@@ -1,0 +1,7 @@
+/bin
+/build
+/lib
+/download
+/temp
+Dynmap-*.jar
+.classpath

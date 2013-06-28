@@ -1,0 +1,22 @@
+[
+{
+  "modid": "WesterosBlocks",
+  "name": "WesterosBlocks",
+  "description": "Custom blocks for WesterosCraft",
+  "version": "@VERSION@",
+  "mcversion": "1.5.2",
+  "url": "http://www.westeroscraft.com/",
+  "updateUrl": "",
+  "authors": [
+    "mikeprimm", "dotblank"
+  ],
+  "credits": "Authored by mikeprimm, dotblank",
+  "logoFile": "",
+  "screenshots": [ ],
+  "parent":"",
+
+  "dependencies": [
+     "mod_MinecraftForge"
+  ]
+}
+]
