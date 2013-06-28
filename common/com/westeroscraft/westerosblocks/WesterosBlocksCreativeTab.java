@@ -14,7 +14,7 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
 
     @Override
     public ItemStack getIconItemStack() {
-        return new ItemStack(WesterosBlocks.block1);
+        return new ItemStack(WesterosBlocks.blockIron);
     }
     
     @Override

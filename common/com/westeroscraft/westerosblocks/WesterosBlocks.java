@@ -22,9 +22,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSand;
+import net.minecraft.block.BlockStairs;
+
 import java.util.logging.Level;
-import com.westeroscraft.westerosblocks.blocks.Block1;
-import com.westeroscraft.westerosblocks.blocks.ItemBlock1;
+import com.westeroscraft.westerosblocks.blocks.BlockIron;
+import com.westeroscraft.westerosblocks.blocks.BlockIronStairs;
+import com.westeroscraft.westerosblocks.blocks.ItemBlockIron;
 import net.minecraft.item.ItemStack;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
@@ -40,11 +44,20 @@ public class WesterosBlocks
     public static Proxy proxy;
 
     // Configuration variables (mostly block ids)
-    public static int block1ID;
+    public static int blockIronID;
+    public static int blockIronStairs0ID;
+    public static int blockIronStairs1ID;
+    public static int blockIronStairs2ID;
+    public static int blockIronStairs3ID;
+    public static int blockIronStairs4ID;
     
     // Block classes
-    public static Block block1;    
-    
+    public static Block blockIron;    
+    public static Block blockIronStairs0;
+    public static Block blockIronStairs1;
+    public static Block blockIronStairs2;
+    public static Block blockIronStairs3;
+    public static Block blockIronStairs4;
     
     @PreInit
     public void preInit(FMLPreInitializationEvent event)
@@ -54,7 +67,12 @@ public class WesterosBlocks
         try
         {
             cfg.load();
-            block1ID = cfg.getBlock("block1", 4000).getInt(4000);
+            blockIronID = cfg.getBlock("blockIron", 4000).getInt(4000);
+            blockIronStairs0ID = cfg.getBlock("blockIronStairs0", 4001).getInt(4001);
+            blockIronStairs1ID = cfg.getBlock("blockIronStairs1", 4002).getInt(4002);
+            blockIronStairs2ID = cfg.getBlock("blockIronStairs2", 4003).getInt(4003);
+            blockIronStairs3ID = cfg.getBlock("blockIronStairs3", 4004).getInt(4004);
+            blockIronStairs4ID = cfg.getBlock("blockIronStairs4", 4005).getInt(4005);
         }
         catch (Exception e)
         {
@@ -69,16 +87,31 @@ public class WesterosBlocks
     @Init
     public void load(FMLInitializationEvent event)
     {
-        block1 = new Block1(block1ID, 5).setUnlocalizedName("block1");
+        blockIron = new BlockIron(blockIronID, 5).setUnlocalizedName("blockIron");
+        blockIronStairs0 = (new BlockIronStairs(blockIronStairs0ID, blockIron, 0)).setUnlocalizedName("IronStairs0");
+        blockIronStairs1 = (new BlockIronStairs(blockIronStairs1ID, blockIron, 1)).setUnlocalizedName("IronStairs1");
+        blockIronStairs2 = (new BlockIronStairs(blockIronStairs2ID, blockIron, 2)).setUnlocalizedName("IronStairs2");
+        blockIronStairs3 = (new BlockIronStairs(blockIronStairs3ID, blockIron, 3)).setUnlocalizedName("IronStairs3");
+        blockIronStairs4 = (new BlockIronStairs(blockIronStairs4ID, blockIron, 4)).setUnlocalizedName("IronStairs4");
         
-        MinecraftForge.setBlockHarvestLevel(block1, "pickaxe", 1);
-        GameRegistry.registerBlock(block1, ItemBlock1.class, "block1");
+        MinecraftForge.setBlockHarvestLevel(blockIron, "pickaxe", 1);
+        GameRegistry.registerBlock(blockIron, ItemBlockIron.class, "blockIron");
+        GameRegistry.registerBlock(blockIronStairs0, "IronStairs0");
+        GameRegistry.registerBlock(blockIronStairs1, "IronStairs1");
+        GameRegistry.registerBlock(blockIronStairs2, "IronStairs2");
+        GameRegistry.registerBlock(blockIronStairs3, "IronStairs3");
+        GameRegistry.registerBlock(blockIronStairs4, "IronStairs4");
 
-        LanguageRegistry.addName(new ItemStack((Block)block1, 1, 0), "Iron 1");
-        LanguageRegistry.addName(new ItemStack((Block)block1, 1, 1), "Iron 2");
-        LanguageRegistry.addName(new ItemStack((Block)block1, 1, 2), "Iron 3");
-        LanguageRegistry.addName(new ItemStack((Block)block1, 1, 3), "Iron 4");
-        LanguageRegistry.addName(new ItemStack((Block)block1, 1, 4), "Iron 5");
+        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 0), "Iron 1");
+        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 1), "Iron 2");
+        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 2), "Iron 3");
+        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 3), "Iron 4");
+        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 4), "Iron 5");
+        LanguageRegistry.addName(blockIronStairs0, "Iron Stairs 1");
+        LanguageRegistry.addName(blockIronStairs1, "Iron Stairs 2");
+        LanguageRegistry.addName(blockIronStairs2, "Iron Stairs 3");
+        LanguageRegistry.addName(blockIronStairs3, "Iron Stairs 4");
+        LanguageRegistry.addName(blockIronStairs4, "Iron Stairs 5");
     }
 
     @PostInit
