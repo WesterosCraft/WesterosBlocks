@@ -1,13 +1,5 @@
 package com.westeroscraft.westerosblocks;
 
-import java.io.IOException;
-import java.io.File;
-import java.util.List;
-
-import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeChunkManager;
-import net.minecraftforge.common.ForgeChunkManager.Ticket;
-
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -33,9 +25,7 @@ import net.minecraft.block.Block;
 import java.util.logging.Level;
 import com.westeroscraft.westerosblocks.blocks.Block1;
 import com.westeroscraft.westerosblocks.blocks.ItemBlock1;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemBlockWithMetadata;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)

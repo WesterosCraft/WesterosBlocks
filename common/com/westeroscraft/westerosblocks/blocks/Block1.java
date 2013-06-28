@@ -1,6 +1,9 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.List;
+
+import com.westeroscraft.westerosblocks.WesterosBlocksCreativeTab;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
@@ -13,11 +16,10 @@ public class Block1 extends Block {
     private Icon[] icons;
     
     public Block1(int blockid, int meta_cnt) {
-        super(blockid, Material.rock);
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        super(blockid, Material.iron);
+        this.setCreativeTab(WesterosBlocksCreativeTab.tabWesterosBlocks);
         this.metacnt = meta_cnt;
         this.icons = new Icon[metacnt];
-        
     }
     public void registerIcons(IconRegister iconRegister)
     {
