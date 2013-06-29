@@ -3,5 +3,5 @@
 /lib
 /download
 /temp
-Dynmap-*.jar
+*.jar
 .classpath
