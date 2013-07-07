@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlocksCreativeTab;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
@@ -22,6 +25,7 @@ public class BlockIron extends Block {
         this.icons = new Icon[metacnt];
     }
     @Override
+    @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister)
     {
         for (int i = 0; i < metacnt; i++) {
@@ -29,11 +33,13 @@ public class BlockIron extends Block {
         }
     }
     @Override
+    @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
         if (meta >= metacnt) meta = 0;
         return icons[meta];
     }
     @Override
+    @SideOnly(Side.CLIENT)
     public void getSubBlocks(int id, CreativeTabs tab, List list)
     {
         for (int i = 0; i < metacnt; i++) {

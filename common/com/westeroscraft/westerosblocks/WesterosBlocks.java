@@ -22,13 +22,24 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockMycelium;
+import net.minecraft.block.BlockPane;
 import net.minecraft.block.BlockSand;
 import net.minecraft.block.BlockStairs;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 
 import java.util.logging.Level;
 import com.westeroscraft.westerosblocks.blocks.BlockIron;
 import com.westeroscraft.westerosblocks.blocks.BlockIronStairs;
-import com.westeroscraft.westerosblocks.blocks.ItemBlockIron;
+import com.westeroscraft.westerosblocks.blocks.BlockLightAsh;
+import com.westeroscraft.westerosblocks.blocks.BlockWCCobblestone;
+import com.westeroscraft.westerosblocks.blocks.BlockWCIronFence;
+import com.westeroscraft.westerosblocks.blocks.BlockWCWoodFence;
+import com.westeroscraft.westerosblocks.blocks.WCItemBlock;
+import com.westeroscraft.westerosblocks.blocks.ItemBlockWCIronFence;
+
 import net.minecraft.item.ItemStack;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
@@ -50,6 +61,10 @@ public class WesterosBlocks
     public static int blockIronStairs2ID;
     public static int blockIronStairs3ID;
     public static int blockIronStairs4ID;
+    public static boolean doReplaceMycelium;
+    public static boolean doReplaceIronFence;
+    public static boolean doReplaceCobblestone;
+    public static boolean doReplaceWoodFence;
     
     // Block classes
     public static Block blockIron;    
@@ -58,6 +73,11 @@ public class WesterosBlocks
     public static Block blockIronStairs2;
     public static Block blockIronStairs3;
     public static Block blockIronStairs4;
+    // Replacement block classes
+    public static BlockMycelium blockMycelium;
+    public static BlockWCIronFence blockIronFence;
+    public static BlockWCCobblestone blockCobblestone;
+    public static BlockWCWoodFence blockWoodFence;
     
     @PreInit
     public void preInit(FMLPreInitializationEvent event)
@@ -73,6 +93,11 @@ public class WesterosBlocks
             blockIronStairs2ID = cfg.getBlock("blockIronStairs2", 4003).getInt(4003);
             blockIronStairs3ID = cfg.getBlock("blockIronStairs3", 4004).getInt(4004);
             blockIronStairs4ID = cfg.getBlock("blockIronStairs4", 4005).getInt(4005);
+            // Replacement block flags
+            doReplaceMycelium = cfg.get("replacements", "mycelium", true).getBoolean(true);
+            doReplaceIronFence = cfg.get("replacements", "ironfence", true).getBoolean(true);
+            doReplaceCobblestone = cfg.get("replacements", "cobblestone", true).getBoolean(true);
+            doReplaceWoodFence = cfg.get("replacements", "woodfence", true).getBoolean(true);
         }
         catch (Exception e)
         {
@@ -93,15 +118,45 @@ public class WesterosBlocks
         blockIronStairs2 = (new BlockIronStairs(blockIronStairs2ID, blockIron, 2)).setUnlocalizedName("IronStairs2");
         blockIronStairs3 = (new BlockIronStairs(blockIronStairs3ID, blockIron, 3)).setUnlocalizedName("IronStairs3");
         blockIronStairs4 = (new BlockIronStairs(blockIronStairs4ID, blockIron, 4)).setUnlocalizedName("IronStairs4");
-        
+        // Replacement blocks
+        if (doReplaceMycelium) {
+            Block.blocksList[Block.mycelium.blockID] = null;
+            blockMycelium = (BlockMycelium)(new BlockLightAsh(Block.mycelium.blockID)).setHardness(0.6F).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("mycel");
+        }
+        if (doReplaceIronFence) {
+            Block.blocksList[Block.fenceIron.blockID] = null;
+            blockIronFence = (BlockWCIronFence) (new BlockWCIronFence(Block.fenceIron.blockID, "fenceIron", "fenceIron", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron");
+        }
+        if (doReplaceCobblestone) {
+            Block.blocksList[Block.cobblestone.blockID] = null;
+            blockCobblestone = new BlockWCCobblestone(Block.cobblestone.blockID);
+        }
+        if (doReplaceWoodFence) {
+            Block.blocksList[Block.fence.blockID] = null;
+            blockWoodFence = new BlockWCWoodFence(85);
+        }
+                
         MinecraftForge.setBlockHarvestLevel(blockIron, "pickaxe", 1);
-        GameRegistry.registerBlock(blockIron, ItemBlockIron.class, "blockIron");
+        // Register blocks
+        GameRegistry.registerBlock(blockIron, WCItemBlock.class, "blockIron");
         GameRegistry.registerBlock(blockIronStairs0, "IronStairs0");
         GameRegistry.registerBlock(blockIronStairs1, "IronStairs1");
         GameRegistry.registerBlock(blockIronStairs2, "IronStairs2");
         GameRegistry.registerBlock(blockIronStairs3, "IronStairs3");
         GameRegistry.registerBlock(blockIronStairs4, "IronStairs4");
-
+        // Register replacement blocks
+        if (doReplaceMycelium) {
+            GameRegistry.registerBlock(blockMycelium, "mycel");
+        }
+        if (doReplaceIronFence) {
+            GameRegistry.registerBlock(blockIronFence, ItemBlockWCIronFence.class, "fenceIron");
+        }
+        if (doReplaceCobblestone) {
+            GameRegistry.registerBlock(blockCobblestone, WCItemBlock.class, "stonebrick");
+        }
+        if (doReplaceWoodFence) {
+            GameRegistry.registerBlock(blockWoodFence, WCItemBlock.class, "fence");
+        }
         LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 0), "Iron 1");
         LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 1), "Iron 2");
         LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 2), "Iron 3");
@@ -112,6 +167,19 @@ public class WesterosBlocks
         LanguageRegistry.addName(blockIronStairs2, "Iron Stairs 3");
         LanguageRegistry.addName(blockIronStairs3, "Iron Stairs 4");
         LanguageRegistry.addName(blockIronStairs4, "Iron Stairs 5");
+        // Register replacement items
+        if (doReplaceMycelium) {
+            LanguageRegistry.addName(blockMycelium, "Light Ash");
+        }
+        if (doReplaceIronFence) {
+            blockIronFence.registerNames();
+        }
+        if (doReplaceCobblestone) {
+            blockCobblestone.registerNames();
+        }
+        if (doReplaceWoodFence) {
+            blockWoodFence.registerNames();
+        }
     }
 
     @PostInit
