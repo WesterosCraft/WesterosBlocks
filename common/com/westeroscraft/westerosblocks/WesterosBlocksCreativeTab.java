@@ -22,9 +22,9 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
     public ItemStack getIconItemStack() {
         switch (tab) {
             case 0:
-                return new ItemStack(WesterosBlocks.blockCobblestone, 1, 1);
+                return new ItemStack(WesterosBlocks.blockIron, 1, 0);
             default:
-                return new ItemStack(WesterosBlocks.blockWoodFence, 1, 1);
+                return new ItemStack(WesterosBlocks.blockIronStairs1, 1, 0);
         }
     }
     @Override

@@ -44,21 +44,21 @@ public class BlockWCIronFence extends BlockPane {
     {
         super.registerIcons(iconRegister);
         
-        axe_left = iconRegister.registerIcon("WesterosBlocks:axe_east/axe_left");
-        axe_right = iconRegister.registerIcon("WesterosBlocks:axe_east/axe_right");
-        cleaver_left = iconRegister.registerIcon("WesterosBlocks:cleaver_north/cleaver_left");
-        cleaver_right = iconRegister.registerIcon("WesterosBlocks:cleaver_north/cleaver_right");
-        dagger_left = iconRegister.registerIcon("WesterosBlocks:dagger_west/dagger_left");
-        dagger_right = iconRegister.registerIcon("WesterosBlocks:dagger_west/dagger_right");
-        pickaxe_left = iconRegister.registerIcon("WesterosBlocks:pickaxe_south/pickaxe_left");
-        pickaxe_right = iconRegister.registerIcon("WesterosBlocks:pickaxe_south/pickaxe_right");
-        shovel_left = iconRegister.registerIcon("WesterosBlocks:shovel_west/shovel_left");
-        shovel_right = iconRegister.registerIcon("WesterosBlocks:shovel_west/shovel_right");
-        transparent = iconRegister.registerIcon("WesterosBlocks:transparent");
-        bars_iron_crossbars = iconRegister.registerIcon("WesterosBlocks:bars_iron_crossbars/bars_iron_crossbars");
-        bars_iron_oxidized = iconRegister.registerIcon("WesterosBlocks:bars_iron_oxidized/bars_iron_oxidized");
-        bars_iron_oxidized_crossbars = iconRegister.registerIcon("WesterosBlocks:bars_iron_oxidized_crossbars/bars_iron_oxidized_crossbars");
-        laundry_pants_towel = iconRegister.registerIcon("WesterosBlocks:laundry/laundry_pants_towel");
+        axe_left = iconRegister.registerIcon("westerosblocks:axe_east/axe_left");
+        axe_right = iconRegister.registerIcon("westerosblocks:axe_east/axe_right");
+        cleaver_left = iconRegister.registerIcon("westerosblocks:cleaver_north/cleaver_left");
+        cleaver_right = iconRegister.registerIcon("westerosblocks:cleaver_north/cleaver_right");
+        dagger_left = iconRegister.registerIcon("westerosblocks:dagger_west/dagger_left");
+        dagger_right = iconRegister.registerIcon("westerosblocks:dagger_west/dagger_right");
+        pickaxe_left = iconRegister.registerIcon("westerosblocks:pickaxe_south/pickaxe_left");
+        pickaxe_right = iconRegister.registerIcon("westerosblocks:pickaxe_south/pickaxe_right");
+        shovel_left = iconRegister.registerIcon("westerosblocks:shovel_west/shovel_left");
+        shovel_right = iconRegister.registerIcon("westerosblocks:shovel_west/shovel_right");
+        transparent = iconRegister.registerIcon("westerosblocks:transparent");
+        bars_iron_crossbars = iconRegister.registerIcon("westerosblocks:bars_iron_crossbars/bars_iron_crossbars");
+        bars_iron_oxidized = iconRegister.registerIcon("westerosblocks:bars_iron_oxidized/bars_iron_oxidized");
+        bars_iron_oxidized_crossbars = iconRegister.registerIcon("westerosblocks:bars_iron_oxidized_crossbars/bars_iron_oxidized_crossbars");
+        laundry_pants_towel = iconRegister.registerIcon("westerosblocks:laundry/laundry_pants_towel");
     }
 
     @Override

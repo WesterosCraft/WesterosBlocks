@@ -24,6 +24,7 @@ public class BlockWCCobblestone extends Block {
         this.setResistance(10.0F);
         this.setStepSound(Block.soundStoneFootstep);
         this.setUnlocalizedName("stonebrick");
+        this.func_111022_d("cobblestone");
         this.setCreativeTab(WesterosBlocksCreativeTab.tabWesterosBlocks);
     }
     @Override
@@ -32,20 +33,20 @@ public class BlockWCCobblestone extends Block {
     {
         super.registerIcons(iconRegister);
         icons[0] = this.blockIcon;
-        icons[1] = iconRegister.registerIcon("WesterosBlocks:stone_bisque/stone_large_bisque");
-        icons[2] = iconRegister.registerIcon("WesterosBlocks:stone_darkkhaki/stone_large_darkkhaki");
-        icons[3] = iconRegister.registerIcon("WesterosBlocks:stone_brown/stone_large_brown");
-        icons[4] = iconRegister.registerIcon("WesterosBlocks:stone_beige/stone_large_beige");
-        icons[5] = iconRegister.registerIcon("WesterosBlocks:stone_floralwhite/stone_large_floralwhite");
-        icons[6] = iconRegister.registerIcon("WesterosBlocks:stone_ghostwhite/stone_large_ghostwhite");
-        icons[7] = iconRegister.registerIcon("WesterosBlocks:stone_dimgrey/stone_large_dimgrey");
-        icons[8] = iconRegister.registerIcon("WesterosBlocks:stone_papayawhip/stone_large_papayawhip");
-        icons[9] = iconRegister.registerIcon("WesterosBlocks:stone_silver/stone_small_silver");
-        icons[10] = iconRegister.registerIcon("WesterosBlocks:stone_burlywood/stone_small_burlywood");
-        icons[11] = iconRegister.registerIcon("WesterosBlocks:stone_honeydew/stone_small_honeydew");
-        icons[12] = iconRegister.registerIcon("WesterosBlocks:stone_peru/stone_large_peru");
-        icons[13] = iconRegister.registerIcon("WesterosBlocks:stone_goldenrod/stone_large_goldenrod");
-        icons[14] = iconRegister.registerIcon("WesterosBlocks:stone_antiquewhite/stone_small_antiquewhite");
+        icons[1] = iconRegister.registerIcon("westerosblocks:stone_bisque/stone_large_bisque");
+        icons[2] = iconRegister.registerIcon("westerosblocks:stone_darkkhaki/stone_large_darkkhaki");
+        icons[3] = iconRegister.registerIcon("westerosblocks:stone_brown/stone_large_brown");
+        icons[4] = iconRegister.registerIcon("westerosblocks:stone_beige/stone_large_beige");
+        icons[5] = iconRegister.registerIcon("westerosblocks:stone_floralwhite/stone_large_floralwhite");
+        icons[6] = iconRegister.registerIcon("westerosblocks:stone_ghostwhite/stone_large_ghostwhite");
+        icons[7] = iconRegister.registerIcon("westerosblocks:stone_dimgrey/stone_large_dimgrey");
+        icons[8] = iconRegister.registerIcon("westerosblocks:stone_papayawhip/stone_large_papayawhip");
+        icons[9] = iconRegister.registerIcon("westerosblocks:stone_silver/stone_small_silver");
+        icons[10] = iconRegister.registerIcon("westerosblocks:stone_burlywood/stone_small_burlywood");
+        icons[11] = iconRegister.registerIcon("westerosblocks:stone_honeydew/stone_small_honeydew");
+        icons[12] = iconRegister.registerIcon("westerosblocks:stone_peru/stone_large_peru");
+        icons[13] = iconRegister.registerIcon("westerosblocks:stone_goldenrod/stone_large_goldenrod");
+        icons[14] = iconRegister.registerIcon("westerosblocks:stone_antiquewhite/stone_small_antiquewhite");
     }
     @Override
     @SideOnly(Side.CLIENT)

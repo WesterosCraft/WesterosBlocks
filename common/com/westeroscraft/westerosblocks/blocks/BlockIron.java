@@ -29,7 +29,7 @@ public class BlockIron extends Block {
     public void registerIcons(IconRegister iconRegister)
     {
         for (int i = 0; i < metacnt; i++) {
-            icons[i] = iconRegister.registerIcon("WesterosBlocks:block1_" + i);
+            icons[i] = iconRegister.registerIcon("westerosblocks:block1_" + i);
         }
     }
     @Override

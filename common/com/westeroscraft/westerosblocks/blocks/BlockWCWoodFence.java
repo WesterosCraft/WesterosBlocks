@@ -20,7 +20,7 @@ public class BlockWCWoodFence extends BlockFence {
     private Icon icons[] = new Icon[16];
     
     public BlockWCWoodFence(int blockid) {
-        super(blockid, "wood", Material.wood);
+        super(blockid, "planks_oak", Material.wood);
         
         this.setHardness(2.0F);
         this.setResistance(5.0F);
@@ -35,22 +35,22 @@ public class BlockWCWoodFence extends BlockFence {
     public void registerIcons(IconRegister iconRegister)
     {
         super.registerIcons(iconRegister);
-        icons[0] = iconRegister.registerIcon("WesterosBlocks:fence_planks_oak/planks_oak");
-        icons[1] = iconRegister.registerIcon("WesterosBlocks:fence_planks_spruce/planks_spruce");
-        icons[2] = iconRegister.registerIcon("WesterosBlocks:fence_planks_birch/planks_birch");
-        icons[3] = iconRegister.registerIcon("WesterosBlocks:fence_planks_jungle/planks_jungle");
-        icons[4] = iconRegister.registerIcon("WesterosBlocks:fence_bark_oak/bark_oak");
-        icons[5] = iconRegister.registerIcon("WesterosBlocks:fence_bark_spruce/bark_spruce");
-        icons[6] = iconRegister.registerIcon("WesterosBlocks:fence_bark_birch/bark_birch");
-        icons[7] = iconRegister.registerIcon("WesterosBlocks:fence_bark_jungle/bark_jungle");
-        icons[8] = iconRegister.registerIcon("WesterosBlocks:fence_vines_oak/planks_oak_vines");
-        icons[9] = iconRegister.registerIcon("WesterosBlocks:fence_vines_spruce/planks_spruce_vines");
-        icons[10] = iconRegister.registerIcon("WesterosBlocks:fence_vines_birch/planks_birch_vines");
-        icons[11] = iconRegister.registerIcon("WesterosBlocks:fence_vinves_jungle/planks_jungle_vines");
-        icons[12] = iconRegister.registerIcon("WesterosBlocks:fence_grapevines_oak/planks_oak_grapevines");
-        icons[13] = iconRegister.registerIcon("WesterosBlocks:fence_grapevines_spruce/planks_spruce_grapevines");
-        icons[14] = iconRegister.registerIcon("WesterosBlocks:fence_grapevines_birch/planks_birch_grapevines");
-        icons[15] = iconRegister.registerIcon("WesterosBlocks:fence_grapevines_jungle/planks_jungle_grapevines");
+        icons[0] = iconRegister.registerIcon("westerosblocks:fence_planks_oak/planks_oak");
+        icons[1] = iconRegister.registerIcon("westerosblocks:fence_planks_spruce/planks_spruce");
+        icons[2] = iconRegister.registerIcon("westerosblocks:fence_planks_birch/planks_birch");
+        icons[3] = iconRegister.registerIcon("westerosblocks:fence_planks_jungle/planks_jungle");
+        icons[4] = iconRegister.registerIcon("westerosblocks:fence_bark_oak/bark_oak");
+        icons[5] = iconRegister.registerIcon("westerosblocks:fence_bark_spruce/bark_spruce");
+        icons[6] = iconRegister.registerIcon("westerosblocks:fence_bark_birch/bark_birch");
+        icons[7] = iconRegister.registerIcon("westerosblocks:fence_bark_jungle/bark_jungle");
+        icons[8] = iconRegister.registerIcon("westerosblocks:fence_vines_oak/planks_oak_vines");
+        icons[9] = iconRegister.registerIcon("westerosblocks:fence_vines_spruce/planks_spruce_vines");
+        icons[10] = iconRegister.registerIcon("westerosblocks:fence_vines_birch/planks_birch_vines");
+        icons[11] = iconRegister.registerIcon("westerosblocks:fence_vines_jungle/planks_jungle_vines");
+        icons[12] = iconRegister.registerIcon("westerosblocks:fence_grapevines_oak/planks_oak_grapevines");
+        icons[13] = iconRegister.registerIcon("westerosblocks:fence_grapevines_spruce/planks_spruce_grapevines");
+        icons[14] = iconRegister.registerIcon("westerosblocks:fence_grapevines_birch/planks_birch_grapevines");
+        icons[15] = iconRegister.registerIcon("westerosblocks:fence_grapevines_jungle/planks_jungle_grapevines");
     }
     
     @Override

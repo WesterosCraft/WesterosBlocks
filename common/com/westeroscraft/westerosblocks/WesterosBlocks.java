@@ -2,13 +2,8 @@ package com.westeroscraft.westerosblocks;
 
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
-import cpw.mods.fml.common.Mod.ServerStarted;
-import cpw.mods.fml.common.Mod.ServerStarting;
-import cpw.mods.fml.common.Mod.ServerStopping;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -22,13 +17,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockMycelium;
-import net.minecraft.block.BlockPane;
-import net.minecraft.block.BlockSand;
-import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 import java.util.logging.Level;
 import com.westeroscraft.westerosblocks.blocks.BlockIron;
@@ -37,8 +27,8 @@ import com.westeroscraft.westerosblocks.blocks.BlockLightAsh;
 import com.westeroscraft.westerosblocks.blocks.BlockWCCobblestone;
 import com.westeroscraft.westerosblocks.blocks.BlockWCIronFence;
 import com.westeroscraft.westerosblocks.blocks.BlockWCWoodFence;
-import com.westeroscraft.westerosblocks.blocks.WCItemBlock;
 import com.westeroscraft.westerosblocks.blocks.ItemBlockWCIronFence;
+import com.westeroscraft.westerosblocks.blocks.WCItemBlock;
 
 import net.minecraft.item.ItemStack;
 
@@ -79,7 +69,7 @@ public class WesterosBlocks
     public static BlockWCCobblestone blockCobblestone;
     public static BlockWCWoodFence blockWoodFence;
     
-    @PreInit
+    @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         // Load configuration file - use suggested (config/WesterosBlocks.cfg)
@@ -109,7 +99,7 @@ public class WesterosBlocks
         }
     }
 
-    @Init
+    @EventHandler
     public void load(FMLInitializationEvent event)
     {
         blockIron = new BlockIron(blockIronID, 5).setUnlocalizedName("blockIron");
@@ -121,11 +111,11 @@ public class WesterosBlocks
         // Replacement blocks
         if (doReplaceMycelium) {
             Block.blocksList[Block.mycelium.blockID] = null;
-            blockMycelium = (BlockMycelium)(new BlockLightAsh(Block.mycelium.blockID)).setHardness(0.6F).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("mycel");
+            blockMycelium = (BlockMycelium)(new BlockLightAsh(Block.mycelium.blockID)).setHardness(0.6F).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("mycel").func_111022_d("mycelium");
         }
         if (doReplaceIronFence) {
             Block.blocksList[Block.fenceIron.blockID] = null;
-            blockIronFence = (BlockWCIronFence) (new BlockWCIronFence(Block.fenceIron.blockID, "fenceIron", "fenceIron", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron");
+            blockIronFence = (BlockWCIronFence) (new BlockWCIronFence(Block.fenceIron.blockID, "iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron");
         }
         if (doReplaceCobblestone) {
             Block.blocksList[Block.cobblestone.blockID] = null;
@@ -182,20 +172,21 @@ public class WesterosBlocks
         }
     }
 
-    @PostInit
+    @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
     }
 
-    @ServerStarting
+    @EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
     }
     
-    @ServerStarted
+    @EventHandler
     public void serverStarted(FMLServerStartedEvent event)
     {
     }
-    @ServerStopping
+
+    @EventHandler
     public void serverStopping(FMLServerStoppingEvent event)
     {
     }

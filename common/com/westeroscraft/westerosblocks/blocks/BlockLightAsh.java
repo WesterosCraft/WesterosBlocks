@@ -23,8 +23,8 @@ public class BlockLightAsh extends BlockMycelium {
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister)
     {
-        blockIcon = iconRegister.registerIcon("WesterosBlocks:ash_light/ash_light_side");
-        top = iconRegister.registerIcon("WesterosBlocks:ash_light/ash_light_top");
+        blockIcon = iconRegister.registerIcon("westerosblocks:ash_light/ash_light_side");
+        top = iconRegister.registerIcon("westerosblocks:ash_light/ash_light_top");
     }
     @Override
     @SideOnly(Side.CLIENT)
