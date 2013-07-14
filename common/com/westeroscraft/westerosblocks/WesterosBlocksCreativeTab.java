@@ -16,15 +16,16 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
         super(id);
         tab = tabnum;
         lbl = label;
+        WesterosBlockDef.addCreativeTab(id,  this);
     }
 
     @Override
     public ItemStack getIconItemStack() {
         switch (tab) {
             case 0:
-                return new ItemStack(WesterosBlocks.blockIron, 1, 0);
+                return new ItemStack(WesterosBlocks.customBlocks[0], 1, 0);
             default:
-                return new ItemStack(WesterosBlocks.blockIronStairs1, 1, 0);
+                return new ItemStack(WesterosBlocks.customBlocks[1], 1, 0);
         }
     }
     @Override

@@ -15,22 +15,23 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraftforge.common.Configuration;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockMycelium;
 import net.minecraft.block.material.Material;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.logging.Level;
-import com.westeroscraft.westerosblocks.blocks.BlockIron;
-import com.westeroscraft.westerosblocks.blocks.BlockIronStairs;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.blocks.BlockLightAsh;
-import com.westeroscraft.westerosblocks.blocks.BlockWCCobblestone;
 import com.westeroscraft.westerosblocks.blocks.BlockWCIronFence;
 import com.westeroscraft.westerosblocks.blocks.BlockWCWoodFence;
 import com.westeroscraft.westerosblocks.blocks.ItemBlockWCIronFence;
-import com.westeroscraft.westerosblocks.blocks.WCItemBlock;
-
-import net.minecraft.item.ItemStack;
+import com.westeroscraft.westerosblocks.blocks.MultiBlockItem;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -45,48 +46,75 @@ public class WesterosBlocks
     public static Proxy proxy;
 
     // Configuration variables (mostly block ids)
-    public static int blockIronID;
-    public static int blockIronStairs0ID;
-    public static int blockIronStairs1ID;
-    public static int blockIronStairs2ID;
-    public static int blockIronStairs3ID;
-    public static int blockIronStairs4ID;
     public static boolean doReplaceMycelium;
     public static boolean doReplaceIronFence;
-    public static boolean doReplaceCobblestone;
     public static boolean doReplaceWoodFence;
     
     // Block classes
-    public static Block blockIron;    
-    public static Block blockIronStairs0;
-    public static Block blockIronStairs1;
-    public static Block blockIronStairs2;
-    public static Block blockIronStairs3;
-    public static Block blockIronStairs4;
+    public static Block customBlocks[];
     // Replacement block classes
     public static BlockMycelium blockMycelium;
     public static BlockWCIronFence blockIronFence;
-    public static BlockWCCobblestone blockCobblestone;
     public static BlockWCWoodFence blockWoodFence;
+    
+    public static WesterosBlockDef[] customBlockDefs;
+    
+    public static Block findBlockByName(String blkname) {
+        for (int i = 0; i < customBlockDefs.length; i++) {
+            if (customBlockDefs[i].blockName.equals(blkname)) {
+                return customBlocks[i];
+            }
+        }
+        try {
+            int id = Integer.parseInt(blkname);
+            if ((id > 0) && (id < Block.blocksList.length)) {
+                return Block.blocksList[id];
+            }
+        } catch (NumberFormatException nfx) {
+        }
+        return null;
+    }
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        // Initialize 
+        WesterosBlockDef.initialize();
+        
+        // Read our block definition resource
+        InputStream in = getClass().getResourceAsStream("/WesterosBlocks.json");
+        if (in == null) {
+            FMLLog.severe("WesterosBlocks couldn't find its block definition resource");
+            return;
+        }
+        InputStreamReader rdr = new InputStreamReader(in);
+        Gson gson = new Gson();
+        try {
+            customBlockDefs = gson.fromJson(rdr, WesterosBlockDef[].class);
+        } catch (JsonSyntaxException iox) {
+            FMLLog.log(Level.SEVERE, iox, "WesterosBlocks couldn't parse its block definition", new Object[0]);
+            return;
+        } catch (JsonIOException iox) {
+            FMLLog.log(Level.SEVERE, iox, "WesterosBlocks couldn't read its block definition", new Object[0]);
+            return;
+        } finally {
+            if (in != null) { try { in.close(); } catch (IOException iox) {}; in = null; }
+        }
+        FMLLog.info("Loaded " + customBlockDefs.length + " block definitions");
+        
         // Load configuration file - use suggested (config/WesterosBlocks.cfg)
         Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
         try
         {
             cfg.load();
-            blockIronID = cfg.getBlock("blockIron", 4000).getInt(4000);
-            blockIronStairs0ID = cfg.getBlock("blockIronStairs0", 4001).getInt(4001);
-            blockIronStairs1ID = cfg.getBlock("blockIronStairs1", 4002).getInt(4002);
-            blockIronStairs2ID = cfg.getBlock("blockIronStairs2", 4003).getInt(4003);
-            blockIronStairs3ID = cfg.getBlock("blockIronStairs3", 4004).getInt(4004);
-            blockIronStairs4ID = cfg.getBlock("blockIronStairs4", 4005).getInt(4005);
+            // Add settings for block defintiions
+            for (int i = 0; i < customBlockDefs.length; i++) {
+                customBlockDefs[i].blockID = cfg.getBlock(customBlockDefs[i].blockName, customBlockDefs[i].blockID).getInt(customBlockDefs[i].blockID);
+            }
+            
             // Replacement block flags
             doReplaceMycelium = cfg.get("replacements", "mycelium", true).getBoolean(true);
             doReplaceIronFence = cfg.get("replacements", "ironfence", true).getBoolean(true);
-            doReplaceCobblestone = cfg.get("replacements", "cobblestone", true).getBoolean(true);
             doReplaceWoodFence = cfg.get("replacements", "woodfence", true).getBoolean(true);
         }
         catch (Exception e)
@@ -102,12 +130,6 @@ public class WesterosBlocks
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-        blockIron = new BlockIron(blockIronID, 5).setUnlocalizedName("blockIron");
-        blockIronStairs0 = (new BlockIronStairs(blockIronStairs0ID, blockIron, 0)).setUnlocalizedName("IronStairs0");
-        blockIronStairs1 = (new BlockIronStairs(blockIronStairs1ID, blockIron, 1)).setUnlocalizedName("IronStairs1");
-        blockIronStairs2 = (new BlockIronStairs(blockIronStairs2ID, blockIron, 2)).setUnlocalizedName("IronStairs2");
-        blockIronStairs3 = (new BlockIronStairs(blockIronStairs3ID, blockIron, 3)).setUnlocalizedName("IronStairs3");
-        blockIronStairs4 = (new BlockIronStairs(blockIronStairs4ID, blockIron, 4)).setUnlocalizedName("IronStairs4");
         // Replacement blocks
         if (doReplaceMycelium) {
             Block.blocksList[Block.mycelium.blockID] = null;
@@ -117,23 +139,24 @@ public class WesterosBlocks
             Block.blocksList[Block.fenceIron.blockID] = null;
             blockIronFence = (BlockWCIronFence) (new BlockWCIronFence(Block.fenceIron.blockID, "iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron");
         }
-        if (doReplaceCobblestone) {
-            Block.blocksList[Block.cobblestone.blockID] = null;
-            blockCobblestone = new BlockWCCobblestone(Block.cobblestone.blockID);
-        }
         if (doReplaceWoodFence) {
             Block.blocksList[Block.fence.blockID] = null;
             blockWoodFence = new BlockWCWoodFence(85);
         }
+        // Construct custom block definitions
+        customBlocks = new Block[customBlockDefs.length];
+        for (int i = 0; i < customBlockDefs.length; i++) {
+            customBlocks[i] = customBlockDefs[i].createBlock(i);
+        }
+        
+        // Initialize custom block definitions
+        for (int i = 0; i < customBlockDefs.length; i++) {
+            if (customBlocks[i] instanceof WesterosBlockLifecycle) {
+                ((WesterosBlockLifecycle)customBlocks[i]).initializeBlockDefinition();
+            }
+        }
                 
-        MinecraftForge.setBlockHarvestLevel(blockIron, "pickaxe", 1);
         // Register blocks
-        GameRegistry.registerBlock(blockIron, WCItemBlock.class, "blockIron");
-        GameRegistry.registerBlock(blockIronStairs0, "IronStairs0");
-        GameRegistry.registerBlock(blockIronStairs1, "IronStairs1");
-        GameRegistry.registerBlock(blockIronStairs2, "IronStairs2");
-        GameRegistry.registerBlock(blockIronStairs3, "IronStairs3");
-        GameRegistry.registerBlock(blockIronStairs4, "IronStairs4");
         // Register replacement blocks
         if (doReplaceMycelium) {
             GameRegistry.registerBlock(blockMycelium, "mycel");
@@ -141,22 +164,9 @@ public class WesterosBlocks
         if (doReplaceIronFence) {
             GameRegistry.registerBlock(blockIronFence, ItemBlockWCIronFence.class, "fenceIron");
         }
-        if (doReplaceCobblestone) {
-            GameRegistry.registerBlock(blockCobblestone, WCItemBlock.class, "stonebrick");
-        }
         if (doReplaceWoodFence) {
-            GameRegistry.registerBlock(blockWoodFence, WCItemBlock.class, "fence");
+            GameRegistry.registerBlock(blockWoodFence, MultiBlockItem.class, "fence");
         }
-        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 0), "Iron 1");
-        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 1), "Iron 2");
-        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 2), "Iron 3");
-        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 3), "Iron 4");
-        LanguageRegistry.addName(new ItemStack((Block)blockIron, 1, 4), "Iron 5");
-        LanguageRegistry.addName(blockIronStairs0, "Iron Stairs 1");
-        LanguageRegistry.addName(blockIronStairs1, "Iron Stairs 2");
-        LanguageRegistry.addName(blockIronStairs2, "Iron Stairs 3");
-        LanguageRegistry.addName(blockIronStairs3, "Iron Stairs 4");
-        LanguageRegistry.addName(blockIronStairs4, "Iron Stairs 5");
         // Register replacement items
         if (doReplaceMycelium) {
             LanguageRegistry.addName(blockMycelium, "Light Ash");
@@ -164,11 +174,14 @@ public class WesterosBlocks
         if (doReplaceIronFence) {
             blockIronFence.registerNames();
         }
-        if (doReplaceCobblestone) {
-            blockCobblestone.registerNames();
-        }
         if (doReplaceWoodFence) {
             blockWoodFence.registerNames();
+        }
+        // Register custom block definitions
+        for (int i = 0; i < customBlockDefs.length; i++) {
+            if (customBlocks[i] instanceof WesterosBlockLifecycle) {
+                ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
+            }
         }
     }
 

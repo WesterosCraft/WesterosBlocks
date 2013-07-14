@@ -1,0 +1,175 @@
+[
+	// Custom block for solid metal blocks
+	{
+		"blockName" : "metal_block_0",
+		"blockID" : 2000,
+		"blockType" : "solid",
+		"hardness" : 5.0,
+		"stepSound" : "metal",
+		"material" : "iron",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 3 } ],
+		"creativeTab" : "WesterosBlocks",
+		"lightValue" : 0.0,
+		"subBlocks" : [
+			// Iron block (was 42:2)
+			{
+				"meta" : 0,
+				"label": "Iron Block",
+				"textures" : [ "metal_block_0/metal_block_iron" ]
+			},
+			// Oxidized Iron block (was 42:3)
+			{
+				"meta" : 1,
+				"label": "Oxidized Iron Block",
+				"textures" : [ "metal_block_0/metal_block_ironoxidized" ]
+			},
+			// Bronze block (was 42:4)
+			{
+				"meta" : 2,
+				"label": "Bronze Block",
+				"textures" : [ "metal_block_0/metal_block_bronze" ]
+			},
+			// Oxidized Iron block (was 42:5)
+			{
+				"meta" : 3,
+				"label": "Oxidized Bronze Block",
+				"textures" : [ "metal_block_0/metal_block_bronzeoxidized" ]
+			},
+			// Oxidized Steel block (was 42:1)
+			{
+				"meta" : 4,
+				"label": "Oxidized Steel Block",
+				"textures" : [ "metal_block_0/metal_block_steeloxidized" ]
+			}
+		]
+	},
+	// Custom block for solid stone blocks
+	{
+		"blockName" : "stone_block_0",
+		"blockID" : 2001,
+		"blockType" : "solid",
+		"hardness" : 1.5,
+		"stepSound" : "stone",
+		"material" : "rock",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 1 } ],
+		"creativeTab" : "WesterosBlocks",
+		"lightValue" : 0.0,
+		"subBlocks" : [
+			// Bisque Stone block (was 1:1)
+			{
+				"meta" : 0,
+				"label": "Bisque Stone",
+				"textures" : [ "stone_block_0/stone_large_bisque" ]
+			},
+			// Dark Khaki Stone block (was 1:2)
+			{
+				"meta" : 1,
+				"label": "Dark Khaki Stone",
+				"textures" : [ "stone_block_0/stone_large_darkkhaki" ]
+			},
+			// Brown Stone block (was 1:3)
+			{
+				"meta" : 2,
+				"label": "Brown Stone",
+				"textures" : [ "stone_block_0/stone_large_brown" ]
+			},
+			// Beige Stone block (was 1:4)
+			{
+				"meta" : 3,
+				"label": "Beige Stone",
+				"textures" : [ "stone_block_0/stone_large_beige" ]
+			},
+			// Floral White Stone block (was 1:5)
+			{
+				"meta" : 4,
+				"label": "Floral White Stone",
+				"textures" : [ "stone_block_0/stone_large_floralwhite" ]
+			},
+			// Ghost White Stone block (was 1:6)
+			{
+				"meta" : 5,
+				"label": "Ghost White Stone",
+				"textures" : [ "stone_block_0/stone_large_ghostwhite" ]
+			},
+			
+			// Dim Grey Stone block (was 1:7)
+			{
+				"meta" : 6,
+				"label": "Dim Grey Stone",
+				"textures" : [ "stone_block_0/stone_large_dimgrey" ]
+			},
+			// Papayawhip Stone block (was 1:8)
+			{
+				"meta" : 7,
+				"label": "Papayawhip Stone",
+				"textures" : [ "stone_block_0/stone_large_papayawhip" ]
+			},
+			// Silver Stone block (was 1:9)
+			{
+				"meta" : 8,
+				"label": "Silver Stone",
+				"textures" : [ "stone_block_0/stone_small_silver" ]
+			},
+			// Burlywood Stone block (was 1:10)
+			{
+				"meta" : 9,
+				"label": "Burlywood Stone",
+				"textures" : [ "stone_block_0/stone_small_burlywood" ]
+			},
+			// Honeydew Stone block (was 1:11)
+			{
+				"meta" : 10,
+				"label": "Honeydew Stone",
+				"textures" : [ "stone_block_0/stone_small_honeydew" ]
+			},
+			// Peru Stone block (was 1:12)
+			{
+				"meta" : 11,
+				"label": "Peru Stone",
+				"textures" : [ "stone_block_0/stone_large_peru" ]
+			},
+			// Goldenrod Stone block (was 1:13)
+			{
+				"meta" : 12,
+				"label": "Goldenrod Stone",
+				"textures" : [ "stone_block_0/stone_large_goldenrod" ]
+			},
+			// Antique White Stone block (was 1:14)
+			{
+				"meta" : 13,
+				"label": "Antique White Stone",
+				"textures" : [ "stone_block_0/stone_small_antiquewhite" ]
+			}
+		]
+	},
+	// Custom block for iron block stairs
+	{
+		"blockName" : "metal_block_0_stair_0",
+		"blockID" : 2002,
+		"blockType" : "stair",
+		"modelBlockName" : "metal_block_0",
+		"modelBlockMeta" : 0,
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Iron Stairs"
+			}
+		]
+	},
+	// Custom block for oxidized iron block stairs
+	{
+		"blockName" : "metal_block_0_stair_1",
+		"blockID" : 2003,
+		"blockType" : "stair",
+		"modelBlockName" : "metal_block_0",
+		"modelBlockMeta" : 1,
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Oxidized Iron Stairs"
+			}
+		]
+	}
+]

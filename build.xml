@@ -50,6 +50,7 @@
 	
 	<target name="init.project.dependencies" depends="init.maven.tasks">
 		<artifact:dependencies filesetId="dependency.fileset">
+  	  		<dependency groupId="com.google.code.gson" artifactId="gson" version="2.2.4" type="jar" scope="compile" />
 		</artifact:dependencies>
 	</target>
 
@@ -178,7 +179,9 @@
 		<delete dir="${jar.dir}"/>
 		<mkdir dir="${jar.dir}"/>
 		<copy todir="${classes.dir}" file="${mcpsrc.dir}/minecraft/mcmod.info"/>
-		<jar destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.jar" basedir="${classes.dir}"/>
+		<jar destfile="${src.dir}/${ant.project.name}-${project.version2}-forge-${forge.baseversion}.jar" basedir="${classes.dir}">
+	        <zipgroupfileset dir="${mcp.dir}/lib" includes="gson-*.jar"/>
+ 		</jar>
 	</target>
 
 	<!-- Default target to run -->
