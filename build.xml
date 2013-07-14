@@ -73,6 +73,7 @@
 	<target name="clean">
 		<delete dir="${build.dir}" failonerror="false"/>
 		<delete dir="${download.dir}" failonerror="false"/>
+		<mkdir dir="${download.dir}"/>
 	</target>
 
 	<!-- Set full version -->
