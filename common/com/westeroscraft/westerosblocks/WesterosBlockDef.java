@@ -11,6 +11,7 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
@@ -424,5 +425,6 @@ public class WesterosBlockDef {
         typeTable.put("log", new WCLogBlock.Factory());
         typeTable.put("plant", new WCPlantBlock.Factory());
         typeTable.put("crop", new WCCropBlock.Factory());
+        typeTable.put("slab", new WCSlabBlock.Factory());
      }
 }

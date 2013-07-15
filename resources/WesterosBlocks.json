@@ -371,5 +371,50 @@
 				"textures" : [ "crop_block_0/cattail" ]
 			}
 		]
+	},
+	// Custom block for metal slab blocks
+	{
+		"blockName" : "medal_slab_block_0",
+		"blockID" : 2008,
+		"blockType" : "slab",
+		"hardness" : 5.0,
+		"stepSound" : "metal",
+		"material" : "iron",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 3 } ],
+		"creativeTab" : "WesterosBlocks",
+		"modelBlockName" : "metal_doubleslab_block_0", // Double slab block name
+		"subBlocks" : [
+			// Iron block
+			{
+				"meta" : 0,
+				"label": "Iron Slab",
+				"textures" : [ "metal_block_0/metal_block_iron" ]
+			},
+			// Oxidized Iron block
+			{
+				"meta" : 1,
+				"label": "Oxidized Iron Slab",
+				"textures" : [ "metal_block_0/metal_block_ironoxidized" ]
+			},
+			// Bronze block
+			{
+				"meta" : 2,
+				"label": "Bronze Slab",
+				"textures" : [ "metal_block_0/metal_block_bronze" ]
+			},
+			// Oxidized Iron block
+			{
+				"meta" : 3,
+				"label": "Oxidized Bronze Slab",
+				"textures" : [ "metal_block_0/metal_block_bronzeoxidized" ]
+			},
+			// Oxidized Steel block
+			{
+				"meta" : 4,
+				"label": "Oxidized Steel Slab",
+				"textures" : [ "metal_block_0/metal_block_steeloxidized" ]
+			}
+		]
 	}
 ]
