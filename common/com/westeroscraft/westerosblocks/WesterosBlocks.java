@@ -17,6 +17,9 @@ import net.minecraftforge.common.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockMycelium;
 import net.minecraft.block.material.Material;
+import net.minecraft.crash.CrashReport;
+import net.minecraft.crash.CrashReportCategory;
+import net.minecraft.util.ReportedException;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -82,6 +85,14 @@ public class WesterosBlocks
     
     public boolean good_init = false;
     
+    public static void crash(Exception x, String msg) {
+        CrashReport crashreport = CrashReport.makeCrashReport(x, msg);
+        throw new ReportedException(crashreport);
+    }
+    public static void crash(String msg) {
+        crash(new Exception(), msg);
+    }
+    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -91,7 +102,7 @@ public class WesterosBlocks
         // Read our block definition resource
         InputStream in = getClass().getResourceAsStream("/WesterosBlocks.json");
         if (in == null) {
-            log.severe("WesterosBlocks couldn't find its block definition resource");
+            crash("WesterosBlocks couldn't find its block definition resource");
             return;
         }
         InputStreamReader rdr = new InputStreamReader(in);
@@ -99,16 +110,17 @@ public class WesterosBlocks
         try {
             customBlockDefs = gson.fromJson(rdr, WesterosBlockDef[].class);
         } catch (JsonSyntaxException iox) {
-            log.severe("WesterosBlocks couldn't parse its block definition: " + iox.getMessage());
+            crash(iox, "WesterosBlocks couldn't parse its block definition");
             return;
         } catch (JsonIOException iox) {
-            log.severe("WesterosBlocks couldn't read its block definition: " + iox.getMessage());
+            crash(iox, "WesterosBlocks couldn't read its block definition");
             return;
         } finally {
             if (in != null) { try { in.close(); } catch (IOException iox) {}; in = null; }
         }
         log.info("Loaded " + customBlockDefs.length + " block definitions");
         if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {
+            crash("WesterosBlocks.json failed sanity check");
             return;
         }
         
@@ -131,7 +143,7 @@ public class WesterosBlocks
         }
         catch (Exception e)
         {
-            log.severe("WesterosBlocks couldn't load its configuration: " + e.getMessage());
+            crash(e, "WesterosBlocks couldn't load its configuration");
         }
         finally
         {
@@ -143,7 +155,7 @@ public class WesterosBlocks
     public void load(FMLInitializationEvent event)
     {
         if (!good_init) {
-            log.severe("preInit failed - aborting load()");
+            crash("preInit failed - aborting load()");
             return;
         }
         // Replacement blocks

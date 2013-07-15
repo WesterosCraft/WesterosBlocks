@@ -195,5 +195,181 @@
 				"textures" : [ "log_block_0/log_redwood_top", "log_block_0/log_redwood_side" ]
 			}
 		]
+	},
+	// Custom block for plants
+	{
+		"blockName" : "plant_block_0",
+		"blockID" : 2005,
+		"blockType" : "plant",
+		"stepSound" : "grass",
+		"material" : "plants",
+		"creativeTab" : "WesterosDeco",
+		"boundingBox" : { "xMin" : 0.3, "xMax" : 0.7, "yMin" : 0.0, "yMax" : 0.6, "zMin" : 0.3, "zMax" : 0.7 },
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Flowers 1",
+				"textures" : [ "plant_block_0/12" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Flowers 2",
+				"textures" : [ "plant_block_0/3" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Flowers 3",
+				"textures" : [ "plant_block_0/8" ]
+			},
+			{
+				"meta" : 3,
+				"label": "Flowers 4",
+				"textures" : [ "plant_block_0/9" ]
+			},
+			{
+				"meta" : 4,
+				"label": "Flowers 5",
+				"textures" : [ "plant_block_0/A6" ]
+			},
+			{
+				"meta" : 5,
+				"label": "Flowers 6",
+				"textures" : [ "plant_block_0/B2" ]
+			},
+			{
+				"meta" : 6,
+				"label": "Flowers 7",
+				"textures" : [ "plant_block_0/B3" ]
+			},
+			{
+				"meta" : 7,
+				"label": "Flowers 8",
+				"textures" : [ "plant_block_0/B4" ]
+			},
+			{
+				"meta" : 8,
+				"label": "Flowers 9",
+				"textures" : [ "plant_block_0/B5" ]
+			},
+			{
+				"meta" : 9,
+				"label": "Flowers 10",
+				"textures" : [ "plant_block_0/B6" ]
+			},
+			{
+				"meta" : 10,
+				"label": "Flowers 11",
+				"textures" : [ "plant_block_0/C2" ]
+			},
+			{
+				"meta" : 11,
+				"label": "Flowers 12",
+				"textures" : [ "plant_block_0/C3" ]
+			},
+			{
+				"meta" : 12,
+				"label": "Flowers 13",
+				"textures" : [ "plant_block_0/C4" ]
+			},
+			{
+				"meta" : 13,
+				"label": "Flowers 14",
+				"textures" : [ "plant_block_0/C6" ]
+			},
+			{
+				"meta" : 14,
+				"label": "Flowers 15",
+				"textures" : [ "plant_block_0/D5" ]
+			},
+			{
+				"meta" : 15,
+				"label": "Flowers 16",
+				"textures" : [ "plant_block_0/E3" ]
+			}
+		]
+	},
+	// More custom plants
+	{
+		"blockName" : "plant_block_1",
+		"blockID" : 2006,
+		"blockType" : "plant",
+		"stepSound" : "grass",
+		"material" : "plants",
+		"creativeTab" : "WesterosDeco",
+		"boundingBox" : { "xMin" : 0.3, "xMax" : 0.7, "yMin" : 0.0, "yMax" : 0.6, "zMin" : 0.3, "zMax" : 0.7 },
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Flowers 17",
+				"textures" : [ "plant_block_1/E4" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Flowers 18",
+				"textures" : [ "plant_block_1/E6" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Flowers 19",
+				"textures" : [ "plant_block_1/F2" ]
+			},
+			{
+				"meta" : 3,
+				"label": "Flowers 20",
+				"textures" : [ "plant_block_1/F3" ]
+			},
+			{
+				"meta" : 4,
+				"label": "Flowers 21",
+				"textures" : [ "plant_block_1/H2" ]
+			},
+			{
+				"meta" : 5,
+				"label": "Flowers 22",
+				"textures" : [ "plant_block_1/H3" ]
+			},
+			{
+				"meta" : 6,
+				"label": "Flowers 23",
+				"textures" : [ "plant_block_1/H4" ]
+			},
+			{
+				"meta" : 7,
+				"label": "Flowers 24",
+				"textures" : [ "plant_block_1/H7" ]
+			},
+			{
+				"meta" : 8,
+				"label": "Flowers 25",
+				"textures" : [ "plant_block_1/I4" ]
+			},
+			{
+				"meta" : 9,
+				"label": "Flowers 26",
+				"textures" : [ "plant_block_1/I5" ]
+			},
+			{
+				"meta" : 10,
+				"label": "Flowers 27",
+				"textures" : [ "plant_block_1/I6" ]
+			}
+		]
+	},
+	// Custom decorative crops
+	{
+		"blockName" : "crop_block_0",
+		"blockID" : 2007,
+		"blockType" : "crop",
+		"stepSound" : "grass",
+		"material" : "plants",
+		"creativeTab" : "WesterosDeco",
+		"boundingBox" : { "xMin" : 0.125, "xMax" : 0.875, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.125, "zMax" : 0.875 },
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Cattails",
+				"textures" : [ "crop_block_0/cattail" ]
+			}
+		]
 	}
 ]

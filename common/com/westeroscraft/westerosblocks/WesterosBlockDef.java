@@ -8,7 +8,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
+import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
@@ -25,6 +27,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import net.minecraft.world.World;
+import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.MinecraftForge;
 
 //
@@ -51,10 +55,19 @@ public class WesterosBlockDef {
     public List<Subblock> subBlocks = null; // Subblocks
     public String modelBlockName = null;    // Name of solid block modelled from (used by 'stairs' type) - can be number of block ID
     public int modelBlockMeta = DEF_INT;    // Metadata of model block to use 
+    public BoundingBox boundingBox = null;  // Bounding box
     
     public static class HarvestLevel {
         public String tool;
         public int level;
+    }
+    public static class BoundingBox {
+        public float xMin = 0.0F;
+        public float xMax = 1.0F;
+        public float yMin = 0.0F;
+        public float yMax = 1.0F;
+        public float zMin = 0.0F;
+        public float zMax = 1.0F;
     }
     
     public static class Subblock {
@@ -65,6 +78,8 @@ public class WesterosBlockDef {
         public int fireSpreadSpeed = DEF_INT;   // Fire spread speed (-1=use block level)
         public int flamability = DEF_INT;       // Flamability (-1=use block level)
         public List<String> textures = null;    // List of textures
+        public BoundingBox boundingBox = null;  // Bounding box
+        public String type = null;              // Block type specific type string (e.g. plant type)
     }
 
     @SideOnly(Side.CLIENT)
@@ -134,6 +149,9 @@ public class WesterosBlockDef {
         }
         if (creativeTab != null) {
             blk.setCreativeTab(getCreativeTab());
+        }
+        if (boundingBox != null) {
+            blk.setBlockBounds(boundingBox.xMin, boundingBox.yMin, boundingBox.zMin, boundingBox.xMax, boundingBox.yMax, boundingBox.zMax);
         }
     }
     // Do standard initialize actions
@@ -237,7 +255,27 @@ public class WesterosBlockDef {
     public static void addCreativeTab(String name, CreativeTabs tab) {
         tabTable.put(name,  tab);
     }
-    
+
+    public EnumPlantType getPlantType(int meta) {
+        EnumPlantType pt = EnumPlantType.Plains;
+        if (subBlocks != null) {
+            for (Subblock sb : subBlocks) {
+                if (sb.meta == meta) {
+                    if (sb.type != null) {
+                        pt = EnumPlantType.valueOf(sb.type);
+                        if (pt == null) {
+                            WesterosBlocks.log.severe(String.format("Invalid plant type '%s' at meta %d of block '%s'", sb.type, meta, this.blockName));
+                            sb.type = EnumPlantType.Plains.name();
+                            pt = EnumPlantType.Plains;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+        return pt;
+    }
+
     private static final int[] all_meta = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
     
     // Used by factory classes to confirm that configuration has acceptable meta values
@@ -384,5 +422,7 @@ public class WesterosBlockDef {
         typeTable.put("solid", new WCSolidBlock.Factory());
         typeTable.put("stair", new WCStairBlock.Factory());
         typeTable.put("log", new WCLogBlock.Factory());
+        typeTable.put("plant", new WCPlantBlock.Factory());
+        typeTable.put("crop", new WCCropBlock.Factory());
      }
 }
