@@ -9,23 +9,26 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
-import cpw.mods.fml.common.FMLLog;
-
 public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(int index, WesterosBlockDef def) {
             if ((def.modelBlockName == null) || (def.modelBlockMeta < 0)) {
-                FMLLog.severe("Type 'stair' requires modelBlockName and modelBlockMeta settings");
+                WesterosBlocks.log.severe("Type 'stair' requires modelBlockName and modelBlockMeta settings");
                 return null;
             }
             // Try to find model block
             Block blk = WesterosBlocks.findBlockByName(def.modelBlockName);
             if (blk == null) {
-                FMLLog.severe("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName);
+                WesterosBlocks.log.severe(String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
                 return null;
             }
+            // Validate meta : we require meta 0, and only allow it
+            if (!def.validateMetaValues(new int[] { 0 }, new int[] { 0 })) {
+                return null;
+            }
+
             return new WCStairBlock(index, def, blk);
         }
     }

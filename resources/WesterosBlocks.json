@@ -171,5 +171,29 @@
 				"label": "Oxidized Iron Stairs"
 			}
 		]
+	},
+	// Custom block for logs
+	{
+		"blockName" : "log_block_0",
+		"blockID" : 2004,
+		"blockType" : "log",
+		"stepSound" : "wood",
+		"material" : "wood",
+		"harvestLevel" : [ { "tool" : "axe", "level" : 1 } ],
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			// Acacia Log
+			{
+				"meta" : 0,
+				"label": "Acacia Log",
+				"textures" : [ "log_block_0/log_acacia_top", "log_block_0/log_acacia_side" ]
+			},
+			// Redwood Log
+			{
+				"meta" : 1,
+				"label": "Redwood Log",
+				"textures" : [ "log_block_0/log_redwood_top", "log_block_0/log_redwood_side" ]
+			}
+		]
 	}
 ]

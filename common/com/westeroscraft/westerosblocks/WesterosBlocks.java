@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks;
 
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -23,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
@@ -36,7 +36,9 @@ import com.westeroscraft.westerosblocks.blocks.MultiBlockItem;
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class WesterosBlocks
-{
+{    
+    public static Logger log = Logger.getLogger("WesterosBlocks");
+    
     // The instance of your mod that Forge uses.
     @Instance("WesterosBlocks")
     public static WesterosBlocks instance;
@@ -62,18 +64,23 @@ public class WesterosBlocks
     public static Block findBlockByName(String blkname) {
         for (int i = 0; i < customBlockDefs.length; i++) {
             if (customBlockDefs[i].blockName.equals(blkname)) {
+                System.out.println(blkname + " matched on index " + i + ": return " + customBlocks[i]);
                 return customBlocks[i];
             }
         }
         try {
             int id = Integer.parseInt(blkname);
             if ((id > 0) && (id < Block.blocksList.length)) {
+                System.out.println(blkname + " matched on ID " + id);
                 return Block.blocksList[id];
             }
         } catch (NumberFormatException nfx) {
         }
+        System.out.println(blkname + " missed");
         return null;
     }
+    
+    public boolean good_init = false;
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -84,7 +91,7 @@ public class WesterosBlocks
         // Read our block definition resource
         InputStream in = getClass().getResourceAsStream("/WesterosBlocks.json");
         if (in == null) {
-            FMLLog.severe("WesterosBlocks couldn't find its block definition resource");
+            log.severe("WesterosBlocks couldn't find its block definition resource");
             return;
         }
         InputStreamReader rdr = new InputStreamReader(in);
@@ -92,15 +99,18 @@ public class WesterosBlocks
         try {
             customBlockDefs = gson.fromJson(rdr, WesterosBlockDef[].class);
         } catch (JsonSyntaxException iox) {
-            FMLLog.log(Level.SEVERE, iox, "WesterosBlocks couldn't parse its block definition", new Object[0]);
+            log.severe("WesterosBlocks couldn't parse its block definition: " + iox.getMessage());
             return;
         } catch (JsonIOException iox) {
-            FMLLog.log(Level.SEVERE, iox, "WesterosBlocks couldn't read its block definition", new Object[0]);
+            log.severe("WesterosBlocks couldn't read its block definition: " + iox.getMessage());
             return;
         } finally {
             if (in != null) { try { in.close(); } catch (IOException iox) {}; in = null; }
         }
-        FMLLog.info("Loaded " + customBlockDefs.length + " block definitions");
+        log.info("Loaded " + customBlockDefs.length + " block definitions");
+        if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {
+            return;
+        }
         
         // Load configuration file - use suggested (config/WesterosBlocks.cfg)
         Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
@@ -116,10 +126,12 @@ public class WesterosBlocks
             doReplaceMycelium = cfg.get("replacements", "mycelium", true).getBoolean(true);
             doReplaceIronFence = cfg.get("replacements", "ironfence", true).getBoolean(true);
             doReplaceWoodFence = cfg.get("replacements", "woodfence", true).getBoolean(true);
+            
+            good_init = true;
         }
         catch (Exception e)
         {
-            FMLLog.log(Level.SEVERE, e, "WesterosBlocks couldn't load its configuration", new Object[0]);
+            log.severe("WesterosBlocks couldn't load its configuration: " + e.getMessage());
         }
         finally
         {
@@ -130,6 +142,10 @@ public class WesterosBlocks
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
+        if (!good_init) {
+            log.severe("preInit failed - aborting load()");
+            return;
+        }
         // Replacement blocks
         if (doReplaceMycelium) {
             Block.blocksList[Block.mycelium.blockID] = null;

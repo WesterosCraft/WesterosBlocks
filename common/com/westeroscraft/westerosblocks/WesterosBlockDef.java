@@ -1,15 +1,17 @@
 package com.westeroscraft.westerosblocks;
 
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -29,23 +31,26 @@ import net.minecraftforge.common.MinecraftForge;
 // Template for block configuration data (populated using GSON)
 //
 public class WesterosBlockDef {
+    private static final float DEF_FLOAT = -999.0F;
+    private static final int DEF_INT = -999;
+    
     public String blockName;                // Locally unique block name
-    public int blockID;                     // Block ID number (default)
+    public int blockID = DEF_INT;           // Block ID number (default)
     public String blockType = "solid";      // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
-    public float hardness = 1.5F;           // Block hardness
-    public String stepSound = "stone";      // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
-    public String material = "rock";        // Generic material (ai, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc)
-    public float resistance = 10.0F;        // Explosion resistance
-    public int lightOpacity = 255;          // Light opacity
+    public float hardness = DEF_FLOAT;      // Block hardness
+    public String stepSound = null;         // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
+    public String material = null;          // Generic material (ai, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc)
+    public float resistance = DEF_FLOAT;    // Explosion resistance
+    public int lightOpacity = DEF_INT;      // Light opacity
     public List<HarvestLevel> harvestLevel = null;  // List of harvest levels
-    public int harvestItemID = 0;           // Harvest item ID
-    public int fireSpreadSpeed = 0;         // Fire spread speed
-    public int flamability = 0;             // Flamability
+    public int harvestItemID = DEF_INT;     // Harvest item ID
+    public int fireSpreadSpeed = DEF_INT;   // Fire spread speed
+    public int flamability = DEF_INT;       // Flamability
     public String creativeTab = null;       // Creative tab for items
-    public float lightValue = 0.0F;         // Emitted light level (0.0-1.0)
+    public float lightValue = DEF_FLOAT;    // Emitted light level (0.0-1.0)
     public List<Subblock> subBlocks = null; // Subblocks
     public String modelBlockName = null;    // Name of solid block modelled from (used by 'stairs' type) - can be number of block ID
-    public int modelBlockMeta = -1;         // Metadata of model block to use 
+    public int modelBlockMeta = DEF_INT;    // Metadata of model block to use 
     
     public static class HarvestLevel {
         public String tool;
@@ -55,10 +60,10 @@ public class WesterosBlockDef {
     public static class Subblock {
         public int meta;        // Meta value for subblock (base value, if more than one associated with block type)
         public String label;    // Label for item associated with block
-        public List<HarvestLevel> harvestLevel; // List of harvest levels
-        public int harvestItemID = -1;           // Harvest item ID (-1=use block level)
-        public int fireSpreadSpeed = -1;         // Fire spread speed (-1=use block level)
-        public int flamability = -1;             // Flamability (-1=use block level)
+        public List<HarvestLevel> harvestLevel = null; // List of harvest levels
+        public int harvestItemID = DEF_INT;     // Harvest item ID (-1=use block level)
+        public int fireSpreadSpeed = DEF_INT;   // Fire spread speed (-1=use block level)
+        public int flamability = DEF_INT;       // Flamability (-1=use block level)
         public List<String> textures = null;    // List of textures
     }
 
@@ -73,7 +78,7 @@ public class WesterosBlockDef {
     public Block createBlock(int idx) {
         WesterosBlockFactory bf = typeTable.get(blockType);
         if (bf == null) {
-            FMLLog.severe("Invalid blockType '%s' in block '%s'", blockType, blockName);
+            WesterosBlocks.log.severe(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));
             return null;
         }
         return bf.buildBlockClass(idx, this);
@@ -82,7 +87,7 @@ public class WesterosBlockDef {
     public Material getMaterial() {
         Material m = materialTable.get(material);
         if (m == null) {
-            FMLLog.warning("Invalid material '%s' in block '%s'", material, blockName);
+            WesterosBlocks.log.warning(String.format("Invalid material '%s' in block '%s'", material, blockName));
             return Material.rock;
         }
         return m;
@@ -91,7 +96,7 @@ public class WesterosBlockDef {
     public StepSound getStepSound() {
         StepSound ss = stepSoundTable.get(stepSound);
         if (ss == null) {
-            FMLLog.warning("Invalid material '%s' in block '%s'", stepSound, blockName);
+            WesterosBlocks.log.warning(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
             return Block.soundStoneFootstep;
         }
         return ss;
@@ -100,7 +105,7 @@ public class WesterosBlockDef {
     public CreativeTabs getCreativeTab() {
         CreativeTabs ct = tabTable.get(creativeTab);
         if (ct == null) {
-            FMLLog.warning("Invalid tab name '%s' in block '%s'", creativeTab, blockName);
+            WesterosBlocks.log.warning(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
             ct = WesterosBlocksCreativeTab.tabWesterosBlocks;
         }
         return ct;
@@ -108,13 +113,25 @@ public class WesterosBlockDef {
     
     // Do standard constructor settings for given block class
     public void doStandardContructorSettings(Block blk) {
-        blk.setHardness(this.hardness);
-        blk.setLightOpacity(this.lightOpacity);
-        blk.setResistance(this.resistance);
-        blk.setLightValue(this.lightValue);
+        if (this.hardness != DEF_FLOAT) {
+            blk.setHardness(this.hardness);
+        }
+        if (this.lightOpacity != DEF_INT) {
+            blk.setLightOpacity(this.lightOpacity);
+        }
+        if (this.resistance != DEF_FLOAT) {
+            blk.setResistance(this.resistance);
+        }
+        if (this.lightValue != DEF_FLOAT) {
+            blk.setLightValue(this.lightValue);
+        }
         blk.setUnlocalizedName(this.blockName);
-        blk.setStepSound(this.getStepSound());
-        Block.setBurnProperties(this.blockID, this.fireSpreadSpeed, this.flamability);
+        if (this.stepSound != null) {
+            blk.setStepSound(this.getStepSound());
+        }
+        if ((this.fireSpreadSpeed != DEF_INT) || (this.flamability != DEF_INT)) {
+            Block.setBurnProperties(this.blockID, this.fireSpreadSpeed, this.flamability);
+        }
         if (creativeTab != null) {
             blk.setCreativeTab(getCreativeTab());
         }
@@ -165,7 +182,7 @@ public class WesterosBlockDef {
             HashMap<String, Icon> map = new HashMap<String, Icon>();
             for (Subblock sb : subBlocks) {
                 if (sb.textures == null) {
-                    FMLLog.warning("No textures for subblock '%d' of block '%s'", sb.meta, this.blockName);
+                    WesterosBlocks.log.warning(String.format("No textures for subblock '%d' of block '%s'", sb.meta, this.blockName));
                     sb.textures = Collections.singletonList("INVALID_" + blockName + "_" + sb.meta);
                 }
                 icons_by_meta[sb.meta] = new Icon[sb.textures.size()];
@@ -219,6 +236,90 @@ public class WesterosBlockDef {
 
     public static void addCreativeTab(String name, CreativeTabs tab) {
         tabTable.put(name,  tab);
+    }
+    
+    private static final int[] all_meta = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+    
+    // Used by factory classes to confirm that configuration has acceptable meta values
+    public boolean validateMetaValues(int[] valid_meta, int[] req_meta) {
+        if (valid_meta == null) {
+            valid_meta = all_meta;
+        }
+        if (req_meta == null) {
+            req_meta = new int[0];
+        }
+        if (subBlocks != null) {
+            for (Subblock sb : subBlocks) {
+                if (sb == null) continue;
+                int m = sb.meta;
+                boolean match = false;
+                for (int vmeta : valid_meta) {
+                    if (m == vmeta) {
+                        match = true;
+                        break;
+                    }
+                }
+                if (!match) {
+                    WesterosBlocks.log.severe(String.format("meta value %d for block '%s' is not valid for block type '%s'", sb.meta, this.blockName, this.blockType));
+                    return false;
+                }
+            }
+        }
+        // Check for required values
+        for (int req : req_meta) {
+            boolean match = false;
+            if (subBlocks != null) {
+                for (Subblock sb : subBlocks) {
+                    if (sb == null) continue;
+                    if (sb.meta == req) {
+                        match = true;
+                        break;
+                    }
+                }
+            }
+            if (!match) {
+                WesterosBlocks.log.severe(String.format("Block '%s' is missing required meta value %d for block type '%s'", this.blockName, req, this.blockType));
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public static boolean sanityCheck(WesterosBlockDef[] defs) {
+        HashSet<String> names = new HashSet<String>();
+        BitSet ids = new BitSet();
+        BitSet metas = new BitSet();
+        // Make sure block IDs and names are unique
+        for (WesterosBlockDef def : defs) {
+            if (def == null) continue;
+            if (def.blockName == null) {
+                WesterosBlocks.log.severe("Block definition is missing blockName");
+                return false;
+            }
+            if (names.add(def.blockName) == false) {    // If alreay defined
+                WesterosBlocks.log.severe(String.format("Block '%s' - blockName duplicated", def.blockName));
+                return false;
+            }
+            if (ids.get(def.blockID)) {    // If alreay defined
+                WesterosBlocks.log.severe(String.format("Block '%s' - blockID duplicated", def.blockName));
+                return false;
+            }
+            ids.set(def.blockID);
+            // Check for duplicate meta
+            metas.clear();
+            if (def.subBlocks != null) {
+                for (Subblock sb : def.subBlocks) {
+                    if (sb == null) continue;
+                    if (metas.get(sb.meta)) {
+                        WesterosBlocks.log.severe(String.format("Block '%s' - duplicate meta value %d", def.blockName, sb.meta));
+                        return false;
+                    }
+                    metas.set(sb.meta);
+                }
+            }
+        }
+        WesterosBlocks.log.info("WesterosBlocks.json passed sanity check");
+        return true;
     }
     
     public static void initialize() {
@@ -282,5 +383,6 @@ public class WesterosBlockDef {
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
         typeTable.put("stair", new WCStairBlock.Factory());
+        typeTable.put("log", new WCLogBlock.Factory());
      }
 }
