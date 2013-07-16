@@ -15,6 +15,7 @@ import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -29,7 +30,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
-import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -441,5 +441,6 @@ public class WesterosBlockDef {
         typeTable.put("crop", new WCCropBlock.Factory());
         typeTable.put("slab", new WCSlabBlock.Factory());
         typeTable.put("fence", new WCFenceBlock.Factory());
+        typeTable.put("wall", new WCWallBlock.Factory());
      }
 }

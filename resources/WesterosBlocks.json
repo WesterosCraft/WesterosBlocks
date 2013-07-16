@@ -151,6 +151,7 @@
 		"blockType" : "stair",
 		"modelBlockName" : "metal_block_0",
 		"modelBlockMeta" : 0,
+		"creativeTab" : "WesterosBlocks",
 		"subBlocks" : [
 			{
 				"meta" : 0,
@@ -165,6 +166,7 @@
 		"blockType" : "stair",
 		"modelBlockName" : "metal_block_0",
 		"modelBlockMeta" : 1,
+		"creativeTab" : "WesterosBlocks",
 		"subBlocks" : [
 			{
 				"meta" : 0,
@@ -525,5 +527,85 @@
 				"textures" : [ "fence_block_0/planks_jungle_grapevines" ]
 			}
 	    ]
+	},
+	// Custom block for stone wall blocks
+	{
+		"blockName" : "stone_wall_block_0",
+		"blockID" : 2010,
+		"blockType" : "wall",
+		"hardness" : 1.5,
+		"stepSound" : "stone",
+		"material" : "rock",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 1 } ],
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			// Dark stone brick wall block (was 139:12)
+			{
+				"meta" : 0,
+				"label": "Dark Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_large_dark" ]
+			},
+			// Light gray stone brick wall block (was 139:10)
+			{
+				"meta" : 1,
+				"label": "Light Grey Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_large_lightgrey" ]
+			},
+			// Red clay stone brick wall block (was 139:6)
+			{
+				"meta" : 2,
+				"label": "Red Clay Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_clay_normal_red" ]
+			},
+			// Sandstone brick wall block (was 139:4)
+			{
+				"meta" : 3,
+				"label": "Sandstone Brick Wall",
+				"textures" : [ "stone_wall_block_0/sandstone_light_top", "stone_wall_block_0/sandstone_light_top", "stone_wall_block_0/sandstone_light_side" ]
+			},
+			// Red Sandstone brick wall block (was 139:3)
+			{
+				"meta" : 4,
+				"label": "Red Sandstone Brick Wall",
+				"textures" : [ "stone_wall_block_0/sandstone_red_top", "stone_wall_block_0/sandstone_red_top", "stone_wall_block_0/sandstone_red_side" ]
+			},
+			// Bluegrey brick wall block (was 139:5)
+			{
+				"meta" : 5,
+				"label": "Blue-grey Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_normal_bluegrey" ]
+			},
+			// Dark grey stone brick wall block (was 139:14)
+			{
+				"meta" : 6,
+				"label": "Dark Grey Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_normal_darkgrey" ]
+			},
+			// Grey stone brick wall block (was 139:11)
+			{
+				"meta" : 7,
+				"label": "Grey Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_normal_grey" ]
+			},
+			// Red stone brick wall block (was 139:11)
+			{
+				"meta" : 8,
+				"label": "Red Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_normal_red" ]
+			},
+			// Red clay stone brick wall block (was 139:15)
+			{
+				"meta" : 9,
+				"label": "Red Clay Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_clay_verysmall_red" ]
+			},
+			// Light gray stone brick wall block (was 139:13)
+			{
+				"meta" : 10,
+				"label": "Light Grey Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_verysmall_lightgrey" ]
+			}
+		]
 	}
 ]
