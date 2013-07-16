@@ -18,13 +18,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockMycelium;
 import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
-import net.minecraft.crash.CrashReportCategory;
 import net.minecraft.util.ReportedException;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.google.gson.Gson;
@@ -32,9 +30,7 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.blocks.BlockLightAsh;
 import com.westeroscraft.westerosblocks.blocks.BlockWCIronFence;
-import com.westeroscraft.westerosblocks.blocks.BlockWCWoodFence;
 import com.westeroscraft.westerosblocks.blocks.ItemBlockWCIronFence;
-import com.westeroscraft.westerosblocks.blocks.MultiBlockItem;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -53,14 +49,12 @@ public class WesterosBlocks
     // Configuration variables (mostly block ids)
     public static boolean doReplaceMycelium;
     public static boolean doReplaceIronFence;
-    public static boolean doReplaceWoodFence;
     
     // Block classes
     public static Block customBlocks[];
     // Replacement block classes
     public static BlockMycelium blockMycelium;
     public static BlockWCIronFence blockIronFence;
-    public static BlockWCWoodFence blockWoodFence;
     
     public static WesterosBlockDef[] customBlockDefs;
     
@@ -137,7 +131,6 @@ public class WesterosBlocks
             // Replacement block flags
             doReplaceMycelium = cfg.get("replacements", "mycelium", true).getBoolean(true);
             doReplaceIronFence = cfg.get("replacements", "ironfence", true).getBoolean(true);
-            doReplaceWoodFence = cfg.get("replacements", "woodfence", true).getBoolean(true);
             
             good_init = true;
         }
@@ -167,10 +160,6 @@ public class WesterosBlocks
             Block.blocksList[Block.fenceIron.blockID] = null;
             blockIronFence = (BlockWCIronFence) (new BlockWCIronFence(Block.fenceIron.blockID, "iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron");
         }
-        if (doReplaceWoodFence) {
-            Block.blocksList[Block.fence.blockID] = null;
-            blockWoodFence = new BlockWCWoodFence(85);
-        }
         // Construct custom block definitions
         customBlocks = new Block[customBlockDefs.length];
         for (int i = 0; i < customBlockDefs.length; i++) {
@@ -192,18 +181,12 @@ public class WesterosBlocks
         if (doReplaceIronFence) {
             GameRegistry.registerBlock(blockIronFence, ItemBlockWCIronFence.class, "fenceIron");
         }
-        if (doReplaceWoodFence) {
-            GameRegistry.registerBlock(blockWoodFence, MultiBlockItem.class, "fence");
-        }
         // Register replacement items
         if (doReplaceMycelium) {
             LanguageRegistry.addName(blockMycelium, "Light Ash");
         }
         if (doReplaceIronFence) {
             blockIronFence.registerNames();
-        }
-        if (doReplaceWoodFence) {
-            blockWoodFence.registerNames();
         }
         // Register custom block definitions
         for (int i = 0; i < customBlockDefs.length; i++) {

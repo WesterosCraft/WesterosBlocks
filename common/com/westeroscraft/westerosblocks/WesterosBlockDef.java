@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
@@ -243,6 +244,19 @@ public class WesterosBlockDef {
             }
         }
     }
+    /*
+     * Get default texture (first one)
+     */
+    public String getFirstTexture() {
+        if (subBlocks != null) {
+            for (Subblock sb : subBlocks) {
+                if ((sb.textures != null) && (sb.textures.size() > 0)) {
+                    return sb.textures.get(0);
+                }
+            }
+        }
+        return "INVALID_" + this.blockName;
+    }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public void getStandardCreativeItems(Block blk, ArrayList itemList) {
@@ -426,5 +440,6 @@ public class WesterosBlockDef {
         typeTable.put("plant", new WCPlantBlock.Factory());
         typeTable.put("crop", new WCCropBlock.Factory());
         typeTable.put("slab", new WCSlabBlock.Factory());
+        typeTable.put("fence", new WCFenceBlock.Factory());
      }
 }

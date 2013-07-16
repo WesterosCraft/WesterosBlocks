@@ -416,5 +416,114 @@
 				"textures" : [ "metal_block_0/metal_block_steeloxidized" ]
 			}
 		]
+	},
+	// Custom block for wooden fence blocks
+	{
+		"blockName" : "fence_block_0",
+		"blockID" : 2009,
+		"blockType" : "fence",
+		"hardness" : 2.0,
+		"stepSound" : "wood",
+		"material" : "wood",
+		"resistance" : 5.0,
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Oak fence (was 85:0)
+			{
+				"meta" : 0,
+				"label": "Oak Fence",
+				"textures" : [ "fence_block_0/planks_oak" ]
+			},
+			// Spruce fence (was 85:1)
+			{
+				"meta" : 1,
+				"label": "Spruce Fence",
+				"textures" : [ "fence_block_0/planks_spruce" ]
+			},
+			// Birch fence (was 85:2)
+			{
+				"meta" : 2,
+				"label": "Birch Fence",
+				"textures" : [ "fence_block_0/planks_birch" ]
+			},
+			// Jungle fence (was 85:3)
+			{
+				"meta" : 3,
+				"label": "Jungle Fence",
+				"textures" : [ "fence_block_0/planks_jungle" ]
+			},
+			// Oak bark fence (was 85:4)
+			{
+				"meta" : 4,
+				"label": "Oak Bark Fence",
+				"textures" : [ "fence_block_0/bark_oak" ]
+			},
+			// Spruce bark fence (was 85:5)
+			{
+				"meta" : 5,
+				"label": "Spruce Bark Fence",
+				"textures" : [ "fence_block_0/bark_spruce" ]
+			},
+			// Birch bark fence (was 85:6)
+			{
+				"meta" : 6,
+				"label": "Birch Bark Fence",
+				"textures" : [ "fence_block_0/bark_birch" ]
+			},
+			// Jungle bark fence (was 85:7)
+			{
+				"meta" : 7,
+				"label": "Jungle Bark Fence",
+				"textures" : [ "fence_block_0/bark_jungle" ]
+			},
+			// Oak fence with vines fence (was 85:8)
+			{
+				"meta" : 8,
+				"label": "Oak Fence with Vines",
+				"textures" : [ "fence_block_0/planks_oak_vines" ]
+			},
+			// Spruce fence with vines fence (was 85:9)
+			{
+				"meta" : 9,
+				"label": "Spruce Fence with Vines",
+				"textures" : [ "fence_block_0/planks_spruce_vines" ]
+			},
+			// Birch fence with vines fence (was 85:10)
+			{
+				"meta" : 10,
+				"label": "Birch Fence with Vines",
+				"textures" : [ "fence_block_0/planks_birch_vines" ]
+			},
+			// Jungle fence with vines fence (was 85:11)
+			{
+				"meta" : 11,
+				"label": "Jungle Fence with Vines",
+				"textures" : [ "fence_block_0/planks_jungle_vines" ]
+			},
+			// Oak fence with grapevines fence (was 85:12)
+			{
+				"meta" : 12,
+				"label": "Oak Fence with Grapes",
+				"textures" : [ "fence_block_0/planks_oak_grapevines" ]
+			},
+			// Spruce fence with grapevines fence (was 85:13)
+			{
+				"meta" : 13,
+				"label": "Spruce Fence with Grapes",
+				"textures" : [ "fence_block_0/planks_spruce_grapevines" ]
+			},
+			// Birch fence with grapevines fence (was 85:14)
+			{
+				"meta" : 14,
+				"label": "Birch Fence with Grapes",
+				"textures" : [ "fence_block_0/planks_birch_grapevines" ]
+			},
+			// Jungle fence with grapevines fence (was 85:15)
+			{
+				"meta" : 15,
+				"label": "Jungle Fence with Grapes",
+				"textures" : [ "fence_block_0/planks_jungle_grapevines" ]
+			}
+	    ]
 	}
 ]
