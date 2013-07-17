@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -31,6 +32,7 @@ import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.blocks.BlockLightAsh;
 import com.westeroscraft.westerosblocks.blocks.BlockWCIronFence;
 import com.westeroscraft.westerosblocks.blocks.ItemBlockWCIronFence;
+import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -55,6 +57,8 @@ public class WesterosBlocks
     // Replacement block classes
     public static BlockMycelium blockMycelium;
     public static BlockWCIronFence blockIronFence;
+    // Custom renders
+    public static int fenceRenderID;
     
     public static WesterosBlockDef[] customBlockDefs;
     
@@ -151,6 +155,10 @@ public class WesterosBlocks
             crash("preInit failed - aborting load()");
             return;
         }
+        // Register renderer
+        fenceRenderID = RenderingRegistry.getNextAvailableRenderId();
+        RenderingRegistry.registerBlockHandler(new WCFenceRenderer());
+        
         // Replacement blocks
         if (doReplaceMycelium) {
             Block.blocksList[Block.mycelium.blockID] = null;

@@ -12,6 +12,7 @@ import net.minecraft.util.Icon;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -76,4 +77,9 @@ public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle {
     public int damageDropped(int meta) {
         return meta;
     }
+    @Override
+    public int getRenderType() {
+        return WesterosBlocks.fenceRenderID;    // Use custom to make inventory render correctly
+    }
+
 }
