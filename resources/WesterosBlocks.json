@@ -607,5 +607,37 @@
 				"textures" : [ "stone_wall_block_0/brick_stone_verysmall_lightgrey" ]
 			}
 		]
+	},
+	// Custom block for iron fence blocks
+	{
+		"blockName" : "bars_iron_block_0",
+		"blockID" : 2011,
+		"blockType" : "pane",
+		"hardness" : 5.0,
+		"stepSound" : "metal",
+		"material" : "iron",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 3 } ],
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Iron Crossbar (was 101:1)
+			{
+				"meta" : 0,
+				"label": "Iron Crossbar",
+				"textures" : [ "bars_iron_block_0/bars_iron_crossbars", "bars_iron_block_0/bars_iron_crossbars" ]
+			},
+			// Oxidized Iron bars (was 101:2)
+			{
+				"meta" : 1,
+				"label": "Oxidized Iron Bars",
+				"textures" : [ "bars_iron_block_0/bars_iron_oxidized", "bars_iron_block_0/bars_iron_oxidized" ]
+			},
+			// Oxidized Iron crossbar (was 101:3)
+			{
+				"meta" : 2,
+				"label": "Oxidized Iron Crossbar",
+				"textures" : [ "bars_iron_block_0/bars_iron_oxidized_crossbars", "bars_iron_block_0/bars_iron_oxidized_crossbars" ]
+			}
+		]
 	}
 ]

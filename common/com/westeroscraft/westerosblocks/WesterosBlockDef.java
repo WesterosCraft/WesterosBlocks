@@ -11,6 +11,7 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
+import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
@@ -442,5 +443,6 @@ public class WesterosBlockDef {
         typeTable.put("slab", new WCSlabBlock.Factory());
         typeTable.put("fence", new WCFenceBlock.Factory());
         typeTable.put("wall", new WCWallBlock.Factory());
+        typeTable.put("pane", new WCPaneBlock.Factory());
      }
 }

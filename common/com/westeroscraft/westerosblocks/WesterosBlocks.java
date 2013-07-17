@@ -30,8 +30,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.blocks.BlockLightAsh;
-import com.westeroscraft.westerosblocks.blocks.BlockWCIronFence;
-import com.westeroscraft.westerosblocks.blocks.ItemBlockWCIronFence;
 import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
@@ -50,13 +48,11 @@ public class WesterosBlocks
 
     // Configuration variables (mostly block ids)
     public static boolean doReplaceMycelium;
-    public static boolean doReplaceIronFence;
     
     // Block classes
     public static Block customBlocks[];
     // Replacement block classes
     public static BlockMycelium blockMycelium;
-    public static BlockWCIronFence blockIronFence;
     // Custom renders
     public static int fenceRenderID;
     
@@ -134,7 +130,6 @@ public class WesterosBlocks
             
             // Replacement block flags
             doReplaceMycelium = cfg.get("replacements", "mycelium", true).getBoolean(true);
-            doReplaceIronFence = cfg.get("replacements", "ironfence", true).getBoolean(true);
             
             good_init = true;
         }
@@ -164,10 +159,6 @@ public class WesterosBlocks
             Block.blocksList[Block.mycelium.blockID] = null;
             blockMycelium = (BlockMycelium)(new BlockLightAsh(Block.mycelium.blockID)).setHardness(0.6F).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("mycel").func_111022_d("mycelium");
         }
-        if (doReplaceIronFence) {
-            Block.blocksList[Block.fenceIron.blockID] = null;
-            blockIronFence = (BlockWCIronFence) (new BlockWCIronFence(Block.fenceIron.blockID, "iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron");
-        }
         // Construct custom block definitions
         customBlocks = new Block[customBlockDefs.length];
         for (int i = 0; i < customBlockDefs.length; i++) {
@@ -186,15 +177,9 @@ public class WesterosBlocks
         if (doReplaceMycelium) {
             GameRegistry.registerBlock(blockMycelium, "mycel");
         }
-        if (doReplaceIronFence) {
-            GameRegistry.registerBlock(blockIronFence, ItemBlockWCIronFence.class, "fenceIron");
-        }
         // Register replacement items
         if (doReplaceMycelium) {
             LanguageRegistry.addName(blockMycelium, "Light Ash");
-        }
-        if (doReplaceIronFence) {
-            blockIronFence.registerNames();
         }
         // Register custom block definitions
         for (int i = 0; i < customBlockDefs.length; i++) {
