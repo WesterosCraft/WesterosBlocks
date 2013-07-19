@@ -12,12 +12,9 @@ import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent; 
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraftforge.common.Configuration;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockMycelium;
-import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
 
@@ -29,7 +26,7 @@ import java.util.logging.Logger;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
-import com.westeroscraft.westerosblocks.blocks.BlockLightAsh;
+import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
 import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
@@ -46,13 +43,8 @@ public class WesterosBlocks
     @SidedProxy(clientSide = "com.westeroscraft.westerosblocks.ClientProxy", serverSide = "com.westeroscraft.westerosblocks.Proxy")
     public static Proxy proxy;
 
-    // Configuration variables (mostly block ids)
-    public static boolean doReplaceMycelium;
-    
     // Block classes
     public static Block customBlocks[];
-    // Replacement block classes
-    public static BlockMycelium blockMycelium;
     // Custom renders
     public static int fenceRenderID;
     
@@ -128,9 +120,6 @@ public class WesterosBlocks
                 customBlockDefs[i].blockID = cfg.getBlock(customBlockDefs[i].blockName, customBlockDefs[i].blockID).getInt(customBlockDefs[i].blockID);
             }
             
-            // Replacement block flags
-            doReplaceMycelium = cfg.get("replacements", "mycelium", true).getBoolean(true);
-            
             good_init = true;
         }
         catch (Exception e)
@@ -153,12 +142,8 @@ public class WesterosBlocks
         // Register renderer
         fenceRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCFenceRenderer());
+        proxy.initRenderRegistry();
         
-        // Replacement blocks
-        if (doReplaceMycelium) {
-            Block.blocksList[Block.mycelium.blockID] = null;
-            blockMycelium = (BlockMycelium)(new BlockLightAsh(Block.mycelium.blockID)).setHardness(0.6F).setStepSound(Block.soundGrassFootstep).setUnlocalizedName("mycel").func_111022_d("mycelium");
-        }
         // Construct custom block definitions
         customBlocks = new Block[customBlockDefs.length];
         for (int i = 0; i < customBlockDefs.length; i++) {
@@ -171,23 +156,17 @@ public class WesterosBlocks
                 ((WesterosBlockLifecycle)customBlocks[i]).initializeBlockDefinition();
             }
         }
-                
-        // Register blocks
-        // Register replacement blocks
-        if (doReplaceMycelium) {
-            GameRegistry.registerBlock(blockMycelium, "mycel");
-        }
-        // Register replacement items
-        if (doReplaceMycelium) {
-            LanguageRegistry.addName(blockMycelium, "Light Ash");
-        }
+        
         // Register custom block definitions
         for (int i = 0; i < customBlockDefs.length; i++) {
             if (customBlocks[i] instanceof WesterosBlockLifecycle) {
                 ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
             }
         }
+        // Register entities
+        EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this, 120, 20, true);;
     }
+    private int nextEntityID = 3000;
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)

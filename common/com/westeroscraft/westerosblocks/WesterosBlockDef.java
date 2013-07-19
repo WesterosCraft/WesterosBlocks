@@ -13,6 +13,7 @@ import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
@@ -444,5 +445,6 @@ public class WesterosBlockDef {
         typeTable.put("fence", new WCFenceBlock.Factory());
         typeTable.put("wall", new WCWallBlock.Factory());
         typeTable.put("pane", new WCPaneBlock.Factory());
+        typeTable.put("sand", new WCSandBlock.Factory());
      }
 }

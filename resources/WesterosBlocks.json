@@ -639,5 +639,71 @@
 				"textures" : [ "bars_iron_block_0/bars_iron_oxidized_crossbars", "bars_iron_block_0/bars_iron_oxidized_crossbars" ]
 			}
 		]
-	}
+	},
+	// Custom block for sand/gravel blocks
+	{
+		"blockName" : "sand_block_0",
+		"blockID" : 2012,
+		"blockType" : "sand",
+		"hardness" : 0.5,
+		"stepSound" : "sand",
+		"material" : "sand",
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			// Desert Sand (biome specific 12:0)
+			{
+				"meta" : 0,
+				"label": "Desert Sand",
+				"textures" : [ "sand_block_0/sand_desert" ]
+			},
+			// Ocean Sand (biome specific 12:0) 
+			{
+				"meta" : 1,
+				"label": "Ocean Sand",
+				"textures" : [ "sand_block_0/sand_ocean" ]
+			},
+			// Sand Skeleton (was 12:1) 
+			{
+				"meta" : 2,
+				"label": "Sand Skeleton",
+				"textures" : [ "sand_block_0/sand_skeleton" ]
+			},
+			// Wet Sand (was 12:2) 
+			{
+				"meta" : 3,
+				"label": "Wet Sand",
+				"textures" : [ "sand_block_0/sand_wet" ]
+			},
+			// Terracotta Sand (was 12:3) 
+			{
+				"meta" : 4,
+				"label": "Terracotta Sand",
+				"textures" : [ "sand_block_0/sand_terracotta" ]
+			},
+			// Pink/Orange Sand (was 12:4) 
+			{
+				"meta" : 5,
+				"label": "Pink/Orange Sand",
+				"textures" : [ "sand_block_0/sand_pinkorange" ]
+			},
+			// Red Sand (was 12:5) 
+			{
+				"meta" : 6,
+				"label": "Red Sand",
+				"textures" : [ "sand_block_0/sand_red" ]
+			},
+			// Sand Stones (was 12:6) 
+			{
+				"meta" : 7,
+				"label": "Sand Stones",
+				"textures" : [ "sand_block_0/sand_stones" ]
+			},
+			// Wet Sand Stones (was 12:7) 
+			{
+				"meta" : 8,
+				"label": "Wet Sand Stones",
+				"textures" : [ "sand_block_0/sand_wet_stones" ]
+			}
+		]
+	}	
 ]

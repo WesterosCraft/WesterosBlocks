@@ -8,4 +8,6 @@ public class Proxy
     public Proxy()
     {
     }
+    public void initRenderRegistry() {
+    }
 }
