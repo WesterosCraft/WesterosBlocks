@@ -81,4 +81,8 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     public String getFullSlabName(int meta) {
         return null;
     }
+    @Override
+    public WesterosBlockDef getWBDefinition() {
+        return def;
+    }
 }

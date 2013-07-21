@@ -16,4 +16,8 @@ public interface WesterosBlockLifecycle {
      * @return true if successfully registered, false if not
      */
     public boolean registerBlockDefinition();
+    /**
+     * Get definition for block
+     */
+    public WesterosBlockDef getWBDefinition();
 }

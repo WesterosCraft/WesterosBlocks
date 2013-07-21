@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockWall;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
+import com.westeroscraft.westerosblocks.WBItemIcon;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
@@ -16,7 +19,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle {
+public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -24,17 +27,14 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle {
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
-            Block matblk = new Block(def.blockID, def.getMaterial());
-            Block.blocksList[def.blockID] = null;
-            
-            return new WCWallBlock(index, def, matblk);
+            return new WCCuboidBlock(index, def);
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCWallBlock(int def_index, WesterosBlockDef def, Block matblk) {
-        super(def.blockID, matblk);
+    protected WCCuboidBlock(int def_index, WesterosBlockDef def) {
+        super(def.blockID, def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -78,6 +78,31 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle {
     @Override
     public int damageDropped(int meta) {
         return meta;
+    }
+    @Override
+    public boolean isOpaqueCube() {
+        return false;
+    }
+    @Override
+    public boolean renderAsNormalBlock() {
+        return false;
+    }
+    @Override
+    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
+        AxisAlignedBB bb = def.getCollisionBoundingBoxFromPool(world, x, y, z);
+        if (bb == null)
+            bb = super.getCollisionBoundingBoxFromPool(world, x, y, z);
+        return bb;
+    }
+    @Override
+    public void setBlockBoundsBasedOnState(IBlockAccess blockaccess, int x, int y, int z) {
+        def.setBlockBoundsBasedOnState(this, blockaccess, x, y, z);
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public boolean shouldSideBeRendered(IBlockAccess access, int x, int y, int z, int side)
+    {
+        return (def.shouldSideBeRendered(access, x, y, z, side)?true:super.shouldSideBeRendered(access, x, y, z, side));
     }
     @Override
     public WesterosBlockDef getWBDefinition() {

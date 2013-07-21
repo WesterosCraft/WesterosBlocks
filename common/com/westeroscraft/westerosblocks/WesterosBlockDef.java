@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
@@ -31,7 +32,10 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -84,10 +88,13 @@ public class WesterosBlockDef {
         public List<String> textures = null;    // List of textures
         public BoundingBox boundingBox = null;  // Bounding box
         public String type = null;              // Block type specific type string (e.g. plant type)
+        public int itemTextureIndex = 0;        // Index of texture for item icon
     }
 
     @SideOnly(Side.CLIENT)
     private transient Icon[][] icons_by_meta;
+
+    private transient Subblock subblock_by_meta[];
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
     private static final Map<String, StepSound> stepSoundTable = new HashMap<String, StepSound>();
@@ -129,7 +136,19 @@ public class WesterosBlockDef {
         }
         return ct;
     }
-    
+
+    private Subblock getByMeta(int meta) {
+        if (subblock_by_meta == null) {
+            subblock_by_meta = new Subblock[16];
+            if (subBlocks != null) {
+                for (Subblock sb : subBlocks) {
+                    subblock_by_meta[sb.meta] = sb;
+                }
+            }
+        }
+        return subblock_by_meta[meta];
+    }
+
     // Do standard constructor settings for given block class
     public void doStandardContructorSettings(Block blk) {
         if (this.hardness != DEF_FLOAT) {
@@ -268,26 +287,67 @@ public class WesterosBlockDef {
             }
         }
     }
-
+    private BoundingBox getBoundingBox(int meta) {
+        BoundingBox bb = this.boundingBox;
+        Subblock sb = getByMeta(meta);
+        if ((sb != null) && (sb.boundingBox != null)) {
+            bb = sb.boundingBox;
+        }
+        return bb;
+    }
+    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
+        int meta = world.getBlockMetadata(x, y, z);
+        BoundingBox bb = getBoundingBox(meta);
+        if (bb != null) {
+            return AxisAlignedBB.getAABBPool().getAABB((double)x + bb.xMin, (double)y + bb.yMin, (double)z + bb.zMin, (double)x + bb.xMax, (double)y + bb.yMax, (double)z + bb.zMax);
+        }
+        return null;
+    }
+    public void setBlockBoundsBasedOnState(Block blk, IBlockAccess blockaccess, int x, int y, int z) {
+        int meta = blockaccess.getBlockMetadata(x, y, z);
+        BoundingBox bb = getBoundingBox(meta);
+        if (bb != null) {
+            blk.setBlockBounds(bb.xMin,  bb.yMin,  bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+        }
+        else {
+            blk.setBlockBounds(0, 0, 0, 1, 1, 1);
+        }
+    }
+    public boolean shouldSideBeRendered(IBlockAccess access, int x, int y, int z, int side) {
+        int meta = access.getBlockMetadata(x, y, z);
+        BoundingBox bb = getBoundingBox(meta);
+        if (bb == null) return true;
+        switch (side) {
+            case 0: // Bottom
+                return (bb.yMin > 0.0F);
+            case 1: // Top
+                return (bb.yMax < 1.0F);
+            case 2: // Zmin
+                return (bb.zMin > 0.0F);
+            case 3: // Zmax
+                return (bb.zMax < 1.0F);
+            case 4: // Xmin
+                return (bb.xMin > 0.0F);
+            case 5: // Xmax
+                return (bb.xMax < 1.0F);
+            default:
+                return true;
+        }
+    }
+    
     public static void addCreativeTab(String name, CreativeTabs tab) {
         tabTable.put(name,  tab);
     }
 
     public EnumPlantType getPlantType(int meta) {
         EnumPlantType pt = EnumPlantType.Plains;
-        if (subBlocks != null) {
-            for (Subblock sb : subBlocks) {
-                if (sb.meta == meta) {
-                    if (sb.type != null) {
-                        pt = EnumPlantType.valueOf(sb.type);
-                        if (pt == null) {
-                            WesterosBlocks.log.severe(String.format("Invalid plant type '%s' at meta %d of block '%s'", sb.type, meta, this.blockName));
-                            sb.type = EnumPlantType.Plains.name();
-                            pt = EnumPlantType.Plains;
-                        }
-                    }
-                    break;
-                }
+        Subblock sb = getByMeta(meta);
+        if ((sb != null) && (sb.type != null)) {
+            pt = EnumPlantType.valueOf(sb.type);
+            if (pt == null) {
+                WesterosBlocks.log.severe(String.format("Invalid plant type '%s' at meta %d of block '%s'", sb.type, meta, this.blockName));
+                sb.type = EnumPlantType.Plains.name();
+                pt = EnumPlantType.Plains;
             }
         }
         return pt;
@@ -377,6 +437,15 @@ public class WesterosBlockDef {
         return true;
     }
     
+    public Icon getItemIcon(int meta) {
+        Subblock sb = getByMeta(meta);
+        int idx = 0;
+        if (sb != null) {
+            idx = sb.itemTextureIndex;
+        }
+        return doStandardIconGet(idx, meta);
+    }
+    
     public static void initialize() {
         materialTable.put("air",  Material.air);
         materialTable.put("grass",  Material.grass);
@@ -446,5 +515,6 @@ public class WesterosBlockDef {
         typeTable.put("wall", new WCWallBlock.Factory());
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
+        typeTable.put("cuboid", new WCCuboidBlock.Factory());
      }
 }

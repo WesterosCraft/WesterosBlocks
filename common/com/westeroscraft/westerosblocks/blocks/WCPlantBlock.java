@@ -113,6 +113,8 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
         return null;
     }
-
-
+    @Override
+    public WesterosBlockDef getWBDefinition() {
+        return def;
+    }
 }

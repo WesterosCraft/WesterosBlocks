@@ -112,4 +112,8 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
     public int damageDropped(int meta) {
         return meta & 0x3;
     }
+    @Override
+    public WesterosBlockDef getWBDefinition() {
+        return def;
+    }
 }

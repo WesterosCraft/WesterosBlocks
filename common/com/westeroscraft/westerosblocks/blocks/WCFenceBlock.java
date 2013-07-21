@@ -81,5 +81,8 @@ public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle {
     public int getRenderType() {
         return WesterosBlocks.fenceRenderID;    // Use custom to make inventory render correctly
     }
-
+    @Override
+    public WesterosBlockDef getWBDefinition() {
+        return def;
+    }
 }

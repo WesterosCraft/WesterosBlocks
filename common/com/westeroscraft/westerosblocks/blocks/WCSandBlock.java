@@ -183,4 +183,8 @@ public class WCSandBlock extends Block implements WesterosBlockLifecycle {
     public int damageDropped(int meta) {
         return meta;
     }
+    @Override
+    public WesterosBlockDef getWBDefinition() {
+        return def;
+    }
 }

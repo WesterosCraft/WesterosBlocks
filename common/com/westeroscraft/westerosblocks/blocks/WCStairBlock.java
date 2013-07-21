@@ -53,5 +53,9 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
         
         return true;
     }
+    @Override
+    public WesterosBlockDef getWBDefinition() {
+        return def;
+    }
 
 }

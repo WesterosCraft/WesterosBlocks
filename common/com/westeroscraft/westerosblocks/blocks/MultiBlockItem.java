@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -33,6 +35,10 @@ public class MultiBlockItem extends ItemBlock {
     @SideOnly(Side.CLIENT)
     @Override
     public Icon getIconFromDamage(int meta) {
+        Block b = getBlock();
+        if (b instanceof WesterosBlockLifecycle) {
+            return ((WesterosBlockLifecycle)b).getWBDefinition().getItemIcon(meta);
+        }
         return getBlock().getIcon(0, meta);
     }
 
