@@ -6,3 +6,4 @@
 *.jar
 .classpath
 /.settings
+/target

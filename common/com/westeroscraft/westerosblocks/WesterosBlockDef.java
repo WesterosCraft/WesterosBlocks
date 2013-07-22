@@ -244,6 +244,9 @@ public class WesterosBlockDef {
     }
     @SideOnly(Side.CLIENT)
     public Icon doStandardIconGet(int side, int meta) {
+        if (icons_by_meta == null) {
+            return null;
+        }
         if (meta >= icons_by_meta.length) {
             meta = 0;
         }
