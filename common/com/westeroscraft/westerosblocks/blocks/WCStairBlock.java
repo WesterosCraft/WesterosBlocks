@@ -3,6 +3,9 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -57,5 +60,20 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
-
+    @Override
+    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    }
+    @Override
+    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, metadata, face);
+    }
+    @Override
+    public int getLightValue(IBlockAccess world, int x, int y, int z) {
+        return def.getLightValue(world, x, y, z);
+    }
+    @Override
+    public int getLightOpacity(World world, int x, int y, int z) {
+        return def.getLightOpacity(world, x, y, z);
+    }
 }

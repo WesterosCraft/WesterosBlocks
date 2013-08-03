@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.BitSet;
 import java.util.Collections;
 import java.util.HashMap;
@@ -37,6 +38,7 @@ import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
+import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.MinecraftForge;
 
 //
@@ -56,10 +58,10 @@ public class WesterosBlockDef {
     public int lightOpacity = DEF_INT;      // Light opacity
     public List<HarvestLevel> harvestLevel = null;  // List of harvest levels
     public int harvestItemID = DEF_INT;     // Harvest item ID
-    public int fireSpreadSpeed = DEF_INT;   // Fire spread speed
-    public int flamability = DEF_INT;       // Flamability
+    public int fireSpreadSpeed = 0;         // Fire spread speed
+    public int flamability = 0;             // Flamability
     public String creativeTab = null;       // Creative tab for items
-    public float lightValue = DEF_FLOAT;    // Emitted light level (0.0-1.0)
+    public float lightValue = 0.0F;         // Emitted light level (0.0-1.0)
     public List<Subblock> subBlocks = null; // Subblocks
     public String modelBlockName = null;    // Name of solid block modelled from (used by 'stairs' type) - can be number of block ID
     public int modelBlockMeta = DEF_INT;    // Metadata of model block to use 
@@ -85,6 +87,8 @@ public class WesterosBlockDef {
         public int harvestItemID = DEF_INT;     // Harvest item ID (-1=use block level)
         public int fireSpreadSpeed = DEF_INT;   // Fire spread speed (-1=use block level)
         public int flamability = DEF_INT;       // Flamability (-1=use block level)
+        public float lightValue = DEF_FLOAT;    // Emitted light level (0.0-1.0)
+        public int lightOpacity = DEF_INT;      // Light opacity
         public List<String> textures = null;    // List of textures
         public BoundingBox boundingBox = null;  // Bounding box
         public String type = null;              // Block type specific type string (e.g. plant type)
@@ -95,6 +99,11 @@ public class WesterosBlockDef {
     private transient Icon[][] icons_by_meta;
 
     private transient Subblock subblock_by_meta[];
+    private transient int fireSpreadSpeed_by_meta[] = null;
+    private transient int flamability_by_meta[] = null;
+    private transient int lightValue_by_meta[] = null;
+    private transient int lightOpacity_by_meta[] = null;
+    private transient int lightValueInt;
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
     private static final Map<String, StepSound> stepSoundTable = new HashMap<String, StepSound>();
@@ -137,14 +146,55 @@ public class WesterosBlockDef {
         return ct;
     }
 
-    private Subblock getByMeta(int meta) {
-        if (subblock_by_meta == null) {
-            subblock_by_meta = new Subblock[16];
-            if (subBlocks != null) {
-                for (Subblock sb : subBlocks) {
-                    subblock_by_meta[sb.meta] = sb;
+    private void initMeta() {
+        subblock_by_meta = new Subblock[16];
+        lightValueInt = (int)(15.0F * lightValue);
+        if (subBlocks != null) {
+            for (Subblock sb : subBlocks) {
+                subblock_by_meta[sb.meta] = sb;
+                if (sb.fireSpreadSpeed != DEF_INT) {
+                    if (fireSpreadSpeed_by_meta == null) {
+                        fireSpreadSpeed_by_meta = new int[16];
+                        if (this.fireSpreadSpeed != DEF_INT) {
+                            Arrays.fill(fireSpreadSpeed_by_meta, this.fireSpreadSpeed);
+                        }
+                    }
+                    fireSpreadSpeed_by_meta[sb.meta] = sb.fireSpreadSpeed; 
+                }
+                if (sb.flamability != DEF_INT) {
+                    if (flamability_by_meta == null) {
+                        flamability_by_meta = new int[16];
+                        if (this.flamability != DEF_INT) {
+                            Arrays.fill(flamability_by_meta, this.flamability);
+                        }
+                    }
+                    flamability_by_meta[sb.meta] = sb.flamability; 
+                }
+                if (sb.lightValue != DEF_FLOAT) {
+                    if (lightValue_by_meta == null) {
+                        lightValue_by_meta = new int[16];
+                        if (this.lightValue != DEF_FLOAT) {
+                            Arrays.fill(lightValue_by_meta, (int)(15.0F * this.lightValue));
+                        }
+                    }
+                    lightValue_by_meta[sb.meta] = (int)(15.0F * sb.lightValue); 
+                }
+                if (sb.lightOpacity != DEF_INT) {
+                    if (lightOpacity_by_meta == null) {
+                        lightOpacity_by_meta = new int[16];
+                        if (this.lightOpacity != DEF_INT) {
+                            Arrays.fill(lightOpacity_by_meta, this.lightOpacity);
+                        }
+                    }
+                    lightOpacity_by_meta[sb.meta] = sb.lightOpacity; 
                 }
             }
+        }
+    }
+    
+    private Subblock getByMeta(int meta) {
+        if (subblock_by_meta == null) {
+            initMeta();
         }
         return subblock_by_meta[meta];
     }
@@ -167,7 +217,7 @@ public class WesterosBlockDef {
         if (this.stepSound != null) {
             blk.setStepSound(this.getStepSound());
         }
-        if ((this.fireSpreadSpeed != DEF_INT) || (this.flamability != DEF_INT)) {
+        if ((this.fireSpreadSpeed > 0) || (this.flamability > 0)) {
             Block.setBurnProperties(this.blockID, this.fireSpreadSpeed, this.flamability);
         }
         if (creativeTab != null) {
@@ -212,6 +262,9 @@ public class WesterosBlockDef {
                 }
                 LanguageRegistry.addName(new ItemStack(blk, 1, sb.meta), sb.label);
             }
+        }
+        if (subblock_by_meta == null) {
+            initMeta();
         }
     }
 
@@ -280,6 +333,34 @@ public class WesterosBlockDef {
             }
         }
         return "INVALID_" + this.blockName;
+    }
+
+    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
+        if (flamability_by_meta != null) {
+            return flamability_by_meta[metadata];
+        }
+        return this.flamability;
+    }
+    
+    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
+        if (fireSpreadSpeed_by_meta != null) {
+            return fireSpreadSpeed_by_meta[metadata];
+        }
+        return this.fireSpreadSpeed;
+    }
+    
+    public int getLightValue(IBlockAccess world, int x, int y, int z) {
+        if (this.lightValue_by_meta != null) {
+            return this.lightValue_by_meta[world.getBlockMetadata(x,  y,  z)];
+        }
+        return this.lightValueInt;
+    }
+    
+    public int getLightOpacity(World world, int x, int y, int z) {
+        if (this.lightOpacity_by_meta != null) {
+            return this.lightOpacity_by_meta[world.getBlockMetadata(x,  y,  z)];
+        }
+        return Block.lightOpacity[this.blockID];
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })

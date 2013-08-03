@@ -1,6 +1,8 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
