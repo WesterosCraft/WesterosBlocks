@@ -1,4 +1,18 @@
-[
+{
+  // Custom 'step sounds' (sounds for blocks - break, place, and step
+  "stepSounds" = [
+  	// Custom step sound
+  	{
+  		"name" : "testStepSound",
+  		"stepSound" : "step.stone",
+  		"breakSound" : "dig.stone",
+  		"placeSound" : "dig.stone",
+  		"volume" : 1.0,
+  		"pitch" : 0.5
+  	}		
+  ],
+  // Custom block definitions
+  "blocks" = [
 	// Custom block for solid metal blocks
 	{
 		"blockName" : "metal_block_0",
@@ -646,7 +660,7 @@
 		"blockID" : 2012,
 		"blockType" : "sand",
 		"hardness" : 0.5,
-		"stepSound" : "sand",
+		"stepSound" : "testStepSound",
 		"material" : "sand",
 		"creativeTab" : "WesterosBlocks",
 		"subBlocks" : [
@@ -706,7 +720,7 @@
 			}
 		]
 	},
-	// Custom block for cubiod blocks
+	// Custom block for cuboid blocks
 	{
 		"blockName" : "cuboid_block_0",
 		"blockID" : 2013,
@@ -760,4 +774,5 @@
 			}
 		]
 	}
-]
+  ]
+}

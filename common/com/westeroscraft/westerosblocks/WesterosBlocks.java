@@ -48,6 +48,8 @@ public class WesterosBlocks
     // Custom renders
     public static int fenceRenderID;
     
+    public static WesterosBlockConfig customConfig;
+    
     public static WesterosBlockDef[] customBlockDefs;
     
     public static Block findBlockByName(String blkname) {
@@ -94,7 +96,8 @@ public class WesterosBlocks
         InputStreamReader rdr = new InputStreamReader(in);
         Gson gson = new Gson();
         try {
-            customBlockDefs = gson.fromJson(rdr, WesterosBlockDef[].class);
+            customConfig = gson.fromJson(rdr, WesterosBlockConfig.class);
+            customBlockDefs = customConfig.blocks;
         } catch (JsonSyntaxException iox) {
             crash(iox, "WesterosBlocks couldn't parse its block definition");
             return;
@@ -104,7 +107,12 @@ public class WesterosBlocks
         } finally {
             if (in != null) { try { in.close(); } catch (IOException iox) {}; in = null; }
         }
-        log.info("Loaded " + customBlockDefs.length + " block definitions");
+        log.info("Loaded " + customBlockDefs.length + " block definitions and " + customConfig.stepSounds.length + " stepsounds");
+        // Process step sound definitions first
+        for (WesterosBlockStepSound ss : customConfig.stepSounds) {
+            WesterosBlockDef.registerStepSound(ss);
+        }
+        
         if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {
             crash("WesterosBlocks.json failed sanity check");
             return;
