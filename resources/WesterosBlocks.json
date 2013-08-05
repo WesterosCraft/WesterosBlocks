@@ -773,6 +773,23 @@
 				"itemTextureIndex" : 2
 			}
 		]
+	},
+	// Custom block for candle blocks
+	{
+		"blockName" : "torch_block_0",
+		"blockID" : 2014,
+		"blockType" : "torch",
+		"stepSound" : "powder",
+		"creativeTab" : "WesterosDeco",
+		"lightValue" : 1.0,
+		"subBlocks" : [
+			// Candle (was redstone torch)
+			{
+				"meta" : 0,
+				"label": "Candle",
+				"textures" : [ "torch_block_0/redstone_torch_on" ]
+			}
+		]
 	}
   ]
 }

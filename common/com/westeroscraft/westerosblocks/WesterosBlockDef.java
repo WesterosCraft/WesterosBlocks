@@ -20,6 +20,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStepSound;
+import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -601,6 +602,7 @@ public class WesterosBlockDef {
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
+        typeTable.put("torch", new WCTorchBlock.Factory());
      }
     // Register custom step sound
     public static void registerStepSound(WesterosBlockStepSound ss) {
