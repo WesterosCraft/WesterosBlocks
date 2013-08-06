@@ -246,7 +246,7 @@ public class WesterosBlockDef {
 
     // Custom color multiplier
     public static class CustomColorMultHandler extends ColorMultHandler {
-        private int[] foliageBuffer = new int[65536];
+        private int[] colorBuffer = new int[65536];
         
         CustomColorMultHandler(String rname, String blockName) {
             super();
@@ -262,9 +262,10 @@ public class WesterosBlockDef {
         @Override
         protected void loadRes(String rname, String blkname) {
             try {
-                foliageBuffer = TextureUtil.func_110986_a(Minecraft.getMinecraft().func_110442_L(), new ResourceLocation(rname));
+                colorBuffer = TextureUtil.func_110986_a(Minecraft.getMinecraft().func_110442_L(), new ResourceLocation(rname));
             } catch (IOException e) {
                 WesterosBlocks.log.severe(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
+                Arrays.fill(colorBuffer,  0xFFFFFF);
             }
         }
 
@@ -275,7 +276,7 @@ public class WesterosBlockDef {
             hum *= tmp;
             int i = (int)((1.0D - tmp) * 255.0D);
             int j = (int)((1.0D - hum) * 255.0D);
-            return foliageBuffer[j << 8 | i];
+            return colorBuffer[j << 8 | i];
         }
         
         @Override
