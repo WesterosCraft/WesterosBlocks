@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.BitSet;
@@ -31,14 +32,21 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.StepSound;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
+import net.minecraft.util.MathHelper;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.ColorizerFoliage;
+import net.minecraft.world.ColorizerGrass;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.MinecraftForge;
@@ -68,6 +76,7 @@ public class WesterosBlockDef {
     public String modelBlockName = null;    // Name of solid block modelled from (used by 'stairs' type) - can be number of block ID
     public int modelBlockMeta = DEF_INT;    // Metadata of model block to use 
     public BoundingBox boundingBox = null;  // Bounding box
+    public String colorMult = "#FFFFFF";    // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
     
     public static class HarvestLevel {
         public String tool;
@@ -95,8 +104,201 @@ public class WesterosBlockDef {
         public BoundingBox boundingBox = null;  // Bounding box
         public String type = null;              // Block type specific type string (e.g. plant type)
         public int itemTextureIndex = 0;        // Index of texture for item icon
+        public String colorMult = null;         // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
     }
 
+    // Base color multiplier (fixed)
+    public static class ColorMultHandler {
+        protected int fixedMult;
+        
+        ColorMultHandler() {
+            fixedMult = 0xFFFFFF;
+        }
+        ColorMultHandler(int mult) {
+            fixedMult = mult;
+        }
+        public int getBlockColor() {
+            return fixedMult;
+        }
+        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+            return fixedMult;
+        }
+        protected void setBaseColor() {
+        }
+        protected void loadRes(String rname, String blkname) {
+        }
+    }
+    // Foliage color multiplier
+    public static class FoliageColorMultHandler extends ColorMultHandler {
+        FoliageColorMultHandler() {
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int getBlockColor() {
+            return ColorizerFoliage.getFoliageColor(0.5, 1.0);
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+            int red = 0;
+            int green = 0;
+            int blue = 0;
+
+            for (int xx = -1; xx <= 1; ++xx) {
+                for (int zz = -1; zz <= 1; ++zz) {
+                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getBiomeFoliageColor();
+                    red += (mult & 0xFF0000) >> 16;
+                    green += (mult & 0x00FF00) >> 8;
+                    blue += (mult & 0x0000FF);
+                }
+            }
+            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+        }
+    }
+    // Grass color multiplier
+    public static class GrassColorMultHandler extends ColorMultHandler {
+        GrassColorMultHandler() {
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int getBlockColor() {
+            return ColorizerGrass.getGrassColor(0.5, 1.0);
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+            int red = 0;
+            int green = 0;
+            int blue = 0;
+
+            for (int xx = -1; xx <= 1; ++xx) {
+                for (int zz = -1; zz <= 1; ++zz) {
+                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getBiomeGrassColor();
+                    red += (mult & 0xFF0000) >> 16;
+                    green += (mult & 0x00FF00) >> 8;
+                    blue += (mult & 0x0000FF);
+                }
+            }
+            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+        }
+    }
+    // Water color multiplier
+    public static class WaterColorMultHandler extends ColorMultHandler {
+        WaterColorMultHandler() {
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+            int red = 0;
+            int green = 0;
+            int blue = 0;
+
+            for (int xx = -1; xx <= 1; ++xx) {
+                for (int zz = -1; zz <= 1; ++zz) {
+                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getWaterColorMultiplier();
+                    red += (mult & 0xFF0000) >> 16;
+                    green += (mult & 0x00FF00) >> 8;
+                    blue += (mult & 0x0000FF);
+                }
+            }
+            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+        }
+    }
+
+    public static class PineColorMultHandler extends ColorMultHandler {
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int getBlockColor() {
+            return ColorizerFoliage.getFoliageColorPine();
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+            return ColorizerFoliage.getFoliageColorPine();
+        }
+    }
+    
+    public static class BirchColorMultHandler extends ColorMultHandler {
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int getBlockColor() {
+            return ColorizerFoliage.getFoliageColorBirch();
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+            return ColorizerFoliage.getFoliageColorBirch();
+        }
+    }
+
+    public static class BasicColorMultHandler extends ColorMultHandler {
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int getBlockColor() {
+            return ColorizerFoliage.getFoliageColorBasic();
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+            return ColorizerFoliage.getFoliageColorBasic();
+        }
+    }
+
+    // Custom color multiplier
+    public static class CustomColorMultHandler extends ColorMultHandler {
+        private int[] foliageBuffer = new int[65536];
+        
+        CustomColorMultHandler(String rname, String blockName) {
+            super();
+            
+            loadRes(rname, blockName);
+        }
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int getBlockColor() {
+            return getColor(0.5F, 1.0F);
+        }
+        @SideOnly(Side.CLIENT)
+        @Override
+        protected void loadRes(String rname, String blkname) {
+            try {
+                foliageBuffer = TextureUtil.func_110986_a(Minecraft.getMinecraft().func_110442_L(), new ResourceLocation(rname));
+            } catch (IOException e) {
+                WesterosBlocks.log.severe(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
+            }
+        }
+
+        private int getColor(float tmp, float hum)
+        {
+            tmp = MathHelper.clamp_float(tmp, 0.0F, 1.0F);
+            hum = MathHelper.clamp_float(hum, 0.0F, 1.0F);
+            hum *= tmp;
+            int i = (int)((1.0D - tmp) * 255.0D);
+            int j = (int)((1.0D - hum) * 255.0D);
+            return foliageBuffer[j << 8 | i];
+        }
+        
+        @Override
+        @SideOnly(Side.CLIENT)
+        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+            int red = 0;
+            int green = 0;
+            int blue = 0;
+
+            for (int xx = -1; xx <= 1; ++xx) {
+                for (int zz = -1; zz <= 1; ++zz) {
+                    BiomeGenBase biome = access.getBiomeGenForCoords(x + xx, z + zz);
+                    int mult = getColor(biome.getFloatTemperature(), biome.getFloatRainfall());
+                    red += (mult & 0xFF0000) >> 16;
+                    green += (mult & 0x00FF00) >> 8;
+                    blue += (mult & 0x0000FF);
+                }
+            }
+            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+        }
+    }
+
+    
     @SideOnly(Side.CLIENT)
     private transient Icon[][] icons_by_meta;
 
@@ -106,11 +308,14 @@ public class WesterosBlockDef {
     private transient int lightValue_by_meta[] = null;
     private transient int lightOpacity_by_meta[] = null;
     private transient int lightValueInt;
+    private transient ColorMultHandler colorMultHandler;
+    private transient ColorMultHandler colorMultHandlerByMeta[];
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
     private static final Map<String, StepSound> stepSoundTable = new HashMap<String, StepSound>();
     private static final Map<String, CreativeTabs> tabTable = new HashMap<String, CreativeTabs>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
+    private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
     
     public Block createBlock(int idx) {
         WesterosBlockFactory bf = typeTable.get(blockType);
@@ -151,6 +356,11 @@ public class WesterosBlockDef {
     private void initMeta() {
         subblock_by_meta = new Subblock[16];
         lightValueInt = (int)(15.0F * lightValue);
+        this.colorMultHandler = getColorHandler(this.colorMult);
+        if (this.colorMultHandler == null) {
+            WesterosBlocks.log.warning(String.format("Invalid colorMult '%s' in block '%s'", this.colorMult, blockName));
+            this.colorMultHandler = getColorHandler("#FFFFFF");
+        }
         if (subBlocks != null) {
             for (Subblock sb : subBlocks) {
                 subblock_by_meta[sb.meta] = sb;
@@ -189,6 +399,17 @@ public class WesterosBlockDef {
                         }
                     }
                     lightOpacity_by_meta[sb.meta] = sb.lightOpacity; 
+                }
+                if (sb.colorMult != null) {
+                    if (this.colorMultHandlerByMeta == null) {
+                        this.colorMultHandlerByMeta = new ColorMultHandler[16];
+                        Arrays.fill(this.colorMultHandlerByMeta, this.colorMultHandler);
+                    }
+                    this.colorMultHandlerByMeta[sb.meta] = getColorHandler(sb.colorMult);
+                    if (this.colorMultHandlerByMeta[sb.meta] == null) {
+                        WesterosBlocks.log.warning(String.format("Invalid colorMult '%s' in block '%s'", sb.colorMult, blockName));
+                        this.colorMultHandlerByMeta[sb.meta] = this.colorMultHandler;
+                    }
                 }
             }
         }
@@ -273,6 +494,9 @@ public class WesterosBlockDef {
     
     @SideOnly(Side.CLIENT)
     public void doStandardRegisterIcons(IconRegister ir) {
+        if (subblock_by_meta == null) {
+            initMeta();
+        }
         icons_by_meta = new Icon[16][];
         if (subBlocks != null) {
             HashMap<String, Icon> map = new HashMap<String, Icon>();
@@ -363,6 +587,25 @@ public class WesterosBlockDef {
             return this.lightOpacity_by_meta[world.getBlockMetadata(x,  y,  z)];
         }
         return Block.lightOpacity[this.blockID];
+    }
+    
+    public int getBlockColor() {
+        return this.colorMultHandler.getBlockColor();
+    }
+    
+    public int getRenderColor(int meta) {
+        if (this.colorMultHandlerByMeta != null) {
+            return this.colorMultHandlerByMeta[meta].getBlockColor();
+        }
+        return this.colorMultHandler.getBlockColor();
+    }
+    
+    public int colorMultiplier(IBlockAccess access, int x, int y, int z, int metaMask) {
+        if (this.colorMultHandlerByMeta != null) {
+            int meta = access.getBlockMetadata(x, y, z) & metaMask;
+            return this.colorMultHandlerByMeta[meta].colorMultiplier(access, x, y, z);
+        }
+        return this.colorMultHandler.colorMultiplier(access, x, y, z);
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -603,7 +846,48 @@ public class WesterosBlockDef {
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
         typeTable.put("torch", new WCTorchBlock.Factory());
+
+        // Standard color multipliers
+        colorMultTable.put("#FFFFFF", new ColorMultHandler());
+        colorMultTable.put("water", new WaterColorMultHandler());
+        colorMultTable.put("foliage", new FoliageColorMultHandler());
+        colorMultTable.put("grass", new GrassColorMultHandler());
+        colorMultTable.put("pine", new PineColorMultHandler());
+        colorMultTable.put("birch", new BirchColorMultHandler());
+        colorMultTable.put("basic", new BasicColorMultHandler());
+        colorMultTable.put("lily", new ColorMultHandler(2129968));
      }
+    // Get color muliplier
+    public ColorMultHandler getColorHandler(String hnd) {
+        ColorMultHandler cmh = colorMultTable.get(hnd);
+        if (cmh == null) {
+            hnd = hnd.toUpperCase();
+            cmh = colorMultTable.get(hnd);
+        }
+        if (cmh == null) { 
+            // See if color code
+            if ((hnd.length() == 7) && (hnd.charAt(0) == '#')) {
+                try {
+                    cmh = new ColorMultHandler(Integer.parseInt(hnd.substring(1), 16));
+                    colorMultTable.put(hnd, cmh);
+                } catch (NumberFormatException nfx) {
+                }
+            }
+            // See if resource
+            else {
+                int idx = hnd.indexOf(':');
+                if (idx < 0) {
+                    hnd = "westeroscraft:" + hnd;
+                    cmh = colorMultTable.get(hnd);
+                }
+                if (cmh == null) {
+                    cmh = new CustomColorMultHandler(hnd, blockName);
+                    colorMultTable.put(hnd, cmh);
+                }
+            }
+        }
+        return cmh;
+    }
     // Register custom step sound
     public static void registerStepSound(WesterosBlockStepSound ss) {
         WCStepSound stepsound = new WCStepSound(ss);

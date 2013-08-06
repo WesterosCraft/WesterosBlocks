@@ -102,4 +102,21 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle {
     public int getLightOpacity(World world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getBlockColor() {
+        return def.getBlockColor();
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getRenderColor(int meta)
+    {
+        return def.getRenderColor(meta);
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int colorMultiplier(IBlockAccess access, int x, int y, int z)
+    {
+        return def.colorMultiplier(access, x, y, z, 0xF);
+    }
 }

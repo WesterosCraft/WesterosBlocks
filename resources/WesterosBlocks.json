@@ -790,6 +790,97 @@
 				"textures" : [ "torch_block_0/redstone_torch_on" ]
 			}
 		]
+	},
+	// Custom block for tall grasses blocks
+	{
+		"blockName" : "tallgrass_block_0",
+		"blockID" : 2015,
+		"blockType" : "plant",
+		"stepSound" : "grass",
+		"creativeTab" : "WesterosPlants",
+		"colorMult" : "grass",
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Forest Fern",
+				"textures" : [ "tallgrass_block_0/forest_fern_cluster" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Forest Grass (short)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thickshort" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Forest Grass (tall thick)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thicktall" ]
+			},
+			{
+				"meta" : 3,
+				"label": "Forest Grass (thick tuft 1)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thicktuft_highcontrast" ]
+			},
+			{
+				"meta" : 4,
+				"label": "Forest Grass (thick tuft 2)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thicktuft_lowcontrast" ]
+			},
+			{
+				"meta" : 5,
+				"label": "Forest Grass (thick tuft 3)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thicktuft_mediumcontrast" ]
+			},
+			{
+				"meta" : 6,
+				"label": "Forest Grass (thin 1)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thinmedium_highcontrast" ]
+			},
+			{
+				"meta" : 7,
+				"label": "Forest Grass (thin 2)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thinmedium_lowcontrast" ]
+			},
+			{
+				"meta" : 8,
+				"label": "Plains Fern",
+				"textures" : [ "tallgrass_block_0/plains_fern_cluster" ]
+			},
+			{
+				"meta" : 9,
+				"label": "Plains Grass (short)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thickshort" ]
+			},
+			{
+				"meta" : 10,
+				"label": "Plains Grass (tall thick)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thicktall" ]
+			},
+			{
+				"meta" : 11,
+				"label": "Plains Grass (thick tuft 1)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thicktuft_highcontrast" ]
+			},
+			{
+				"meta" : 12,
+				"label": "Plains Grass (thick tuft 2)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thicktuft_lowcontrast" ]
+			},
+			{
+				"meta" : 13,
+				"label": "Plains Grass (thick tuft 3)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thicktuft_mediumcontrast" ]
+			},
+			{
+				"meta" : 14,
+				"label": "Plains Grass (thin 1)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thinmedium_highcontrast" ]
+			},
+			{
+				"meta" : 15,
+				"label": "Plains Grass (thin 2)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thinmedium_lowcontrast" ]
+			}
+		]
 	}
   ]
 }

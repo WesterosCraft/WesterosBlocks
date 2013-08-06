@@ -90,11 +90,11 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     }
     @Override
     public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+        return def.getFireSpreadSpeed(world, x, y, z, metadata & 0x7, face);
     }
     @Override
     public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+        return def.getFlammability(world, x, y, z, metadata & 0x7, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
@@ -103,5 +103,22 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getBlockColor() {
+        return def.getBlockColor();
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getRenderColor(int meta)
+    {
+        return def.getRenderColor(meta);
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int colorMultiplier(IBlockAccess access, int x, int y, int z)
+    {
+        return def.colorMultiplier(access, x, y, z, 0x7);
     }
 }
