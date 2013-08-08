@@ -13,6 +13,7 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
@@ -77,6 +78,7 @@ public class WesterosBlockDef {
     public int modelBlockMeta = DEF_INT;    // Metadata of model block to use 
     public BoundingBox boundingBox = null;  // Bounding box
     public String colorMult = "#FFFFFF";    // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
+    public String type = "";                // Type field (used for plant types or other block type specific values)
     
     public static class HarvestLevel {
         public String tool;
@@ -669,15 +671,24 @@ public class WesterosBlockDef {
         tabTable.put(name,  tab);
     }
 
-    public EnumPlantType getPlantType(int meta) {
-        EnumPlantType pt = EnumPlantType.Plains;
+    public String getType(int meta) {
         Subblock sb = getByMeta(meta);
         if ((sb != null) && (sb.type != null)) {
-            pt = EnumPlantType.valueOf(sb.type);
+            return sb.type;
+        }
+        return this.type;
+    }
+
+    public EnumPlantType getPlantType(int meta) {
+        EnumPlantType pt = EnumPlantType.Plains;
+        String t = getType(meta);
+        if (t != null) {
+            pt = EnumPlantType.valueOf(t);
             if (pt == null) {
-                WesterosBlocks.log.severe(String.format("Invalid plant type '%s' at meta %d of block '%s'", sb.type, meta, this.blockName));
-                sb.type = EnumPlantType.Plains.name();
+                WesterosBlocks.log.severe(String.format("Invalid plant type '%s' at meta %d of block '%s'", t, meta, this.blockName));
                 pt = EnumPlantType.Plains;
+                Subblock sb = getByMeta(meta);
+                sb.type = pt.name();
             }
         }
         return pt;
@@ -847,6 +858,7 @@ public class WesterosBlockDef {
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
         typeTable.put("torch", new WCTorchBlock.Factory());
+        typeTable.put("leaves", new WCLeavesBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

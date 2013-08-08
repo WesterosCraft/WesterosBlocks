@@ -881,6 +881,94 @@
 				"textures" : [ "tallgrass_block_0/plains_grass_thinmedium_lowcontrast" ]
 			}
 		]
+	},
+	// Custom block for leaves blocks
+	{
+		"blockName" : "leaves_block_0",
+		"blockID" : 2016,
+		"blockType" : "leaves",
+		"stepSound" : "grass",
+		"creativeTab" : "WesterosPlants",
+		"type" : "no-decay", // These were glass blocks: assume we don't want them to decay
+		"subBlocks" : [
+		    // Apple Fruit Leaves (was 20:8)
+			{
+				"meta" : 0,
+				"label": "Apple Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_apple_fruit_top_bottom", "leaves_block_0/leaves_apple_fruit_top_bottom", "leaves_block_0/leaves_apple_fruit_1", "leaves_block_0/leaves_apple_fruit_1" ]
+			},
+			// Apricot Fruit Leaves (was 20:12)
+			{
+				"meta" : 1,
+				"label": "Apricot Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_apricot_fruit_top_bottom", "leaves_block_0/leaves_apricot_fruit_top_bottom", "leaves_block_0/leaves_apricot_fruit_1", "leaves_block_0/leaves_apricot_fruit_1" ]
+			},
+			// Cherry Fruit Leaves (was 20:11)
+			{
+				"meta" : 2,
+				"label": "Cherry Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_cherry_fruit_top_bottom", "leaves_block_0/leaves_cherry_fruit_top_bottom", "leaves_block_0/leaves_cherry_fruit_1", "leaves_block_0/leaves_cherry_fruit_1" ]
+			},
+			// Grape Fruit Leaves (was 20:5)
+			{
+				"meta" : 3,
+				"label": "Grape Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_grapes_fruit_top_bottom", "leaves_block_0/leaves_grapes_fruit_top_bottom", "leaves_block_0/leaves_grapes_fruit_1", "leaves_block_0/leaves_grapes_fruit_1" ]
+			},
+			// Lemon Fruit Leaves (was 20:10)
+			{
+				"meta" : 4,
+				"label": "Lemon Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_lemon_fruit_top_bottom", "leaves_block_0/leaves_lemon_fruit_top_bottom", "leaves_block_0/leaves_lemon_fruit_1", "leaves_block_0/leaves_lemon_fruit_1" ]
+			},
+			// Lime Fruit Leaves (was 20:6)
+			{
+				"meta" : 5,
+				"label": "Lime Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_lime_fruit_top_bottom", "leaves_block_0/leaves_lime_fruit_top_bottom", "leaves_block_0/leaves_lime_fruit_1", "leaves_block_0/leaves_lime_fruit_1" ]
+			},
+			// Orange Fruit Leaves (was 20:7)
+			{
+				"meta" : 6,
+				"label": "Orange Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_orange_fruit_top_bottom", "leaves_block_0/leaves_orange_fruit_top_bottom", "leaves_block_0/leaves_orange_fruit_1", "leaves_block_0/leaves_orange_fruit_1" ]
+			},
+			// Peach Fruit Leaves (was 20:13)
+			{
+				"meta" : 7,
+				"label": "Peach Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_peach_fruit_top_bottom", "leaves_block_0/leaves_peach_fruit_top_bottom", "leaves_block_0/leaves_peach_fruit_1", "leaves_block_0/leaves_peach_fruit_1" ]
+			}
+		]
+	},
+	// Custom block for leaves blocks (#2)
+	{
+		"blockName" : "leaves_block_1",
+		"blockID" : 2017,
+		"blockType" : "leaves",
+		"stepSound" : "grass",
+		"type" : "no-decay", // These were glass blocks: assume we don't want them to decay
+		"creativeTab" : "WesterosPlants",
+		"subBlocks" : [
+			// Plum Fruit Leaves (from 20:14)
+			{
+				"meta" : 0,
+				"label": "Plum Fruit Leaves",
+				"textures" : [ "leaves_block_1/leaves_plum_fruit_top_bottom", "leaves_block_1/leaves_plum_fruit_top_bottom", "leaves_block_1/leaves_plum_fruit_1", "leaves_block_1/leaves_plum_fruit_1" ]
+			},
+			// Pomegrenade Fruit Leaves (from 20:9)
+			{
+				"meta" : 1,
+				"label": "Pomegrenade Fruit Leaves",
+				"textures" : [ "leaves_block_1/leaves_pomegrenade_fruit_top_bottom", "leaves_block_1/leaves_pomegrenade_fruit_top_bottom", "leaves_block_1/leaves_pomegrenade_fruit_1", "leaves_block_1/leaves_pomegrenade_fruit_1" ]
+			},
+			// Weirwood Leaves (from 20:15)
+			{
+				"meta" : 2,
+				"label": "Weirwood Leaves",
+				"textures" : [ "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood" ]
+			}
+		]
 	}
   ]
 }
