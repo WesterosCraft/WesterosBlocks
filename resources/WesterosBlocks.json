@@ -969,6 +969,110 @@
 				"textures" : [ "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood" ]
 			}
 		]
+	},
+	// Custom block for crate blocks
+	{
+		"blockName" : "crate_block_0",
+		"blockID" : 2018,
+		"blockType" : "solid",
+		"hardness" : 2.0,
+		"stepSound" : "wood",
+		"material" : "wood",
+		"resistance" : 5.0,
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Crate block (was 25:0)
+			{
+				"meta" : 0,
+				"label": "Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/0", "crate_block_0/0" ]
+			},
+			// Crate block (was 25:1)
+			{
+				"meta" : 1,
+				"label": "Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/1", "crate_block_0/1" ]
+			},
+			// Crate block (was 25:2)
+			{
+				"meta" : 2,
+				"label": "Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/2", "crate_block_0/2" ]
+			},
+			// Crate block (was 25:3)
+			{
+				"meta" : 3,
+				"label": "Open Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/3", "crate_block_0/0" ]
+			},
+			// Crate block (was 25:4)
+			{
+				"meta" : 4,
+				"label": "Potato Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/4", "crate_block_0/1" ]
+			},
+			// Crate block (was 25:5)
+			{
+				"meta" : 5,
+				"label": "Fish Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/5", "crate_block_0/2" ]
+			},
+			// Crate block (was 25:6)
+			{
+				"meta" : 6,
+				"label": "Grain Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/6", "crate_block_0/0" ]
+			},
+			// Crate block (was 25:7)
+			{
+				"meta" : 7,
+				"label": "Apple Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/7", "crate_block_0/1" ]
+			},
+			// Crate block (was 25:8)
+			{
+				"meta" : 8,
+				"label": "Carrot Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/8", "crate_block_0/2" ]
+			},
+			// Crate block (was 25:9)
+			{
+				"meta" : 9,
+				"label": "Salt Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/9", "crate_block_0/0" ]
+			},
+			// Crate block (was 25:10)
+			{
+				"meta" : 10,
+				"label": "Iron Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/10", "crate_block_0/1" ]
+			},
+			// Crate block (was 25:11)
+			{
+				"meta" : 11,
+				"label": "Fruit Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/11", "crate_block_0/2" ]
+			}
+		]
+	},
+	// Custom block for pine wood door
+	{
+		"blockName" : "pine_door",
+		"blockID" : 2019,
+		"blockType" : "door",
+		"hardness" : 2.0,
+		"stepSound" : "wood",
+		"material" : "wood",
+		"resistance" : 5.0,
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Pine Door
+			{
+				"meta" : 0,
+				"label": "Pine Door",
+				"textures" : [ "pine_door/pine_door_top", "pine_door/pine_door_bottom" ]
+			}
+		]
 	}
   ]
 }

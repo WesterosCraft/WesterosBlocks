@@ -12,6 +12,7 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
@@ -859,6 +860,7 @@ public class WesterosBlockDef {
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
         typeTable.put("torch", new WCTorchBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
+        typeTable.put("door", new WCDoorBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());
