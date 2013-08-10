@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.blocks;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
@@ -50,6 +51,16 @@ public class MultiBlockItem extends ItemBlock {
     @Override
     public int getMetadata(int damage) {
         return damage;
+    }
+    
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void registerIcons (IconRegister iconRegister)
+    {
+        Block b = getBlock();
+        if (b instanceof WesterosBlockLifecycle) {
+            ((WesterosBlockLifecycle)b).getWBDefinition().doStandardItemRegisterIcons(iconRegister);;
+        }
     }
 }
 

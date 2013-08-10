@@ -14,6 +14,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCItemDoor;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
@@ -38,6 +39,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
@@ -62,6 +64,7 @@ public class WesterosBlockDef {
     
     public String blockName;                // Locally unique block name
     public int blockID = DEF_INT;           // Block ID number (default)
+    public int itemID = DEF_INT;            // Item ID (if type has distinct item ID)
     public String blockType = "solid";      // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
     public float hardness = DEF_FLOAT;      // Block hardness
     public String stepSound = null;         // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
@@ -104,6 +107,7 @@ public class WesterosBlockDef {
         public float lightValue = DEF_FLOAT;    // Emitted light level (0.0-1.0)
         public int lightOpacity = DEF_INT;      // Light opacity
         public List<String> textures = null;    // List of textures
+        public String itemTexture = null;       // Item texture, if any
         public BoundingBox boundingBox = null;  // Bounding box
         public String type = null;              // Block type specific type string (e.g. plant type)
         public int itemTextureIndex = 0;        // Index of texture for item icon
@@ -305,7 +309,8 @@ public class WesterosBlockDef {
     
     @SideOnly(Side.CLIENT)
     private transient Icon[][] icons_by_meta;
-
+    private transient Icon[] itemicons_by_meta;
+    
     private transient Subblock subblock_by_meta[];
     private transient int fireSpreadSpeed_by_meta[] = null;
     private transient int flamability_by_meta[] = null;
@@ -476,18 +481,32 @@ public class WesterosBlockDef {
     
     // Do standard register actions
     public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass) {
+        doStandardRegisterActions(blk, itmclass, null);
+    }
+    // Do standard register actions
+    public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, Item itm) {
         // Register the block
-        if (itmclass != null)
+        if (itmclass != null) {
             GameRegistry.registerBlock(blk, itmclass, this.blockName);
-        else
+        }
+        else {
             GameRegistry.registerBlock(blk, this.blockName);
+        }
+        if (itm != null) {
+            GameRegistry.registerItem(itm, this.blockName + "_item");
+        }
         // And register strings for each item block
         if ((this.subBlocks != null) && (this.subBlocks.size() > 0)) {
             for (Subblock sb : this.subBlocks) {
                 if (sb.label == null) {
                     sb.label = this.blockName + " " + sb.meta;
                 }
-                LanguageRegistry.addName(new ItemStack(blk, 1, sb.meta), sb.label);
+                if (itm != null) {
+                    LanguageRegistry.addName(new ItemStack(itm, 1, sb.meta), sb.label);
+                }
+                else {
+                    LanguageRegistry.addName(new ItemStack(blk, 1, sb.meta), sb.label);
+                }
             }
         }
         if (subblock_by_meta == null) {
@@ -525,6 +544,32 @@ public class WesterosBlockDef {
             }
         }
     }
+
+    @SideOnly(Side.CLIENT)
+    public void doStandardItemRegisterIcons(IconRegister ir) {
+        if (subblock_by_meta == null) {
+            initMeta();
+        }
+        itemicons_by_meta = new Icon[16];
+        if (subBlocks != null) {
+            HashMap<String, Icon> map = new HashMap<String, Icon>();
+            for (Subblock sb : subBlocks) {
+                if (sb.itemTexture != null) {
+                    String txt = sb.itemTexture;
+                    if (txt.indexOf(':') < 0) {
+                        txt = "westerosblocks:" + txt;
+                    }
+                    Icon ico = map.get(txt);
+                    if (ico == null) {
+                        ico = ir.registerIcon(txt);
+                        map.put(txt, ico);
+                    }
+                    itemicons_by_meta[sb.meta] = ico;
+                }
+            }
+        }
+    }
+
     @SideOnly(Side.CLIENT)
     public Icon doStandardIconGet(int side, int meta) {
         if (icons_by_meta == null) {
@@ -542,7 +587,7 @@ public class WesterosBlockDef {
         }
         return null;
     }
-    
+
     @SideOnly(Side.CLIENT)
     public void getStandardSubBlocks(Block blk, int id, CreativeTabs tab, List<ItemStack> list) {
         if (subBlocks != null) {
@@ -780,6 +825,14 @@ public class WesterosBlockDef {
     }
     
     public Icon getItemIcon(int meta) {
+        if (itemicons_by_meta != null) {
+            if (meta >= itemicons_by_meta.length) {
+                meta = 0;
+            }
+            if (itemicons_by_meta[meta] != null) {
+                return itemicons_by_meta[meta];
+            }
+        }
         Subblock sb = getByMeta(meta);
         int idx = 0;
         if (sb != null) {

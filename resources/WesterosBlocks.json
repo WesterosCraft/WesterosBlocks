@@ -1055,10 +1055,11 @@
 			}
 		]
 	},
-	// Custom block for pine wood door
+	// Custom block for redwood wood door
 	{
-		"blockName" : "pine_door",
+		"blockName" : "redwood_door",
 		"blockID" : 2019,
+		"itemID" : 12019,
 		"blockType" : "door",
 		"hardness" : 2.0,
 		"stepSound" : "wood",
@@ -1069,8 +1070,9 @@
 			// Pine Door
 			{
 				"meta" : 0,
-				"label": "Pine Door",
-				"textures" : [ "pine_door/pine_door_top", "pine_door/pine_door_bottom" ]
+				"label": "Redwood Door",
+				"textures" : [ "redwood_door/redwood_door_top", "redwood_door/redwood_door_bottom" ],
+				"itemTexture" : "redwood_door_item"
 			}
 		]
 	}

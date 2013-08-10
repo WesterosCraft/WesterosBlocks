@@ -1,19 +1,18 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
@@ -21,8 +20,9 @@ import net.minecraftforge.common.ForgeDirection;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -56,7 +56,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, MultiBlockItem.class);
+        def.doStandardRegisterActions(this, null, new WCItemDoor(this, this.def));
         
         return true;
     }
@@ -134,7 +134,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
      */
     public int idDropped(int meta, Random par2Random, int par3)
     {
-        return (meta & 8) != 0 ? 0 : def.blockID;
+        return (meta & 8) != 0 ? 0 : def.itemID;
     }
     
     @SideOnly(Side.CLIENT)
@@ -143,21 +143,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
      */
     public int idPicked(World par1World, int par2, int par3, int par4)
     {
-        return def.blockID;
-    }
-
-    
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+        return def.itemID;
     }
     
     @Override
@@ -207,5 +193,14 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
         return def.colorMultiplier(access, x, y, z, 0x0);
+    }
+    @Override
+    public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z)
+    {
+        return new ItemStack(def.itemID, 1, 0);
+    }
+    @Override
+    public void getSubBlocks (int par1, CreativeTabs par2CreativeTabs, List par3List)
+    {
     }
 }
