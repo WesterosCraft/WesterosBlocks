@@ -134,7 +134,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
      */
     public int idDropped(int meta, Random par2Random, int par3)
     {
-        return (meta & 8) != 0 ? 0 : def.itemID;
+        return (meta & 8) != 0 ? 0 : def.blockID;
     }
     
     @SideOnly(Side.CLIENT)
@@ -143,7 +143,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
      */
     public int idPicked(World par1World, int par2, int par3, int par4)
     {
-        return def.itemID;
+        return def.blockID;
     }
     
     @Override
@@ -197,7 +197,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     @Override
     public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z)
     {
-        return new ItemStack(def.itemID, 1, 0);
+        return new ItemStack(def.blockID, 1, 0);
     }
     @Override
     public void getSubBlocks (int par1, CreativeTabs par2CreativeTabs, List par3List)

@@ -23,7 +23,7 @@ public class WCItemDoor extends Item
     
     public WCItemDoor(Block blk, WesterosBlockDef def)
     {
-        super(def.itemID);
+        super(def.blockID);
         this.blk = blk;
         this.def = def;
         this.maxStackSize = 1;

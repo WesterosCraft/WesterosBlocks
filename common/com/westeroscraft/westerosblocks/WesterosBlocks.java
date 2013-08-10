@@ -126,9 +126,6 @@ public class WesterosBlocks
             // Add settings for block defintiions
             for (int i = 0; i < customBlockDefs.length; i++) {
                 customBlockDefs[i].blockID = cfg.getBlock(customBlockDefs[i].blockName, customBlockDefs[i].blockID).getInt(customBlockDefs[i].blockID);
-                if (customBlockDefs[i].itemID > 0) {
-                    customBlockDefs[i].itemID = cfg.getItem(customBlockDefs[i].blockName, customBlockDefs[i].itemID).getInt(customBlockDefs[i].itemID);
-                }
             }
             
             good_init = true;
