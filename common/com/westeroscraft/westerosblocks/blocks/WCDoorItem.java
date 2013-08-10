@@ -15,13 +15,13 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCItemDoor extends Item
+public class WCDoorItem extends Item
 {
     private Block blk;
     private String unlocname;
     private WesterosBlockDef def;
     
-    public WCItemDoor(Block blk, WesterosBlockDef def)
+    public WCDoorItem(Block blk, WesterosBlockDef def)
     {
         super(def.blockID);
         this.blk = blk;

@@ -56,7 +56,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, null, new WCItemDoor(this, this.def));
+        def.doStandardRegisterActions(this, null, new WCDoorItem(this, this.def));
         
         return true;
     }
