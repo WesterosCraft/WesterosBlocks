@@ -391,7 +391,7 @@
 	// Custom block for metal slab blocks
 	{
 		"blockName" : "medal_slab_block_0",
-		"blockID" : 2008,
+		"blockIDs" : [ 2008, 2020 ],
 		"blockType" : "slab",
 		"hardness" : 5.0,
 		"stepSound" : "metal",
@@ -399,7 +399,6 @@
 		"resistance" : 10.0,
 		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 3 } ],
 		"creativeTab" : "WesterosBlocks",
-		"modelBlockName" : "metal_doubleslab_block_0", // Double slab block name
 		"subBlocks" : [
 			// Iron block
 			{
@@ -797,6 +796,7 @@
 		"blockID" : 2015,
 		"blockType" : "plant",
 		"stepSound" : "grass",
+		"material" : "grass",
 		"creativeTab" : "WesterosPlants",
 		"colorMult" : "grass",
 		"subBlocks" : [
@@ -888,6 +888,7 @@
 		"blockID" : 2016,
 		"blockType" : "leaves",
 		"stepSound" : "grass",
+		"material" : "leaves",
 		"creativeTab" : "WesterosPlants",
 		"type" : "no-decay", // These were glass blocks: assume we don't want them to decay
 		"subBlocks" : [
@@ -947,6 +948,7 @@
 		"blockID" : 2017,
 		"blockType" : "leaves",
 		"stepSound" : "grass",
+		"material" : "leaves",
 		"type" : "no-decay", // These were glass blocks: assume we don't want them to decay
 		"creativeTab" : "WesterosPlants",
 		"subBlocks" : [

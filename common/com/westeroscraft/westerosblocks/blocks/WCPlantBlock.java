@@ -25,17 +25,17 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
-            return new WCPlantBlock(index, def);
+            return new Block[] { new WCPlantBlock(def) };
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCPlantBlock(int def_index, WesterosBlockDef def) {
+    protected WCPlantBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);

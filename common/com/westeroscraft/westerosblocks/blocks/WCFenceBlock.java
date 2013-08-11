@@ -24,17 +24,17 @@ public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
-            return new WCFenceBlock(index, def);
+            return new Block[] { new WCFenceBlock(def) };
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCFenceBlock(int def_index, WesterosBlockDef def) {
+    protected WCFenceBlock(WesterosBlockDef def) {
         super(def.blockID, def.getFirstTexture(), def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);

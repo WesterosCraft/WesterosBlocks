@@ -25,18 +25,18 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             // Make sure meta values only for 0-3 (other bits are orientation
             if (!def.validateMetaValues(new int[] { 0, 1, 2, 3 }, null)) {
                 return null;
             }
-            return new WCLogBlock(index, def);
+            return new Block[] { new WCLogBlock(def) };
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCLogBlock(int def_index, WesterosBlockDef def) {
+    protected WCLogBlock(WesterosBlockDef def) {
         super(def.blockID);
         this.def = def;
         def.doStandardContructorSettings(this);

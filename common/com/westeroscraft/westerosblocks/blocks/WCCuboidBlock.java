@@ -23,17 +23,17 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
-            return new WCCuboidBlock(index, def);
+            return new Block[] { new WCCuboidBlock(def) };
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCCuboidBlock(int def_index, WesterosBlockDef def) {
+    protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);

@@ -23,20 +23,20 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
             Block matblk = new Block(def.blockID, def.getMaterial());
             Block.blocksList[def.blockID] = null;
             
-            return new WCWallBlock(index, def, matblk);
+            return new Block[] { new WCWallBlock(def, matblk) };
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCWallBlock(int def_index, WesterosBlockDef def, Block matblk) {
+    protected WCWallBlock(WesterosBlockDef def, Block matblk) {
         super(def.blockID, matblk);
         this.def = def;
         def.doStandardContructorSettings(this);

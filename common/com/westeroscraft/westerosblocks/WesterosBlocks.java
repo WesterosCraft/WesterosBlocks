@@ -21,6 +21,8 @@ import net.minecraft.util.ReportedException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.logging.Logger;
 
 import com.google.gson.Gson;
@@ -45,6 +47,7 @@ public class WesterosBlocks
 
     // Block classes
     public static Block customBlocks[];
+    public static HashMap<String, Block> customBlocksByName;
     // Custom renders
     public static int fenceRenderID;
     
@@ -53,21 +56,17 @@ public class WesterosBlocks
     public static WesterosBlockDef[] customBlockDefs;
     
     public static Block findBlockByName(String blkname) {
-        for (int i = 0; i < customBlockDefs.length; i++) {
-            if (customBlockDefs[i].blockName.equals(blkname)) {
-                System.out.println(blkname + " matched on index " + i + ": return " + customBlocks[i]);
-                return customBlocks[i];
-            }
+        Block blk = customBlocksByName.get(blkname);
+        if (blk != null) {
+            return blk;
         }
         try {
             int id = Integer.parseInt(blkname);
             if ((id > 0) && (id < Block.blocksList.length)) {
-                System.out.println(blkname + " matched on ID " + id);
                 return Block.blocksList[id];
             }
         } catch (NumberFormatException nfx) {
         }
-        System.out.println(blkname + " missed");
         return null;
     }
     
@@ -125,7 +124,16 @@ public class WesterosBlocks
             cfg.load();
             // Add settings for block defintiions
             for (int i = 0; i < customBlockDefs.length; i++) {
-                customBlockDefs[i].blockID = cfg.getBlock(customBlockDefs[i].blockName, customBlockDefs[i].blockID).getInt(customBlockDefs[i].blockID);
+                if (customBlockDefs[i].blockIDs == null) {
+                    customBlockDefs[i].blockIDs = new int[] { customBlockDefs[i].blockID };
+                }
+                for (int j = 0; j < customBlockDefs[i].blockIDs.length; j++) {
+                    int val = customBlockDefs[i].blockIDs[j];
+                    customBlockDefs[i].blockIDs[j] = cfg.getBlock(customBlockDefs[i].getUnlocalizedName(j), val).getInt(val);
+                    if (j == 0) {
+                        customBlockDefs[i].blockID = customBlockDefs[i].blockIDs[j];
+                    }
+                }
             }
             
             good_init = true;
@@ -153,10 +161,23 @@ public class WesterosBlocks
         proxy.initRenderRegistry();
         
         // Construct custom block definitions
-        customBlocks = new Block[customBlockDefs.length];
+        ArrayList<Block> blklist = new ArrayList<Block>();
+        customBlocksByName = new HashMap<String, Block>();
         for (int i = 0; i < customBlockDefs.length; i++) {
-            customBlocks[i] = customBlockDefs[i].createBlock(i);
+            Block[] blks = customBlockDefs[i].createBlocks();
+            if (blks != null) {
+                for (int j = 0; j < blks.length; j++) {
+                    Block blk = blks[j];
+                    blklist.add(blk);
+                    customBlocksByName.put(customBlockDefs[i].getUnlocalizedName(j), blk);
+                }
+            }
+            else {
+                crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
+                return;
+            }
         }
+        customBlocks = blklist.toArray(new Block[blklist.size()]);
         
         // Initialize custom block definitions
         for (int i = 0; i < customBlockDefs.length; i++) {

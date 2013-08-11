@@ -71,8 +71,8 @@
 
 	<!-- Clear build directory -->
 	<target name="clean">
-		<delete dir="${build.dir}" failonerror="false"/>
-		<delete dir="${download.dir}" failonerror="false"/>
+		<delete dir="${build.dir}" failonerror="true"/>
+		<delete dir="${download.dir}" failonerror="true"/>
 		<mkdir dir="${download.dir}"/>
 	</target>
 
@@ -102,7 +102,7 @@
 	<!-- Setup mcp and forge -->
 	<target name="setup" depends="download-files" if="out-of-date">
 
-		<delete dir="${forge.dir}" failonerror="false"/>
+		<delete dir="${forge.dir}" failonerror="true"/>
 
 		<unzip dest="${forge.dir}/.." src="${download.dir}/${forge.name}"/>
 
@@ -110,11 +110,11 @@
 		<chmod dir="${forge.dir}" perm="ugo+rx" includes="**.sh"/>
 
 		<!-- Install forge -->
-		<exec dir="${forge.dir}" executable="cmd" osfamily="windows" failonerror="false">
+		<exec dir="${forge.dir}" executable="cmd" osfamily="windows" failonerror="true">
 			<arg line="/c install.cmd"/>
 		</exec>
 
-		<exec dir="${forge.dir}" executable="sh" osfamily="unix" failonerror="false">
+		<exec dir="${forge.dir}" executable="sh" osfamily="unix" failonerror="true">
 			<arg value="install.sh"/>
 		</exec>
 
@@ -141,20 +141,20 @@
   			<mapper type="flatten" />
 		</copy>
 		<!-- Recompile -->
-		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows" failonerror="false">
+		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows" failonerror="true">
 			<arg line="/c recompile.bat"/>
 		</exec>
 
-		<exec dir="${mcp.dir}" executable="sh" osfamily="unix" failonerror="false">
+		<exec dir="${mcp.dir}" executable="sh" osfamily="unix" failonerror="true">
 			<arg value="recompile.sh"/>
 		</exec>
 
 		<!-- Reobfuscate -->
-		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows" failonerror="false">
+		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows" failonerror="true">
 			<arg line="/c reobfuscate.bat"/>
 		</exec>
 
-		<exec dir="${mcp.dir}" executable="sh" osfamily="unix" failonerror="false">
+		<exec dir="${mcp.dir}" executable="sh" osfamily="unix" failonerror="true">
 			<arg value="reobfuscate.sh"/>
 		</exec>
 

@@ -14,16 +14,16 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class WCCropBlock extends WCPlantBlock {
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
-            return new WCCropBlock(index, def);
+            return new Block[] { new WCCropBlock(def) };
         }
     }
 
-    protected WCCropBlock(int def_index, WesterosBlockDef def) {
-        super(def_index, def);
+    protected WCCropBlock(WesterosBlockDef def) {
+        super(def);
     }
 
     @Override

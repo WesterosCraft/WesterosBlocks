@@ -25,18 +25,18 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
-            return new WCPaneBlock(index, def);
+            return new Block[] { new WCPaneBlock(def) };
         }
     }
     
     private WesterosBlockDef def;
     private int lastMeta;
     
-    protected WCPaneBlock(int def_index, WesterosBlockDef def) {
+    protected WCPaneBlock(WesterosBlockDef def) {
         super(def.blockID, "txt", "sidetxt", def.getMaterial(), true);
         this.def = def;
         def.doStandardContructorSettings(this);

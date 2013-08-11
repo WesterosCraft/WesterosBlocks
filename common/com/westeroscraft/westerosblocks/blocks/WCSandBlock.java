@@ -25,17 +25,17 @@ public class WCSandBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
-            return new WCSandBlock(index, def);
+            return new Block[] { new WCSandBlock(def) };
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCSandBlock(int def_index, WesterosBlockDef def) {
+    protected WCSandBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);

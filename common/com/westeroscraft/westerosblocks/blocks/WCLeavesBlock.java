@@ -26,18 +26,18 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, null)) {
                 return null;
             }
-            return new WCLeavesBlock(index, def);
+            return new Block[] { new WCLeavesBlock(def) };
         }
     }
     
     private WesterosBlockDef def;
     private int[] adjacentTreeBlocks;
     private boolean[] nodecay;
-    protected WCLeavesBlock(int def_index, WesterosBlockDef def) {
+    protected WCLeavesBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial(), false);
         this.setTickRandomly(true);
         this.def = def;

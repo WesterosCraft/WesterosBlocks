@@ -19,7 +19,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if ((def.modelBlockName == null) || (def.modelBlockMeta < 0)) {
                 WesterosBlocks.log.severe("Type 'stair' requires modelBlockName and modelBlockMeta settings");
                 return null;
@@ -35,13 +35,13 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
                 return null;
             }
 
-            return new WCStairBlock(index, def, blk);
+            return new Block[] { new WCStairBlock(def, blk) };
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCStairBlock(int def_index, WesterosBlockDef def, Block blk) {
+    protected WCStairBlock(WesterosBlockDef def, Block blk) {
         super(def.blockID, blk, def.modelBlockMeta);
         this.def = def;
         this.setCreativeTab(def.getCreativeTab());

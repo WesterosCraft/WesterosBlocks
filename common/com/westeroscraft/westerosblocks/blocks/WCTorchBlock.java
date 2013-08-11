@@ -23,17 +23,17 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             if (!def.validateMetaValues(new int[] { 0 }, new int[] { 0 })) {
                 return null;
             }
-            return new WCTorchBlock(index, def);
+            return new Block[] { new WCTorchBlock(def) };
         }
     }
     
     private WesterosBlockDef def;
     
-    protected WCTorchBlock(int def_index, WesterosBlockDef def) {
+    protected WCTorchBlock(WesterosBlockDef def) {
         super(def.blockID);
         this.def = def;
         def.doStandardContructorSettings(this);

@@ -63,6 +63,7 @@ public class WesterosBlockDef {
     
     public String blockName;                // Locally unique block name
     public int blockID = DEF_INT;           // Block ID number (default)
+    public int[] blockIDs = null;           // Block ID numbers (default) - for definitions with more than one block
     public String blockType = "solid";      // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
     public float hardness = DEF_FLOAT;      // Block hardness
     public String stepSound = null;         // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
@@ -324,13 +325,13 @@ public class WesterosBlockDef {
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
     private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
     
-    public Block createBlock(int idx) {
+    public Block[] createBlocks() {
         WesterosBlockFactory bf = typeTable.get(blockType);
         if (bf == null) {
             WesterosBlocks.log.severe(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));
             return null;
         }
-        return bf.buildBlockClass(idx, this);
+        return bf.buildBlockClasses(this);
     }
     
     public Material getMaterial() {
@@ -477,21 +478,27 @@ public class WesterosBlockDef {
         }
     }
     
-    // Do standard register actions
-    public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass) {
-        doStandardRegisterActions(blk, itmclass, null);
+    public String getUnlocalizedName(int blknum) {
+        if (blknum == 0)
+            return this.blockName;
+        else
+            return this.blockName + "_" + (blknum+1);
     }
     // Do standard register actions
-    public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, Item itm) {
+    public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass) {
+        doStandardRegisterActions(blk, itmclass, null, 0);
+    }
+    // Do standard register actions
+    public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, Item itm, int idx) {
         // Register the block
         if (itmclass != null) {
-            GameRegistry.registerBlock(blk, itmclass, this.blockName);
+            GameRegistry.registerBlock(blk, itmclass, this.getUnlocalizedName(idx));
         }
         else {
-            GameRegistry.registerBlock(blk, this.blockName);
+            GameRegistry.registerBlock(blk, this.getUnlocalizedName(idx));
         }
         if (itm != null) {
-            GameRegistry.registerItem(itm, this.blockName + "_item");
+            GameRegistry.registerItem(itm, this.getUnlocalizedName(idx) + "_item");
         }
         // And register strings for each item block
         if ((this.subBlocks != null) && (this.subBlocks.size() > 0)) {
@@ -800,11 +807,32 @@ public class WesterosBlockDef {
                 WesterosBlocks.log.severe(String.format("Block '%s' - blockName duplicated", def.blockName));
                 return false;
             }
-            if (ids.get(def.blockID)) {    // If alreay defined
-                WesterosBlocks.log.severe(String.format("Block '%s' - blockID duplicated", def.blockName));
-                return false;
+            if (def.blockIDs != null) {
+                for (int i = 0; i < def.blockIDs.length; i++) {
+                    if ((def.blockIDs[i] < 0) || (def.blockIDs[i] > 4095)) {
+                        WesterosBlocks.log.severe(String.format("Block '%s' - blockIDs[%d] invalid", def.blockName, i));
+                        return false;
+                    }
+                    else if (ids.get(def.blockIDs[i])) {    // If already defined
+                        WesterosBlocks.log.severe(String.format("Block '%s' - blockIDs[%d] duplicated", def.blockName, i));
+                        return false;
+                    }
+                    ids.set(def.blockIDs[i]);
+                }
+                def.blockID = def.blockIDs[0];
             }
-            ids.set(def.blockID);
+            else {
+                if ((def.blockID < 0) || (def.blockID > 4095)) {
+                    WesterosBlocks.log.severe(String.format("Block '%s' - blockID invalid", def.blockName));
+                    return false;
+                }
+                else if (ids.get(def.blockID)) {    // If already defined
+                    WesterosBlocks.log.severe(String.format("Block '%s' - blockID duplicated", def.blockName));
+                    return false;
+                }
+                ids.set(def.blockID);
+                def.blockIDs = new int[] { def.blockID };
+            }
             // Check for duplicate meta
             metas.clear();
             if (def.subBlocks != null) {

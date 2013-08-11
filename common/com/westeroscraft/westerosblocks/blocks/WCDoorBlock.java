@@ -8,8 +8,6 @@ import net.minecraft.block.BlockDoor;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MovingObjectPosition;
@@ -21,8 +19,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -30,12 +26,12 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(int index, WesterosBlockDef def) {
+        public Block[] buildBlockClasses(WesterosBlockDef def) {
             // Validate meta : we require meta 0, and only allow it
             if (!def.validateMetaValues(new int[] { 0 }, new int[] { 0 })) {
                 return null;
             }
-            return new WCDoorBlock(index, def);
+            return new Block[] { new WCDoorBlock(def) };
         }
     }
     
@@ -43,7 +39,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     private Icon[] upper;
     private Icon[] lower;
     
-    protected WCDoorBlock(int def_index, WesterosBlockDef def) {
+    protected WCDoorBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
@@ -56,7 +52,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, null, new WCDoorItem(this, this.def));
+        def.doStandardRegisterActions(this, null, new WCDoorItem(this, this.def), 0);
         
         return true;
     }
