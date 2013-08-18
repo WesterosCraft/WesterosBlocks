@@ -180,14 +180,14 @@ public class WesterosBlocks
         customBlocks = blklist.toArray(new Block[blklist.size()]);
         
         // Initialize custom block definitions
-        for (int i = 0; i < customBlockDefs.length; i++) {
+        for (int i = 0; i < customBlocks.length; i++) {
             if (customBlocks[i] instanceof WesterosBlockLifecycle) {
                 ((WesterosBlockLifecycle)customBlocks[i]).initializeBlockDefinition();
             }
         }
         
         // Register custom block definitions
-        for (int i = 0; i < customBlockDefs.length; i++) {
+        for (int i = 0; i < customBlocks.length; i++) {
             if (customBlocks[i] instanceof WesterosBlockLifecycle) {
                 ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
             }

@@ -161,7 +161,6 @@ public class EntityWCFallingSand extends Entity implements IEntityAdditionalSpaw
         nbt.setByte("Data", (byte)this.metadata);
         nbt.setByte("Time", (byte)this.fallTime);
         nbt.setBoolean("DropItem", this.shouldDropItem);
-        System.out.println("write=" + blockID + ":" + metadata);
     }
 
     /**
@@ -174,7 +173,6 @@ public class EntityWCFallingSand extends Entity implements IEntityAdditionalSpaw
         this.metadata = nbt.getByte("Data") & 255;
         this.fallTime = nbt.getByte("Time") & 255;
         this.shouldDropItem = nbt.getBoolean("DropItem");
-        System.out.println("read=" + blockID + ":" + metadata);
     }
     
     @Override

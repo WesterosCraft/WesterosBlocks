@@ -1077,6 +1077,25 @@
 				"itemTexture" : "redwood_door_item"
 			}
 		]
+	},
+	// Custom block for sand layers
+	{
+		"blockName" : "sand_layer_0",
+		"blockID" : 2021,
+		"blockType" : "layer",
+		"hardness" : 0.5,
+		"stepSound" : "testStepSound",
+		"material" : "sand",
+		"creativeTab" : "WesterosBlocks",
+		"type" : "cnt:8",
+		"subBlocks" : [
+			// Desert Sand Layer
+			{
+				"meta" : 0,
+				"label": "Desert Sand Layer",
+				"textures" : [ "sand_block_0/sand_desert" ]
+			}
+		]
 	}
   ]
 }

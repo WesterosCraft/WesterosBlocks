@@ -14,6 +14,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
@@ -940,6 +941,7 @@ public class WesterosBlockDef {
         typeTable.put("torch", new WCTorchBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("door", new WCDoorBlock.Factory());
+        typeTable.put("layer", new WCLayerBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());
