@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
+import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
@@ -40,6 +41,10 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
     }
     
     private WesterosBlockDef def;
+    private Icon offsetIconXN = null;
+    private Icon offsetIconXP = null;
+    private Icon offsetIconZN = null;
+    private Icon offsetIconZP = null;
     
     protected WCStairBlock(WesterosBlockDef def, Block blk) {
         super(def.blockID, blk, def.modelBlockMeta);
@@ -95,5 +100,40 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
         return def.colorMultiplier(access, x, y, z, 0x0);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public Icon getIcon(int side, int meta) {
+        Icon ico = super.getIcon(side, meta);
+        if (side == 2) {
+            if(this.getBlockBoundsMaxX() == 0.5) {
+                if (offsetIconXP == null) {
+                    offsetIconXP = new ShiftedIcon(ico, true);
+                }
+                ico = offsetIconXP;
+            }
+            else if(this.getBlockBoundsMinX() == 0.5) {
+                if (offsetIconXN == null) {
+                    offsetIconXN = new ShiftedIcon(ico, false);
+                }
+                ico = offsetIconXN;
+            }
+        }
+        else if (side == 5) {
+            if (this.getBlockBoundsMaxZ() == 0.5) {
+                if (offsetIconZP == null) {
+                    offsetIconZP = new ShiftedIcon(ico, true);
+                }
+                ico = offsetIconZP;
+            }
+            else if (this.getBlockBoundsMinZ() == 0.5) {
+                if (offsetIconZN == null) {
+                    offsetIconZN = new ShiftedIcon(ico, false);
+                }
+                ico = offsetIconZN;
+            }
+        }
+        return ico;
     }
 }

@@ -50,6 +50,8 @@ public class WesterosBlocks
     public static HashMap<String, Block> customBlocksByName;
     // Custom renders
     public static int fenceRenderID;
+    // Use stair render fix
+    public boolean useFixedStairs = false;
     
     public static WesterosBlockConfig customConfig;
     
@@ -135,6 +137,7 @@ public class WesterosBlocks
                     }
                 }
             }
+            useFixedStairs = cfg.get("Settings",  "useFixedStairs", true).getBoolean(true);
             
             good_init = true;
         }
@@ -191,6 +194,31 @@ public class WesterosBlocks
             if (customBlocks[i] instanceof WesterosBlockLifecycle) {
                 ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
             }
+        }
+        // Fix standard blocks
+        if (useFixedStairs) {
+            /*
+            Block.blocksList[53] = null; Item.itemsList[53] = null;
+            GameRegistry.registerBlock(new FixedStairs(53, Block.planks, 0), "stairsWood");
+            Block.blocksList[67] = null; Item.itemsList[67] = null;
+            GameRegistry.registerBlock(new FixedStairs(67, Block.cobblestone, 0), "stairsStone");
+            Block.blocksList[108] = null; Item.itemsList[108] = null;
+            GameRegistry.registerBlock(new FixedStairs(108, Block.brick, 0), "stairsBrick");
+            Block.blocksList[109] = null; Item.itemsList[109] = null;
+            GameRegistry.registerBlock(new FixedStairs(109, Block.stoneBrick, 0), "stairsStoneBrickSmooth");
+            Block.blocksList[114] = null; Item.itemsList[114] = null;
+            GameRegistry.registerBlock(new FixedStairs(114, Block.netherBrick, 0), "stairsNetherBrick");
+            Block.blocksList[128] = null; Item.itemsList[128] = null;
+            GameRegistry.registerBlock(new FixedStairs(128, Block.sandStone, 0), "stairsSandStone");
+            Block.blocksList[134] = null; Item.itemsList[134] = null;
+            GameRegistry.registerBlock(new FixedStairs(134, Block.planks, 1), "stairsWoodSpruce");
+            Block.blocksList[135] = null; Item.itemsList[153] = null;
+            GameRegistry.registerBlock(new FixedStairs(135, Block.planks, 2), "stairsWoodBirch");
+            Block.blocksList[136] = null; Item.itemsList[136] = null;
+            GameRegistry.registerBlock(new FixedStairs(136, Block.planks, 3), "stairsWoodJungle");
+            Block.blocksList[156] = null; Item.itemsList[156] = null;
+            GameRegistry.registerBlock(new FixedStairs(156, Block.blockNetherQuartz, 0), "stairsQuartz"); 
+            */
         }
         // Register entities
         EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this, 120, 20, true);;
