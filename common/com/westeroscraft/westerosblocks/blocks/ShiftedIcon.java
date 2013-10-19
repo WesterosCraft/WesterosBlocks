@@ -14,17 +14,17 @@ public class ShiftedIcon implements Icon {
         if (!pos)
             uOff = -uOff;
     }
-    @Override
-    @SideOnly(Side.CLIENT)
-    public int getOriginX() {
-        return baseIcon.getOriginX();
-    }
+//    @Override
+//    @SideOnly(Side.CLIENT)
+//    public int getOriginX() {
+//        return baseIcon.getOriginX();
+//    }
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public int getOriginY() {
-        return baseIcon.getOriginY();
-    }
+//    @Override
+//    @SideOnly(Side.CLIENT)
+//    public int getOriginY() {
+//        return baseIcon.getOriginY();
+//    }
 
     @Override
     @SideOnly(Side.CLIENT)
@@ -67,5 +67,15 @@ public class ShiftedIcon implements Icon {
     @SideOnly(Side.CLIENT)
     public String getIconName() {
         return baseIcon.getIconName();
+    }
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getIconWidth() {
+        return baseIcon.getIconWidth();
+    }
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getIconHeight() {
+        return baseIcon.getIconHeight();
     }
 }

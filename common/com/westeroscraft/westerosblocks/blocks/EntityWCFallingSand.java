@@ -176,9 +176,9 @@ public class EntityWCFallingSand extends Entity implements IEntityAdditionalSpaw
     }
     
     @Override
-    public void func_85029_a(CrashReportCategory par1CrashReportCategory)
+    public void addEntityCrashInfo(CrashReportCategory par1CrashReportCategory)
     {
-        super.func_85029_a(par1CrashReportCategory);
+        super.addEntityCrashInfo(par1CrashReportCategory);
         par1CrashReportCategory.addCrashSection("Immitating block ID", Integer.valueOf(this.blockID));
         par1CrashReportCategory.addCrashSection("Immitating block data", Integer.valueOf(this.metadata));
     }

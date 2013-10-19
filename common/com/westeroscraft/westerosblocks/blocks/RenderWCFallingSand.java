@@ -37,7 +37,7 @@ public class RenderWCFallingSand extends Render
         {
             GL11.glPushMatrix();
             GL11.glTranslatef((float)par2, (float)par4, (float)par6);
-            this.func_110777_b(par1EntityFallingSand);
+            this.bindEntityTexture(par1EntityFallingSand);
             GL11.glDisable(GL11.GL_LIGHTING);
             Tessellator tessellator;
             if (block != null)
@@ -51,14 +51,14 @@ public class RenderWCFallingSand extends Render
         }
     }
 
-    protected ResourceLocation func_110783_a(EntityWCFallingSand par1EntityFallingSand)
+    protected ResourceLocation getFallingSandTextures(EntityWCFallingSand par1EntityFallingSand)
     {
-        return TextureMap.field_110575_b;
+        return TextureMap.locationBlocksTexture;
     }
 
-    protected ResourceLocation func_110775_a(Entity par1Entity)
+    protected ResourceLocation getEntityTexture(Entity par1Entity)
     {
-        return this.func_110783_a((EntityWCFallingSand)par1Entity);
+        return this.getFallingSandTextures((EntityWCFallingSand)par1Entity);
     }
 
     /**

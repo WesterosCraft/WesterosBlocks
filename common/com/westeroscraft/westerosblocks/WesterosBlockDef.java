@@ -269,7 +269,7 @@ public class WesterosBlockDef {
         @Override
         protected void loadRes(String rname, String blkname) {
             try {
-                colorBuffer = TextureUtil.func_110986_a(Minecraft.getMinecraft().func_110442_L(), new ResourceLocation(rname));
+                colorBuffer = TextureUtil.readImageData(Minecraft.getMinecraft().getResourceManager(), new ResourceLocation(rname));
             } catch (IOException e) {
                 WesterosBlocks.log.severe(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
                 Arrays.fill(colorBuffer,  0xFFFFFF);

@@ -2,11 +2,11 @@
 	<property environment="env"/>
 
 	<!-- Properties (version) -->
-	<property name="mc.version" value="1.6.2"/>
-	<property name="forge.baseversion" value="9.10.0"/>
-	<property name="forge.build" value="804"/>
+	<property name="mc.version" value="1.6.4"/>
+	<property name="forge.baseversion" value="9.11.1"/>
+	<property name="forge.build" value="933"/>
 	<property name="project.version" value="0.1"/>
-	<property name="project.devversion" value="-alpha-7"/>
+	<property name="project.devversion" value="-alpha-8"/>
 
 	<!-- Properties (build control) -->
 	<property name="build.dir" value="build"/>
@@ -151,11 +151,11 @@
 
 		<!-- Reobfuscate -->
 		<exec dir="${mcp.dir}" executable="cmd" osfamily="windows" failonerror="true">
-			<arg line="/c reobfuscate.bat"/>
+			<arg line="/c reobfuscate_srg.bat"/>
 		</exec>
 
 		<exec dir="${mcp.dir}" executable="sh" osfamily="unix" failonerror="true">
-			<arg value="reobfuscate.sh"/>
+			<arg value="reobfuscate_srg.sh"/>
 		</exec>
 
 		<!-- Copy classes -->
