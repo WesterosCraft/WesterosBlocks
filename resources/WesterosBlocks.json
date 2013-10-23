@@ -1152,6 +1152,32 @@
 				"textures" : [ "smoke_block_0/smoke_8" ]
 			}
 		]
-	}
+	},
+	// Custom block for smoke (using web block)
+	{
+		"blockName" : "ladder_block_0",
+		"blockID" : 2023,
+		"blockType" : "ladder",
+		"stepSound" : "ladder",
+		"material" : "iron",
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Iron Ladder",
+				"textures" : [ "ladder_block_0/ladder_iron" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Iron Ladder (top)",
+				"textures" : [ "ladder_block_0/ladder_iron_top" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Iron Ladder (bottom)",
+				"textures" : [ "ladder_block_0/ladder_iron_bottom" ]
+			}
+		]
+	 }	
   ]
 }
