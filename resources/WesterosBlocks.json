@@ -1096,6 +1096,62 @@
 				"textures" : [ "sand_block_0/sand_desert" ]
 			}
 		]
+	},
+	// Custom block for smoke (using web block)
+	{
+		"blockName" : "smoke_block_0",
+		"blockID" : 2022,
+		"blockType" : "web",
+		"stepSound" : "cloth",
+		"material" : "web",
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Smoke 1",
+				"textures" : [ "smoke_block_0/smoke_0" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Smoke 2",
+				"textures" : [ "smoke_block_0/smoke_1" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Smoke 3",
+				"textures" : [ "smoke_block_0/smoke_2" ]
+			},
+			{
+				"meta" : 3,
+				"label": "Smoke 4",
+				"textures" : [ "smoke_block_0/smoke_3" ]
+			},
+			{
+				"meta" : 4,
+				"label": "Smoke 5",
+				"textures" : [ "smoke_block_0/smoke_4" ]
+			},
+			{
+				"meta" : 5,
+				"label": "Smoke 6",
+				"textures" : [ "smoke_block_0/smoke_5" ]
+			},
+			{
+				"meta" : 6,
+				"label": "Smoke 7",
+				"textures" : [ "smoke_block_0/smoke_6" ]
+			},
+			{
+				"meta" : 7,
+				"label": "Smoke 8",
+				"textures" : [ "smoke_block_0/smoke_7" ]
+			},
+			{
+				"meta" : 8,
+				"label": "Smoke 9",
+				"textures" : [ "smoke_block_0/smoke_8" ]
+			}
+		]
 	}
   ]
 }

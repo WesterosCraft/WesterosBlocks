@@ -26,6 +26,7 @@ import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStepSound;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -942,6 +943,7 @@ public class WesterosBlockDef {
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("door", new WCDoorBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
+        typeTable.put("web", new WCWebBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());
