@@ -1178,6 +1178,27 @@
 				"textures" : [ "ladder_block_0/ladder_iron_bottom" ]
 			}
 		]
-	 }	
+	 },
+	// Custom block for redwood wood half-door
+	{
+		"blockName" : "redwood_halfdoor",
+		"blockID" : 2024,
+		"itemID" : 12024,
+		"blockType" : "halfdoor",
+		"hardness" : 2.0,
+		"stepSound" : "wood",
+		"material" : "wood",
+		"resistance" : 5.0,
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Pine Door
+			{
+				"meta" : 0,
+				"label": "Redwood Half-Door",
+				"textures" : [ "redwood_door/redwood_door_top" ],
+				"itemTexture" : "redwood_door_item"
+			}
+		]
+	}
   ]
 }

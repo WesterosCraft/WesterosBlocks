@@ -14,6 +14,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
@@ -946,6 +947,7 @@ public class WesterosBlockDef {
         typeTable.put("layer", new WCLayerBlock.Factory());
         typeTable.put("web", new WCWebBlock.Factory());
         typeTable.put("ladder", new WCLadderBlock.Factory());
+        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

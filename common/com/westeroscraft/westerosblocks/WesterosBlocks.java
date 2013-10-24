@@ -30,6 +30,7 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
 import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
+import com.westeroscraft.westerosblocks.blocks.WCHalfDoorRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
@@ -52,6 +53,7 @@ public class WesterosBlocks
     // Custom renders
     public static int fenceRenderID;
     public static int ladderRenderID;
+    public static int halfdoorRenderID;
     // Use stair render fix
     public boolean useFixedStairs = false;
     
@@ -165,6 +167,8 @@ public class WesterosBlocks
         RenderingRegistry.registerBlockHandler(new WCFenceRenderer());
         ladderRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCLadderRenderer());
+        halfdoorRenderID = RenderingRegistry.getNextAvailableRenderId();
+        RenderingRegistry.registerBlockHandler(new WCHalfDoorRenderer());
         proxy.initRenderRegistry();
         
         // Construct custom block definitions
