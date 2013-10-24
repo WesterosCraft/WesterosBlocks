@@ -91,6 +91,7 @@ public class WesterosBlocks
     {
         // Initialize 
         WesterosBlockDef.initialize();
+        WesterosBlocksCreativeTab.init();
         
         // Read our block definition resource
         InputStream in = getClass().getResourceAsStream("/WesterosBlocks.json");

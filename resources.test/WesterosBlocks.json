@@ -1,0 +1,1204 @@
+{
+  // Custom 'step sounds' (sounds for blocks - break, place, and step
+  "stepSounds" = [
+  	// Custom step sound
+  	{
+  		"name" : "testStepSound",
+  		"stepSound" : "step.stone",
+  		"breakSound" : "dig.stone",
+  		"placeSound" : "dig.stone",
+  		"volume" : 1.0,
+  		"pitch" : 0.5
+  	}		
+  ],
+  // Custom block definitions
+  "blocks" = [
+	// Custom block for solid metal blocks
+	{
+		"blockName" : "metal_block_0",
+		"blockID" : 2000,
+		"blockType" : "solid",
+		"hardness" : 5.0,
+		"stepSound" : "metal",
+		"material" : "iron",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 3 } ],
+		"creativeTab" : "WesterosBlocks",
+		"lightValue" : 0.0,
+		"subBlocks" : [
+			// Iron block (was 42:2)
+			{
+				"meta" : 0,
+				"label": "Iron Block",
+				"textures" : [ "metal_block_0/metal_block_iron" ]
+			},
+			// Oxidized Iron block (was 42:3)
+			{
+				"meta" : 1,
+				"label": "Oxidized Iron Block",
+				"textures" : [ "metal_block_0/metal_block_ironoxidized" ]
+			},
+			// Bronze block (was 42:4)
+			{
+				"meta" : 2,
+				"label": "Bronze Block",
+				"textures" : [ "metal_block_0/metal_block_bronze" ]
+			},
+			// Oxidized Iron block (was 42:5)
+			{
+				"meta" : 3,
+				"label": "Oxidized Bronze Block",
+				"textures" : [ "metal_block_0/metal_block_bronzeoxidized" ]
+			},
+			// Oxidized Steel block (was 42:1)
+			{
+				"meta" : 4,
+				"label": "Oxidized Steel Block",
+				"textures" : [ "metal_block_0/metal_block_steeloxidized" ]
+			}
+		]
+	},
+	// Custom block for solid stone blocks
+	{
+		"blockName" : "stone_block_0",
+		"blockID" : 2001,
+		"blockType" : "solid",
+		"hardness" : 1.5,
+		"stepSound" : "stone",
+		"material" : "rock",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 1 } ],
+		"creativeTab" : "WesterosBlocks",
+		"lightValue" : 0.0,
+		"subBlocks" : [
+			// Bisque Stone block (was 1:1)
+			{
+				"meta" : 0,
+				"label": "Bisque Stone",
+				"textures" : [ "stone_block_0/stone_large_bisque" ]
+			},
+			// Dark Khaki Stone block (was 1:2)
+			{
+				"meta" : 1,
+				"label": "Dark Khaki Stone",
+				"textures" : [ "stone_block_0/stone_large_darkkhaki" ]
+			},
+			// Brown Stone block (was 1:3)
+			{
+				"meta" : 2,
+				"label": "Brown Stone",
+				"textures" : [ "stone_block_0/stone_large_brown" ]
+			},
+			// Beige Stone block (was 1:4)
+			{
+				"meta" : 3,
+				"label": "Beige Stone",
+				"textures" : [ "stone_block_0/stone_large_beige" ]
+			},
+			// Floral White Stone block (was 1:5)
+			{
+				"meta" : 4,
+				"label": "Floral White Stone",
+				"textures" : [ "stone_block_0/stone_large_floralwhite" ]
+			},
+			// Ghost White Stone block (was 1:6)
+			{
+				"meta" : 5,
+				"label": "Ghost White Stone",
+				"textures" : [ "stone_block_0/stone_large_ghostwhite" ]
+			},
+			
+			// Dim Grey Stone block (was 1:7)
+			{
+				"meta" : 6,
+				"label": "Dim Grey Stone",
+				"textures" : [ "stone_block_0/stone_large_dimgrey" ]
+			},
+			// Papayawhip Stone block (was 1:8)
+			{
+				"meta" : 7,
+				"label": "Papayawhip Stone",
+				"textures" : [ "stone_block_0/stone_large_papayawhip" ]
+			},
+			// Silver Stone block (was 1:9)
+			{
+				"meta" : 8,
+				"label": "Silver Stone",
+				"textures" : [ "stone_block_0/stone_small_silver" ]
+			},
+			// Burlywood Stone block (was 1:10)
+			{
+				"meta" : 9,
+				"label": "Burlywood Stone",
+				"textures" : [ "stone_block_0/stone_small_burlywood" ]
+			},
+			// Honeydew Stone block (was 1:11)
+			{
+				"meta" : 10,
+				"label": "Honeydew Stone",
+				"textures" : [ "stone_block_0/stone_small_honeydew" ]
+			},
+			// Peru Stone block (was 1:12)
+			{
+				"meta" : 11,
+				"label": "Peru Stone",
+				"textures" : [ "stone_block_0/stone_large_peru" ]
+			},
+			// Goldenrod Stone block (was 1:13)
+			{
+				"meta" : 12,
+				"label": "Goldenrod Stone",
+				"textures" : [ "stone_block_0/stone_large_goldenrod" ]
+			},
+			// Antique White Stone block (was 1:14)
+			{
+				"meta" : 13,
+				"label": "Antique White Stone",
+				"textures" : [ "stone_block_0/stone_small_antiquewhite" ]
+			}
+		]
+	},
+	// Custom block for iron block stairs
+	{
+		"blockName" : "metal_block_0_stair_0",
+		"blockID" : 2002,
+		"blockType" : "stair",
+		"modelBlockName" : "metal_block_0",
+		"modelBlockMeta" : 0,
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Iron Stairs"
+			}
+		]
+	},
+	// Custom block for oxidized iron block stairs
+	{
+		"blockName" : "metal_block_0_stair_1",
+		"blockID" : 2003,
+		"blockType" : "stair",
+		"modelBlockName" : "metal_block_0",
+		"modelBlockMeta" : 1,
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Oxidized Iron Stairs"
+			}
+		]
+	},
+	// Custom block for logs
+	{
+		"blockName" : "log_block_0",
+		"blockID" : 2004,
+		"blockType" : "log",
+		"stepSound" : "wood",
+		"material" : "wood",
+		"harvestLevel" : [ { "tool" : "axe", "level" : 1 } ],
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			// Acacia Log
+			{
+				"meta" : 0,
+				"label": "Acacia Log",
+				"textures" : [ "log_block_0/log_acacia_top", "log_block_0/log_acacia_side" ]
+			},
+			// Redwood Log
+			{
+				"meta" : 1,
+				"label": "Redwood Log",
+				"textures" : [ "log_block_0/log_redwood_top", "log_block_0/log_redwood_side" ]
+			}
+		]
+	},
+	// Custom block for plants
+	{
+		"blockName" : "plant_block_0",
+		"blockID" : 2005,
+		"blockType" : "plant",
+		"stepSound" : "grass",
+		"material" : "plants",
+		"creativeTab" : "WesterosDeco",
+		"boundingBox" : { "xMin" : 0.3, "xMax" : 0.7, "yMin" : 0.0, "yMax" : 0.6, "zMin" : 0.3, "zMax" : 0.7 },
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Flowers 1",
+				"textures" : [ "plant_block_0/12" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Flowers 2",
+				"textures" : [ "plant_block_0/3" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Flowers 3",
+				"textures" : [ "plant_block_0/8" ]
+			},
+			{
+				"meta" : 3,
+				"label": "Flowers 4",
+				"textures" : [ "plant_block_0/9" ]
+			},
+			{
+				"meta" : 4,
+				"label": "Flowers 5",
+				"textures" : [ "plant_block_0/A6" ]
+			},
+			{
+				"meta" : 5,
+				"label": "Flowers 6",
+				"textures" : [ "plant_block_0/B2" ]
+			},
+			{
+				"meta" : 6,
+				"label": "Flowers 7",
+				"textures" : [ "plant_block_0/B3" ]
+			},
+			{
+				"meta" : 7,
+				"label": "Flowers 8",
+				"textures" : [ "plant_block_0/B4" ]
+			},
+			{
+				"meta" : 8,
+				"label": "Flowers 9",
+				"textures" : [ "plant_block_0/B5" ]
+			},
+			{
+				"meta" : 9,
+				"label": "Flowers 10",
+				"textures" : [ "plant_block_0/B6" ]
+			},
+			{
+				"meta" : 10,
+				"label": "Flowers 11",
+				"textures" : [ "plant_block_0/C2" ]
+			},
+			{
+				"meta" : 11,
+				"label": "Flowers 12",
+				"textures" : [ "plant_block_0/C3" ]
+			},
+			{
+				"meta" : 12,
+				"label": "Flowers 13",
+				"textures" : [ "plant_block_0/C4" ]
+			},
+			{
+				"meta" : 13,
+				"label": "Flowers 14",
+				"textures" : [ "plant_block_0/C6" ]
+			},
+			{
+				"meta" : 14,
+				"label": "Flowers 15",
+				"textures" : [ "plant_block_0/D5" ]
+			},
+			{
+				"meta" : 15,
+				"label": "Flowers 16",
+				"textures" : [ "plant_block_0/E3" ]
+			}
+		]
+	},
+	// More custom plants
+	{
+		"blockName" : "plant_block_1",
+		"blockID" : 2006,
+		"blockType" : "plant",
+		"stepSound" : "grass",
+		"material" : "plants",
+		"creativeTab" : "WesterosDeco",
+		"boundingBox" : { "xMin" : 0.3, "xMax" : 0.7, "yMin" : 0.0, "yMax" : 0.6, "zMin" : 0.3, "zMax" : 0.7 },
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Flowers 17",
+				"textures" : [ "plant_block_1/E4" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Flowers 18",
+				"textures" : [ "plant_block_1/E6" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Flowers 19",
+				"textures" : [ "plant_block_1/F2" ]
+			},
+			{
+				"meta" : 3,
+				"label": "Flowers 20",
+				"textures" : [ "plant_block_1/F3" ]
+			},
+			{
+				"meta" : 4,
+				"label": "Flowers 21",
+				"textures" : [ "plant_block_1/H2" ]
+			},
+			{
+				"meta" : 5,
+				"label": "Flowers 22",
+				"textures" : [ "plant_block_1/H3" ]
+			},
+			{
+				"meta" : 6,
+				"label": "Flowers 23",
+				"textures" : [ "plant_block_1/H4" ]
+			},
+			{
+				"meta" : 7,
+				"label": "Flowers 24",
+				"textures" : [ "plant_block_1/H7" ]
+			},
+			{
+				"meta" : 8,
+				"label": "Flowers 25",
+				"textures" : [ "plant_block_1/I4" ]
+			},
+			{
+				"meta" : 9,
+				"label": "Flowers 26",
+				"textures" : [ "plant_block_1/I5" ]
+			},
+			{
+				"meta" : 10,
+				"label": "Flowers 27",
+				"textures" : [ "plant_block_1/I6" ]
+			}
+		]
+	},
+	// Custom decorative crops
+	{
+		"blockName" : "crop_block_0",
+		"blockID" : 2007,
+		"blockType" : "crop",
+		"stepSound" : "grass",
+		"material" : "plants",
+		"creativeTab" : "WesterosDeco",
+		"boundingBox" : { "xMin" : 0.125, "xMax" : 0.875, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.125, "zMax" : 0.875 },
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Cattails",
+				"textures" : [ "crop_block_0/cattail" ]
+			}
+		]
+	},
+	// Custom block for metal slab blocks
+	{
+		"blockName" : "medal_slab_block_0",
+		"blockIDs" : [ 2008, 2020 ],
+		"blockType" : "slab",
+		"hardness" : 5.0,
+		"stepSound" : "metal",
+		"material" : "iron",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 3 } ],
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			// Iron block
+			{
+				"meta" : 0,
+				"label": "Iron Slab",
+				"textures" : [ "metal_block_0/metal_block_iron" ]
+			},
+			// Oxidized Iron block
+			{
+				"meta" : 1,
+				"label": "Oxidized Iron Slab",
+				"textures" : [ "metal_block_0/metal_block_ironoxidized" ]
+			},
+			// Bronze block
+			{
+				"meta" : 2,
+				"label": "Bronze Slab",
+				"textures" : [ "metal_block_0/metal_block_bronze" ]
+			},
+			// Oxidized Iron block
+			{
+				"meta" : 3,
+				"label": "Oxidized Bronze Slab",
+				"textures" : [ "metal_block_0/metal_block_bronzeoxidized" ]
+			},
+			// Oxidized Steel block
+			{
+				"meta" : 4,
+				"label": "Oxidized Steel Slab",
+				"textures" : [ "metal_block_0/metal_block_steeloxidized" ]
+			}
+		]
+	},
+	// Custom block for wooden fence blocks
+	{
+		"blockName" : "fence_block_0",
+		"blockID" : 2009,
+		"blockType" : "fence",
+		"hardness" : 2.0,
+		"stepSound" : "wood",
+		"material" : "wood",
+		"resistance" : 5.0,
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Oak fence (was 85:0)
+			{
+				"meta" : 0,
+				"label": "Oak Fence",
+				"textures" : [ "fence_block_0/planks_oak" ]
+			},
+			// Spruce fence (was 85:1)
+			{
+				"meta" : 1,
+				"label": "Spruce Fence",
+				"textures" : [ "fence_block_0/planks_spruce" ]
+			},
+			// Birch fence (was 85:2)
+			{
+				"meta" : 2,
+				"label": "Birch Fence",
+				"textures" : [ "fence_block_0/planks_birch" ]
+			},
+			// Jungle fence (was 85:3)
+			{
+				"meta" : 3,
+				"label": "Jungle Fence",
+				"textures" : [ "fence_block_0/planks_jungle" ]
+			},
+			// Oak bark fence (was 85:4)
+			{
+				"meta" : 4,
+				"label": "Oak Bark Fence",
+				"textures" : [ "fence_block_0/bark_oak" ]
+			},
+			// Spruce bark fence (was 85:5)
+			{
+				"meta" : 5,
+				"label": "Spruce Bark Fence",
+				"textures" : [ "fence_block_0/bark_spruce" ]
+			},
+			// Birch bark fence (was 85:6)
+			{
+				"meta" : 6,
+				"label": "Birch Bark Fence",
+				"textures" : [ "fence_block_0/bark_birch" ]
+			},
+			// Jungle bark fence (was 85:7)
+			{
+				"meta" : 7,
+				"label": "Jungle Bark Fence",
+				"textures" : [ "fence_block_0/bark_jungle" ]
+			},
+			// Oak fence with vines fence (was 85:8)
+			{
+				"meta" : 8,
+				"label": "Oak Fence with Vines",
+				"textures" : [ "fence_block_0/planks_oak_vines" ]
+			},
+			// Spruce fence with vines fence (was 85:9)
+			{
+				"meta" : 9,
+				"label": "Spruce Fence with Vines",
+				"textures" : [ "fence_block_0/planks_spruce_vines" ]
+			},
+			// Birch fence with vines fence (was 85:10)
+			{
+				"meta" : 10,
+				"label": "Birch Fence with Vines",
+				"textures" : [ "fence_block_0/planks_birch_vines" ]
+			},
+			// Jungle fence with vines fence (was 85:11)
+			{
+				"meta" : 11,
+				"label": "Jungle Fence with Vines",
+				"textures" : [ "fence_block_0/planks_jungle_vines" ]
+			},
+			// Oak fence with grapevines fence (was 85:12)
+			{
+				"meta" : 12,
+				"label": "Oak Fence with Grapes",
+				"textures" : [ "fence_block_0/planks_oak_grapevines" ]
+			},
+			// Spruce fence with grapevines fence (was 85:13)
+			{
+				"meta" : 13,
+				"label": "Spruce Fence with Grapes",
+				"textures" : [ "fence_block_0/planks_spruce_grapevines" ]
+			},
+			// Birch fence with grapevines fence (was 85:14)
+			{
+				"meta" : 14,
+				"label": "Birch Fence with Grapes",
+				"textures" : [ "fence_block_0/planks_birch_grapevines" ]
+			},
+			// Jungle fence with grapevines fence (was 85:15)
+			{
+				"meta" : 15,
+				"label": "Jungle Fence with Grapes",
+				"textures" : [ "fence_block_0/planks_jungle_grapevines" ]
+			}
+	    ]
+	},
+	// Custom block for stone wall blocks
+	{
+		"blockName" : "stone_wall_block_0",
+		"blockID" : 2010,
+		"blockType" : "wall",
+		"hardness" : 1.5,
+		"stepSound" : "stone",
+		"material" : "rock",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 1 } ],
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			// Dark stone brick wall block (was 139:12)
+			{
+				"meta" : 0,
+				"label": "Dark Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_large_dark" ]
+			},
+			// Light gray stone brick wall block (was 139:10)
+			{
+				"meta" : 1,
+				"label": "Light Grey Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_large_lightgrey" ]
+			},
+			// Red clay stone brick wall block (was 139:6)
+			{
+				"meta" : 2,
+				"label": "Red Clay Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_clay_normal_red" ]
+			},
+			// Sandstone brick wall block (was 139:4)
+			{
+				"meta" : 3,
+				"label": "Sandstone Brick Wall",
+				"textures" : [ "stone_wall_block_0/sandstone_light_top", "stone_wall_block_0/sandstone_light_top", "stone_wall_block_0/sandstone_light_side" ]
+			},
+			// Red Sandstone brick wall block (was 139:3)
+			{
+				"meta" : 4,
+				"label": "Red Sandstone Brick Wall",
+				"textures" : [ "stone_wall_block_0/sandstone_red_top", "stone_wall_block_0/sandstone_red_top", "stone_wall_block_0/sandstone_red_side" ]
+			},
+			// Bluegrey brick wall block (was 139:5)
+			{
+				"meta" : 5,
+				"label": "Blue-grey Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_normal_bluegrey" ]
+			},
+			// Dark grey stone brick wall block (was 139:14)
+			{
+				"meta" : 6,
+				"label": "Dark Grey Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_normal_darkgrey" ]
+			},
+			// Grey stone brick wall block (was 139:11)
+			{
+				"meta" : 7,
+				"label": "Grey Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_normal_grey" ]
+			},
+			// Red stone brick wall block (was 139:11)
+			{
+				"meta" : 8,
+				"label": "Red Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_normal_red" ]
+			},
+			// Red clay stone brick wall block (was 139:15)
+			{
+				"meta" : 9,
+				"label": "Red Clay Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_clay_verysmall_red" ]
+			},
+			// Light gray stone brick wall block (was 139:13)
+			{
+				"meta" : 10,
+				"label": "Light Grey Stone Brick Wall",
+				"textures" : [ "stone_wall_block_0/brick_stone_verysmall_lightgrey" ]
+			}
+		]
+	},
+	// Custom block for iron fence blocks
+	{
+		"blockName" : "bars_iron_block_0",
+		"blockID" : 2011,
+		"blockType" : "pane",
+		"hardness" : 5.0,
+		"stepSound" : "metal",
+		"material" : "iron",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 3 } ],
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Iron Crossbar (was 101:1)
+			{
+				"meta" : 0,
+				"label": "Iron Crossbar",
+				"textures" : [ "bars_iron_block_0/bars_iron_crossbars", "bars_iron_block_0/bars_iron_crossbars" ]
+			},
+			// Oxidized Iron bars (was 101:2)
+			{
+				"meta" : 1,
+				"label": "Oxidized Iron Bars",
+				"textures" : [ "bars_iron_block_0/bars_iron_oxidized", "bars_iron_block_0/bars_iron_oxidized" ]
+			},
+			// Oxidized Iron crossbar (was 101:3)
+			{
+				"meta" : 2,
+				"label": "Oxidized Iron Crossbar",
+				"textures" : [ "bars_iron_block_0/bars_iron_oxidized_crossbars", "bars_iron_block_0/bars_iron_oxidized_crossbars" ]
+			}
+		]
+	},
+	// Custom block for sand/gravel blocks
+	{
+		"blockName" : "sand_block_0",
+		"blockID" : 2012,
+		"blockType" : "sand",
+		"hardness" : 0.5,
+		"stepSound" : "testStepSound",
+		"material" : "sand",
+		"creativeTab" : "WesterosBlocks",
+		"subBlocks" : [
+			// Desert Sand (biome specific 12:0)
+			{
+				"meta" : 0,
+				"label": "Desert Sand",
+				"textures" : [ "sand_block_0/sand_desert" ]
+			},
+			// Ocean Sand (biome specific 12:0) 
+			{
+				"meta" : 1,
+				"label": "Ocean Sand",
+				"textures" : [ "sand_block_0/sand_ocean" ]
+			},
+			// Sand Skeleton (was 12:1) 
+			{
+				"meta" : 2,
+				"label": "Sand Skeleton",
+				"textures" : [ "sand_block_0/sand_skeleton" ]
+			},
+			// Wet Sand (was 12:2) 
+			{
+				"meta" : 3,
+				"label": "Wet Sand",
+				"textures" : [ "sand_block_0/sand_wet" ]
+			},
+			// Terracotta Sand (was 12:3) 
+			{
+				"meta" : 4,
+				"label": "Terracotta Sand",
+				"textures" : [ "sand_block_0/sand_terracotta" ]
+			},
+			// Pink/Orange Sand (was 12:4) 
+			{
+				"meta" : 5,
+				"label": "Pink/Orange Sand",
+				"textures" : [ "sand_block_0/sand_pinkorange" ]
+			},
+			// Red Sand (was 12:5) 
+			{
+				"meta" : 6,
+				"label": "Red Sand",
+				"textures" : [ "sand_block_0/sand_red" ]
+			},
+			// Sand Stones (was 12:6) 
+			{
+				"meta" : 7,
+				"label": "Sand Stones",
+				"textures" : [ "sand_block_0/sand_stones" ]
+			},
+			// Wet Sand Stones (was 12:7) 
+			{
+				"meta" : 8,
+				"label": "Wet Sand Stones",
+				"textures" : [ "sand_block_0/sand_wet_stones" ]
+			}
+		]
+	},
+	// Custom block for cuboid blocks
+	{
+		"blockName" : "cuboid_block_0",
+		"blockID" : 2013,
+		"blockType" : "cuboid",
+		"hardness" : 5.0,
+		"stepSound" : "metal",
+		"material" : "iron",
+		"resistance" : 10.0,
+		"harvestLevel" : [ { "tool" : "pickaxe", "level" : 3 } ],
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Axe block (facing east) (was 101:5)
+			{
+				"meta" : 0,
+				"label": "Axe Block",
+				"textures" : [ "transparent", "transparent", "cuboid_block_0/axe_left", "cuboid_block_0/axe_right", "transparent", "transparent" ],
+				"boundingBox" : { "xMin" : 0.0, "xMax" : 1.0, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.499, "zMax" : 0.5 },
+				"itemTextureIndex" : 2
+			},
+			// Cleaver block (facing north) (was 101:6)
+			{
+				"meta" : 1,
+				"label": "Cleaver Block",
+				"textures" : [ "transparent", "transparent", "transparent", "transparent", "cuboid_block_0/cleaver_left", "cuboid_block_0/cleaver_right" ],
+				"boundingBox" : { "xMin" : 0.499, "xMax" : 0.5, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.0, "zMax" : 1.0 },
+				"itemTextureIndex" : 4
+			},
+			// Dagger block (facing west) (was 101:7)
+			{
+				"meta" : 2,
+				"label": "Dagger Block",
+				"textures" : [ "transparent", "transparent", "cuboid_block_0/dagger_right", "cuboid_block_0/dagger_left", "transparent", "transparent" ],
+				"boundingBox" : { "xMin" : 0.0, "xMax" : 1.0, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.499, "zMax" : 0.5 },
+				"itemTextureIndex" : 2
+			},
+			// Pickaxe block (facing south) (was 101:8)
+			{
+				"meta" : 3,
+				"label": "Pickaxe Block",
+				"textures" : [ "transparent", "transparent", "transparent", "transparent", "cuboid_block_0/pickaxe_right", "cuboid_block_0/pickaxe_left" ],
+				"boundingBox" : { "xMin" : 0.499, "xMax" : 0.5, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.0, "zMax" : 1.0 },
+				"itemTextureIndex" : 4
+			},
+			// Shovel block (facing west) (was 101:9)
+			{
+				"meta" : 4,
+				"label": "Shovel Block",
+				"textures" : [ "transparent", "transparent", "cuboid_block_0/shovel_right", "cuboid_block_0/shovel_left", "transparent", "transparent" ],
+				"boundingBox" : { "xMin" : 0.0, "xMax" : 1.0, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.499, "zMax" : 0.5 },
+				"itemTextureIndex" : 2
+			}
+		]
+	},
+	// Custom block for candle blocks
+	{
+		"blockName" : "torch_block_0",
+		"blockID" : 2014,
+		"blockType" : "torch",
+		"stepSound" : "powder",
+		"creativeTab" : "WesterosDeco",
+		"lightValue" : 1.0,
+		"subBlocks" : [
+			// Candle (was redstone torch)
+			{
+				"meta" : 0,
+				"label": "Candle",
+				"textures" : [ "torch_block_0/redstone_torch_on" ]
+			}
+		]
+	},
+	// Custom block for tall grasses blocks
+	{
+		"blockName" : "tallgrass_block_0",
+		"blockID" : 2015,
+		"blockType" : "plant",
+		"stepSound" : "grass",
+		"material" : "grass",
+		"creativeTab" : "WesterosPlants",
+		"colorMult" : "grass",
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Forest Fern",
+				"textures" : [ "tallgrass_block_0/forest_fern_cluster" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Forest Grass (short)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thickshort" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Forest Grass (tall thick)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thicktall" ]
+			},
+			{
+				"meta" : 3,
+				"label": "Forest Grass (thick tuft 1)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thicktuft_highcontrast" ]
+			},
+			{
+				"meta" : 4,
+				"label": "Forest Grass (thick tuft 2)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thicktuft_lowcontrast" ]
+			},
+			{
+				"meta" : 5,
+				"label": "Forest Grass (thick tuft 3)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thicktuft_mediumcontrast" ]
+			},
+			{
+				"meta" : 6,
+				"label": "Forest Grass (thin 1)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thinmedium_highcontrast" ]
+			},
+			{
+				"meta" : 7,
+				"label": "Forest Grass (thin 2)",
+				"textures" : [ "tallgrass_block_0/forest_grass_thinmedium_lowcontrast" ]
+			},
+			{
+				"meta" : 8,
+				"label": "Plains Fern",
+				"textures" : [ "tallgrass_block_0/plains_fern_cluster" ]
+			},
+			{
+				"meta" : 9,
+				"label": "Plains Grass (short)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thickshort" ]
+			},
+			{
+				"meta" : 10,
+				"label": "Plains Grass (tall thick)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thicktall" ]
+			},
+			{
+				"meta" : 11,
+				"label": "Plains Grass (thick tuft 1)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thicktuft_highcontrast" ]
+			},
+			{
+				"meta" : 12,
+				"label": "Plains Grass (thick tuft 2)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thicktuft_lowcontrast" ]
+			},
+			{
+				"meta" : 13,
+				"label": "Plains Grass (thick tuft 3)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thicktuft_mediumcontrast" ]
+			},
+			{
+				"meta" : 14,
+				"label": "Plains Grass (thin 1)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thinmedium_highcontrast" ]
+			},
+			{
+				"meta" : 15,
+				"label": "Plains Grass (thin 2)",
+				"textures" : [ "tallgrass_block_0/plains_grass_thinmedium_lowcontrast" ]
+			}
+		]
+	},
+	// Custom block for leaves blocks
+	{
+		"blockName" : "leaves_block_0",
+		"blockID" : 2016,
+		"blockType" : "leaves",
+		"stepSound" : "grass",
+		"material" : "leaves",
+		"creativeTab" : "WesterosPlants",
+		"type" : "no-decay", // These were glass blocks: assume we don't want them to decay
+		"subBlocks" : [
+		    // Apple Fruit Leaves (was 20:8)
+			{
+				"meta" : 0,
+				"label": "Apple Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_apple_fruit_top_bottom", "leaves_block_0/leaves_apple_fruit_top_bottom", "leaves_block_0/leaves_apple_fruit_1", "leaves_block_0/leaves_apple_fruit_1" ]
+			},
+			// Apricot Fruit Leaves (was 20:12)
+			{
+				"meta" : 1,
+				"label": "Apricot Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_apricot_fruit_top_bottom", "leaves_block_0/leaves_apricot_fruit_top_bottom", "leaves_block_0/leaves_apricot_fruit_1", "leaves_block_0/leaves_apricot_fruit_1" ]
+			},
+			// Cherry Fruit Leaves (was 20:11)
+			{
+				"meta" : 2,
+				"label": "Cherry Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_cherry_fruit_top_bottom", "leaves_block_0/leaves_cherry_fruit_top_bottom", "leaves_block_0/leaves_cherry_fruit_1", "leaves_block_0/leaves_cherry_fruit_1" ]
+			},
+			// Grape Fruit Leaves (was 20:5)
+			{
+				"meta" : 3,
+				"label": "Grape Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_grapes_fruit_top_bottom", "leaves_block_0/leaves_grapes_fruit_top_bottom", "leaves_block_0/leaves_grapes_fruit_1", "leaves_block_0/leaves_grapes_fruit_1" ]
+			},
+			// Lemon Fruit Leaves (was 20:10)
+			{
+				"meta" : 4,
+				"label": "Lemon Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_lemon_fruit_top_bottom", "leaves_block_0/leaves_lemon_fruit_top_bottom", "leaves_block_0/leaves_lemon_fruit_1", "leaves_block_0/leaves_lemon_fruit_1" ]
+			},
+			// Lime Fruit Leaves (was 20:6)
+			{
+				"meta" : 5,
+				"label": "Lime Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_lime_fruit_top_bottom", "leaves_block_0/leaves_lime_fruit_top_bottom", "leaves_block_0/leaves_lime_fruit_1", "leaves_block_0/leaves_lime_fruit_1" ]
+			},
+			// Orange Fruit Leaves (was 20:7)
+			{
+				"meta" : 6,
+				"label": "Orange Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_orange_fruit_top_bottom", "leaves_block_0/leaves_orange_fruit_top_bottom", "leaves_block_0/leaves_orange_fruit_1", "leaves_block_0/leaves_orange_fruit_1" ]
+			},
+			// Peach Fruit Leaves (was 20:13)
+			{
+				"meta" : 7,
+				"label": "Peach Fruit Leaves",
+				"textures" : [ "leaves_block_0/leaves_peach_fruit_top_bottom", "leaves_block_0/leaves_peach_fruit_top_bottom", "leaves_block_0/leaves_peach_fruit_1", "leaves_block_0/leaves_peach_fruit_1" ]
+			}
+		]
+	},
+	// Custom block for leaves blocks (#2)
+	{
+		"blockName" : "leaves_block_1",
+		"blockID" : 2017,
+		"blockType" : "leaves",
+		"stepSound" : "grass",
+		"material" : "leaves",
+		"type" : "no-decay", // These were glass blocks: assume we don't want them to decay
+		"creativeTab" : "WesterosPlants",
+		"subBlocks" : [
+			// Plum Fruit Leaves (from 20:14)
+			{
+				"meta" : 0,
+				"label": "Plum Fruit Leaves",
+				"textures" : [ "leaves_block_1/leaves_plum_fruit_top_bottom", "leaves_block_1/leaves_plum_fruit_top_bottom", "leaves_block_1/leaves_plum_fruit_1", "leaves_block_1/leaves_plum_fruit_1" ]
+			},
+			// Pomegrenade Fruit Leaves (from 20:9)
+			{
+				"meta" : 1,
+				"label": "Pomegrenade Fruit Leaves",
+				"textures" : [ "leaves_block_1/leaves_pomegrenade_fruit_top_bottom", "leaves_block_1/leaves_pomegrenade_fruit_top_bottom", "leaves_block_1/leaves_pomegrenade_fruit_1", "leaves_block_1/leaves_pomegrenade_fruit_1" ]
+			},
+			// Weirwood Leaves (from 20:15)
+			{
+				"meta" : 2,
+				"label": "Weirwood Leaves",
+				"textures" : [ "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood", "leaves_block_1/leaves_weirwood" ]
+			}
+		]
+	},
+	// Custom block for crate blocks
+	{
+		"blockName" : "crate_block_0",
+		"blockID" : 2018,
+		"blockType" : "solid",
+		"hardness" : 2.0,
+		"stepSound" : "wood",
+		"material" : "wood",
+		"resistance" : 5.0,
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Crate block (was 25:0)
+			{
+				"meta" : 0,
+				"label": "Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/0", "crate_block_0/0" ]
+			},
+			// Crate block (was 25:1)
+			{
+				"meta" : 1,
+				"label": "Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/1", "crate_block_0/1" ]
+			},
+			// Crate block (was 25:2)
+			{
+				"meta" : 2,
+				"label": "Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/2", "crate_block_0/2" ]
+			},
+			// Crate block (was 25:3)
+			{
+				"meta" : 3,
+				"label": "Open Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/3", "crate_block_0/0" ]
+			},
+			// Crate block (was 25:4)
+			{
+				"meta" : 4,
+				"label": "Potato Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/4", "crate_block_0/1" ]
+			},
+			// Crate block (was 25:5)
+			{
+				"meta" : 5,
+				"label": "Fish Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/5", "crate_block_0/2" ]
+			},
+			// Crate block (was 25:6)
+			{
+				"meta" : 6,
+				"label": "Grain Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/6", "crate_block_0/0" ]
+			},
+			// Crate block (was 25:7)
+			{
+				"meta" : 7,
+				"label": "Apple Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/7", "crate_block_0/1" ]
+			},
+			// Crate block (was 25:8)
+			{
+				"meta" : 8,
+				"label": "Carrot Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/8", "crate_block_0/2" ]
+			},
+			// Crate block (was 25:9)
+			{
+				"meta" : 9,
+				"label": "Salt Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/9", "crate_block_0/0" ]
+			},
+			// Crate block (was 25:10)
+			{
+				"meta" : 10,
+				"label": "Iron Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/10", "crate_block_0/1" ]
+			},
+			// Crate block (was 25:11)
+			{
+				"meta" : 11,
+				"label": "Fruit Crate",
+				"textures" : [ "crate_block_0/0", "crate_block_0/11", "crate_block_0/2" ]
+			}
+		]
+	},
+	// Custom block for redwood wood door
+	{
+		"blockName" : "redwood_door",
+		"blockID" : 2019,
+		"itemID" : 12019,
+		"blockType" : "door",
+		"hardness" : 2.0,
+		"stepSound" : "wood",
+		"material" : "wood",
+		"resistance" : 5.0,
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Pine Door
+			{
+				"meta" : 0,
+				"label": "Redwood Door",
+				"textures" : [ "redwood_door/redwood_door_top", "redwood_door/redwood_door_bottom" ],
+				"itemTexture" : "redwood_door_item"
+			}
+		]
+	},
+	// Custom block for sand layers
+	{
+		"blockName" : "sand_layer_0",
+		"blockID" : 2021,
+		"blockType" : "layer",
+		"hardness" : 0.5,
+		"stepSound" : "testStepSound",
+		"material" : "sand",
+		"creativeTab" : "WesterosBlocks",
+		"type" : "cnt:8",
+		"subBlocks" : [
+			// Desert Sand Layer
+			{
+				"meta" : 0,
+				"label": "Desert Sand Layer",
+				"textures" : [ "sand_block_0/sand_desert" ]
+			}
+		]
+	},
+	// Custom block for smoke (using web block)
+	{
+		"blockName" : "smoke_block_0",
+		"blockID" : 2022,
+		"blockType" : "web",
+		"stepSound" : "cloth",
+		"material" : "web",
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Smoke 1",
+				"textures" : [ "smoke_block_0/smoke_0" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Smoke 2",
+				"textures" : [ "smoke_block_0/smoke_1" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Smoke 3",
+				"textures" : [ "smoke_block_0/smoke_2" ]
+			},
+			{
+				"meta" : 3,
+				"label": "Smoke 4",
+				"textures" : [ "smoke_block_0/smoke_3" ]
+			},
+			{
+				"meta" : 4,
+				"label": "Smoke 5",
+				"textures" : [ "smoke_block_0/smoke_4" ]
+			},
+			{
+				"meta" : 5,
+				"label": "Smoke 6",
+				"textures" : [ "smoke_block_0/smoke_5" ]
+			},
+			{
+				"meta" : 6,
+				"label": "Smoke 7",
+				"textures" : [ "smoke_block_0/smoke_6" ]
+			},
+			{
+				"meta" : 7,
+				"label": "Smoke 8",
+				"textures" : [ "smoke_block_0/smoke_7" ]
+			},
+			{
+				"meta" : 8,
+				"label": "Smoke 9",
+				"textures" : [ "smoke_block_0/smoke_8" ]
+			}
+		]
+	},
+	// Custom block for smoke (using web block)
+	{
+		"blockName" : "ladder_block_0",
+		"blockID" : 2023,
+		"blockType" : "ladder",
+		"stepSound" : "ladder",
+		"material" : "iron",
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			{
+				"meta" : 0,
+				"label": "Iron Ladder",
+				"textures" : [ "ladder_block_0/ladder_iron" ]
+			},
+			{
+				"meta" : 1,
+				"label": "Iron Ladder (top)",
+				"textures" : [ "ladder_block_0/ladder_iron_top" ]
+			},
+			{
+				"meta" : 2,
+				"label": "Iron Ladder (bottom)",
+				"textures" : [ "ladder_block_0/ladder_iron_bottom" ]
+			}
+		]
+	 },
+	// Custom block for redwood wood half-door
+	{
+		"blockName" : "redwood_halfdoor",
+		"blockID" : 2024,
+		"itemID" : 12024,
+		"blockType" : "halfdoor",
+		"hardness" : 2.0,
+		"stepSound" : "wood",
+		"material" : "wood",
+		"resistance" : 5.0,
+		"creativeTab" : "WesterosDeco",
+		"subBlocks" : [
+			// Pine Door
+			{
+				"meta" : 0,
+				"label": "Redwood Half-Door",
+				"textures" : [ "redwood_door/redwood_door_top" ],
+				"itemTexture" : "redwood_door_item"
+			}
+		]
+	}
+  ]
+}

@@ -11,6 +11,10 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
     public static final CreativeTabs tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "Westeros Decorative", 1);
     public static final CreativeTabs tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "Westeros Plants", 2);
     
+    public static void init() {
+        
+    }
+    
     private int tab;
     private String lbl;
     public  WesterosBlocksCreativeTab(String id, String label, int tabnum) {
