@@ -460,17 +460,5 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     public int getMobilityFlag()
     {
         return 1;
-    }
-
-    /**
-     * Called when the block is attempted to be harvested
-     */
-    public void onBlockHarvested(World par1World, int par2, int par3, int par4, int par5, EntityPlayer par6EntityPlayer)
-    {
-        if (par6EntityPlayer.capabilities.isCreativeMode)
-        {
-            par1World.setBlockToAir(par2, par3 - 1, par4);
-        }
-    }
-    
+    }    
 }
