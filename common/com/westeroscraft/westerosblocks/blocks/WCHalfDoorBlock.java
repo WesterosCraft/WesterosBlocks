@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
@@ -58,7 +59,6 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
 
     public boolean registerBlockDefinition() {
         def.doStandardRegisterActions(this, null, new WCHalfDoorItem(this, this.def), 0);
-        
         return true;
     }
     
@@ -129,15 +129,6 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
      * Returns the ID of the items to drop on destruction.
      */
     public int idDropped(int meta, Random par2Random, int par3)
-    {
-        return def.blockID;
-    }
-    
-    @SideOnly(Side.CLIENT)
-    /**
-     * only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
-     */
-    public int idPicked(World par1World, int par2, int par3, int par4)
     {
         return def.blockID;
     }

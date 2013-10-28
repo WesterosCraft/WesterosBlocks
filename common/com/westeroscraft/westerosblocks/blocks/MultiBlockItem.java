@@ -20,7 +20,7 @@ public class MultiBlockItem extends ItemBlock {
     }
 
     @SideOnly(Side.CLIENT)
-    private Block getBlock() {
+    protected Block getBlock() {
         if (blk == null) {
             blk = Block.blocksList[getBlockID()];
         }

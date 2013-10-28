@@ -17,7 +17,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class WCHalfDoorItem extends Item
 {
     private Block blk;
-    private String unlocname;
     private WesterosBlockDef def;
     
     public WCHalfDoorItem(Block blk, WesterosBlockDef def)
@@ -26,7 +25,6 @@ public class WCHalfDoorItem extends Item
         this.blk = blk;
         this.def = def;
         this.maxStackSize = 1;
-        this.unlocname = def.blockName + "_item";
         this.setCreativeTab(def.getCreativeTab());
     }
 
@@ -64,10 +62,11 @@ public class WCHalfDoorItem extends Item
             }
         }
     }
+    
     @Override
     public String getUnlocalizedName (ItemStack itemstack)
     {
-        return unlocname;
+        return blk.getUnlocalizedName();
     }
 
     @SideOnly(Side.CLIENT)
@@ -81,7 +80,7 @@ public class WCHalfDoorItem extends Item
     @Override
     public Icon getIconFromDamage(int meta)
     {
-        return def.getItemIcon(meta);
+        return def.getItemIcon(0);
     }
     
     public static void placeDoorBlock(World par0World, int par1, int par2, int par3, int side, Block par5Block)
