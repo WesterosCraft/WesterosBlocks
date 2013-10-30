@@ -15,6 +15,7 @@ import net.minecraftforge.common.ForgeDirection;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -140,5 +141,12 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
         return def.colorMultiplier(access, x, y, z, 0xF);
+    }
+    /**
+     * The type of render function that is called for this block
+     */
+    public int getRenderType()
+    {
+        return WesterosBlocks.cuboidRenderID;
     }
 }

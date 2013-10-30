@@ -115,6 +115,7 @@ public class WesterosBlockDef {
         public String type = null;              // Block type specific type string (e.g. plant type)
         public int itemTextureIndex = 0;        // Index of texture for item icon
         public String colorMult = null;         // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
+        public List<BoundingBox> cuboids = null;    // List of cuboids composing block (for 'cuboid', and others)
     }
 
     // Base color multiplier (fixed)
@@ -423,6 +424,22 @@ public class WesterosBlockDef {
                         this.colorMultHandlerByMeta[sb.meta] = this.colorMultHandler;
                     }
                 }
+                if ((sb.boundingBox != null) && (sb.cuboids == null)) {
+                    sb.cuboids = Collections.singletonList(sb.boundingBox);
+                }
+                if ((sb.cuboids != null) && (sb.boundingBox == null)) {
+                    sb.boundingBox = new BoundingBox();
+                    sb.boundingBox.xMin = sb.boundingBox.yMin = sb.boundingBox.zMin = 1.0F;
+                    sb.boundingBox.xMax = sb.boundingBox.yMax = sb.boundingBox.zMax = 0.0F;
+                    for (BoundingBox bb : sb.cuboids) {
+                        if (bb.xMin < sb.boundingBox.xMin) sb.boundingBox.xMin = bb.xMin;
+                        if (bb.yMin < sb.boundingBox.yMin) sb.boundingBox.yMin = bb.yMin;
+                        if (bb.zMin < sb.boundingBox.zMin) sb.boundingBox.zMin = bb.zMin;
+                        if (bb.xMax > sb.boundingBox.xMax) sb.boundingBox.xMax = bb.xMax;
+                        if (bb.yMax > sb.boundingBox.yMax) sb.boundingBox.yMax = bb.yMax;
+                        if (bb.zMax > sb.boundingBox.zMax) sb.boundingBox.zMax = bb.zMax;
+                    }
+                }
             }
         }
     }
@@ -674,7 +691,8 @@ public class WesterosBlockDef {
             }
         }
     }
-    private BoundingBox getBoundingBox(int meta) {
+    
+    public BoundingBox getBoundingBox(int meta) {
         BoundingBox bb = this.boundingBox;
         Subblock sb = getByMeta(meta);
         if ((sb != null) && (sb.boundingBox != null)) {
@@ -682,6 +700,15 @@ public class WesterosBlockDef {
         }
         return bb;
     }
+    
+    public List<BoundingBox> getCuboidList(int meta) {
+        Subblock sb = getByMeta(meta);
+        if ((sb != null) && (sb.cuboids != null)) {
+           return sb.cuboids;
+        }
+        return null;
+    }
+    
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
         int meta = world.getBlockMetadata(x, y, z);
         BoundingBox bb = getBoundingBox(meta);

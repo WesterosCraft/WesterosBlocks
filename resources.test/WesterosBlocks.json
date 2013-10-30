@@ -770,7 +770,20 @@
 				"textures" : [ "transparent", "transparent", "cuboid_block_0/shovel_right", "cuboid_block_0/shovel_left", "transparent", "transparent" ],
 				"boundingBox" : { "xMin" : 0.0, "xMax" : 1.0, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.499, "zMax" : 0.5 },
 				"itemTextureIndex" : 2
-			}
+			},
+,			// Oxidized bronze pyramid
+        	{
+          		"meta": 5,
+		        "label": "Oxidized Bronze Pyramid",
+		        "textures": [
+            		"metal_block_0/metal_block_bronzeoxidized"
+          		],
+          		"cuboids": [ 
+            		{ "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.2, "zMin": 0.0, "zMax": 1.0 },
+            		{ "xMin": 0.2, "xMax": 0.8, "yMin": 0.2, "yMax": 0.4, "zMin": 0.2, "zMax": 0.8 },
+            		{ "xMin": 0.4, "xMax": 0.6, "yMin": 0.4, "yMax": 0.6, "zMin": 0.4, "zMax": 0.6 }
+          		]
+         	}			
 		]
 	},
 	// Custom block for candle blocks
