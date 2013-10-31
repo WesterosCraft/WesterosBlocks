@@ -3,7 +3,6 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.block.Block;
@@ -54,12 +53,14 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         Tessellator tessellator = Tessellator.instance;
         WCCuboidBlock cblock = (WCCuboidBlock) block;
         WesterosBlockDef def = cblock.getWBDefinition();
-        List<BoundingBox> cub = def.getCuboidList(meta);
-        if (cub != null) {
-            for (BoundingBox bb : cub) {
-                renderer.setRenderBounds(bb.xMin, bb.yMin, bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+        List<WesterosBlockDef.Cuboid> cubs = def.getCuboidList(meta);
+        if (cubs != null) {
+            for (WesterosBlockDef.Cuboid cub : cubs) {
+                cblock.setActiveRenderCuboid(cub);
+                renderer.setRenderBounds(cub.xMin, cub.yMin, cub.zMin, cub.xMax, cub.yMax, cub.zMax);
                 WCCuboidRenderer.renderStandardInvBlock(renderer, block, meta);
             }
+            cblock.setActiveRenderCuboid(null);
         }
     }
 
@@ -68,12 +69,14 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         WCCuboidBlock cblock = (WCCuboidBlock) block;
         WesterosBlockDef def = cblock.getWBDefinition();
         int meta = world.getBlockMetadata(x, y, z);
-        List<BoundingBox> cub = def.getCuboidList(meta);
-        if (cub != null) {
-            for (BoundingBox bb : cub) {
-                renderer.setRenderBounds(bb.xMin, bb.yMin, bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+        List<WesterosBlockDef.Cuboid> cubs = def.getCuboidList(meta);
+        if (cubs != null) {
+            for (WesterosBlockDef.Cuboid cub : cubs) {
+                cblock.setActiveRenderCuboid(cub);
+                renderer.setRenderBounds(cub.xMin, cub.yMin, cub.zMin, cub.xMax, cub.yMax, cub.zMax);
                 renderer.renderStandardBlock(cblock, x, y, z);
             }
+            cblock.setActiveRenderCuboid(null);
         }
         return true;
     }

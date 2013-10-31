@@ -33,6 +33,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     }
     
     private WesterosBlockDef def;
+    private int[] sideMapping;  // Side to texture index mapping (use by renderer for cuboids
     
     protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
@@ -62,6 +63,12 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
+        if (this.sideMapping != null) {
+            if (side >= this.sideMapping.length) {
+                side = this.sideMapping.length - 1;
+            }
+            side = this.sideMapping[side];
+        }
         return def.doStandardIconGet(side, meta);
     }
     
@@ -148,5 +155,17 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     public int getRenderType()
     {
         return WesterosBlocks.cuboidRenderID;
+    }
+    
+    /**
+     * Set active cuboid during render
+     */
+    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c) {
+        if (c != null) {
+            this.sideMapping = c.sideTextures;
+        }
+        else {
+            this.sideMapping = null;
+        }
     }
 }

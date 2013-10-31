@@ -100,6 +100,9 @@ public class WesterosBlockDef {
         public float zMin = 0.0F;
         public float zMax = 1.0F;
     }
+    public static class Cuboid extends BoundingBox {
+        public int[] sideTextures = null;
+    }
     
     public static class Subblock {
         public int meta;        // Meta value for subblock (base value, if more than one associated with block type)
@@ -116,7 +119,7 @@ public class WesterosBlockDef {
         public String type = null;              // Block type specific type string (e.g. plant type)
         public int itemTextureIndex = 0;        // Index of texture for item icon
         public String colorMult = null;         // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
-        public List<BoundingBox> cuboids = null;    // List of cuboids composing block (for 'cuboid', and others)
+        public List<Cuboid> cuboids = null;     // List of cuboids composing block (for 'cuboid', and others)
     }
 
     // Base color multiplier (fixed)
@@ -426,7 +429,14 @@ public class WesterosBlockDef {
                     }
                 }
                 if ((sb.boundingBox != null) && (sb.cuboids == null)) {
-                    sb.cuboids = Collections.singletonList(sb.boundingBox);
+                    Cuboid c = new Cuboid();
+                    c.xMin = sb.boundingBox.xMin;
+                    c.xMax = sb.boundingBox.xMax;
+                    c.yMin = sb.boundingBox.yMin;
+                    c.yMax = sb.boundingBox.yMax;
+                    c.zMin = sb.boundingBox.zMin;
+                    c.zMax = sb.boundingBox.zMax;
+                    sb.cuboids = Collections.singletonList(c);
                 }
                 if ((sb.cuboids != null) && (sb.boundingBox == null)) {
                     sb.boundingBox = new BoundingBox();
@@ -702,7 +712,7 @@ public class WesterosBlockDef {
         return bb;
     }
     
-    public List<BoundingBox> getCuboidList(int meta) {
+    public List<Cuboid> getCuboidList(int meta) {
         Subblock sb = getByMeta(meta);
         if ((sb != null) && (sb.cuboids != null)) {
            return sb.cuboids;
