@@ -24,6 +24,7 @@ import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStepSound;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
@@ -975,6 +976,7 @@ public class WesterosBlockDef {
         typeTable.put("web", new WCWebBlock.Factory());
         typeTable.put("ladder", new WCLadderBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
+        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

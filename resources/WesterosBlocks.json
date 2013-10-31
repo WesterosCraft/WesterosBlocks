@@ -2217,7 +2217,7 @@
     {
       "blockName": "soulsand_like_blocks_0",
       "blockID": 2034,
-      "blockType": "solid",
+      "blockType": "soulsand",
       "hardness": 2,
       "stepSound": "grass",
       "material": "ground",
