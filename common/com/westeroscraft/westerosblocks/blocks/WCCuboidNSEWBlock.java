@@ -23,6 +23,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
+            def.setMetaMask(0x3);
             if (!def.validateMetaValues(new int[] { 0, 1, 2, 3 }, new int[] { 0 })) {
                 return null;
             }
@@ -48,6 +49,9 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
                 cuboids_by_meta[i+8].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY180));
                 cuboids_by_meta[i+12].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY270));
             }
+            setBoundingBoxFromCuboidList(i+4);
+            setBoundingBoxFromCuboidList(i+8);
+            setBoundingBoxFromCuboidList(i+12);
         }
     }
 
@@ -59,12 +63,6 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
-        return super.getIcon(side, meta & 3);
-    }
-    
-    @Override
-    @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister)
     {
         super.registerIcons(iconRegister);
@@ -74,31 +72,6 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     public int damageDropped(int meta) {
         return meta & 3;
     }
-    @Override
-    public boolean isOpaqueCube() {
-        return false;
-    }
-    @Override
-    public boolean renderAsNormalBlock() {
-        return false;
-    }
-    @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata & 3, face);
-    }
-    @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata & 3, face);
-    }
-    @Override
-    public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z, 0x3);
-    }
-    @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z, 0x3);
-    }
-    
     /**
      *  Get cuboid list at given meta
      *  @param meta

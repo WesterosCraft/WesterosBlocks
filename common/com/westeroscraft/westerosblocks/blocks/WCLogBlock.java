@@ -25,6 +25,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
+            def.setMetaMask(0x3);
             // Make sure meta values only for 0-3 (other bits are orientation
             if (!def.validateMetaValues(new int[] { 0, 1, 2, 3 }, null)) {
                 return null;
@@ -120,19 +121,19 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
     }
     @Override
     public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata & 0x3, face);
+        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
     }
     @Override
     public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata & 0x3, face);
+        return def.getFlammability(world, x, y, z, metadata, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z, 0x3);
+        return def.getLightValue(world, x, y, z);
     }
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z, 0x3);
+        return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
     @Override
@@ -143,12 +144,12 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
     @Override
     public int getRenderColor(int meta)
     {
-        return def.getRenderColor(meta & 0x3);
+        return def.getRenderColor(meta);
     }
     @SideOnly(Side.CLIENT)
     @Override
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
-        return def.colorMultiplier(access, x, y, z, 0x3);
+        return def.colorMultiplier(access, x, y, z);
     }
 }

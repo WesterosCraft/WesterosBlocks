@@ -27,6 +27,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
+            def.setMetaMask(0x0);
             if (!def.validateMetaValues(new int[] { 0 }, new int[] { 0 })) {
                 return null;
             }
@@ -79,7 +80,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
-        return def.doStandardIconGet(side, 0);
+        return def.doStandardIconGet(side, meta);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -132,15 +133,15 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
     }
     @Override
     public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, 0, face);
+        return def.getFlammability(world, x, y, z, metadata, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z, 0x0);
+        return def.getLightValue(world, x, y, z);
     }
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z, 0x0);
+        return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
     @Override
@@ -157,7 +158,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
-        return def.colorMultiplier(access, x, y, z, 0x0);
+        return def.colorMultiplier(access, x, y, z);
     }
     private void setBlockBoundsForLayerDepth(int meta) {
         int j = meta % layerCount;

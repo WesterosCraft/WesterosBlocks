@@ -23,6 +23,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
+            def.setMetaMask(0x7);
             if (!def.validateMetaValues(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, new int[] { 0 })) {
                 return null;
             }
@@ -44,6 +45,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
             for (WesterosBlockDef.Cuboid c : lst) {
                 cuboids_by_meta[i+8].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
             }
+            setBoundingBoxFromCuboidList(i+8);
         }
     }
 
@@ -55,12 +57,6 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
-        return super.getIcon(side, meta & 0x7);
-    }
-    
-    @Override
-    @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister)
     {
         super.registerIcons(iconRegister);
@@ -69,30 +65,6 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     @Override
     public int damageDropped(int meta) {
         return meta & 0x7;
-    }
-    @Override
-    public boolean isOpaqueCube() {
-        return false;
-    }
-    @Override
-    public boolean renderAsNormalBlock() {
-        return false;
-    }
-    @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata & 0x7, face);
-    }
-    @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata & 0x7, face);
-    }
-    @Override
-    public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z, 0x7);
-    }
-    @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z, 0x7);
     }
         
     /**

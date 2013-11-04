@@ -28,6 +28,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
             // Limit to 0-7
+            def.setMetaMask(0x7);
             if (!def.validateMetaValues(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, null)) {
                 return null;
             }
@@ -88,7 +89,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
-        return def.doStandardIconGet(side, meta & 7);
+        return def.doStandardIconGet(side, meta);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -115,19 +116,19 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     }
     @Override
     public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata & 0x7, face);
+        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
     }
     @Override
     public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata & 0x7, face);
+        return def.getFlammability(world, x, y, z, metadata, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z, 0x7);
+        return def.getLightValue(world, x, y, z);
     }
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z, 0x7);
+        return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
     @Override
@@ -144,7 +145,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     @Override
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
-        return def.colorMultiplier(access, x, y, z, 0x7);
+        return def.colorMultiplier(access, x, y, z);
     }
     @Override
     public int damageDropped(int meta) {

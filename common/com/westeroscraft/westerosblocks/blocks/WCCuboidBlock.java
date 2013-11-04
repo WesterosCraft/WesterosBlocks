@@ -131,11 +131,11 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z, 0xF);
+        return def.getLightValue(world, x, y, z);
     }
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z, 0xF);
+        return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
     @Override
@@ -152,7 +152,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
-        return def.colorMultiplier(access, x, y, z, 0xF);
+        return def.colorMultiplier(access, x, y, z);
     }
     /**
      * The type of render function that is called for this block
@@ -179,5 +179,20 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
      */
     public List<WesterosBlockDef.Cuboid> getCuboidList(int meta) {
         return def.getCuboidList(meta);
+    }
+    
+    public void setBoundingBoxFromCuboidList(int meta) {
+        List<WesterosBlockDef.Cuboid> cl = getCuboidList(meta);
+        float xmin = 100.0F, ymin = 100.0F, zmin = 100.0F;
+        float xmax = -100.0F, ymax = -100.0F, zmax = -100.0F;
+        for(WesterosBlockDef.Cuboid c : cl) {
+            if (c.xMin < xmin) xmin = c.xMin;
+            if (c.yMin < ymin) ymin = c.yMin;
+            if (c.zMin < zmin) zmin = c.zMin;
+            if (c.xMax > xmax) xmax = c.xMax;
+            if (c.yMax > ymax) ymax = c.yMax;
+            if (c.zMax > zmax) zmax = c.zMax;
+        }
+        def.setBoundingBox(meta, xmin, ymin, zmin, xmax, ymax, zmax);
     }
 }

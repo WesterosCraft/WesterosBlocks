@@ -27,6 +27,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
+            def.setMetaMask(0x0);
             // Validate meta : we require meta 0, and only allow it
             if (!def.validateMetaValues(new int[] { 0 }, new int[] { 0 })) {
                 return null;
@@ -154,22 +155,22 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     
     @Override
     public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, 0, face);
+        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
     }
     
     @Override
     public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, 0, face);
+        return def.getFlammability(world, x, y, z, metadata, face);
     }
     
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z, 0);
+        return def.getLightValue(world, x, y, z);
     }
     
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z, 0);
+        return def.getLightOpacity(world, x, y, z);
     }
     
     @SideOnly(Side.CLIENT)
@@ -181,14 +182,14 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     @SideOnly(Side.CLIENT)
     @Override
     public int getRenderColor(int meta) {
-        return def.getRenderColor(0);
+        return def.getRenderColor(meta);
     }
     
     @SideOnly(Side.CLIENT)
     @Override
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
-        return def.colorMultiplier(access, x, y, z, 0x0);
+        return def.colorMultiplier(access, x, y, z);
     }
     @Override
     public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z)

@@ -129,11 +129,11 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z, 0xF);
+        return def.getLightValue(world, x, y, z);
     }
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z, 0xF);
+        return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
     @Override
@@ -150,6 +150,6 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     @Override
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
-        return def.colorMultiplier(access, x, y, z, 0xF);
+        return def.colorMultiplier(access, x, y, z);
     }
 }

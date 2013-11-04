@@ -407,12 +407,19 @@ public class WesterosBlockDef {
     private transient int lightValueInt;
     private transient ColorMultHandler colorMultHandler;
     private transient ColorMultHandler colorMultHandlerByMeta[];
+    private transient BoundingBox boundingBoxByMeta[];
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
     private static final Map<String, StepSound> stepSoundTable = new HashMap<String, StepSound>();
     private static final Map<String, CreativeTabs> tabTable = new HashMap<String, CreativeTabs>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
     private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
+    
+    private int metaMask = 0xF; // Bitmask for translating raw metadata values to base (subblock) meta values
+    
+    public void setMetaMask(int mask) {
+        metaMask = mask;
+    }
     
     public Block[] createBlocks() {
         WesterosBlockFactory bf = typeTable.get(blockType);
@@ -451,19 +458,24 @@ public class WesterosBlockDef {
     }
 
     private void initMeta() {
-        subblock_by_meta = new Subblock[16];
+        subblock_by_meta = new Subblock[metaMask+1];
         lightValueInt = (int)(15.0F * lightValue);
         this.colorMultHandler = getColorHandler(this.colorMult);
         if (this.colorMultHandler == null) {
             WesterosBlocks.log.warning(String.format("Invalid colorMult '%s' in block '%s'", this.colorMult, blockName));
             this.colorMultHandler = getColorHandler("#FFFFFF");
         }
+        boundingBoxByMeta = new BoundingBox[16];    // Always do all 16: rotated blocks change this
+        for (int i = 0; i < 16; i++) {
+            boundingBoxByMeta[i] = this.boundingBox;
+        }
+        
         if (subBlocks != null) {
             for (Subblock sb : subBlocks) {
                 subblock_by_meta[sb.meta] = sb;
                 if (sb.fireSpreadSpeed != DEF_INT) {
                     if (fireSpreadSpeed_by_meta == null) {
-                        fireSpreadSpeed_by_meta = new int[16];
+                        fireSpreadSpeed_by_meta = new int[metaMask+1];
                         if (this.fireSpreadSpeed != DEF_INT) {
                             Arrays.fill(fireSpreadSpeed_by_meta, this.fireSpreadSpeed);
                         }
@@ -472,7 +484,7 @@ public class WesterosBlockDef {
                 }
                 if (sb.flamability != DEF_INT) {
                     if (flamability_by_meta == null) {
-                        flamability_by_meta = new int[16];
+                        flamability_by_meta = new int[metaMask+1];
                         if (this.flamability != DEF_INT) {
                             Arrays.fill(flamability_by_meta, this.flamability);
                         }
@@ -481,7 +493,7 @@ public class WesterosBlockDef {
                 }
                 if (sb.lightValue != DEF_FLOAT) {
                     if (lightValue_by_meta == null) {
-                        lightValue_by_meta = new int[16];
+                        lightValue_by_meta = new int[metaMask+1];
                         if (this.lightValue != DEF_FLOAT) {
                             Arrays.fill(lightValue_by_meta, (int)(15.0F * this.lightValue));
                         }
@@ -490,7 +502,7 @@ public class WesterosBlockDef {
                 }
                 if (sb.lightOpacity != DEF_INT) {
                     if (lightOpacity_by_meta == null) {
-                        lightOpacity_by_meta = new int[16];
+                        lightOpacity_by_meta = new int[metaMask+1];
                         if (this.lightOpacity != DEF_INT) {
                             Arrays.fill(lightOpacity_by_meta, this.lightOpacity);
                         }
@@ -499,7 +511,7 @@ public class WesterosBlockDef {
                 }
                 if (sb.colorMult != null) {
                     if (this.colorMultHandlerByMeta == null) {
-                        this.colorMultHandlerByMeta = new ColorMultHandler[16];
+                        this.colorMultHandlerByMeta = new ColorMultHandler[metaMask+1];
                         Arrays.fill(this.colorMultHandlerByMeta, this.colorMultHandler);
                     }
                     this.colorMultHandlerByMeta[sb.meta] = getColorHandler(sb.colorMult);
@@ -531,6 +543,14 @@ public class WesterosBlockDef {
                         if (bb.zMax > sb.boundingBox.zMax) sb.boundingBox.zMax = bb.zMax;
                     }
                 }
+                // If block specific bounding box, copy it to all matching meta slots
+                if (sb.boundingBox != null) {
+                    for (int i = 0; i < 16; i++) {
+                        if ((i & metaMask) == sb.meta) {
+                            this.boundingBoxByMeta[i] = sb.boundingBox;
+                        }
+                    }
+                }
             }
         }
     }
@@ -539,7 +559,7 @@ public class WesterosBlockDef {
         if (subblock_by_meta == null) {
             initMeta();
         }
-        return subblock_by_meta[meta];
+        return subblock_by_meta[meta & metaMask];
     }
 
     // Do standard constructor settings for given block class
@@ -637,7 +657,7 @@ public class WesterosBlockDef {
         if (subblock_by_meta == null) {
             initMeta();
         }
-        icons_by_meta = new Icon[16][];
+        icons_by_meta = new Icon[metaMask+1][];
         if (subBlocks != null) {
             HashMap<String, Icon> map = new HashMap<String, Icon>();
             for (Subblock sb : subBlocks) {
@@ -667,7 +687,7 @@ public class WesterosBlockDef {
         if (subblock_by_meta == null) {
             initMeta();
         }
-        itemicons_by_meta = new Icon[16];
+        itemicons_by_meta = new Icon[metaMask+1];
         if (subBlocks != null) {
             HashMap<String, Icon> map = new HashMap<String, Icon>();
             for (Subblock sb : subBlocks) {
@@ -692,6 +712,7 @@ public class WesterosBlockDef {
         if (icons_by_meta == null) {
             return null;
         }
+        meta &= metaMask;
         if (meta >= icons_by_meta.length) {
             meta = 0;
         }
@@ -728,6 +749,7 @@ public class WesterosBlockDef {
     }
 
     public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
+        metadata &= metaMask;
         if (flamability_by_meta != null) {
             return flamability_by_meta[metadata];
         }
@@ -735,20 +757,21 @@ public class WesterosBlockDef {
     }
     
     public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
+        metadata &= metaMask;
         if (fireSpreadSpeed_by_meta != null) {
             return fireSpreadSpeed_by_meta[metadata];
         }
         return this.fireSpreadSpeed;
     }
         
-    public int getLightValue(IBlockAccess world, int x, int y, int z, int metaMask) {
+    public int getLightValue(IBlockAccess world, int x, int y, int z) {
         if (this.lightValue_by_meta != null) {
             return this.lightValue_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
         }
         return this.lightValueInt;
     }
         
-    public int getLightOpacity(World world, int x, int y, int z, int metaMask) {
+    public int getLightOpacity(World world, int x, int y, int z) {
         if (this.lightOpacity_by_meta != null) {
             return this.lightOpacity_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
         }
@@ -760,13 +783,14 @@ public class WesterosBlockDef {
     }
     
     public int getRenderColor(int meta) {
+        meta &= metaMask;
         if (this.colorMultHandlerByMeta != null) {
             return this.colorMultHandlerByMeta[meta].getBlockColor();
         }
         return this.colorMultHandler.getBlockColor();
     }
     
-    public int colorMultiplier(IBlockAccess access, int x, int y, int z, int metaMask) {
+    public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
         if (this.colorMultHandlerByMeta != null) {
             int meta = access.getBlockMetadata(x, y, z) & metaMask;
             return this.colorMultHandlerByMeta[meta].colorMultiplier(access, x, y, z);
@@ -782,17 +806,26 @@ public class WesterosBlockDef {
             }
         }
     }
+
+    // Override default bounding box for given meta
+    public void setBoundingBox(int meta, float xmin, float ymin, float zmin, float xmax, float ymax, float zmax) {
+        BoundingBox bb = new BoundingBox();
+        this.boundingBoxByMeta[meta] = bb;
+        bb.xMin = xmin;
+        bb.xMax = xmax;
+        bb.yMin = ymin;
+        bb.yMax = ymax;
+        bb.zMin = zmin;
+        bb.zMax = zmax;
+    }
     
     public BoundingBox getBoundingBox(int meta) {
-        BoundingBox bb = this.boundingBox;
-        Subblock sb = getByMeta(meta);
-        if ((sb != null) && (sb.boundingBox != null)) {
-            bb = sb.boundingBox;
-        }
-        return bb;
+        return boundingBoxByMeta[meta];
     }
     
     public List<Cuboid> getCuboidList(int meta) {
+        meta &= metaMask;
+        
         Subblock sb = getByMeta(meta);
         if ((sb != null) && (sb.cuboids != null)) {
            return sb.cuboids;
@@ -845,6 +878,8 @@ public class WesterosBlockDef {
     }
 
     public String getType(int meta) {
+        meta &= metaMask;
+        
         Subblock sb = getByMeta(meta);
         if ((sb != null) && (sb.type != null)) {
             return sb.type;
@@ -853,6 +888,7 @@ public class WesterosBlockDef {
     }
 
     public EnumPlantType getPlantType(int meta) {
+        meta &= metaMask;
         EnumPlantType pt = EnumPlantType.Plains;
         String t = getType(meta);
         if (t != null) {
@@ -890,6 +926,11 @@ public class WesterosBlockDef {
                 }
                 if (!match) {
                     WesterosBlocks.log.severe(String.format("meta value %d for block '%s' is not valid for block type '%s'", sb.meta, this.blockName, this.blockType));
+                    return false;
+                }
+                // If value exceeds metaMask-ed bits
+                if ((m & metaMask) != m) {
+                    WesterosBlocks.log.severe(String.format("meta value %d for block '%s' is not valid for block type '%s' - metaMask=%x", sb.meta, this.blockName, this.blockType, metaMask));
                     return false;
                 }
             }
@@ -973,6 +1014,7 @@ public class WesterosBlockDef {
     }
     
     public Icon getItemIcon(int meta) {
+        meta &= metaMask;
         if (itemicons_by_meta != null) {
             if (meta >= itemicons_by_meta.length) {
                 meta = 0;
