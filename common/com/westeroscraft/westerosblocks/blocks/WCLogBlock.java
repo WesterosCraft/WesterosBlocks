@@ -12,7 +12,6 @@ import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
-import net.minecraftforge.event.ForgeSubscribe;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -129,11 +128,11 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z);
+        return def.getLightValue(world, x, y, z, 0x3);
     }
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z);
+        return def.getLightOpacity(world, x, y, z, 0x3);
     }
     @SideOnly(Side.CLIENT)
     @Override

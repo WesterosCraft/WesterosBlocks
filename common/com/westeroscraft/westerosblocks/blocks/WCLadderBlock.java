@@ -273,11 +273,11 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle {
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z);
+        return def.getLightValue(world, x, y, z, 0x3);
     }
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z);
+        return def.getLightOpacity(world, x, y, z, 0x3);
     }
     @SideOnly(Side.CLIENT)
     @Override

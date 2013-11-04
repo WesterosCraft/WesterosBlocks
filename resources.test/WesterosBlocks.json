@@ -1212,6 +1212,104 @@
 				"itemTexture" : "redwood_door_item"
 			}
 		]
-	}
+	},
+    {
+      "blockName": "test_block",
+      "blockID": 4000,
+      "blockType": "cuboid-nsew",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "lightValue": 0,
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Test Block",
+          "textures": [
+            "test/bottom",
+            "test/top",
+            "test/north",
+            "test/south",
+            "test/west",
+            "test/east"
+          ],
+          cuboids: [
+            { "xMin": 0.0, "xMax": 0.9, "yMin": 0.0, "yMax": 0.9, "zMin": 0.0, "zMax": 0.9 }
+          ]
+        },       
+        {
+          "meta": 1,
+          "label": "Test Block 2",
+          "textures": [
+            "test/bottom",
+            "test/top",
+            "test/north",
+            "test/south",
+            "test/west",
+            "test/east"
+          ],
+          cuboids: [
+            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.3, "zMax": 0.7 }
+          ]
+        }       
+      ]
+    },
+    {
+      "blockName": "test_block_ne",
+      "blockID": 4001,
+      "blockType": "cuboid-ne",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "lightValue": 0,
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Test NE",
+          "textures": [
+            "test/bottom",
+            "test/top",
+            "test/north",
+            "test/south",
+            "test/west",
+            "test/east"
+          ],
+          cuboids: [
+            { "xMin": 0.0, "xMax": 0.9, "yMin": 0.0, "yMax": 0.9, "zMin": 0.0, "zMax": 0.9 }
+          ]
+        },       
+        {
+          "meta": 1,
+          "label": "Test ME 2",
+          "textures": [
+            "test/bottom",
+            "test/top",
+            "test/north",
+            "test/south",
+            "test/west",
+            "test/east"
+          ],
+          cuboids: [
+            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.3, "zMax": 0.7 }
+          ]
+        }       
+      ]
+    }
   ]
 }

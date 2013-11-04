@@ -12,6 +12,8 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
@@ -100,8 +102,86 @@ public class WesterosBlockDef {
         public float zMin = 0.0F;
         public float zMax = 1.0F;
     }
+    public static class Vector {
+        float x, y, z;
+        
+        private void rotate(int xcnt, int ycnt, int zcnt) {
+            double xx, yy, zz;
+            xx = x - 0.5F; yy = y - 0.5F; zz = z - 0.5F; // Shoft to center of block
+            /* Do X rotation */
+            double rot = Math.toRadians(xcnt);
+            double nval = zz * Math.sin(rot) + yy * Math.cos(rot);
+            zz = zz * Math.cos(rot) - yy * Math.sin(rot);
+            yy = nval;
+            /* Do Y rotation */
+            rot = Math.toRadians(ycnt);
+            nval = xx * Math.cos(rot) - zz * Math.sin(rot);
+            zz = xx * Math.sin(rot) + zz * Math.cos(rot);
+            xx = nval;
+            /* Do Z rotation */
+            rot = Math.toRadians(zcnt);
+            nval = yy * Math.sin(rot) + xx * Math.cos(rot);
+            yy = yy * Math.cos(rot) - xx * Math.sin(rot);
+            xx = nval;
+            x = (float)xx + 0.5F; y = (float)yy + 0.5F; z = (float)zz + 0.5F; // Shoft back to corner
+        }
+
+    }
+    public static enum CuboidRotation {
+        NONE(0, 0, 0, new int[] { 0, 1, 2, 3, 4, 5 }),
+        ROTY90(0, 90, 0, new int[] { 0, 1, 4, 5, 3, 2 }),
+        ROTY180(0, 180, 0, new int[] { 0, 1, 3, 2, 5, 4 }), 
+        ROTY270(0, 270, 0, new int[] { 0, 1, 5, 4, 2, 3 }),
+        ROTZ90(0, 0, 90, new int[] { 5, 4, 2, 3, 0, 1 }),
+        ROTZ270(0, 0, 270, new int[] { 4, 5, 2, 3, 1, 0 });
+        
+        int xrot, yrot, zrot;
+        int txtidx[];
+        
+        CuboidRotation(int xr, int yr, int zr, int[] txt_idx) {
+            xrot = xr;
+            yrot = yr;
+            zrot = zr;
+            txtidx = txt_idx;
+        }
+        
+    }
     public static class Cuboid extends BoundingBox {
         public int[] sideTextures = null;
+        
+        public Cuboid rotateCuboid(CuboidRotation rot) {
+            Cuboid c = new Cuboid();
+            Vector v0 = new Vector();
+            Vector v1 = new Vector();
+            v0.x = xMin; v0.y = yMin; v0.z = zMin;
+            v1.x = xMax; v1.y = yMax; v1.z = zMax;
+            // Rotate corners
+            v0.rotate(rot.xrot, rot.yrot, rot.zrot);
+            v1.rotate(rot.xrot, rot.yrot, rot.zrot);
+            // Compute net min/max
+            c.xMin = Math.min(v0.x,  v1.x);
+            c.xMax = Math.max(v0.x,  v1.x);
+            c.yMin = Math.min(v0.y,  v1.y);
+            c.yMax = Math.max(v0.y,  v1.y);
+            c.zMin = Math.min(v0.z,  v1.z);
+            c.zMax = Math.max(v0.z,  v1.z);
+            if (this.sideTextures != null) {
+                c.sideTextures = new int[rot.txtidx.length];
+                int cnt = this.sideTextures.length;
+                for (int i = 0; i < c.sideTextures.length; i++) {
+                    if (i < cnt) {
+                        c.sideTextures[i] = this.sideTextures[rot.txtidx[i]];
+                    }
+                    else {
+                        c.sideTextures[i] = this.sideTextures[rot.txtidx[cnt-1]];
+                    }
+                }
+            }
+            else {
+                c.sideTextures = rot.txtidx;
+            }
+            return c;
+        }
     }
     
     public static class Subblock {
@@ -660,17 +740,17 @@ public class WesterosBlockDef {
         }
         return this.fireSpreadSpeed;
     }
-    
-    public int getLightValue(IBlockAccess world, int x, int y, int z) {
+        
+    public int getLightValue(IBlockAccess world, int x, int y, int z, int metaMask) {
         if (this.lightValue_by_meta != null) {
-            return this.lightValue_by_meta[world.getBlockMetadata(x,  y,  z)];
+            return this.lightValue_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
         }
         return this.lightValueInt;
     }
-    
-    public int getLightOpacity(World world, int x, int y, int z) {
+        
+    public int getLightOpacity(World world, int x, int y, int z, int metaMask) {
         if (this.lightOpacity_by_meta != null) {
-            return this.lightOpacity_by_meta[world.getBlockMetadata(x,  y,  z)];
+            return this.lightOpacity_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
         }
         return Block.lightOpacity[this.blockID];
     }
@@ -979,6 +1059,8 @@ public class WesterosBlockDef {
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
+        typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
+        typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         typeTable.put("torch", new WCTorchBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("door", new WCDoorBlock.Factory());

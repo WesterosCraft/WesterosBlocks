@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.AxisAlignedBB;
@@ -32,8 +33,8 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         }
     }
     
-    private WesterosBlockDef def;
-    private int[] sideMapping;  // Side to texture index mapping (use by renderer for cuboids
+    protected WesterosBlockDef def;
+    protected WesterosBlockDef.Cuboid currentCuboid; // Current rendering cuboid
     
     protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
@@ -63,11 +64,15 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
-        if (this.sideMapping != null) {
-            if (side >= this.sideMapping.length) {
-                side = this.sideMapping.length - 1;
+        int[] sidemap = null;
+        if (this.currentCuboid != null) {
+            sidemap = this.currentCuboid.sideTextures;
+        }
+        if (sidemap != null) {
+            if (side >= sidemap.length) {
+                side = sidemap.length - 1;
             }
-            side = this.sideMapping[side];
+            side = sidemap[side];
         }
         return def.doStandardIconGet(side, meta);
     }
@@ -126,11 +131,11 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z);
+        return def.getLightValue(world, x, y, z, 0xF);
     }
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z);
+        return def.getLightOpacity(world, x, y, z, 0xF);
     }
     @SideOnly(Side.CLIENT)
     @Override
@@ -160,12 +165,19 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     /**
      * Set active cuboid during render
      */
-    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c) {
+    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer) {
         if (c != null) {
-            this.sideMapping = c.sideTextures;
+            this.currentCuboid = c;
         }
         else {
-            this.sideMapping = null;
+            this.currentCuboid = null;
         }
+    }
+    /**
+     *  Get cuboid list at given meta
+     *  @param meta
+     */
+    public List<WesterosBlockDef.Cuboid> getCuboidList(int meta) {
+        return def.getCuboidList(meta);
     }
 }

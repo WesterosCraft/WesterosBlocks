@@ -11,7 +11,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class MultiBlockItem extends ItemBlock {
-    private Block blk;
+    protected Block blk;
 
     public MultiBlockItem(int par1) {
         super(par1);

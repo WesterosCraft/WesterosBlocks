@@ -52,15 +52,14 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
             RenderBlocks renderer) {
         Tessellator tessellator = Tessellator.instance;
         WCCuboidBlock cblock = (WCCuboidBlock) block;
-        WesterosBlockDef def = cblock.getWBDefinition();
-        List<WesterosBlockDef.Cuboid> cubs = def.getCuboidList(meta);
+        List<WesterosBlockDef.Cuboid> cubs = cblock.getCuboidList(meta);
         if (cubs != null) {
             for (WesterosBlockDef.Cuboid cub : cubs) {
-                cblock.setActiveRenderCuboid(cub);
+                cblock.setActiveRenderCuboid(cub, renderer);
                 renderer.setRenderBounds(cub.xMin, cub.yMin, cub.zMin, cub.xMax, cub.yMax, cub.zMax);
                 WCCuboidRenderer.renderStandardInvBlock(renderer, block, meta);
             }
-            cblock.setActiveRenderCuboid(null);
+            cblock.setActiveRenderCuboid(null, renderer);
         }
     }
 
@@ -69,14 +68,14 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         WCCuboidBlock cblock = (WCCuboidBlock) block;
         WesterosBlockDef def = cblock.getWBDefinition();
         int meta = world.getBlockMetadata(x, y, z);
-        List<WesterosBlockDef.Cuboid> cubs = def.getCuboidList(meta);
+        List<WesterosBlockDef.Cuboid> cubs = cblock.getCuboidList(meta);
         if (cubs != null) {
             for (WesterosBlockDef.Cuboid cub : cubs) {
-                cblock.setActiveRenderCuboid(cub);
+                cblock.setActiveRenderCuboid(cub, renderer);
                 renderer.setRenderBounds(cub.xMin, cub.yMin, cub.zMin, cub.xMax, cub.yMax, cub.zMax);
                 renderer.renderStandardBlock(cblock, x, y, z);
             }
-            cblock.setActiveRenderCuboid(null);
+            cblock.setActiveRenderCuboid(null, renderer);
         }
         return true;
     }
