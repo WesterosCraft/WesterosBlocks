@@ -165,7 +165,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     /**
      * Set active cuboid during render
      */
-    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer) {
+    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer, int meta) {
         if (c != null) {
             this.currentCuboid = c;
         }

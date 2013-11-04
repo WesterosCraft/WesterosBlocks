@@ -55,11 +55,11 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         List<WesterosBlockDef.Cuboid> cubs = cblock.getCuboidList(meta);
         if (cubs != null) {
             for (WesterosBlockDef.Cuboid cub : cubs) {
-                cblock.setActiveRenderCuboid(cub, renderer);
+                cblock.setActiveRenderCuboid(cub, renderer, meta);
                 renderer.setRenderBounds(cub.xMin, cub.yMin, cub.zMin, cub.xMax, cub.yMax, cub.zMax);
                 WCCuboidRenderer.renderStandardInvBlock(renderer, block, meta);
             }
-            cblock.setActiveRenderCuboid(null, renderer);
+            cblock.setActiveRenderCuboid(null, renderer, meta);
         }
     }
 
@@ -71,11 +71,11 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         List<WesterosBlockDef.Cuboid> cubs = cblock.getCuboidList(meta);
         if (cubs != null) {
             for (WesterosBlockDef.Cuboid cub : cubs) {
-                cblock.setActiveRenderCuboid(cub, renderer);
+                cblock.setActiveRenderCuboid(cub, renderer, meta);
                 renderer.setRenderBounds(cub.xMin, cub.yMin, cub.zMin, cub.xMax, cub.yMax, cub.zMax);
                 renderer.renderStandardBlock(cblock, x, y, z);
             }
-            cblock.setActiveRenderCuboid(null, renderer);
+            cblock.setActiveRenderCuboid(null, renderer, meta);
         }
         return true;
     }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
@@ -105,4 +106,33 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     public List<WesterosBlockDef.Cuboid> getCuboidList(int meta) {
         return cuboids_by_meta[meta];
     }
+    /**
+     * Set active cuboid during render
+     */
+    @Override
+    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer, int meta) {
+        super.setActiveRenderCuboid(c, renderer, meta);
+        int dir = (meta >> 2);
+        if (c != null) {
+            if (dir == 1) {
+                renderer.uvRotateTop = 1;
+                renderer.uvRotateBottom = 1;
+            }
+            else if (dir == 2) {
+                renderer.uvRotateTop = 3;
+                renderer.uvRotateBottom = 3;
+            }
+            else if (dir == 3) {
+                renderer.uvRotateTop = 2;
+                renderer.uvRotateBottom = 2;
+            }
+            else {
+                renderer.uvRotateTop = renderer.uvRotateBottom = 0;
+            }
+        }
+        else {
+            renderer.uvRotateTop = renderer.uvRotateBottom = 0;
+        }
+    }
+
 }
