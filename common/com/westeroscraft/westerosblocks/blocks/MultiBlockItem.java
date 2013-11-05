@@ -19,7 +19,6 @@ public class MultiBlockItem extends ItemBlock {
         setHasSubtypes(true);
     }
 
-    @SideOnly(Side.CLIENT)
     protected Block getBlock() {
         if (blk == null) {
             blk = Block.blocksList[getBlockID()];

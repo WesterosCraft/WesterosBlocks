@@ -26,17 +26,19 @@ public class WCCuboidNEItem extends MultiBlockItem {
         else
         {
             ++y;
-
+            
             if (player.canPlayerEdit(x, y, z, side, stack))
             {
-                if (!blk.canPlaceBlockAt(world, x, y, z))
+                Block block = getBlock();
+                
+                if ((block == null) || (!block.canPlaceBlockAt(world, x, y, z)))
                 {
                     return false;
                 }
                 else
                 {
                     int dir = MathHelper.floor_double((double)((player.rotationYaw + 180.0F) * 4.0F / 360.0F) - 0.5D) & 3;
-                    placeCuboidBlock(world, x, y, z, dir, blk, stack.getItemDamage() & 3);
+                    placeCuboidBlock(world, x, y, z, dir, block, stack.getItemDamage() & 3);
                     --stack.stackSize;
                     return true;
                 }

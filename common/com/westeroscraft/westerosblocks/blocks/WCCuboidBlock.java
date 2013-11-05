@@ -115,7 +115,25 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public boolean shouldSideBeRendered(IBlockAccess access, int x, int y, int z, int side)
     {
-        return (def.shouldSideBeRendered(access, x, y, z, side)?true:super.shouldSideBeRendered(access, x, y, z, side));
+        if (currentCuboid != null) {
+            switch (side) {
+                case 0: // Bottom
+                    return (currentCuboid.yMin > 0.0F);
+                case 1: // Top
+                    return (currentCuboid.yMax < 1.0F);
+                case 2: // Zmin
+                    return (currentCuboid.zMin > 0.0F);
+                case 3: // Zmax
+                    return (currentCuboid.zMax < 1.0F);
+                case 4: // Xmin
+                    return (currentCuboid.xMin > 0.0F);
+                case 5: // Xmax
+                    return (currentCuboid.xMax < 1.0F);
+                default:
+                    return true;
+            }
+       }
+        return true;
     }
     @Override
     public WesterosBlockDef getWBDefinition() {

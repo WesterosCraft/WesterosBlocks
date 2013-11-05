@@ -60,13 +60,6 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
         
         return true;
     }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
-    {
-        super.registerIcons(iconRegister);
-    }
     
     @Override
     public int damageDropped(int meta) {

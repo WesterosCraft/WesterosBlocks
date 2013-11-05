@@ -841,7 +841,7 @@
     {
       "blockName": "cuboid_block_0",
       "blockID": 2013,
-      "blockType": "cuboid",
+      "blockType": "cuboid-nsew",
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -853,165 +853,165 @@
         }
       ],
       "creativeTab": "WesterosDeco",
-      "subBlocks": [
+		"subBlocks": [
+			{
+			"meta": 0,
+			"label": "Axe Block",
+			"textures": [
+					"transparent",
+					"transparent",
+					"cuboid_block_0/axe_left",
+					"cuboid_block_0/axe_right",
+					"transparent",
+					"transparent"
+				],
+				"boundingBox": {
+					"xMin": 0,
+					"xMax": 1,
+					"yMin": 0,
+					"yMax": 1,
+					"zMin": 0.499,
+					"zMax": 0.5
+				},
+				"itemTextureIndex": 2
+			},
+			{
+			"meta": 1,
+			"label": "Cleaver Block",
+			"textures": [
+				"transparent",
+				"transparent",
+				"transparent",
+				"transparent",
+				"cuboid_block_0/cleaver_left",
+				"cuboid_block_0/cleaver_right"
+			],
+			"boundingBox": {
+				"xMin": 0.499,
+				"xMax": 0.5,
+				"yMin": 0,
+				"yMax": 1,
+				"zMin": 0,
+				"zMax": 1
+			},
+			"itemTextureIndex": 4
+			},
+			{
+			"meta": 2,
+			"label": "Dagger Block",
+			"textures": [
+				"transparent",
+				"transparent",
+				"cuboid_block_0/dagger_right",
+				"cuboid_block_0/dagger_left",
+				"transparent",
+				"transparent"
+			],
+			"boundingBox": {
+				"xMin": 0,
+				"xMax": 1,
+				"yMin": 0,
+				"yMax": 1,
+				"zMin": 0.499,
+				"zMax": 0.5
+			},
+			"itemTextureIndex": 2
+			},
+			{
+			"meta": 3,
+			"label": "Pickaxe Block",
+			"textures": [
+				"transparent",
+				"transparent",
+				"transparent",
+				"transparent",
+				"cuboid_block_0/pickaxe_right",
+				"cuboid_block_0/pickaxe_left"
+			],
+			"boundingBox": {
+					"xMin": 0.499,
+					"xMax": 0.5,
+					"yMin": 0,
+					"yMax": 1,
+					"zMin": 0,
+					"zMax": 1
+				},
+				"itemTextureIndex": 4
+			}
+		]
+	},
+	{
+      "blockName": "cuboid_block_1",
+      "blockID": 2064,
+      "blockType": "cuboid-nsew",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [
         {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+		"subBlocks": [
+			{
+				"meta": 0,
+				"label": "Shovel Block",
+				"textures": [
+					"transparent",
+					"transparent",
+					"cuboid_block_0/shovel_right",
+					"cuboid_block_0/shovel_left",
+					"transparent",
+					"transparent"
+				],
+				"boundingBox": {
+					"xMin": 0,
+					"xMax": 1,
+					"yMin": 0,
+					"yMax": 1,
+					"zMin": 0.499,
+					"zMax": 0.5
+				},
+				"itemTextureIndex": 2
+			},
+			{
+				"meta": 1,
+				"label": "Iron Half Door",
+				"textures": [
+					"cuboid_block_0/door_iron_lower"
+				],
+				"boundingBox": {
+					"xMin": 0,
+					"xMax": 1,
+					"yMin": 0,
+					"yMax": 1,
+					"zMin": 0,
+					"zMax": 0.1875
+				}				
+			}
+		]
+	},
+	{
+      "blockName": "cuboid_block_2",
+      "blockID": 2065,
+      "blockType": "cuboid-ne",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+		"subBlocks": [
+		{
           "meta": 0,
-          "label": "Axe Block",
-          "textures": [
-            "transparent",
-            "transparent",
-            "cuboid_block_0/axe_left",
-            "cuboid_block_0/axe_right",
-            "transparent",
-            "transparent"
-          ],
-          "boundingBox": {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 1,
-            "zMin": 0.499,
-            "zMax": 0.5
-          },
-          "itemTextureIndex": 2
-        },
-        {
-          "meta": 1,
-          "label": "Cleaver Block",
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "cuboid_block_0/cleaver_left",
-            "cuboid_block_0/cleaver_right"
-          ],
-          "boundingBox": {
-            "xMin": 0.499,
-            "xMax": 0.5,
-            "yMin": 0,
-            "yMax": 1,
-            "zMin": 0,
-            "zMax": 1
-          },
-          "itemTextureIndex": 4
-        },
-        {
-          "meta": 2,
-          "label": "Dagger Block",
-          "textures": [
-            "transparent",
-            "transparent",
-            "cuboid_block_0/dagger_right",
-            "cuboid_block_0/dagger_left",
-            "transparent",
-            "transparent"
-          ],
-          "boundingBox": {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 1,
-            "zMin": 0.499,
-            "zMax": 0.5
-          },
-          "itemTextureIndex": 2
-        },
-        {
-          "meta": 3,
-          "label": "Pickaxe Block",
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "cuboid_block_0/pickaxe_right",
-            "cuboid_block_0/pickaxe_left"
-          ],
-          "boundingBox": {
-            "xMin": 0.499,
-            "xMax": 0.5,
-            "yMin": 0,
-            "yMax": 1,
-            "zMin": 0,
-            "zMax": 1
-          },
-          "itemTextureIndex": 4
-        },
-        {
-          "meta": 4,
-          "label": "Shovel Block",
-          "textures": [
-            "transparent",
-            "transparent",
-            "cuboid_block_0/shovel_right",
-            "cuboid_block_0/shovel_left",
-            "transparent",
-            "transparent"
-          ],
-          "boundingBox": {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 1,
-            "zMin": 0.499,
-            "zMax": 0.5
-          },
-          "itemTextureIndex": 2
-        },
-        {
-          "meta": 5,
-          "label": "Pewter Plate",
-          "textures": [
-            "transparent",
-            "cuboid_block_0/0"
-          ],
-          "boundingBox": {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0.039,
-            "yMax": 0.03,
-            "zMin": 0,
-            "zMax": 1
-          },
-          "itemTextureIndex": 2
-        },
-        {
-          "meta": 6,
-          "label": "Wooden Plate",
-          "textures": [
-            "transparent",
-            "cuboid_block_0/2"
-          ],
-          "boundingBox": {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0.039,
-            "yMax": 0.03,
-            "zMin": 0,
-            "zMax": 1
-          },
-          "itemTextureIndex": 2
-        },
-        {
-          "meta": 7,
-          "label": "Coins Placeholder",
-          "textures": [
-            "transparent",
-            "cuboid_block_0/coins"
-          ],
-          "boundingBox": {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0.039,
-            "yMax": 0.03,
-            "zMin": 0,
-            "zMax": 1
-          },
-          "itemTextureIndex": 2
-        },
-        {
-          "meta": 8,
           "label": "Hammock",
           "lightOpacity": 0,
           "textures": [
@@ -1030,9 +1030,9 @@
           },
           "itemTextureIndex": 2
         },
-        {
-          "meta": 9,
-          "label": "Laundry",
+		{
+          "meta": 1,
+          "label": "Clothesline",
           "lightOpacity": 0,
           "textures": [
             "transparent",
@@ -1052,15 +1052,15 @@
           },
           "itemTextureIndex": 2
         },
-        {
-          "meta": 10,
+		{
+          "meta": 2,
           "label": "Sword Rack",
           "lightOpacity": 0,
           "textures": [
             "cuboid_block_0/rack_bottom",
             "cuboid_block_0/rack_top",
-            "cuboid_block_0/rack_rest",
-            "cuboid_block_0/rack_rest",
+            "cuboid_block_0/Rack_rest",
+            "cuboid_block_0/Rack_rest",
             "cuboid_block_0/rack_bottom",
             "cuboid_block_0/rack_bottom"
           ],
@@ -1071,31 +1071,117 @@
             "yMax": 1,
             "zMin": 0.45,
             "zMax": 0.55
+			},
+			"itemTextureIndex": 2
+			},
+			{
+          "meta": 3,
+          "label": "Coins",
+          "textures": [
+            "transparent",
+            "cuboid_block_0/coins"
+			],
+			"boundingBox": {
+				"xMin": 0,
+				"xMax": 1,
+				"yMin": 0.039,
+				"yMax": 0.03,
+				"zMin": 0,
+				"zMax": 1
+			},
+			"itemTextureIndex": 2
+			}
+		]
+	},
+	{
+      "blockName": "cuboid_block_3",
+      "blockID": 2066,
+      "blockType": "cuboid",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+		"subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pewter Plate",
+          "textures": [
+            "transparent",
+            "cuboid_block_0/0"
+          ],
+          "boundingBox": {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0.039,
+            "yMax": 0.03,
+            "zMin": 0,
+            "zMax": 1
           },
           "itemTextureIndex": 2
         },
         {
-          "meta": 11,
+          "meta": 1,
+          "label": "Wooden Plate",
+          "textures": [
+            "transparent",
+            "cuboid_block_0/2"
+          ],
+          "boundingBox": {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0.039,
+            "yMax": 0.03,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
+        },
+        {
+          "meta": 2,
           "label": "Lantern",
           "lightValue": 0.9375,
+		  "lightOpacity" : 0,
           "textures": [
-            "metal_block_0/metal_block_bronzeoxidized",
-            "light_emitting_blocks_0/0"
+            "metal_block_0/metal_block_iron",
+            "light_emitting_blocks_0/6",
+			"light_emitting_blocks_0/2"
           ],
           "cuboids": [
             { "xMin": 0.3125, "xMax": 0.6875, "yMin": 0.0625, "yMax": 0.125, "zMin": 0.3125, "zMax": 0.6875, sideTextures: [ 0,0,0,0,0,0 ] },
+			{ "xMin": 0.3125, "xMax": 0.6875, "yMin": 0.5625, "yMax": 0.625, "zMin": 0.3125, "zMax": 0.6875, sideTextures: [ 0,0,0,0,0,0 ] },
             { "xMin": 0.3125, "xMax": 0.375, "yMin": 0.0, "yMax": 0.5625, "zMin": 0.3125, "zMax": 0.375, sideTextures: [ 0,0,0,0,0,0 ] },
             { "xMin": 0.625, "xMax": 0.6875, "yMin": 0.0, "yMax": 0.5625, "zMin": 0.3125, "zMax": 0.375, sideTextures: [ 0,0,0,0,0,0 ] },
             { "xMin": 0.3125, "xMax": 0.375, "yMin": 0.0, "yMax": 0.5625, "zMin": 0.625, "zMax": 0.6875, sideTextures: [ 0,0,0,0,0,0 ] },
             { "xMin": 0.625, "xMax": 0.6875, "yMin": 0.0, "yMax": 0.5625, "zMin": 0.625, "zMax": 0.6875, sideTextures: [ 0,0,0,0,0,0 ] },
-            { "xMin": 0.3125, "xMax": 0.6875, "yMin": 0.4375, "yMax": 0.5, "zMin": 0.3125, "zMax": 0.6875, sideTextures: [ 0,0,0,0,0,0 ] },
-            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.5625, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
-            { "xMin": 0.375, "xMax": 0.625, "yMin": 0.625, "yMax": 0.6875, "zMin": 0.375, "zMax": 0.625, sideTextures: [ 0,0,0,0,0,0 ] },
             { "xMin": 0.375, "xMax": 0.625, "yMin": 0.125, "yMax": 0.5625, "zMin": 0.375, "zMax": 0.625, sideTextures: [ 1,1,1,1,1,1 ] },
-            { "xMin": 0.3125, "xMax": 0.375, "yMin": 0.625, "yMax": 0.84, "zMin": 0.47, "zMax": 0.53, sideTextures: [ 0,0,0,0,0,0 ] },
-            { "xMin": 0.625, "xMax": 0.6875, "yMin": 0.625, "yMax": 0.84, "zMin": 0.47, "zMax": 0.53, sideTextures: [ 0,0,0,0,0,0 ] },
-            { "xMin": 0.36, "xMax": 0.64, "yMin": 0.8125, "yMax": 0.875, "zMin": 0.47, "zMax": 0.53, sideTextures: [ 0,0,0,0,0,0 ] }
+            { "xMin": 0.3125, "xMax": 0.375, "yMin": 0.625, "yMax": 0.9, "zMin": 0.47, "zMax": 0.53, sideTextures: [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.625, "xMax": 0.6875, "yMin": 0.625, "yMax": 0.9, "zMin": 0.47, "zMax": 0.53, sideTextures: [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.36, "xMax": 0.64, "yMin": 0.85, "yMax": 1, "zMin": 0.47, "zMax": 0.53, sideTextures: [ 2,2,2,2,2,2 ] }
           ]
+        },
+		{
+          "meta": 3,
+          "label": "Unlit Candle",
+          "textures": [
+						"torch_block_0/redstone_torch_off",
+						"transparent",
+						"torch_block_0/redstone_torch_off"
+					],
+          "boundingBox": {
+            "xMin": 0.45,
+            "xMax": 0.60,
+            "yMin": 0,
+            "yMax": 0.65,
+            "zMin": 0.45,
+            "zMax": 0.60
+          }
         }
       ]
     },
@@ -1105,7 +1191,7 @@
       "blockType": "torch",
       "stepSound": "powder",
       "creativeTab": "WesterosDeco",
-      "lightValue": 1,
+      "lightValue": 0.7,
       "subBlocks": [
         {
           "meta": 0,
@@ -1591,7 +1677,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosDeco",
-      "lightOpacity": 2,
+      "lightOpacity": 0,
       "type": "no-decay",
       "subBlocks": [
         {
@@ -2823,8 +2909,8 @@
       "subBlocks" : [
         {
           "meta" : 0,
-          "label": "Iron Half-Door",
-          "textures" : [ "halfdoor_block_0/door_iron_lower" ],
+          "label": "Window Shutters",
+          "textures" : [ "halfdoor_block_0/window_shutters" ],
           "itemTexture" : "halfdoor_item"
         }
       ]
@@ -2842,8 +2928,8 @@
       "subBlocks" : [    
         {
           "meta" : 0,
-          "label": "Wood Half-Door",
-          "textures" : [ "halfdoor_block_0/door_wood_lower" ],
+          "label": "Half-Door",
+          "textures" : [ "halfdoor_block_0/garden_door" ],
           "itemTexture" : "halfdoor_item"
         }
       ]
@@ -3314,6 +3400,222 @@
           ]
         }
       ]
-    }
-  ]
+    },
+		{
+		"blockName": "hopper_block",
+		"blockID": 2067,
+		"blockType": "cuboid",
+		"hardness": 5,
+		"stepSound": "stone",
+		"material": "rock",
+		"resistance": 4,
+		"harvestLevel": [
+			{
+			"tool": "pickaxe",
+			"level": 3
+			}
+		],
+		"creativeTab": "WesterosDeco",
+			"subBlocks": [
+				{
+				"meta": 0,
+				"label": "Spruce Hopper",
+				"textures": [
+					"hopper_blocks/planks_spruce"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 1,
+				"label": "Birch Hopper",
+				"textures": [
+					"hopper_blocks/planks_birch"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 2,
+				"label": "Jungle Hopper",
+				"textures": [
+					"hopper_blocks/planks_jungle"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 3,
+				"label": "Cobblestone Hopper",
+				"textures": [
+					"hopper_blocks/cobblestone"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 4,
+				"label": "Mossy Cobblestone Hopper",
+				"textures": [
+					"hopper_blocks/cobblestone_mossy"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 5,
+				"label": "Netherbrick Hopper",
+				"textures": [
+					"hopper_blocks/nether_brick"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 6,
+				"label": "Desert Sandstone Hopper",
+				"textures": [
+					"hopper_blocks/sandstone_side"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 7,
+				"label": "Vivid Sandstone Hopper",
+				"textures": [
+					"hopper_blocks/3"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 8,
+				"label": "Vivid Dark Sandstone Hopper",
+				"textures": [
+					"hopper_blocks/18"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 9,
+				"label": "Monochrome Sandstone Hopper",
+				"textures": [
+					"hopper_blocks/29"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 10,
+				"label": "Monochrome Dark Sandstone Hopper",
+				"textures": [
+					"hopper_blocks/34"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 11,
+				"label": "Terracotta Hopper",
+				"textures": [
+					"hopper_blocks/23"
+				],
+				"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				}
+			]
+		},
+		{
+		"blockName": "hopper_block_1",
+		"blockID": 2068,
+		"blockType": "cuboid",
+		"hardness": 5,
+		"stepSound": "stone",
+		"material": "rock",
+		"resistance": 4,
+		"harvestLevel": [
+			{
+			"tool": "pickaxe",
+			"level": 3
+			}
+		],
+		"creativeTab": "WesterosDeco",
+			"subBlocks": [
+				{
+				"meta": 0,
+				"label": "Black Slate Tip",
+				"textures": [
+					"stone_block_1/0"
+					],
+					"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.275, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 1,
+				"label": "Blue Slate Tip",
+				"textures": [
+					"stone_block_1/32"
+					],
+					"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.275, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				},
+				{
+				"meta": 2,
+				"label": "Red Slate Tip",
+				"textures": [
+					"stone_block_1/16"
+					],
+					"cuboids": [
+					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, sideTextures: [ 0,0,0,0,0,0 ] },
+					{ "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.275, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
+					]
+				}				
+			]
+		}
+	]
 }

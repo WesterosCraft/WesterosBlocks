@@ -712,11 +712,11 @@ public class WesterosBlockDef {
         if (icons_by_meta == null) {
             return null;
         }
-        meta &= metaMask;
-        if (meta >= icons_by_meta.length) {
-            meta = 0;
+        int m = meta & metaMask;
+        if (m >= icons_by_meta.length) {
+            m = 0;
         }
-        Icon[] ico = icons_by_meta[meta];
+        Icon[] ico = icons_by_meta[m];
         if (ico != null) {
             if (side >= ico.length) {
                 side = ico.length - 1;
