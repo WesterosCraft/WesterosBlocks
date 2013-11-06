@@ -118,22 +118,32 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         if (currentCuboid != null) {
             switch (side) {
                 case 0: // Bottom
-                    return (currentCuboid.yMin > 0.0F);
+                    if (currentCuboid.yMin > 0.0F)
+                        return true;
+                    break;
                 case 1: // Top
-                    return (currentCuboid.yMax < 1.0F);
+                    if (currentCuboid.yMax < 1.0F)
+                        return true;
+                    break;
                 case 2: // Zmin
-                    return (currentCuboid.zMin > 0.0F);
+                    if (currentCuboid.zMin > 0.0F)
+                        return true;
+                    break;
                 case 3: // Zmax
-                    return (currentCuboid.zMax < 1.0F);
+                    if (currentCuboid.zMax < 1.0F)
+                        return true;
+                    break;
                 case 4: // Xmin
-                    return (currentCuboid.xMin > 0.0F);
+                    if (currentCuboid.xMin > 0.0F)
+                        return true;
+                    break;
                 case 5: // Xmax
-                    return (currentCuboid.xMax < 1.0F);
-                default:
-                    return true;
+                    if (currentCuboid.xMax < 1.0F)
+                        return true;
+                    break;
             }
-       }
-        return true;
+        }
+        return !access.isBlockOpaqueCube(x, y, z);
     }
     @Override
     public WesterosBlockDef getWBDefinition() {

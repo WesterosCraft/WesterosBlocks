@@ -14,6 +14,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
@@ -124,6 +125,13 @@ public class WesterosBlockDef {
             yy = yy * Math.cos(rot) - xx * Math.sin(rot);
             xx = nval;
             x = (float)xx + 0.5F; y = (float)yy + 0.5F; z = (float)zz + 0.5F; // Shoft back to corner
+            // Clip value
+            if (x > 1.0F) x = 1.0F;
+            if (y > 1.0F) y = 1.0F;
+            if (z > 1.0F) z = 1.0F;
+            if (x < 0.0F) x = 0.0F;
+            if (y < 0.0F) y = 0.0F;
+            if (z < 0.0F) z = 0.0F;
         }
 
     }
@@ -1103,6 +1111,7 @@ public class WesterosBlockDef {
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
         typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
         typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
+        typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
         typeTable.put("torch", new WCTorchBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("door", new WCDoorBlock.Factory());
