@@ -72,8 +72,8 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
      * Set active cuboid during render
      */
     @Override
-    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer, int meta) {
-        super.setActiveRenderCuboid(c, renderer, meta);
+    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer, int meta, int index) {
+        super.setActiveRenderCuboid(c, renderer, meta, index);
         int dir = (meta >> 3);
         if ((c != null) && (dir == 1)) {
             renderer.uvRotateTop = 1;

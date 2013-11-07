@@ -14,17 +14,11 @@ public class ShiftedIcon implements Icon {
         if (!pos)
             uOff = -uOff;
     }
-//    @Override
-//    @SideOnly(Side.CLIENT)
-//    public int getOriginX() {
-//        return baseIcon.getOriginX();
-//    }
 
-//    @Override
-//    @SideOnly(Side.CLIENT)
-//    public int getOriginY() {
-//        return baseIcon.getOriginY();
-//    }
+    public ShiftedIcon(Icon base, float offset) {
+        baseIcon = base;
+        uOff = offset * (base.getMaxU() - base.getMinU());
+    }
 
     @Override
     @SideOnly(Side.CLIENT)

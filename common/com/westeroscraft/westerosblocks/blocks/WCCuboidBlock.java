@@ -35,6 +35,8 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     
     protected WesterosBlockDef def;
     protected WesterosBlockDef.Cuboid currentCuboid; // Current rendering cuboid
+    protected int cuboidIndex;
+    protected Icon sideIcons[][] = new Icon[16][];
     
     protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
@@ -64,17 +66,46 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
+        if (cuboidIndex < 0) return null;
+        
+        if ((side == 2) || (side == 5)) { // North or East
+            if (this.sideIcons[meta] == null) {
+                List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(meta);
+                if (lst != null) {
+                    this.sideIcons[meta] = new Icon[lst.size() * 6];
+                }
+            }
+            if (this.sideIcons[meta][6*cuboidIndex+side] != null) { // North needs shift
+                return this.sideIcons[meta][6*cuboidIndex+side];
+            }
+        }
         int[] sidemap = null;
         if (this.currentCuboid != null) {
             sidemap = this.currentCuboid.sideTextures;
         }
+        int nside = side;
         if (sidemap != null) {
-            if (side >= sidemap.length) {
-                side = sidemap.length - 1;
+            if (nside >= sidemap.length) {
+                nside = sidemap.length - 1;
             }
-            side = sidemap[side];
+            nside = sidemap[nside];
         }
-        return def.doStandardIconGet(side, meta);
+        Icon ico = def.doStandardIconGet(nside, meta);
+        if (side == 2) { // North
+            float shft = (1.0F - currentCuboid.xMax) - currentCuboid.xMin;
+            if (shft != 0.0F) {
+                ico = new ShiftedIcon(ico, shft);
+            }
+            this.sideIcons[meta][6*cuboidIndex + side] = ico;
+        }
+        else if (side == 5) { // East
+            float shft = (1.0F - currentCuboid.zMax) - currentCuboid.zMin;
+            if (shft != 0.0F) {
+                ico = new ShiftedIcon(ico, shft);
+            }
+            this.sideIcons[meta][6*cuboidIndex + side] = ico;
+        }
+        return ico;
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -193,13 +224,14 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     /**
      * Set active cuboid during render
      */
-    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer, int meta) {
+    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer, int meta, int index) {
         if (c != null) {
             this.currentCuboid = c;
         }
         else {
             this.currentCuboid = null;
         }
+        cuboidIndex = index;
     }
     /**
      *  Get cuboid list at given meta
