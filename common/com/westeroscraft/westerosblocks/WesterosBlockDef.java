@@ -154,8 +154,14 @@ public class WesterosBlockDef {
         }
         
     }
+    // Shape for normal cuboid (box)
+    public static final String SHAPE_BOX = "box";
+    // Shape for crossed squares (plant-style) (texture is index 0 in list)
+    public static final String SHAPE_CROSSED = "crossed";
+    
     public static class Cuboid extends BoundingBox {
         public int[] sideTextures = null;
+        public String shape = SHAPE_BOX; // "box" = normal cuboid, "crossed" = plant-style crossed (texture 0)
         
         public Cuboid rotateCuboid(CuboidRotation rot) {
             Cuboid c = new Cuboid();

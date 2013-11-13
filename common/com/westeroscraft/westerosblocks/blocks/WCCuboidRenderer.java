@@ -47,6 +47,19 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         tessellator.draw();
         GL11.glTranslatef(0.5F, 0.5F, 0.5F);
     }
+    
+    public static void renderCrossedSquaresInvBlock (RenderBlocks renderblocks, Block block, int meta)
+    {
+        Tessellator tessellator = Tessellator.instance;
+        GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
+        tessellator.startDrawingQuads();
+        tessellator.setNormal(0.0F, -1.0F, 0.0F);
+        renderblocks.drawCrossedSquares(block, meta, -0.5D, -0.5D, -0.5D, 1.0F);
+        tessellator.draw();
+        GL11.glTranslatef(0.5F, 0.5F, 0.5F);
+    }
+    
+
 
     public void renderInventoryBlock(Block block, int meta, int modelID,
             RenderBlocks renderer) {
@@ -59,7 +72,12 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
                 WesterosBlockDef.Cuboid cub = cubs.get(i);
                 cblock.setActiveRenderCuboid(cub, renderer, meta, i);
                 renderer.setRenderBounds(cub.xMin, cub.yMin, cub.zMin, cub.xMax, cub.yMax, cub.zMax);
-                WCCuboidRenderer.renderStandardInvBlock(renderer, block, meta);
+                if (WesterosBlockDef.SHAPE_CROSSED.equals(cub.shape)) {
+                    WCCuboidRenderer.renderCrossedSquaresInvBlock(renderer, block, meta);
+                }
+                else {
+                    WCCuboidRenderer.renderStandardInvBlock(renderer, block, meta);
+                }
             }
             cblock.setActiveRenderCuboid(null, renderer, meta, -1);
         }
@@ -77,7 +95,12 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
                 WesterosBlockDef.Cuboid cub = cubs.get(i);
                 cblock.setActiveRenderCuboid(cub, renderer, meta, i);
                 renderer.setRenderBounds(cub.xMin, cub.yMin, cub.zMin, cub.xMax, cub.yMax, cub.zMax);
-                renderer.renderStandardBlock(cblock, x, y, z);
+                if (WesterosBlockDef.SHAPE_CROSSED.equals(cub.shape)) {
+                    renderer.renderCrossedSquares(cblock, x, y, z);
+                }
+                else {
+                    renderer.renderStandardBlock(cblock, x, y, z);
+                }
             }
             cblock.setActiveRenderCuboid(null, renderer, meta, -1);
         }
