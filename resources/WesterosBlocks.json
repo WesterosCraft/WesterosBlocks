@@ -1,4 +1,12 @@
 {
+  "sounds": [
+    { "name": "wolf_howls", "label": "Wolf Howls", "soundResourceName": "wolf_howl", "numberOfSounds": 2, volume: 1.0, pitch: 1.0 },
+    { "name": "dog_barks", "label": "Dog Barks", "soundResourceName": "dog_bark", "numberOfSounds": 6, volume: 1.0, pitch: 1.0 },
+    { "name": "cow_moos", "label": "Cow Moos", "soundResourceName": "cow", "numberOfSounds": 4, volume: 1.0, pitch: 1.0 },
+    { "name": "frog_croaks", "label": "Frog Croaks", "soundResourceName": "frog", "numberOfSounds": 2, volume: 1.0, pitch: 1.0 },
+    { "name": "rooster_crows", "label": "Rooster Crows", "soundResourceName": "rooster", "numberOfSounds": 2, volume: 1.0, pitch: 1.0 },
+    { "name": "owl_hoot", "label": "Owl Hoots", "soundResourceName": "owl", volume: 1.0, pitch: 1.0 }
+  ],
   "stepSounds": [
     {
       "name": "testStepSound",
@@ -3615,6 +3623,34 @@
 					{ "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.275, "zMin": 0, "zMax": 1, sideTextures: [ 0,0,0,0,0,0 ] }
 					]
 				}				
+			]
+		},
+	    {
+		    "blockName": "sound_blocks_0",
+      		"blockID": 2069,
+		    "blockType": "sound",
+		    "hardness": 2,
+      		"stepSound": "grass",
+      		"material": "ground",
+      		"resistance": 2,
+      		"creativeTab": "WesterosBlocks",
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Forest Sounds",
+          			"textures": [
+            			"solid_blocks_0/dirt_bone"
+          			],
+          			"soundList": [ "wolf_howls", "frog_croaks", "owl_hoot" ]
+        		},
+        		{
+          			"meta": 1,
+          			"label": "Farm Sounds",
+          			"textures": [
+            			"solid_blocks_0/dirt_bone"
+          			],
+          			"soundList": [ "dog_barks", "cow_moos", "rooster_crows" ]
+        		}
 			]
 		}
 	]

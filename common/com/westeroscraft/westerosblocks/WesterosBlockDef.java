@@ -28,6 +28,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStepSound;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
@@ -214,6 +215,7 @@ public class WesterosBlockDef {
         public int itemTextureIndex = 0;        // Index of texture for item icon
         public String colorMult = null;         // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
         public List<Cuboid> cuboids = null;     // List of cuboids composing block (for 'cuboid', and others)
+        public List<String> soundList = null;   // List of custom sound names or sound IDs (for 'sound' blocks)
     }
 
     // Base color multiplier (fixed)
@@ -422,6 +424,7 @@ public class WesterosBlockDef {
     private transient ColorMultHandler colorMultHandler;
     private transient ColorMultHandler colorMultHandlerByMeta[];
     private transient BoundingBox boundingBoxByMeta[];
+    private transient List<String> sounds_by_meta[] = null;
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
     private static final Map<String, StepSound> stepSoundTable = new HashMap<String, StepSound>();
@@ -471,6 +474,7 @@ public class WesterosBlockDef {
         return ct;
     }
 
+    @SuppressWarnings("unchecked")
     private void initMeta() {
         subblock_by_meta = new Subblock[metaMask+1];
         lightValueInt = (int)(15.0F * lightValue);
@@ -564,6 +568,13 @@ public class WesterosBlockDef {
                             this.boundingBoxByMeta[i] = sb.boundingBox;
                         }
                     }
+                }
+                // If custom sounds
+                if (sb.soundList != null) {
+                    if (this.sounds_by_meta == null) {
+                        this.sounds_by_meta = new List[metaMask+1];
+                    }
+                    this.sounds_by_meta[sb.meta] = sb.soundList;
                 }
             }
         }
@@ -769,7 +780,15 @@ public class WesterosBlockDef {
         }
         return this.flamability;
     }
-    
+
+    public List<String> getSoundIDList(int metadata) {
+        metadata &= metaMask;
+        if (this.sounds_by_meta != null) {
+            return this.sounds_by_meta[metadata];
+        }
+        return null;
+    }
+
     public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
         metadata &= metaMask;
         if (fireSpreadSpeed_by_meta != null) {
@@ -1126,6 +1145,7 @@ public class WesterosBlockDef {
         typeTable.put("ladder", new WCLadderBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
+        typeTable.put("sound", new WCSoundBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -13,7 +14,10 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
@@ -23,6 +27,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.logging.Logger;
 
 import com.google.gson.Gson;
@@ -62,6 +67,8 @@ public class WesterosBlocks
     public static WesterosBlockConfig customConfig;
     
     public static WesterosBlockDef[] customBlockDefs;
+    
+    public static HashMap<String, WesterosBlocksSoundDef> soundsDefs;
     
     public static Block findBlockByName(String blkname) {
         Block blk = customBlocksByName.get(blkname);
@@ -155,6 +162,22 @@ public class WesterosBlocks
         finally
         {
             cfg.save();
+        }
+        // Build sound def map
+        soundsDefs = new HashMap<String, WesterosBlocksSoundDef>();
+        if (customConfig.sounds != null) {
+            for (WesterosBlocksSoundDef sd : customConfig.sounds) {
+                String rname = sd.soundResourceName;
+                if (rname.indexOf(':') < 0) {
+                    rname = "westerosblocks:" + rname;
+                }
+                sd.soundResourceID = rname.replace('/',  '.');
+                soundsDefs.put(sd.name, sd);
+            }
+            // Register listener for client sound loading
+            if(FMLCommonHandler.instance().getSide().isClient()) {  
+                MinecraftForge.EVENT_BUS.register(new SoundEventListener());
+            }
         }
     }
 
@@ -255,5 +278,44 @@ public class WesterosBlocks
     @EventHandler
     public void serverStopping(FMLServerStoppingEvent event)
     {
+    }
+    
+    public class SoundEventListener {
+        @ForgeSubscribe
+        public void onSound(SoundLoadEvent event)
+        {
+            log.info("Registering " + customConfig.sounds.length + " custom sounds");
+            HashSet<String> soundids = new HashSet<String>();
+            for (WesterosBlocksSoundDef sd : customConfig.sounds) {
+                String rname = sd.soundResourceName;
+                if (rname.indexOf(':') < 0) {
+                    rname = "westerosblocks:" + rname;
+                }
+                if (sd.numberOfSounds > 1) {
+                    for (int i = 1; i <= sd.numberOfSounds; i++) {
+                        String sid = rname + i + ".ogg";
+                        if (soundids.contains(sid) == false) {
+                            try {
+                                event.manager.soundPoolSounds.addSound(sid);
+                                soundids.add(sid);
+                            } catch (Exception x) {
+                                log.warning("Failed to register sound " + sid + " - " + x.getMessage());
+                            }
+                        }
+                    }
+                }
+                else {
+                    String sid = rname + ".ogg";
+                    if (soundids.contains(sid) == false) {
+                        try {
+                            event.manager.soundPoolSounds.addSound(sid);
+                            soundids.add(sid);
+                        } catch (Exception x) {
+                            log.warning("Failed to register sound " + sid + " - " + x.getMessage());
+                        }
+                    }
+                }
+            }
+        }
     }
 }
