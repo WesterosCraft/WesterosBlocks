@@ -4,7 +4,6 @@ import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -29,9 +28,39 @@ public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
             return new Block[] { new WCSoundBlock(def) };
         }
     }
+    
+    public int[] def_period_by_meta = new int[16];
+    public int[] def_addition_by_meta = new int[16];
+    public int[] def_starttime_by_meta = new int[16];
+    public int[] def_endtime_by_meta = new int[16];
 
     protected WCSoundBlock(WesterosBlockDef def) {
         super(def);
+        for (int i = 0; i < 16; i++) {
+            String type = def.getType(i);
+            if (type != null) {
+                String[] toks = type.split(",");
+                for (String tok : toks) {
+                    String [] flds = tok.split(":");
+                    if (flds.length < 2) continue;
+                    if (flds[0].equals("period")) {
+                        def_period_by_meta[i] = Integer.parseInt(flds[1]);
+                    }
+                    else if (flds[0].equals("random-add")) {
+                        def_addition_by_meta[i] = Integer.parseInt(flds[1]);
+                    }
+                    else if (flds[0].equals("start-time")) {
+                        def_starttime_by_meta[i] = ((Integer.parseInt(flds[1]) * 10) + 18000) % 24000;
+                    }
+                    else if (flds[0].equals("end-time")) {
+                        def_endtime_by_meta[i] = ((Integer.parseInt(flds[1]) * 10) + 18000) % 24000;
+                    }
+                    else {
+                        WesterosBlocks.log.warning("Invalid type attribute '" + flds[0] + "' in " + def.blockName + "[" + i + "]");
+                    }
+                }
+            }
+        }
     }
 
     /**

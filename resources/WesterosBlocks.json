@@ -3641,7 +3641,8 @@
           			"textures": [
             			"solid_blocks_0/dirt_bone"
           			],
-          			"soundList": [ "wolf_howls", "frog_croaks", "owl_hoot" ]
+          			"soundList": [ "wolf_howls", "frog_croaks", "owl_hoot" ],
+          			"type" : "period:60,random-add:60,start-time:1900,end-time:500"
         		},
         		{
           			"meta": 1,
@@ -3649,7 +3650,8 @@
           			"textures": [
             			"solid_blocks_0/dirt_bone"
           			],
-          			"soundList": [ "dog_barks", "cow_moos", "rooster_crows" ]
+          			"soundList": [ "dog_barks", "cow_moos", "rooster_crows" ],
+          			"type" : "period:60,random-add:60,start-time:600,end-time:1800"
         		}
 			]
 		}
