@@ -9,23 +9,27 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class WCBedItem extends Item
+public class WCBedItem extends ItemBlock
 {
     private Block blk;
     private WesterosBlockDef def;
+    public static WCBedBlock block;
+    public static int lastItemID;
     
-    public WCBedItem(Block blk, WesterosBlockDef def)
+    public WCBedItem(int id)
     {
-        super(def.blockID);
-        this.blk = blk;
-        this.def = def;
+        super(id);
+        this.blk = block;
+        this.def = block.getWBDefinition();
         this.maxStackSize = 1;
         this.setCreativeTab(def.getCreativeTab());
+        lastItemID = this.itemID;
     }
 
     @Override

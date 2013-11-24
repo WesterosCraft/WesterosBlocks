@@ -39,6 +39,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     private WesterosBlockDef def;
     private Icon[] upper;
     private Icon[] lower;
+    private int itemID;
     
     protected WCDoorBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
@@ -53,7 +54,9 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, null, new WCDoorItem(this, this.def), 0);
+        WCDoorItem.block = this;
+        def.doStandardRegisterActions(this, WCDoorItem.class);
+        itemID = WCDoorItem.lastItemID;
         
         return true;
     }
@@ -140,7 +143,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
      */
     public int idPicked(World par1World, int par2, int par3, int par4)
     {
-        return def.blockID;
+        return this.itemID;
     }
     
     @Override
@@ -190,11 +193,6 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
         return def.colorMultiplier(access, x, y, z);
-    }
-    @Override
-    public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z)
-    {
-        return new ItemStack(def.blockID, 1, 0);
     }
     @Override
     public void getSubBlocks (int par1, CreativeTabs par2CreativeTabs, List par3List)

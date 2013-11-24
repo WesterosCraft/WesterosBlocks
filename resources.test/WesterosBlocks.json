@@ -1087,7 +1087,7 @@
 				"meta" : 0,
 				"label": "Redwood Door",
 				"textures" : [ "redwood_door/redwood_door_top", "redwood_door/redwood_door_bottom" ],
-				"itemTexture" : "redwood_door_item"
+				"itemTexture" : "redwood_door/redwood_door_item"
 			}
 		]
 	},

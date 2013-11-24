@@ -2919,7 +2919,7 @@
           "meta" : 0,
           "label": "Window Shutters",
           "textures" : [ "halfdoor_block_0/window_shutters" ],
-          "itemTexture" : "halfdoor_item"
+          "itemTexture" : "halfdoor_block_0/halfdoor_item"
         }
       ]
     },
@@ -2938,7 +2938,7 @@
           "meta" : 0,
           "label": "Half-Door",
           "textures" : [ "halfdoor_block_0/garden_door" ],
-          "itemTexture" : "halfdoor_item"
+          "itemTexture" : "halfdoor_block_0/halfdoor_item"
         }
       ]
     },
@@ -3680,7 +3680,7 @@
         		{
           			"meta": 0,
           			"label": "Custom Bed",
-		            "itemTexture" : "bed_item",
+		            "itemTexture" : "bed_block_0/bed_item",
           			"textures": [
             			"bed_block_0/bed_head_top",
             			"bed_block_0/bed_feet_top",
@@ -3708,6 +3708,6 @@
           			]
         		}
       		]
-    	}
+    	}    	
 	]
 }

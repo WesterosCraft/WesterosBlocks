@@ -57,9 +57,9 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     }
 
     public boolean registerBlockDefinition() {
-        Item itm = new WCHalfDoorItem(this, this.def);
-        def.doStandardRegisterActions(this, null, itm, 0);
-        itemID = itm.itemID;
+        WCHalfDoorItem.block = this;
+        def.doStandardRegisterActions(this, WCHalfDoorItem.class);
+        itemID = WCHalfDoorItem.lastItemID;
         return true;
     }
     
@@ -392,35 +392,15 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor blockID
      */
-//    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
-//    {
-//        int i1 = par1World.getBlockMetadata(par2, par3, par4);
-//
-//        boolean flag = false;
-//
-//        if (!par1World.doesBlockHaveSolidTopSurface(par2, par3 - 1, par4))
-//        {
-//            par1World.setBlockToAir(par2, par3, par4);
-//            flag = true;
-//        }
-//
-//        if (flag)
-//        {
-//            if (!par1World.isRemote)
-//            {
-//                this.dropBlockAsItem(par1World, par2, par3, par4, i1, 0);
-//            }
-//        }
-//        else
-//        {
-//            boolean flag1 = par1World.isBlockIndirectlyGettingPowered(par2, par3, par4);
-//
-//            if ((flag1 || par5 > 0 && Block.blocksList[par5].canProvidePower()) && par5 != this.blockID)
-//            {
-//                this.onPoweredBlockChange(par1World, par2, par3, par4, flag1);
-//            }
-//        }
-//    }
+    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+    {
+        boolean flag1 = par1World.isBlockIndirectlyGettingPowered(par2, par3, par4);
+
+        if ((flag1 || par5 > 0 && Block.blocksList[par5].canProvidePower()) && par5 != this.blockID)
+        {
+            this.onPoweredBlockChange(par1World, par2, par3, par4, flag1);
+        }
+    }
 
     /**
      * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world,

@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemDoor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
@@ -15,20 +16,21 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCDoorItem extends Item
+public class WCDoorItem extends ItemBlock
 {
     private Block blk;
-    private String unlocname;
     private WesterosBlockDef def;
+    public static WCDoorBlock block;
+    public static int lastItemID;
     
-    public WCDoorItem(Block blk, WesterosBlockDef def)
+    public WCDoorItem(int id)
     {
-        super(def.blockID);
-        this.blk = blk;
-        this.def = def;
+        super(id);
+        this.blk = block;
+        this.def = block.getWBDefinition();
         this.maxStackSize = 1;
-        this.unlocname = def.blockName + "_item";
         this.setCreativeTab(def.getCreativeTab());
+        lastItemID = this.itemID;
     }
 
     /**
@@ -68,7 +70,7 @@ public class WCDoorItem extends Item
     @Override
     public String getUnlocalizedName (ItemStack itemstack)
     {
-        return unlocname;
+        return blk.getUnlocalizedName() + "_item";
     }
 
     @SideOnly(Side.CLIENT)
@@ -77,7 +79,7 @@ public class WCDoorItem extends Item
     {
         def.doStandardItemRegisterIcons(iconRegister);
     }
-    
+        
     @SideOnly(Side.CLIENT)
     @Override
     public Icon getIconFromDamage(int meta)

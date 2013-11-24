@@ -9,7 +9,6 @@ import net.minecraft.block.BlockBed;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBed;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
@@ -52,9 +51,9 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle {
     }
 
     public boolean registerBlockDefinition() {
-        Item itm = new WCBedItem(this, this.def);
-        def.doStandardRegisterActions(this, null, itm, 0);
-        itemID = itm.itemID;
+        WCBedItem.block = this;
+        def.doStandardRegisterActions(this, WCBedItem.class);
+        itemID = WCBedItem.lastItemID;
         
         return true;
     }

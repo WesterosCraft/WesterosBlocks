@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
@@ -14,18 +15,21 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCHalfDoorItem extends Item
+public class WCHalfDoorItem extends ItemBlock
 {
     private Block blk;
     private WesterosBlockDef def;
+    public static WCHalfDoorBlock block;
+    public static int lastItemID;
     
-    public WCHalfDoorItem(Block blk, WesterosBlockDef def)
+    public WCHalfDoorItem(int id)
     {
-        super(def.blockID);
-        this.blk = blk;
-        this.def = def;
+        super(id);
+        this.blk = block;
+        this.def = block.getWBDefinition();
         this.maxStackSize = 1;
         this.setCreativeTab(def.getCreativeTab());
+        lastItemID = this.itemID;
     }
 
     /**
@@ -51,7 +55,6 @@ public class WCHalfDoorItem extends Item
                 else
                 {
                     int i1 = MathHelper.floor_double((double)((player.rotationYaw + 180.0F) * 4.0F / 360.0F) - 0.5D) & 3;
-                    System.out.println("placeDoorBlock(side=" + i1 + ",itemdamage=" + stack.getItemDamage());
                     placeDoorBlock(world, x, y, z, i1, blk);
                     --stack.stackSize;
                     return true;
@@ -67,7 +70,7 @@ public class WCHalfDoorItem extends Item
     @Override
     public String getUnlocalizedName (ItemStack itemstack)
     {
-        return blk.getUnlocalizedName();
+        return blk.getUnlocalizedName() + "_item";
     }
 
     @SideOnly(Side.CLIENT)
@@ -125,7 +128,6 @@ public class WCHalfDoorItem extends Item
         }
 
         int meta = side | (flag2 ? 8 : 0);
-        System.out.println("placeDoorBlock(meta=" + meta);
         
         par0World.setBlock(par1, par2, par3, par5Block.blockID, meta, 2);
         par0World.notifyBlocksOfNeighborChange(par1, par2, par3, par5Block.blockID);
