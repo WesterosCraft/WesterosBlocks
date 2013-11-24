@@ -119,4 +119,9 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle {
     {
         return def.colorMultiplier(access, x, y, z);
     }
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

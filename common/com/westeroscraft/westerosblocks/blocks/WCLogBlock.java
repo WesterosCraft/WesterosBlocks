@@ -152,4 +152,9 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
     {
         return def.colorMultiplier(access, x, y, z);
     }
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

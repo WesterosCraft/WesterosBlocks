@@ -255,4 +255,9 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         }
         def.setBoundingBox(meta, xmin, ymin, zmin, xmax, ymax, zmax);
     }
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

@@ -100,5 +100,9 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
             renderer.uvRotateTop = renderer.uvRotateBottom = 0;
         }
     }
-
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

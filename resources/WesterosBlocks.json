@@ -3654,6 +3654,22 @@
           			"type" : "period:60,random-add:60,start-time:600,end-time:1800"
         		}
 			]
-		}
+		},
+	    {
+   		   	"blockName": "rope_block_0",
+      		"blockID": 2070,
+      		"blockType": "rail",
+      		"creativeTab": "WesterosDeco",
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Rope",
+          			"textures": [
+            			"rope_block_0/rope",
+            			"rope_block_0/rope_turned"
+          			]
+        		}
+      		]
+    	}
 	]
 }

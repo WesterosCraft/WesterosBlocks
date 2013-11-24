@@ -83,5 +83,9 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
             renderer.uvRotateTop = renderer.uvRotateBottom = 0;
         }
     }
-
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

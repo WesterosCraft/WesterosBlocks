@@ -208,4 +208,9 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
     public int quantityDropped(int meta, int fortune, Random random) {
         return (meta % layerCount) + 1;
     }
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

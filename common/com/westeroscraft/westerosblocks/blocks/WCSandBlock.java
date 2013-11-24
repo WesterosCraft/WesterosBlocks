@@ -34,9 +34,11 @@ public class WCSandBlock extends Block implements WesterosBlockLifecycle {
     }
     
     private WesterosBlockDef def;
+    private boolean isSolidOpaque = true;
     
     protected WCSandBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
+        this.isSolidOpaque = !def.nonOpaque; 
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -221,5 +223,14 @@ public class WCSandBlock extends Block implements WesterosBlockLifecycle {
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
     {
         return def.colorMultiplier(access, x, y, z);
+    }
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
+    @Override
+    public boolean isOpaqueCube() {
+        return isSolidOpaque;
     }
 }

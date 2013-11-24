@@ -51,6 +51,7 @@ public class WCHalfDoorItem extends Item
                 else
                 {
                     int i1 = MathHelper.floor_double((double)((player.rotationYaw + 180.0F) * 4.0F / 360.0F) - 0.5D) & 3;
+                    System.out.println("placeDoorBlock(side=" + i1 + ",itemdamage=" + stack.getItemDamage());
                     placeDoorBlock(world, x, y, z, i1, blk);
                     --stack.stackSize;
                     return true;
@@ -124,6 +125,8 @@ public class WCHalfDoorItem extends Item
         }
 
         int meta = side | (flag2 ? 8 : 0);
+        System.out.println("placeDoorBlock(meta=" + meta);
+        
         par0World.setBlock(par1, par2, par3, par5Block.blockID, meta, 2);
         par0World.notifyBlocksOfNeighborChange(par1, par2, par3, par5Block.blockID);
 

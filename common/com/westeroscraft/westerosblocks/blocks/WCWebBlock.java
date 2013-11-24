@@ -147,5 +147,9 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
     {
         par5Entity.setInWeb();
     }
-
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

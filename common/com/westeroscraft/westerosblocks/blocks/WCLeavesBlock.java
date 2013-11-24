@@ -319,4 +319,9 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     {
         return true;
     }
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

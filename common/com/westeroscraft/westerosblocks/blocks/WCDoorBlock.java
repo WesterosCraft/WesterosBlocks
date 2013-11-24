@@ -200,4 +200,9 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
     public void getSubBlocks (int par1, CreativeTabs par2CreativeTabs, List par3List)
     {
     }
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

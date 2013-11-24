@@ -24,6 +24,7 @@ import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
@@ -91,6 +92,9 @@ public class WesterosBlockDef {
     public BoundingBox boundingBox = null;  // Bounding box
     public String colorMult = "#FFFFFF";    // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
     public String type = "";                // Type field (used for plant types or other block type specific values)
+    public boolean alphaRender = false;     // If true, do render on pass 2 (for alpha blending)
+    public boolean nonOpaque = false;       // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches 
+                                            // ('solid', 'sound', 'sand', 'soulsand' blocks)
     
     public static class HarvestLevel {
         public String tool;
@@ -1146,6 +1150,7 @@ public class WesterosBlockDef {
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
+        typeTable.put("rail", new WCRailBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

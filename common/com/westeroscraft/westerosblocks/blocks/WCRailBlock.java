@@ -2,13 +2,11 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockHalfSlab;
+import net.minecraft.block.BlockRail;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -17,47 +15,29 @@ import net.minecraftforge.common.ForgeDirection;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle {
+public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
-            // Limit to 0-7
-            def.setMetaMask(0x7);
-            if (!def.validateMetaValues(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, null)) {
+            def.setMetaMask(0x0);
+            if (!def.validateMetaValues(new int[] { 0 }, new int[] { 0 })) {
                 return null;
             }
-            if (def.blockIDs.length != 2) {
-                WesterosBlocks.log.severe(String.format("Block '%s' does not have a valid number of blockIDs: 2 are required", def.blockName));
-                return null;
-            }
-            WCSlabBlock half = new WCSlabBlock(def, false);
-            WCSlabBlock full = new WCSlabBlock(def, true);
-            half.otherBlock = full;
-            full.otherBlock = half;
-            return new Block[] { half, full };
+            return new Block[] { new WCRailBlock(def) };
         }
     }
-
-    private static final int HALF_IDX = 0;
-    private static final int FULL_IDX = 1;
     
     private WesterosBlockDef def;
-    private WCSlabBlock otherBlock;
     
-    protected WCSlabBlock(WesterosBlockDef def, boolean is_double) {
-        super(def.blockIDs[is_double?FULL_IDX:HALF_IDX], is_double, def.getMaterial());
+    protected WCRailBlock(WesterosBlockDef def) {
+        super(def.blockID);
         this.def = def;
         def.doStandardContructorSettings(this);
-        if (is_double) {
-            this.setCreativeTab(null);
-        }
-        useNeighborBrightness[blockID] = true;
     }
 
     public boolean initializeBlockDefinition() {
@@ -67,14 +47,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     }
 
     public boolean registerBlockDefinition() {
-        if (this.isDoubleSlab) {
-            WCSlabItem.setSlabs(otherBlock, this);
-            def.doStandardRegisterActions(this, WCSlabItem.class, null, FULL_IDX);
-        }
-        else {
-            WCSlabItem.setSlabs(this, otherBlock);
-            def.doStandardRegisterActions(this, WCSlabItem.class, null, HALF_IDX);
-        }
+        def.doStandardRegisterActions(this, MultiBlockItem.class);
         
         return true;
     }
@@ -89,7 +62,10 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
-        return def.doStandardIconGet(side, meta);
+        if (meta >= 6)
+            return def.doStandardIconGet(1, 0);
+        else
+            return def.doStandardIconGet(0, 0);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -98,18 +74,15 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     public void getSubBlocks(int id, CreativeTabs tab, List list) {
         def.getStandardSubBlocks(this, id, tab, list);
     }
-    
     @SuppressWarnings("rawtypes")
     @Override
     public void addCreativeItems(ArrayList itemList) {
         def.getStandardCreativeItems(this, itemList);
     }
-
     @Override
-    public String getFullSlabName(int meta) {
-        return def.getUnlocalizedName(FULL_IDX) + "." + meta; // Get name for full slab
+    public int damageDropped(int meta) {
+        return 0;
     }
-
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
@@ -147,33 +120,25 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     {
         return def.colorMultiplier(access, x, y, z);
     }
-    @Override
-    public int damageDropped(int meta) {
-        return meta;
-    }
-    @Override
-    public int idDropped(int meta, Random rnd, int par3) {
-        if (this.isDoubleSlab) {
-            return this.otherBlock.blockID;
-        }
-        else
-            return blockID;
-    }
-    @Override
-    public int idPicked(World world, int x, int y, int z) {
-        if (!isDoubleSlab)
-            return blockID;
-        else
-            return otherBlock.blockID;
-    }
-
-    @Override
-    protected ItemStack createStackedBlock(int meta) {
-        return new ItemStack(blockID, 2, meta);
-    }
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
+    }
+    
+    /**
+     * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
+     * their own) Args: x, y, z, neighbor blockID
+     * Modified from BlockRailBase: don't break when support blocks break
+     */
+    @Override
+    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+    {
+        if (!par1World.isRemote)
+        {
+            int meta = par1World.getBlockMetadata(par2, par3, par4);
+
+            this.func_94358_a(par1World, par2, par3, par4, meta, meta, par5);
+        }
     }
 }

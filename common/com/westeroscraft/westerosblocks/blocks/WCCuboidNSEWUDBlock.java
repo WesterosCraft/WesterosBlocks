@@ -121,4 +121,9 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
             }
         }
     }
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
+    }
 }

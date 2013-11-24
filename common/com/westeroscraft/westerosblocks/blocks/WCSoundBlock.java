@@ -14,6 +14,8 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlocksSoundDef;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
 
@@ -168,5 +170,4 @@ public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
         super.breakBlock(par1World, par2, par3, par4, par5, par6);
         par1World.removeBlockTileEntity(par2, par3, par4);
     }
-
 }
