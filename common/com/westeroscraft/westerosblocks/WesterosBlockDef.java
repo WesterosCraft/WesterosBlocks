@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
@@ -1151,6 +1152,7 @@ public class WesterosBlockDef {
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("rail", new WCRailBlock.Factory());
+        typeTable.put("bed", new WCBedBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

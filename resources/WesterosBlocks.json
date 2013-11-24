@@ -3670,6 +3670,27 @@
           			]
         		}
       		]
+    	},
+	    {
+   		   	"blockName": "bed_block_0",
+      		"blockID": 2071,
+      		"blockType": "bed",
+      		"creativeTab": "WesterosDeco",
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Custom Bed",
+		            "itemTexture" : "bed_item",
+          			"textures": [
+            			"bed_block_0/bed_head_top",
+            			"bed_block_0/bed_feet_top",
+            			"bed_block_0/bed_head_side",
+            			"bed_block_0/bed_feet_side",
+            			"bed_block_0/bed_head_end",
+            			"bed_block_0/bed_feet_end"
+          			]
+        		}
+      		]
     	}
 	]
 }
