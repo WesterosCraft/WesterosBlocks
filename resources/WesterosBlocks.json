@@ -3691,6 +3691,23 @@
           			]
         		}
       		]
+    	},
+	    {
+   		   	"blockName": "translucent_block_0",
+      		"blockID": 2072,
+      		"blockType": "solid",
+      		"creativeTab": "WesterosDeco",
+      		"nonOpaque": true,
+      		"alphaRender": true,
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Ice Block",
+          			"textures": [
+            			"translucent_block_0/ice"
+          			]
+        		}
+      		]
     	}
 	]
 }
