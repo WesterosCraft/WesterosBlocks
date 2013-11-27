@@ -2907,7 +2907,6 @@
     {
       "blockName" : "halfdoor_block_0",
       "blockID" : 2055,
-      "itemID" : 12024,
       "blockType" : "halfdoor",
       "hardness" : 2.0,
       "stepSound" : "wood",
@@ -2926,7 +2925,6 @@
     {
       "blockName" : "halfdoor_block_1",
       "blockID" : 2056,
-      "itemID" : 12024,
       "blockType" : "halfdoor",
       "hardness" : 2.0,
       "stepSound" : "wood",

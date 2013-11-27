@@ -57,7 +57,6 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     }
 
     public boolean registerBlockDefinition() {
-        WCHalfDoorItem.block = this;
         def.doStandardRegisterActions(this, WCHalfDoorItem.class);
         itemID = WCHalfDoorItem.lastItemID;
         return true;
@@ -183,8 +182,9 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
         return def.colorMultiplier(access, x, y, z);
     }
     @Override
-    public void getSubBlocks (int par1, CreativeTabs par2CreativeTabs, List par3List)
+    public void getSubBlocks (int id, CreativeTabs tab, List list)
     {
+        def.getStandardSubBlocks(this, id, tab, list);
     }
     
     /**
