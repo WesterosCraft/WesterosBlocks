@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Icon;
@@ -144,4 +145,10 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle {
     {
         return isBlockHeadOfBed(par1) ? 0 : itemID;
     }
+    @Override
+    public boolean isBed(World world, int x, int y, int z, EntityLivingBase player)
+    {
+        return true;
+    }
+
 }
