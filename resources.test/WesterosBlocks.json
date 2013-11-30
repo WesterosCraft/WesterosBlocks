@@ -1462,7 +1462,106 @@
 				"itemTextureIndex": 4
 			}
 		]
+	},
+    		{
+      "blockName": "cuboid_stack_block_2",
+      "blockID": 4004,
+      "blockType": "cuboid-ne-stack",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+		"subBlocks": [
+		{
+          "meta": 0,
+          "label": "Hammock+Clothesline",
+          "lightOpacity": 0,
+          "textures": [
+            "cuboid_block_0/Hammock_top",
+            "cuboid_block_0/Hammock_top",
+            "cuboid_block_0/Hammock_side",
+            "cuboid_block_0/Hammock_side"
+          ],
+          "boundingBox": {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0.3,
+            "yMax": 0.5,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
+        },
+		{
+          "meta": 1,
+          "label": "Clothesline (BAD)",
+          "lightOpacity": 0,
+          "textures": [
+            "transparent",
+            "transparent",
+            "cuboid_block_0/laundry_shirt_towel",
+            "cuboid_block_0/laundry_shirt_towel_mirrored",
+            "transparent",
+            "transparent"
+          ],
+          "boundingBox": {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0.499,
+            "zMax": 0.5
+          },
+          "itemTextureIndex": 2
+        },
+		{
+          "meta": 2,
+          "label": "Sword Rack + Coins",
+          "lightOpacity": 0,
+          "type": "no-break-under",
+          "textures": [
+            "cuboid_block_0/rack_bottom",
+            "cuboid_block_0/rack_top",
+            "cuboid_block_0/Rack_rest",
+            "cuboid_block_0/Rack_rest",
+            "cuboid_block_0/rack_bottom",
+            "cuboid_block_0/rack_bottom"
+          ],
+          "boundingBox": {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0.45,
+            "zMax": 0.55
+			},
+			"itemTextureIndex": 2
+			},
+			{
+          "meta": 3,
+          "label": "Coins (BAD)",
+          "textures": [
+            "transparent",
+            "cuboid_block_0/coins"
+			],
+			"boundingBox": {
+				"xMin": 0,
+				"xMax": 1,
+				"yMin": 0.039,
+				"yMax": 0.03,
+				"zMin": 0,
+				"zMax": 1
+			},
+			"itemTextureIndex": 2
+			}
+		]
 	}
-
   ]
 }

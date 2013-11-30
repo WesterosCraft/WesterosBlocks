@@ -10,13 +10,13 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
-public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements WesterosBlockLifecycle {
+public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
-            def.setMetaMask(0x3);
-            if (!def.validateMetaValues(new int[] { 0, 1, 2, 3 }, new int[] { 0, 1 })) {
+            def.setMetaMask(0x7);
+            if (!def.validateMetaValues(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, new int[] { 0, 1 })) {
                 return null;
             }
             // Force any top blocks to have no inventory item
@@ -33,13 +33,13 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
                     return null;
                 }
             }
-            return new Block[] { new WCCuboidNSEWStackBlock(def) };
+            return new Block[] { new WCCuboidNEStackBlock(def) };
         }
     }
     
-    private boolean noBreakUnder[] = new boolean[2];
+    private boolean noBreakUnder[] = new boolean[4];
     
-    protected WCCuboidNSEWStackBlock(WesterosBlockDef def) {
+    protected WCCuboidNEStackBlock(WesterosBlockDef def) {
         super(def);
         if (def.subBlocks != null) {
             for (WesterosBlockDef.Subblock sb : def.subBlocks) {
@@ -49,7 +49,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
                     String[] toks = type.split(",");
                     for (String tok : toks) {
                         if (tok.equals("no-break-under")) {
-                            noBreakUnder[sb.meta >> 1] = true;
+                            noBreakUnder[(sb.meta >> 1) & 0x3] = true;
                         }
                     }
                 }
@@ -58,7 +58,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, WCCuboidNSEWStackItem.class);
+        def.doStandardRegisterActions(this, WCCuboidNEStackItem.class);
         
         return true;
     }
@@ -90,7 +90,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
                 didBreak = true;
             }
             // Did we lose our support block and not a 'no-break-under' block?
-            if ((!noBreakUnder[(meta >> 1) & 1]) && (!world.doesBlockHaveSolidTopSurface(x, y - 1, z))) {
+            if ((!noBreakUnder[(meta >> 1) & 0x3]) && (!world.doesBlockHaveSolidTopSurface(x, y - 1, z))) {
                 world.setBlockToAir(x, y, z);
                 didBreak = true;
                 // See if above is still our top - break it too, if needed

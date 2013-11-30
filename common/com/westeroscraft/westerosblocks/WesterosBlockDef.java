@@ -14,6 +14,7 @@ import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNEStackBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
@@ -1159,6 +1160,7 @@ public class WesterosBlockDef {
         typeTable.put("rail", new WCRailBlock.Factory());
         typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
+        typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

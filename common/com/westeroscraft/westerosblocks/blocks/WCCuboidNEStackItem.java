@@ -6,9 +6,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class WCCuboidNEItem extends MultiBlockItem {
+public class WCCuboidNEStackItem extends MultiBlockItem {
 
-    public WCCuboidNEItem(int par1) {
+    public WCCuboidNEStackItem(int par1) {
         super(par1);
     }
     
@@ -46,15 +46,15 @@ public class WCCuboidNEItem extends MultiBlockItem {
                 dir = 2;
                 break;
         }
-
-        if (player.canPlayerEdit(x, y, z, side, stack)) {
+        // Check if we can change both blocks
+        if (player.canPlayerEdit(x, y, z, side, stack) && player.canPlayerEdit(x, y + 1, z, side, stack)) {
             Block block = getBlock();
 
             if ((block == null) || (!block.canPlaceBlockAt(world, x, y, z))) {
                 return false;
             }
             else {
-                placeCuboidBlock(world, x, y, z, dir, block, stack.getItemDamage() & 0x7);
+                placeCuboidBlock(world, x, y, z, dir, block, stack.getItemDamage() & 0x6);
                 --stack.stackSize;
                 return true;
             }
@@ -63,13 +63,13 @@ public class WCCuboidNEItem extends MultiBlockItem {
             return false;
         }
     }
-    
-    public static void placeCuboidBlock(World par0World, int par1, int par2, int par3, int side, Block par5Block, int meta)
+    public static void placeCuboidBlock(World world, int x, int y, int z, int side, Block block, int meta)
     {
         meta += (8 * (side % 2));
 
-        par0World.setBlock(par1, par2, par3, par5Block.blockID, meta, 2);
-        par0World.notifyBlocksOfNeighborChange(par1, par2, par3, par5Block.blockID);
+        world.setBlock(x, y, z, block.blockID, meta, 2);
+        world.setBlock(x, y + 1, z, block.blockID, meta | 0x1, 2);
+        world.notifyBlocksOfNeighborChange(x, y, z, block.blockID);
+        world.notifyBlocksOfNeighborChange(x, y + 1, z, block.blockID);
     }
-
 }
