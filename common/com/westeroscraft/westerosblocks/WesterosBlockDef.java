@@ -15,6 +15,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
@@ -221,6 +222,7 @@ public class WesterosBlockDef {
         public String colorMult = null;         // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
         public List<Cuboid> cuboids = null;     // List of cuboids composing block (for 'cuboid', and others)
         public List<String> soundList = null;   // List of custom sound names or sound IDs (for 'sound' blocks)
+        public boolean noInventoryItem = false; // If true, don't register inventory item for subblock
     }
 
     // Base color multiplier (fixed)
@@ -665,6 +667,7 @@ public class WesterosBlockDef {
         // And register strings for each item block
         if ((this.subBlocks != null) && (this.subBlocks.size() > 0)) {
             for (Subblock sb : this.subBlocks) {
+                if (sb.noInventoryItem) continue; 
                 if (sb.label == null) {
                     sb.label = this.blockName + " " + sb.meta;
                 }
@@ -721,6 +724,7 @@ public class WesterosBlockDef {
         if (subBlocks != null) {
             HashMap<String, Icon> map = new HashMap<String, Icon>();
             for (Subblock sb : subBlocks) {
+                if (sb.noInventoryItem) continue; 
                 if (sb.itemTexture != null) {
                     String txt = sb.itemTexture;
                     if (txt.indexOf(':') < 0) {
@@ -760,6 +764,7 @@ public class WesterosBlockDef {
     public void getStandardSubBlocks(Block blk, int id, CreativeTabs tab, List<ItemStack> list) {
         if (subBlocks != null) {
             for (Subblock sb : subBlocks) {
+                if (sb.noInventoryItem) continue; 
                 list.add(new ItemStack(blk, 1, sb.meta));
             }
         }
@@ -1153,6 +1158,7 @@ public class WesterosBlockDef {
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("rail", new WCRailBlock.Factory());
         typeTable.put("bed", new WCBedBlock.Factory());
+        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

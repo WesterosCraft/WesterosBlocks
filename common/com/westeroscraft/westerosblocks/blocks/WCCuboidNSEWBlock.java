@@ -5,11 +5,7 @@ import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.util.Icon;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraft.creativetab.CreativeTabs;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -60,7 +56,13 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
         
         return true;
     }
-    
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void getSubBlocks(int id, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, id, tab, list);
+    }
+
     @Override
     public int damageDropped(int meta) {
         return meta & 3;

@@ -1359,6 +1359,110 @@
           ]
         }       
       ]
-    }
+    },
+    	    {
+      "blockName": "cuboid_stack_block_0",
+      "blockID": 4003,
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+		"subBlocks": [
+			{
+			"meta": 0,
+			"label": "Axe+Cleaver Stack",
+			"textures": [
+					"transparent",
+					"transparent",
+					"cuboid_block_0/axe_left",
+					"cuboid_block_0/axe_right",
+					"transparent",
+					"transparent"
+				],
+				"boundingBox": {
+					"xMin": 0,
+					"xMax": 1,
+					"yMin": 0,
+					"yMax": 1,
+					"zMin": 0.499,
+					"zMax": 0.5
+				},
+				"itemTextureIndex": 2
+			},
+			{
+			"meta": 1,
+			"label": "Cleaver Block (BAD)",
+			"textures": [
+				"transparent",
+				"transparent",
+				"transparent",
+				"transparent",
+				"cuboid_block_0/cleaver_left",
+				"cuboid_block_0/cleaver_right"
+			],
+			"boundingBox": {
+				"xMin": 0.499,
+				"xMax": 0.5,
+				"yMin": 0,
+				"yMax": 1,
+				"zMin": 0,
+				"zMax": 1
+			},
+			"itemTextureIndex": 4
+			},
+			{
+			"meta": 2,
+			"label": "Dagger+Pickaxe Stack",
+			"type": "no-break-under",
+			"textures": [
+				"transparent",
+				"transparent",
+				"cuboid_block_0/dagger_right",
+				"cuboid_block_0/dagger_left",
+				"transparent",
+				"transparent"
+			],
+			"boundingBox": {
+				"xMin": 0,
+				"xMax": 1,
+				"yMin": 0,
+				"yMax": 1,
+				"zMin": 0.499,
+				"zMax": 0.5
+			},
+			"itemTextureIndex": 2
+			},
+			{
+			"meta": 3,
+			"label": "Pickaxe Block (BAD)",
+			"textures": [
+				"transparent",
+				"transparent",
+				"transparent",
+				"transparent",
+				"cuboid_block_0/pickaxe_right",
+				"cuboid_block_0/pickaxe_left"
+			],
+			"boundingBox": {
+					"xMin": 0.499,
+					"xMax": 0.5,
+					"yMin": 0,
+					"yMax": 1,
+					"zMin": 0,
+					"zMax": 1
+				},
+				"itemTextureIndex": 4
+			}
+		]
+	}
+
   ]
 }
