@@ -302,4 +302,19 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle {
     {
         return (def.alphaRender?1:0);
     }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public boolean shouldSideBeRendered(IBlockAccess access, int x, int y, int z, int side) {
+        if ((side == 0) || (side == 1))
+            return false;
+        ForgeDirection dir = ForgeDirection.values()[side];
+        int meta = access.getBlockMetadata(x - dir.offsetX, y, z - dir.offsetZ);
+        switch ((meta >> 2) & 0x3) {
+            case 0:
+            case 1:
+                return ((side == 4) || (side == 5));
+            default:
+                return ((side == 2) || (side == 3));
+        }
+    }
 }
