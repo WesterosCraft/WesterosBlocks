@@ -28,9 +28,15 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
                     }
                     matches |= (1 << sb.meta);
                 }
-                if ((matches != 0x3) && (matches != 0xF)) {
-                    WesterosBlocks.log.severe(String.format("unmatched stacked subblocks in block '%s'", def.blockType));
-                    return null;
+                for (int i = 0; i < 4; i++) {
+                    switch (matches >> (2*i)) {
+                        case 0:
+                        case 3:
+                            break;
+                        default:
+                            WesterosBlocks.log.severe(String.format("unmatched stacked subblocks %d in block '%s'", 2*i, def.blockType));
+                            return null;
+                    }
                 }
             }
             return new Block[] { new WCCuboidNEStackBlock(def) };
