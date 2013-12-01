@@ -7,7 +7,8 @@
 	<property name="forge.build" value="953"/>
 	<property name="project.version" value="0.3"/>
 	<property name="project.devversion" value="-alpha-5"/>
-
+	<property name="dynmap.version" value="1.9.1"/>
+	
 	<!-- Properties (build control) -->
 	<property name="build.dir" value="build"/>
 	<property name="src.dir" value="."/>
@@ -49,8 +50,11 @@
 	 </target>
 	
 	<target name="init.project.dependencies" depends="init.maven.tasks">
+		<artifact:remoteRepository id="dynmap.repository" url="http://repo.mikeprimm.com/" />
 		<artifact:dependencies filesetId="dependency.fileset">
   	  		<dependency groupId="com.google.code.gson" artifactId="gson" version="2.2.4" type="jar" scope="compile" />
+		  	<dependency groupId="org.dynmap" artifactId="DynmapCoreAPI" version="${dynmap.version}" type="jar" scope="compile" />
+			<remoteRepository refid="dynmap.repository" />
 		</artifact:dependencies>
 	</target>
 
