@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.ModTextureDefinition;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.Material;
@@ -15,13 +17,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCSandBlock extends Block implements WesterosBlockLifecycle {
+public class WCSandBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -233,4 +236,11 @@ public class WCSandBlock extends Block implements WesterosBlockLifecycle {
     public boolean isOpaqueCube() {
         return isSolidOpaque;
     }
+    
+    @Override
+    public void registerTextureData(ModTextureDefinition mtd) {
+        def.defaultRegisterTextures(mtd);
+        def.defaultRegisterTextureBlock(mtd);
+    }
+
 }

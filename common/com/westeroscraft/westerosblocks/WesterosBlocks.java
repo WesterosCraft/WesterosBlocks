@@ -53,6 +53,9 @@ public class WesterosBlocks
     @SidedProxy(clientSide = "com.westeroscraft.westerosblocks.ClientProxy", serverSide = "com.westeroscraft.westerosblocks.Proxy")
     public static Proxy proxy;
 
+    // Dynmap support
+    public DynmapSupport dynmap = null;
+    
     // Block classes
     public static Block customBlocks[];
     public static HashMap<String, Block> customBlocksByName;
@@ -258,7 +261,29 @@ public class WesterosBlocks
         }
         // Register entities
         EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this, 120, 20, true);;
+
+        // Handle dynmap support
+        try {
+            handleDynmap();
+        } catch (NoClassDefFoundError x) {
+            log.info("Dynmap Mod Support API not found");
+            this.dynmap = null;
+        }
     }
+    
+    private void handleDynmap() {
+        this.dynmap = new DynmapSupport("WesterosBlocks", Version.VER);
+        
+        // Register textures from various block definitions
+        for (int i = 0; i < customBlocks.length; i++) {
+            if (customBlocks[i] instanceof WesterosBlockDynmapSupport) {
+                ((WesterosBlockDynmapSupport)customBlocks[i]).registerTextureData(this.dynmap.getTextureDef());
+            }
+        }
+
+        this.dynmap.complete();
+    }
+    
     private int nextEntityID = 3000;
 
     @EventHandler

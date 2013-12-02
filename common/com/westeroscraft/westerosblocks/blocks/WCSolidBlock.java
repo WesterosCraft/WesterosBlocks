@@ -3,6 +3,8 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.dynmap.modsupport.ModTextureDefinition;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,13 +14,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
+public class WCSolidBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -125,5 +128,11 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public boolean isOpaqueCube() {
         return isSolidOpaque;
+    }
+
+    @Override
+    public void registerTextureData(ModTextureDefinition mtd) {
+        def.defaultRegisterTextures(mtd);
+        def.defaultRegisterTextureBlock(mtd);
     }
 }

@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.BlockSide;
+import org.dynmap.modsupport.BlockTextureRecord;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TextureModifier;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -14,13 +19,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
+public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -156,5 +163,41 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle {
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
+    }
+    
+    @Override
+    public void registerTextureData(ModTextureDefinition mtd) {
+        def.defaultRegisterTextures(mtd);
+        // Modifiers for each orientation
+        TextureModifier tmod[][] = { 
+            { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE },
+            { TextureModifier.NONE, TextureModifier.NONE, TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE },
+            { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.ROT90, TextureModifier.ROT270 },
+            { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE }
+        };
+        // Texture index for each orientation
+        int txtid[][] = {
+            { 0, 0, 1, 1, 1, 1 },
+            { 1, 1, 1, 1, 0, 0 },
+            { 1, 1, 0, 0, 1, 1 },
+            { 1, 1, 1, 1, 1, 1 }
+        };
+
+        for (WesterosBlockDef.Subblock sb : def.subBlocks) {
+            if (sb == null) continue;
+            if (sb.textures == null) continue;
+            for (int i = 0; i < 4; i++) {   // 4 orientations
+                BlockTextureRecord mtr = mtd.addBlockTextureRecord(this.blockID);
+                mtr.setMetaValue(4*i + sb.meta);
+                for (int face = 0; face < 6; face++) {
+                    int fidx = txtid[i][face];
+                    if (fidx >= sb.textures.size()) {
+                        fidx = sb.textures.size() - 1;
+                    }
+                    String txt = sb.textures.get(fidx);
+                    mtr.setSideTexture(txt.replace(':', '_'), tmod[i][face], BlockSide.valueOf("FACE_" + face));
+                }
+            }
+        }
     }
 }

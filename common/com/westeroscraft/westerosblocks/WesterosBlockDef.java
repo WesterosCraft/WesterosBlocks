@@ -10,6 +10,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import org.dynmap.modsupport.BlockSide;
+import org.dynmap.modsupport.BlockTextureRecord;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TextureModifier;
+
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
@@ -1207,5 +1212,62 @@ public class WesterosBlockDef {
     public static void registerStepSound(WesterosBlockStepSound ss) {
         WCStepSound stepsound = new WCStepSound(ss);
         stepSoundTable.put(ss.name, stepsound);
+    }
+    /**
+     * Default texture registration for Dynmap
+     */
+    public void defaultRegisterTextures(ModTextureDefinition mtd) {
+        mtd.setTexturePath("assets/westerosblocks/textures/blocks/");
+        HashSet<String> txtids = new HashSet<String>(); // Build set if distinct IDs
+        if (this.subblock_by_meta != null) {
+            for (int i = 0; i < this.subblock_by_meta.length; i++) {
+                Subblock sb = subblock_by_meta[i];
+                if ((sb != null) && (sb.textures != null)) {
+                    txtids.addAll(sb.textures);
+                }
+            }
+        }
+        // Register the textures
+        for (String txtid : txtids) {
+            int colon = txtid.indexOf(':');
+            if (colon < 0) {
+                mtd.registerTextureFile(txtid);
+            }
+            else {
+                mtd.registerTextureFile(txtid.replace(':', '_'), 
+                        "assets/" + txtid.substring(0, colon).toLowerCase() + "/textures/blocks/" + txtid.substring(colon+1) + ".png");
+            }
+        }
+    }
+    /**
+     * Default texture block (6 face) registration for Dynmap
+     */
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd) {
+        if (this.subblock_by_meta != null) {
+            TextureModifier tmod = TextureModifier.NONE;
+            if (this.nonOpaque) {
+                tmod = TextureModifier.CLEARINSIDE;
+            }
+            for (int i = 0; i < this.subblock_by_meta.length; i++) {
+                Subblock sb = subblock_by_meta[i];
+                if ((sb != null) && (sb.textures != null)) {
+                    BlockTextureRecord mtr = mtd.addBlockTextureRecord(this.blockID);
+                    // Set for all associated metas
+                    for (int meta = i; meta < 16; meta++) {
+                        if ((meta & metaMask) == (i & metaMask)) {
+                            mtr.setMetaValue(meta);
+                        }
+                    }
+                    for (int face = 0; face < 6; face++) {
+                        int fidx = face;
+                        if (fidx >= sb.textures.size()) {
+                            fidx = sb.textures.size() - 1;
+                        }
+                        String txtid = sb.textures.get(fidx);
+                        mtr.setSideTexture(txtid.replace(':', '_'), tmod, BlockSide.valueOf("FACE_" + face));
+                    }
+                }
+            }
+        }
     }
 }
