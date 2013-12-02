@@ -1179,17 +1179,14 @@ public class WesterosBlockDef {
      }
     // Get color muliplier
     public ColorMultHandler getColorHandler(String hnd) {
-        ColorMultHandler cmh = colorMultTable.get(hnd);
-        if (cmh == null) {
-            hnd = hnd.toUpperCase();
-            cmh = colorMultTable.get(hnd);
-        }
+        String hndid = hnd.toUpperCase();
+        ColorMultHandler cmh = colorMultTable.get(hndid);
         if (cmh == null) { 
             // See if color code
-            if ((hnd.length() == 7) && (hnd.charAt(0) == '#')) {
+            if ((hndid.length() == 7) && (hndid.charAt(0) == '#')) {
                 try {
-                    cmh = new ColorMultHandler(Integer.parseInt(hnd.substring(1), 16));
-                    colorMultTable.put(hnd, cmh);
+                    cmh = new ColorMultHandler(Integer.parseInt(hndid.substring(1), 16));
+                    colorMultTable.put(hndid, cmh);
                 } catch (NumberFormatException nfx) {
                 }
             }
@@ -1197,12 +1194,15 @@ public class WesterosBlockDef {
             else {
                 int idx = hnd.indexOf(':');
                 if (idx < 0) {
-                    hnd = "westeroscraft:" + hnd;
+                    hnd = "westerosblocks:" + hnd;
                     cmh = colorMultTable.get(hnd);
+                }
+                if (hnd.endsWith(".png") == false) {
+                    hnd = hnd + ".png";
                 }
                 if (cmh == null) {
                     cmh = new CustomColorMultHandler(hnd, blockName);
-                    colorMultTable.put(hnd, cmh);
+                    colorMultTable.put(hndid, cmh);
                 }
             }
         }
