@@ -94,6 +94,14 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle {
     public void addCreativeItems(ArrayList itemList) {
         def.getStandardCreativeItems(this, itemList);
     }
+    @SideOnly(Side.CLIENT)
+    /**
+     * only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
+     */
+    public int idPicked(World par1World, int par2, int par3, int par4)
+    {
+        return this.itemID;
+    }
     @Override
     public int damageDropped(int meta) {
         return 0;
