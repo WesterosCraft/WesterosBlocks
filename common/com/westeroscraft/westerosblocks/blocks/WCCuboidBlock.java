@@ -34,8 +34,8 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     }
     
     protected WesterosBlockDef def;
-    protected WesterosBlockDef.Cuboid currentCuboid; // Current rendering cuboid
-    protected int cuboidIndex;
+    protected WesterosBlockDef.Cuboid currentCuboid = null; // Current rendering cuboid
+    protected int cuboidIndex = -1;
     protected Icon sideIcons[][] = new Icon[16][];
     
     protected WCCuboidBlock(WesterosBlockDef def) {
