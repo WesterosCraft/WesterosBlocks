@@ -33,11 +33,37 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
     }
     
     private WesterosBlockDef def;
+    private boolean[] noInWebByMeta = null;
+    private boolean noInWeb = false;
     
     protected WCWebBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
+        int cntInWeb = 0;
+        boolean[] no_in_web = new boolean[16];
+        for (int i = 0; i < 16; i++) {
+            String t = def.getType(i);
+            if (t != null) {
+                String[] toks = t.split(",");
+                for (String tok : toks) {
+                    if (tok.equals("no-in-web")) {
+                        no_in_web[i] = true;
+                    }
+                }
+            }
+            if (!no_in_web[i])
+                cntInWeb++;
+        }
+        if (cntInWeb == 0) {
+            noInWeb = true;
+        }
+        else if (cntInWeb == 16) {
+            noInWeb = false;
+        }
+        else {  // Mixed, need per meta values
+            noInWebByMeta = no_in_web;
+        }
     }
 
     public boolean initializeBlockDefinition() {
@@ -143,9 +169,18 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
     /**
      * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
      */
-    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
+    public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity)
     {
-        par5Entity.setInWeb();
+        if (this.noInWebByMeta != null) {
+            int meta = world.getBlockMetadata(x,  y,  z);
+            if (this.noInWebByMeta[meta]) {
+                return;
+            }
+        }
+        else if (this.noInWeb) {
+            return;
+        }
+        entity.setInWeb();
     }
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()

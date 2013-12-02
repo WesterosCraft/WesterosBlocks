@@ -2825,7 +2825,8 @@
         {
           "meta" : 0,
           "label": "Smoke",
-          "textures" : [ "smoke_block_0/smoke_0" ]
+          "textures" : [ "smoke_block_0/smoke_0" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 1,
