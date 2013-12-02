@@ -66,8 +66,25 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
-        if (cuboidIndex < 0) return null;
-        
+        boolean tmpset = false;
+        if (cuboidIndex < 0) {
+            currentCuboid = def.getCuboidList(meta).get(0);
+            if (currentCuboid == null) {
+                return null;
+            }
+            cuboidIndex = 0;
+            tmpset = true;
+        }
+        Icon ico = getIconInternal(side, meta);
+
+        if (tmpset) {
+            currentCuboid = null;
+            cuboidIndex = -1;
+        }
+        return ico;
+    }
+    @SideOnly(Side.CLIENT)
+    private Icon getIconInternal(int side, int meta) {
         if ((side == 2) || (side == 5)) { // North or East
             if (this.sideIcons[meta] == null) {
                 List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(meta);
