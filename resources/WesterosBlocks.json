@@ -3697,6 +3697,7 @@
       		"creativeTab": "WesterosDeco",
       		"nonOpaque": true,
       		"alphaRender": true,
+      		"material": "ice",
       		"subBlocks": [
         		{
           			"meta": 0,
@@ -3706,6 +3707,6 @@
           			]
         		}
       		]
-    	}    	
+    	}
 	]
 }
