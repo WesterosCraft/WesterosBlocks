@@ -5580,6 +5580,7 @@
       		"stepSound": "powder",
       		"creativeTab": "WesterosDeco",
       		"lightValue": 0.7,
+      		"material": "wood",
       		"subBlocks": [
         		{
           			"meta": 0,
