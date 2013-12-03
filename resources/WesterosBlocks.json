@@ -612,6 +612,7 @@
         {
           "meta": 1,
           "label": "Stone Brick Wall",
+          "colorMult" : "textures/colormap/stonebrick",
           "textures": [
             "stone_wall_block_0/brick_stone_large_lightgrey"
           ]
@@ -658,6 +659,7 @@
         {
           "meta": 7,
           "label": "Small Stone Brick Wall",
+          "colorMult" : "textures/colormap/lapisore",
           "textures": [
             "stone_wall_block_0/brick_stone_normal_grey"
           ]
@@ -811,7 +813,7 @@
         {
           "meta": 0,
           "label": "Sand Skeleton",
-		  "colorMult" : "colourmap/sand",
+		  "colorMult" : "textures/colormap/sand",
           "textures": [
             "sand_block_0/sand_skeleton"
           ]
@@ -847,7 +849,7 @@
         {
           "meta": 5,
           "label": "Sand Stones",
-		  "colorMult" : "colourmap/sand",
+		  "colorMult" : "textures/colormap/sand",
           "textures": [
             "sand_block_0/sand_stones"
           ]
@@ -1287,6 +1289,24 @@
             { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.4375, "yMax": 0.5, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,3,2,2,2,2 ] },
             { "xMin": 0.375, "xMax": 0.625, "yMin": 0.5, "yMax": 0.5625, "zMin": 0.375, "zMax": 0.625, "sideTextures": [ 0,1,2,2,2,2 ] }
           ]
+        },
+        {
+          "meta": 6,
+          "label": "Table",
+          "textures": [
+            "bench_block_0/regularspruce",
+            "bench_block_0/table_top",
+            "bench_block_0/table_side"
+          ],
+          "boundingBox": {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
         }
       ]
     },
@@ -1672,7 +1692,7 @@
         {
           "meta": 0,
           "label": "Desert Sand Layer",
-          "colorMult" : "colourmap/sand",
+          "colorMult" : "textures/colormap/sand",
 		  "textures": [
             "sand_block_0/163"
           ]
@@ -1741,15 +1761,6 @@
             "bench_block_0/regularspruce",
             "bench_block_0/crafting_table_top",
             "bench_block_0/bench_mason_hammer_mallet"
-          ]
-        },
-        {
-          "meta": 6,
-		  "label": "Table",
-		  "textures": [
-            "bench_block_0/regularspruce",
-            "bench_block_0/table_top",
-            "bench_block_0/table_side"
           ]
         },
         {
@@ -1872,6 +1883,7 @@
         {
           "meta": 0,
           "label": "Small Stone Brick Arrow Slit",
+          "colorMult" : "textures/colormap/lapisore",
           "textures": [
             "arrow_slits/63"
           ]
@@ -1879,6 +1891,7 @@
         {
           "meta": 1,
           "label": "Stone Brick Arrow Slit",
+          "colorMult" : "textures/colormap/stonebrick",
           "textures": [
             "arrow_slits/brick_large_stone_arrow_loop_grey"
           ]
@@ -1886,6 +1899,7 @@
         {
           "meta": 2,
           "label": "Mossy Stone Brick Arrow Slit",
+          "colorMult" : "textures/colormap/stonebrick",
           "textures": [
             "arrow_slits/brick_large_stone_arrow_loop_mossy"
           ]
@@ -1893,6 +1907,7 @@
         {
           "meta": 3,
           "label": "Stone Brick Window",
+          "colorMult" : "textures/colormap/stonebrick",
           "textures": [
             "arrow_slits/brick_stone_large_window"
           ]
@@ -2061,6 +2076,7 @@
         {
           "meta": 10,
           "label": "Grey Keystone",
+          "colorMult" : "textures/colormap/lapisore",
           "textures": [
             "stone_block_0/48"
           ]
@@ -2241,7 +2257,7 @@
         {
           "meta": 10,
           "label": "Small Stone Brick",
-		  "colorMult" : "colourmap/lapisoreocean",
+		  "colorMult" : "textures/colormap/lapisore",
           "textures": [
             "stone_block_1/lapis_ore"
           ]
@@ -2603,6 +2619,20 @@
 			"solid_blocks_0/squash_top",
 			"solid_blocks_0/squash_side"
           ]
+        },
+        {
+          "meta": 7,
+          "label": "Plain White Daub",
+          "textures": [
+            "daub_wattle_blocks/daub_plain_white"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Plain Brown Daub",
+          "textures": [
+            "daub_wattle_blocks/daub_plain_brown"
+          ]
         }
       ]
     },
@@ -2742,6 +2772,7 @@
       "subBlocks": [
         {
           "meta": 0,
+          "colorMult" : "textures/colormap/lapisore",
           "label": "Small Stone Brick Stairs"
         }
       ]
@@ -2860,6 +2891,7 @@
         {
           "meta": 0,
           "label": "Small Stone Brick Slab",
+          "colorMult" : "textures/colormap/lapisore",
           "textures": [
             "stone_block_1/lapis_ore"
           ]
@@ -3084,6 +3116,7 @@
         {
           "meta": 0,
           "label": "Cobblestone Fence",
+          "colorMult" : "textures/colormap/cobblestone",
           "textures": [
             "fence_block_1/cobblestone"
           ]
@@ -3091,6 +3124,7 @@
         {
           "meta": 1,
           "label": "Mossy Cobblestone Fence",
+          "colorMult" : "textures/colormap/cobblestone",
           "textures": [
             "fence_block_1/cobblestone_mossy"
           ]
@@ -3163,72 +3197,86 @@
         {
           "meta" : 1,
           "label": "Vertical Rope",
-          "textures" : [ "smoke_block_0/rope_vertical" ]
+          "textures" : [ "smoke_block_0/rope_vertical" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 2,
           "label": "Rope Block Harness",
-          "textures" : [ "smoke_block_0/rope_blockharness" ]
+          "textures" : [ "smoke_block_0/rope_blockharness" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 3,
           "label": "Vertical Chain",
-          "textures" : [ "smoke_block_0/chain_vertical" ]
+          "textures" : [ "smoke_block_0/chain_vertical" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 4,
           "label": "Chain Block Harness",
-          "textures" : [ "smoke_block_0/chain_blockharness" ]
+          "textures" : [ "smoke_block_0/chain_blockharness" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 5,
           "label": "Bees",
-          "textures" : [ "smoke_block_0/bugs_bees2" ]
+          "textures" : [ "smoke_block_0/bugs_bees2" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 6,
           "label": "Flies",
-          "textures" : [ "smoke_block_0/bugs_flies1" ]
+          "textures" : [ "smoke_block_0/bugs_flies1" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 7,
           "label": "Icicle",
-          "textures" : [ "smoke_block_0/0" ]
+          "textures" : [ "smoke_block_0/0" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 8,
           "label": "Sausages Leg of Ham",
-          "textures" : [ "smoke_block_0/Sausages2" ]
+          "textures" : [ "smoke_block_0/Sausages2" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 9,
           "label": "Dead Hare",
-          "textures" : [ "smoke_block_0/rabbit_dead" ]
+          "textures" : [ "smoke_block_0/rabbit_dead" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 10,
           "label": "Dead Fowl",
-          "textures" : [ "smoke_block_0/Fowl" ]
+          "textures" : [ "smoke_block_0/Fowl" ],
+          "type": "no-in-web"
         },
         {
           "meta" : 11,
           "label": "Dead Fish",
-          "textures" : [ "smoke_block_0/Fish_Dead2" ]
+          "textures" : [ "smoke_block_0/Fish_Dead2" ],
+          "type": "no-in-web"
         },
 		{
           "meta" : 12,
           "label": "Garlic Strand",
-          "textures" : [ "smoke_block_0/GarlicStrand" ]
+          "textures" : [ "smoke_block_0/GarlicStrand" ],
+          "type": "no-in-web"
         },
 		{
           "meta" : 13,
           "label": "Bushel of Herbs",
-          "textures" : [ "smoke_block_0/herbs" ]
+          "textures" : [ "smoke_block_0/herbs" ],
+          "type": "no-in-web"
         },
 		{
           "meta" : 14,
           "label": "Chili Ristra",
-          "textures" : [ "smoke_block_0/Chili Ristra" ]
+          "textures" : [ "smoke_block_0/Chili Ristra" ],
+          "type": "no-in-web"
         }
       ]
     },
@@ -4220,7 +4268,14 @@
 				"textures": [
 					"stone_block_2/StormlandsEmerald"
 				]
-				}
+				},
+				{
+                "meta": 14,
+                "label": "Light Stone",
+                "textures": [
+                    "stone_block_2/stone_light"
+                ]
+                }
 			]
 		},
 		{
@@ -5459,6 +5514,62 @@
              {
              "meta": 0,
              "label": "Gold Brick Stairs"
+             }
+         ]
+       },
+       {
+         "blockName": "metal_block_0_stair_5",
+         "blockID": 2110,
+         "blockType": "stair",
+         "modelBlockName": "22",
+         "modelBlockMeta": 0,
+         "creativeTab": "WesterosBlocks",
+         "subBlocks": [
+             {
+             "meta": 0,
+             "label": "Bronze Stairs"
+             }
+         ]
+       },
+       {
+         "blockName": "metal_block_0_stair_6",
+         "blockID": 2111,
+         "blockType": "stair",
+         "modelBlockName": "42",
+         "modelBlockMeta": 0,
+         "creativeTab": "WesterosBlocks",
+         "subBlocks": [
+             {
+             "meta": 0,
+             "label": "Iron Stairs"
+             }
+         ]
+       },
+       {
+         "blockName": "metal_block_0_stair_7",
+         "blockID": 2112,
+         "blockType": "stair",
+         "modelBlockName": "133",
+         "modelBlockMeta": 0,
+         "creativeTab": "WesterosBlocks",
+         "subBlocks": [
+             {
+             "meta": 0,
+             "label": "Steel Stairs"
+             }
+         ]
+       },
+       {
+         "blockName": "snow_stairs",
+         "blockID": 2113,
+         "blockType": "stair",
+         "modelBlockName": "80",
+         "modelBlockMeta": 0,
+         "creativeTab": "WesterosDeco",
+         "subBlocks": [
+             {
+             "meta": 0,
+             "label": "Snow Stairs"
              }
          ]
        }
