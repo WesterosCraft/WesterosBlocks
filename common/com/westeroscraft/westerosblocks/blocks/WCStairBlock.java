@@ -1,6 +1,8 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.util.Icon;
@@ -142,4 +144,11 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
     {
         return (def.alphaRender?1:0);
     }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
+    }
+
 }

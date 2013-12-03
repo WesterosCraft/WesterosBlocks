@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.dynmap.modsupport.ModTextureDefinition;
 
@@ -134,5 +135,12 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     public void registerTextureData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd);
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
     }
 }

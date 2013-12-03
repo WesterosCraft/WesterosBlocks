@@ -242,5 +242,11 @@ public class WCSandBlock extends Block implements WesterosBlockLifecycle, Wester
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd);
     }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
+    }
 
 }

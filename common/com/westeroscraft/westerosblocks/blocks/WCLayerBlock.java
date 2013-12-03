@@ -213,4 +213,10 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
     {
         return (def.alphaRender?1:0);
     }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
+    }
 }

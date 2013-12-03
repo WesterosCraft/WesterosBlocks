@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockTorch;
@@ -121,5 +122,11 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle {
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
     }
 }

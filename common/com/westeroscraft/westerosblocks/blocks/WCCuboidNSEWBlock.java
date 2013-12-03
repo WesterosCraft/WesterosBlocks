@@ -2,10 +2,12 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.world.World;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -32,6 +34,10 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     @SuppressWarnings("unchecked")
     protected WCCuboidNSEWBlock(WesterosBlockDef def) {
         super(def);
+        // Set rotations for effects
+        this.metaRotations = new WesterosBlockDef.CuboidRotation[] { WesterosBlockDef.CuboidRotation.NONE,
+            WesterosBlockDef.CuboidRotation.ROTY90, WesterosBlockDef.CuboidRotation.ROTY180, WesterosBlockDef.CuboidRotation.ROTY270 };
+
         cuboids_by_meta = (List<WesterosBlockDef.Cuboid>[])new List[16];
         for (int i = 0; i < 4; i++) {
             List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(i);
@@ -106,5 +112,5 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
-    }
+    }    
 }

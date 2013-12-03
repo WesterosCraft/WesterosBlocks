@@ -200,4 +200,10 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
             }
         }
     }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
+    }
 }

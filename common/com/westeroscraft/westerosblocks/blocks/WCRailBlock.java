@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRail;
@@ -140,5 +141,11 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle {
 
             this.func_94358_a(par1World, par2, par3, par4, meta, meta, par5);
         }
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
     }
 }

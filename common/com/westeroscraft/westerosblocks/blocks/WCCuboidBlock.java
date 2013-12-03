@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -17,6 +18,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.CuboidRotation;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -37,6 +39,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     protected WesterosBlockDef.Cuboid currentCuboid = null; // Current rendering cuboid
     protected int cuboidIndex = -1;
     protected Icon sideIcons[][] = new Icon[16][];
+    protected WesterosBlockDef.CuboidRotation[] metaRotations = null;
     
     protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
@@ -68,7 +71,10 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     public Icon getIcon(int side, int meta) {
         boolean tmpset = false;
         if (cuboidIndex < 0) {
-            currentCuboid = def.getCuboidList(meta).get(0);
+            List<WesterosBlockDef.Cuboid> clist = def.getCuboidList(meta);
+            if ((clist != null) && (clist.size() > 0)) {    
+                currentCuboid = clist.get(0);
+            }
             if (currentCuboid == null) {
                 return null;
             }
@@ -276,5 +282,11 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd, metaRotations);
+        super.randomDisplayTick(world, x, y, z, rnd);
     }
 }

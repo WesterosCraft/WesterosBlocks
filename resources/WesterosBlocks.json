@@ -5572,6 +5572,30 @@
              "label": "Snow Stairs"
              }
          ]
-       }
+       },
+       {
+      		"blockName": "candle_block_0",
+			"blockID": 2114,
+			"blockType": "cuboid",
+      		"stepSound": "powder",
+      		"creativeTab": "WesterosDeco",
+      		"lightValue": 0.7,
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Candle (Effect Test)",
+          			"textures": [
+            			"torch_block_0/redstone_torch_on"
+          			],
+          			"cuboids": [
+            			{ "xMin": 0.40, "xMax": 0.60, "yMin": 0, "yMax": 0.65, "zMin": 0.40, "zMax": 0.60, "sideTextures": [ 0 ], "shape": "crossed" }
+          			],
+          			"particles": [
+        				{ "x": 0.5, "y": 0.65, "z": 0.5, "particle": "smoke", "chance": 0.1, "vxrand": 0.05, "vzrand": 0.05 },
+            			{ "x": 0.5, "y": 0.65, "z": 0.5, "particle": "flame" }
+          			]
+        		}
+      		]
+    	}
 	]
 }

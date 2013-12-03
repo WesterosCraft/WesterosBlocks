@@ -147,6 +147,8 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
             double d2 = z + random.nextFloat();
             world.spawnParticle("dripWater", d0, d1, d2, 0.0D, 0.0D, 0.0D);
         }
+        def.doRandomDisplayTick(world, x, y, z, random);
+        
         super.randomDisplayTick(world, x, y, z, random);
     }
 

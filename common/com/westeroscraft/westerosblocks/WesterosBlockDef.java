@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
@@ -53,6 +54,30 @@ import net.minecraft.block.Block;
 import net.minecraft.block.StepSound;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.EntityAuraFX;
+import net.minecraft.client.particle.EntityBreakingFX;
+import net.minecraft.client.particle.EntityBubbleFX;
+import net.minecraft.client.particle.EntityCloudFX;
+import net.minecraft.client.particle.EntityCritFX;
+import net.minecraft.client.particle.EntityDropParticleFX;
+import net.minecraft.client.particle.EntityEnchantmentTableParticleFX;
+import net.minecraft.client.particle.EntityExplodeFX;
+import net.minecraft.client.particle.EntityFX;
+import net.minecraft.client.particle.EntityFireworkSparkFX;
+import net.minecraft.client.particle.EntityFlameFX;
+import net.minecraft.client.particle.EntityFootStepFX;
+import net.minecraft.client.particle.EntityHeartFX;
+import net.minecraft.client.particle.EntityHugeExplodeFX;
+import net.minecraft.client.particle.EntityLargeExplodeFX;
+import net.minecraft.client.particle.EntityLavaFX;
+import net.minecraft.client.particle.EntityNoteFX;
+import net.minecraft.client.particle.EntityPortalFX;
+import net.minecraft.client.particle.EntityReddustFX;
+import net.minecraft.client.particle.EntitySmokeFX;
+import net.minecraft.client.particle.EntitySnowShovelFX;
+import net.minecraft.client.particle.EntitySpellParticleFX;
+import net.minecraft.client.particle.EntitySplashFX;
+import net.minecraft.client.particle.EntitySuspendFX;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
@@ -207,8 +232,18 @@ public class WesterosBlockDef {
             else {
                 c.sideTextures = rot.txtidx;
             }
+            c.shape = this.shape;
             return c;
         }
+    }
+    
+    public static class Particle {
+        public float x = 0.5F, y = 0.5F, z = 0.5F;  // Default position of effect
+        public float vx = 0.0F, vy = 0.0F, vz = 0.0F;   // Default velocity of effect
+        public float xrand = 0.0F, yrand = 0.0F, zrand = 0.0F;  // Default random position of effect (-rand to +rand)
+        public float vxrand = 0.0F, vyrand = 0.0F, vzrand = 0.0F;  // Default random velocity of effect (-rand to +rand)
+        public float chance = 1.0F;
+        public String particle;
     }
     
     public static class Subblock {
@@ -229,6 +264,7 @@ public class WesterosBlockDef {
         public List<Cuboid> cuboids = null;     // List of cuboids composing block (for 'cuboid', and others)
         public List<String> soundList = null;   // List of custom sound names or sound IDs (for 'sound' blocks)
         public boolean noInventoryItem = false; // If true, don't register inventory item for subblock
+        public List<Particle> particles = null; // List of particles to be randomly emitted
     }
 
     // Base color multiplier (fixed)
@@ -438,13 +474,15 @@ public class WesterosBlockDef {
     private transient ColorMultHandler colorMultHandlerByMeta[];
     private transient BoundingBox boundingBoxByMeta[];
     private transient List<String> sounds_by_meta[] = null;
+    private transient List<Particle> particles_by_meta[] = null;
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
     private static final Map<String, StepSound> stepSoundTable = new HashMap<String, StepSound>();
     private static final Map<String, CreativeTabs> tabTable = new HashMap<String, CreativeTabs>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
     private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
-    
+    private static final HashSet<String> particles = new HashSet<String>();
+
     private int metaMask = 0xF; // Bitmask for translating raw metadata values to base (subblock) meta values
     
     public void setMetaMask(int mask) {
@@ -589,6 +627,19 @@ public class WesterosBlockDef {
                     }
                     this.sounds_by_meta[sb.meta] = sb.soundList;
                 }
+                // If particle effects
+                if ((sb.particles != null) && (sb.particles.size() > 0)) {
+                    if (this.particles_by_meta == null) {
+                        this.particles_by_meta = new List[metaMask+1];
+                    }
+                    this.particles_by_meta[sb.meta]= sb.particles; 
+                    for (Particle pid : sb.particles) {
+                        if (particles.contains(pid.particle) == false) {
+                            WesterosBlocks.log.warning(String.format("Invalid particle '%s' in block '%s'", pid.particle, blockName));
+                            pid.particle = "smoke"; // Use smoke by default
+                        }
+                    }
+                }
             }
         }
     }
@@ -626,6 +677,9 @@ public class WesterosBlockDef {
         }
         if (boundingBox != null) {
             blk.setBlockBounds(boundingBox.xMin, boundingBox.yMin, boundingBox.zMin, boundingBox.xMax, boundingBox.yMax, boundingBox.zMax);
+        }
+        if (this.particles_by_meta != null) {   // Any particles?
+            blk.setTickRandomly(true);
         }
     }
     // Do standard initialize actions
@@ -801,6 +855,14 @@ public class WesterosBlockDef {
         metadata &= metaMask;
         if (this.sounds_by_meta != null) {
             return this.sounds_by_meta[metadata];
+        }
+        return null;
+    }
+
+    public List<Particle> getParticleList(int metadata) {
+        metadata &= metaMask;
+        if (this.particles_by_meta != null) {
+            return this.particles_by_meta[metadata];
         }
         return null;
     }
@@ -1176,6 +1238,42 @@ public class WesterosBlockDef {
         colorMultTable.put("birch", new BirchColorMultHandler());
         colorMultTable.put("basic", new BasicColorMultHandler());
         colorMultTable.put("lily", new ColorMultHandler(2129968));
+        
+        // Valid particle values
+        particles.add("hugeexplosion");
+        particles.add("largeexplode");
+        particles.add("fireworksSpark");
+        particles.add("bubble");
+        particles.add("suspended");
+        particles.add("depthsuspend");
+        particles.add("townaura");
+        particles.add("crit");
+        particles.add("magicCrit");
+        particles.add("smoke");
+        particles.add("mobSpell");
+        particles.add("mobSpellAmbient");
+        particles.add("spell");
+        particles.add("instantSpell");
+        particles.add("witchMagic");
+        particles.add("note");
+        particles.add("portal");
+        particles.add("enchantmenttable");
+        particles.add("explode");
+        particles.add("flame");
+        particles.add("lava");
+        particles.add("footstep");
+        particles.add("splash");
+        particles.add("largesmoke");
+        particles.add("cloud");
+        particles.add("reddust");
+        particles.add("snowballpoof");
+        particles.add("dripWater");
+        particles.add("dripLava");
+        particles.add("snowshovel");
+        particles.add("slime");
+        particles.add("heart");
+        particles.add("angryVillager");
+        particles.add("happyVillager");
      }
     // Get color muliplier
     public ColorMultHandler getColorHandler(String hnd) {
@@ -1267,6 +1365,70 @@ public class WesterosBlockDef {
                         mtr.setSideTexture(txtid.replace(':', '_'), tmod, BlockSide.valueOf("FACE_" + face));
                     }
                 }
+            }
+        }
+    }
+    /**
+     * Do standard random display processing
+     */
+    @SideOnly(Side.CLIENT)
+    public void doRandomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        doRandomDisplayTick(world, x, y, z, rnd, null);
+    }
+    
+    public void doRandomDisplayTick(World world, int x, int y, int z, Random rnd, CuboidRotation[] rot) {
+
+        if (this.particles_by_meta == null) {
+            return;
+        }
+        int meta = world.getBlockMetadata(x,  y,  z);
+        List<Particle> lst = this.particles_by_meta[meta & metaMask]; // Get particles, if any
+        if (lst == null) {
+            return;
+        }
+        // Compute rotation
+        CuboidRotation cr = CuboidRotation.NONE;
+        if (rot != null) {
+            int mmult = meta / (metaMask + 1);
+            if (mmult >= rot.length) {
+                mmult = 0;
+            }
+            cr = rot[mmult];
+        }
+        // And display particles
+        for (Particle p : lst) {    // Loop through our particles
+            if (p.particle == null) {
+                continue;
+            }
+            // If not 100% on, and too high random, skip it
+            if ((p.chance < 1.0F) && (p.chance >= rnd.nextFloat())) {
+                continue;
+            }
+            double dx = p.x;
+            double dy = p.y;
+            double dz = p.z;
+            double dvx = p.vx;
+            double dvy = p.vy;
+            double dvz = p.vz;
+            if (p.xrand > 0.0F) { dx += p.xrand * (rnd.nextFloat() - 0.5F) * 2.0; }
+            if (p.yrand > 0.0F) { dy += p.yrand * (rnd.nextFloat() - 0.5F) * 2.0; }
+            if (p.zrand > 0.0F) { dz += p.zrand * (rnd.nextFloat() - 0.5F) * 2.0; }
+            if (p.vxrand > 0.0F) { dvx += p.vxrand * (rnd.nextFloat() - 0.5F) * 2.0; }
+            if (p.vyrand > 0.0F) { dvy += p.vyrand * (rnd.nextFloat() - 0.5F) * 2.0; }
+            if (p.vzrand > 0.0F) { dvz += p.vzrand * (rnd.nextFloat() - 0.5F) * 2.0; }
+            switch (cr) {
+                default:
+                    world.spawnParticle(p.particle, x + dx, y + dy, z + dz, dvx, dvy, dvz);
+                    break;
+                case ROTY90:
+                    world.spawnParticle(p.particle, x + dz, y + dy, z + 1.0 - dx, -dvz, dvy, dvx);
+                    break;
+                case ROTY180:
+                    world.spawnParticle(p.particle, x + 1.0 - dx, y + dy, z + 1.0 - dz, -dvx, dvy, -dvz);
+                    break;
+                case ROTY270:
+                    world.spawnParticle(p.particle, x + 1.0 - dz, y + dy, z + dx, dvz, dvy, -dvx);
+                    break;
             }
         }
     }

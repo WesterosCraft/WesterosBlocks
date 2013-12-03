@@ -317,4 +317,10 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle {
                 return ((side == 2) || (side == 3));
         }
     }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
+    }
 }

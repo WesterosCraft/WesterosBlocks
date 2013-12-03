@@ -441,4 +441,10 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     {
         return this.itemID;
     }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
+    }
 }
