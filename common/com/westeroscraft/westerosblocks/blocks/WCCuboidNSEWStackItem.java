@@ -46,11 +46,12 @@ public class WCCuboidNSEWStackItem extends MultiBlockItem {
                 dir = 2;
                 break;
         }
+        
         // Check if we can change both blocks
         if (player.canPlayerEdit(x, y, z, side, stack) && player.canPlayerEdit(x, y + 1, z, side, stack)) {
             Block block = getBlock();
 
-            if ((block == null) || (!block.canPlaceBlockAt(world, x, y, z))) {
+            if ((block == null) || (!block.canPlaceBlockOnSide(world, x, y, z, side, stack))) {
                 return false;
             }
             else {

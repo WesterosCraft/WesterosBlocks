@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
@@ -157,6 +158,16 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
     @Override
     public boolean canPlaceBlockAt(World world, int x, int y, int z)
     {
-        return y >= 255 ? false : world.doesBlockHaveSolidTopSurface(x, y - 1, z) && super.canPlaceBlockAt(world, x, y, z) && super.canPlaceBlockAt(world, x, y + 1, z);
+        return y >= 255 ? false : super.canPlaceBlockAt(world, x, y, z) && super.canPlaceBlockAt(world, x, y + 1, z);
+    }
+    @Override
+    public boolean canPlaceBlockOnSide(World world, int x, int y, int z, int side, ItemStack item) {
+        int meta = item.getItemDamage();
+        if (y < 255) {
+            if (this.noBreakUnder[meta>>1] || world.doesBlockHaveSolidTopSurface(x, y - 1, z)) {
+                return super.canPlaceBlockAt(world, x, y, z) && super.canPlaceBlockAt(world, x, y + 1, z);
+            }
+        }
+        return false;
     }
 }

@@ -50,7 +50,7 @@ public class WCCuboidNEStackItem extends MultiBlockItem {
         if (player.canPlayerEdit(x, y, z, side, stack) && player.canPlayerEdit(x, y + 1, z, side, stack)) {
             Block block = getBlock();
 
-            if ((block == null) || (!block.canPlaceBlockAt(world, x, y, z))) {
+            if ((block == null) || (!block.canPlaceBlockOnSide(world, x, y, z, side, stack))) {
                 return false;
             }
             else {
