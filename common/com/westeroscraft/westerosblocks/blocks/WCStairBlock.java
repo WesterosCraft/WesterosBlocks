@@ -110,31 +110,37 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
     public Icon getIcon(int side, int meta) {
         Icon ico = super.getIcon(side, meta);
         if (side == 2) {
-            if(this.getBlockBoundsMaxX() == 0.5) {
-                if (offsetIconXP == null) {
-                    offsetIconXP = new ShiftedIcon(ico, true);
+            // Don't do for item render, which does vertical slices instead of horizontal
+            if((this.getBlockBoundsMinY() != 0.0) || (this.getBlockBoundsMaxY() != 1.0)) {
+                if(this.getBlockBoundsMaxX() == 0.5) {
+                    if (offsetIconXP == null) {
+                        offsetIconXP = new ShiftedIcon(ico, true);
+                    }
+                    ico = offsetIconXP;
                 }
-                ico = offsetIconXP;
-            }
-            else if(this.getBlockBoundsMinX() == 0.5) {
-                if (offsetIconXN == null) {
-                    offsetIconXN = new ShiftedIcon(ico, false);
+                else if(this.getBlockBoundsMinX() == 0.5) {
+                    if (offsetIconXN == null) {
+                        offsetIconXN = new ShiftedIcon(ico, false);
+                    }
+                    ico = offsetIconXN;
                 }
-                ico = offsetIconXN;
             }
         }
         else if (side == 5) {
-            if (this.getBlockBoundsMaxZ() == 0.5) {
-                if (offsetIconZP == null) {
-                    offsetIconZP = new ShiftedIcon(ico, true);
+            // Don't do for item render, which does vertical slices instead of horizontal
+            if((this.getBlockBoundsMinY() != 0.0) || (this.getBlockBoundsMaxY() != 1.0)) {
+                if (this.getBlockBoundsMaxZ() == 0.5) {
+                    if (offsetIconZP == null) {
+                        offsetIconZP = new ShiftedIcon(ico, true);
+                    }
+                    ico = offsetIconZP;
                 }
-                ico = offsetIconZP;
-            }
-            else if (this.getBlockBoundsMinZ() == 0.5) {
-                if (offsetIconZN == null) {
-                    offsetIconZN = new ShiftedIcon(ico, false);
+                else if (this.getBlockBoundsMinZ() == 0.5) {
+                    if (offsetIconZN == null) {
+                        offsetIconZN = new ShiftedIcon(ico, false);
+                    }
+                    ico = offsetIconZN;
                 }
-                ico = offsetIconZN;
             }
         }
         return ico;
