@@ -780,7 +780,7 @@
           "label": "Iron Crossbar",
           "textures": [
             "bars_iron_block_0/bars_iron_crossbars",
-            "bars_iron_block_0/bars_iron_crossbars"
+            "bars_iron_block_0/bars_iron_crossbars_top"
           ]
         },
         {
@@ -796,7 +796,7 @@
           "label": "Oxidized Iron Crossbar",
           "textures": [
             "bars_iron_block_0/bars_iron_oxidized_crossbars",
-            "bars_iron_block_0/bars_iron_oxidized_crossbars"
+            "bars_iron_block_0/bars_iron_oxidized_crossbars_top"
           ]
         }
       ]
@@ -2399,6 +2399,13 @@
           "textures": [
             "wood_colours/7"
           ]
+        },
+        {
+          "meta": 13,
+          "label": "Dark Northern Wood",
+          "textures": [
+            "wood_colours/wood_dark"
+          ]
         }
       ]
     },
@@ -2932,6 +2939,20 @@
           "textures": [
             "stone_block_1/16"
           ]
+        },
+        {
+          "meta": 6,
+          "label": "Bedrock Slab",
+          "textures": [
+            "stone_block_2/bedrock"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Dark Cobble Slab",
+          "textures": [
+            "stone_block_0/cobbledark"
+          ]
         }
       ]
     },
@@ -3176,6 +3197,41 @@
           "label": "Terracotta Fence",
           "textures": [
             "stone_block_0/23"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Dark Northern Wood Fence",
+          "textures": [
+            "wood_colours/wood_dark"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Small Stone Brick Fence",
+          "textures": [
+            "stone_block_1/lapis_ore"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Dark Cobble Fence",
+          "textures": [
+            "stone_block_0/cobbledark"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Bedrock Fence",
+          "textures": [
+            "stone_block_2/bedrock"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Light Grey Stone Fence",
+          "textures": [
+            "stone_block_1/emerald_block"
           ]
         }
       ]
@@ -5574,29 +5630,74 @@
          ]
        },
        {
-      		"blockName": "candle_block_0",
-			"blockID": 2114,
-			"blockType": "cuboid",
-      		"stepSound": "powder",
-      		"creativeTab": "WesterosDeco",
-      		"lightValue": 0.7,
-      		"material": "wood",
-      		"subBlocks": [
-        		{
-          			"meta": 0,
-          			"label": "Candle (Effect Test)",
-          			"textures": [
-            			"torch_block_0/redstone_torch_on"
-          			],
-          			"cuboids": [
-            			{ "xMin": 0.40, "xMax": 0.60, "yMin": 0, "yMax": 0.65, "zMin": 0.40, "zMax": 0.60, "sideTextures": [ 0 ], "shape": "crossed" }
-          			],
-          			"particles": [
-        				{ "x": 0.5, "y": 0.65, "z": 0.5, "particle": "smoke", "chance": 0.1, "vxrand": 0.05, "vzrand": 0.05 },
-            			{ "x": 0.5, "y": 0.65, "z": 0.5, "particle": "flame" }
-          			]
-        		}
-      		]
-    	}
+         "blockName": "northern_wood_stairs",
+         "blockID": 2114,
+         "blockType": "stair",
+         "modelBlockName": "wood_colours",
+         "modelBlockMeta": 13,
+         "creativeTab": "WesterosBlocks",
+         "subBlocks": [
+             {
+             "meta": 0,
+             "label": "Dark Northern Wood Stairs"
+             }
+         ]
+       },
+       {
+         "blockName": "wood_slab_block_0",
+         "blockIDs": [
+             2115,
+             2116
+          ],
+          "blockType": "slab",
+          "hardness": 2,
+          "stepSound": "wood",
+          "material": "wood",
+          "resistance": 5,
+          "harvestLevel": [
+            {
+             "tool": "axe",
+             "level": 1
+            }
+          ],
+          "creativeTab": "WesterosBlocks",
+          "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Dark Northern Wood Slab",
+          "textures": [
+          "wood_colours/wood_dark"
+          ]
+        }
+         ]
+       },
+       {
+         "blockName": "bedrock_stairs",
+         "blockID": 2117,
+         "blockType": "stair",
+         "modelBlockName": "7",
+         "modelBlockMeta": 0,
+         "creativeTab": "WesterosBlocks",
+         "subBlocks": [
+             {
+             "meta": 0,
+             "label": "Bedrock Stairs"
+             }
+         ]
+       },
+       {
+         "blockName": "cobble_dark_stairs",
+         "blockID": 2118,
+         "blockType": "stair",
+         "modelBlockName": "stone_block_0",
+         "modelBlockMeta": 14,
+         "creativeTab": "WesterosBlocks",
+         "subBlocks": [
+             {
+             "meta": 0,
+             "label": "Dark Cobble Stairs"
+             }
+         ]
+       }
 	]
 }
