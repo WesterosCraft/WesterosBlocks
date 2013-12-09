@@ -53,7 +53,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     protected WCSlabBlock(WesterosBlockDef def, boolean is_double) {
         super(def.blockIDs[is_double?FULL_IDX:HALF_IDX], is_double, def.getMaterial());
         this.def = def;
-        def.doStandardContructorSettings(this);
+        def.doStandardContructorSettings(this, is_double?FULL_IDX:HALF_IDX);
         if (is_double) {
             this.setCreativeTab(null);
         }

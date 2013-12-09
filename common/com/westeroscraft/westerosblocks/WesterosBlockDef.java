@@ -653,6 +653,9 @@ public class WesterosBlockDef {
 
     // Do standard constructor settings for given block class
     public void doStandardContructorSettings(Block blk) {
+        doStandardContructorSettings(blk, 0);
+    }
+    public void doStandardContructorSettings(Block blk, int idx) {
         if (this.hardness != DEF_FLOAT) {
             blk.setHardness(this.hardness);
         }
@@ -665,7 +668,7 @@ public class WesterosBlockDef {
         if (this.lightValue != DEF_FLOAT) {
             blk.setLightValue(this.lightValue);
         }
-        blk.setUnlocalizedName(this.blockName);
+        blk.setUnlocalizedName(this.getUnlocalizedName(idx));
         if (this.stepSound != null) {
             blk.setStepSound(this.getStepSound());
         }
