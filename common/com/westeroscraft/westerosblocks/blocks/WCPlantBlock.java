@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.PlantBlockModel;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,13 +20,14 @@ import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IPlantable;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlantable {
+public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlantable, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -163,5 +168,17 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
+    }
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.registerPatchTextureBlock(mtd, 2);
+        // Get plant model, and set for all defined meta
+        PlantBlockModel pbm = md.addPlantModel(this.blockID);
+        /* Make models for each layer thickness */
+        for (WesterosBlockDef.Subblock sb : def.subBlocks) {
+            pbm.setMetaValue(sb.meta);
+        }
     }
 }

@@ -166,7 +166,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     }
     
     @Override
-    public void registerTextureData(ModTextureDefinition mtd) {
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
         // Modifiers for each orientation
         TextureModifier tmod[][] = { 

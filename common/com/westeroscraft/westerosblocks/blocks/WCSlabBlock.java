@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.BoxBlockModel;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHalfSlab;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -15,6 +19,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -22,7 +27,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle {
+public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -182,4 +187,23 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.defaultRegisterTextureBlock(mtd);
+        /* Add models for half slabs */
+        if (!this.isDoubleSlab) {
+            BoxBlockModel bottom = md.addBoxModel(this.blockID);
+            bottom.setYRange(0.0, 0.5);
+            BoxBlockModel top = md.addBoxModel(this.blockID);
+            top.setYRange(0.5, 1.0);
+            for (WesterosBlockDef.Subblock sb : def.subBlocks) {
+                bottom.setMetaValue(sb.meta);
+                top.setMetaValue(sb.meta | 0x8);
+            }
+        }
+    }
+
 }

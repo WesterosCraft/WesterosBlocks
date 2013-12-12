@@ -1341,6 +1341,37 @@ public class WesterosBlockDef {
         }
     }
     /**
+     * Default texture block registration for Dynmap (min patch count
+     */
+    public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount) {
+        if (this.subblock_by_meta != null) {
+            TextureModifier tmod = TextureModifier.NONE;
+            if (this.nonOpaque) {
+                tmod = TextureModifier.CLEARINSIDE;
+            }
+            for (int i = 0; i < this.subblock_by_meta.length; i++) {
+                Subblock sb = subblock_by_meta[i];
+                if ((sb != null) && (sb.textures != null)) {
+                    BlockTextureRecord mtr = mtd.addBlockTextureRecord(this.blockID);
+                    // Set for all associated metas
+                    for (int meta = i; meta < 16; meta++) {
+                        if ((meta & metaMask) == (i & metaMask)) {
+                            mtr.setMetaValue(meta);
+                        }
+                    }
+                    for (int patch = 0; patch < minPatchCount; patch++) {
+                        int fidx = patch;
+                        if (fidx >= sb.textures.size()) {
+                            fidx = sb.textures.size() - 1;
+                        }
+                        String txtid = sb.textures.get(fidx);
+                        mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
+                    }
+                }
+            }
+        }
+    }
+    /**
      * Default texture block (6 face) registration for Dynmap
      */
     public void defaultRegisterTextureBlock(ModTextureDefinition mtd) {

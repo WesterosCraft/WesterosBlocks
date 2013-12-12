@@ -132,7 +132,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     }
 
     @Override
-    public void registerTextureData(ModTextureDefinition mtd) {
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd);
     }

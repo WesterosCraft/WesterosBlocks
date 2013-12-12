@@ -277,7 +277,7 @@ public class WesterosBlocks
         // Register textures from various block definitions
         for (int i = 0; i < customBlocks.length; i++) {
             if (customBlocks[i] instanceof WesterosBlockDynmapSupport) {
-                ((WesterosBlockDynmapSupport)customBlocks[i]).registerTextureData(this.dynmap.getTextureDef());
+                ((WesterosBlockDynmapSupport)customBlocks[i]).registerDynmapRenderData(this.dynmap.getTextureDef());
             }
         }
 

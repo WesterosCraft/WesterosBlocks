@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.WallFenceBlockModel;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -14,6 +18,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -21,7 +26,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle {
+public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -133,4 +138,16 @@ public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.registerPatchTextureBlock(mtd, 3);
+        // Get plant model, and set for all defined meta
+        WallFenceBlockModel pbm = md.addWallFenceModel(this.blockID, WallFenceBlockModel.FenceType.FENCE);
+        for (WesterosBlockDef.Subblock sb : def.subBlocks) {
+            pbm.setMetaValue(sb.meta);
+        }
+    }
+
 }

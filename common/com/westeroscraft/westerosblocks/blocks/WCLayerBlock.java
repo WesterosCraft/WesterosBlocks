@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.BoxBlockModel;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -15,6 +19,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -22,7 +27,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
+public class WCLayerBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -218,5 +223,17 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
     public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
+    }
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.defaultRegisterTextureBlock(mtd);
+        /* Make models for each layer thickness */
+        for (int i = 0; i < layerCount; i++) {
+            BoxBlockModel mod = md.addBoxModel(this.blockID);
+            mod.setYRange(0.0, (double)(i+1) / (double) layerCount);
+            mod.setMetaValue(i);
+        }
     }
 }

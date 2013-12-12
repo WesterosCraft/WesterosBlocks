@@ -238,7 +238,7 @@ public class WCSandBlock extends Block implements WesterosBlockLifecycle, Wester
     }
     
     @Override
-    public void registerTextureData(ModTextureDefinition mtd) {
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd);
     }

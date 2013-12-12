@@ -3,6 +3,11 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.StairBlockModel;
+import org.dynmap.modsupport.WallFenceBlockModel;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.util.Icon;
@@ -11,6 +16,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -18,7 +24,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle {
+public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -48,10 +54,12 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
     private Icon offsetIconXP = null;
     private Icon offsetIconZN = null;
     private Icon offsetIconZP = null;
+    private final Block ourModelBlock;
     
     protected WCStairBlock(WesterosBlockDef def, Block blk) {
         super(def.blockID, blk, def.modelBlockMeta);
         this.def = def;
+        this.ourModelBlock = blk;
         this.setCreativeTab(def.getCreativeTab());
         this.setUnlocalizedName(def.blockName);
     }
@@ -155,6 +163,14 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle 
     public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
+    }
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        // Make copy of model block textu def
+        mtd.addCopyBlockTextureRecord(this.blockID, ourModelBlock.blockID, def.modelBlockMeta);
+        // Get stair model
+        StairBlockModel pbm = md.addStairModel(this.blockID);
     }
 
 }
