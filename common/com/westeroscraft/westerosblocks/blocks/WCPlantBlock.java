@@ -6,7 +6,9 @@ import java.util.Random;
 
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.PatchBlockModel;
 import org.dynmap.modsupport.PlantBlockModel;
+import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -174,11 +176,12 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
-        // Get plant model, and set for all defined meta
-        PlantBlockModel pbm = md.addPlantModel(this.blockID);
-        /* Make models for each layer thickness */
+
+        PatchBlockModel mod = md.addPatchModel(this.blockID);
+        String patch0 = mod.addPatch(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, SideVisible.FLIP);
+        mod.addRotatedPatch(patch0, 0, 90, 0);
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {
-            pbm.setMetaValue(sb.meta);
+            mod.setMetaValue(sb.meta);
         }
     }
 }

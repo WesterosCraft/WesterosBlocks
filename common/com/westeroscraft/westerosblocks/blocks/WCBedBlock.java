@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.BoxBlockModel;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -17,13 +21,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle {
+public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -164,4 +169,12 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.defaultRegisterTextureBlock(mtd);
+        //TODO - get models done
+    }
+
 }
