@@ -1359,7 +1359,11 @@ public class WesterosBlockDef {
                             mtr.setMetaValue(meta);
                         }
                     }
-                    for (int patch = 0; patch < minPatchCount; patch++) {
+                    int cnt = sb.textures.size();
+                    if (cnt < minPatchCount) {
+                        cnt = minPatchCount;
+                    }
+                    for (int patch = 0; patch < cnt; patch++) {
                         int fidx = patch;
                         if (fidx >= sb.textures.size()) {
                             fidx = sb.textures.size() - 1;

@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.CuboidBlockModel;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.PatchBlockModel;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -15,6 +20,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -23,7 +30,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef.CuboidRotation;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
+public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -289,4 +296,26 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         def.doRandomDisplayTick(world, x, y, z, rnd, metaRotations);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        WesterosBlockDef def = this.getWBDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.registerPatchTextureBlock(mtd, 6);
+        for (int meta = 0; meta < 16; meta++) {
+            List<Cuboid> cl = this.getCuboidList(meta);   
+            if (cl == null) continue;
+            CuboidBlockModel mod = md.addCuboidModel(this.blockID);
+            for (Cuboid c : cl) {
+                if (WesterosBlockDef.SHAPE_CROSSED.equals(c.shape)) {   // Crosed
+                    mod.addCrossedPatches(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax, c.sideTextures[0]);
+                }
+                else {
+                    mod.addCuboid(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax, c.sideTextures);
+                }
+            }
+            mod.setMetaValue(meta);
+        }
+    }
+
 }
