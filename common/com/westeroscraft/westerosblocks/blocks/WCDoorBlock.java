@@ -3,6 +3,11 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.BlockTextureRecord;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.PatchBlockModel;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.client.renderer.IconFlipped;
@@ -16,13 +21,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
+public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -209,4 +215,14 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        WesterosBlockDef def = this.getWBDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.registerPatchTextureBlock(mtd, 2);
+        //TODO: Add moels
+    }
+
 }

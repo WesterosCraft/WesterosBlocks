@@ -3,13 +3,19 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.BlockTextureRecord;
+import org.dynmap.modsupport.CuboidBlockModel;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TextureModifier;
+import org.dynmap.modsupport.WallFenceBlockModel;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MovingObjectPosition;
@@ -19,6 +25,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -26,7 +34,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
+public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -81,17 +89,11 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
         return this.icons[0];
     }
     
-    @SideOnly(Side.CLIENT)
-    @Override
-    /**
-     * Retrieves the block texture to use based on the display side. Args: iBlockAccess, x, y, z, side
-     */
-    public Icon getBlockTexture(IBlockAccess blkAccess, int x, int y, int z, int side) {
+    private int getIconIndex(int meta, int side) {
+        boolean flag1 = false;
         if (side != 1 && side != 0) {
-            int meta = blkAccess.getBlockMetadata(x, y, z);
             int direction = meta & 3;
             boolean flag = (meta & 4) != 0;
-            boolean flag1 = false;
 
             if (flag) {
                 if (direction == 0 && side == 2) {
@@ -118,8 +120,17 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
                     flag1 = !flag1;
                 }
             }
-
-            return this.icons[flag1 ? 1 : 0];
+        }
+        return (flag1 ? 1 : 0);
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    /**
+     * Retrieves the block texture to use based on the display side. Args: iBlockAccess, x, y, z, side
+     */
+    public Icon getBlockTexture(IBlockAccess blkAccess, int x, int y, int z, int side) {
+        if (side != 1 && side != 0) {
+            return this.icons[getIconIndex(blkAccess.getBlockMetadata(x, y, z), side)];
         } else {
             return this.icons[0];
         }
@@ -447,4 +458,51 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        // Register texture, and flip version
+        Subblock sb = def.getByMeta(0);
+        if ((sb == null) || (sb.textures == null) || (sb.textures.size() == 0)) return;
+        String txt = sb.textures.get(0);
+        BlockTextureRecord btr = mtd.addBlockTextureRecord(this.blockID);
+        btr.setPatchTexture(txt, TextureModifier.NONE, 0);
+        btr.setPatchTexture(txt, TextureModifier.FLIPHORIZ, 1);
+        // Register model for each meta
+        for (int meta = 0; meta < 16; meta++) {
+            CuboidBlockModel mod = md.addCuboidModel(this.blockID);
+            mod.setMetaValue(meta);
+            int[] txtids = new int[] { this.getIconIndex(meta, 0), this.getIconIndex(meta, 1), this.getIconIndex(meta, 2),
+                    this.getIconIndex(meta, 3), this.getIconIndex(meta, 4), this.getIconIndex(meta, 5) };
+            switch (meta) {
+                case 0:
+                case 7:
+                case 8:
+                case 13:
+                    mod.addCuboid(0.0, 0.0, 0.0, 0.1875, 1.0, 1.0, txtids);
+                    break;
+                case 1:
+                case 4:
+                case 9:
+                case 14:
+                    mod.addCuboid(0.0, 0.0, 0.0, 1.0, 1.0, 0.1875, txtids);
+                    break;
+                case 3:
+                case 6:
+                case 11:
+                case 12:
+                    mod.addCuboid(0.0, 0.0, 0.8125, 1.0, 1.0, 1.0, txtids);
+                    break;
+                case 5:
+                case 2:
+                case 10:
+                case 15:
+                    mod.addCuboid(0.8125, 0.0, 0.0, 1.0, 1.0, 1.0, txtids);
+                    break;
+            }
+        }
+    }
+
 }
