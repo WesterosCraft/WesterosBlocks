@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.BlockSide;
+import org.dynmap.modsupport.BlockTextureRecord;
+import org.dynmap.modsupport.CuboidBlockModel;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TextureModifier;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -16,13 +23,15 @@ import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IShearable;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCLeavesBlock extends BlockLeavesBase implements IShearable, WesterosBlockLifecycle {
+public class WCLeavesBlock extends BlockLeavesBase implements IShearable, WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -325,5 +334,23 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
+    }
+    
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        for (int meta = 0; meta < 8; meta++) {
+            Subblock sb = def.getByMeta(meta);
+            if (sb == null) continue;
+            String topbot = sb.getTextureByIndex(1);
+            String sides = sb.getTextureByIndex(3);
+            BlockTextureRecord btr = mtd.addBlockTextureRecord(this.blockID);
+            btr.setMetaValue(meta);
+            btr.setMetaValue(meta | 8);
+            btr.setSideTexture(topbot, BlockSide.TOP);
+            btr.setSideTexture(topbot, BlockSide.BOTTOM);
+            btr.setSideTexture(sides, BlockSide.ALLSIDES);
+        }
     }
 }

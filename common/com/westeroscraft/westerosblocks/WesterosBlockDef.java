@@ -265,6 +265,16 @@ public class WesterosBlockDef {
         public List<String> soundList = null;   // List of custom sound names or sound IDs (for 'sound' blocks)
         public boolean noInventoryItem = false; // If true, don't register inventory item for subblock
         public List<Particle> particles = null; // List of particles to be randomly emitted
+        
+        public String getTextureByIndex(int idx) {
+            if ((textures != null) && (textures.size() > 0)) {
+                if (idx >= textures.size()) {
+                    idx = textures.size() - 1;
+                }
+                return textures.get(idx);
+            }
+            return null;
+        }
     }
 
     // Base color multiplier (fixed)
