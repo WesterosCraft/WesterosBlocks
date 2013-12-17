@@ -38,6 +38,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
+import com.westeroscraft.westerosblocks.blocks.WCStairRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -64,6 +65,7 @@ public class WesterosBlocks
     public static int ladderRenderID;
     public static int halfdoorRenderID;
     public static int cuboidRenderID;
+    public static int stairRenderID;
     // Use stair render fix
     public boolean useFixedStairs = false;
     
@@ -200,6 +202,8 @@ public class WesterosBlocks
         RenderingRegistry.registerBlockHandler(new WCHalfDoorRenderer());
         cuboidRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCCuboidRenderer());
+        stairRenderID = RenderingRegistry.getNextAvailableRenderId();
+        RenderingRegistry.registerBlockHandler(new WCStairRenderer());
         proxy.initRenderRegistry();
         
         // Construct custom block definitions

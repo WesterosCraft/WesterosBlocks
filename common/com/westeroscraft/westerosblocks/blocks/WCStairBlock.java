@@ -121,37 +121,35 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     public Icon getIcon(int side, int meta) {
         Icon ico = super.getIcon(side, meta);
         if (side == 2) {
-            // Don't do for item render, which does vertical slices instead of horizontal
-            if((this.getBlockBoundsMinY() != 0.0) || (this.getBlockBoundsMaxY() != 1.0)) {
-                if(this.getBlockBoundsMaxX() == 0.5) {
-                    if (offsetIconXP == null) {
-                        offsetIconXP = new ShiftedIcon(ico, true);
-                    }
-                    ico = offsetIconXP;
+            if(this.getBlockBoundsMaxX() == 0.5) {
+                if (offsetIconXP == null) {
+                    offsetIconXP = new ShiftedIcon(ico, true);
                 }
-                else if(this.getBlockBoundsMinX() == 0.5) {
-                    if (offsetIconXN == null) {
-                        offsetIconXN = new ShiftedIcon(ico, false);
-                    }
-                    ico = offsetIconXN;
+                ico = offsetIconXP;
+                System.out.println(def.blockName + ": shift XP side 2");
+            }
+            else if(this.getBlockBoundsMinX() == 0.5) {
+                if (offsetIconXN == null) {
+                    offsetIconXN = new ShiftedIcon(ico, false);
                 }
+                ico = offsetIconXN;
+                System.out.println(def.blockName + ": shift XN side 2");
             }
         }
         else if (side == 5) {
-            // Don't do for item render, which does vertical slices instead of horizontal
-            if((this.getBlockBoundsMinY() != 0.0) || (this.getBlockBoundsMaxY() != 1.0)) {
-                if (this.getBlockBoundsMaxZ() == 0.5) {
-                    if (offsetIconZP == null) {
-                        offsetIconZP = new ShiftedIcon(ico, true);
-                    }
-                    ico = offsetIconZP;
+            if (this.getBlockBoundsMaxZ() == 0.5) {
+                if (offsetIconZP == null) {
+                    offsetIconZP = new ShiftedIcon(ico, true);
                 }
-                else if (this.getBlockBoundsMinZ() == 0.5) {
-                    if (offsetIconZN == null) {
-                        offsetIconZN = new ShiftedIcon(ico, false);
-                    }
-                    ico = offsetIconZN;
+                ico = offsetIconZP;
+                System.out.println(def.blockName + ": shift ZP side 5");
+            }
+            else if (this.getBlockBoundsMinZ() == 0.5) {
+                if (offsetIconZN == null) {
+                    offsetIconZN = new ShiftedIcon(ico, false);
                 }
+                ico = offsetIconZN;
+                System.out.println(def.blockName + ": shift ZN side 5");
             }
         }
         return ico;
@@ -160,6 +158,10 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
+    }
+    @Override
+    public int getRenderType() {
+        return WesterosBlocks.stairRenderID;    // Use custom to make inventory render correctly
     }
     @SideOnly(Side.CLIENT)
     @Override
