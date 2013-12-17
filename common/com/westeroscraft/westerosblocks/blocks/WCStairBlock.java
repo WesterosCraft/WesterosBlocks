@@ -62,6 +62,9 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         this.ourModelBlock = blk;
         this.setCreativeTab(def.getCreativeTab());
         this.setUnlocalizedName(def.blockName);
+        if (def.lightOpacity < 0) {    // Workaround for f*cked up MC lighting hacks
+            this.setLightOpacity(0);
+        }
     }
 
     public boolean initializeBlockDefinition() {
