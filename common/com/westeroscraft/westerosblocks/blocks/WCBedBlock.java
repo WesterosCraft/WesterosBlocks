@@ -4,9 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import org.dynmap.modsupport.BoxBlockModel;
+import org.dynmap.modsupport.BlockSide;
+import org.dynmap.modsupport.BlockTextureRecord;
+import org.dynmap.modsupport.PatchBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TextureModifier;
+import org.dynmap.modsupport.TransparencyMode;
+import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
@@ -24,6 +29,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -173,8 +179,76 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd);
-        //TODO - get models done
+        WesterosBlockDef def = this.getWBDefinition();
+        Subblock sb = def.getByMeta(0);
+        if ((sb != null) && (sb.textures != null)) {
+            // Register textures 
+            TextureModifier tmod = TextureModifier.NONE;
+            if (def.nonOpaque) {
+                tmod = TextureModifier.CLEARINSIDE;
+            }
+            BlockTextureRecord mtr = mtd.addBlockTextureRecord(this.blockID);
+            mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
+            // Set for all meta values for foot
+            for (int meta = 0; meta < 8; meta++) {
+                mtr.setMetaValue(meta);
+            }
+            int[] face_to_idx = new int[] { 1, 1, 3, 3, 5, 5 };
+            for (int face = 0; face < 6; face++) {
+                int fidx = face_to_idx[face];
+                if (fidx >= sb.textures.size()) {
+                    fidx = sb.textures.size() - 1;
+                }
+                String txtid = sb.textures.get(fidx);
+                mtr.setPatchTexture(txtid.replace(':', '_'), tmod, face);
+            }
+            // Set for head
+            mtr = mtd.addBlockTextureRecord(this.blockID);
+            mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
+            // Set for all meta values for head
+            for (int meta = 8; meta < 16; meta++) {
+                mtr.setMetaValue(meta);
+            }
+            face_to_idx = new int[] { 0, 0, 2, 2, 4, 4 };
+            for (int face = 0; face < 6; face++) {
+                int fidx = face_to_idx[face];
+                if (fidx >= sb.textures.size()) {
+                    fidx = sb.textures.size() - 1;
+                }
+                String txtid = sb.textures.get(fidx);
+                mtr.setPatchTexture(txtid.replace(':', '_'), tmod, face);
+            }
+        }
+        // Create east facing model
+        PatchBlockModel mod = md.addPatchModel(this.blockID);
+        mod.addPatch(0, 0.1875, 0, 1, 0.1875, 0, 0, 0.1875, 1, SideVisible.TOP); // Bottom
+        mod.addPatch(0, 0.5625, 1, 1, 0.5625, 1, 0, 0.5625, 0, SideVisible.TOP); // Top
+        mod.addPatch(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0.5625, 100, SideVisible.BOTTOM); // Z- (flip)
+        mod.addPatch(0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0.5625, 100, SideVisible.TOP); // Z+
+        mod.addPatch(0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0.5625, 100, SideVisible.TOP); // X-
+        mod.addPatch(1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0.5625, 100, SideVisible.TOP); // X+
+        mod.setMetaValue(3);
+        mod.setMetaValue(7);
+        mod.setMetaValue(11);
+        mod.setMetaValue(15);
+        // Make north facing model
+        PatchBlockModel nmod = md.addRotatedPatchModel(this.blockID, mod, 0, 270, 0);
+        nmod.setMetaValue(2);
+        nmod.setMetaValue(6);
+        nmod.setMetaValue(10);
+        nmod.setMetaValue(14);
+        // Make south facing model
+        PatchBlockModel smod = md.addRotatedPatchModel(this.blockID, mod, 0, 90, 0);
+        smod.setMetaValue(0);
+        smod.setMetaValue(4);
+        smod.setMetaValue(8);
+        smod.setMetaValue(12);
+        // Make west facing model
+        PatchBlockModel wmod = md.addRotatedPatchModel(this.blockID, mod, 0, 180, 0);
+        wmod.setMetaValue(1);
+        wmod.setMetaValue(5);
+        wmod.setMetaValue(9);
+        wmod.setMetaValue(13);
     }
 
 }

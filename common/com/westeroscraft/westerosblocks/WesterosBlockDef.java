@@ -644,7 +644,7 @@ public class WesterosBlockDef {
         }
     }
     
-    private Subblock getByMeta(int meta) {
+    public Subblock getByMeta(int meta) {
         if (subblock_by_meta == null) {
             initMeta();
         }
