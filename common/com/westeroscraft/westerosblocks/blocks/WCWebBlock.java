@@ -45,6 +45,7 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle, Westero
     protected WCWebBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.def = def;
+        this.setLightOpacity(1); // Default for webs
         def.doStandardContructorSettings(this);
         int cntInWeb = 0;
         boolean[] no_in_web = new boolean[16];
