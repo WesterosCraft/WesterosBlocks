@@ -1483,8 +1483,8 @@
           "meta": 1,
           "label": "Pomegrenade Fruit Leaves",
           "textures": [
-            "leaves_block_1/leaves_pomegrenade_fruit_top_bottom",
-            "leaves_block_1/leaves_pomegrenade_fruit_top_bottom",
+            "leaves_block_1/leaves_pomegrenade_top_bottom",
+            "leaves_block_1/leaves_pomegrenade_top_bottom",
             "leaves_block_1/leaves_pomegrenade_fruit_1",
             "leaves_block_1/leaves_pomegrenade_fruit_1"
           ]
