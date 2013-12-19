@@ -4,13 +4,13 @@
   "name": "WesterosBlocks",
   "description": "Custom blocks for WesterosCraft",
   "version": "@VERSION@",
-  "mcversion": "1.5.2",
+  "mcversion": "1.6.4",
   "url": "http://www.westeroscraft.com/",
   "updateUrl": "",
   "authors": [
-    "mikeprimm", "dotblank"
+    "mikeprimm", "Thamus_Knoward", "Emoticone11"
   ],
-  "credits": "Authored by mikeprimm, dotblank",
+  "credits": "Design and code by mikeprimm, artwork and block design by Thamus_Knoward, Emoticone11",
   "logoFile": "",
   "screenshots": [ ],
   "parent":"",
