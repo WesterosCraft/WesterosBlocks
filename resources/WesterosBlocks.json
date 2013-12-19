@@ -940,7 +940,7 @@
 				"zMin": 0.499,
 				"zMax": 0.5
 			},
-			"itemTextureIndex": 2
+			"itemTextureIndex": 4
 			},
 			{
 			"meta": 3,
@@ -5740,6 +5740,22 @@
              "label": "Dark Cobble Stairs"
              }
          ]
-       }
+       },
+	   {
+   		   	"blockName": "rope_block_2",
+      		"blockID": 2119,
+      		"blockType": "rail",
+      		"creativeTab": "WesterosDeco",
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Packed Snow",
+          			"textures": [
+            			"rope_block_0/packed_snow",
+            			"rope_block_0/packed_snow_curve"
+          			]
+        		}
+			]
+    	}
 	]
 }
