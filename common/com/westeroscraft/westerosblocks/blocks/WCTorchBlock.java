@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.PatchBlockModel;
+import org.dynmap.renderer.RenderPatchFactory.SideVisible;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockTorch;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -14,13 +19,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle {
+public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -129,4 +135,37 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.registerPatchTextureBlock(mtd, 5);
+
+        // Make vertical model
+        PatchBlockModel mod0 = md.addPatchModel(this.blockID);
+        String vside = mod0.addPatch(0.4375, 0.0, 0.0, 0.4375, 0.0, 1.0, 0.4375, 1.0, 0.0, SideVisible.TOP);
+        mod0.addRotatedPatch(vside, 0, 90, 0);
+        mod0.addRotatedPatch(vside, 0, 180, 0);
+        mod0.addRotatedPatch(vside, 0, 270, 0);
+        mod0.addPatch(0.0, 0.625, -0.0625, 1.0, 0.625, -0.0625, 0.0, 0.625, 0.9375, 0.4375, 0.5625, 0.5, 0.625, 100.0, SideVisible.BOTH);
+        mod0.setMetaValue(0);
+        mod0.setMetaValue(5);
+        // Make side model
+        PatchBlockModel mod1 = md.addPatchModel(this.blockID);
+        mod1.addPatch(-0.5, 0.2, 0.4375, 0.5, 0.2, 0.4375, -0.1, 1.2, 0.4375, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.BOTTOM);
+        mod1.addPatch(-0.5, 0.2, 0.5625, 0.5, 0.2, 0.5625, -0.1, 1.2, 0.5625, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.TOP);
+        mod1.addPatch(0.0625, 0.2, 0.0, 0.0625, 0.2, 1.0, 0.4625, 1.2, 0.0, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.BOTTOM);
+        mod1.addPatch(-0.0625, 0.2, 0.0, -0.0625, 0.2, 1.0, 0.3375, 1.2, 0.0, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.TOP);
+        mod1.addPatch(0.0, 0.825, -0.3625, 1.0, 0.825, -0.3625, 0.0, 0.825, 0.6375, 0.4375, 0.5625, 0.5, 0.625, 100.0, SideVisible.BOTH);
+        mod1.setMetaValue(1);
+        // Rotate for other sides
+        PatchBlockModel mod2 = md.addRotatedPatchModel(this.blockID, mod1, 0, 180, 0);
+        mod2.setMetaValue(2);
+        PatchBlockModel mod3 = md.addRotatedPatchModel(this.blockID, mod1, 0, 90, 0);
+        mod3.setMetaValue(3);
+        PatchBlockModel mod4 = md.addRotatedPatchModel(this.blockID, mod1, 0, 270, 0);
+        mod4.setMetaValue(4);
+    }
+
 }
