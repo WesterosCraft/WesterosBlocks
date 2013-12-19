@@ -317,8 +317,7 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     @SideOnly(Side.CLIENT)
     public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
-        int i1 = par1IBlockAccess.getBlockId(par2, par3, par4);
-        return !Block.leaves.graphicsLevel && i1 == this.blockID ? false : super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
+        return true;
     }
 
     @Override
@@ -330,7 +329,8 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     public boolean isLeaves(World world, int x, int y, int z)
     {
         return true;
-    }
+    }    
+
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
     {
