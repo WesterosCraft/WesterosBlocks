@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.PatchBlockModel;
+import org.dynmap.renderer.RenderPatchFactory.SideVisible;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLadder;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -21,6 +26,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -28,7 +34,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCLadderBlock extends Block implements WesterosBlockLifecycle {
+public class WCLadderBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -323,4 +329,28 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        def.registerPatchTextureBlock(mtd, 1);
+        /* Make base model */
+        PatchBlockModel mod = md.addPatchModel(this.blockID);
+        String patch0 = mod.addPatch(0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, SideVisible.BOTH);
+        /* Make rotated models */
+        PatchBlockModel mod90 = md.addPatchModel(this.blockID);
+        mod90.addRotatedPatch(patch0, 0, 90, 0);
+        PatchBlockModel mod180 = md.addPatchModel(this.blockID);
+        mod180.addRotatedPatch(patch0, 0, 180, 0);
+        PatchBlockModel mod270 = md.addPatchModel(this.blockID);
+        mod270.addRotatedPatch(patch0, 0, 270, 0);
+        
+        for (WesterosBlockDef.Subblock sb : def.subBlocks) {
+            mod.setMetaValue(sb.meta);
+            mod90.setMetaValue(sb.meta + 8);
+            mod180.setMetaValue(sb.meta + 4);
+            mod270.setMetaValue(sb.meta + 12);
+        }
+    }
+
 }
