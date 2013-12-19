@@ -137,6 +137,10 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
         super.randomDisplayTick(world, x, y, z, rnd);
     }
     @Override
+    public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
+        return true;
+    }
+    @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);

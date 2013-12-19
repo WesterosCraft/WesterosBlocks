@@ -149,5 +149,8 @@ public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle, 
             pbm.setMetaValue(sb.meta);
         }
     }
-
+    @Override
+    public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
+        return true;
+    }
 }
