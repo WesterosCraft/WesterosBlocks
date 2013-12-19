@@ -283,6 +283,9 @@ public class WesterosBlocks
             if (customBlocks[i] instanceof WesterosBlockDynmapSupport) {
                 ((WesterosBlockDynmapSupport)customBlocks[i]).registerDynmapRenderData(this.dynmap.getTextureDef());
             }
+            else {
+                log.info("No Dynmap render support for blockID=" + customBlocks[i].getUnlocalizedName());
+            }
         }
 
         this.dynmap.complete();

@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.BlockTextureRecord;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.PatchBlockModel;
+import org.dynmap.modsupport.TextureModifier;
+import org.dynmap.modsupport.TransparencyMode;
+import org.dynmap.renderer.RenderPatchFactory.SideVisible;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRail;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -14,13 +22,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle {
+public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -147,5 +157,80 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle {
     public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
+    }
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        def.defaultRegisterTextures(mtd);
+        WesterosBlockDef def = this.getWBDefinition();
+        Subblock sb = def.getByMeta(0);
+        if ((sb != null) && (sb.textures != null)) {
+            // Register textures 
+            TextureModifier tmod = TextureModifier.NONE;
+            if (def.nonOpaque) {
+                tmod = TextureModifier.CLEARINSIDE;
+            }
+            // Make record for straight tracks
+            BlockTextureRecord mtr = mtd.addBlockTextureRecord(this.blockID);
+            mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
+            // Set for all meta values for straight tracks
+            for (int meta = 0; meta < 6; meta++) {
+                mtr.setMetaValue(meta);
+            }
+            for (int meta = 10; meta < 14; meta++) {
+                mtr.setMetaValue(meta);
+            }
+            int fidx = 0;
+            if (fidx >= sb.textures.size()) {
+                fidx = sb.textures.size() - 1;
+            }
+            String txtid = sb.textures.get(fidx);
+            mtr.setPatchTexture(txtid.replace(':', '_'), tmod, 0);
+            // Make record for curved tracks
+            mtr = mtd.addBlockTextureRecord(this.blockID);
+            mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
+            // Set for all meta values for curved tracks
+            for (int meta = 6; meta < 10; meta++) {
+                mtr.setMetaValue(meta);
+            }
+            fidx = 1;
+            if (fidx >= sb.textures.size()) {
+                fidx = sb.textures.size() - 1;
+            }
+            txtid = sb.textures.get(fidx);
+            mtr.setPatchTexture(txtid.replace(':', '_'), tmod, 0);
+        }
+        // Make models for flat tracks
+        PatchBlockModel mod = md.addPatchModel(this.blockID);
+        String patchFlat = mod.addPatch(0.0, 0.01, 0.0, 1.0, 0.01, 0.0, 0.0, 0.01, 1.0, SideVisible.BOTH);
+        mod.setMetaValue(0);
+        mod.setMetaValue(9);
+        PatchBlockModel mod90 = md.addPatchModel(this.blockID);
+        mod90.addRotatedPatch(patchFlat, 0, 90, 0);
+        mod90.setMetaValue(1);
+        mod90.setMetaValue(6);
+        PatchBlockModel mod180 = md.addPatchModel(this.blockID);
+        mod180.addRotatedPatch(patchFlat, 0, 180, 0);
+        mod180.setMetaValue(7);
+        PatchBlockModel mod270 = md.addPatchModel(this.blockID);
+        mod270.addRotatedPatch(patchFlat, 0, 270, 0);
+        mod270.setMetaValue(8);
+        // Make models for sloped tracks
+        PatchBlockModel modS0 = md.addPatchModel(this.blockID);
+        String patchSlope = mod.addPatch(0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, SideVisible.BOTH);
+        modS0.setMetaValue(2);
+        modS0.setMetaValue(10);
+        PatchBlockModel modS90 = md.addPatchModel(this.blockID);
+        modS90.addRotatedPatch(patchSlope, 0, 90, 0);
+        modS90.setMetaValue(5);
+        modS90.setMetaValue(13);
+        PatchBlockModel modS180 = md.addPatchModel(this.blockID);
+        modS180.addRotatedPatch(patchSlope, 0, 180, 0);
+        modS180.setMetaValue(3);
+        modS180.setMetaValue(11);
+        PatchBlockModel modS270 = md.addPatchModel(this.blockID);
+        modS270.addRotatedPatch(patchSlope, 0, 270, 0);
+        modS270.setMetaValue(4);
+        modS270.setMetaValue(12);
     }
 }
