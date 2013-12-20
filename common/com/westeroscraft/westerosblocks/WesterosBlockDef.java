@@ -1015,8 +1015,11 @@ public class WesterosBlockDef {
         meta &= metaMask;
         EnumPlantType pt = EnumPlantType.Plains;
         String t = getType(meta);
-        if (t != null) {
-            pt = EnumPlantType.valueOf(t);
+        if ((t != null) && (t.length() > 0)) {
+            try {
+                pt = EnumPlantType.valueOf(t);
+            } catch (IllegalArgumentException iax) {
+            }
             if (pt == null) {
                 WesterosBlocks.log.severe(String.format("Invalid plant type '%s' at meta %d of block '%s'", t, meta, this.blockName));
                 pt = EnumPlantType.Plains;
