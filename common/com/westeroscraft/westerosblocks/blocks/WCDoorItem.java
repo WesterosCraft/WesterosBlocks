@@ -39,6 +39,10 @@ public class WCDoorItem extends ItemBlock
      */
     public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float par8, float par9, float par10)
     {
+        if (world.isRemote)
+        {
+            return true;
+        }
         if (side != 1)
         {
             return false;
@@ -49,8 +53,8 @@ public class WCDoorItem extends ItemBlock
 
             if (player.canPlayerEdit(x, y, z, side, stack) && player.canPlayerEdit(x, y + 1, z, side, stack))
             {
-                if (!blk.canPlaceBlockAt(world, x, y, z))
-                {
+                if ((!blk.canPlaceBlockAt(world, x, y, z)) ||
+                    (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack))) {
                     return false;
                 }
                 else

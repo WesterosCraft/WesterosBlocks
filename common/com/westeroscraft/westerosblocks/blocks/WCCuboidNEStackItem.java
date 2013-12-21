@@ -18,6 +18,10 @@ public class WCCuboidNEStackItem extends MultiBlockItem {
      */
     public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float par8, float par9, float par10)
     {
+        if (world.isRemote)
+        {
+            return true;
+        }
         int dir = 0;
 
         switch (side) {
@@ -53,6 +57,10 @@ public class WCCuboidNEStackItem extends MultiBlockItem {
             if ((block == null) || (!block.canPlaceBlockOnSide(world, x, y, z, side, stack))) {
                 return false;
             }
+            else if (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack)) {
+                world.notifyBlockChange(x, y, z, 0);
+                return false;
+            }
             else {
                 placeCuboidBlock(world, x, y, z, dir, block, stack.getItemDamage() & 0x6);
                 --stack.stackSize;
@@ -67,9 +75,11 @@ public class WCCuboidNEStackItem extends MultiBlockItem {
     {
         meta += (8 * (side % 2));
 
-        world.setBlock(x, y, z, block.blockID, meta, 2);
-        world.setBlock(x, y + 1, z, block.blockID, meta | 0x1, 2);
-        world.notifyBlocksOfNeighborChange(x, y, z, block.blockID);
-        world.notifyBlocksOfNeighborChange(x, y + 1, z, block.blockID);
+        world.setBlock(x, y, z, block.blockID, meta, 3);
+        if (world.getBlockId(x, y, z) == block.blockID) {
+            world.setBlock(x, y + 1, z, block.blockID, meta | 0x1, 3);
+            world.notifyBlocksOfNeighborChange(x, y, z, block.blockID);
+            world.notifyBlocksOfNeighborChange(x, y + 1, z, block.blockID);
+        }
     }
 }

@@ -33,8 +33,9 @@ public class WCHalfDoorItem extends MultiBlockItem
 
             if (player.canPlayerEdit(x, y, z, side, stack))
             {
-                if (!getBlock().canPlaceBlockAt(world, x, y, z))
-                {
+                Block block = getBlock();
+                if ((!block.canPlaceBlockAt(world, x, y, z)) ||
+                    (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack))) {
                     return false;
                 }
                 else
@@ -94,7 +95,7 @@ public class WCHalfDoorItem extends MultiBlockItem
 
         int meta = side | (flag2 ? 8 : 0);
         
-        par0World.setBlock(par1, par2, par3, par5Block.blockID, meta, 2);
+        par0World.setBlock(par1, par2, par3, par5Block.blockID, meta, 3);
         par0World.notifyBlocksOfNeighborChange(par1, par2, par3, par5Block.blockID);
 
     }

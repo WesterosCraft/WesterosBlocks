@@ -51,7 +51,8 @@ public class WCCuboidNSEWUDItem extends MultiBlockItem {
         if (player.canPlayerEdit(x, y, z, side, stack)) {
             Block block = getBlock();
 
-            if ((block == null) || (!block.canPlaceBlockAt(world, x, y, z))) {
+            if ((block == null) || (!block.canPlaceBlockAt(world, x, y, z)) ||
+                (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack))) {
                 return false;
             }
             else {
@@ -68,7 +69,7 @@ public class WCCuboidNSEWUDItem extends MultiBlockItem {
     {
         meta += (2 * side);
 
-        par0World.setBlock(par1, par2, par3, par5Block.blockID, meta, 2);
+        par0World.setBlock(par1, par2, par3, par5Block.blockID, meta, 3);
         par0World.notifyBlocksOfNeighborChange(par1, par2, par3, par5Block.blockID);
     }
 

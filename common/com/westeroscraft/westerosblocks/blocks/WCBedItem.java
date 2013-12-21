@@ -8,7 +8,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
@@ -56,20 +55,20 @@ public class WCBedItem extends ItemBlock
      * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return
      * True if something happen and false if it don't. This is for ITEMS, not BLOCKS
      */
-    public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
+    public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float par8, float par9, float par10)
     {
-        if (par3World.isRemote)
+        if (world.isRemote)
         {
             return true;
         }
-        else if (par7 != 1)
+        else if (side != 1)
         {
             return false;
         }
         else
         {
-            ++par5;
-            int i1 = MathHelper.floor_double((double)(par2EntityPlayer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+            ++y;
+            int i1 = MathHelper.floor_double((double)(player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
             byte b0 = 0;
             byte b1 = 0;
 
@@ -93,18 +92,22 @@ public class WCBedItem extends ItemBlock
                 b0 = 1;
             }
 
-            if (par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack) && par2EntityPlayer.canPlayerEdit(par4 + b0, par5, par6 + b1, par7, par1ItemStack))
+            if (player.canPlayerEdit(x, y, z, side, stack) && player.canPlayerEdit(x + b0, y, z + b1, side, stack))
             {
-                if (par3World.isAirBlock(par4, par5, par6) && par3World.isAirBlock(par4 + b0, par5, par6 + b1) && par3World.doesBlockHaveSolidTopSurface(par4, par5 - 1, par6) && par3World.doesBlockHaveSolidTopSurface(par4 + b0, par5 - 1, par6 + b1))
+                if (world.isAirBlock(x, y, z) && world.isAirBlock(x + b0, y, z + b1) && world.doesBlockHaveSolidTopSurface(x, y - 1, z) && world.doesBlockHaveSolidTopSurface(x + b0, y - 1, z + b1))
                 {
-                    par3World.setBlock(par4, par5, par6, blk.blockID, i1, 3);
+                    if (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack)) {
+                        return false;
+                    }
+                    
+                    world.setBlock(x, y, z, blk.blockID, i1, 3);
 
-                    if (par3World.getBlockId(par4, par5, par6) == blk.blockID)
+                    if (world.getBlockId(x, y, z) == blk.blockID)
                     {
-                        par3World.setBlock(par4 + b0, par5, par6 + b1, blk.blockID, i1 + 8, 3);
+                        world.setBlock(x + b0, y, z + b1, blk.blockID, i1 + 8, 3);
                     }
 
-                    --par1ItemStack.stackSize;
+                    --stack.stackSize;
                     return true;
                 }
                 else
