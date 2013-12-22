@@ -14,12 +14,17 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockWall;
+import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
+import net.minecraft.item.Item;
 import net.minecraft.util.ReportedException;
 
 import java.io.IOException;
@@ -68,6 +73,8 @@ public class WesterosBlocks
     public static int stairRenderID;
     // Use stair render fix
     public boolean useFixedStairs = false;
+    public boolean useFixedFence = false;
+    public boolean useFixedWall = false;
     
     public static WesterosBlockConfig customConfig;
     
@@ -157,6 +164,8 @@ public class WesterosBlocks
                 }
             }
             useFixedStairs = cfg.get("Settings",  "useFixedStairs", true).getBoolean(true);
+            useFixedFence = cfg.get("Settings", "useFixedFence", true).getBoolean(true);
+            useFixedWall = cfg.get("Settings", "useFixedWall", true).getBoolean(true);
             
             good_init = true;
         }
@@ -262,6 +271,18 @@ public class WesterosBlocks
             Block.blocksList[156] = null; Item.itemsList[156] = null;
             GameRegistry.registerBlock(new FixedStairs(156, Block.blockNetherQuartz, 0), "stairsQuartz"); 
             */
+        }
+        // Use fixed fence (for connection to custom fences)
+        if (useFixedFence) {
+            Block.blocksList[85] = null; Item.itemsList[85] = null;
+            GameRegistry.registerBlock((new FixedFence(85, "planks_oak", Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("fence"), "fence");
+            Block.blocksList[113] = null; Item.itemsList[113] = null;
+            GameRegistry.registerBlock((new FixedFence(113, "nether_brick", Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("netherFence"), "netherFence");
+        }
+        // Use fixed wall (for connection to custom walls)
+        if (useFixedWall) {
+            Block.blocksList[139] = null; Item.itemsList[139] = null;
+            GameRegistry.registerBlock((new FixedWall(139, Block.cobblestone)).setUnlocalizedName("cobbleWall"), "cobbleWall");
         }
         // Register entities
         EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this, 120, 20, true);;
