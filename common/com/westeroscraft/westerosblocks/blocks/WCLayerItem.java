@@ -25,6 +25,9 @@ public class WCLayerItem extends ItemBlockWithMetadata
         {
             return false;
         }
+        else if (world.isRemote) {
+            return true;
+        }
         else if (!player.canPlayerEdit(x, y, z, side, stack))
         {
             return false;
@@ -34,18 +37,23 @@ public class WCLayerItem extends ItemBlockWithMetadata
             int blkid = world.getBlockId(x, y, z);
             if (blkid == this.getBlockID())
             {
+                int meta = world.getBlockMetadata(x, y, z);
+                world.setBlock(x, y, z, 0, 0, 0);
                 if (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack)) {
+                    world.setBlock(x, y, z, blkid, meta, 0); // Restore
                     return false;
                 }
                 WCLayerBlock block = (WCLayerBlock) Block.blocksList[blkid];
-                int meta = world.getBlockMetadata(x, y, z);
                 int k1 = meta % block.layerCount;
 
-                if ((k1 < (block.layerCount-1)) && world.checkNoEntityCollision(block.getCollisionBoundingBoxFromPool(world, x, y, z)) && world.setBlockMetadataWithNotify(x, y, z, k1 + 1, 3))
+                if ((k1 < (block.layerCount-1)) && world.checkNoEntityCollision(block.getCollisionBoundingBoxFromPool(world, x, y, z)) && world.setBlock(x, y, z, blkid, k1 + 1, 3))
                 {
                     world.playSoundEffect((double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5F), block.stepSound.getPlaceSound(), (block.stepSound.getVolume() + 1.0F) / 2.0F, block.stepSound.getPitch() * 0.8F);
                     --stack.stackSize;
                     return true;
+                }
+                else {
+                    world.setBlock(x, y, z, blkid, meta, 0); // Restore
                 }
             }
 
