@@ -10,6 +10,7 @@ import org.dynmap.modsupport.WallFenceBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
@@ -151,4 +152,21 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
             pbm.setMetaValue(sb.meta);
         }
     }
+    /**
+     * Return whether an adjacent block can connect to a wall.
+     */
+    @Override
+    public boolean canConnectWallTo(IBlockAccess world, int x, int y, int z)
+    {
+        int id = world.getBlockId(x, y, z);
+        Block block = Block.blocksList[id];
+
+        if (id != this.blockID && id != Block.fenceGate.blockID && (!(block instanceof BlockWall))) {
+            return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
+        }
+        else {
+            return true;
+        }
+    }
+
 }

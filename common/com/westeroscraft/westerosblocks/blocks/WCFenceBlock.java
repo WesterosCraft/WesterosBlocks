@@ -10,6 +10,7 @@ import org.dynmap.modsupport.WallFenceBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
@@ -152,5 +153,21 @@ public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle, 
     @Override
     public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
         return true;
+    }
+    
+    /**
+     * Returns true if the specified block can be connected by a fence
+     */
+    @Override
+    public boolean canConnectFenceTo(IBlockAccess world, int x, int y, int z) {
+        int id = world.getBlockId(x, y, z);
+        Block block = Block.blocksList[id];
+
+        if ((id != this.blockID) && (id != Block.fenceGate.blockID) && (!(block instanceof BlockFence))) {
+            return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
+        }
+        else {
+            return true;
+        }
     }
 }
