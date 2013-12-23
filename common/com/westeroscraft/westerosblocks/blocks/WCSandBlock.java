@@ -42,6 +42,9 @@ public class WCSandBlock extends Block implements WesterosBlockLifecycle, Wester
     protected WCSandBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.isSolidOpaque = !def.nonOpaque; 
+        if (this.isSolidOpaque && (def.lightOpacity < 0)) {
+            def.lightOpacity = 255;
+        }
         this.def = def;
         def.doStandardContructorSettings(this);
     }

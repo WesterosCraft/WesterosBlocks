@@ -42,10 +42,14 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     }
     
     private WesterosBlockDef def;
+    private boolean isSolidOpaque = true;
     
     protected WCLogBlock(WesterosBlockDef def) {
         super(def.blockID);
         this.def = def;
+        if (this.isSolidOpaque && (def.lightOpacity < 0)) {
+            def.lightOpacity = 255;
+        }
         def.doStandardContructorSettings(this);
     }
 
@@ -163,6 +167,10 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
+    }
+    @Override
+    public boolean isOpaqueCube() {
+        return isSolidOpaque;
     }
     
     @Override

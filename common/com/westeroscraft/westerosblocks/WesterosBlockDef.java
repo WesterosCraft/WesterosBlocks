@@ -669,15 +669,18 @@ public class WesterosBlockDef {
         if (this.hardness != DEF_FLOAT) {
             blk.setHardness(this.hardness);
         }
-        if (this.lightOpacity != DEF_INT) {
-            blk.setLightOpacity(this.lightOpacity);
+        if (this.lightOpacity == DEF_INT) {
+            this.lightOpacity = 0;  // Assume 0 - set to 255 before this call in solid blocks
         }
+        blk.setLightOpacity(this.lightOpacity);
+        
         if (this.resistance != DEF_FLOAT) {
             blk.setResistance(this.resistance);
         }
-        if (this.lightValue != DEF_FLOAT) {
-            blk.setLightValue(this.lightValue);
+        if (this.lightValue == DEF_FLOAT) {
+            this.lightValue = 0.0F;
         }
+        blk.setLightValue(this.lightValue);
         blk.setUnlocalizedName(this.getUnlocalizedName(idx));
         if (this.stepSound != null) {
             blk.setStepSound(this.getStepSound());
