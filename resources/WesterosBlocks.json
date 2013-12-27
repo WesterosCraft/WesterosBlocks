@@ -1294,7 +1294,7 @@
           "meta": 6,
           "label": "Table",
           "textures": [
-            "bench_block_0/regularspruce",
+            "transparent",
             "bench_block_0/table_top",
             "bench_block_0/table_side"
           ],
