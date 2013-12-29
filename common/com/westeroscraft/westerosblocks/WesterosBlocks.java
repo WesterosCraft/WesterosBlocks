@@ -21,6 +21,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockPane;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
@@ -76,6 +77,7 @@ public class WesterosBlocks
     public boolean useFixedStairs = false;
     public boolean useFixedFence = false;
     public boolean useFixedWall = false;
+    public boolean useFixedPane = false;
     
     public static WesterosBlockConfig customConfig;
     
@@ -167,6 +169,7 @@ public class WesterosBlocks
             useFixedStairs = cfg.get("Settings",  "useFixedStairs", true).getBoolean(true);
             useFixedFence = cfg.get("Settings", "useFixedFence", true).getBoolean(true);
             useFixedWall = cfg.get("Settings", "useFixedWall", true).getBoolean(true);
+            useFixedPane = cfg.get("Settings", "useFixedPane", true).getBoolean(true);
             
             good_init = true;
         }
@@ -285,6 +288,14 @@ public class WesterosBlocks
             Block.blocksList[139] = null; Item.itemsList[139] = null;
             GameRegistry.registerBlock((new FixedWall(139, Block.cobblestone)).setUnlocalizedName("cobbleWall"), "cobbleWall");
             Item.itemsList[139] = (new ItemMultiTextureTile(139 - 256, Block.blocksList[139], BlockWall.types)).setUnlocalizedName("cobbleWall");
+        }
+        // Use fixed pane (for connection to custom panes_
+        if (useFixedPane) {
+            Block.blocksList[101] = null; Item.itemsList[101] = null;
+            
+            GameRegistry.registerBlock((new FixedPane(101, "iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron"), "fenceIron");
+            Block.blocksList[102] = null; Item.itemsList[102] = null;
+            GameRegistry.registerBlock((new FixedPane(102, "glass", "glass_pane_top", Material.glass, false)).setHardness(0.3F).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("thinGlass"), "thinGlass");
         }
         // Register entities
         EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this, 120, 20, true);;

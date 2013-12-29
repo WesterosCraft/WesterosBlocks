@@ -155,4 +155,14 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
             pbm.setMetaValue(sb.meta);
         }
     }
+    @Override
+    public boolean canPaneConnectTo(IBlockAccess access, int x, int y, int z, ForgeDirection dir)
+    {
+        int id = access.getBlockId(x+dir.offsetX, y+dir.offsetY, z+dir.offsetZ);
+        if (canThisPaneConnectToThisBlockID(id) || access.isBlockSolidOnSide(x+dir.offsetX, y+dir.offsetY, z+dir.offsetZ, dir.getOpposite(), false))
+            return true;
+        if ((Block.blocksList[id] instanceof BlockPane) && (this.blockMaterial == Block.blocksList[id].blockMaterial))
+            return true;
+        return false;
+    }
 }

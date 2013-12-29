@@ -1,7 +1,6 @@
 package com.westeroscraft.westerosblocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
