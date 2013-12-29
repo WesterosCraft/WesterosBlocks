@@ -25,6 +25,7 @@ import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemMultiTextureTile;
 import net.minecraft.util.ReportedException;
 
 import java.io.IOException;
@@ -283,6 +284,7 @@ public class WesterosBlocks
         if (useFixedWall) {
             Block.blocksList[139] = null; Item.itemsList[139] = null;
             GameRegistry.registerBlock((new FixedWall(139, Block.cobblestone)).setUnlocalizedName("cobbleWall"), "cobbleWall");
+            Item.itemsList[139] = (new ItemMultiTextureTile(139 - 256, Block.blocksList[139], BlockWall.types)).setUnlocalizedName("cobbleWall");
         }
         // Register entities
         EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this, 120, 20, true);;
