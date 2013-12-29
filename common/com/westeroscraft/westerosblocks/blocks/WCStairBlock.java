@@ -5,8 +5,6 @@ import java.util.Random;
 
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.StairBlockModel;
-import org.dynmap.modsupport.WallFenceBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
@@ -175,7 +173,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         // Make copy of model block textu def
         mtd.addCopyBlockTextureRecord(this.blockID, ourModelBlock.blockID, def.modelBlockMeta);
         // Get stair model
-        StairBlockModel pbm = md.addStairModel(this.blockID);
+        md.addStairModel(this.blockID);
     }
 
 }

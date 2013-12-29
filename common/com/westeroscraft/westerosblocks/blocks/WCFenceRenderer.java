@@ -16,10 +16,7 @@ public class WCFenceRenderer implements ISimpleBlockRenderingHandler {
     public void renderInventoryBlock(Block block, int metadata, int modelID,
             RenderBlocks renderer) {
         Tessellator tessellator = Tessellator.instance;
-        int j;
-        float f1;
         float f2;
-        float f3;
 
         renderer.setRenderBoundsFromBlock(block);
         

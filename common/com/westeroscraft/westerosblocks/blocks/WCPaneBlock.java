@@ -7,11 +7,9 @@ import java.util.Random;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.PaneBlockModel;
-import org.dynmap.modsupport.WallFenceBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPane;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
@@ -23,7 +21,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.PatchBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
@@ -18,7 +17,6 @@ import net.minecraft.block.BlockBed;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.Item;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;

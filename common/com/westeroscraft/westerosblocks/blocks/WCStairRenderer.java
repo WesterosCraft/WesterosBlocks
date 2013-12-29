@@ -3,7 +3,6 @@ package com.westeroscraft.westerosblocks.blocks;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
@@ -17,10 +16,6 @@ public class WCStairRenderer implements ISimpleBlockRenderingHandler {
     public void renderInventoryBlock(Block block, int metadata, int modelID,
             RenderBlocks renderer) {
         Tessellator tessellator = Tessellator.instance;
-        int j;
-        float f1;
-        float f2;
-        float f3;
 
         renderer.setRenderBoundsFromBlock(block);
         int k;

@@ -6,10 +6,7 @@ import java.util.Random;
 
 import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
-import org.dynmap.modsupport.CuboidBlockModel;
-import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TextureModifier;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
@@ -339,7 +336,6 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
-        ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
         for (int meta = 0; meta < 8; meta++) {
             Subblock sb = def.getByMeta(meta);

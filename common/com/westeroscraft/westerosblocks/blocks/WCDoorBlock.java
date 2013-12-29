@@ -3,19 +3,15 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.List;
 import java.util.Random;
 
-import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.PatchBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;

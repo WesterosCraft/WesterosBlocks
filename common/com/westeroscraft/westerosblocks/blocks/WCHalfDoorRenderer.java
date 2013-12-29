@@ -3,7 +3,6 @@ package com.westeroscraft.westerosblocks.blocks;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.util.Icon;
@@ -49,7 +48,6 @@ public class WCHalfDoorRenderer implements ISimpleBlockRenderingHandler {
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
             Block block, int modelId, RenderBlocks renderer) {
         Tessellator tessellator = Tessellator.instance;
-        int meta = world.getBlockMetadata(x, y, z);
 
         boolean flag = false;
         float f = 0.5F;

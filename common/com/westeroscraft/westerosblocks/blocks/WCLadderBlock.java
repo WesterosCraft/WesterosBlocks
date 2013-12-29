@@ -15,7 +15,6 @@ import org.dynmap.modsupport.PatchBlockModel;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLadder;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;

@@ -8,9 +8,6 @@ import net.minecraft.world.World;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
 public class WCSoulSandBlock extends WCSolidBlock {
 
     public static class Factory extends WesterosBlockFactory {

@@ -7,7 +7,6 @@ import java.util.Random;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.PatchBlockModel;
-import org.dynmap.modsupport.PlantBlockModel;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;

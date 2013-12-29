@@ -3,10 +3,7 @@ package com.westeroscraft.westerosblocks.blocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockAnvil;
-import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
@@ -39,7 +36,6 @@ public class RenderWCFallingSand extends Render
             GL11.glTranslatef((float)par2, (float)par4, (float)par6);
             this.bindEntityTexture(par1EntityFallingSand);
             GL11.glDisable(GL11.GL_LIGHTING);
-            Tessellator tessellator;
             if (block != null)
             {
                 this.sandRenderBlocks.setRenderBoundsFromBlock(block);

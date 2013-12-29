@@ -162,7 +162,6 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
     }
     @Override
     public boolean canPlaceBlockOnSide(World world, int x, int y, int z, int side, ItemStack item) {
-        int meta = item.getItemDamage();
         if (y < 255) {
             if (this.noBreakUnder[item.getItemDamage()>>1] || world.doesBlockHaveSolidTopSurface(x, y - 1, z)) {
                 return super.canPlaceBlockAt(world, x, y, z) && super.canPlaceBlockAt(world, x, y + 1, z);
