@@ -174,21 +174,23 @@ public class WesterosBlockDef {
 
     }
     public static enum CuboidRotation {
-        NONE(0, 0, 0, new int[] { 0, 1, 2, 3, 4, 5 }),
-        ROTY90(0, 90, 0, new int[] { 0, 1, 4, 5, 3, 2 }),
-        ROTY180(0, 180, 0, new int[] { 0, 1, 3, 2, 5, 4 }), 
-        ROTY270(0, 270, 0, new int[] { 0, 1, 5, 4, 2, 3 }),
-        ROTZ90(0, 0, 90, new int[] { 5, 4, 2, 3, 0, 1 }),
-        ROTZ270(0, 0, 270, new int[] { 4, 5, 2, 3, 1, 0 });
+        NONE(0, 0, 0, new int[] { 0, 1, 2, 3, 4, 5 }, new int[] { 0, 0, 0, 0, 0, 0 }),
+        ROTY90(0, 90, 0, new int[] { 0, 1, 4, 5, 3, 2 }, new int[] { 270, 90, 0, 0, 0, 0 }),
+        ROTY180(0, 180, 0, new int[] { 0, 1, 3, 2, 5, 4 }, new int[] { 180, 180, 0, 0, 0, 0 }), 
+        ROTY270(0, 270, 0, new int[] { 0, 1, 5, 4, 2, 3 }, new int[] { 90, 270, 0, 0, 0, 0 }),
+        ROTZ90(0, 0, 90, new int[] { 5, 4, 2, 3, 0, 1 }, new int[] { 270, 90, 270, 90, 90, 90 }),
+        ROTZ270(0, 0, 270, new int[] { 4, 5, 2, 3, 1, 0 }, new int[] { 90, 270, 90, 270, 270, 270 });
         
-        int xrot, yrot, zrot;
-        int txtidx[];
+        final int xrot, yrot, zrot;
+        final int txtidx[];
+        final int txtrot[];
         
-        CuboidRotation(int xr, int yr, int zr, int[] txt_idx) {
+        CuboidRotation(int xr, int yr, int zr, int[] txt_idx, int[] txt_rot) {
             xrot = xr;
             yrot = yr;
             zrot = zr;
             txtidx = txt_idx;
+            txtrot = txt_rot;
         }
         
     }
@@ -199,6 +201,7 @@ public class WesterosBlockDef {
     
     public static class Cuboid extends BoundingBox {
         public int[] sideTextures = null;
+        public int[] sideRotations = { 0, 0, 0, 0, 0, 0 };
         public String shape = SHAPE_BOX; // "box" = normal cuboid, "crossed" = plant-style crossed (texture 0)
         
         public Cuboid rotateCuboid(CuboidRotation rot) {
@@ -221,17 +224,19 @@ public class WesterosBlockDef {
                 c.sideTextures = new int[rot.txtidx.length];
                 int cnt = this.sideTextures.length;
                 for (int i = 0; i < c.sideTextures.length; i++) {
-                    if (i < cnt) {
-                        c.sideTextures[i] = this.sideTextures[rot.txtidx[i]];
+                    int newidx = rot.txtidx[i];
+                    if (newidx < cnt) {
+                        c.sideTextures[i] = this.sideTextures[newidx];
                     }
                     else {
-                        c.sideTextures[i] = this.sideTextures[rot.txtidx[cnt-1]];
+                        c.sideTextures[i] = this.sideTextures[cnt-1];
                     }
                 }
             }
             else {
                 c.sideTextures = rot.txtidx;
             }
+            c.sideRotations = rot.txtrot;
             c.shape = this.shape;
             return c;
         }
