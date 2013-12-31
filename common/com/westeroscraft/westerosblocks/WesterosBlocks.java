@@ -20,9 +20,13 @@ import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDoor;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockPane;
+import net.minecraft.block.BlockPressurePlate;
+import net.minecraft.block.BlockPressurePlateWeighted;
 import net.minecraft.block.BlockWall;
+import net.minecraft.block.EnumMobType;
 import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.item.Item;
@@ -78,6 +82,7 @@ public class WesterosBlocks
     public boolean useFixedFence = false;
     public boolean useFixedWall = false;
     public boolean useFixedPane = false;
+    public boolean useFixedPressurePlate = false;
     
     public static WesterosBlockConfig customConfig;
     
@@ -170,6 +175,7 @@ public class WesterosBlocks
             useFixedFence = cfg.get("Settings", "useFixedFence", true).getBoolean(true);
             useFixedWall = cfg.get("Settings", "useFixedWall", true).getBoolean(true);
             useFixedPane = cfg.get("Settings", "useFixedPane", true).getBoolean(true);
+            useFixedPressurePlate = cfg.get("Settings", "useFixedPressurePlate", true).getBoolean(true);
             
             good_init = true;
         }
@@ -296,6 +302,18 @@ public class WesterosBlocks
             GameRegistry.registerBlock((new FixedPane(101, "iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron"), "fenceIron");
             Block.blocksList[102] = null; Item.itemsList[102] = null;
             GameRegistry.registerBlock((new FixedPane(102, "glass", "glass_pane_top", Material.glass, false)).setHardness(0.3F).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("thinGlass"), "thinGlass");
+        }
+        // Use fixed pressure plate (for allowing placement on custom fences)
+        if (useFixedPressurePlate) {
+            Block.blocksList[70] = null; Item.itemsList[70] = null;
+            GameRegistry.registerBlock((new FixedPressurePlate(70, "stone", Material.rock, EnumMobType.mobs)).setHardness(0.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("pressurePlate"), "pressurePlate");
+            Block.blocksList[72] = null; Item.itemsList[72] = null;
+            GameRegistry.registerBlock((new FixedPressurePlate(72, "planks_oak", Material.wood, EnumMobType.everything)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("pressurePlate"), "pressurePlate_wood");
+
+            Block.blocksList[147] = null; Item.itemsList[147] = null;
+            GameRegistry.registerBlock((new FixedPressurePlateWeighted(147, "gold_block", Material.iron, 64)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_light"), "weightedPlate_light");
+            Block.blocksList[148] = null; Item.itemsList[148] = null;
+            GameRegistry.registerBlock((new FixedPressurePlateWeighted(148, "iron_block", Material.iron, 640)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_heavy"), "weightedPlate_heavy");
         }
         // Register entities
         EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this, 120, 20, true);;
