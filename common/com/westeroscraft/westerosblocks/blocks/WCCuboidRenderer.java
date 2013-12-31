@@ -81,6 +81,8 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
             cblock.setActiveRenderCuboid(null, renderer, meta, -1);
         }
     }
+
+    private float red, green, blue;  // Base color multipliers
     
     private void prepLighting(IBlockAccess world, Block block, int x, int y, int z) {
         Tessellator tessellator = Tessellator.instance;
@@ -88,9 +90,9 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         tessellator.setBrightness(block.getMixedBrightnessForBlock(world, x, y, z));
         // Compute the color multiplier
         int mult = block.colorMultiplier(world, x, y, z);
-        float red = (float)(mult >> 16 & 255) / 255.0F;
-        float green = (float)(mult >> 8 & 255) / 255.0F;
-        float blue = (float)(mult & 255) / 255.0F;
+        red = (float)(mult >> 16 & 255) / 255.0F;
+        green = (float)(mult >> 8 & 255) / 255.0F;
+        blue = (float)(mult & 255) / 255.0F;
 
         if (EntityRenderer.anaglyphEnable) {
             float nred = (red * 30.0F + green * 59.0F + blue * 11.0F) / 100.0F;
@@ -100,7 +102,6 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
             green = ngreen;
             blue = nblue;
         }
-        tessellator.setColorOpaque_F(red, green, blue);
     }
     private enum CalcUV {
         XMIN,
@@ -218,6 +219,8 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
             { CalcUV.YMIN, CalcUV.INV_ZMAX }        // Rot 270
         }
     };
+    private static final float sidebright[] = { 0.5F, 1.0F, 0.8F, 0.8F, 0.6F, 0.6f };
+    
     private void renderCuboidSide(WCCuboidBlock block, WesterosBlockDef.Cuboid cub, RenderBlocks renderer, int meta, int side) {
         Tessellator tessellator = Tessellator.instance;
         Icon icon = renderer.getBlockIconFromSideAndMetadata(block, side, meta);    // Get icon for side
@@ -227,6 +230,8 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         double umax = calcMaxU(icon, side, rot, cub);
         double vmin = calcMinV(icon, side, rot, cub);
         double vmax = calcMaxV(icon, side, rot, cub);
+        // Set color mult
+        tessellator.setColorOpaque_F(red * sidebright[side], green * sidebright[side], blue * sidebright[side]);
         // Add corners
         int[][] c = sideToCorner[side];
         tessellator.addVertexWithUV(xr[c[(4-rot)%4][0]], yr[c[(4-rot)%4][1]], zr[c[(4-rot)%4][2]], umin, vmin);
