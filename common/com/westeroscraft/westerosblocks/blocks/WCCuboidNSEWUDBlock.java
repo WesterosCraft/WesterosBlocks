@@ -5,10 +5,12 @@ import java.util.List;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.util.Icon;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -65,6 +67,14 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
         
         return true;
     }
+    /**
+     * The type of render function that is called for this block
+     */
+    @Override
+    public int getRenderType()
+    {
+        return WesterosBlocks.cuboidNSEWUDRenderID;
+    }
     
     @Override
     public int damageDropped(int meta) {
@@ -77,49 +87,23 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
     public List<WesterosBlockDef.Cuboid> getCuboidList(int meta) {
         return cuboids_by_meta[meta];
     }
-    /**
-     * Set active cuboid during render
-     */
-    @Override
-    public void setActiveRenderCuboid(WesterosBlockDef.Cuboid c, RenderBlocks renderer, int meta, int index) {
-        super.setActiveRenderCuboid(c, renderer, meta, index);
-        int dir = (meta >> 1);
-        
-        renderer.uvRotateNorth = renderer.uvRotateSouth = 0;
-        renderer.uvRotateTop = renderer.uvRotateBottom = 0;
-
-        if (c != null) {
-            switch (dir) {
-                case 0:
-                default:
-                    break;
-                case 1:
-                    renderer.uvRotateTop = 1;
-                    renderer.uvRotateBottom = 2;
-                    break;
-                case 2:
-                    renderer.uvRotateTop = 3;
-                    renderer.uvRotateBottom = 3;
-                    break;
-                case 3:
-                    renderer.uvRotateTop = 2;
-                    renderer.uvRotateBottom = 1;
-                    break;
-                case 4:
-                    renderer.uvRotateNorth = 2;
-                    renderer.uvRotateSouth = 1;
-                    renderer.uvRotateTop = 1;
-                    renderer.uvRotateBottom = 1;
-                    break;
-                case 5:
-                    renderer.uvRotateNorth = 1;
-                    renderer.uvRotateSouth = 2;
-                    renderer.uvRotateTop = 1;
-                    renderer.uvRotateBottom = 1;
-                    break;
-            }
+    
+    @SideOnly(Side.CLIENT)
+    protected Icon getIconInternal(int side, int meta) {
+        int[] sidemap = null;
+        if (this.currentCuboid != null) {
+            sidemap = this.currentCuboid.sideTextures;
         }
+        int nside = side;
+        if (sidemap != null) {
+            if (nside >= sidemap.length) {
+                nside = sidemap.length - 1;
+            }
+            nside = sidemap[nside];
+        }
+        return def.doStandardIconGet(nside, meta);
     }
+
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
     {

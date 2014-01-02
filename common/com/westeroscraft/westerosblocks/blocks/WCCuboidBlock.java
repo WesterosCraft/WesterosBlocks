@@ -43,6 +43,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     protected WesterosBlockDef def;
     protected WesterosBlockDef.Cuboid currentCuboid = null; // Current rendering cuboid
     protected int cuboidIndex = -1;
+    protected Icon sideIcons[][] = new Icon[16][];
     protected WesterosBlockDef.CuboidRotation[] metaRotations = null;
     
     protected WCCuboidBlock(WesterosBlockDef def) {
@@ -94,7 +95,18 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         return ico;
     }
     @SideOnly(Side.CLIENT)
-    private Icon getIconInternal(int side, int meta) {
+    protected Icon getIconInternal(int side, int meta) {
+        if ((side == 2) || (side == 5)) { // North or East
+            if (this.sideIcons[meta] == null) {
+                List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(meta);
+                if (lst != null) {
+                    this.sideIcons[meta] = new Icon[lst.size() * 6];
+                }
+            }
+            if (this.sideIcons[meta][6*cuboidIndex+side] != null) { // North needs shift
+                return this.sideIcons[meta][6*cuboidIndex+side];
+            }
+        }
         int[] sidemap = null;
         if (this.currentCuboid != null) {
             sidemap = this.currentCuboid.sideTextures;
@@ -107,6 +119,20 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
             nside = sidemap[nside];
         }
         Icon ico = def.doStandardIconGet(nside, meta);
+        if (side == 2) { // North
+            float shft = (1.0F - currentCuboid.xMax) - currentCuboid.xMin;
+            if (shft != 0.0F) {
+                ico = new ShiftedIcon(ico, shft);
+            }
+            this.sideIcons[meta][6*cuboidIndex + side] = ico;
+        }
+        else if (side == 5) { // East
+            float shft = (1.0F - currentCuboid.zMax) - currentCuboid.zMin;
+            if (shft != 0.0F) {
+                ico = new ShiftedIcon(ico, shft);
+            }
+            this.sideIcons[meta][6*cuboidIndex + side] = ico;
+        }
         return ico;
     }
     

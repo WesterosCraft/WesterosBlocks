@@ -45,6 +45,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorRenderer;
@@ -76,6 +77,7 @@ public class WesterosBlocks
     public static int ladderRenderID;
     public static int halfdoorRenderID;
     public static int cuboidRenderID;
+    public static int cuboidNSEWUDRenderID;
     public static int stairRenderID;
     // Use stair render fix
     public boolean useFixedStairs = false;
@@ -221,6 +223,8 @@ public class WesterosBlocks
         RenderingRegistry.registerBlockHandler(new WCHalfDoorRenderer());
         cuboidRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCCuboidRenderer());
+        cuboidNSEWUDRenderID = RenderingRegistry.getNextAvailableRenderId();
+        RenderingRegistry.registerBlockHandler(new WCCuboidNSEWUDRenderer());
         stairRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCStairRenderer());
         proxy.initRenderRegistry();
