@@ -1979,7 +1979,9 @@
           "meta": 7,
           "label": "Cage",
           "textures": [
-            "arrow_slits/cage_top"
+            "arrow_slits/cage_bottom",
+			"arrow_slits/cage_top",
+			"arrow_slits/cage_side"
           ]
         },
 		{
@@ -2015,6 +2017,13 @@
           "label": "Stone Slab Arrow Slit",
           "textures": [
             "arrow_slits/StoneSlabArrowSlits"
+          ]
+        },
+		{
+          "meta": 13,
+          "label": "Stormlands Brick Arrow Slit",
+          "textures": [
+            "arrow_slits/StormlandsArrowSlits"
           ]
         }
       ]
@@ -3120,6 +3129,13 @@
           "label": "Snow Slab",
           "textures": [
             "solid_blocks_0/snow"
+            ]
+        },
+		{
+          "meta": 3,
+          "label": "Muddy Snow Slab",
+          "textures": [
+            "solid_blocks_0/muddysnow"
             ]
         }
       ]
@@ -4362,7 +4378,7 @@
 				},
 				{
 				"meta": 13,
-				"label": "Stormlands Small Light Brick",
+				"label": "Stormlands Dark Cobblestone",
 				"textures": [
 					"stone_block_2/StormlandsEmerald"
 				]
@@ -4372,6 +4388,13 @@
                 "label": "Light Stone",
                 "textures": [
                     "stone_block_2/stone_light"
+                ]
+                },
+				{
+                "meta": 15,
+                "label": "Stormlands Mossy Cobblestone",
+                "textures": [
+                    "stone_block_2/cobblestonestormlands_mossy"
                 ]
                 }
 			]
@@ -5756,6 +5779,110 @@
           			]
         		}
 			]
-    	}
-	]
+    	},
+		{
+      "blockName": "stone_wall_block_1",
+      "blockID": 2120,
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Vivid Sandstone Wall",
+          "textures": [
+            "stone_block_0/22",
+            "stone_block_0/22",
+            "stone_block_0/3"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Vivid Mossy Sandstone Wall",
+          "textures": [
+            "stone_block_0/22",
+            "stone_block_0/22",
+            "stone_block_0/7"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Vivid Dark Sandstone Wall",
+          "textures": [
+            "stone_block_0/21",
+            "stone_block_0/21",
+            "stone_block_0/18"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Large Brick Sandstone Wall",
+          "textures": [
+            "stone_block_0/sandstone_bricks_large"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Monochrome Sandstone Wall",
+          "textures": [
+            "stone_block_0/30",
+            "stone_block_0/30",
+            "stone_block_0/29"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Monochrome Mossy Sandstone Wall",
+          "textures": [
+            "stone_block_0/30",
+            "stone_block_0/30",
+            "stone_block_0/37"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Monochrome Dark Sandstone Wall",
+          "textures": [
+            "stone_block_0/35",
+            "stone_block_0/35",
+            "stone_block_0/34"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Terracotta Wall",
+          "textures": [
+            "stone_block_0/25",
+            "stone_block_0/25",
+            "stone_block_0/23"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Terracotta Engraved Wall",
+          "textures": [
+            "stone_block_0/25",
+            "stone_block_0/25",
+            "stone_block_0/24"
+          ]
+        },
+		{
+          "meta": 10,
+          "label": "Dark Brown Sandstone Wall",
+          "textures": [
+            "stone_block_0/47"
+          ]
+        }
+      ]
+    }
+   ]
 }

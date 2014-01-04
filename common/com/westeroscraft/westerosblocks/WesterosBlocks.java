@@ -53,7 +53,6 @@ import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCStairRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
-@NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class WesterosBlocks
 {    
     public static Logger log = Logger.getLogger("WesterosBlocks");
