@@ -53,6 +53,7 @@ import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCStairRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
+@NetworkMod(clientSideRequired = true, serverSideRequired = true)
 public class WesterosBlocks
 {    
     public static Logger log = Logger.getLogger("WesterosBlocks");
@@ -319,7 +320,7 @@ public class WesterosBlocks
             GameRegistry.registerBlock((new FixedPressurePlateWeighted(148, "iron_block", Material.iron, 640)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_heavy"), "weightedPlate_heavy");
         }
         // Register entities
-        EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this, 120, 20, true);;
+        EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this.instance, 120, 20, true);;
 
         // Handle dynmap support
         try {
