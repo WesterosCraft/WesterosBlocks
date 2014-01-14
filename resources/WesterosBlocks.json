@@ -5883,6 +5883,23 @@
           ]
         }
       ]
-    }
+    },
+    	   {
+   		   	"blockName": "fire_block_0",
+      		"blockID": 2121,
+      		"blockType": "fire",
+      		"creativeTab": "WesterosDeco",
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Safe Fire",
+          			"textures": [
+            			"fire_block_0/fire_layer_0",
+            			"fire_block_0/fire_layer_1"
+          			]
+        		}
+			]
+    	}
+    
    ]
 }

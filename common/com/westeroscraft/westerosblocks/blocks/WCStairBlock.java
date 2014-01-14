@@ -124,14 +124,12 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
                     offsetIconXP = new ShiftedIcon(ico, true);
                 }
                 ico = offsetIconXP;
-                System.out.println(def.blockName + ": shift XP side 2");
             }
             else if(this.getBlockBoundsMinX() == 0.5) {
                 if (offsetIconXN == null) {
                     offsetIconXN = new ShiftedIcon(ico, false);
                 }
                 ico = offsetIconXN;
-                System.out.println(def.blockName + ": shift XN side 2");
             }
         }
         else if (side == 5) {
@@ -140,14 +138,12 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
                     offsetIconZP = new ShiftedIcon(ico, true);
                 }
                 ico = offsetIconZP;
-                System.out.println(def.blockName + ": shift ZP side 5");
             }
             else if (this.getBlockBoundsMinZ() == 0.5) {
                 if (offsetIconZN == null) {
                     offsetIconZN = new ShiftedIcon(ico, false);
                 }
                 ico = offsetIconZN;
-                System.out.println(def.blockName + ": shift ZN side 5");
             }
         }
         return ico;
