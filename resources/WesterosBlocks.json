@@ -5889,6 +5889,7 @@
       		"blockID": 2121,
       		"blockType": "fire",
       		"creativeTab": "WesterosDeco",
+	        "lightValue": 1.0,
       		"subBlocks": [
         		{
           			"meta": 0,
