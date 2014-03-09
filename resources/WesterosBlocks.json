@@ -1171,7 +1171,7 @@
       "blockID": 2066,
       "blockType": "cuboid",
 	  "nonOpaque": true,
-	  "alphaRender": true,
+	  "alphaRender": false,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -1915,12 +1915,12 @@
       "blockType": "solid",
       "creativeTab": "WesterosDeco",
       "nonOpaque": true,
-      "alphaRender": true,
+      "alphaRender": false,
       "hardness": 2,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "lightOpacity": 2,
+      "lightOpacity": 0,
       "subBlocks": [
         {
           "meta": 0,
