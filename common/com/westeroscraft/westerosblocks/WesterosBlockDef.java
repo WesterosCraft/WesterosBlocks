@@ -268,6 +268,7 @@ public class WesterosBlockDef {
         public int itemTextureIndex = 0;        // Index of texture for item icon
         public String colorMult = null;         // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
         public List<Cuboid> cuboids = null;     // List of cuboids composing block (for 'cuboid', and others)
+        public List<BoundingBox> collisionBoxes = null;     // For 'solid', used for raytrace (arrow shots)
         public List<String> soundList = null;   // List of custom sound names or sound IDs (for 'sound' blocks)
         public boolean noInventoryItem = false; // If true, don't register inventory item for subblock
         public List<Particle> particles = null; // List of particles to be randomly emitted
@@ -491,6 +492,7 @@ public class WesterosBlockDef {
     private transient BoundingBox boundingBoxByMeta[];
     private transient List<String> sounds_by_meta[] = null;
     private transient List<Particle> particles_by_meta[] = null;
+    private transient boolean hasCollisionBoxes = false;
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
     private static final Map<String, StepSound> stepSoundTable = new HashMap<String, StepSound>();
@@ -656,8 +658,16 @@ public class WesterosBlockDef {
                         }
                     }
                 }
+                // If any collision boxes, mark ti
+                if (sb.collisionBoxes != null) {
+                    hasCollisionBoxes = true;
+                }
             }
         }
+    }
+    
+    public boolean hasCollisionBoxes() {
+        return hasCollisionBoxes;
     }
     
     public Subblock getByMeta(int meta) {
@@ -965,7 +975,17 @@ public class WesterosBlockDef {
         }
         return null;
     }
-    
+
+    public List<BoundingBox> getCollisionBoxList(int meta) {
+        meta &= metaMask;
+        
+        Subblock sb = getByMeta(meta);
+        if ((sb != null) && (sb.collisionBoxes != null)) {
+           return sb.collisionBoxes;
+        }
+        return null;
+    }
+
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
         int meta = world.getBlockMetadata(x, y, z);
         BoundingBox bb = getBoundingBox(meta);

@@ -9,7 +9,11 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
+import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.Vec3;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
@@ -18,6 +22,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -145,5 +151,58 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
+    }
+    
+    @Override
+    public void addCollisionBoxesToList(World world, int x, int y, int z, AxisAlignedBB mask, List list, Entity entity)
+    {
+        if (def.hasCollisionBoxes() == false) {
+            super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
+            return;
+        }
+        int meta = world.getBlockMetadata(x,  y,  z);
+        List<BoundingBox> cl = def.getCollisionBoxList(meta); 
+        if (cl == null) {
+            super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
+            return;
+        }
+        for (BoundingBox c : cl) {
+            this.setBlockBounds(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax);
+            super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
+        }
+        def.setBlockBoundsBasedOnState(this, world, x, y, z);
+    }
+
+    @Override
+    public MovingObjectPosition collisionRayTrace(World world, int x, int y, int z, Vec3 start, Vec3 end) {
+        if (def.hasCollisionBoxes() == false) {
+            return super.collisionRayTrace(world, x, y, z, start, end);
+        }
+        int meta = world.getBlockMetadata(x,  y,  z);
+        List<BoundingBox> cl = def.getCollisionBoxList(meta); 
+        if (cl == null) {
+            return super.collisionRayTrace(world, x, y, z, start, end);
+        }
+        MovingObjectPosition bestpos = null;
+        double bestdist = 0.0;
+        for (BoundingBox c : cl) {
+            this.setBlockBounds(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax);
+            MovingObjectPosition pos = super.collisionRayTrace(world, x, y, z, start, end);
+            if (pos != null) {
+                if (bestpos == null) {
+                    bestpos = pos;
+                    bestdist = bestpos.hitVec.squareDistanceTo(end);
+                }
+                else {
+                    double dist = pos.hitVec.squareDistanceTo(end);
+                    if (dist > bestdist) {
+                        bestpos = pos;
+                        bestdist = dist;
+                    }
+                }
+            }
+        }
+        def.setBlockBoundsBasedOnState(this, world, x, y, z);
+        return bestpos;
     }
 }
