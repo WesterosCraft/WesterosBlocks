@@ -12,8 +12,11 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
+import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.Vec3;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
@@ -159,17 +162,17 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     public boolean renderAsNormalBlock() {
         return false;
     }
-    @Override
-    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
-        AxisAlignedBB bb = def.getCollisionBoundingBoxFromPool(world, x, y, z);
-        if (bb == null)
-            bb = super.getCollisionBoundingBoxFromPool(world, x, y, z);
-        return bb;
-    }
-    @Override
-    public void setBlockBoundsBasedOnState(IBlockAccess blockaccess, int x, int y, int z) {
-        def.setBlockBoundsBasedOnState(this, blockaccess, x, y, z);
-    }
+//    @Override
+//    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
+//        AxisAlignedBB bb = def.getCollisionBoundingBoxFromPool(world, x, y, z);
+//        if (bb == null)
+//            bb = super.getCollisionBoundingBoxFromPool(world, x, y, z);
+//        return bb;
+//    }
+//    @Override
+//    public void setBlockBoundsBasedOnState(IBlockAccess blockaccess, int x, int y, int z) {
+//        def.setBlockBoundsBasedOnState(this, blockaccess, x, y, z);
+//    }
     @SideOnly(Side.CLIENT)
     @Override
     public boolean shouldSideBeRendered(IBlockAccess access, int x, int y, int z, int side)
@@ -316,4 +319,42 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         }
     }
 
+    @Override
+    public void addCollisionBoxesToList(World world, int x, int y, int z, AxisAlignedBB mask, List list, Entity entity)
+    {
+        int meta = world.getBlockMetadata(x,  y,  z);
+        List<Cuboid> cl = this.getCuboidList(meta); 
+        for (Cuboid c : cl) {
+            this.setBlockBounds(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax);
+            super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
+        }
+        def.setBlockBoundsBasedOnState(this, world, x, y, z);
+    }
+    
+    @Override
+    public MovingObjectPosition collisionRayTrace(World world, int x, int y, int z, Vec3 start, Vec3 end) {
+        int meta = world.getBlockMetadata(x,  y,  z);
+        List<Cuboid> cl = this.getCuboidList(meta); 
+        MovingObjectPosition bestpos = null;
+        double bestdist = 0.0;
+        for (Cuboid c : cl) {
+            this.setBlockBounds(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax);
+            MovingObjectPosition pos = super.collisionRayTrace(world, x, y, z, start, end);
+            if (pos != null) {
+                if (bestpos == null) {
+                    bestpos = pos;
+                    bestdist = bestpos.hitVec.squareDistanceTo(end);
+                }
+                else {
+                    double dist = pos.hitVec.squareDistanceTo(end);
+                    if (dist > bestdist) {
+                        bestpos = pos;
+                        bestdist = dist;
+                    }
+                }
+            }
+        }
+        def.setBlockBoundsBasedOnState(this, world, x, y, z);
+        return bestpos;
+    }
 }
