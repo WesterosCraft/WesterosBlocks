@@ -17,6 +17,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
@@ -50,7 +51,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.StepSound;
 import net.minecraft.block.material.Material;
@@ -1274,6 +1274,7 @@ public class WesterosBlockDef {
         typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
         typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
         typeTable.put("fire", new WCFireBlock.Factory());
+        typeTable.put("cake", new WCCakeBlock.Factory());
 
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());

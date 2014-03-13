@@ -5984,6 +5984,24 @@
           			]
         		}
 			]
+    	},
+    	   {
+   		   	"blockName": "cake_block_0",
+      		"blockID": 2122,
+      		"blockType": "cake",
+      		"creativeTab": "WesterosDeco",
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Custom Cake",
+          			"textures": [
+            			"cake_block_0/cake_bottom",
+            			"cake_block_0/cake_top",
+            			"cake_block_0/cake_side",
+            			"cake_block_0/cake_inner"
+          			]
+        		}
+			]
     	}
     
    ]
