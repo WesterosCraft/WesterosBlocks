@@ -6005,10 +6005,7 @@
     	},
     {
       "blockName": "furnace_block_0",
-      "blockIDs": [
-        2123,
-        2124
-      ],
+      "blockID": 2123,
       "blockType": "furnace",
       "hardness": 5,
       "stepSound": "metal",
@@ -6027,25 +6024,9 @@
             "furnace_block_0/furnace_front_on",
             "furnace_block_0/furnace_front_off"
           ]
-        }
-      ]
-    },
+        },
         {
-      "blockName": "furnace_block_1",
-      "blockIDs": [
-        2125,
-        2126
-      ],
-      "blockType": "furnace",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "creativeTab": "WesterosBlocks",
-      "lightValue": 0.875F,
-      "subBlocks": [
-        {
-          "meta": 0,
+          "meta": 1,
           "label": "Always Active Furnace",
           "type": "always-on:true",
           "textures": [
@@ -6058,6 +6039,5 @@
         }
       ]
     }
- 
    ]
 }
