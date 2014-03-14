@@ -6002,7 +6002,62 @@
           			]
         		}
 			]
-    	}
-    
+    	},
+    {
+      "blockName": "furnace_block_0",
+      "blockIDs": [
+        2123,
+        2124
+      ],
+      "blockType": "furnace",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875F,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Custom Furnace",
+          "textures": [
+            "furnace_block_0/furnace_bottom",
+            "furnace_block_0/furnace_top",
+            "furnace_block_0/furnace_side",
+            "furnace_block_0/furnace_front_on",
+            "furnace_block_0/furnace_front_off"
+          ]
+        }
+      ]
+    },
+        {
+      "blockName": "furnace_block_1",
+      "blockIDs": [
+        2125,
+        2126
+      ],
+      "blockType": "furnace",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "creativeTab": "WesterosBlocks",
+      "lightValue": 0.875F,
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Always Active Furnace",
+          "type": "always-on:true",
+          "textures": [
+            "furnace_block_0/furnace_bottom",
+            "furnace_block_0/furnace_top",
+            "furnace_block_0/furnace_side",
+            "furnace_block_0/furnace_front_on",
+            "furnace_block_0/furnace_front_on"
+          ]
+        }
+      ]
+    }
+ 
    ]
 }
