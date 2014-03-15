@@ -25,6 +25,7 @@ import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.BlockPressurePlate;
 import net.minecraft.block.BlockPressurePlateWeighted;
+import net.minecraft.block.BlockStationary;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.EnumMobType;
 import net.minecraft.block.material.Material;
@@ -48,6 +49,7 @@ import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
+import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCStairRenderer;
@@ -80,12 +82,14 @@ public class WesterosBlocks
     public static int cuboidRenderID;
     public static int cuboidNSEWUDRenderID;
     public static int stairRenderID;
+    public static int fluidCTMRenderID;
     // Use stair render fix
     public boolean useFixedStairs = false;
     public boolean useFixedFence = false;
     public boolean useFixedWall = false;
     public boolean useFixedPane = false;
     public boolean useFixedPressurePlate = false;
+    public boolean useWaterCTMFix = false;
     
     public static WesterosBlockConfig customConfig;
     
@@ -179,7 +183,7 @@ public class WesterosBlocks
             useFixedWall = cfg.get("Settings", "useFixedWall", true).getBoolean(true);
             useFixedPane = cfg.get("Settings", "useFixedPane", true).getBoolean(true);
             useFixedPressurePlate = cfg.get("Settings", "useFixedPressurePlate", true).getBoolean(true);
-            
+            useWaterCTMFix = cfg.get("Settings", "useWaterCTMFix", true).getBoolean(true);
             good_init = true;
         }
         catch (Exception e)
@@ -228,6 +232,13 @@ public class WesterosBlocks
         RenderingRegistry.registerBlockHandler(new WCCuboidNSEWUDRenderer());
         stairRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCStairRenderer());
+        if (useWaterCTMFix && FluidCTMFix.checkForCTMSupport()) {
+            fluidCTMRenderID = RenderingRegistry.getNextAvailableRenderId();
+            RenderingRegistry.registerBlockHandler(new WCFluidCTMRenderer());
+        }
+        else {
+            useWaterCTMFix = false;
+        }
         proxy.initRenderRegistry();
         
         // Construct custom block definitions
@@ -319,6 +330,11 @@ public class WesterosBlocks
             GameRegistry.registerBlock((new FixedPressurePlateWeighted(147, "gold_block", Material.iron, 64)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_light"), "weightedPlate_light");
             Block.blocksList[148] = null; Item.itemsList[148] = null;
             GameRegistry.registerBlock((new FixedPressurePlateWeighted(148, "iron_block", Material.iron, 640)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_heavy"), "weightedPlate_heavy");
+        }
+        // Use CTM fixed fluid for stationary water
+        if (useWaterCTMFix) {
+            Block.blocksList[9] = null; Item.itemsList[9] = null;
+            GameRegistry.registerBlock((new FluidCTMFix(9, Material.water)).setHardness(100.0F).setLightOpacity(3).setUnlocalizedName("water").setTextureName("water_still"), "water");
         }
         // Register entities
         EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this.instance, 120, 20, true);;
