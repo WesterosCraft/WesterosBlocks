@@ -1,10 +1,10 @@
 /bin
 /build
 /lib
-/download
-/temp
-*.jar
+Dynmap-*.jar
 .classpath
+/eclipse
+/.gradle
+.project
 /.settings
-/target
-.DS_Store
+/run
