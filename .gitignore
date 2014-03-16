@@ -1,7 +1,7 @@
 /bin
 /build
 /lib
-Dynmap-*.jar
+WesterosBlocks-*.jar
 .classpath
 /eclipse
 /.gradle
