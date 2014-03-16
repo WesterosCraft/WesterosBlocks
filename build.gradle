@@ -11,7 +11,7 @@ buildscript {
         }
         maven {
             name = "dynmap"
-            url = "http://repo.mikeprimm.com/"
+            url = "http://repo.mikeprimm.com"
         }
     }
     dependencies {
