@@ -76,6 +76,10 @@ processResources
 }
 
 jar {
+    manifest {
+        attributes 'FMLCorePlugin': 'com.westeroscraft.westerosblocks.asm.FMLLoadingPlugin'
+        attributes 'FMLCorePluginContainsFMLMod': 'true'
+    }
    classifier = "forge-9.11.1"
    destinationDir = project.projectDir
    //from { configurations.westerosblocks.collect { it.isDirectory() ? it : zipTree(it) } }
