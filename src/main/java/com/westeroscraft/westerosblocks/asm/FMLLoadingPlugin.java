@@ -10,7 +10,7 @@ import cpw.mods.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
 public class FMLLoadingPlugin  implements cpw.mods.fml.relauncher.IFMLLoadingPlugin {
     @Override
     public String[] getASMTransformerClass() {
-        return new String[]{ WorldTypeClassTransformer.class.getName()};
+        return new String[]{ ClassTransformer.class.getName()};
     }
 
     @Override

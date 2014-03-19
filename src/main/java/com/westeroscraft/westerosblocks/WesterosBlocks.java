@@ -20,18 +20,10 @@ import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDoor;
-import net.minecraft.block.BlockFence;
-import net.minecraft.block.BlockPane;
-import net.minecraft.block.BlockPressurePlate;
-import net.minecraft.block.BlockPressurePlateWeighted;
-import net.minecraft.block.BlockStationary;
-import net.minecraft.block.BlockWall;
 import net.minecraft.block.EnumMobType;
 import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemMultiTextureTile;
 import net.minecraft.util.ReportedException;
 
 import java.io.IOException;
@@ -85,9 +77,6 @@ public class WesterosBlocks
     public static int fluidCTMRenderID;
     // Use stair render fix
     public boolean useFixedStairs = false;
-    public boolean useFixedFence = false;
-    public boolean useFixedWall = false;
-    public boolean useFixedPane = false;
     public boolean useFixedPressurePlate = false;
     public boolean useWaterCTMFix = false;
     
@@ -179,9 +168,6 @@ public class WesterosBlocks
                 }
             }
             useFixedStairs = cfg.get("Settings",  "useFixedStairs", true).getBoolean(true);
-            useFixedFence = cfg.get("Settings", "useFixedFence", true).getBoolean(true);
-            useFixedWall = cfg.get("Settings", "useFixedWall", true).getBoolean(true);
-            useFixedPane = cfg.get("Settings", "useFixedPane", true).getBoolean(true);
             useFixedPressurePlate = cfg.get("Settings", "useFixedPressurePlate", true).getBoolean(true);
             useWaterCTMFix = cfg.get("Settings", "useWaterCTMFix", true).getBoolean(true);
             good_init = true;
@@ -297,27 +283,6 @@ public class WesterosBlocks
             Block.blocksList[156] = null; Item.itemsList[156] = null;
             GameRegistry.registerBlock(new FixedStairs(156, Block.blockNetherQuartz, 0), "stairsQuartz"); 
             */
-        }
-        // Use fixed fence (for connection to custom fences)
-        if (useFixedFence) {
-            Block.blocksList[85] = null; Item.itemsList[85] = null;
-            GameRegistry.registerBlock((new FixedFence(85, "planks_oak", Material.wood)).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("fence"), "fence");
-            Block.blocksList[113] = null; Item.itemsList[113] = null;
-            GameRegistry.registerBlock((new FixedFence(113, "nether_brick", Material.rock)).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("netherFence"), "netherFence");
-        }
-        // Use fixed wall (for connection to custom walls)
-        if (useFixedWall) {
-            Block.blocksList[139] = null; Item.itemsList[139] = null;
-            GameRegistry.registerBlock((new FixedWall(139, Block.cobblestone)).setUnlocalizedName("cobbleWall"), "cobbleWall");
-            Item.itemsList[139] = (new ItemMultiTextureTile(139 - 256, Block.blocksList[139], BlockWall.types)).setUnlocalizedName("cobbleWall");
-        }
-        // Use fixed pane (for connection to custom panes_
-        if (useFixedPane) {
-            Block.blocksList[101] = null; Item.itemsList[101] = null;
-            
-            GameRegistry.registerBlock((new FixedPane(101, "iron_bars", "iron_bars", Material.iron, true)).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundMetalFootstep).setUnlocalizedName("fenceIron"), "fenceIron");
-            Block.blocksList[102] = null; Item.itemsList[102] = null;
-            GameRegistry.registerBlock((new FixedPane(102, "glass", "glass_pane_top", Material.glass, false)).setHardness(0.3F).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("thinGlass"), "thinGlass");
         }
         // Use fixed pressure plate (for allowing placement on custom fences)
         if (useFixedPressurePlate) {
