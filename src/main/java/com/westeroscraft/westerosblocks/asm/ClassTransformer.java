@@ -8,10 +8,11 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.FieldInsnNode;
+import org.objectweb.asm.tree.InsnNode;
 import org.objectweb.asm.tree.MethodNode;
+import org.objectweb.asm.tree.TypeInsnNode;
 import org.objectweb.asm.Opcodes;
-
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
@@ -20,6 +21,7 @@ import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 public class ClassTransformer implements IClassTransformer, Opcodes {
@@ -50,14 +52,17 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else if (name.equals("net.minecraft.block.BlockPane")) {    // Clean name for BlockPane
             bytes = transformBlockPane(name, bytes, false);
         }
+        else if (name.equals("amx")) {   // Obfuscated BlockBasePressurePlate
+            bytes = transformBlockBasePressurePlate(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.block.BlockBasePressurePlate")) {    // Clean name for BlockBasePressurePlate
+            bytes = transformBlockBasePressurePlate(name, bytes, false);
+        }
         return bytes;
     }
     
     private MethodNode findMethod(ClassNode cls, String methname, String methsig) {
-        @SuppressWarnings("unchecked")
         Iterator<MethodNode> methods = cls.methods.iterator();
-        int ldc_index = -1;
-        boolean matched = false;
         while(methods.hasNext()) {
             MethodNode m = methods.next();
             // Check if method we want
@@ -68,7 +73,6 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return null;
     }
     private int findOpSequence(MethodNode meth, int[] opcodes) {
-        @SuppressWarnings("unchecked")
         Iterator<AbstractInsnNode> iter = meth.instructions.iterator();
         int index = -1;
         int seqindex = 0;
@@ -91,12 +95,23 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         return -1;
     }
+    
+    private void printMethod(MethodNode meth) {
+        Iterator<AbstractInsnNode> iter = meth.instructions.iterator();
+        System.out.println("printMethod(" + meth.name + ")");
+        while (iter.hasNext()) {
+            AbstractInsnNode n = iter.next();
+            System.out.println("  " + n.getOpcode() + " (" + n.getType() + " - " + n.getClass().getName() + ")");
+        }
+    }
         
     
     private byte[] transformWorldType(String name, byte[] b, boolean obfus) {
         String targetMethodName = "";
         String targetMethodSig = "";
 
+        System.out.println("Checking class " + name);
+        
         targetMethodName ="getCloudHeight";
         targetMethodSig = "()F";
         
@@ -108,13 +123,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            WesterosBlocks.log.info("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { LDC } );
         if (ldx_index < 0) {
-            WesterosBlocks.log.info("Cannot patch "  + targetMethodName + "() in " + name);
+            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method implementation
@@ -177,6 +192,9 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
     private byte[] transformBlockWall(String name, byte[] b, boolean obfus) {
         String targetMethodName = "";
         String targetMethodDesc = "";
+
+        System.out.println("Checking class " + name);
+
         if(obfus == true) {
             targetMethodName = "d"; // canConnectWallTo()
             targetMethodDesc = "(Lacf;III)Z";
@@ -194,13 +212,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodDesc);
         if (m == null) {
-            WesterosBlocks.log.info("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { ALOAD, ILOAD, ILOAD, ILOAD, INVOKEINTERFACE } );
         if (ldx_index < 0) {
-            WesterosBlocks.log.info("Cannot patch "  + targetMethodName + "() in " + name);
+            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method
@@ -258,6 +276,9 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
     private byte[] transformBlockFence(String name, byte[] b, boolean obfus) {
         String targetMethodName = "";
         String targetMethodDesc = "";
+        
+        System.out.println("Checking class " + name);
+
         if(obfus == true) {
             targetMethodName = "d"; // canConnectFenceTo()
             targetMethodDesc = "(Lacf;III)Z";
@@ -275,13 +296,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodDesc);
         if (m == null) {
-            WesterosBlocks.log.info("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { ALOAD, ILOAD, ILOAD, ILOAD, INVOKEINTERFACE } );
         if (ldx_index < 0) {
-            WesterosBlocks.log.info("Cannot patch "  + targetMethodName + "() in " + name);
+            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method
@@ -339,6 +360,8 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodDesc = "";
 
+        System.out.println("Checking class " + name);
+
         targetMethodName ="canPaneConnectTo";
         if(obfus == true) {
             targetMethodDesc = "(Lacf;IIILnet/minecraftforge/common/ForgeDirection;)Z";
@@ -355,13 +378,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodDesc);
         if (m == null) {
-            WesterosBlocks.log.info("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { ALOAD, ALOAD, ILOAD, ALOAD, GETFIELD } );
         if (ldx_index < 0) {
-            WesterosBlocks.log.info("Cannot patch "  + targetMethodName + "() in " + name);
+            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method
@@ -411,6 +434,133 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return b;
     }
 
+    
+    private byte[] transformBlockBasePressurePlate(String name, byte[] b, boolean obfus) {
+        String targetMethodName = "";   //canPlaceBlockAt(World par1World, int par2, int par3, int par4)
+        String targetMethodSig = "";
+        String targetMethodName2 = "";  // onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+        String targetMethodSig2 = "";
+
+        System.out.println("Checking class " + name);
+
+        if (obfus) {
+            targetMethodName = "c"; //canPlaceBlockAt
+            targetMethodSig = "(Labw;III)Z";
+            targetMethodName2 ="a"; //onNeighborBlockChange
+            targetMethodSig2 = "(Labw;IIII)V";
+        }
+        else {
+            targetMethodName ="canPlaceBlockAt";
+            targetMethodSig = "(Lnet/minecraft/world/World;III)Z";
+            targetMethodName2 ="onNeighborBlockChange";
+            targetMethodSig2 = "(Lnet/minecraft/world/World;IIII)V";
+        }
+        
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Now find the first method
+        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
+        if (m == null) {
+            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }
+
+        // Find target op seqence before patch in canPlaceBlockAt method (insert after last instruction in sequence)
+        // mv.visitInsn(ICONST_1);
+        // mv.visitInsn(ISUB);
+        // mv.visitVarInsn(ILOAD, 4);
+        // mv.visitMethodInsn(INVOKEVIRTUAL, "net/minecraft/world/World", "doesBlockHaveSolidTopSurface", "(III)Z", false);
+        // mv.visitJumpInsn(IFNE, l1);        
+        int index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, IFNE } );
+        if (index < 0) {
+            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
+            return b;
+        }
+        if (obfus) {
+            m.instructions.insert(m.instructions.get(index+4), new FieldInsnNode(GETSTATIC, "aqz", "s", "[Laqz;"));
+        }
+        else {
+            m.instructions.insert(m.instructions.get(index+4), new FieldInsnNode(GETSTATIC, "net/minecraft/block/Block", "blocksList", "[Lnet/minecraft/block/Block;"));
+        }
+
+        // Find second patch in canPlaceBlockAt methdod (replace last instruction in sequence)
+        // mv.visitInsn(ICONST_1);
+        // mv.visitInsn(ISUB);
+        // mv.visitVarInsn(ILOAD, 4);
+        // mv.visitMethodInsn(INVOKEVIRTUAL, "net/minecraft/world/World", "getBlockId", "(III)I", false);
+        // mv.visitMethodInsn(INVOKESTATIC, "net/minecraft/block/BlockFence", "isIdAFence", "(I)Z", false);
+        index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, INVOKESTATIC } );
+        if (index < 0) {
+            System.out.println("Cannot patch#2 "  + targetMethodName + "() in " + name);
+            return b;
+        }
+        m.instructions.remove(m.instructions.get(index+4));   // Remove old INVOKESTATIC
+        AbstractInsnNode n = m.instructions.get(index+4);   // Get instruction after
+        m.instructions.insertBefore(n, new InsnNode(AALOAD));
+        if (obfus) {
+            m.instructions.insertBefore(n, new TypeInsnNode(INSTANCEOF, "aoh"));
+        }
+        else {
+            m.instructions.insertBefore(n, new TypeInsnNode(INSTANCEOF, "net/minecraft/block/BlockFence"));
+        }
+        
+        // Now find the second method
+        m = findMethod(classNode, targetMethodName2, targetMethodSig2);
+        if (m == null) {
+            System.out.println("Cannot find "  + targetMethodName2 + "() in " + name + " for patching");
+            return b;
+        }
+
+        // Find first patch location in onNeighborBlockChange method
+        // mv.visitInsn(ICONST_1);
+        // mv.visitInsn(ISUB);
+        // mv.visitVarInsn(ILOAD, 4);
+        // mv.visitMethodInsn(INVOKEVIRTUAL, "net/minecraft/world/World", "doesBlockHaveSolidTopSurface", "(III)Z", false);
+        // mv.visitJumpInsn(IFNE, l2);
+        index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, IFNE } );
+        if (index < 0) {
+            System.out.println("Cannot patch "  + targetMethodName2 + "() in " + name);
+            return b;
+        }
+        if (obfus) {
+            m.instructions.insert(m.instructions.get(index+4), new FieldInsnNode(GETSTATIC, "aqz", "s", "[Laqz;"));
+        }
+        else {
+            m.instructions.insert(m.instructions.get(index+4), 
+                    new FieldInsnNode(GETSTATIC, "net/minecraft/block/Block", "blocksList", "[Lnet/minecraft/block/Block;"));
+        }
+        // Find second patch in onNeighborBlockChange methdod (replace first instruction in sequence)
+        // mv.visitMethodInsn(INVOKESTATIC, "net/minecraft/block/BlockFence", "isIdAFence", "(I)Z", false);
+        // mv.visitJumpInsn(IFNE, l2);
+        // mv.visitInsn(ICONST_1);
+        // mv.visitVarInsn(ISTORE, 6)
+        index = findOpSequence(m, new int[] { INVOKESTATIC, IFNE, ICONST_1, ISTORE } );
+        if (index < 0) {
+            System.out.println("Cannot patch#2 "  + targetMethodName2 + "() in " + name);
+            return b;
+        }
+        m.instructions.remove(m.instructions.get(index));   // Remove old INVOKESTATIC
+        n = m.instructions.get(index);   // Get instruction after
+        m.instructions.insertBefore(n, new InsnNode(AALOAD));
+        if (obfus) {
+            m.instructions.insertBefore(n, new TypeInsnNode(INSTANCEOF, "aoh"));
+        }
+        else {
+            m.instructions.insertBefore(n, new TypeInsnNode(INSTANCEOF, "net/minecraft/block/BlockFence"));
+        }
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+
+        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        
+        return b;
+    }
+    
     public static float getWorldHeight(int wtIndex) {
         return 256.0F;
     }

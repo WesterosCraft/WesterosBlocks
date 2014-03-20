@@ -285,17 +285,17 @@ public class WesterosBlocks
             */
         }
         // Use fixed pressure plate (for allowing placement on custom fences)
-        if (useFixedPressurePlate) {
-            Block.blocksList[70] = null; Item.itemsList[70] = null;
-            GameRegistry.registerBlock((new FixedPressurePlate(70, "stone", Material.rock, EnumMobType.mobs)).setHardness(0.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("pressurePlate"), "pressurePlate");
-            Block.blocksList[72] = null; Item.itemsList[72] = null;
-            GameRegistry.registerBlock((new FixedPressurePlate(72, "planks_oak", Material.wood, EnumMobType.everything)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("pressurePlate"), "pressurePlate_wood");
-
-            Block.blocksList[147] = null; Item.itemsList[147] = null;
-            GameRegistry.registerBlock((new FixedPressurePlateWeighted(147, "gold_block", Material.iron, 64)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_light"), "weightedPlate_light");
-            Block.blocksList[148] = null; Item.itemsList[148] = null;
-            GameRegistry.registerBlock((new FixedPressurePlateWeighted(148, "iron_block", Material.iron, 640)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_heavy"), "weightedPlate_heavy");
-        }
+//        if (useFixedPressurePlate) {
+//            Block.blocksList[70] = null; Item.itemsList[70] = null;
+//            GameRegistry.registerBlock((new FixedPressurePlate(70, "stone", Material.rock, EnumMobType.mobs)).setHardness(0.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("pressurePlate"), "pressurePlate");
+//            Block.blocksList[72] = null; Item.itemsList[72] = null;
+//            GameRegistry.registerBlock((new FixedPressurePlate(72, "planks_oak", Material.wood, EnumMobType.everything)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("pressurePlate"), "pressurePlate_wood");
+//
+//            Block.blocksList[147] = null; Item.itemsList[147] = null;
+//            GameRegistry.registerBlock((new FixedPressurePlateWeighted(147, "gold_block", Material.iron, 64)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_light"), "weightedPlate_light");
+//            Block.blocksList[148] = null; Item.itemsList[148] = null;
+//            GameRegistry.registerBlock((new FixedPressurePlateWeighted(148, "iron_block", Material.iron, 640)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_heavy"), "weightedPlate_heavy");
+//        }
         // Use CTM fixed fluid for stationary water
         if (useWaterCTMFix) {
             Block.blocksList[9] = null; Item.itemsList[9] = null;
