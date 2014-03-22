@@ -1562,6 +1562,60 @@
 			"itemTextureIndex": 2
 			}
 		]
-	}
+	},
+    	   {
+   		   	"blockName": "cake_block_0",
+      		"blockID": 2122,
+      		"blockType": "cake",
+      		"creativeTab": "WesterosDeco",
+      		"subBlocks": [
+        		{
+          			"meta": 0,
+          			"label": "Custom Cake",
+          			"textures": [
+            			"cake_block_0/cake_bottom",
+            			"cake_block_0/cake_top",
+            			"cake_block_0/cake_side",
+            			"cake_block_0/cake_inner"
+          			]
+        		}
+			]
+    	},
+    {
+      "blockName": "furnace_block_0",
+      "blockID": 2123,
+      "blockType": "furnace",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875F,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Custom Furnace",
+          "textures": [
+            "furnace_block_0/furnace_bottom",
+            "furnace_block_0/furnace_top",
+            "furnace_block_0/furnace_side",
+            "furnace_block_0/furnace_front_on",
+            "furnace_block_0/furnace_front_off"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Always Active Furnace",
+          "type": "always-on:true",
+          "textures": [
+            "furnace_block_0/furnace_bottom",
+            "furnace_block_0/furnace_top",
+            "furnace_block_0/furnace_side",
+            "furnace_block_0/furnace_front_on",
+            "furnace_block_0/furnace_front_on"
+          ]
+        }
+      ]
+    }
   ]
 }
