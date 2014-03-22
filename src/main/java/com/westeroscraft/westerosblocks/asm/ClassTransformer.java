@@ -1,7 +1,10 @@
 package com.westeroscraft.westerosblocks.asm;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Iterator;
 
+import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Label;
@@ -14,14 +17,20 @@ import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.TypeInsnNode;
 import org.objectweb.asm.Opcodes;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockPane;
+import net.minecraft.block.BlockStationary;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.launchwrapper.IClassTransformer;
+import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 
 public class ClassTransformer implements IClassTransformer, Opcodes {
@@ -57,6 +66,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         else if (name.equals("net.minecraft.block.BlockBasePressurePlate")) {    // Clean name for BlockBasePressurePlate
             bytes = transformBlockBasePressurePlate(name, bytes, false);
+        }
+        else if (name.equals("ape")) {   // Obfuscated BlockStationary
+            bytes = transformBlockStationary(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.block.BlockStationary")) {    // Clean name for BlockStationary
+            bytes = transformBlockStationary(name, bytes, false);
         }
         return bytes;
     }
@@ -96,6 +111,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return -1;
     }
     
+    @SuppressWarnings("unused")
     private void printMethod(MethodNode meth) {
         Iterator<AbstractInsnNode> iter = meth.instructions.iterator();
         System.out.println("printMethod(" + meth.name + ")");
@@ -560,6 +576,96 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         
         return b;
     }
+
+    private byte[] transformBlockStationary(String name, byte[] b, boolean obfus) {
+
+        System.out.println("Checking class " + name);
+                
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Add net method for getIcon()
+        MethodVisitor mv;
+        AnnotationVisitor av0;
+        if (obfus) {
+            mv = classNode.visitMethod(ACC_PUBLIC, "a", "(II)Lms;", null, null);
+        }
+        else {
+            mv = classNode.visitMethod(ACC_PUBLIC, "getIcon", "(II)Lnet/minecraft/util/Icon;", null, null);
+        }
+        av0 = mv.visitAnnotation("Lcpw/mods/fml/relauncher/SideOnly;", true);
+        av0.visitEnum("value", "Lcpw/mods/fml/relauncher/Side;", "CLIENT");
+        av0.visitEnd();
+        mv.visitCode();
+        Label l0 = new Label();
+        mv.visitLabel(l0);
+        mv.visitVarInsn(ILOAD, 1);
+        mv.visitVarInsn(ILOAD, 2);
+        mv.visitVarInsn(ALOAD, 0);
+        mv.visitVarInsn(ILOAD, 1);
+        mv.visitVarInsn(ILOAD, 2);
+        if (obfus) {
+            mv.visitMethodInsn(INVOKESPECIAL, "apc", "a", "(II)Lms;");
+        }
+        else {
+            mv.visitMethodInsn(INVOKESPECIAL, "net/minecraft/block/BlockFluid", "getIcon", "(II)Lnet/minecraft/util/Icon;");
+        }
+        mv.visitVarInsn(ALOAD, 0);
+        if (obfus) {
+            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "handleFluidGetIcon", "(IILms;Lape;)Lms;");
+        }
+        else {
+            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "handleFluidGetIcon", "(IILnet/minecraft/util/Icon;Lnet/minecraft/block/BlockStationary;)Lnet/minecraft/util/Icon;");
+        }
+        mv.visitInsn(ARETURN);
+        Label l1 = new Label();
+        mv.visitLabel(l1);
+        if (obfus) {
+            mv.visitLocalVariable("this", "Lape;", null, l0, l1, 0);
+        }
+        else {
+            mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockStationary;", null, l0, l1, 0);
+        }
+        mv.visitLocalVariable("side", "I", null, l0, l1, 1);
+        mv.visitLocalVariable("meta", "I", null, l0, l1, 2);
+        mv.visitMaxs(5, 3);
+        mv.visitEnd();
+
+        // Add getRenderType method
+        if (obfus) {
+            mv = classNode.visitMethod(ACC_PUBLIC, "d", "()I", null, null);
+        }
+        else {
+            mv = classNode.visitMethod(ACC_PUBLIC, "getRenderType", "()I", null, null);
+        }
+        mv.visitCode();
+        l0 = new Label();
+        mv.visitLabel(l0);
+        mv.visitFieldInsn(GETSTATIC, "com/westeroscraft/westerosblocks/WesterosBlocks", "fluidCTMRenderID", "I");
+        mv.visitInsn(IRETURN);
+        l1 = new Label();
+        mv.visitLabel(l1);
+        if (obfus) {
+            mv.visitLocalVariable("this", "Lape;", null, l0, l1, 0);
+        }
+        else {
+            mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockStationary;", null, l0, l1, 0);
+        }
+        mv.visitMaxs(1, 1);
+        mv.visitEnd();
+
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+
+        System.out.println("Methdos for  " + name + " patched!");
+        
+        
+        return b;
+    }    
     
     public static float getWorldHeight(int wtIndex) {
         return 256.0F;
@@ -598,6 +704,35 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         if ((Block.blocksList[id] instanceof BlockPane) && (blk.blockMaterial == Block.blocksList[id].blockMaterial))
             return true;
         return false;
+    }
+
+    public static Method ctmMethod = null;
+    
+    public static boolean checkForCTMSupport() {
+        Class<?> cls;
+        try {
+            cls = Class.forName("com.prupe.mcpatcher.ctm.CTMUtils");
+            // public static Icon getTile(RenderBlocks renderBlocks, Block block, int i, int j, int k, int face, Icon icon, Tessellator tessellator) {
+            ctmMethod = cls.getDeclaredMethod("getTile", new Class[] { RenderBlocks.class, Block.class, int.class, int.class, int.class, int.class, Icon.class, Tessellator.class });
+            WesterosBlocks.log.info("CTM support found for water fix");
+        } catch (ClassNotFoundException e) {
+        } catch (SecurityException e) {
+        } catch (NoSuchMethodException e) {
+        }
+        return (ctmMethod != null);
+    }
+    
+    public static Icon handleFluidGetIcon(int side, int meta, Icon ico, BlockStationary blk) {
+        if ((side == 1) && (ctmMethod != null) && (WCFluidCTMRenderer.World != null)) {
+            try {
+                ico = (Icon) ctmMethod.invoke(null, WCFluidCTMRenderer.Renderer, blk, WCFluidCTMRenderer.X,
+                        WCFluidCTMRenderer.Y, WCFluidCTMRenderer.Z, side, ico, WCFluidCTMRenderer.Tessell);
+            } catch (IllegalArgumentException e) {
+            } catch (IllegalAccessException e) {
+            } catch (InvocationTargetException e) {
+            }
+        }
+        return ico;
     }
 
 }

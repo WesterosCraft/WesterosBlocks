@@ -14,16 +14,12 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraft.block.Block;
-import net.minecraft.block.EnumMobType;
-import net.minecraft.block.material.Material;
 import net.minecraft.crash.CrashReport;
-import net.minecraft.item.Item;
 import net.minecraft.util.ReportedException;
 
 import java.io.IOException;
@@ -37,6 +33,7 @@ import java.util.logging.Logger;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
+import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
@@ -86,6 +83,7 @@ public class WesterosBlocks
     
     public static HashMap<String, WesterosBlocksSoundDef> soundsDefs;
     
+
     public static Block findBlockByName(String blkname) {
         Block blk = customBlocksByName.get(blkname);
         if (blk != null) {
@@ -218,12 +216,13 @@ public class WesterosBlocks
         RenderingRegistry.registerBlockHandler(new WCCuboidNSEWUDRenderer());
         stairRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCStairRenderer());
-        if (useWaterCTMFix && FluidCTMFix.checkForCTMSupport()) {
+        if (useWaterCTMFix && ClassTransformer.checkForCTMSupport()) {
             fluidCTMRenderID = RenderingRegistry.getNextAvailableRenderId();
             RenderingRegistry.registerBlockHandler(new WCFluidCTMRenderer());
         }
         else {
             useWaterCTMFix = false;
+            fluidCTMRenderID = 4;   // Vanilla fluid renderer
         }
         proxy.initRenderRegistry();
         
@@ -259,50 +258,8 @@ public class WesterosBlocks
                 ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
             }
         }
-        // Fix standard blocks
-        if (useFixedStairs) {
-            /*
-            Block.blocksList[53] = null; Item.itemsList[53] = null;
-            GameRegistry.registerBlock(new FixedStairs(53, Block.planks, 0), "stairsWood");
-            Block.blocksList[67] = null; Item.itemsList[67] = null;
-            GameRegistry.registerBlock(new FixedStairs(67, Block.cobblestone, 0), "stairsStone");
-            Block.blocksList[108] = null; Item.itemsList[108] = null;
-            GameRegistry.registerBlock(new FixedStairs(108, Block.brick, 0), "stairsBrick");
-            Block.blocksList[109] = null; Item.itemsList[109] = null;
-            GameRegistry.registerBlock(new FixedStairs(109, Block.stoneBrick, 0), "stairsStoneBrickSmooth");
-            Block.blocksList[114] = null; Item.itemsList[114] = null;
-            GameRegistry.registerBlock(new FixedStairs(114, Block.netherBrick, 0), "stairsNetherBrick");
-            Block.blocksList[128] = null; Item.itemsList[128] = null;
-            GameRegistry.registerBlock(new FixedStairs(128, Block.sandStone, 0), "stairsSandStone");
-            Block.blocksList[134] = null; Item.itemsList[134] = null;
-            GameRegistry.registerBlock(new FixedStairs(134, Block.planks, 1), "stairsWoodSpruce");
-            Block.blocksList[135] = null; Item.itemsList[153] = null;
-            GameRegistry.registerBlock(new FixedStairs(135, Block.planks, 2), "stairsWoodBirch");
-            Block.blocksList[136] = null; Item.itemsList[136] = null;
-            GameRegistry.registerBlock(new FixedStairs(136, Block.planks, 3), "stairsWoodJungle");
-            Block.blocksList[156] = null; Item.itemsList[156] = null;
-            GameRegistry.registerBlock(new FixedStairs(156, Block.blockNetherQuartz, 0), "stairsQuartz"); 
-            */
-        }
-        // Use fixed pressure plate (for allowing placement on custom fences)
-//        if (useFixedPressurePlate) {
-//            Block.blocksList[70] = null; Item.itemsList[70] = null;
-//            GameRegistry.registerBlock((new FixedPressurePlate(70, "stone", Material.rock, EnumMobType.mobs)).setHardness(0.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("pressurePlate"), "pressurePlate");
-//            Block.blocksList[72] = null; Item.itemsList[72] = null;
-//            GameRegistry.registerBlock((new FixedPressurePlate(72, "planks_oak", Material.wood, EnumMobType.everything)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("pressurePlate"), "pressurePlate_wood");
-//
-//            Block.blocksList[147] = null; Item.itemsList[147] = null;
-//            GameRegistry.registerBlock((new FixedPressurePlateWeighted(147, "gold_block", Material.iron, 64)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_light"), "weightedPlate_light");
-//            Block.blocksList[148] = null; Item.itemsList[148] = null;
-//            GameRegistry.registerBlock((new FixedPressurePlateWeighted(148, "iron_block", Material.iron, 640)).setHardness(0.5F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("weightedPlate_heavy"), "weightedPlate_heavy");
-//        }
-        // Use CTM fixed fluid for stationary water
-        if (useWaterCTMFix) {
-            Block.blocksList[9] = null; Item.itemsList[9] = null;
-            GameRegistry.registerBlock((new FluidCTMFix(9, Material.water)).setHardness(100.0F).setLightOpacity(3).setUnlocalizedName("water").setTextureName("water_still"), "water");
-        }
         // Register entities
-        EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, this.instance, 120, 20, true);;
+        EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, WesterosBlocks.instance, 120, 20, true);;
 
         // Handle dynmap support
         try {

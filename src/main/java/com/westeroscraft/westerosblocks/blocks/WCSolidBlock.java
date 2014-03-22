@@ -23,7 +23,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -153,6 +152,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         super.randomDisplayTick(world, x, y, z, rnd);
     }
     
+    @SuppressWarnings("rawtypes")
     @Override
     public void addCollisionBoxesToList(World world, int x, int y, int z, AxisAlignedBB mask, List list, Entity entity)
     {

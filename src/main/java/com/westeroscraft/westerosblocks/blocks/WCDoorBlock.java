@@ -196,6 +196,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     {
         return def.colorMultiplier(access, x, y, z);
     }
+    @SuppressWarnings("rawtypes")
     @Override
     public void getSubBlocks (int par1, CreativeTabs par2CreativeTabs, List par3List)
     {

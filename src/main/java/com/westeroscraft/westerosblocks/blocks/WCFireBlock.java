@@ -13,16 +13,12 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldProviderEnd;
 
 import net.minecraftforge.common.ForgeDirection;
-import static net.minecraftforge.common.ForgeDirection.*;
 
 public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, WesterosBlockDynmapSupport
 {

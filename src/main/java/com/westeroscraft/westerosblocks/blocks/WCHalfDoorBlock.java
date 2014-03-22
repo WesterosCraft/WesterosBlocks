@@ -191,6 +191,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     {
         return def.colorMultiplier(access, x, y, z);
     }
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public void getSubBlocks (int id, CreativeTabs tab, List list)
     {

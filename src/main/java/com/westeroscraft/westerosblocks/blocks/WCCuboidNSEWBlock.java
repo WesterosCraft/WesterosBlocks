@@ -61,6 +61,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
         return true;
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(int id, CreativeTabs tab, List list) {

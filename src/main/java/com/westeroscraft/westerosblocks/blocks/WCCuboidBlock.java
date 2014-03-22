@@ -320,7 +320,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     }
 
     @Override
-    public void addCollisionBoxesToList(World world, int x, int y, int z, AxisAlignedBB mask, List list, Entity entity)
+    public void addCollisionBoxesToList(World world, int x, int y, int z, AxisAlignedBB mask, @SuppressWarnings("rawtypes") List list, Entity entity)
     {
         int meta = world.getBlockMetadata(x,  y,  z);
         List<Cuboid> cl = this.getCuboidList(meta); 
