@@ -126,7 +126,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodSig = "";
 
-        System.out.println("Checking class " + name);
+        WesterosBlocks.log.fine("Checking class " + name);
         
         targetMethodName ="getCloudHeight";
         targetMethodSig = "()F";
@@ -139,13 +139,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { LDC } );
         if (ldx_index < 0) {
-            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
+            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method implementation
@@ -200,7 +200,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
@@ -209,7 +209,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodDesc = "";
 
-        System.out.println("Checking class " + name);
+        WesterosBlocks.log.fine("Checking class " + name);
 
         if(obfus == true) {
             targetMethodName = "d"; // canConnectWallTo()
@@ -228,13 +228,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodDesc);
         if (m == null) {
-            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { ALOAD, ILOAD, ILOAD, ILOAD, INVOKEINTERFACE } );
         if (ldx_index < 0) {
-            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
+            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method
@@ -284,7 +284,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
@@ -293,7 +293,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodDesc = "";
         
-        System.out.println("Checking class " + name);
+        WesterosBlocks.log.fine("Checking class " + name);
 
         if(obfus == true) {
             targetMethodName = "d"; // canConnectFenceTo()
@@ -312,13 +312,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodDesc);
         if (m == null) {
-            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { ALOAD, ILOAD, ILOAD, ILOAD, INVOKEINTERFACE } );
         if (ldx_index < 0) {
-            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
+            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method
@@ -367,7 +367,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
@@ -376,7 +376,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodDesc = "";
 
-        System.out.println("Checking class " + name);
+        WesterosBlocks.log.fine("Checking class " + name);
 
         targetMethodName ="canPaneConnectTo";
         if(obfus == true) {
@@ -394,13 +394,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodDesc);
         if (m == null) {
-            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { ALOAD, ALOAD, ILOAD, ALOAD, GETFIELD } );
         if (ldx_index < 0) {
-            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
+            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method
@@ -445,7 +445,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
@@ -457,7 +457,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName2 = "";  // onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
         String targetMethodSig2 = "";
 
-        System.out.println("Checking class " + name);
+        WesterosBlocks.log.fine("Checking class " + name);
 
         if (obfus) {
             targetMethodName = "c"; //canPlaceBlockAt
@@ -480,7 +480,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the first method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
 
@@ -492,7 +492,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // mv.visitJumpInsn(IFNE, l1);        
         int index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, IFNE } );
         if (index < 0) {
-            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
+            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         if (obfus) {
@@ -510,7 +510,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // mv.visitMethodInsn(INVOKESTATIC, "net/minecraft/block/BlockFence", "isIdAFence", "(I)Z", false);
         index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, INVOKESTATIC } );
         if (index < 0) {
-            System.out.println("Cannot patch#2 "  + targetMethodName + "() in " + name);
+            WesterosBlocks.log.warning("Cannot patch#2 "  + targetMethodName + "() in " + name);
             return b;
         }
         m.instructions.remove(m.instructions.get(index+4));   // Remove old INVOKESTATIC
@@ -526,7 +526,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the second method
         m = findMethod(classNode, targetMethodName2, targetMethodSig2);
         if (m == null) {
-            System.out.println("Cannot find "  + targetMethodName2 + "() in " + name + " for patching");
+            WesterosBlocks.log.warning("Cannot find "  + targetMethodName2 + "() in " + name + " for patching");
             return b;
         }
 
@@ -538,7 +538,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // mv.visitJumpInsn(IFNE, l2);
         index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, IFNE } );
         if (index < 0) {
-            System.out.println("Cannot patch "  + targetMethodName2 + "() in " + name);
+            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName2 + "() in " + name);
             return b;
         }
         if (obfus) {
@@ -555,7 +555,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // mv.visitVarInsn(ISTORE, 6)
         index = findOpSequence(m, new int[] { INVOKESTATIC, IFNE, ICONST_1, ISTORE } );
         if (index < 0) {
-            System.out.println("Cannot patch#2 "  + targetMethodName2 + "() in " + name);
+            WesterosBlocks.log.warning("Cannot patch#2 "  + targetMethodName2 + "() in " + name);
             return b;
         }
         m.instructions.remove(m.instructions.get(index));   // Remove old INVOKESTATIC
@@ -572,14 +572,14 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
 
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
 
     private byte[] transformBlockStationary(String name, byte[] b, boolean obfus) {
 
-        System.out.println("Checking class " + name);
+        WesterosBlocks.log.fine("Checking class " + name);
                 
         //set up ASM class manipulation stuff. Consult the ASM docs for details
         ClassNode classNode = new ClassNode();
@@ -661,7 +661,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
 
-        System.out.println("Methdos for  " + name + " patched!");
+        WesterosBlocks.log.fine("Methdos for  " + name + " patched!");
         
         
         return b;
@@ -714,7 +714,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
             cls = Class.forName("com.prupe.mcpatcher.ctm.CTMUtils");
             // public static Icon getTile(RenderBlocks renderBlocks, Block block, int i, int j, int k, int face, Icon icon, Tessellator tessellator) {
             ctmMethod = cls.getDeclaredMethod("getTile", new Class[] { RenderBlocks.class, Block.class, int.class, int.class, int.class, int.class, Icon.class, Tessellator.class });
-            WesterosBlocks.log.info("CTM support found for water fix");
+            WesterosBlocks.log.fine("CTM support found for water fix");
         } catch (ClassNotFoundException e) {
         } catch (SecurityException e) {
         } catch (NoSuchMethodException e) {
