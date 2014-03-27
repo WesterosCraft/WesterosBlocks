@@ -56,7 +56,6 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     }
 
     public boolean registerBlockDefinition() {
-        WCDoorItem.block = this;
         def.doStandardRegisterActions(this, WCDoorItem.class);
         itemID = WCDoorItem.lastItemID;
         
@@ -198,8 +197,9 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     }
     @SuppressWarnings("rawtypes")
     @Override
-    public void getSubBlocks (int par1, CreativeTabs par2CreativeTabs, List par3List)
+    public void getSubBlocks (int id, CreativeTabs tab, List list)
     {
+        def.getStandardSubBlocks(this, id, tab, list);
     }
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()

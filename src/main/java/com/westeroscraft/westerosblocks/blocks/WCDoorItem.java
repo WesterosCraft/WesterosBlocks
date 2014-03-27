@@ -15,20 +15,15 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCDoorItem extends ItemBlock
+public class WCDoorItem extends MultiBlockItem
 {
-    private Block blk;
-    private WesterosBlockDef def;
-    public static WCDoorBlock block;
     public static int lastItemID;
     
     public WCDoorItem(int id)
     {
         super(id);
-        this.blk = block;
-        this.def = block.getWBDefinition();
         this.maxStackSize = 1;
-        this.setCreativeTab(def.getCreativeTab());
+        //this.setCreativeTab(def.getCreativeTab());
         lastItemID = this.itemID;
     }
 
@@ -52,8 +47,9 @@ public class WCDoorItem extends ItemBlock
 
             if (player.canPlayerEdit(x, y, z, side, stack) && player.canPlayerEdit(x, y + 1, z, side, stack))
             {
+                Block blk = getBlock();
                 if ((!blk.canPlaceBlockAt(world, x, y, z)) ||
-                    (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack))) {
+                    (!world.canPlaceEntityOnSide(blk.blockID, x, y, z, false, side, player, stack))) {
                     return false;
                 }
                 else
@@ -70,23 +66,9 @@ public class WCDoorItem extends ItemBlock
             }
         }
     }
-    @Override
-    public String getUnlocalizedName (ItemStack itemstack)
-    {
-        return blk.getUnlocalizedName() + "_item";
-    }
 
-    @SideOnly(Side.CLIENT)
     @Override
-    public void registerIcons (IconRegister iconRegister)
-    {
-        def.doStandardItemRegisterIcons(iconRegister);
-    }
-        
-    @SideOnly(Side.CLIENT)
-    @Override
-    public Icon getIconFromDamage(int meta)
-    {
-        return def.getItemIcon(meta);
+    public int getMetadata(int damage) {
+        return 0;
     }
 }
