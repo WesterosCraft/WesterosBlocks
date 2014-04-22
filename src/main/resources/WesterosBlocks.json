@@ -52,7 +52,7 @@
           "meta": 3,
           "label": "Molten Blades",
           "textures": [
-            "metal_block_0/5"
+            "metal_block_0/blades_molten"
           ]
         },
         {
@@ -96,8 +96,8 @@
           "meta": 0,
           "label": "Closed Barrel",
           "textures": [
-            "log_block_0/2",
-            "log_block_0/1"
+            "log_block_0/barrel_top_closed",
+            "log_block_0/barrel_side"
           ]
         },
         {
@@ -113,7 +113,7 @@
           "label": "Oak Log Rope",
           "textures": [
             "log_block_0/tree_top",
-            "log_block_0/oakrope"
+            "log_block_0/bark_oak_rope"
           ]
         },
         {
@@ -121,7 +121,7 @@
           "label": "Oak Log Chain",
           "textures": [
             "log_block_0/tree_top",
-            "log_block_0/oakchain"
+            "log_block_0/bark_oak_chain"
           ]
         }
       ]
@@ -144,16 +144,16 @@
           "meta": 0,
           "label": "Weirwood Face",
           "textures": [
-            "log_block_0/face",
-            "log_block_0/birch"
+            "log_block_0/weirwood_face",
+            "wood_block_0/bark_birch"
           ]
         },
         {
           "meta": 1,
           "label": "Mossy Oak Log",
           "textures": [
-            "log_block_0/5",
-            "log_block_0/3"
+            "log_block_0/bark_oak_mossy_top",
+            "log_block_0/bark_oak_mossy"
           ]
         },
         {
@@ -194,112 +194,112 @@
           "meta": 0,
           "label": "Yellow Flower 1",
           "textures": [
-            "yellow_flower_block_0/3"
+            "yellow_flower_block_0/yellow_flower_0"
           ]
         },
         {
           "meta": 1,
           "label": "Yellow Flower 2",
           "textures": [
-            "yellow_flower_block_0/8"
+            "yellow_flower_block_0/yellow_flower_1"
           ]
         },
         {
           "meta": 2,
           "label": "Yellow Flower 3",
           "textures": [
-            "yellow_flower_block_0/9"
+            "yellow_flower_block_0/yellow_flower_2"
           ]
         },
         {
           "meta": 3,
           "label": "Yellow Flower 4",
           "textures": [
-            "yellow_flower_block_0/A6"
+            "yellow_flower_block_0/yellow_flower_3"
           ]
         },
         {
           "meta": 4,
           "label": "Yellow Flower 5",
           "textures": [
-            "yellow_flower_block_0/B2"
+            "yellow_flower_block_0/yellow_flower_4"
           ]
         },
         {
           "meta": 5,
           "label": "Yellow Flower 6",
           "textures": [
-            "yellow_flower_block_0/B3"
+            "yellow_flower_block_0/yellow_flower_5"
           ]
         },
         {
           "meta": 6,
           "label": "Yellow Flower 7",
           "textures": [
-            "yellow_flower_block_0/B4"
+            "yellow_flower_block_0/yellow_flower_6"
           ]
         },
         {
           "meta": 7,
           "label": "Yellow Flower 8",
           "textures": [
-            "yellow_flower_block_0/B5"
+            "yellow_flower_block_0/yellow_flower_7"
           ]
         },
         {
           "meta": 8,
           "label": "Yellow Flower 9",
           "textures": [
-            "yellow_flower_block_0/B6"
+            "yellow_flower_block_0/yellow_flower_8"
           ]
         },
         {
           "meta": 9,
           "label": "Yellow Flower 10",
           "textures": [
-            "yellow_flower_block_0/C2"
+            "yellow_flower_block_0/yellow_flower_9"
           ]
         },
         {
           "meta": 10,
           "label": "Yellow Flower 11",
           "textures": [
-            "yellow_flower_block_0/C3"
+            "yellow_flower_block_0/yellow_flower_10"
           ]
         },
         {
           "meta": 11,
           "label": "Yellow Flower 12",
           "textures": [
-            "yellow_flower_block_0/C4"
+            "yellow_flower_block_0/yellow_flower_11"
           ]
         },
         {
           "meta": 12,
           "label": "Yellow Flower 13",
           "textures": [
-            "yellow_flower_block_0/C6"
+            "yellow_flower_block_0/yellow_flower_12"
           ]
         },
         {
           "meta": 13,
           "label": "Yellow Flower 14",
           "textures": [
-            "yellow_flower_block_0/D5"
+            "yellow_flower_block_0/yellow_flower_13"
           ]
         },
         {
           "meta": 14,
           "label": "Yellow Flower 15",
           "textures": [
-            "yellow_flower_block_0/E3"
+            "yellow_flower_block_0/yellow_flower_14"
           ]
         },
         {
           "meta": 15,
           "label": "Yellow Flower 16",
           "textures": [
-            "yellow_flower_block_0/E4"
+            "yellow_flower_block_0/yellow_flower_15"
           ]
         }
       ]
@@ -324,70 +324,77 @@
           "meta": 0,
           "label": "Yellow Flower 17",
           "textures": [
-            "yellow_flower_block_1/E6"
+            "yellow_flower_block_1/yellow_flower_16"
           ]
         },
         {
           "meta": 1,
           "label": "Yellow Flower 18",
           "textures": [
-            "yellow_flower_block_1/F2"
+            "yellow_flower_block_1/yellow_flower_17"
           ]
         },
         {
           "meta": 2,
           "label": "Yellow Flower 19",
           "textures": [
-            "yellow_flower_block_1/F3"
+            "yellow_flower_block_1/yellow_flower_18"
           ]
         },
         {
           "meta": 3,
           "label": "Yellow Flower 20",
           "textures": [
-            "yellow_flower_block_1/H2"
+            "yellow_flower_block_1/yellow_flower_19"
           ]
         },
         {
           "meta": 4,
           "label": "Yellow Flower 21",
           "textures": [
-            "yellow_flower_block_1/H3"
+            "yellow_flower_block_1/yellow_flower_20"
           ]
         },
         {
           "meta": 5,
           "label": "Yellow Flower 22",
           "textures": [
-            "yellow_flower_block_1/H4"
+            "yellow_flower_block_1/yellow_flower_21"
           ]
         },
         {
           "meta": 6,
           "label": "Yellow Flower 23",
           "textures": [
-            "yellow_flower_block_1/H7"
+            "yellow_flower_block_1/yellow_flower_22"
           ]
         },
         {
           "meta": 7,
           "label": "Yellow Flower 24",
           "textures": [
-            "yellow_flower_block_1/I4"
+            "yellow_flower_block_1/yellow_flower_23"
           ]
         },
         {
           "meta": 8,
           "label": "Yellow Flower 25",
           "textures": [
-            "yellow_flower_block_1/I5"
+            "yellow_flower_block_1/yellow_flower_24"
           ]
         },
 		{
           "meta": 9,
           "label": "Strawberry Bush",
           "textures": [
-            "yellow_flower_block_1/strawberry1"
+            "yellow_flower_block_1/yellow_flower_strawberry"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Yellow Flower 26",
+          "textures": [
+            "yellow_flower_block_1/yellow_flower_25"
           ]
         }
       ]
@@ -476,112 +483,112 @@
           "meta": 0,
           "label": "Oak Fence",
           "textures": [
-            "fence_block_0/planks_oak"
+            "wood_block_0/planks_oak"
           ]
         },
         {
           "meta": 1,
           "label": "Spruce Fence",
           "textures": [
-            "fence_block_0/planks_spruce"
+            "wood_block_0/planks_spruce"
           ]
         },
         {
           "meta": 2,
           "label": "Birch Fence",
           "textures": [
-            "fence_block_0/planks_birch"
+            "wood_block_0/planks_birch"
           ]
         },
         {
           "meta": 3,
           "label": "Jungle Fence",
           "textures": [
-            "fence_block_0/planks_jungle"
+            "wood_block_0/planks_jungle"
           ]
         },
         {
           "meta": 4,
           "label": "Oak Bark Fence",
           "textures": [
-            "fence_block_0/bark_oak"
+            "wood_block_0/bark_oak"
           ]
         },
         {
           "meta": 5,
           "label": "Spruce Bark Fence",
           "textures": [
-            "fence_block_0/bark_spruce"
+            "wood_block_0/bark_spruce"
           ]
         },
         {
           "meta": 6,
           "label": "Birch Bark Fence",
           "textures": [
-            "fence_block_0/bark_birch"
+            "wood_block_0/bark_birch"
           ]
         },
         {
           "meta": 7,
           "label": "Jungle Bark Fence",
           "textures": [
-            "fence_block_0/bark_jungle"
+            "wood_block_0/bark_jungle"
           ]
         },
         {
           "meta": 8,
           "label": "Oak Fence with Vines",
           "textures": [
-            "fence_block_0/planks_oak_vines"
+            "wood_block_0/planks_oak_vines"
           ]
         },
         {
           "meta": 9,
           "label": "Spruce Fence with Vines",
           "textures": [
-            "fence_block_0/planks_spruce_vines"
+            "wood_block_0/planks_spruce_vines"
           ]
         },
         {
           "meta": 10,
           "label": "Birch Fence with Vines",
           "textures": [
-            "fence_block_0/planks_birch_vines"
+            "wood_block_0/planks_birch_vines"
           ]
         },
         {
           "meta": 11,
           "label": "Jungle Fence with Vines",
           "textures": [
-            "fence_block_0/planks_jungle_vines"
+            "wood_block_0/planks_jungle_vines"
           ]
         },
         {
           "meta": 12,
           "label": "Oak Fence with Grapes",
           "textures": [
-            "fence_block_0/planks_oak_grapevines"
+            "wood_block_0/planks_oak_grapevines"
           ]
         },
         {
           "meta": 13,
           "label": "Spruce Fence with Grapes",
           "textures": [
-            "fence_block_0/planks_spruce_grapevines"
+            "wood_block_0/planks_spruce_grapevines"
           ]
         },
         {
           "meta": 14,
           "label": "Birch Fence with Grapes",
           "textures": [
-            "fence_block_0/planks_birch_grapevines"
+            "wood_block_0/planks_birch_grapevines"
           ]
         },
         {
           "meta": 15,
           "label": "Jungle Fence with Grapes",
           "textures": [
-            "fence_block_0/planks_jungle_grapevines"
+            "wood_block_0/planks_jungle_grapevines"
           ]
         }
       ]
@@ -606,7 +613,7 @@
           "meta": 0,
           "label": "Nether Brick Wall",
           "textures": [
-            "stone_wall_block_0/brick_stone_large_dark"
+            "stone_block_3/brick_nether"
           ]
         },
         {
@@ -614,14 +621,14 @@
           "label": "Stone Brick Wall",
           "colorMult" : "textures/colormap/stonebrick",
           "textures": [
-            "stone_wall_block_0/brick_stone_large_lightgrey"
+            "stone_block_1/brick_stone_large_unshaded"
           ]
         },
         {
           "meta": 2,
           "label": "Brick Wall",
           "textures": [
-            "stone_wall_block_0/brick_clay_normal_red"
+            "stone_block_3/brick_orange_large"
           ]
         },
         {
@@ -630,7 +637,7 @@
           "textures": [
             "stone_wall_block_0/sandstone_light_top",
             "stone_wall_block_0/sandstone_light_top",
-            "stone_wall_block_0/sandstone_light_side"
+            "stone_block_0/sandstone_normal"
           ]
         },
         {
@@ -639,21 +646,21 @@
           "textures": [
             "stone_wall_block_0/sandstone_red_top",
             "stone_wall_block_0/sandstone_red_top",
-            "stone_wall_block_0/sandstone_red_side"
+            "stone_block_0/sandstone_red"
           ]
         },
         {
           "meta": 5,
           "label": "Dark Cobble Wall",
           "textures": [
-            "stone_wall_block_0/brick_stone_normal_bluegrey"
+            "stone_block_1/stone_cobble_dark"
           ]
         },
         {
           "meta": 6,
           "label": "Bedrock Wall",
           "textures": [
-            "stone_wall_block_0/brick_stone_normal_darkgrey"
+            "stone_block_1/stone_bedrock"
           ]
         },
         {
@@ -661,28 +668,28 @@
           "label": "Small Stone Brick Wall",
           "colorMult" : "textures/colormap/lapisore",
           "textures": [
-            "stone_wall_block_0/brick_stone_normal_grey"
+            "stone_block_1/brick_stone_small"
           ]
         },
         {
           "meta": 8,
           "label": "Dark Red Brick Wall",
           "textures": [
-            "stone_wall_block_0/brick_stone_normal_red"
+            "stone_block_3/brick_dark_red"
           ]
         },
         {
           "meta": 9,
           "label": "Small Brick Wall",
           "textures": [
-            "stone_wall_block_0/brick_clay_verysmall_red"
+            "stone_block_3/brick_orange_small_side"
           ]
         },
         {
           "meta": 10,
           "label": "Light Grey Stone Wall",
           "textures": [
-            "stone_wall_block_0/brick_stone_verysmall_lightgrey"
+            "stone_block_1/brick_light_grey"
           ]
         },
         {
@@ -701,6 +708,20 @@
             "stone_wall_block_0/wall_marble_top",
             "stone_wall_block_0/wall_marble_top",
             "stone_wall_block_0/wall_marble_column_side"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Reach Pink Light Brick Wall",
+          "textures": [
+            "stone_block_2/brick_reach_light_pink"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Stormlands Dark Cobblestone Wall",
+          "textures": [
+            "stone_block_2/stone_cobble_stormlands_dark"
           ]
         }
       ]
@@ -722,39 +743,48 @@
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
         {
-          "meta":0,
+          "meta": 0,
           "label": "Thin Oak Log",
           "textures":[
-            "thin_log_0/log_oak_top",
-            "thin_log_0/log_oak_top",
-            "thin_log_0/log_oak_side"
+            "stone_wall_block_0/log_oak_top",
+            "stone_wall_block_0/log_oak_top",
+            "wood_block_0/bark_oak"
           ]
         },
         {
-          "meta":1,
+          "meta": 1,
           "label": "Thin Spruce Log",
           "textures":[
-            "thin_log_0/log_spruce_top",
-            "thin_log_0/log_spruce_top",
-            "thin_log_0/log_spruce_side"
+            "stone_wall_block_0/log_spruce_top",
+            "stone_wall_block_0/log_spruce_top",
+            "wood_block_0/bark_spruce"
           ]
         },
         {
-          "meta":2,
+          "meta": 2,
           "label": "Thin Birch Log",
           "textures":[
-            "thin_log_0/log_birch_top",
-            "thin_log_0/log_birch_top",
-            "thin_log_0/log_birch_side"
+            "stone_wall_block_0/log_birch_top",
+            "stone_wall_block_0/log_birch_top",
+            "wood_block_0/bark_birch"
           ]
         },
         {
-          "meta":3,
+          "meta": 3,
           "label": "Thin Jungle Log",
           "textures":[
-            "thin_log_0/log_jungle_top",
-            "thin_log_0/log_jungle_top",
-            "thin_log_0/log_jungle_side"
+            "stone_wall_block_0/log_jungle_top",
+            "stone_wall_block_0/log_jungle_top",
+            "wood_block_0/bark_jungle"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Thin Palm Log",
+          "textures":[
+            "stone_wall_block_0/log_palm_top",
+            "stone_wall_block_0/log_palm_top",
+            "log_block_1/log_palm"
           ]
         }
       ]
@@ -1040,7 +1070,7 @@
           "label": "Horse Shoes",
           "lightOpacity": 0,
           "textures": [
-            "cuboid_block_0/Horseshoes"
+            "cuboid_block_0/horseshoes"
           ],
           "boundingBox": {
 				"xMin": 0,
@@ -1081,8 +1111,8 @@
           "textures": [
             "cuboid_block_0/rack_bottom",
             "cuboid_block_0/rack_top",
-            "cuboid_block_0/Rack_rest",
-            "cuboid_block_0/Rack_rest",
+            "cuboid_block_0/rack_rest",
+            "cuboid_block_0/rack_rest",
             "cuboid_block_0/rack_bottom",
             "cuboid_block_0/rack_bottom"
           ],
@@ -1118,7 +1148,7 @@
           "label": "Frying Pan",
           "textures": [
             "transparent",
-            "cuboid_block_0/FryingPan"
+            "cuboid_block_0/pan_frying"
 			],
 			"boundingBox": {
 				"xMin": 0,
@@ -1135,7 +1165,7 @@
           "label": "Broken Sword",
           "textures": [
             "transparent",
-            "cuboid_block_0/BrokenSword"
+            "cuboid_block_0/sword_broken"
 			],
 			"boundingBox": {
 				"xMin": 0,
@@ -1152,7 +1182,7 @@
           "label": "Bones",
           "textures": [
             "transparent",
-            "cuboid_block_0/Bones"
+            "cuboid_block_0/bone"
 			],
 			"boundingBox": {
 				"xMin": 0,
@@ -1189,7 +1219,7 @@
           "label": "Pewter Plate",
           "textures": [
             "transparent",
-            "cuboid_block_0/0"
+            "cuboid_block_0/plate_pewter"
           ],
           "boundingBox": {
             "xMin": 0,
@@ -1206,7 +1236,7 @@
           "label": "Wooden Plate",
           "textures": [
             "transparent",
-            "cuboid_block_0/2"
+            "cuboid_block_0/plate_wood"
           ],
           "boundingBox": {
             "xMin": 0,
@@ -1225,8 +1255,8 @@
 		  "lightOpacity" : 0,
           "textures": [
             "metal_block_0/metal_block_iron",
-            "light_emitting_blocks_0/6",
-			"light_emitting_blocks_0/2"
+            "light_emitting_blocks_0/lantern_handheld_center",
+			"light_emitting_blocks_0/lantern_red_bottom"
           ],
           "cuboids": [
             { "xMin": 0.3125, "xMax": 0.6875, "yMin": 0.0625, "yMax": 0.125, "zMin": 0.3125, "zMax": 0.6875, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -1262,10 +1292,10 @@
           "meta": 4,
           "label": "Pewter Flagon",
           "textures": [
-            "cuboid_block_0/MetalFlagonBottom",
-            "cuboid_block_0/MetalFlagonTopLid",
-			"cuboid_block_0/FlagonMetalSide",
-			"cuboid_block_0/FlagonMetalTopBody"
+            "cuboid_block_0/flagon_metal_bottom",
+            "cuboid_block_0/flagon_metal_top_lid",
+			"cuboid_block_0/flagon_metal_side",
+			"cuboid_block_0/flagon_metal_top_body"
           ],
           "cuboids": [
             { "xMin": 0.3125, "xMax": 0.6875, "yMin": 0.0, "yMax": 0.0625, "zMin": 0.3125, "zMax": 0.6875, "sideTextures": [ 0,3,2,2,2,2 ] },
@@ -1278,10 +1308,10 @@
           "meta": 5,
           "label": "Glass Flagon",
 		  "textures": [
-            "cuboid_block_0/glassflagonbottom",
-            "cuboid_block_0/glassflagonlidtop",
-			"cuboid_block_0/glassflagonside",
-			"cuboid_block_0/glassflagonbodytop"
+            "cuboid_block_0/flagon_glass_bottom",
+            "cuboid_block_0/flagon_glass_top_lid",
+			"cuboid_block_0/flagon_glass_side",
+			"cuboid_block_0/flagon_glass_top_body"
           ],
           "cuboids": [
             { "xMin": 0.3125, "xMax": 0.6875, "yMin": 0.0, "yMax": 0.0625, "zMin": 0.3125, "zMax": 0.6875, "sideTextures": [ 0,3,2,2,2,2 ] },
@@ -1349,6 +1379,29 @@
             "zMax": 0.875
           },
           "itemTextureIndex": 2
+        },
+        {
+          "meta": 9,
+          "label": "Red Lantern",
+          "lightValue": 0.9375,
+          "lightOpacity" : 0,
+          "textures": [
+            "wood_block_0/planks_jungle",
+            "light_emitting_blocks_0/lantern_handheld_red_center",
+            "light_emitting_blocks_0/lantern_red_bottom"
+          ],
+          "cuboids": [
+            { "xMin": 0.3125, "xMax": 0.6875, "yMin": 0.0625, "yMax": 0.125, "zMin": 0.3125, "zMax": 0.6875, "sideTextures": [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.3125, "xMax": 0.6875, "yMin": 0.5625, "yMax": 0.625, "zMin": 0.3125, "zMax": 0.6875, "sideTextures": [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.3125, "xMax": 0.375, "yMin": 0.0, "yMax": 0.5625, "zMin": 0.3125, "zMax": 0.375, "sideTextures": [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.625, "xMax": 0.6875, "yMin": 0.0, "yMax": 0.5625, "zMin": 0.3125, "zMax": 0.375, "sideTextures": [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.3125, "xMax": 0.375, "yMin": 0.0, "yMax": 0.5625, "zMin": 0.625, "zMax": 0.6875, "sideTextures": [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.625, "xMax": 0.6875, "yMin": 0.0, "yMax": 0.5625, "zMin": 0.625, "zMax": 0.6875, "sideTextures": [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.375, "xMax": 0.625, "yMin": 0.125, "yMax": 0.5625, "zMin": 0.375, "zMax": 0.625, "sideTextures": [ 1,1,1,1,1,1 ] },
+            { "xMin": 0.3125, "xMax": 0.375, "yMin": 0.625, "yMax": 0.9, "zMin": 0.47, "zMax": 0.53, "sideTextures": [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.625, "xMax": 0.6875, "yMin": 0.625, "yMax": 0.9, "zMin": 0.47, "zMax": 0.53, "sideTextures": [ 0,0,0,0,0,0 ] },
+            { "xMin": 0.36, "xMax": 0.64, "yMin": 0.85, "yMax": 1, "zMin": 0.47, "zMax": 0.53, "sideTextures": [ 2,2,2,2,2,2 ] }
+          ]
         }
       ]
     },
@@ -1500,35 +1553,35 @@
           "meta": 3,
           "label": "Blackberry Bush",
           "textures": [
-            "leaves_block_1/blackberry1"
+            "leaves_block_1/leaves_blackberry_1"
           ]
         },
 		{
           "meta": 4,
           "label": "Blueberry Bush",
           "textures": [
-            "leaves_block_1/blueberry1"
+            "leaves_block_1/leaves_blueberry_1"
           ]
         },
 		{
           "meta": 5,
           "label": "Raspberry Bush",
           "textures": [
-            "leaves_block_1/raspberry1"
+            "leaves_block_1/leaves_raspberry_1"
           ]
         },
 		{
           "meta": 6,
           "label": "Juniper Bush",
           "textures": [
-            "leaves_block_1/juniper1"
+            "leaves_block_1/leaves_juniper_1"
           ]
         },
 		{
           "meta": 7,
           "label": "Red Rose Bush",
           "textures": [
-            "leaves_block_1/rose_red1"
+            "leaves_block_1/leaves_rose_red_1"
           ]
         }
       ]
@@ -1546,21 +1599,21 @@
           "meta": 0,
           "label": "Pink Rose Bush",
           "textures": [
-            "leaves_block_1/rose_pink1"
+            "leaves_block_1/leaves_rose_pink_1"
           ]
         },
         {
           "meta": 1,
           "label": "White Rose Bush",
           "textures": [
-            "leaves_block_1/rose_white1"
+            "leaves_block_1/leaves_rose_white_1"
           ]
         },
 		{
           "meta": 2,
           "label": "Yellow Rose Bush",
           "textures": [
-            "leaves_block_1/rose_yellow1"
+            "leaves_block_1/leaves_rose_yellow_1"
           ]
         }
       ]
@@ -1579,144 +1632,144 @@
           "meta": 0,
           "label": "Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/0",
-            "crate_block_0/0"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_side_crossbar_right"
           ]
         },
         {
           "meta": 1,
           "label": "Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/1",
-            "crate_block_0/1"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_side_crossbar_left",
+            "crate_block_0/crate_side_crossbar_left"
           ]
         },
         {
           "meta": 2,
           "label": "Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/2",
-            "crate_block_0/2"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_side_crossbar_crossed",
+            "crate_block_0/crate_side_crossbar_crossed"
           ]
         },
         {
           "meta": 3,
           "label": "Open Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/3",
-            "crate_block_0/0"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_empty",
+            "crate_block_0/crate_side_crossbar_right"
           ]
         },
         {
           "meta": 4,
           "label": "Turnip Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/4",
-            "crate_block_0/1"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_turnip",
+            "crate_block_0/crate_side_crossbar_left"
           ]
         },
         {
           "meta": 5,
           "label": "Fish Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/5",
-            "crate_block_0/2"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_fish",
+            "crate_block_0/crate_side_crossbar_crossed"
           ]
         },
         {
           "meta": 6,
           "label": "Grain Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/6",
-            "crate_block_0/0"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_grain",
+            "crate_block_0/crate_side_crossbar_right"
           ]
         },
         {
           "meta": 7,
           "label": "Apple Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/7",
-            "crate_block_0/1"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_apples",
+            "crate_block_0/crate_side_crossbar_left"
           ]
         },
         {
           "meta": 8,
           "label": "Carrot Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/8",
-            "crate_block_0/2"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_carrot",
+            "crate_block_0/crate_side_crossbar_crossed"
           ]
         },
         {
           "meta": 9,
           "label": "Salt Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/9",
-            "crate_block_0/0"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_salt",
+            "crate_block_0/crate_side_crossbar_right"
           ]
         },
         {
           "meta": 10,
           "label": "Iron Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/10",
-            "crate_block_0/1"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_iron",
+            "crate_block_0/crate_side_crossbar_left"
           ]
         },
         {
           "meta": 11,
           "label": "Berry Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/11",
-            "crate_block_0/2"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_berry",
+            "crate_block_0/crate_side_crossbar_crossed"
           ]
         },
         {
           "meta": 12,
           "label": "Water Barrel",
           "textures": [
-            "log_block_0/2",
-            "crate_block_0/12",
-            "log_block_0/1"
+            "log_block_0/barrel_top_closed",
+            "crate_block_0/barrel_top_water",
+            "log_block_0/barrel_side"
           ]
         },
         {
           "meta": 13,
           "label": "Empty Barrel",
           "textures": [
-            "log_block_0/2",
-            "crate_block_0/13",
-            "log_block_0/1"
+            "log_block_0/barrel_top_closed",
+            "crate_block_0/barrel_top_empty",
+            "log_block_0/barrel_side"
           ]
         },
 		{
           "meta": 14,
           "label": "Grape Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/14",
-            "crate_block_0/2"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_grape",
+            "crate_block_0/crate_side_crossbar_crossed"
           ]
         },
 		{
           "meta": 15,
           "label": "Silver Tin Crate",
           "textures": [
-            "crate_block_0/0",
-            "crate_block_0/15",
-            "crate_block_0/2"
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_tin",
+            "crate_block_0/crate_side_crossbar_crossed"
           ]
         }
       ]
@@ -1736,7 +1789,7 @@
           "label": "Desert Sand Layer",
           "colorMult" : "textures/colormap/sand",
 		  "textures": [
-            "sand_block_0/163"
+            "sand_block_0/sand_desert"
           ]
         }
       ]
@@ -1755,7 +1808,7 @@
           "meta": 0,
           "label": "Bench Butcher Knives",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/crafting_table_top",
             "bench_block_0/bench_butcher_knives"
           ]
@@ -1764,7 +1817,7 @@
           "meta": 1,
           "label": "Bench Carpentry Hammer Saw",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/crafting_table_top",
             "bench_block_0/bench_carpentry_hammer_saw"
           ]
@@ -1773,7 +1826,7 @@
           "meta": 2,
           "label": "Bench Drawers",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/crafting_table_top",
             "bench_block_0/bench_drawers"
           ]
@@ -1782,7 +1835,7 @@
           "meta": 3,
           "label": "Bench Kitchen Knives",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/crafting_table_top",
             "bench_block_0/bench_kitchen_knives"
           ]
@@ -1791,7 +1844,7 @@
           "meta": 4,
           "label": "Bench Kitchen Pans",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/crafting_table_top",
             "bench_block_0/bench_kitchen_pans"
           ]
@@ -1800,7 +1853,7 @@
           "meta": 5,
           "label": "Bench Mason Hammer Mallet",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/crafting_table_top",
             "bench_block_0/bench_mason_hammer_mallet"
           ]
@@ -1809,7 +1862,7 @@
           "meta": 7,
           "label": "Table Drawers",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/table_top",
             "bench_block_0/table_drawers_side"
           ]
@@ -1818,7 +1871,7 @@
           "meta": 8,
           "label": "Table Books",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/table_top",
             "bench_block_0/table_drawer_books_side"
           ]
@@ -1827,7 +1880,7 @@
           "meta": 9,
           "label": "Table Widgets",
           "textures": [
-            "bench_block_0/regularspruce",
+            "bench_block_0/spruce_top",
             "bench_block_0/table_top",
             "bench_block_0/table_drawer_widgets_side"
           ]
@@ -1836,36 +1889,36 @@
           "meta": 10,
           "label": "Full Cabinet",
           "textures": [
-            "bench_block_0/regularspruce",
-            "bench_block_0/regularspruce",
-            "bench_block_0/8"
+            "bench_block_0/spruce_top",
+            "bench_block_0/spruce_top",
+            "bench_block_0/cabinet_full"
           ]
         },
         {
           "meta": 11,
           "label": "Empty Cabinet",
           "textures": [
-            "bench_block_0/regularspruce",
-            "bench_block_0/regularspruce",
-            "bench_block_0/3"
+            "bench_block_0/spruce_top",
+            "bench_block_0/spruce_top",
+            "bench_block_0/cabinet_empty"
           ]
         },
         {
           "meta": 12,
           "label": "Broken Cabinet",
           "textures": [
-            "bench_block_0/regularspruce",
-            "bench_block_0/regularspruce",
-            "bench_block_0/9"
+            "bench_block_0/spruce_top",
+            "bench_block_0/spruce_top",
+            "bench_block_0/cabinet_broken"
           ]
         },
         {
           "meta": 13,
           "label": "Cabinet Drawer",
           "textures": [
-            "bench_block_0/regularspruce",
-            "bench_block_0/regularspruce",
-            "bench_block_0/11"
+            "bench_block_0/spruce_top",
+            "bench_block_0/spruce_top",
+            "bench_block_0/cabinet_drawer"
           ]
         }
       ]
@@ -1884,27 +1937,27 @@
           "meta": 0,
           "label": "Bookshelf Library",
           "textures": [
-            "bookshelves_block_0/regularspruce",
-            "bookshelves_block_0/regularspruce",
-            "bookshelves_block_0/6"
+            "bookshelves_block_0/spruce_top",
+            "bookshelves_block_0/spruce_top",
+            "bookshelves_block_0/bookshelf_library"
           ]
         },
         {
           "meta": 1,
           "label": "Bookshelf Maester",
           "textures": [
-            "bookshelves_block_0/regularspruce",
-            "bookshelves_block_0/regularspruce",
-            "bookshelves_block_0/7"
+            "bookshelves_block_0/spruce_top",
+            "bookshelves_block_0/spruce_top",
+            "bookshelves_block_0/bookshelf_maester"
           ]
         },
         {
           "meta": 2,
           "label": "Bookshelf Abandoned",
           "textures": [
-            "bookshelves_block_0/regularspruce",
-            "bookshelves_block_0/regularspruce",
-            "bookshelves_block_0/4"
+            "bookshelves_block_0/spruce_top",
+            "bookshelves_block_0/spruce_top",
+            "bookshelves_block_0/bookshelf_abandoned"
           ]
         }
       ]
@@ -1927,13 +1980,13 @@
           "label": "Small Stone Brick Arrow Slit",
           "colorMult" : "textures/colormap/lapisore",
           "textures": [
-            "arrow_slits/63"
+            "arrow_slits/brick_small_stone_arrow_slit"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.25, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.25 },
-            { "xMin": 0.75, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.25 },
-            { "xMin": 0.0, "xMax": 0.25, "yMin": 0, "yMax": 1.0, "zMin": 0.75, "zMax": 1.0 },
-            { "xMin": 0.75, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.75, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
         {
@@ -1941,13 +1994,13 @@
           "label": "Stone Brick Arrow Slit",
           "colorMult" : "textures/colormap/stonebrick",
           "textures": [
-            "arrow_slits/brick_large_stone_arrow_loop_grey"
+            "arrow_slits/brick_large_stone_arrow_slit_grey"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
         {
@@ -1955,13 +2008,13 @@
           "label": "Mossy Stone Brick Arrow Slit",
           "colorMult" : "textures/colormap/stonebrick",
           "textures": [
-            "arrow_slits/brick_large_stone_arrow_loop_mossy"
+            "arrow_slits/brick_large_stone_arrow_slit_mossy"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
         {
@@ -1972,23 +2025,17 @@
             "arrow_slits/brick_stone_large_window"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
         {
           "meta": 4,
           "label": "Coloured Sept Window",
           "textures": [
-            "arrow_slits/19"
-          ],
-          "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            "arrow_slits/glass_stained"
           ]
         },
         {
@@ -1996,25 +2043,13 @@
           "label": "Sept Crystal",
           "textures": [
             "arrow_slits/crystal_block_diamond"
-          ],
-          "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
           ]
         },
         {
           "meta": 6,
           "label": "Fish Trap",
           "textures": [
-            "arrow_slits/f1"
-          ],
-          "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            "arrow_slits/fish_trap"
           ]
         },
         {
@@ -2024,90 +2059,97 @@
             "arrow_slits/cage_bottom",
 			"arrow_slits/cage_top",
 			"arrow_slits/cage_side"
-          ],
-          "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
           ]
         },
 		{
           "meta": 8,
           "label": "Netherbrick Arrow Slit",
           "textures": [
-            "arrow_slits/NetherbrickArrowslit"
+            "arrow_slits/brick_nether_arrow_slit"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
 		{
           "meta": 9,
           "label": "Desert Sandstone Arrow Slit",
           "textures": [
-            "arrow_slits/DorneSandstoneArrowslit"
+            "arrow_slits/sandstone_dorne_arrow_slit"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
 		{
           "meta": 10,
           "label": "Vivid Sandstone Arrow Slit",
           "textures": [
-            "arrow_slits/VividSandstoneArrowslit"
+            "arrow_slits/sandstone_vivid_arrow_slit"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
 		{
           "meta": 11,
           "label": "Terracotta Arrow Slit",
           "textures": [
-            "arrow_slits/TerracottaArrowslit"
+            "arrow_slits/sandstone_terracotta_arrow_slit"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
 		{
           "meta": 12,
           "label": "Stone Slab Arrow Slit",
           "textures": [
-            "arrow_slits/StoneSlabArrowSlits"
+            "arrow_slits/stone_slab_window"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         },
 		{
           "meta": 13,
           "label": "Stormlands Brick Arrow Slit",
           "textures": [
-            "arrow_slits/StormlandsArrowSlits"
+            "arrow_slits/stormlands_arrow_slit"
           ],
           "collisionBoxes": [
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.375 },
-            { "xMin": 0.0, "xMax": 0.375, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 },
-            { "xMin": 0.625, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.625, "zMax": 1.0 }
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Reach Pink Light Brick Arrow Slit",
+          "textures": [
+            "arrow_slits/reach_pink_arrow_slit"
+          ],
+          "collisionBoxes": [
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
         }
       ]
@@ -2126,34 +2168,34 @@
           "meta": 0,
           "label": "Dark Brown Sandstone",
           "textures": [
-            "stone_block_0/47"
+            "stone_block_0/sandstone_brown_dark"
           ]
         },
         {
           "meta": 1,
           "label": "Vivid Sandstone",
           "textures": [
-            "stone_block_0/22",
-            "stone_block_0/22",
-            "stone_block_0/3"
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid"
           ]
         },
         {
           "meta": 2,
           "label": "Vivid Mossy Sandstone",
           "textures": [
-            "stone_block_0/22",
-            "stone_block_0/22",
-            "stone_block_0/7"
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid_mossy"
           ]
         },
         {
           "meta": 3,
           "label": "Vivid Dark Sandstone",
           "textures": [
-            "stone_block_0/21",
-            "stone_block_0/21",
-            "stone_block_0/18"
+            "stone_block_0/sandstone_vivid_dark_top",
+            "stone_block_0/sandstone_vivid_dark_top",
+            "stone_block_0/sandstone_vivid_dark"
           ]
         },
         {
@@ -2167,45 +2209,45 @@
           "meta": 5,
           "label": "Monochrome Sandstone",
           "textures": [
-            "stone_block_0/30",
-            "stone_block_0/30",
-            "stone_block_0/29"
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome"
           ]
         },
         {
           "meta": 6,
           "label": "Monochrome Mossy Sandstone",
           "textures": [
-            "stone_block_0/30",
-            "stone_block_0/30",
-            "stone_block_0/37"
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome_mossy"
           ]
         },
         {
           "meta": 7,
           "label": "Monochrome Dark Sandstone",
           "textures": [
-            "stone_block_0/35",
-            "stone_block_0/35",
-            "stone_block_0/34"
+            "stone_block_0/sandstone_monochrome_dark_top",
+            "stone_block_0/sandstone_monochrome_dark_top",
+            "stone_block_0/sandstone_monochrome_dark"
           ]
         },
         {
           "meta": 8,
           "label": "Terracotta",
           "textures": [
-            "stone_block_0/25",
-            "stone_block_0/25",
-            "stone_block_0/23"
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta"
           ]
         },
         {
           "meta": 9,
           "label": "Terracotta Engraved",
           "textures": [
-            "stone_block_0/25",
-            "stone_block_0/25",
-            "stone_block_0/24"
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta_engraved"
           ]
         },
         {
@@ -2213,44 +2255,44 @@
           "label": "Grey Keystone",
           "colorMult" : "textures/colormap/lapisore",
           "textures": [
-            "stone_block_0/48"
+            "stone_block_3/keystone_grey"
           ]
         },
         {
           "meta": 11,
           "label": "Sandy Stone Slabs",
           "textures": [
-            "stone_block_0/0"
+            "stone_block_0/stone_slab_sandy"
           ]
         },
         {
           "meta": 12,
-          "label": "Dark Bricks",
+          "label": "Dark Red Bricks",
           "textures": [
-            "stone_block_0/49"
+            "stone_block_3/brick_dark_red"
           ]
         },
         {
           "meta": 13,
           "label": "Netherbrick Keystone",
           "textures": [
-            "stone_block_0/2"
+            "stone_block_3/keystone_netherbrick"
           ]
         },
         {
           "meta": 14,
           "label": "Dark Cobble",
           "textures": [
-            "stone_block_0/cobbledark"
+            "stone_block_1/stone_cobble_dark"
           ]
         },
         {
           "meta": 15,
           "label": "Small Bricks Ornate Top",
           "textures": [
-            "stone_block_0/ornate",
-            "stone_block_0/ornate",
-            "stone_block_0/100"
+            "stone_block_3/brick_orange_small_top_ornate",
+            "stone_block_3/brick_orange_small_top_ornate",
+            "stone_block_3/brick_orange_small_side"
           ]
         }
       ]
@@ -2269,42 +2311,42 @@
           "meta": 0,
           "label": "Piston Top",
           "textures": [
-            "six_sided_blocks_0/piston_top"
+            "wood_block_0/piston_top"
           ]
         },
         {
           "meta": 1,
           "label": "6-Sided Oak",
           "textures": [
-            "six_sided_blocks_0/tree_side"
+            "wood_block_0/bark_oak"
           ]
         },
         {
           "meta": 2,
           "label": "6-Sided Spruce",
           "textures": [
-            "six_sided_blocks_0/tree_spruce"
+            "wood_block_0/bark_spruce"
           ]
         },
         {
           "meta": 3,
           "label": "6-Sided Birch",
           "textures": [
-            "six_sided_blocks_0/quartzblock_lines"
+            "wood_block_0/bark_birch"
           ]
         },
                 {
           "meta": 4,
           "label": "6-Sided Jungle",
           "textures": [
-            "six_sided_blocks_0/tree_jungle"
+            "wood_block_0/bark_jungle"
           ]
         },
 		{
           "meta": 5,
           "label": "6-Sided Stone Slab",
           "textures": [
-            "six_sided_blocks_0/stone_slab_top"
+            "stone_block_1/stone_slab_top"
           ]
         }
       ]
@@ -2323,70 +2365,70 @@
           "meta": 0,
           "label": "TerrainSet Eastern Islands",
           "textures": [
-            "stone_block_1/stone_large_easternislands"
+            "stone_terrainsets_0/stone_eastern_islands"
           ]
         },
         {
           "meta": 1,
           "label": "TerrainSet Iron Islands",
           "textures": [
-            "stone_block_1/stonemoss"
+            "stone_terrainsets_0/stone_ocean_iron_islands"
           ]
         },
         {
           "meta": 2,
           "label": "TerrainSet Mountains of the Moon",
           "textures": [
-            "stone_block_1/stone_large_beige"
+            "stone_terrainsets_0/stone_vale"
           ]
         },
         {
           "meta": 3,
           "label": "TerrainSet The North",
           "textures": [
-            "stone_block_1/stone_large_dimgrey"
+            "stone_terrainsets_0/stone_north"
           ]
         },
         {
           "meta": 4,
           "label": "TerrainSet Ocean Rocks",
           "textures": [
-            "stone_block_1/mossystonebrick"
+            "stone_terrainsets_0/stone_ocean_iron_islands"
           ]
         },
         {
           "meta": 5,
           "label": "TerrainSet Red Mountains",
           "textures": [
-            "stone_block_1/stone_large_redochre"
+            "stone_terrainsets_0/stone_red_mountains"
           ]
         },
         {
           "meta": 6,
           "label": "TerrainSet River Rocks",
           "textures": [
-            "stone_block_1/iron_rock1"
+            "stone_terrainsets_0/stone_river"
           ]
         },
         {
           "meta": 7,
           "label": "TerrainSet Westerlands",
           "textures": [
-            "stone_block_1/stone_large_darkkhaki"
+            "stone_terrainsets_0/stone_westerlands"
           ]
         },
         {
           "meta": 8,
           "label": "TerrainSet Arbor Dorne",
           "textures": [
-            "stone_block_1/stone_large_peru"
+            "stone_terrainsets_0/stone_dorne"
           ]
         },
         {
           "meta": 9,
           "label": "Light Grey Stone",
           "textures": [
-            "stone_block_1/emerald_block"
+            "stone_block_1/brick_light_grey"
           ]
         },
         {
@@ -2394,42 +2436,42 @@
           "label": "Small Stone Brick",
 		  "colorMult" : "textures/colormap/lapisore",
           "textures": [
-            "stone_block_1/lapis_ore"
+            "stone_block_1/brick_stone_small"
           ]
         },
         {
           "meta": 11,
           "label": "Black Slate",
           "textures": [
-            "stone_block_1/0"
+            "stone_slate_0/slate_black"
           ]
         },
         {
           "meta": 12,
           "label": "Blue Slate",
           "textures": [
-            "stone_block_1/32"
+            "stone_slate_0/slate_blue"
           ]
         },
         {
           "meta": 13,
           "label": "Red Slate",
           "textures": [
-            "stone_block_1/16"
+            "stone_slate_0/slate_red"
           ]
         },
 		{
           "meta": 14,
           "label": "Lannisport Orange Plaster",
           "textures": [
-            "stone_block_1/LPpinkplaster"
+            "stone_block_3/plaster_lannisport_orange"
           ]
         },
 		{
           "meta": 15,
           "label": "Lannisport Yellow Plaster",
           "textures": [
-            "stone_block_1/LPochreplaster"
+            "stone_block_3/plaster_lannisport_yellow"
           ]
         }
       ]
@@ -2448,104 +2490,104 @@
           "meta": 0,
           "label": "Purple Wood",
           "textures": [
-            "wood_colours/26"
+            "wood_block_1/wood_purple"
           ]
         },
         {
           "meta": 1,
           "label": "White Wood",
           "textures": [
-            "wood_colours/74"
+            "wood_block_1/wood_white"
           ]
         },
         {
           "meta": 2,
           "label": "Green Wood",
           "textures": [
-            "wood_colours/98"
+            "wood_block_1/wood_green"
           ]
         },
         {
           "meta": 3,
           "label": "Gray Wood",
           "textures": [
-            "wood_colours/122"
+            "wood_block_1/wood_gray"
           ]
         },
                 {
           "meta": 4,
           "label": "Red Wood",
           "textures": [
-            "wood_colours/162"
+            "wood_block_1/wood_red"
           ]
         },
         {
           "meta": 5,
           "label": "Black Wood",
           "textures": [
-            "wood_colours/170"
+            "wood_block_1/wood_black"
           ]
         },
         {
           "meta": 6,
           "label": "Blue Wood",
           "textures": [
-            "wood_colours/226"
+            "wood_block_1/wood_blue"
           ]
         },
         {
           "meta": 7,
           "label": "Yellow Wood",
           "textures": [
-            "wood_colours/yellow"
+            "wood_block_1/wood_yellow"
           ]
         },
         {
           "meta": 8,
           "label": "Parquet Floor",
           "textures": [
-            "wood_colours/1"
+            "wood_block_1/wood_floor_ornate"
           ]
         },
         {
           "meta": 9,
           "label": "Thatch Light Fur",
           "textures": [
-            "wood_colours/thatch_light"
+            "wood_block_1/thatch_light"
           ]
         },
         {
           "meta": 10,
           "label": "Thatch Dark Fur",
           "textures": [
-            "wood_colours/thatch_dark"
+            "wood_block_1/thatch_dark"
           ]
         },
         {
           "meta": 11,
           "label": "Leather",
           "textures": [
-            "wood_colours/leather_block_leather"
+            "wood_block_1/leather_block_leather"
           ]
         },
 		{
           "meta": 12,
           "label": "Northern Carvings",
           "textures": [
-            "wood_colours/7"
+            "wood_block_1/wood_carving_northern"
           ]
         },
         {
           "meta": 13,
           "label": "Dark Northern Wood",
           "textures": [
-            "wood_colours/wood_dark"
+            "wood_block_1/wood_northern"
           ]
         }
       ]
     },
     {
-      "blockName": "daub_wattle_blocks",
+      "blockName": "daub_wattle_block_0",
       "blockID": 2031,
       "blockType": "solid",
       "hardness": 2,
@@ -2558,112 +2600,112 @@
           "meta": 0,
           "label": "Daub Wattle Brown Crosshatch",
           "textures": [
-            "daub_wattle_blocks/36"
+            "daub_wattle_block_0/daub_brown_crossed"
           ]
         },
         {
           "meta": 1,
           "label": "Daub Wattle Brown Lefthatch",
           "textures": [
-            "daub_wattle_blocks/44"
+            "daub_wattle_block_0/daub_brown_left"
           ]
         },
         {
           "meta": 2,
           "label": "Daub Wattle Brown Righthatch",
           "textures": [
-            "daub_wattle_blocks/40"
+            "daub_wattle_block_0/daub_brown_right"
           ]
         },
         {
           "meta": 3,
           "label": "Daub Wattle Brown Frame",
           "textures": [
-            "daub_wattle_blocks/48"
+            "daub_wattle_block_0/daub_brown_open"
           ]
         },
                 {
           "meta": 4,
           "label": "Daub Wattle White Crosshatch",
           "textures": [
-            "daub_wattle_blocks/3"
+            "daub_wattle_block_0/daub_white_crossed"
           ]
         },
         {
           "meta": 5,
           "label": "Daub Wattle White Lefthatch",
           "textures": [
-            "daub_wattle_blocks/5"
+            "daub_wattle_block_0/daub_white_left"
           ]
         },
         {
           "meta": 6,
           "label": "Daub Wattle White Righthatch",
           "textures": [
-            "daub_wattle_blocks/4"
+            "daub_wattle_block_0/daub_white_right"
           ]
         },
         {
           "meta": 7,
           "label": "Daub Wattle White Frame",
           "textures": [
-            "daub_wattle_blocks/6"
+            "daub_wattle_block_0/daub_white_open"
           ]
         },
         {
           "meta": 8,
           "label": "Daub Wattle Red Crosshatch",
           "textures": [
-            "daub_wattle_blocks/53"
+            "daub_wattle_block_0/daub_red_crossed"
           ]
         },
         {
           "meta": 9,
           "label": "Daub Wattle Red Lefthatch",
           "textures": [
-            "daub_wattle_blocks/55"
+            "daub_wattle_block_0/daub_red_left"
           ]
         },
         {
           "meta": 10,
           "label": "Daub Wattle Red Righthatch",
           "textures": [
-            "daub_wattle_blocks/54"
+            "daub_wattle_block_0/daub_red_right"
           ]
         },
         {
           "meta": 11,
           "label": "Daub Wattle Red Frame",
           "textures": [
-            "daub_wattle_blocks/56"
+            "daub_wattle_block_0/daub_red_open"
           ]
         },
         {
           "meta": 12,
           "label": "Daub Brick Crosshatch",
           "textures": [
-            "daub_wattle_blocks/19"
+            "daub_wattle_block_0/daub_brick_crossed"
           ]
         },
         {
           "meta": 13,
           "label": "Daub Brick Lefthatch",
           "textures": [
-            "daub_wattle_blocks/27"
+            "daub_wattle_block_0/daub_brick_left"
           ]
         },
         {
           "meta": 14,
           "label": "Daub Brick Righthatch",
           "textures": [
-            "daub_wattle_blocks/23"
+            "daub_wattle_block_0/daub_brick_right"
           ]
         },
         {
           "meta": 15,
           "label": "Daub Brick Frame",
           "textures": [
-            "daub_wattle_blocks/31"
+            "daub_wattle_block_0/daub_brick_open"
           ]
         }
       ]
@@ -2683,16 +2725,16 @@
           "meta": 0,
           "label": "Red Lantern",
           "textures": [
-            "light_emitting_blocks_0/2",
-            "light_emitting_blocks_0/1",
-            "light_emitting_blocks_0/0"
+            "light_emitting_blocks_0/lantern_red_bottom",
+            "light_emitting_blocks_0/lantern_red_top",
+            "light_emitting_blocks_0/lantern_red_side"
           ]
         },
         {
           "meta": 1,
           "label": "Glowing Embers",
           "textures": [
-            "light_emitting_blocks_0/coals"
+            "light_emitting_blocks_0/coals_glowing"
           ]
         }
       ]
@@ -2711,69 +2753,69 @@
           "meta": 0,
           "label": "Bone Dirt",
           "textures": [
-            "solid_blocks_0/dirt_bone"
+            "ground_block_0/dirt_bone"
           ]
         },
         {
           "meta": 1,
           "label": "Scorched Earth",
           "textures": [
-            "solid_blocks_0/dirt",
-            "solid_blocks_0/56",
-            "solid_blocks_0/53"
+            "ground_block_0/dirt",
+            "ground_block_0/soil_scorched_top",
+            "ground_block_0/soil_scorched"
           ]
         },
         {
           "meta": 2,
           "label": "Dates",
           "textures": [
-            "solid_blocks_0/2",
-            "solid_blocks_0/0",
-            "solid_blocks_0/3"
+            "miscellaneous_block_0/dates_bottom",
+            "miscellaneous_block_0/dates_top",
+            "miscellaneous_block_0/dates_side"
           ]
         },
 		{
           "meta": 3,
           "label": "Fallen Leaves",
           "textures": [
-            "solid_blocks_0/leaves"
+            "ground_block_0/dirt_leaf_cover"
           ]
         },
 		{
           "meta": 4,
           "label": "Pine Needles",
           "textures": [
-            "solid_blocks_0/pine"
+            "ground_block_0/dirt_pine_cover"
           ]
         },
 		{
           "meta": 5,
           "label": "Spit Roast",
           "textures": [
-            "solid_blocks_0/Spitroast"
+            "miscellaneous_block_0/food_meat_spitroast"
           ]
         },
 		{
           "meta": 6,
           "label": "Squash",
           "textures": [
-            "solid_blocks_0/squash_top",
-			"solid_blocks_0/squash_top",
-			"solid_blocks_0/squash_side"
+            "miscellaneous_block_0/food_squash_top",
+			"miscellaneous_block_0/food_squash_top",
+			"miscellaneous_block_0/food_squash_side"
           ]
         },
         {
           "meta": 7,
           "label": "Plain White Daub",
           "textures": [
-            "daub_wattle_blocks/daub_plain_white"
+            "daub_wattle_block_0/daub_plain_white"
           ]
         },
         {
           "meta": 8,
           "label": "Plain Brown Daub",
           "textures": [
-            "daub_wattle_blocks/daub_plain_brown"
+            "daub_wattle_block_0/daub_plain_brown"
           ]
         }
       ]
@@ -2792,16 +2834,16 @@
           "meta": 0,
           "label": "Mud",
           "textures": [
-            "soulsand_like_blocks_0/mud"
+            "ground_block_0/mud"
           ]
         },
         {
           "meta": 1,
           "label": "Bog",
           "textures": [
-            "soulsand_like_blocks_0/mud",
-            "soulsand_like_blocks_0/bog_top_2",
-            "soulsand_like_blocks_0/bog_side"
+            "ground_block_0/mud",
+            "ground_block_0/bog_top",
+            "ground_block_0/bog_side"
           ]
         }
       ]
@@ -2956,43 +2998,43 @@
           "meta": 0,
           "label": "Vivid Sandstone Slab",
           "textures": [
-            "stone_block_0/22",
-            "stone_block_0/22",
-            "stone_block_0/3"
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid"
           ]
         },
         {
           "meta": 1,
           "label": "Vivid Dark Sandstone Slab",
           "textures": [
-            "stone_block_0/21",
-            "stone_block_0/21",
-            "stone_block_0/18"
+            "stone_block_0/sandstone_vivid_dark_top",
+            "stone_block_0/sandstone_vivid_dark_top",
+            "stone_block_0/sandstone_vivid_dark"
           ]
         },
         {
           "meta": 2,
           "label": "Monochrome Sandstone Slab",
           "textures": [
-            "stone_block_0/30",
-            "stone_block_0/30",
-            "stone_block_0/29"
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome"
           ]
         },
         {
           "meta": 3,
           "label": "Monochrome Dark Sandstone Slab",
           "textures": [
-            "stone_block_0/35",
-            "stone_block_0/35",
-            "stone_block_0/34"
+            "stone_block_0/sandstone_monochrome_dark_top",
+            "stone_block_0/sandstone_monochrome_dark_top",
+            "stone_block_0/sandstone_monochrome_dark"
           ]
         },
         {
           "meta": 4,
           "label": "Dark Brown Sandstone Slab",
           "textures": [
-            "stone_block_0/47"
+            "stone_block_0/sandstone_brown_dark"
           ]
         },
         {
@@ -3004,9 +3046,9 @@
         },
 		{
           "meta": 6,
-          "label": "Lannisport Orange Brick Slab",
+          "label": "Lannisport Slate Slab",
           "textures": [
-            "stone_block_2/orangebrick"
+            "stone_slate_0/slate_lannisport"
           ]
         }
       ]  
@@ -3035,58 +3077,58 @@
           "label": "Small Stone Brick Slab",
           "colorMult" : "textures/colormap/lapisore",
           "textures": [
-            "stone_block_1/lapis_ore"
+            "stone_block_1/brick_stone_small"
           ]
         },
         {
           "meta": 1,
           "label": "Light Grey Stone Slab",
           "textures": [
-            "stone_block_1/emerald_block"
+            "stone_block_1/brick_light_grey"
           ]
         },
         {
           "meta": 2,
           "label": "Terracotta Slab",
           "textures": [
-            "stone_block_0/25",
-            "stone_block_0/25",
-            "stone_block_0/23"
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta"
           ]
         },
         {
           "meta": 3,
           "label": "Black Slate Slab",
           "textures": [
-            "stone_block_1/0"
+            "stone_slate_0/slate_black"
           ]
         },
         {
           "meta": 4,
           "label": "Blue Slate Slab",
           "textures": [
-            "stone_block_1/32"
+            "stone_slate_0/slate_blue"
           ]
         },
         {
           "meta": 5,
           "label": "Red Slate Slab",
           "textures": [
-            "stone_block_1/16"
+            "stone_slate_0/slate_red"
           ]
         },
         {
           "meta": 6,
           "label": "Bedrock Slab",
           "textures": [
-            "stone_block_2/bedrock"
+            "stone_block_1/stone_bedrock"
           ]
         },
         {
           "meta": 7,
           "label": "Dark Cobble Slab",
           "textures": [
-            "stone_block_0/cobbledark"
+            "stone_block_1/stone_cobble_dark"
           ]
         }
       ]
@@ -3114,35 +3156,35 @@
           "meta": 0,
           "label": "Dirt Slab",
           "textures": [
-            "solid_blocks_0/dirt"
+            "ground_block_0/dirt"
           ]
         },
         {
           "meta": 1,
           "label": "Gravel Slab",
           "textures": [
-            "random_slab_block_0/gravel"
+            "ground_block_0/gravel"
           ]
         },
         {
           "meta": 2,
           "label": "Thatch Light Fur Slab",
           "textures": [
-            "wood_colours/thatch_light"
+            "wood_block_1/thatch_light"
           ]
         },
         {
           "meta": 3,
           "label": "Thatch Dark Fur Slab",
           "textures": [
-            "wood_colours/thatch_dark"
+            "wood_block_1/thatch_dark"
           ]
         },
         {
           "meta": 4,
           "label": "Leather Slab",
           "textures": [
-            "wood_colours/leather_block_leather"
+            "wood_block_1/leather_block_leather"
           ]
         },
         {
@@ -3150,9 +3192,9 @@
           "label": "Stool",
           "lightOpacity": 0,
           "textures": [
-            "random_slab_block_0/3",
-            "random_slab_block_0/0",
-            "random_slab_block_0/2"
+            "random_slab_block_0/seat_bottom",
+            "random_slab_block_0/seat_top",
+            "random_slab_block_0/seat_side"
           ]
         },
         {
@@ -3160,9 +3202,9 @@
           "label": "Stool Cushion",
           "lightOpacity": 0,
           "textures": [
-            "random_slab_block_0/3",
-            "random_slab_block_0/1",
-            "random_slab_block_0/2"
+            "random_slab_block_0/seat_bottom",
+            "random_slab_block_0/seat_top_cushion",
+            "random_slab_block_0/seat_side"
           ]
         }
       ]
@@ -3190,36 +3232,43 @@
           "meta": 0,
           "label": "Grain Flour Sack",
           "textures": [
-            "solid_blocks_0/Grain Sack",
-			"solid_blocks_0/Grain Sack",
-			"solid_blocks_0/Grain Sack Front",
-			"solid_blocks_0/Grain Sack Front",
-			"solid_blocks_0/Grain Sack Side"
+            "miscellaneous_block_0/grain_sack",
+			"miscellaneous_block_0/grain_sack",
+			"miscellaneous_block_0/grain_sack_front",
+			"miscellaneous_block_0/grain_sack_front",
+			"miscellaneous_block_0/grain_sack_side"
 	        ]
         },
 		{
           "meta": 1,
           "label": "Cut Grain Flour Sack",
           "textures": [
-            "solid_blocks_0/Grain Sack",
-			"solid_blocks_0/Flour Sack Cut",
-			"solid_blocks_0/Grain Sack Front",
-			"solid_blocks_0/Grain Sack Front",
-			"solid_blocks_0/Grain Sack Side"
+            "miscellaneous_block_0/grain_sack",
+			"miscellaneous_block_0/grain_sack_cut",
+			"miscellaneous_block_0/grain_sack_front",
+			"miscellaneous_block_0/grain_sack_front",
+			"miscellaneous_block_0/grain_sack_side"
 	        ]
         },
         {
           "meta": 2,
           "label": "Snow Slab",
           "textures": [
-            "solid_blocks_0/snow"
+            "ground_block_0/snow"
             ]
         },
 		{
           "meta": 3,
           "label": "Muddy Snow Slab",
           "textures": [
-            "solid_blocks_0/muddysnow"
+            "ground_block_0/snow_muddy"
+            ]
+        },
+        {
+          "meta": 4,
+          "label": "Reach Yellow Gravel Slab",
+          "textures": [
+            "ground_block_0/gravel_reach"
             ]
         }
       ]
@@ -3281,7 +3330,7 @@
           "label": "Cobblestone Fence",
           "colorMult" : "textures/colormap/cobblestone",
           "textures": [
-            "fence_block_1/cobblestone"
+            "stone_block_1/stone_cobble_unshaded"
           ]
         },
         {
@@ -3289,97 +3338,111 @@
           "label": "Mossy Cobblestone Fence",
           "colorMult" : "textures/colormap/cobblestone",
           "textures": [
-            "fence_block_1/cobblestone_mossy"
+            "stone_block_1/stone_cobble_mossy_unshaded"
           ]
         },
         {
           "meta": 2,
           "label": "Reinforced Oak Fence",
           "textures": [
-            "fence_block_1/planks_reinforced_oak"
+            "wood_block_0/planks_reinforced_oak"
           ]
         },
         {
           "meta": 3,
           "label": "Desert Sandstone Fence",
           "textures": [
-            "fence_block_1/sandstone_normal"
+            "stone_block_0/sandstone_normal"
           ]
         },
         {
           "meta": 4,
           "label": "Vivid Sandstone Fence",
           "textures": [
-            "stone_block_0/3"
+            "stone_block_0/sandstone_vivid"
           ]
         },
         {
           "meta": 5,
           "label": "Vivid Dark Sandstone Fence",
           "textures": [
-            "stone_block_0/18"
+            "stone_block_0/sandstone_vivid_dark"
           ]
         },
         {
           "meta": 6,
           "label": "Monochrome Sandstone Fence",
           "textures": [
-            "stone_block_0/29"
+            "stone_block_0/sandstone_monochrome"
           ]
         },
         {
           "meta": 7,
           "label": "Monochrome Dark Sandstone Fence",
           "textures": [
-            "stone_block_0/34"
+            "stone_block_0/sandstone_monochrome_dark"
           ]
         },
         {
           "meta": 8,
           "label": "Terracotta Fence",
           "textures": [
-            "stone_block_0/23"
+            "stone_block_0/sandstone_terracotta"
           ]
         },
         {
           "meta": 9,
           "label": "Dark Northern Wood Fence",
           "textures": [
-            "wood_colours/wood_dark"
+            "wood_block_1/wood_northern"
           ]
         },
         {
           "meta": 10,
           "label": "Small Stone Brick Fence",
           "textures": [
-            "stone_block_1/lapis_ore"
+            "stone_block_1/brick_stone_small"
           ]
         },
         {
           "meta": 11,
           "label": "Dark Cobble Fence",
           "textures": [
-            "stone_block_0/cobbledark"
+            "stone_block_1/stone_cobble_dark"
           ]
         },
         {
           "meta": 12,
           "label": "Bedrock Fence",
           "textures": [
-            "stone_block_2/bedrock"
+            "stone_block_1/stone_bedrock"
           ]
         },
         {
           "meta": 13,
           "label": "Light Grey Stone Fence",
           "textures": [
-            "stone_block_1/emerald_block"
+            "stone_block_1/brick_light_grey"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Brick Fence",
+          "textures": [
+            "stone_block_3/brick_orange_large"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Marble Column Fence",
+          "textures": [
+            "log_block_0/column_block_marble_side"
           ]
         }
       ]
     },    
     {
-      "blockName" : "smoke_block_0",
+      "blockName" : "web_block_0",
       "blockID" : 2053,
       "blockType" : "web",
       "stepSound" : "cloth",
@@ -3389,91 +3452,91 @@
         {
           "meta" : 0,
           "label": "Smoke",
-          "textures" : [ "smoke_block_0/smoke_0" ],
+          "textures" : [ "web_block_0/smoke" ],
           "type": "no-in-web"
         },
         {
           "meta" : 1,
           "label": "Vertical Rope",
-          "textures" : [ "smoke_block_0/rope_vertical" ],
+          "textures" : [ "web_block_0/rope_vertical" ],
           "type": "no-in-web"
         },
         {
           "meta" : 2,
           "label": "Rope Block Harness",
-          "textures" : [ "smoke_block_0/rope_blockharness" ],
+          "textures" : [ "web_block_0/rope_blockharness" ],
           "type": "no-in-web"
         },
         {
           "meta" : 3,
           "label": "Vertical Chain",
-          "textures" : [ "smoke_block_0/chain_vertical" ],
+          "textures" : [ "web_block_0/chain_vertical" ],
           "type": "no-in-web"
         },
         {
           "meta" : 4,
           "label": "Chain Block Harness",
-          "textures" : [ "smoke_block_0/chain_blockharness" ],
+          "textures" : [ "web_block_0/chain_blockharness" ],
           "type": "no-in-web"
         },
         {
           "meta" : 5,
           "label": "Bees",
-          "textures" : [ "smoke_block_0/bugs_bees2" ],
+          "textures" : [ "web_block_0/bug_bees" ],
           "type": "no-in-web"
         },
         {
           "meta" : 6,
           "label": "Flies",
-          "textures" : [ "smoke_block_0/bugs_flies1" ],
+          "textures" : [ "web_block_0/bug_flies" ],
           "type": "no-in-web"
         },
         {
           "meta" : 7,
           "label": "Icicle",
-          "textures" : [ "smoke_block_0/0" ],
+          "textures" : [ "web_block_0/icicles" ],
           "type": "no-in-web"
         },
         {
           "meta" : 8,
           "label": "Sausages Leg of Ham",
-          "textures" : [ "smoke_block_0/Sausages2" ],
+          "textures" : [ "web_block_0/food_sausages" ],
           "type": "no-in-web"
         },
         {
           "meta" : 9,
           "label": "Dead Hare",
-          "textures" : [ "smoke_block_0/rabbit_dead" ],
+          "textures" : [ "web_block_0/food_rabbit_dead" ],
           "type": "no-in-web"
         },
         {
           "meta" : 10,
           "label": "Dead Fowl",
-          "textures" : [ "smoke_block_0/Fowl" ],
+          "textures" : [ "web_block_0/food_fowl_dead" ],
           "type": "no-in-web"
         },
         {
           "meta" : 11,
           "label": "Dead Fish",
-          "textures" : [ "smoke_block_0/Fish_Dead2" ],
+          "textures" : [ "web_block_0/food_fish_dead" ],
           "type": "no-in-web"
         },
 		{
           "meta" : 12,
           "label": "Garlic Strand",
-          "textures" : [ "smoke_block_0/GarlicStrand" ],
+          "textures" : [ "web_block_0/food_garlic_strand" ],
           "type": "no-in-web"
         },
 		{
           "meta" : 13,
           "label": "Bushel of Herbs",
-          "textures" : [ "smoke_block_0/herbs" ],
+          "textures" : [ "web_block_0/food_herbs" ],
           "type": "no-in-web"
         },
 		{
           "meta" : 14,
           "label": "Chili Ristra",
-          "textures" : [ "smoke_block_0/Chili Ristra" ],
+          "textures" : [ "web_block_0/food_chili_ristra" ],
           "type": "no-in-web"
         }
       ]
@@ -3494,12 +3557,12 @@
         {
           "meta" : 1,
           "label": "Rope Ladder",
-          "textures" : [ "ladder_block_0/7" ]
+          "textures" : [ "ladder_block_0/ladder_rope" ]
         },
 		{
           "meta" : 2,
           "label": "Vine Jasmine",
-          "textures" : [ "ladder_block_0/jasmine" ]
+          "textures" : [ "ladder_block_0/vine_jasmine" ]
         }
       ]
     },
@@ -3517,7 +3580,7 @@
         {
           "meta" : 0,
           "label": "Dark Window Shutters",
-          "textures" : [ "halfdoor_block_0/window_shutters" ]
+          "textures" : [ "halfdoor_block_0/shutters_spruce" ]
         }
       ]
     },
@@ -3553,7 +3616,7 @@
         {
           "meta" : 0,
           "label": "Green Lannisport Window Shutters",
-          "textures" : [ "cuboid_block_0/LannisportShutters" ]
+          "textures" : [ "halfdoor_block_0/shutters_lannisport" ]
 	    }
       ]
     },
@@ -3618,112 +3681,112 @@
           "meta": 0,
           "label": "Red Flower 1",
           "textures": [
-            "red_flower_block_0/2"
+            "red_flower_block_0/red_flower_0"
           ]
         },
         {
           "meta": 1,
           "label": "Red Flower 2",
           "textures": [
-            "red_flower_block_0/7"
+            "red_flower_block_0/red_flower_1"
           ]
         },
         {
           "meta": 2,
           "label": "Red Flower 3",
           "textures": [
-            "red_flower_block_0/12"
+            "red_flower_block_0/red_flower_2"
           ]
         },
         {
           "meta": 3,
           "label": "Red Flower 4",
           "textures": [
-            "red_flower_block_0/A2"
+            "red_flower_block_0/red_flower_3"
           ]
         },
         {
           "meta": 4,
           "label": "Red Flower 5",
           "textures": [
-            "red_flower_block_0/A3"
+            "red_flower_block_0/red_flower_4"
           ]
         },
         {
           "meta": 5,
           "label": "Red Flower 6",
           "textures": [
-            "red_flower_block_0/A4"
+            "red_flower_block_0/red_flower_5"
           ]
         },
         {
           "meta": 6,
           "label": "Red Flower 7",
           "textures": [
-            "red_flower_block_0/A5"
+            "red_flower_block_0/red_flower_6"
           ]
         },
         {
           "meta": 7,
           "label": "Red Flower 8",
           "textures": [
-            "red_flower_block_0/B1"
+            "red_flower_block_0/red_flower_7"
           ]
         },
         {
           "meta": 8,
           "label": "Red Flower 9",
           "textures": [
-            "red_flower_block_0/C1"
+            "red_flower_block_0/red_flower_8"
           ]
         },
         {
           "meta": 9,
           "label": "Red Flower 10",
           "textures": [
-            "red_flower_block_0/F1"
+            "red_flower_block_0/red_flower_9"
           ]
         },
         {
           "meta": 10,
           "label": "Red Flower 11",
           "textures": [
-            "red_flower_block_0/F4"
+            "red_flower_block_0/red_flower_10"
           ]
         },
         {
           "meta": 11,
           "label": "Red Flower 12",
           "textures": [
-            "red_flower_block_0/F5"
+            "red_flower_block_0/red_flower_11"
           ]
         },
         {
           "meta": 12,
           "label": "Red Flower 13",
           "textures": [
-            "red_flower_block_0/H1"
+            "red_flower_block_0/red_flower_12"
           ]
         },
         {
           "meta": 13,
           "label": "Red Flower 14",
           "textures": [
-            "red_flower_block_0/H5"
+            "red_flower_block_0/red_flower_13"
           ]
         },
         {
           "meta": 14,
           "label": "Red Flower 15",
           "textures": [
-            "red_flower_block_0/H6"
+            "red_flower_block_0/red_flower_14"
           ]
         },
         {
           "meta": 15,
           "label": "Red Flower 16",
           "textures": [
-            "red_flower_block_0/H7"
+            "red_flower_block_0/red_flower_15"
           ]
         }
       ]
@@ -3748,70 +3811,70 @@
           "meta": 0,
           "label": "Red Flower 17",
           "textures": [
-            "red_flower_block_1/I2"
+            "red_flower_block_1/red_flower_16"
           ]
         },
         {
           "meta": 1,
           "label": "Red Flower 18",
           "textures": [
-            "red_flower_block_1/I5"
+            "red_flower_block_1/red_flower_17"
           ]
         },
         {
           "meta": 2,
           "label": "Red Flower 19",
           "textures": [
-            "red_flower_block_1/I6"
+            "red_flower_block_1/red_flower_18"
           ]
         },
         {
           "meta": 3,
           "label": "Red Flower 20",
           "textures": [
-            "red_flower_block_1/J1"
+            "red_flower_block_1/red_flower_19"
           ]
         },
         {
           "meta": 4,
           "label": "Red Flower 21",
           "textures": [
-            "red_flower_block_1/J2"
+            "red_flower_block_1/red_flower_20"
           ]
         },
         {
           "meta": 5,
           "label": "Red Flower 22",
           "textures": [
-            "red_flower_block_1/J3"
+            "red_flower_block_1/red_flower_21"
           ]
         },
         {
           "meta": 6,
           "label": "Red Flower 23",
           "textures": [
-            "red_flower_block_1/J4"
+            "red_flower_block_1/red_flower_22"
           ]
         },
         {
           "meta": 7,
           "label": "Red Flower 24",
           "textures": [
-            "red_flower_block_1/J5"
+            "red_flower_block_1/red_flower_23"
           ]
         },
         {
           "meta": 8,
           "label": "Red Flower 25",
           "textures": [
-            "red_flower_block_1/J7"
+            "red_flower_block_1/red_flower_24"
           ]
         },
 		{
           "meta": 9,
           "label": "Cranberry Bush",
           "textures": [
-            "red_flower_block_1/cranberry"
+            "red_flower_block_1/red_flower_cranberry"
           ]
         }
       ]
@@ -3836,91 +3899,91 @@
           "meta": 0,
           "label": "Brown Mushroom 1",
           "textures": [
-            "brown_mushroom_block_0/1"
+            "brown_mushroom_block_0/mushroom_brown_0"
           ]
         },
         {
           "meta": 1,
           "label": "Brown Mushroom 2",
           "textures": [
-            "brown_mushroom_block_0/2"
+            "brown_mushroom_block_0/mushroom_brown_1"
           ]
         },
         {
           "meta": 2,
           "label": "Brown Mushroom 3",
           "textures": [
-            "brown_mushroom_block_0/3"
+            "brown_mushroom_block_0/mushroom_brown_2"
           ]
         },
         {
           "meta": 3,
           "label": "Brown Mushroom 4",
           "textures": [
-            "brown_mushroom_block_0/4"
+            "brown_mushroom_block_0/mushroom_brown_3"
           ]
         },
         {
           "meta": 4,
           "label": "Brown Mushroom 5",
           "textures": [
-            "brown_mushroom_block_0/5"
+            "brown_mushroom_block_0/mushroom_brown_4"
           ]
         },
         {
           "meta": 5,
           "label": "Brown Mushroom 6",
           "textures": [
-            "brown_mushroom_block_0/8"
+            "brown_mushroom_block_0/mushroom_brown_5"
           ]
         },
         {
           "meta": 6,
           "label": "Brown Mushroom 7",
           "textures": [
-            "brown_mushroom_block_0/9"
+            "brown_mushroom_block_0/mushroom_brown_6"
           ]
         },
         {
           "meta": 7,
           "label": "Brown Mushroom 8",
           "textures": [
-            "brown_mushroom_block_0/13"
+            "brown_mushroom_block_0/mushroom_brown_7"
           ]
         },
         {
           "meta": 8,
           "label": "Brown Mushroom 9",
           "textures": [
-            "brown_mushroom_block_0/14"
+            "brown_mushroom_block_0/mushroom_brown_8"
           ]
         },
         {
           "meta": 9,
           "label": "Brown Mushroom 10",
           "textures": [
-            "brown_mushroom_block_0/15"
+            "brown_mushroom_block_0/mushroom_brown_9"
           ]
         },
         {
           "meta": 10,
           "label": "Brown Mushroom 11",
           "textures": [
-            "brown_mushroom_block_0/16"
+            "brown_mushroom_block_0/mushroom_brown_10"
           ]
         },
         {
           "meta": 11,
           "label": "Brown Mushroom 12",
           "textures": [
-            "brown_mushroom_block_0/17"
+            "brown_mushroom_block_0/mushroom_brown_11"
           ]
         },
         {
           "meta": 12,
           "label": "Brown Mushroom 13",
           "textures": [
-            "brown_mushroom_block_0/21"
+            "brown_mushroom_block_0/mushroom_brown_12"
           ]
         }
       ]
@@ -3945,63 +4008,63 @@
           "meta": 0,
           "label": "Red Mushroom 1",
           "textures": [
-            "red_mushroom_block_0/0"
+            "red_mushroom_block_0/mushroom_red_0"
           ]
         },
         {
           "meta": 1,
           "label": "Red Mushroom 2",
           "textures": [
-            "red_mushroom_block_0/6"
+            "red_mushroom_block_0/mushroom_red_1"
           ]
         },
         {
           "meta": 2,
           "label": "Red Mushroom 3",
           "textures": [
-            "red_mushroom_block_0/7"
+            "red_mushroom_block_0/mushroom_red_2"
           ]
         },
         {
           "meta": 3,
           "label": "Red Mushroom 4",
           "textures": [
-            "red_mushroom_block_0/10"
+            "red_mushroom_block_0/mushroom_red_3"
           ]
         },
         {
           "meta": 4,
           "label": "Red Mushroom 5",
           "textures": [
-            "red_mushroom_block_0/11"
+            "red_mushroom_block_0/mushroom_red_4"
           ]
         },
         {
           "meta": 5,
           "label": "Red Mushroom 6",
           "textures": [
-            "red_mushroom_block_0/12"
+            "red_mushroom_block_0/mushroom_red_5"
           ]
         },
         {
           "meta": 6,
           "label": "Red Mushroom 7",
           "textures": [
-            "red_mushroom_block_0/18"
+            "red_mushroom_block_0/mushroom_red_6"
           ]
         },
         {
           "meta": 7,
           "label": "Red Mushroom 8",
           "textures": [
-            "red_mushroom_block_0/20"
+            "red_mushroom_block_0/mushroom_red_7"
           ]
         },
         {
           "meta": 8,
           "label": "Red Mushroom 9",
           "textures": [
-            "red_mushroom_block_0/24"
+            "red_mushroom_block_0/mushroom_red_8"
           ]
         }
       ]
@@ -4032,7 +4095,7 @@
       ]
     },
 		{
-		"blockName": "hopper_block",
+		"blockName": "hopper_block_0",
 		"blockID": 2067,
 		"blockType": "cuboid",
 		"hardness": 5,
@@ -4051,7 +4114,7 @@
 				"meta": 0,
 				"label": "Spruce Hopper",
 				"textures": [
-					"hopper_blocks/planks_spruce"
+					"wood_block_0/planks_spruce"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4063,7 +4126,7 @@
 				"meta": 1,
 				"label": "Birch Hopper",
 				"textures": [
-					"hopper_blocks/planks_birch"
+					"wood_block_0/planks_birch"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4075,7 +4138,7 @@
 				"meta": 2,
 				"label": "Jungle Hopper",
 				"textures": [
-					"hopper_blocks/planks_jungle"
+					"wood_block_0/planks_jungle"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4087,7 +4150,7 @@
 				"meta": 3,
 				"label": "Cobblestone Hopper",
 				"textures": [
-					"hopper_blocks/cobblestone"
+					"stone_block_1/stone_cobble"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4099,7 +4162,7 @@
 				"meta": 4,
 				"label": "Mossy Cobblestone Hopper",
 				"textures": [
-					"hopper_blocks/cobblestone_mossy"
+					"stone_block_1/stone_cobble_mossy"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4111,7 +4174,7 @@
 				"meta": 5,
 				"label": "Netherbrick Hopper",
 				"textures": [
-					"hopper_blocks/nether_brick"
+					"stone_block_3/brick_nether"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4123,7 +4186,7 @@
 				"meta": 6,
 				"label": "Desert Sandstone Hopper",
 				"textures": [
-					"hopper_blocks/sandstone_normal"
+					"stone_block_0/sandstone_normal"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4135,7 +4198,7 @@
 				"meta": 7,
 				"label": "Vivid Sandstone Hopper",
 				"textures": [
-					"hopper_blocks/3"
+					"stone_block_0/sandstone_vivid"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4147,7 +4210,7 @@
 				"meta": 8,
 				"label": "Vivid Dark Sandstone Hopper",
 				"textures": [
-					"hopper_blocks/18"
+					"stone_block_0/sandstone_vivid_dark"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4159,7 +4222,7 @@
 				"meta": 9,
 				"label": "Monochrome Sandstone Hopper",
 				"textures": [
-					"hopper_blocks/29"
+					"stone_block_0/sandstone_monochrome"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4171,7 +4234,7 @@
 				"meta": 10,
 				"label": "Monochrome Dark Sandstone Hopper",
 				"textures": [
-					"hopper_blocks/34"
+					"stone_block_0/sandstone_monochrome_dark"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4183,14 +4246,62 @@
 				"meta": 11,
 				"label": "Terracotta Hopper",
 				"textures": [
-					"hopper_blocks/23"
+					"stone_block_0/sandstone_terracotta"
 				],
 				"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
 					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
 					{ "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
 					]
-				}
+				},
+				{
+                "meta": 12,
+                "label": "Light Grey Stone Hopper",
+                "textures": [
+                    "stone_block_1/brick_light_grey"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 13,
+                "label": "Small Stone Brick Hopper",
+                "textures": [
+                    "stone_block_1/brick_stone_small"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 14,
+                "label": "Reach Pink Light Brick Hopper",
+                "textures": [
+                    "stone_block_2/brick_reach_light_pink"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 15,
+                "label": "Stormlands Dark Cobblestone Hopper",
+                "textures": [
+                    "stone_block_2/stone_cobble_stormlands_dark"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                }
 			]
 		},
 		{
@@ -4213,7 +4324,7 @@
 				"meta": 0,
 				"label": "Black Slate Tip",
 				"textures": [
-					"stone_block_1/0"
+					"stone_slate_0/slate_black"
 					],
 					"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4225,7 +4336,7 @@
 				"meta": 1,
 				"label": "Blue Slate Tip",
 				"textures": [
-					"stone_block_1/32"
+					"stone_slate_0/slate_blue"
 					],
 					"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -4237,14 +4348,50 @@
 				"meta": 2,
 				"label": "Red Slate Tip",
 				"textures": [
-					"stone_block_1/16"
+					"stone_slate_0/slate_red"
 					],
 					"cuboids": [
 					{ "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
 					{ "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
 					{ "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.275, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
 					]
-				}				
+				},
+				{
+                "meta": 3,
+                "label": "Brown Slate Tip",
+                "textures": [
+                    "stone_slate_0/slate_brown"
+                    ],
+                    "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.275, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 4,
+                "label": "Green Slate Tip",
+                "textures": [
+                    "stone_slate_0/slate_green"
+                    ],
+                    "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.275, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 5,
+                "label": "Gold Brick Tip",
+                "textures": [
+                    "metal_block_0/brick_metal_normal_gold"
+                    ],
+                    "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.625, "yMax": 1, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.275, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                }   			
 			]
 		},
 		{
@@ -4322,8 +4469,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/1",
-					"banner_block_0/1"
+					"banner_block_0/banner_grey_bottom",
+					"banner_block_0/banner_grey_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -4343,8 +4490,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/0",
-					"banner_block_0/0"
+					"banner_block_0/banner_grey_top",
+					"banner_block_0/banner_grey_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -4373,112 +4520,112 @@
 				"meta": 0,
 				"label": "Lannisport Keystone Orange Plaster",
 				"textures": [
-					"stone_block_2/0"
+					"stone_block_2/brick_lannisport"
 				]
 				},
 				{
 				"meta": 1,
 				"label": "Lannisport Keystone Yellow Plaster",
 				"textures": [
-					"stone_block_2/0"
+					"stone_block_2/brick_lannisport"
 				]
 				},
 				{
 				"meta": 2,
 				"label": "Lannisport Light Brick",
 				"textures": [
-					"stone_block_2/0"
+					"stone_block_2/brick_lannisport"
 				]
 				},
 				{
 				"meta": 3,
 				"label": "Northern Cobble",
 				"textures": [
-					"stone_block_2/2"
+					"stone_block_1/stone_cobble_northern"
 				]
 				},
 				{
 				"meta": 4,
 				"label": "Icy Northern Cobble",
 				"textures": [
-					"stone_block_2/1"
+					"stone_block_1/stone_cobble_northern_icy"
 				]
 				},
 				{
 				"meta": 5,
-				"label": "Reach Light Brick",
+				"label": "Faint Light Grey Stone",
 				"textures": [
-					"stone_block_2/Reach Light Brick"
+					"stone_block_2/brick_reach_light"
 				]
 				},
 				{
 				"meta": 6,
 				"label": "Reach Pink Light Brick",
 				"textures": [
-					"stone_block_2/Reach Pink Light Brick"
+					"stone_block_2/brick_reach_light_pink"
 				]
 				},
 				{
 				"meta": 7,
 				"label": "Reach Pink Cobblestone",
 				"textures": [
-					"stone_block_2/Reach Pink Cobblestone"
+					"stone_block_2/stone_cobble_reach_pink"
 				]
 				},
 				{
 				"meta": 8,
 				"label": "Reach Pink Brick",
 				"textures": [
-					"stone_block_2/Reach Pink Brick"
+					"stone_block_2/brick_reach_pink"
 				]
 				},
 				{
 				"meta": 9,
-				"label": "Lannisport Orange Brick",
+				"label": "Lannisport Slate",
 				"textures": [
-					"stone_block_2/orangebrick"
+					"stone_slate_0/slate_lannisport"
 				]
 				},
 				{
 				"meta": 10,
 				"label": "Stormlands Cobblestone",
 				"textures": [
-					"stone_block_2/StormlandsCobble"
+					"stone_block_2/stone_cobble_stormlands"
 				]
 				},
 				{
 				"meta": 11,
 				"label": "Stormlands Brick",
 				"textures": [
-					"stone_block_2/StormlandsBrick"
+					"stone_block_2/brick_stormlands_small"
 				]
 				},
 				{
 				"meta": 12,
 				"label": "Stormlands Large Brick",
 				"textures": [
-					"stone_block_2/3"
+					"stone_block_2/brick_stormlands_large"
 				]
 				},
 				{
 				"meta": 13,
 				"label": "Stormlands Dark Cobblestone",
 				"textures": [
-					"stone_block_2/StormlandsEmerald"
+					"stone_block_2/stone_cobble_stormlands_dark"
 				]
 				},
 				{
                 "meta": 14,
                 "label": "Light Stone",
                 "textures": [
-                    "stone_block_2/stone_light"
+                    "stone_block_1/stone_light"
                 ]
                 },
 				{
                 "meta": 15,
                 "label": "Stormlands Mossy Cobblestone",
                 "textures": [
-                    "stone_block_2/cobblestonestormlands_mossy"
+                    "stone_block_2/stone_cobble_stormlands_mossy"
                 ]
                 }
 			]
@@ -4497,7 +4644,7 @@
           			"meta": 0,
           			"label": "Forest Sounds",
           			"textures": [
-            			"solid_blocks_0/dirt_bone"
+            			"ground_block_0/dirt_bone"
           			],
           			"soundList": [ "wolf_howls", "frog_croaks", "owl_hoot" ],
           			"type" : "period:60,random-add:60,start-time:1900,end-time:500"
@@ -4506,7 +4653,7 @@
           			"meta": 1,
           			"label": "Farm Sounds",
           			"textures": [
-            			"solid_blocks_0/dirt_bone"
+            			"ground_block_0/dirt_bone"
           			],
           			"soundList": [ "dog_barks", "cow_moos", "rooster_crows" ],
           			"type" : "period:60,random-add:60,start-time:600,end-time:1800"
@@ -4545,8 +4692,8 @@
       "blockName": "stone_slab_stair_0",
       "blockID": 2075,
       "blockType": "stair",
-      "modelBlockName": "six_sided_blocks_0",
-      "modelBlockMeta": 5,
+      "modelBlockName": "43",
+      "modelBlockMeta": 0,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
         {
@@ -4573,30 +4720,30 @@
           "meta": 0,
           "label": "Mossy Spruce Log",
           "textures": [
-            "log_block_1/5",
-            "log_block_1/2"
+            "log_block_1/bark_spruce_mossy_top",
+            "log_block_1/bark_spruce_mossy"
           ]
         },
         {
           "meta": 1,
           "label": "Mossy Birch Log",
           "textures": [
-            "log_block_1/b5",
-            "log_block_1/b1"
+            "log_block_1/bark_birch_mossy_top",
+            "log_block_1/bark_birch_mossy"
           ]
         },
         {
           "meta": 2,
           "label": "Mossy Jungle Log",
           "textures": [
-            "log_block_1/j5",
-            "log_block_1/j1"
+            "log_block_1/bark_jungle_mossy_top",
+            "log_block_1/bark_jungle_mossy"
           ]
         }        
       ]
     },
 	{
-   		   	"blockName": "rope_block_0",
+   		   	"blockName": "rail_block_0",
       		"blockID": 2080,
       		"blockType": "rail",
       		"creativeTab": "WesterosDeco",
@@ -4605,8 +4752,8 @@
           			"meta": 0,
           			"label": "Horizontal Rope",
           			"textures": [
-            			"rope_block_0/rope",
-            			"rope_block_0/rope_turned"
+            			"rail_block_0/rope",
+            			"rail_block_0/rope_turned"
           		]
         	}
       	]
@@ -4621,8 +4768,8 @@
           			"meta": 0,
           			"label": "Horizontal Net",
           			"textures": [
-            			"rope_block_0/Net_Large",
-            			"rope_block_0/Net_Large5"
+            			"rail_block_0/net_large",
+            			"rail_block_0/net_large_turned"
           			]
         		}
 			]
@@ -4636,14 +4783,14 @@
         		{
           			"meta": 0,
           			"label": "Nights Watch Bed",
-		            "itemTexture" : "bed_block_0/1",
+		            "itemTexture" : "bed_block_0/bed_night_watch_1",
           			"textures": [
-            			"bed_block_0/2",
-            			"bed_block_0/1",
-            			"bed_block_0/10",
-            			"bed_block_0/9",
-            			"bed_block_0/11",
-            			"bed_block_0/8"
+            			"bed_block_0/bed_night_watch_0",
+            			"bed_block_0/bed_night_watch_1",
+            			"bed_block_0/bed_night_watch_2",
+            			"bed_block_0/bed_night_watch_3",
+            			"bed_block_0/bed_night_watch_4",
+            			"bed_block_0/bed_night_watch_5"
           			]
         		}
 				
@@ -4658,14 +4805,14 @@
         		{
           			"meta": 0,
           			"label": "Northern Bed",
-		            "itemTexture" : "bed_block_0/5",
+		            "itemTexture" : "bed_block_0/bed_north_1",
           			"textures": [
-            			"bed_block_0/6",
-            			"bed_block_0/5",
-            			"bed_block_0/14",
-            			"bed_block_0/13",
-            			"bed_block_0/15",
-            			"bed_block_0/12"
+            			"bed_block_0/bed_north_0",
+            			"bed_block_0/bed_north_1",
+            			"bed_block_0/bed_north_2",
+            			"bed_block_0/bed_north_3",
+            			"bed_block_0/bed_north_4",
+            			"bed_block_0/bed_north_5"
           			]
         		}
 				
@@ -4680,14 +4827,14 @@
         		{
           			"meta": 0,
           			"label": "Straw Bed",
-		            "itemTexture" : "bed_block_0/17",
+		            "itemTexture" : "bed_block_0/bed_straw_1",
           			"textures": [
-            			"bed_block_0/18",
-            			"bed_block_0/17",
-            			"bed_block_0/26",
-            			"bed_block_0/25",
-            			"bed_block_0/24",
-            			"bed_block_0/27"
+            			"bed_block_0/bed_straw_0",
+            			"bed_block_0/bed_straw_1",
+            			"bed_block_0/bed_straw_2",
+            			"bed_block_0/bed_straw_3",
+            			"bed_block_0/bed_straw_4",
+            			"bed_block_0/bed_straw_5"
           			]
         		}
 				
@@ -4702,14 +4849,14 @@
         		{
           			"meta": 0,
           			"label": "Itchy Straw Bed",
-		            "itemTexture" : "bed_block_0/21",
+		            "itemTexture" : "bed_block_0/bed_straw_itchy_1",
           			"textures": [
-            			"bed_block_0/22",
-            			"bed_block_0/21",
-            			"bed_block_0/30",
-            			"bed_block_0/29",
-            			"bed_block_0/31",
-            			"bed_block_0/28"
+            			"bed_block_0/bed_straw_itchy_0",
+            			"bed_block_0/bed_straw_itchy_1",
+            			"bed_block_0/bed_straw_itchy_2",
+            			"bed_block_0/bed_straw_itchy_3",
+            			"bed_block_0/bed_straw_itchy_4",
+            			"bed_block_0/bed_straw_itchy_5"
           			]
         		}
 				
@@ -4724,14 +4871,14 @@
         		{
           			"meta": 0,
           			"label": "Noble Blue Bed",
-		            "itemTexture" : "bed_block_0/33",
+		            "itemTexture" : "bed_block_0/bed_noble_blue_1",
           			"textures": [
-            			"bed_block_0/34",
-            			"bed_block_0/33",
-            			"bed_block_0/42",
-            			"bed_block_0/41",
-            			"bed_block_0/43",
-            			"bed_block_0/40"
+            			"bed_block_0/bed_noble_blue_0",
+            			"bed_block_0/bed_noble_blue_1",
+            			"bed_block_0/bed_noble_blue_2",
+            			"bed_block_0/bed_noble_blue_3",
+            			"bed_block_0/bed_noble_blue_4",
+            			"bed_block_0/bed_noble_blue_5"
           			]
         		}
 				
@@ -4746,14 +4893,14 @@
         		{
           			"meta": 0,
           			"label": "Noble Red Bed",
-		            "itemTexture" : "bed_block_0/37",
+		            "itemTexture" : "bed_block_0/bed_noble_red_1",
           			"textures": [
-            			"bed_block_0/38",
-            			"bed_block_0/37",
-            			"bed_block_0/46",
-            			"bed_block_0/45",
-            			"bed_block_0/47",
-            			"bed_block_0/44"
+            			"bed_block_0/bed_noble_red_0",
+            			"bed_block_0/bed_noble_red_1",
+            			"bed_block_0/bed_noble_red_2",
+            			"bed_block_0/bed_noble_red_3",
+            			"bed_block_0/bed_noble_red_4",
+            			"bed_block_0/bed_noble_red_5"
           			]
         		}
 				
@@ -4768,14 +4915,14 @@
         		{
           			"meta": 0,
           			"label": "Patchy Pale Red Bed",
-		            "itemTexture" : "bed_block_0/49",
+		            "itemTexture" : "bed_block_0/bed_patchy_red_1",
           			"textures": [
-            			"bed_block_0/50",
-            			"bed_block_0/49",
-            			"bed_block_0/58",
-            			"bed_block_0/57",
-            			"bed_block_0/59",
-            			"bed_block_0/56"
+            			"bed_block_0/bed_patchy_red_0",
+            			"bed_block_0/bed_patchy_red_1",
+            			"bed_block_0/bed_patchy_red_2",
+            			"bed_block_0/bed_patchy_red_3",
+            			"bed_block_0/bed_patchy_red_4",
+            			"bed_block_0/bed_patchy_red_5"
           			]
         		}
 				
@@ -4790,14 +4937,14 @@
         		{
           			"meta": 0,
           			"label": "Patchy Pale Green Bed",
-		            "itemTexture" : "bed_block_0/53",
+		            "itemTexture" : "bed_block_0/bed_patchy_green_1",
           			"textures": [
-            			"bed_block_0/54",
-            			"bed_block_0/53",
-            			"bed_block_0/62",
-            			"bed_block_0/61",
-            			"bed_block_0/63",
-            			"bed_block_0/60"
+            			"bed_block_0/bed_patchy_green_0",
+            			"bed_block_0/bed_patchy_green_1",
+            			"bed_block_0/bed_patchy_green_2",
+            			"bed_block_0/bed_patchy_green_3",
+            			"bed_block_0/bed_patchy_green_4",
+            			"bed_block_0/bed_patchy_green_5"
           			]
         		}
 				
@@ -4812,14 +4959,14 @@
         		{
           			"meta": 0,
           			"label": "Hammock",
-		            "itemTexture" : "bed_block_0/65",
+		            "itemTexture" : "bed_block_0/bed_hammock_1",
           			"textures": [
-            			"bed_block_0/66",
-            			"bed_block_0/65",
-            			"bed_block_0/74",
-            			"bed_block_0/73",
-            			"bed_block_0/75",
-            			"bed_block_0/72"
+            			"bed_block_0/bed_hammock_0",
+            			"bed_block_0/bed_hammock_1",
+            			"bed_block_0/bed_hammock_2",
+            			"bed_block_0/bed_hammock_3",
+            			"bed_block_0/bed_hammock_4",
+            			"bed_block_0/bed_hammock_5"
           			]
         		}
 				
@@ -4835,7 +4982,7 @@
 			"subBlocks": [
 				{
 				"meta": 0,
-				"label": "Lannisport Orange Brick Stair"
+				"label": "Lannisport Slate Stair"
 				}
 			]
 		},
@@ -4858,7 +5005,7 @@
           "label": "Spruce Log Rope",
           "textures": [
             "log_block_0/tree_top",
-            "log_block_0/Winchsprucerope"
+            "log_block_0/bark_spruce_rope"
           ]
         },
         {
@@ -4866,7 +5013,7 @@
           "label": "Spruce Log Chain",
           "textures": [
             "log_block_0/tree_top",
-            "log_block_0/Winchsprucechain"
+            "log_block_0/bark_spruce_chain"
           ]
         },
         {
@@ -4874,7 +5021,7 @@
           "label": "Jungle Log Rope",
           "textures": [
             "log_block_0/tree_top",
-            "log_block_0/Winchjungleerope"
+            "log_block_0/bark_jungle_rope"
           ]
         },
 		{
@@ -4882,7 +5029,7 @@
           "label": "Jungle Log Chain",
           "textures": [
             "log_block_0/tree_top",
-            "log_block_0/Winchjungleechain"
+            "log_block_0/bark_jungle_chain"
           ]
         }  		
       ]
@@ -4912,8 +5059,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/3",
-					"banner_block_0/3"
+					"banner_block_0/banner_red_bottom",
+					"banner_block_0/banner_red_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -4933,8 +5080,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/2",
-					"banner_block_0/2"
+					"banner_block_0/banner_red_top",
+					"banner_block_0/banner_red_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -4973,8 +5120,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/5",
-					"banner_block_0/5"
+					"banner_block_0/banner_black_bottom",
+					"banner_block_0/banner_black_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -4994,8 +5141,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/4",
-					"banner_block_0/4"
+					"banner_block_0/banner_black_top",
+					"banner_block_0/banner_black_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5034,8 +5181,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/7",
-					"banner_block_0/7"
+					"banner_block_0/banner_seven_bottom",
+					"banner_block_0/banner_seven_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5055,8 +5202,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/6",
-					"banner_block_0/6"
+					"banner_block_0/banner_seven_top",
+					"banner_block_0/banner_seven_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5095,8 +5242,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/9",
-					"banner_block_0/9"
+					"banner_block_0/banner_cream_bottom",
+					"banner_block_0/banner_cream_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5110,14 +5257,14 @@
 				},
 				{
 			"meta": 1,
-			"label": "Cream Banner Bottom",
+			"label": "Cream Banner Top",
 			"textures": [
 					"transparent",
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/8",
-					"banner_block_0/8"
+					"banner_block_0/banner_cream_top",
+					"banner_block_0/banner_cream_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5156,8 +5303,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/11",
-					"banner_block_0/11"
+					"banner_block_0/banner_blue_bottom",
+					"banner_block_0/banner_blue_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5171,14 +5318,14 @@
 				},
 				{
 			"meta": 1,
-			"label": "Blue Banner Bottom",
+			"label": "Blue Banner Top",
 			"textures": [
 					"transparent",
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/10",
-					"banner_block_0/10"
+					"banner_block_0/banner_blue_top",
+					"banner_block_0/banner_blue_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5217,8 +5364,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/13",
-					"banner_block_0/13"
+					"banner_block_0/banner_brown_bottom",
+					"banner_block_0/banner_brown_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5238,8 +5385,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/12",
-					"banner_block_0/12"
+					"banner_block_0/banner_brown_top",
+					"banner_block_0/banner_brown_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5278,8 +5425,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/15",
-					"banner_block_0/15"
+					"banner_block_0/banner_cyan_bottom",
+					"banner_block_0/banner_cyan_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5293,14 +5440,14 @@
 				},
 				{
 			"meta": 1,
-			"label": "Brown Banner Top",
+			"label": "Cyan Banner Top",
 			"textures": [
 					"transparent",
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/14",
-					"banner_block_0/14"
+					"banner_block_0/banner_cyan_top",
+					"banner_block_0/banner_cyan_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5339,8 +5486,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/17",
-					"banner_block_0/17"
+					"banner_block_0/banner_green_bottom",
+					"banner_block_0/banner_green_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5360,8 +5507,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/16",
-					"banner_block_0/16"
+					"banner_block_0/banner_green_top",
+					"banner_block_0/banner_green_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5400,8 +5547,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/19",
-					"banner_block_0/19"
+					"banner_block_0/banner_orange_bottom",
+					"banner_block_0/banner_orange_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5421,8 +5568,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/18",
-					"banner_block_0/18"
+					"banner_block_0/banner_orange_top",
+					"banner_block_0/banner_orange_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5461,8 +5608,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/21",
-					"banner_block_0/21"
+					"banner_block_0/banner_pinkpurple_bottom",
+					"banner_block_0/banner_pinkpurple_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5482,8 +5629,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/20",
-					"banner_block_0/20"
+					"banner_block_0/banner_pinkpurple_top",
+					"banner_block_0/banner_pinkpurple_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5522,8 +5669,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/23",
-					"banner_block_0/23"
+					"banner_block_0/banner_purple_bottom",
+					"banner_block_0/banner_purple_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5543,8 +5690,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/22",
-					"banner_block_0/22"
+					"banner_block_0/banner_purple_top",
+					"banner_block_0/banner_purple_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5583,8 +5730,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/25",
-					"banner_block_0/25"
+					"banner_block_0/banner_rhllor_bottom",
+					"banner_block_0/banner_rhllor_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5598,14 +5745,14 @@
 				},
 				{
 			"meta": 1,
-			"label": "Pink and Purple Banner Top",
+			"label": "Lord of Light R'hllor Banner Top",
 			"textures": [
 					"transparent",
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/24",
-					"banner_block_0/24"
+					"banner_block_0/banner_rhllor_top",
+					"banner_block_0/banner_rhllor_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5644,8 +5791,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/27",
-					"banner_block_0/27"
+					"banner_block_0/banner_yellow_bottom",
+					"banner_block_0/banner_yellow_bottom"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5665,8 +5812,8 @@
 					"transparent",
 					"transparent",
 					"transparent",
-					"banner_block_0/26",
-					"banner_block_0/26"
+					"banner_block_0/banner_yellow_top",
+					"banner_block_0/banner_yellow_top"
 				],
 				"boundingBox": {
 					"xMin": 0.96875,
@@ -5815,7 +5962,7 @@
           "meta": 0,
           "label": "Dark Northern Wood Slab",
           "textures": [
-          "wood_colours/wood_dark"
+          "wood_block_1/wood_northern"
           ]
         }
          ]
@@ -5858,8 +6005,8 @@
           			"meta": 0,
           			"label": "Packed Snow",
           			"textures": [
-            			"rope_block_0/packed_snow",
-            			"rope_block_0/packed_snow_curve"
+            			"rail_block_0/packed_snow",
+            			"rail_block_0/packed_snow_turned"
           			]
         		}
 			]
@@ -5884,27 +6031,27 @@
           "meta": 0,
           "label": "Vivid Sandstone Wall",
           "textures": [
-            "stone_block_0/22",
-            "stone_block_0/22",
-            "stone_block_0/3"
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid"
           ]
         },
         {
           "meta": 2,
           "label": "Vivid Mossy Sandstone Wall",
           "textures": [
-            "stone_block_0/22",
-            "stone_block_0/22",
-            "stone_block_0/7"
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid_top",
+            "stone_block_0/sandstone_vivid_mossy"
           ]
         },
         {
           "meta": 3,
           "label": "Vivid Dark Sandstone Wall",
           "textures": [
-            "stone_block_0/21",
-            "stone_block_0/21",
-            "stone_block_0/18"
+            "stone_block_0/sandstone_vivid_dark_top",
+            "stone_block_0/sandstone_vivid_dark_top",
+            "stone_block_0/sandstone_vivid_dark"
           ]
         },
         {
@@ -5918,52 +6065,87 @@
           "meta": 5,
           "label": "Monochrome Sandstone Wall",
           "textures": [
-            "stone_block_0/30",
-            "stone_block_0/30",
-            "stone_block_0/29"
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome"
           ]
         },
         {
           "meta": 6,
           "label": "Monochrome Mossy Sandstone Wall",
           "textures": [
-            "stone_block_0/30",
-            "stone_block_0/30",
-            "stone_block_0/37"
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome_top",
+            "stone_block_0/sandstone_monochrome_mossy"
           ]
         },
         {
           "meta": 7,
           "label": "Monochrome Dark Sandstone Wall",
           "textures": [
-            "stone_block_0/35",
-            "stone_block_0/35",
-            "stone_block_0/34"
+            "stone_block_0/sandstone_monochrome_dark_top",
+            "stone_block_0/sandstone_monochrome_dark_top",
+            "stone_block_0/sandstone_monochrome_dark"
           ]
         },
         {
           "meta": 8,
           "label": "Terracotta Wall",
           "textures": [
-            "stone_block_0/25",
-            "stone_block_0/25",
-            "stone_block_0/23"
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta"
           ]
         },
         {
           "meta": 9,
           "label": "Terracotta Engraved Wall",
           "textures": [
-            "stone_block_0/25",
-            "stone_block_0/25",
-            "stone_block_0/24"
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta_top",
+            "stone_block_0/sandstone_terracotta_engraved"
           ]
         },
 		{
           "meta": 10,
           "label": "Dark Brown Sandstone Wall",
           "textures": [
-            "stone_block_0/47"
+            "stone_block_0/sandstone_brown_dark"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Black Slate Wall",
+          "textures": [
+            "stone_slate_0/slate_black"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Blue Slate Wall",
+          "textures": [
+            "stone_slate_0/slate_blue"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Red Slate Wall",
+          "textures": [
+            "stone_slate_0/slate_red"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Brown Slate Wall",
+          "textures": [
+            "stone_slate_0/slate_brown"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Green Slate Wall",
+          "textures": [
+            "stone_slate_0/slate_green"
           ]
         }
       ]
@@ -5984,6 +6166,1121 @@
           			]
         		}
 			]
-    	}
+    	},
+        {
+        "blockName": "piston_block_1",
+        "blockID": 2122,
+        "blockType": "cuboid-nsewud",
+        "hardness": 3,
+        "stepSound": "wood",
+        "material": "wood",
+        "resistance": 2,
+        "harvestLevel": [
+            {
+            "tool": "axe",
+            "level": 1
+            }
+        ],
+        "creativeTab": "WesterosDeco",
+            "subBlocks": [
+                {
+                "meta": 0,
+                "label": "Sticky Piston Extension",
+                "textures": [
+                    "piston_block_0/piston_side",
+                    "piston_block_0/piston_side_rotated",
+                    "piston_block_0/piston_top_sticky"
+                    ],
+                    "cuboids": [
+                    { "xMin": 0.249, "xMax": 1, "yMin": 0.3755, "yMax": 0.6245, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 0.249, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 1,1,1,1,2,2 ] }
+                    ]
+                }
+            ]
+        },
+    {
+            "blockName": "rail_block_1",
+            "blockID": 2125,
+            "blockType": "rail",
+            "creativeTab": "WesterosDeco",
+            "subBlocks": [
+                {
+                    "meta": 0,
+                    "label": "Horizontal Chain",
+                    "textures": [
+                        "rail_block_0/chain",
+                        "rail_block_0/chain_turned"
+                ]
+            }
+        ]
+    },
+            {
+            "blockName": "stone_block_3",
+            "blockID": 2126,
+            "blockType": "solid",
+            "hardness": 5,
+            "stepSound": "stone",
+            "material": "rock",
+            "resistance": 10,
+            "creativeTab": "WesterosBlocks",
+            "subBlocks": [
+                {
+                "meta": 0,
+                "label": "Brown Slate",
+                "textures": [
+                    "stone_slate_0/slate_brown"
+                ]
+                },
+                {
+                "meta": 1,
+                "label": "Green Slate",
+                "textures": [
+                    "stone_slate_0/slate_green"
+                ]
+                },
+                {
+                "meta": 2,
+                "label": "Ornate Sandstone",
+                "textures": [
+                    "stone_block_0/sandstone_ornate"
+                ]
+                },
+                {
+                "meta": 3,
+                "label": "Ornate Marble",
+                "textures": [
+                    "stone_block_3/marble_ornate"
+                ]
+                },
+                {
+                "meta": 4,
+                "label": "TerrainSet Stormlands",
+                "textures": [
+                    "stone_terrainsets_0/stone_stormlands"
+                ]
+                },
+                {
+                "meta": 5,
+                "label": "Blue/Green Carved Sandstone",
+                "textures": [
+                    "stone_block_0/sandstone_carved_blue"
+                ]
+                },
+                {
+                "meta": 6,
+                "label": "Red/Orange Carved Sandstone",
+                "textures": [
+                    "stone_block_0/sandstone_carved_red"
+                ]
+                },
+                {
+                "meta": 7,
+                "label": "Small White Bricks",
+                "textures": [
+                    "stone_block_1/bricks_white_small"
+                ]
+                },
+                {
+                "meta": 8,
+                "label": "Small Smooth Stone Bricks",
+                "textures": [
+                    "stone_block_1/bricks_stone_small_smooth"
+                ]
+                },
+                {
+                "meta": 9,
+                "label": "Dorne Dull Terracotta",
+                "textures": [
+                    "stone_block_0/sandstone_terracotta_dull_top",
+                    "stone_block_0/sandstone_terracotta_dull_top",
+                    "stone_block_0/sandstone_terracotta_dull"
+                ]
+                },
+                {
+                "meta": 10,
+                "label": "Dorne Light Terracotta",
+                "textures": [
+                    "stone_block_0/sandstone_terracotta_light_top",
+                    "stone_block_0/sandstone_terracotta_light_top",
+                    "stone_block_0/sandstone_terracotta_light"
+                ]
+                },
+                {
+                "meta": 11,
+                "label": "Dorne Dark Sandstone",
+                "textures": [
+                    "stone_block_0/sandstone_normal_dark_top",
+                    "stone_block_0/sandstone_normal_dark_top",
+                    "stone_block_0/sandstone_normal_dark"
+                ]
+                },
+                {
+                "meta": 12,
+                "label": "Dorne Mud Plaster",
+                "textures": [
+                    "stone_block_3/plaster_dornish_light"
+                ]
+                },
+                {
+                "meta": 13,
+                "label": "Dorne Dark Mud Plaster",
+                "textures": [
+                    "stone_block_3/plaster_dornish_dark"
+                ]
+                },
+                {
+                "meta": 14,
+                "label": "Casterly Rock Crimson Plaster",
+                "textures": [
+                    "stone_block_3/plaster_casterly_crimson"
+                ]
+                }
+            ]
+        },
+            {
+      "blockName": "stone_slab_block_2",
+      "blockIDs": [
+        2127,
+        2128
+      ],
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Brown Slate Slab",
+          "textures": [
+            "stone_slate_0/slate_brown"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Green Slate Slab",
+          "textures": [
+            "stone_slate_0/slate_green"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Reach Pink Light Brick Slab",
+          "textures": [
+            "stone_block_2/brick_reach_light_pink"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Stormlands Dark Cobblestone Slab",
+          "textures": [
+            "stone_block_2/stone_cobble_stormlands_dark"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Dorne Dull Terracotta Slab",
+          "textures": [
+            "stone_block_0/sandstone_terracotta_dull"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Dorne Light Terracotta Slab",
+          "textures": [
+            "stone_block_0/sandstone_terracotta_light"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Dorne Dark Sandstone Slab",
+          "textures": [
+            "stone_block_0/sandstone_normal_dark"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Casterly Rock Crimson Plaster Slab",
+          "textures": [
+            "stone_block_3/plaster_casterly_crimson"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_0",
+      "blockID": 2129,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_3",
+      "modelBlockMeta": 0,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Brown Slate Stair"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_1",
+      "blockID": 2130,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_3",
+      "modelBlockMeta": 1,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Green Slate Stair"
+        }
+      ]
+    },
+    {
+      "blockName": "fence_block_2",
+      "blockID": 2131,
+      "blockType": "fence",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Black Slate Fence",
+          "textures": [
+            "stone_slate_0/slate_black"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Blue Slate Fence",
+          "textures": [
+            "stone_slate_0/slate_blue"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Red Slate Fence",
+          "textures": [
+            "stone_slate_0/slate_red"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Brown Slate Fence",
+          "textures": [
+            "stone_slate_0/slate_brown"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Green Slate Fence",
+          "textures": [
+            "stone_slate_0/slate_green"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Reach Pink Light Brick Fence",
+          "textures": [
+            "stone_block_2/brick_reach_light_pink"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Stormlands Dark Cobblestone Fence",
+          "textures": [
+            "stone_block_2/stone_cobble_stormlands_dark"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Dorne Dull Terracotta Fence",
+          "textures": [
+             "stone_block_0/sandstone_terracotta_dull"
+           ]
+        },
+        {
+          "meta": 8,
+          "label": "Dorne Light Terracotta Fence",
+          "textures": [
+             "stone_block_0/sandstone_terracotta_light"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Dorne Dark Sandstone Fence",
+          "textures": [
+             "stone_block_0/sandstone_normal_dark"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Palm Fence",
+          "textures": [
+             "log_block_1/log_palm"
+          ]
+        }
+      ]
+    },
+     {
+      "blockName": "furnace_block_0",
+      "blockID": 2132,
+      "blockType": "furnace",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875F,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Brick Furnace",
+          "textures": [
+            "furnace_block_0/brick_furnace_bottom",
+            "furnace_block_0/brick_furnace_top",
+            "furnace_block_0/brick_furnace_side",
+            "furnace_block_0/brick_furnace_front_on_still",
+            "furnace_block_0/brick_furnace_front_off"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Always Active Brick Furnace",
+          "type": "always-on:true",
+          "textures": [
+            "furnace_block_0/brick_furnace_bottom",
+            "furnace_block_0/brick_furnace_top",
+            "furnace_block_0/brick_furnace_side",
+            "furnace_block_0/brick_furnace_front_on_still",
+            "furnace_block_0/brick_furnace_front_on_still"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "furnace_block_1",
+      "blockID": 2133,
+      "blockType": "furnace",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875F,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Sandstone Furnace",
+          "textures": [
+            "furnace_block_0/sandstone_mono_furnace_bottom",
+            "furnace_block_0/sandstone_mono_furnace_top",
+            "furnace_block_0/sandstone_mono_furnace_side",
+            "furnace_block_0/sandstone_mono_furnace_front_on_still",
+            "furnace_block_0/sandstone_mono_furnace_front_off"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Always Active Brick Furnace",
+          "type": "always-on:true",
+          "textures": [
+            "furnace_block_0/sandstone_mono_furnace_bottom",
+            "furnace_block_0/sandstone_mono_furnace_top",
+            "furnace_block_0/sandstone_mono_furnace_side",
+            "furnace_block_0/sandstone_mono_furnace_front_on_still",
+            "furnace_block_0/sandstone_mono_furnace_front_on_still"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "furnace_block_2",
+      "blockID": 2134,
+      "blockType": "furnace",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875F,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 1,
+          "label": "Always Active Furnace",
+          "textures": [
+            "furnace_block_0/furnace_bottom",
+            "furnace_block_0/furnace_top",
+            "furnace_block_0/furnace_side",
+            "furnace_block_0/furnace_front_on_still",
+            "furnace_block_0/furnace_front_on_still"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_2",
+      "blockID": 2135,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_2",
+      "modelBlockMeta": 6,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Reach Pink Light Brick Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "wool_slab_block_0",
+      "blockIDs": [
+        2136,
+        2137
+      ],
+      "blockType": "slab",
+      "hardness": 1.5,
+      "stepSound": "cloth",
+      "material": "cloth",
+      "resistance": 4,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "White Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_white"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Orange Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_orange"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Light Brown Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_light_brown"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Light Blue Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_light_blue"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Yellow Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_yellow"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Dirty White Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_dirty_white"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Pink Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_pink"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Gray Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_gray"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "wool_slab_block_1",
+      "blockIDs": [
+        2138,
+        2139
+      ],
+      "blockType": "slab",
+      "hardness": 1.5,
+      "stepSound": "cloth",
+      "material": "cloth",
+      "resistance": 4,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Light Gray Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_light_gray"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Cyan Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_cyan"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Purple Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_purple"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Blue Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_blue"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Brown Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_brown"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Green Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_green"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Red Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_red"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Black Wool Slab",
+          "textures": [
+            "wool_colours/wool_colored_black"
+          ]
+        }
+      ]
+    },
+    {
+        "blockName" : "door_spruce",
+        "blockID" : 2140,
+        "blockType" : "door",
+        "hardness" : 2.0,
+        "stepSound" : "wood",
+        "material" : "wood",
+        "resistance" : 5.0,
+        "creativeTab" : "WesterosDeco",
+        "subBlocks" : [
+            {
+                "meta" : 0,
+                "label": "Spruce Door",
+                "textures" : [ "door_block_0/door_spruce_top", "door_block_0/door_spruce_bottom" ]
+            }
+        ]
+    },
+    {
+      "blockName": "sand_layer_1",
+      "blockID": 2141,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "testStepSound",
+      "material": "sand",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Terracotta Sand Layer",
+          "textures": [
+            "sand_block_0/sand_terracotta"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_2",
+      "blockID": 2142,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "testStepSound",
+      "material": "sand",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pink/Orange Sand Layer",
+          "textures": [
+            "sand_block_0/sand_pinkorange"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_3",
+      "blockID": 2143,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "testStepSound",
+      "material": "sand",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Red Sand Layer",
+          "textures": [
+            "sand_block_0/sand_red"
+          ]
+        }
+      ]
+    },
+    {
+        "blockName" : "dornish_pane_0",
+        "blockID" : 2144,
+        "blockType" : "pane",
+        "hardness" : 1.0,
+        "stepSound" : "stone",
+        "material" : "stone",
+        "resistance" : 3.0,
+        "creativeTab" : "WesterosDeco",
+        "subBlocks" : [
+            {
+                "meta" : 0,
+                "label" : "Dorne Carved Stone Window",
+                "textures" : [ "glass_pane_block_0/moorish_stone_window_pane" ]
+            },
+            {
+                "meta" : 1,
+                "label" : "Dorne Carved Wooden Window",
+                "textures" : [ "glass_pane_block_0/moorish_wood_window_pane" ]
+            }
+        ]
+    },
+    {
+      "blockName" : "halfdoor_block_3",
+      "blockID" : 2145,
+      "itemID" : 12024,
+      "blockType" : "halfdoor",
+      "hardness" : 2.0,
+      "stepSound" : "wood",
+      "material" : "wood",
+      "resistance" : 5.0,
+      "creativeTab" : "WesterosDeco",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "Dorne Red Window Shutters",
+          "textures" : [ "halfdoor_block_0/shutters_dorne" ]
+        }
+      ]
+    },
+    {
+      "blockName" : "halfdoor_block_4",
+      "blockID" : 2146,
+      "itemID" : 12024,
+      "blockType" : "halfdoor",
+      "hardness" : 2.0,
+      "stepSound" : "wood",
+      "material" : "wood",
+      "resistance" : 5.0,
+      "creativeTab" : "WesterosDeco",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "Reach Blue Window Shutters",
+          "textures" : [ "halfdoor_block_0/shutters_reach" ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_3",
+      "blockID": 2147,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_2",
+      "modelBlockMeta": 13,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Stormlands Dark Cobblestone Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "log_block_5",
+      "blockID": 2148,
+      "blockType": "log",
+      "stepSound": "wood",
+      "material": "wood",
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Palm Tree Log",
+          "textures": [
+            "log_block_1/log_palm_top",
+            "log_block_1/log_palm"
+          ]
+        }    
+      ]
+    },
+    {
+      "blockName": "solid_blocks_1",
+      "blockID": 2149,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "dirt",
+      "material": "ground",
+      "resistance": 2,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Reach Gravel",
+          "textures": [
+            "ground_block_0/gravel_reach"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Dorne Dry Soil",
+          "textures": [
+            "ground_block_0/soil_dried"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Dorne Dusty Dirt",
+          "textures": [
+            "ground_block_0/dirt_dusty"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_wall_block_2",
+      "blockID": 2150,
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Dorne Dull Terracotta Wall",
+          "textures": [
+            "stone_block_0/sandstone_terracotta_dull_top",
+            "stone_block_0/sandstone_terracotta_dull_top",
+            "stone_block_0/sandstone_terracotta_dull"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Dorne Light Terracotta Wall",
+          "textures": [
+            "stone_block_0/sandstone_terracotta_light_top",
+            "stone_block_0/sandstone_terracotta_light_top",
+            "stone_block_0/sandstone_terracotta_light"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Dorne Dark Sandstone Wall",
+          "textures": [
+            "stone_block_0/sandstone_normal_dark_top",
+            "stone_block_0/sandstone_normal_dark_top",
+            "stone_block_0/sandstone_normal_dark"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_4",
+      "blockID": 2151,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_3",
+      "modelBlockMeta": 9,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Dorne Dull Terracotta Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_5",
+      "blockID": 2152,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_3",
+      "modelBlockMeta": 10,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Dorne Light Terracotta Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_6",
+      "blockID": 2153,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_3",
+      "modelBlockMeta": 11,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Dorne Dark Sandstone Stairs"
+        }
+      ]
+    },
+            {
+        "blockName": "hopper_block_2",
+        "blockID": 2154,
+        "blockType": "cuboid",
+        "hardness": 5,
+        "stepSound": "stone",
+        "material": "rock",
+        "resistance": 4,
+        "harvestLevel": [
+            {
+            "tool": "pickaxe",
+            "level": 3
+            }
+        ],
+        "creativeTab": "WesterosDeco",
+            "subBlocks": [
+                {
+                "meta": 0,
+                "label": "Dorne Dull Terracotta Hopper",
+                "textures": [
+                    "stone_block_0/sandstone_terracotta_dull"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 1,
+                "label": "Dorne Light Terracotta Hopper",
+                "textures": [
+                    "stone_block_0/sandstone_terracotta_light"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 2,
+                "label": "Dorne Dark Sandstone Hopper",
+                "textures": [
+                    "stone_block_0/sandstone_normal_dark"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 3,
+                "label": "Oak Hopper",
+                "textures": [
+                    "wood_block_0/planks_oak"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                }
+            ]
+        },
+       {
+      "blockName" : "web_block_1",
+      "blockID" : 2155,
+      "blockType" : "web",
+      "stepSound" : "cloth",
+      "material" : "web",
+      "creativeTab" : "WesterosPlants",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "Savanna Tall Grass",
+          "textures" : [ "web_block_1/tall_grass_savanna" ],
+          "colorMult" : "textures/colormap/grass",
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 1,
+          "label": "Jungle Tall Fern",
+          "textures" : [ "web_block_1/tall_fern_jungle" ],
+          "colorMult" : "textures/colormap/grass",
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 2,
+          "label": "Jungle Tall Grass",
+          "textures" : [ "web_block_1/tall_grass_jungle" ],
+          "colorMult" : "textures/colormap/grass",
+          "type": "no-in-web"
+        }
+      ]
+    },
+    {
+      "blockName": "dead_bush_block_0",
+      "blockID": 2156,
+      "blockType": "plant",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosPlants",
+      "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+      },
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Dorne Dead Bush",
+          "textures": [
+            "tallgrass_block_0/dorne_bush_thorny"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_7",
+      "blockID": 2157,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_3",
+      "modelBlockMeta": 14,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Casterly Rock Crimson Plaster Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "utility_block_0",
+      "blockID": 2158,
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "lightValue": 0,
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "'Approval' Utility Block",
+          "textures": [
+            "utility_block_0/approved"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "'High Class' Utility Block",
+          "textures": [
+            "utility_block_0/highclass"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "'Middle Class' Utility Block",
+          "textures": [
+            "utility_block_0/middleclass"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "'Low Class' Utility Block",
+          "textures": [
+            "utility_block_0/lowclass"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "'Special' Utility Block",
+          "textures": [
+            "utility_block_0/special"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "'Note' Utility Block",
+          "textures": [
+            "utility_block_0/note"
+          ]
+        }
+      ]
+    }
    ]
 }
