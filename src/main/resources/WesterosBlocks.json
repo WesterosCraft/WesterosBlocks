@@ -6330,9 +6330,20 @@
                 },
                 {
                 "meta": 14,
-                "label": "Casterly Rock Crimson Plaster",
+                "label": "Dorne Mossy Dark Sandstone",
                 "textures": [
-                    "stone_block_3/plaster_casterly_crimson"
+                    "stone_block_0/sandstone_normal_dark_top",
+                    "stone_block_0/sandstone_normal_dark_top",
+                    "stone_block_0/sandstone_normal_dark_mossy"
+                ]
+                },
+                {
+                "meta": 15,
+                "label": "Dorne Mossy Light Terracotta",
+                "textures": [
+                    "stone_block_0/sandstone_terracotta_light_top",
+                    "stone_block_0/sandstone_terracotta_light_top",
+                    "stone_block_0/sandstone_terracotta_light_mossy"
                 ]
                 }
             ]
@@ -6388,6 +6399,8 @@
           "meta": 4,
           "label": "Dorne Dull Terracotta Slab",
           "textures": [
+            "stone_block_0/sandstone_terracotta_dull_top",
+            "stone_block_0/sandstone_terracotta_dull_top",
             "stone_block_0/sandstone_terracotta_dull"
           ]
         },
@@ -6395,6 +6408,8 @@
           "meta": 5,
           "label": "Dorne Light Terracotta Slab",
           "textures": [
+            "stone_block_0/sandstone_terracotta_light_top",
+            "stone_block_0/sandstone_terracotta_light_top",
             "stone_block_0/sandstone_terracotta_light"
           ]
         },
@@ -6402,6 +6417,8 @@
           "meta": 6,
           "label": "Dorne Dark Sandstone Slab",
           "textures": [
+            "stone_block_0/sandstone_normal_dark_top",
+            "stone_block_0/sandstone_normal_dark_top",
             "stone_block_0/sandstone_normal_dark"
           ]
         },
@@ -7206,21 +7223,42 @@
           ]
         }
       ]
-    },
+    },    
     {
-      "blockName": "stone_block_3_stair_7",
-      "blockID": 2157,
-      "blockType": "stair",
-      "modelBlockName": "stone_block_3",
-      "modelBlockMeta": 14,
-      "creativeTab": "WesterosBlocks",
-      "subBlocks": [
-        {
-          "meta": 0,
-          "label": "Casterly Rock Crimson Plaster Stairs"
-        }
-      ]
-    },
+            "blockName": "stone_block_4",
+            "blockID": 2157,
+            "blockType": "solid",
+            "hardness": 5,
+            "stepSound": "stone",
+            "material": "rock",
+            "resistance": 10,
+            "creativeTab": "WesterosBlocks",
+            "subBlocks": [
+                {
+                "meta": 0,
+                "label": "Casterly Rock Crimson Plaster",
+                "textures": [
+                    "stone_block_3/plaster_casterly_crimson"
+                ]
+                },
+                {
+                "meta": 1,
+                "label": "Winterfell Placeholder 1",
+                "textures": [
+                    "stone_block_2/brick_winterfell_granite_top",
+                    "stone_block_2/brick_winterfell_granite_top",
+                    "stone_block_2/brick_winterfell_granite"
+                ]
+                },
+                {
+                "meta": 2,
+                "label": "Winterfell Placeholder 2",
+                "textures": [
+                    "stone_block_2/stone_winterfell_carving"
+                ]
+                }
+            ]
+        },
     {
       "blockName": "utility_block_0",
       "blockID": 2158,
@@ -7281,6 +7319,80 @@
           ]
         }
       ]
-    }
+    },
+    {
+      "blockName": "stone_block_4_stair_0",
+      "blockID": 2159,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_4",
+      "modelBlockMeta": 0,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Casterly Rock Crimson Plaster Stairs"
+        }
+      ]
+    },
+        {
+      "blockName" : "ladder_block_1",
+      "blockID" : 2160,
+      "blockType" : "ladder",
+      "stepSound" : "stone",
+      "material" : "rock",
+      "creativeTab" : "WesterosDeco",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "Winterfell Placeholder 3",
+          "textures" : [ "ladder_block_0/ladder_cobblestone" ]
+        }
+      ]
+    },
+    {
+        "blockName": "stone_cuboid_block_0",
+        "blockID": 2161,
+        "blockType": "cuboid-nsewud",
+        "hardness": 5,
+        "stepSound": "stone",
+        "material": "rock",
+        "resistance": 10,
+        "harvestLevel": [
+            {
+            "tool": "pickaxe",
+            "level": 1
+            }
+        ],
+        "creativeTab": "WesterosDeco",
+            "subBlocks": [
+                {
+                "meta": 0,
+                "label": "Winterfell Placeholder 4",
+                "textures": [
+                    "stone_block_2/brick_winterfell_granite",
+                    "stone_block_2/brick_winterfell_granite",
+                    "stone_block_2/brick_winterfell_granite",
+                    "stone_block_2/brick_winterfell_granite"
+                    ],
+                    "cuboids": [
+                    { "zMin": 0, "zMax": 0.0625, "yMin": 0.125, "yMax": 0.5625, "xMin": 0.875, "xMax": 0.9375, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.09375, "zMax": 0.34375, "yMin": 0.375, "yMax": 0.59375, "xMin": 0.71875, "xMax": 0.90625, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.125, "zMax": 0.375, "yMin": 0.25, "yMax": 0.34375, "xMin": 0.71875, "xMax": 0.875, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.125, "zMax": 0.375, "yMin": 0.625, "yMax": 0.71875, "xMin": 0.71875, "xMax": 0.875, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.125, "zMax": 0.46875, "yMin": 0.28125, "yMax": 0.34375, "xMin": 0.90625, "xMax": 0.9375, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.125, "zMax": 0.46875, "yMin": 0.625, "yMax": 0.6875, "xMin": 0.90625, "xMax": 0.9375, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.1875, "zMax": 0.4375, "yMin": 0.34375, "yMax": 0.625, "xMin": 0.46875, "xMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.34375, "zMax": 0.59375, "yMin": 0.3125, "yMax": 0.65625, "xMin": 0.25, "xMax": 0.5, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.53125, "zMax": 0.59375, "yMin": 0.34375, "yMax": 0.40625, "xMin": 0.5, "xMax": 0.9375, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.53125, "zMax": 0.59375, "yMin": 0.5625, "yMax": 0.625, "xMin": 0.5, "xMax": 0.9375, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.53125, "zMax": 0.71875, "yMin": 0.375, "yMax": 0.59375, "xMin": 0.125, "xMax": 0.28125, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.5625, "zMax": 0.59375, "yMin": 0.375, "yMax": 0.40625, "xMin": 0.03125, "xMax": 0.28125, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.5625, "zMax": 0.59375, "yMin": 0.5625, "yMax": 0.59375, "xMin": 0.03125, "xMax": 0.28125, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0.625, "zMax": 0.875, "yMin": 0.4375, "yMax": 0.53125, "xMin": 0.21875, "xMax": 0.3125, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "zMin": 0, "zMax": 1, "yMin": 0, "yMax": 1, "xMin": 0.96875, "xMax": 1, "sideTextures": [ 2,2,2,2,2,2 ] }
+                    ]
+                }
+            ]
+        }
    ]
 }
