@@ -44,10 +44,10 @@ public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
                     String [] flds = tok.split(":");
                     if (flds.length < 2) continue;
                     if (flds[0].equals("period")) {
-                        def_period_by_meta[i] = Integer.parseInt(flds[1]);
+                        def_period_by_meta[i] = (int) Math.round(20.0 * Double.parseDouble(flds[1]));
                     }
                     else if (flds[0].equals("random-add")) {
-                        def_addition_by_meta[i] = Integer.parseInt(flds[1]);
+                        def_addition_by_meta[i] = (int) Math.round(20.0 * Double.parseDouble(flds[1]));
                     }
                     else if (flds[0].equals("start-time")) {
                         def_starttime_by_meta[i] = ((Integer.parseInt(flds[1]) * 10) + 18000) % 24000;

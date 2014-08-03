@@ -114,7 +114,7 @@ public class WCTileEntitySound extends TileEntity
                 this.triggerSound(sb, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
         }
-        nextPlaybackTimer = 20 * (playback_period + rnd.nextInt(random_playback_addition + 1));
+        nextPlaybackTimer = playback_period + rnd.nextInt(random_playback_addition + 1);
     }
     private void initBlock() {
         int id = this.worldObj.getBlockId(this.xCoord, this.yCoord, this.zCoord);
