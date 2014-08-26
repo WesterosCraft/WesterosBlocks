@@ -8127,7 +8127,7 @@
             			"sound_int"
           			],
           			"soundList": [ "tavern_small" ],
-          			"type" : "period:59,random-add:0,start-time:200,end-time:1500"
+          			"type" : "period:59,random-add:0,start-time:0,end-time:2400"
         		},
         		{
           			"meta": 1,
@@ -8136,7 +8136,7 @@
             			"sound_int"
           			],
           			"soundList": [ "tavern_large" ],
-          			"type" : "period:59,random-add:0,start-time:200,end-time:1500"
+          			"type" : "period:59,random-add:0,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 2,
@@ -8145,7 +8145,7 @@
             			"sound_int"
           			],
           			"soundList": [ "blacksmith_small" ],
-          			"type" : "period:5,random-add:0,start-time:0,end-time:1200"
+          			"type" : "period:5,random-add:0,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 3,
@@ -8154,7 +8154,7 @@
             			"sound_int"
           			],
           			"soundList": [ "blacksmith_large" ],
-          			"type" : "period:5,random-add:0,start-time:0,end-time:1200"
+          			"type" : "period:5,random-add:0,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 4,
@@ -8199,7 +8199,7 @@
             			"sound_int"
           			],
           			"soundList": [ "armory_small" ],
-          			"type" : "period:3,random-add:2,start-time:0,end-time:1350"
+          			"type" : "period:3,random-add:2,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 9,
@@ -8208,7 +8208,7 @@
             			"sound_int"
           			],
           			"soundList": [ "armory_large" ],
-          			"type" : "period:3,random-add:2,start-time:0,end-time:1350"
+          			"type" : "period:3,random-add:2,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 10,
@@ -8217,7 +8217,7 @@
             			"sound_int"
           			],
           			"soundList": [ "butcher_small" ],
-          			"type" : "period:6,random-add:2,start-time:0,end-time:1200"
+          			"type" : "period:6,random-add:2,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 11,
@@ -8226,7 +8226,7 @@
             			"sound_int"
           			],
           			"soundList": [ "butcher_large" ],
-          			"type" : "period:6,random-add:2,start-time:0,end-time:1200"
+          			"type" : "period:6,random-add:2,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 12,
@@ -8235,7 +8235,7 @@
             			"sound_int"
           			],
           			"soundList": [ "carpenter_small" ],
-          			"type" : "period:8,random-add:2,start-time:0,end-time:1200"
+          			"type" : "period:8,random-add:2,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 13,
@@ -8244,7 +8244,7 @@
             			"sound_int"
           			],
           			"soundList": [ "carpenter_large" ],
-          			"type" : "period:8,random-add:2,start-time:0,end-time:1200"
+          			"type" : "period:8,random-add:2,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 14,
@@ -8285,7 +8285,7 @@
             			"sound_int"
           			],
           			"soundList": [ "sept_small" ],
-          			"type" : "period:49,random-add:0,start-time:0,end-time:1350"
+          			"type" : "period:49,random-add:0,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 1,
@@ -8294,7 +8294,7 @@
             			"sound_int"
           			],
           			"soundList": [ "sept_large" ],
-          			"type" : "period:49,random-add:0,start-time:0,end-time:1350"
+          			"type" : "period:49,random-add:0,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 2,
@@ -8330,7 +8330,7 @@
             			"sound_int"
           			],
           			"soundList": [ "jenny_of_oldstones" ],
-          			"type" : "period:420,random-add:120,start-time:200,end-time:1500"
+          			"type" : "period:420,random-add:120,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 6,
@@ -8348,7 +8348,7 @@
             			"sound_ext"
           			],
           			"soundList": [ "iron_mine_small" ],
-          			"type" : "period:5.5,random-add:1,start-time:0,end-time:1200"
+          			"type" : "period:5.5,random-add:1,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 8,
@@ -8357,7 +8357,7 @@
             			"sound_ext"
           			],
           			"soundList": [ "iron_mine_large" ],
-          			"type" : "period:5.5,random-add:1,start-time:0,end-time:1200"
+          			"type" : "period:5.5,random-add:1,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 9,
@@ -8411,7 +8411,7 @@
             			"sound_ext"
           			],
           			"soundList": [ "market_small" ],
-          			"type" : "period:59,random-add:0,start-time:0,end-time:1200"
+          			"type" : "period:59,random-add:0,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 15,
@@ -8420,7 +8420,7 @@
             			"sound_ext"
           			],
           			"soundList": [ "market_large" ],
-          			"type" : "period:59,random-add:0,start-time:0,end-time:1200"
+          			"type" : "period:59,random-add:0,start-time:0,end-time:2400"
         		}
 			]
 	},
@@ -8443,7 +8443,7 @@
             			"sound_ext"
           			],
           			"soundList": [ "training_yard_small" ],
-          			"type" : "period:3,random-add:2,start-time:0,end-time:1200"
+          			"type" : "period:3,random-add:2,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 1,
@@ -8452,7 +8452,7 @@
             			"sound_ext"
           			],
           			"soundList": [ "training_yard_large" ],
-          			"type" : "period:3,random-add:2,start-time:0,end-time:1200"
+          			"type" : "period:3,random-add:2,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 2,
@@ -8488,7 +8488,7 @@
             			"sound_ext"
           			],
           			"soundList": [ "rushing_water_small" ],
-          			"type" : "period:3,random-add:0,start-time:0,end-time:2400"
+          			"type" : "period:3.2,random-add:0,start-time:0,end-time:2400"
         		},
 				{
           			"meta": 6,
@@ -8497,7 +8497,7 @@
             			"sound_ext"
           			],
           			"soundList": [ "rushing_water_large" ],
-          			"type" : "period:3,random-add:0,start-time:0,end-time:2400"
+          			"type" : "period:3.2,random-add:0,start-time:0,end-time:2400"
         		}
 			]
 	},
