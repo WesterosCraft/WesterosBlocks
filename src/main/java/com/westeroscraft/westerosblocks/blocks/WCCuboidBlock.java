@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -269,7 +270,11 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
      *  @param meta
      */
     public List<WesterosBlockDef.Cuboid> getCuboidList(int meta) {
-        return def.getCuboidList(meta);
+        List<WesterosBlockDef.Cuboid> rslt = def.getCuboidList(meta);
+        if (rslt == null) {
+            rslt = Collections.emptyList();
+        }
+        return rslt;
     }
     
     public void setBoundingBoxFromCuboidList(int meta) {
