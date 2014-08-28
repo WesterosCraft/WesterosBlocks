@@ -110,8 +110,10 @@ public class WCTileEntitySound extends TileEntity
             }
             if (trigger) {
                 int id = this.worldObj.getBlockId(this.xCoord, this.yCoord, this.zCoord);
-                WCSoundBlock sb = (WCSoundBlock) Block.blocksList[id];
-                this.triggerSound(sb, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+                Block b = Block.blocksList[id];;
+                if (b instanceof WCSoundBlock) {    
+                    this.triggerSound((WCSoundBlock) b, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+                }
             }
         }
         nextPlaybackTimer = playback_period + rnd.nextInt(random_playback_addition + 1);
