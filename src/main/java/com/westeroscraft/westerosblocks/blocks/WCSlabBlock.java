@@ -195,7 +195,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd);
+        def.defaultRegisterTextureBlock(mtd, this.isDoubleSlab ? FULL_IDX : HALF_IDX);
         /* Add models for half slabs */
         if (!this.isDoubleSlab) {
             BoxBlockModel bottom = md.addBoxModel(this.blockID);

@@ -703,7 +703,7 @@ public class WesterosBlockDef {
             blk.setStepSound(this.getStepSound());
         }
         if ((this.fireSpreadSpeed > 0) || (this.flamability > 0)) {
-            Block.setBurnProperties(this.blockID, this.fireSpreadSpeed, this.flamability);
+            Block.setBurnProperties(this.blockIDs[idx], this.fireSpreadSpeed, this.flamability);
         }
         if (creativeTab != null) {
             blk.setCreativeTab(getCreativeTab());
@@ -1395,27 +1395,30 @@ public class WesterosBlockDef {
             if (this.nonOpaque) {
                 tmod = TextureModifier.CLEARINSIDE;
             }
-            for (int i = 0; i < this.subblock_by_meta.length; i++) {
-                Subblock sb = subblock_by_meta[i];
-                if ((sb != null) && (sb.textures != null)) {
-                    BlockTextureRecord mtr = mtd.addBlockTextureRecord(this.blockID);
-                    // Set for all associated metas
-                    for (int meta = i; meta < 16; meta++) {
-                        if ((meta & metaMask) == (i & metaMask)) {
-                            mtr.setMetaValue(meta);
+            for (int idx = 0; idx < this.blockIDs.length; idx++) {
+                int blkid = this.blockIDs[idx];
+                for (int i = 0; i < this.subblock_by_meta.length; i++) {
+                    Subblock sb = subblock_by_meta[i];
+                    if ((sb != null) && (sb.textures != null)) {
+                        BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
+                        // Set for all associated metas
+                        for (int meta = i; meta < 16; meta++) {
+                            if ((meta & metaMask) == (i & metaMask)) {
+                                mtr.setMetaValue(meta);
+                            }
                         }
-                    }
-                    int cnt = sb.textures.size();
-                    if (cnt < minPatchCount) {
-                        cnt = minPatchCount;
-                    }
-                    for (int patch = 0; patch < cnt; patch++) {
-                        int fidx = patch;
-                        if (fidx >= sb.textures.size()) {
-                            fidx = sb.textures.size() - 1;
+                        int cnt = sb.textures.size();
+                        if (cnt < minPatchCount) {
+                            cnt = minPatchCount;
                         }
-                        String txtid = sb.textures.get(fidx);
-                        mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
+                        for (int patch = 0; patch < cnt; patch++) {
+                            int fidx = patch;
+                            if (fidx >= sb.textures.size()) {
+                                fidx = sb.textures.size() - 1;
+                            }
+                            String txtid = sb.textures.get(fidx);
+                            mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
+                        }
                     }
                 }
             }
@@ -1425,15 +1428,22 @@ public class WesterosBlockDef {
      * Default texture block (6 face) registration for Dynmap
      */
     public void defaultRegisterTextureBlock(ModTextureDefinition mtd) {
+        defaultRegisterTextureBlock(mtd, 0);
+    }
+    /**
+     * Default texture block (6 face) registration for Dynmap
+     */
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx) {
         if (this.subblock_by_meta != null) {
             TextureModifier tmod = TextureModifier.NONE;
             if (this.nonOpaque) {
                 tmod = TextureModifier.CLEARINSIDE;
             }
+            int blkid = this.blockIDs[idx];
             for (int i = 0; i < this.subblock_by_meta.length; i++) {
                 Subblock sb = subblock_by_meta[i];
                 if ((sb != null) && (sb.textures != null)) {
-                    BlockTextureRecord mtr = mtd.addBlockTextureRecord(this.blockID);
+                    BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
                     // Set for all associated metas
                     for (int meta = i; meta < 16; meta++) {
                         if ((meta & metaMask) == (i & metaMask)) {
