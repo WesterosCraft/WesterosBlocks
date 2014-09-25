@@ -15,6 +15,7 @@ import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
+import org.dynmap.modsupport.TransparencyMode;
 
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
@@ -1428,12 +1429,12 @@ public class WesterosBlockDef {
      * Default texture block (6 face) registration for Dynmap
      */
     public void defaultRegisterTextureBlock(ModTextureDefinition mtd) {
-        defaultRegisterTextureBlock(mtd, 0);
+        defaultRegisterTextureBlock(mtd, 0, null);
     }
     /**
      * Default texture block (6 face) registration for Dynmap
      */
-    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx) {
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx, TransparencyMode tm) {
         if (this.subblock_by_meta != null) {
             TextureModifier tmod = TextureModifier.NONE;
             if (this.nonOpaque) {
@@ -1444,6 +1445,9 @@ public class WesterosBlockDef {
                 Subblock sb = subblock_by_meta[i];
                 if ((sb != null) && (sb.textures != null)) {
                     BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
+                    if (tm != null) {
+                        mtr.setTransparencyMode(tm);
+                    }
                     // Set for all associated metas
                     for (int meta = i; meta < 16; meta++) {
                         if ((meta & metaMask) == (i & metaMask)) {

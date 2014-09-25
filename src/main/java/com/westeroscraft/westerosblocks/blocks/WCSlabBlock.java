@@ -7,6 +7,7 @@ import java.util.Random;
 import org.dynmap.modsupport.BoxBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHalfSlab;
@@ -195,9 +196,9 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd, this.isDoubleSlab ? FULL_IDX : HALF_IDX);
         /* Add models for half slabs */
         if (!this.isDoubleSlab) {
+            def.defaultRegisterTextureBlock(mtd, HALF_IDX, TransparencyMode.SEMITRANSPARENT);
             BoxBlockModel bottom = md.addBoxModel(this.blockID);
             bottom.setYRange(0.0, 0.5);
             BoxBlockModel top = md.addBoxModel(this.blockID);
@@ -206,6 +207,9 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
                 bottom.setMetaValue(sb.meta);
                 top.setMetaValue(sb.meta | 0x8);
             }
+        }
+        else {
+            def.defaultRegisterTextureBlock(mtd, FULL_IDX, null);
         }
     }
 
