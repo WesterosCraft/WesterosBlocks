@@ -1391,6 +1391,9 @@ public class WesterosBlockDef {
      * Default texture block registration for Dynmap (min patch count
      */
     public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount) {
+        registerPatchTextureBlock(mtd, minPatchCount, TransparencyMode.TRANSPARENT);
+    }
+    public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount, TransparencyMode tm) {
         if (this.subblock_by_meta != null) {
             TextureModifier tmod = TextureModifier.NONE;
             if (this.nonOpaque) {
@@ -1402,6 +1405,9 @@ public class WesterosBlockDef {
                     Subblock sb = subblock_by_meta[i];
                     if ((sb != null) && (sb.textures != null)) {
                         BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
+                        if (tm != null) {
+                            mtr.setTransparencyMode(tm);
+                        }
                         // Set for all associated metas
                         for (int meta = i; meta < 16; meta++) {
                             if ((meta & metaMask) == (i & metaMask)) {

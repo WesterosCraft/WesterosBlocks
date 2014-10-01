@@ -6,6 +6,7 @@ import java.util.Random;
 import org.dynmap.modsupport.BoxBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCake;
@@ -143,7 +144,7 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd);
+        def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.TRANSPARENT);
         // Get stair model
         BoxBlockModel mdl = md.addBoxModel(this.blockID);
         mdl.setYRange(0.0, 0.5);

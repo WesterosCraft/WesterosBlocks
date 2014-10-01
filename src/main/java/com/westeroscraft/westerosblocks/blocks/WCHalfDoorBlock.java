@@ -8,6 +8,7 @@ import org.dynmap.modsupport.CuboidBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
+import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -468,6 +469,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
         if ((sb == null) || (sb.textures == null) || (sb.textures.size() == 0)) return;
         String txt = sb.textures.get(0);
         BlockTextureRecord btr = mtd.addBlockTextureRecord(this.blockID);
+        btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
         btr.setPatchTexture(txt, TextureModifier.NONE, 0);
         btr.setPatchTexture(txt, TextureModifier.FLIPHORIZ, 1);
         // Register model for each meta

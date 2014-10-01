@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -142,7 +143,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd);
+        def.defaultRegisterTextureBlock(mtd, 0, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
     }
 
     @SideOnly(Side.CLIENT)

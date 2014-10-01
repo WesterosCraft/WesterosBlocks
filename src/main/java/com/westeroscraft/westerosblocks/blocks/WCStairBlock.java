@@ -3,8 +3,10 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import org.dynmap.modsupport.CopyBlockTextureRecord;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
@@ -167,7 +169,8 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         // Make copy of model block textu def
-        mtd.addCopyBlockTextureRecord(this.blockID, ourModelBlock.blockID, def.modelBlockMeta);
+        CopyBlockTextureRecord btr = mtd.addCopyBlockTextureRecord(this.blockID, ourModelBlock.blockID, def.modelBlockMeta);
+        btr.setTransparencyMode(TransparencyMode.SEMITRANSPARENT);
         // Get stair model
         md.addStairModel(this.blockID);
     }

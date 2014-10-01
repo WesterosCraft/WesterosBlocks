@@ -7,6 +7,7 @@ import java.util.Random;
 import org.dynmap.modsupport.BoxBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -228,7 +229,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd);
+        def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.TRANSPARENT);
         /* Make models for each layer thickness */
         for (int i = 0; i < layerCount; i++) {
             BoxBlockModel mod = md.addBoxModel(this.blockID);

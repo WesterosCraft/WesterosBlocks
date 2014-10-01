@@ -7,6 +7,7 @@ import java.util.Random;
 import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
@@ -343,6 +344,7 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
             String topbot = sb.getTextureByIndex(1);
             String sides = sb.getTextureByIndex(3);
             BlockTextureRecord btr = mtd.addBlockTextureRecord(this.blockID);
+            btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
             btr.setMetaValue(meta);
             btr.setMetaValue(meta | 8);
             btr.setSideTexture(topbot, BlockSide.TOP);
