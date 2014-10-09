@@ -1367,11 +1367,20 @@ public class WesterosBlockDef {
     public void defaultRegisterTextures(ModTextureDefinition mtd) {
         mtd.setTexturePath("assets/westerosblocks/textures/blocks/");
         HashSet<String> txtids = new HashSet<String>(); // Build set if distinct IDs
+        HashSet<String> maptxtids = new HashSet<String>(); // Build set if distinct IDs
+        if ((colorMult != null) && (colorMult.startsWith("#") == false)) {
+            maptxtids.add(colorMult);
+        }
         if (this.subblock_by_meta != null) {
             for (int i = 0; i < this.subblock_by_meta.length; i++) {
                 Subblock sb = subblock_by_meta[i];
-                if ((sb != null) && (sb.textures != null)) {
-                    txtids.addAll(sb.textures);
+                if (sb != null) {
+                    if (sb.textures != null) {
+                        txtids.addAll(sb.textures);
+                    }
+                    if ((sb.colorMult != null) && (sb.colorMult.startsWith("#") == false)) {
+                        maptxtids.add(sb.colorMult);
+                    }
                 }
             }
         }
@@ -1384,6 +1393,17 @@ public class WesterosBlockDef {
             else {
                 mtd.registerTextureFile(txtid.replace(':', '_'), 
                         "assets/" + txtid.substring(0, colon).toLowerCase() + "/textures/blocks/" + txtid.substring(colon+1) + ".png");
+            }
+        }
+        // Register the maps
+        for (String txtid : maptxtids) {
+            int colon = txtid.indexOf(':');
+            if (colon < 0) {
+                mtd.registerTextureFile(txtid, "assets/westerosblocks/" + txtid + ".png");
+            }
+            else {
+                mtd.registerTextureFile(txtid.replace(':', '_'), 
+                        "assets/" + txtid.substring(0, colon).toLowerCase() + "/" + txtid.substring(colon+1) + ".png");
             }
         }
     }
@@ -1425,6 +1445,11 @@ public class WesterosBlockDef {
                             }
                             String txtid = sb.textures.get(fidx);
                             mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
+                        }
+                        String blockColor = sb.colorMult;
+                        if (blockColor == null) blockColor = this.colorMult;
+                        if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
+                            mtr.setBlockColorMapTexture(blockColor.replace(':', '_'));
                         }
                     }
                 }
