@@ -14,6 +14,7 @@ import java.util.Random;
 import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TextureFileType;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
@@ -1399,10 +1400,10 @@ public class WesterosBlockDef {
         for (String txtid : maptxtids) {
             int colon = txtid.indexOf(':');
             if (colon < 0) {
-                mtd.registerTextureFile(txtid, "assets/westerosblocks/" + txtid + ".png");
+                mtd.registerBiomeTextureFile(txtid, "assets/westerosblocks/" + txtid + ".png");
             }
             else {
-                mtd.registerTextureFile(txtid.replace(':', '_'), 
+                mtd.registerBiomeTextureFile(txtid.replace(':', '_'), 
                         "assets/" + txtid.substring(0, colon).toLowerCase() + "/" + txtid.substring(colon+1) + ".png");
             }
         }
@@ -1446,11 +1447,7 @@ public class WesterosBlockDef {
                             String txtid = sb.textures.get(fidx);
                             mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
                         }
-                        String blockColor = sb.colorMult;
-                        if (blockColor == null) blockColor = this.colorMult;
-                        if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
-                            mtr.setBlockColorMapTexture(blockColor.replace(':', '_'));
-                        }
+                        setBlockColorMap(mtr, sb);
                     }
                 }
             }
@@ -1493,8 +1490,16 @@ public class WesterosBlockDef {
                         String txtid = sb.textures.get(fidx);
                         mtr.setSideTexture(txtid.replace(':', '_'), tmod, BlockSide.valueOf("FACE_" + face));
                     }
+                    setBlockColorMap(mtr, sb);
                 }
             }
+        }
+    }
+    public void setBlockColorMap(BlockTextureRecord mtr, Subblock sb) {
+        String blockColor = sb.colorMult;
+        if (blockColor == null) blockColor = this.colorMult;
+        if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
+            mtr.setBlockColorMapTexture(blockColor.replace(':', '_'));
         }
     }
     /**

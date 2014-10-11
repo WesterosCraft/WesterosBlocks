@@ -82,7 +82,7 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(int side, int meta) {
-        // Map side to 0=topbottom fast, 1=topbottom fancy, 2=sides fast, 3=sides fancy
+        // Map side to 0=topbottom fast, 1=sides fast,  2=topbottom fancy, 3=sides fancy
         return def.doStandardIconGet(((side > 1) ? 0 : 1) | (Block.leaves.graphicsLevel ? 2 : 0), meta);
     }
     
@@ -341,7 +341,7 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
         for (int meta = 0; meta < 8; meta++) {
             Subblock sb = def.getByMeta(meta);
             if (sb == null) continue;
-            String topbot = sb.getTextureByIndex(1);
+            String topbot = sb.getTextureByIndex(2);
             String sides = sb.getTextureByIndex(3);
             BlockTextureRecord btr = mtd.addBlockTextureRecord(this.blockID);
             btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
@@ -350,6 +350,7 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
             btr.setSideTexture(topbot, BlockSide.TOP);
             btr.setSideTexture(topbot, BlockSide.BOTTOM);
             btr.setSideTexture(sides, BlockSide.ALLSIDES);
+            def.setBlockColorMap(btr, sb);
         }
     }
 }

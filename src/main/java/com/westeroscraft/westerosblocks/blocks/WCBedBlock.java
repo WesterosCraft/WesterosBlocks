@@ -200,6 +200,7 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
                 String txtid = sb.textures.get(fidx);
                 mtr.setPatchTexture(txtid.replace(':', '_'), tmod, face);
             }
+            def.setBlockColorMap(mtr, sb);
             // Set for head
             mtr = mtd.addBlockTextureRecord(this.blockID);
             mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
@@ -216,6 +217,7 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
                 String txtid = sb.textures.get(fidx);
                 mtr.setPatchTexture(txtid.replace(':', '_'), tmod, face);
             }
+            def.setBlockColorMap(mtr, sb);
         }
         // Create east facing model
         PatchBlockModel mod = md.addPatchModel(this.blockID);

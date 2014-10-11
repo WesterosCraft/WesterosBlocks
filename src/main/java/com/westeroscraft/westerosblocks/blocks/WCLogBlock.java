@@ -204,6 +204,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
                     String txt = sb.textures.get(fidx);
                     mtr.setSideTexture(txt.replace(':', '_'), tmod[i][face], BlockSide.valueOf("FACE_" + face));
                 }
+                def.setBlockColorMap(mtr, sb);
             }
         }
     }

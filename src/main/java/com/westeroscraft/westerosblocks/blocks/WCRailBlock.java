@@ -199,6 +199,7 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
             }
             txtid = sb.textures.get(fidx);
             mtr.setPatchTexture(txtid.replace(':', '_'), tmod, 0);
+            def.setBlockColorMap(mtr, sb);
         }
         // Make models for flat tracks
         PatchBlockModel mod = md.addPatchModel(this.blockID);

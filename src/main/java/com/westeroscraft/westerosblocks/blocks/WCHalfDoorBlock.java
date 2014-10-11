@@ -472,6 +472,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
         btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
         btr.setPatchTexture(txt, TextureModifier.NONE, 0);
         btr.setPatchTexture(txt, TextureModifier.FLIPHORIZ, 1);
+        def.setBlockColorMap(btr, sb);
         // Register model for each meta
         for (int meta = 0; meta < 16; meta++) {
             CuboidBlockModel mod = md.addCuboidModel(this.blockID);
