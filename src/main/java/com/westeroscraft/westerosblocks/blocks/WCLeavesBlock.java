@@ -49,7 +49,9 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
         super(def.blockID, def.getMaterial(), false);
         this.setTickRandomly(true);
         this.def = def;
-        this.setLightOpacity(1); // Default light opacity
+        if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
+            def.lightOpacity = 1;
+        }
         def.doStandardContructorSettings(this);
         nodecay = new boolean[8];
         for (int i = 0; i < 8; i++) {

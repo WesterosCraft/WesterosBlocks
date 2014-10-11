@@ -106,7 +106,7 @@ import net.minecraftforge.common.MinecraftForge;
 //
 public class WesterosBlockDef {
     private static final float DEF_FLOAT = -999.0F;
-    private static final int DEF_INT = -999;
+    public static final int DEF_INT = -999;
     
     public String blockName;                // Locally unique block name
     public int blockID = DEF_INT;           // Block ID number (default)
