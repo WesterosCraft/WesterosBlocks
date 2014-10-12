@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.logging.Logger;
@@ -76,6 +77,8 @@ public class WesterosBlocks
     public boolean useFixedStairs = false;
     public boolean useFixedPressurePlate = false;
     public boolean useWaterCTMFix = false;
+    
+    public static BitSet slabStyleLightingBlocks = new BitSet();
     
     public static WesterosBlockConfig customConfig;
     
@@ -194,6 +197,13 @@ public class WesterosBlocks
                 MinecraftForge.EVENT_BUS.register(new SoundEventListener());
             }
         }
+        // Initialize with standard block IDs
+        slabStyleLightingBlocks.clear();
+        slabStyleLightingBlocks.set(Block.stoneSingleSlab.blockID);
+        slabStyleLightingBlocks.set(Block.woodSingleSlab.blockID);
+        slabStyleLightingBlocks.set(Block.tilledField.blockID);
+        slabStyleLightingBlocks.set(Block.stairsWoodOak.blockID);
+        slabStyleLightingBlocks.set(Block.stairsCobblestone.blockID);
     }
 
     @EventHandler

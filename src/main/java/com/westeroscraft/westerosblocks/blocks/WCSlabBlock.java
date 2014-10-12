@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.List;
 import java.util.Random;
 
@@ -14,6 +15,7 @@ import net.minecraft.block.BlockHalfSlab;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Facing;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -55,23 +57,23 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     
     private WesterosBlockDef def;
     private WCSlabBlock otherBlock;
+    private static BitSet halfSlabs = new BitSet();
     
     protected WCSlabBlock(WesterosBlockDef def, boolean is_double) {
         super(def.blockIDs[is_double?FULL_IDX:HALF_IDX], is_double, def.getMaterial());
         this.def = def;
         if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
-            if (is_double) {
-                def.lightOpacity = 255;
-            }
-            else {
-                def.lightOpacity = 0;    // Workaround MC's f*cked up lighting exceptions
-            }
+            def.lightOpacity = 255;
         }
         def.doStandardContructorSettings(this, is_double?FULL_IDX:HALF_IDX);
         if (is_double) {
             this.setCreativeTab(null);
         }
-        useNeighborBrightness[blockID] = true;
+        else {
+            WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
+            halfSlabs.set(def.blockID);
+            useNeighborBrightness[def.blockID] = true;
+        }
     }
 
     public boolean initializeBlockDefinition() {
@@ -197,6 +199,40 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
         super.randomDisplayTick(world, x, y, z, rnd);
     }
     
+    
+    @SideOnly(Side.CLIENT)
+    @Override
+    /**
+     * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given
+     * coordinates.  Args: blockAccess, x, y, z, side
+     */
+    public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+    {
+        if (this.isDoubleSlab)
+        {
+            return super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
+        }
+        else if (par5 != 1 && par5 != 0 && !super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5))
+        {
+            return false;
+        }
+        else
+        {
+            int i1 = par2 + Facing.offsetsXForSide[Facing.oppositeSide[par5]];
+            int j1 = par3 + Facing.offsetsYForSide[Facing.oppositeSide[par5]];
+            int k1 = par4 + Facing.offsetsZForSide[Facing.oppositeSide[par5]];
+            boolean flag = (par1IBlockAccess.getBlockMetadata(i1, j1, k1) & 8) != 0;
+            return flag ? (par5 == 0 ? true : (par5 == 1 && super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5) ? true : !isBlockSingleSlab(par1IBlockAccess.getBlockId(par2, par3, par4)) || (par1IBlockAccess.getBlockMetadata(par2, par3, par4) & 8) == 0)) : (par5 == 1 ? true : (par5 == 0 && super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5) ? true : !isBlockSingleSlab(par1IBlockAccess.getBlockId(par2, par3, par4)) || (par1IBlockAccess.getBlockMetadata(par2, par3, par4) & 8) != 0));
+        }
+    }
+
+    @SideOnly(Side.CLIENT)
+
+    private static boolean isBlockSingleSlab(int id)
+    {
+        return (id == Block.stoneSingleSlab.blockID) || (id == Block.woodSingleSlab.blockID) || halfSlabs.get(id);
+    }
+
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();

@@ -60,11 +60,13 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         super(def.blockID, blk, def.modelBlockMeta);
         this.def = def;
         this.ourModelBlock = blk;
+        if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
+            def.lightOpacity = 255;
+        }
         this.setCreativeTab(def.getCreativeTab());
         this.setUnlocalizedName(def.blockName);
-        if (def.lightOpacity < 0) {    // Workaround for f*cked up MC lighting hacks
-            this.setLightOpacity(0);
-        }
+        WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
+        useNeighborBrightness[def.blockID] = true;
     }
 
     public boolean initializeBlockDefinition() {

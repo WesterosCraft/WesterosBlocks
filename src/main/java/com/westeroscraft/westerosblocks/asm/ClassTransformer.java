@@ -13,6 +13,7 @@ import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldInsnNode;
 import org.objectweb.asm.tree.InsnNode;
+import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.TypeInsnNode;
 import org.objectweb.asm.Opcodes;
@@ -20,6 +21,8 @@ import org.objectweb.asm.Opcodes;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
 
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockPane;
@@ -30,6 +33,7 @@ import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraft.util.Icon;
+import net.minecraft.world.ChunkCache;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.ForgeDirection;
 
@@ -72,6 +76,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         else if (name.equals("net.minecraft.block.BlockStationary")) {    // Clean name for BlockStationary
             bytes = transformBlockStationary(name, bytes, false);
+        }
+        else if (name.equals("acl")) {   // Obfuscated ChunkCache
+            bytes = transformChunkCache(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.world.ChunkCache")) {    // Clean name for ChunkCache
+            bytes = transformChunkCache(name, bytes, false);
         }
         return bytes;
     }
@@ -667,6 +677,61 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return b;
     }    
     
+    private byte[] transformChunkCache(String name, byte[] b, boolean obfus) {
+        String targetMethodName = "";   //    public int getLightValueExt(int par1, int par2, int par3, boolean par4)
+        String targetMethodSig = "";
+
+        WesterosBlocks.log.fine("Checking class " + name);
+
+        if (FMLCommonHandler.instance().getSide() == Side.SERVER) {
+            WesterosBlocks.log.fine("Nothing to patch on server side for " + name);
+            return b;
+        }
+        if (obfus) {
+            targetMethodName = "a"; //getLightValueExt
+            targetMethodSig = "(IIIZ)I";
+        }
+        else {
+            targetMethodName ="getLightValueExt";
+            targetMethodSig = "(IIIZ)I";
+        }
+        
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Now find the first method
+        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
+        if (m == null) {
+            WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }
+
+        // Find target op seqence before patch in getLightValueExt method (insert after last instruction in sequence)
+        // mv.visitVarInsn(ALOAD, 0);
+        // mv.visitVarInsn(ILOAD, 1);
+        // mv.visitVarInsn(ILOAD, 2);
+        // mv.visitVarInsn(ILOAD, 3);
+        // mv.visitMethodInsn(INVOKEVIRTUAL, "net/minecraft/world/ChunkCache", "getBlockId", "(III)I", false);
+        int index = findOpSequence(m, new int[] { ALOAD, ILOAD, ILOAD, ILOAD, INVOKEVIRTUAL } );
+        if (index < 0) {
+            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
+            return b;
+        }
+        m.instructions.remove(m.instructions.get(index+4));   // Remove old INVOKEVIRTUAL
+        AbstractInsnNode n = m.instructions.get(index+4);   // Get instruction after
+        if (obfus) {
+            m.instructions.insertBefore(n, new MethodInsnNode(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "getBlockIDForLightValue", "(Lacl;III)I"));
+        }
+        else {
+            m.instructions.insertBefore(n, new MethodInsnNode(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "getBlockIDForLightValue", "(Lcom/westeroscraft/westerosblocks/asm/ChunkCache;III)I"));
+        }
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
+        
+        return b;
+    }
+
     public static float getWorldHeight(int wtIndex) {
         return 256.0F;
     }
@@ -735,5 +800,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return ico;
     }
 
+    public static int getBlockIDForLightValue(ChunkCache chunkCache, int x, int y, int z) {
+        int id = chunkCache.getBlockId(x, y, z);
+        if (WesterosBlocks.slabStyleLightingBlocks.get(id)) {
+            id = Block.stoneSingleSlab.blockID;
+        }
+        return id;
+    }
 }
 
