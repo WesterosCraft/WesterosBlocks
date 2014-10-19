@@ -5,7 +5,6 @@ import java.util.Random;
 
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.WallFenceBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
@@ -196,7 +195,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     {
         return def.colorMultiplier(access, x, y, z);
     }
-    @SuppressWarnings("rawtypes")
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public void getSubBlocks (int id, CreativeTabs tab, List list)
     {
