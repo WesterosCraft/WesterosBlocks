@@ -5,6 +5,7 @@ import java.util.Random;
 
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.WallFenceBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
@@ -219,7 +220,8 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
         WesterosBlockDef def = this.getWBDefinition();
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
-        //TODO: Add moels
-    }
+        // Get door model, and set for all defined meta
+        md.addDoorModel(this.blockID);
+   }
 
 }
