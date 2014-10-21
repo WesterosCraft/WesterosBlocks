@@ -12,21 +12,25 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent; 
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
-import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.network.FMLEmbeddedChannel;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
-import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.ForgeSubscribe;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
+import io.netty.channel.ChannelHandler;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.logging.Logger;
@@ -35,6 +39,11 @@ import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.asm.ClassTransformer;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
+import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
+import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
+/*NOTYET
 import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
@@ -42,11 +51,10 @@ import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
+*/
 import com.westeroscraft.westerosblocks.blocks.WCStairRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
-@NetworkMod(clientSideRequired = true, serverSideRequired = true, channels={ WesterosBlocksPacketHandler.CHANNEL }, 
-    packetHandler = WesterosBlocksPacketHandler.class)
 public class WesterosBlocks
 {    
     public static Logger log = Logger.getLogger("WesterosBlocks");
@@ -93,10 +101,7 @@ public class WesterosBlocks
             return blk;
         }
         try {
-            int id = Integer.parseInt(blkname);
-            if ((id > 0) && (id < Block.blocksList.length)) {
-                return Block.blocksList[id];
-            }
+            return Block.getBlockFromName(blkname);
         } catch (NumberFormatException nfx) {
         }
         return null;
@@ -162,7 +167,9 @@ public class WesterosBlocks
                 }
                 for (int j = 0; j < customBlockDefs[i].blockIDs.length; j++) {
                     int val = customBlockDefs[i].blockIDs[j];
-                    customBlockDefs[i].blockIDs[j] = cfg.getBlock(customBlockDefs[i].getUnlocalizedName(j), val).getInt(val);
+                    /**NOTYET
+                    customBlockDefs[i].blockIDs[j] = cfg.getBlock(customBlockDefs[i].getBlockName(j), val).getInt(val);
+                    */
                     if (j == 0) {
                         customBlockDefs[i].blockID = customBlockDefs[i].blockIDs[j];
                     }
@@ -193,17 +200,21 @@ public class WesterosBlocks
                 soundsDefs.put(sd.name, sd);
             }
             // Register listener for client sound loading
+            /*NOTYET
             if(FMLCommonHandler.instance().getSide().isClient()) {  
                 MinecraftForge.EVENT_BUS.register(new SoundEventListener());
             }
+            */
         }
         // Initialize with standard block IDs
         slabStyleLightingBlocks.clear();
+        /**NOTYET
         slabStyleLightingBlocks.set(Block.stoneSingleSlab.blockID);
         slabStyleLightingBlocks.set(Block.woodSingleSlab.blockID);
         slabStyleLightingBlocks.set(Block.tilledField.blockID);
         slabStyleLightingBlocks.set(Block.stairsWoodOak.blockID);
         slabStyleLightingBlocks.set(Block.stairsCobblestone.blockID);
+        */
     }
 
     @EventHandler
@@ -218,14 +229,17 @@ public class WesterosBlocks
         RenderingRegistry.registerBlockHandler(new WCFenceRenderer());
         ladderRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCLadderRenderer());
-        halfdoorRenderID = RenderingRegistry.getNextAvailableRenderId();
-        RenderingRegistry.registerBlockHandler(new WCHalfDoorRenderer());
         cuboidRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCCuboidRenderer());
+        /**NOTYET
+        halfdoorRenderID = RenderingRegistry.getNextAvailableRenderId();
+        RenderingRegistry.registerBlockHandler(new WCHalfDoorRenderer());
+        */
         cuboidNSEWUDRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCCuboidNSEWUDRenderer());
         stairRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCStairRenderer());
+        /**NOTYET
         if (useWaterCTMFix && ClassTransformer.checkForCTMSupport()) {
             fluidCTMRenderID = RenderingRegistry.getNextAvailableRenderId();
             RenderingRegistry.registerBlockHandler(new WCFluidCTMRenderer());
@@ -234,8 +248,10 @@ public class WesterosBlocks
             useWaterCTMFix = false;
             fluidCTMRenderID = 4;   // Vanilla fluid renderer
         }
+        */
         proxy.initRenderRegistry();
         
+        //NOTYET NetworkRegistry.newChannel(WesterosBlocksPacketHandler.CHANNEL, new WesterosBlocksPacketHandler());
         // Construct custom block definitions
         ArrayList<Block> blklist = new ArrayList<Block>();
         customBlocksByName = new HashMap<String, Block>();
@@ -245,12 +261,14 @@ public class WesterosBlocks
                 for (int j = 0; j < blks.length; j++) {
                     Block blk = blks[j];
                     blklist.add(blk);
-                    customBlocksByName.put(customBlockDefs[i].getUnlocalizedName(j), blk);
+                    customBlocksByName.put(customBlockDefs[i].getBlockName(j), blk);
                 }
             }
             else {
+                /**NOTYET 
                 crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
                 return;
+                */
             }
         }
         customBlocks = blklist.toArray(new Block[blklist.size()]);
@@ -269,8 +287,9 @@ public class WesterosBlocks
             }
         }
         // Register entities
+        /**NOTYET
         EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, WesterosBlocks.instance, 120, 20, true);;
-
+        */
         // Handle dynmap support
         try {
             handleDynmap();
@@ -317,8 +336,9 @@ public class WesterosBlocks
     {
     }
     
+    /**NOTYET
     public class SoundEventListener {
-        @ForgeSubscribe
+        @SubscribeEvent
         public void onSound(SoundLoadEvent event)
         {
             log.info("Registering " + customConfig.sounds.length + " custom sounds");
@@ -355,4 +375,5 @@ public class WesterosBlocks
             }
         }
     }
+    */
 }

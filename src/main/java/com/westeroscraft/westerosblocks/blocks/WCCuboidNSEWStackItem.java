@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 
 public class WCCuboidNSEWStackItem extends MultiBlockItem {
 
-    public WCCuboidNSEWStackItem(int par1) {
+    public WCCuboidNSEWStackItem(Block par1) {
         super(par1);
     }
     
@@ -56,10 +56,10 @@ public class WCCuboidNSEWStackItem extends MultiBlockItem {
         if (player.canPlayerEdit(x, y, z, side, stack) && player.canPlayerEdit(x, y + 1, z, side, stack)) {
             Block block = getBlock();
 
-            if ((block == null) || (!block.canPlaceBlockOnSide(world, x, y, z, side, stack))) {
+            if ((block == null) || (!block.canPlaceBlockOnSide(world, x, y, z, side))) {
                 return false;
             }
-            else if (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack)) {
+            else if (!world.canPlaceEntityOnSide(block, x, y, z, false, side, player, stack)) {
                 return false;
             }
             else {
@@ -76,11 +76,11 @@ public class WCCuboidNSEWStackItem extends MultiBlockItem {
     {
         meta += (4 * side);
 
-        world.setBlock(x, y, z, block.blockID, meta, 3);
-        if (world.getBlockId(x, y, z) == block.blockID) {
-            world.setBlock(x, y + 1, z, block.blockID, meta | 0x1, 3);
-            world.notifyBlocksOfNeighborChange(x, y, z, block.blockID);
-            world.notifyBlocksOfNeighborChange(x, y + 1, z, block.blockID);
+        world.setBlock(x, y, z, block, meta, 3);
+        if (world.getBlock(x, y, z) == block) {
+            world.setBlock(x, y + 1, z, block, meta | 0x1, 3);
+            world.notifyBlocksOfNeighborChange(x, y, z, block);
+            world.notifyBlocksOfNeighborChange(x, y + 1, z, block);
         }
     }
 }

@@ -2,20 +2,20 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 
-public class ShiftedIcon implements Icon {
-    private Icon baseIcon;
+public class ShiftedIcon implements IIcon {
+    private IIcon baseIcon;
     private float uOff;
 
-    public ShiftedIcon(Icon base, boolean pos) {
+    public ShiftedIcon(IIcon base, boolean pos) {
         baseIcon = base;
         uOff = (base.getMaxU() - base.getMinU()) / 2.0F;
         if (!pos)
             uOff = -uOff;
     }
 
-    public ShiftedIcon(Icon base, float offset) {
+    public ShiftedIcon(IIcon base, float offset) {
         baseIcon = base;
         uOff = offset * (base.getMaxU() - base.getMinU());
     }

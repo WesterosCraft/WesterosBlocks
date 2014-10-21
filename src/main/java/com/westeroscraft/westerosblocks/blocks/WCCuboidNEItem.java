@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 
 public class WCCuboidNEItem extends MultiBlockItem {
 
-    public WCCuboidNEItem(int par1) {
+    public WCCuboidNEItem(Block par1) {
         super(par1);
     }
     
@@ -51,7 +51,7 @@ public class WCCuboidNEItem extends MultiBlockItem {
             Block block = getBlock();
 
             if ((block == null) || (!block.canPlaceBlockAt(world, x, y, z)) ||
-                    (!world.canPlaceEntityOnSide(block.blockID, x, y, z, false, side, player, stack))) {
+                    (!world.canPlaceEntityOnSide(block, x, y, z, false, side, player, stack))) {
                 return false;
             }
             else {
@@ -69,8 +69,8 @@ public class WCCuboidNEItem extends MultiBlockItem {
     {
         meta += (8 * (side % 2));
 
-        par0World.setBlock(par1, par2, par3, par5Block.blockID, meta, 3);
-        par0World.notifyBlocksOfNeighborChange(par1, par2, par3, par5Block.blockID);
+        par0World.setBlock(par1, par2, par3, par5Block, meta, 3);
+        par0World.notifyBlocksOfNeighborChange(par1, par2, par3, par5Block);
     }
 
 }

@@ -18,6 +18,7 @@ import org.dynmap.modsupport.TextureFileType;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
+/*NOTYET
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
@@ -44,6 +45,47 @@ import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
+import com.westeroscraft.westerosblocks.blocks.WCStepSound;
+import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNEStackBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
+import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStepSound;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
@@ -55,7 +97,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.StepSound;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityAuraFX;
@@ -82,14 +123,15 @@ import net.minecraft.client.particle.EntitySnowShovelFX;
 import net.minecraft.client.particle.EntitySpellParticleFX;
 import net.minecraft.client.particle.EntitySplashFX;
 import net.minecraft.client.particle.EntitySuspendFX;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.ColorizerFoliage;
@@ -98,8 +140,8 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.util.ForgeDirection;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -326,7 +368,7 @@ public class WesterosBlockDef {
 
             for (int xx = -1; xx <= 1; ++xx) {
                 for (int zz = -1; zz <= 1; ++zz) {
-                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getBiomeFoliageColor();
+                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getBiomeFoliageColor(x + xx, y, z + zz);
                     red += (mult & 0xFF0000) >> 16;
                     green += (mult & 0x00FF00) >> 8;
                     blue += (mult & 0x0000FF);
@@ -353,7 +395,7 @@ public class WesterosBlockDef {
 
             for (int xx = -1; xx <= 1; ++xx) {
                 for (int zz = -1; zz <= 1; ++zz) {
-                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getBiomeGrassColor();
+                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getBiomeGrassColor(x + xx, y, z + zz);
                     red += (mult & 0xFF0000) >> 16;
                     green += (mult & 0x00FF00) >> 8;
                     blue += (mult & 0x0000FF);
@@ -469,7 +511,7 @@ public class WesterosBlockDef {
             for (int xx = -1; xx <= 1; ++xx) {
                 for (int zz = -1; zz <= 1; ++zz) {
                     BiomeGenBase biome = access.getBiomeGenForCoords(x + xx, z + zz);
-                    int mult = getColor(biome.getFloatTemperature(), biome.getFloatRainfall());
+                    int mult = getColor(biome.getFloatTemperature(x + xx, y, z + zz), biome.getFloatRainfall());
                     red += (mult & 0xFF0000) >> 16;
                     green += (mult & 0x00FF00) >> 8;
                     blue += (mult & 0x0000FF);
@@ -481,8 +523,8 @@ public class WesterosBlockDef {
 
     
     @SideOnly(Side.CLIENT)
-    private transient Icon[][] icons_by_meta;
-    private transient Icon[] itemicons_by_meta;
+    private transient IIcon[][] icons_by_meta;
+    private transient IIcon[] itemicons_by_meta;
     
     private transient Subblock subblock_by_meta[];
     private transient int fireSpreadSpeed_by_meta[] = null;
@@ -498,7 +540,7 @@ public class WesterosBlockDef {
     private transient boolean hasCollisionBoxes = false;
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
-    private static final Map<String, StepSound> stepSoundTable = new HashMap<String, StepSound>();
+    private static final Map<String, Block.SoundType> stepSoundTable = new HashMap<String, Block.SoundType>();
     private static final Map<String, CreativeTabs> tabTable = new HashMap<String, CreativeTabs>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
     private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
@@ -528,11 +570,11 @@ public class WesterosBlockDef {
         return m;
     }
     
-    public StepSound getStepSound() {
-        StepSound ss = stepSoundTable.get(stepSound);
+    public Block.SoundType getStepSound() {
+        Block.SoundType ss = stepSoundTable.get(stepSound);
         if (ss == null) {
             WesterosBlocks.log.warning(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
-            return Block.soundStoneFootstep;
+            return Block.soundTypeStone;
         }
         return ss;
     }
@@ -699,13 +741,13 @@ public class WesterosBlockDef {
         if (this.lightValue == DEF_FLOAT) {
             this.lightValue = 0.0F;
         }
-        blk.setLightValue(this.lightValue);
-        blk.setUnlocalizedName(this.getUnlocalizedName(idx));
+        blk.setLightLevel(this.lightValue);
+        blk.setBlockName(this.getBlockName(idx));
         if (this.stepSound != null) {
             blk.setStepSound(this.getStepSound());
         }
         if ((this.fireSpreadSpeed > 0) || (this.flamability > 0)) {
-            Block.setBurnProperties(this.blockIDs[idx], this.fireSpreadSpeed, this.flamability);
+            Blocks.fire.setFireInfo(blk, this.fireSpreadSpeed, this.flamability);
         }
         if (creativeTab != null) {
             blk.setCreativeTab(getCreativeTab());
@@ -722,7 +764,7 @@ public class WesterosBlockDef {
         // Register any harvest levels
         if (harvestLevel != null) { // Do overall first
             for (HarvestLevel hl : harvestLevel) {
-                MinecraftForge.setBlockHarvestLevel(blk, hl.tool, hl.level);
+                blk.setHarvestLevel(hl.tool, hl.level);
             }
         }
         // And do any meta-specific overrides second
@@ -730,14 +772,14 @@ public class WesterosBlockDef {
             for (Subblock sb : this.subBlocks) {
                 if (sb.harvestLevel != null) { // Do overall first
                     for (HarvestLevel hl : sb.harvestLevel) {
-                        MinecraftForge.setBlockHarvestLevel(blk, hl.tool, hl.level);
+                        blk.setHarvestLevel(hl.tool, hl.level);
                     }
                 }
             }
         }
     }
     
-    public String getUnlocalizedName(int blknum) {
+    public String getBlockName(int blknum) {
         if (blknum == 0)
             return this.blockName;
         else
@@ -751,13 +793,13 @@ public class WesterosBlockDef {
     public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, Item itm, int idx) {
         // Register the block
         if (itmclass != null) {
-            GameRegistry.registerBlock(blk, itmclass, this.getUnlocalizedName(idx));
+            GameRegistry.registerBlock(blk, itmclass, this.getBlockName(idx));
         }
         else {
-            GameRegistry.registerBlock(blk, this.getUnlocalizedName(idx));
+            GameRegistry.registerBlock(blk, this.getBlockName(idx));
         }
         if (itm != null) {
-            GameRegistry.registerItem(itm, this.getUnlocalizedName(idx) + "_item");
+            GameRegistry.registerItem(itm, this.getBlockName(idx) + "_item");
         }
         // And register strings for each item block
         if ((this.subBlocks != null) && (this.subBlocks.size() > 0)) {
@@ -781,25 +823,25 @@ public class WesterosBlockDef {
 
     
     @SideOnly(Side.CLIENT)
-    public void doStandardRegisterIcons(IconRegister ir) {
+    public void doStandardRegisterIcons(IIconRegister ir) {
         if (subblock_by_meta == null) {
             initMeta();
         }
-        icons_by_meta = new Icon[metaMask+1][];
+        icons_by_meta = new IIcon[metaMask+1][];
         if (subBlocks != null) {
-            HashMap<String, Icon> map = new HashMap<String, Icon>();
+            HashMap<String, IIcon> map = new HashMap<String, IIcon>();
             for (Subblock sb : subBlocks) {
                 if (sb.textures == null) {
                     WesterosBlocks.log.warning(String.format("No textures for subblock '%d' of block '%s'", sb.meta, this.blockName));
                     sb.textures = Collections.singletonList("INVALID_" + blockName + "_" + sb.meta);
                 }
-                icons_by_meta[sb.meta] = new Icon[sb.textures.size()];
+                icons_by_meta[sb.meta] = new IIcon[sb.textures.size()];
                 for (int i = 0; i < sb.textures.size(); i++) {
                     String txt = sb.textures.get(i);
                     if (txt.indexOf(':') < 0) {
                         txt = "westerosblocks:" + txt;
                     }
-                    Icon ico = map.get(txt);
+                    IIcon ico = map.get(txt);
                     if (ico == null) {
                         ico = ir.registerIcon(txt);
                         map.put(txt, ico);
@@ -811,13 +853,13 @@ public class WesterosBlockDef {
     }
 
     @SideOnly(Side.CLIENT)
-    public void doStandardItemRegisterIcons(IconRegister ir) {
+    public void doStandardItemRegisterIcons(IIconRegister ir) {
         if (subblock_by_meta == null) {
             initMeta();
         }
-        itemicons_by_meta = new Icon[metaMask+1];
+        itemicons_by_meta = new IIcon[metaMask+1];
         if (subBlocks != null) {
-            HashMap<String, Icon> map = new HashMap<String, Icon>();
+            HashMap<String, IIcon> map = new HashMap<String, IIcon>();
             for (Subblock sb : subBlocks) {
                 if (sb.noInventoryItem) continue; 
                 if (sb.itemTexture != null) {
@@ -825,7 +867,7 @@ public class WesterosBlockDef {
                     if (txt.indexOf(':') < 0) {
                         txt = "westerosblocks:" + txt;
                     }
-                    Icon ico = map.get(txt);
+                    IIcon ico = map.get(txt);
                     if (ico == null) {
                         ico = ir.registerIcon(txt);
                         map.put(txt, ico);
@@ -837,7 +879,7 @@ public class WesterosBlockDef {
     }
 
     @SideOnly(Side.CLIENT)
-    public Icon doStandardIconGet(int side, int meta) {
+    public IIcon doStandardIconGet(int side, int meta) {
         if (icons_by_meta == null) {
             return null;
         }
@@ -845,7 +887,7 @@ public class WesterosBlockDef {
         if (m >= icons_by_meta.length) {
             m = 0;
         }
-        Icon[] ico = icons_by_meta[m];
+        IIcon[] ico = icons_by_meta[m];
         if (ico != null) {
             if (side >= ico.length) {
                 side = ico.length - 1;
@@ -878,10 +920,9 @@ public class WesterosBlockDef {
         return "INVALID_" + this.blockName;
     }
 
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        metadata &= metaMask;
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
         if (flamability_by_meta != null) {
-            return flamability_by_meta[metadata];
+            return flamability_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
         }
         return this.flamability;
     }
@@ -902,10 +943,9 @@ public class WesterosBlockDef {
         return null;
     }
 
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        metadata &= metaMask;
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
         if (fireSpreadSpeed_by_meta != null) {
-            return fireSpreadSpeed_by_meta[metadata];
+            return fireSpreadSpeed_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
         }
         return this.fireSpreadSpeed;
     }
@@ -917,11 +957,11 @@ public class WesterosBlockDef {
         return this.lightValueInt;
     }
         
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         if (this.lightOpacity_by_meta != null) {
             return this.lightOpacity_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
         }
-        return Block.lightOpacity[this.blockID];
+        return Block.getBlockById(this.blockID).getLightOpacity();
     }
     
     public int getBlockColor() {
@@ -993,7 +1033,7 @@ public class WesterosBlockDef {
         int meta = world.getBlockMetadata(x, y, z);
         BoundingBox bb = getBoundingBox(meta);
         if (bb != null) {
-            return AxisAlignedBB.getAABBPool().getAABB((double)x + bb.xMin, (double)y + bb.yMin, (double)z + bb.zMin, (double)x + bb.xMax, (double)y + bb.yMax, (double)z + bb.zMax);
+            return AxisAlignedBB.getBoundingBox((double)x + bb.xMin, (double)y + bb.yMin, (double)z + bb.zMin, (double)x + bb.xMax, (double)y + bb.yMax, (double)z + bb.zMax);
         }
         return null;
     }
@@ -1172,7 +1212,7 @@ public class WesterosBlockDef {
         return true;
     }
     
-    public Icon getItemIcon(int meta) {
+    public IIcon getItemIcon(int meta) {
         meta &= metaMask;
         if (itemicons_by_meta != null) {
             if (meta >= itemicons_by_meta.length) {
@@ -1217,25 +1257,25 @@ public class WesterosBlockDef {
         materialTable.put("craftedSnow", Material.craftedSnow);
         materialTable.put("cactus", Material.cactus);
         materialTable.put("clay", Material.clay);
-        materialTable.put("pumpkin", Material.pumpkin);
+        materialTable.put("pumpkin", Material.gourd);
         materialTable.put("dragonEgg", Material.dragonEgg);
         materialTable.put("portal", Material.portal);
         materialTable.put("cake", Material.cake);
         materialTable.put("web", Material.web);
         materialTable.put("piston", Material.piston);
 
-        stepSoundTable.put("powder", Block.soundPowderFootstep);
-        stepSoundTable.put("wood", Block.soundWoodFootstep);
-        stepSoundTable.put("gravel", Block.soundGravelFootstep);
-        stepSoundTable.put("grass", Block.soundGrassFootstep);
-        stepSoundTable.put("stone", Block.soundStoneFootstep);
-        stepSoundTable.put("metal", Block.soundMetalFootstep);
-        stepSoundTable.put("glass", Block.soundGlassFootstep);
-        stepSoundTable.put("cloth", Block.soundClothFootstep);
-        stepSoundTable.put("sand", Block.soundSandFootstep);
-        stepSoundTable.put("snow", Block.soundSnowFootstep);
-        stepSoundTable.put("ladder", Block.soundLadderFootstep);
-        stepSoundTable.put("anvil", Block.soundAnvilFootstep);
+        stepSoundTable.put("powder", Block.soundTypeSand);
+        stepSoundTable.put("wood", Block.soundTypeWood);
+        stepSoundTable.put("gravel", Block.soundTypeGravel);
+        stepSoundTable.put("grass", Block.soundTypeGrass);
+        stepSoundTable.put("stone", Block.soundTypeStone);
+        stepSoundTable.put("metal", Block.soundTypeMetal);
+        stepSoundTable.put("glass", Block.soundTypeGlass);
+        stepSoundTable.put("cloth", Block.soundTypeCloth);
+        stepSoundTable.put("sand", Block.soundTypeSand);
+        stepSoundTable.put("snow", Block.soundTypeSnow);
+        stepSoundTable.put("ladder", Block.soundTypeLadder);
+        stepSoundTable.put("anvil", Block.soundTypeAnvil);
         // Tab table
         tabTable.put("buildingBlocks", CreativeTabs.tabBlock);
         tabTable.put("decorations", CreativeTabs.tabDecorations);
@@ -1255,31 +1295,32 @@ public class WesterosBlockDef {
         typeTable.put("plant", new WCPlantBlock.Factory());
         typeTable.put("crop", new WCCropBlock.Factory());
         typeTable.put("slab", new WCSlabBlock.Factory());
-        typeTable.put("fence", new WCFenceBlock.Factory());
         typeTable.put("wall", new WCWallBlock.Factory());
-        typeTable.put("pane", new WCPaneBlock.Factory());
-        typeTable.put("sand", new WCSandBlock.Factory());
+        typeTable.put("fence", new WCFenceBlock.Factory());
+        typeTable.put("web", new WCWebBlock.Factory());
+        typeTable.put("torch", new WCTorchBlock.Factory());
+        typeTable.put("ladder", new WCLadderBlock.Factory());
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
         typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
         typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
-        typeTable.put("torch", new WCTorchBlock.Factory());
+        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
+        typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
+        /*NOTYET
+        typeTable.put("pane", new WCPaneBlock.Factory());
+        typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("door", new WCDoorBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
-        typeTable.put("web", new WCWebBlock.Factory());
-        typeTable.put("ladder", new WCLadderBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("rail", new WCRailBlock.Factory());
         typeTable.put("bed", new WCBedBlock.Factory());
-        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
-        typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
         typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("cake", new WCCakeBlock.Factory());
         typeTable.put("furnace", new WCFurnaceBlock.Factory());
-
+        */
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());
         colorMultTable.put("water", new WaterColorMultHandler());

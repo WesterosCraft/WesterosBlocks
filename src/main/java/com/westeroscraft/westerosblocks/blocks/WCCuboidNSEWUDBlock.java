@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.block.Block;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -88,7 +88,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
     }
     
     @SideOnly(Side.CLIENT)
-    protected Icon getIconInternal(int side, int meta) {
+    protected IIcon getIconInternal(int side, int meta) {
         int[] sidemap = null;
         if (this.currentCuboid != null) {
             sidemap = this.currentCuboid.sideTextures;

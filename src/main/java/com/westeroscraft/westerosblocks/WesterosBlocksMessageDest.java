@@ -1,8 +1,5 @@
 package com.westeroscraft.westerosblocks;
 
-import net.minecraft.network.INetworkManager;
-import cpw.mods.fml.common.network.Player;
-
 public interface WesterosBlocksMessageDest {
     /**
      * Handle message received
@@ -12,5 +9,7 @@ public interface WesterosBlocksMessageDest {
      * @param msg - message buffer
      * @param msgoff - offset of start of message in buffer
      */
+    /*NOTYET
     public void deliverMessage(INetworkManager manager, Player player, byte[] msg, int msgoff);
+    */
 }

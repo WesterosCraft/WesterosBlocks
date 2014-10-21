@@ -9,9 +9,10 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.EntityRenderer;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
+
 import org.lwjgl.opengl.GL11;
 
 // Custom renderer for 6 way rotation cuboids
@@ -54,13 +55,13 @@ public class WCCuboidNSEWUDRenderer implements ISimpleBlockRenderingHandler {
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
         tessellator.startDrawingQuads();
         tessellator.setNormal(0.0F, -1.0F, 0.0F);
-        renderblocks.drawCrossedSquares(block, meta, -0.5D, -0.5D, -0.5D, 1.0F);
+        renderblocks.drawCrossedSquares(block.getIcon(0, meta), -0.5D, -0.5D, -0.5D, 1.0F);
         tessellator.draw();
         GL11.glTranslatef(0.5F, 0.5F, 0.5F);
     }
     
 
-
+    @Override
     public void renderInventoryBlock(Block block, int meta, int modelID,
             RenderBlocks renderer) {
         WCCuboidBlock cblock = (WCCuboidBlock) block;
@@ -111,7 +112,7 @@ public class WCCuboidNSEWUDRenderer implements ISimpleBlockRenderingHandler {
         INV_YMAX,
         INV_ZMAX
     };    
-    private double calcInterpUV(Icon ico, CalcUV f, WesterosBlockDef.Cuboid cub, boolean get_v, boolean min) {
+    private double calcInterpUV(IIcon ico, CalcUV f, WesterosBlockDef.Cuboid cub, boolean get_v, boolean min) {
         double v = 0.0;
         switch (f) {
             case XMIN:
@@ -156,16 +157,16 @@ public class WCCuboidNSEWUDRenderer implements ISimpleBlockRenderingHandler {
         else
             return ico.getInterpolatedU(v);
     }
-    private double calcMinU(Icon ico, int side, int rot, WesterosBlockDef.Cuboid cub) {
+    private double calcMinU(IIcon ico, int side, int rot, WesterosBlockDef.Cuboid cub) {
         return calcInterpUV(ico, uvCalc[side][rot][0], cub, false, true);
     }
-    private double calcMaxU(Icon ico, int side, int rot, WesterosBlockDef.Cuboid cub) {
+    private double calcMaxU(IIcon ico, int side, int rot, WesterosBlockDef.Cuboid cub) {
         return calcInterpUV(ico, uvCalc[side][rot][0], cub, false, false);
     }
-    private double calcMinV(Icon ico, int side, int rot, WesterosBlockDef.Cuboid cub) {
+    private double calcMinV(IIcon ico, int side, int rot, WesterosBlockDef.Cuboid cub) {
         return calcInterpUV(ico, uvCalc[side][rot][1], cub, true, true);
     }
-    private double calcMaxV(Icon ico, int side, int rot, WesterosBlockDef.Cuboid cub) {
+    private double calcMaxV(IIcon ico, int side, int rot, WesterosBlockDef.Cuboid cub) {
         return calcInterpUV(ico, uvCalc[side][rot][1], cub, true, false);
     }
     
@@ -223,7 +224,7 @@ public class WCCuboidNSEWUDRenderer implements ISimpleBlockRenderingHandler {
     
     private void renderCuboidSide(WCCuboidBlock block, WesterosBlockDef.Cuboid cub, RenderBlocks renderer, int meta, int side) {
         Tessellator tessellator = Tessellator.instance;
-        Icon icon = renderer.getBlockIconFromSideAndMetadata(block, side, meta);    // Get icon for side
+        IIcon icon = renderer.getBlockIconFromSideAndMetadata(block, side, meta);    // Get icon for side
         int rot = cub.sideRotations[side] / 90;
         // Get interpolated U and V ranges
         double umin = calcMinU(icon, side, rot, cub);
@@ -258,6 +259,7 @@ public class WCCuboidNSEWUDRenderer implements ISimpleBlockRenderingHandler {
         }
     }
     
+    @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
             Block block, int modelId, RenderBlocks renderer) {
         WCCuboidBlock cblock = (WCCuboidBlock) block;
@@ -284,13 +286,15 @@ public class WCCuboidNSEWUDRenderer implements ISimpleBlockRenderingHandler {
         return true;
     }
 
+    @Override
     public int getRenderId() {
         return WesterosBlocks.cuboidNSEWUDRenderID;
     }
 
     @Override
-    public boolean shouldRender3DInInventory() {
+    public boolean shouldRender3DInInventory(int modelId) {
         return true;
     }
+
 
 }

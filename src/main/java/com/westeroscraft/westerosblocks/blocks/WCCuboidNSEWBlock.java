@@ -6,6 +6,7 @@ import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -64,8 +65,8 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
 
     @Override

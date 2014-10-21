@@ -11,16 +11,17 @@ import org.dynmap.modsupport.ModTextureDefinition;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
@@ -47,11 +48,11 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     protected WesterosBlockDef def;
     protected WesterosBlockDef.Cuboid currentCuboid = null; // Current rendering cuboid
     protected int cuboidIndex = -1;
-    protected Icon sideIcons[][] = new Icon[16][];
+    protected IIcon sideIcons[][] = new IIcon[16][];
     protected WesterosBlockDef.CuboidRotation[] metaRotations = null;
     
     protected WCCuboidBlock(WesterosBlockDef def) {
-        super(def.blockID, def.getMaterial());
+        super(def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -70,14 +71,14 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         boolean tmpset = false;
         if (cuboidIndex < 0) {
             List<WesterosBlockDef.Cuboid> clist = def.getCuboidList(meta);
@@ -90,7 +91,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
             cuboidIndex = 0;
             tmpset = true;
         }
-        Icon ico = getIconInternal(side, meta);
+        IIcon ico = getIconInternal(side, meta);
 
         if (tmpset) {
             currentCuboid = null;
@@ -99,12 +100,12 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         return ico;
     }
     @SideOnly(Side.CLIENT)
-    protected Icon getIconInternal(int side, int meta) {
+    protected IIcon getIconInternal(int side, int meta) {
         if ((side == 2) || (side == 5)) { // North or East
             if (this.sideIcons[meta] == null) {
                 List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(meta);
                 if (lst != null) {
-                    this.sideIcons[meta] = new Icon[lst.size() * 6];
+                    this.sideIcons[meta] = new IIcon[lst.size() * 6];
                 }
             }
             if (this.sideIcons[meta][6*cuboidIndex+side] != null) { // North needs shift
@@ -122,7 +123,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
             }
             nside = sidemap[nside];
         }
-        Icon ico = def.doStandardIconGet(nside, meta);
+        IIcon ico = def.doStandardIconGet(nside, meta);
         if (side == 2) { // North
             float shft = (1.0F - currentCuboid.xMax) - currentCuboid.xMin;
             if (shft != 0.0F) {
@@ -143,13 +144,8 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     @Override
     public int damageDropped(int meta) {
@@ -163,17 +159,6 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     public boolean renderAsNormalBlock() {
         return false;
     }
-//    @Override
-//    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
-//        AxisAlignedBB bb = def.getCollisionBoundingBoxFromPool(world, x, y, z);
-//        if (bb == null)
-//            bb = super.getCollisionBoundingBoxFromPool(world, x, y, z);
-//        return bb;
-//    }
-//    @Override
-//    public void setBlockBoundsBasedOnState(IBlockAccess blockaccess, int x, int y, int z) {
-//        def.setBlockBoundsBasedOnState(this, blockaccess, x, y, z);
-//    }
     @SideOnly(Side.CLIENT)
     @Override
     public boolean shouldSideBeRendered(IBlockAccess access, int x, int y, int z, int side)
@@ -206,26 +191,26 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
                     break;
             }
         }
-        return !access.isBlockOpaqueCube(x, y, z);
+        return !access.getBlock(x, y, z).isOpaqueCube();
     }
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -306,12 +291,13 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         WesterosBlockDef def = this.getWBDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 6);
         for (int meta = 0; meta < 16; meta++) {
             List<Cuboid> cl = this.getCuboidList(meta);   
             if (cl == null) continue;
-            CuboidBlockModel mod = md.addCuboidModel(this.blockID);
+            CuboidBlockModel mod = md.addCuboidModel(blkid);
             for (Cuboid c : cl) {
                 if (WesterosBlockDef.SHAPE_CROSSED.equals(c.shape)) {   // Crosed
                     mod.addCrossedPatches(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax, c.sideTextures[0]);

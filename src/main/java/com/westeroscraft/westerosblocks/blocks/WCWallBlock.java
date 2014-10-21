@@ -11,12 +11,14 @@ import org.dynmap.modsupport.WallFenceBlockModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.util.Icon;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -34,8 +36,8 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
-            Block matblk = new Block(def.blockID, def.getMaterial());
-            Block.blocksList[def.blockID] = null;
+            Block matblk = new WCSolidBlock(def);
+            //Block.blocksList[def.blockID] = null;
             
             return new Block[] { new WCWallBlock(def, matblk) };
         }
@@ -44,7 +46,7 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
     private WesterosBlockDef def;
     
     protected WCWallBlock(WesterosBlockDef def, Block matblk) {
-        super(def.blockID, matblk);
+        super(matblk);
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -63,27 +65,22 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         return def.doStandardIconGet(side, meta);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     @Override
     public int damageDropped(int meta) {
@@ -94,19 +91,19 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess  world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess  world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -144,10 +141,11 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 3);
         // Get plant model, and set for all defined meta
-        WallFenceBlockModel pbm = md.addWallFenceModel(this.blockID, WallFenceBlockModel.FenceType.WALL);
+        WallFenceBlockModel pbm = md.addWallFenceModel(blkid, WallFenceBlockModel.FenceType.WALL);
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {
             pbm.setMetaValue(sb.meta);
         }
@@ -158,11 +156,10 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
     @Override
     public boolean canConnectWallTo(IBlockAccess world, int x, int y, int z)
     {
-        int id = world.getBlockId(x, y, z);
-        Block block = Block.blocksList[id];
+        Block block = world.getBlock(x, y, z);
 
-        if (id != this.blockID && id != Block.fenceGate.blockID && (!(block instanceof BlockWall))) {
-            return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
+        if (block != this && block != Blocks.fence_gate && (!(block instanceof BlockWall))) {
+            return block != null && block.getMaterial().isOpaque() && block.renderAsNormalBlock() ? block.getMaterial() != Material.gourd : false;
         }
         else {
             return true;

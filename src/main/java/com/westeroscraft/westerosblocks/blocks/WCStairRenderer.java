@@ -13,6 +13,7 @@ import org.lwjgl.opengl.GL11;
 // Custom fence renderer - lets us render fence items with per-meta specific textures in inventory
 public class WCStairRenderer implements ISimpleBlockRenderingHandler {
 
+    @Override
     public void renderInventoryBlock(Block block, int metadata, int modelID,
             RenderBlocks renderer) {
         Tessellator tessellator = Tessellator.instance;
@@ -62,18 +63,22 @@ public class WCStairRenderer implements ISimpleBlockRenderingHandler {
         renderer.setRenderBounds(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
     }
 
+    @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
             Block block, int modelId, RenderBlocks renderer) {
         // Use default for world blocks
         return renderer.renderBlockStairs((BlockStairs)block, x, y, z);
     }
 
-    public boolean shouldRender3DInInventory() {
-        return true;
-    }
 
+    @Override
     public int getRenderId() {
         return WesterosBlocks.stairRenderID;
+    }
+
+    @Override
+    public boolean shouldRender3DInInventory(int modelId) {
+        return true;
     }
 
 }

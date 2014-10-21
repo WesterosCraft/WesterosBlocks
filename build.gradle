@@ -11,7 +11,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
     }
 }
 
@@ -80,7 +80,7 @@ jar {
         attributes 'FMLCorePlugin': 'com.westeroscraft.westerosblocks.asm.FMLLoadingPlugin'
         attributes 'FMLCorePluginContainsFMLMod': 'true'
     }
-   classifier = "forge-9.11.1"
+   classifier = "forge-1.7.10"
    destinationDir = project.projectDir
    //from { configurations.westerosblocks.collect { it.isDirectory() ? it : zipTree(it) } }
 }

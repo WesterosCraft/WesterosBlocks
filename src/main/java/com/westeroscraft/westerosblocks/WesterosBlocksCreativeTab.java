@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 
@@ -39,5 +40,10 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
     @Override
     public String getTranslatedTabLabel() {
         return lbl;
+    }
+
+    @Override
+    public Item getTabIconItem() {
+        return getIconItemStack().getItem();
     }
 }

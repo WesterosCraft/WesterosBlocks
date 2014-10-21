@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -10,15 +9,16 @@ import org.dynmap.modsupport.PatchBlockModel;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -43,7 +43,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     private WesterosBlockDef def;
     
     protected WCPlantBlock(WesterosBlockDef def) {
-        super(def.blockID, def.getMaterial());
+        super(def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -62,45 +62,27 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         return def.doStandardIconGet(side, meta);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     
     @Override
     public int damageDropped(int meta) {
         return meta;
-    }
-
-    public EnumPlantType getPlantType(World world, int x, int y, int z) {
-        return def.getPlantType(world.getBlockMetadata(x,  y,  z));
-    }
-
-    public int getPlantID(World world, int x, int y, int z) {
-        return this.blockID;
-    }
-
-    public int getPlantMetadata(World world, int x, int y, int z) {
-        return world.getBlockMetadata(x,  y,  z);
     }
 
     @Override
@@ -127,19 +109,19 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -173,14 +155,30 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
 
-        PatchBlockModel mod = md.addPatchModel(this.blockID);
+        PatchBlockModel mod = md.addPatchModel(blkid);
         String patch0 = mod.addPatch(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, SideVisible.FLIP);
         mod.addRotatedPatch(patch0, 0, 90, 0);
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {
             mod.setMetaValue(sb.meta);
         }
+    }
+
+    @Override
+    public EnumPlantType getPlantType(IBlockAccess world, int x, int y, int z) {
+        return def.getPlantType(world.getBlockMetadata(x,  y,  z));
+    }
+
+    @Override
+    public Block getPlant(IBlockAccess world, int x, int y, int z) {
+        return this;
+    }
+
+    @Override
+    public int getPlantMetadata(IBlockAccess world, int x, int y, int z) {
+        return world.getBlockMetadata(x,  y,  z);
     }
 }

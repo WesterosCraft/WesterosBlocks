@@ -2,9 +2,9 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import com.westeroscraft.westerosblocks.WesterosBlockStepSound;
 
-import net.minecraft.block.StepSound;
+import net.minecraft.block.Block;
 
-public class WCStepSound extends StepSound {
+public class WCStepSound extends Block.SoundType {
     private String breakSound;
     private String placeSound;
 
@@ -24,17 +24,20 @@ public class WCStepSound extends StepSound {
         }
     }
     
+    @Override
     public String getBreakSound()
     {
         return this.breakSound;
     }
 
-    public String getStepSound()
+    @Override
+    public String getStepResourcePath()
     {
-        return this.stepSoundName;
+        return this.soundName;
     }
 
-    public String getPlaceSound()
+    @Override
+    public String func_150496_b()
     {
         return this.placeSound;
     }

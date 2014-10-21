@@ -1,10 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import static net.minecraftforge.common.ForgeDirection.EAST;
-import static net.minecraftforge.common.ForgeDirection.NORTH;
-import static net.minecraftforge.common.ForgeDirection.SOUTH;
-import static net.minecraftforge.common.ForgeDirection.WEST;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -15,14 +10,15 @@ import org.dynmap.modsupport.PatchBlockModel;
 import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -49,7 +45,7 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
     private WesterosBlockDef def;
     
     protected WCLadderBlock(WesterosBlockDef def) {
-        super(def.blockID, def.getMaterial());
+        super(def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -134,37 +130,39 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
     /**
      * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
      */
+    @Override
     public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4)
     {
-        return par1World.isBlockSolidOnSide(par2 - 1, par3, par4, EAST ) ||
-               par1World.isBlockSolidOnSide(par2 + 1, par3, par4, WEST ) ||
-               par1World.isBlockSolidOnSide(par2, par3, par4 - 1, SOUTH) ||
-               par1World.isBlockSolidOnSide(par2, par3, par4 + 1, NORTH);
+        return par1World.isSideSolid(par2 - 1, par3, par4, ForgeDirection.EAST ) ||
+               par1World.isSideSolid(par2 + 1, par3, par4, ForgeDirection.WEST ) ||
+               par1World.isSideSolid(par2, par3, par4 - 1, ForgeDirection.SOUTH) ||
+               par1World.isSideSolid(par2, par3, par4 + 1, ForgeDirection.NORTH);
     }
 
     /**
      * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
      */
+    @Override
     public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int meta)
     {
         int j1 = meta & 0x3;
 
-        if ((j1 == 0 || par5 == 2) && par1World.isBlockSolidOnSide(par2, par3, par4 + 1, NORTH))
+        if ((j1 == 0 || par5 == 2) && par1World.isSideSolid(par2, par3, par4 + 1, ForgeDirection.NORTH))
         {
             j1 |= 0xC;
         }
 
-        if ((j1 == 0 || par5 == 3) && par1World.isBlockSolidOnSide(par2, par3, par4 - 1, SOUTH))
+        if ((j1 == 0 || par5 == 3) && par1World.isSideSolid(par2, par3, par4 - 1, ForgeDirection.SOUTH))
         {
             j1 |= 0x8;
         }
 
-        if ((j1 == 0 || par5 == 4) && par1World.isBlockSolidOnSide(par2 + 1, par3, par4, WEST))
+        if ((j1 == 0 || par5 == 4) && par1World.isSideSolid(par2 + 1, par3, par4, ForgeDirection.WEST))
         {
             j1 |= 0x4;
         }
 
-        if ((j1 == 0 || par5 == 5) && par1World.isBlockSolidOnSide(par2 - 1, par3, par4, EAST))
+        if ((j1 == 0 || par5 == 5) && par1World.isSideSolid(par2 - 1, par3, par4, ForgeDirection.EAST))
         {
             j1 |= 0x0;
         }
@@ -176,28 +174,29 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor blockID
      */
-    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+    @Override
+    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, Block par5)
     {
         int meta = par1World.getBlockMetadata(par2, par3, par4);
         boolean flag = false;
         int sidemeta = (meta >> 2);
 
-        if (sidemeta == 3 && par1World.isBlockSolidOnSide(par2, par3, par4 + 1, NORTH))
+        if (sidemeta == 3 && par1World.isSideSolid(par2, par3, par4 + 1, ForgeDirection.NORTH))
         {
             flag = true;
         }
 
-        if (sidemeta == 2 && par1World.isBlockSolidOnSide(par2, par3, par4 - 1, SOUTH))
+        if (sidemeta == 2 && par1World.isSideSolid(par2, par3, par4 - 1, ForgeDirection.SOUTH))
         {
             flag = true;
         }
 
-        if (sidemeta == 1 && par1World.isBlockSolidOnSide(par2 + 1, par3, par4, WEST))
+        if (sidemeta == 1 && par1World.isSideSolid(par2 + 1, par3, par4, ForgeDirection.WEST))
         {
             flag = true;
         }
 
-        if (sidemeta == 0 && par1World.isBlockSolidOnSide(par2 - 1, par3, par4, EAST))
+        if (sidemeta == 0 && par1World.isSideSolid(par2 - 1, par3, par4, ForgeDirection.EAST))
         {
             flag = true;
         }
@@ -214,13 +213,14 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
     /**
      * Returns the quantity of items to drop on block destruction.
      */
+    @Override
     public int quantityDropped(Random par1Random)
     {
         return 1;
     }
 
     @Override
-    public boolean isLadder(World world, int x, int y, int z, EntityLivingBase entity)
+    public boolean isLadder(IBlockAccess world, int x, int y, int z, EntityLivingBase entity)
     {
         return true;
     }
@@ -239,27 +239,22 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         return def.doStandardIconGet(side, meta);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     @Override
     public int damageDropped(int meta) {
@@ -270,19 +265,19 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -331,17 +326,18 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 1);
         /* Make base model */
-        PatchBlockModel mod = md.addPatchModel(this.blockID);
+        PatchBlockModel mod = md.addPatchModel(blkid);
         String patch0 = mod.addPatch(0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, SideVisible.BOTH);
         /* Make rotated models */
-        PatchBlockModel mod90 = md.addPatchModel(this.blockID);
+        PatchBlockModel mod90 = md.addPatchModel(blkid);
         mod90.addRotatedPatch(patch0, 0, 90, 0);
-        PatchBlockModel mod180 = md.addPatchModel(this.blockID);
+        PatchBlockModel mod180 = md.addPatchModel(blkid);
         mod180.addRotatedPatch(patch0, 0, 180, 0);
-        PatchBlockModel mod270 = md.addPatchModel(this.blockID);
+        PatchBlockModel mod270 = md.addPatchModel(blkid);
         mod270.addRotatedPatch(patch0, 0, 270, 0);
         
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {

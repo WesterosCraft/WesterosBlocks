@@ -19,16 +19,28 @@ import org.objectweb.asm.tree.TypeInsnNode;
 import org.objectweb.asm.Opcodes;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockPane;
+import net.minecraft.block.BlockStationary;
+import net.minecraft.block.BlockWall;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.launchwrapper.IClassTransformer;
+import net.minecraft.util.Icon;
+import net.minecraft.world.ChunkCache;
+import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.common.ForgeDirection;
 
 public class ClassTransformer implements IClassTransformer, Opcodes {
     @Override
     public byte[] transform(String name, String tname, byte[] bytes)
     {
-        /*NOTYET
         if (name.equals("acg")) { // Obfuscated name for net.minecraft.world.WorldType
             bytes = transformWorldType(name, bytes, true);
         }
@@ -71,7 +83,6 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else if (name.equals("net.minecraft.world.ChunkCache")) {    // Clean name for ChunkCache
             bytes = transformChunkCache(name, bytes, false);
         }
-        */
         return bytes;
     }
     
@@ -725,7 +736,6 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return 256.0F;
     }
     
-    /*NOTYET
     public static boolean canConnectFenceTo(int blkid, IBlockAccess world, int x, int y, int z) {
         int id = world.getBlockId(x, y, z);
         Block block = Block.blocksList[id];
@@ -797,6 +807,5 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         return id;
     }
-    */
 }
 

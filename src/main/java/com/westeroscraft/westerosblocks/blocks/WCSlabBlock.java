@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
 import java.util.Random;
@@ -11,15 +10,17 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockHalfSlab;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.block.BlockSlab;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Facing;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -30,7 +31,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
+public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -60,7 +61,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     private static BitSet halfSlabs = new BitSet();
     
     protected WCSlabBlock(WesterosBlockDef def, boolean is_double) {
-        super(def.blockIDs[is_double?FULL_IDX:HALF_IDX], is_double, def.getMaterial());
+        super(is_double, def.getMaterial());
         this.def = def;
         if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
             def.lightOpacity = 255;
@@ -72,7 +73,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
         else {
             WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
             halfSlabs.set(def.blockID);
-            useNeighborBrightness[def.blockID] = true;
+            //NOTYET useNeighborBrightness[def.blockID] = true;
         }
     }
 
@@ -83,7 +84,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
     }
 
     public boolean registerBlockDefinition() {
-        if (this.isDoubleSlab) {
+        if (this.field_150004_a) { // isDoubleSlab
             WCSlabItem.setSlabs(otherBlock, this);
             def.doStandardRegisterActions(this, WCSlabItem.class, null, FULL_IDX);
         }
@@ -97,33 +98,27 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         return def.doStandardIconGet(side, meta);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     
-    @SuppressWarnings("rawtypes")
     @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
-    }
-
-    @Override
-    public String getFullSlabName(int meta) {
-        return def.getUnlocalizedName(FULL_IDX) + "." + meta; // Get name for full slab
+    public String func_150002_b(int meta) { // getFullSlabName
+        return def.getBlockName(FULL_IDX) + "." + meta; // Get name for full slab
     }
 
     @Override
@@ -131,19 +126,19 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -168,24 +163,17 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
         return meta;
     }
     @Override
-    public int idDropped(int meta, Random rnd, int par3) {
-        if (this.isDoubleSlab) {
-            return this.otherBlock.blockID;
-        }
+    @SideOnly(Side.CLIENT)
+    public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_) {
+        if (!field_150004_a)
+            return Item.getItemFromBlock(this);
         else
-            return blockID;
-    }
-    @Override
-    public int idPicked(World world, int x, int y, int z) {
-        if (!isDoubleSlab)
-            return blockID;
-        else
-            return otherBlock.blockID;
+            return Item.getItemFromBlock(otherBlock);
     }
 
     @Override
     protected ItemStack createStackedBlock(int meta) {
-        return new ItemStack(blockID, 2, meta);
+        return new ItemStack(Item.getItemFromBlock(this), 2, meta & 7);
     }
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
@@ -208,7 +196,7 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
      */
     public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
-        if (this.isDoubleSlab)
+        if (this.field_150004_a)
         {
             return super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5);
         }
@@ -222,27 +210,28 @@ public class WCSlabBlock extends BlockHalfSlab implements WesterosBlockLifecycle
             int j1 = par3 + Facing.offsetsYForSide[Facing.oppositeSide[par5]];
             int k1 = par4 + Facing.offsetsZForSide[Facing.oppositeSide[par5]];
             boolean flag = (par1IBlockAccess.getBlockMetadata(i1, j1, k1) & 8) != 0;
-            return flag ? (par5 == 0 ? true : (par5 == 1 && super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5) ? true : !isBlockSingleSlab(par1IBlockAccess.getBlockId(par2, par3, par4)) || (par1IBlockAccess.getBlockMetadata(par2, par3, par4) & 8) == 0)) : (par5 == 1 ? true : (par5 == 0 && super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5) ? true : !isBlockSingleSlab(par1IBlockAccess.getBlockId(par2, par3, par4)) || (par1IBlockAccess.getBlockMetadata(par2, par3, par4) & 8) != 0));
+            return flag ? (par5 == 0 ? true : (par5 == 1 && super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5) ? true : !isBlockSingleSlab(par1IBlockAccess.getBlock(par2, par3, par4)) || (par1IBlockAccess.getBlockMetadata(par2, par3, par4) & 8) == 0)) : (par5 == 1 ? true : (par5 == 0 && super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, par5) ? true : !isBlockSingleSlab(par1IBlockAccess.getBlock(par2, par3, par4)) || (par1IBlockAccess.getBlockMetadata(par2, par3, par4) & 8) != 0));
         }
     }
 
     @SideOnly(Side.CLIENT)
 
-    private static boolean isBlockSingleSlab(int id)
+    private static boolean isBlockSingleSlab(Block id)
     {
-        return (id == Block.stoneSingleSlab.blockID) || (id == Block.woodSingleSlab.blockID) || halfSlabs.get(id);
+        return (id == Blocks.stone_slab) || (id == Blocks.wooden_slab) || halfSlabs.get(Block.getIdFromBlock(id));
     }
 
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
+        int blkid = Block.getIdFromBlock(this);
         /* Add models for half slabs */
-        if (!this.isDoubleSlab) {
+        if (!this.field_150004_a) {
             def.defaultRegisterTextureBlock(mtd, HALF_IDX, TransparencyMode.SEMITRANSPARENT);
-            BoxBlockModel bottom = md.addBoxModel(this.blockID);
+            BoxBlockModel bottom = md.addBoxModel(blkid);
             bottom.setYRange(0.0, 0.5);
-            BoxBlockModel top = md.addBoxModel(this.blockID);
+            BoxBlockModel top = md.addBoxModel(blkid);
             top.setYRange(0.5, 1.0);
             for (WesterosBlockDef.Subblock sb : def.subBlocks) {
                 bottom.setMetaValue(sb.meta);

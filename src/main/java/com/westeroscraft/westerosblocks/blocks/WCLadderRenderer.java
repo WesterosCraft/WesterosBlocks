@@ -11,7 +11,7 @@ import org.lwjgl.opengl.GL11;
 
 // Custom fence renderer - lets us render fence items with per-meta specific textures in inventory
 public class WCLadderRenderer implements ISimpleBlockRenderingHandler {
-
+    @Override
     public void renderInventoryBlock(Block block, int meta, int modelID,
             RenderBlocks renderer) {
         
@@ -44,6 +44,7 @@ public class WCLadderRenderer implements ISimpleBlockRenderingHandler {
         GL11.glTranslatef(0.5F, 0.5F, 0.5F);
     }
 
+    @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
             Block block, int modelId, RenderBlocks renderer) {
         int meta = world.getBlockMetadata(x, y, z);
@@ -68,13 +69,14 @@ public class WCLadderRenderer implements ISimpleBlockRenderingHandler {
         return true;
     }
 
+    @Override
     public int getRenderId() {
         return WesterosBlocks.ladderRenderID;
     }
 
     @Override
-    public boolean shouldRender3DInInventory() {
+    public boolean shouldRender3DInInventory(int modelId) {
         return false;
-    }
+     }
 
 }

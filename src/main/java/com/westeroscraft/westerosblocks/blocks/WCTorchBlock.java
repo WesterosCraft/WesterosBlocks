@@ -11,12 +11,13 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockTorch;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.util.Icon;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -42,7 +43,7 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
     private WesterosBlockDef def;
     
     protected WCTorchBlock(WesterosBlockDef def) {
-        super(def.blockID);
+        super();
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -61,27 +62,22 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         return def.doStandardIconGet(side, 0);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     @Override
     public int damageDropped(int meta) {
@@ -92,19 +88,19 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -139,11 +135,12 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 5);
 
         // Make vertical model
-        PatchBlockModel mod0 = md.addPatchModel(this.blockID);
+        PatchBlockModel mod0 = md.addPatchModel(blkid);
         String vside = mod0.addPatch(0.4375, 0.0, 0.0, 0.4375, 0.0, 1.0, 0.4375, 1.0, 0.0, SideVisible.TOP);
         mod0.addRotatedPatch(vside, 0, 90, 0);
         mod0.addRotatedPatch(vside, 0, 180, 0);
@@ -152,7 +149,7 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
         mod0.setMetaValue(0);
         mod0.setMetaValue(5);
         // Make side model
-        PatchBlockModel mod1 = md.addPatchModel(this.blockID);
+        PatchBlockModel mod1 = md.addPatchModel(blkid);
         mod1.addPatch(-0.5, 0.2, 0.4375, 0.5, 0.2, 0.4375, -0.1, 1.2, 0.4375, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.BOTTOM);
         mod1.addPatch(-0.5, 0.2, 0.5625, 0.5, 0.2, 0.5625, -0.1, 1.2, 0.5625, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.TOP);
         mod1.addPatch(0.0625, 0.2, 0.0, 0.0625, 0.2, 1.0, 0.4625, 1.2, 0.0, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.BOTTOM);
@@ -160,11 +157,11 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
         mod1.addPatch(0.0, 0.825, -0.3625, 1.0, 0.825, -0.3625, 0.0, 0.825, 0.6375, 0.4375, 0.5625, 0.5, 0.625, 100.0, SideVisible.BOTH);
         mod1.setMetaValue(1);
         // Rotate for other sides
-        PatchBlockModel mod2 = md.addRotatedPatchModel(this.blockID, mod1, 0, 180, 0);
+        PatchBlockModel mod2 = md.addRotatedPatchModel(blkid, mod1, 0, 180, 0);
         mod2.setMetaValue(2);
-        PatchBlockModel mod3 = md.addRotatedPatchModel(this.blockID, mod1, 0, 90, 0);
+        PatchBlockModel mod3 = md.addRotatedPatchModel(blkid, mod1, 0, 90, 0);
         mod3.setMetaValue(3);
-        PatchBlockModel mod4 = md.addRotatedPatchModel(this.blockID, mod1, 0, 270, 0);
+        PatchBlockModel mod4 = md.addRotatedPatchModel(blkid, mod1, 0, 270, 0);
         mod4.setMetaValue(4);
     }
 

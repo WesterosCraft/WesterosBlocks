@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -81,10 +82,10 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
         // If we're a bottom block
         if ((meta & 1) == 0) {
             boolean didBreak = false;
-            int aboveID = world.getBlockId(x, y + 1, z);
+            Block above = world.getBlock(x, y + 1, z);
             int aboveMeta = 0;
             boolean aboveIsTop = false;
-            if (aboveID == this.blockID) {
+            if (above == this) {
                 aboveMeta = world.getBlockMetadata(x, y + 1, z);
                 if (aboveMeta == (meta | 0x1)) {
                     aboveIsTop = true;
@@ -97,7 +98,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
                 didBreak = true;
             }
             // Did we lose our support block and not a 'no-break-under' block?
-            if ((!noBreakUnder[(meta >> 1) & 1]) && (!world.doesBlockHaveSolidTopSurface(x, y - 1, z))) {
+            if ((!noBreakUnder[(meta >> 1) & 1]) && (!World.doesBlockHaveSolidTopSurface(world, x, y - 1, z))) {
                 world.setBlockToAir(x, y, z);
                 didBreak = true;
                 // See if above is still our top - break it too, if needed
@@ -114,10 +115,10 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
             }
         }
         else {  // Else its a top block
-            int belowID = world.getBlockId(x, y - 1, z);
+            Block below = world.getBlock(x, y - 1, z);
             int belowMeta = 0;
             boolean belowIsBottom = false;
-            if (belowID == this.blockID) {
+            if (below == this) {
                 belowMeta = world.getBlockMetadata(x, y - 1, z);
                 if (belowMeta == (meta & 0xE)) {
                     belowIsBottom = true;
@@ -135,14 +136,14 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
      * Returns the ID of the items to drop on destruction.
      */
     @Override
-    public int idDropped(int meta, Random par2Random, int par3)
+    public Item getItemDropped(int meta, Random rnd, int other)
     {
         // If top, no drop
         if ((meta & 1) == 1) {
-            return 0;
+            return null;
         }
         else {
-            return super.idDropped(meta, par2Random, par3);
+            return super.getItemDropped(meta, rnd, other);
         }
     }
     @Override
@@ -159,15 +160,5 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
     public boolean canPlaceBlockAt(World world, int x, int y, int z)
     {
         return y >= 255 ? false : super.canPlaceBlockAt(world, x, y, z) && super.canPlaceBlockAt(world, x, y + 1, z);
-    }
-    @Override
-    public boolean canPlaceBlockOnSide(World world, int x, int y, int z, int side, ItemStack item) {
-        int meta = item.getItemDamage();
-        if (y < 255) {
-            if (this.noBreakUnder[meta>>1] || world.doesBlockHaveSolidTopSurface(x, y - 1, z)) {
-                return super.canPlaceBlockAt(world, x, y, z) && super.canPlaceBlockAt(world, x, y + 1, z);
-            }
-        }
-        return false;
     }
 }

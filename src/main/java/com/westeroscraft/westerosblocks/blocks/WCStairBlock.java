@@ -10,10 +10,9 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
-import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -50,23 +49,19 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     }
     
     private WesterosBlockDef def;
-    private Icon offsetIconXN = null;
-    private Icon offsetIconXP = null;
-    private Icon offsetIconZN = null;
-    private Icon offsetIconZP = null;
     private final Block ourModelBlock;
     
     protected WCStairBlock(WesterosBlockDef def, Block blk) {
-        super(def.blockID, blk, def.modelBlockMeta);
+        super(blk, def.modelBlockMeta);
         this.def = def;
         this.ourModelBlock = blk;
         if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
             def.lightOpacity = 255;
         }
         this.setCreativeTab(def.getCreativeTab());
-        this.setUnlocalizedName(def.blockName);
+        this.setBlockName(def.blockName);
         WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
-        useNeighborBrightness[def.blockID] = true;
+        //NOTYET useNeighborBrightness[def.blockID] = true;
     }
 
     public boolean initializeBlockDefinition() {
@@ -85,19 +80,19 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -118,40 +113,6 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         return def.colorMultiplier(access, x, y, z);
     }
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
-        Icon ico = super.getIcon(side, meta);
-        if (side == 2) {
-            if(this.getBlockBoundsMaxX() == 0.5) {
-                if (offsetIconXP == null) {
-                    offsetIconXP = new ShiftedIcon(ico, true);
-                }
-                ico = offsetIconXP;
-            }
-            else if(this.getBlockBoundsMinX() == 0.5) {
-                if (offsetIconXN == null) {
-                    offsetIconXN = new ShiftedIcon(ico, false);
-                }
-                ico = offsetIconXN;
-            }
-        }
-        else if (side == 5) {
-            if (this.getBlockBoundsMaxZ() == 0.5) {
-                if (offsetIconZP == null) {
-                    offsetIconZP = new ShiftedIcon(ico, true);
-                }
-                ico = offsetIconZP;
-            }
-            else if (this.getBlockBoundsMinZ() == 0.5) {
-                if (offsetIconZN == null) {
-                    offsetIconZN = new ShiftedIcon(ico, false);
-                }
-                ico = offsetIconZN;
-            }
-        }
-        return ico;
-    }
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
     {
@@ -170,11 +131,13 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
+        int id = Block.getIdFromBlock(this);
+        int modid = Block.getIdFromBlock(ourModelBlock);
         // Make copy of model block textu def
-        CopyBlockTextureRecord btr = mtd.addCopyBlockTextureRecord(this.blockID, ourModelBlock.blockID, def.modelBlockMeta);
+        CopyBlockTextureRecord btr = mtd.addCopyBlockTextureRecord(id, modid, def.modelBlockMeta);
         btr.setTransparencyMode(TransparencyMode.SEMITRANSPARENT);
         // Get stair model
-        md.addStairModel(this.blockID);
+        md.addStairModel(id);
     }
 
 }

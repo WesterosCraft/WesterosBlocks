@@ -8,13 +8,14 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
+
 import org.lwjgl.opengl.GL11;
 
 // Custom fence renderer - lets us render fence items with per-meta specific textures in inventory
 public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
-
     public static void renderStandardInvBlock (RenderBlocks renderblocks, Block block, int meta)
     {
         Tessellator tessellator = Tessellator.instance;
@@ -52,13 +53,12 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
         tessellator.startDrawingQuads();
         tessellator.setNormal(0.0F, -1.0F, 0.0F);
-        renderblocks.drawCrossedSquares(block, meta, -0.5D, -0.5D, -0.5D, 1.0F);
+        renderblocks.drawCrossedSquares(block.getIcon(0, meta), -0.5D, -0.5D, -0.5D, 1.0F);
         tessellator.draw();
         GL11.glTranslatef(0.5F, 0.5F, 0.5F);
     }
-    
 
-
+    @Override
     public void renderInventoryBlock(Block block, int meta, int modelID,
             RenderBlocks renderer) {
         WCCuboidBlock cblock = (WCCuboidBlock) block;
@@ -80,6 +80,7 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         }
     }
 
+    @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
             Block block, int modelId, RenderBlocks renderer) {
         WCCuboidBlock cblock = (WCCuboidBlock) block;
@@ -103,13 +104,13 @@ public class WCCuboidRenderer implements ISimpleBlockRenderingHandler {
         return true;
     }
 
+    @Override
     public int getRenderId() {
         return WesterosBlocks.cuboidRenderID;
     }
 
     @Override
-    public boolean shouldRender3DInInventory() {
+    public boolean shouldRender3DInInventory(int modelId) {
         return true;
     }
-
 }

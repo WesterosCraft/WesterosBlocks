@@ -3,26 +3,24 @@ package com.westeroscraft.westerosblocks.blocks;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class MultiBlockItem extends ItemBlock {
     private Block blk;
 
-    public MultiBlockItem(int par1) {
+    public MultiBlockItem(Block par1) {
         super(par1);
         setMaxDamage(0);
         setHasSubtypes(true);
+        this.blk = par1;
     }
 
     protected Block getBlock() {
-        if (blk == null) {
-            blk = Block.blocksList[getBlockID()];
-        }
         return blk;
     }
 
@@ -34,7 +32,7 @@ public class MultiBlockItem extends ItemBlock {
 
     @SideOnly(Side.CLIENT)
     @Override
-    public Icon getIconFromDamage(int meta) {
+    public IIcon getIconFromDamage(int meta) {
         Block b = getBlock();
         if (b instanceof WesterosBlockLifecycle) {
             return ((WesterosBlockLifecycle)b).getWBDefinition().getItemIcon(meta);
@@ -54,7 +52,7 @@ public class MultiBlockItem extends ItemBlock {
     
     @SideOnly(Side.CLIENT)
     @Override
-    public void registerIcons (IconRegister iconRegister)
+    public void registerIcons (IIconRegister iconRegister)
     {
         Block b = getBlock();
         if (b instanceof WesterosBlockLifecycle) {
