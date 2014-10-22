@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -10,12 +9,13 @@ import org.dynmap.modsupport.PaneBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPane;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.util.Icon;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -41,7 +41,7 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     private int lastMeta;
     
     protected WCPaneBlock(WesterosBlockDef def) {
-        super(def.blockID, "txt", "sidetxt", def.getMaterial(), true);
+        super("txt", "sidetxt", def.getMaterial(), true);
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -60,15 +60,15 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
-        Icon ico = def.doStandardIconGet(side, meta);
+    public IIcon getIcon(int side, int meta) {
+        IIcon ico = def.doStandardIconGet(side, meta);
         if (side == 0) {    // Remember last meta of side 0: renderer asks for side texture without it
             lastMeta = meta;
         }
@@ -77,20 +77,15 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getSideTextureIndex() {
+    public IIcon func_150097_e() { // getSideTextureIndex()
         return getIcon(1, lastMeta); // Side 1 = side texture: use meta of last side 0 request
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     @Override
     public int damageDropped(int meta) {
@@ -101,19 +96,19 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -147,22 +142,25 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
         // Make pane model for each meta
-        PaneBlockModel pbm = md.addPaneModel(this.blockID);
+        PaneBlockModel pbm = md.addPaneModel(blkid);
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {
             pbm.setMetaValue(sb.meta);
         }
     }
     @Override
-    public boolean canPaneConnectTo(IBlockAccess access, int x, int y, int z, ForgeDirection dir)
-    {
-        int id = access.getBlockId(x+dir.offsetX, y+dir.offsetY, z+dir.offsetZ);
-        if (canThisPaneConnectToThisBlockID(id) || access.isBlockSolidOnSide(x+dir.offsetX, y+dir.offsetY, z+dir.offsetZ, dir.getOpposite(), false))
+    public boolean canPaneConnectTo(IBlockAccess world, int x, int y, int z, ForgeDirection dir)
+    {   
+        Block blk = world.getBlock(x, y, z);
+        if (canPaneConnectToBlock(blk) || world.isSideSolid(x, y, z, dir.getOpposite(), false)) {
             return true;
-        if ((Block.blocksList[id] instanceof BlockPane) && (this.blockMaterial == Block.blocksList[id].blockMaterial))
+        }
+        if ((blk instanceof BlockPane) && (this.getMaterial() == blk.getMaterial())) {
             return true;
+        }
         return false;
     }
 }

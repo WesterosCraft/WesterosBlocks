@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.BitSet;
@@ -14,7 +13,6 @@ import java.util.Random;
 import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TextureFileType;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
@@ -76,6 +74,12 @@ import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 
 
+
+
+
+
+
+import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
@@ -87,11 +91,15 @@ import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
+import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStepSound;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
@@ -105,30 +113,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.EntityAuraFX;
-import net.minecraft.client.particle.EntityBreakingFX;
-import net.minecraft.client.particle.EntityBubbleFX;
-import net.minecraft.client.particle.EntityCloudFX;
-import net.minecraft.client.particle.EntityCritFX;
-import net.minecraft.client.particle.EntityDropParticleFX;
-import net.minecraft.client.particle.EntityEnchantmentTableParticleFX;
-import net.minecraft.client.particle.EntityExplodeFX;
-import net.minecraft.client.particle.EntityFX;
-import net.minecraft.client.particle.EntityFireworkSparkFX;
-import net.minecraft.client.particle.EntityFlameFX;
-import net.minecraft.client.particle.EntityFootStepFX;
-import net.minecraft.client.particle.EntityHeartFX;
-import net.minecraft.client.particle.EntityHugeExplodeFX;
-import net.minecraft.client.particle.EntityLargeExplodeFX;
-import net.minecraft.client.particle.EntityLavaFX;
-import net.minecraft.client.particle.EntityNoteFX;
-import net.minecraft.client.particle.EntityPortalFX;
-import net.minecraft.client.particle.EntityReddustFX;
-import net.minecraft.client.particle.EntitySmokeFX;
-import net.minecraft.client.particle.EntitySnowShovelFX;
-import net.minecraft.client.particle.EntitySpellParticleFX;
-import net.minecraft.client.particle.EntitySplashFX;
-import net.minecraft.client.particle.EntitySuspendFX;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
@@ -146,7 +130,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.ForgeDirection;
 
 //
@@ -1315,16 +1298,16 @@ public class WesterosBlockDef {
         typeTable.put("door", new WCDoorBlock.Factory());
         typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
-        /*NOTYET
         typeTable.put("pane", new WCPaneBlock.Factory());
-        typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
-        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
-        typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("rail", new WCRailBlock.Factory());
-        typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("cake", new WCCakeBlock.Factory());
+        /*NOTYET
+        typeTable.put("sand", new WCSandBlock.Factory());
+        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
+        typeTable.put("sound", new WCSoundBlock.Factory());
+        typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("furnace", new WCFurnaceBlock.Factory());
         */
         // Standard color multipliers

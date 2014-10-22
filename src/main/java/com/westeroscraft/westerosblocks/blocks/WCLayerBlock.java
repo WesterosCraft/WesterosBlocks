@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -10,14 +9,16 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -45,7 +46,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     int layerCount;
     
     protected WCLayerBlock(WesterosBlockDef def) {
-        super(def.blockID, def.getMaterial());
+        super(def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
         layerCount = 8;
@@ -78,27 +79,22 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         return def.doStandardIconGet(side, meta);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     @Override
     public int damageDropped(int meta) {
@@ -117,7 +113,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     {
         int l = 1 + (par1World.getBlockMetadata(par2, par3, par4) % layerCount);
         float f = 1F / (float) layerCount;
-        return AxisAlignedBB.getAABBPool().getAABB((double)par2 + this.minX, (double)par3 + this.minY, (double)par4 + this.minZ, (double)par2 + this.maxX, (double)((float)par3 + (float)l * f), (double)par4 + this.maxZ);
+        return AxisAlignedBB.getBoundingBox((double)par2 + this.minX, (double)par3 + this.minY, (double)par4 + this.minZ, (double)par2 + this.maxX, (double)((float)par3 + (float)l * f), (double)par4 + this.maxZ);
     }
     @Override
     public void setBlockBoundsBasedOnState(IBlockAccess blockaccess, int x, int y, int z) {
@@ -134,19 +130,19 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -174,23 +170,26 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 
     @Override
     public boolean canPlaceBlockAt(World world, int x, int y, int z) {
-        int l = world.getBlockId(x, y - 1, z);        
-        Block block = Block.blocksList[l];
+        Block block = world.getBlock(x, y - 1, z);        
+
         if (block == null) { // Invalid/empty block below
             return false;
         }
         if (block == this) { // Full block of our type below
             return true;
         }
-        if (!block.isLeaves(world, x, y - 1, z) && !Block.blocksList[l].isOpaqueCube()) {   // If no leaves and not opaque blow, cannot place
+        if (block == Blocks.ice || block == Blocks.packed_ice) {
+            return true;
+        }
+        if (!block.isLeaves(world, x, y - 1, z) && !block.isOpaqueCube()) {   // If no leaves and not opaque blow, cannot place
             return false;
         }
-        boolean rslt = world.getBlockMaterial(x, y - 1, z).blocksMovement(); // If blocks movement, can place
+        boolean rslt = block.getMaterial().blocksMovement(); // If blocks movement, can place
         return rslt;
     }
 
     @Override
-    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5) {
+    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, Block par5) {
         this.canLayerStay(par1World, par2, par3, par4);
     }
 
@@ -228,11 +227,12 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.TRANSPARENT);
         /* Make models for each layer thickness */
         for (int i = 0; i < layerCount; i++) {
-            BoxBlockModel mod = md.addBoxModel(this.blockID);
+            BoxBlockModel mod = md.addBoxModel(blkid);
             mod.setYRange(0.0, (double)(i+1) / (double) layerCount);
             mod.setMetaValue(i);
         }

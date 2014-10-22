@@ -10,11 +10,12 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCake;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.util.Icon;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -42,10 +43,10 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
     private WesterosBlockDef def;
     
     protected WCCakeBlock(WesterosBlockDef def) {
-        super(def.blockID);
+        super();
         this.def = def;
         this.setCreativeTab(def.getCreativeTab());
-        this.setUnlocalizedName(def.blockName);
+        this.setBlockName(def.blockName);
         if (def.lightOpacity < 0) {    // Workaround for f*cked up MC lighting hacks
             this.setLightOpacity(0);
         }
@@ -65,7 +66,7 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
     
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
@@ -75,19 +76,19 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -107,16 +108,15 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
     {
         return def.colorMultiplier(access, x, y, z);
     }
+    @Override
     @SideOnly(Side.CLIENT)
-    /**
-     * only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
-     */
-    public int idPicked(World par1World, int par2, int par3, int par4) {
-        return this.blockID;
+    public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
+    {
+        return Item.getItemFromBlock(this);
     }
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         int idx;
         if (side < 2) { // Top or bottom
             idx = side;
@@ -143,10 +143,11 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.TRANSPARENT);
         // Get stair model
-        BoxBlockModel mdl = md.addBoxModel(this.blockID);
+        BoxBlockModel mdl = md.addBoxModel(blkid);
         mdl.setYRange(0.0, 0.5);
         for (int i = 0; i < 16; i++) {
             mdl.setMetaValue(i);

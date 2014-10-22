@@ -42,6 +42,7 @@ import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
+import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
 /*NOTYET
 import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
@@ -239,7 +240,6 @@ public class WesterosBlocks
         RenderingRegistry.registerBlockHandler(new WCCuboidNSEWUDRenderer());
         stairRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCStairRenderer());
-        /**NOTYET
         if (useWaterCTMFix && ClassTransformer.checkForCTMSupport()) {
             fluidCTMRenderID = RenderingRegistry.getNextAvailableRenderId();
             RenderingRegistry.registerBlockHandler(new WCFluidCTMRenderer());
@@ -248,7 +248,6 @@ public class WesterosBlocks
             useWaterCTMFix = false;
             fluidCTMRenderID = 4;   // Vanilla fluid renderer
         }
-        */
         proxy.initRenderRegistry();
         
         //NOTYET NetworkRegistry.newChannel(WesterosBlocksPacketHandler.CHANNEL, new WesterosBlocksPacketHandler());

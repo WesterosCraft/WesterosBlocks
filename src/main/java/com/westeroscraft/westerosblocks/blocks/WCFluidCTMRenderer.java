@@ -18,6 +18,7 @@ public class WCFluidCTMRenderer implements ISimpleBlockRenderingHandler {
     public static RenderBlocks Renderer;
     public static Tessellator Tessell;
     
+    @Override
     public void renderInventoryBlock(Block block, int meta, int modelID,
             RenderBlocks renderer) {
         Tessellator tessellator = Tessellator.instance;
@@ -49,6 +50,7 @@ public class WCFluidCTMRenderer implements ISimpleBlockRenderingHandler {
         GL11.glTranslatef(0.5F, 0.5F, 0.5F);
     }
 
+    @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
             Block block, int modelId, RenderBlocks renderer) {
         World = world;
@@ -58,7 +60,7 @@ public class WCFluidCTMRenderer implements ISimpleBlockRenderingHandler {
         Renderer = renderer;
         Tessell = Tessellator.instance;
         // Call fluid renderer
-        boolean rslt = renderer.renderBlockFluids(block, x, y, z);
+        boolean rslt = renderer.renderBlockLiquid(block, x, y, z);
         World = null;
         Renderer = null;
         Tessell = null;
@@ -66,12 +68,14 @@ public class WCFluidCTMRenderer implements ISimpleBlockRenderingHandler {
         return rslt;
     }
 
-    public boolean shouldRender3DInInventory() {
-        return true;
-    }
-
+    @Override
     public int getRenderId() {
         return WesterosBlocks.fluidCTMRenderID;
+    }
+
+    @Override
+    public boolean shouldRender3DInInventory(int modelId) {
+        return true;
     }
 
 }

@@ -22,7 +22,11 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.launchwrapper.IClassTransformer;
+import net.minecraft.util.IIcon;
 
 public class ClassTransformer implements IClassTransformer, Opcodes {
     @Override
@@ -760,6 +764,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
             return true;
         return false;
     }
+    */
 
     public static Method ctmMethod = null;
     
@@ -768,7 +773,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         try {
             cls = Class.forName("com.prupe.mcpatcher.ctm.CTMUtils");
             // public static Icon getTile(RenderBlocks renderBlocks, Block block, int i, int j, int k, int face, Icon icon, Tessellator tessellator) {
-            ctmMethod = cls.getDeclaredMethod("getTile", new Class[] { RenderBlocks.class, Block.class, int.class, int.class, int.class, int.class, Icon.class, Tessellator.class });
+            ctmMethod = cls.getDeclaredMethod("getTile", new Class[] { RenderBlocks.class, Block.class, int.class, int.class, int.class, int.class, IIcon.class, Tessellator.class });
             WesterosBlocks.log.fine("CTM support found for water fix");
         } catch (ClassNotFoundException e) {
         } catch (SecurityException e) {
@@ -776,7 +781,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         return (ctmMethod != null);
     }
-    
+    /*NOTYET
     public static Icon handleFluidGetIcon(int side, int meta, Icon ico, BlockStationary blk) {
         if ((side == 1) && (ctmMethod != null) && (WCFluidCTMRenderer.World != null)) {
             try {
