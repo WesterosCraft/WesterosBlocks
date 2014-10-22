@@ -9,12 +9,13 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.client.renderer.IconFlipped;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.util.Icon;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -39,12 +40,11 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     }
     
     private WesterosBlockDef def;
-    private Icon[] upper;
-    private Icon[] lower;
-    private int itemID;
+    private IIcon[] upper;
+    private IIcon[] lower;
     
     protected WCDoorBlock(WesterosBlockDef def) {
-        super(def.blockID, def.getMaterial());
+        super(def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -57,17 +57,16 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
 
     public boolean registerBlockDefinition() {
         def.doStandardRegisterActions(this, WCDoorItem.class);
-        itemID = WCDoorItem.lastItemID;
         
         return true;
     }
     
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister) {
+    public void registerBlockIcons(IIconRegister iconRegister) {
         def.doStandardRegisterIcons(iconRegister);
-        upper = new Icon[2];
-        lower = new Icon[2];
+        upper = new IIcon[2];
+        lower = new IIcon[2];
         upper[0] = def.doStandardIconGet(0,  0);
         lower[0] = def.doStandardIconGet(1,  0);
         upper[1] = new IconFlipped(upper[0], true, false);
@@ -79,7 +78,7 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     /**
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
      */
-    public Icon getIcon(int side, int meta)
+    public IIcon getIcon(int side, int meta)
     {
         return this.lower[0];
     }
@@ -89,9 +88,9 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     /**
      * Retrieves the block texture to use based on the display side. Args: iBlockAccess, x, y, z, side
      */
-    public Icon getBlockTexture(IBlockAccess blkAccess, int x, int y, int z, int side) {
+    public IIcon getIcon(IBlockAccess blkAccess, int x, int y, int z, int side) {
         if (side != 1 && side != 0) {
-            int meta = this.getFullMetadata(blkAccess, x, y, z);
+            int meta = this.func_150012_g(blkAccess, x, y, z); // getFullMetadata
             int direction = meta & 3;
             boolean flag = (meta & 4) != 0;
             boolean flag1 = false;
@@ -133,18 +132,11 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     /**
      * Returns the ID of the items to drop on destruction.
      */
-    public int idDropped(int meta, Random par2Random, int par3)
-    {
-        return (meta & 8) != 0 ? 0 : def.blockID;
-    }
-    
+    @Override
     @SideOnly(Side.CLIENT)
-    /**
-     * only called by clickMiddleMouseButton , and passed to inventory.setCurrentItem (along with isCreative)
-     */
-    public int idPicked(World par1World, int par2, int par3, int par4)
+    public Item getItemDropped(int meta, Random par2Random, int par3)
     {
-        return this.itemID;
+        return (meta & 8) != 0 ? null : Item.getItemFromBlock(this);
     }
     
     @Override
@@ -158,22 +150,19 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     }
     
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
-    
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
-    
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
-    
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     
@@ -197,9 +186,8 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     }
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
-    public void getSubBlocks (int id, CreativeTabs tab, List list)
-    {
-        def.getStandardSubBlocks(this, id, tab, list);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
@@ -217,10 +205,11 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         WesterosBlockDef def = this.getWBDefinition();
+        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
         // Get door model, and set for all defined meta
-        md.addDoorModel(this.blockID);
+        md.addDoorModel(blkid);
    }
 
 }

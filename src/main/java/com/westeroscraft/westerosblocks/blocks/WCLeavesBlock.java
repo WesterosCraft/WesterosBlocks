@@ -11,14 +11,16 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
-import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IShearable;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -46,7 +48,7 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     private int[] adjacentTreeBlocks;
     private boolean[] nodecay;
     protected WCLeavesBlock(WesterosBlockDef def) {
-        super(def.blockID, def.getMaterial(), false);
+        super(def.getMaterial(), false);
         this.setTickRandomly(true);
         this.def = def;
         if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
@@ -76,28 +78,23 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int side, int meta) {
+    public IIcon getIcon(int side, int meta) {
         // Map side to 0=topbottom fast, 1=sides fast,  2=topbottom fancy, 3=sides fancy
-        return def.doStandardIconGet(((side > 1) ? 0 : 1) | (Block.leaves.graphicsLevel ? 2 : 0), meta);
+        return def.doStandardIconGet(((side > 1) ? 0 : 1) | (Blocks.leaves.isOpaqueCube() ? 0 : 2), meta);
     }
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(int id, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, id, tab, list);
-    }
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
+    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
     @Override
     public int damageDropped(int meta) {
@@ -108,19 +105,19 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
         return def;
     }
     @Override
-    public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, metadata, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
     @Override
-    public int getLightOpacity(World world, int x, int y, int z) {
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
@@ -144,14 +141,14 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     @Override
     public boolean isOpaqueCube()
     {
-        return Block.leaves.isOpaqueCube();
+        return Blocks.leaves.isOpaqueCube();
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World world, int x, int y, int z, Random random)
     {
-        if (world.canLightningStrikeAt(x, y + 1, z) && !world.doesBlockHaveSolidTopSurface(x, y - 1, z) && random.nextInt(15) == 1) {
+        if (world.canLightningStrikeAt(x, y + 1, z) && !World.doesBlockHaveSolidTopSurface(world, x, y - 1, z) && random.nextInt(15) == 1) {
             double d0 = x + random.nextFloat();
             double d1 = y - 0.05D;
             double d2 = z + random.nextFloat();
@@ -163,17 +160,23 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     }
 
     @Override
-    public void breakBlock(World world, int x, int y, int z, int par5, int par6) {
-        byte radius = 1;
-        int bounds = radius + 1;
+    public void breakBlock(World world, int x, int y, int z, Block p_149749_5_, int p_149749_6_)
+    {
+        byte b0 = 1;
+        int i1 = b0 + 1;
 
-        if (world.checkChunksExist(x - bounds, y - bounds, z - bounds, x + bounds, y + bounds, z + bounds)) {
-            for (int i = -radius; i <= radius; ++i) {
-                for (int j = -radius; j <= radius; ++j) {
-                    for (int k = -radius; k <= radius; ++k) {
-                        int blockID = world.getBlockId(x + i, y + j, z + k);
-                        if (Block.blocksList[blockID] != null) {
-                            Block.blocksList[blockID].beginLeavesDecay(world, x + i, y + j, z + k);
+        if (world.checkChunksExist(x - i1, y - i1, z - i1, x + i1, y + i1, z + i1))
+        {
+            for (int j1 = -b0; j1 <= b0; ++j1)
+            {
+                for (int k1 = -b0; k1 <= b0; ++k1)
+                {
+                    for (int l1 = -b0; l1 <= b0; ++l1)
+                    {
+                        Block block = world.getBlock(x + j1, y + k1, z + l1);
+                        if (block.isLeaves(world, x + j1, y + k1, z + l1))
+                        {
+                            block.beginLeavesDecay(world, x + j1, y + k1, z + l1);
                         }
                     }
                 }
@@ -218,9 +221,7 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
                     {
                         for (j2 = -b0; j2 <= b0; ++j2)
                         {
-                            k2 = world.getBlockId(x + l1, y + i2, z + j2);
-
-                            Block block = Block.blocksList[k2];
+                            Block block = world.getBlock(x + l1, y + i2, z + j2);
 
                             if (block != null && block.canSustainLeaves(world, x + l1, y + i2, z + j2))
                             {
@@ -303,18 +304,19 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     }
 
     @Override
-    public boolean isShearable(ItemStack item, World world, int x, int y, int z) {
+    public boolean isShearable(ItemStack item, IBlockAccess world, int x, int y, int z) {
         return true;
     }
 
     @Override
-    public ArrayList<ItemStack> onSheared(ItemStack item, World world, int x, int y, int z, int fortune) {
+    public ArrayList<ItemStack> onSheared(ItemStack item, IBlockAccess world, int x, int y, int z, int fortune) {
         ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
         ret.add(new ItemStack(this, 1, world.getBlockMetadata(x, y, z) & 0x7));
         return ret;
     }
 
     @SideOnly(Side.CLIENT)
+    @Override
     public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
         return true;
@@ -326,12 +328,13 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     }
 
     @Override
-    public boolean isLeaves(World world, int x, int y, int z)
+    public boolean isLeaves(IBlockAccess world, int x, int y, int z)
     {
         return true;
     }    
 
     @SideOnly(Side.CLIENT)
+    @Override
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
@@ -340,12 +343,13 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
+        int blkid = Block.getIdFromBlock(this);
         for (int meta = 0; meta < 8; meta++) {
             Subblock sb = def.getByMeta(meta);
             if (sb == null) continue;
             String topbot = sb.getTextureByIndex(2);
             String sides = sb.getTextureByIndex(3);
-            BlockTextureRecord btr = mtd.addBlockTextureRecord(this.blockID);
+            BlockTextureRecord btr = mtd.addBlockTextureRecord(blkid);
             btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
             btr.setMetaValue(meta);
             btr.setMetaValue(meta | 8);

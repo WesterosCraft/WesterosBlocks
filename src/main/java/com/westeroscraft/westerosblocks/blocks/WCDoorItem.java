@@ -9,14 +9,11 @@ import net.minecraft.world.World;
 
 public class WCDoorItem extends MultiBlockItem
 {
-    public static int lastItemID;
-    
-    public WCDoorItem(int id)
+    public WCDoorItem(Block id)
     {
         super(id);
         this.maxStackSize = 1;
         //this.setCreativeTab(def.getCreativeTab());
-        lastItemID = this.itemID;
     }
 
     /**
@@ -41,7 +38,7 @@ public class WCDoorItem extends MultiBlockItem
             {
                 Block blk = getBlock();
                 if ((!blk.canPlaceBlockAt(world, x, y, z)) ||
-                    (!world.canPlaceEntityOnSide(blk.blockID, x, y, z, false, side, player, stack))) {
+                    (!world.canPlaceEntityOnSide(blk, x, y, z, false, side, player, stack))) {
                     return false;
                 }
                 else

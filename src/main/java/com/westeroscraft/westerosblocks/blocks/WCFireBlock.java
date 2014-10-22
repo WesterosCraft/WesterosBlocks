@@ -21,11 +21,11 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.util.Icon;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, WesterosBlockDynmapSupport
 {
@@ -41,7 +41,7 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
     private WesterosBlockDef def;
 
     protected WCFireBlock(WesterosBlockDef def) {
-        super(def.blockID);
+        super();
         
         this.def = def;
         def.doStandardContructorSettings(this);
@@ -64,6 +64,7 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
     /**
      * Ticks the block if it's been scheduled
      */
+    @Override
     public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
     }
@@ -71,18 +72,20 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
     /**
      * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
      */
+    @Override
     public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4)
     {
-        return par1World.doesBlockHaveSolidTopSurface(par2, par3 - 1, par4);
+        return World.doesBlockHaveSolidTopSurface(par1World, par2, par3 - 1, par4);
     }
 
     /**
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor blockID
      */
-    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+    @Override
+    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, Block par5)
     {
-        if (!par1World.doesBlockHaveSolidTopSurface(par2, par3 - 1, par4))
+        if (!World.doesBlockHaveSolidTopSurface(par1World, par2, par3 - 1, par4))
         {
             par1World.setBlockToAir(par2, par3, par4);
         }
@@ -91,6 +94,7 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
     /**
      * Called whenever the block is added into the world. Args: world, x, y, z
      */
+    @Override
     public void onBlockAdded(World par1World, int par2, int par3, int par4)
     {
     }
@@ -100,29 +104,34 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
      * When this method is called, your block should register all the icons it needs with the given IconRegister. This
      * is the only chance you get to register icons.
      */
-    public void registerIcons(IconRegister iconRegister)
+    @Override
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         def.doStandardRegisterIcons(iconRegister);
     }
 
     @SideOnly(Side.CLIENT)
-    public Icon getFireIcon(int side)
+    @Override
+    public IIcon getFireIcon(int side)
     {
         return def.doStandardIconGet(side, 0);
     }
 
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(int par1, int par2)
+    @Override
+    public IIcon getIcon(int par1, int par2)
     {
         return def.doStandardIconGet(0, 0);
     }
     
-    public boolean canBlockCatchFire(IBlockAccess world, int x, int y, int z, ForgeDirection face)
+    @Override
+    public boolean canCatchFire(IBlockAccess world, int x, int y, int z, ForgeDirection face)
     {
         return false;
     }
 
-    public int getChanceToEncourageFire(World world, int x, int y, int z, int oldChance, ForgeDirection face)
+    @Override
+    public int getChanceToEncourageFire(IBlockAccess world, int x, int y, int z, int oldChance, ForgeDirection face)
     {
         return 0;
     }
@@ -131,12 +140,13 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
+        int blkid = Block.getIdFromBlock(this);
         // Register textures
         Subblock sb = def.getByMeta(0);
         if ((sb == null) || (sb.textures == null) || (sb.textures.size() < 2)) return;
         String txt1 = sb.textures.get(0);
         String txt2 = sb.textures.get(1);
-        BlockTextureRecord btr = mtd.addBlockTextureRecord(this.blockID);
+        BlockTextureRecord btr = mtd.addBlockTextureRecord(blkid);
         btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
         btr.setPatchTexture(txt1, TextureModifier.NONE, 0);
         btr.setPatchTexture(txt1, TextureModifier.NONE, 1);
@@ -148,7 +158,7 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
         btr.setPatchTexture(txt2, TextureModifier.NONE, 7);
         def.setBlockColorMap(btr, sb);
         /* Make base model */
-        PatchBlockModel mod = md.addPatchModel(this.blockID);
+        PatchBlockModel mod = md.addPatchModel(blkid);
         // patchblock:id=51,data=*,patch0=VertX0,patch1=VertX0@90,patch2=VertX0@180,patch3=VertX0@270,patch4=SlopeXUpZTop675,patch5=SlopeXUpZTop675@90,patch6=SlopeXUpZTop675@180,patch4=SlopeXUpZTop675@270
         // patch:id=VertX0,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
         // patch:id=SlopeXUpZTop675,Ox=0.375,Oy=0.0,Oz=0.0,Ux=0.375,Uy=0.0,Uz=1.0,Vx=0.5,Vy=1.0,Vz=0.0,visibility=top

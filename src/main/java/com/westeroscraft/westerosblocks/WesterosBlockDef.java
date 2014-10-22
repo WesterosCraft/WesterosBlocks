@@ -73,6 +73,9 @@ import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 
 
+
+
+
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
@@ -80,8 +83,11 @@ import com.westeroscraft.westerosblocks.blocks.WCCuboidNEStackBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
+import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
@@ -1306,18 +1312,18 @@ public class WesterosBlockDef {
         typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
         typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
         typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
+        typeTable.put("door", new WCDoorBlock.Factory());
+        typeTable.put("fire", new WCFireBlock.Factory());
+        typeTable.put("leaves", new WCLeavesBlock.Factory());
         /*NOTYET
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
-        typeTable.put("leaves", new WCLeavesBlock.Factory());
-        typeTable.put("door", new WCDoorBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("rail", new WCRailBlock.Factory());
         typeTable.put("bed", new WCBedBlock.Factory());
-        typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("cake", new WCCakeBlock.Factory());
         typeTable.put("furnace", new WCFurnaceBlock.Factory());
         */
