@@ -11,6 +11,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.items.WCCuboidNSEWStackItem;
 
 public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements WesterosBlockLifecycle {
 

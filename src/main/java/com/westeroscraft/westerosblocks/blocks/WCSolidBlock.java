@@ -24,6 +24,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
+import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -84,13 +85,6 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
         def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
     }
-    /*NOTYET
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCreativeItems(ArrayList itemList) {
-        def.getStandardCreativeItems(this, itemList);
-    }
-    */
     @Override
     public int damageDropped(int meta) {
         return meta;

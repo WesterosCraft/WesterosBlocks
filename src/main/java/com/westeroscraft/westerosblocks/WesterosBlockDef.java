@@ -79,6 +79,12 @@ import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 
 
+
+
+
+
+
+import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
@@ -90,6 +96,8 @@ import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
@@ -97,9 +105,11 @@ import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStepSound;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
@@ -1303,13 +1313,11 @@ public class WesterosBlockDef {
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         typeTable.put("rail", new WCRailBlock.Factory());
         typeTable.put("cake", new WCCakeBlock.Factory());
-        /*NOTYET
+        typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
-        typeTable.put("sound", new WCSoundBlock.Factory());
-        typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("furnace", new WCFurnaceBlock.Factory());
-        */
+        typeTable.put("sound", new WCSoundBlock.Factory());
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());
         colorMultTable.put("water", new WaterColorMultHandler());

@@ -12,6 +12,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.items.WCCuboidNEStackItem;
 
 public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlockLifecycle {
 

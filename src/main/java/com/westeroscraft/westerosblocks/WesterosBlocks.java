@@ -1,7 +1,6 @@
 package com.westeroscraft.westerosblocks;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -12,18 +11,13 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent; 
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.FMLEmbeddedChannel;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.relauncher.Side;
-import net.minecraftforge.client.event.sound.SoundLoadEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
-import io.netty.channel.ChannelHandler;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,18 +26,12 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.EnumMap;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.logging.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.asm.ClassTransformer;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
 /*NOTYET
 import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
@@ -53,7 +41,15 @@ import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
 */
-import com.westeroscraft.westerosblocks.blocks.WCStairRenderer;
+import com.westeroscraft.westerosblocks.network.PacketHandler;
+import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
+import com.westeroscraft.westerosblocks.render.WCCuboidNSEWUDRenderer;
+import com.westeroscraft.westerosblocks.render.WCCuboidRenderer;
+import com.westeroscraft.westerosblocks.render.WCFenceRenderer;
+import com.westeroscraft.westerosblocks.render.WCFluidCTMRenderer;
+import com.westeroscraft.westerosblocks.render.WCHalfDoorRenderer;
+import com.westeroscraft.westerosblocks.render.WCLadderRenderer;
+import com.westeroscraft.westerosblocks.render.WCStairRenderer;
 
 @Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
 public class WesterosBlocks
@@ -95,6 +91,7 @@ public class WesterosBlocks
     
     public static HashMap<String, WesterosBlocksSoundDef> soundsDefs;
     
+    public static EnumMap<Side, FMLEmbeddedChannel> channels;
 
     public static Block findBlockByName(String blkname) {
         Block blk = customBlocksByName.get(blkname);
@@ -167,8 +164,8 @@ public class WesterosBlocks
                     customBlockDefs[i].blockIDs = new int[] { customBlockDefs[i].blockID };
                 }
                 for (int j = 0; j < customBlockDefs[i].blockIDs.length; j++) {
-                    int val = customBlockDefs[i].blockIDs[j];
                     /**NOTYET
+                    int val = customBlockDefs[i].blockIDs[j];
                     customBlockDefs[i].blockIDs[j] = cfg.getBlock(customBlockDefs[i].getBlockName(j), val).getInt(val);
                     */
                     if (j == 0) {
@@ -232,10 +229,8 @@ public class WesterosBlocks
         RenderingRegistry.registerBlockHandler(new WCLadderRenderer());
         cuboidRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCCuboidRenderer());
-        /**NOTYET
         halfdoorRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCHalfDoorRenderer());
-        */
         cuboidNSEWUDRenderID = RenderingRegistry.getNextAvailableRenderId();
         RenderingRegistry.registerBlockHandler(new WCCuboidNSEWUDRenderer());
         stairRenderID = RenderingRegistry.getNextAvailableRenderId();
@@ -285,10 +280,9 @@ public class WesterosBlocks
                 ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
             }
         }
-        // Register entities
-        /**NOTYET
-        EntityRegistry.registerModEntity(EntityWCFallingSand.class, "Falling Sand", nextEntityID++, WesterosBlocks.instance, 120, 20, true);;
-        */
+        // Set up channel
+        channels = NetworkRegistry.INSTANCE.newChannel(WesterosBlocksChannelHandler.CHANNEL, new WesterosBlocksChannelHandler(), new PacketHandler());
+
         // Handle dynmap support
         try {
             handleDynmap();
@@ -314,8 +308,6 @@ public class WesterosBlocks
         this.dynmap.complete();
     }
     
-    private int nextEntityID = 3000;
-
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
