@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -11,9 +12,12 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent; 
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.FMLEmbeddedChannel;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
+import net.minecraftforge.client.event.sound.SoundLoadEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
@@ -26,6 +30,7 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.EnumMap;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.logging.Logger;
 
 import com.google.gson.Gson;
@@ -198,11 +203,9 @@ public class WesterosBlocks
                 soundsDefs.put(sd.name, sd);
             }
             // Register listener for client sound loading
-            /*NOTYET
             if(FMLCommonHandler.instance().getSide().isClient()) {  
                 MinecraftForge.EVENT_BUS.register(new SoundEventListener());
             }
-            */
         }
         // Initialize with standard block IDs
         slabStyleLightingBlocks.clear();
@@ -327,7 +330,6 @@ public class WesterosBlocks
     {
     }
     
-    /**NOTYET
     public class SoundEventListener {
         @SubscribeEvent
         public void onSound(SoundLoadEvent event)
@@ -339,6 +341,7 @@ public class WesterosBlocks
                 if (rname.indexOf(':') < 0) {
                     rname = "westerosblocks:" + rname;
                 }
+                /*NOTYET
                 if (sd.numberOfSounds > 1) {
                     for (int i = 1; i <= sd.numberOfSounds; i++) {
                         String sid = rname + i + ".ogg";
@@ -363,8 +366,8 @@ public class WesterosBlocks
                         }
                     }
                 }
+                */
             }
         }
     }
-    */
 }

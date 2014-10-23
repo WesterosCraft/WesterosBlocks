@@ -30,6 +30,7 @@ public class WCTileEntitySound extends TileEntity
     /**
      * Writes a tile entity to NBT.
      */
+    @Override
     public void writeToNBT(NBTTagCompound nbt)
     {
         super.writeToNBT(nbt);
@@ -47,6 +48,7 @@ public class WCTileEntitySound extends TileEntity
     /**
      * Reads a tile entity from NBT.
      */
+    @Override
     public void readFromNBT(NBTTagCompound nbt)
     {
         super.readFromNBT(nbt);
@@ -89,6 +91,7 @@ public class WCTileEntitySound extends TileEntity
      * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count
      * ticks and creates a new spawn inside its implementation.
      */
+    @Override
     public void updateEntity() {
         if (!initDone) {
             initBlock();

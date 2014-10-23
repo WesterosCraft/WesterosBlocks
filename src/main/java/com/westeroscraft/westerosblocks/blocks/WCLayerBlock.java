@@ -44,7 +44,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     }
     
     private WesterosBlockDef def;
-    int layerCount;
+    public int layerCount;
     
     protected WCLayerBlock(WesterosBlockDef def) {
         super(def.getMaterial());
