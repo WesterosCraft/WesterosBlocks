@@ -61,7 +61,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         }
         this.setCreativeTab(def.getCreativeTab());
         this.setBlockName(def.blockName);
-        WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
+        //WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
         //NOTYET useNeighborBrightness[def.blockID] = true;
     }
 
@@ -94,7 +94,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     }
     @Override
     public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z);
+        return def.getLightOpacity(this, world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
     @Override

@@ -81,8 +81,6 @@ public class WesterosBlockDef {
     public static final int DEF_INT = -999;
     
     public String blockName;                // Locally unique block name
-    public int blockID = DEF_INT;           // Block ID number (default)
-    public int[] blockIDs = null;           // Block ID numbers (default) - for definitions with more than one block
     public String blockType = "solid";      // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
     public float hardness = DEF_FLOAT;      // Block hardness
     public String stepSound = null;         // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
@@ -104,6 +102,8 @@ public class WesterosBlockDef {
     public boolean alphaRender = false;     // If true, do render on pass 2 (for alpha blending)
     public boolean nonOpaque = false;       // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches 
                                             // ('solid', 'sound', 'sand', 'soulsand' blocks)
+    
+    private int blockIDCount = 1;           // NUmber of block IDs for definition (set by block type handler)
     
     public static class HarvestLevel {
         public String tool;
@@ -887,11 +887,11 @@ public class WesterosBlockDef {
         return this.lightValueInt;
     }
         
-    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
+    public int getLightOpacity(Block blk, IBlockAccess world, int x, int y, int z) {
         if (this.lightOpacity_by_meta != null) {
             return this.lightOpacity_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
         }
-        return Block.getBlockById(this.blockID).getLightOpacity();
+        return blk.getLightOpacity();
     }
     
     public int getBlockColor() {
@@ -1086,7 +1086,6 @@ public class WesterosBlockDef {
     
     public static boolean sanityCheck(WesterosBlockDef[] defs) {
         HashSet<String> names = new HashSet<String>();
-        BitSet ids = new BitSet();
         BitSet metas = new BitSet();
         // Make sure block IDs and names are unique
         for (WesterosBlockDef def : defs) {
@@ -1098,32 +1097,6 @@ public class WesterosBlockDef {
             if (names.add(def.blockName) == false) {    // If alreay defined
                 WesterosBlocks.log.severe(String.format("Block '%s' - blockName duplicated", def.blockName));
                 return false;
-            }
-            if (def.blockIDs != null) {
-                for (int i = 0; i < def.blockIDs.length; i++) {
-                    if ((def.blockIDs[i] < 0) || (def.blockIDs[i] > 4095)) {
-                        WesterosBlocks.log.severe(String.format("Block '%s' - blockIDs[%d] invalid", def.blockName, i));
-                        return false;
-                    }
-                    else if (ids.get(def.blockIDs[i])) {    // If already defined
-                        WesterosBlocks.log.severe(String.format("Block '%s' - blockIDs[%d] duplicated", def.blockName, i));
-                        return false;
-                    }
-                    ids.set(def.blockIDs[i]);
-                }
-                def.blockID = def.blockIDs[0];
-            }
-            else {
-                if ((def.blockID < 0) || (def.blockID > 4095)) {
-                    WesterosBlocks.log.severe(String.format("Block '%s' - blockID invalid", def.blockName));
-                    return false;
-                }
-                else if (ids.get(def.blockID)) {    // If already defined
-                    WesterosBlocks.log.severe(String.format("Block '%s' - blockID duplicated", def.blockName));
-                    return false;
-                }
-                ids.set(def.blockID);
-                def.blockIDs = new int[] { def.blockID };
             }
             // Check for duplicate meta
             metas.clear();
@@ -1384,8 +1357,10 @@ public class WesterosBlockDef {
             if (this.nonOpaque) {
                 tmod = TextureModifier.CLEARINSIDE;
             }
-            for (int idx = 0; idx < this.blockIDs.length; idx++) {
-                int blkid = this.blockIDs[idx];
+            for (int idx = 0; idx < this.blockIDCount; idx++) {
+                Block blk = Block.getBlockFromName("westeroscraft:" + this.getBlockName(idx));
+                if (blk == null) continue;
+                int blkid = Block.getIdFromBlock(blk);
                 for (int i = 0; i < this.subblock_by_meta.length; i++) {
                     Subblock sb = subblock_by_meta[i];
                     if ((sb != null) && (sb.textures != null)) {
@@ -1432,7 +1407,9 @@ public class WesterosBlockDef {
             if (this.nonOpaque) {
                 tmod = TextureModifier.CLEARINSIDE;
             }
-            int blkid = this.blockIDs[idx];
+            Block blk = Block.getBlockFromName("westerosblocks:" + this.getBlockName(idx));
+            if (blk == null) return;
+            int blkid = Block.getIdFromBlock(blk);
             for (int i = 0; i < this.subblock_by_meta.length; i++) {
                 Subblock sb = subblock_by_meta[i];
                 if ((sb != null) && (sb.textures != null)) {
@@ -1529,5 +1506,8 @@ public class WesterosBlockDef {
                     break;
             }
         }
+    }
+    public void setBlockIDCount(int cnt) {
+        blockIDCount = cnt;
     }
 }

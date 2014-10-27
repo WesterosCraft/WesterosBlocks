@@ -42,10 +42,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
             if (!def.validateMetaValues(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, null)) {
                 return null;
             }
-            if (def.blockIDs.length != 2) {
-                WesterosBlocks.log.severe(String.format("Block '%s' does not have a valid number of blockIDs: 2 are required", def.blockName));
-                return null;
-            }
+            def.setBlockIDCount(2); // 2 block IDs - half, full
             WCSlabBlock half = new WCSlabBlock(def, false);
             WCSlabBlock full = new WCSlabBlock(def, true);
             half.otherBlock = full;
@@ -72,8 +69,8 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
             this.setCreativeTab(null);
         }
         else {
-            WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
-            halfSlabs.set(def.blockID);
+            //WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
+            //halfSlabs.set(def.blockID);
             //NOTYET useNeighborBrightness[def.blockID] = true;
         }
     }
@@ -140,7 +137,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     }
     @Override
     public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z);
+        return def.getLightOpacity(this, world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
     @Override

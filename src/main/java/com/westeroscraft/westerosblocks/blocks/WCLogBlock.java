@@ -134,7 +134,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     }
     @Override
     public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
-        return def.getLightOpacity(world, x, y, z);
+        return def.getLightOpacity(this, world, x, y, z);
     }
     @SideOnly(Side.CLIENT)
     @Override

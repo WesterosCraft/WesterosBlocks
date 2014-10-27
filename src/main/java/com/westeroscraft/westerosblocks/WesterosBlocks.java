@@ -143,21 +143,6 @@ public class WesterosBlocks
         try
         {
             cfg.load();
-            // Add settings for block defintiions
-            for (int i = 0; i < customBlockDefs.length; i++) {
-                if (customBlockDefs[i].blockIDs == null) {
-                    customBlockDefs[i].blockIDs = new int[] { customBlockDefs[i].blockID };
-                }
-                for (int j = 0; j < customBlockDefs[i].blockIDs.length; j++) {
-                    /**NOTYET
-                    int val = customBlockDefs[i].blockIDs[j];
-                    customBlockDefs[i].blockIDs[j] = cfg.getBlock(customBlockDefs[i].getBlockName(j), val).getInt(val);
-                    */
-                    if (j == 0) {
-                        customBlockDefs[i].blockID = customBlockDefs[i].blockIDs[j];
-                    }
-                }
-            }
             useFixedStairs = cfg.get("Settings",  "useFixedStairs", true).getBoolean(true);
             useFixedPressurePlate = cfg.get("Settings", "useFixedPressurePlate", true).getBoolean(true);
             useWaterCTMFix = cfg.get("Settings", "useWaterCTMFix", true).getBoolean(true);
