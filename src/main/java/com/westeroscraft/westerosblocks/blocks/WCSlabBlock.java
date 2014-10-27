@@ -26,7 +26,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.items.WCSlabItem;
 
 import cpw.mods.fml.relauncher.Side;
@@ -223,13 +222,14 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
-        int blkid = Block.getIdFromBlock(this);
+        
         /* Add models for half slabs */
         if (!this.field_150004_a) {
+            String blkname = def.getBlockName(HALF_IDX);
             def.defaultRegisterTextureBlock(mtd, HALF_IDX, TransparencyMode.SEMITRANSPARENT);
-            BoxBlockModel bottom = md.addBoxModel(blkid);
+            BoxBlockModel bottom = md.addBoxModel(blkname);
             bottom.setYRange(0.0, 0.5);
-            BoxBlockModel top = md.addBoxModel(blkid);
+            BoxBlockModel top = md.addBoxModel(blkname);
             top.setYRange(0.5, 1.0);
             for (WesterosBlockDef.Subblock sb : def.subBlocks) {
                 bottom.setMetaValue(sb.meta);

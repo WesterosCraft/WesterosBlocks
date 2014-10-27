@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -167,9 +166,9 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
         def.defaultRegisterTextures(mtd);
         WesterosBlockDef def = this.getWBDefinition();
+        String blkname = def.getBlockName(0);
         Subblock sb = def.getByMeta(0);
         if ((sb != null) && (sb.textures != null)) {
             // Register textures 
@@ -177,7 +176,7 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
             if (def.nonOpaque) {
                 tmod = TextureModifier.CLEARINSIDE;
             }
-            BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
+            BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
             mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
             // Set for all meta values for foot
             for (int meta = 0; meta < 8; meta++) {
@@ -194,7 +193,7 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
             }
             def.setBlockColorMap(mtr, sb);
             // Set for head
-            mtr = mtd.addBlockTextureRecord(blkid);
+            mtr = mtd.addBlockTextureRecord(blkname);
             mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
             // Set for all meta values for head
             for (int meta = 8; meta < 16; meta++) {
@@ -212,7 +211,7 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
             def.setBlockColorMap(mtr, sb);
         }
         // Create east facing model
-        PatchBlockModel mod = md.addPatchModel(blkid);
+        PatchBlockModel mod = md.addPatchModel(blkname);
         mod.addPatch(0, 0.1875, 0, 1, 0.1875, 0, 0, 0.1875, 1, SideVisible.TOP); // Bottom
         mod.addPatch(0, 0.5625, 1, 1, 0.5625, 1, 0, 0.5625, 0, SideVisible.TOP); // Top
         mod.addPatch(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0.5625, 100, SideVisible.BOTTOM); // Z- (flip)
@@ -224,19 +223,19 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
         mod.setMetaValue(11);
         mod.setMetaValue(15);
         // Make north facing model
-        PatchBlockModel nmod = md.addRotatedPatchModel(blkid, mod, 0, 270, 0);
+        PatchBlockModel nmod = md.addRotatedPatchModel(blkname, mod, 0, 270, 0);
         nmod.setMetaValue(2);
         nmod.setMetaValue(6);
         nmod.setMetaValue(10);
         nmod.setMetaValue(14);
         // Make south facing model
-        PatchBlockModel smod = md.addRotatedPatchModel(blkid, mod, 0, 90, 0);
+        PatchBlockModel smod = md.addRotatedPatchModel(blkname, mod, 0, 90, 0);
         smod.setMetaValue(0);
         smod.setMetaValue(4);
         smod.setMetaValue(8);
         smod.setMetaValue(12);
         // Make west facing model
-        PatchBlockModel wmod = md.addRotatedPatchModel(blkid, mod, 0, 180, 0);
+        PatchBlockModel wmod = md.addRotatedPatchModel(blkname, mod, 0, 180, 0);
         wmod.setMetaValue(1);
         wmod.setMetaValue(5);
         wmod.setMetaValue(9);

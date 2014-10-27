@@ -132,13 +132,13 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int id = Block.getIdFromBlock(this);
-        int modid = Block.getIdFromBlock(ourModelBlock);
+        String blkname = def.getBlockName(0);
+        String modblkname = def.modelBlockName;
         // Make copy of model block textu def
-        CopyBlockTextureRecord btr = mtd.addCopyBlockTextureRecord(id, modid, def.modelBlockMeta);
+        CopyBlockTextureRecord btr = mtd.addCopyBlockTextureRecord(blkname, modblkname, def.modelBlockMeta);
         btr.setTransparencyMode(TransparencyMode.SEMITRANSPARENT);
         // Get stair model
-        md.addStairModel(id);
+        md.addStairModel(blkname);
     }
 
 }

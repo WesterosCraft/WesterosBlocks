@@ -166,7 +166,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         // Modifiers for each orientation
         TextureModifier tmod[][] = { 
             { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE },
@@ -186,7 +186,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
             if (sb == null) continue;
             if (sb.textures == null) continue;
             for (int i = 0; i < 4; i++) {   // 4 orientations
-                BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
+                BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
                 mtr.setMetaValue(4*i + sb.meta);
                 for (int face = 0; face < 6; face++) {
                     int fidx = txtid[i][face];

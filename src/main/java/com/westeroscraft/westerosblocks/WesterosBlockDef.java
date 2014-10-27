@@ -1358,13 +1358,11 @@ public class WesterosBlockDef {
                 tmod = TextureModifier.CLEARINSIDE;
             }
             for (int idx = 0; idx < this.blockIDCount; idx++) {
-                Block blk = Block.getBlockFromName("westeroscraft:" + this.getBlockName(idx));
-                if (blk == null) continue;
-                int blkid = Block.getIdFromBlock(blk);
+                String blkname = this.getBlockName(idx);
                 for (int i = 0; i < this.subblock_by_meta.length; i++) {
                     Subblock sb = subblock_by_meta[i];
                     if ((sb != null) && (sb.textures != null)) {
-                        BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
+                        BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
                         if (tm != null) {
                             mtr.setTransparencyMode(tm);
                         }
@@ -1407,13 +1405,11 @@ public class WesterosBlockDef {
             if (this.nonOpaque) {
                 tmod = TextureModifier.CLEARINSIDE;
             }
-            Block blk = Block.getBlockFromName("westerosblocks:" + this.getBlockName(idx));
-            if (blk == null) return;
-            int blkid = Block.getIdFromBlock(blk);
+            String blkname = this.getBlockName(idx);
             for (int i = 0; i < this.subblock_by_meta.length; i++) {
                 Subblock sb = subblock_by_meta[i];
                 if ((sb != null) && (sb.textures != null)) {
-                    BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
+                    BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
                     if (tm != null) {
                         mtr.setTransparencyMode(tm);
                     }

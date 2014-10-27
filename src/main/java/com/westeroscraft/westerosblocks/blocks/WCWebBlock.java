@@ -201,11 +201,11 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle, Westero
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
         // Get plant model, and set for all defined meta
-        PlantBlockModel pbm = md.addPlantModel(blkid);
+        PlantBlockModel pbm = md.addPlantModel(blkname);
         /* Make models for each layer thickness */
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {
             pbm.setMetaValue(sb.meta);

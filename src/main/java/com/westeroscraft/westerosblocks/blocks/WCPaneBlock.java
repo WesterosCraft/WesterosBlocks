@@ -143,11 +143,11 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
         // Make pane model for each meta
-        PaneBlockModel pbm = md.addPaneModel(blkid);
+        PaneBlockModel pbm = md.addPaneModel(blkname);
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {
             pbm.setMetaValue(sb.meta);
         }

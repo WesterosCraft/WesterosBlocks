@@ -157,7 +157,7 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         WesterosBlockDef def = this.getWBDefinition();
         Subblock sb = def.getByMeta(0);
@@ -168,7 +168,7 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
                 tmod = TextureModifier.CLEARINSIDE;
             }
             // Make record for straight tracks
-            BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkid);
+            BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
             mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
             // Set for all meta values for straight tracks
             for (int meta = 0; meta < 6; meta++) {
@@ -184,7 +184,7 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
             String txtid = sb.textures.get(fidx);
             mtr.setPatchTexture(txtid.replace(':', '_'), tmod, 0);
             // Make record for curved tracks
-            mtr = mtd.addBlockTextureRecord(blkid);
+            mtr = mtd.addBlockTextureRecord(blkname);
             mtr.setTransparencyMode(TransparencyMode.TRANSPARENT);
             // Set for all meta values for curved tracks
             for (int meta = 6; meta < 10; meta++) {
@@ -199,34 +199,34 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
             def.setBlockColorMap(mtr, sb);
         }
         // Make models for flat tracks
-        PatchBlockModel mod = md.addPatchModel(blkid);
+        PatchBlockModel mod = md.addPatchModel(blkname);
         String patchFlat = mod.addPatch(0.0, 0.01, 0.0, 1.0, 0.01, 0.0, 0.0, 0.01, 1.0, SideVisible.BOTH);
         mod.setMetaValue(0);
         mod.setMetaValue(9);
-        PatchBlockModel mod90 = md.addPatchModel(blkid);
+        PatchBlockModel mod90 = md.addPatchModel(blkname);
         mod90.addRotatedPatch(patchFlat, 0, 90, 0);
         mod90.setMetaValue(1);
         mod90.setMetaValue(6);
-        PatchBlockModel mod180 = md.addPatchModel(blkid);
+        PatchBlockModel mod180 = md.addPatchModel(blkname);
         mod180.addRotatedPatch(patchFlat, 0, 180, 0);
         mod180.setMetaValue(7);
-        PatchBlockModel mod270 = md.addPatchModel(blkid);
+        PatchBlockModel mod270 = md.addPatchModel(blkname);
         mod270.addRotatedPatch(patchFlat, 0, 270, 0);
         mod270.setMetaValue(8);
         // Make models for sloped tracks
-        PatchBlockModel modS0 = md.addPatchModel(blkid);
+        PatchBlockModel modS0 = md.addPatchModel(blkname);
         String patchSlope = mod.addPatch(0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, SideVisible.BOTH);
         modS0.setMetaValue(2);
         modS0.setMetaValue(10);
-        PatchBlockModel modS90 = md.addPatchModel(blkid);
+        PatchBlockModel modS90 = md.addPatchModel(blkname);
         modS90.addRotatedPatch(patchSlope, 0, 90, 0);
         modS90.setMetaValue(5);
         modS90.setMetaValue(13);
-        PatchBlockModel modS180 = md.addPatchModel(blkid);
+        PatchBlockModel modS180 = md.addPatchModel(blkname);
         modS180.addRotatedPatch(patchSlope, 0, 180, 0);
         modS180.setMetaValue(3);
         modS180.setMetaValue(11);
-        PatchBlockModel modS270 = md.addPatchModel(blkid);
+        PatchBlockModel modS270 = md.addPatchModel(blkname);
         modS270.addRotatedPatch(patchSlope, 0, 270, 0);
         modS270.setMetaValue(4);
         modS270.setMetaValue(12);

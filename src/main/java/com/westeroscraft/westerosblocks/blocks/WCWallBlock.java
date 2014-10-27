@@ -142,11 +142,11 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 3);
         // Get plant model, and set for all defined meta
-        WallFenceBlockModel pbm = md.addWallFenceModel(blkid, WallFenceBlockModel.FenceType.WALL);
+        WallFenceBlockModel pbm = md.addWallFenceModel(blkname, WallFenceBlockModel.FenceType.WALL);
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {
             pbm.setMetaValue(sb.meta);
         }

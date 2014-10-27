@@ -471,20 +471,20 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         // Register texture, and flip version
         Subblock sb = def.getByMeta(0);
         if ((sb == null) || (sb.textures == null) || (sb.textures.size() == 0)) return;
         String txt = sb.textures.get(0);
-        BlockTextureRecord btr = mtd.addBlockTextureRecord(blkid);
+        BlockTextureRecord btr = mtd.addBlockTextureRecord(blkname);
         btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
         btr.setPatchTexture(txt, TextureModifier.NONE, 0);
         btr.setPatchTexture(txt, TextureModifier.FLIPHORIZ, 1);
         def.setBlockColorMap(btr, sb);
         // Register model for each meta
         for (int meta = 0; meta < 16; meta++) {
-            CuboidBlockModel mod = md.addCuboidModel(blkid);
+            CuboidBlockModel mod = md.addCuboidModel(blkname);
             mod.setMetaValue(meta);
             int[] txtids = new int[] { this.getIconIndex(meta, 0), this.getIconIndex(meta, 1), this.getIconIndex(meta, 2),
                     this.getIconIndex(meta, 3), this.getIconIndex(meta, 4), this.getIconIndex(meta, 5) };

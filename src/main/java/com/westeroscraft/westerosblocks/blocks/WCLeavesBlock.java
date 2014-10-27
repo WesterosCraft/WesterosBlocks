@@ -344,13 +344,13 @@ public class WCLeavesBlock extends BlockLeavesBase implements IShearable, Wester
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         for (int meta = 0; meta < 8; meta++) {
             Subblock sb = def.getByMeta(meta);
             if (sb == null) continue;
             String topbot = sb.getTextureByIndex(2);
             String sides = sb.getTextureByIndex(3);
-            BlockTextureRecord btr = mtd.addBlockTextureRecord(blkid);
+            BlockTextureRecord btr = mtd.addBlockTextureRecord(blkname);
             btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
             btr.setMetaValue(meta);
             btr.setMetaValue(meta | 8);

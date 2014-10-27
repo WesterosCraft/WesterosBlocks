@@ -144,11 +144,11 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.TRANSPARENT);
         // Get stair model
-        BoxBlockModel mdl = md.addBoxModel(blkid);
+        BoxBlockModel mdl = md.addBoxModel(blkname);
         mdl.setYRange(0.0, 0.5);
         for (int i = 0; i < 16; i++) {
             mdl.setMetaValue(i);

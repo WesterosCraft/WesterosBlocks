@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -292,13 +291,13 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         WesterosBlockDef def = this.getWBDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 6);
         for (int meta = 0; meta < 16; meta++) {
             List<Cuboid> cl = this.getCuboidList(meta);   
             if (cl == null) continue;
-            CuboidBlockModel mod = md.addCuboidModel(blkid);
+            CuboidBlockModel mod = md.addCuboidModel(blkname);
             for (Cuboid c : cl) {
                 if (WesterosBlockDef.SHAPE_CROSSED.equals(c.shape)) {   // Crosed
                     mod.addCrossedPatches(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax, c.sideTextures[0]);

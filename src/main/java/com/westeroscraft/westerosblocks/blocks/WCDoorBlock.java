@@ -206,11 +206,11 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         WesterosBlockDef def = this.getWBDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
         // Get door model, and set for all defined meta
-        md.addDoorModel(blkid);
+        md.addDoorModel(blkname);
    }
 
 }

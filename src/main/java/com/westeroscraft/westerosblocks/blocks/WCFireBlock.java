@@ -141,13 +141,13 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         // Register textures
         Subblock sb = def.getByMeta(0);
         if ((sb == null) || (sb.textures == null) || (sb.textures.size() < 2)) return;
         String txt1 = sb.textures.get(0);
         String txt2 = sb.textures.get(1);
-        BlockTextureRecord btr = mtd.addBlockTextureRecord(blkid);
+        BlockTextureRecord btr = mtd.addBlockTextureRecord(blkname);
         btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
         btr.setPatchTexture(txt1, TextureModifier.NONE, 0);
         btr.setPatchTexture(txt1, TextureModifier.NONE, 1);
@@ -159,7 +159,7 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
         btr.setPatchTexture(txt2, TextureModifier.NONE, 7);
         def.setBlockColorMap(btr, sb);
         /* Make base model */
-        PatchBlockModel mod = md.addPatchModel(blkid);
+        PatchBlockModel mod = md.addPatchModel(blkname);
         // patchblock:id=51,data=*,patch0=VertX0,patch1=VertX0@90,patch2=VertX0@180,patch3=VertX0@270,patch4=SlopeXUpZTop675,patch5=SlopeXUpZTop675@90,patch6=SlopeXUpZTop675@180,patch4=SlopeXUpZTop675@270
         // patch:id=VertX0,Ox=0.0,Oy=0.0,Oz=1.0,Ux=0.0,Uy=0.0,Uz=0.0,Vx=0.0,Vy=1.0,Vz=1.0,visibility=bottom
         // patch:id=SlopeXUpZTop675,Ox=0.375,Oy=0.0,Oz=0.0,Ux=0.375,Uy=0.0,Uz=1.0,Vx=0.5,Vy=1.0,Vz=0.0,visibility=top

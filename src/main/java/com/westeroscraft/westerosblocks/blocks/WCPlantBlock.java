@@ -156,11 +156,11 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
 
-        PatchBlockModel mod = md.addPatchModel(blkid);
+        PatchBlockModel mod = md.addPatchModel(blkname);
         String patch0 = mod.addPatch(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, SideVisible.FLIP);
         mod.addRotatedPatch(patch0, 0, 90, 0);
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {

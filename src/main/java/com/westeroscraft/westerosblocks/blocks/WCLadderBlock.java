@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -327,18 +326,18 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 1);
         /* Make base model */
-        PatchBlockModel mod = md.addPatchModel(blkid);
+        PatchBlockModel mod = md.addPatchModel(blkname);
         String patch0 = mod.addPatch(0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, SideVisible.BOTH);
         /* Make rotated models */
-        PatchBlockModel mod90 = md.addPatchModel(blkid);
+        PatchBlockModel mod90 = md.addPatchModel(blkname);
         mod90.addRotatedPatch(patch0, 0, 90, 0);
-        PatchBlockModel mod180 = md.addPatchModel(blkid);
+        PatchBlockModel mod180 = md.addPatchModel(blkname);
         mod180.addRotatedPatch(patch0, 0, 180, 0);
-        PatchBlockModel mod270 = md.addPatchModel(blkid);
+        PatchBlockModel mod270 = md.addPatchModel(blkname);
         mod270.addRotatedPatch(patch0, 0, 270, 0);
         
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {

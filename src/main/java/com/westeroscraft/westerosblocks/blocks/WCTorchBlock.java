@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -136,12 +135,12 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        int blkid = Block.getIdFromBlock(this);
+        String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 5);
 
         // Make vertical model
-        PatchBlockModel mod0 = md.addPatchModel(blkid);
+        PatchBlockModel mod0 = md.addPatchModel(blkname);
         String vside = mod0.addPatch(0.4375, 0.0, 0.0, 0.4375, 0.0, 1.0, 0.4375, 1.0, 0.0, SideVisible.TOP);
         mod0.addRotatedPatch(vside, 0, 90, 0);
         mod0.addRotatedPatch(vside, 0, 180, 0);
@@ -150,7 +149,7 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
         mod0.setMetaValue(0);
         mod0.setMetaValue(5);
         // Make side model
-        PatchBlockModel mod1 = md.addPatchModel(blkid);
+        PatchBlockModel mod1 = md.addPatchModel(blkname);
         mod1.addPatch(-0.5, 0.2, 0.4375, 0.5, 0.2, 0.4375, -0.1, 1.2, 0.4375, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.BOTTOM);
         mod1.addPatch(-0.5, 0.2, 0.5625, 0.5, 0.2, 0.5625, -0.1, 1.2, 0.5625, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.TOP);
         mod1.addPatch(0.0625, 0.2, 0.0, 0.0625, 0.2, 1.0, 0.4625, 1.2, 0.0, 0.0, 1.0, 0.0, 0.8, 100.0, SideVisible.BOTTOM);
@@ -158,11 +157,11 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
         mod1.addPatch(0.0, 0.825, -0.3625, 1.0, 0.825, -0.3625, 0.0, 0.825, 0.6375, 0.4375, 0.5625, 0.5, 0.625, 100.0, SideVisible.BOTH);
         mod1.setMetaValue(1);
         // Rotate for other sides
-        PatchBlockModel mod2 = md.addRotatedPatchModel(blkid, mod1, 0, 180, 0);
+        PatchBlockModel mod2 = md.addRotatedPatchModel(blkname, mod1, 0, 180, 0);
         mod2.setMetaValue(2);
-        PatchBlockModel mod3 = md.addRotatedPatchModel(blkid, mod1, 0, 90, 0);
+        PatchBlockModel mod3 = md.addRotatedPatchModel(blkname, mod1, 0, 90, 0);
         mod3.setMetaValue(3);
-        PatchBlockModel mod4 = md.addRotatedPatchModel(blkid, mod1, 0, 270, 0);
+        PatchBlockModel mod4 = md.addRotatedPatchModel(blkname, mod1, 0, 270, 0);
         mod4.setMetaValue(4);
     }
 
