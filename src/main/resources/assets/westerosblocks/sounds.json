@@ -1,0 +1,921 @@
+{
+	"tavern_small" : { 
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name": "tavern", 
+	      "volume": 0.5, 
+	      "pitch": 1.0 
+	    }
+	  ]
+	},
+	"tavern_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name": "tavern", 
+	      "volume": 1.2
+	    }
+	  ]
+	},
+	"blacksmith_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "blacksmith1", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith2", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith3", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith4", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith5", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith6", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith7", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith8", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith9", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "blacksmith10", 
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"blacksmith_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "blacksmith1", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith2", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith3", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith4", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith5", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith6", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith7", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith8", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith9", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "blacksmith10", 
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"stables_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "stables1", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables2", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables3", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables4", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables5", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables6", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables7", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables8", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables9", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "stables10", 
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"stables_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "stables1", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables2", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables3", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables4", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables5", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables6", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables7", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables8", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables9", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "stables10", 
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+    "windmill_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "windmill", 
+	      "volume" : 0.4
+	    }
+	  ]
+	},
+    "windmill_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "windmill", 
+	      "volume" : 1.7
+	    }
+	  ]
+	},
+    "armory_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "armory1",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "armory2",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "armory3",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "armory4",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "armory5",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "armory6",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "armory7",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "armory8",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "armory9",
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"armory_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "armory1",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "armory2",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "armory3",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "armory4",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "armory5",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "armory6",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "armory7",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "armory8",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "armory9",
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"butcher_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "butcher1",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "butcher2",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "butcher3",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "butcher4",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "butcher5",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "butcher6",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "butcher7",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "butcher8",
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"butcher_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "butcher1",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "butcher2",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "butcher3",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "butcher4",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "butcher5",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "butcher6",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "butcher7",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "butcher8",
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"carpenter_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "carpenter1",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "carpenter2",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "carpenter3",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "carpenter4",
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "carpenter5",
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"carpenter_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "carpenter1",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "carpenter2",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "carpenter3",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "carpenter4",
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "carpenter5",
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"dungeon_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "dungeon",
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"dungeon_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "dungeon",
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"sept_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "sept",
+	      "volume" : 0.7
+	    }
+	  ]
+	},
+	"sept_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "sept",
+	      "volume" : 1.4
+	    }
+	  ]
+	},
+	"rookery_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "rookery1",
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "rookery2",
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "rookery3",
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "rookery4",
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "rookery5",
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "rookery6",
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "rookery7",
+	      "volume" : 0.7
+	    }
+	  ]
+	},
+	"rookery_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "rookery1",
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "rookery2",
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "rookery3",
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "rookery4",
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "rookery5",
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "rookery6",
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "rookery7",
+	      "volume" : 1.4
+	    }
+	  ]
+	},
+	"sewer" : {
+	  "category" : "block", 
+	  "sounds" : [ "sewer" ]
+    },
+	"cave_ambience" : {
+	  "category" : "block", 
+	  "sounds" : [ "cave_ambience" ]
+    },
+	"jenny_of_oldstones" : {
+	  "category" : "block", 
+	  "sounds" : [ "jenny_of_oldstones" ]
+    },
+	"iron_mine_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "iron_mine1", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine2", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine3", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine4", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine5", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine6", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine7", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine8", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine9", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "iron_mine10", 
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"iron_mine_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "iron_mine1", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine2", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine3", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine4", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine5", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine6", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine7", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine8", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine9", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "iron_mine10", 
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"heart_tree_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "heart_tree", 
+	      "volume" : 0.7
+	    }
+	  ]
+	},
+	"heart_tree_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "heart_tree", 
+	      "volume" : 1.4
+	    }
+	  ]
+	},
+	"docked_ship_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "docked_ship1", 
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "docked_ship2", 
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "docked_ship3", 
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "docked_ship4", 
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "docked_ship5", 
+	      "volume" : 0.7
+	    },
+	    { 
+	      "name" : "docked_ship6", 
+	      "volume" : 0.7
+	    }
+	  ]
+	},
+	"docked_ship_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "docked_ship1", 
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "docked_ship2", 
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "docked_ship3", 
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "docked_ship4", 
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "docked_ship5", 
+	      "volume" : 1.4
+	    },
+	    { 
+	      "name" : "docked_ship6", 
+	      "volume" : 1.4
+	    }
+	  ]
+	},
+	"ship_sails" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "ship_sails1", 
+	      "volume" : 1.25
+	    },
+	    { 
+	      "name" : "ship_sails2", 
+	      "volume" : 1.25
+	    },
+	    { 
+	      "name" : "ship_sails3", 
+	      "volume" : 1.25
+	    },
+	    { 
+	      "name" : "ship_sails4", 
+	      "volume" : 1.25
+	    }
+	  ]
+	},
+	"market_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "market", 
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"market_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "market", 
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"training_yard_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "training_yard1", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "training_yard2", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "training_yard3", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "training_yard4", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "training_yard5", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "training_yard6", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "training_yard7", 
+	      "volume" : 0.6
+	    },
+	    { 
+	      "name" : "training_yard8", 
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"training_yard_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "training_yard1", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "training_yard2", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "training_yard3", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "training_yard4", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "training_yard5", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "training_yard6", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "training_yard7", 
+	      "volume" : 1.3
+	    },
+	    { 
+	      "name" : "training_yard8", 
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"beehive_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "beehive", 
+	      "volume" : 0.15
+	    }
+	  ]
+	},
+	"beehive_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "beehive", 
+	      "volume" : 0.4
+	    }
+	  ]
+	},
+	"flag_flapping" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "flag_flapping", 
+	      "volume" : 0.6
+	    }
+	  ]
+	},
+	"rushing_water_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "rushing_water", 
+	      "volume" : 0.7
+	    }
+	  ]
+	},
+	"rushing_water_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "rushing_water", 
+	      "volume" : 1.5
+	    }
+	  ]
+	},
+	"warning_bells_small" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "warning_bells", 
+	      "volume" : 7.0
+	    }
+	  ]
+	},
+	"warning_bells_large" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "warning_bells", 
+	      "volume" : 13.0
+	    }
+	  ]
+	},
+	"portcullis_4sec" : {
+	  "category" : "block", 
+	  "sounds" : [ "portcullis_4sec" ]
+	},
+	"portcullis_6sec" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "portcullis_6sec", 
+	      "volume" : 1.3
+	    }
+	  ]
+	},
+	"hornblast_rangers" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "hornblast_rangers", 
+	      "volume" : 27.0
+	    }
+	  ]
+	},
+	"hornblast_wildlings" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "hornblast_wildlings", 
+	      "volume" : 27.0
+	    }
+	  ]
+	},
+	"hornblast_walkers" : {
+	  "category" : "block", 
+	  "sounds" : [ 
+	    { 
+	      "name" : "hornblast_walkers", 
+	      "volume" : 27.0
+	    }
+	  ]
+	}
+}

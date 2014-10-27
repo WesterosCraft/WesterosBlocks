@@ -16,74 +16,6 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
-/*NOTYET
-import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNEStackBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
-import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
-import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
-import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
-import com.westeroscraft.westerosblocks.blocks.WCStepSound;
-import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
-import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
-import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
@@ -111,7 +43,6 @@ import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
-import com.westeroscraft.westerosblocks.blocks.WCStepSound;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
@@ -1394,11 +1325,6 @@ public class WesterosBlockDef {
             }
         }
         return cmh;
-    }
-    // Register custom step sound
-    public static void registerStepSound(WesterosBlockStepSound ss) {
-        WCStepSound stepsound = new WCStepSound(ss);
-        stepSoundTable.put(ss.name, stepsound);
     }
     /**
      * Default texture registration for Dynmap

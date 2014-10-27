@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlocksSoundDef;
 import com.westeroscraft.westerosblocks.tileentity.WCTileEntitySound;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -149,18 +148,12 @@ public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
         if ((sndids != null) && (sndids.size() > soundIndex)) {
             sndid = sndids.get(soundIndex);
         }
-        // Find sound definition
-        WesterosBlocksSoundDef def = null;
-        float volume = 1.0F;
-        float pitch = 1.0F;
         if (sndid != null) {
-            def = WesterosBlocks.soundsDefs.get(sndid);
-            if (def != null) {
-                volume = def.volume;
-                pitch = def.pitch;
-                sndid = def.soundResourceID;
+            int cidx = sndid.indexOf(':');
+            if (cidx < 0) {
+                sndid = "westerosblocks:" + sndid;
             }
-            world.playSoundEffect((double)x + 0.5D, (double)y + 0.5D, (double)z + 0.5D, sndid, volume, pitch);
+            world.playSoundEffect((double)x + 0.5D, (double)y + 0.5D, (double)z + 0.5D, sndid, 1.0F, 1.0F);
         }
         return true;
     }

@@ -1,7 +1,6 @@
 package com.westeroscraft.westerosblocks;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -12,12 +11,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartedEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent; 
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.FMLEmbeddedChannel;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
-import net.minecraftforge.client.event.sound.SoundLoadEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
@@ -30,22 +26,12 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.EnumMap;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.logging.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.asm.ClassTransformer;
-/*NOTYET
-import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCFluidCTMRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCHalfDoorRenderer;
-import com.westeroscraft.westerosblocks.blocks.WCLadderRenderer;
-*/
 import com.westeroscraft.westerosblocks.network.PacketHandler;
 import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
 import com.westeroscraft.westerosblocks.render.WCCuboidNSEWUDRenderer;
@@ -93,8 +79,6 @@ public class WesterosBlocks
     public static WesterosBlockConfig customConfig;
     
     public static WesterosBlockDef[] customBlockDefs;
-    
-    public static HashMap<String, WesterosBlocksSoundDef> soundsDefs;
     
     public static EnumMap<Side, FMLEmbeddedChannel> channels;
 
@@ -147,11 +131,7 @@ public class WesterosBlocks
         } finally {
             if (in != null) { try { in.close(); } catch (IOException iox) {}; in = null; }
         }
-        log.info("Loaded " + customBlockDefs.length + " block definitions and " + customConfig.stepSounds.length + " stepsounds");
-        // Process step sound definitions first
-        for (WesterosBlockStepSound ss : customConfig.stepSounds) {
-            WesterosBlockDef.registerStepSound(ss);
-        }
+        log.info("Loaded " + customBlockDefs.length + " block definitions");
         
         if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {
             crash("WesterosBlocks.json failed sanity check");
@@ -190,22 +170,6 @@ public class WesterosBlocks
         finally
         {
             cfg.save();
-        }
-        // Build sound def map
-        soundsDefs = new HashMap<String, WesterosBlocksSoundDef>();
-        if (customConfig.sounds != null) {
-            for (WesterosBlocksSoundDef sd : customConfig.sounds) {
-                String rname = sd.soundResourceName;
-                if (rname.indexOf(':') < 0) {
-                    rname = "westerosblocks:" + rname;
-                }
-                sd.soundResourceID = rname.replace('/',  '.');
-                soundsDefs.put(sd.name, sd);
-            }
-            // Register listener for client sound loading
-            if(FMLCommonHandler.instance().getSide().isClient()) {  
-                MinecraftForge.EVENT_BUS.register(new SoundEventListener());
-            }
         }
         // Initialize with standard block IDs
         slabStyleLightingBlocks.clear();
@@ -328,46 +292,5 @@ public class WesterosBlocks
     @EventHandler
     public void serverStopping(FMLServerStoppingEvent event)
     {
-    }
-    
-    public class SoundEventListener {
-        @SubscribeEvent
-        public void onSound(SoundLoadEvent event)
-        {
-            log.info("Registering " + customConfig.sounds.length + " custom sounds");
-            HashSet<String> soundids = new HashSet<String>();
-            for (WesterosBlocksSoundDef sd : customConfig.sounds) {
-                String rname = sd.soundResourceName;
-                if (rname.indexOf(':') < 0) {
-                    rname = "westerosblocks:" + rname;
-                }
-                /*NOTYET
-                if (sd.numberOfSounds > 1) {
-                    for (int i = 1; i <= sd.numberOfSounds; i++) {
-                        String sid = rname + i + ".ogg";
-                        if (soundids.contains(sid) == false) {
-                            try {
-                                event.manager.soundPoolSounds.addSound(sid);
-                                soundids.add(sid);
-                            } catch (Exception x) {
-                                log.warning("Failed to register sound " + sid + " - " + x.getMessage());
-                            }
-                        }
-                    }
-                }
-                else {
-                    String sid = rname + ".ogg";
-                    if (soundids.contains(sid) == false) {
-                        try {
-                            event.manager.soundPoolSounds.addSound(sid);
-                            soundids.add(sid);
-                        } catch (Exception x) {
-                            log.warning("Failed to register sound " + sid + " - " + x.getMessage());
-                        }
-                    }
-                }
-                */
-            }
-        }
     }
 }
