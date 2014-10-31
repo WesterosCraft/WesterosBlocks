@@ -142,14 +142,6 @@
 	    { 
 	      "name" : "stables8", 
 	      "volume" : 0.6
-	    },
-	    { 
-	      "name" : "stables9", 
-	      "volume" : 0.6
-	    },
-	    { 
-	      "name" : "stables10", 
-	      "volume" : 0.6
 	    }
 	  ]
 	},
@@ -186,14 +178,6 @@
 	    },
 	    { 
 	      "name" : "stables8", 
-	      "volume" : 1.3
-	    },
-	    { 
-	      "name" : "stables9", 
-	      "volume" : 1.3
-	    },
-	    { 
-	      "name" : "stables10", 
 	      "volume" : 1.3
 	    }
 	  ]
