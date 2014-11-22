@@ -44,6 +44,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
+import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
@@ -1222,6 +1223,7 @@ public class WesterosBlockDef {
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
         typeTable.put("furnace", new WCFurnaceBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
+        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());
         colorMultTable.put("water", new WaterColorMultHandler());

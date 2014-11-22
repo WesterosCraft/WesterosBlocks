@@ -8519,6 +8519,21 @@
                 }               
             }
         ]
-    }
+    },
+    {
+      "blockName" : "trapdoor_block_0",
+      "blockType" : "trapdoor",
+      "stepSound" : "stone",
+      "material" : "stone",
+      "creativeTab" : "WesterosDeco",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "Red Sandstone Trap Door",
+          "textures" : [ "stone_block_0/sandstone_red" ]
+        }
+      ]
+    },
+    
    ]
 }

@@ -202,6 +202,7 @@ public class WesterosBlocks
         ArrayList<Block> blklist = new ArrayList<Block>();
         customBlocksByName = new HashMap<String, Block>();
         for (int i = 0; i < customBlockDefs.length; i++) {
+            if (customBlockDefs[i] == null) continue;
             Block[] blks = customBlockDefs[i].createBlocks();
             if (blks != null) {
                 for (int j = 0; j < blks.length; j++) {
