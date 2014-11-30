@@ -46,6 +46,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     protected WCLogBlock(WesterosBlockDef def) {
         super(def.blockID);
         this.def = def;
+        this.isSolidOpaque = !def.nonOpaque;
         if (this.isSolidOpaque && (def.lightOpacity < 0)) {
             def.lightOpacity = 255;
         }

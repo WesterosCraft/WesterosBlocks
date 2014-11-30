@@ -24,6 +24,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -105,7 +106,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
 
     @Override
     public int getRenderType() {
-        return 1;
+        return WesterosBlocks.crossedRenderID; //1
     }
 
     @Override

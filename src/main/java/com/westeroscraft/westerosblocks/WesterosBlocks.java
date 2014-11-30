@@ -36,6 +36,7 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
+import com.westeroscraft.westerosblocks.blocks.WCCrossedRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidRenderer;
 import com.westeroscraft.westerosblocks.blocks.WCFenceRenderer;
@@ -73,6 +74,7 @@ public class WesterosBlocks
     public static int cuboidNSEWUDRenderID;
     public static int stairRenderID;
     public static int fluidCTMRenderID;
+    public static int crossedRenderID;
     // Use stair render fix
     public boolean useFixedStairs = false;
     public boolean useFixedPressurePlate = false;
@@ -234,6 +236,8 @@ public class WesterosBlocks
             useWaterCTMFix = false;
             fluidCTMRenderID = 4;   // Vanilla fluid renderer
         }
+        crossedRenderID = RenderingRegistry.getNextAvailableRenderId();
+        RenderingRegistry.registerBlockHandler(new WCCrossedRenderer());
         proxy.initRenderRegistry();
         
         // Construct custom block definitions

@@ -22,6 +22,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -120,7 +121,7 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle, Westero
 
     @Override
     public int getRenderType() {
-        return 1;
+        return WesterosBlocks.crossedRenderID; //1
     }
 
     @Override
@@ -137,37 +138,45 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle, Westero
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
         return null;
     }
+    
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
+    
     @Override
     public int getFireSpreadSpeed(World world, int x, int y, int z, int metadata, ForgeDirection face) {
         return def.getFireSpreadSpeed(world, x, y, z, metadata, face);
     }
+    
     @Override
     public int getFlammability(IBlockAccess world, int x, int y, int z, int metadata, ForgeDirection face) {
         return def.getFlammability(world, x, y, z, metadata, face);
     }
+    
     @Override
     public int getLightValue(IBlockAccess world, int x, int y, int z) {
         return def.getLightValue(world, x, y, z);
     }
+    
     @Override
     public int getLightOpacity(World world, int x, int y, int z) {
         return def.getLightOpacity(world, x, y, z);
     }
+    
     @SideOnly(Side.CLIENT)
     @Override
     public int getBlockColor() {
         return def.getBlockColor();
     }
+    
     @SideOnly(Side.CLIENT)
     @Override
     public int getRenderColor(int meta)
     {
         return def.getRenderColor(meta);
     }
+    
     @SideOnly(Side.CLIENT)
     @Override
     public int colorMultiplier(IBlockAccess access, int x, int y, int z)
@@ -191,17 +200,20 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle, Westero
         }
         entity.setInWeb();
     }
+    
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass()
     {
         return (def.alphaRender?1:0);
     }
+    
     @SideOnly(Side.CLIENT)
     @Override
     public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
     }
+    
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
