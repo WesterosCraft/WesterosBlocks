@@ -11,7 +11,6 @@ import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -51,11 +50,23 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     private WesterosBlockDef def;
     private Icon[] icons;
     private int itemID;
-    
+    private boolean locked = false;
+
     protected WCHalfDoorBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
+        String type = def.getType(0);
+        if (type != null) {
+            String[] toks = type.split(",");
+            for (String tok : toks) {
+                String [] flds = tok.split(":");
+                if (flds.length < 2) continue;
+                if (flds[0].equals("locked")) {
+                    locked = flds[1].equals("true");
+                }
+            }
+        }
     }
 
     public boolean initializeBlockDefinition() {
@@ -364,7 +375,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
      */
     public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
     {
-        if (this.blockMaterial == Material.iron)
+        if (this.locked)
         {
             return false; //Allow items to interact with the door
         }

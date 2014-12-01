@@ -11,6 +11,7 @@ import net.minecraft.block.BlockDoor;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -42,11 +43,23 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     private Icon[] upper;
     private Icon[] lower;
     private int itemID;
+    private boolean locked = false;
     
     protected WCDoorBlock(WesterosBlockDef def) {
         super(def.blockID, def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
+        String type = def.getType(0);
+        if (type != null) {
+            String[] toks = type.split(",");
+            for (String tok : toks) {
+                String [] flds = tok.split(":");
+                if (flds.length < 2) continue;
+                if (flds[0].equals("locked")) {
+                    locked = flds[1].equals("true");
+                }
+            }
+        }
     }
 
     public boolean initializeBlockDefinition() {
@@ -211,6 +224,38 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
         def.doRandomDisplayTick(world, x, y, z, rnd);
         super.randomDisplayTick(world, x, y, z, rnd);
+    }
+    
+    /**
+     * Called upon block activation (right click on the block.)
+     */
+    @Override
+    public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
+    {
+        if (this.locked)
+        {
+            return false; //Allow items to interact with the door
+        }
+        else
+        {
+            int i1 = this.getFullMetadata(par1World, par2, par3, par4);
+            int j1 = i1 & 7;
+            j1 ^= 4;
+
+            if ((i1 & 8) == 0)
+            {
+                par1World.setBlockMetadataWithNotify(par2, par3, par4, j1, 2);
+                par1World.markBlockRangeForRenderUpdate(par2, par3, par4, par2, par3, par4);
+            }
+            else
+            {
+                par1World.setBlockMetadataWithNotify(par2, par3 - 1, par4, j1, 2);
+                par1World.markBlockRangeForRenderUpdate(par2, par3 - 1, par4, par2, par3, par4);
+            }
+
+            par1World.playAuxSFXAtEntity(par5EntityPlayer, 1003, par2, par3, par4, 0);
+            return true;
+        }
     }
     
     @Override
