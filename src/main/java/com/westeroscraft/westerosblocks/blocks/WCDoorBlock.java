@@ -11,6 +11,7 @@ import net.minecraft.block.BlockDoor;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
@@ -43,11 +44,23 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     private WesterosBlockDef def;
     private IIcon[] upper;
     private IIcon[] lower;
+    private boolean locked = false;
     
     protected WCDoorBlock(WesterosBlockDef def) {
         super(def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
+        String type = def.getType(0);
+        if (type != null) {
+            String[] toks = type.split(",");
+            for (String tok : toks) {
+                String [] flds = tok.split(":");
+                if (flds.length < 2) continue;
+                if (flds[0].equals("locked")) {
+                    locked = flds[1].equals("true");
+                }
+            }
+        }
     }
 
     public boolean initializeBlockDefinition() {
@@ -202,6 +215,35 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
         super.randomDisplayTick(world, x, y, z, rnd);
     }
     
+    @Override
+    public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+    {
+        if (this.locked)
+        {
+            return false; //Allow items to interact with the door
+        }
+        else
+        {
+            int i1 = this.func_150012_g(p_149727_1_, p_149727_2_, p_149727_3_, p_149727_4_);
+            int j1 = i1 & 7;
+            j1 ^= 4;
+
+            if ((i1 & 8) == 0)
+            {
+                p_149727_1_.setBlockMetadataWithNotify(p_149727_2_, p_149727_3_, p_149727_4_, j1, 2);
+                p_149727_1_.markBlockRangeForRenderUpdate(p_149727_2_, p_149727_3_, p_149727_4_, p_149727_2_, p_149727_3_, p_149727_4_);
+            }
+            else
+            {
+                p_149727_1_.setBlockMetadataWithNotify(p_149727_2_, p_149727_3_ - 1, p_149727_4_, j1, 2);
+                p_149727_1_.markBlockRangeForRenderUpdate(p_149727_2_, p_149727_3_ - 1, p_149727_4_, p_149727_2_, p_149727_3_, p_149727_4_);
+            }
+
+            p_149727_1_.playAuxSFXAtEntity(p_149727_5_, 1003, p_149727_2_, p_149727_3_, p_149727_4_, 0);
+            return true;
+        }
+    }
+
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
