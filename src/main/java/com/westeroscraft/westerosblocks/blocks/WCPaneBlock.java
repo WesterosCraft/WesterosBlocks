@@ -72,6 +72,9 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
         if (side == 0) {    // Remember last meta of side 0: renderer asks for side texture without it
             lastMeta = meta;
         }
+        if (ico == null) {
+            ico = def.doStandardIconGet(side, 0); // For invalid meta, use meta 0 to prevent trap
+        }
         return ico;
     }
     
