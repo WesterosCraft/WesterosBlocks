@@ -212,10 +212,8 @@ public class WesterosBlocks
                 }
             }
             else {
-                /**NOTYET 
                 crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
                 return;
-                */
             }
         }
         customBlocks = blklist.toArray(new Block[blklist.size()]);
