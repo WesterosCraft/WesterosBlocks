@@ -976,7 +976,7 @@ public class WesterosBlockDef {
         if ((sb != null) && (sb.cuboids != null)) {
            return sb.cuboids;
         }
-        return null;
+        return Collections.emptyList();
     }
 
     public List<BoundingBox> getCollisionBoxList(int meta) {
@@ -986,7 +986,7 @@ public class WesterosBlockDef {
         if ((sb != null) && (sb.collisionBoxes != null)) {
            return sb.collisionBoxes;
         }
-        return null;
+        return Collections.emptyList();
     }
 
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
