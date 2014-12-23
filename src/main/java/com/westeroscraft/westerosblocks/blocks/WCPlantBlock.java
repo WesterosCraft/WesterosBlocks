@@ -106,7 +106,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
 
     @Override
     public int getRenderType() {
-        return WesterosBlocks.crossedRenderID; //1
+        return (def.alphaRender?WesterosBlocks.crossedRenderID:1);
     }
 
     @Override
