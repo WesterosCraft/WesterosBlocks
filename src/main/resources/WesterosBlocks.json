@@ -97,7 +97,7 @@
         },
         {
           "meta": 3,
-          "label": "Molten Blades",
+          "label": "Iron Throne Blade Block",
           "textures": [
             "metal_block_0/blades_molten"
           ]
@@ -527,6 +527,13 @@
           "textures": [
             "metal_block_0/brick_metal_normal_gold"
           ]
+        },
+        {
+          "meta": 7,
+          "label": "Iron Throne Blade Slab",
+          "textures": [
+            "metal_block_0/blades_molten"
+          ]
         }
       ]
     },
@@ -774,7 +781,7 @@
         },
         {
           "meta": 13,
-          "label": "Reach Pink Light Brick Wall",
+          "label": "Reach Pink Light Stone Wall",
           "textures": [
             "stone_block_2/brick_reach_light_pink"
           ]
@@ -898,7 +905,7 @@
       "blockID": 2012,
       "blockType": "sand",
       "hardness": 0.5,
-      "stepSound": "testStepSound",
+      "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
@@ -1278,7 +1285,7 @@
       "blockID": 2066,
       "blockType": "cuboid",
       "nonOpaque": true,
-      "alphaRender": false,
+      "alphaRender": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -1460,7 +1467,7 @@
         {
           "meta": 9,
           "label": "Red Lantern",
-          "lightValue": 0.9375,
+          "lightValue": 0.550,
           "lightOpacity" : 0,
           "textures": [
             "wood_block_0/planks_jungle",
@@ -1518,7 +1525,7 @@
       "blockType": "torch",
       "stepSound": "powder",
       "creativeTab": "WesterosDeco",
-      "lightValue": 0.7,
+      "lightValue": 0.625,
       "subBlocks": [
         {
           "meta": 0,
@@ -1964,7 +1971,7 @@
       "blockID": 2021,
       "blockType": "layer",
       "hardness": 0.5,
-      "stepSound": "testStepSound",
+      "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
@@ -2221,13 +2228,19 @@
           "label": "Coloured Sept Window",
           "textures": [
             "arrow_slits_0/glass_stained"
+          ],
+          "collisionBoxes": [
+            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.0, "zMax": 1.0 }
           ]
         },
         {
           "meta": 5,
-          "label": "Sept Crystal",
+          "label": "Sept Crystal Large",
           "textures": [
-            "arrow_slits_0/crystal_block_diamond"
+            "translucent_block_0/crystal_block"
+          ],
+          "collisionBoxes": [
+            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.0, "zMax": 1.0 }
           ]
         },
         {
@@ -2235,6 +2248,9 @@
           "label": "Fish Trap",
           "textures": [
             "arrow_slits_0/fish_trap"
+          ],
+          "collisionBoxes": [
+            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.0, "zMax": 1.0 }
           ]
         },
         {
@@ -2244,6 +2260,9 @@
             "arrow_slits_0/cage_bottom",
 			"arrow_slits_0/cage_top",
 			"arrow_slits_0/cage_side"
+          ],
+          "collisionBoxes": [
+            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.0, "zMax": 1.0 }
           ]
         },
 		{
@@ -2326,7 +2345,7 @@
         },
         {
           "meta": 14,
-          "label": "Reach Pink Light Brick Arrow Slit",
+          "label": "Reach Pink Light Stone Arrow Slit",
           "textures": [
             "arrow_slits_0/reach_pink_arrow_slit"
           ],
@@ -2919,11 +2938,11 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosDeco",
-      "lightValue" : 0.4,
       "subBlocks": [
         {
           "meta": 0,
           "label": "Red Lantern",
+          "lightValue" : 0.55,
           "textures": [
             "light_emitting_blocks_0/lantern_red_bottom",
             "light_emitting_blocks_0/lantern_red_top",
@@ -2933,6 +2952,7 @@
         {
           "meta": 1,
           "label": "Glowing Embers",
+          "lightValue" : 0.50,
           "textures": [
             "light_emitting_blocks_0/coals_glowing"
           ]
@@ -3492,7 +3512,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Black Slate Stair"
+          "label": "Black Slate Stairs"
         }
       ]
     },
@@ -3506,7 +3526,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Blue Slate Stair"
+          "label": "Blue Slate Stairs"
         }
       ]
     },
@@ -3520,7 +3540,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Red Slate Stair"
+          "label": "Red Slate Stairs"
         }
       ]
     },
@@ -3813,7 +3833,7 @@
       "subBlocks" : [    
         {
           "meta" : 0,
-          "label": "Oak Half-Door",
+          "label": "Oak Window Shutters",
           "textures" : [ "halfdoor_block_0/garden_door" ]
         }
       ]
@@ -4525,7 +4545,7 @@
                 },
                 {
                 "meta": 14,
-                "label": "Reach Pink Light Brick Hopper",
+                "label": "Reach Pink Light Stone Hopper",
                 "textures": [
                     "stone_block_2/brick_reach_light_pink"
                 ],
@@ -4805,7 +4825,7 @@
 				},
 				{
 				"meta": 6,
-				"label": "Reach Pink Light Brick",
+				"label": "Reach Pink Light Stone",
 				"textures": [
 					"stone_block_2/brick_reach_light_pink"
 				]
@@ -4913,7 +4933,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Stone Slab Stair"
+          "label": "Stone Slab Stairs"
         }
       ]
     },
@@ -5197,7 +5217,7 @@
 			"subBlocks": [
 				{
 				"meta": 0,
-				"label": "Lannisport Slate Stair"
+				"label": "Lannisport Slate Stairs"
 				}
 			]
 		},
@@ -6598,7 +6618,7 @@
         },
         {
           "meta": 2,
-          "label": "Reach Pink Light Brick Slab",
+          "label": "Reach Pink Light Stone Slab",
           "textures": [
             "stone_block_2/brick_reach_light_pink"
           ]
@@ -6656,7 +6676,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Brown Slate Stair"
+          "label": "Brown Slate Stairs"
         }
       ]
     },
@@ -6670,7 +6690,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Green Slate Stair"
+          "label": "Green Slate Stairs"
         }
       ]
     },
@@ -6721,7 +6741,7 @@
         },
         {
           "meta": 5,
-          "label": "Reach Pink Light Brick Fence",
+          "label": "Reach Pink Light Stone Fence",
           "textures": [
             "stone_block_2/brick_reach_light_pink"
           ]
@@ -6759,6 +6779,13 @@
           "label": "Palm Fence",
           "textures": [
              "log_block_1/log_palm"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Iron Throne Blade Fence",
+          "textures": [
+             "metal_block_0/blades_molten"
           ]
         }
       ]
@@ -6870,7 +6897,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Reach Pink Light Brick Stairs"
+          "label": "Reach Pink Light Stone Stairs"
         }
       ]
     },
@@ -7050,7 +7077,7 @@
       "blockID": 2141,
       "blockType": "layer",
       "hardness": 0.5,
-      "stepSound": "testStepSound",
+      "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
@@ -7069,7 +7096,7 @@
       "blockID": 2142,
       "blockType": "layer",
       "hardness": 0.5,
-      "stepSound": "testStepSound",
+      "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
@@ -7088,7 +7115,7 @@
       "blockID": 2143,
       "blockType": "layer",
       "hardness": 0.5,
-      "stepSound": "testStepSound",
+      "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
@@ -7273,6 +7300,20 @@
             "stone_block_0/sandstone_normal_dark_top",
             "stone_block_0/sandstone_normal_dark"
           ]
+        },
+        {
+          "meta": 3,
+          "label": "KL Dun Brick Wall",
+          "textures": [
+            "stone_block_3/brick_dun"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Iron Throne Blade Wall",
+          "textures": [
+            "metal_block_0/blades_molten"
+          ]
         }
       ]
     },
@@ -7389,7 +7430,7 @@
                     "wood_block_0/planks_oak"
                 ],
                 "cuboids": [
-                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.0625, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.160, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 0.650, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 0.125, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -7405,7 +7446,7 @@
                     "wood_block_0/planks_spruce"
                 ],
                 "cuboids": [
-                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.0625, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.160, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 0.650, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 0.125, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -7421,7 +7462,7 @@
                     "wood_block_0/planks_birch"
                 ],
                 "cuboids": [
-                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.0625, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.160, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 0.650, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 0.125, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -7437,13 +7478,25 @@
                     "wood_block_0/planks_jungle"
                 ],
                 "cuboids": [
-                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.0625, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0.160, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 0.650, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 0.125, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0.875, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 0.125, "sideTextures": [ 0,0,0,0,0,0 ] },
                     { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0.875, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 8,
+                "label": "KL Dun Brick Hopper",
+                "textures": [
+                    "stone_block_3/brick_dun"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
                     ]
                 }
             ]
@@ -7600,6 +7653,27 @@
                 "textures": [
                     "stone_block_2/stone_marble_eyrie"
                 ]
+                },
+                {
+                "meta": 12,
+                "label": "Baelors Brown Veined Marble",
+                "textures": [
+                    "stone_block_2/stone_marble_baelors"
+                ]
+                },
+                {
+                "meta": 13,
+                "label": "Highgarden Pink Veined Marble",
+                "textures": [
+                    "stone_block_2/stone_marble_highgarden"
+                ]
+                },
+                {
+                "meta": 14,
+                "label": "Sunspear Yellow Veined Marble",
+                "textures": [
+                    "stone_block_3/stone_marble_sunspear"
+                ]
                 }
             ]
         },
@@ -7713,10 +7787,15 @@
                 "meta": 0,
                 "label": "Flat Wheel",
                 "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "cuboid_block_1/wheel",
                     "cuboid_block_1/wheel"
                 ],
                 "boundingBox": {
-                    "xMin": 0.961,
+                    "xMin": 0.92,
                     "xMax": 0.97,
                     "yMin": 0,
                     "yMax": 1,
@@ -7728,11 +7807,16 @@
                 "meta": 1,
                 "label": "Wattle Fence",
                 "textures": [
-                    "cuboid_block_1/fence_wattle"
+                    "transparent",
+                    "transparent",
+                    "cuboid_block_1/fence_wattle",
+                    "cuboid_block_1/fence_wattle",
+                    "transparent",
+                    "transparent"
                 ],
                 "boundingBox": {
                     "xMin": 0.010,
-                    "xMax": 0.015,
+                    "xMax": 0.070,
                     "yMin": 0,
                     "yMax": 1,
                     "zMin": 0,
@@ -7809,6 +7893,19 @@
             { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
             { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
           ]
+        },
+        {
+          "meta": 2,
+          "label": "KL Dun Brick Arrow Slit",
+          "textures": [
+            "arrow_slits_1/brick_dun_arrow_slit"
+          ],
+          "collisionBoxes": [
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
+          ]
         }
       ]
     },
@@ -7845,6 +7942,13 @@
           "label": "Dark Red Brick Slab",
           "textures": [
             "stone_block_3/brick_dark_red"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "KL Dun Brick Slab",
+          "textures": [
+            "stone_block_3/brick_dun"
           ]
         }
       ]
@@ -7945,7 +8049,7 @@
         },
         {
           "meta": 1,
-          "label": "Dornish Mud Furnace",
+          "label": "Always Active Dornish Mud Furnace",
           "type": "always-on:true",
           "textures": [
             "furnace_block_0/mud_furnace_top",
@@ -8777,6 +8881,438 @@
                     "zMin": 0,
                     "zMax": 1
                 }               
+            }
+        ]
+    },
+    {
+      "blockName" : "crop_block_1",
+      "blockID" : 2182,
+      "blockType" : "crop",
+      "stepSound" : "powder",
+      "material" : "wood",
+      "creativeTab" : "WesterosDeco",
+      "lightValue": 0.625,
+      "boundingBox" : { "xMin" : 0.125, "xMax" : 0.875, "yMin" : 0.0, "yMax" : 1.0, "zMin" : 0.125, "zMax" : 0.875 },
+      "subBlocks" : [
+          {
+              "meta" : 0,
+              "label": "Candle Altar",
+              "textures" : [ "crop_block_0/altar_candles" ]
+          }
+       ]
+     },
+     {
+        "blockName": "banner_block_14",
+        "blockID": 2183,
+        "blockType": "cuboid-nsew-stack",
+        "hardness": 1,
+        "stepSound": "wood",
+        "material": "wood",
+        "resistance": 1,
+        "harvestLevel": [
+            {
+            "tool": "sword",
+            "level": 1
+            }
+        ],
+        "creativeTab": "WesterosDeco",
+            "subBlocks": [
+                {
+            "meta": 0,
+            "type" : "no-break-under",
+            "label": "Red Keep Banner",
+            "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner_block_0/banner_redkeep_bottom",
+                    "banner_block_0/banner_redkeep_bottom"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                },
+                "itemTextureIndex": 2
+                },
+                {
+            "meta": 1,
+            "label": "Red Keep Banner Top",
+            "textures": [
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "transparent",
+                    "banner_block_0/banner_redkeep_top",
+                    "banner_block_0/banner_redkeep_top"
+                ],
+                "boundingBox": {
+                    "xMin": 0.96875,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                },
+                "itemTextureIndex": 2
+                }               
+            ]       
+        },
+        {
+            "blockName": "stone_block_5",
+            "blockID": 2184,
+            "blockType": "solid",
+            "hardness": 5,
+            "stepSound": "stone",
+            "material": "rock",
+            "resistance": 10,
+            "creativeTab": "WesterosBlocks",
+            "subBlocks": [
+                {
+                "meta": 0,
+                "label": "KL Dun Brick",
+                "textures": [
+                    "stone_block_3/brick_dun"
+                ]
+                },
+                {
+                "meta": 1,
+                "label": "KL Dun Cobble",
+                "textures": [
+                    "stone_block_3/brick_dun_cobble"
+                ]
+                },
+                {
+                "meta": 2,
+                "label": "KL Dun Carved Brick",
+                "textures": [
+                    "stone_block_3/brick_dun_ornate"
+                ]
+                },
+                {
+                "meta": 3,
+                "label": "Coarse Red Sandstone",
+                "textures": [
+                    "stone_block_0/sandstone_red_coarse"
+                ]
+                },
+                {
+                "meta": 4,
+                "label": "Coarse Red Carved Sandstone",
+                "textures": [
+                    "stone_block_0/sandstone_red_coarse_ornate"
+                ]
+                }
+            ]
+        },
+        {
+      "blockName": "stone_block_5_stair_0",
+      "blockID": 2181,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_5",
+      "modelBlockMeta": 0,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "KL Dun Brick Stairs"
+        }
+      ]
+    },
+        {
+      "blockName": "translucent_wall_block_0",
+      "blockID": 2185,
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Sept Crystal Medium",
+          "textures": [
+            "translucent_block_0/crystal_block_wall_top",
+            "translucent_block_0/crystal_block_wall_top",
+            "translucent_block_0/crystal_block_wall"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "translucent_fence_block_0",
+      "blockID": 2186,
+      "blockType": "fence",
+      "hardness": 5,
+      "stepSound": "stone",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Sept Crystal Small",
+          "textures": [
+            "translucent_block_0/crystal_block_fence_top",
+            "translucent_block_0/crystal_block_fence_top",
+            "translucent_block_0/crystal_block_fence"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName" : "translucent_web_block_0",
+      "blockID" : 2187,
+      "blockType" : "web",
+      "stepSound" : "cloth",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material" : "web",
+      "creativeTab" : "WesterosDeco",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "Baelor Orb Crone",
+          "textures" : [ "translucent_block_0/baelors_orb_crone" ],
+          "lightValue": 0.40,
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 1,
+          "label": "Baelor Orb Father",
+          "textures" : [ "translucent_block_0/baelors_orb_father" ],
+          "lightValue": 0.40,
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 2,
+          "label": "Baelor Orb Maiden",
+          "textures" : [ "translucent_block_0/baelors_orb_maiden" ],
+          "lightValue": 0.40,
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 3,
+          "label": "Baelor Orb Mother",
+          "textures" : [ "translucent_block_0/baelors_orb_mother" ],
+          "lightValue": 0.40,
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 4,
+          "label": "Baelor Orb Smith",
+          "textures" : [ "translucent_block_0/baelors_orb_smith" ],
+          "lightValue": 0.40,
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 5,
+          "label": "Baelor Orb Stranger",
+          "textures" : [ "translucent_block_0/baelors_orb_stranger" ],
+          "lightValue": 0.40,
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 6,
+          "label": "Baelor Orb Warrior",
+          "textures" : [ "translucent_block_0/baelors_orb_warrior" ],
+          "lightValue": 0.40,
+          "type": "no-in-web"
+        }
+      ]
+    },
+    {
+      "blockName": "stained_glass_0",
+      "blockID": 2188,
+      "blockType": "solid",
+      "creativeTab": "WesterosDeco",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "hardness": 2,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 10,
+      "lightOpacity": 0,
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Stained Glass Red",
+          "textures": [
+            "translucent_block_0/glass_red"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Stained Glass Orange",
+          "textures": [
+            "translucent_block_0/glass_orange"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Stained Glass Yellow",
+          "textures": [
+            "translucent_block_0/glass_yellow"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Stained Glass Green",
+          "textures": [
+            "translucent_block_0/glass_green"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Stained Glass Blue",
+          "textures": [
+            "translucent_block_0/glass_blue"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Stained Glass Purple",
+          "textures": [
+            "translucent_block_0/glass_purple"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Stained Glass Pink",
+          "textures": [
+            "translucent_block_0/glass_pink"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Stained Glass Black",
+          "textures": [
+            "translucent_block_0/glass_black"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stained_glass_pane_0",
+      "blockID": 2189,
+      "blockType": "pane",
+      "hardness": 2,
+      "stepSound": "glass",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "material": "glass",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Stained Glass Pane Red",
+          "textures": [
+            "translucent_block_0/glass_pane_red"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Stained Glass Pane Orange",
+          "textures": [
+            "translucent_block_0/glass_pane_orange"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Stained Glass Pane Yellow",
+          "textures": [
+            "translucent_block_0/glass_pane_yellow"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Stained Glass Pane Green",
+          "textures": [
+            "translucent_block_0/glass_pane_green"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Stained Glass Pane Blue",
+          "textures": [
+            "translucent_block_0/glass_pane_blue"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Stained Glass Pane Purple",
+          "textures": [
+            "translucent_block_0/glass_pane_purple"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Stained Glass Pane Pink",
+          "textures": [
+            "translucent_block_0/glass_pane_pink"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Stained Glass Pane Black",
+          "textures": [
+            "translucent_block_0/glass_pane_black"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "metal_block_0_stair_8",
+      "blockID": 2190,
+      "blockType": "stair",
+      "modelBlockName": "metal_block_0",
+      "modelBlockMeta": 3,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Iron Throne Blade Stairs"
+        }
+      ]
+    },
+    {
+        "blockName" : "door_secret_sandstone_red",
+        "blockID" : 2191,
+        "blockType" : "door",
+        "hardness" : 7.0,
+        "stepSound" : "stone",
+        "material" : "stone",
+        "resistance" : 7.0,
+        "creativeTab" : "WesterosDeco",
+        "type" : "locked:true",
+        "subBlocks" : [
+            {
+                "meta" : 0,
+                "label": "Red Keep Secret Door",
+                "textures" : [ "stone_block_0/sandstone_red", "stone_block_0/sandstone_red" ]
             }
         ]
     }
