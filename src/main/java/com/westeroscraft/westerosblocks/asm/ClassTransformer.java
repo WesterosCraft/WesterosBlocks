@@ -13,9 +13,12 @@ import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldInsnNode;
 import org.objectweb.asm.tree.InsnNode;
+import org.objectweb.asm.tree.JumpInsnNode;
+import org.objectweb.asm.tree.LabelNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.TypeInsnNode;
+import org.objectweb.asm.tree.VarInsnNode;
 import org.objectweb.asm.Opcodes;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -82,6 +85,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         else if (name.equals("net.minecraft.world.ChunkCache")) {    // Clean name for ChunkCache
             bytes = transformChunkCache(name, bytes, false);
+        }
+        else if (name.equals("bfr")) {   // Obfuscated RenderBlocks
+            bytes = transformRenderBlocks(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.client.renderer.RenderBlocks")) {    // Clean name for RenderBlocks
+            bytes = transformRenderBlocks(name, bytes, false);
         }
         return bytes;
     }
@@ -727,7 +736,90 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else {
             m.instructions.insertBefore(n, new MethodInsnNode(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "getBlockIDForLightValue", "(Lcom/westeroscraft/westerosblocks/asm/ChunkCache;III)I"));
         }
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+
         WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
+        
+        return b;
+    }
+
+    private byte[] transformRenderBlocks(String name, byte[] b, boolean obfus) {
+        String targetMethodName = "";   //    public int getLightValueExt(int par1, int par2, int par3, boolean par4)
+        String targetMethodSig = "";
+
+        System.out.println("Checking class " + name);
+
+        if (obfus) {
+            targetMethodName = "a"; //drawCrossedSquares
+            targetMethodSig = "(Laqz;IDDDF)V";
+        }
+        else {
+            targetMethodName ="drawCrosseddSquares";
+            targetMethodSig = "(Lnet/minecraft/block/Block;IDDDF)V";
+        }
+        
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Now find the first method
+        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
+        if (m == null) {
+            System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }        
+        // Find sequence 
+        //  mv.visitVarInsn(ALOAD, 10);
+        //  mv.visitVarInsn(DLOAD, 22);
+        //  mv.visitVarInsn(DLOAD, 5);
+        // mv.visitVarInsn(FLOAD, 9);
+        // mv.visitInsn(F2D);
+        // mv.visitInsn(DADD);
+        // mv.visitVarInsn(DLOAD, 26);
+        // mv.visitVarInsn(DLOAD, 12);
+        // mv.visitVarInsn(DLOAD, 14);
+        // mv.visitMethodInsn(INVOKEVIRTUAL, "net/minecraft/client/renderer/Tessellator", "addVertexWithUV", "(DDDDD)V", false);
+        int index = findOpSequence(m, new int[] { ALOAD, DLOAD, DLOAD, FLOAD, F2D, DADD, DLOAD, DLOAD, DLOAD, INVOKEVIRTUAL } );
+        if (index < 0) {
+            System.out.println("Cannot patch "  + targetMethodName + "() in " + name);
+            return b;
+        }
+        AbstractInsnNode n = m.instructions.get(index);   // Get first instruction
+        m.instructions.insertBefore(n, new VarInsnNode(ALOAD, 1));
+        if (obfus) {
+            m.instructions.insertBefore(n, new MethodInsnNode(INVOKEVIRTUAL, "aqz", "n", "()I"));
+        }
+        else {
+            m.instructions.insertBefore(n, new MethodInsnNode(INVOKEVIRTUAL, "net/minecraft/block/Block", "getRenderBlockPass", "()I"));
+        }
+        m.instructions.insertBefore(n, new InsnNode(ICONST_1));
+        LabelNode l1 = new LabelNode();
+        m.instructions.insertBefore(n, new JumpInsnNode(IF_ICMPNE, l1));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 12));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 14));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 16));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 18));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 22));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 24));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 26));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 28));
+        m.instructions.insertBefore(n, new VarInsnNode(DLOAD, 5));
+        m.instructions.insertBefore(n, new VarInsnNode(FLOAD, 9));
+        m.instructions.insertBefore(n, new InsnNode(F2D));
+        m.instructions.insertBefore(n, new MethodInsnNode(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "drawCrossedSquares", "(DDDDDDDDDD)V"));
+        m.instructions.insertBefore(n, new InsnNode(RETURN));
+        m.instructions.insertBefore(n, l1);
+        
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+
+        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
@@ -807,5 +899,20 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         return id;
     }
+    
+    
+    public static void drawCrossedSquares(double d3, double d4, double d5, double d6, double d8, double d9, double d10, double d11, double par5, double par9)
+    {
+        Tessellator tessellator = Tessellator.instance;
+        tessellator.addVertexWithUV(d8, par5 + par9, d10, d3, d4);
+        tessellator.addVertexWithUV(d8, par5 + 0.0D, d10, d3, d6);
+        tessellator.addVertexWithUV(d9, par5 + 0.0D, d11, d5, d6);
+        tessellator.addVertexWithUV(d9, par5 + par9, d11, d5, d4);
+        tessellator.addVertexWithUV(d8, par5 + par9, d11, d3, d4);
+        tessellator.addVertexWithUV(d8, par5 + 0.0D, d11, d3, d6);
+        tessellator.addVertexWithUV(d9, par5 + 0.0D, d10, d5, d6);
+        tessellator.addVertexWithUV(d9, par5 + par9, d10, d5, d4);
+    }
+
 }
 

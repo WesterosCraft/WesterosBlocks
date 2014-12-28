@@ -9315,6 +9315,42 @@
                 "textures" : [ "stone_block_0/sandstone_red", "stone_block_0/sandstone_red" ]
             }
         ]
+    },
+    {
+      "blockName" : "translucent_web_block_1",
+      "blockID" : 2192,
+      "blockType" : "web",
+      "stepSound" : "cloth",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material" : "web",
+      "creativeTab" : "WesterosDeco",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "Alyssas Tears Mist One",
+          "textures" : [ "translucent_block_0/alyssas_tears_mist_one" ],
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 1,
+          "label": "Alyssas Tears Mist Two",
+          "textures" : [ "translucent_block_0/alyssas_tears_mist_two" ],
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 2,
+          "label": "Alyssas Tears Mist Three",
+          "textures" : [ "translucent_block_0/alyssas_tears_mist_three" ],
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 3,
+          "label": "Alyssas Tears Mist Four",
+          "textures" : [ "translucent_block_0/alyssas_tears_mist_four" ],
+          "type": "no-in-web"
+        }
+      ]
     }
    ]
 }

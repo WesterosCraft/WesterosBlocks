@@ -121,7 +121,8 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle, Westero
 
     @Override
     public int getRenderType() {
-        return (def.alphaRender?WesterosBlocks.crossedRenderID:1);
+        //return (def.alphaRender?WesterosBlocks.crossedRenderID:1);
+        return 1;
     }
 
     @Override
