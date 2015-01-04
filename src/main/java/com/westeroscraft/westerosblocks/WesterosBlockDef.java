@@ -718,19 +718,16 @@ public class WesterosBlockDef {
     }
     // Do standard register actions
     public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass) {
-        doStandardRegisterActions(blk, itmclass, null, 0);
+        doStandardRegisterActions(blk, itmclass, 0);
     }
     // Do standard register actions
-    public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, Item itm, int idx) {
+    public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, int idx) {
         // Register the block
         if (itmclass != null) {
             GameRegistry.registerBlock(blk, itmclass, this.getBlockName(idx));
         }
         else {
             GameRegistry.registerBlock(blk, this.getBlockName(idx));
-        }
-        if (itm != null) {
-            GameRegistry.registerItem(itm, this.getBlockName(idx) + "_item");
         }
         // And register strings for each item block
         if ((this.subBlocks != null) && (this.subBlocks.size() > 0)) {
@@ -739,12 +736,7 @@ public class WesterosBlockDef {
                 if (sb.label == null) {
                     sb.label = this.blockName + " " + sb.meta;
                 }
-                if (itm != null) {
-                    LanguageRegistry.addName(new ItemStack(itm, 1, sb.meta), sb.label);
-                }
-                else {
-                    LanguageRegistry.addName(new ItemStack(blk, 1, sb.meta), sb.label);
-                }
+                LanguageRegistry.addName(new ItemStack(blk, 1, sb.meta), sb.label);
             }
         }
         if (subblock_by_meta == null) {

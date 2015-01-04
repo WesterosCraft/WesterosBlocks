@@ -83,11 +83,11 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     public boolean registerBlockDefinition() {
         if (this.field_150004_a) { // isDoubleSlab
             WCSlabItem.setSlabs(otherBlock, this);
-            def.doStandardRegisterActions(this, WCSlabItem.class, null, FULL_IDX);
+            def.doStandardRegisterActions(this, WCSlabItem.class, FULL_IDX);
         }
         else {
             WCSlabItem.setSlabs(this, otherBlock);
-            def.doStandardRegisterActions(this, WCSlabItem.class, null, HALF_IDX);
+            def.doStandardRegisterActions(this, WCSlabItem.class, HALF_IDX);
         }
         
         return true;
