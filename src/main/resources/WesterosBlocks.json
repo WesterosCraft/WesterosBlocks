@@ -1491,7 +1491,9 @@
           "meta": 10,
           "label": "Blood",
           "textures": [
-              "cuboid_block_0/blood"
+	          "transparent",
+              "cuboid_block_0/blood",
+          	  "transparent"
           ],
          "boundingBox": {
               "xMin": 0,
@@ -1506,7 +1508,9 @@
           "meta": 11,
           "label": "Fallen Weirwood Leaves",
           "textures": [
-              "cuboid_block_0/fallen_leaves_weirwood"
+          	  "transparent",
+              "cuboid_block_0/fallen_leaves_weirwood",
+          	  "transparent"
           ],
          "boundingBox": {
               "xMin": 0,
