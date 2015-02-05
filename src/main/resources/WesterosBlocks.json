@@ -2586,6 +2586,7 @@
         {
           "meta": 0,
           "label": "TerrainSet Eastern Islands",
+          "colorMult" : "textures/colormap/easternisland",
           "textures": [
             "stone_terrainsets_0/stone_eastern_islands"
           ]
