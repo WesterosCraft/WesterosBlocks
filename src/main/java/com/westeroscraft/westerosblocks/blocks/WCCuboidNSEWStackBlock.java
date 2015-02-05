@@ -4,7 +4,6 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
@@ -76,7 +75,8 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor blockID
      */
-    public void onNeighborBlockChange(World world, int x, int y, int z, int neighborID)
+    @Override
+    public void onNeighborBlockChange(World world, int x, int y, int z, Block neighbor)
     {
         int meta = world.getBlockMetadata(x, y, z);
 
