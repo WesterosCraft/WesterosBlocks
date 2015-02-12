@@ -8,10 +8,12 @@ import org.dynmap.modsupport.ModTextureDefinition;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
@@ -152,7 +154,12 @@ public class WCDoorBlock extends BlockDoor implements WesterosBlockLifecycle, We
     {
         return (meta & 8) != 0 ? null : Item.getItemFromBlock(this);
     }
-    
+    @Override
+    @SideOnly(Side.CLIENT)
+    public Item getItem(World w, int x, int y, int z) {
+        return Item.getItemFromBlock(this);
+    }
+
     @Override
     public int damageDropped(int meta) {
         return 0;
