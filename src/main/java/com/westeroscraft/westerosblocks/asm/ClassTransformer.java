@@ -63,14 +63,6 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else if (name.equals("net.minecraft.world.WorldType")) {    // Clear name
             bytes = transformWorldType(name, bytes, false);
         }
-        /*NOTYET
-        else if (name.equals("amx")) {   // Obfuscated BlockBasePressurePlate
-            bytes = transformBlockBasePressurePlate(name, bytes, true);
-        }
-        else if (name.equals("net.minecraft.block.BlockBasePressurePlate")) {    // Clean name for BlockBasePressurePlate
-            bytes = transformBlockBasePressurePlate(name, bytes, false);
-        }
-        */
         return bytes;
     }
     
@@ -348,6 +340,58 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitLocalVariable("z", "I", null, l0, l1, 4);
         mv.visitMaxs(5, 5);
         mv.visitEnd();
+        
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
+
+        // Second method func_149825_a(Block)
+        if(obfus == true) {
+            targetMethodName = "a"; // func_149825_a()
+            targetMethodDesc = "(Laji;)Z";
+        }
+        else {
+            targetMethodName ="func_149825_a";
+            targetMethodDesc = "(Lnet/minecraft/block/Block;)Z";
+        }
+        // Now find the method
+        m = findMethod(classNode, targetMethodName, targetMethodDesc);
+        if (m == null) {
+            WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }
+        // Find our target op sequence
+        ldx_index = findOpSequence(m, new int[] { ALOAD, GETSTATIC } );
+        if (ldx_index < 0) {
+            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
+            return b;
+        }
+        // Replace method
+        mv = m;
+        m.instructions.clear();
+        m.localVariables.clear();
+        mv.visitCode();
+
+        l0 = new Label();
+        mv.visitLabel(l0);
+        mv.visitLineNumber(158, l0);
+        mv.visitVarInsn(ALOAD, 0);
+        if (obfus) {
+            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "isFenceBlock", "(Laji;)Z", false);
+        }
+        else {
+            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "isFenceBlock", "(Lnet/minecraft/block/Block;)Z", false);
+        }
+        mv.visitInsn(IRETURN);
+        l1 = new Label();
+        mv.visitLabel(l1);
+        if (obfus) {
+            mv.visitLocalVariable("b", "Laji;", null, l0, l1, 0);
+        }
+        else {
+            mv.visitLocalVariable("b", "Lnet/minecraft/block/Block;", null, l0, l1, 0);
+        }
+        mv.visitMaxs(1, 1);
+        mv.visitEnd();
+
 
         //ASM specific for cleaning up and returning the final bytes for JVM processing.
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
@@ -367,10 +411,10 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
 
         targetMethodName ="canPaneConnectTo";
         if(obfus == true) {
-            targetMethodDesc = "(Lahl;IIILnet/minecraftforge/common/ForgeDirection;)Z";
+            targetMethodDesc = "(Lahl;IIILnet/minecraftforge/common/util/ForgeDirection;)Z";
         }
         else {
-            targetMethodDesc = "(Lnet/minecraft/world/IBlockAccess;IIILnet/minecraftforge/common/ForgeDirection;)Z";
+            targetMethodDesc = "(Lnet/minecraft/world/IBlockAccess;IIILnet/minecraftforge/common/util/ForgeDirection;)Z";
         }
 
         //set up ASM class manipulation stuff. Consult the ASM docs for details
@@ -385,7 +429,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
             return b;
         }
         // Find our target op sequence
-        int ldx_index = findOpSequence(m, new int[] { ALOAD, ALOAD, ILOAD, ALOAD, GETFIELD } );
+        int ldx_index = findOpSequence(m, new int[] { ALOAD, ALOAD, ILOAD, ILOAD, ILOAD, INVOKEINTERFACE } );
         if (ldx_index < 0) {
             WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
@@ -437,133 +481,6 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         
         return b;
     }
-
-    
-    private byte[] transformBlockBasePressurePlate(String name, byte[] b, boolean obfus) {
-        String targetMethodName = "";   //canPlaceBlockAt(World par1World, int par2, int par3, int par4)
-        String targetMethodSig = "";
-        String targetMethodName2 = "";  // onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
-        String targetMethodSig2 = "";
-
-        WesterosBlocks.log.fine("Checking class " + name);
-
-        if (obfus) {
-            targetMethodName = "c"; //canPlaceBlockAt
-            targetMethodSig = "(Labw;III)Z";
-            targetMethodName2 ="a"; //onNeighborBlockChange
-            targetMethodSig2 = "(Labw;IIII)V";
-        }
-        else {
-            targetMethodName ="canPlaceBlockAt";
-            targetMethodSig = "(Lnet/minecraft/world/World;III)Z";
-            targetMethodName2 ="onNeighborBlockChange";
-            targetMethodSig2 = "(Lnet/minecraft/world/World;IIII)V";
-        }
-        
-        //set up ASM class manipulation stuff. Consult the ASM docs for details
-        ClassNode classNode = new ClassNode();
-        ClassReader classReader = new ClassReader(b);
-        classReader.accept(classNode, 0);
-
-        // Now find the first method
-        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
-        if (m == null) {
-            WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
-            return b;
-        }
-
-        // Find target op seqence before patch in canPlaceBlockAt method (insert after last instruction in sequence)
-        // mv.visitInsn(ICONST_1);
-        // mv.visitInsn(ISUB);
-        // mv.visitVarInsn(ILOAD, 4);
-        // mv.visitMethodInsn(INVOKEVIRTUAL, "net/minecraft/world/World", "doesBlockHaveSolidTopSurface", "(III)Z", false);
-        // mv.visitJumpInsn(IFNE, l1);        
-        int index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, IFNE } );
-        if (index < 0) {
-            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName + "() in " + name);
-            return b;
-        }
-        if (obfus) {
-            m.instructions.insert(m.instructions.get(index+4), new FieldInsnNode(GETSTATIC, "aqz", "s", "[Laqz;"));
-        }
-        else {
-            m.instructions.insert(m.instructions.get(index+4), new FieldInsnNode(GETSTATIC, "net/minecraft/block/Block", "blocksList", "[Lnet/minecraft/block/Block;"));
-        }
-
-        // Find second patch in canPlaceBlockAt methdod (replace last instruction in sequence)
-        // mv.visitInsn(ICONST_1);
-        // mv.visitInsn(ISUB);
-        // mv.visitVarInsn(ILOAD, 4);
-        // mv.visitMethodInsn(INVOKEVIRTUAL, "net/minecraft/world/World", "getBlockId", "(III)I", false);
-        // mv.visitMethodInsn(INVOKESTATIC, "net/minecraft/block/BlockFence", "isIdAFence", "(I)Z", false);
-        index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, INVOKESTATIC } );
-        if (index < 0) {
-            WesterosBlocks.log.warning("Cannot patch#2 "  + targetMethodName + "() in " + name);
-            return b;
-        }
-        m.instructions.remove(m.instructions.get(index+4));   // Remove old INVOKESTATIC
-        AbstractInsnNode n = m.instructions.get(index+4);   // Get instruction after
-        m.instructions.insertBefore(n, new InsnNode(AALOAD));
-        if (obfus) {
-            m.instructions.insertBefore(n, new TypeInsnNode(INSTANCEOF, "aoh"));
-        }
-        else {
-            m.instructions.insertBefore(n, new TypeInsnNode(INSTANCEOF, "net/minecraft/block/BlockFence"));
-        }
-        
-        // Now find the second method
-        m = findMethod(classNode, targetMethodName2, targetMethodSig2);
-        if (m == null) {
-            WesterosBlocks.log.warning("Cannot find "  + targetMethodName2 + "() in " + name + " for patching");
-            return b;
-        }
-
-        // Find first patch location in onNeighborBlockChange method
-        // mv.visitInsn(ICONST_1);
-        // mv.visitInsn(ISUB);
-        // mv.visitVarInsn(ILOAD, 4);
-        // mv.visitMethodInsn(INVOKEVIRTUAL, "net/minecraft/world/World", "doesBlockHaveSolidTopSurface", "(III)Z", false);
-        // mv.visitJumpInsn(IFNE, l2);
-        index = findOpSequence(m, new int[] { ICONST_1, ISUB, ILOAD, INVOKEVIRTUAL, IFNE } );
-        if (index < 0) {
-            WesterosBlocks.log.warning("Cannot patch "  + targetMethodName2 + "() in " + name);
-            return b;
-        }
-        if (obfus) {
-            m.instructions.insert(m.instructions.get(index+4), new FieldInsnNode(GETSTATIC, "aqz", "s", "[Laqz;"));
-        }
-        else {
-            m.instructions.insert(m.instructions.get(index+4), 
-                    new FieldInsnNode(GETSTATIC, "net/minecraft/block/Block", "blocksList", "[Lnet/minecraft/block/Block;"));
-        }
-        // Find second patch in onNeighborBlockChange methdod (replace first instruction in sequence)
-        // mv.visitMethodInsn(INVOKESTATIC, "net/minecraft/block/BlockFence", "isIdAFence", "(I)Z", false);
-        // mv.visitJumpInsn(IFNE, l2);
-        // mv.visitInsn(ICONST_1);
-        // mv.visitVarInsn(ISTORE, 6)
-        index = findOpSequence(m, new int[] { INVOKESTATIC, IFNE, ICONST_1, ISTORE } );
-        if (index < 0) {
-            WesterosBlocks.log.warning("Cannot patch#2 "  + targetMethodName2 + "() in " + name);
-            return b;
-        }
-        m.instructions.remove(m.instructions.get(index));   // Remove old INVOKESTATIC
-        n = m.instructions.get(index);   // Get instruction after
-        m.instructions.insertBefore(n, new InsnNode(AALOAD));
-        if (obfus) {
-            m.instructions.insertBefore(n, new TypeInsnNode(INSTANCEOF, "aoh"));
-        }
-        else {
-            m.instructions.insertBefore(n, new TypeInsnNode(INSTANCEOF, "net/minecraft/block/BlockFence"));
-        }
-        //ASM specific for cleaning up and returning the final bytes for JVM processing.
-        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
-        classNode.accept(writer);
-        b = writer.toByteArray();
-
-        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
-        
-        return b;
-    }
   
     public static float getWorldHeight(int wtIndex) {
         return 256.0F;
@@ -579,6 +496,10 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else {
             return true;
         }
+    }
+    
+    public static boolean isFenceBlock(Block blk) {
+        return blk instanceof BlockFence;
     }
     
     public static boolean canPaneConnectTo(BlockPane block, IBlockAccess world, int x, int y, int z, ForgeDirection dir)
