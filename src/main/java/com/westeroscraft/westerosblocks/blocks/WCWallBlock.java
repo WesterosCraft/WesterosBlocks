@@ -24,6 +24,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
 import cpw.mods.fml.relauncher.Side;
@@ -154,17 +155,9 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
     /**
      * Return whether an adjacent block can connect to a wall.
      */
-    @Override
-    public boolean canConnectWallTo(IBlockAccess world, int x, int y, int z)
-    {
-        Block block = world.getBlock(x, y, z);
-
-        if (block != this && block != Blocks.fence_gate && (!(block instanceof BlockWall))) {
-            return block != null && block.getMaterial().isOpaque() && block.renderAsNormalBlock() ? block.getMaterial() != Material.gourd : false;
-        }
-        else {
-            return true;
-        }
-    }
-
+//    @Override
+//    public boolean canConnectWallTo(IBlockAccess world, int x, int y, int z)
+//    {
+//        return ClassTransformer.canConnectWallTo(this, world, x, y, z);
+//    }
 }
