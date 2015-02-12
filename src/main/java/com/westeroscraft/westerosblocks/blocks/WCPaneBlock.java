@@ -21,6 +21,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
 import cpw.mods.fml.relauncher.Side;
@@ -154,17 +155,5 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
         for (WesterosBlockDef.Subblock sb : def.subBlocks) {
             pbm.setMetaValue(sb.meta);
         }
-    }
-    @Override
-    public boolean canPaneConnectTo(IBlockAccess world, int x, int y, int z, ForgeDirection dir)
-    {   
-        Block blk = world.getBlock(x, y, z);
-        if (canPaneConnectToBlock(blk) || world.isSideSolid(x, y, z, dir.getOpposite(), false)) {
-            return true;
-        }
-        if ((blk instanceof BlockPane) && (this.getMaterial() == blk.getMaterial())) {
-            return true;
-        }
-        return false;
     }
 }

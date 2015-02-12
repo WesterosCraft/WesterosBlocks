@@ -24,6 +24,7 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockPane;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -32,6 +33,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class ClassTransformer implements IClassTransformer, Opcodes {
     @Override
@@ -49,18 +51,18 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else if (name.equals("net.minecraft.block.BlockFence")) {    // Clean name for BlockFence
             bytes = transformBlockFence(name, bytes, false);
         }
+        else if (name.equals("aoa")) {   // Obfuscated BlockPane
+            bytes = transformBlockPane(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.block.BlockPane")) {    // Clean name for BlockPane
+            bytes = transformBlockPane(name, bytes, false);
+        }
         /*NOTYET
         if (name.equals("acg")) { // Obfuscated name for net.minecraft.world.WorldType
             bytes = transformWorldType(name, bytes, true);
         }
         else if (name.equals("net.minecraft.world.WorldType")) {    // Clear name
             bytes = transformWorldType(name, bytes, false);
-        }
-        else if (name.equals("aqy")) {   // Obfuscated BlockPane
-            bytes = transformBlockPane(name, bytes, true);
-        }
-        else if (name.equals("net.minecraft.block.BlockPane")) {    // Clean name for BlockPane
-            bytes = transformBlockPane(name, bytes, false);
         }
         else if (name.equals("amx")) {   // Obfuscated BlockBasePressurePlate
             bytes = transformBlockBasePressurePlate(name, bytes, true);
@@ -377,7 +379,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
 
         targetMethodName ="canPaneConnectTo";
         if(obfus == true) {
-            targetMethodDesc = "(Lacf;IIILnet/minecraftforge/common/ForgeDirection;)Z";
+            targetMethodDesc = "(Lahl;IIILnet/minecraftforge/common/ForgeDirection;)Z";
         }
         else {
             targetMethodDesc = "(Lnet/minecraft/world/IBlockAccess;IIILnet/minecraftforge/common/ForgeDirection;)Z";
@@ -407,6 +409,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitCode();
         Label l0 = new Label();
         mv.visitLabel(l0);
+        mv.visitLineNumber(162, l0);
         mv.visitVarInsn(ALOAD, 0);
         mv.visitVarInsn(ALOAD, 1);
         mv.visitVarInsn(ILOAD, 2);
@@ -414,26 +417,26 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitVarInsn(ILOAD, 4);
         mv.visitVarInsn(ALOAD, 5);
         if (obfus) {
-            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "canPaneConnectTo", "(Laqy;Lacf;IIILnet/minecraftforge/common/ForgeDirection;)Z");
+            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "canPaneConnectTo", "(Laoa;Lahl;IIILnet/minecraftforge/common/util/ForgeDirection;)Z", false);
         }
         else {
-            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "canPaneConnectTo", "(Lnet/minecraft/block/BlockPane;Lnet/minecraft/world/IBlockAccess;IIILnet/minecraftforge/common/ForgeDirection;)Z");
+            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "canPaneConnectTo", "(Lnet/minecraft/block/BlockPane;Lnet/minecraft/world/IBlockAccess;IIILnet/minecraftforge/common/util/ForgeDirection;)Z", false);
         }
         mv.visitInsn(IRETURN);
         Label l1 = new Label();
         mv.visitLabel(l1);
         if (obfus) {
-            mv.visitLocalVariable("this", "Laqy;", null, l0, l1, 0);
-            mv.visitLocalVariable("access", "Lacf;", null, l0, l1, 1);
+            mv.visitLocalVariable("this", "Laoa;", null, l0, l1, 0);
+            mv.visitLocalVariable("world", "Lahl;", null, l0, l1, 1);
         }
         else {
-            mv.visitLocalVariable("this", "Lcom/westeroscraft/westerosblocks/FixedPane;", null, l0, l1, 0);
-            mv.visitLocalVariable("access", "Lnet/minecraft/world/IBlockAccess;", null, l0, l1, 1);
+            mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockPane;", null, l0, l1, 0);
+            mv.visitLocalVariable("world", "Lnet/minecraft/world/IBlockAccess;", null, l0, l1, 1);
         }
         mv.visitLocalVariable("x", "I", null, l0, l1, 2);
         mv.visitLocalVariable("y", "I", null, l0, l1, 3);
         mv.visitLocalVariable("z", "I", null, l0, l1, 4);
-        mv.visitLocalVariable("dir", "Lnet/minecraftforge/common/ForgeDirection;", null, l0, l1, 5);
+        mv.visitLocalVariable("dir", "Lnet/minecraftforge/common/util/ForgeDirection;", null, l0, l1, 5);
         mv.visitMaxs(6, 6);
         mv.visitEnd();
 
@@ -735,17 +738,17 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
     }
     
-    /**NOTYET
-    public static boolean canPaneConnectTo(BlockPane blk, IBlockAccess access, int x, int y, int z, ForgeDirection dir)
+    public static boolean canPaneConnectTo(BlockPane block, IBlockAccess world, int x, int y, int z, ForgeDirection dir)
     {
-        int id = access.getBlockId(x+dir.offsetX, y+dir.offsetY, z+dir.offsetZ);
-        if (blk.canThisPaneConnectToThisBlockID(id) || access.isBlockSolidOnSide(x+dir.offsetX, y+dir.offsetY, z+dir.offsetZ, dir.getOpposite(), false))
+        Block blk = world.getBlock(x, y, z);
+        if (block.canPaneConnectToBlock(blk) || world.isSideSolid(x, y, z, dir.getOpposite(), false)) {
             return true;
-        if ((Block.blocksList[id] instanceof BlockPane) && (blk.blockMaterial == Block.blocksList[id].blockMaterial))
+        }
+        if ((blk instanceof BlockPane) && (block.getMaterial() == blk.getMaterial())) {
             return true;
+        }
         return false;
     }
-    */
 
     public static boolean canConnectWallTo(Block blk, IBlockAccess world, int x, int y, int z)
     {
