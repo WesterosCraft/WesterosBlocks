@@ -152,12 +152,4 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
             pbm.setMetaValue(sb.meta);
         }
     }
-    /**
-     * Return whether an adjacent block can connect to a wall.
-     */
-//    @Override
-//    public boolean canConnectWallTo(IBlockAccess world, int x, int y, int z)
-//    {
-//        return ClassTransformer.canConnectWallTo(this, world, x, y, z);
-//    }
 }

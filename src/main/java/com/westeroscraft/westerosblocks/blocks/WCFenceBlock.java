@@ -24,6 +24,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
 import cpw.mods.fml.relauncher.Side;
@@ -151,20 +152,5 @@ public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle, 
     @Override
     public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
         return true;
-    }
-    
-    /**
-     * Returns true if the specified block can be connected by a fence
-     */
-    @Override
-    public boolean canConnectFenceTo(IBlockAccess world, int x, int y, int z) {
-        Block block = world.getBlock(x, y, z);
-
-        if ((block != this) && (block != Blocks.fence_gate) && (!(block instanceof BlockFence))) {
-            return block != null && block.getMaterial().isOpaque() && block.renderAsNormalBlock() ? block.getMaterial() != Material.gourd : false;
-        }
-        else {
-            return true;
-        }
     }
 }

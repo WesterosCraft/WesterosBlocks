@@ -23,6 +23,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -42,18 +43,18 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else if (name.equals("net.minecraft.block.BlockWall")) {    // Clean name for BlockWall
             bytes = transformBlockWall(name, bytes, false);
         }
+        else if (name.equals("akz")) {   // Obfuscated BlockFence
+            bytes = transformBlockFence(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.block.BlockFence")) {    // Clean name for BlockFence
+            bytes = transformBlockFence(name, bytes, false);
+        }
         /*NOTYET
         if (name.equals("acg")) { // Obfuscated name for net.minecraft.world.WorldType
             bytes = transformWorldType(name, bytes, true);
         }
         else if (name.equals("net.minecraft.world.WorldType")) {    // Clear name
             bytes = transformWorldType(name, bytes, false);
-        }
-        else if (name.equals("aoh")) {   // Obfuscated BlockFence
-            bytes = transformBlockFence(name, bytes, true);
-        }
-        else if (name.equals("net.minecraft.block.BlockFence")) {    // Clean name for BlockFence
-            bytes = transformBlockFence(name, bytes, false);
         }
         else if (name.equals("aqy")) {   // Obfuscated BlockPane
             bytes = transformBlockPane(name, bytes, true);
@@ -296,8 +297,8 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         WesterosBlocks.log.fine("Checking class " + name);
 
         if(obfus == true) {
-            targetMethodName = "d"; // canConnectFenceTo()
-            targetMethodDesc = "(Lacf;III)Z";
+            targetMethodName = "e"; // canConnectFenceTo()
+            targetMethodDesc = "(Lahl;III)Z";
         }
         else {
             targetMethodName ="canConnectFenceTo";
@@ -326,34 +327,30 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         m.instructions.clear();
         m.localVariables.clear();
         mv.visitCode();
+        
         Label l0 = new Label();
         mv.visitLabel(l0);
+        mv.visitLineNumber(162, l0);
         mv.visitVarInsn(ALOAD, 0);
-        if (obfus) {
-            mv.visitFieldInsn(GETFIELD, "aoh", "cF", "I");
-        }
-        else {
-            mv.visitFieldInsn(GETFIELD, "net/minecraft/block/BlockFence", "blockID", "I");
-        }
         mv.visitVarInsn(ALOAD, 1);
         mv.visitVarInsn(ILOAD, 2);
         mv.visitVarInsn(ILOAD, 3);
         mv.visitVarInsn(ILOAD, 4);
         if (obfus) {
-            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "canConnectFenceTo", "(ILacf;III)Z");
+            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "canConnectFenceTo", "(Laji;Lahl;III)Z", false);
         }
         else {
-            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "canConnectFenceTo", "(ILnet/minecraft/world/IBlockAccess;III)Z");
+            mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "canConnectFenceTo", "(Lnet/minecraft/block/Block;Lnet/minecraft/world/IBlockAccess;III)Z", false);
         }
         mv.visitInsn(IRETURN);
         Label l1 = new Label();
         mv.visitLabel(l1);
         if (obfus) {
-            mv.visitLocalVariable("this", "Laoh;", null, l0, l1, 0);
-            mv.visitLocalVariable("world", "Lacf;", null, l0, l1, 1);
+            mv.visitLocalVariable("this", "Laji;", null, l0, l1, 0);
+            mv.visitLocalVariable("world", "Lahl;", null, l0, l1, 1);
         }
         else {
-            mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockFence;", null, l0, l1, 0);
+            mv.visitLocalVariable("this", "Lnet/minecraft/block/Block;", null, l0, l1, 0);
             mv.visitLocalVariable("world", "Lnet/minecraft/world/IBlockAccess;", null, l0, l1, 1);
         }
         mv.visitLocalVariable("x", "I", null, l0, l1, 2);
@@ -726,20 +723,19 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return 256.0F;
     }
     
-    /*NOTYET
-    public static boolean canConnectFenceTo(int blkid, IBlockAccess world, int x, int y, int z) {
-        int id = world.getBlockId(x, y, z);
-        Block block = Block.blocksList[id];
+    public static boolean canConnectFenceTo(Block blk, IBlockAccess world, int x, int y, int z) {
+        Block block = world.getBlock(x, y, z);
 
-        if ((id != blkid) && (id != Block.fenceGate.blockID) && (!(block instanceof BlockFence))) {
-            return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
+        if ((blk != block) && (block != Blocks.fence_gate) && (!(block instanceof BlockFence))) {
+            Material m = block.getMaterial();
+            return block != null && m.isOpaque() && block.renderAsNormalBlock() ? m != Material.gourd : false;
         }
         else {
             return true;
         }
     }
     
-
+    /**NOTYET
     public static boolean canPaneConnectTo(BlockPane blk, IBlockAccess access, int x, int y, int z, ForgeDirection dir)
     {
         int id = access.getBlockId(x+dir.offsetX, y+dir.offsetY, z+dir.offsetZ);
