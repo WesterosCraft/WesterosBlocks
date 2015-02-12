@@ -158,6 +158,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     {
         return Item.getItemFromBlock(this);
     }
+    @Override
     public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
     {
         return Item.getItemFromBlock(this);
