@@ -61,8 +61,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         }
         this.setCreativeTab(def.getCreativeTab());
         this.setBlockName(def.blockName);
-        //WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
-        //NOTYET useNeighborBrightness[def.blockID] = true;
+        useNeighborBrightness = true;
     }
 
     public boolean initializeBlockDefinition() {

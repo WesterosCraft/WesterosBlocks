@@ -68,9 +68,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
             this.setCreativeTab(null);
         }
         else {
-            //WesterosBlocks.slabStyleLightingBlocks.set(def.blockID);
-            //halfSlabs.set(def.blockID);
-            //NOTYET useNeighborBrightness[def.blockID] = true;
+            useNeighborBrightness = true;
         }
     }
 
