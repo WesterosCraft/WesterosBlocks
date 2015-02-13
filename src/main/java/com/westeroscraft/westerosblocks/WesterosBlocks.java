@@ -18,6 +18,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
+import net.minecraft.world.biome.BiomeGenBase;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -73,6 +74,7 @@ public class WesterosBlocks
     public boolean useFixedStairs = false;
     public boolean useFixedPressurePlate = false;
     public boolean useWaterCTMFix = false;
+    public boolean snowInTaiga = false;
     
     public static BitSet slabStyleLightingBlocks = new BitSet();
     
@@ -146,6 +148,7 @@ public class WesterosBlocks
             useFixedStairs = cfg.get("Settings",  "useFixedStairs", true).getBoolean(true);
             useFixedPressurePlate = cfg.get("Settings", "useFixedPressurePlate", true).getBoolean(true);
             useWaterCTMFix = cfg.get("Settings", "useWaterCTMFix", true).getBoolean(true);
+            snowInTaiga = cfg.get("Settings", "snowInTaiga", true).getBoolean(true);
             good_init = true;
         }
         catch (Exception e)
@@ -165,6 +168,9 @@ public class WesterosBlocks
         slabStyleLightingBlocks.set(Block.stairsWoodOak.blockID);
         slabStyleLightingBlocks.set(Block.stairsCobblestone.blockID);
         */
+        if(snowInTaiga) {
+            BiomeGenBase.taiga.setEnableSnow().setTemperatureRainfall(-0.5F, 0.4F);
+        }
     }
 
     @EventHandler
