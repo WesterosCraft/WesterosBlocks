@@ -67,9 +67,6 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     protected WCFurnaceBlock(WesterosBlockDef def) {
         super(false);
         this.def = def;
-        if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
-            def.lightOpacity = 0;    // Workaround MC's f*cked up lighting exceptions
-        }
         def.doStandardContructorSettings(this);
         for (int i = 0; i < 2; i++) {
             String type = def.getType(i);

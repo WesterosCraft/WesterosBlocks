@@ -48,9 +48,6 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
         this.def = def;
         this.setCreativeTab(def.getCreativeTab());
         this.setBlockName(def.blockName);
-        if (def.lightOpacity < 0) {    // Workaround for f*cked up MC lighting hacks
-            this.setLightOpacity(0);
-        }
     }
 
     public boolean initializeBlockDefinition() {

@@ -61,6 +61,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFarmland;
+import net.minecraft.block.BlockSlab;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -672,7 +675,12 @@ public class WesterosBlockDef {
             blk.setHardness(this.hardness);
         }
         if (this.lightOpacity == DEF_INT) {
-            this.lightOpacity = 0;  // Assume 0 - set to 255 before this call in solid blocks
+            if (blk.isOpaqueCube()) {
+                this.lightOpacity = 0;
+            }
+            else {
+                this.lightOpacity = 255;
+            }
         }
         blk.setLightOpacity(this.lightOpacity);
         

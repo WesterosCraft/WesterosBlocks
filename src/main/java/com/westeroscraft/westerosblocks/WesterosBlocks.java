@@ -16,6 +16,9 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFarmland;
+import net.minecraft.block.BlockSlab;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -229,6 +232,7 @@ public class WesterosBlocks
             if (customBlocks[i] instanceof WesterosBlockLifecycle) {
                 ((WesterosBlockLifecycle)customBlocks[i]).initializeBlockDefinition();
             }
+            setNeighborBrightness(customBlocks[i]);
         }
         
         // Register custom block definitions
@@ -247,6 +251,10 @@ public class WesterosBlocks
             log.info("Dynmap Mod Support API not found");
             this.dynmap = null;
         }
+    }
+
+    private void setNeighborBrightness(Block b) {
+        b.useNeighborBrightness = ((b instanceof BlockStairs) || (b instanceof BlockSlab) || (b instanceof BlockFarmland) || b.getCanBlockGrass() || (b.getLightOpacity() == 0));
     }
     
     private void handleDynmap() {
