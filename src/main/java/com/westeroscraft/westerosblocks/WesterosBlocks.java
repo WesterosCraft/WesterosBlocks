@@ -254,7 +254,7 @@ public class WesterosBlocks
     }
 
     private void setNeighborBrightness(Block b) {
-        b.useNeighborBrightness = ((b instanceof BlockStairs) || (b instanceof BlockSlab) || (b instanceof BlockFarmland) || b.getCanBlockGrass() || (b.getLightOpacity() == 0));
+        b.useNeighborBrightness = ((b instanceof BlockStairs) || (b instanceof BlockSlab) || (b instanceof BlockFarmland) || b.canBlockGrass || (b.getLightOpacity() == 0));
     }
     
     private void handleDynmap() {
