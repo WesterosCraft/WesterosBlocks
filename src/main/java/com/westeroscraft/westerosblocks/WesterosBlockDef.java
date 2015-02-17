@@ -708,7 +708,6 @@ public class WesterosBlockDef {
             blk.setTickRandomly(true);
         }
         blk.useNeighborBrightness = ((blk instanceof BlockStairs) || (blk instanceof BlockSlab) || (blk instanceof BlockFarmland) || blk.canBlockGrass || (blk.getLightOpacity() == 0));
-
     }
     // Do standard initialize actions
     public void doStandardInitializeActions(Block blk) {

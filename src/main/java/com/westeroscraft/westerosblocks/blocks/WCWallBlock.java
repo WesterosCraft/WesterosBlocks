@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -10,10 +9,8 @@ import org.dynmap.modsupport.WallFenceBlockModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
@@ -24,7 +21,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
 import cpw.mods.fml.relauncher.Side;
@@ -38,7 +34,9 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
+            int opacity = def.lightOpacity; // preserve this setting
             Block matblk = new WCSolidBlock(def);
+            def.lightOpacity = opacity;
             //Block.blocksList[def.blockID] = null;
             
             return new Block[] { new WCWallBlock(def, matblk) };
