@@ -232,7 +232,6 @@ public class WesterosBlocks
             if (customBlocks[i] instanceof WesterosBlockLifecycle) {
                 ((WesterosBlockLifecycle)customBlocks[i]).initializeBlockDefinition();
             }
-            setNeighborBrightness(customBlocks[i]);
         }
         
         // Register custom block definitions
@@ -253,10 +252,6 @@ public class WesterosBlocks
         }
     }
 
-    private void setNeighborBrightness(Block b) {
-        b.useNeighborBrightness = ((b instanceof BlockStairs) || (b instanceof BlockSlab) || (b instanceof BlockFarmland) || b.canBlockGrass || (b.getLightOpacity() == 0));
-    }
-    
     private void handleDynmap() {
         this.dynmap = new DynmapSupport("WesterosBlocks", Version.VER);
         

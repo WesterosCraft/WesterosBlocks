@@ -676,10 +676,10 @@ public class WesterosBlockDef {
         }
         if (this.lightOpacity == DEF_INT) {
             if (blk.isOpaqueCube()) {
-                this.lightOpacity = 0;
+                this.lightOpacity = 255;
             }
             else {
-                this.lightOpacity = 255;
+                this.lightOpacity = 0;
             }
         }
         blk.setLightOpacity(this.lightOpacity);
@@ -707,6 +707,8 @@ public class WesterosBlockDef {
         if (this.particles_by_meta != null) {   // Any particles?
             blk.setTickRandomly(true);
         }
+        blk.useNeighborBrightness = ((blk instanceof BlockStairs) || (blk instanceof BlockSlab) || (blk instanceof BlockFarmland) || blk.canBlockGrass || (blk.getLightOpacity() == 0));
+
     }
     // Do standard initialize actions
     public void doStandardInitializeActions(Block blk) {
