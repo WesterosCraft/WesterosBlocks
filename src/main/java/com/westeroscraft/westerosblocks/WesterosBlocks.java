@@ -16,9 +16,6 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFarmland;
-import net.minecraft.block.BlockSlab;
-import net.minecraft.block.BlockStairs;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -271,6 +268,11 @@ public class WesterosBlocks
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        try {
+            Class.forName("wdl.WDL");
+            crash("****** WorldDownloader not supported!!!!!! ******");
+        } catch (ClassNotFoundException cnfx) {
+        }
     }
 
     @EventHandler
