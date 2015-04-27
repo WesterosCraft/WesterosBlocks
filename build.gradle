@@ -74,7 +74,7 @@ processResources
         exclude 'mcmod.info'
     }
     // Move access transformer to META-INF
-    rename '(.+_at.cfg)', 'META-INF/$1'
+    //rename '(.+_at.cfg)', 'META-INF/$1'
     
 }
 
@@ -86,7 +86,7 @@ jar {
    classifier = "forge-1.7.10"
    destinationDir = project.projectDir
    //from { configurations.westerosblocks.collect { it.isDirectory() ? it : zipTree(it) } }
-   manifest {
-        attributes 'FMLAT': 'WesterosBlocks_at.cfg'
-    }
+   //manifest {
+   //     attributes 'FMLAT': 'WesterosBlocks_at.cfg'
+   //}
 }
