@@ -36,7 +36,6 @@ public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCode
         int blkid = Block.getIdFromBlock(blk);
         BlockMsgPacket pkt = new BlockMsgPacket(blkid, blkmsg);
         sendToPlayer(pkt, player);
-        System.out.println("sendBlockMessge(" + blkid + ", " + player.getDisplayName() + "," + msgid);
     }
     
     public static void sendToPlayer(WBPacket packet , EntityPlayerMP player) {

@@ -17,7 +17,6 @@ public class PacketHandler extends SimpleChannelInboundHandler<WBPacket>  {
     private void onBlockMsg(INetHandler handler, EntityPlayer player, BlockMsgPacket packet) throws IOException {
         Block blk = Block.getBlockById(packet.blockID);
         if ((blk != null) && (blk instanceof WesterosBlocksMessageDest)) {
-            System.out.println("deliverMessage(" + packet.blockID + ")");
             ((WesterosBlocksMessageDest)blk).deliverMessage(handler, player, packet.msgdata);
         }
     }

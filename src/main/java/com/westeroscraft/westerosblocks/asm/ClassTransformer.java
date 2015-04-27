@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.asm;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Field;
 import java.util.Iterator;
 
 import org.objectweb.asm.AnnotationVisitor;
@@ -31,6 +32,7 @@ import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.init.Blocks;
 import net.minecraft.launchwrapper.IClassTransformer;
+import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -542,6 +544,78 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         } catch (NoSuchMethodException e) {
         }
         return (ctmMethod != null);
+    }
+    
+    private static Field canBlockGrass = null;
+    
+    public static boolean getCanBlockGrass(Block blk) {
+        if (canBlockGrass == null) {
+            for (Field f : Block.class.getDeclaredFields()) {
+                String cname = f.getName();
+                if ((f.getType() == boolean.class) && (cname.equals("canBlockGrass") || cname.equals("s") || cname.equals("field_149785_s"))) {
+                    canBlockGrass = f;
+                    f.setAccessible(true);
+                    break;
+                }
+            }
+            if (canBlockGrass == null) {
+                WesterosBlocks.crash("Cannot find Block.canBlockGrass!!!");
+            }
+        }
+        try {
+            return canBlockGrass.getBoolean(blk);
+        } catch (IllegalArgumentException e) {
+            return false;
+        } catch (IllegalAccessException e) {
+            return false;
+        }
+    }
+    private static Field useNeighborBrightness = null;
+    
+    public static void setUseNeighborBrightness(Block blk, boolean val) {
+        if (useNeighborBrightness == null) {
+            for (Field f : Block.class.getDeclaredFields()) {
+                String cname = f.getName();
+                if ((f.getType() == boolean.class) && (cname.equals("useNeighborBrightness") || cname.equals("u") || cname.equals("field_149783_u"))) {
+                    useNeighborBrightness = f;
+                    f.setAccessible(true);
+                    break;
+                }
+            }
+            if (useNeighborBrightness == null) {
+                WesterosBlocks.crash("Cannot find Block.useNeighborBrightness!!!");
+            }
+        }
+        try {
+            useNeighborBrightness.setBoolean(blk, val);
+        } catch (IllegalArgumentException e) {
+        } catch (IllegalAccessException e) {
+        }
+    }
+    
+    private static Method canSmelt;
+    
+    public static boolean canSmelt(TileEntityFurnace te) {
+        if (canSmelt == null) {
+            for (Method m : TileEntityFurnace.class.getDeclaredMethods()) {
+                String cname = m.getName();
+                if ((m.getReturnType() == boolean.class) && (cname.equals("canSmelt") || cname.equals("func_145948_k"))) {
+                    canSmelt = m;
+                    m.setAccessible(true);
+                    break;
+                }
+            }
+            if (canSmelt == null) {
+                WesterosBlocks.crash("Cannot find TileEntityFurnace.canSmelt()!!!");
+            }
+        }
+        try {
+            return (Boolean) canSmelt.invoke(te);
+        } catch (IllegalAccessException e) {
+        } catch (IllegalArgumentException e) {
+        } catch (InvocationTargetException e) {
+        }
+        return false;
     }
 }
 

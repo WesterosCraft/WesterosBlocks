@@ -19,6 +19,7 @@ import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
 import com.google.common.collect.ObjectArrays;
+import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
@@ -707,7 +708,7 @@ public class WesterosBlockDef {
         if (this.particles_by_meta != null) {   // Any particles?
             blk.setTickRandomly(true);
         }
-        blk.useNeighborBrightness = ((blk instanceof BlockStairs) || (blk instanceof BlockSlab) || (blk instanceof BlockFarmland) || blk.canBlockGrass || (blk.getLightOpacity() == 0));
+        ClassTransformer.setUseNeighborBrightness(blk, ((blk instanceof BlockStairs) || (blk instanceof BlockSlab) || (blk instanceof BlockFarmland) || ClassTransformer.getCanBlockGrass(blk) || (blk.getLightOpacity() == 0)));
     }
     // Do standard initialize actions
     public void doStandardInitializeActions(Block blk) {

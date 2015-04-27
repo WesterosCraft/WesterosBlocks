@@ -1,8 +1,6 @@
 package com.westeroscraft.westerosblocks.tileentity;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
+import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
 
 import net.minecraft.tileentity.TileEntityFurnace;
@@ -27,7 +25,7 @@ public class WCFurnaceTileEntity extends TileEntityFurnace {
 
         if (!this.worldObj.isRemote)
         {
-            if (this.furnaceBurnTime == 0 && this.canSmelt())
+            if (this.furnaceBurnTime == 0 && ClassTransformer.canSmelt(this))
             {
                 this.currentItemBurnTime = this.furnaceBurnTime = getItemBurnTime(this.getStackInSlot(1));
 
@@ -47,7 +45,7 @@ public class WCFurnaceTileEntity extends TileEntityFurnace {
                 }
             }
 
-            if (this.isBurning() && this.canSmelt())
+            if (this.isBurning() && ClassTransformer.canSmelt(this))
             {
                 ++this.furnaceCookTime;
 
