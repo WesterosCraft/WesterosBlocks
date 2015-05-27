@@ -1335,7 +1335,7 @@
         {
           "meta": 2,
           "label": "Lantern",
-          "lightValue": 0.9375,
+          "lightValue": 0.70,
           "lightOpacity" : 0,
           "textures": [
             "metal_block_0/metal_block_iron",
@@ -1491,9 +1491,7 @@
           "meta": 10,
           "label": "Blood",
           "textures": [
-	          "transparent",
-              "cuboid_block_0/blood",
-          	  "transparent"
+              "cuboid_block_0/blood"
           ],
          "boundingBox": {
               "xMin": 0,
@@ -1508,9 +1506,7 @@
           "meta": 11,
           "label": "Fallen Weirwood Leaves",
           "textures": [
-          	  "transparent",
-              "cuboid_block_0/fallen_leaves_weirwood",
-          	  "transparent"
+              "cuboid_block_0/fallen_leaves_weirwood"
           ],
          "boundingBox": {
               "xMin": 0,
@@ -1661,7 +1657,7 @@
         },
         {
           "meta": 1,
-          "label": "Pomegrenade Fruit Leaves",
+          "label": "Pomegranate Fruit Leaves",
           "colorMult": "textures/colormap/birch",
           "textures": [
             "leaves_block_0/leaves_birch_opaque",
@@ -2176,6 +2172,8 @@
           "label": "Small Stone Brick Arrow Slit",
           "colorMult" : "textures/colormap/lapisore",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/brick_small_stone_arrow_slit"
           ],
           "collisionBoxes": [
@@ -2190,6 +2188,8 @@
           "label": "Stone Brick Arrow Slit",
           "colorMult" : "textures/colormap/stonebrick",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/brick_large_stone_arrow_slit_grey"
           ],
           "collisionBoxes": [
@@ -2204,6 +2204,8 @@
           "label": "Mossy Stone Brick Arrow Slit",
           "colorMult" : "textures/colormap/stonebrick",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/brick_large_stone_arrow_slit_mossy"
           ],
           "collisionBoxes": [
@@ -2218,6 +2220,8 @@
           "label": "Stone Brick Window",
           "colorMult" : "textures/colormap/stonebrick",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/brick_stone_large_window"
           ],
           "collisionBoxes": [
@@ -2273,6 +2277,8 @@
           "meta": 8,
           "label": "Netherbrick Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/brick_nether_arrow_slit"
           ],
           "collisionBoxes": [
@@ -2286,6 +2292,8 @@
           "meta": 9,
           "label": "Desert Sandstone Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/sandstone_dorne_arrow_slit"
           ],
           "collisionBoxes": [
@@ -2299,6 +2307,8 @@
           "meta": 10,
           "label": "Vivid Sandstone Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/sandstone_vivid_arrow_slit"
           ],
           "collisionBoxes": [
@@ -2312,6 +2322,8 @@
           "meta": 11,
           "label": "Terracotta Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/sandstone_terracotta_arrow_slit"
           ],
           "collisionBoxes": [
@@ -2325,6 +2337,8 @@
           "meta": 12,
           "label": "Stone Slab Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/stone_slab_window"
           ],
           "collisionBoxes": [
@@ -2338,6 +2352,8 @@
           "meta": 13,
           "label": "Stormlands Brick Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/stormlands_arrow_slit"
           ],
           "collisionBoxes": [
@@ -2351,6 +2367,8 @@
           "meta": 14,
           "label": "Reach Pink Light Stone Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/reach_pink_arrow_slit"
           ],
           "collisionBoxes": [
@@ -2365,6 +2383,8 @@
           "label": "Light Grey Stone Arrow Slit",
           "colorMult": "textures/colormap/lightgreystone",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_0/light_grey_stone_arrow_slit"
           ],
           "collisionBoxes": [
@@ -2777,21 +2797,21 @@
           "meta": 9,
           "label": "Thatch Light Fur",
           "textures": [
-            "wood_block_1/thatch_light"
+            "fur_block_0/thatch_light"
           ]
         },
         {
           "meta": 10,
           "label": "Thatch Dark Fur",
           "textures": [
-            "wood_block_1/thatch_dark"
+            "fur_block_0/thatch_dark"
           ]
         },
         {
           "meta": 11,
           "label": "Leather",
           "textures": [
-            "wood_block_1/leather_block_leather"
+            "fur_block_0/leather_block_leather"
           ]
         },
 		{
@@ -2857,14 +2877,14 @@
         },
         {
           "meta": 5,
-          "label": "Daub Wattle White Lefthatch",
+          "label": "Daub Wattle White Righthatch",
           "textures": [
             "daub_wattle_block_0/daub_white_left"
           ]
         },
         {
           "meta": 6,
-          "label": "Daub Wattle White Righthatch",
+          "label": "Daub Wattle White Lefthatch",
           "textures": [
             "daub_wattle_block_0/daub_white_right"
           ]
@@ -3397,21 +3417,21 @@
           "meta": 2,
           "label": "Thatch Light Fur Slab",
           "textures": [
-            "wood_block_1/thatch_light"
+            "fur_block_0/thatch_light"
           ]
         },
         {
           "meta": 3,
           "label": "Thatch Dark Fur Slab",
           "textures": [
-            "wood_block_1/thatch_dark"
+            "fur_block_0/thatch_dark"
           ]
         },
         {
           "meta": 4,
           "label": "Leather Slab",
           "textures": [
-            "wood_block_1/leather_block_leather"
+            "fur_block_0/leather_block_leather"
           ]
         },
         {
@@ -3810,7 +3830,6 @@
     {
       "blockName" : "halfdoor_block_0",
       "blockID" : 2055,
-      "itemID" : 12024,
       "blockType" : "halfdoor",
       "hardness" : 2.0,
       "stepSound" : "wood",
@@ -3828,7 +3847,6 @@
     {
       "blockName" : "halfdoor_block_1",
       "blockID" : 2056,
-      "itemID" : 12024,
       "blockType" : "halfdoor",
       "hardness" : 2.0,
       "stepSound" : "wood",
@@ -3846,7 +3864,6 @@
 	{
       "blockName" : "halfdoor_block_2",
       "blockID" : 2090,
-      "itemID" : 12024,
       "blockType" : "halfdoor",
       "hardness" : 2.0,
       "stepSound" : "wood",
@@ -6515,16 +6532,16 @@
                 },
                 {
                 "meta": 7,
-                "label": "Small White Bricks",
+                "label": "Small White Brick",
                 "textures": [
-                    "stone_block_1/bricks_white_small"
+                    "stone_block_1/brick_white_small"
                 ]
                 },
                 {
                 "meta": 8,
-                "label": "Small Smooth Stone Bricks",
+                "label": "Small Smooth Stone Brick",
                 "textures": [
-                    "stone_block_1/bricks_stone_small_smooth"
+                    "stone_block_1/brick_stone_small_smooth"
                 ]
                 },
                 {
@@ -7159,7 +7176,6 @@
     {
       "blockName" : "halfdoor_block_3",
       "blockID" : 2145,
-      "itemID" : 12024,
       "blockType" : "halfdoor",
       "hardness" : 2.0,
       "stepSound" : "wood",
@@ -7177,7 +7193,6 @@
     {
       "blockName" : "halfdoor_block_4",
       "blockID" : 2146,
-      "itemID" : 12024,
       "blockType" : "halfdoor",
       "hardness" : 2.0,
       "stepSound" : "wood",
@@ -7235,7 +7250,7 @@
       "blockID": 2149,
       "blockType": "solid",
       "hardness": 2,
-      "stepSound": "sand",
+      "stepSound": "grass",
       "material": "ground",
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
@@ -7318,6 +7333,27 @@
           "label": "Iron Throne Blade Wall",
           "textures": [
             "metal_block_0/blades_molten"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Winterfell Granite Wall",
+          "textures": [
+            "stone_block_2/brick_winterfell_granite"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "White Harbor Cobble Wall",
+          "textures": [
+            "stone_block_2/stone_cobble_whiteharbor"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Basalt Brick Wall",
+          "textures": [
+            "stone_block_1/brick_basalt"
           ]
         }
       ]
@@ -7497,6 +7533,18 @@
                 "label": "KL Dun Brick Hopper",
                 "textures": [
                     "stone_block_3/brick_dun"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 9,
+                "label": "Small White Brick Hopper",
+                "textures": [
+                    "stone_block_1/brick_white_small"
                 ],
                 "cuboids": [
                     { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -7877,6 +7925,8 @@
           "meta": 0,
           "label": "Red Sandstone Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_1/sandstone_red_arrow_slit"
           ],
           "collisionBoxes": [
@@ -7890,6 +7940,8 @@
           "meta": 1,
           "label": "Small Brick Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_1/brick_small_arrow_slit"
           ],
           "collisionBoxes": [
@@ -7903,7 +7955,39 @@
           "meta": 2,
           "label": "KL Dun Brick Arrow Slit",
           "textures": [
+            "transparent",
+            "transparent",
             "arrow_slits_1/brick_dun_arrow_slit"
+          ],
+          "collisionBoxes": [
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Winterfell Granite Arrow Slit",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_winterfell_granite_arrow_slit"
+          ],
+          "collisionBoxes": [
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
+            { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 },
+            { "xMin": 0.80, "xMax": 1.0, "yMin": 0, "yMax": 1.0, "zMin": 0.80, "zMax": 1.0 }
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Basalt Brick Arrow Slit",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_basalt_arrow_slit"
           ],
           "collisionBoxes": [
             { "xMin": 0.0, "xMax": 0.20, "yMin": 0, "yMax": 1.0, "zMin": 0.0, "zMax": 0.20 },
@@ -7954,6 +8038,29 @@
           "label": "KL Dun Brick Slab",
           "textures": [
             "stone_block_3/brick_dun"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Winterfell Granite Slab",
+          "textures": [
+            "stone_block_2/brick_winterfell_granite_top",
+            "stone_block_2/brick_winterfell_granite_top",
+            "stone_block_2/brick_winterfell_granite"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "White Harbor Cobble Slab",
+          "textures": [
+            "stone_block_2/stone_cobble_whiteharbor"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Basalt Brick Slab",
+          "textures": [
+            "stone_block_1/brick_basalt"
           ]
         }
       ]
@@ -8700,6 +8807,18 @@
           "label": "Bushel of Sourleaf",
           "textures" : [ "web_block_1/food_sourleaf" ],
           "type": "no-in-web"
+        },
+        {
+          "meta" : 1,
+          "label": "Iron Throne Random Blades",
+          "textures" : [ "web_block_1/blades_random" ],
+          "type": "no-in-web"
+        },
+        {
+          "meta" : 2,
+          "label": "Dead Rat",
+          "textures" : [ "web_block_1/rat_dead" ],
+          "type": "no-in-web"
         }
       ]
     },
@@ -9011,6 +9130,29 @@
                 "textures": [
                     "stone_block_0/sandstone_red_coarse_ornate"
                 ]
+                },
+                {
+                "meta": 5,
+                "label": "White Harbor Granite",
+                "textures": [
+                    "stone_block_2/brick_whiteharbor_granite_top",
+                    "stone_block_2/brick_whiteharbor_granite_top",
+                    "stone_block_2/brick_whiteharbor_granite"
+                ]
+                },
+                {
+                "meta": 6,
+                "label": "White Harbor Cobble",
+                "textures": [
+                    "stone_block_2/stone_cobble_whiteharbor"
+                ]
+                },
+                {
+                "meta": 7,
+                "label": "Basalt Brick",
+                "textures": [
+                    "stone_block_1/brick_basalt"
+                ]
                 }
             ]
         },
@@ -9081,63 +9223,127 @@
       ]
     },
     {
-      "blockName" : "translucent_web_block_0",
-      "blockID" : 2187,
-      "blockType" : "web",
-      "stepSound" : "cloth",
+      "blockName": "cuboid_block_6",
+      "blockID": 2187,
+      "blockType": "cuboid",
       "nonOpaque": true,
       "alphaRender": true,
-      "material" : "web",
-      "creativeTab" : "WesterosDeco",
-      "subBlocks" : [
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 2,
+      "harvestLevel": [
         {
-          "meta" : 0,
-          "label": "Baelor Orb Crone",
-          "textures" : [ "translucent_block_0/baelors_orb_crone" ],
-          "lightValue": 0.40,
-          "type": "no-in-web"
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+        "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Baelors Sphere Crone Yellow",
+          "textures": [
+            "translucent_block_0/baelors_sphere_yellow_topbottom",
+            "translucent_block_0/baelors_sphere_yellow_side"
+          ],
+          "cuboids": [
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.0, "yMax": 0.125, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.125, "yMax": 0.25, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.125, "xMax": 0.875, "yMin": 0.25, "yMax": 0.75, "zMin": 0.125, "zMax": 0.875, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.75, "yMax": 0.875, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.875, "yMax": 1.0, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] }
+          ]
         },
         {
-          "meta" : 1,
-          "label": "Baelor Orb Father",
-          "textures" : [ "translucent_block_0/baelors_orb_father" ],
-          "lightValue": 0.40,
-          "type": "no-in-web"
+          "meta": 1,
+          "label": "Baelors Sphere Father Green",
+          "textures": [
+            "translucent_block_0/baelors_sphere_green_topbottom",
+            "translucent_block_0/baelors_sphere_green_side"
+          ],
+          "cuboids": [
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.0, "yMax": 0.125, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.125, "yMax": 0.25, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.125, "xMax": 0.875, "yMin": 0.25, "yMax": 0.75, "zMin": 0.125, "zMax": 0.875, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.75, "yMax": 0.875, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.875, "yMax": 1.0, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] }
+          ]
         },
         {
-          "meta" : 2,
-          "label": "Baelor Orb Maiden",
-          "textures" : [ "translucent_block_0/baelors_orb_maiden" ],
-          "lightValue": 0.40,
-          "type": "no-in-web"
+          "meta": 2,
+          "label": "Baelors Sphere Maiden Pink",
+          "textures": [
+            "translucent_block_0/baelors_sphere_pink_topbottom",
+            "translucent_block_0/baelors_sphere_pink_side"
+          ],
+          "cuboids": [
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.0, "yMax": 0.125, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.125, "yMax": 0.25, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.125, "xMax": 0.875, "yMin": 0.25, "yMax": 0.75, "zMin": 0.125, "zMax": 0.875, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.75, "yMax": 0.875, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.875, "yMax": 1.0, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] }
+          ]
         },
         {
-          "meta" : 3,
-          "label": "Baelor Orb Mother",
-          "textures" : [ "translucent_block_0/baelors_orb_mother" ],
-          "lightValue": 0.40,
-          "type": "no-in-web"
+          "meta": 3,
+          "label": "Baelors Sphere Mother Blue",
+          "textures": [
+            "translucent_block_0/baelors_sphere_blue_topbottom",
+            "translucent_block_0/baelors_sphere_blue_side"
+          ],
+          "cuboids": [
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.0, "yMax": 0.125, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.125, "yMax": 0.25, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.125, "xMax": 0.875, "yMin": 0.25, "yMax": 0.75, "zMin": 0.125, "zMax": 0.875, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.75, "yMax": 0.875, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.875, "yMax": 1.0, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] }
+          ]
         },
         {
-          "meta" : 4,
-          "label": "Baelor Orb Smith",
-          "textures" : [ "translucent_block_0/baelors_orb_smith" ],
-          "lightValue": 0.40,
-          "type": "no-in-web"
+          "meta": 4,
+          "label": "Baelors Sphere Smith Orange",
+          "textures": [
+            "translucent_block_0/baelors_sphere_orange_topbottom",
+            "translucent_block_0/baelors_sphere_orange_side"
+          ],
+          "cuboids": [
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.0, "yMax": 0.125, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.125, "yMax": 0.25, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.125, "xMax": 0.875, "yMin": 0.25, "yMax": 0.75, "zMin": 0.125, "zMax": 0.875, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.75, "yMax": 0.875, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.875, "yMax": 1.0, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] }
+          ]
         },
         {
-          "meta" : 5,
-          "label": "Baelor Orb Stranger",
-          "textures" : [ "translucent_block_0/baelors_orb_stranger" ],
-          "lightValue": 0.40,
-          "type": "no-in-web"
+          "meta": 5,
+          "label": "Baelors Sphere Stranger Grey",
+          "textures": [
+            "translucent_block_0/baelors_sphere_grey_topbottom",
+            "translucent_block_0/baelors_sphere_grey_side"
+          ],
+          "cuboids": [
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.0, "yMax": 0.125, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.125, "yMax": 0.25, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.125, "xMax": 0.875, "yMin": 0.25, "yMax": 0.75, "zMin": 0.125, "zMax": 0.875, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.75, "yMax": 0.875, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.875, "yMax": 1.0, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] }
+          ]
         },
         {
-          "meta" : 6,
-          "label": "Baelor Orb Warrior",
-          "textures" : [ "translucent_block_0/baelors_orb_warrior" ],
-          "lightValue": 0.40,
-          "type": "no-in-web"
+          "meta": 6,
+          "label": "Baelors Sphere Warrior Red",
+          "textures": [
+            "translucent_block_0/baelors_sphere_red_topbottom",
+            "translucent_block_0/baelors_sphere_red_side"
+          ],
+          "cuboids": [
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.0, "yMax": 0.125, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.125, "yMax": 0.25, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.125, "xMax": 0.875, "yMin": 0.25, "yMax": 0.75, "zMin": 0.125, "zMax": 0.875, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.25, "xMax": 0.75, "yMin": 0.75, "yMax": 0.875, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,1,1,1,1 ] },
+            { "xMin": 0.40625, "xMax": 0.59375, "yMin": 0.875, "yMax": 1.0, "zMin": 0.40625, "zMax": 0.59375, "sideTextures": [ 0,0,1,1,1,1 ] }
+          ]
         }
       ]
     },
@@ -9354,6 +9560,918 @@
           "label": "Alyssas Tears Mist Four",
           "textures" : [ "translucent_block_0/alyssas_tears_mist_four" ],
           "type": "no-in-web"
+        }
+      ]
+    },
+    {
+      "blockName": "sign_block_0",
+      "blockID": 2194,
+      "blockType": "cuboid-ne",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+         {
+           "meta": 0,
+           "label": "City Profession: Ale Merchant",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/ale_merchant",
+               "sign_block_0/ale_merchant",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 1,
+           "label": "City Profession: Apothecary",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/apothecary",
+               "sign_block_0/apothecary",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 2,
+           "label": "City Profession: Armorer",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/armorer",
+               "sign_block_0/armorer",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 3,
+           "label": "City Profession: Baker",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/baker",
+               "sign_block_0/baker",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 4,
+           "label": "City Profession: Barber",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/barber",
+               "sign_block_0/barber",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 5,
+           "label": "City Profession: Blacksmith",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/blacksmith",
+               "sign_block_0/blacksmith",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 6,
+           "label": "City Profession: Bookbinder",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/bookbinder",
+               "sign_block_0/bookbinder",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 7,
+           "label": "City Profession: Butcher",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/butcher",
+               "sign_block_0/butcher",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         }
+       ]
+     },
+     {
+      "blockName": "sign_block_1",
+      "blockID": 2195,
+      "blockType": "cuboid-ne",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+         {
+           "meta": 0,
+           "label": "City Profession: Carpenter",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/carpenter",
+               "sign_block_0/carpenter",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 1,
+           "label": "City Profession: Cartwright",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/cartwright",
+               "sign_block_0/cartwright",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 2,
+           "label": "City Profession: Cobbler",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/cobbler",
+               "sign_block_0/cobbler",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 3,
+           "label": "City Profession: Cooper",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/cooper",
+               "sign_block_0/cooper",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 4,
+           "label": "City Profession: Fishmongerer",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/fishmongerer",
+               "sign_block_0/fishmongerer",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 5,
+           "label": "City Profession: Fletcher",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/fletcher",
+               "sign_block_0/fletcher",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 6,
+           "label": "City Profession: Furrier",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/furrier",
+               "sign_block_0/furrier",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 7,
+           "label": "City Profession: Inn",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_0/inn",
+               "sign_block_0/inn",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         }
+       ]
+     },
+     {
+      "blockName": "sign_block_2",
+      "blockID": 2196,
+      "blockType": "cuboid-ne",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+         {
+           "meta": 0,
+           "label": "City Profession: Chandler",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/chandler",
+               "sign_block_1/chandler",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 1,
+           "label": "City Profession: Jeweller",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/jeweller",
+               "sign_block_1/jeweller",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 2,
+           "label": "City Profession: Mason",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/mason",
+               "sign_block_1/mason",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 3,
+           "label": "City Profession: Mercer",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/mercer",
+               "sign_block_1/mercer",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 4,
+           "label": "City Profession: Net Maker",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/net_maker",
+               "sign_block_1/net_maker",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 5,
+           "label": "City Profession: Potter",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/potter",
+               "sign_block_1/potter",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 6,
+           "label": "City Profession: Ropemaker",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/rope_maker",
+               "sign_block_1/rope_maker",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 7,
+           "label": "City Profession: Scribe",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/scribe",
+               "sign_block_1/scribe",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         }
+       ]
+     },
+     {
+      "blockName": "sign_block_3",
+      "blockID": 2197,
+      "blockType": "cuboid-ne",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+         {
+           "meta": 0,
+           "label": "City Profession: Spicer",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/spicer",
+               "sign_block_1/spicer",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 1,
+           "label": "City Profession: Stables",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/stables",
+               "sign_block_1/stables",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 2,
+           "label": "City Profession: Tailor",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/tailor",
+               "sign_block_1/tailor",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 3,
+           "label": "City Profession: Tanner",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/tanner",
+               "sign_block_1/tanner",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 4,
+           "label": "City Profession: Tavern",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/tavern",
+               "sign_block_1/tavern",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 5,
+           "label": "City Profession: Weaponsmith",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/weaponsmith",
+               "sign_block_1/weaponsmith",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 6,
+           "label": "City Profession: Wine Merchant",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/wine_merchant",
+               "sign_block_1/wine_merchant",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         }
+       ]
+     },
+     {
+      "blockName": "stone_block_4_stair_3",
+      "blockID": 2198,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_4",
+      "modelBlockMeta": 1,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Winterfell Granite Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_5_stair_1",
+      "blockID": 2199,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_5",
+      "modelBlockMeta": 6,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "White Harbor Cobble Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_5_stair_2",
+      "blockID": 2200,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_5",
+      "modelBlockMeta": 7,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Basalt Brick Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "cuboid_block_7",
+      "blockID": 2201,
+      "blockType": "cuboid-nsew",
+      "hardness": 5,
+      "stepSound": "cloth",
+      "material": "wood",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+        "subBlocks": [
+            {
+                "meta": 0,
+                "label": "Mance's Camp Common Tent 1",
+                "textures": [
+					"fur_block_0/leather_mance_common_inside",
+           		 	"fur_block_0/leather_mance_common_outside_1",
+					"fur_block_0/leather_mance_common_outside_1",
+					"fur_block_0/leather_mance_common_outside_1",
+					"fur_block_0/leather_mance_common_outside_1",
+					"fur_block_0/leather_mance_common_inside"
+                ],
+                "boundingBox": {
+                    "xMin": 0,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }               
+            },    
+            {
+                "meta": 1,
+                "label": "Mance's Camp Common Tent 2",
+                "textures": [
+                    "fur_block_0/leather_mance_common_inside",
+           		 	"fur_block_0/leather_mance_common_outside_2",
+					"fur_block_0/leather_mance_common_outside_2",
+					"fur_block_0/leather_mance_common_outside_2",
+					"fur_block_0/leather_mance_common_outside_2",
+					"fur_block_0/leather_mance_common_inside"
+                ],
+                "boundingBox": {
+                    "xMin": 0,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }               
+            },
+            {
+                "meta": 2,
+                "label": "Mance's Camp Mance's Tent",
+                "textures": [
+                    "fur_block_0/leather_mance_main_inside",
+           		 	"fur_block_0/leather_mance_main_outside",
+					"fur_block_0/leather_mance_main_outside",
+					"fur_block_0/leather_mance_main_outside",
+					"fur_block_0/leather_mance_main_outside",
+					"fur_block_0/leather_mance_main_inside"
+                ],
+                "boundingBox": {
+                    "xMin": 0,
+                    "xMax": 1,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }               
+            },
+            {
+                "meta": 3,
+                "label": "Mance's Camp Mance's Tent Antlers",
+                "textures": [
+                    "transparent",
+                    "transparent",
+                    "fur_block_0/mance_antlers_elk",
+                    "fur_block_0/mance_antlers_elk",
+                    "transparent",
+                    "transparent"
+                ],
+                "boundingBox": {
+                    "xMin": 0.47,
+                    "xMax": 0.53,
+                    "yMin": 0,
+                    "yMax": 1,
+                    "zMin": 0,
+                    "zMax": 1
+                }               
+            }
+        ]
+    },
+    {
+      "blockName" : "trapdoor_block_0",
+      "blockID" : 2202,
+      "blockType" : "trapdoor",
+      "hardness" : 2.0,
+      "stepSound" : "metal",
+      "material" : "wood",
+      "resistance" : 5.0,
+      "creativeTab" : "WesterosDeco",
+      "type" : "locked:false",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "King's Landing Sewer Manhole",
+          "textures" : [ "trapdoor_block_0/kings_landing_manhole" ]
         }
       ]
     }
