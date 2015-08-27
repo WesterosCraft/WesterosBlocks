@@ -734,7 +734,7 @@
         {
           "meta": 7,
           "label": "Small Stone Brick Wall",
-          "colorMult" : "textures/colormap/lapisore",
+          "colorMult" : "textures/colormap/smallstonebrick",
           "textures": [
             "stone_block_1/brick_stone_small"
           ]
@@ -2170,7 +2170,7 @@
         {
           "meta": 0,
           "label": "Small Stone Brick Arrow Slit",
-          "colorMult" : "textures/colormap/lapisore",
+          "colorMult" : "textures/colormap/smallstonebrick",
           "textures": [
             "transparent",
             "transparent",
@@ -2495,7 +2495,7 @@
         {
           "meta": 10,
           "label": "Grey Keystone",
-          "colorMult" : "textures/colormap/lapisore",
+          "colorMult" : "textures/colormap/smallstonebrick",
           "textures": [
             "stone_block_3/keystone_grey"
           ]
@@ -2678,7 +2678,7 @@
         {
           "meta": 10,
           "label": "Small Stone Brick",
-		  "colorMult" : "textures/colormap/lapisore",
+		  "colorMult" : "textures/colormap/smallstonebrick",
           "textures": [
             "stone_block_1/brick_stone_small"
           ]
@@ -3201,7 +3201,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "colorMult" : "textures/colormap/lapisore",
+          "colorMult" : "textures/colormap/smallstonebrick",
           "label": "Small Stone Brick Stairs"
         }
       ]
@@ -3321,7 +3321,7 @@
         {
           "meta": 0,
           "label": "Small Stone Brick Slab",
-          "colorMult" : "textures/colormap/lapisore",
+          "colorMult" : "textures/colormap/smallstonebrick",
           "textures": [
             "stone_block_1/brick_stone_small"
           ]
@@ -7582,6 +7582,13 @@
           "textures" : [ "web_block_1/tall_grass_jungle" ],
           "colorMult" : "textures/colormap/grass",
           "type": "no-in-web"
+        },
+        {
+          "meta" : 3,
+          "label": "Cattails",
+          "textures" : [ "web_block_1/cattails" ],
+          "colorMult" : "textures/colormap/reed",
+          "type": "no-in-web"
         }
       ]
     },
@@ -7654,6 +7661,7 @@
                 {
                 "meta": 4,
                 "label": "Mossy Small Stone Brick",
+                "colorMult" : "textures/colormap/mossysmallstonebrick",
                 "textures": [
                     "stone_block_1/brick_stone_small_mossy"
                 ]
@@ -10303,6 +10311,28 @@
                "sign_block_0/sign_top",
                "sign_block_1/wine_merchant",
                "sign_block_1/wine_merchant",
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_bottom"
+            ],
+            "boundingBox": {
+               "xMin": 0,
+               "xMax": 1,
+               "yMin": 0,
+               "yMax": 1,
+               "zMin": 0.45,
+               "zMax": 0.55
+            },
+            "itemTextureIndex": 2
+         },
+         {
+           "meta": 7,
+           "label": "City Profession: Flea Bottom Potshop",
+            "lightOpacity": 0,
+            "textures": [
+               "sign_block_0/sign_bottom",
+               "sign_block_0/sign_top",
+               "sign_block_1/potshop",
+               "sign_block_1/potshop",
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_bottom"
             ],
