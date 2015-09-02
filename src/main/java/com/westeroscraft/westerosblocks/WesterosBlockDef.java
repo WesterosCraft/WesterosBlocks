@@ -20,6 +20,7 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import com.google.common.collect.ObjectArrays;
 import com.westeroscraft.westerosblocks.asm.ClassTransformer;
+import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
@@ -230,6 +231,20 @@ public class WesterosBlockDef {
             c.sideRotations = rot.txtrot;
             c.shape = this.shape;
             return c;
+        }
+        public Cuboid() {
+        }
+        public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1) {
+            this(x0, y0, z0, x1, y1, z1, null);
+        }
+        public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1, int[] sidetextures) {
+            this.xMin = x0;
+            this.xMax = x1;
+            this.yMin = y0;
+            this.yMax = y1;
+            this.zMin = z0;
+            this.zMax = z1;
+            this.sideTextures = sidetextures;
         }
     }
     
@@ -1297,6 +1312,7 @@ public class WesterosBlockDef {
         typeTable.put("furnace", new WCFurnaceBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
+        typeTable.put("beacon", new WCBeaconBlock.Factory());
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());
         colorMultTable.put("water", new WaterColorMultHandler());

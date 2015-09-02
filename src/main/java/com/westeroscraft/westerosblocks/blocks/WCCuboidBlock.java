@@ -81,7 +81,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     public IIcon getIcon(int side, int meta) {
         boolean tmpset = false;
         if (cuboidIndex < 0) {
-            List<WesterosBlockDef.Cuboid> clist = def.getCuboidList(meta);
+            List<WesterosBlockDef.Cuboid> clist = this.getCuboidList(meta);
             if ((clist != null) && (clist.size() > 0)) {    
                 currentCuboid = clist.get(0);
             }
@@ -103,7 +103,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     protected IIcon getIconInternal(int side, int meta) {
         if ((side == 2) || (side == 5)) { // North or East
             if (this.sideIcons[meta] == null) {
-                List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(meta);
+                List<WesterosBlockDef.Cuboid> lst = this.getCuboidList(meta);
                 if (lst != null) {
                     this.sideIcons[meta] = new IIcon[lst.size() * 6];
                 }
@@ -263,7 +263,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     }
     
     public void setBoundingBoxFromCuboidList(int meta) {
-        List<WesterosBlockDef.Cuboid> cl = getCuboidList(meta);
+        List<WesterosBlockDef.Cuboid> cl = this.getCuboidList(meta);
         float xmin = 100.0F, ymin = 100.0F, zmin = 100.0F;
         float xmax = -100.0F, ymax = -100.0F, zmax = -100.0F;
         for(WesterosBlockDef.Cuboid c : cl) {
