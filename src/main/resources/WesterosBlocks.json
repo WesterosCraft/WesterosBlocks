@@ -6812,7 +6812,7 @@
         }
       ]
     },
-     {
+    {
       "blockName": "furnace_block_0",
       "blockID": 2132,
       "blockType": "furnace",
@@ -10503,6 +10503,80 @@
           "meta" : 0,
           "label": "King's Landing Sewer Manhole",
           "textures" : [ "trapdoor_block_0/kings_landing_manhole" ]
+        }
+      ]
+    },
+    {
+      "blockName": "beacon_block_0",
+      "blockID": 2203,
+      "blockType": "beacon",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875F,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Brazier",
+          "textures": [
+            "beacon_block_0/brazier_side",
+            "beacon_block_0/brazier_side",
+            "beacon_block_0/brazier_side",
+            "beacon_block_0/brazier_side",
+            "beacon_block_0/brazier_side",
+            "beacon_block_0/brazier_side",
+            "beacon_block_0/transparent",
+            "beacon_block_0/brazier_ash_glowing",
+            "beacon_block_0/brazier_ash_glowing",
+            "beacon_block_0/brazier_ash_glowing",
+            "beacon_block_0/brazier_ash_glowing",
+            "beacon_block_0/brazier_ash_glowing",
+            "beacon_block_0/transparent",
+            "beacon_block_0/brazier_fire",
+            "beacon_block_0/brazier_fire",
+            "beacon_block_0/brazier_fire",
+            "beacon_block_0/brazier_fire",
+            "beacon_block_0/brazier_fire"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "beacon_block_1",
+      "blockID": 2204,
+      "blockType": "beacon",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Brazier",
+          "textures": [
+            "beacon_block_1/brazier_side",
+            "beacon_block_1/brazier_side",
+            "beacon_block_1/brazier_side",
+            "beacon_block_1/brazier_side",
+            "beacon_block_1/brazier_side",
+            "beacon_block_1/brazier_side",
+            "beacon_block_1/transparent",
+            "beacon_block_1/brazier_ash",
+            "beacon_block_1/brazier_ash",
+            "beacon_block_1/brazier_ash",
+            "beacon_block_1/brazier_ash",
+            "beacon_block_1/brazier_ash",
+            "beacon_block_1/transparent",
+            "beacon_block_1/transparent",
+            "beacon_block_1/transparent",
+            "beacon_block_1/transparent",
+            "beacon_block_1/transparent",
+            "beacon_block_1/transparent"
+          ]
         }
       ]
     }
