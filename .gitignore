@@ -8,4 +8,4 @@ WesterosBlocks-*.jar
 .project
 /.settings
 /run
-/.DS_Store
+.DS_Store
