@@ -3824,6 +3824,11 @@
           "meta" : 2,
           "label": "Vine Jasmine",
           "textures" : [ "ladder_block_0/vine_jasmine" ]
+        },
+        {
+          "meta" : 3,
+          "label": "Wood Ladder",
+          "textures" : [ "ladder_block_0/ladder_normal" ]
         }
       ]
     },
