@@ -3813,22 +3813,26 @@
         {
           "meta" : 0,
           "label": "Iron Rungs",
-          "textures" : [ "ladder_block_0/ladder_iron" ]
+          "textures" : [ "ladder_block_0/ladder_iron" ],
+          "type" : "allow-unsupported"          
         },
         {
           "meta" : 1,
           "label": "Rope Ladder",
-          "textures" : [ "ladder_block_0/ladder_rope" ]
+          "textures" : [ "ladder_block_0/ladder_rope" ],
+          "type" : "allow-unsupported"          
         },
 		{
           "meta" : 2,
           "label": "Vine Jasmine",
-          "textures" : [ "ladder_block_0/vine_jasmine" ]
+          "textures" : [ "ladder_block_0/vine_jasmine" ],
+          "type" : "allow-unsupported"          
         },
         {
           "meta" : 3,
           "label": "Wood Ladder",
-          "textures" : [ "ladder_block_0/ladder_normal" ]
+          "textures" : [ "ladder_block_0/ladder_normal" ],
+          "type" : "allow-unsupported"          
         }
       ]
     },
@@ -7829,7 +7833,8 @@
         {
           "meta" : 0,
           "label": "Winterfell Stone Ladder",
-          "textures" : [ "ladder_block_0/ladder_cobblestone" ]
+          "textures" : [ "ladder_block_0/ladder_cobblestone" ],
+          "type" : "allow-unsupported"          
         }
       ]
     },

@@ -43,11 +43,23 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
     }
     
     private WesterosBlockDef def;
+    private boolean allow_unsupported[] = new boolean[4];
     
     protected WCLadderBlock(WesterosBlockDef def) {
         super(def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
+        for (int i = 0; i < 4; i++) {
+            String t = def.getType(i);
+            if (t != null) {
+                String[] toks = t.split(",");
+                for (String tok : toks) {
+                    if (tok.equals("allow-unsupported")) {
+                        allow_unsupported[i] = true;
+                    }
+                }
+            }
+        }
     }
     
     /**
@@ -145,7 +157,7 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
     @Override
     public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int meta)
     {
-        int j1 = meta & 0x3;
+        int j1 = 0;
 
         if ((j1 == 0 || par5 == 2) && par1World.isSideSolid(par2, par3, par4 + 1, ForgeDirection.NORTH))
         {
@@ -166,6 +178,7 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
         {
             j1 |= 0x0;
         }
+        j1 |= (meta & 0x3);
 
         return j1;
     }
@@ -201,7 +214,7 @@ public class WCLadderBlock extends Block implements WesterosBlockLifecycle, West
             flag = true;
         }
 
-        if (!flag)
+        if ((!flag) && (!allow_unsupported[meta & 0x3]))
         {
             this.dropBlockAsItem(par1World, par2, par3, par4, meta & 3, 0);
             par1World.setBlockToAir(par2, par3, par4);
