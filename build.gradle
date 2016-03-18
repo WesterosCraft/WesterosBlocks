@@ -29,8 +29,8 @@ configFile.withReader {
 version = "${config.WesterosBlocks_version}${config.WesterosBlocks_extversion}"
 group= "com.westeroscraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "WesterosBlocks"
-targetCompatibility = '1.6'
-sourceCompatibility = '1.6'
+targetCompatibility = '1.7'
+sourceCompatibility = '1.7'
 ext.buildNumber = System.getenv().BUILD_NUMBER ?: "Dev"
 
 minecraft {
