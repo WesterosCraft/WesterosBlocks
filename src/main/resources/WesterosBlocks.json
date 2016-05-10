@@ -6549,6 +6549,7 @@
                 {
                 "meta": 8,
                 "label": "Small Smooth Stone Brick",
+                "colorMult" : "textures/colormap/smallsmoothstonebrick",
                 "textures": [
                     "stone_block_1/brick_stone_small_smooth"
                 ]
@@ -6908,6 +6909,7 @@
           "meta": 1,
           "label": "Always Active Furnace",
           "type": "always-on:true",
+          "colorMult" : "textures/colormap/cobblestone",
           "textures": [
             "furnace_block_0/furnace_bottom",
             "furnace_block_0/furnace_top",
@@ -10586,6 +10588,66 @@
             "beacon_block_1/transparent",
             "beacon_block_1/transparent",
             "beacon_block_1/transparent"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "forest_block_0",
+      "blockID": 2205,
+      "blockType": "plant",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosPlants",
+      "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
+      },
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Cow Parsely",
+          "textures": [
+            "web_block_1/cow_parsely"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Bracken",
+          "textures": [
+            "web_block_1/bracken"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Lady Fern",
+          "textures": [
+            "web_block_1/lady_fern"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Nettle",
+          "textures": [
+            "web_block_1/nettle"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Dead Bracken",
+          "textures": [
+            "web_block_1/bracken_dead"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Fireweed",
+          "textures": [
+            "web_block_1/fireweed"
           ]
         }
       ]
