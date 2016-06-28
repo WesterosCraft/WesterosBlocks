@@ -1548,7 +1548,6 @@
         {
           "meta": 0,
           "label": "Apple Fruit Leaves",
-          "colorMult": "textures/colormap/birch",
           "textures": [
             "leaves_block_0/leaves_birch_opaque",
             "leaves_block_0/leaves_birch_opaque",
@@ -1559,7 +1558,6 @@
         {
           "meta": 1,
           "label": "Apricot Fruit Leaves",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1570,7 +1568,6 @@
         {
           "meta": 2,
           "label": "Cherry Fruit Leaves",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1581,7 +1578,6 @@
         {
           "meta": 3,
           "label": "Grape Fruit Leaves",
-          "colorMult": "textures/colormap/foliagejungle",
           "textures": [
             "leaves_block_0/leaves_jungle_opaque",
             "leaves_block_0/leaves_jungle_opaque",
@@ -1592,7 +1588,6 @@
         {
           "meta": 4,
           "label": "Lemon Fruit Leaves",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1603,7 +1598,6 @@
         {
           "meta": 5,
           "label": "Lime Fruit Leaves",
-          "colorMult": "textures/colormap/foliagejungle",
           "textures": [
             "leaves_block_0/leaves_jungle_opaque",
             "leaves_block_0/leaves_jungle_opaque",
@@ -1614,7 +1608,6 @@
         {
           "meta": 6,
           "label": "Orange Fruit Leaves",
-          "colorMult": "textures/colormap/foliagejungle",
           "textures": [
             "leaves_block_0/leaves_jungle_opaque",
             "leaves_block_0/leaves_jungle_opaque",
@@ -1625,7 +1618,6 @@
         {
           "meta": 7,
           "label": "Peach Fruit Leaves",
-          "colorMult": "textures/colormap/birch",
           "textures": [
             "leaves_block_0/leaves_birch_opaque",
             "leaves_block_0/leaves_birch_opaque",
@@ -1647,7 +1639,6 @@
         {
           "meta": 0,
           "label": "Plum Fruit Leaves",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1658,7 +1649,6 @@
         {
           "meta": 1,
           "label": "Pomegranate Fruit Leaves",
-          "colorMult": "textures/colormap/birch",
           "textures": [
             "leaves_block_0/leaves_birch_opaque",
             "leaves_block_0/leaves_birch_opaque",
@@ -1679,7 +1669,6 @@
 		{
           "meta": 3,
           "label": "Blackberry Bush",
-          "colorMult": "textures/colormap/birch",
           "textures": [
             "leaves_block_0/leaves_birch_opaque",
             "leaves_block_0/leaves_birch_opaque",
@@ -1690,7 +1679,6 @@
 		{
           "meta": 4,
           "label": "Blueberry Bush",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1701,7 +1689,6 @@
 		{
           "meta": 5,
           "label": "Raspberry Bush",
-          "colorMult": "textures/colormap/foliagejungle",
           "textures": [
             "leaves_block_0/leaves_jungle_opaque",
             "leaves_block_0/leaves_jungle_opaque",
@@ -1712,7 +1699,6 @@
 		{
           "meta": 6,
           "label": "Juniper Bush",
-          "colorMult": "textures/colormap/pine",
           "textures": [
             "leaves_block_0/leaves_spruce_opaque",
             "leaves_block_0/leaves_spruce_opaque",
@@ -1723,7 +1709,6 @@
 		{
           "meta": 7,
           "label": "Red Rose Bush",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1745,7 +1730,6 @@
         {
           "meta": 0,
           "label": "Pink Rose Bush",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1756,7 +1740,6 @@
         {
           "meta": 1,
           "label": "White Rose Bush",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1767,7 +1750,6 @@
 		{
           "meta": 2,
           "label": "Yellow Rose Bush",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -1778,7 +1760,6 @@
         {
           "meta": 3,
           "label": "Hop Fruit Leaves",
-          "colorMult": "textures/colormap/foliagejungle",
           "textures": [
             "leaves_block_0/leaves_jungle_opaque",
             "leaves_block_0/leaves_jungle_opaque",
@@ -1789,7 +1770,6 @@
         {
           "meta": 4,
           "label": "Olive Fruit Leaves",
-          "colorMult": "textures/colormap/foliageoak",
           "textures": [
             "leaves_block_0/leaves_oak_opaque",
             "leaves_block_0/leaves_oak_opaque",
@@ -3464,8 +3444,8 @@
       ],
       "blockType": "slab",
       "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
+      "stepSound": "gravel",
+      "material": "craftedSnow",
       "resistance": 2,
       "harvestLevel": [
         {
@@ -7807,6 +7787,13 @@
           "textures": [
             "utility_block_0/note"
           ]
+        },
+        {
+          "meta": 6,
+          "label": "'House Count' Utility Block",
+          "textures": [
+            "utility_block_0/housecount"
+          ]
         }
       ]
     },
@@ -10506,7 +10493,7 @@
       "blockType" : "trapdoor",
       "hardness" : 2.0,
       "stepSound" : "metal",
-      "material" : "wood",
+      "material" : "iron",
       "resistance" : 5.0,
       "creativeTab" : "WesterosDeco",
       "type" : "locked:false",
@@ -10649,6 +10636,24 @@
           "textures": [
             "web_block_1/fireweed"
           ]
+        }
+      ]
+    },
+    {
+      "blockName" : "trapdoor_block_1",
+      "blockID" : 2206,
+      "blockType" : "trapdoor",
+      "hardness" : 2.0,
+      "stepSound" : "metal",
+      "material" : "iron",
+      "resistance" : 5.0,
+      "creativeTab" : "WesterosDeco",
+      "type" : "locked:false",
+      "subBlocks" : [
+        {
+          "meta" : 0,
+          "label": "White Harbor Sewer Manhole",
+          "textures" : [ "trapdoor_block_0/white_harbor_manhole" ]
         }
       ]
     }
