@@ -695,6 +695,7 @@
         {
           "meta": 2,
           "label": "Brick Wall",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "stone_block_3/brick_orange_large"
           ]
@@ -749,6 +750,7 @@
         {
           "meta": 9,
           "label": "Small Brick Wall",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "stone_block_3/brick_orange_small_side"
           ]
@@ -2511,6 +2513,7 @@
         {
           "meta": 15,
           "label": "Small Bricks Ornate Top",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "stone_block_3/brick_orange_small_top_ornate",
             "stone_block_3/brick_orange_small_top_ornate",
@@ -2907,6 +2910,7 @@
         {
           "meta": 12,
           "label": "Daub Brick Crosshatch",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "daub_wattle_block_0/daub_brick_crossed"
           ]
@@ -2914,6 +2918,7 @@
         {
           "meta": 13,
           "label": "Daub Brick Lefthatch",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "daub_wattle_block_0/daub_brick_left"
           ]
@@ -2921,6 +2926,7 @@
         {
           "meta": 14,
           "label": "Daub Brick Righthatch",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "daub_wattle_block_0/daub_brick_right"
           ]
@@ -2928,6 +2934,7 @@
         {
           "meta": 15,
           "label": "Daub Brick Frame",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "daub_wattle_block_0/daub_brick_open"
           ]
@@ -3431,7 +3438,7 @@
           "textures": [
             "random_slab_block_0/seat_bottom",
             "random_slab_block_0/seat_top_cushion",
-            "random_slab_block_0/seat_side"
+            "random_slab_block_0/seat_side_cushion"
           ]
         }
       ]
@@ -3663,6 +3670,7 @@
         {
           "meta": 14,
           "label": "Brick Fence",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "stone_block_3/brick_orange_large"
           ]
@@ -4830,6 +4838,7 @@
 				{
 				"meta": 5,
 				"label": "Faint Light Grey Stone",
+				"colorMult" : "textures/colormap/faintlightgreystone",
 				"textures": [
 					"stone_block_2/brick_reach_light"
 				]
@@ -5160,7 +5169,7 @@
       		"subBlocks": [
         		{
           			"meta": 0,
-          			"label": "Patchy Pale Red Bed",
+          			"label": "Pale Red Bed",
 		            "itemTexture" : "bed_block_0/bed_patchy_red_1",
           			"textures": [
             			"bed_block_0/bed_patchy_red_0",
@@ -5182,7 +5191,7 @@
       		"subBlocks": [
         		{
           			"meta": 0,
-          			"label": "Patchy Pale Green Bed",
+          			"label": "Pale Green Bed",
 		            "itemTexture" : "bed_block_0/bed_patchy_green_1",
           			"textures": [
             			"bed_block_0/bed_patchy_green_0",
@@ -6799,6 +6808,20 @@
           "textures": [
              "metal_block_0/blades_molten"
           ]
+        },
+        {
+          "meta": 12,
+          "label": "Bronze Fence",
+          "textures": [
+             "metal_block_0/metal_block_bronze"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Lannisport Slate Fence",
+          "textures": [
+             "stone_slate_0/slate_lannisport"
+          ]
         }
       ]
     },
@@ -6816,6 +6839,7 @@
         {
           "meta": 0,
           "label": "Brick Furnace",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "furnace_block_0/brick_furnace_bottom",
             "furnace_block_0/brick_furnace_top",
@@ -6827,6 +6851,7 @@
         {
           "meta": 1,
           "label": "Always Active Brick Furnace",
+          "colorMult" : "textures/colormap/brick",
           "type": "always-on:true",
           "textures": [
             "furnace_block_0/brick_furnace_bottom",
@@ -7346,6 +7371,20 @@
           "textures": [
             "stone_block_1/brick_basalt"
           ]
+        },
+        {
+          "meta": 8,
+          "label": "Bronze Wall",
+          "textures": [
+            "metal_block_0/metal_block_bronze"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Lannisport Slate Wall",
+          "textures": [
+            "stone_slate_0/slate_lannisport"
+          ]
         }
       ]
     },
@@ -7536,6 +7575,18 @@
                 "label": "Small White Brick Hopper",
                 "textures": [
                     "stone_block_1/brick_white_small"
+                ],
+                "cuboids": [
+                    { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0.25, "xMax": 0.75, "yMin": 0.275, "yMax": 0.625, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0,0,0,0,0,0 ] },
+                    { "xMin": 0, "xMax": 1, "yMin": 0.625, "yMax": 1, "zMin": 0, "zMax": 1, "sideTextures": [ 0,0,0,0,0,0 ] }
+                    ]
+                },
+                {
+                "meta": 10,
+                "label": "Brick Hopper",
+                "textures": [
+                    "stone_block_3/brick_orange_large"
                 ],
                 "cuboids": [
                     { "xMin": 0.3755, "xMax": 0.6245, "yMin": 0, "yMax": 0.275, "zMin": 0.3755, "zMax": 0.6245, "sideTextures": [ 0,0,0,0,0,0 ] },
@@ -7946,6 +7997,7 @@
         {
           "meta": 1,
           "label": "Small Brick Arrow Slit",
+          "colorMult" : "textures/colormap/brick",
           "textures": [
             "transparent",
             "transparent",
