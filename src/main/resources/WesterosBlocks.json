@@ -6914,7 +6914,7 @@
           "meta": 1,
           "label": "Always Active Furnace",
           "type": "always-on:true",
-          "colorMult" : "textures/colormap/cobblestone",
+          "colorMult" : "textures/colormap/furnace",
           "textures": [
             "furnace_block_0/furnace_bottom",
             "furnace_block_0/furnace_top",
