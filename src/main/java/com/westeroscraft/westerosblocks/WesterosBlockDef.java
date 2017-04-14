@@ -11,14 +11,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import org.apache.logging.log4j.Level;
 import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
-import com.google.common.collect.ObjectArrays;
 import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
@@ -53,39 +51,29 @@ import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.LoaderException;
-import cpw.mods.fml.common.LoaderState;
-import cpw.mods.fml.common.registry.GameData;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFarmland;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.ColorizerFoliage;
 import net.minecraft.world.ColorizerGrass;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fml.common.registry.GameData;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -302,7 +290,7 @@ public class WesterosBlockDef {
         public int getBlockColor() {
             return fixedMult;
         }
-        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             return fixedMult;
         }
         protected void setBaseColor() {
@@ -321,14 +309,15 @@ public class WesterosBlockDef {
         }
         @Override
         @SideOnly(Side.CLIENT)
-        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             int red = 0;
             int green = 0;
             int blue = 0;
 
             for (int xx = -1; xx <= 1; ++xx) {
                 for (int zz = -1; zz <= 1; ++zz) {
-                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getBiomeFoliageColor(x + xx, y, z + zz);
+                    BlockPos bp = pos.add(xx, 0, zz);
+                    int mult = access.getBiome(bp).getFoliageColorAtPos(bp);
                     red += (mult & 0xFF0000) >> 16;
                     green += (mult & 0x00FF00) >> 8;
                     blue += (mult & 0x0000FF);
@@ -348,14 +337,15 @@ public class WesterosBlockDef {
         }
         @Override
         @SideOnly(Side.CLIENT)
-        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             int red = 0;
             int green = 0;
             int blue = 0;
 
             for (int xx = -1; xx <= 1; ++xx) {
                 for (int zz = -1; zz <= 1; ++zz) {
-                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getBiomeGrassColor(x + xx, y, z + zz);
+                    BlockPos bp = pos.add(xx, 0, zz);
+                    int mult = access.getBiome(bp).getGrassColorAtPos(bp);
                     red += (mult & 0xFF0000) >> 16;
                     green += (mult & 0x00FF00) >> 8;
                     blue += (mult & 0x0000FF);
@@ -370,14 +360,15 @@ public class WesterosBlockDef {
         }
         @Override
         @SideOnly(Side.CLIENT)
-        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             int red = 0;
             int green = 0;
             int blue = 0;
 
             for (int xx = -1; xx <= 1; ++xx) {
                 for (int zz = -1; zz <= 1; ++zz) {
-                    int mult = access.getBiomeGenForCoords(x + xx, z + zz).getWaterColorMultiplier();
+                    BlockPos bp = pos.add(xx, 0, zz);
+                    int mult = access.getBiome(bp).getWaterColorMultiplier();
                     red += (mult & 0xFF0000) >> 16;
                     green += (mult & 0x00FF00) >> 8;
                     blue += (mult & 0x0000FF);
@@ -395,7 +386,7 @@ public class WesterosBlockDef {
         }
         @Override
         @SideOnly(Side.CLIENT)
-        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             return ColorizerFoliage.getFoliageColorPine();
         }
     }
@@ -408,7 +399,7 @@ public class WesterosBlockDef {
         }
         @Override
         @SideOnly(Side.CLIENT)
-        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             return ColorizerFoliage.getFoliageColorBirch();
         }
     }
@@ -421,7 +412,7 @@ public class WesterosBlockDef {
         }
         @Override
         @SideOnly(Side.CLIENT)
-        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             return ColorizerFoliage.getFoliageColorBasic();
         }
     }
@@ -453,8 +444,8 @@ public class WesterosBlockDef {
 
         private int getColor(float tmp, float hum)
         {
-            tmp = MathHelper.clamp_float(tmp, 0.0F, 1.0F);
-            hum = MathHelper.clamp_float(hum, 0.0F, 1.0F);
+            tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
+            hum = MathHelper.clamp(hum, 0.0F, 1.0F);
             hum *= tmp;
             int i = (int)((1.0D - tmp) * 255.0D);
             int j = (int)((1.0D - hum) * 255.0D);
@@ -463,15 +454,16 @@ public class WesterosBlockDef {
         
         @Override
         @SideOnly(Side.CLIENT)
-        public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             int red = 0;
             int green = 0;
             int blue = 0;
 
             for (int xx = -1; xx <= 1; ++xx) {
                 for (int zz = -1; zz <= 1; ++zz) {
-                    BiomeGenBase biome = access.getBiomeGenForCoords(x + xx, z + zz);
-                    int mult = getColor(biome.getFloatTemperature(x + xx, y, z + zz), biome.getFloatRainfall());
+                    BlockPos bp = pos.add(xx, 0, zz);
+                    Biome biome = access.getBiome(bp);
+                    int mult = getColor(biome.getFloatTemperature(bp), biome.getRainfall());
                     red += (mult & 0xFF0000) >> 16;
                     green += (mult & 0x00FF00) >> 8;
                     blue += (mult & 0x0000FF);
@@ -525,7 +517,7 @@ public class WesterosBlockDef {
         Material m = materialTable.get(material);
         if (m == null) {
             WesterosBlocks.log.warning(String.format("Invalid material '%s' in block '%s'", material, blockName));
-            return Material.rock;
+            return Material.ROCK;
         }
         return m;
     }
@@ -712,7 +704,7 @@ public class WesterosBlockDef {
             blk.setStepSound(this.getStepSound());
         }
         if ((this.fireSpreadSpeed > 0) || (this.flamability > 0)) {
-            Blocks.fire.setFireInfo(blk, this.fireSpreadSpeed, this.flamability);
+            Blocks.FIRE.setFireInfo(blk, this.fireSpreadSpeed, this.flamability);
         }
         if (creativeTab != null) {
             blk.setCreativeTab(getCreativeTab());
@@ -1227,7 +1219,7 @@ public class WesterosBlockDef {
         materialTable.put("grass",  Material.grass);
         materialTable.put("ground",  Material.ground);
         materialTable.put("wood",  Material.wood);
-        materialTable.put("rock",  Material.rock);
+        materialTable.put("rock",  Material.ROCK);
         materialTable.put("iron", Material.iron);
         materialTable.put("anvil", Material.anvil);
         materialTable.put("water", Material.water);
@@ -1237,7 +1229,7 @@ public class WesterosBlockDef {
         materialTable.put("vine", Material.vine);
         materialTable.put("sponge", Material.sponge);
         materialTable.put("cloth", Material.cloth);
-        materialTable.put("fire", Material.fire);
+        materialTable.put("fire", Material.FIRE);
         materialTable.put("sand", Material.sand);
         materialTable.put("circuits", Material.circuits);
         materialTable.put("glass", Material.glass);

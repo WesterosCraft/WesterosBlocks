@@ -2,12 +2,12 @@ package com.westeroscraft.westerosblocks.asm;
 
 import java.util.Map;
 
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin.MCVersion;
-import cpw.mods.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.MCVersion;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
 
-@MCVersion(value = "1.7.10")
+@MCVersion(value = "1.11.2")
 @TransformerExclusions({ "com.westeroscraft.westerosblocks.asm" })
-public class FMLLoadingPlugin  implements cpw.mods.fml.relauncher.IFMLLoadingPlugin {
+public class FMLLoadingPlugin  implements net.minecraftforge.fml.relauncher.IFMLLoadingPlugin {
     @Override
     public String[] getASMTransformerClass() {
         return new String[]{ ClassTransformer.class.getName()};

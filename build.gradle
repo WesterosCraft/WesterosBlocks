@@ -11,11 +11,11 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
     }
 }
 
-apply plugin: 'forge'
+apply plugin: 'net.minecraftforge.gradle.forge'
 
 // define the properties file
 ext.configFile = file "build.properties"
@@ -29,14 +29,14 @@ configFile.withReader {
 version = "${config.WesterosBlocks_version}${config.WesterosBlocks_extversion}"
 group= "com.westeroscraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "WesterosBlocks"
-targetCompatibility = '1.7'
-sourceCompatibility = '1.7'
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
 ext.buildNumber = System.getenv().BUILD_NUMBER ?: "Dev"
 
 minecraft {
     version = config.minecraft_version + "-" + config.forge_version
-    assetDir = "run/assets"
-
+	runDir = "run"
+	mappings = config.mappings_version
 	replaceIn "Version.java"
     	replace "@VERSION@", config.WesterosBlocks_version + config.WesterosBlocks_extversion + '-' + project.ext.buildNumber
     	replace "@BUILD_NUMBER@", project.ext.buildNumber
@@ -83,7 +83,7 @@ jar {
         attributes 'FMLCorePlugin': 'com.westeroscraft.westerosblocks.asm.FMLLoadingPlugin'
         attributes 'FMLCorePluginContainsFMLMod': 'true'
     }
-   classifier = "forge-1.7.10"
+   classifier = "forge-1.11.2"
    destinationDir = project.projectDir
    //from { configurations.westerosblocks.collect { it.isDirectory() ? it : zipTree(it) } }
    //manifest {

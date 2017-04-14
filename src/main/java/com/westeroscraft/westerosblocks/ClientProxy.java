@@ -23,9 +23,9 @@ public class ClientProxy extends Proxy {
     @Override
     public EntityPlayer getPlayerFromNetHandler (INetHandler handler) {
         if (handler instanceof NetHandlerPlayServer) {
-            return ((NetHandlerPlayServer) handler).playerEntity;
+            return ((NetHandlerPlayServer) handler).player;
         } else {
-            return Minecraft.getMinecraft().thePlayer;
+            return Minecraft.getMinecraft().player;
         }
     }	
 }

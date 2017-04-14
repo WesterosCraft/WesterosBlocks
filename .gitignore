@@ -9,3 +9,5 @@ WesterosBlocks-*.jar
 /.settings
 /run
 .DS_Store
+/WesterosBlocks_Client.launch
+/WesterosBlocks_Server.launch
