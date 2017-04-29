@@ -6,9 +6,9 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import cpw.mods.fml.common.network.FMLIndexedMessageToMessageCodec;
-import cpw.mods.fml.common.network.FMLOutboundHandler;
-import cpw.mods.fml.relauncher.Side;
+import net.minecraftforge.fml.common.network.FMLIndexedMessageToMessageCodec;
+import net.minecraftforge.fml.common.network.FMLOutboundHandler;
+import net.minecraftforge.fml.relauncher.Side;
 
 public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCodec<WBPacket> {
     public static final String CHANNEL = "WesterosBlocks";
@@ -45,7 +45,7 @@ public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCode
             WesterosBlocks.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGETARGS).set(player);
             WesterosBlocks.channels.get(Side.SERVER).writeOutbound(packet);
         } catch (Throwable t) {
-            String name = player.getDisplayName();
+            String name = player.getDisplayName().getUnformattedText();
 
             if (name == null) {
                 name = "<no name>";

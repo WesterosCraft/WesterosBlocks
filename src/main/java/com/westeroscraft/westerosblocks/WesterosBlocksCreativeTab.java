@@ -43,7 +43,7 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
     }
 
     @Override
-    public Item getTabIconItem() {
-        return getIconItemStack().getItem();
+    public ItemStack getTabIconItem() {
+        return getIconItemStack();
     }
 }

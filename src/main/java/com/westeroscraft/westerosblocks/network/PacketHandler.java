@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
-import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.INetHandler;

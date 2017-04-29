@@ -55,13 +55,17 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockFarmland;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.BlockStairs;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -242,7 +246,7 @@ public class WesterosBlockDef {
         public float xrand = 0.0F, yrand = 0.0F, zrand = 0.0F;  // Default random position of effect (-rand to +rand)
         public float vxrand = 0.0F, vyrand = 0.0F, vzrand = 0.0F;  // Default random velocity of effect (-rand to +rand)
         public float chance = 1.0F;
-        public String particle;
+        public EnumParticleTypes particle;
     }
     
     public static class Subblock {
@@ -474,9 +478,9 @@ public class WesterosBlockDef {
     }
 
     
-    @SideOnly(Side.CLIENT)
-    private transient IIcon[][] icons_by_meta;
-    private transient IIcon[] itemicons_by_meta;
+//    @SideOnly(Side.CLIENT)
+//    private transient IIcon[][] icons_by_meta;
+//    private transient IIcon[] itemicons_by_meta;
     
     private transient Subblock subblock_by_meta[];
     private transient int fireSpreadSpeed_by_meta[] = null;
@@ -492,11 +496,11 @@ public class WesterosBlockDef {
     private transient boolean hasCollisionBoxes = false;
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
-    private static final Map<String, Block.SoundType> stepSoundTable = new HashMap<String, Block.SoundType>();
+    private static final Map<String, SoundType> stepSoundTable = new HashMap<String, SoundType>();
     private static final Map<String, CreativeTabs> tabTable = new HashMap<String, CreativeTabs>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
     private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
-    private static final HashSet<String> particles = new HashSet<String>();
+    private static final Map<String, EnumParticleTypes> particles = new HashMap<String, EnumParticleTypes>();
 
     private int metaMask = 0xF; // Bitmask for translating raw metadata values to base (subblock) meta values
     
@@ -522,11 +526,11 @@ public class WesterosBlockDef {
         return m;
     }
     
-    public Block.SoundType getStepSound() {
-        Block.SoundType ss = stepSoundTable.get(stepSound);
+    public SoundType getStepSound() {
+        SoundType ss = stepSoundTable.get(stepSound);
         if (ss == null) {
             WesterosBlocks.log.warning(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
-            return Block.soundTypeStone;
+            return SoundType.STONE;
         }
         return ss;
     }
@@ -651,7 +655,7 @@ public class WesterosBlockDef {
                     for (Particle pid : sb.particles) {
                         if (particles.contains(pid.particle) == false) {
                             WesterosBlocks.log.warning(String.format("Invalid particle '%s' in block '%s'", pid.particle, blockName));
-                            pid.particle = "smoke"; // Use smoke by default
+                            pid.particle = EnumParticleTypes.SMOKE_NORMAL; // Use smoke by default
                         }
                     }
                 }
@@ -1004,40 +1008,40 @@ public class WesterosBlockDef {
         return Collections.emptyList();
     }
 
-    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
-        int meta = world.getBlockMetadata(x, y, z);
-        BoundingBox bb = getBoundingBox(meta);
-        if (bb != null) {
-            return AxisAlignedBB.getBoundingBox((double)x + bb.xMin, (double)y + bb.yMin, (double)z + bb.zMin, (double)x + bb.xMax, (double)y + bb.yMax, (double)z + bb.zMax);
-        }
-        return null;
-    }
-    public void setBlockBoundsBasedOnState(Block blk, IBlockAccess blockaccess, int x, int y, int z) {
-        int meta = blockaccess.getBlockMetadata(x, y, z);
-        BoundingBox bb = getBoundingBox(meta);
-        if (bb != null) {
-            blk.setBlockBounds(bb.xMin,  bb.yMin,  bb.zMin, bb.xMax, bb.yMax, bb.zMax);
-        }
-        else {
-            blk.setBlockBounds(0, 0, 0, 1, 1, 1);
-        }
-    }
-    public boolean shouldSideBeRendered(IBlockAccess access, int x, int y, int z, int side) {
-        int meta = access.getBlockMetadata(x, y, z);
+//    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z) {
+//        int meta = world.getBlockMetadata(x, y, z);
+//        BoundingBox bb = getBoundingBox(meta);
+//        if (bb != null) {
+//            return AxisAlignedBB.getBoundingBox((double)x + bb.xMin, (double)y + bb.yMin, (double)z + bb.zMin, (double)x + bb.xMax, (double)y + bb.yMax, (double)z + bb.zMax);
+//        }
+//        return null;
+//    }
+//    public void setBlockBoundsBasedOnState(Block blk, IBlockAccess blockaccess, int x, int y, int z) {
+//        int meta = blockaccess.getBlockMetadata(x, y, z);
+//        BoundingBox bb = getBoundingBox(meta);
+//        if (bb != null) {
+//            blk.setBlockBounds(bb.xMin,  bb.yMin,  bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+//        }
+//        else {
+//            blk.setBlockBounds(0, 0, 0, 1, 1, 1);
+//        }
+//    }
+    public boolean shouldSideBeRendered(IBlockState state, IBlockAccess access, BlockPos pos, EnumFacing side) {
+        int meta = state.getBlock().getMetaFromState(state);
         BoundingBox bb = getBoundingBox(meta);
         if (bb == null) return true;
         switch (side) {
-            case 0: // Bottom
+            case DOWN: // Bottom
                 return (bb.yMin > 0.0F);
-            case 1: // Top
+            case UP: // Top
                 return (bb.yMax < 1.0F);
-            case 2: // Zmin
+            case NORTH: // Zmin
                 return (bb.zMin > 0.0F);
-            case 3: // Zmax
+            case SOUTH: // Zmax
                 return (bb.zMax < 1.0F);
-            case 4: // Xmin
+            case WEST: // Xmin
                 return (bb.xMin > 0.0F);
-            case 5: // Xmax
+            case EAST: // Xmax
                 return (bb.xMax < 1.0F);
             default:
                 return true;
@@ -1196,81 +1200,83 @@ public class WesterosBlockDef {
         return true;
     }
     
-    public IIcon getItemIcon(int meta) {
-        meta &= metaMask;
-        if (itemicons_by_meta != null) {
-            if (meta >= itemicons_by_meta.length) {
-                meta = 0;
-            }
-            if (itemicons_by_meta[meta] != null) {
-                return itemicons_by_meta[meta];
-            }
-        }
-        Subblock sb = getByMeta(meta);
-        int idx = 0;
-        if (sb != null) {
-            idx = sb.itemTextureIndex;
-        }
-        return doStandardIconGet(idx, meta);
-    }
+//    public IIcon getItemIcon(int meta) {
+//        meta &= metaMask;
+//        if (itemicons_by_meta != null) {
+//            if (meta >= itemicons_by_meta.length) {
+//                meta = 0;
+//            }
+//            if (itemicons_by_meta[meta] != null) {
+//                return itemicons_by_meta[meta];
+//            }
+//        }
+//        Subblock sb = getByMeta(meta);
+//        int idx = 0;
+//        if (sb != null) {
+//            idx = sb.itemTextureIndex;
+//        }
+//        return doStandardIconGet(idx, meta);
+//    }
     
     public static void initialize() {
-        materialTable.put("air",  Material.air);
-        materialTable.put("grass",  Material.grass);
-        materialTable.put("ground",  Material.ground);
-        materialTable.put("wood",  Material.wood);
+        materialTable.put("air",  Material.AIR);
+        materialTable.put("grass",  Material.GRASS);
+        materialTable.put("ground",  Material.GROUND);
+        materialTable.put("wood",  Material.WOOD);
         materialTable.put("rock",  Material.ROCK);
-        materialTable.put("iron", Material.iron);
-        materialTable.put("anvil", Material.anvil);
-        materialTable.put("water", Material.water);
-        materialTable.put("lava", Material.lava);
-        materialTable.put("leaves", Material.leaves);
-        materialTable.put("plants", Material.plants);
-        materialTable.put("vine", Material.vine);
-        materialTable.put("sponge", Material.sponge);
-        materialTable.put("cloth", Material.cloth);
+        materialTable.put("iron", Material.IRON);
+        materialTable.put("anvil", Material.ANVIL);
+        materialTable.put("water", Material.WATER);
+        materialTable.put("lava", Material.LAVA);
+        materialTable.put("leaves", Material.LEAVES);
+        materialTable.put("plants", Material.PLANTS);
+        materialTable.put("vine", Material.VINE);
+        materialTable.put("sponge", Material.SPONGE);
+        materialTable.put("cloth", Material.CLOTH);
         materialTable.put("fire", Material.FIRE);
-        materialTable.put("sand", Material.sand);
-        materialTable.put("circuits", Material.circuits);
-        materialTable.put("glass", Material.glass);
-        materialTable.put("redstoneLight", Material.redstoneLight);
-        materialTable.put("tnt", Material.tnt);
-        materialTable.put("coral", Material.coral);
-        materialTable.put("ice", Material.ice);
-        materialTable.put("snow", Material.snow);
-        materialTable.put("craftedSnow", Material.craftedSnow);
-        materialTable.put("cactus", Material.cactus);
-        materialTable.put("clay", Material.clay);
-        materialTable.put("pumpkin", Material.gourd);
-        materialTable.put("dragonEgg", Material.dragonEgg);
-        materialTable.put("portal", Material.portal);
-        materialTable.put("cake", Material.cake);
-        materialTable.put("web", Material.web);
-        materialTable.put("piston", Material.piston);
+        materialTable.put("sand", Material.SAND);
+        materialTable.put("circuits", Material.CIRCUITS);
+        materialTable.put("glass", Material.GLASS);
+        materialTable.put("redstoneLight", Material.REDSTONE_LIGHT);
+        materialTable.put("tnt", Material.TNT);
+        materialTable.put("coral", Material.CORAL);
+        materialTable.put("ice", Material.ICE);
+        materialTable.put("snow", Material.SNOW);
+        materialTable.put("craftedSnow", Material.CRAFTED_SNOW);
+        materialTable.put("cactus", Material.CACTUS);
+        materialTable.put("clay", Material.CLAY);
+        materialTable.put("pumpkin", Material.GOURD);
+        materialTable.put("dragonEgg", Material.DRAGON_EGG);
+        materialTable.put("portal", Material.PORTAL);
+        materialTable.put("cake", Material.CAKE);
+        materialTable.put("web", Material.WEB);
+        materialTable.put("piston", Material.PISTON);
 
-        stepSoundTable.put("powder", Block.soundTypeSand);
-        stepSoundTable.put("wood", Block.soundTypeWood);
-        stepSoundTable.put("gravel", Block.soundTypeGravel);
-        stepSoundTable.put("grass", Block.soundTypeGrass);
-        stepSoundTable.put("stone", Block.soundTypeStone);
-        stepSoundTable.put("metal", Block.soundTypeMetal);
-        stepSoundTable.put("glass", Block.soundTypeGlass);
-        stepSoundTable.put("cloth", Block.soundTypeCloth);
-        stepSoundTable.put("sand", Block.soundTypeSand);
-        stepSoundTable.put("snow", Block.soundTypeSnow);
-        stepSoundTable.put("ladder", Block.soundTypeLadder);
-        stepSoundTable.put("anvil", Block.soundTypeAnvil);
+        stepSoundTable.put("powder", SoundType.SAND);
+        stepSoundTable.put("wood", SoundType.WOOD);
+        stepSoundTable.put("gravel", SoundType.GROUND);
+        stepSoundTable.put("grass", SoundType.GROUND);
+        stepSoundTable.put("stone", SoundType.STONE);
+        stepSoundTable.put("metal", SoundType.METAL);
+        stepSoundTable.put("glass", SoundType.GLASS);
+        stepSoundTable.put("cloth", SoundType.CLOTH);
+        stepSoundTable.put("sand", SoundType.SAND);
+        stepSoundTable.put("snow", SoundType.SNOW);
+        stepSoundTable.put("ladder", SoundType.LADDER);
+        stepSoundTable.put("anvil", SoundType.ANVIL);
+        stepSoundTable.put("plant", SoundType.PLANT);
+        stepSoundTable.put("slime", SoundType.SLIME);
         // Tab table
-        tabTable.put("buildingBlocks", CreativeTabs.tabBlock);
-        tabTable.put("decorations", CreativeTabs.tabDecorations);
-        tabTable.put("redstone", CreativeTabs.tabRedstone);
-        tabTable.put("transportation", CreativeTabs.tabTransport);
-        tabTable.put("misc", CreativeTabs.tabMisc);
-        tabTable.put("food", CreativeTabs.tabFood);
-        tabTable.put("tools", CreativeTabs.tabTools);
-        tabTable.put("combat", CreativeTabs.tabCombat);
-        tabTable.put("brewing", CreativeTabs.tabBrewing);
-        tabTable.put("materials", CreativeTabs.tabMaterials);
+        tabTable.put("buildingBlocks", CreativeTabs.BUILDING_BLOCKS);
+        tabTable.put("decorations", CreativeTabs.DECORATIONS);
+        tabTable.put("redstone", CreativeTabs.REDSTONE);
+        tabTable.put("transportation", CreativeTabs.TRANSPORTATION);
+        tabTable.put("misc", CreativeTabs.MISC);
+        tabTable.put("food", CreativeTabs.FOOD);
+        tabTable.put("tools", CreativeTabs.TOOLS);
+        tabTable.put("combat", CreativeTabs.COMBAT);
+        tabTable.put("brewing", CreativeTabs.BREWING);
+        tabTable.put("materials", CreativeTabs.MATERIALS);
 
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
@@ -1316,40 +1322,40 @@ public class WesterosBlockDef {
         colorMultTable.put("lily", new ColorMultHandler(2129968));
         
         // Valid particle values
-        particles.add("hugeexplosion");
-        particles.add("largeexplode");
-        particles.add("fireworksSpark");
-        particles.add("bubble");
-        particles.add("suspended");
-        particles.add("depthsuspend");
-        particles.add("townaura");
-        particles.add("crit");
-        particles.add("magicCrit");
-        particles.add("smoke");
-        particles.add("mobSpell");
-        particles.add("mobSpellAmbient");
-        particles.add("spell");
-        particles.add("instantSpell");
-        particles.add("witchMagic");
-        particles.add("note");
-        particles.add("portal");
-        particles.add("enchantmenttable");
-        particles.add("explode");
-        particles.add("flame");
-        particles.add("lava");
-        particles.add("footstep");
-        particles.add("splash");
-        particles.add("largesmoke");
-        particles.add("cloud");
-        particles.add("reddust");
-        particles.add("snowballpoof");
-        particles.add("dripWater");
-        particles.add("dripLava");
-        particles.add("snowshovel");
-        particles.add("slime");
-        particles.add("heart");
-        particles.add("angryVillager");
-        particles.add("happyVillager");
+        particles.put("hugeexplosion", EnumParticleTypes.EXPLOSION_HUGE);
+        particles.put("largeexplode", EnumParticleTypes.EXPLOSION_LARGE);
+        particles.put("fireworksSpark", EnumParticleTypes.FIREWORKS_SPARK);
+        particles.put("bubble", EnumParticleTypes.WATER_BUBBLE);
+        particles.put("suspended", EnumParticleTypes.SUSPENDED);
+        particles.put("depthsuspend", EnumParticleTypes.SUSPENDED_DEPTH);
+        particles.put("townaura", EnumParticleTypes.TOWN_AURA);
+        particles.put("crit", EnumParticleTypes.CRIT);
+        particles.put("magicCrit", EnumParticleTypes.CRIT_MAGIC);
+        particles.put("smoke", EnumParticleTypes.SMOKE_NORMAL);
+        particles.put("mobSpell", EnumParticleTypes.SPELL_MOB);
+        particles.put("mobSpellAmbient", EnumParticleTypes.SPELL_MOB_AMBIENT);
+        particles.put("spell", EnumParticleTypes.SPELL);
+        particles.put("instantSpell", EnumParticleTypes.SPELL_INSTANT);
+        particles.put("witchMagic", EnumParticleTypes.SPELL_WITCH);
+        particles.put("note", EnumParticleTypes.NOTE);
+        particles.put("portal", EnumParticleTypes.PORTAL);
+        particles.put("enchantmenttable", EnumParticleTypes.ENCHANTMENT_TABLE);
+        particles.put("explode", EnumParticleTypes.EXPLOSION_NORMAL);
+        particles.put("flame", EnumParticleTypes.FLAME);
+        particles.put("lava", EnumParticleTypes.LAVA);
+        particles.put("footstep", EnumParticleTypes.FOOTSTEP);
+        particles.put("splash", EnumParticleTypes.WATER_SPLASH);
+        particles.put("largesmoke", EnumParticleTypes.SMOKE_LARGE);
+        particles.put("cloud", EnumParticleTypes.CLOUD);
+        particles.put("reddust", EnumParticleTypes.REDSTONE);
+        particles.put("snowballpoof", EnumParticleTypes.SNOWBALL);
+        particles.put("dripWater", EnumParticleTypes.DRIP_WATER);
+        particles.put("dripLava", EnumParticleTypes.DRIP_LAVA);
+        particles.put("snowshovel", EnumParticleTypes.SNOW_SHOVEL);
+        particles.put("slime", EnumParticleTypes.SLIME);
+        particles.put("heart", EnumParticleTypes.HEART);
+        particles.put("angryVillager", EnumParticleTypes.VILLAGER_ANGRY);
+        particles.put("happyVillager", EnumParticleTypes.VILLAGER_HAPPY);
      }
     // Get color muliplier
     public ColorMultHandler getColorHandler(String hnd) {
@@ -1526,16 +1532,15 @@ public class WesterosBlockDef {
      * Do standard random display processing
      */
     @SideOnly(Side.CLIENT)
-    public void doRandomDisplayTick(World world, int x, int y, int z, Random rnd) {
-        doRandomDisplayTick(world, x, y, z, rnd, null);
+    public void randomDisplayTick(IBlockState state, World world, BlockPos pos, Random rnd) {
+        doRandomDisplayTick(state, world, pos, rnd, null);
     }
     
-    public void doRandomDisplayTick(World world, int x, int y, int z, Random rnd, CuboidRotation[] rot) {
-
+    public void doRandomDisplayTick(IBlockState state, World world, BlockPos pos, Random rnd, CuboidRotation[] rot) {
         if (this.particles_by_meta == null) {
             return;
         }
-        int meta = world.getBlockMetadata(x,  y,  z);
+        int meta = state.getBlock().getMetaFromState(state);
         List<Particle> lst = this.particles_by_meta[meta & metaMask]; // Get particles, if any
         if (lst == null) {
             return;
@@ -1570,6 +1575,9 @@ public class WesterosBlockDef {
             if (p.vxrand > 0.0F) { dvx += p.vxrand * (rnd.nextFloat() - 0.5F) * 2.0; }
             if (p.vyrand > 0.0F) { dvy += p.vyrand * (rnd.nextFloat() - 0.5F) * 2.0; }
             if (p.vzrand > 0.0F) { dvz += p.vzrand * (rnd.nextFloat() - 0.5F) * 2.0; }
+            double x = pos.getX();
+            double y = pos.getY();
+            double z = pos.getZ();
             switch (cr) {
                 default:
                     world.spawnParticle(p.particle, x + dx, y + dy, z + dz, dvx, dvy, dvz);

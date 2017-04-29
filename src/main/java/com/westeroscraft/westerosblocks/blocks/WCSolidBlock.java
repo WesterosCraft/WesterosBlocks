@@ -26,8 +26,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class WCSolidBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
