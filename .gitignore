@@ -5,9 +5,9 @@ WesterosBlocks-*.jar
 .classpath
 /eclipse
 /.gradle
-.project
 /.settings
 /run
 .DS_Store
-/WesterosBlocks_Client.launch
-/WesterosBlocks_Server.launch
+/*_Client.launch
+/*_Server.launch
+/.project
