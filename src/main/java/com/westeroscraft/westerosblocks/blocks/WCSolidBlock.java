@@ -7,17 +7,20 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.Vec3;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -25,6 +28,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
+import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,18 +41,25 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
+            new_variant = PropertyMeta.create("variant", def.getDefinedBaseMeta());
+
             return new Block[] { new WCSolidBlock(def) };
         }
     }
+    // Hack to pass in property, which is needed during 'block' constructor, but isn't static for us
+    private static PropertyMeta new_variant = null;
     
     private WesterosBlockDef def;
     private boolean isSolidOpaque = true;
     
+    private PropertyMeta variant;
+
     protected WCSolidBlock(WesterosBlockDef def) {
         super(def.getMaterial());
         this.isSolidOpaque = !def.nonOpaque;
         this.def = def;
         def.doStandardContructorSettings(this);
+        setSoundType(def.getStepSound());
     }
 
     public boolean initializeBlockDefinition() {
@@ -62,74 +73,49 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         
         return true;
     }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
-    {
-        def.doStandardRegisterIcons(iconRegister);
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta) {
-        return def.doStandardIconGet(side, meta);
-    }
     
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
+        def.getStandardSubBlocks(this, Item.getIdFromItem(itemIn), tab, list);
     }
+
     @Override
-    public int damageDropped(int meta) {
-        return meta;
+    public int damageDropped(IBlockState state) {
+        return getMetaFromState(state);
     }
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
+    
     @Override
-    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, face);
+    public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {
+        return def.getFireSpreadSpeed(world, pos, face);
     }
+    
     @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, face);
+    public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) {
+        return def.getFlammability(world, pos, face);
     }
+    
     @Override
-    public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z);
+    public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+        return def.getLightValue(state, world, pos);
     }
+    
     @Override
-    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
-        return def.getLightOpacity(this, world, x, y, z);
+    public int getLightOpacity(IBlockState state, IBlockAccess world, BlockPos pos) {
+        return def.getLightOpacity(state, world, pos);
     }
+
     @SideOnly(Side.CLIENT)
-    @Override
-    public int getBlockColor() {
-        return def.getBlockColor();
-    }
-    @SideOnly(Side.CLIENT)
-    @Override
-    public int getRenderColor(int meta)
+    public BlockRenderLayer getBlockLayer()
     {
-        return def.getRenderColor(meta);
+        return (def.alphaRender?BlockRenderLayer.SOLID:BlockRenderLayer.TRANSLUCENT);
     }
-    @SideOnly(Side.CLIENT)
+
     @Override
-    public int colorMultiplier(IBlockAccess access, int x, int y, int z)
-    {
-        return def.colorMultiplier(access, x, y, z);
-    }
-    @SideOnly(Side.CLIENT)
-    public int getRenderBlockPass()
-    {
-        return (def.alphaRender?1:0);
-    }
-    @Override
-    public boolean isOpaqueCube() {
+    public boolean isOpaqueCube(IBlockState state) {
         return isSolidOpaque;
     }
 
@@ -141,62 +127,79 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
-        def.doRandomDisplayTick(world, x, y, z, rnd);
-        super.randomDisplayTick(world, x, y, z, rnd);
+    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rnd) {
+        def.randomDisplayTick(stateIn, worldIn, pos, rnd);
+        super.randomDisplayTick(stateIn, worldIn, pos, rnd);
     }
     
-    @SuppressWarnings("rawtypes")
-    @Override
-    public void addCollisionBoxesToList(World world, int x, int y, int z, AxisAlignedBB mask, List list, Entity entity)
-    {
-        if (def.hasCollisionBoxes() == false) {
-            super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
-            return;
-        }
-        int meta = world.getBlockMetadata(x,  y,  z);
-        List<BoundingBox> cl = def.getCollisionBoxList(meta); 
-        if (cl == null) {
-            super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
-            return;
-        }
-        for (BoundingBox c : cl) {
-            this.setBlockBounds(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax);
-            super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
-        }
-        def.setBlockBoundsBasedOnState(this, world, x, y, z);
-    }
+    //@SuppressWarnings("rawtypes")
+    //@Override
+    //public void addCollisionBoxesToList(World world, int x, int y, int z, AxisAlignedBB mask, List list, Entity entity)
+    //{
+    //    if (def.hasCollisionBoxes() == false) {
+    //        super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
+    //        return;
+    //    }
+    //    int meta = world.getBlockMetadata(x,  y,  z);
+    //    List<BoundingBox> cl = def.getCollisionBoxList(meta); 
+    //    if (cl == null) {
+    //        super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
+    //        return;
+    //    }
+    //    for (BoundingBox c : cl) {
+    //        this.setBlockBounds(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax);
+    //        super.addCollisionBoxesToList(world, x, y, z, mask, list, entity);
+    //    }
+    //    def.setBlockBoundsBasedOnState(this, world, x, y, z);
+    //}
 
+    //@Override
+    //public MovingObjectPosition collisionRayTrace(World world, int x, int y, int z, Vec3 start, Vec3 end) {
+    //    if (def.hasCollisionBoxes() == false) {
+    //        return super.collisionRayTrace(world, x, y, z, start, end);
+    //    }
+    //    int meta = world.getBlockMetadata(x,  y,  z);
+    //    List<BoundingBox> cl = def.getCollisionBoxList(meta); 
+    //    if (cl == null) {
+    //        return super.collisionRayTrace(world, x, y, z, start, end);
+    //    }
+    //    MovingObjectPosition bestpos = null;
+    //    double bestdist = 0.0;
+    //    for (BoundingBox c : cl) {
+    //        this.setBlockBounds(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax);
+    //        MovingObjectPosition pos = super.collisionRayTrace(world, x, y, z, start, end);
+    //        if (pos != null) {
+    //            if (bestpos == null) {
+    //                bestpos = pos;
+    //                bestdist = bestpos.hitVec.squareDistanceTo(end);
+    //            }
+    //            else {
+    //                double dist = pos.hitVec.squareDistanceTo(end);
+    //                if (dist > bestdist) {
+    //                    bestpos = pos;
+    //                    bestdist = dist;
+    //                }
+    //            }
+    //        }
+    //    }
+    //    def.setBlockBoundsBasedOnState(this, world, x, y, z);
+    //    return bestpos;
+    //}
     @Override
-    public MovingObjectPosition collisionRayTrace(World world, int x, int y, int z, Vec3 start, Vec3 end) {
-        if (def.hasCollisionBoxes() == false) {
-            return super.collisionRayTrace(world, x, y, z, start, end);
+    protected BlockStateContainer createBlockState() {
+        if (new_variant != null) {
+            variant = new_variant;
+            new_variant = null;
         }
-        int meta = world.getBlockMetadata(x,  y,  z);
-        List<BoundingBox> cl = def.getCollisionBoxList(meta); 
-        if (cl == null) {
-            return super.collisionRayTrace(world, x, y, z, start, end);
-        }
-        MovingObjectPosition bestpos = null;
-        double bestdist = 0.0;
-        for (BoundingBox c : cl) {
-            this.setBlockBounds(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax);
-            MovingObjectPosition pos = super.collisionRayTrace(world, x, y, z, start, end);
-            if (pos != null) {
-                if (bestpos == null) {
-                    bestpos = pos;
-                    bestdist = bestpos.hitVec.squareDistanceTo(end);
-                }
-                else {
-                    double dist = pos.hitVec.squareDistanceTo(end);
-                    if (dist > bestdist) {
-                        bestpos = pos;
-                        bestdist = dist;
-                    }
-                }
-            }
-        }
-        def.setBlockBoundsBasedOnState(this, world, x, y, z);
-        return bestpos;
+        return new BlockStateContainer(this, new IProperty[] { variant });
     }
+    // map from state to meta and vice verca - use highest bit for polished boolean, use low 2 bits for variant
+    @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return this.getDefaultState().withProperty(variant, meta);
+    }
+    @Override
+    public int getMetaFromState(IBlockState state) {
+        return (Integer) state.getValue(variant);
+    }    
 }

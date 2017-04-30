@@ -17,51 +17,57 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
-import com.westeroscraft.westerosblocks.asm.ClassTransformer;
-import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
-import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNEStackBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
-import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
-import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
-import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
-import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
-import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
-import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
+
+//import com.westeroscraft.westerosblocks.asm.ClassTransformer;
+//import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCCuboidNEStackBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
+//import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFarmland;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.network.LanServerDetector.LanServerList;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
@@ -76,6 +82,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.fml.common.registry.GameData;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -246,7 +253,7 @@ public class WesterosBlockDef {
         public float xrand = 0.0F, yrand = 0.0F, zrand = 0.0F;  // Default random position of effect (-rand to +rand)
         public float vxrand = 0.0F, vyrand = 0.0F, vzrand = 0.0F;  // Default random velocity of effect (-rand to +rand)
         public float chance = 1.0F;
-        public EnumParticleTypes particle;
+        public String particle;
     }
     
     public static class Subblock {
@@ -653,9 +660,9 @@ public class WesterosBlockDef {
                     }
                     this.particles_by_meta[sb.meta]= sb.particles; 
                     for (Particle pid : sb.particles) {
-                        if (particles.contains(pid.particle) == false) {
+                        if (particles.containsKey(pid.particle) == false) {
                             WesterosBlocks.log.warning(String.format("Invalid particle '%s' in block '%s'", pid.particle, blockName));
-                            pid.particle = EnumParticleTypes.SMOKE_NORMAL; // Use smoke by default
+                            pid.particle = "smoke"; // Use smoke by default
                         }
                     }
                 }
@@ -677,6 +684,20 @@ public class WesterosBlockDef {
         }
         return subblock_by_meta[meta & metaMask];
     }
+    
+    // Return list of base metavalues (masked)
+    public List<Integer> getDefinedBaseMeta() {
+        if (subblock_by_meta == null) {
+            initMeta();
+        }
+        ArrayList<Integer> lst = new ArrayList<Integer>();
+        for (int i = 0; i <= metaMask; i++) {
+            if (subblock_by_meta[i] != null) {
+                lst.add(i);
+            }
+        }
+        return lst;
+    }
 
     // Do standard constructor settings for given block class
     public void doStandardContructorSettings(Block blk) {
@@ -687,7 +708,7 @@ public class WesterosBlockDef {
             blk.setHardness(this.hardness);
         }
         if (this.lightOpacity == DEF_INT) {
-            if (blk.isOpaqueCube()) {
+            if (blk.isOpaqueCube(blk.getDefaultState())) { //TODO: not sure this is going to be right....
                 this.lightOpacity = 255;
             }
             else {
@@ -703,10 +724,7 @@ public class WesterosBlockDef {
             this.lightValue = 0.0F;
         }
         blk.setLightLevel(this.lightValue);
-        blk.setBlockName(this.getBlockName(idx));
-        if (this.stepSound != null) {
-            blk.setStepSound(this.getStepSound());
-        }
+        blk.setUnlocalizedName(this.getBlockName(idx));
         if ((this.fireSpreadSpeed > 0) || (this.flamability > 0)) {
             Blocks.FIRE.setFireInfo(blk, this.fireSpreadSpeed, this.flamability);
         }
@@ -714,12 +732,14 @@ public class WesterosBlockDef {
             blk.setCreativeTab(getCreativeTab());
         }
         if (boundingBox != null) {
-            blk.setBlockBounds(boundingBox.xMin, boundingBox.yMin, boundingBox.zMin, boundingBox.xMax, boundingBox.yMax, boundingBox.zMax);
+            //TODO: handled elsewhere
+            //blk.setBlockBounds(boundingBox.xMin, boundingBox.yMin, boundingBox.zMin, boundingBox.xMax, boundingBox.yMax, boundingBox.zMax);
         }
         if (this.particles_by_meta != null) {   // Any particles?
             blk.setTickRandomly(true);
         }
-        ClassTransformer.setUseNeighborBrightness(blk, ((blk instanceof BlockStairs) || (blk instanceof BlockSlab) || (blk instanceof BlockFarmland) || ClassTransformer.getCanBlockGrass(blk) || (blk.getLightOpacity() == 0)));
+        //TODO: need to see if we will still need this
+        //ClassTransformer.setUseNeighborBrightness(blk, ((blk instanceof BlockStairs) || (blk instanceof BlockSlab) || (blk instanceof BlockFarmland) || ClassTransformer.getCanBlockGrass(blk) || (blk.getLightOpacity() == 0)));
     }
     // Do standard initialize actions
     public void doStandardInitializeActions(Block blk) {
@@ -765,7 +785,8 @@ public class WesterosBlockDef {
                 if (sb.label == null) {
                     sb.label = this.blockName + " " + sb.meta;
                 }
-                LanguageRegistry.addName(new ItemStack(blk, 1, sb.meta), sb.label);
+                //TODO: handle this case
+                //LanguageRegistry.addName(new ItemStack(blk, 1, sb.meta), sb.label);
             }
         }
         if (subblock_by_meta == null) {
@@ -777,19 +798,15 @@ public class WesterosBlockDef {
     {
         try
         {
-            ItemBlock i = null;
-            if (itemclass != null)
-            {
-                Class<?>[] ctorArgClasses = new Class<?>[1];
-                ctorArgClasses[0] = Block.class;
-                Constructor<? extends ItemBlock> itemCtor = itemclass.getConstructor(ctorArgClasses);
-                i = itemCtor.newInstance(new Object[] { block });
+            Item i = null;
+            if (itemclass != null) {
+                i = (Item)itemclass.getConstructor(Block.class).newInstance(block);
             }
+            ResourceLocation rl = new ResourceLocation(WesterosBlocks.MOD_ID, name);
             // block registration has to happen first
-            GameData.getBlockRegistry().addObject(id, name, block);
-            if (i != null)
-            {
-                GameData.getBlockRegistry().addObject(id, name, i);
+            GameRegistry.register(block, rl);
+            if (i != null) {
+                GameRegistry.register(i, rl);
             }
             return block;
         }
@@ -801,80 +818,80 @@ public class WesterosBlockDef {
     }
 
     
-    @SideOnly(Side.CLIENT)
-    public void doStandardRegisterIcons(IIconRegister ir) {
-        if (subblock_by_meta == null) {
-            initMeta();
-        }
-        icons_by_meta = new IIcon[metaMask+1][];
-        if (subBlocks != null) {
-            HashMap<String, IIcon> map = new HashMap<String, IIcon>();
-            for (Subblock sb : subBlocks) {
-                if (sb.textures == null) {
-                    WesterosBlocks.log.warning(String.format("No textures for subblock '%d' of block '%s'", sb.meta, this.blockName));
-                    sb.textures = Collections.singletonList("INVALID_" + blockName + "_" + sb.meta);
-                }
-                icons_by_meta[sb.meta] = new IIcon[sb.textures.size()];
-                for (int i = 0; i < sb.textures.size(); i++) {
-                    String txt = sb.textures.get(i);
-                    if (txt.indexOf(':') < 0) {
-                        txt = "westerosblocks:" + txt;
-                    }
-                    IIcon ico = map.get(txt);
-                    if (ico == null) {
-                        ico = ir.registerIcon(txt);
-                        map.put(txt, ico);
-                    }
-                    icons_by_meta[sb.meta][i] = ico;
-                }
-            }
-        }
-    }
+    //@SideOnly(Side.CLIENT)
+    //public void doStandardRegisterIcons(IIconRegister ir) {
+    //    if (subblock_by_meta == null) {
+    //        initMeta();
+    //    }
+    //    icons_by_meta = new IIcon[metaMask+1][];
+    //    if (subBlocks != null) {
+    //        HashMap<String, IIcon> map = new HashMap<String, IIcon>();
+    //        for (Subblock sb : subBlocks) {
+    //            if (sb.textures == null) {
+    //                WesterosBlocks.log.warning(String.format("No textures for subblock '%d' of block '%s'", sb.meta, this.blockName));
+    //                sb.textures = Collections.singletonList("INVALID_" + blockName + "_" + sb.meta);
+    //            }
+    //            icons_by_meta[sb.meta] = new IIcon[sb.textures.size()];
+    //            for (int i = 0; i < sb.textures.size(); i++) {
+    //                String txt = sb.textures.get(i);
+    //                if (txt.indexOf(':') < 0) {
+    //                    txt = "westerosblocks:" + txt;
+    //                }
+    //                IIcon ico = map.get(txt);
+    //                if (ico == null) {
+    //                    ico = ir.registerIcon(txt);
+    //                    map.put(txt, ico);
+    //                }
+    //                icons_by_meta[sb.meta][i] = ico;
+    //            }
+    //        }
+    //    }
+    //}
 
-    @SideOnly(Side.CLIENT)
-    public void doStandardItemRegisterIcons(IIconRegister ir) {
-        if (subblock_by_meta == null) {
-            initMeta();
-        }
-        itemicons_by_meta = new IIcon[metaMask+1];
-        if (subBlocks != null) {
-            HashMap<String, IIcon> map = new HashMap<String, IIcon>();
-            for (Subblock sb : subBlocks) {
-                if (sb.noInventoryItem) continue; 
-                if (sb.itemTexture != null) {
-                    String txt = sb.itemTexture;
-                    if (txt.indexOf(':') < 0) {
-                        txt = "westerosblocks:" + txt;
-                    }
-                    IIcon ico = map.get(txt);
-                    if (ico == null) {
-                        ico = ir.registerIcon(txt);
-                        map.put(txt, ico);
-                    }
-                    itemicons_by_meta[sb.meta] = ico;
-                }
-            }
-        }
-    }
+    //@SideOnly(Side.CLIENT)
+    //public void doStandardItemRegisterIcons(IIconRegister ir) {
+    //    if (subblock_by_meta == null) {
+    //        initMeta();
+    //    }
+    //    itemicons_by_meta = new IIcon[metaMask+1];
+    //    if (subBlocks != null) {
+    //        HashMap<String, IIcon> map = new HashMap<String, IIcon>();
+    //        for (Subblock sb : subBlocks) {
+    //            if (sb.noInventoryItem) continue; 
+    //            if (sb.itemTexture != null) {
+    //                String txt = sb.itemTexture;
+    //                if (txt.indexOf(':') < 0) {
+    //                    txt = "westerosblocks:" + txt;
+    //                }
+    //                IIcon ico = map.get(txt);
+    //                if (ico == null) {
+    //                    ico = ir.registerIcon(txt);
+    //                    map.put(txt, ico);
+    //                }
+    //                itemicons_by_meta[sb.meta] = ico;
+    //            }
+    //        }
+    //    }
+    //}
 
-    @SideOnly(Side.CLIENT)
-    public IIcon doStandardIconGet(int side, int meta) {
-        if (icons_by_meta == null) {
-            return null;
-        }
-        int m = meta & metaMask;
-        if (m >= icons_by_meta.length) {
-            m = 0;
-        }
-        IIcon[] ico = icons_by_meta[m];
-        if (ico != null) {
-            if (side >= ico.length) {
-                side = ico.length - 1;
-            }
-            return ico[side];
-        }
-        return null;
-    }
+    //@SideOnly(Side.CLIENT)
+    //public IIcon doStandardIconGet(int side, int meta) {
+    //    if (icons_by_meta == null) {
+    //        return null;
+    //    }
+    //    int m = meta & metaMask;
+    //    if (m >= icons_by_meta.length) {
+    //        m = 0;
+    //    }
+    //    IIcon[] ico = icons_by_meta[m];
+    //    if (ico != null) {
+    //        if (side >= ico.length) {
+    //            side = ico.length - 1;
+    //        }
+    //        return ico[side];
+    //    }
+    //    return null;
+    //}
 
     @SideOnly(Side.CLIENT)
     public void getStandardSubBlocks(Block blk, int id, CreativeTabs tab, List<ItemStack> list) {
@@ -899,9 +916,10 @@ public class WesterosBlockDef {
         return "INVALID_" + this.blockName;
     }
 
-    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+    public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) {
         if (flamability_by_meta != null) {
-            return flamability_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
+            IBlockState bs = world.getBlockState(pos);
+            return flamability_by_meta[bs.getBlock().getMetaFromState(bs) & metaMask];
         }
         return this.flamability;
     }
@@ -922,30 +940,31 @@ public class WesterosBlockDef {
         return null;
     }
 
-    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+    public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {
         if (fireSpreadSpeed_by_meta != null) {
-            return fireSpreadSpeed_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
+            IBlockState bs = world.getBlockState(pos);
+            return fireSpreadSpeed_by_meta[bs.getBlock().getMetaFromState(bs) & metaMask];
         }
         return this.fireSpreadSpeed;
     }
-        
-    public int getLightValue(IBlockAccess world, int x, int y, int z) {
+
+    public int getLightValue(IBlockState bs, IBlockAccess world, BlockPos pos) {
         if (this.lightValue_by_meta != null) {
-            return this.lightValue_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
+            return this.lightValue_by_meta[bs.getBlock().getMetaFromState(bs) & metaMask];
         }
         return this.lightValueInt;
     }
-        
-    public int getLightOpacity(Block blk, IBlockAccess world, int x, int y, int z) {
+
+    public int getLightOpacity(IBlockState bs, IBlockAccess world, BlockPos pos) {
         if (this.lightOpacity_by_meta != null) {
-            return this.lightOpacity_by_meta[world.getBlockMetadata(x,  y,  z) & metaMask];
+            return this.lightOpacity_by_meta[bs.getBlock().getMetaFromState(bs) & metaMask];
         }
-        return blk.getLightOpacity();
+        return bs.getLightOpacity();
     }
     
-    public int getBlockColor() {
-        return this.colorMultHandler.getBlockColor();
-    }
+//    public int getBlockColor() {
+//        return this.colorMultHandler.getBlockColor();
+//    }
     
     public int getRenderColor(int meta) {
         meta &= metaMask;
@@ -955,13 +974,14 @@ public class WesterosBlockDef {
         return this.colorMultHandler.getBlockColor();
     }
     
-    public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
-        if (this.colorMultHandlerByMeta != null) {
-            int meta = access.getBlockMetadata(x, y, z) & metaMask;
-            return this.colorMultHandlerByMeta[meta].colorMultiplier(access, x, y, z);
-        }
-        return this.colorMultHandler.colorMultiplier(access, x, y, z);
-    }
+    //TODO: This needs to be done via registering delegate (BlockColors.registerBlockColorHandler())
+    //public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
+    //    if (this.colorMultHandlerByMeta != null) {
+    //        int meta = access.getBlockMetadata(x, y, z) & metaMask;
+    //        return this.colorMultHandlerByMeta[meta].colorMultiplier(access, x, y, z);
+    //    }
+    //    return this.colorMultHandler.colorMultiplier(access, x, y, z);
+    //}
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public void getStandardCreativeItems(Block blk, ArrayList itemList) {
@@ -1281,36 +1301,36 @@ public class WesterosBlockDef {
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
         typeTable.put("stair", new WCStairBlock.Factory());
-        typeTable.put("log", new WCLogBlock.Factory());
-        typeTable.put("plant", new WCPlantBlock.Factory());
-        typeTable.put("crop", new WCCropBlock.Factory());
-        typeTable.put("slab", new WCSlabBlock.Factory());
-        typeTable.put("wall", new WCWallBlock.Factory());
-        typeTable.put("fence", new WCFenceBlock.Factory());
-        typeTable.put("web", new WCWebBlock.Factory());
-        typeTable.put("torch", new WCTorchBlock.Factory());
-        typeTable.put("ladder", new WCLadderBlock.Factory());
-        typeTable.put("cuboid", new WCCuboidBlock.Factory());
-        typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
-        typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
-        typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
-        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
-        typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
-        typeTable.put("door", new WCDoorBlock.Factory());
-        typeTable.put("fire", new WCFireBlock.Factory());
-        typeTable.put("leaves", new WCLeavesBlock.Factory());
-        typeTable.put("pane", new WCPaneBlock.Factory());
-        typeTable.put("layer", new WCLayerBlock.Factory());
-        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
-        typeTable.put("rail", new WCRailBlock.Factory());
-        typeTable.put("cake", new WCCakeBlock.Factory());
-        typeTable.put("bed", new WCBedBlock.Factory());
-        typeTable.put("sand", new WCSandBlock.Factory());
-        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
-        typeTable.put("furnace", new WCFurnaceBlock.Factory());
-        typeTable.put("sound", new WCSoundBlock.Factory());
-        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
-        typeTable.put("beacon", new WCBeaconBlock.Factory());
+        //typeTable.put("log", new WCLogBlock.Factory());
+        //typeTable.put("plant", new WCPlantBlock.Factory());
+        //typeTable.put("crop", new WCCropBlock.Factory());
+        //typeTable.put("slab", new WCSlabBlock.Factory());
+        //typeTable.put("wall", new WCWallBlock.Factory());
+        //typeTable.put("fence", new WCFenceBlock.Factory());
+        //typeTable.put("web", new WCWebBlock.Factory());
+        //typeTable.put("torch", new WCTorchBlock.Factory());
+        //typeTable.put("ladder", new WCLadderBlock.Factory());
+        //typeTable.put("cuboid", new WCCuboidBlock.Factory());
+        //typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
+        //typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
+        //typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
+        //typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
+        //typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
+        //typeTable.put("door", new WCDoorBlock.Factory());
+        //typeTable.put("fire", new WCFireBlock.Factory());
+        //typeTable.put("leaves", new WCLeavesBlock.Factory());
+        //typeTable.put("pane", new WCPaneBlock.Factory());
+        //typeTable.put("layer", new WCLayerBlock.Factory());
+        //typeTable.put("soulsand", new WCSoulSandBlock.Factory());
+        //typeTable.put("rail", new WCRailBlock.Factory());
+        //typeTable.put("cake", new WCCakeBlock.Factory());
+        //typeTable.put("bed", new WCBedBlock.Factory());
+        //typeTable.put("sand", new WCSandBlock.Factory());
+        //typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
+        //typeTable.put("furnace", new WCFurnaceBlock.Factory());
+        //typeTable.put("sound", new WCSoundBlock.Factory());
+        //typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
+        //typeTable.put("beacon", new WCBeaconBlock.Factory());
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new ColorMultHandler());
         colorMultTable.put("water", new WaterColorMultHandler());
@@ -1580,16 +1600,16 @@ public class WesterosBlockDef {
             double z = pos.getZ();
             switch (cr) {
                 default:
-                    world.spawnParticle(p.particle, x + dx, y + dy, z + dz, dvx, dvy, dvz);
+                    world.spawnParticle(particles.get(p.particle), x + dx, y + dy, z + dz, dvx, dvy, dvz);
                     break;
                 case ROTY90:
-                    world.spawnParticle(p.particle, x + dz, y + dy, z + 1.0 - dx, -dvz, dvy, dvx);
+                    world.spawnParticle(particles.get(p.particle), x + dz, y + dy, z + 1.0 - dx, -dvz, dvy, dvx);
                     break;
                 case ROTY180:
-                    world.spawnParticle(p.particle, x + 1.0 - dx, y + dy, z + 1.0 - dz, -dvx, dvy, -dvz);
+                    world.spawnParticle(particles.get(p.particle), x + 1.0 - dx, y + dy, z + 1.0 - dz, -dvx, dvy, -dvz);
                     break;
                 case ROTY270:
-                    world.spawnParticle(p.particle, x + 1.0 - dz, y + dy, z + dx, dvz, dvy, -dvx);
+                    world.spawnParticle(particles.get(p.particle), x + 1.0 - dz, y + dy, z + dx, dvz, dvy, -dvx);
                     break;
             }
         }

@@ -43,9 +43,10 @@ import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
 //import com.westeroscraft.westerosblocks.render.WCLadderRenderer;
 //import com.westeroscraft.westerosblocks.render.WCStairRenderer;
 
-@Mod(modid = "WesterosBlocks", name = "WesterosBlocks", version = Version.VER)
+@Mod(modid = WesterosBlocks.MOD_ID, name = "WesterosBlocks", version = Version.VER)
 public class WesterosBlocks
 {    
+    public static final String MOD_ID = "westerosblocks";
     public static Logger log = Logger.getLogger("WesterosBlocks");
     
     // The instance of your mod that Forge uses.
@@ -222,8 +223,9 @@ public class WesterosBlocks
                 }
             }
             else {
-                crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
-                return;
+                //crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
+                //return;
+                log.warning("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
             }
         }
         customBlocks = blklist.toArray(new Block[blklist.size()]);

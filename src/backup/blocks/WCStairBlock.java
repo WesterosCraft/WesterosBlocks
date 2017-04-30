@@ -10,12 +10,9 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.util.BlockRenderLayer;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -24,8 +21,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -42,32 +39,28 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
                 WesterosBlocks.log.severe(String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
                 return null;
             }
-            IBlockState bs = blk.getStateFromMeta(def.modelBlockMeta);
-            if (bs == null) {
-                WesterosBlocks.log.severe(String.format("modelBlockMeta '%d' not found for block '%s'", def.modelBlockMeta, def.blockName));
-                return null;
-            }
-            
             // Validate meta : we require meta 0, and only allow it
             def.setMetaMask(0x0);
             if (!def.validateMetaValues(new int[] { 0 }, new int[] { 0 })) {
                 return null;
             }
 
-            return new Block[] { new WCStairBlock(def, bs) };
+            return new Block[] { new WCStairBlock(def, blk) };
         }
     }
     
     private WesterosBlockDef def;
+    private final Block ourModelBlock;
     
-    protected WCStairBlock(WesterosBlockDef def, IBlockState bs) {
-        super(bs);
+    protected WCStairBlock(WesterosBlockDef def, Block blk) {
+        super(blk, def.modelBlockMeta);
         this.def = def;
+        this.ourModelBlock = blk;
         if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
             def.lightOpacity = 255;
         }
         this.setCreativeTab(def.getCreativeTab());
-        this.setUnlocalizedName(def.blockName);
+        this.setBlockName(def.blockName);
         useNeighborBrightness = true;
     }
 
@@ -86,41 +79,55 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
-    
-    
     @Override
-    public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {
-        return def.getFireSpreadSpeed(world, pos, face);
+    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFireSpreadSpeed(world, x, y, z, face);
     }
-    
     @Override
-    public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) {
-        return def.getFlammability(world, pos, face);
+    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
+        return def.getFlammability(world, x, y, z, face);
     }
-    
     @Override
-    public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
-        return def.getLightValue(state, world, pos);
+    public int getLightValue(IBlockAccess world, int x, int y, int z) {
+        return def.getLightValue(world, x, y, z);
     }
-    
     @Override
-    public int getLightOpacity(IBlockState state, IBlockAccess world, BlockPos pos) {
-        return def.getLightOpacity(state, world, pos);
+    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
+        return def.getLightOpacity(this, world, x, y, z);
     }
-
     @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer()
+    @Override
+    public int getBlockColor() {
+        return def.getBlockColor();
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int getRenderColor(int meta)
     {
-        return (def.alphaRender?BlockRenderLayer.SOLID:BlockRenderLayer.TRANSLUCENT);
+        return def.getRenderColor(meta);
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public int colorMultiplier(IBlockAccess access, int x, int y, int z)
+    {
+        return def.colorMultiplier(access, x, y, z);
     }
 
     @SideOnly(Side.CLIENT)
-    @Override
-    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rnd) {
-        def.randomDisplayTick(stateIn, worldIn, pos, rnd);
-        super.randomDisplayTick(stateIn, worldIn, pos, rnd);
+    public int getRenderBlockPass()
+    {
+        return (def.alphaRender?1:0);
     }
-    
+    @Override
+    public int getRenderType() {
+        return WesterosBlocks.stairRenderID;    // Use custom to make inventory render correctly
+    }
+    @SideOnly(Side.CLIENT)
+    @Override
+    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
+        def.doRandomDisplayTick(world, x, y, z, rnd);
+        super.randomDisplayTick(world, x, y, z, rnd);
+    }
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();

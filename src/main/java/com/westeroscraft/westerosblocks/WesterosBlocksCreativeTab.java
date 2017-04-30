@@ -10,8 +10,8 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
 
     public static final CreativeTabs tabWesterosBlocks = new  WesterosBlocksCreativeTab("WesterosBlocks", "Westeros Blocks", "metal_block_0");
     public static final CreativeTabs tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "Westeros Decorative", "metal_block_0_stair_1");
-    public static final CreativeTabs tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "Westeros Plants", "yellow_flower_block_0");
-    public static final CreativeTabs tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "Westeros Sounds", "sound_blocks_0");
+//    public static final CreativeTabs tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "Westeros Plants", "yellow_flower_block_0");
+//    public static final CreativeTabs tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "Westeros Sounds", "sound_blocks_0");
     
     public static void init() {
         
