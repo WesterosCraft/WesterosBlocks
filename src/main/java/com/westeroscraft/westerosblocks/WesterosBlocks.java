@@ -20,6 +20,7 @@ import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
 //import net.minecraft.world.biome.Biome;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -32,6 +33,8 @@ import java.util.logging.Logger;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
+import com.westeroscraft.westerosblocks.modelexport.ModelExport;
+import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 //import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.network.PacketHandler;
 import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
@@ -100,6 +103,7 @@ public class WesterosBlocks
     }
     
     public boolean good_init = false;
+    public File modcfgdir = null;
     
     public static void crash(Exception x, String msg) {
         CrashReport crashreport = CrashReport.makeCrashReport(x, msg);
@@ -175,6 +179,7 @@ public class WesterosBlocks
             //TODO: need to handle this in 1.11.2
             //Biome.taiga.setEnableSnow().setTemperatureRainfall(-0.5F, 0.4F);
         }
+        modcfgdir = event.getModConfigurationDirectory();
     }
 
     @EventHandler
@@ -220,6 +225,17 @@ public class WesterosBlocks
                     Block blk = blks[j];
                     blklist.add(blk);
                     customBlocksByName.put(customBlockDefs[i].getBlockName(j), blk);
+                    
+                    // Do blocks state export here
+                    ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modcfgdir);
+                    if (exp != null) {
+                        try {
+                            exp.doBlockStateExport();
+                            exp.doModelExports();
+                        } catch (IOException iox) {
+                            log.warning(String.format("Error exporting block %s - %s",  blk.getUnlocalizedName(), iox));
+                        }
+                    }
                 }
             }
             else {

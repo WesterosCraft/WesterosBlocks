@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/transparent",
+    "up": "westerosblocks:blocks/transparent",
+    "north": "westerosblocks:blocks/arrow_slits_0/brick_stone_large_window",
+    "south": "westerosblocks:blocks/arrow_slits_0/brick_stone_large_window",
+    "west": "westerosblocks:blocks/arrow_slits_0/brick_stone_large_window",
+    "east": "westerosblocks:blocks/arrow_slits_0/brick_stone_large_window"
+  }
+}

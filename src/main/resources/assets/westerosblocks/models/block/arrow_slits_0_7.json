@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/arrow_slits_0/cage_bottom",
+    "up": "westerosblocks:blocks/arrow_slits_0/cage_top",
+    "north": "westerosblocks:blocks/arrow_slits_0/cage_side",
+    "south": "westerosblocks:blocks/arrow_slits_0/cage_side",
+    "west": "westerosblocks:blocks/arrow_slits_0/cage_side",
+    "east": "westerosblocks:blocks/arrow_slits_0/cage_side"
+  }
+}

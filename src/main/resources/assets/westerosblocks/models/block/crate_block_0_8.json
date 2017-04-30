@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_right",
+    "up": "westerosblocks:blocks/crate_block_0/crate_top_carrot",
+    "north": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed",
+    "south": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed",
+    "west": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed",
+    "east": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed"
+  }
+}

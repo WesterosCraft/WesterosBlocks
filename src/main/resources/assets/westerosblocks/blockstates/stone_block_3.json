@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:stone_block_3_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:stone_block_3_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:stone_block_3_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:stone_block_3_0"
+    },
+    "variant=7": {
+      "model": "westerosblocks:stone_block_3_7"
+    },
+    "variant=6": {
+      "model": "westerosblocks:stone_block_3_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:stone_block_3_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:stone_block_3_4"
+    },
+    "variant=10": {
+      "model": "westerosblocks:stone_block_3_10"
+    },
+    "variant=9": {
+      "model": "westerosblocks:stone_block_3_9"
+    },
+    "variant=15": {
+      "model": "westerosblocks:stone_block_3_15"
+    },
+    "variant=8": {
+      "model": "westerosblocks:stone_block_3_8"
+    },
+    "variant=13": {
+      "model": "westerosblocks:stone_block_3_13"
+    },
+    "variant=14": {
+      "model": "westerosblocks:stone_block_3_14"
+    },
+    "variant=11": {
+      "model": "westerosblocks:stone_block_3_11"
+    },
+    "variant=12": {
+      "model": "westerosblocks:stone_block_3_12"
+    }
+  }
+}

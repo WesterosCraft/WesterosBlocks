@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_top",
+    "up": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_top",
+    "north": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_engraved",
+    "south": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_engraved",
+    "west": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_engraved",
+    "east": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_engraved"
+  }
+}

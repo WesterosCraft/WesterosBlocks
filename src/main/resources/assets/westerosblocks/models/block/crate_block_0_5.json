@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/log_block_0/barrel_top_closed",
+    "up": "westerosblocks:blocks/crate_block_0/barrel_top_fish",
+    "north": "westerosblocks:blocks/log_block_0/barrel_side",
+    "south": "westerosblocks:blocks/log_block_0/barrel_side",
+    "west": "westerosblocks:blocks/log_block_0/barrel_side",
+    "east": "westerosblocks:blocks/log_block_0/barrel_side"
+  }
+}

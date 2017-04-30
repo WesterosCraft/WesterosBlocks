@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "westerosblocks:blocks/stone_block_3/plaster_oldtown_brown"
+  }
+}

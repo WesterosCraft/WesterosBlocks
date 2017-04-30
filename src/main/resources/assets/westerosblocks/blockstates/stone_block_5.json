@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:stone_block_5_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:stone_block_5_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:stone_block_5_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:stone_block_5_0"
+    },
+    "variant=7": {
+      "model": "westerosblocks:stone_block_5_7"
+    },
+    "variant=6": {
+      "model": "westerosblocks:stone_block_5_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:stone_block_5_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:stone_block_5_4"
+    }
+  }
+}

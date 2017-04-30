@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "variant=2": {
+      "model": "westerosblocks:solid_blocks_1_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:solid_blocks_1_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:solid_blocks_1_0"
+    }
+  }
+}

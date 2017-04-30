@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/miscellaneous_block_0/food_squash_top",
+    "up": "westerosblocks:blocks/miscellaneous_block_0/food_squash_top",
+    "north": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
+    "south": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
+    "west": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
+    "east": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side"
+  }
+}

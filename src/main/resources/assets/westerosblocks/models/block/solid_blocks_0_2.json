@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/miscellaneous_block_0/dates_bottom",
+    "up": "westerosblocks:blocks/miscellaneous_block_0/dates_top",
+    "north": "westerosblocks:blocks/miscellaneous_block_0/dates_side",
+    "south": "westerosblocks:blocks/miscellaneous_block_0/dates_side",
+    "west": "westerosblocks:blocks/miscellaneous_block_0/dates_side",
+    "east": "westerosblocks:blocks/miscellaneous_block_0/dates_side"
+  }
+}

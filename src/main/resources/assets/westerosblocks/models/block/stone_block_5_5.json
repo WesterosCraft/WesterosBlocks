@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_block_2/brick_whiteharbor_granite_top",
+    "up": "westerosblocks:blocks/stone_block_2/brick_whiteharbor_granite_top",
+    "north": "westerosblocks:blocks/stone_block_2/brick_whiteharbor_granite",
+    "south": "westerosblocks:blocks/stone_block_2/brick_whiteharbor_granite",
+    "west": "westerosblocks:blocks/stone_block_2/brick_whiteharbor_granite",
+    "east": "westerosblocks:blocks/stone_block_2/brick_whiteharbor_granite"
+  }
+}

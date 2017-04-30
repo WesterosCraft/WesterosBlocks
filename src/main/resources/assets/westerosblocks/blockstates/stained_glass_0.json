@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:stained_glass_0_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:stained_glass_0_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:stained_glass_0_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:stained_glass_0_0"
+    },
+    "variant=7": {
+      "model": "westerosblocks:stained_glass_0_7"
+    },
+    "variant=6": {
+      "model": "westerosblocks:stained_glass_0_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:stained_glass_0_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:stained_glass_0_4"
+    }
+  }
+}

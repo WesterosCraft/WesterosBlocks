@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:six_sided_blocks_0_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:six_sided_blocks_0_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:six_sided_blocks_0_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:six_sided_blocks_0_0"
+    },
+    "variant=5": {
+      "model": "westerosblocks:six_sided_blocks_0_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:six_sided_blocks_0_4"
+    }
+  }
+}

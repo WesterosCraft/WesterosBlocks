@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "westerosblocks:blocks/stone_block_0/sandstone_carved_blue"
+  }
+}

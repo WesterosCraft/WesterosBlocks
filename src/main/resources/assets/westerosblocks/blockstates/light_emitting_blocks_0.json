@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "variant=1": {
+      "model": "westerosblocks:light_emitting_blocks_0_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:light_emitting_blocks_0_0"
+    }
+  }
+}
