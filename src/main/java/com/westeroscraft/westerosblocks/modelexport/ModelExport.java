@@ -20,6 +20,7 @@ public abstract class ModelExport {
     private File destdir;
     private File blockstatedir;
     private File blockmodeldir;
+    private File itemmodeldir;
     private Block block;
     
     public ModelExport(Block block, WesterosBlockDef def, File dest) {
@@ -29,6 +30,8 @@ public abstract class ModelExport {
         this.blockstatedir.mkdirs();
         this.blockmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/block");
         this.blockmodeldir.mkdirs();
+        this.itemmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/item");
+        this.itemmodeldir.mkdirs();
         for (Subblock sb : def.subBlocks) {
             addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
         }
@@ -48,6 +51,19 @@ public abstract class ModelExport {
     }
     public void writeBlockModelFile(String model, Object obj) throws IOException {
         File f = new File(blockmodeldir, model + ".json");
+        FileWriter fos = null;
+        try {
+            fos = new FileWriter(f);
+            Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+            gson.toJson(obj, fos);
+        } finally {
+            if (fos != null) {
+                fos.close();
+            }
+        }
+    }
+    public void writeItemModelFile(String model, Object obj) throws IOException {
+        File f = new File(itemmodeldir, model + ".json");
         FileWriter fos = null;
         try {
             fos = new FileWriter(f);

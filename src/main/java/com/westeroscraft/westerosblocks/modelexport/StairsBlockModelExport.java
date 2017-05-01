@@ -2,23 +2,16 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
-import com.westeroscraft.westerosblocks.WesterosBlockConfig;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
 
 public class StairsBlockModelExport extends ModelExport {
     private WCStairBlock blk;
@@ -67,6 +60,9 @@ public class StairsBlockModelExport extends ModelExport {
     }
     public static class Texture {
         public String bottom, top, side;
+    }
+    public static class ModelObject {
+    	public String parent;
     }
 
     public StairsBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
@@ -189,6 +185,10 @@ public class StairsBlockModelExport extends ModelExport {
         inner.textures.top = uptxt;
         inner.textures.side = sidetxt;
         this.writeBlockModelFile(def.blockName + "_inner", inner);
+        // Build simple item model that refers to base block model
+        ModelObject mo = new ModelObject();
+        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        this.writeItemModelFile(def.blockName, mo);
     }
 }
 

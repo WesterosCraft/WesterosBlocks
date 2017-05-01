@@ -2,14 +2,9 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
-import com.westeroscraft.westerosblocks.WesterosBlockConfig;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
@@ -43,6 +38,9 @@ public class SolidBlockModelExport extends ModelExport {
     }
     public static class Texture {
         public String down, up, north, south, west, east;
+    }
+    public static class ModelObject {
+    	public String parent;
     }
 
     
@@ -83,6 +81,10 @@ public class SolidBlockModelExport extends ModelExport {
                 model = mod;
             }
             this.writeBlockModelFile(def.blockName + "_" + sb.meta, model);
+            // Build simple item model that refers to block model
+            ModelObject mo = new ModelObject();
+            mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + sb.meta;
+            this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
         }
     }
 
