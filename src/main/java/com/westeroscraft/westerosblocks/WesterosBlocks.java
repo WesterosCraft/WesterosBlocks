@@ -245,6 +245,11 @@ public class WesterosBlocks
             }
         }
         customBlocks = blklist.toArray(new Block[blklist.size()]);
+        try {
+            ModelExport.writeNLSFile(modcfgdir);
+        } catch (IOException iox) {
+            log.warning(String.format("Error writing NLS - %s", iox));
+        }
         
         // Initialize custom block definitions
         for (int i = 0; i < customBlocks.length; i++) {

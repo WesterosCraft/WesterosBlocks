@@ -72,6 +72,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -984,10 +985,10 @@ public class WesterosBlockDef {
     //}
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    public void getStandardCreativeItems(Block blk, ArrayList itemList) {
+    public void getStandardCreativeItems(Block blk, CreativeTabs tab, NonNullList<ItemStack> subItems) {
         if (subBlocks != null) {
             for (Subblock sb : subBlocks) {
-                itemList.add(new ItemStack(blk, 1, sb.meta));
+                subItems.add(new ItemStack(blk, 1, sb.meta));
             }
         }
     }

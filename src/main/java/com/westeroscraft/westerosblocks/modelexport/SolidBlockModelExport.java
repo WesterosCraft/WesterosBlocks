@@ -47,7 +47,7 @@ public class SolidBlockModelExport extends ModelExport {
 
     
     public SolidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
-        super(blk, dest);
+        super(blk, def, dest);
         this.blk = (WCSolidBlock) blk;
         this.def = def;
     }

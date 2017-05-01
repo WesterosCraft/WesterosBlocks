@@ -109,12 +109,6 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     }
 
     @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer()
-    {
-        return (def.alphaRender?BlockRenderLayer.SOLID:BlockRenderLayer.TRANSLUCENT);
-    }
-
-    @SideOnly(Side.CLIENT)
     @Override
     public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rnd) {
         def.randomDisplayTick(stateIn, worldIn, pos, rnd);

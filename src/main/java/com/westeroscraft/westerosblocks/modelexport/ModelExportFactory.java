@@ -13,6 +13,9 @@ public class ModelExportFactory {
             case "solid":
                 me = new SolidBlockModelExport(blk, def, dest);
                 break;
+            case "stair":
+                me = new StairsBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }
