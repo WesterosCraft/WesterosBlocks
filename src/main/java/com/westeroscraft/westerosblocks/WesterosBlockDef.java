@@ -726,6 +726,7 @@ public class WesterosBlockDef {
         }
         blk.setLightLevel(this.lightValue);
         blk.setUnlocalizedName(this.getBlockName(idx));
+        blk.setRegistryName(this.getBlockName(idx));
         if ((this.fireSpreadSpeed > 0) || (this.flamability > 0)) {
             Blocks.FIRE.setFireInfo(blk, this.fireSpreadSpeed, this.flamability);
         }
@@ -776,8 +777,6 @@ public class WesterosBlockDef {
     public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, int idx) {
         int reqID = (this.blockIDs[idx] >= 0) ? this.blockIDs[idx] : -1;
         if (itmclass == null) itmclass = ItemBlock.class;
-        // Register the block
-        //GameRegistry.registerBlock(blk, itmclass, this.getBlockName(idx));
         registerBlock(blk, itmclass, this.getBlockName(idx), reqID);
         // And register strings for each item block
         if ((this.subBlocks != null) && (this.subBlocks.size() > 0)) {
@@ -786,8 +785,6 @@ public class WesterosBlockDef {
                 if (sb.label == null) {
                     sb.label = this.blockName + " " + sb.meta;
                 }
-                //TODO: handle this case
-                //LanguageRegistry.addName(new ItemStack(blk, 1, sb.meta), sb.label);
             }
         }
         if (subblock_by_meta == null) {
@@ -799,15 +796,18 @@ public class WesterosBlockDef {
     {
         try
         {
-            Item i = null;
+            Item itm = null;
             if (itemclass != null) {
-                i = (Item)itemclass.getConstructor(Block.class).newInstance(block);
+                itm = (Item)itemclass.getConstructor(Block.class).newInstance(block);
+                itm.setRegistryName(block.getRegistryName());
             }
-            ResourceLocation rl = new ResourceLocation(WesterosBlocks.MOD_ID, name);
             // block registration has to happen first
-            GameRegistry.register(block, rl);
-            if (i != null) {
-                GameRegistry.register(i, rl);
+            GameRegistry.register(block);
+            if (itm != null) {
+                GameRegistry.register(itm);
+                if(block instanceof WesterosBlockLifecycle) {
+                    ((WesterosBlockLifecycle)block).registerItemModel(itm);
+                }                
             }
             return block;
         }
@@ -984,11 +984,10 @@ public class WesterosBlockDef {
     //    return this.colorMultHandler.colorMultiplier(access, x, y, z);
     //}
 
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    public void getStandardCreativeItems(Block blk, CreativeTabs tab, NonNullList<ItemStack> subItems) {
+    public void getStandardCreativeItems(Block blk, Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
         if (subBlocks != null) {
             for (Subblock sb : subBlocks) {
-                subItems.add(new ItemStack(blk, 1, sb.meta));
+                subItems.add(new ItemStack(itemIn, 1, sb.meta));
             }
         }
     }

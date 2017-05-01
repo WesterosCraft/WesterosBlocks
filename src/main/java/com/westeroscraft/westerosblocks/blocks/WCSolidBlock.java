@@ -7,6 +7,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFlower;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
@@ -25,6 +26,7 @@ import net.minecraft.world.World;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
@@ -61,22 +63,27 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         def.doStandardContructorSettings(this);
         setSoundType(def.getStepSound());
     }
-
+    @Override
     public boolean initializeBlockDefinition() {
         def.doStandardInitializeActions(this);
 
         return true;
     }
-
+    @Override
     public boolean registerBlockDefinition() {
         def.doStandardRegisterActions(this, MultiBlockItem.class);
         
         return true;
     }
+    @Override
+    public void registerItemModel(Item itemBlock) {
+        WesterosBlocks.proxy.registerItemRenderer(itemBlock, 0, def.blockName);
+    }
     
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
-        def.getStandardSubBlocks(this, Item.getIdFromItem(itemIn), tab, list);
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
+    {
+        def.getStandardCreativeItems(this, itemIn, tab, list);
     }
 
     @Override
@@ -111,7 +118,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
-        return (def.alphaRender?BlockRenderLayer.SOLID:BlockRenderLayer.TRANSLUCENT);
+        return (def.alphaRender?BlockRenderLayer.CUTOUT_MIPPED:BlockRenderLayer.SOLID);
     }
 
     @Override

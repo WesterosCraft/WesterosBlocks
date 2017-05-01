@@ -39,16 +39,5 @@ public class MultiBlockItem extends ItemBlock {
     public int getMetadata(int damage) {
         return damage;
     }
-    
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems)
-    {        
-        if (blk instanceof WesterosBlockLifecycle) {
-            WesterosBlockDef def = ((WesterosBlockLifecycle)blk).getWBDefinition();
-            def.getStandardCreativeItems(blk, tab, subItems);
-        }
-    }
-    
 }
 

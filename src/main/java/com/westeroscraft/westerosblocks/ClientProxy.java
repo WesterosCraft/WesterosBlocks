@@ -6,9 +6,13 @@ import com.westeroscraft.westerosblocks.blocks.RenderWCFallingSand;
 */
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.NetHandlerPlayServer;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
 
 public class ClientProxy extends Proxy {
 	public ClientProxy() {
@@ -28,4 +32,8 @@ public class ClientProxy extends Proxy {
             return Minecraft.getMinecraft().player;
         }
     }	
+    @Override
+    public void registerItemRenderer(Item item, int meta, String id) {
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(WesterosBlocks.MOD_ID + ":" + id, "inventory"));
+    }
 }

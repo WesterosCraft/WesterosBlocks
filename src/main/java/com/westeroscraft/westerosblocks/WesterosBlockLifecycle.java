@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks;
 
+import net.minecraft.item.Item;
+
 // Used to define the interfaces for properly priming one of our custom block definitions
 //   Block definitions must also have constructor with WesterosBlockDef as parameter
 public interface WesterosBlockLifecycle {
@@ -20,4 +22,9 @@ public interface WesterosBlockLifecycle {
      * Get definition for block
      */
     public WesterosBlockDef getWBDefinition();
+    /**
+     * Register item model
+     * @param item
+     */
+    public void registerItemModel(Item item);
 }

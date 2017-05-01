@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.NetHandlerPlayServer;
 
@@ -25,4 +26,5 @@ public class Proxy
             return null;
         }
     }
+    public void registerItemRenderer(Item item, int meta, String id) {}
 }

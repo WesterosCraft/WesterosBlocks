@@ -11,6 +11,7 @@ import org.dynmap.modsupport.TransparencyMode;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -68,6 +69,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         }
         this.setCreativeTab(def.getCreativeTab());
         this.setUnlocalizedName(def.blockName);
+        this.setRegistryName(def.blockName);
         useNeighborBrightness = true;
     }
 
@@ -86,7 +88,10 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
-    
+    @Override
+    public void registerItemModel(Item itemBlock) {
+        WesterosBlocks.proxy.registerItemRenderer(itemBlock, 0, def.blockName);
+    }
     
     @Override
     public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {

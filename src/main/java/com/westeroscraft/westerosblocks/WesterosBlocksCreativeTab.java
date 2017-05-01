@@ -1,9 +1,14 @@
 package com.westeroscraft.westerosblocks;
 
+import com.westeroscraft.westerosblocks.modelexport.ModelExport;
+
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 public class  WesterosBlocksCreativeTab extends CreativeTabs {
@@ -17,18 +22,20 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
         
     }
     
-    private String lbl;
     private String type;
     private Block blk = null;
     public  WesterosBlocksCreativeTab(String id, String label, String type) {
         super(id);
-        lbl = label;
         this.type = type;
         WesterosBlockDef.addCreativeTab(id,  this);
+        // Add to our NLS export
+        ModelExport.addNLSString("itemGroup." + id, label);
     }
-
+    
+    @SideOnly(Side.CLIENT)
     @Override
-    public ItemStack getIconItemStack() {
+    public ItemStack getTabIconItem()
+    {
         if (blk == null) {
             blk = WesterosBlocks.findBlockByName(this.type);
             if (blk == null) {
@@ -36,14 +43,5 @@ public class  WesterosBlocksCreativeTab extends CreativeTabs {
             }
         }
         return new ItemStack(blk, 1, 0);
-    }
-    @Override
-    public String getTranslatedTabLabel() {
-        return lbl;
-    }
-
-    @Override
-    public ItemStack getTabIconItem() {
-        return getIconItemStack();
     }
 }
