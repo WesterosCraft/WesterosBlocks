@@ -69,6 +69,7 @@ public class StairsBlockModelExport extends ModelExport {
         super(blk, def, dest);
         this.blk = (WCStairBlock) blk;
         this.def = def;
+        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
     }
 
     @Override

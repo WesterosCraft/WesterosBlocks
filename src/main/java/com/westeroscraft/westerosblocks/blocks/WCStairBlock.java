@@ -70,6 +70,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         this.setCreativeTab(def.getCreativeTab());
         this.setUnlocalizedName(def.blockName);
         this.setRegistryName(def.blockName);
+
         useNeighborBrightness = true;
     }
 
@@ -80,17 +81,13 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, MultiBlockItem.class);
+        def.doStandardRegisterActions(this, null);
         
         return true;
     }
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
-    }
-    @Override
-    public void registerItemModel(Item itemBlock) {
-        WesterosBlocks.proxy.registerItemRenderer(itemBlock, 0, def.blockName);
     }
     
     @Override

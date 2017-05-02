@@ -32,9 +32,6 @@ public abstract class ModelExport {
         this.blockmodeldir.mkdirs();
         this.itemmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/item");
         this.itemmodeldir.mkdirs();
-        for (Subblock sb : def.subBlocks) {
-            addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
-        }
     }
     public void writeBlockStateFile(String blockname, Object obj) throws IOException {
         File f = new File(blockstatedir, blockname + ".json");

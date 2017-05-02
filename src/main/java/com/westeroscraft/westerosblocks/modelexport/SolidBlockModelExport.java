@@ -48,6 +48,9 @@ public class SolidBlockModelExport extends ModelExport {
         super(blk, def, dest);
         this.blk = (WCSolidBlock) blk;
         this.def = def;
+        for (Subblock sb : def.subBlocks) {
+            addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
+        }
     }
     
     @Override

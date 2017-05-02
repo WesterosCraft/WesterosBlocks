@@ -22,9 +22,4 @@ public interface WesterosBlockLifecycle {
      * Get definition for block
      */
     public WesterosBlockDef getWBDefinition();
-    /**
-     * Register item model
-     * @param item
-     */
-    public void registerItemModel(Item item);
 }

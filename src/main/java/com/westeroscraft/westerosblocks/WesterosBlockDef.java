@@ -20,6 +20,8 @@ import org.dynmap.modsupport.TransparencyMode;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
+import jline.internal.Log;
+
 //import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 //import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
 //import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
@@ -777,7 +779,6 @@ public class WesterosBlockDef {
     public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, int idx) {
         int reqID = (this.blockIDs[idx] >= 0) ? this.blockIDs[idx] : -1;
         if (itmclass == null) itmclass = ItemBlock.class;
-        registerBlock(blk, itmclass, this.getBlockName(idx), reqID);
         // And register strings for each item block
         if ((this.subBlocks != null) && (this.subBlocks.size() > 0)) {
             for (Subblock sb : this.subBlocks) {
@@ -790,24 +791,27 @@ public class WesterosBlockDef {
         if (subblock_by_meta == null) {
             initMeta();
         }
+        registerBlock(blk, itmclass, this.getBlockName(idx), reqID);
     }
 
-    private static Block registerBlock(Block block, Class<? extends ItemBlock> itemclass, String name, int id)
+    private Block registerBlock(Block block, Class<? extends ItemBlock> itemclass, String name, int id)
     {
         try
         {
             Item itm = null;
             if (itemclass != null) {
                 itm = (Item)itemclass.getConstructor(Block.class).newInstance(block);
-                itm.setRegistryName(block.getRegistryName());
             }
             // block registration has to happen first
             GameRegistry.register(block);
             if (itm != null) {
-                GameRegistry.register(itm);
-                if(block instanceof WesterosBlockLifecycle) {
-                    ((WesterosBlockLifecycle)block).registerItemModel(itm);
-                }                
+            	GameRegistry.register(itm, block.getRegistryName());
+            	if (subBlocks != null) {
+            		for (Subblock sb : subBlocks) {
+            			ItemStack is = new ItemStack(itm, 1, sb.meta);
+            			WesterosBlocks.proxy.registerItemRenderer(is.getItem(), sb.meta, is.getUnlocalizedName().substring(5));
+            		}
+            	}
             }
             return block;
         }

@@ -75,10 +75,6 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         
         return true;
     }
-    @Override
-    public void registerItemModel(Item itemBlock) {
-        WesterosBlocks.proxy.registerItemRenderer(itemBlock, 0, def.blockName);
-    }
     
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
