@@ -1,6 +1,10 @@
 package com.westeroscraft.westerosblocks;
 
+import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 // Used to define the interfaces for properly priming one of our custom block definitions
 //   Block definitions must also have constructor with WesterosBlockDef as parameter
@@ -22,4 +26,9 @@ public interface WesterosBlockLifecycle {
      * Get definition for block
      */
     public WesterosBlockDef getWBDefinition();
+    /**
+     * Block coloring handlers
+     */
+	@SideOnly(Side.CLIENT)
+    public IBlockColor getBlockColor();
 }

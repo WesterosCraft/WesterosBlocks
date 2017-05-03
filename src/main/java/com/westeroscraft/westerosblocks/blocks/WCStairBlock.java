@@ -11,6 +11,8 @@ import org.dynmap.modsupport.TransparencyMode;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -18,6 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import com.westeroscraft.westerosblocks.BlockColoring;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -128,5 +131,10 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         // Get stair model
         md.addStairModel(blkname);
     }
-
+    
+    @Override
+    @SideOnly(Side.CLIENT)
+    public IBlockColor getBlockColor() {
+    	return def.colorMultiplier();
+    }
 }

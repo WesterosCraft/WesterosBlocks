@@ -1,0 +1,100 @@
+{
+  "variants": {
+    "check_decay=false,decayable=true,variant=2": {
+      "model": "westerosblocks:leaves_block_0_2"
+    },
+    "check_decay=false,decayable=true,variant=3": {
+      "model": "westerosblocks:leaves_block_0_3"
+    },
+    "check_decay=false,decayable=true,variant=4": {
+      "model": "westerosblocks:leaves_block_0_4"
+    },
+    "check_decay=false,decayable=true,variant=5": {
+      "model": "westerosblocks:leaves_block_0_5"
+    },
+    "check_decay=false,decayable=true,variant=6": {
+      "model": "westerosblocks:leaves_block_0_6"
+    },
+    "check_decay=false,decayable=false,variant=6": {
+      "model": "westerosblocks:leaves_block_0_6"
+    },
+    "check_decay=false,decayable=false,variant=5": {
+      "model": "westerosblocks:leaves_block_0_5"
+    },
+    "check_decay=false,decayable=true,variant=7": {
+      "model": "westerosblocks:leaves_block_0_7"
+    },
+    "check_decay=false,decayable=false,variant=7": {
+      "model": "westerosblocks:leaves_block_0_7"
+    },
+    "check_decay=false,decayable=false,variant=2": {
+      "model": "westerosblocks:leaves_block_0_2"
+    },
+    "check_decay=false,decayable=false,variant=1": {
+      "model": "westerosblocks:leaves_block_0_1"
+    },
+    "check_decay=false,decayable=false,variant=4": {
+      "model": "westerosblocks:leaves_block_0_4"
+    },
+    "check_decay=false,decayable=false,variant=3": {
+      "model": "westerosblocks:leaves_block_0_3"
+    },
+    "check_decay=false,decayable=true,variant=0": {
+      "model": "westerosblocks:leaves_block_0_0"
+    },
+    "check_decay=false,decayable=false,variant=0": {
+      "model": "westerosblocks:leaves_block_0_0"
+    },
+    "check_decay=false,decayable=true,variant=1": {
+      "model": "westerosblocks:leaves_block_0_1"
+    },
+    "check_decay=true,decayable=true,variant=3": {
+      "model": "westerosblocks:leaves_block_0_3"
+    },
+    "check_decay=true,decayable=true,variant=4": {
+      "model": "westerosblocks:leaves_block_0_4"
+    },
+    "check_decay=true,decayable=true,variant=1": {
+      "model": "westerosblocks:leaves_block_0_1"
+    },
+    "check_decay=true,decayable=true,variant=2": {
+      "model": "westerosblocks:leaves_block_0_2"
+    },
+    "check_decay=true,decayable=true,variant=7": {
+      "model": "westerosblocks:leaves_block_0_7"
+    },
+    "check_decay=true,decayable=true,variant=5": {
+      "model": "westerosblocks:leaves_block_0_5"
+    },
+    "check_decay=true,decayable=true,variant=6": {
+      "model": "westerosblocks:leaves_block_0_6"
+    },
+    "check_decay=true,decayable=true,variant=0": {
+      "model": "westerosblocks:leaves_block_0_0"
+    },
+    "check_decay=true,decayable=false,variant=1": {
+      "model": "westerosblocks:leaves_block_0_1"
+    },
+    "check_decay=true,decayable=false,variant=0": {
+      "model": "westerosblocks:leaves_block_0_0"
+    },
+    "check_decay=true,decayable=false,variant=5": {
+      "model": "westerosblocks:leaves_block_0_5"
+    },
+    "check_decay=true,decayable=false,variant=4": {
+      "model": "westerosblocks:leaves_block_0_4"
+    },
+    "check_decay=true,decayable=false,variant=3": {
+      "model": "westerosblocks:leaves_block_0_3"
+    },
+    "check_decay=true,decayable=false,variant=2": {
+      "model": "westerosblocks:leaves_block_0_2"
+    },
+    "check_decay=true,decayable=false,variant=7": {
+      "model": "westerosblocks:leaves_block_0_7"
+    },
+    "check_decay=true,decayable=false,variant=6": {
+      "model": "westerosblocks:leaves_block_0_6"
+    }
+  }
+}

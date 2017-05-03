@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.network.INetHandler;
@@ -14,8 +15,10 @@ public class Proxy
     public Proxy()
     {
     }
+    
     public void initRenderRegistry() {
     }
+    
     /**
      * This function returns either the player from the handler if it's on the
      * server, or directly from the minecraft instance if it's the client.
@@ -27,6 +30,10 @@ public class Proxy
             return null;
         }
     }
+    
     public void registerItemRenderer(Item item, int meta, String name) {
+    }
+
+    public void registerColoring(Block[] blocks) {
     }
 }

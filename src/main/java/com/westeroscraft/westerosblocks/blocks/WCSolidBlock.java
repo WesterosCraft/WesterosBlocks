@@ -12,6 +12,8 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -23,6 +25,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import com.westeroscraft.westerosblocks.BlockColoring;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -196,13 +199,21 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         }
         return new BlockStateContainer(this, new IProperty[] { variant });
     }
+    
     // map from state to meta and vice verca - use highest bit for polished boolean, use low 2 bits for variant
     @Override
     public IBlockState getStateFromMeta(int meta) {
         return this.getDefaultState().withProperty(variant, meta);
     }
+    
     @Override
     public int getMetaFromState(IBlockState state) {
         return (Integer) state.getValue(variant);
-    }    
+    }
+    
+    @Override
+    @SideOnly(Side.CLIENT)
+    public IBlockColor getBlockColor() {
+    	return def.colorMultiplier();
+    }
 }

@@ -17,6 +17,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
+import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
@@ -66,6 +67,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.network.LanServerDetector.LanServerList;
+import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.texture.TextureUtil;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -292,13 +295,21 @@ public class WesterosBlockDef {
     }
 
     // Base color multiplier (fixed)
-    public static class ColorMultHandler {
+    public static abstract class ColorMultHandler {
+        ColorMultHandler() {
+        }
+        public abstract int getBlockColor();
+        public abstract int colorMultiplier(IBlockAccess access, BlockPos pos);
+        protected void setBaseColor() {
+        }
+        protected void loadRes(String rname, String blkname) {
+        }
+    }
+    // Fixed color multiplier (fixed)
+    public static class FixedColorMultHandler extends ColorMultHandler {
         protected int fixedMult;
         
-        ColorMultHandler() {
-            fixedMult = 0xFFFFFF;
-        }
-        ColorMultHandler(int mult) {
+        FixedColorMultHandler(int mult) {
             fixedMult = mult;
         }
         public int getBlockColor() {
@@ -390,6 +401,10 @@ public class WesterosBlockDef {
             }
             return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
         }
+		@Override
+		public int getBlockColor() {
+			return 0xFFFFFF;
+		}
     }
 
     public static class PineColorMultHandler extends ColorMultHandler {
@@ -967,10 +982,6 @@ public class WesterosBlockDef {
         return bs.getLightOpacity();
     }
     
-//    public int getBlockColor() {
-//        return this.colorMultHandler.getBlockColor();
-//    }
-    
     public int getRenderColor(int meta) {
         meta &= metaMask;
         if (this.colorMultHandlerByMeta != null) {
@@ -979,14 +990,39 @@ public class WesterosBlockDef {
         return this.colorMultHandler.getBlockColor();
     }
     
-    //TODO: This needs to be done via registering delegate (BlockColors.registerBlockColorHandler())
-    //public int colorMultiplier(IBlockAccess access, int x, int y, int z) {
-    //    if (this.colorMultHandlerByMeta != null) {
-    //        int meta = access.getBlockMetadata(x, y, z) & metaMask;
-    //        return this.colorMultHandlerByMeta[meta].colorMultiplier(access, x, y, z);
-    //    }
-    //    return this.colorMultHandler.colorMultiplier(access, x, y, z);
-    //}
+    @SideOnly(Side.CLIENT)
+    public IBlockColor colorMultiplier() {
+    	
+    	if (this.colorMult.equals("#FFFFFF")) {
+    		boolean found = false;
+    		for (Subblock sb : subBlocks) {
+    			if ((sb.colorMult != null) && (sb.colorMult.equals("#FFFFFF") == false)) {
+    				found = true;
+    			}
+    		}
+    		// No custom handler?
+    		if (!found) {
+    			return null;
+    		}
+    	}
+        return new IBlockColor() {
+            @Override
+            public int colorMultiplier(IBlockState state, IBlockAccess world, BlockPos pos, int tintIndex)
+            {
+                if (WesterosBlockDef.this.colorMultHandlerByMeta != null) {
+                    int meta = state.getBlock().getMetaFromState(state) & metaMask;
+                    if (world == null)
+                    	return WesterosBlockDef.this.colorMultHandlerByMeta[meta].getBlockColor();
+                    else
+                    	return WesterosBlockDef.this.colorMultHandlerByMeta[meta].colorMultiplier(world, pos);
+                }
+                if (world == null)
+                	return WesterosBlockDef.this.colorMultHandler.getBlockColor();
+                else
+                	return WesterosBlockDef.this.colorMultHandler.colorMultiplier(world, pos);
+            }
+        };
+    }
 
     public void getStandardCreativeItems(Block blk, Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
         if (subBlocks != null) {
@@ -1322,7 +1358,7 @@ public class WesterosBlockDef {
         //typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
         //typeTable.put("door", new WCDoorBlock.Factory());
         //typeTable.put("fire", new WCFireBlock.Factory());
-        //typeTable.put("leaves", new WCLeavesBlock.Factory());
+        typeTable.put("leaves", new WCLeavesBlock.Factory());
         //typeTable.put("pane", new WCPaneBlock.Factory());
         //typeTable.put("layer", new WCLayerBlock.Factory());
         //typeTable.put("soulsand", new WCSoulSandBlock.Factory());
@@ -1336,14 +1372,14 @@ public class WesterosBlockDef {
         //typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         //typeTable.put("beacon", new WCBeaconBlock.Factory());
         // Standard color multipliers
-        colorMultTable.put("#FFFFFF", new ColorMultHandler());
+        colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
         colorMultTable.put("water", new WaterColorMultHandler());
         colorMultTable.put("foliage", new FoliageColorMultHandler());
         colorMultTable.put("grass", new GrassColorMultHandler());
         colorMultTable.put("pine", new PineColorMultHandler());
         colorMultTable.put("birch", new BirchColorMultHandler());
         colorMultTable.put("basic", new BasicColorMultHandler());
-        colorMultTable.put("lily", new ColorMultHandler(2129968));
+        colorMultTable.put("lily", new FixedColorMultHandler(2129968));
         
         // Valid particle values
         particles.put("hugeexplosion", EnumParticleTypes.EXPLOSION_HUGE);
@@ -1389,7 +1425,7 @@ public class WesterosBlockDef {
             // See if color code
             if ((hndid.length() == 7) && (hndid.charAt(0) == '#')) {
                 try {
-                    cmh = new ColorMultHandler(Integer.parseInt(hndid.substring(1), 16));
+                    cmh = new FixedColorMultHandler(Integer.parseInt(hndid.substring(1), 16));
                     colorMultTable.put(hndid, cmh);
                 } catch (NumberFormatException nfx) {
                 }

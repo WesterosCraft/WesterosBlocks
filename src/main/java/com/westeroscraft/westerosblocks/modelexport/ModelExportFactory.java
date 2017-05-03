@@ -16,6 +16,9 @@ public class ModelExportFactory {
             case "stair":
                 me = new StairsBlockModelExport(blk, def, dest);
                 break;
+            case "leaves":
+                me = new LeavesBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }
