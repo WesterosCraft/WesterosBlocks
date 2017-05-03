@@ -19,6 +19,9 @@ public class ModelExportFactory {
             case "leaves":
                 me = new LeavesBlockModelExport(blk, def, dest);
                 break;
+            case "log":
+                me = new LogBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

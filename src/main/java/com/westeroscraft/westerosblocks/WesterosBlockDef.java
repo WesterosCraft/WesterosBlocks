@@ -18,6 +18,7 @@ import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
@@ -1341,7 +1342,7 @@ public class WesterosBlockDef {
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
         typeTable.put("stair", new WCStairBlock.Factory());
-        //typeTable.put("log", new WCLogBlock.Factory());
+        typeTable.put("log", new WCLogBlock.Factory());
         //typeTable.put("plant", new WCPlantBlock.Factory());
         //typeTable.put("crop", new WCCropBlock.Factory());
         //typeTable.put("slab", new WCSlabBlock.Factory());

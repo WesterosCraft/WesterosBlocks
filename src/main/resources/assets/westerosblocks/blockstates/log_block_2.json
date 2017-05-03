@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "axis=y,variant=0": {
+      "model": "westerosblocks:log_block_2_0"
+    },
+    "axis=none,variant=0": {
+      "model": "westerosblocks:log_block_2_bark_0"
+    },
+    "axis=z,variant=0": {
+      "model": "westerosblocks:log_block_2_0",
+      "x": 90
+    },
+    "axis=x,variant=0": {
+      "model": "westerosblocks:log_block_2_0",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "westerosblocks:blocks/log_block_0/target_front",
+    "side": "westerosblocks:blocks/log_block_0/target_sides"
+  }
+}
