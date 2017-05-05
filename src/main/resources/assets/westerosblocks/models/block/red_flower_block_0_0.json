@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "westerosblocks:blocks/red_flower_block_0/red_flower_0"
+  }
+}

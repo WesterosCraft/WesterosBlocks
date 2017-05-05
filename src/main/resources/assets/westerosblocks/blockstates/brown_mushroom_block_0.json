@@ -1,0 +1,43 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:brown_mushroom_block_0_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:brown_mushroom_block_0_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:brown_mushroom_block_0_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:brown_mushroom_block_0_0"
+    },
+    "variant=7": {
+      "model": "westerosblocks:brown_mushroom_block_0_7"
+    },
+    "variant=6": {
+      "model": "westerosblocks:brown_mushroom_block_0_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:brown_mushroom_block_0_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:brown_mushroom_block_0_4"
+    },
+    "variant=10": {
+      "model": "westerosblocks:brown_mushroom_block_0_10"
+    },
+    "variant=9": {
+      "model": "westerosblocks:brown_mushroom_block_0_9"
+    },
+    "variant=8": {
+      "model": "westerosblocks:brown_mushroom_block_0_8"
+    },
+    "variant=11": {
+      "model": "westerosblocks:brown_mushroom_block_0_11"
+    },
+    "variant=12": {
+      "model": "westerosblocks:brown_mushroom_block_0_12"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:blocks/tallgrass_block_0/grass_unshaded_icon"
+  }
+}

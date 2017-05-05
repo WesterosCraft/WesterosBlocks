@@ -22,6 +22,9 @@ public class ModelExportFactory {
             case "log":
                 me = new LogBlockModelExport(blk, def, dest);
                 break;
+            case "plant":
+                me = new PlantBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

@@ -19,6 +19,7 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
+import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
@@ -1045,10 +1046,14 @@ public class WesterosBlockDef {
         bb.zMax = zmax;
     }
     
-    public BoundingBox getBoundingBox(int meta) {
-        return boundingBoxByMeta[meta];
+    public BoundingBox getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+    	return getBoundingBox(state.getBlock().getMetaFromState(state) & metaMask);
     }
-    
+
+    public BoundingBox getBoundingBox(int meta) {
+        return boundingBoxByMeta[meta & metaMask];
+    }
+
     public List<Cuboid> getCuboidList(int meta) {
         meta &= metaMask;
         
@@ -1343,7 +1348,7 @@ public class WesterosBlockDef {
         typeTable.put("solid", new WCSolidBlock.Factory());
         typeTable.put("stair", new WCStairBlock.Factory());
         typeTable.put("log", new WCLogBlock.Factory());
-        //typeTable.put("plant", new WCPlantBlock.Factory());
+        typeTable.put("plant", new WCPlantBlock.Factory());
         //typeTable.put("crop", new WCCropBlock.Factory());
         //typeTable.put("slab", new WCSlabBlock.Factory());
         //typeTable.put("wall", new WCWallBlock.Factory());

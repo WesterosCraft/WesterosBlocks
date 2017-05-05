@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:blocks/red_flower_block_0/red_flower_9"
+  }
+}
