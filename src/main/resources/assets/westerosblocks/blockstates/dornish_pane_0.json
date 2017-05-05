@@ -1,0 +1,252 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "variant": "0"
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_post_0"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "0",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_side_0",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "0",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_side_0",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "0",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_side_alt_0",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "0",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_side_alt_0",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "0",
+            "north": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_noside_0",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "0",
+            "east": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_noside_alt_0",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "0",
+            "south": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_noside_alt_0",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "0",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_noside_0",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "variant": "1"
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_post_1"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "1",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_side_1",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "1",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_side_1",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "1",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_side_alt_1",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "1",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_side_alt_1",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "1",
+            "north": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_noside_1",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "1",
+            "east": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_noside_alt_1",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "1",
+            "south": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_noside_alt_1",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "1",
+            "west": "false"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:dornish_pane_0_noside_1",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}

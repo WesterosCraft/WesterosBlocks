@@ -1,0 +1,6 @@
+{
+  "parent": "block/pane_noside",
+  "textures": {
+    "pane": "westerosblocks:blocks/translucent_block_0/glass_pane_yellow"
+  }
+}

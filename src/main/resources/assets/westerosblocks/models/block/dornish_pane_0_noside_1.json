@@ -1,0 +1,6 @@
+{
+  "parent": "block/pane_noside",
+  "textures": {
+    "pane": "westerosblocks:blocks/glass_pane_block_0/moorish_wood_window_pane"
+  }
+}

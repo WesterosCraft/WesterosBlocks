@@ -1,0 +1,7 @@
+{
+  "parent": "block/pane_post",
+  "textures": {
+    "edge": "westerosblocks:blocks/translucent_block_0/glass_pane_yellow",
+    "pane": "westerosblocks:blocks/translucent_block_0/glass_pane_yellow"
+  }
+}

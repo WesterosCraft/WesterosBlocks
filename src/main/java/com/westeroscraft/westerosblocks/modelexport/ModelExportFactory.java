@@ -25,6 +25,9 @@ public class ModelExportFactory {
             case "plant":
                 me = new PlantBlockModelExport(blk, def, dest);
                 break;
+            case "pane":
+                me = new PaneBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }
