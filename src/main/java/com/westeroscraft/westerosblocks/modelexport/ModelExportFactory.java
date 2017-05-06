@@ -28,6 +28,9 @@ public class ModelExportFactory {
             case "pane":
                 me = new PaneBlockModelExport(blk, def, dest);
                 break;
+            case "crop":
+                me = new CropBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

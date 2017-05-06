@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "westerosblocks:blocks/crop_block_0/altar_candles"
+  }
+}
