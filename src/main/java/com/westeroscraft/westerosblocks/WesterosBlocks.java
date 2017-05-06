@@ -180,15 +180,7 @@ public class WesterosBlocks
             //Biome.taiga.setEnableSnow().setTemperatureRainfall(-0.5F, 0.4F);
         }
         modcfgdir = event.getModConfigurationDirectory();
-    }
-
-    @EventHandler
-    public void load(FMLInitializationEvent event)
-    {
-        if (!good_init) {
-            crash("preInit failed - aborting load()");
-            return;
-        }
+        
         // Register renderer
         //TODO: probably don't need these
         //fenceRenderID = RenderingRegistry.getNextAvailableRenderId();
@@ -211,9 +203,7 @@ public class WesterosBlocks
         //    useWaterCTMFix = false;
         //    fluidCTMRenderID = 4;   // Vanilla fluid renderer
         //}
-        proxy.initRenderRegistry();
         
-        //NOTYET NetworkRegistry.newChannel(WesterosBlocksPacketHandler.CHANNEL, new WesterosBlocksPacketHandler());
         // Construct custom block definitions
         ArrayList<Block> blklist = new ArrayList<Block>();
         customBlocksByName = new HashMap<String, Block>();
@@ -264,9 +254,22 @@ public class WesterosBlocks
                 ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
             }
         }
+        // Register block models
+        WesterosBlocks.proxy.registerBlockModels(customBlocks);
+
+        proxy.initRenderRegistry();
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+        if (!good_init) {
+            crash("preInit failed - aborting load()");
+            return;
+        }
 
         // Register block coloring
-        WesterosBlocks.proxy.registerColoring(customBlocks);
+        WesterosBlocks.proxy.registerColoring();
 
         // Set up channel
         channels = NetworkRegistry.INSTANCE.newChannel(WesterosBlocksChannelHandler.CHANNEL, new WesterosBlocksChannelHandler(), new PacketHandler());

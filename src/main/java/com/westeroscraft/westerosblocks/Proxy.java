@@ -35,7 +35,10 @@ public class Proxy
     public void registerItemRenderer(Item item, int meta, String name) {
     }
 
-    public void registerColoring(Block[] blocks) {
+    public void registerBlockModels(Block[] blocks) {
+    }
+
+    public void registerColoring() {
     }
 }
 
