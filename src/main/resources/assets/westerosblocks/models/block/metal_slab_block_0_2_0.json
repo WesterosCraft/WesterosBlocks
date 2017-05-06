@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/metal_block_0/metal_block_iron",
+    "up": "westerosblocks:blocks/metal_block_0/metal_block_iron",
+    "north": "westerosblocks:blocks/metal_block_0/metal_block_iron",
+    "south": "westerosblocks:blocks/metal_block_0/metal_block_iron",
+    "west": "westerosblocks:blocks/metal_block_0/metal_block_iron",
+    "east": "westerosblocks:blocks/metal_block_0/metal_block_iron",
+    "particle": "westerosblocks:blocks/metal_block_0/metal_block_iron"
+  }
+}

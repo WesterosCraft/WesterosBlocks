@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/wool_colours/wool_colored_black",
+    "up": "westerosblocks:blocks/wool_colours/wool_colored_black",
+    "north": "westerosblocks:blocks/wool_colours/wool_colored_black",
+    "south": "westerosblocks:blocks/wool_colours/wool_colored_black",
+    "west": "westerosblocks:blocks/wool_colours/wool_colored_black",
+    "east": "westerosblocks:blocks/wool_colours/wool_colored_black",
+    "particle": "westerosblocks:blocks/wool_colours/wool_colored_black"
+  }
+}

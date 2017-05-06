@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/ground_block_0/soil_scorched",
     "south": "westerosblocks:blocks/ground_block_0/soil_scorched",
     "west": "westerosblocks:blocks/ground_block_0/soil_scorched",
-    "east": "westerosblocks:blocks/ground_block_0/soil_scorched"
+    "east": "westerosblocks:blocks/ground_block_0/soil_scorched",
+    "particle": "westerosblocks:blocks/ground_block_0/soil_scorched"
   }
 }

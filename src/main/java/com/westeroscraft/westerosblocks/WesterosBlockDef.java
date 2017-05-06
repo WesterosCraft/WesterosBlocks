@@ -23,6 +23,7 @@ import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
@@ -1358,7 +1359,7 @@ public class WesterosBlockDef {
         typeTable.put("log", new WCLogBlock.Factory());
         typeTable.put("plant", new WCPlantBlock.Factory());
         typeTable.put("crop", new WCCropBlock.Factory());
-        //typeTable.put("slab", new WCSlabBlock.Factory());
+        typeTable.put("slab", new WCSlabBlock.Factory());
         //typeTable.put("wall", new WCWallBlock.Factory());
         //typeTable.put("fence", new WCFenceBlock.Factory());
         //typeTable.put("web", new WCWebBlock.Factory());

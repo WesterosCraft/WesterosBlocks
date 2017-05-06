@@ -37,7 +37,7 @@ public class SolidBlockModelExport extends ModelExport {
         public Texture textures = new Texture();
     }
     public static class Texture {
-        public String down, up, north, south, west, east;
+        public String down, up, north, south, west, east, particle;
     }
     public static class ModelObject {
     	public String parent;
@@ -81,6 +81,7 @@ public class SolidBlockModelExport extends ModelExport {
                 mod.textures.south = getTextureID(sb.getTextureByIndex(3));
                 mod.textures.west = getTextureID(sb.getTextureByIndex(4));
                 mod.textures.east = getTextureID(sb.getTextureByIndex(5));
+                mod.textures.particle = getTextureID(sb.getTextureByIndex(2));
                 model = mod;
             }
             this.writeBlockModelFile(def.blockName + "_" + sb.meta, model);

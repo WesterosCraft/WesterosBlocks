@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/bench_block_0/bench_kitchen_pans",
     "south": "westerosblocks:blocks/bench_block_0/bench_kitchen_pans",
     "west": "westerosblocks:blocks/bench_block_0/bench_kitchen_pans",
-    "east": "westerosblocks:blocks/bench_block_0/bench_kitchen_pans"
+    "east": "westerosblocks:blocks/bench_block_0/bench_kitchen_pans",
+    "particle": "westerosblocks:blocks/bench_block_0/bench_kitchen_pans"
   }
 }

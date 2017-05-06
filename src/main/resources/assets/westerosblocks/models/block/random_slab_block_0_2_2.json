@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/fur_block_0/thatch_light",
+    "up": "westerosblocks:blocks/fur_block_0/thatch_light",
+    "north": "westerosblocks:blocks/fur_block_0/thatch_light",
+    "south": "westerosblocks:blocks/fur_block_0/thatch_light",
+    "west": "westerosblocks:blocks/fur_block_0/thatch_light",
+    "east": "westerosblocks:blocks/fur_block_0/thatch_light",
+    "particle": "westerosblocks:blocks/fur_block_0/thatch_light"
+  }
+}

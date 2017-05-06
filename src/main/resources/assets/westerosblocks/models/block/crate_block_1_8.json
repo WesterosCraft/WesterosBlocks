@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/crate_block_1/basket_side",
     "south": "westerosblocks:blocks/crate_block_1/basket_side",
     "west": "westerosblocks:blocks/crate_block_1/basket_side",
-    "east": "westerosblocks:blocks/crate_block_1/basket_side"
+    "east": "westerosblocks:blocks/crate_block_1/basket_side",
+    "particle": "westerosblocks:blocks/crate_block_1/basket_side"
   }
 }

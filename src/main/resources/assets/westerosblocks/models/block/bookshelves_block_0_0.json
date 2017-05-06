@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/bookshelves_block_0/bookshelf_library",
     "south": "westerosblocks:blocks/bookshelves_block_0/bookshelf_library",
     "west": "westerosblocks:blocks/bookshelves_block_0/bookshelf_library",
-    "east": "westerosblocks:blocks/bookshelves_block_0/bookshelf_library"
+    "east": "westerosblocks:blocks/bookshelves_block_0/bookshelf_library",
+    "particle": "westerosblocks:blocks/bookshelves_block_0/bookshelf_library"
   }
 }

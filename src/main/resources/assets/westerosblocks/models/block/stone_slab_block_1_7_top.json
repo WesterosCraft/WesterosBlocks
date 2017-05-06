@@ -1,0 +1,8 @@
+{
+  "parent": "block/upper_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
+    "top": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
+    "side": "westerosblocks:blocks/stone_block_1/stone_cobble_dark"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=top,variant=0": {
+      "model": "westerosblocks:random_slab_block_3_0_top"
+    },
+    "half=bottom,variant=0": {
+      "model": "westerosblocks:random_slab_block_3_0_bottom"
+    }
+  }
+}

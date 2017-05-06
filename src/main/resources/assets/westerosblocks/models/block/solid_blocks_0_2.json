@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/miscellaneous_block_0/dates_side",
     "south": "westerosblocks:blocks/miscellaneous_block_0/dates_side",
     "west": "westerosblocks:blocks/miscellaneous_block_0/dates_side",
-    "east": "westerosblocks:blocks/miscellaneous_block_0/dates_side"
+    "east": "westerosblocks:blocks/miscellaneous_block_0/dates_side",
+    "particle": "westerosblocks:blocks/miscellaneous_block_0/dates_side"
   }
 }

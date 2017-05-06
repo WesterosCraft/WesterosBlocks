@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/bench_block_0/cabinet_broken",
     "south": "westerosblocks:blocks/bench_block_0/cabinet_broken",
     "west": "westerosblocks:blocks/bench_block_0/cabinet_broken",
-    "east": "westerosblocks:blocks/bench_block_0/cabinet_broken"
+    "east": "westerosblocks:blocks/bench_block_0/cabinet_broken",
+    "particle": "westerosblocks:blocks/bench_block_0/cabinet_broken"
   }
 }

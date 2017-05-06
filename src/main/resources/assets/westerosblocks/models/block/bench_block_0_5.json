@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet",
     "south": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet",
     "west": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet",
-    "east": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet"
+    "east": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet",
+    "particle": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet"
   }
 }

@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/arrow_slits_1/brick_winterfell_granite_arrow_slit",
     "south": "westerosblocks:blocks/arrow_slits_1/brick_winterfell_granite_arrow_slit",
     "west": "westerosblocks:blocks/arrow_slits_1/brick_winterfell_granite_arrow_slit",
-    "east": "westerosblocks:blocks/arrow_slits_1/brick_winterfell_granite_arrow_slit"
+    "east": "westerosblocks:blocks/arrow_slits_1/brick_winterfell_granite_arrow_slit",
+    "particle": "westerosblocks:blocks/arrow_slits_1/brick_winterfell_granite_arrow_slit"
   }
 }

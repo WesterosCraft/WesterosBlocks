@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/arrow_slits_0/cage_side",
     "south": "westerosblocks:blocks/arrow_slits_0/cage_side",
     "west": "westerosblocks:blocks/arrow_slits_0/cage_side",
-    "east": "westerosblocks:blocks/arrow_slits_0/cage_side"
+    "east": "westerosblocks:blocks/arrow_slits_0/cage_side",
+    "particle": "westerosblocks:blocks/arrow_slits_0/cage_side"
   }
 }

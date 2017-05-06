@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/wool_colours/wool_colored_pink",
+    "up": "westerosblocks:blocks/wool_colours/wool_colored_pink",
+    "north": "westerosblocks:blocks/wool_colours/wool_colored_pink",
+    "south": "westerosblocks:blocks/wool_colours/wool_colored_pink",
+    "west": "westerosblocks:blocks/wool_colours/wool_colored_pink",
+    "east": "westerosblocks:blocks/wool_colours/wool_colored_pink",
+    "particle": "westerosblocks:blocks/wool_colours/wool_colored_pink"
+  }
+}

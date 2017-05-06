@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:stone_slab_block_3_2_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:stone_slab_block_3_2_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:stone_slab_block_3_2_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:stone_slab_block_3_2_0"
+    },
+    "variant=5": {
+      "model": "westerosblocks:stone_slab_block_3_2_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:stone_slab_block_3_2_4"
+    }
+  }
+}

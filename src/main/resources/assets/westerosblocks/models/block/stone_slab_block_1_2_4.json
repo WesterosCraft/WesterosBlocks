@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_slate_0/slate_blue",
+    "up": "westerosblocks:blocks/stone_slate_0/slate_blue",
+    "north": "westerosblocks:blocks/stone_slate_0/slate_blue",
+    "south": "westerosblocks:blocks/stone_slate_0/slate_blue",
+    "west": "westerosblocks:blocks/stone_slate_0/slate_blue",
+    "east": "westerosblocks:blocks/stone_slate_0/slate_blue",
+    "particle": "westerosblocks:blocks/stone_slate_0/slate_blue"
+  }
+}

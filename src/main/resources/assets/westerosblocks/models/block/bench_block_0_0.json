@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/bench_block_0/bench_butcher_knives",
     "south": "westerosblocks:blocks/bench_block_0/bench_butcher_knives",
     "west": "westerosblocks:blocks/bench_block_0/bench_butcher_knives",
-    "east": "westerosblocks:blocks/bench_block_0/bench_butcher_knives"
+    "east": "westerosblocks:blocks/bench_block_0/bench_butcher_knives",
+    "particle": "westerosblocks:blocks/bench_block_0/bench_butcher_knives"
   }
 }

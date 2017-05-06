@@ -1,0 +1,8 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/crate_block_1/basket_bottom",
+    "top": "westerosblocks:blocks/crate_block_1/basket_dates",
+    "side": "westerosblocks:blocks/random_slab_block_0/basket_side_slab"
+  }
+}

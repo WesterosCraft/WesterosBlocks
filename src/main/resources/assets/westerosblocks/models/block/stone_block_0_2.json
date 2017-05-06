@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/stone_block_0/sandstone_vivid_mossy",
     "south": "westerosblocks:blocks/stone_block_0/sandstone_vivid_mossy",
     "west": "westerosblocks:blocks/stone_block_0/sandstone_vivid_mossy",
-    "east": "westerosblocks:blocks/stone_block_0/sandstone_vivid_mossy"
+    "east": "westerosblocks:blocks/stone_block_0/sandstone_vivid_mossy",
+    "particle": "westerosblocks:blocks/stone_block_0/sandstone_vivid_mossy"
   }
 }

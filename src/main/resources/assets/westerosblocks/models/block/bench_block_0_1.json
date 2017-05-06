@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/bench_block_0/bench_carpentry_hammer_saw",
     "south": "westerosblocks:blocks/bench_block_0/bench_carpentry_hammer_saw",
     "west": "westerosblocks:blocks/bench_block_0/bench_carpentry_hammer_saw",
-    "east": "westerosblocks:blocks/bench_block_0/bench_carpentry_hammer_saw"
+    "east": "westerosblocks:blocks/bench_block_0/bench_carpentry_hammer_saw",
+    "particle": "westerosblocks:blocks/bench_block_0/bench_carpentry_hammer_saw"
   }
 }

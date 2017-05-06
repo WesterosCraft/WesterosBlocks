@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/bench_block_0/table_drawer_widgets_side",
     "south": "westerosblocks:blocks/bench_block_0/table_drawer_widgets_side",
     "west": "westerosblocks:blocks/bench_block_0/table_drawer_widgets_side",
-    "east": "westerosblocks:blocks/bench_block_0/table_drawer_widgets_side"
+    "east": "westerosblocks:blocks/bench_block_0/table_drawer_widgets_side",
+    "particle": "westerosblocks:blocks/bench_block_0/table_drawer_widgets_side"
   }
 }

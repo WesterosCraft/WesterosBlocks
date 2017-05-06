@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/ground_block_0/snow",
+    "up": "westerosblocks:blocks/ground_block_0/snow",
+    "north": "westerosblocks:blocks/ground_block_0/snow",
+    "south": "westerosblocks:blocks/ground_block_0/snow",
+    "west": "westerosblocks:blocks/ground_block_0/snow",
+    "east": "westerosblocks:blocks/ground_block_0/snow",
+    "particle": "westerosblocks:blocks/ground_block_0/snow"
+  }
+}

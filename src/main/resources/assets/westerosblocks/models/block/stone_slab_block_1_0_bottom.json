@@ -1,0 +1,8 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_1/brick_stone_small",
+    "top": "westerosblocks:blocks/stone_block_1/brick_stone_small",
+    "side": "westerosblocks:blocks/stone_block_1/brick_stone_small"
+  }
+}

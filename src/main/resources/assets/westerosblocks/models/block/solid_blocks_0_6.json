@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
     "south": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
     "west": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
-    "east": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side"
+    "east": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
+    "particle": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side"
   }
 }

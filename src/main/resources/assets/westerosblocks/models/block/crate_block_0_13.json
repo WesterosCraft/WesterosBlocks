@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/log_block_0/barrel_side",
     "south": "westerosblocks:blocks/log_block_0/barrel_side",
     "west": "westerosblocks:blocks/log_block_0/barrel_side",
-    "east": "westerosblocks:blocks/log_block_0/barrel_side"
+    "east": "westerosblocks:blocks/log_block_0/barrel_side",
+    "particle": "westerosblocks:blocks/log_block_0/barrel_side"
   }
 }

@@ -6,6 +6,7 @@
     "north": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_left",
     "south": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_left",
     "west": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_left",
-    "east": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_left"
+    "east": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_left",
+    "particle": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_left"
   }
 }
