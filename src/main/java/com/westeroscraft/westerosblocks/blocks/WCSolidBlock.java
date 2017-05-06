@@ -52,7 +52,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         }
     }
     // Hack to pass in property, which is needed during 'block' constructor, but isn't static for us
-    private static PropertyMeta new_variant = null;
+    protected static PropertyMeta new_variant = null;
     
     private WesterosBlockDef def;
     private boolean isSolidOpaque = true;

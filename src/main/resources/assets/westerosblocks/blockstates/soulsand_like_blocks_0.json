@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "variant=1": {
+      "model": "westerosblocks:soulsand_like_blocks_0_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:soulsand_like_blocks_0_0"
+    }
+  }
+}
