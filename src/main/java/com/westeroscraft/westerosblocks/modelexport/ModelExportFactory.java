@@ -31,6 +31,9 @@ public class ModelExportFactory {
             case "crop":
                 me = new CropBlockModelExport(blk, def, dest);
                 break;
+            case "door":
+                me = new DoorBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

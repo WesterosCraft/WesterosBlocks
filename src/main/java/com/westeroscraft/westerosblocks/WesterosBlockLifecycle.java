@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks;
 
+import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.item.Item;
@@ -31,4 +32,8 @@ public interface WesterosBlockLifecycle {
      */
 	@SideOnly(Side.CLIENT)
     public IBlockColor getBlockColor();
+	/**
+	 * Get nonrendering properties
+	 */
+	public IProperty<?>[] getNonRenderingProperties();
 }

@@ -211,4 +211,8 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     	BoundingBox bb = def.getBoundingBox(state, source, pos);
     	return new AxisAlignedBB(bb.xMin, bb.yMin, bb.zMin, bb.xMax, bb.yMax, bb.zMax);
     }
+    
+    @Override
+    public IProperty<?>[] getNonRenderingProperties() { return null; }
+
 }

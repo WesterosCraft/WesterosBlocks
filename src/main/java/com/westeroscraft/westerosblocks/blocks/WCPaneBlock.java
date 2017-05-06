@@ -160,4 +160,6 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     	return def.colorMultiplier();
     }
 
+    @Override
+    public IProperty<?>[] getNonRenderingProperties() { return null; }
 }

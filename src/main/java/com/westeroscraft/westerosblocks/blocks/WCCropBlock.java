@@ -5,6 +5,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.PatchBlockModel;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.properties.IProperty;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -41,5 +42,8 @@ public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupp
         mod.addPatch(1.0, 0.0, 0.75, 0.0, 0.0, 0.75, 1.0, 1.0, 0.75);
         mod.addPatch(1.0, 0.0, 0.25, 0.0, 0.0, 0.25, 1.0, 1.0, 0.25);
     }
+
+    @Override
+    public IProperty<?>[] getNonRenderingProperties() { return null; }
 
 }

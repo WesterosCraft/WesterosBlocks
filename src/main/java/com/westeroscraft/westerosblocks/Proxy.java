@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -37,3 +38,4 @@ public class Proxy
     public void registerColoring(Block[] blocks) {
     }
 }
+

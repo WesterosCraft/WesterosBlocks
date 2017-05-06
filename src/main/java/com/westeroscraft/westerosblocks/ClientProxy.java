@@ -1,23 +1,17 @@
 package com.westeroscraft.westerosblocks;
 
-import jline.internal.Log;
 import net.minecraft.block.Block;
-
-/*NOTYET
-import com.westeroscraft.westerosblocks.blocks.EntityWCFallingSand;
-import com.westeroscraft.westerosblocks.blocks.RenderWCFallingSand;
-*/
+import net.minecraft.block.properties.IProperty;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.statemap.IStateMapper;
+import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.NetHandlerPlayServer;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 
@@ -52,6 +46,11 @@ public class ClientProxy extends Proxy {
         for (Block block : blocks) {
         	if (block instanceof WesterosBlockLifecycle) {
         		WesterosBlockLifecycle blockcolor = (WesterosBlockLifecycle) block;
+        		IProperty<?>[] ignor = blockcolor.getNonRenderingProperties();
+        		if (ignor != null) {
+        		    IStateMapper custom_mapper = (new StateMap.Builder()).ignore(ignor).build();
+        		    ModelLoader.setCustomStateMapper(block, custom_mapper);
+        		}
         		IBlockColor col = blockcolor.getBlockColor();
         		if (col != null) {
         			Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler(col, block);

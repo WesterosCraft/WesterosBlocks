@@ -241,4 +241,8 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     public IBlockColor getBlockColor() {
     	return def.colorMultiplier();
     }
+    
+    @Override
+    public IProperty<?>[] getNonRenderingProperties() { return null; }
+
 }

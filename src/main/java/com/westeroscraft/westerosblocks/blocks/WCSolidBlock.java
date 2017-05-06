@@ -164,4 +164,6 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     public IBlockColor getBlockColor() {
     	return def.colorMultiplier();
     }
+    @Override
+    public IProperty<?>[] getNonRenderingProperties() { return null; }
 }

@@ -194,4 +194,8 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     public IBlockColor getBlockColor() {
     	return def.colorMultiplier();
     }
+    
+    @Override
+    public IProperty<?>[] getNonRenderingProperties() { return null; }
+
 }
