@@ -3,7 +3,9 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -83,39 +85,43 @@ public class DoorBlockModelExport extends ModelExport {
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         String bn = def.blockName;
-        so.variants.put("facing=east,half=lower,hinge=left,open=false", new Variant(bn, "bottom"));
-        so.variants.put("facing=south,half=lower,hinge=left,open=false", new Variant(bn, "bottom", 90));
-        so.variants.put("facing=west,half=lower,hinge=left,open=false", new Variant(bn, "bottom", 180));
-        so.variants.put("facing=north,half=lower,hinge=left,open=false", new Variant(bn, "bottom", 270));
-        so.variants.put("facing=east,half=lower,hinge=right,open=false", new Variant(bn, "bottom_rh"));
-        so.variants.put("facing=south,half=lower,hinge=right,open=false", new Variant(bn, "bottom_rh", 90));
-        so.variants.put("facing=west,half=lower,hinge=right,open=false", new Variant(bn, "bottom_rh", 180));
-        so.variants.put("facing=north,half=lower,hinge=right,open=false", new Variant(bn, "bottom_rh", 270));
-        so.variants.put("facing=east,half=lower,hinge=left,open=true", new Variant(bn, "bottom_rh", 90));
-        so.variants.put("facing=south,half=lower,hinge=left,open=true", new Variant(bn, "bottom_rh", 180));
-        so.variants.put("facing=west,half=lower,hinge=left,open=true", new Variant(bn, "bottom_rh", 270));
-        so.variants.put("facing=north,half=lower,hinge=left,open=true", new Variant(bn, "bottom_rh"));
-        so.variants.put("facing=east,half=lower,hinge=right,open=true", new Variant(bn, "bottom", 270));
-        so.variants.put("facing=south,half=lower,hinge=right,open=true", new Variant(bn, "bottom"));
-        so.variants.put("facing=west,half=lower,hinge=right,open=true", new Variant(bn, "bottom", 90));
-        so.variants.put("facing=north,half=lower,hinge=right,open=true", new Variant(bn, "bottom", 180));
-        so.variants.put("facing=east,half=upper,hinge=left,open=false", new Variant(bn, "top"));
-        so.variants.put("facing=south,half=upper,hinge=left,open=false", new Variant(bn, "top", 90));
-        so.variants.put("facing=west,half=upper,hinge=left,open=false", new Variant(bn, "top", 180));
-        so.variants.put("facing=north,half=upper,hinge=left,open=false", new Variant(bn, "top", 270));
-        so.variants.put("facing=east,half=upper,hinge=right,open=false", new Variant(bn, "top_rh"));
-        so.variants.put("facing=south,half=upper,hinge=right,open=false", new Variant(bn, "top_rh", 90));
-        so.variants.put("facing=west,half=upper,hinge=right,open=false", new Variant(bn, "top_rh", 180));
-        so.variants.put("facing=north,half=upper,hinge=right,open=false", new Variant(bn, "top_rh", 270));
-        so.variants.put("facing=east,half=upper,hinge=left,open=true", new Variant(bn, "top_rh", 90));
-        so.variants.put("facing=south,half=upper,hinge=left,open=true", new Variant(bn, "top_rh", 180));
-        so.variants.put("facing=west,half=upper,hinge=left,open=true", new Variant(bn, "top_rh", 270));
-        so.variants.put("facing=north,half=upper,hinge=left,open=true", new Variant(bn, "top_rh"));
-        so.variants.put("facing=east,half=upper,hinge=right,open=true", new Variant(bn, "top", 270));
-        so.variants.put("facing=south,half=upper,hinge=right,open=true", new Variant(bn, "top"));
-        so.variants.put("facing=west,half=upper,hinge=right,open=true", new Variant(bn, "top", 90));
-        so.variants.put("facing=north,half=upper,hinge=right,open=true", new Variant(bn, "top", 180));
-
+        so.variants.put("facing=east,half=lower,hinge=left,open=false,powered=false", new Variant(bn, "bottom"));
+        so.variants.put("facing=south,half=lower,hinge=left,open=false,powered=false", new Variant(bn, "bottom", 90));
+        so.variants.put("facing=west,half=lower,hinge=left,open=false,powered=false", new Variant(bn, "bottom", 180));
+        so.variants.put("facing=north,half=lower,hinge=left,open=false,powered=false", new Variant(bn, "bottom", 270));
+        so.variants.put("facing=east,half=lower,hinge=right,open=false,powered=false", new Variant(bn, "bottom_rh"));
+        so.variants.put("facing=south,half=lower,hinge=right,open=false,powered=false", new Variant(bn, "bottom_rh", 90));
+        so.variants.put("facing=west,half=lower,hinge=right,open=false,powered=false", new Variant(bn, "bottom_rh", 180));
+        so.variants.put("facing=north,half=lower,hinge=right,open=false,powered=false", new Variant(bn, "bottom_rh", 270));
+        so.variants.put("facing=east,half=lower,hinge=left,open=true,powered=false", new Variant(bn, "bottom_rh", 90));
+        so.variants.put("facing=south,half=lower,hinge=left,open=true,powered=false", new Variant(bn, "bottom_rh", 180));
+        so.variants.put("facing=west,half=lower,hinge=left,open=true,powered=false", new Variant(bn, "bottom_rh", 270));
+        so.variants.put("facing=north,half=lower,hinge=left,open=true,powered=false", new Variant(bn, "bottom_rh"));
+        so.variants.put("facing=east,half=lower,hinge=right,open=true,powered=false", new Variant(bn, "bottom", 270));
+        so.variants.put("facing=south,half=lower,hinge=right,open=true,powered=false", new Variant(bn, "bottom"));
+        so.variants.put("facing=west,half=lower,hinge=right,open=true,powered=false", new Variant(bn, "bottom", 90));
+        so.variants.put("facing=north,half=lower,hinge=right,open=true,powered=false", new Variant(bn, "bottom", 180));
+        so.variants.put("facing=east,half=upper,hinge=left,open=false,powered=false", new Variant(bn, "top"));
+        so.variants.put("facing=south,half=upper,hinge=left,open=false,powered=false", new Variant(bn, "top", 90));
+        so.variants.put("facing=west,half=upper,hinge=left,open=false,powered=false", new Variant(bn, "top", 180));
+        so.variants.put("facing=north,half=upper,hinge=left,open=false,powered=false", new Variant(bn, "top", 270));
+        so.variants.put("facing=east,half=upper,hinge=right,open=false,powered=false", new Variant(bn, "top_rh"));
+        so.variants.put("facing=south,half=upper,hinge=right,open=false,powered=false", new Variant(bn, "top_rh", 90));
+        so.variants.put("facing=west,half=upper,hinge=right,open=false,powered=false", new Variant(bn, "top_rh", 180));
+        so.variants.put("facing=north,half=upper,hinge=right,open=false,powered=false", new Variant(bn, "top_rh", 270));
+        so.variants.put("facing=east,half=upper,hinge=left,open=true,powered=false", new Variant(bn, "top_rh", 90));
+        so.variants.put("facing=south,half=upper,hinge=left,open=true,powered=false", new Variant(bn, "top_rh", 180));
+        so.variants.put("facing=west,half=upper,hinge=left,open=true,powered=false", new Variant(bn, "top_rh", 270));
+        so.variants.put("facing=north,half=upper,hinge=left,open=true,powered=false", new Variant(bn, "top_rh"));
+        so.variants.put("facing=east,half=upper,hinge=right,open=true,powered=false", new Variant(bn, "top", 270));
+        so.variants.put("facing=south,half=upper,hinge=right,open=true,powered=false", new Variant(bn, "top"));
+        so.variants.put("facing=west,half=upper,hinge=right,open=true,powered=false", new Variant(bn, "top", 90));
+        so.variants.put("facing=north,half=upper,hinge=right,open=true,powered=false", new Variant(bn, "top", 180));
+        Set<String> keys = new HashSet<String>(so.variants.keySet());
+        for (String k : keys) {
+        	so.variants.put(k.replace("powered=false", "powered=true"), so.variants.get(k));
+        }
+        
         this.writeBlockStateFile(def.blockName, so);
     }
 

@@ -264,9 +264,10 @@ public class WesterosBlocks
                 ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
             }
         }
+
         // Register block coloring
         WesterosBlocks.proxy.registerColoring(customBlocks);
-        
+
         // Set up channel
         channels = NetworkRegistry.INSTANCE.newChannel(WesterosBlocksChannelHandler.CHANNEL, new WesterosBlocksChannelHandler(), new PacketHandler());
 

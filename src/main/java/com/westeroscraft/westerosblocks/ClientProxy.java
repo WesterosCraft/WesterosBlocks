@@ -45,13 +45,13 @@ public class ClientProxy extends Proxy {
     {
         for (Block block : blocks) {
         	if (block instanceof WesterosBlockLifecycle) {
-        		WesterosBlockLifecycle blockcolor = (WesterosBlockLifecycle) block;
-        		IProperty<?>[] ignor = blockcolor.getNonRenderingProperties();
+        		WesterosBlockLifecycle blocklc = (WesterosBlockLifecycle) block;
+        		IProperty<?>[] ignor = blocklc.getNonRenderingProperties();
         		if (ignor != null) {
         		    IStateMapper custom_mapper = (new StateMap.Builder()).ignore(ignor).build();
         		    ModelLoader.setCustomStateMapper(block, custom_mapper);
         		}
-        		IBlockColor col = blockcolor.getBlockColor();
+        		IBlockColor col = blocklc.getBlockColor();
         		if (col != null) {
         			Minecraft.getMinecraft().getBlockColors().registerBlockColorHandler(col, block);
         			Minecraft.getMinecraft().getItemColors().registerItemColorHandler(BlockColoring.BLOCK_ITEM_COLORING, block);
