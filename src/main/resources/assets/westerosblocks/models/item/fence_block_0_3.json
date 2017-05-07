@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "westerosblocks:blocks/wood_block_0/planks_jungle"
+  }
+}

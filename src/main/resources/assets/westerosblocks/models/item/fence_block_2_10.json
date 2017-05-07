@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "westerosblocks:blocks/log_block_1/log_palm"
+  }
+}

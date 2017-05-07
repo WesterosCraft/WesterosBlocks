@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "westerosblocks:blocks/stone_slate_0/slate_blue"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "westerosblocks:blocks/log_block_0/column_block_marble_side"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands_dark"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "westerosblocks:blocks/stone_block_0/sandstone_monochrome"
+  }
+}

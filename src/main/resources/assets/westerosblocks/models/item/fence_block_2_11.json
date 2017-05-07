@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "westerosblocks:blocks/metal_block_0/blades_molten"
+  }
+}

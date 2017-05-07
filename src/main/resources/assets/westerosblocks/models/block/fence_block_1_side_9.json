@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "westerosblocks:blocks/wood_block_1/wood_northern"
+  }
+}

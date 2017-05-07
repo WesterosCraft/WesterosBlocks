@@ -38,6 +38,9 @@ public class ModelExportFactory {
             case "slab":
                 me = new SlabBlockModelExport(blk, def, dest);
                 break;
+            case "fence":
+                me = new FenceBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

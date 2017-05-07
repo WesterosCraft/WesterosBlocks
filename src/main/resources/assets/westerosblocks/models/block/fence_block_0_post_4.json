@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "westerosblocks:blocks/wood_block_0/bark_oak"
+  }
+}

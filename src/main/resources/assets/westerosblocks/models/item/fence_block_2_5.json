@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "westerosblocks:blocks/stone_block_2/brick_reach_light_pink"
+  }
+}
