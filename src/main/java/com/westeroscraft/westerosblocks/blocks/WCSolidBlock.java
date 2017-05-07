@@ -1,21 +1,16 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.List;
 import java.util.Random;
 
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFlower;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
@@ -25,13 +20,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import com.westeroscraft.westerosblocks.BlockColoring;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 
@@ -54,7 +46,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     // Hack to pass in property, which is needed during 'block' constructor, but isn't static for us
     protected static PropertyMeta new_variant = null;
     
-    private WesterosBlockDef def;
+    protected WesterosBlockDef def;
     private boolean isSolidOpaque = true;
     
     private PropertyMeta variant;

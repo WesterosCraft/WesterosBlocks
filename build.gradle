@@ -85,8 +85,8 @@ jar {
     //}
    classifier = "forge-1.11.2"
    destinationDir = project.projectDir
-   //from { configurations.westerosblocks.collect { it.isDirectory() ? it : zipTree(it) } }
-   //manifest {
-   //     attributes 'FMLAT': 'WesterosBlocks_at.cfg'
-   //}
+   from { configurations.westerosblocks.collect { it.isDirectory() ? it : zipTree(it) } }
+   manifest {
+        attributes 'FMLAT': 'WesterosBlocks_at.cfg'
+   }
 }

@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:sound_blocks_2_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:sound_blocks_2_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:sound_blocks_2_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:sound_blocks_2_0"
+    },
+    "variant=6": {
+      "model": "westerosblocks:sound_blocks_2_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:sound_blocks_2_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:sound_blocks_2_4"
+    }
+  }
+}

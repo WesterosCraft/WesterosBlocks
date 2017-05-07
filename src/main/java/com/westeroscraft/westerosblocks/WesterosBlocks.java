@@ -285,7 +285,9 @@ public class WesterosBlocks
 
     private void handleDynmap() {
         this.dynmap = new DynmapSupport("WesterosBlocks", Version.VER);
-        
+        if (this.dynmap.getTextureDef() == null) {
+            return;
+        }
         // Register textures from various block definitions
         for (int i = 0; i < customBlocks.length; i++) {
             if (customBlocks[i] instanceof WesterosBlockDynmapSupport) {

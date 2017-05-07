@@ -12,6 +12,7 @@ public class ModelExportFactory {
         switch (def.blockType) {
             case "solid":
             case "soulsand":
+            case "sound":
                 me = new SolidBlockModelExport(blk, def, dest);
                 break;
             case "stair":

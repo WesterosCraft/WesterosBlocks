@@ -26,6 +26,7 @@ import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
 import net.minecraft.block.Block;
@@ -1336,7 +1337,7 @@ public class WesterosBlockDef {
         //typeTable.put("sand", new WCSandBlock.Factory());
         //typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
         //typeTable.put("furnace", new WCFurnaceBlock.Factory());
-        //typeTable.put("sound", new WCSoundBlock.Factory());
+        typeTable.put("sound", new WCSoundBlock.Factory());
         //typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         //typeTable.put("beacon", new WCBeaconBlock.Factory());
         // Standard color multipliers
