@@ -1,6 +1,8 @@
 {
-  "parent": "block/fence_inventory",
+  "parent": "westerosblocks:block/fence_inventory",
   "textures": {
-    "texture": "westerosblocks:blocks/log_block_0/column_block_marble_side"
+    "bottom": "westerosblocks:blocks/log_block_0/column_block_marble_side",
+    "top": "westerosblocks:blocks/log_block_0/column_block_marble_side",
+    "side": "westerosblocks:blocks/log_block_0/column_block_marble_side"
   }
 }

@@ -1,6 +1,8 @@
 {
-  "parent": "block/fence_post",
+  "parent": "westerosblocks:block/fence_post",
   "textures": {
-    "texture": "westerosblocks:blocks/translucent_block_0/crystal_block_fence_top"
+    "bottom": "westerosblocks:blocks/translucent_block_0/crystal_block_fence_top",
+    "top": "westerosblocks:blocks/translucent_block_0/crystal_block_fence_top",
+    "side": "westerosblocks:blocks/translucent_block_0/crystal_block_fence"
   }
 }

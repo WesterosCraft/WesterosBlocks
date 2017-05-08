@@ -1,6 +1,8 @@
 {
-  "parent": "block/fence_side",
+  "parent": "westerosblocks:block/fence_side",
   "textures": {
-    "texture": "westerosblocks:blocks/wood_block_0/bark_birch"
+    "bottom": "westerosblocks:blocks/wood_block_0/bark_birch",
+    "top": "westerosblocks:blocks/wood_block_0/bark_birch",
+    "side": "westerosblocks:blocks/wood_block_0/bark_birch"
   }
 }

@@ -29,6 +29,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 import net.minecraft.block.Block;
@@ -1316,7 +1317,7 @@ public class WesterosBlockDef {
         typeTable.put("plant", new WCPlantBlock.Factory());
         typeTable.put("crop", new WCCropBlock.Factory());
         typeTable.put("slab", new WCSlabBlock.Factory());
-        //typeTable.put("wall", new WCWallBlock.Factory());
+        typeTable.put("wall", new WCWallBlock.Factory());
         typeTable.put("fence", new WCFenceBlock.Factory());
         typeTable.put("web", new WCWebBlock.Factory());
         //typeTable.put("torch", new WCTorchBlock.Factory());

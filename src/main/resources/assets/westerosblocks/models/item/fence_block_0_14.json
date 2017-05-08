@@ -1,6 +1,8 @@
 {
-  "parent": "block/fence_inventory",
+  "parent": "westerosblocks:block/fence_inventory",
   "textures": {
-    "texture": "westerosblocks:blocks/wood_block_0/planks_birch_grapevines"
+    "bottom": "westerosblocks:blocks/wood_block_0/planks_birch_grapevines",
+    "top": "westerosblocks:blocks/wood_block_0/planks_birch_grapevines",
+    "side": "westerosblocks:blocks/wood_block_0/planks_birch_grapevines"
   }
 }

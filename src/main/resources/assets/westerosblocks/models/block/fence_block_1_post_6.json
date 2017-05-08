@@ -1,6 +1,8 @@
 {
-  "parent": "block/fence_post",
+  "parent": "westerosblocks:block/fence_post",
   "textures": {
-    "texture": "westerosblocks:blocks/stone_block_0/sandstone_monochrome"
+    "bottom": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
+    "top": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
+    "side": "westerosblocks:blocks/stone_block_0/sandstone_monochrome"
   }
 }

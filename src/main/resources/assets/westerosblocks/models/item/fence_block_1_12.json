@@ -1,6 +1,8 @@
 {
-  "parent": "block/fence_inventory",
+  "parent": "westerosblocks:block/fence_inventory",
   "textures": {
-    "texture": "westerosblocks:blocks/stone_block_1/stone_bedrock"
+    "bottom": "westerosblocks:blocks/stone_block_1/stone_bedrock",
+    "top": "westerosblocks:blocks/stone_block_1/stone_bedrock",
+    "side": "westerosblocks:blocks/stone_block_1/stone_bedrock"
   }
 }
