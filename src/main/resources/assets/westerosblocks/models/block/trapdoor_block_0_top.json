@@ -1,0 +1,6 @@
+{
+  "parent": "block/trapdoor_top",
+  "textures": {
+    "texture": "westerosblocks:blocks/trapdoor_block_0/kings_landing_manhole"
+  }
+}
