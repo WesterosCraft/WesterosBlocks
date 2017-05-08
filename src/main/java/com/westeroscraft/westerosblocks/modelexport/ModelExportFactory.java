@@ -25,7 +25,8 @@ public class ModelExportFactory {
                 me = new LogBlockModelExport(blk, def, dest);
                 break;
             case "plant":
-                me = new PlantBlockModelExport(blk, def, dest);
+            case "web":
+                me = new CrossBlockModelExport(blk, def, dest);
                 break;
             case "pane":
                 me = new PaneBlockModelExport(blk, def, dest);

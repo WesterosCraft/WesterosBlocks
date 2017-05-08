@@ -8,13 +8,10 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 
 import net.minecraft.block.Block;
 
 public class LogBlockModelExport extends ModelExport {
-    private WCLogBlock blk;
     private WesterosBlockDef def;
 
     // Template objects for Gson export of block state
@@ -48,7 +45,6 @@ public class LogBlockModelExport extends ModelExport {
     
     public LogBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.blk = (WCLogBlock) blk;
         this.def = def;
         for (Subblock sb : def.subBlocks) {
             addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);

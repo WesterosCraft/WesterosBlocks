@@ -13,7 +13,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
-import com.westeroscraft.westerosblocks.modelexport.PlantBlockModelExport.TextureLayer0;
+import com.westeroscraft.westerosblocks.modelexport.CrossBlockModelExport.TextureLayer0;
 
 import net.minecraft.block.Block;
 

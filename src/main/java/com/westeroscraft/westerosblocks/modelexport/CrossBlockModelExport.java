@@ -8,13 +8,10 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 
 import net.minecraft.block.Block;
 
-public class PlantBlockModelExport extends ModelExport {
-    private WCPlantBlock blk;
+public class CrossBlockModelExport extends ModelExport {
     private WesterosBlockDef def;
 
     // Template objects for Gson export of block state
@@ -40,9 +37,8 @@ public class PlantBlockModelExport extends ModelExport {
         public TextureLayer0 textures = new TextureLayer0();
     }
     
-    public PlantBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
+    public CrossBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.blk = (WCPlantBlock) blk;
         this.def = def;
         for (Subblock sb : def.subBlocks) {
             addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);

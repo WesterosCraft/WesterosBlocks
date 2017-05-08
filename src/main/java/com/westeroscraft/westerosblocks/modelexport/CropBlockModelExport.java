@@ -8,14 +8,10 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 
 import net.minecraft.block.Block;
 
 public class CropBlockModelExport extends ModelExport {
-    private WCCropBlock blk;
     private WesterosBlockDef def;
 
     // Template objects for Gson export of block state
@@ -43,7 +39,6 @@ public class CropBlockModelExport extends ModelExport {
     
     public CropBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.blk = (WCCropBlock) blk;
         this.def = def;
         for (Subblock sb : def.subBlocks) {
             addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);

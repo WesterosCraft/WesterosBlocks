@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "westerosblocks:blocks/web_block_0/food_sausages"
+  }
+}
