@@ -1,4 +1,4 @@
-#Mon May 08 22:21:32 CDT 2017
+#Mon May 08 23:35:49 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -155,6 +155,7 @@ tile.fence_block_2_6.name=Stormlands Dark Cobblestone Fence
 tile.fence_block_2_7.name=Dorne Dull Terracotta Fence
 tile.fence_block_2_8.name=Dorne Light Terracotta Fence
 tile.fence_block_2_9.name=Dorne Dark Sandstone Fence
+tile.fire_block_0.name=Safe Fire
 tile.forest_block_0_0.name=Cow Parsely
 tile.forest_block_0_1.name=Bracken
 tile.forest_block_0_2.name=Lady Fern

@@ -56,6 +56,9 @@ public class ModelExportFactory {
             case "ladder":
                 me = new LadderBlockModelExport(blk, def, dest);
                 break;
+            case "fire":
+                me = new FireBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }
