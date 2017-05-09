@@ -49,6 +49,9 @@ public class ModelExportFactory {
             case "trapdoor":
                 me = new TrapDoorBlockModelExport(blk, def, dest);
                 break;
+            case "torch":
+                me = new TorchBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

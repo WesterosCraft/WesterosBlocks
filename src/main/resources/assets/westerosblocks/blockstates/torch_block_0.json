@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:torch_block_0_wall"
+    },
+    "facing=south": {
+      "model": "westerosblocks:torch_block_0_wall",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "westerosblocks:torch_block_0_wall",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "westerosblocks:torch_block_0"
+    },
+    "facing=west": {
+      "model": "westerosblocks:torch_block_0_wall",
+      "y": 180
+    }
+  }
+}

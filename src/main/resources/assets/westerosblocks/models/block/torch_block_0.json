@@ -1,0 +1,6 @@
+{
+  "parent": "block/torch",
+  "textures": {
+    "torch": "westerosblocks:blocks/torch_block_0/redstone_torch_on"
+  }
+}

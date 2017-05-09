@@ -5,8 +5,11 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Collections;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Properties;
+import java.util.TreeSet;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -93,7 +96,14 @@ public abstract class ModelExport {
         PrintStream fw = null;
         try {
             fw = new PrintStream(new File(tgt, "en_US.lang"));
-            nls.list(fw);
+            Properties tmp = new Properties() {
+                @Override
+                public synchronized Enumeration<Object> keys() {
+                    return Collections.enumeration(new TreeSet<Object>(super.keySet()));
+                }
+            };
+            tmp.putAll(nls);
+            tmp.store(fw, null);
         } finally {
             if (fw != null) fw.close();
         }
