@@ -1,4 +1,4 @@
-#Mon May 08 21:31:11 CDT 2017
+#Mon May 08 22:21:32 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -162,6 +162,11 @@ tile.forest_block_0_3.name=Nettle
 tile.forest_block_0_4.name=Dead Bracken
 tile.forest_block_0_5.name=Fireweed
 tile.glasspane_net_0.name=Vertical Net
+tile.ladder_block_0_0.name=Iron Rungs
+tile.ladder_block_0_1.name=Rope Ladder
+tile.ladder_block_0_2.name=Vine Jasmine
+tile.ladder_block_0_3.name=Wood Ladder
+tile.ladder_block_1_0.name=Winterfell Stone Ladder
 tile.leaves_block_0_0.name=Apple Fruit Leaves
 tile.leaves_block_0_1.name=Apricot Fruit Leaves
 tile.leaves_block_0_2.name=Cherry Fruit Leaves
