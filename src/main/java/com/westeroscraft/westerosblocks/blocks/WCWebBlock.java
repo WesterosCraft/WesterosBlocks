@@ -168,6 +168,7 @@ public class WCWebBlock extends BlockWeb implements WesterosBlockLifecycle, West
         return def.colorMultiplier();
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
         return (def.alphaRender?BlockRenderLayer.TRANSLUCENT:BlockRenderLayer.CUTOUT);

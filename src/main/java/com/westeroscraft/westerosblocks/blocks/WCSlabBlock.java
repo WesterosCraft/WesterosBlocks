@@ -169,6 +169,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
         return def.getLightOpacity(state, world, pos);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {

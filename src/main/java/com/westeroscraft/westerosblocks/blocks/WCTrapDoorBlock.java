@@ -26,7 +26,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
 public class WCTrapDoorBlock extends BlockTrapDoor implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -92,6 +91,7 @@ public class WCTrapDoorBlock extends BlockTrapDoor implements WesterosBlockLifec
         return def.getLightOpacity(state, world, pos);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {

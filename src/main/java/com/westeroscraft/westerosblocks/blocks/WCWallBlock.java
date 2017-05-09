@@ -105,6 +105,7 @@ public class WCWallBlock extends BlockWall implements WesterosBlockLifecycle, We
         return def.getLightOpacity(state, world, pos);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {

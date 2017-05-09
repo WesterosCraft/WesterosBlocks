@@ -108,6 +108,7 @@ public class WCFenceBlock extends BlockFence implements WesterosBlockLifecycle, 
         return def.getLightOpacity(state, world, pos);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {

@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.List;
 import java.util.Random;
 
 import org.dynmap.modsupport.ModModelDefinition;
@@ -8,9 +7,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.PaneBlockModel;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockPane;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -52,7 +49,6 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     
     private WesterosBlockDef def;
     private PropertyMeta variant;
-    private int lastMeta;
     
     protected WCPaneBlock(WesterosBlockDef def) {
         super(def.getMaterial(), true);
@@ -108,6 +104,7 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
         return def.getLightOpacity(state, world, pos);
     }
     
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {

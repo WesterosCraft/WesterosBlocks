@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.List;
 import java.util.Random;
 
 import org.dynmap.modsupport.BlockSide;
@@ -11,7 +10,6 @@ import org.dynmap.modsupport.TextureModifier;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
@@ -112,6 +110,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
         return def.getLightOpacity(state, world, pos);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {

@@ -1,9 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import javax.annotation.Nullable;
 
 import org.dynmap.modsupport.BlockSide;
@@ -14,13 +10,10 @@ import org.dynmap.modsupport.TransparencyMode;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
-import net.minecraft.block.BlockPlanks.EnumType;
 import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -37,8 +30,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
 
-import com.google.common.base.Predicate;
-import com.westeroscraft.westerosblocks.BlockColoring;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;

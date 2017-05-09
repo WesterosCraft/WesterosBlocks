@@ -106,6 +106,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         return def.getLightOpacity(state, world, pos);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {

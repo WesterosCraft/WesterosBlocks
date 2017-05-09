@@ -266,7 +266,9 @@ public class WesterosBlockDef {
     public static abstract class ColorMultHandler {
         ColorMultHandler() {
         }
+        @SideOnly(Side.CLIENT)
         public abstract int getBlockColor();
+        @SideOnly(Side.CLIENT)
         public abstract int colorMultiplier(IBlockAccess access, BlockPos pos);
         protected void setBaseColor() {
         }
@@ -280,9 +282,13 @@ public class WesterosBlockDef {
         FixedColorMultHandler(int mult) {
             fixedMult = mult;
         }
+        @Override
+        @SideOnly(Side.CLIENT)
         public int getBlockColor() {
             return fixedMult;
         }
+        @Override
+        @SideOnly(Side.CLIENT)
         public int colorMultiplier(IBlockAccess access, BlockPos pos) {
             return fixedMult;
         }
@@ -369,7 +375,8 @@ public class WesterosBlockDef {
             }
             return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
         }
-		@Override
+        @Override
+        @SideOnly(Side.CLIENT)
 		public int getBlockColor() {
 			return 0xFFFFFF;
 		}
@@ -429,16 +436,19 @@ public class WesterosBlockDef {
             return getColor(0.5F, 1.0F);
         }
         @SideOnly(Side.CLIENT)
-        @Override
         protected void loadRes(String rname, String blkname) {
+            if (rname.indexOf(':') < 0)
+                rname = WesterosBlocks.MOD_ID + ":" + rname;
+            if (rname.endsWith(".png") == false)
+                rname += ".png";
             try {
                 colorBuffer = TextureUtil.readImageData(Minecraft.getMinecraft().getResourceManager(), new ResourceLocation(rname));
+                WesterosBlocks.log.severe(String.format("Loaded resource '%s' in block '%s' : %d pixels", rname, blkname, colorBuffer.length));
             } catch (Exception e) {
                 WesterosBlocks.log.severe(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
                 Arrays.fill(colorBuffer,  0xFFFFFF);
             }
         }
-
         private int getColor(float tmp, float hum)
         {
             tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
@@ -448,7 +458,6 @@ public class WesterosBlockDef {
             int j = (int)((1.0D - hum) * 255.0D);
             return colorBuffer[j << 8 | i];
         }
-        
         @Override
         @SideOnly(Side.CLIENT)
         public int colorMultiplier(IBlockAccess access, BlockPos pos) {
@@ -951,6 +960,9 @@ public class WesterosBlockDef {
     }
     
     public int getRenderColor(int meta) {
+        if (subblock_by_meta == null) {
+            initMeta();
+        }
         meta &= metaMask;
         if (this.colorMultHandlerByMeta != null) {
             return this.colorMultHandlerByMeta[meta].getBlockColor();
@@ -960,7 +972,9 @@ public class WesterosBlockDef {
     
     @SideOnly(Side.CLIENT)
     public IBlockColor colorMultiplier() {
-    	
+        if (subblock_by_meta == null) {
+            initMeta();
+        }
     	if (this.colorMult.equals("#FFFFFF")) {
     		boolean found = false;
     		for (Subblock sb : subBlocks) {
@@ -1406,18 +1420,17 @@ public class WesterosBlockDef {
             else {
                 int idx = hnd.indexOf(':');
                 if (idx < 0) {
-                    hnd = "westerosblocks:" + hnd;
-                    cmh = colorMultTable.get(hnd);
+                    hnd = WesterosBlocks.MOD_ID + ":" + hnd;
+                    hndid = hnd.toUpperCase();
                 }
-                if (hnd.endsWith(".png") == false) {
-                    hnd = hnd + ".png";
-                }
+                cmh = colorMultTable.get(hndid);
                 if (cmh == null) {
                     cmh = new CustomColorMultHandler(hnd, blockName);
                     colorMultTable.put(hndid, cmh);
                 }
             }
         }
+
         return cmh;
     }
     /**
