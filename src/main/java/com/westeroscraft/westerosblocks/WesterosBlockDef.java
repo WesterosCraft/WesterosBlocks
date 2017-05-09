@@ -16,6 +16,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
+import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
@@ -1354,7 +1355,7 @@ public class WesterosBlockDef {
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         //typeTable.put("rail", new WCRailBlock.Factory());
         //typeTable.put("cake", new WCCakeBlock.Factory());
-        //typeTable.put("bed", new WCBedBlock.Factory());
+        typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
         //typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
         //typeTable.put("furnace", new WCFurnaceBlock.Factory());

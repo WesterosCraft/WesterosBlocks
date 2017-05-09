@@ -59,6 +59,9 @@ public class ModelExportFactory {
             case "fire":
                 me = new FireBlockModelExport(blk, def, dest);
                 break;
+            case "bed":
+                me = new BedBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }
