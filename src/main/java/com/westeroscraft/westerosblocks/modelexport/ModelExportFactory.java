@@ -13,6 +13,7 @@ public class ModelExportFactory {
             case "solid":
             case "soulsand":
             case "sound":
+            case "sand":
                 me = new SolidBlockModelExport(blk, def, dest);
                 break;
             case "stair":

@@ -1,4 +1,4 @@
-#Mon May 08 21:11:34 CDT 2017
+#Mon May 08 21:31:11 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -287,6 +287,13 @@ tile.red_mushroom_block_0_5.name=Red Mushroom 6
 tile.red_mushroom_block_0_6.name=Red Mushroom 7
 tile.red_mushroom_block_0_7.name=Red Mushroom 8
 tile.red_mushroom_block_0_8.name=Red Mushroom 9
+tile.sand_block_0_0.name=Sand Skeleton
+tile.sand_block_0_1.name=Wet Sand
+tile.sand_block_0_2.name=Terracotta Sand
+tile.sand_block_0_3.name=Pink/Orange Sand
+tile.sand_block_0_4.name=Red Sand
+tile.sand_block_0_5.name=Sand Stones
+tile.sand_block_0_6.name=Wet Sand Stones
 tile.sandstone_block_0_stair_0.name=Vivid Sandstone Stairs
 tile.sandstone_block_0_stair_1.name=Monochrome Sandstone Stairs
 tile.sandstone_block_0_stair_2.name=Terracotta Stairs

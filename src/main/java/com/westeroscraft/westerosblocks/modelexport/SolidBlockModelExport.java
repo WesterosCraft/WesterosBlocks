@@ -13,7 +13,6 @@ import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import net.minecraft.block.Block;
 
 public class SolidBlockModelExport extends ModelExport {
-    private WCSolidBlock blk;
     private WesterosBlockDef def;
 
     // Template objects for Gson export of block state
@@ -46,7 +45,6 @@ public class SolidBlockModelExport extends ModelExport {
     
     public SolidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.blk = (WCSolidBlock) blk;
         this.def = def;
         for (Subblock sb : def.subBlocks) {
             addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
