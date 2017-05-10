@@ -18,6 +18,7 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
@@ -1341,7 +1342,7 @@ public class WesterosBlockDef {
         typeTable.put("web", new WCWebBlock.Factory());
         typeTable.put("torch", new WCTorchBlock.Factory());
         typeTable.put("ladder", new WCLadderBlock.Factory());
-        //typeTable.put("cuboid", new WCCuboidBlock.Factory());
+        typeTable.put("cuboid", new WCCuboidBlock.Factory());
         //typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
         //typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         //typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());

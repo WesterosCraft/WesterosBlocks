@@ -62,6 +62,9 @@ public class ModelExportFactory {
             case "bed":
                 me = new BedBlockModelExport(blk, def, dest);
                 break;
+            case "cuboid":
+                me = new CuboidBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

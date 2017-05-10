@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:cuboid_block_3_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:cuboid_block_3_2"
+    },
+    "variant=10": {
+      "model": "westerosblocks:cuboid_block_3_10"
+    },
+    "variant=1": {
+      "model": "westerosblocks:cuboid_block_3_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:cuboid_block_3_0"
+    },
+    "variant=7": {
+      "model": "westerosblocks:cuboid_block_3_7"
+    },
+    "variant=6": {
+      "model": "westerosblocks:cuboid_block_3_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:cuboid_block_3_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:cuboid_block_3_4"
+    },
+    "variant=9": {
+      "model": "westerosblocks:cuboid_block_3_9"
+    },
+    "variant=8": {
+      "model": "westerosblocks:cuboid_block_3_8"
+    },
+    "variant=11": {
+      "model": "westerosblocks:cuboid_block_3_11"
+    }
+  }
+}

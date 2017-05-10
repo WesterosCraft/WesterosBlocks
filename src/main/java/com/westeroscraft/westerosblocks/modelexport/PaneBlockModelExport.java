@@ -3,22 +3,16 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
-import com.westeroscraft.westerosblocks.modelexport.CrossBlockModelExport.TextureLayer0;
 
 import net.minecraft.block.Block;
 
 public class PaneBlockModelExport extends ModelExport {
-    private WCPaneBlock blk;
     private WesterosBlockDef def;
 
     // Template objects for Gson export of block state
@@ -80,7 +74,6 @@ public class PaneBlockModelExport extends ModelExport {
 
     public PaneBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.blk = (WCPaneBlock) blk;
         this.def = def;
         for (Subblock sb : def.subBlocks) {
             addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);

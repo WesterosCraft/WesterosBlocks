@@ -1,0 +1,180 @@
+package com.westeroscraft.westerosblocks.modelexport;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
+
+import net.minecraft.block.Block;
+
+public class CuboidBlockModelExport extends ModelExport {
+    private WesterosBlockDef def;
+
+    // Template objects for Gson export of block state
+    public static class StateObject {
+        public Map<String, Variant> variants = new HashMap<String, Variant>();
+    }
+    public static class Variant {
+        public String model;
+    }
+    
+    // Template objects for Gson export of block models
+    public static class ModelObjectCuboid {
+        public String parent = "block/block";    // Use 'block' model for single texture
+        public Display display = new Display();
+        public Map<String, String> textures = new HashMap<String, String>();
+        public List<Element> elements = new ArrayList<Element>();
+    }
+    public static class Display {
+        public int[] rotation = { 0, 90, 0 };
+        public int[] translation = { 0, 0, 0 };
+        public double[] scale = { 0.5, 0.5, 0.5 };
+    }
+    public static class Element {
+        public float[] from = { 0, 0, 0 };
+        public float[] to = { 16, 16, 16 };
+        public Map<String, Face> faces = new HashMap<String, Face>();
+    }
+    public static class Face {
+        public float[] uv = { 0, 0, 16, 16 };
+        public String texture;
+        public Integer rotation;
+        public String cullface;
+    }
+    public static class ModelObject {
+    	public String parent;
+    }
+    
+    public CuboidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
+        super(blk, def, dest);
+        this.def = def;
+        for (Subblock sb : def.subBlocks) {
+            addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
+        }
+    }
+    
+    @Override
+    public void doBlockStateExport() throws IOException {
+        StateObject so = new StateObject();
+        for (Subblock sb : def.subBlocks) {
+            Variant var = new Variant();
+            var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
+            so.variants.put(String.format("variant=%d", sb.meta), var);
+        }
+        this.writeBlockStateFile(def.blockName, so);
+    }
+
+    private static float getClamped(float v) {
+        v = 16F * v;
+        if (v < -16f) v = -16f;
+        if (v > 32f) v = 32f;
+        return v;
+    }
+        
+    private static final int[] STDTXTIDX = { 0, 1, 2, 3, 4, 5 };
+    @Override
+    public void doModelExports() throws IOException {
+        for (Subblock sb : def.subBlocks) {
+            ModelObjectCuboid mod = new ModelObjectCuboid();
+            mod.textures.put("particle", getTextureID(sb.getTextureByIndex(0)));
+            int cnt = Math.max(6, sb.textures.size());
+            for (int i = 0; i < cnt; i++) {
+                mod.textures.put("txt" + i, getTextureID(sb.getTextureByIndex(i)));
+            }
+            List<Cuboid> cubs = def.getCuboidList(sb.meta);
+            for (Cuboid c : cubs) { 
+                Face f;
+                int[] sidetxt = c.sideTextures;
+                if (sidetxt == null) {  // If not mapped, use index=side
+                    sidetxt = STDTXTIDX;
+                }
+                
+                if (WesterosBlockDef.SHAPE_CROSSED.equals(c.shape)) {
+                    continue; //TODO - handle crossed model
+                }
+                float xmin = getClamped(c.xMin);
+                float ymin = getClamped(c.yMin);
+                float zmin = getClamped(c.zMin);
+                float xmax = getClamped(c.xMax);
+                float ymax = getClamped(c.yMax);
+                float zmax = getClamped(c.zMax);
+                Element elem = new Element();
+                elem.from[0] = xmin;
+                elem.from[1] = ymin;
+                elem.from[2] = zmin;
+                elem.to[0] = xmax;
+                elem.to[1] = ymax;
+                elem.to[2] = zmax;
+                // Add down face
+                f = new Face();
+                f.uv[0] = xmin;
+                f.uv[2] = xmax;
+                f.uv[1] = 16-zmax;
+                f.uv[3] = 16-zmin;
+                f.texture = "#txt" + sidetxt[0];
+                if (elem.from[1] <= 0) f.cullface = "down";
+                elem.faces.put("down", f);
+                // Add up face
+                f = new Face();
+                f.uv[0] = xmin;
+                f.uv[2] = xmax;
+                f.uv[1] = zmin;
+                f.uv[3] = zmax;
+                f.texture = "#txt" + sidetxt[1];
+                if (elem.to[1] >= 16) f.cullface = "up";
+                elem.faces.put("up", f);
+                // Add north face
+                f = new Face();
+                f.uv[0] = 16-xmax;
+                f.uv[2] = 16-xmin;
+                f.uv[1] = 16-ymax;
+                f.uv[3] = 16-ymin;
+                f.texture = "#txt" + sidetxt[2];
+                if (elem.from[2] <= 0) f.cullface = "north";
+                elem.faces.put("north", f);
+                // Add south face
+                f = new Face();
+                f.uv[0] = xmin;
+                f.uv[2] = xmax;
+                f.uv[1] = 16-ymax;
+                f.uv[3] = 16-ymin;
+                f.texture = "#txt" + sidetxt[3];
+                if (elem.to[2] >= 16) f.cullface = "south";
+                elem.faces.put("south", f);
+                // Add west face
+                f = new Face();
+                f.uv[0] = zmin;
+                f.uv[2] = zmax;
+                f.uv[1] = 16-ymax;
+                f.uv[3] = 16-ymin;
+                f.texture = "#txt" + sidetxt[4];
+                if (elem.from[0] <= 0) f.cullface = "west";
+                elem.faces.put("west", f);
+                // Add eath face
+                f = new Face();
+                f.uv[0] = 16-zmax;
+                f.uv[2] = 16-zmin;
+                f.uv[1] = 16-ymax;
+                f.uv[3] = 16-ymin;
+                f.texture = "#txt" + sidetxt[5];
+                if (elem.to[0] >= 16) f.cullface = "east";
+                elem.faces.put("east", f);
+                
+                mod.elements.add(elem);
+            }
+            this.writeBlockModelFile(def.blockName + "_" + sb.meta, mod);
+            // Build simple item model that refers to block model
+            ModelObject mo = new ModelObject();
+            mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + sb.meta;
+            this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
+        }
+    }
+
+}

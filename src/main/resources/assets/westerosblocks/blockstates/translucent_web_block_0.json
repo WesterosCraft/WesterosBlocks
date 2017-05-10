@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:translucent_web_block_0_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:translucent_web_block_0_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:translucent_web_block_0_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:translucent_web_block_0_0"
+    },
+    "variant=6": {
+      "model": "westerosblocks:translucent_web_block_0_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:translucent_web_block_0_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:translucent_web_block_0_4"
+    }
+  }
+}
