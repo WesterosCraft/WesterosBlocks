@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -51,7 +52,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     protected static PropertyMeta new_variant = null;
     
     protected WesterosBlockDef def;
-    private PropertyMeta variant;
+    protected PropertyMeta variant;
     
     protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.getMaterial());
@@ -187,5 +188,33 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     {   
         BoundingBox bb = def.getBoundingBox(state, source, pos);
         return new AxisAlignedBB(bb.xMin, bb.yMin, bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+    }
+    
+    /**
+     *  Get cuboid list at given meta
+     *  @param meta
+     */
+    public List<WesterosBlockDef.Cuboid> getCuboidList(int meta) {
+        List<WesterosBlockDef.Cuboid> rslt = def.getCuboidList(meta);
+        if (rslt == null) {
+            rslt = Collections.emptyList();
+        }
+        return rslt;
+    }
+    
+    public void setBoundingBoxFromCuboidList(int meta) {
+        List<WesterosBlockDef.Cuboid> cl = this.getCuboidList(meta);
+        if (cl == null) cl = Collections.emptyList();
+        float xmin = 100.0F, ymin = 100.0F, zmin = 100.0F;
+        float xmax = -100.0F, ymax = -100.0F, zmax = -100.0F;
+        for(WesterosBlockDef.Cuboid c : cl) {
+            if (c.xMin < xmin) xmin = c.xMin;
+            if (c.yMin < ymin) ymin = c.yMin;
+            if (c.zMin < zmin) zmin = c.zMin;
+            if (c.xMax > xmax) xmax = c.xMax;
+            if (c.yMax > ymax) ymax = c.yMax;
+            if (c.zMax > zmax) zmax = c.zMax;
+        }
+        def.setBoundingBox(meta, xmin, ymin, zmin, xmax, ymax, zmax);
     }
 }

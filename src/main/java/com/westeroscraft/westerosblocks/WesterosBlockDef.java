@@ -19,6 +19,8 @@ import org.dynmap.modsupport.TransparencyMode;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
@@ -1033,11 +1035,11 @@ public class WesterosBlockDef {
     }
     
     public BoundingBox getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-    	return getBoundingBox(state.getBlock().getMetaFromState(state) & metaMask);
+    	return getBoundingBox(state.getBlock().getMetaFromState(state));
     }
 
     public BoundingBox getBoundingBox(int meta) {
-        return boundingBoxByMeta[meta & metaMask];
+        return boundingBoxByMeta[meta];
     }
 
     public List<Cuboid> getCuboidList(int meta) {
@@ -1343,8 +1345,8 @@ public class WesterosBlockDef {
         typeTable.put("torch", new WCTorchBlock.Factory());
         typeTable.put("ladder", new WCLadderBlock.Factory());
         typeTable.put("cuboid", new WCCuboidBlock.Factory());
-        //typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
-        //typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
+        typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
+        typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         //typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
         //typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
         //typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());

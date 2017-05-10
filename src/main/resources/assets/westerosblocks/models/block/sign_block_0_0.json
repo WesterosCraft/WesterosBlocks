@@ -1,0 +1,103 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt4": "westerosblocks:blocks/sign_block_0/sign_bottom",
+    "txt5": "westerosblocks:blocks/sign_block_0/sign_bottom",
+    "txt2": "westerosblocks:blocks/sign_block_0/ale_merchant",
+    "txt3": "westerosblocks:blocks/sign_block_0/ale_merchant",
+    "txt0": "westerosblocks:blocks/sign_block_0/sign_bottom",
+    "txt1": "westerosblocks:blocks/sign_block_0/sign_top",
+    "particle": "westerosblocks:blocks/sign_block_0/sign_bottom"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        7.2
+      ],
+      "to": [
+        16.0,
+        16.0,
+        8.8
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            7.2,
+            0.0,
+            8.8,
+            16.0
+          ],
+          "texture": "#txt5",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt3"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt2"
+        },
+        "west": {
+          "uv": [
+            7.2,
+            0.0,
+            8.8,
+            16.0
+          ],
+          "texture": "#txt4",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            7.2,
+            16.0,
+            8.8
+          ],
+          "texture": "#txt1",
+          "cullface": "up"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            7.2,
+            16.0,
+            8.8
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

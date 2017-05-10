@@ -15,7 +15,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import net.minecraft.block.Block;
 
 public class CuboidBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
+    protected WesterosBlockDef def;
 
     // Template objects for Gson export of block state
     public static class StateObject {
@@ -23,6 +23,7 @@ public class CuboidBlockModelExport extends ModelExport {
     }
     public static class Variant {
         public String model;
+        public Integer y;
     }
     
     // Template objects for Gson export of block models

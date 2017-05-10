@@ -1,0 +1,103 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt4": "westerosblocks:blocks/cuboid_block_1/star_chart_2x2",
+    "txt5": "westerosblocks:blocks/cuboid_block_1/star_chart_2x2",
+    "txt2": "westerosblocks:blocks/cuboid_block_1/star_chart_2x2",
+    "txt3": "westerosblocks:blocks/cuboid_block_1/star_chart_2x2",
+    "txt0": "westerosblocks:blocks/cuboid_block_1/star_chart_2x2",
+    "txt1": "westerosblocks:blocks/cuboid_block_1/star_chart_2x2",
+    "particle": "westerosblocks:blocks/cuboid_block_1/star_chart_2x2"
+  },
+  "elements": [
+    {
+      "from": [
+        15.376,
+        0.0,
+        0.0
+      ],
+      "to": [
+        15.52,
+        16.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt5"
+        },
+        "south": {
+          "uv": [
+            15.376,
+            0.0,
+            15.52,
+            16.0
+          ],
+          "texture": "#txt3",
+          "cullface": "south"
+        },
+        "north": {
+          "uv": [
+            0.47999954,
+            0.0,
+            0.6239996,
+            16.0
+          ],
+          "texture": "#txt2",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt4"
+        },
+        "up": {
+          "uv": [
+            15.376,
+            0.0,
+            15.52,
+            16.0
+          ],
+          "texture": "#txt1",
+          "cullface": "up"
+        },
+        "down": {
+          "uv": [
+            15.376,
+            0.0,
+            15.52,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}
