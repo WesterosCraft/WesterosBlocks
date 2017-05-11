@@ -1,4 +1,4 @@
-#Wed May 10 01:46:29 CDT 2017
+#Wed May 10 19:52:48 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -133,6 +133,11 @@ tile.cuboid_block_7_0.name=Mance's Camp Common Tent 1
 tile.cuboid_block_7_1.name=Mance's Camp Common Tent 2
 tile.cuboid_block_7_2.name=Mance's Camp Mance's Tent
 tile.cuboid_block_7_3.name=Mance's Camp Mance's Tent Antlers
+tile.cuboid_nsewud_block_0_0.name=Piston Extension
+tile.cuboid_nsewud_block_0_1.name=Wagon Wheel & Axle
+tile.cuboid_nsewud_block_1_0.name=Sticky Piston Extension
+tile.cuboid_nsewud_block_2_0.name=Rope Pulley
+tile.cuboid_nsewud_block_2_1.name=Chain Pulley
 tile.daub_wattle_block_0_0.name=Daub Wattle Brown Crosshatch
 tile.daub_wattle_block_0_1.name=Daub Wattle Brown Lefthatch
 tile.daub_wattle_block_0_10.name=Daub Wattle Red Righthatch
