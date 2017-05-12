@@ -1,4 +1,4 @@
-#Wed May 10 19:52:48 CDT 2017
+#Thu May 11 23:54:58 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -384,6 +384,10 @@ tile.sand_block_0_3.name=Pink/Orange Sand
 tile.sand_block_0_4.name=Red Sand
 tile.sand_block_0_5.name=Sand Stones
 tile.sand_block_0_6.name=Wet Sand Stones
+tile.sand_layer_0.name=Desert Sand Layer
+tile.sand_layer_1.name=Terracotta Sand Layer
+tile.sand_layer_2.name=Pink/Orange Sand Layer
+tile.sand_layer_3.name=Red Sand Layer
 tile.sandstone_block_0_stair_0.name=Vivid Sandstone Stairs
 tile.sandstone_block_0_stair_1.name=Monochrome Sandstone Stairs
 tile.sandstone_block_0_stair_2.name=Terracotta Stairs

@@ -26,6 +26,7 @@ import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
@@ -1025,6 +1026,9 @@ public class WesterosBlockDef {
 
     // Override default bounding box for given meta
     public void setBoundingBox(int meta, float xmin, float ymin, float zmin, float xmax, float ymax, float zmax) {
+        if (boundingBoxByMeta == null) {
+            initMeta();
+        }
         BoundingBox bb = new BoundingBox();
         this.boundingBoxByMeta[meta] = bb;
         bb.xMin = xmin;
@@ -1355,7 +1359,7 @@ public class WesterosBlockDef {
         typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("pane", new WCPaneBlock.Factory());
-        //typeTable.put("layer", new WCLayerBlock.Factory());
+        typeTable.put("layer", new WCLayerBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         //typeTable.put("rail", new WCRailBlock.Factory());
         //typeTable.put("cake", new WCCakeBlock.Factory());
