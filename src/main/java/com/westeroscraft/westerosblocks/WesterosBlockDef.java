@@ -26,6 +26,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
@@ -1369,7 +1370,7 @@ public class WesterosBlockDef {
         typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
-        //typeTable.put("furnace", new WCFurnaceBlock.Factory());
+        typeTable.put("furnace", new WCFurnaceBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         //typeTable.put("beacon", new WCBeaconBlock.Factory());

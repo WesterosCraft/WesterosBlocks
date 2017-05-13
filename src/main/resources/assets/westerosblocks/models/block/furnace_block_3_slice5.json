@@ -1,0 +1,45 @@
+{
+  "parent": "block/thin_block",
+  "textures": {
+    "particle": "westerosblocks:blocks/furnace_block_0/mud_furnace_side",
+    "bottom": "westerosblocks:blocks/furnace_block_0/mud_furnace_top",
+    "top": "westerosblocks:blocks/furnace_block_0/mud_furnace_top",
+    "side": "westerosblocks:blocks/furnace_block_0/mud_furnace_side",
+    "inside": "westerosblocks:blocks/furnace_block_0/mud_furnace_front_on_still"
+  },
+  "elements": [
+    {
+      "from": [
+        11.0,
+        0.0,
+        1.0
+      ],
+      "to": [
+        15.0,
+        8.0,
+        15.0
+      ],
+      "faces": {
+        "east": {
+          "texture": "#side"
+        },
+        "south": {
+          "texture": "#side"
+        },
+        "north": {
+          "texture": "#side"
+        },
+        "west": {
+          "texture": "#inside"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "down": {
+          "texture": "#bottom",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

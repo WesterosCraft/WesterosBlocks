@@ -86,6 +86,9 @@ public class ModelExportFactory {
             case "cake":
                 me = new CakeBlockModelExport(blk, def, dest);
                 break;
+            case "furnace":
+                me = new FurnaceBlockModelExport(blk, def, dest);
+                break;
 
         }
         return me;

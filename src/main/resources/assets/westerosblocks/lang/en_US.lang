@@ -1,4 +1,4 @@
-#Sat May 13 14:06:13 CDT 2017
+#Sat May 13 17:37:52 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -213,6 +213,13 @@ tile.forest_block_0_2.name=Lady Fern
 tile.forest_block_0_3.name=Nettle
 tile.forest_block_0_4.name=Dead Bracken
 tile.forest_block_0_5.name=Fireweed
+tile.furnace_block_0_0.name=Brick Furnace
+tile.furnace_block_0_1.name=Always Active Brick Furnace
+tile.furnace_block_1_0.name=Sandstone Furnace
+tile.furnace_block_1_1.name=Always Active Brick Furnace
+tile.furnace_block_2_1.name=Always Active Furnace
+tile.furnace_block_3_0.name=Dornish Mud Furnace
+tile.furnace_block_3_1.name=Always Active Dornish Mud Furnace
 tile.glasspane_net_0.name=Vertical Net
 tile.halfdoor_block_0.name=Dark Window Shutters
 tile.halfdoor_block_1.name=Oak Window Shutters

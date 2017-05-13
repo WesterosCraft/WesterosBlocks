@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "westerosblocks:blocks/furnace_block_0/mud_furnace_top",
+    "front": "westerosblocks:blocks/furnace_block_0/mud_furnace_front_on_still",
+    "side": "westerosblocks:blocks/furnace_block_0/mud_furnace_side"
+  }
+}

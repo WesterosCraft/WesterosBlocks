@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=west,lit=true,variant=0": {
+      "model": "westerosblocks:furnace_block_3_0_lit",
+      "y": 270
+    },
+    "facing=west,lit=true,variant=1": {
+      "model": "westerosblocks:furnace_block_3_1_lit",
+      "y": 270
+    },
+    "facing=west,lit=false,variant=0": {
+      "model": "westerosblocks:furnace_block_3_0",
+      "y": 270
+    },
+    "facing=north,lit=false,variant=0": {
+      "model": "westerosblocks:furnace_block_3_0"
+    },
+    "facing=south,lit=false,variant=1": {
+      "model": "westerosblocks:furnace_block_3_1",
+      "y": 180
+    },
+    "facing=north,lit=false,variant=1": {
+      "model": "westerosblocks:furnace_block_3_1"
+    },
+    "facing=east,lit=true,variant=0": {
+      "model": "westerosblocks:furnace_block_3_0_lit",
+      "y": 90
+    },
+    "facing=east,lit=true,variant=1": {
+      "model": "westerosblocks:furnace_block_3_1_lit",
+      "y": 90
+    },
+    "facing=south,lit=true,variant=0": {
+      "model": "westerosblocks:furnace_block_3_0_lit",
+      "y": 180
+    },
+    "facing=west,lit=false,variant=1": {
+      "model": "westerosblocks:furnace_block_3_1",
+      "y": 270
+    },
+    "facing=south,lit=true,variant=1": {
+      "model": "westerosblocks:furnace_block_3_1_lit",
+      "y": 180
+    },
+    "facing=north,lit=true,variant=1": {
+      "model": "westerosblocks:furnace_block_3_1_lit"
+    },
+    "facing=north,lit=true,variant=0": {
+      "model": "westerosblocks:furnace_block_3_0_lit"
+    },
+    "facing=east,lit=false,variant=0": {
+      "model": "westerosblocks:furnace_block_3_0",
+      "y": 90
+    },
+    "facing=south,lit=false,variant=0": {
+      "model": "westerosblocks:furnace_block_3_0",
+      "y": 180
+    },
+    "facing=east,lit=false,variant=1": {
+      "model": "westerosblocks:furnace_block_3_1",
+      "y": 90
+    }
+  }
+}
