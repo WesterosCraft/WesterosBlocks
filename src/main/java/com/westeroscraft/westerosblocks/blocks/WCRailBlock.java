@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.List;
 import java.util.Random;
 
 import org.dynmap.modsupport.BlockTextureRecord;
@@ -13,13 +12,20 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRail;
-import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.util.IIcon;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -27,9 +33,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -59,101 +62,61 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, MultiBlockItem.class);
+        def.doStandardRegisterActions(this, null);
         
         return true;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
     {
-        def.doStandardRegisterIcons(iconRegister);
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta) {
-        if (meta >= 6)
-            return def.doStandardIconGet(1, 0);
-        else
-            return def.doStandardIconGet(0, 0);
+        def.getStandardCreativeItems(this, itemIn, tab, list);
     }
     
-    @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
-    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itm, CreativeTabs tab, List list) {
-        def.getStandardSubBlocks(this, Item.getIdFromItem(itm), tab, list);
+    public int damageDropped(IBlockState state) {
+        return getMetaFromState(state);
     }
-    @Override
-    public int damageDropped(int meta) {
-        return 0;
-    }
+    
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
+    
     @Override
-    public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
-        return def.getFireSpreadSpeed(world, x, y, z, face);
-    }
-    @Override
-    public int getFlammability(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
-        return def.getFlammability(world, x, y, z, face);
-    }
-    @Override
-    public int getLightValue(IBlockAccess world, int x, int y, int z) {
-        return def.getLightValue(world, x, y, z);
-    }
-    @Override
-    public int getLightOpacity(IBlockAccess world, int x, int y, int z) {
-        return def.getLightOpacity(this, world, x, y, z);
-    }
-    @SideOnly(Side.CLIENT)
-    @Override
-    public int getBlockColor() {
-        return def.getBlockColor();
-    }
-    @SideOnly(Side.CLIENT)
-    @Override
-    public int getRenderColor(int meta)
-    {
-        return def.getRenderColor(meta);
-    }
-    @SideOnly(Side.CLIENT)
-    @Override
-    public int colorMultiplier(IBlockAccess access, int x, int y, int z)
-    {
-        return def.colorMultiplier(access, x, y, z);
-    }
-    @SideOnly(Side.CLIENT)
-    public int getRenderBlockPass()
-    {
-        return (def.alphaRender?1:0);
+    public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {
+        return def.getFireSpreadSpeed(world, pos, face);
     }
     
-    /**
-     * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
-     * their own) Args: x, y, z, neighbor blockID
-     * Modified from BlockRailBase: don't break when support blocks break
-     */
     @Override
-    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, Block par5)
-    {
-        if (!par1World.isRemote)
-        {
-            int meta = par1World.getBlockMetadata(par2, par3, par4);
-
-            this.func_150048_a(par1World, par2, par3, par4, meta, meta, par5);
-        }
+    public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) {
+        return def.getFlammability(world, pos, face);
     }
+    
+    @Override
+    public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+        return def.getLightValue(state, world, pos);
+    }
+    
+    @Override
+    public int getLightOpacity(IBlockState state, IBlockAccess world, BlockPos pos) {
+        return def.getLightOpacity(state, world, pos);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public BlockRenderLayer getBlockLayer() {
+        return (def.alphaRender?BlockRenderLayer.TRANSLUCENT:BlockRenderLayer.CUTOUT);
+    }
+    
     @SideOnly(Side.CLIENT)
     @Override
-    public void randomDisplayTick(World world, int x, int y, int z, Random rnd) {
-        def.doRandomDisplayTick(world, x, y, z, rnd);
-        super.randomDisplayTick(world, x, y, z, rnd);
+    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rnd) {
+        def.randomDisplayTick(stateIn, worldIn, pos, rnd);
+        super.randomDisplayTick(stateIn, worldIn, pos, rnd);
     }
+    
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
@@ -231,4 +194,14 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
         modS270.setMetaValue(4);
         modS270.setMetaValue(12);
     }
+    
+    @Override
+    @SideOnly(Side.CLIENT)
+    public IBlockColor getBlockColor() {
+        return def.colorMultiplier();
+    }
+    
+    @Override
+    public IProperty<?>[] getNonRenderingProperties() { return null; }
+
 }

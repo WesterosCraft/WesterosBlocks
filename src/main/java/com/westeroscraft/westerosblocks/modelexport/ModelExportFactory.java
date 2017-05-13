@@ -77,6 +77,9 @@ public class ModelExportFactory {
             case "layer":
                 me = new LayerBlockModelExport(blk, def, dest);
                 break;
+            case "rail":
+                me = new RailBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

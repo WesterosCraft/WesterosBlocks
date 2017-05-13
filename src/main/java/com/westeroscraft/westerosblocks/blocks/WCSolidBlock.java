@@ -64,6 +64,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
 
         return true;
     }
+
     @Override
     public boolean registerBlockDefinition() {
         def.doStandardRegisterActions(this, MultiBlockItem.class);
@@ -71,6 +72,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         return true;
     }
     
+    @Override
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
     {
@@ -81,6 +83,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     public int damageDropped(IBlockState state) {
         return getMetaFromState(state);
     }
+    
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
