@@ -22,7 +22,6 @@ public class HalfDoorBlockModelExport extends ModelExport {
         public String model = "";
         public Integer x;
         public Integer y;
-        public Boolean uvlock;
         public Variant(String blkname) {
             this(blkname, null, 0);
         }
@@ -33,7 +32,6 @@ public class HalfDoorBlockModelExport extends ModelExport {
         		model = WesterosBlocks.MOD_ID + ":" + blkname;
             if (yrot != 0) {
                 y = yrot;
-                uvlock = true;
             }
         }
     }
@@ -48,9 +46,22 @@ public class HalfDoorBlockModelExport extends ModelExport {
         public Texture textures = new Texture();
     }
     public static class Display {
-        public int[] rotation = { 30, 225, 0 };
-        public int[] translation = { 0, 0, 0 };
-        public double[] scale = { 0.625, 0.625, 0.625 };
+    	public DisplayInst gui = new DisplayInst(30, 225, 0, 0, 0.625);
+    	public DisplayInst ground = new DisplayInst(0, 0, 0, 3, 0.25);
+    	public DisplayInst fixed = new DisplayInst(0, 0, 0, 0, 0.5);
+    	public DisplayInst thirdperson_righthand = new DisplayInst(75, 45, 0, 2.5, 0.375);
+    	public DisplayInst firstperson_righthand = new DisplayInst(0, 45, 0, 0, 0.4);
+    	public DisplayInst firstperson_lefthand = new DisplayInst(0, 225, 0, 0, 0.4);
+    }
+    public static class DisplayInst {
+        public int[] rotation;
+        public double[] translation;
+        public double[] scale;
+        public DisplayInst(int rotx, int roty, int rotz, double transy, double scale) {
+        	rotation = new int[] { rotx, roty, rotz };
+        	translation = new double[] { 0, transy, 0 };
+        	this.scale = new double[] { scale, scale, scale };
+        }
     }
 
     public static class Texture {

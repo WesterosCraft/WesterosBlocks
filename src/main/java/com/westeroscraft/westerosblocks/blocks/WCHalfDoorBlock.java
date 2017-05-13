@@ -330,11 +330,9 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
         EnumFacing enumfacing;
         switch (facing) {
             case DOWN:
-                pos = pos.down();
                 enumfacing = EnumFacing.fromAngle((double)placer.rotationYaw + 180.0F);
                 break;
             case UP:
-                pos = pos.up();
                 enumfacing = EnumFacing.fromAngle((double)placer.rotationYaw + 180.0F);
                 break;
             default:
