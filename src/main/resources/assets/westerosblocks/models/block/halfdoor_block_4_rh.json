@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "top": "westerosblocks:blocks/halfdoor_block_0/shutters_reach",
+    "bottom": "westerosblocks:blocks/halfdoor_block_0/shutters_reach"
+  }
+}

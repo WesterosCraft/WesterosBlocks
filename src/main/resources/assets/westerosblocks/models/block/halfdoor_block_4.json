@@ -1,0 +1,24 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "top": "westerosblocks:blocks/halfdoor_block_0/shutters_reach",
+    "bottom": "westerosblocks:blocks/halfdoor_block_0/shutters_reach"
+  },
+  "display": {
+    "rotation": [
+      30,
+      225,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.625,
+      0.625,
+      0.625
+    ]
+  }
+}

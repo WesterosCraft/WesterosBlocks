@@ -1,4 +1,4 @@
-#Fri May 12 21:12:50 CDT 2017
+#Sat May 13 13:29:35 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -214,6 +214,11 @@ tile.forest_block_0_3.name=Nettle
 tile.forest_block_0_4.name=Dead Bracken
 tile.forest_block_0_5.name=Fireweed
 tile.glasspane_net_0.name=Vertical Net
+tile.halfdoor_block_0.name=Dark Window Shutters
+tile.halfdoor_block_1.name=Oak Window Shutters
+tile.halfdoor_block_2.name=Green Lannisport Window Shutters
+tile.halfdoor_block_3.name=Dorne Red Window Shutters
+tile.halfdoor_block_4.name=Reach Blue Window Shutters
 tile.hopper_block_0_0.name=Spruce Hopper
 tile.hopper_block_0_1.name=Birch Hopper
 tile.hopper_block_0_10.name=Monochrome Dark Sandstone Hopper

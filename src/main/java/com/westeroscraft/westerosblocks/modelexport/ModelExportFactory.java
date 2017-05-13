@@ -80,6 +80,10 @@ public class ModelExportFactory {
             case "rail":
                 me = new RailBlockModelExport(blk, def, dest);
                 break;
+            case "halfdoor":
+                me = new HalfDoorBlockModelExport(blk, def, dest);
+                break;
+
         }
         return me;
     }

@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "top": "westerosblocks:blocks/halfdoor_block_0/garden_door",
+    "bottom": "westerosblocks:blocks/halfdoor_block_0/garden_door"
+  }
+}
