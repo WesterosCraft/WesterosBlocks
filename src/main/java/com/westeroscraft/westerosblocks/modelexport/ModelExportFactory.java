@@ -83,6 +83,9 @@ public class ModelExportFactory {
             case "halfdoor":
                 me = new HalfDoorBlockModelExport(blk, def, dest);
                 break;
+            case "cake":
+                me = new CakeBlockModelExport(blk, def, dest);
+                break;
 
         }
         return me;
