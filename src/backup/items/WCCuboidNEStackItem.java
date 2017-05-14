@@ -1,9 +1,14 @@
 package com.westeroscraft.westerosblocks.items;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class WCCuboidNEStackItem extends MultiBlockItem {
@@ -81,5 +86,16 @@ public class WCCuboidNEStackItem extends MultiBlockItem {
             world.notifyBlocksOfNeighborChange(x, y, z, block);
             world.notifyBlocksOfNeighborChange(x, y + 1, z, block);
         }
+    }
+    @Override
+    public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer, EnumHand hand) {
+        IBlockState state = this.getStateFromMeta(meta & 0x6);
+        EnumFacing enumfacing = (placer != null) ? EnumFacing.fromAngle((double)placer.rotationYaw) : facing;
+
+        if ((enumfacing == EnumFacing.EAST) || (enumfacing == EnumFacing.WEST))
+            state = state.withProperty(FACING, EnumFacing.EAST);
+        else
+            state = state.withProperty(FACING, EnumFacing.NORTH);
+        return state;
     }
 }

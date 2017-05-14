@@ -69,6 +69,9 @@ public class ModelExportFactory {
             case "cuboid-ne":
                 me = new CuboidNEBlockModelExport(blk, def, dest);
                 break;
+            case "cuboid-ne-stack":
+                me = new CuboidNEStackBlockModelExport(blk, def, dest);
+                break;
             case "cuboid-nsew":
                 me = new CuboidNSEWBlockModelExport(blk, def, dest);
                 break;

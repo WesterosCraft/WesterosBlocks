@@ -22,6 +22,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNEStackBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
@@ -815,6 +816,7 @@ public class WesterosBlockDef {
             	GameRegistry.register(itm, block.getRegistryName());
             	if (subBlocks != null) {
             		for (Subblock sb : subBlocks) {
+                        if (sb.noInventoryItem) continue; 
             			ItemStack is = new ItemStack(itm, 1, sb.meta);
             			WesterosBlocks.proxy.registerItemRenderer(is.getItem(), sb.meta, is.getUnlocalizedName().substring(5));
             		}
@@ -1024,6 +1026,7 @@ public class WesterosBlockDef {
     public void getStandardCreativeItems(Block blk, Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
         if (subBlocks != null) {
             for (Subblock sb : subBlocks) {
+                if (sb.noInventoryItem) continue;
                 subItems.add(new ItemStack(itemIn, 1, sb.meta));
             }
         }
@@ -1359,7 +1362,7 @@ public class WesterosBlockDef {
         typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
         //typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
-        //typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
+        typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
         typeTable.put("door", new WCDoorBlock.Factory());
         typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());

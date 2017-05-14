@@ -55,7 +55,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     protected static PropertyMeta new_variant = null;
     
     protected WesterosBlockDef def;
-    protected PropertyMeta variant;
+    public PropertyMeta variant;
     
     protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.getMaterial());
