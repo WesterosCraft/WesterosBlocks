@@ -18,16 +18,16 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.items.WCCuboidNEStackItem;
+import com.westeroscraft.westerosblocks.items.WCCuboidNSEWStackItem;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 
-public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlockLifecycle {
+public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
-            def.setMetaMask(0x7);
-            if (!def.validateMetaValues(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, new int[] { 0, 1 })) {
+            def.setMetaMask(0x3);
+            if (!def.validateMetaValues(new int[] { 0, 1, 2, 3 }, new int[] { 0, 1 })) {
                 return null;
             }
             // Force any top blocks to have no inventory item
@@ -39,7 +39,7 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
                     }
                     matches |= (1 << sb.meta);
                 }
-                for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < 2; i++) {
                     switch (matches >> (2*i)) {
                         case 0:
                         case 3:
@@ -50,7 +50,7 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
                     }
                 }
             }
-            // Build variant list (bit 1-2 of defined bottom blocks)
+            // Build variant list (bit 1 of defined bottom blocks)
             List<Integer> metalist = def.getDefinedBaseMeta();
             ArrayList<Integer> variant_list = new ArrayList<Integer>();
             for (Integer id : metalist) {
@@ -59,15 +59,15 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
             }
             new_variant = PropertyMeta.create("variant", variant_list);
 
-            return new Block[] { new WCCuboidNEStackBlock(def) };
+            return new Block[] { new WCCuboidNSEWStackBlock(def) };
         }
     }
     
     public static PropertyBool TOP = PropertyBool.create("top");
 
-    private boolean noBreakUnder[] = new boolean[4];
+    private boolean noBreakUnder[] = new boolean[2];
     
-    protected WCCuboidNEStackBlock(WesterosBlockDef def) {
+    protected WCCuboidNSEWStackBlock(WesterosBlockDef def) {
         super(def);
         if (def.subBlocks != null) {
             for (WesterosBlockDef.Subblock sb : def.subBlocks) {
@@ -77,7 +77,7 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
                     String[] toks = type.split(",");
                     for (String tok : toks) {
                         if (tok.equals("no-break-under")) {
-                            noBreakUnder[(sb.meta >> 1) & 0x3] = true;
+                            noBreakUnder[sb.meta >> 1] = true;
                         }
                     }
                 }
@@ -86,7 +86,7 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, WCCuboidNEStackItem.class);
+        def.doStandardRegisterActions(this, WCCuboidNSEWStackItem.class);
         
         return true;
     }
@@ -142,16 +142,16 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
      */
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        state = state.withProperty(FACING, EnumFacing.NORTH).withProperty(TOP,  false);
+        state = state.withProperty(FACING, EnumFacing.EAST).withProperty(TOP,  false);
         return super.getItemDropped(state, rand, fortune);
     }
 
     @Override
     public int damageDropped(IBlockState state) {
-        state = state.withProperty(FACING, EnumFacing.NORTH).withProperty(TOP, false);
+        state = state.withProperty(FACING, EnumFacing.EAST).withProperty(TOP, false);
         return this.getMetaFromState(state);
     }
-    
+
     /**
      * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
      */
@@ -173,12 +173,12 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
     // map from state to meta and vice verca - use highest bit for polished boolean, use low 2 bits for variant
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(variant, (meta & 0x6) >> 1).withProperty(FACING, ((meta&8)!=0) ? EnumFacing.EAST : EnumFacing.NORTH).withProperty(TOP, (meta & 1) != 0);
+        return this.getDefaultState().withProperty(variant, (meta & 0x2) >> 1).withProperty(FACING, VALIDFACING.get(meta >> 2)).withProperty(TOP, (meta & 1) != 0);
     }
     
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (state.getValue(variant).intValue() << 1) + ((state.getValue(FACING) == EnumFacing.EAST)?8:0) + (state.getValue(TOP)?1:0);
+        return (state.getValue(variant).intValue() << 1) + (VALIDFACING.indexOf(state.getValue(FACING)) << 2) + (state.getValue(TOP)?1:0);
     }
 
 }

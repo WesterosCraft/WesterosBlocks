@@ -38,7 +38,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     }
     
     private List<WesterosBlockDef.Cuboid> cuboids_by_meta[];
-    private static final List<EnumFacing> VALIDFACING = new ArrayList<EnumFacing>() {{
+    protected static final List<EnumFacing> VALIDFACING = new ArrayList<EnumFacing>() {{
         add(EnumFacing.EAST);
         add(EnumFacing.SOUTH);
         add(EnumFacing.WEST);
