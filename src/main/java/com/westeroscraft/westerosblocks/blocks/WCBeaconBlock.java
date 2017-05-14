@@ -1,12 +1,15 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import net.minecraft.block.Block;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
@@ -17,6 +20,8 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
             if (!def.validateMetaValues(null, null)) {
                 return null;
             }
+            new_variant = PropertyMeta.create("variant", def.getDefinedBaseMeta());
+
             return new Block[] { new WCBeaconBlock(def) };
         }
     }
@@ -31,6 +36,10 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
     
     protected WCBeaconBlock(WesterosBlockDef def) {
         super(def);
+        for (Subblock sb : def.subBlocks) {
+            sb.cuboids = cuboidlist;
+            setBoundingBoxFromCuboidList(sb.meta);
+        }
     }
             
     /**

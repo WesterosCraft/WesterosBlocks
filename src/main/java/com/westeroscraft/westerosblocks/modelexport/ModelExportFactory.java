@@ -63,6 +63,7 @@ public class ModelExportFactory {
                 me = new BedBlockModelExport(blk, def, dest);
                 break;
             case "cuboid":
+            case "beacon":
                 me = new CuboidBlockModelExport(blk, def, dest);
                 break;
             case "cuboid-ne":
@@ -89,7 +90,6 @@ public class ModelExportFactory {
             case "furnace":
                 me = new FurnaceBlockModelExport(blk, def, dest);
                 break;
-
         }
         return me;
     }

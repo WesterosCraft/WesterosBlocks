@@ -1,4 +1,4 @@
-#Sat May 13 17:37:52 CDT 2017
+#Sat May 13 22:06:40 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -27,6 +27,8 @@ tile.arrow_slits_1_4.name=Basalt Brick Arrow Slit
 tile.bars_iron_block_0_0.name=Iron Crossbar
 tile.bars_iron_block_0_1.name=Oxidized Iron Bars
 tile.bars_iron_block_0_2.name=Oxidized Iron Crossbar
+tile.beacon_block_0_0.name=Brazier
+tile.beacon_block_1_0.name=Brazier
 tile.bed_block_0.name=Nights Watch Bed
 tile.bed_block_1.name=Northern Bed
 tile.bed_block_2.name=Straw Bed

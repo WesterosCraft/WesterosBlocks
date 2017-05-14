@@ -16,6 +16,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
+import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
@@ -1373,7 +1374,7 @@ public class WesterosBlockDef {
         typeTable.put("furnace", new WCFurnaceBlock.Factory());
         typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
-        //typeTable.put("beacon", new WCBeaconBlock.Factory());
+        typeTable.put("beacon", new WCBeaconBlock.Factory());
         // Standard color multipliers
         colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
         colorMultTable.put("water", new WaterColorMultHandler());
