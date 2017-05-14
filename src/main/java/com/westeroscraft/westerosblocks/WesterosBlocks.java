@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks;
 
-//import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -18,7 +17,6 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ReportedException;
-//import net.minecraft.world.biome.Biome;
 
 import java.io.File;
 import java.io.IOException;
@@ -35,16 +33,8 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
-//import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 import com.westeroscraft.westerosblocks.network.PacketHandler;
 import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
-//import com.westeroscraft.westerosblocks.render.WCCuboidNSEWUDRenderer;
-//import com.westeroscraft.westerosblocks.render.WCCuboidRenderer;
-//import com.westeroscraft.westerosblocks.render.WCFenceRenderer;
-//import com.westeroscraft.westerosblocks.render.WCFluidCTMRenderer;
-//import com.westeroscraft.westerosblocks.render.WCHalfDoorRenderer;
-//import com.westeroscraft.westerosblocks.render.WCLadderRenderer;
-//import com.westeroscraft.westerosblocks.render.WCStairRenderer;
 
 @Mod(modid = WesterosBlocks.MOD_ID, name = "WesterosBlocks", version = Version.VER)
 public class WesterosBlocks
@@ -66,15 +56,6 @@ public class WesterosBlocks
     // Block classes
     public static Block customBlocks[];
     public static HashMap<String, Block> customBlocksByName;
-    // Custom renders
-    //TODO: probably not needed
-    //public static int fenceRenderID;
-    //public static int ladderRenderID;
-    //public static int halfdoorRenderID;
-    //public static int cuboidRenderID;
-    //public static int cuboidNSEWUDRenderID;
-    //public static int stairRenderID;
-    //public static int fluidCTMRenderID;
     
     // Use stair render fix
     public boolean useFixedStairs = false;
@@ -180,30 +161,7 @@ public class WesterosBlocks
             //Biome.taiga.setEnableSnow().setTemperatureRainfall(-0.5F, 0.4F);
         }
         modcfgdir = event.getModConfigurationDirectory();
-        
-        // Register renderer
-        //TODO: probably don't need these
-        //fenceRenderID = RenderingRegistry.getNextAvailableRenderId();
-        //RenderingRegistry.registerBlockHandler(new WCFenceRenderer());
-        //ladderRenderID = RenderingRegistry.getNextAvailableRenderId();
-        //RenderingRegistry.registerBlockHandler(new WCLadderRenderer());
-        //cuboidRenderID = RenderingRegistry.getNextAvailableRenderId();
-        //RenderingRegistry.registerBlockHandler(new WCCuboidRenderer());
-        //halfdoorRenderID = RenderingRegistry.getNextAvailableRenderId();
-        //RenderingRegistry.registerBlockHandler(new WCHalfDoorRenderer());
-        //cuboidNSEWUDRenderID = RenderingRegistry.getNextAvailableRenderId();
-        //RenderingRegistry.registerBlockHandler(new WCCuboidNSEWUDRenderer());
-        //stairRenderID = RenderingRegistry.getNextAvailableRenderId();
-        //RenderingRegistry.registerBlockHandler(new WCStairRenderer());
-        //if (useWaterCTMFix && ClassTransformer.checkForCTMSupport()) {
-        //    fluidCTMRenderID = RenderingRegistry.getNextAvailableRenderId();
-        //    RenderingRegistry.registerBlockHandler(new WCFluidCTMRenderer());
-        //}
-        //else {
-        //    useWaterCTMFix = false;
-        //    fluidCTMRenderID = 4;   // Vanilla fluid renderer
-        //}
-        
+                
         // Construct custom block definitions
         ArrayList<Block> blklist = new ArrayList<Block>();
         customBlocksByName = new HashMap<String, Block>();
@@ -229,9 +187,8 @@ public class WesterosBlocks
                 }
             }
             else {
-                //crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
-                //return;
-                log.warning("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
+                crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
+                return;
             }
         }
         customBlocks = blklist.toArray(new Block[blklist.size()]);
