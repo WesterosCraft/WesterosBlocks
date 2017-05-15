@@ -58,9 +58,6 @@ import com.westeroscraft.westerosblocks.tileentity.WCTileEntitySound;
 //  bit 1-2 = orientation (same as standard, but minus 2 on value (0-3 vs 2-5)
 //  bit 3 = active (1) vs idle (0)
 public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecycle, WesterosBlockDynmapSupport, WesterosBlocksMessageDest {
-
-    private static boolean did_te_register = false;
-
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
@@ -71,12 +68,7 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
             }
             new_variant = PropertyMeta.create("variant", def.getDefinedBaseMeta());
 
-            //TODO: only register TE once - need to see if we need to add legacy ids for compatibility with old world data
-            //GameRegistry.registerTileEntity(WCFurnaceTileEntity.class, def.blockName);
-            if (!did_te_register) {
-                GameRegistry.registerTileEntity(WCFurnaceTileEntity.class, "WCFurnaceTileEntity");
-                did_te_register = true;
-            }
+            def.registerTileEntity(WCFurnaceTileEntity.class, "WCFurnaceTileEntity");
 
             return new Block[] { new WCFurnaceBlock(def) };
         }

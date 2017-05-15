@@ -48,6 +48,7 @@ import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
+import com.westeroscraft.westerosblocks.tileentity.WCFurnaceTileEntity;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -61,6 +62,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.NonNullList;
@@ -1663,5 +1665,25 @@ public class WesterosBlockDef {
     }
     public void setBlockIDCount(int cnt) {
         blockIDCount = cnt;
+    }
+    private static class TileEntityRec {
+        Class<? extends TileEntity> te_class;
+        List<String> legacy_ids = new ArrayList<String>();
+    }
+    private static HashMap<String, TileEntityRec> te_rec = new HashMap<String, TileEntityRec>();
+    public void registerTileEntity(Class<? extends TileEntity> teclass, String std_id) {
+        TileEntityRec ter = te_rec.get(std_id); // Get existing rec
+        if (ter == null) {
+            ter = new TileEntityRec();
+            ter.te_class = teclass;
+            te_rec.put(std_id,  ter);
+        }
+        ter.legacy_ids.add(this.blockName);
+    }
+    public static void processRegisterTileEntities() {
+        for (String std_id : te_rec.keySet()) {
+            TileEntityRec ter = te_rec.get(std_id);
+            GameRegistry.registerTileEntityWithAlternatives(ter.te_class, std_id, ter.legacy_ids.toArray(new String[0]));
+        }
     }
 }

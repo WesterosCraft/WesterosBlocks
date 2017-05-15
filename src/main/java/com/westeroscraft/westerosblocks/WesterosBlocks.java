@@ -197,7 +197,8 @@ public class WesterosBlocks
         } catch (IOException iox) {
             log.warning(String.format("Error writing NLS - %s", iox));
         }
-        
+        // Register tile entities
+        WesterosBlockDef.processRegisterTileEntities();
         // Initialize custom block definitions
         for (int i = 0; i < customBlocks.length; i++) {
             if (customBlocks[i] instanceof WesterosBlockLifecycle) {

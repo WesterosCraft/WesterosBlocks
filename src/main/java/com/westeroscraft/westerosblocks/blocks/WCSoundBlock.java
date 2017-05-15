@@ -20,13 +20,11 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
+import com.westeroscraft.westerosblocks.tileentity.WCFurnaceTileEntity;
 import com.westeroscraft.westerosblocks.tileentity.WCTileEntitySound;
 
 
 public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
-
-    private static boolean did_te_register = false;
-    
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
@@ -35,12 +33,7 @@ public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
             }
             WCSolidBlock.new_variant = PropertyMeta.create("variant", def.getDefinedBaseMeta());
 
-            //TODO: only register TE once - need to see if we need to add legacy ids for compatibility with old world data
-            //GameRegistry.registerTileEntity(WCTileEntitySound.class, def.blockName);
-            if (!did_te_register) {
-                GameRegistry.registerTileEntity(WCTileEntitySound.class, "WCTileEntitySound");
-                did_te_register = true;
-            }
+            def.registerTileEntity(WCTileEntitySound.class, "WCTileEntitySound");
             
             return new Block[] { new WCSoundBlock(def) };
         }
