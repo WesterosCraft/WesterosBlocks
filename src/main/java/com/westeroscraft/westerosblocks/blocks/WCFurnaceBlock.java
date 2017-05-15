@@ -246,7 +246,7 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     @Override
     public IBlockState getStateFromMeta(int meta)
     {
-        EnumFacing enumfacing = EnumFacing.getFront((meta >> 1) & 0x3);
+        EnumFacing enumfacing = EnumFacing.getFront(((meta >> 1) & 0x3) + 2);
 
         if (enumfacing.getAxis() == EnumFacing.Axis.Y)
         {
@@ -258,7 +258,7 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
 
     public int getMetaFromState(IBlockState state)
     {
-        int meta = ((EnumFacing)state.getValue(FACING)).getIndex() << 1;
+        int meta = (((EnumFacing)state.getValue(FACING)).getIndex() - 2) << 1;
         if (state.getValue(LIT).booleanValue())
             meta |= 0x8;
         meta += state.getValue(variant).intValue();
