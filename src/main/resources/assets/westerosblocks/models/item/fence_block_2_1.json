@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/fence_inventory",
+  "parent": "westerosblocks:block/untinted/fence_inventory",
   "textures": {
     "bottom": "westerosblocks:blocks/stone_slate_0/slate_blue",
     "top": "westerosblocks:blocks/stone_slate_0/slate_blue",

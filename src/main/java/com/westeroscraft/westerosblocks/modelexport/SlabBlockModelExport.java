@@ -84,6 +84,7 @@ public class SlabBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         for (Subblock sb : def.subBlocks) {
+            boolean isTinted = sb.isTinted(def);
         	// Double block model
             ModelObjectCube mod = new ModelObjectCube();
             mod.textures.down = getTextureID(sb.getTextureByIndex(0));
@@ -93,18 +94,21 @@ public class SlabBlockModelExport extends ModelExport {
             mod.textures.west = getTextureID(sb.getTextureByIndex(4));
             mod.textures.east = getTextureID(sb.getTextureByIndex(5));
             mod.textures.particle = getTextureID(sb.getTextureByIndex(3));
+            if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube";
             this.writeBlockModelFile(def.getBlockName(1) + "_" + sb.meta, mod);
             // Lower half block model
             ModelObjectHalfLower modl = new ModelObjectHalfLower();
             modl.textures.bottom = getTextureID(sb.getTextureByIndex(0));
             modl.textures.top = getTextureID(sb.getTextureByIndex(1));
             modl.textures.side = getTextureID(sb.getTextureByIndex(2));
+            if (isTinted) modl.parent = WesterosBlocks.MOD_ID + ":block/tinted/half_slab";
             this.writeBlockModelFile(def.getBlockName(0) + "_" + sb.meta + "_bottom", modl);
             // Upper half block model
             ModelObjectHalfUpper modu = new ModelObjectHalfUpper();
             modu.textures.bottom = getTextureID(sb.getTextureByIndex(0));
             modu.textures.top = getTextureID(sb.getTextureByIndex(1));
             modu.textures.side = getTextureID(sb.getTextureByIndex(2));
+            if (isTinted) modu.parent = WesterosBlocks.MOD_ID + ":block/tinted/upper_slab";
             this.writeBlockModelFile(def.getBlockName(0) + "_" + sb.meta + "_top", modu);
             // Build simple item model that refers to lower block model
             ModelObject mo = new ModelObject();

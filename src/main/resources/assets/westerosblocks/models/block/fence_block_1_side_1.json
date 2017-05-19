@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/fence_side",
+  "parent": "westerosblocks:block/tinted/fence_side",
   "textures": {
     "bottom": "westerosblocks:blocks/stone_block_1/stone_cobble_mossy_unshaded",
     "top": "westerosblocks:blocks/stone_block_1/stone_cobble_mossy_unshaded",

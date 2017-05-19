@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/fence_post",
+  "parent": "westerosblocks:block/untinted/fence_post",
   "textures": {
     "bottom": "westerosblocks:blocks/wood_block_0/bark_spruce",
     "top": "westerosblocks:blocks/wood_block_0/bark_spruce",

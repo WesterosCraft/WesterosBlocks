@@ -1,5 +1,5 @@
 {
-  "parent": "block/orientable",
+  "parent": "westerosblocks:block/tinted/orientable",
   "textures": {
     "top": "westerosblocks:blocks/furnace_block_0/brick_furnace_top",
     "front": "westerosblocks:blocks/furnace_block_0/brick_furnace_front_off",

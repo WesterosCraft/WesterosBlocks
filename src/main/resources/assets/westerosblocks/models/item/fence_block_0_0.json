@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/fence_inventory",
+  "parent": "westerosblocks:block/untinted/fence_inventory",
   "textures": {
     "bottom": "westerosblocks:blocks/wood_block_0/planks_oak",
     "top": "westerosblocks:blocks/wood_block_0/planks_oak",

@@ -30,7 +30,7 @@ public class FurnaceBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectCubeAll {
-        public String parent = "block/orientable";    // Use 'cube_all' model for single texture
+        public String parent = "block/orientable";    // Use 'orientable' model for single texture
         public TextureOrient textures = new TextureOrient();
     }
     public static class TextureOrient {
@@ -72,16 +72,19 @@ public class FurnaceBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         for (Subblock sb : def.subBlocks) {
+            boolean isTinted = sb.isTinted(def);
             ModelObjectCubeAll mod = new ModelObjectCubeAll();
             mod.textures.top = getTextureID(sb.getTextureByIndex(1)); 
             mod.textures.side = getTextureID(sb.getTextureByIndex(2)); 
             mod.textures.front = getTextureID(sb.getTextureByIndex(3)); // ON
+            if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/orientable";
             this.writeBlockModelFile(def.blockName + "_" + sb.meta + "_lit", mod);
             
             mod = new ModelObjectCubeAll();
             mod.textures.top = getTextureID(sb.getTextureByIndex(1)); 
             mod.textures.side = getTextureID(sb.getTextureByIndex(2)); 
             mod.textures.front = getTextureID(sb.getTextureByIndex(4)); // Off
+            if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/orientable";
             this.writeBlockModelFile(def.blockName + "_" + sb.meta, mod);
             // Build simple item model that refers to block model
             ModelObject mo = new ModelObject();

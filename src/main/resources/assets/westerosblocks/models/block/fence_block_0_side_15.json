@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/fence_side",
+  "parent": "westerosblocks:block/untinted/fence_side",
   "textures": {
     "bottom": "westerosblocks:blocks/wood_block_0/planks_jungle_grapevines",
     "top": "westerosblocks:blocks/wood_block_0/planks_jungle_grapevines",
