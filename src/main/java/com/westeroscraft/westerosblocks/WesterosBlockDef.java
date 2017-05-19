@@ -75,6 +75,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.EnumPlantType;
+import net.minecraftforge.fml.common.registry.GameData;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -818,9 +819,12 @@ public class WesterosBlockDef {
                 itm = (Item)itemclass.getConstructor(Block.class).newInstance(block);
             }
             // block registration has to happen first
-            GameRegistry.register(block);
+            ResourceLocation rl = new ResourceLocation(WesterosBlocks.MOD_ID, name);
+            GameData.getBlockRegistry().register(id, rl, block);
+            //GameRegistry.register(block);
             if (itm != null) {
-            	GameRegistry.register(itm, block.getRegistryName());
+                GameData.getItemRegistry().register(id, rl, itm);
+            	//GameRegistry.register(itm, block.getRegistryName());
             	if (subBlocks != null) {
             		for (Subblock sb : subBlocks) {
                         if (sb.noInventoryItem) continue; 
