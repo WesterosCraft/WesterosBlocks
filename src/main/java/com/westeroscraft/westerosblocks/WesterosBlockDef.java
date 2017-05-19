@@ -279,6 +279,10 @@ public class WesterosBlockDef {
             }
             return null;
         }
+        
+        public boolean isTinted(WesterosBlockDef def) {
+            return ((colorMult != null) && (colorMult.equals("#FFFFFF") == false)) || (def.colorMult.equals("#FFFFFF") == false);
+        }
     }
 
     // Base color multiplier (fixed)

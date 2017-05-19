@@ -61,6 +61,10 @@ public class CrossBlockModelExport extends ModelExport {
         for (Subblock sb : def.subBlocks) {
             ModelObjectCross mod = new ModelObjectCross();
             mod.textures.cross = getTextureID(sb.getTextureByIndex(0)); 
+            // Use tinted cross if 
+            if (sb.isTinted(def)) {
+                mod.parent = "block/tinted_cross";
+            }
             this.writeBlockModelFile(def.blockName + "_" + sb.meta, mod);
             // Build simple item model that refers to block model
             ModelObject mo = new ModelObject();

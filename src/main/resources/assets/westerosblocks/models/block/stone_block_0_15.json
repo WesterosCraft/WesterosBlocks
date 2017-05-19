@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "westerosblocks:block/tinted/cube",
   "textures": {
     "down": "westerosblocks:blocks/stone_block_3/brick_orange_small_top_ornate",
     "up": "westerosblocks:blocks/stone_block_3/brick_orange_small_top_ornate",

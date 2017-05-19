@@ -121,6 +121,7 @@ public class StairsBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
+        boolean isTinted = def.subBlocks.get(0).isTinted(def);
         // Find base block for stairs - textures come from there
         Block bblk = WesterosBlocks.findBlockByName(def.modelBlockName);
         if (bblk == null) {
@@ -173,18 +174,21 @@ public class StairsBlockModelExport extends ModelExport {
         base.textures.bottom = downtxt;
         base.textures.top = uptxt;
         base.textures.side = sidetxt;
+        if (isTinted) base.parent = WesterosBlocks.MOD_ID + ":block/tinted/stairs";
         this.writeBlockModelFile(def.blockName, base);
         // Outer model
         ModelObjectOuterStair outer = new ModelObjectOuterStair();
         outer.textures.bottom = downtxt;
         outer.textures.top = uptxt;
         outer.textures.side = sidetxt;
+        if (isTinted) outer.parent = WesterosBlocks.MOD_ID + ":block/tinted/outer_stairs";
         this.writeBlockModelFile(def.blockName + "_outer", outer);
         // Inner model
         ModelObjectInnerStair inner = new ModelObjectInnerStair();
         inner.textures.bottom = downtxt;
         inner.textures.top = uptxt;
         inner.textures.side = sidetxt;
+        if (isTinted) inner.parent = WesterosBlocks.MOD_ID + ":block/tinted/inner_stairs";
         this.writeBlockModelFile(def.blockName + "_inner", inner);
         // Build simple item model that refers to base block model
         ModelObject mo = new ModelObject();

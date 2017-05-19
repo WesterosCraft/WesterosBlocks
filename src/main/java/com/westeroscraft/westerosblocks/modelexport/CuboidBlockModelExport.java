@@ -61,6 +61,7 @@ public class CuboidBlockModelExport extends ModelExport {
         public String texture;
         public Integer rotation;
         public String cullface;
+        public Integer tintindex;
     }
     public static class ModelObject {
     	public String parent;
@@ -93,7 +94,7 @@ public class CuboidBlockModelExport extends ModelExport {
         return v;
     }
      
-    protected void doCuboidModel(Subblock sb, int meta, int modelmeta, String name) throws IOException {
+    protected void doCuboidModel(Subblock sb, int meta, int modelmeta, String name, boolean isTinted) throws IOException {
         ModelObjectCuboid mod = new ModelObjectCuboid();
         mod.textures.put("particle", getTextureID(sb.getTextureByIndex(0)));
         int cnt = Math.max(6, sb.textures.size());
@@ -134,6 +135,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f = new Face();
                 f.uv = new float[] { 0, 0, 16, 16 };
                 f.texture = "#txt0";
+                if (isTinted) f.tintindex = 0;
                 elem.faces.put("north", f);
                 elem.faces.put("south", f);
                 mod.elements.add(elem);
@@ -150,6 +152,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f = new Face();
                 f.uv = new float[] { 0, 0, 16, 16 };
                 f.texture = "#txt0";
+                if (isTinted) f.tintindex = 0;
                 elem.faces.put("west", f);
                 elem.faces.put("east", f);
                 mod.elements.add(elem);
@@ -171,6 +174,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-zmin;
                 f.texture = "#txt" + sidetxt[0];
                 f.rotation = (siderot[0] != 0) ? siderot[0] : null;
+                if (isTinted) f.tintindex = 0;
                 if (elem.from[1] <= 0) f.cullface = "down";
                 elem.faces.put("down", f);
                 // Add up face
@@ -181,6 +185,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = zmax;
                 f.texture = "#txt" + sidetxt[1];
                 f.rotation = (siderot[1] != 0) ? siderot[1] : null;
+                if (isTinted) f.tintindex = 0;
                 if (elem.to[1] >= 16) f.cullface = "up";
                 elem.faces.put("up", f);
                 // Add north face
@@ -191,6 +196,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-ymin;
                 f.texture = "#txt" + sidetxt[2];
                 f.rotation = (siderot[2] != 0) ? siderot[2] : null;
+                if (isTinted) f.tintindex = 0;
                 if (elem.from[2] <= 0) f.cullface = "north";
                 elem.faces.put("north", f);
                 // Add south face
@@ -201,6 +207,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-ymin;
                 f.texture = "#txt" + sidetxt[3];
                 f.rotation = (siderot[3] != 0) ? siderot[3] : null;
+                if (isTinted) f.tintindex = 0;
                 if (elem.to[2] >= 16) f.cullface = "south";
                 elem.faces.put("south", f);
                 // Add west face
@@ -211,6 +218,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-ymin;
                 f.texture = "#txt" + sidetxt[4];
                 f.rotation = (siderot[4] != 0) ? siderot[4] : null;
+                if (isTinted) f.tintindex = 0;
                 if (elem.from[0] <= 0) f.cullface = "west";
                 elem.faces.put("west", f);
                 // Add eath face
@@ -221,6 +229,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-ymin;
                 f.texture = "#txt" + sidetxt[5];
                 f.rotation = (siderot[5] != 0) ? siderot[5] : null;
+                if (isTinted) f.tintindex = 0;
                 if (elem.to[0] >= 16) f.cullface = "east";
                 elem.faces.put("east", f);
                 mod.elements.add(elem);
@@ -232,7 +241,7 @@ public class CuboidBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         for (Subblock sb : def.subBlocks) {
-            doCuboidModel(sb, sb.meta, sb.meta, def.blockName);
+            doCuboidModel(sb, sb.meta, sb.meta, def.blockName, sb.isTinted(def));
             // Build simple item model that refers to block model
             ModelObject mo = new ModelObject();
             mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + sb.meta;

@@ -50,7 +50,7 @@ public class CuboidNSEWUDBlockModelExport extends CuboidBlockModelExport {
     	super.doModelExports();
     	
         for (Subblock sb : def.subBlocks) {
-            doCuboidModel(sb, sb.meta, sb.meta + 6, def.blockName + "_north");
+            doCuboidModel(sb, sb.meta, sb.meta + 6, def.blockName + "_north", sb.isTinted(def));
         }
     }
 }

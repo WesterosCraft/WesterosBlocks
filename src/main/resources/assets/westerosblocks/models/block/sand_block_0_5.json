@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "all": "westerosblocks:blocks/sand_block_0/sand_stones"
+    "down": "westerosblocks:blocks/sand_block_0/sand_stones",
+    "up": "westerosblocks:blocks/sand_block_0/sand_stones",
+    "north": "westerosblocks:blocks/sand_block_0/sand_stones",
+    "south": "westerosblocks:blocks/sand_block_0/sand_stones",
+    "west": "westerosblocks:blocks/sand_block_0/sand_stones",
+    "east": "westerosblocks:blocks/sand_block_0/sand_stones",
+    "particle": "westerosblocks:blocks/sand_block_0/sand_stones"
   }
 }

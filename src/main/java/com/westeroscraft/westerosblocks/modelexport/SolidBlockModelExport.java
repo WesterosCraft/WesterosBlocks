@@ -66,12 +66,8 @@ public class SolidBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         for (Subblock sb : def.subBlocks) {
             Object model;
-            if (sb.textures.size() == 1) {  // Only one?
-                ModelObjectCubeAll mod = new ModelObjectCubeAll();
-                mod.textures.all = getTextureID(sb.getTextureByIndex(0)); 
-                model = mod;
-            }
-            else {
+            boolean isTinted = sb.isTinted(def);
+            if ((sb.textures.size() > 1) || isTinted) { // More than one texture, or tinted?
                 ModelObjectCube mod = new ModelObjectCube();
                 mod.textures.down = getTextureID(sb.getTextureByIndex(0));
                 mod.textures.up = getTextureID(sb.getTextureByIndex(1));
@@ -80,6 +76,14 @@ public class SolidBlockModelExport extends ModelExport {
                 mod.textures.west = getTextureID(sb.getTextureByIndex(4));
                 mod.textures.east = getTextureID(sb.getTextureByIndex(5));
                 mod.textures.particle = getTextureID(sb.getTextureByIndex(2));
+                if (isTinted) {
+                    mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube";
+                }
+                model = mod;
+            }
+            else {
+                ModelObjectCubeAll mod = new ModelObjectCubeAll();
+                mod.textures.all = getTextureID(sb.getTextureByIndex(0)); 
                 model = mod;
             }
             this.writeBlockModelFile(def.blockName + "_" + sb.meta, model);

@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "all": "westerosblocks:blocks/daub_wattle_block_0/daub_brick_open"
+    "down": "westerosblocks:blocks/daub_wattle_block_0/daub_brick_open",
+    "up": "westerosblocks:blocks/daub_wattle_block_0/daub_brick_open",
+    "north": "westerosblocks:blocks/daub_wattle_block_0/daub_brick_open",
+    "south": "westerosblocks:blocks/daub_wattle_block_0/daub_brick_open",
+    "west": "westerosblocks:blocks/daub_wattle_block_0/daub_brick_open",
+    "east": "westerosblocks:blocks/daub_wattle_block_0/daub_brick_open",
+    "particle": "westerosblocks:blocks/daub_wattle_block_0/daub_brick_open"
   }
 }
