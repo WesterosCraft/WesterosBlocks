@@ -16,16 +16,27 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ReportedException;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.EnumMap;
 import java.util.HashMap;
+import java.util.List;
 import java.util.logging.Logger;
 
 import com.google.gson.Gson;
@@ -239,6 +250,11 @@ public class WesterosBlocks
             log.info("Dynmap Mod Support API not found");
             this.dynmap = null;
         }
+        try {
+			migrateRP();
+		} catch (IOException e) {
+            log.info("Migrate RP failed");
+		}
     }
 
     private void handleDynmap() {
@@ -257,6 +273,90 @@ public class WesterosBlocks
         }
 
         this.dynmap.complete();
+    }
+    
+    private void migrateRP() throws IOException {
+    	File f = new File(modcfgdir, "WesterosCraft/assets/minecraft/mcpatcher/ctm");
+    	if (f.exists() == false) {
+    		return;
+    	}
+    	// Build block ID to resouse ID map
+    	HashMap<Integer, String> id_to_name = new HashMap<Integer, String>();
+    	for (int id = 0; id < 4096; id++) {
+    		Block b = Block.getBlockById(id);
+    		if ((b != null) && (b != Blocks.AIR)) {
+    			id_to_name.put(id, b.getRegistryName().toString());
+    			log.info(String.format("%d=%s", id, id_to_name.get(id)));
+    		}
+    	}
+    	Files.walkFileTree(f.toPath(), new SimpleFileVisitor<Path>() {
+    		@Override
+    		public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+    			String fn = file.getFileName().toString();
+    			if (fn.endsWith(".properties")) {
+    				FileReader fis = new FileReader(file.toString());
+    				LineNumberReader rdr = new LineNumberReader(fis);
+    				String line;
+    				List<String> lines = new ArrayList<String>();
+    				String matching = null;
+					while ((line = rdr.readLine()) != null) {
+    					String[] parts = line.split("=");
+    					if ((parts.length > 1) && (parts[0].trim().equalsIgnoreCase("matchBlocks"))) {
+    						matching = parts[1].trim();
+    						log.info(String.format("%s: found matchBlocks = %s", file.toString(), matching));
+    					}
+    					else {
+    						lines.add(line);
+    					}
+    				}
+					rdr.close();
+					fis.close();
+					if (matching == null) {	// Not found : see if we can infer from name
+						if (fn.startsWith("block")) {
+							int blkid = 0;
+							int off = 5;
+							while (Character.isDigit(fn.charAt(off))) {
+								blkid = (10*blkid) + (fn.charAt(off) - '0');
+								off++;
+							}
+    						log.info(String.format("%s: inferred matchBlocks = %d", file.toString(), blkid));
+    						matching = Integer.toString(blkid);
+						}
+					}
+					// If we've got something to map, process it
+					if (matching != null) {
+						String[] ids = matching.split(" ");
+						String newline = "matchBlocks=";
+						for (String id : ids) {
+							try {
+								int idnum = Integer.parseInt(id.trim());
+								String name = id_to_name.get(idnum);
+								if (name == null) {
+									log.info(String.format("%s: ID not found!!!  %d", file.toString(), idnum));
+									newline += idnum + " ";
+								}
+								else {
+									newline += name + " ";
+								}
+							} catch (NumberFormatException nfx) {
+								log.info(String.format("%s: Non number - preserved - %s", file.toString(), id.trim()));
+								newline += id.trim() + " ";
+							}
+						}
+						lines.add(0, newline);	// Add at start
+						FileWriter fw = new FileWriter(file.toFile());
+						log.info("Open " + file.toString());
+						for (String l : lines) {
+							fw.write(l.trim() + "\n");
+							log.info("Write: " + l.trim());
+						}
+						log.info("Close " + file.toString());
+						fw.close();
+					}
+    			}
+    			return FileVisitResult.CONTINUE;
+    		}
+    	});
     }
     
     @EventHandler
