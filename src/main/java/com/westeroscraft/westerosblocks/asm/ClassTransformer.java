@@ -19,7 +19,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
     @Override
     public byte[] transform(String name, String tname, byte[] bytes)
     {
-        if (name.equals("ajv")) { // Obfuscated name for net.minecraft.world.WorldType
+        if (name.equals("ajx")) { // Obfuscated name for net.minecraft.world.WorldType
             bytes = transformWorldType(name, bytes, true);
         }
         else if (name.equals("net.minecraft.world.WorldType")) {    // Clear name
@@ -111,7 +111,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitLineNumber(11, l0);
         mv.visitVarInsn(ALOAD, 0);
         if (obfus) {
-            mv.visitFieldInsn(GETFIELD, "ajv", "f", "I");
+            mv.visitFieldInsn(GETFIELD, "ajx", "i", "I");
         }
         else {
             mv.visitFieldInsn(GETFIELD, "net/minecraft/world/WorldType", "worldTypeId", "I");
@@ -138,7 +138,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         Label l4 = new Label();
         mv.visitLabel(l4);
         if (obfus) {
-            mv.visitLocalVariable("this", "Lajv;", null, l0, l4, 0);
+            mv.visitLocalVariable("this", "Lajx;", null, l0, l4, 0);
         }
         else {
             mv.visitLocalVariable("this", "Lnet/minecraft/world/WorldType;", null, l0, l4, 0);
@@ -152,7 +152,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        WesterosBlocks.log.info("Method " + targetMethodName + "() of " + name + " patched!");
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
