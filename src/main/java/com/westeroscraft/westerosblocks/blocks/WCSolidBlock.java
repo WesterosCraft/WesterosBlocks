@@ -113,7 +113,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
-        return (def.alphaRender?BlockRenderLayer.TRANSLUCENT:BlockRenderLayer.SOLID);
+        return (def.alphaRender?BlockRenderLayer.TRANSLUCENT:(isSolidOpaque?BlockRenderLayer.SOLID:BlockRenderLayer.CUTOUT));
     }
 
     @Override

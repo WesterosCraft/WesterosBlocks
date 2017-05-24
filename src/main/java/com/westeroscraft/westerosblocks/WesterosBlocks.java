@@ -289,6 +289,8 @@ public class WesterosBlocks
     			log.info(String.format("%d=%s", id, id_to_name.get(id)));
     		}
     	}
+    	HashMap<File, Integer> moved_files = new HashMap<File, Integer>();
+    	
     	Files.walkFileTree(f.toPath(), new SimpleFileVisitor<Path>() {
     		@Override
     		public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
@@ -299,11 +301,15 @@ public class WesterosBlocks
     				String line;
     				List<String> lines = new ArrayList<String>();
     				String matching = null;
+    				String tilesmatching = null;
 					while ((line = rdr.readLine()) != null) {
     					String[] parts = line.split("=");
     					if ((parts.length > 1) && (parts[0].trim().equalsIgnoreCase("matchBlocks"))) {
     						matching = parts[1].trim();
     						log.info(String.format("%s: found matchBlocks = %s", file.toString(), matching));
+    					}
+    					else if ((parts.length > 1) && (parts[0].trim().equalsIgnoreCase("tiles"))) {
+    					    tilesmatching = parts[1];
     					}
     					else {
     						lines.add(line);
@@ -344,13 +350,59 @@ public class WesterosBlocks
 							}
 						}
 						lines.add(0, newline);	// Add at start
+					}
+					if (tilesmatching != null) {
+                        String[] ids = tilesmatching.split(" ");
+                        String newline = "tiles=";
+                        for (String id : ids) {
+                            if (id.indexOf('-') > 0) {  // Range?  Assume already numbers
+                                newline += id + " ";
+                            }
+                            else {
+                                try {
+                                    int idnum = Integer.parseInt(id);
+                                    newline += id + " ";
+                                } catch (NumberFormatException nfx) {
+                                    String ourdir = file.toFile().getParent();
+                                    // Not a number - need to map it to one
+                                    File oldfile = new File(ourdir, id + ".png");
+                                    // See if already moved
+                                    Integer newnum = moved_files.get(oldfile);
+                                    if (newnum == null) { // Not yet?
+                                        if (oldfile.exists()) { // Found old file
+                                            // Find new number that isn't in use yet
+                                            for (int nn = 0; ; nn++) {
+                                                File newfile = new File(ourdir, nn + ".png");
+                                                if (newfile.exists() == false) {
+                                                    newnum = nn;
+                                                    log.info(String.format("%s: rename %s to %s", file.toString(), oldfile, newfile));
+                                                    oldfile.renameTo(newfile);
+                                                    moved_files.put(oldfile,  newnum);
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            log.info(String.format("%s: file '%s' not found", file.toString(), oldfile));
+                                        }
+                                    }
+                                    if (newnum != null) {   // New value
+                                        newline += newnum + " ";
+                                    }
+                                    else {
+                                        log.info(String.format("%s: problem moving file %s", file.toString(), id.trim()));
+                                        newline += id.trim() + " ";
+                                    }
+                                }
+                            }
+                        }
+                        lines.add(newline);  // Add at end
+					}
+					if ((matching != null) || (tilesmatching != null)) {
 						FileWriter fw = new FileWriter(file.toFile());
-						log.info("Open " + file.toString());
 						for (String l : lines) {
 							fw.write(l.trim() + "\n");
-							log.info("Write: " + l.trim());
 						}
-						log.info("Close " + file.toString());
 						fw.close();
 					}
     			}
