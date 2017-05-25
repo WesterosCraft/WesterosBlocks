@@ -25,6 +25,19 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else if (name.equals("net.minecraft.world.WorldType")) {    // Clear name
             bytes = transformWorldType(name, bytes, false);
         }
+        else if (name.equals("anv")) { // Obfuscated name for net.minecraft.block.BlockGlass
+            bytes = transformBlockGlass(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.block.BlockGlass")) {    // Clear name
+            bytes = transformBlockGlass(name, bytes, false);
+        }
+        else if (name.equals("arj")) { // Obfuscated name for net.minecraft.block.BlockPane
+            bytes = transformBlockGlassPane(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.block.BlockPane")) {    // Clear name
+            bytes = transformBlockGlassPane(name, bytes, false);
+        }
+        
         return bytes;
     }
     
@@ -160,6 +173,130 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
     public static float getWorldHeight(int wtIndex) {
         return 256.0F;
     }
-    
+
+    private byte[] transformBlockGlass(String name, byte[] b, boolean obfus) {
+        String targetMethodName = "";
+        String targetMethodSig = "";
+
+        WesterosBlocks.log.fine("Checking class " + name);
+        
+        if (obfus) {
+            targetMethodName ="f";
+            targetMethodSig = "()Lajk;";
+        }
+        else {
+            targetMethodName ="getBlockLayer";
+            targetMethodSig = "()Lnet/minecraft/util/BlockRenderLayer;";
+        }
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Now find the method
+        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
+        if (m == null) {
+            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }
+        // Replace method implementation
+        MethodVisitor mv = m;
+        m.instructions.clear();
+        m.localVariables.clear();
+        
+        mv.visitCode();
+        Label l0 = new Label();
+        mv.visitLabel(l0);
+        mv.visitLineNumber(27, l0);
+        if (obfus) {
+            mv.visitFieldInsn(GETSTATIC, "ajk", "d", "Lajk;");
+        }
+        else {
+            mv.visitFieldInsn(GETSTATIC, "net/minecraft/util/BlockRenderLayer", "TRANSLUCENT", "Lnet/minecraft/util/BlockRenderLayer;");
+        }
+        mv.visitInsn(ARETURN);
+        Label l1 = new Label();
+        mv.visitLabel(l1);
+        if (obfus) {
+            mv.visitLocalVariable("this", "Lanv;", null, l0, l1, 0);
+        }
+        else {
+            mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockGlass;", null, l0, l1, 0);
+        }
+        mv.visitMaxs(1, 1);
+        mv.visitEnd();
+
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+        
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
+        
+        return b;
+    }
+
+    private byte[] transformBlockGlassPane(String name, byte[] b, boolean obfus) {
+        String targetMethodName = "";
+        String targetMethodSig = "";
+
+        WesterosBlocks.log.fine("Checking class " + name);
+        
+        if (obfus) {
+            targetMethodName ="f";
+            targetMethodSig = "()Lajk;";
+        }
+        else {
+            targetMethodName ="getBlockLayer";
+            targetMethodSig = "()Lnet/minecraft/util/BlockRenderLayer;";
+        }
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Now find the method
+        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
+        if (m == null) {
+            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }
+        // Replace method implementation
+        MethodVisitor mv = m;
+        m.instructions.clear();
+        m.localVariables.clear();
+        
+        mv.visitCode();
+        Label l0 = new Label();
+        mv.visitLabel(l0);
+        mv.visitLineNumber(27, l0);
+        if (obfus) {
+            mv.visitFieldInsn(GETSTATIC, "ajk", "d", "Lajk;");
+        }
+        else {
+            mv.visitFieldInsn(GETSTATIC, "net/minecraft/util/BlockRenderLayer", "TRANSLUCENT", "Lnet/minecraft/util/BlockRenderLayer;");
+        }
+        mv.visitInsn(ARETURN);
+        Label l1 = new Label();
+        mv.visitLabel(l1);
+        if (obfus) {
+            mv.visitLocalVariable("this", "Larj;", null, l0, l1, 0);
+        }
+        else {
+            mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockPane;", null, l0, l1, 0);
+        }
+        mv.visitMaxs(1, 1);
+        mv.visitEnd();
+
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+        
+        WesterosBlocks.log.fine("Method " + targetMethodName + "() of " + name + " patched!");
+        
+        return b;
+    }
+
 }
 
