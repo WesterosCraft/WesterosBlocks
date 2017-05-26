@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import javax.annotation.Nullable;
+
 import org.dynmap.modsupport.BoxBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
@@ -138,6 +140,34 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     @Override
     public int getLightOpacity(IBlockState state, IBlockAccess world, BlockPos pos) {
         return def.getLightOpacity(state, world, pos);
+    }
+    
+    @Override
+    public boolean blocksMovement(IBlockAccess worldIn, BlockPos pos)
+    {
+        return ((Integer)worldIn.getBlockState(pos).getValue(layers)).intValue() <= (layerCount/2);
+    }
+
+    @Override
+    public boolean isFullyOpaque(IBlockState state)
+    {
+        return ((Integer)state.getValue(layers)).intValue() == layerCount;
+    }
+
+    @Override
+    @Nullable
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
+    {
+        int i = ((Integer)blockState.getValue(layers)).intValue() - 1;
+        float f = 1.0F / layerCount;
+        AxisAlignedBB axisalignedbb = blockState.getBoundingBox(worldIn, pos);
+        return new AxisAlignedBB(axisalignedbb.minX, axisalignedbb.minY, axisalignedbb.minZ, axisalignedbb.maxX, (double)((float)i * f), axisalignedbb.maxZ);
+    }
+
+    @Override
+    public boolean isFullCube(IBlockState state)
+    {
+        return false;
     }
 
     @Override
