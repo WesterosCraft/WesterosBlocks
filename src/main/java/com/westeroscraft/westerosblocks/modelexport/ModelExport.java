@@ -1,20 +1,17 @@
 package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Collections;
 import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.Properties;
 import java.util.TreeSet;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.block.Block;
@@ -24,10 +21,8 @@ public abstract class ModelExport {
     private File blockstatedir;
     private File blockmodeldir;
     private File itemmodeldir;
-    private Block block;
     
     public ModelExport(Block block, WesterosBlockDef def, File dest) {
-        this.block = block;
         this.destdir = dest;
         this.blockstatedir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/blockstates");
         this.blockstatedir.mkdirs();
@@ -97,7 +92,8 @@ public abstract class ModelExport {
         try {
             fw = new PrintStream(new File(tgt, "en_US.lang"));
             Properties tmp = new Properties() {
-                @Override
+				private static final long serialVersionUID = 1L;
+				@Override
                 public synchronized Enumeration<Object> keys() {
                     return Collections.enumeration(new TreeSet<Object>(super.keySet()));
                 }

@@ -3,22 +3,15 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
-import com.westeroscraft.westerosblocks.modelexport.CropBlockModelExport.TextureLayer0;
 
 import net.minecraft.block.Block;
 
 public class DoorBlockModelExport extends ModelExport {
-    private WCDoorBlock blk;
     private WesterosBlockDef def;
 
     // Template objects for Gson export of block state
@@ -76,7 +69,6 @@ public class DoorBlockModelExport extends ModelExport {
 
     public DoorBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.blk = (WCDoorBlock) blk;
         this.def = def;
         addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
     }

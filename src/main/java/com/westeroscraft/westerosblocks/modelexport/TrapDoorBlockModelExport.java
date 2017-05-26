@@ -8,15 +8,10 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
-import com.westeroscraft.westerosblocks.modelexport.DoorBlockModelExport.StateObject;
-import com.westeroscraft.westerosblocks.modelexport.DoorBlockModelExport.Variant;
 
 import net.minecraft.block.Block;
 
 public class TrapDoorBlockModelExport extends ModelExport {
-    private WCTrapDoorBlock blk;
     private WesterosBlockDef def;
 
     // Template objects for Gson export of block state
@@ -55,7 +50,6 @@ public class TrapDoorBlockModelExport extends ModelExport {
     
     public TrapDoorBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.blk = (WCTrapDoorBlock) blk;
         this.def = def;
         addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
     }

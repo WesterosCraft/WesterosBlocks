@@ -48,7 +48,6 @@ import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
-import com.westeroscraft.westerosblocks.tileentity.WCFurnaceTileEntity;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -722,7 +721,8 @@ public class WesterosBlockDef {
     public void doStandardContructorSettings(Block blk) {
         doStandardContructorSettings(blk, 0);
     }
-    public void doStandardContructorSettings(Block blk, int idx) {
+    @SuppressWarnings("deprecation")
+	public void doStandardContructorSettings(Block blk, int idx) {
         if (this.hardness != DEF_FLOAT) {
             blk.setHardness(this.hardness);
         }
@@ -810,7 +810,8 @@ public class WesterosBlockDef {
         registerBlock(blk, itmclass, this.getBlockName(idx), reqID);
     }
 
-    private Block registerBlock(Block block, Class<? extends ItemBlock> itemclass, String name, int id)
+    @SuppressWarnings("deprecation")
+	private Block registerBlock(Block block, Class<? extends ItemBlock> itemclass, String name, int id)
     {
         try
         {
@@ -980,7 +981,8 @@ public class WesterosBlockDef {
         return this.lightValueInt;
     }
 
-    public int getLightOpacity(IBlockState bs, IBlockAccess world, BlockPos pos) {
+    @SuppressWarnings("deprecation")
+	public int getLightOpacity(IBlockState bs, IBlockAccess world, BlockPos pos) {
         if (this.lightOpacity_by_meta != null) {
             return this.lightOpacity_by_meta[bs.getBlock().getMetaFromState(bs) & metaMask];
         }

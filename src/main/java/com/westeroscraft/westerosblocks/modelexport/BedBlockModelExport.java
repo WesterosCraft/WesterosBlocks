@@ -8,7 +8,6 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.modelexport.TorchBlockModelExport.Texture0;
 
 import net.minecraft.block.Block;
 

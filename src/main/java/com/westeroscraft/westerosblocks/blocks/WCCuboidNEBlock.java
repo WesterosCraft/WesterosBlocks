@@ -35,10 +35,13 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
         }
     }
     
-    private static final List<EnumFacing> VALIDFACING = new ArrayList<EnumFacing>() {{
-        add(EnumFacing.NORTH);
-        add(EnumFacing.EAST);
-    }};
+    private static final List<EnumFacing> VALIDFACING = new ArrayList<EnumFacing>() {
+    	private static final long serialVersionUID = 1L;
+
+    	{
+    		add(EnumFacing.NORTH);
+    		add(EnumFacing.EAST);
+    	}};
     public static final PropertyDirection FACING = PropertyDirection.create("facing", VALIDFACING);
     
     private List<WesterosBlockDef.Cuboid> cuboids_by_meta[];

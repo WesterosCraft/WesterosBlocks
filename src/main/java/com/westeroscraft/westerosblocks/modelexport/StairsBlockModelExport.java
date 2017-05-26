@@ -9,12 +9,10 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
 import net.minecraft.block.Block;
 
 public class StairsBlockModelExport extends ModelExport {
-    private WCStairBlock blk;
     private WesterosBlockDef def;
 
     // Template objects for Gson export of block state
@@ -67,7 +65,6 @@ public class StairsBlockModelExport extends ModelExport {
 
     public StairsBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.blk = (WCStairBlock) blk;
         this.def = def;
         addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
     }

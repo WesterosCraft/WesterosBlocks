@@ -2,8 +2,6 @@ package com.westeroscraft.westerosblocks;
 
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.client.renderer.color.IItemColor;
-import net.minecraft.item.Item;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 

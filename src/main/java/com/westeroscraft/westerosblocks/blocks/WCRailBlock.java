@@ -32,7 +32,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 
 public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 

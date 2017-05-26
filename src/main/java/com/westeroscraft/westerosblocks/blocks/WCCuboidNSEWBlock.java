@@ -8,9 +8,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.Item;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
@@ -38,12 +36,14 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     }
     
     private List<WesterosBlockDef.Cuboid> cuboids_by_meta[];
-    protected static final List<EnumFacing> VALIDFACING = new ArrayList<EnumFacing>() {{
-        add(EnumFacing.EAST);
-        add(EnumFacing.SOUTH);
-        add(EnumFacing.WEST);
-        add(EnumFacing.NORTH);
-    }};
+    protected static final List<EnumFacing> VALIDFACING = new ArrayList<EnumFacing>() {
+    	private static final long serialVersionUID = 1L;
+    	{
+    		add(EnumFacing.EAST);
+    		add(EnumFacing.SOUTH);
+    		add(EnumFacing.WEST);
+    		add(EnumFacing.NORTH);
+    	}};
     public static final PropertyDirection FACING = PropertyDirection.create("facing", VALIDFACING);
 
     @SuppressWarnings("unchecked")

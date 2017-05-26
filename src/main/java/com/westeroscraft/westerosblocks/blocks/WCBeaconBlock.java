@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,7 +30,6 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
             new WesterosBlockDef.Cuboid(0.125f, 0.00625f, 0.125f, 0.875f, 0.1875f, 0.875f, new int[] { 6, 7, 8, 9, 10, 11 }),
             new WesterosBlockDef.Cuboid(0.1875f, 0.1875f, 0.1875f, 0.8125f, 0.875f, 0.8125f, new int[] { 12, 13, 14, 15, 16, 17 })
     };
-    @SuppressWarnings("unchecked")
     private static List<WesterosBlockDef.Cuboid> cuboidlist = Arrays.asList(cuboids);
     
     protected WCBeaconBlock(WesterosBlockDef def) {

@@ -37,14 +37,17 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
     
     private List<WesterosBlockDef.Cuboid> cuboids_by_meta[];
 
-    private static final List<EnumFacing> VALIDFACING = new ArrayList<EnumFacing>() {{
-        add(EnumFacing.EAST);
-        add(EnumFacing.SOUTH);
-        add(EnumFacing.WEST);
-        add(EnumFacing.NORTH);
-        add(EnumFacing.DOWN);
-        add(EnumFacing.UP);
-    }};
+    private static final List<EnumFacing> VALIDFACING = new ArrayList<EnumFacing>() {
+    	private static final long serialVersionUID = 1L;
+
+    	{
+    		add(EnumFacing.EAST);
+    		add(EnumFacing.SOUTH);
+    		add(EnumFacing.WEST);
+    		add(EnumFacing.NORTH);
+    		add(EnumFacing.DOWN);
+    		add(EnumFacing.UP);
+    	}};
     public static final PropertyDirection FACING = PropertyDirection.create("facing", VALIDFACING);
 
     @SuppressWarnings("unchecked")

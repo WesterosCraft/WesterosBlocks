@@ -39,7 +39,8 @@ public class BlockColoring {
         @Override
         public int getColorFromItemstack(ItemStack stack, int tintIndex) 
         {
-            IBlockState state = ((ItemBlock)stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata());
+            @SuppressWarnings("deprecation")
+			IBlockState state = ((ItemBlock)stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata());
             IBlockColor blockColor = ((WesterosBlockLifecycle)state.getBlock()).getBlockColor();
             return blockColor == null ? 0xFFFFFF : blockColor.colorMultiplier(state, null, null, tintIndex);
         }

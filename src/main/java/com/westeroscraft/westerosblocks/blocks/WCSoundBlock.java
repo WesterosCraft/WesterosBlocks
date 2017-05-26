@@ -14,13 +14,11 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
-import com.westeroscraft.westerosblocks.tileentity.WCFurnaceTileEntity;
 import com.westeroscraft.westerosblocks.tileentity.WCTileEntitySound;
 
 

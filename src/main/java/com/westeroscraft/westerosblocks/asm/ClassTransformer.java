@@ -87,7 +87,8 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
     }
         
     
-    private byte[] transformWorldType(String name, byte[] b, boolean obfus) {
+    @SuppressWarnings("deprecation")
+	private byte[] transformWorldType(String name, byte[] b, boolean obfus) {
         String targetMethodName = "";
         String targetMethodSig = "";
 

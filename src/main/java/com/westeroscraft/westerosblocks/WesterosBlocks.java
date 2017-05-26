@@ -20,7 +20,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.ReportedException;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -131,6 +130,7 @@ public class WesterosBlocks
             return;
         } finally {
             if (in != null) { try { in.close(); } catch (IOException iox) {}; in = null; }
+            if (rdr != null) { try { rdr.close(); } catch (IOException iox) {}; rdr = null; }
         }
         log.info("Loaded " + customBlockDefs.length + " block definitions");
         
@@ -360,7 +360,7 @@ public class WesterosBlocks
                             }
                             else {
                                 try {
-                                    int idnum = Integer.parseInt(id);
+                                    Integer.parseInt(id);
                                     newline += id + " ";
                                 } catch (NumberFormatException nfx) {
                                     String ourdir = file.toFile().getParent();
