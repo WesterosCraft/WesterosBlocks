@@ -9,6 +9,7 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
+import net.minecraft.block.BlockSlab.EnumBlockHalf;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -173,7 +174,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
-        return (def.alphaRender?BlockRenderLayer.TRANSLUCENT:BlockRenderLayer.SOLID);
+        return (def.alphaRender?BlockRenderLayer.TRANSLUCENT:BlockRenderLayer.CUTOUT);
     }
     
 
@@ -239,4 +240,13 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     		return new BlockStateContainer(this, new IProperty[] { HALF, this.variant });
     	}
     }
+    
+    @Override
+    public boolean doesSideBlockRendering(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing face) {
+        if (net.minecraftforge.common.ForgeModContainer.disableStairSlabCulling)
+            return super.doesSideBlockRendering(state, world, pos, face);
+
+        return state.isOpaqueCube();
+    }
+
 }
