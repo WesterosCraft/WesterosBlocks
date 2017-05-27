@@ -14,6 +14,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
@@ -52,6 +53,7 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
     private WesterosBlockDef def;
     private boolean allow_unsupported[] = new boolean[4];
     private PropertyMeta variant;
+    private static EnumFacing[] orientation = { EnumFacing.EAST, EnumFacing.WEST, EnumFacing.SOUTH, EnumFacing.NORTH };
 
     protected WCLadderBlock(WesterosBlockDef def) {
         this.def = def;
@@ -89,7 +91,7 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
 
     @Override
     public int damageDropped(IBlockState state) {
-        return getMetaFromState(state);
+        return state.getValue(variant).intValue();
     }
     @Override
     public WesterosBlockDef getWBDefinition() {
@@ -142,19 +144,22 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
     // map from state to meta and vice verca - use highest bit for polished boolean, use low 2 bits for variant
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        EnumFacing enumfacing = EnumFacing.getHorizontal(meta >> 2);
-
-        if (enumfacing.getAxis() == EnumFacing.Axis.Y)
-        {
-            enumfacing = EnumFacing.NORTH;
-        }
+        EnumFacing enumfacing = orientation[meta >> 2];
 
         return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(variant, meta & 3);
     }
     
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (((EnumFacing)state.getValue(FACING)).getHorizontalIndex() << 2) + ((Integer) state.getValue(variant));
+    	int idx = (Integer) state.getValue(variant);
+    	EnumFacing f = state.getValue(FACING);
+    	for (int i = 0; i < orientation.length; i++) {
+    		if (orientation[i] == f) {
+    			idx += (4 * i);
+    			break;
+    		}
+    	}
+    	return idx;
     }
     
     @Override
@@ -188,6 +193,16 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
             mod180.setMetaValue(sb.meta + 4);
             mod270.setMetaValue(sb.meta + 12);
         }
+    }
+    
+    @Override
+    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    {
+    	IBlockState state = super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
+    	if (state != null) {
+    		state = state.withProperty(variant, meta & 0x3);
+    	}
+    	return state;
     }
 
 }
