@@ -32,6 +32,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 
+import it.unimi.dsi.fastutil.Arrays;
+
 public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -53,6 +55,7 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     private boolean isSolidOpaque = true;
     
     private PropertyMeta variant;
+    private static BlockLog.EnumAxis[] orientation = { BlockLog.EnumAxis.Y, BlockLog.EnumAxis.X, BlockLog.EnumAxis.Z, BlockLog.EnumAxis.NONE };
     
     protected WCLogBlock(WesterosBlockDef def) {
         super();
@@ -179,13 +182,20 @@ public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, West
     @Override
     public IBlockState getStateFromMeta(int meta) {
     	
-    	return this.getDefaultState().withProperty(LOG_AXIS, BlockLog.EnumAxis.values()[meta >> 2]).withProperty(this.variant, meta & 3);
+    	return this.getDefaultState().withProperty(LOG_AXIS, orientation[meta >> 2]).withProperty(this.variant, meta & 3);
     }
     
     @Override
     public int getMetaFromState(IBlockState state) {
         int idx = (Integer) state.getValue(this.variant);
-        return ((BlockLog.EnumAxis) state.getValue(LOG_AXIS)).ordinal() * 4 + idx;
+        BlockLog.EnumAxis o = state.getValue(LOG_AXIS);
+        int ord = 0;
+        for (ord = 0; ord < orientation.length; ord++) {
+        	if (orientation[ord] == o) {
+        		return (4*ord) + idx;
+        	}
+        }
+        return idx;
     }
     
     @Override
