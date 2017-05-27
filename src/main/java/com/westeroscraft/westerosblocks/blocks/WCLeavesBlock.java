@@ -242,6 +242,6 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     }
     
     @Override
-    public IProperty<?>[] getNonRenderingProperties() { return null; }
+    public IProperty<?>[] getNonRenderingProperties() { return new IProperty[] { CHECK_DECAY, DECAYABLE }; }
 
 }

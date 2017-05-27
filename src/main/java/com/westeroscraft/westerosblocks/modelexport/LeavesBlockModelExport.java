@@ -64,10 +64,7 @@ public class LeavesBlockModelExport extends ModelExport {
         for (Subblock sb : def.subBlocks) {
             Variant var = new Variant();
             var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
-            so.variants.put(String.format("check_decay=true,decayable=true,variant=%d", sb.meta), var);
-            so.variants.put(String.format("check_decay=false,decayable=true,variant=%d", sb.meta), var);
-            so.variants.put(String.format("check_decay=true,decayable=false,variant=%d", sb.meta), var);
-            so.variants.put(String.format("check_decay=false,decayable=false,variant=%d", sb.meta), var);
+            so.variants.put(String.format("variant=%d", sb.meta), var);
         }
         this.writeBlockStateFile(def.blockName, so);
     }
