@@ -25,6 +25,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
@@ -49,11 +50,27 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     
     private WesterosBlockDef def;
     private PropertyMeta variant;
+    private boolean legacy_model[] = new boolean[16];
     
     protected WCPaneBlock(WesterosBlockDef def) {
         super(def.getMaterial(), true);
         this.def = def;
         def.doStandardContructorSettings(this);
+        for (Subblock sb : def.subBlocks) {
+            String t = def.getType(sb.meta);
+            if (t != null) {
+                String[] toks = t.split(",");
+                for (String tok : toks) {
+                    if (tok.equals("legacy-model")) {
+                        legacy_model[sb.meta] = true;
+                    }
+                }
+            }
+        }
+    }
+    
+    public boolean isLegacyModel(int meta) {
+    	return legacy_model[meta];
     }
 
     public boolean initializeBlockDefinition() {

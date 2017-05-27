@@ -8,11 +8,13 @@ import java.util.List;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
+import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 
 import net.minecraft.block.Block;
 
 public class PaneBlockModelExport extends ModelExport {
     private WesterosBlockDef def;
+    private boolean[] legacy_model = new boolean[16];
 
     // Template objects for Gson export of block state
     public static class StateObject {
@@ -29,7 +31,7 @@ public class PaneBlockModelExport extends ModelExport {
     }
     public static class WhenRec {
     	String variant;
-    	String north, south, west, east;
+    	Boolean north, south, west, east;
     	public List<WhenRec> OR;
     }
     public static class Apply {
@@ -76,13 +78,19 @@ public class PaneBlockModelExport extends ModelExport {
         this.def = def;
         for (Subblock sb : def.subBlocks) {
             addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
+            legacy_model[sb.meta] = ((WCPaneBlock) blk).isLegacyModel(sb.meta);
         }
     }
     
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
+        // Record for when legacy model is needed (all false)
+        WhenRec wnone = new WhenRec();
+        wnone.north = wnone.south = wnone.east = wnone.west = Boolean.FALSE;
+
         for (Subblock sb : def.subBlocks) {
+        	boolean is_legacy = legacy_model[sb.meta];
         	// Add post based on our variant
         	States ps = new States();
         	ps.when.variant = Integer.toString(sb.meta);
@@ -92,8 +100,9 @@ public class PaneBlockModelExport extends ModelExport {
         	SideStates ssn = new SideStates();
         	WhenRec wr = new WhenRec();
         	wr.variant = Integer.toString(sb.meta);
-        	wr.north = "true";
+        	wr.north = true;
         	ssn.when.OR.add(wr);
+        	if (is_legacy) ssn.when.OR.add(wnone);
         	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_side_" + sb.meta;
         	ssn.apply.uvlock = true;
         	so.multipart.add(ssn);
@@ -101,8 +110,9 @@ public class PaneBlockModelExport extends ModelExport {
         	ssn = new SideStates();
         	wr = new WhenRec();
         	wr.variant = Integer.toString(sb.meta);
-        	wr.east = "true";
+        	wr.east = true;
         	ssn.when.OR.add(wr);
+        	if (is_legacy) ssn.when.OR.add(wnone);
         	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_side_" + sb.meta;
         	ssn.apply.uvlock = true;
         	ssn.apply.y = 90;
@@ -111,8 +121,9 @@ public class PaneBlockModelExport extends ModelExport {
         	ssn = new SideStates();
         	wr = new WhenRec();
         	wr.variant = Integer.toString(sb.meta);
-        	wr.south = "true";
+        	wr.south = true;
         	ssn.when.OR.add(wr);
+        	if (is_legacy) ssn.when.OR.add(wnone);
         	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_side_alt_" + sb.meta;
         	ssn.apply.uvlock = true;
         	so.multipart.add(ssn);
@@ -120,8 +131,9 @@ public class PaneBlockModelExport extends ModelExport {
         	ssn = new SideStates();
         	wr = new WhenRec();
         	wr.variant = Integer.toString(sb.meta);
-        	wr.west = "true";
+        	wr.west = true;
         	ssn.when.OR.add(wr);
+        	if (is_legacy) ssn.when.OR.add(wnone);
         	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_side_alt_" + sb.meta;
         	ssn.apply.uvlock = true;
         	ssn.apply.y = 90;
@@ -130,7 +142,7 @@ public class PaneBlockModelExport extends ModelExport {
         	ssn = new SideStates();
         	wr = new WhenRec();
         	wr.variant = Integer.toString(sb.meta);
-        	wr.north = "false";
+        	wr.north = false;
         	ssn.when.OR.add(wr);
         	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_noside_" + sb.meta;
         	ssn.apply.uvlock = true;
@@ -139,7 +151,7 @@ public class PaneBlockModelExport extends ModelExport {
         	ssn = new SideStates();
         	wr = new WhenRec();
         	wr.variant = Integer.toString(sb.meta);
-        	wr.east = "false";
+        	wr.east = false;
         	ssn.when.OR.add(wr);
         	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_noside_alt_" + sb.meta;
         	ssn.apply.uvlock = true;
@@ -148,7 +160,7 @@ public class PaneBlockModelExport extends ModelExport {
         	ssn = new SideStates();
         	wr = new WhenRec();
         	wr.variant = Integer.toString(sb.meta);
-        	wr.south = "false";
+        	wr.south = false;
         	ssn.when.OR.add(wr);
         	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_noside_alt_" + sb.meta;
         	ssn.apply.y = 90;
@@ -158,7 +170,7 @@ public class PaneBlockModelExport extends ModelExport {
         	ssn = new SideStates();
         	wr = new WhenRec();
         	wr.variant = Integer.toString(sb.meta);
-        	wr.west = "false";
+        	wr.west = false;
         	ssn.when.OR.add(wr);
         	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_noside_" + sb.meta;
         	ssn.apply.uvlock = true;

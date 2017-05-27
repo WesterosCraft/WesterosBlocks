@@ -811,6 +811,7 @@
       "stepSound": "metal",
       "material": "iron",
       "resistance": 10,
+      "type": "legacy-model",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -3827,6 +3828,7 @@
     	"material" : "glass",
     	"resistance" : 3.0,
     	"creativeTab" : "WesterosDeco",
+        "type": "legacy-model",
     	"subBlocks" : [
     		{
     			"meta" : 0,
@@ -7119,6 +7121,7 @@
         "material" : "rock",
         "resistance" : 3.0,
         "creativeTab" : "WesterosDeco",
+        "type": "legacy-model",
         "subBlocks" : [
             {
                 "meta" : 0,
@@ -9432,6 +9435,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
+      "type": "legacy-model",
       "harvestLevel": [
         {
           "tool": "pickaxe",
