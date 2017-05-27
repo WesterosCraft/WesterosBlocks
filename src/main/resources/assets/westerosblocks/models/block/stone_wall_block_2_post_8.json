@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/wall_post",
+  "parent": "westerosblocks:block/untinted/wall_post",
   "textures": {
     "bottom": "westerosblocks:blocks/metal_block_0/metal_block_bronze",
     "top": "westerosblocks:blocks/metal_block_0/metal_block_bronze",

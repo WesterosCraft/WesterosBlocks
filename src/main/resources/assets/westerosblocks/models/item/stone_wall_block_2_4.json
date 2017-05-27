@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/wall_inventory",
+  "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
     "bottom": "westerosblocks:blocks/metal_block_0/blades_molten",
     "top": "westerosblocks:blocks/metal_block_0/blades_molten",

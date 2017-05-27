@@ -39,18 +39,18 @@ public class WallBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectPost {
-        public String parent = WesterosBlocks.MOD_ID + ":block/wall_post";    // Use 'wall_post' model for single texture
+        public String parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_post";    // Use 'wall_post' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectSide {
-        public String parent = WesterosBlocks.MOD_ID + ":block/wall_side";    // Use 'wall_side' model for single texture
+        public String parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_side";    // Use 'wall_side' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {
         public String bottom, top, side;
     }
     public static class ModelObject {
-    	public String parent = WesterosBlocks.MOD_ID + ":block/wall_inventory";
+    	public String parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_inventory";
         public Texture textures = new Texture();
     }
 
@@ -120,22 +120,27 @@ public class WallBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         for (Subblock sb : def.subBlocks) {
+            boolean isTinted = sb.isTinted(def);
+
             ModelObjectPost mod = new ModelObjectPost();
             mod.textures.bottom = getTextureID(sb.getTextureByIndex(0)); 
             mod.textures.top = getTextureID(sb.getTextureByIndex(1)); 
             mod.textures.side = getTextureID(sb.getTextureByIndex(2)); 
+            if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_post";
             this.writeBlockModelFile(def.blockName + "_post_" + sb.meta, mod);
             // Side model
             ModelObjectSide smod = new ModelObjectSide();
             smod.textures.bottom = getTextureID(sb.getTextureByIndex(0)); 
             smod.textures.top = getTextureID(sb.getTextureByIndex(1)); 
             smod.textures.side = getTextureID(sb.getTextureByIndex(2)); 
+            if (isTinted) smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_side";
             this.writeBlockModelFile(def.blockName + "_side_" + sb.meta, smod);
             // Build simple item model that refers to fence inventory model
             ModelObject mo = new ModelObject();
             mo.textures.bottom = getTextureID(sb.getTextureByIndex(0));
             mo.textures.top = getTextureID(sb.getTextureByIndex(1)); 
             mo.textures.side = getTextureID(sb.getTextureByIndex(2)); 
+            if (isTinted) mo.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_inventory";
             this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
         }
     }
