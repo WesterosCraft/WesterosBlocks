@@ -2,7 +2,8 @@
   "parent": "block/block",
   "textures": {
     "end": "westerosblocks:blocks/leaves_block_0/leaves_weirwood",
-    "side": "westerosblocks:blocks/leaves_block_0/leaves_weirwood"
+    "side": "westerosblocks:blocks/leaves_block_0/leaves_weirwood",
+    "partcle": "westerosblocks:blocks/leaves_block_0/leaves_weirwood"
   },
   "elements": [
     {

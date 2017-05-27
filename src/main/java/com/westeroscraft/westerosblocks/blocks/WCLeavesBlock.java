@@ -81,12 +81,14 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
         this.setDefaultState(this.blockState.getBaseState().withProperty(variant, defmeta).withProperty(CHECK_DECAY, !nodecay[0]).withProperty(DECAYABLE, !nodecay[0]));
     }
 
+    @Override
     public boolean initializeBlockDefinition() {
         def.doStandardInitializeActions(this);
 
         return true;
     }
 
+    @Override
     public boolean registerBlockDefinition() {
         def.doStandardRegisterActions(this, MultiBlockItem.class);
         
@@ -94,16 +96,19 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     }
     
     @SideOnly(Side.CLIENT)
+    @Override
     public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
         def.getStandardCreativeItems(this, itemIn, tab, list);
     }
 
+    @Override
     protected void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance) {
     }
 
+    @Override
     protected ItemStack getSilkTouchDrop(IBlockState state)
     {
-        return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(variant));
+        return new ItemStack(Item.getItemFromBlock(this), 1, state.getValue(variant).intValue());
     }
 
     // map from state to meta and vice verca - use highest bit for polished boolean, use low 2 bits for variant
@@ -111,13 +116,13 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     public IBlockState getStateFromMeta(int meta)
     {
     	int off = meta & 0x7;
-        return this.getDefaultState().withProperty(variant, off).withProperty(DECAYABLE, !nodecay[off]).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
+        return this.getDefaultState().withProperty(variant, off).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
     }
 
     @Override
     public int getMetaFromState(IBlockState state)
     {
-        int i = state.getValue(variant);
+        int i = state.getValue(variant).intValue();
 
         if (((Boolean)state.getValue(CHECK_DECAY)).booleanValue()) {
             i |= 8;
@@ -125,6 +130,7 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
         return i;
     }
 
+    @Override
     protected BlockStateContainer createBlockState()
     {
         if (new_variant != null) {
@@ -134,11 +140,13 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
         return new BlockStateContainer(this, new IProperty[] {CHECK_DECAY, DECAYABLE, variant});
     }
 
+    @Override
     public int damageDropped(IBlockState state)
     {
-        return state.getValue(variant);
+        return state.getValue(variant).intValue();
     }
 
+    @Override
     public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, ItemStack stack)
     {
         if (!worldIn.isRemote && stack.getItem() == Items.SHEARS)
@@ -154,7 +162,7 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     @Override
     public NonNullList<ItemStack> onSheared(ItemStack item, net.minecraft.world.IBlockAccess world, BlockPos pos, int fortune)
     {
-        return NonNullList.withSize(1, new ItemStack(this, 1, world.getBlockState(pos).getValue(variant)));
+        return NonNullList.withSize(1, new ItemStack(this, 1, world.getBlockState(pos).getValue(variant).intValue()));
     }
     
     @Override
