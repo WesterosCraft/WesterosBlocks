@@ -2,19 +2,26 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import javax.annotation.Nullable;
+
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockLadder;
 import net.minecraft.block.BlockTrapDoor;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -25,6 +32,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 public class WCTrapDoorBlock extends BlockTrapDoor implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
@@ -41,11 +49,22 @@ public class WCTrapDoorBlock extends BlockTrapDoor implements WesterosBlockLifec
     }
     
     private WesterosBlockDef def;
+    private boolean locked = false;
     
     protected WCTrapDoorBlock(WesterosBlockDef def) {
         super(def.getMaterial());
         this.def = def;
         def.doStandardContructorSettings(this);
+        Subblock sb = def.subBlocks.get(0);
+        String t = def.getType(sb.meta);
+        if (t != null) {
+            String[] toks = t.split(",");
+            for (String tok : toks) {
+                if (tok.equals("locked:true")) {
+                    locked = true;
+                }
+            }
+        }
     }
 
     public boolean initializeBlockDefinition() {
@@ -119,4 +138,33 @@ public class WCTrapDoorBlock extends BlockTrapDoor implements WesterosBlockLifec
     
     @Override
     public IProperty<?>[] getNonRenderingProperties() { return null; }
+    
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+    {
+        if (this.locked)
+        {
+            return false;
+        }
+        else
+        {
+            state = state.cycleProperty(OPEN);
+            worldIn.setBlockState(pos, state, 2);
+            this.playSound(playerIn, worldIn, pos, ((Boolean)state.getValue(OPEN)).booleanValue());
+            return true;
+        }
+    }
+
+    @Override
+    public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity)
+    {
+        if (state.getValue(OPEN))
+        {
+            IBlockState down = world.getBlockState(pos.down());
+            if (down.getBlock() instanceof BlockLadder)
+                return down.getValue(BlockLadder.FACING) == state.getValue(FACING);
+        }
+        return false;
+    }
+
 }
