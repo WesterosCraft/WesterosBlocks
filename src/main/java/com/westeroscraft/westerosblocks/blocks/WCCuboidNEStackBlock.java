@@ -173,12 +173,12 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
     // map from state to meta and vice verca - use highest bit for polished boolean, use low 2 bits for variant
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(variant, (meta & 0x6) >> 1).withProperty(FACING, ((meta&8)!=0) ? EnumFacing.EAST : EnumFacing.NORTH).withProperty(TOP, (meta & 1) != 0);
+        return this.getDefaultState().withProperty(variant, (meta & 0x6) >> 1).withProperty(FACING, ((meta&8)!=0) ? EnumFacing.NORTH : EnumFacing.EAST).withProperty(TOP, (meta & 1) != 0);
     }
     
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (state.getValue(variant).intValue() << 1) + ((state.getValue(FACING) == EnumFacing.EAST)?8:0) + (state.getValue(TOP)?1:0);
+        return (state.getValue(variant).intValue() << 1) + ((state.getValue(FACING) == EnumFacing.NORTH)?8:0) + (state.getValue(TOP)?1:0);
     }
 
 }

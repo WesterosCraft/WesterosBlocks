@@ -39,8 +39,8 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     	private static final long serialVersionUID = 1L;
 
     	{
-    		add(EnumFacing.NORTH);
     		add(EnumFacing.EAST);
+    		add(EnumFacing.NORTH);
     	}};
     public static final PropertyDirection FACING = PropertyDirection.create("facing", VALIDFACING);
     
@@ -87,12 +87,12 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     // map from state to meta and vice verca - use highest bit for polished boolean, use low 2 bits for variant
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return this.getDefaultState().withProperty(variant, meta & 0x7).withProperty(FACING, ((meta&8)!=0) ? EnumFacing.EAST : EnumFacing.NORTH);
+        return this.getDefaultState().withProperty(variant, meta & 0x7).withProperty(FACING, ((meta&8)!=0) ? EnumFacing.NORTH : EnumFacing.EAST);
     }
     
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (Integer) state.getValue(variant) + ((state.getValue(FACING) == EnumFacing.EAST)?8:0);
+        return (Integer) state.getValue(variant) + ((state.getValue(FACING) == EnumFacing.NORTH)?8:0);
     }
 
     /**

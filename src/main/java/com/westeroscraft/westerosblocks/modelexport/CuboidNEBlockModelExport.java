@@ -21,12 +21,12 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
         for (Subblock sb : def.subBlocks) {
             Variant var = new Variant();
             var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
-            so.variants.put(String.format("facing=north,variant=%d", sb.meta), var);
+            so.variants.put(String.format("facing=east,variant=%d", sb.meta), var);
 
             var = new Variant();
             var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
             var.y = 90;
-            so.variants.put(String.format("facing=east,variant=%d", sb.meta), var);
+            so.variants.put(String.format("facing=north,variant=%d", sb.meta), var);
         }
         this.writeBlockStateFile(def.blockName, so);
     }
