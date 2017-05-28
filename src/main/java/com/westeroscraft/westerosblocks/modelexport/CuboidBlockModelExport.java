@@ -93,6 +93,20 @@ public class CuboidBlockModelExport extends ModelExport {
         if (v > 32f) v = 32f;
         return v;
     }
+    
+    private static void processRotation(Face f) {
+    	if (f.rotation != null) {
+    		if ((f.rotation == 90) || (f.rotation == 270)) {
+    			float vt;
+    			vt = f.uv[1];
+    			f.uv[1] = f.uv[0];
+    			f.uv[0] = vt;
+    			vt = f.uv[3];
+    			f.uv[3] = f.uv[2];
+    			f.uv[2] = vt;
+    		}
+    	}
+    }
      
     protected void doCuboidModel(Subblock sb, int meta, int modelmeta, String name, boolean isTinted) throws IOException {
         ModelObjectCuboid mod = new ModelObjectCuboid();
@@ -174,6 +188,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-zmin;
                 f.texture = "#txt" + sidetxt[0];
                 f.rotation = (siderot[0] != 0) ? siderot[0] : null;
+                processRotation(f);
                 if (isTinted) f.tintindex = 0;
                 if (elem.from[1] <= 0) f.cullface = "down";
                 elem.faces.put("down", f);
@@ -185,6 +200,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = zmax;
                 f.texture = "#txt" + sidetxt[1];
                 f.rotation = (siderot[1] != 0) ? siderot[1] : null;
+                processRotation(f);
                 if (isTinted) f.tintindex = 0;
                 if (elem.to[1] >= 16) f.cullface = "up";
                 elem.faces.put("up", f);
@@ -196,6 +212,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-ymin;
                 f.texture = "#txt" + sidetxt[2];
                 f.rotation = (siderot[2] != 0) ? siderot[2] : null;
+                processRotation(f);
                 if (isTinted) f.tintindex = 0;
                 if (elem.from[2] <= 0) f.cullface = "north";
                 elem.faces.put("north", f);
@@ -207,6 +224,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-ymin;
                 f.texture = "#txt" + sidetxt[3];
                 f.rotation = (siderot[3] != 0) ? siderot[3] : null;
+                processRotation(f);
                 if (isTinted) f.tintindex = 0;
                 if (elem.to[2] >= 16) f.cullface = "south";
                 elem.faces.put("south", f);
@@ -218,6 +236,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-ymin;
                 f.texture = "#txt" + sidetxt[4];
                 f.rotation = (siderot[4] != 0) ? siderot[4] : null;
+                processRotation(f);
                 if (isTinted) f.tintindex = 0;
                 if (elem.from[0] <= 0) f.cullface = "west";
                 elem.faces.put("west", f);
@@ -229,6 +248,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.uv[3] = 16-ymin;
                 f.texture = "#txt" + sidetxt[5];
                 f.rotation = (siderot[5] != 0) ? siderot[5] : null;
+                processRotation(f);
                 if (isTinted) f.tintindex = 0;
                 if (elem.to[0] >= 16) f.cullface = "east";
                 elem.faces.put("east", f);

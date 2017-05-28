@@ -1,26 +1,26 @@
 {
   "variants": {
     "facing=north,variant=0": {
-      "model": "westerosblocks:cuboid_nsewud_block_1_0",
-      "y": 270
+      "model": "westerosblocks:cuboid_nsewud_block_1_0"
     },
     "facing=west,variant=0": {
       "model": "westerosblocks:cuboid_nsewud_block_1_0",
-      "y": 180
+      "y": 270
     },
     "facing=down,variant=0": {
-      "model": "westerosblocks:cuboid_nsewud_block_1_north_0",
+      "model": "westerosblocks:cuboid_nsewud_block_1_0",
       "x": 90
     },
     "facing=south,variant=0": {
       "model": "westerosblocks:cuboid_nsewud_block_1_0",
-      "y": 90
+      "y": 180
     },
     "facing=east,variant=0": {
-      "model": "westerosblocks:cuboid_nsewud_block_1_0"
+      "model": "westerosblocks:cuboid_nsewud_block_1_0",
+      "y": 90
     },
     "facing=up,variant=0": {
-      "model": "westerosblocks:cuboid_nsewud_block_1_north_0",
+      "model": "westerosblocks:cuboid_nsewud_block_1_0",
       "x": 270
     }
   }
