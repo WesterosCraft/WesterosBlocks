@@ -9594,18 +9594,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/ale_merchant",
-               "sign_block_0/ale_merchant",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9616,18 +9611,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/apothecary",
-               "sign_block_0/apothecary",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9638,18 +9628,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/armorer",
-               "sign_block_0/armorer",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9660,18 +9645,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/baker",
-               "sign_block_0/baker",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9682,18 +9662,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/barber",
-               "sign_block_0/barber",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9704,18 +9679,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/blacksmith",
-               "sign_block_0/blacksmith",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9726,18 +9696,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/bookbinder",
-               "sign_block_0/bookbinder",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9748,18 +9713,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/butcher",
-               "sign_block_0/butcher",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          }
        ]
@@ -9788,18 +9748,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/carpenter",
-               "sign_block_0/carpenter",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9810,18 +9765,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/cartwright",
-               "sign_block_0/cartwright",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9832,18 +9782,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/cobbler",
-               "sign_block_0/cobbler",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9854,18 +9799,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/cooper",
-               "sign_block_0/cooper",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9876,18 +9816,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/fishmongerer",
-               "sign_block_0/fishmongerer",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9898,18 +9833,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/fletcher",
-               "sign_block_0/fletcher",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9920,18 +9850,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/furrier",
-               "sign_block_0/furrier",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -9942,18 +9867,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_0/inn",
-               "sign_block_0/inn",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          }
        ]
@@ -9982,18 +9902,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/chandler",
-               "sign_block_1/chandler",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10004,18 +9919,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/jeweller",
-               "sign_block_1/jeweller",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10026,18 +9936,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/mason",
-               "sign_block_1/mason",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10048,18 +9953,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/mercer",
-               "sign_block_1/mercer",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10070,18 +9970,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/net_maker",
-               "sign_block_1/net_maker",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10092,18 +9987,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/potter",
-               "sign_block_1/potter",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10114,18 +10004,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/rope_maker",
-               "sign_block_1/rope_maker",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10136,18 +10021,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/scribe",
-               "sign_block_1/scribe",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          }
        ]
@@ -10176,18 +10056,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/spicer",
-               "sign_block_1/spicer",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10198,18 +10073,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/stables",
-               "sign_block_1/stables",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10220,18 +10090,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/tailor",
-               "sign_block_1/tailor",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10242,18 +10107,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/tanner",
-               "sign_block_1/tanner",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10264,18 +10124,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/tavern",
-               "sign_block_1/tavern",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10286,18 +10141,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/weaponsmith",
-               "sign_block_1/weaponsmith",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10308,18 +10158,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/wine_merchant",
-               "sign_block_1/wine_merchant",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_cut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          },
          {
@@ -10330,18 +10175,13 @@
                "sign_block_0/sign_bottom",
                "sign_block_0/sign_top",
                "sign_block_1/potshop",
-               "sign_block_1/potshop",
-               "sign_block_0/sign_bottom",
-               "sign_block_0/sign_bottom"
+               "sign_block_0/sign_dirtycut",
+               "transparent"
             ],
-            "boundingBox": {
-               "xMin": 0,
-               "xMax": 1,
-               "yMin": 0,
-               "yMax": 1,
-               "zMin": 0.45,
-               "zMax": 0.55
-            },
+            "cuboids": [
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.45, "zMax": 0.55, "sideTextures": [ 4,4,2,2,4,4 ] },
+	            { "xMin": 0.0, "xMax": 1.0, "yMin": 0.0, "yMax": 1.0, "zMin": 0.46, "zMax": 0.54, "sideTextures": [ 0,1,3,3,0,0 ] }
+            ],
             "itemTextureIndex": 2
          }
        ]
