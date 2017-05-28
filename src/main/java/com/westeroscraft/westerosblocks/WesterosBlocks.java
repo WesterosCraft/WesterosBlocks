@@ -67,13 +67,7 @@ public class WesterosBlocks
     public static Block customBlocks[];
     public static HashMap<String, Block> customBlocksByName;
     
-    // Use stair render fix
-    public boolean useFixedStairs = false;
-    public boolean useFixedPressurePlate = false;
-    public boolean useWaterCTMFix = false;
     public boolean snowInTaiga = false;
-    
-    public static BitSet slabStyleLightingBlocks = new BitSet();
     
     public static WesterosBlockConfig customConfig;
     
@@ -144,9 +138,6 @@ public class WesterosBlocks
         try
         {
             cfg.load();
-            useFixedStairs = cfg.get("Settings",  "useFixedStairs", true).getBoolean(true);
-            useFixedPressurePlate = cfg.get("Settings", "useFixedPressurePlate", true).getBoolean(true);
-            useWaterCTMFix = cfg.get("Settings", "useWaterCTMFix", true).getBoolean(true);
             snowInTaiga = cfg.get("Settings", "snowInTaiga", true).getBoolean(true);
             good_init = true;
         }
@@ -159,14 +150,6 @@ public class WesterosBlocks
             cfg.save();
         }
         // Initialize with standard block IDs
-        slabStyleLightingBlocks.clear();
-        /**NOTYET
-        slabStyleLightingBlocks.set(Block.stoneSingleSlab.blockID);
-        slabStyleLightingBlocks.set(Block.woodSingleSlab.blockID);
-        slabStyleLightingBlocks.set(Block.tilledField.blockID);
-        slabStyleLightingBlocks.set(Block.stairsWoodOak.blockID);
-        slabStyleLightingBlocks.set(Block.stairsCobblestone.blockID);
-        */
         if(snowInTaiga) {
             //TODO: need to handle this in 1.11.2
             //Biome.taiga.setEnableSnow().setTemperatureRainfall(-0.5F, 0.4F);
