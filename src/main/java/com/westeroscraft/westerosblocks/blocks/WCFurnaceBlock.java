@@ -12,6 +12,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
@@ -86,6 +87,7 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
                 }
             }
         }
+        this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(LIT, false));
     }
 
     public boolean initializeBlockDefinition() {
@@ -149,8 +151,9 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
         def.randomDisplayTick(stateIn, worldIn, pos, rand);
 
-        int meta = this.getMetaFromState(stateIn);
-        boolean active = alwaysOn[meta & 0x1] || ((meta & 0x8) != 0);
+        int var = stateIn.getValue(variant).intValue();
+        boolean lit = stateIn.getValue(LIT).booleanValue();
+        boolean active = alwaysOn[var] || lit;
         
         if (active)
         {
@@ -214,8 +217,8 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
         WCFurnaceBlock blk = (WCFurnaceBlock) iblockstate.getBlock();
         int var = iblockstate.getValue(blk.variant).intValue();
         
-        iblockstate = iblockstate.withProperty(LIT, active | blk.alwaysOn[var]);
-        
+        iblockstate = iblockstate.withProperty(LIT, active || blk.alwaysOn[var]);
+
         worldIn.setBlockState(pos, iblockstate, 3);
 
         if (tileentity != null)
@@ -240,16 +243,18 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
         {
             enumfacing = EnumFacing.NORTH;
         }
+        int var = meta & 1;
 
-        return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(variant, meta & 1).withProperty(LIT, (meta & 0x8) > 0);
+        return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(variant, meta & 1).withProperty(LIT, alwaysOn[var] || ((meta & 0x8) > 0));
     }
 
     public int getMetaFromState(IBlockState state)
     {
         int meta = (((EnumFacing)state.getValue(FACING)).getIndex() - 2) << 1;
-        if (state.getValue(LIT).booleanValue())
+        int var = state.getValue(variant).intValue();
+        if (state.getValue(LIT).booleanValue() || alwaysOn[var])
             meta |= 0x8;
-        meta += state.getValue(variant).intValue();
+        meta += var;
         return meta;
     }
 
@@ -305,4 +310,13 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
         //    p.openContainer.windowId = msg[1];
         //}
     }
+    
+    @Override
+    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    {
+    	int var = (meta & 0x1);
+    	boolean lit = alwaysOn[var];
+        return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(variant,  var).withProperty(LIT, lit);
+    }
+
 }
