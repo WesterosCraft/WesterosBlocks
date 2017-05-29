@@ -92,7 +92,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodSig = "";
 
-        WesterosBlocks.log.debug("Checking class " + name);
+        //WesterosBlocks.log.debug("Checking class " + name);
         
         targetMethodName ="getCloudHeight";
         targetMethodSig = "()F";
@@ -105,13 +105,13 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            WesterosBlocks.log.warn("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            //WesterosBlocks.log.warn("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Find our target op sequence
         int ldx_index = findOpSequence(m, new int[] { LDC } );
         if (ldx_index < 0) {
-            WesterosBlocks.log.warn("Cannot patch "  + targetMethodName + "() in " + name);
+            //WesterosBlocks.log.warn("Cannot patch "  + targetMethodName + "() in " + name);
             return b;
         }
         // Replace method implementation
@@ -166,7 +166,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
@@ -179,7 +179,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodSig = "";
 
-        WesterosBlocks.log.debug("Checking class " + name);
+        //WesterosBlocks.log.debug("Checking class " + name);
         
         if (obfus) {
             targetMethodName ="f";
@@ -232,7 +232,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
@@ -241,7 +241,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodSig = "";
 
-        WesterosBlocks.log.debug("Checking class " + name);
+        //WesterosBlocks.log.debug("Checking class " + name);
         
         if (obfus) {
             targetMethodName ="f";
@@ -294,7 +294,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
