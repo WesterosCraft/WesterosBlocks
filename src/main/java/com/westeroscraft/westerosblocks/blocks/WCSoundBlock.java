@@ -64,7 +64,7 @@ public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
                         def_endtime_by_meta[i] = ((Integer.parseInt(flds[1]) * 10) + 18000) % 24000;
                     }
                     else {
-                        WesterosBlocks.log.warning("Invalid type attribute '" + flds[0] + "' in " + def.blockName + "[" + i + "]");
+                        WesterosBlocks.log.warn("Invalid type attribute '" + flds[0] + "' in " + def.blockName + "[" + i + "]");
                     }
                 }
             }
@@ -155,7 +155,7 @@ public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
         if (sndid != null) {
             SoundEvent se = getSound(sndid);
             if (se == null) {
-                WesterosBlocks.log.warning("Unable to find sound " + sndid);
+                WesterosBlocks.log.warn("Unable to find sound " + sndid);
             }
             else {
                 world.playSound(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, se, SoundCategory.BLOCKS, 1.0F, 1.0F, true);

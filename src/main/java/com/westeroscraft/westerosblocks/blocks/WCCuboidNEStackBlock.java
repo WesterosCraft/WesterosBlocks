@@ -45,7 +45,7 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
                         case 3:
                             break;
                         default:
-                            WesterosBlocks.log.severe(String.format("unmatched stacked subblocks %d in block '%s'", 2*i, def.blockType));
+                            WesterosBlocks.log.error(String.format("unmatched stacked subblocks %d in block '%s'", 2*i, def.blockType));
                             return null;
                     }
                 }

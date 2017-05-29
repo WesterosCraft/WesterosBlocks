@@ -466,9 +466,8 @@ public class WesterosBlockDef {
                 rname += ".png";
             try {
                 colorBuffer = TextureUtil.readImageData(Minecraft.getMinecraft().getResourceManager(), new ResourceLocation(rname));
-                WesterosBlocks.log.severe(String.format("Loaded resource '%s' in block '%s' : %d pixels", rname, blkname, colorBuffer.length));
             } catch (Exception e) {
-                WesterosBlocks.log.severe(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
+                WesterosBlocks.log.error(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
                 Arrays.fill(colorBuffer,  0xFFFFFF);
             }
         }
@@ -536,7 +535,7 @@ public class WesterosBlockDef {
     public Block[] createBlocks() {
         WesterosBlockFactory bf = typeTable.get(blockType);
         if (bf == null) {
-            WesterosBlocks.log.severe(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));
+            WesterosBlocks.log.error(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));
             return null;
         }
         return bf.buildBlockClasses(this);
@@ -545,7 +544,7 @@ public class WesterosBlockDef {
     public Material getMaterial() {
         Material m = materialTable.get(material);
         if (m == null) {
-            WesterosBlocks.log.warning(String.format("Invalid material '%s' in block '%s'", material, blockName));
+            WesterosBlocks.log.warn(String.format("Invalid material '%s' in block '%s'", material, blockName));
             return Material.ROCK;
         }
         return m;
@@ -554,7 +553,7 @@ public class WesterosBlockDef {
     public SoundType getStepSound() {
         SoundType ss = stepSoundTable.get(stepSound);
         if (ss == null) {
-            WesterosBlocks.log.warning(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
+            WesterosBlocks.log.warn(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
             return SoundType.STONE;
         }
         return ss;
@@ -563,7 +562,7 @@ public class WesterosBlockDef {
     public CreativeTabs getCreativeTab() {
         CreativeTabs ct = tabTable.get(creativeTab);
         if (ct == null) {
-            WesterosBlocks.log.warning(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
+            WesterosBlocks.log.warn(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
             ct = WesterosBlocksCreativeTab.tabWesterosBlocks;
         }
         return ct;
@@ -575,7 +574,7 @@ public class WesterosBlockDef {
         lightValueInt = (int)(15.0F * lightValue);
         this.colorMultHandler = getColorHandler(this.colorMult);
         if (this.colorMultHandler == null) {
-            WesterosBlocks.log.warning(String.format("Invalid colorMult '%s' in block '%s'", this.colorMult, blockName));
+            WesterosBlocks.log.warn(String.format("Invalid colorMult '%s' in block '%s'", this.colorMult, blockName));
             this.colorMultHandler = getColorHandler("#FFFFFF");
         }
         boundingBoxByMeta = new BoundingBox[16];    // Always do all 16: rotated blocks change this
@@ -629,7 +628,7 @@ public class WesterosBlockDef {
                     }
                     this.colorMultHandlerByMeta[sb.meta] = getColorHandler(sb.colorMult);
                     if (this.colorMultHandlerByMeta[sb.meta] == null) {
-                        WesterosBlocks.log.warning(String.format("Invalid colorMult '%s' in block '%s'", sb.colorMult, blockName));
+                        WesterosBlocks.log.warn(String.format("Invalid colorMult '%s' in block '%s'", sb.colorMult, blockName));
                         this.colorMultHandlerByMeta[sb.meta] = this.colorMultHandler;
                     }
                 }
@@ -679,7 +678,7 @@ public class WesterosBlockDef {
                     this.particles_by_meta[sb.meta]= sb.particles; 
                     for (Particle pid : sb.particles) {
                         if (particles.containsKey(pid.particle) == false) {
-                            WesterosBlocks.log.warning(String.format("Invalid particle '%s' in block '%s'", pid.particle, blockName));
+                            WesterosBlocks.log.warn(String.format("Invalid particle '%s' in block '%s'", pid.particle, blockName));
                             pid.particle = "smoke"; // Use smoke by default
                         }
                     }
@@ -1152,7 +1151,7 @@ public class WesterosBlockDef {
             } catch (IllegalArgumentException iax) {
             }
             if (pt == null) {
-                WesterosBlocks.log.severe(String.format("Invalid plant type '%s' at meta %d of block '%s'", t, meta, this.blockName));
+                WesterosBlocks.log.error(String.format("Invalid plant type '%s' at meta %d of block '%s'", t, meta, this.blockName));
                 pt = EnumPlantType.Plains;
                 Subblock sb = getByMeta(meta);
                 sb.type = pt.name();
@@ -1183,12 +1182,12 @@ public class WesterosBlockDef {
                     }
                 }
                 if (!match) {
-                    WesterosBlocks.log.severe(String.format("meta value %d for block '%s' is not valid for block type '%s'", sb.meta, this.blockName, this.blockType));
+                    WesterosBlocks.log.error(String.format("meta value %d for block '%s' is not valid for block type '%s'", sb.meta, this.blockName, this.blockType));
                     return false;
                 }
                 // If value exceeds metaMask-ed bits
                 if ((m & metaMask) != m) {
-                    WesterosBlocks.log.severe(String.format("meta value %d for block '%s' is not valid for block type '%s' - metaMask=%x", sb.meta, this.blockName, this.blockType, metaMask));
+                    WesterosBlocks.log.error(String.format("meta value %d for block '%s' is not valid for block type '%s' - metaMask=%x", sb.meta, this.blockName, this.blockType, metaMask));
                     return false;
                 }
             }
@@ -1206,7 +1205,7 @@ public class WesterosBlockDef {
                 }
             }
             if (!match) {
-                WesterosBlocks.log.severe(String.format("Block '%s' is missing required meta value %d for block type '%s'", this.blockName, req, this.blockType));
+                WesterosBlocks.log.error(String.format("Block '%s' is missing required meta value %d for block type '%s'", this.blockName, req, this.blockType));
                 return false;
             }
         }
@@ -1221,11 +1220,11 @@ public class WesterosBlockDef {
         for (WesterosBlockDef def : defs) {
             if (def == null) continue;
             if (def.blockName == null) {
-                WesterosBlocks.log.severe("Block definition is missing blockName");
+                WesterosBlocks.log.error("Block definition is missing blockName");
                 return false;
             }
             if (names.add(def.blockName) == false) {    // If alreay defined
-                WesterosBlocks.log.severe(String.format("Block '%s' - blockName duplicated", def.blockName));
+                WesterosBlocks.log.error(String.format("Block '%s' - blockName duplicated", def.blockName));
                 return false;
             }
             
@@ -1235,11 +1234,11 @@ public class WesterosBlockDef {
                         continue;
                     }
                     else if (def.blockIDs[i] > 4095) {
-                        WesterosBlocks.log.severe(String.format("Block '%s' - blockIDs[%d] invalid", def.blockName, i));
+                        WesterosBlocks.log.error(String.format("Block '%s' - blockIDs[%d] invalid", def.blockName, i));
                         return false;
                     }
                     else if (ids.get(def.blockIDs[i])) {    // If already defined
-                        WesterosBlocks.log.severe(String.format("Block '%s' - blockIDs[%d] duplicated", def.blockName, i));
+                        WesterosBlocks.log.error(String.format("Block '%s' - blockIDs[%d] duplicated", def.blockName, i));
                         return false;
                     }
                     ids.set(def.blockIDs[i]);
@@ -1251,11 +1250,11 @@ public class WesterosBlockDef {
                     
                 }
                 else if (def.blockID > 4095) {
-                    WesterosBlocks.log.severe(String.format("Block '%s' - blockID invalid", def.blockName));
+                    WesterosBlocks.log.error(String.format("Block '%s' - blockID invalid", def.blockName));
                     return false;
                 }
                 else if (ids.get(def.blockID)) {    // If already defined
-                    WesterosBlocks.log.severe(String.format("Block '%s' - blockID duplicated", def.blockName));
+                    WesterosBlocks.log.error(String.format("Block '%s' - blockID duplicated", def.blockName));
                     return false;
                 }
                 else {
@@ -1269,7 +1268,7 @@ public class WesterosBlockDef {
                 for (Subblock sb : def.subBlocks) {
                     if (sb == null) continue;
                     if (metas.get(sb.meta)) {
-                        WesterosBlocks.log.severe(String.format("Block '%s' - duplicate meta value %d", def.blockName, sb.meta));
+                        WesterosBlocks.log.error(String.format("Block '%s' - duplicate meta value %d", def.blockName, sb.meta));
                         return false;
                     }
                     metas.set(sb.meta);

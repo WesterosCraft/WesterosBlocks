@@ -33,19 +33,19 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         @Override
         public Block[] buildBlockClasses(WesterosBlockDef def) {
             if ((def.modelBlockName == null) || (def.modelBlockMeta < 0)) {
-                WesterosBlocks.log.severe("Type 'stair' requires modelBlockName and modelBlockMeta settings");
+                WesterosBlocks.log.error("Type 'stair' requires modelBlockName and modelBlockMeta settings");
                 return null;
             }
             // Try to find model block
             Block blk = WesterosBlocks.findBlockByName(def.modelBlockName);
             if (blk == null) {
-                WesterosBlocks.log.severe(String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
+                WesterosBlocks.log.error(String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
                 return null;
             }
             @SuppressWarnings("deprecation")
 			IBlockState bs = blk.getStateFromMeta(def.modelBlockMeta);
             if (bs == null) {
-                WesterosBlocks.log.severe(String.format("modelBlockMeta '%d' not found for block '%s'", def.modelBlockMeta, def.blockName));
+                WesterosBlocks.log.error(String.format("modelBlockMeta '%d' not found for block '%s'", def.modelBlockMeta, def.blockName));
                 return null;
             }
             

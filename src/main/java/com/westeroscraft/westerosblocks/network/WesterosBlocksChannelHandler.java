@@ -50,7 +50,7 @@ public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCode
             if (name == null) {
                 name = "<no name>";
             }
-            WesterosBlocks.log.warning("sentToPlayer \"" + name + "\" error: " + t.getMessage());
+            WesterosBlocks.log.warn("sentToPlayer \"" + name + "\" error: " + t.getMessage());
         }
     }
     

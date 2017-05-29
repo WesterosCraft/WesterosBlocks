@@ -19,8 +19,6 @@ import net.minecraft.crash.CrashReport;
 import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ReportedException;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeTaiga;
 
 import java.io.File;
 import java.io.FileReader;
@@ -35,11 +33,12 @@ import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
-import java.util.BitSet;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
@@ -49,13 +48,12 @@ import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 import com.westeroscraft.westerosblocks.network.PacketHandler;
 import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
 
-import jline.internal.Log;
-
 @Mod(modid = WesterosBlocks.MOD_ID, name = "WesterosBlocks", version = Version.VER)
 public class WesterosBlocks
 {    
     public static final String MOD_ID = "westerosblocks";
-    public static Logger log = Logger.getLogger("WesterosBlocks");
+    
+    public static Logger log = LogManager.getLogger(MOD_ID);
     
     // The instance of your mod that Forge uses.
     @Instance("WesterosBlocks")
@@ -157,7 +155,7 @@ public class WesterosBlocks
         // Initialize with standard block IDs
         if(snowInTaiga) {
         	Biomes.TAIGA.temperature = -0.5F;	// Access set up using AccessTransformer
-        	Log.info("Enabled snow in TAIGA");
+            log.info("Enabled snow in TAIGA");
         }
         modcfgdir = event.getModConfigurationDirectory();
                 
@@ -180,7 +178,7 @@ public class WesterosBlocks
                             exp.doBlockStateExport();
                             exp.doModelExports();
                         } catch (IOException iox) {
-                            log.warning(String.format("Error exporting block %s - %s",  blk.getUnlocalizedName(), iox));
+                            log.warn(String.format("Error exporting block %s - %s",  blk.getUnlocalizedName(), iox));
                         }
                     }
                 }
@@ -194,7 +192,7 @@ public class WesterosBlocks
         try {
             ModelExport.writeNLSFile(modcfgdir);
         } catch (IOException iox) {
-            log.warning(String.format("Error writing NLS - %s", iox));
+            log.warn(String.format("Error writing NLS - %s", iox));
         }
         // Register tile entities
         WesterosBlockDef.processRegisterTileEntities();
