@@ -70,6 +70,7 @@ public class WesterosBlocks
     public static Block customBlocks[];
     public static HashMap<String, Block> customBlocksByName;
     
+    public boolean blockDevMode = false;
     public boolean snowInTaiga = false;
     
     public static WesterosBlockConfig customConfig;
@@ -142,6 +143,7 @@ public class WesterosBlocks
         {
             cfg.load();
             snowInTaiga = cfg.get("Settings", "snowInTaiga", true).getBoolean(true);
+            blockDevMode = cfg.get("Settings", "blockDevMode", false).getBoolean(false);
             good_init = true;
         }
         catch (Exception e)
@@ -157,8 +159,12 @@ public class WesterosBlocks
         	Biomes.TAIGA.temperature = -0.5F;	// Access set up using AccessTransformer
             log.info("Enabled snow in TAIGA");
         }
-        modcfgdir = event.getModConfigurationDirectory();
+        modcfgdir = new File(event.getModConfigurationDirectory(), MOD_ID);
+        modcfgdir.mkdirs();
                 
+        if (blockDevMode) {
+        	log.info("Block dev mode enabled : block export processing will be done to " + modcfgdir + "/assets/" + MOD_ID);
+        }
         // Construct custom block definitions
         ArrayList<Block> blklist = new ArrayList<Block>();
         customBlocksByName = new HashMap<String, Block>();
@@ -172,14 +178,16 @@ public class WesterosBlocks
                     customBlocksByName.put(customBlockDefs[i].getBlockName(j), blk);
                     
                     // Do blocks state export here
-                    ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modcfgdir);
-                    if (exp != null) {
-                        try {
-                            exp.doBlockStateExport();
-                            exp.doModelExports();
-                        } catch (IOException iox) {
-                            log.warn(String.format("Error exporting block %s - %s",  blk.getUnlocalizedName(), iox));
-                        }
+                    if (blockDevMode) {
+                    	ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modcfgdir);
+                    	if (exp != null) {
+                    		try {
+                    			exp.doBlockStateExport();
+                    			exp.doModelExports();
+                    		} catch (IOException iox) {
+                    			log.warn(String.format("Error exporting block %s - %s",  blk.getUnlocalizedName(), iox));
+                    		}
+                    	}
                     }
                 }
             }
@@ -189,10 +197,13 @@ public class WesterosBlocks
             }
         }
         customBlocks = blklist.toArray(new Block[blklist.size()]);
-        try {
-            ModelExport.writeNLSFile(modcfgdir);
-        } catch (IOException iox) {
-            log.warn(String.format("Error writing NLS - %s", iox));
+        
+        if (blockDevMode) {
+        	try {
+        		ModelExport.writeNLSFile(modcfgdir);
+        	} catch (IOException iox) {
+        		log.warn(String.format("Error writing NLS - %s", iox));
+        	}
         }
         // Register tile entities
         WesterosBlockDef.processRegisterTileEntities();
