@@ -16,8 +16,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
+import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ReportedException;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeTaiga;
 
 import java.io.File;
 import java.io.FileReader;
@@ -45,6 +48,8 @@ import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 import com.westeroscraft.westerosblocks.network.PacketHandler;
 import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
+
+import jline.internal.Log;
 
 @Mod(modid = WesterosBlocks.MOD_ID, name = "WesterosBlocks", version = Version.VER)
 public class WesterosBlocks
@@ -151,8 +156,8 @@ public class WesterosBlocks
         }
         // Initialize with standard block IDs
         if(snowInTaiga) {
-            //TODO: need to handle this in 1.11.2
-            //Biome.taiga.setEnableSnow().setTemperatureRainfall(-0.5F, 0.4F);
+        	Biomes.TAIGA.temperature = -0.5F;	// Access set up using AccessTransformer
+        	Log.info("Enabled snow in TAIGA");
         }
         modcfgdir = event.getModConfigurationDirectory();
                 
