@@ -37,6 +37,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else if (name.equals("net.minecraft.block.BlockPane")) {    // Clear name
             bytes = transformBlockGlassPane(name, bytes, false);
         }
+        else if (name.equals("cy")) { // Obfuscated name for ObjectIntIdentityMap
+            bytes = transformObjectIntIdentityMap(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.util.ObjectIntIdentityMap")) {    // Clear name
+            bytes = transformObjectIntIdentityMap(name, bytes, false);
+        }
         
         return bytes;
     }
@@ -299,5 +305,63 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return b;
     }
 
+    private byte[] transformObjectIntIdentityMap(String name, byte[] b, boolean obfus) {
+        String targetMethodName = "";
+        String targetMethodSig = "";
+        String targetClassSig  = "";
+        String targetFieldID = "";
+
+        //WesterosBlocks.log.debug("Checking class " + name);
+
+        if (obfus) {
+            targetMethodName ="a";
+            targetClassSig  = "cy";
+            targetFieldID = "b";
+        }
+        else {
+            targetMethodName ="size";
+            targetClassSig  = "net/minecraft/util/ObjectIntIdentityMap";
+            targetFieldID = "objectList";
+        }
+        targetMethodSig = "()I";
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Now find the method
+        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
+        if (m == null) {
+            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }
+        // Replace method implementation
+        MethodVisitor mv = m;
+        m.instructions.clear();
+        m.localVariables.clear();
+        mv.visitCode();
+        Label l0 = new Label();
+        mv.visitLabel(l0);
+        mv.visitLineNumber(61, l0);
+        mv.visitVarInsn(ALOAD, 0);
+        mv.visitFieldInsn(GETFIELD, targetClassSig, targetFieldID, "Ljava/util/List;");
+        mv.visitMethodInsn(INVOKEINTERFACE, "java/util/List", "size", "()I", true);
+        mv.visitInsn(IRETURN);
+        Label l1 = new Label();
+        mv.visitLabel(l1);
+        mv.visitLocalVariable("this", "L" + targetClassSig + ";", "L" + targetClassSig + "<TT;>;", l0, l1, 0);
+        mv.visitMaxs(1, 1);
+        mv.visitEnd();
+        
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+        
+        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        
+        return b;
+    }
 }
 

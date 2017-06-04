@@ -143,7 +143,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         return new BlockStateContainer(this, new IProperty[] { variant });
     }
     
-    // map from state to meta and vice verca - use highest bit for polished boolean, use low 2 bits for variant
+    // map from state to meta and vice versa
     @Override
     public IBlockState getStateFromMeta(int meta) {
         return this.getDefaultState().withProperty(variant, meta);
@@ -151,7 +151,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     
     @Override
     public int getMetaFromState(IBlockState state) {
-        return (Integer) state.getValue(variant);
+        return state.getValue(variant).intValue();
     }
     
     @Override
