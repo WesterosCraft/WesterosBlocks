@@ -11,8 +11,6 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.Opcodes;
 
-import com.westeroscraft.westerosblocks.WesterosBlocks;
-
 import net.minecraft.launchwrapper.IClassTransformer;
 
 public class ClassTransformer implements IClassTransformer, Opcodes {
@@ -359,7 +357,6 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         b = writer.toByteArray();
         
         //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
         
         return b;
     }
