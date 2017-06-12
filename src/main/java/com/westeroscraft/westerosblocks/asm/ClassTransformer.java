@@ -9,6 +9,7 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
+
 import org.objectweb.asm.Opcodes;
 
 import net.minecraft.launchwrapper.IClassTransformer;
@@ -40,6 +41,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         else if (name.equals("net.minecraft.util.ObjectIntIdentityMap")) {    // Clear name
             bytes = transformObjectIntIdentityMap(name, bytes, false);
+        }
+        else if (name.equals("id")) {
+        	bytes = transformSPacketTimeUpdate(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.network.play.server.SPacketTimeUpdate")) {
+        	bytes = transformSPacketTimeUpdate(name, bytes, false);
         }
         
         return bytes;
@@ -360,5 +367,92 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         
         return b;
     }
+    
+    private byte[] transformSPacketTimeUpdate(String name, byte[] b, boolean obfus) {
+        String targetMethodName = "";
+        String targetMethodSig = "";
+        String targetClassSig  = "";
+        String targetFieldID = "";
+        String targetFieldID2 = "";
+        String targetClassPacketBuffer = "";
+
+        //WesterosBlocks.log.debug("Checking class " + name);
+        
+        if (obfus) {
+            targetClassSig  = "id";
+            targetMethodName ="a";
+            targetMethodSig = "(Let;)V";
+            targetFieldID = "b";
+            targetFieldID2 = "a";
+            targetClassPacketBuffer = "et";
+        }
+        else {
+            targetClassSig  = "net/minecraft/network/play/server/SPacketTimeUpdate";
+            targetMethodName ="readPacketData";
+            targetMethodSig = "(Lnet/minecraft/network/PacketBuffer;)V";
+            targetFieldID = "worldTime";
+            targetFieldID2 = "totalWorldTime";
+            targetClassPacketBuffer = "net/minecraft/network/PacketBuffer";
+        }
+        
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Now find the method
+        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
+        if (m == null) {
+            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }
+        MethodVisitor mv = m;
+        m.instructions.clear();
+        m.localVariables.clear();
+        mv.visitCode();
+        Label l0 = new Label();
+        mv.visitLabel(l0);
+        mv.visitLineNumber(38, l0);
+        mv.visitVarInsn(ALOAD, 0);
+        mv.visitVarInsn(ALOAD, 1);
+        mv.visitMethodInsn(INVOKEVIRTUAL, targetClassPacketBuffer, "readLong", "()J", false);
+        mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "processTotalWorldTime", "(J)J", false);
+        mv.visitFieldInsn(PUTFIELD, targetClassSig, targetFieldID2, "J");
+        Label l1 = new Label();
+        mv.visitLabel(l1);
+        mv.visitLineNumber(39, l1);
+        mv.visitVarInsn(ALOAD, 0);
+        mv.visitVarInsn(ALOAD, 1);
+        mv.visitMethodInsn(INVOKEVIRTUAL, targetClassPacketBuffer, "readLong", "()J", false);
+        mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "processWorldTime", "(J)J", false);
+        mv.visitFieldInsn(PUTFIELD, targetClassSig, targetFieldID, "J");
+        Label l2 = new Label();
+        mv.visitLabel(l2);
+        mv.visitLineNumber(40, l2);
+        mv.visitInsn(RETURN);
+        Label l3 = new Label();
+        mv.visitLabel(l3);
+        mv.visitLocalVariable("this", "L" + targetClassSig + ";", null, l0, l3, 0);
+        mv.visitLocalVariable("buf", "L" + targetClassPacketBuffer + ";", null, l0, l3, 1);
+        mv.visitMaxs(3, 2);
+        mv.visitEnd();        
+        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+
+        return b;
+    }
+    
+    public static long processWorldTime(long wt) {
+    	return wt;
+    }
+
+    public static long processTotalWorldTime(long twt) {
+    	return twt;
+    }
+
 }
 
