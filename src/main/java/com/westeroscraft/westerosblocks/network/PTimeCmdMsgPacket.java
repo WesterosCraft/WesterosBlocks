@@ -1,6 +1,10 @@
 package com.westeroscraft.westerosblocks.network;
 
+import com.westeroscraft.westerosblocks.commands.PTimeCommand;
+
 import io.netty.buffer.ByteBuf;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.network.INetHandler;
 
 public class PTimeCmdMsgPacket extends WBPacket {
 	public boolean relative;
@@ -27,4 +31,8 @@ public class PTimeCmdMsgPacket extends WBPacket {
     	data.writeInt(time_off);
     }
 
+    @Override
+    public void processPacket(INetHandler handler, EntityPlayer player) {
+    	PTimeCommand.setTimeOffset(this.relative, this.time_off);
+    }
 }

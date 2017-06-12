@@ -416,7 +416,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitVarInsn(ALOAD, 0);
         mv.visitVarInsn(ALOAD, 1);
         mv.visitMethodInsn(INVOKEVIRTUAL, targetClassPacketBuffer, "readLong", "()J", false);
-        mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "processTotalWorldTime", "(J)J", false);
+        mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/commands/PTimeCommand", "processTotalWorldTime", "(J)J", false);
         mv.visitFieldInsn(PUTFIELD, targetClassSig, targetFieldID2, "J");
         Label l1 = new Label();
         mv.visitLabel(l1);
@@ -424,7 +424,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitVarInsn(ALOAD, 0);
         mv.visitVarInsn(ALOAD, 1);
         mv.visitMethodInsn(INVOKEVIRTUAL, targetClassPacketBuffer, "readLong", "()J", false);
-        mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/asm/ClassTransformer", "processWorldTime", "(J)J", false);
+        mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/commands/PTimeCommand", "processWorldTime", "(J)J", false);
         mv.visitFieldInsn(PUTFIELD, targetClassSig, targetFieldID, "J");
         Label l2 = new Label();
         mv.visitLabel(l2);
@@ -444,31 +444,6 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         b = writer.toByteArray();
 
         return b;
-    }
-    
-    public static void setTimeOffset(boolean relative, int offset_ticks) {
-		relative_off = relative;
-		time_off = offset_ticks;
-    }
-    
-    private static boolean relative_off = true;
-    private static long time_off = 0;
-    
-    public static long processWorldTime(long wt) {
-    	if (wt >= 0) {
-    		if (relative_off) {
-    			wt = (wt + 24000 + time_off) % 24000;
-    		}
-    		else {
-    			wt = wt - (wt % 24000) + time_off;
-    		}
-    	}
-        return wt;
-    }
-
-    public static long processTotalWorldTime(long twt) {
-		return twt;
-    }
-
+    }    
 }
 

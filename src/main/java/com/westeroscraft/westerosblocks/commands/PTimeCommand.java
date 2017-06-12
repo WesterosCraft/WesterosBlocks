@@ -81,7 +81,7 @@ public class PTimeCommand implements ICommand {
         		else {
         			sender.sendMessage(new TextComponentString("Setting player time to fixed"));
         		}
-        		WesterosBlocksChannelHandler.sendPTimeCmdMessage((EntityPlayerMP) sender, rel, off.intValue());
+        		WesterosBlocksChannelHandler.sendPTimeCmdMessage(player, rel, off.intValue());
         	}
         	else {
         		WesterosBlocks.log.info("Command only usable by player");
@@ -199,4 +199,29 @@ public class PTimeCommand implements ICommand {
 	public static long hoursMinutesToTicks(int hours, int min) {
 		return (ticksAtMidnight + (hours * ticksPerHour) + ((min * ticksPerHour)/60)) % ticksPerDay;
 	}
+
+	// Implementation of hooks for processing worldtime changes
+    public static void setTimeOffset(boolean relative, int offset_ticks) {
+		relative_off = relative;
+		time_off = offset_ticks;
+    }
+    
+    private static boolean relative_off = true;
+    private static long time_off = 0;
+    
+    public static long processWorldTime(long wt) {
+    	if (wt >= 0) {
+    		if (relative_off) {
+    			wt = (wt + 24000 + time_off) % 24000;
+    		}
+    		else {
+    			wt = wt - (wt % 24000) + time_off;
+    		}
+    	}
+        return wt;
+    }
+
+    public static long processTotalWorldTime(long twt) {
+		return twt;
+    }
 }

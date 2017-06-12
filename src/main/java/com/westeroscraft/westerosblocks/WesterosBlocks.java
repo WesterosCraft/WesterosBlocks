@@ -8,11 +8,14 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartedEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent; 
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.event.FMLServerStoppedEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.network.FMLEmbeddedChannel;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
 import net.minecraft.crash.CrashReport;
@@ -253,6 +256,8 @@ public class WesterosBlocks
 		} catch (IOException e) {
             log.info("Migrate RP failed");
 		}
+        
+        proxy.initCleanupHooks();
     }
 
     private void handleDynmap() {
@@ -421,7 +426,10 @@ public class WesterosBlocks
 
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
-    	event.registerServerCommand(new PTimeCommand());
+    	// ptime is only valid for MP mode
+    	if(event.getSide().isServer()) {
+    		event.registerServerCommand(new PTimeCommand());
+    	}
 	}
     
     @EventHandler
@@ -433,4 +441,9 @@ public class WesterosBlocks
     public void serverStopping(FMLServerStoppingEvent event)
     {
     }
+
+    @EventHandler
+    public void serverStopped(FMLServerStoppedEvent event)
+    {
+    }    
 }

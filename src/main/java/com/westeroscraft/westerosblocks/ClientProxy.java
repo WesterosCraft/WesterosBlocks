@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import com.westeroscraft.westerosblocks.commands.PTimeCommand;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
@@ -23,13 +25,31 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import net.minecraftforge.fml.common.network.FMLNetworkEvent;
 
 public class ClientProxy extends Proxy {
 	public ClientProxy() {
 	}
+	
+	@Override
+	public void initCleanupHooks() {
+		MinecraftForge.EVENT_BUS.register(new Object() {
+			@SubscribeEvent
+			public void playerLogout(FMLNetworkEvent.ClientDisconnectionFromServerEvent event) {
+				WesterosBlocks.log.info("playerLogout");
+				// Reset time offset to default
+				PTimeCommand.setTimeOffset(true,  0);
+			}
+		});
+	}
+	
 	public void initRenderRegistry() {
 	    // Register entity renderers
 	}
+	
     /**
      * This function returns either the player from the handler if it's on the
      * server, or directly from the minecraft instance if it's the client.

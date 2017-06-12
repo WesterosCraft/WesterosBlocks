@@ -15,6 +15,10 @@ public class Proxy
     {
     }
     
+    public void initCleanupHooks() {
+    	
+    }
+    
     public void initRenderRegistry() {
     }
     

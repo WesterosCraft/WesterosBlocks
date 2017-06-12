@@ -1,6 +1,9 @@
 package com.westeroscraft.westerosblocks.network;
 
 import io.netty.buffer.ByteBuf;
+import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.network.INetHandler;
 
 public class BlockMsgPacket extends WBPacket {
     public short blockID;
@@ -29,4 +32,11 @@ public class BlockMsgPacket extends WBPacket {
         data.writeBytes(msgdata);
     }
 
+    @Override
+    public void processPacket(INetHandler handler, EntityPlayer player) {
+        Block blk = Block.getBlockById(this.blockID);
+        if ((blk != null) && (blk instanceof WesterosBlocksMessageDest)) {
+            ((WesterosBlocksMessageDest)blk).deliverMessage(handler, player, this.msgdata);
+        }
+    }
 }
