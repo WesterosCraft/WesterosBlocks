@@ -10,9 +10,11 @@ import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.command.WrongUsageException;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
 public class PTimeCommand implements ICommand {
@@ -35,7 +37,7 @@ public class PTimeCommand implements ICommand {
 
 	@Override
 	public String getUsage(ICommandSender sender) {
-		return "ptime [list|reset|day|night|dawn|17:30|4pm|4000ticks]"; 
+		return "ptime [reset|day|night|dawn|17:30|4pm|4000ticks]"; 
 	}
 
 	@Override
@@ -49,13 +51,40 @@ public class PTimeCommand implements ICommand {
         
         if (!world.isRemote) { 
         	if (sender instanceof EntityPlayerMP) {
+        		EntityPlayerMP player = (EntityPlayerMP) sender;
         		Long off = null;
-        		Boolean rel = null;
-        		
-        		WesterosBlocksChannelHandler.sendPTimeCmdMessage((EntityPlayerMP) sender, true, 12000);
+        		boolean rel = true;
+        		if (args.length != 1) {
+        			throw new WrongUsageException("Requires one argument");
+        		}
+        		String timearg = args[0];
+        		if (timearg.startsWith("@")) { // Is fixed?
+    				rel = false;
+    				timearg = timearg.substring(1);
+        		}
+        		// Parse it
+        		try {
+        			off = timestrToTick(timearg);
+    			} catch (IllegalArgumentException x) {
+        			throw new WrongUsageException(x.getMessage());
+        		}
+        		if (off == null) {	// Doing reset
+        			off = Long.valueOf(0);
+        			rel = true;
+        			sender.sendMessage(new TextComponentString("Resetting player time to world time"));
+        		}
+        		else if (rel) {
+        			sender.sendMessage(new TextComponentString("Setting player time relative to world time"));
+        			long curtime = player.getServerWorld().getWorldTime();
+        			off = (off - curtime + 24000) % 24000;
+        		}
+        		else {
+        			sender.sendMessage(new TextComponentString("Setting player time to fixed"));
+        		}
+        		WesterosBlocksChannelHandler.sendPTimeCmdMessage((EntityPlayerMP) sender, rel, off.intValue());
         	}
         	else {
-        		WesterosBlocks.log.info("Command onlu usable by player");
+        		WesterosBlocks.log.info("Command only usable by player");
         	}
         } 			
 	}
@@ -75,5 +104,99 @@ public class PTimeCommand implements ICommand {
 	@Override
 	public boolean isUsernameIndex(String[] args, int index) {
 		return false;
+	}
+	
+	public static final int ticksAtMidnight = 18000;
+	public static final int ticksPerDay = 24000;
+	public static final int ticksPerHour = 1000;
+
+	/**
+	 * Parse time string, including reset and time-of-day aliases
+	 * 
+	 * @param timestr - ptime argument
+	 * @return null if reset, ticks otherwise
+	 * @throws IllegalArgumentException if invalid format
+	 */
+	public static Long timestrToTick(String timestr) throws IllegalArgumentException {
+		timestr = timestr.toLowerCase();
+		switch(timestr) {
+			// Reset
+			case "reset":
+			case "normal":
+			case "default":
+				return null;
+			case "sunrise":
+			case "dawn":
+				return Long.valueOf(23000);
+			case "daystart":
+			case "day":
+				return Long.valueOf(0);
+			case "morning":
+				return Long.valueOf(1000);
+			case "midday":
+			case "noon":
+				return Long.valueOf(6000);
+			case "afternoon":
+				return Long.valueOf(9000);
+			case "sunset":
+			case "dusk":
+			case "sundown":
+			case "nightfall":
+				return Long.valueOf(12000);
+			case "nightstart":
+			case "night":
+				return Long.valueOf(14000);
+			case "midnight":
+				return Long.valueOf(18000);
+		}
+		// If ticks (#t or #ticks)
+		if(timestr.matches("^[0-9]+ti?c?k?s?$")) {
+			return Long.parseLong(timestr.replaceAll("[^0-9]", "")) % 24000;
+		}
+		// If 24 hour format
+		else if(timestr.matches("^[0-9]{2}[^0-9]?[0-9]{2}$")) {
+			String pname = timestr.replaceAll("[^0-9]", "");
+			if (pname.length() != 4) {
+				throw new IllegalArgumentException("Bad 24 hour time - " + timestr);
+			}
+			return hoursMinutesToTicks(Integer.parseInt(pname.substring(0, 2)), Integer.parseInt(pname.substring(2, 4)));
+		}
+		// If 12 hour format
+		else if(timestr.matches("^[0-9]{1,2}([^0-9]?[0-9]{2})?(pm|am)$")) {
+			String ptime = timestr.replaceAll("[^0-9]", "");	// Strip am/pm
+			int hrs = 0, mins = 0;
+			switch(ptime.length()) {
+				case 4: // hhmm
+					hrs = Integer.parseInt(ptime.substring(0, 2));
+					mins = Integer.parseInt(ptime.substring(2, 4));
+					break;
+				case 3: // hmm
+					hrs = Integer.parseInt(ptime.substring(0, 1));
+					mins = Integer.parseInt(ptime.substring(1, 3));
+					break;
+				case 2: // hh
+				case 1: // h
+					hrs = Integer.parseInt(ptime);
+					break;
+				default:
+					throw new IllegalArgumentException("Bad 12 hour time - " + timestr);
+			}
+			// Add 12 hours for anything PM except 12
+			if (timestr.endsWith("pm") && (hrs != 12)) {
+				hrs += 12;	
+			}
+			// Subtract 12 for 12 AM
+			else if (timestr.endsWith("am") && (hrs == 12)) {
+				hrs -= 12;
+			}
+			return hoursMinutesToTicks(hrs, mins);
+		}
+		else {
+			throw new IllegalArgumentException("Bad time - " + timestr);
+		}
+	}
+	
+	public static long hoursMinutesToTicks(int hours, int min) {
+		return (ticksAtMidnight + (hours * ticksPerHour) + ((min * ticksPerHour)/60)) % ticksPerDay;
 	}
 }
