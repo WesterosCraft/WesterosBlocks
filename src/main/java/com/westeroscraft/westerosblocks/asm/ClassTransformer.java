@@ -48,6 +48,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         else if (name.equals("net.minecraft.network.play.server.SPacketTimeUpdate")) {
         	bytes = transformSPacketTimeUpdate(name, bytes, false);
         }
+        else if (name.equals("gu")) {
+        	bytes = transformSPacketChangeGameState(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.network.play.server.SPacketChangeGameState")) {
+        	bytes = transformSPacketChangeGameState(name, bytes, false);
+        }
         
         return bytes;
     }
@@ -436,6 +442,88 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitLocalVariable("buf", "L" + targetClassPacketBuffer + ";", null, l0, l3, 1);
         mv.visitMaxs(3, 2);
         mv.visitEnd();        
+        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+
+        return b;
+    }    
+    
+    private byte[] transformSPacketChangeGameState(String name, byte[] b, boolean obfus) {
+        String targetMethodName = "";
+        String targetMethodSig = "";
+        String targetClassSig  = "";
+        String targetParmClassSig = "";
+        String targetFieldID = "";
+        String targetFieldID2 = "";
+
+        //WesterosBlocks.log.debug("Checking class " + name);
+        
+        if (obfus) {
+            targetClassSig  = "gu";
+            targetMethodName ="a";
+            targetMethodSig = "(Let;)V";
+            targetFieldID = "b";
+            targetFieldID2 = "c";
+            targetParmClassSig = "et";
+        }
+        else {
+            targetClassSig  = "net/minecraft/network/play/server/SPacketChangeGameState";
+            targetMethodName ="readPacketData";
+            targetMethodSig = "(Lnet/minecraft/network/PacketBuffer;)V";
+            targetFieldID = "state";
+            targetFieldID2 = "value";
+            targetParmClassSig = "net/minecraft/network/PacketBuffer";
+        }
+        
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassNode classNode = new ClassNode();
+        ClassReader classReader = new ClassReader(b);
+        classReader.accept(classNode, 0);
+
+        // Now find the method
+        MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
+        if (m == null) {
+            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+            return b;
+        }
+        MethodVisitor mv = m;
+        m.instructions.clear();
+        m.localVariables.clear();
+        mv.visitCode();
+        Label l0 = new Label();
+        mv.visitLabel(l0);
+        mv.visitLineNumber(18, l0);
+        mv.visitVarInsn(ALOAD, 0);
+        mv.visitVarInsn(ALOAD, 1);
+        mv.visitMethodInsn(INVOKEVIRTUAL, targetParmClassSig, "readUnsignedByte", "()S", false);
+        mv.visitFieldInsn(PUTFIELD, targetClassSig, targetFieldID, "I");
+        Label l1 = new Label();
+        mv.visitLabel(l1);
+        mv.visitLineNumber(19, l1);
+        mv.visitVarInsn(ALOAD, 0);
+        mv.visitVarInsn(ALOAD, 1);
+        mv.visitMethodInsn(INVOKEVIRTUAL, targetParmClassSig, "readFloat", "()F", false);
+        mv.visitFieldInsn(PUTFIELD, targetClassSig, targetFieldID2, "F");
+        Label l2 = new Label();
+        mv.visitLabel(l2);
+        mv.visitLineNumber(20, l2);
+        mv.visitVarInsn(ALOAD, 0);
+        mv.visitMethodInsn(INVOKESTATIC, "com/westeroscraft/westerosblocks/commands/PWeatherCommand", "processChangeGameState", "(L" + targetClassSig + ";)V", false);
+        Label l3 = new Label();
+        mv.visitLabel(l3);
+        mv.visitLineNumber(21, l3);
+        mv.visitInsn(RETURN);
+        Label l4 = new Label();
+        mv.visitLabel(l4);
+        mv.visitLocalVariable("this", "L" + targetClassSig + ";", null, l0, l4, 0);
+        mv.visitLocalVariable("buf", "L" + targetParmClassSig + ";", null, l0, l4, 1);
+        mv.visitMaxs(2, 2);
+        mv.visitEnd();
+        
         //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
         
         //ASM specific for cleaning up and returning the final bytes for JVM processing.

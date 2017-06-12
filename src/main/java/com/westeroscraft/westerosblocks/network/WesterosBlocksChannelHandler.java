@@ -17,6 +17,7 @@ public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCode
     public WesterosBlocksChannelHandler() {
         addDiscriminator(0, BlockMsgPacket.class);
         addDiscriminator(1, PTimeCmdMsgPacket.class);
+        addDiscriminator(2, PWeatherCmdMsgPacket.class);
     }
 
     @Override
@@ -29,20 +30,6 @@ public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCode
         packet.readData(data);
     }
     
-    public static void sendBlockMessage(Block blk, EntityPlayerMP player, byte msgid, byte[] data) {
-        byte[] blkmsg = new byte[1 + data.length];
-        blkmsg[0] = msgid;
-        System.arraycopy(data, 0, blkmsg, 1, data.length);
-        int blkid = Block.getIdFromBlock(blk);
-        BlockMsgPacket pkt = new BlockMsgPacket(blkid, blkmsg);
-        sendToPlayer(pkt, player);
-    }
-
-    public static void sendPTimeCmdMessage(EntityPlayerMP player, boolean rel, int time_off) {
-        PTimeCmdMsgPacket pkt = new PTimeCmdMsgPacket(rel, time_off);
-        sendToPlayer(pkt, player);
-    }
-
     public static void sendToPlayer(WBPacket packet , EntityPlayerMP player) {
         try {
             WesterosBlocks.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET)
@@ -58,17 +45,4 @@ public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCode
             WesterosBlocks.log.warn("sentToPlayer \"" + name + "\" error: " + t.getMessage());
         }
     }
-    
-    /*
-    byte[] buf = new byte[3 + 1 + data.length];
-    buf[0] = BLOCKMSG;
-    buf[1] = (byte) ((blk.blockID >> 8) & 0xFF);
-    buf[2] = (byte) (blk.blockID & 0xFF);
-    buf[3] = msgid;
-    System.arraycopy(data, 0, buf, 4, data.length);
-    Packet250CustomPayload pkt = PacketDispatcher.getPacket(CHANNEL, buf);
-    player.playerNetServerHandler.sendPacketToPlayer(pkt);
-    System.out.println("sendBlockMessge(" + blk.blockID + ", " + player.getEntityName() + "," + msgid);
-    */
-
 }

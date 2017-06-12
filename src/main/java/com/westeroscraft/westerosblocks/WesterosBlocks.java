@@ -47,6 +47,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.commands.PTimeCommand;
+import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 import com.westeroscraft.westerosblocks.network.PacketHandler;
@@ -429,6 +430,7 @@ public class WesterosBlocks
     	// ptime is only valid for MP mode
     	if(event.getSide().isServer()) {
     		event.registerServerCommand(new PTimeCommand());
+    		event.registerServerCommand(new PWeatherCommand());
     	}
 	}
     

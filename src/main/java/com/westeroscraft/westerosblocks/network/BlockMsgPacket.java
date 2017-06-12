@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.network;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.INetHandler;
 
 public class BlockMsgPacket extends WBPacket {
@@ -39,4 +40,14 @@ public class BlockMsgPacket extends WBPacket {
             ((WesterosBlocksMessageDest)blk).deliverMessage(handler, player, this.msgdata);
         }
     }
+    
+    public static void sendBlockMessage(Block blk, EntityPlayerMP player, byte msgid, byte[] data) {
+        byte[] blkmsg = new byte[1 + data.length];
+        blkmsg[0] = msgid;
+        System.arraycopy(data, 0, blkmsg, 1, data.length);
+        int blkid = Block.getIdFromBlock(blk);
+        BlockMsgPacket pkt = new BlockMsgPacket(blkid, blkmsg);
+        WesterosBlocksChannelHandler.sendToPlayer(pkt, player);
+    }
+
 }

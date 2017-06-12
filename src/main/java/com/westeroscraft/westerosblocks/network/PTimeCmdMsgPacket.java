@@ -4,6 +4,7 @@ import com.westeroscraft.westerosblocks.commands.PTimeCommand;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.INetHandler;
 
 public class PTimeCmdMsgPacket extends WBPacket {
@@ -35,4 +36,10 @@ public class PTimeCmdMsgPacket extends WBPacket {
     public void processPacket(INetHandler handler, EntityPlayer player) {
     	PTimeCommand.setTimeOffset(this.relative, this.time_off);
     }
+    
+    public static void sendCmdMessage(EntityPlayerMP player, boolean rel, int time_off) {
+        PTimeCmdMsgPacket pkt = new PTimeCmdMsgPacket(rel, time_off);
+        WesterosBlocksChannelHandler.sendToPlayer(pkt, player);
+    }
+
 }

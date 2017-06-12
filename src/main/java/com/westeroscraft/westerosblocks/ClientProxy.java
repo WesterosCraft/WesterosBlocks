@@ -6,6 +6,8 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.westeroscraft.westerosblocks.commands.PTimeCommand;
+import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
+import com.westeroscraft.westerosblocks.commands.PWeatherCommand.PWEATHER_SETTING;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
@@ -42,6 +44,12 @@ public class ClientProxy extends Proxy {
 				WesterosBlocks.log.info("playerLogout");
 				// Reset time offset to default
 				PTimeCommand.setTimeOffset(true,  0);
+				// Reset weather settings
+				PWeatherCommand.setWeatherSetting(PWEATHER_SETTING.RESET, null);
+			}
+			@SubscribeEvent
+			public void playerWorldChange(PlayerEvent.PlayerChangedDimensionEvent event) {
+				PWeatherCommand.setWeatherSetting(PWEATHER_SETTING.RESET, null);
 			}
 		});
 	}

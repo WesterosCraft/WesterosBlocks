@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.network.PTimeCmdMsgPacket;
 import com.westeroscraft.westerosblocks.network.WesterosBlocksChannelHandler;
 
 import net.minecraft.command.CommandException;
@@ -81,7 +82,7 @@ public class PTimeCommand implements ICommand {
         		else {
         			sender.sendMessage(new TextComponentString("Setting player time to fixed"));
         		}
-        		WesterosBlocksChannelHandler.sendPTimeCmdMessage(player, rel, off.intValue());
+        		PTimeCmdMsgPacket.sendCmdMessage(player, rel, off.intValue());
         	}
         	else {
         		WesterosBlocks.log.info("Command only usable by player");
@@ -91,7 +92,6 @@ public class PTimeCommand implements ICommand {
 
 	@Override
 	public boolean checkPermission(MinecraftServer server, ICommandSender sender) {
-		WesterosBlocks.log.info("PTimeCommand.checkPermission()"); 
 		return true;
 	}
 
