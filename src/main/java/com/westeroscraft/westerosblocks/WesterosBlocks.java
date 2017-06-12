@@ -43,6 +43,7 @@ import org.apache.logging.log4j.Logger;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
+import com.westeroscraft.westerosblocks.commands.PTimeCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 import com.westeroscraft.westerosblocks.network.PacketHandler;
@@ -420,7 +421,8 @@ public class WesterosBlocks
 
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
-    }
+    	event.registerServerCommand(new PTimeCommand());
+	}
     
     @EventHandler
     public void serverStarted(FMLServerStartedEvent event)

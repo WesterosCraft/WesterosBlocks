@@ -16,7 +16,7 @@ public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCode
 
     public WesterosBlocksChannelHandler() {
         addDiscriminator(0, BlockMsgPacket.class);
-        //addDiscriminator(1, PacketTileState.class);
+        addDiscriminator(1, PTimeCmdMsgPacket.class);
     }
 
     @Override
@@ -37,7 +37,12 @@ public class WesterosBlocksChannelHandler extends FMLIndexedMessageToMessageCode
         BlockMsgPacket pkt = new BlockMsgPacket(blkid, blkmsg);
         sendToPlayer(pkt, player);
     }
-    
+
+    public static void sendPTimeCmdMessage(EntityPlayerMP player, boolean rel, int time_off) {
+        PTimeCmdMsgPacket pkt = new PTimeCmdMsgPacket(rel, time_off);
+        sendToPlayer(pkt, player);
+    }
+
     public static void sendToPlayer(WBPacket packet , EntityPlayerMP player) {
         try {
             WesterosBlocks.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET)

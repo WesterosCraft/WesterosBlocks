@@ -446,12 +446,28 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         return b;
     }
     
+    public static void setTimeOffset(boolean relative, int offset_ticks) {
+		relative_off = relative;
+		time_off = offset_ticks;
+    }
+    
+    private static boolean relative_off = true;
+    private static long time_off = 0;
+    
     public static long processWorldTime(long wt) {
-    	return wt;
+    	if (wt >= 0) {
+    		if (relative_off) {
+    			wt = (wt + 24000 + time_off) % 24000;
+    		}
+    		else {
+    			wt = wt - (wt % 24000) + time_off;
+    		}
+    	}
+        return wt;
     }
 
     public static long processTotalWorldTime(long twt) {
-    	return twt;
+		return twt;
     }
 
 }

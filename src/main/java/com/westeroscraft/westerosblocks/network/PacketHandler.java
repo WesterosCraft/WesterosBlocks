@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.network;
 import java.io.IOException;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.asm.ClassTransformer;
 
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraft.block.Block;
@@ -29,6 +30,10 @@ public class PacketHandler extends SimpleChannelInboundHandler<WBPacket>  {
 
             if (packet instanceof BlockMsgPacket) {
                 onBlockMsg(netHandler, player, (BlockMsgPacket) packet);
+            }
+            else if (packet instanceof PTimeCmdMsgPacket) {
+            	PTimeCmdMsgPacket mp = (PTimeCmdMsgPacket) packet;
+            	ClassTransformer.setTimeOffset(mp.relative, mp.time_off);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
