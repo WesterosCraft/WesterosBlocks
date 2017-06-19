@@ -245,19 +245,29 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
         }
         int var = meta & 1;
 
-        return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(variant, meta & 1).withProperty(LIT, alwaysOn[var] || ((meta & 0x8) > 0));
+        return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(variant, meta & 1).withProperty(LIT, ((meta & 0x8) > 0));
     }
 
+    @Override
     public int getMetaFromState(IBlockState state)
     {
         int meta = (((EnumFacing)state.getValue(FACING)).getIndex() - 2) << 1;
         int var = state.getValue(variant).intValue();
-        if (state.getValue(LIT).booleanValue() || alwaysOn[var])
+        if (state.getValue(LIT).booleanValue())
             meta |= 0x8;
         meta += var;
         return meta;
     }
 
+    @Override
+    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
+    {
+        int var = state.getValue(variant).intValue();
+    	if (alwaysOn[var]) 
+    		state = state.withProperty(LIT, true);
+    	return state;
+    }
+    
     protected BlockStateContainer createBlockState()
     {
         if (new_variant != null) {
