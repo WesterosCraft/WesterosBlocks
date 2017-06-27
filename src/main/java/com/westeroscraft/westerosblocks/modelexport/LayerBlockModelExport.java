@@ -53,6 +53,7 @@ public class LayerBlockModelExport extends ModelExport {
         public String texture;
         public Integer rotation;
         public String cullface;
+        public Integer tintindex;
     }
     public static class ModelObject {
     	public String parent;
@@ -81,6 +82,7 @@ public class LayerBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         Subblock sb = def.subBlocks.get(0);
+        boolean is_tinted = sb.isTinted(def);
         for (int i = 0; i < blk.layerCount; i++) {
             ModelObjectCuboid mod = new ModelObjectCuboid();
             mod.textures.put("particle", getTextureID(sb.getTextureByIndex(0)));
@@ -105,6 +107,7 @@ public class LayerBlockModelExport extends ModelExport {
             f.uv[3] = 16;
             f.texture = "#txt0";
             f.cullface = "down";
+            if (is_tinted) f.tintindex = 0;
             elem.faces.put("down", f);
             // Add up face
             f = new Face();
@@ -114,6 +117,7 @@ public class LayerBlockModelExport extends ModelExport {
             f.uv[3] = 16;
             f.texture = "#txt1";
             if (elem.to[1] >= 16) f.cullface = "up";
+            if (is_tinted) f.tintindex = 0;
             elem.faces.put("up", f);
             // Add north face
             f = new Face();
@@ -123,6 +127,7 @@ public class LayerBlockModelExport extends ModelExport {
             f.uv[3] = 16;
             f.texture = "#txt2";
             f.cullface = "north";
+            if (is_tinted) f.tintindex = 0;
             elem.faces.put("north", f);
             // Add south face
             f = new Face();
@@ -132,6 +137,7 @@ public class LayerBlockModelExport extends ModelExport {
             f.uv[3] = 16;
             f.texture = "#txt3";
             f.cullface = "south";
+            if (is_tinted) f.tintindex = 0;
             elem.faces.put("south", f);
             // Add west face
             f = new Face();
@@ -141,6 +147,7 @@ public class LayerBlockModelExport extends ModelExport {
             f.uv[3] = 16;
             f.texture = "#txt4";
             f.cullface = "west";
+            if (is_tinted) f.tintindex = 0;
             elem.faces.put("west", f);
             // Add eath face
             f = new Face();
@@ -150,6 +157,7 @@ public class LayerBlockModelExport extends ModelExport {
             f.uv[3] = 16;
             f.texture = "#txt5";
             f.cullface = "east";
+            if (is_tinted) f.tintindex = 0;
             elem.faces.put("east", f);
             mod.elements.add(elem);
             
