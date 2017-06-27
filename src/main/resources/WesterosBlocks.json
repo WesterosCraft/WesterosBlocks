@@ -10495,6 +10495,45 @@
           "textures" : [ "trapdoor_block_0/white_harbor_manhole" ]
         }
       ]
-    }
+    },
+        {
+        "blockName": "test_block",
+        "blockID": 2207,
+        "blockType": "cuboid-nsewud",
+        "hardness": 3,
+        "stepSound": "wood",
+        "material": "wood",
+        "resistance": 2,
+        "harvestLevel": [
+            {
+            "tool": "axe",
+            "level": 1
+            }
+        ],
+        "creativeTab": "WesterosDeco",
+            "subBlocks": [
+                {
+                "meta": 0,
+                "label": "Test Block",
+                "textures": [
+                    "test_block/d_texture",
+                    "test_block/u_texture",
+                    "test_block/w_texture",
+                    "test_block/e_texture",
+                    "test_block/s_texture",
+                    "test_block/n_texture"
+                    ],
+                   "boundingBox": {
+                       "xMin": 0,
+                       "xMax": 1,
+                       "yMin": 0,
+                       "yMax": 1,
+                       "zMin": 0,
+                       "zMax": 1
+                   }
+                }
+            ]
+        }
+    
    ]
 }
