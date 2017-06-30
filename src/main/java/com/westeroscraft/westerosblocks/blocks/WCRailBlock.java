@@ -12,6 +12,7 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRail;
+import net.minecraft.block.BlockRailBase;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
@@ -202,5 +203,13 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
     
     @Override
     public IProperty<?>[] getNonRenderingProperties() { return null; }
+
+    // Update from BlockRailBase to prevent break when support lost
+    @Override
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
+        if (!worldIn.isRemote) {
+             this.updateState(state, worldIn, pos, blockIn);
+        }
+    }
 
 }

@@ -205,4 +205,14 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
     	return state;
     }
 
+    @Override
+    protected boolean canBlockStay(World worldIn, BlockPos pos, EnumFacing facing)
+    {
+        IBlockState bs = worldIn.getBlockState(pos);
+        if ((bs.getBlock() == this) && (allow_unsupported[bs.getValue(variant).intValue()])) {
+            return true;
+        }
+        return super.canBlockStay(worldIn, pos, facing);
+    }
+
 }
