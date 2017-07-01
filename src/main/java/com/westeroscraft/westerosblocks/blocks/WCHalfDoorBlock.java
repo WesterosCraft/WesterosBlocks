@@ -364,29 +364,15 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
         }
     }
 
+    // Modified to prevent breaking when unsupported
     @Override
-    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
-    {
-        boolean flag1 = false;
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
+        boolean flag = worldIn.isBlockPowered(pos);
 
-        if (!worldIn.getBlockState(pos.down()).isSideSolid(worldIn,  pos.down(), EnumFacing.UP)) {
-            worldIn.setBlockToAir(pos);
-            flag1 = true;
-        }
-
-        if (flag1) {
-            if (!worldIn.isRemote) {
-                this.dropBlockAsItem(worldIn, pos, state, 0);
-            }
-        }
-        else {
-            boolean flag = worldIn.isBlockPowered(pos);
-
-            if (blockIn != this && (flag || blockIn.getDefaultState().canProvidePower()) && flag != ((Boolean)state.getValue(BlockDoor.OPEN)).booleanValue()) {
-                worldIn.setBlockState(pos, state.withProperty(BlockDoor.OPEN, Boolean.valueOf(flag)), 2);
-                worldIn.markBlockRangeForRenderUpdate(pos, pos);
-                worldIn.playEvent((EntityPlayer)null, flag ? this.getOpenSound() : this.getCloseSound(), pos, 0);
-            }
+        if (blockIn != this && (flag || blockIn.getDefaultState().canProvidePower()) && flag != ((Boolean)state.getValue(BlockDoor.OPEN)).booleanValue()) {
+            worldIn.setBlockState(pos, state.withProperty(BlockDoor.OPEN, Boolean.valueOf(flag)), 2);
+            worldIn.markBlockRangeForRenderUpdate(pos, pos);
+            worldIn.playEvent((EntityPlayer)null, flag ? this.getOpenSound() : this.getCloseSound(), pos, 0);
         }
     }
 }
