@@ -130,7 +130,11 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     
     @Override
     public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
-        return def.getLightValue(state, world, pos);
+        boolean active = alwaysOn[state.getValue(variant).intValue()] || state.getValue(LIT).booleanValue();
+        if (active) {
+            return def.getLightValue(state, world, pos);
+        }
+        return 0;
     }
     
     @Override
