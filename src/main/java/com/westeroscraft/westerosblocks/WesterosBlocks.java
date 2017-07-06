@@ -75,6 +75,7 @@ public class WesterosBlocks
     
     public boolean blockDevMode = false;
     public boolean snowInTaiga = false;
+    public boolean publishToDynmap = false;
     
     public static WesterosBlockConfig customConfig;
     
@@ -147,6 +148,7 @@ public class WesterosBlocks
             cfg.load();
             snowInTaiga = cfg.get("Settings", "snowInTaiga", true).getBoolean(true);
             blockDevMode = cfg.get("Settings", "blockDevMode", false).getBoolean(false);
+            publishToDynmap = cfg.get("Settings", "publishToDynmap", false).getBoolean(false);
             good_init = true;
         }
         catch (Exception e)
@@ -260,6 +262,9 @@ public class WesterosBlocks
     }
 
     private void handleDynmap() {
+        if (publishToDynmap == false) {
+            return;
+        }
         this.dynmap = new DynmapSupport(WesterosBlocks.MOD_ID, Version.VER);
         if (this.dynmap.getTextureDef() == null) {
             return;
