@@ -59,7 +59,7 @@ public class WesterosBlocks
     public static Logger log = LogManager.getLogger(MOD_ID);
     
     // The instance of your mod that Forge uses.
-    @Instance("WesterosBlocks")
+    @Instance(WesterosBlocks.MOD_ID)
     public static WesterosBlocks instance;
 
     // Says where the client and server 'proxy' code is loaded.
@@ -260,7 +260,7 @@ public class WesterosBlocks
     }
 
     private void handleDynmap() {
-        this.dynmap = new DynmapSupport("WesterosBlocks", Version.VER);
+        this.dynmap = new DynmapSupport(WesterosBlocks.MOD_ID, Version.VER);
         if (this.dynmap.getTextureDef() == null) {
             return;
         }
@@ -278,7 +278,7 @@ public class WesterosBlocks
     }
     
     private void migrateRP() throws IOException {
-    	File f = new File(modcfgdir, "WesterosCraft/assets/minecraft/mcpatcher/ctm");
+    	File f = new File(modcfgdir, "westeroscraft/assets/minecraft/mcpatcher/ctm");
     	if (f.exists() == false) {
     		return;
     	}
