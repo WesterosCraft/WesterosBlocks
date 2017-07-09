@@ -1,4 +1,4 @@
-#Mon Jun 26 23:08:53 CDT 2017
+#Sun Jul 09 09:24:51 CDT 2017
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -735,6 +735,7 @@ tile.stone_wall_block_2_7.name=Basalt Brick Wall
 tile.stone_wall_block_2_8.name=Bronze Wall
 tile.stone_wall_block_2_9.name=Lannisport Slate Wall
 tile.test_block_0.name=Test Block
+tile.test_block_1.name=Test Block 2
 tile.thatch_stair_0.name=Thatch Light Fur Stairs
 tile.thatch_stair_1.name=Thatch Dark Fur Stairs
 tile.thin_log_0_0.name=Thin Oak Log
