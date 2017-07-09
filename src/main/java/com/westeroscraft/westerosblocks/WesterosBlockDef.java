@@ -1606,6 +1606,25 @@ public class WesterosBlockDef {
             mtr.setBlockColorMapTexture(blockColor.replace(':', '_'));
         }
     }
+    public String getBlockColorMapResource(Subblock sb) {
+        String res = null;
+        String blockColor = sb.colorMult;
+        if (blockColor == null) blockColor = this.colorMult;
+        if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
+            String tok[] = blockColor.split(":");
+            if (tok.length == 1) {
+                if (tok[0].startsWith("textures/"))
+                    tok[0] = tok[0].substring(9);
+                res = WesterosBlocks.MOD_ID + ":" + tok[0];
+            }
+            else {
+                if (tok[1].startsWith("textures/"))
+                    tok[1] = tok[1].substring(9);
+                res = tok[0] + ":" + tok[1];
+            }
+        }
+        return res;
+    }
     /**
      * Do standard random display processing
      */

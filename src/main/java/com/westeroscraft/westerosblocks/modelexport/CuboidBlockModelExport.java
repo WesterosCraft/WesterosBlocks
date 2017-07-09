@@ -261,11 +261,20 @@ public class CuboidBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         for (Subblock sb : def.subBlocks) {
-            doCuboidModel(sb, sb.meta, sb.meta, def.blockName, sb.isTinted(def));
+            boolean isTinted = sb.isTinted(def);
+            doCuboidModel(sb, sb.meta, sb.meta, def.blockName, isTinted);
             // Build simple item model that refers to block model
             ModelObject mo = new ModelObject();
             mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + sb.meta;
             this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
+
+            // Add tint overrides
+            if (isTinted) {
+                String tintres = def.getBlockColorMapResource(sb);
+                if (tintres != null) {
+                    ModelExport.addTintingOverride(def.blockName, String.format("variant=%s", sb.meta), tintres);
+                }
+            }
         }
     }
 

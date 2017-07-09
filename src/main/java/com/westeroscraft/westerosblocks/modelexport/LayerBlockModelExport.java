@@ -167,6 +167,13 @@ public class LayerBlockModelExport extends ModelExport {
         ModelObject mo = new ModelObject();
         mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_1";
         this.writeItemModelFile(def.blockName, mo);
+        // Handle tint resources
+        if (is_tinted) {
+            String tintres = def.getBlockColorMapResource(sb);
+            if (tintres != null) {
+                ModelExport.addTintingOverride(def.blockName, null, tintres);
+            }
+        }
     }
 
 }

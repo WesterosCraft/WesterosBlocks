@@ -142,6 +142,14 @@ public class WallBlockModelExport extends ModelExport {
             mo.textures.side = getTextureID(sb.getTextureByIndex(2)); 
             if (isTinted) mo.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_inventory";
             this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
+            
+            // Handle tint resources
+            if (isTinted) {
+                String tintres = def.getBlockColorMapResource(sb);
+                if (tintres != null) {
+                    ModelExport.addTintingOverride(def.blockName, String.format("variant2=%s", sb.meta), tintres);
+                }
+            }
         }
     }
 

@@ -62,7 +62,8 @@ public class CrossBlockModelExport extends ModelExport {
             ModelObjectCross mod = new ModelObjectCross();
             mod.textures.cross = getTextureID(sb.getTextureByIndex(0)); 
             // Use tinted cross if 
-            if (sb.isTinted(def)) {
+            boolean isTinted = sb.isTinted(def);
+            if (isTinted) {
                 mod.parent = "block/tinted_cross";
             }
             this.writeBlockModelFile(def.blockName + "_" + sb.meta, mod);
@@ -70,6 +71,15 @@ public class CrossBlockModelExport extends ModelExport {
             ModelObject mo = new ModelObject();
             mo.textures.layer0 = mod.textures.cross;
             this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
+            
+            // Add tint overrides
+            if (isTinted) {
+                String tintres = def.getBlockColorMapResource(sb);
+                if (tintres != null) {
+                    ModelExport.addTintingOverride(def.blockName, String.format("variant=%s", sb.meta), tintres);
+                }
+            }
+
         }
     }
 

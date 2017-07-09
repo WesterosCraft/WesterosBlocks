@@ -139,6 +139,13 @@ public class FenceBlockModelExport extends ModelExport {
             mo.textures.side = getTextureID(sb.getTextureByIndex(2)); 
             if (isTinted) mo.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_inventory";
             this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
+            // Handle tint resources
+            if (isTinted) {
+                String tintres = def.getBlockColorMapResource(sb);
+                if (tintres != null) {
+                    ModelExport.addTintingOverride(def.blockName, String.format("variant=%s", sb.meta), tintres);
+                }
+            }
         }
     }
 

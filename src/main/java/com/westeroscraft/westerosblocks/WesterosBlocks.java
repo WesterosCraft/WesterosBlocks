@@ -209,7 +209,13 @@ public class WesterosBlocks
         	} catch (IOException iox) {
         		log.warn(String.format("Error writing NLS - %s", iox));
         	}
+            try {
+                ModelExport.writeDynmapOverridesFile(modcfgdir);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
+            }
         }
+
         // Register tile entities
         WesterosBlockDef.processRegisterTileEntities();
         // Initialize custom block definitions

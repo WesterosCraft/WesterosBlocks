@@ -4,8 +4,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.TreeSet;
 
@@ -104,4 +109,66 @@ public abstract class ModelExport {
             if (fw != null) fw.close();
         }
     }
+    
+    private static class TintOver {
+        String cond;
+        String txt;
+    }
+    private static Map<String, List<TintOver>> tintoverrides = new HashMap<String, List<TintOver>>();
+    
+    public static void addTintingOverride(String blockname, String cond, String txtfile) {
+        List<TintOver> blst = tintoverrides.get(blockname);
+        if (blst == null) {
+            blst = new ArrayList<TintOver>();
+            tintoverrides.put(blockname, blst);
+        }
+        TintOver to = new TintOver();
+        to.cond = cond;
+        to.txt = txtfile;
+        blst.add(to);
+    }
+    public static void writeDynmapOverridesFile(File dest) throws IOException {
+        File tgt = new File(dest, "assets/" + WesterosBlocks.MOD_ID + "/dynmap");
+        tgt.mkdirs();
+        PrintStream fw = null;
+        try {
+            fw = new PrintStream(new File(tgt, "blockstateoverrides.json"));
+            fw.println("{");
+            fw.println("  \"overrides\": {");
+            fw.println("      \"" + WesterosBlocks.MOD_ID + "\": {");
+            //TODO - add block state overrides
+            fw.println("       }");
+            fw.println("   },");
+            fw.println("  \"tinting\": {");
+            fw.println("      \"" + WesterosBlocks.MOD_ID + "\": {");
+            boolean first1 = true;
+            for (Entry<String, List<TintOver>> br : tintoverrides.entrySet()) {
+                if (!first1) {
+                    fw.println("          ,");
+                }
+                fw.println("          \"" + br.getKey() + "\": [");
+                boolean first2 = true;
+                for (TintOver toe : br.getValue()) {
+                    if (!first2) {
+                        fw.println("              ,");
+                    }
+                    if ((toe.cond != null) && (toe.cond.equals("") == false)) {
+                        fw.println("              { \"state\": \"" + toe.cond + "\", \"colormap\": [ \"" + toe.txt + "\" ] }");
+                    }
+                    else {
+                        fw.println("              { \"colormap\": [ \"" + toe.txt + "\" ] }");
+                    }
+                    first2 = false;
+                }
+                fw.println("          ]");
+                first1 = false;
+            }
+            fw.println("       }");
+            fw.println("   }");
+            fw.println("}");
+        } finally {
+            if (fw != null) fw.close();
+        }
+    }
+
 }

@@ -90,6 +90,13 @@ public class SolidBlockModelExport extends ModelExport {
             ModelObject mo = new ModelObject();
             mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + sb.meta;
             this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
+            // Add tint overrides
+            if (isTinted) {
+                String tintres = def.getBlockColorMapResource(sb);
+                if (tintres != null) {
+                    ModelExport.addTintingOverride(def.blockName, String.format("variant=%s", sb.meta), tintres);
+                }
+            }
         }
     }
 

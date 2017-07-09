@@ -191,6 +191,14 @@ public class StairsBlockModelExport extends ModelExport {
         ModelObject mo = new ModelObject();
         mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
         this.writeItemModelFile(def.blockName, mo);
+        
+        // Handle tint resources
+        if (isTinted) {
+            String tintres = def.getBlockColorMapResource(def.subBlocks.get(0));
+            if (tintres != null) {
+                ModelExport.addTintingOverride(def.blockName, null, tintres);
+            }
+        }
     }
 }
 
