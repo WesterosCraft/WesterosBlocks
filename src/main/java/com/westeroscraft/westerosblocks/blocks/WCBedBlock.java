@@ -199,6 +199,19 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
     }
     @Override
     public IProperty<?>[] getNonRenderingProperties() { 
-        return new IProperty<?>[] { BlockBed.OCCUPIED }; }
+        return new IProperty<?>[] { BlockBed.OCCUPIED };
+    }
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, 0);
+    }
+    @Override
+    public int damageDropped(IBlockState state) {
+        return 0;
+    }
 
 }
