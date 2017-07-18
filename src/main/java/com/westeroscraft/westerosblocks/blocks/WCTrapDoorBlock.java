@@ -18,6 +18,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -74,7 +75,7 @@ public class WCTrapDoorBlock extends BlockTrapDoor implements WesterosBlockLifec
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, null);
+        def.doStandardRegisterActions(this, ItemBlock.class);
         
         return true;
     }

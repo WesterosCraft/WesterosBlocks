@@ -141,8 +141,7 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     }
 
     @Override
-    public int damageDropped(IBlockState state)
-    {
+    public int damageDropped(IBlockState state) {
         return state.getValue(variant).intValue();
     }
 
@@ -243,5 +242,10 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     
     @Override
     public IProperty<?>[] getNonRenderingProperties() { return new IProperty[] { CHECK_DECAY, DECAYABLE }; }
+
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, state.getValue(variant).intValue());
+    }
 
 }

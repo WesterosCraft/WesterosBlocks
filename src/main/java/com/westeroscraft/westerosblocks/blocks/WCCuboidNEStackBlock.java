@@ -10,6 +10,7 @@ import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -142,14 +143,12 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
      */
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        state = state.withProperty(FACING, EnumFacing.NORTH).withProperty(TOP,  false);
-        return super.getItemDropped(state, rand, fortune);
+        return Item.getItemFromBlock(this);
     }
 
     @Override
     public int damageDropped(IBlockState state) {
-        state = state.withProperty(FACING, EnumFacing.NORTH).withProperty(TOP, false);
-        return this.getMetaFromState(state);
+    	return state.getValue(variant).intValue() << 1;
     }
     
     /**
@@ -179,6 +178,11 @@ public class WCCuboidNEStackBlock extends WCCuboidNEBlock implements WesterosBlo
     @Override
     public int getMetaFromState(IBlockState state) {
         return (state.getValue(variant).intValue() << 1) + ((state.getValue(FACING) == EnumFacing.NORTH)?8:0) + (state.getValue(TOP)?1:0);
+    }
+
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, state.getValue(variant).intValue() << 1);
     }
 
 }

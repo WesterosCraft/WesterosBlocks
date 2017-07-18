@@ -10,6 +10,7 @@ import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -148,8 +149,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
 
     @Override
     public int damageDropped(IBlockState state) {
-        state = state.withProperty(FACING, EnumFacing.EAST).withProperty(TOP, false);
-        return this.getMetaFromState(state);
+    	return state.getValue(variant).intValue() << 1;
     }
 
     /**
@@ -181,4 +181,8 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
         return (state.getValue(variant).intValue() << 1) + (VALIDFACING.indexOf(state.getValue(FACING)) << 2) + (state.getValue(TOP)?1:0);
     }
 
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, state.getValue(variant).intValue() << 1);
+    }
 }

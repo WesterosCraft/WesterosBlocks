@@ -8,6 +8,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.BlockSlab.EnumBlockHalf;
 import net.minecraft.block.properties.IProperty;
@@ -15,6 +16,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
@@ -43,7 +45,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
             if (!def.validateMetaValues(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 }, null)) {
                 return null;
             }
-            IProperty<Integer> new_var = PropertyMeta.create("variant", def.getDefinedBaseMeta());
+            PropertyMeta new_var = PropertyMeta.create("variant", def.getDefinedBaseMeta());
 
             def.setBlockIDCount(2); // 2 block IDs - half, full
             glob_is_double = false;
@@ -58,7 +60,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
             return new Block[] { half, full };
         }
     }
-    private static IProperty<Integer> new_variant;
+    private static PropertyMeta new_variant;
     private static boolean glob_is_double;
 
     private static final int HALF_IDX = 0;
@@ -67,7 +69,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     private WesterosBlockDef def;
     private WCSlabBlock otherBlock;
     private boolean is_double;
-    private IProperty<Integer> variant;
+    private PropertyMeta variant;
     
     protected WCSlabBlock(WesterosBlockDef def, boolean is_double) {
         super(def.getMaterial());
@@ -77,12 +79,16 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
             def.lightOpacity = 255;
         }
         def.doStandardContructorSettings(this, is_double?FULL_IDX:HALF_IDX);
+
+        IBlockState iblockstate = this.blockState.getBaseState();
         if (is_double) {
             this.setCreativeTab(null);
         }
         else {
             useNeighborBrightness = true;
+            iblockstate = iblockstate.withProperty(HALF, BlockSlab.EnumBlockHalf.BOTTOM);
         }
+        this.setDefaultState(iblockstate.withProperty(variant, variant.fromMeta(0)));
     }
 
     public boolean initializeBlockDefinition() {
@@ -93,8 +99,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
 
     public boolean registerBlockDefinition() {
         if (this.is_double) { // isDoubleSlab
-            WCSlabItem.setSlabs(otherBlock, this);
-            def.doStandardRegisterActions(this, WCSlabItem.class, FULL_IDX);
+            def.doStandardRegisterActions(this, null, FULL_IDX);
         }
         else {
             WCSlabItem.setSlabs(this, otherBlock);
@@ -130,19 +135,21 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     @Override
     public int damageDropped(IBlockState state)
     {
-    	return state.getBlock().getMetaFromState(state) & 7;
+    	return state.getValue(variant).intValue();
     }
 
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
     {
-        def.getStandardCreativeItems(this, itemIn, tab, list);
+        if (itemIn != Item.getItemFromBlock(this.is_double?this:this.otherBlock)) {
+    		def.getStandardCreativeItems(this, itemIn, tab, list);
+        }
     }
     
     @Override
     public String getUnlocalizedName(int meta)
     {
-        return "tile." + def.getBlockName(HALF_IDX) + "_" + meta; // Get name for full slab
+        return "tile." + def.getBlockName(HALF_IDX) + "_" + (meta & 7); // Get name for full slab
     }
 
     @Override
@@ -223,7 +230,7 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
 
 	@Override
 	public Comparable<?> getTypeForItem(ItemStack stack) {
-		return Integer.valueOf(stack.getMetadata() & 7);
+		return variant.fromMeta(stack.getMetadata() & 7);
 	}
 	
     @Override
@@ -248,5 +255,17 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
 
         return state.isOpaqueCube();
     }
+    
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+    	if (this.isDouble())
+            return Item.getItemFromBlock(this.otherBlock);
+    	else
+            return Item.getItemFromBlock(this);
+    }
 
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack((this.isDouble()?this.otherBlock:this), 1, state.getValue(variant).intValue());
+    }
 }

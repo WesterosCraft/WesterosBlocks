@@ -9,6 +9,7 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
@@ -89,7 +90,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
 
     @Override
     public int damageDropped(IBlockState state) {
-        return getMetaFromState(state) & 0x1;
+    	return state.getValue(variant).intValue();
     }
     
     @Override
@@ -125,4 +126,10 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
         IBlockState state = this.getStateFromMeta(meta & 0x1);
         return state.withProperty(FACING, facing.getOpposite());
     }
+    
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, state.getValue(variant).intValue());
+    }
+
 }

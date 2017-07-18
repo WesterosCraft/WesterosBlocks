@@ -13,6 +13,7 @@ import net.minecraft.block.BlockCake;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -56,7 +57,7 @@ public class WCCakeBlock extends BlockCake implements WesterosBlockLifecycle, We
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, null);
+        def.doStandardRegisterActions(this, ItemBlock.class);
         
         return true;
     }

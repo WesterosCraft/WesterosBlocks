@@ -21,6 +21,7 @@ import net.minecraft.block.BlockFire;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -54,7 +55,7 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
     }
 
     public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, null);
+        def.doStandardRegisterActions(this, ItemBlock.class);
         
         return true;
     }

@@ -13,17 +13,18 @@ import java.util.Set;
 public class PropertyMeta extends PropertyHelper<Integer>
 {
     private final ImmutableSet<Integer> allowedValues;
+    private static final Integer[] VALUES = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
 
     protected PropertyMeta(String name, List<Integer> valid_meta)
     {
         super(name, Integer.class);
 
         Set<Integer> set = Sets.<Integer>newHashSet();
-        for (int v : valid_meta) {
+        for (Integer v : valid_meta) {
             if ((v < 0) || (v > 15)) {
                 throw new IllegalArgumentException("Invalid meta value");
             }
-            set.add(Integer.valueOf(v));
+            set.add(VALUES[v]);
         }
         this.allowedValues = ImmutableSet.copyOf(set);
     }
@@ -65,7 +66,7 @@ public class PropertyMeta extends PropertyHelper<Integer>
         try
         {
             Integer integer = Integer.valueOf(value);
-            return this.allowedValues.contains(integer) ? Optional.of(integer) : Optional.<Integer>absent();
+            return this.allowedValues.contains(integer) ? Optional.of(VALUES[integer]) : Optional.<Integer>absent();
         }
         catch (NumberFormatException var3)
         {
@@ -76,5 +77,9 @@ public class PropertyMeta extends PropertyHelper<Integer>
     public String getName(Integer value)
     {
         return value.toString();
+    }
+    
+    public Integer fromMeta(int m) {
+    	return VALUES[m];
     }
 }

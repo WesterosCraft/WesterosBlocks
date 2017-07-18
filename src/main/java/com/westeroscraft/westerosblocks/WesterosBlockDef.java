@@ -793,7 +793,6 @@ public class WesterosBlockDef {
     // Do standard register actions
     public void doStandardRegisterActions(Block blk, Class<? extends ItemBlock> itmclass, int idx) {
         int reqID = (this.blockIDs[idx] >= 0) ? this.blockIDs[idx] : -1;
-        if (itmclass == null) itmclass = ItemBlock.class;
         // And register strings for each item block
         if ((this.subBlocks != null) && (this.subBlocks.size() > 0)) {
             for (Subblock sb : this.subBlocks) {
