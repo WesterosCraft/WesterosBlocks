@@ -37,12 +37,12 @@ public class HalfDoorBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectTop {
-        public String parent = "block/door_top";    // Use 'door_top' model
+        public String parent = "westerosblocks:block/untinted/half_door";
         public Texture textures = new Texture();
         public Display display = new Display();
     }
     public static class ModelObjectTopRH {
-        public String parent = "block/door_top_rh";    // Use 'door_top_rh' model
+        public String parent = "westerosblocks:block/untinted/half_door_rh";
         public Texture textures = new Texture();
     }
     public static class Display {
