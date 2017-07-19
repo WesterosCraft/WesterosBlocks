@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
@@ -9,6 +10,7 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -72,11 +74,6 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     }
     
     @Override
-    public int damageDropped(IBlockState state) {
-        return state.getValue(variant).intValue();
-    }
-
-    @Override
     protected BlockStateContainer createBlockState() {
         if (new_variant != null) {
             variant = new_variant;
@@ -117,8 +114,15 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     }
 
     @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
         return new ItemStack(this, 1, state.getValue(variant).intValue());
     }
-
+    @Override
+    public int damageDropped(IBlockState state) {
+        return state.getValue(variant).intValue();
+    }
 }

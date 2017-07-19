@@ -139,20 +139,6 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
     }
 
     /**
-     * Returns the ID of the items to drop on destruction.
-     */
-    @Override
-    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        state = state.withProperty(FACING, EnumFacing.EAST).withProperty(TOP,  false);
-        return super.getItemDropped(state, rand, fortune);
-    }
-
-    @Override
-    public int damageDropped(IBlockState state) {
-    	return state.getValue(variant).intValue() << 1;
-    }
-
-    /**
      * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
      */
     @Override
@@ -182,7 +168,15 @@ public class WCCuboidNSEWStackBlock extends WCCuboidNSEWBlock implements Westero
     }
 
     @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
         return new ItemStack(this, 1, state.getValue(variant).intValue() << 1);
+    }
+    @Override
+    public int damageDropped(IBlockState state) {
+        return state.getValue(variant).intValue() << 1;
     }
 }

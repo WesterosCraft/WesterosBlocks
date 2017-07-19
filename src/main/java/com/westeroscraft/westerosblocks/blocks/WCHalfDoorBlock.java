@@ -103,11 +103,6 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     {
         def.getStandardCreativeItems(this, itemIn, tab, list);
     }
-
-    @Override
-    public int damageDropped(IBlockState state) {
-        return 0;
-    }
         
     @Override
     public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {
@@ -376,4 +371,18 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
             worldIn.playEvent((EntityPlayer)null, flag ? this.getOpenSound() : this.getCloseSound(), pos, 0);
         }
     }
+    
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, 0);
+    }
+    @Override
+    public int damageDropped(IBlockState state) {
+        return 0;
+    }
+
 }

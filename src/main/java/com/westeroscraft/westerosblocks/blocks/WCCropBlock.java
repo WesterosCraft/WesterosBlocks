@@ -45,5 +45,4 @@ public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupp
 
     @Override
     public IProperty<?>[] getNonRenderingProperties() { return null; }
-
 }

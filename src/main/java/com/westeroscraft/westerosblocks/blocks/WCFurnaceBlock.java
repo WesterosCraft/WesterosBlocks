@@ -109,11 +109,6 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     }
 
     @Override
-    public int damageDropped(IBlockState state) {
-        return state.getValue(variant).intValue();
-    }
-    
-    @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
@@ -233,12 +228,6 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     }
 
     @Override
-    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
-    {
-        return new ItemStack(this);
-    }
-
-    @Override
     public IBlockState getStateFromMeta(int meta)
     {
         EnumFacing enumfacing = EnumFacing.getFront(((meta >> 1) & 0x3) + 2);
@@ -249,7 +238,7 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
         }
         int var = meta & 1;
 
-        return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(variant, meta & 1).withProperty(LIT, ((meta & 0x8) > 0));
+        return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(variant, var).withProperty(LIT, ((meta & 0x8) > 0));
     }
 
     @Override
@@ -331,6 +320,19 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     	int var = (meta & 0x1);
     	boolean lit = alwaysOn[var];
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(variant,  var).withProperty(LIT, lit);
+    }
+
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, state.getValue(variant).intValue());
+    }
+    @Override
+    public int damageDropped(IBlockState state) {
+        return state.getValue(variant).intValue();
     }
 
 }

@@ -12,7 +12,6 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRail;
-import net.minecraft.block.BlockRailBase;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
@@ -74,12 +73,7 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
     {
         def.getStandardCreativeItems(this, itemIn, tab, list);
     }
-    
-    @Override
-    public int damageDropped(IBlockState state) {
-        return getMetaFromState(state);
-    }
-    
+        
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
@@ -211,6 +205,19 @@ public class WCRailBlock extends BlockRail implements WesterosBlockLifecycle, We
         if (!worldIn.isRemote) {
              this.updateState(state, worldIn, pos, blockIn);
         }
+    }
+
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, 0);
+    }
+    @Override
+    public int damageDropped(IBlockState state) {
+        return 0;
     }
 
 }

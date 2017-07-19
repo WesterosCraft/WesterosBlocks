@@ -107,11 +107,6 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
         def.getStandardCreativeItems(this, itemIn, tab, list);
     }
 
-    @Override
-    public int damageDropped(IBlockState state) {
-        return getMetaFromState(state);
-    }
-
     @Override 
     public int quantityDropped(IBlockState state, int fortune, Random random) {
         return ((Integer)state.getValue(layers)) + 1;
@@ -237,4 +232,18 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     }
     @Override
     public IProperty<?>[] getNonRenderingProperties() { return null; }
+    
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, 0);
+    }
+    @Override
+    public int damageDropped(IBlockState state) {
+        return 0;
+    }
+
 }

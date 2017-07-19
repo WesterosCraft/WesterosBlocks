@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import java.util.Random;
+
 import javax.annotation.Nullable;
 
 import org.dynmap.modsupport.BlockSide;
@@ -141,11 +143,6 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     }
 
     @Override
-    public int damageDropped(IBlockState state) {
-        return state.getValue(variant).intValue();
-    }
-
-    @Override
     public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, ItemStack stack)
     {
         if (!worldIn.isRemote && stack.getItem() == Items.SHEARS)
@@ -244,8 +241,16 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     public IProperty<?>[] getNonRenderingProperties() { return new IProperty[] { CHECK_DECAY, DECAYABLE }; }
 
     @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
         return new ItemStack(this, 1, state.getValue(variant).intValue());
     }
-
+    @Override
+    public int damageDropped(IBlockState state) {
+        return state.getValue(variant).intValue();
+    }
+    
 }

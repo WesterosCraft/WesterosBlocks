@@ -90,10 +90,6 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
     }
 
     @Override
-    public int damageDropped(IBlockState state) {
-        return state.getValue(variant).intValue();
-    }
-    @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
@@ -213,6 +209,19 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
             return true;
         }
         return super.canBlockStay(worldIn, pos, facing);
+    }
+
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(this);
+    }
+    @Override
+    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+        return new ItemStack(this, 1, state.getValue(variant).intValue());
+    }
+    @Override
+    public int damageDropped(IBlockState state) {
+        return state.getValue(variant).intValue();
     }
 
 }
