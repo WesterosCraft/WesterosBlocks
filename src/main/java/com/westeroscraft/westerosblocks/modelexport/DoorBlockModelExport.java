@@ -22,7 +22,6 @@ public class DoorBlockModelExport extends ModelExport {
         public String model = "";
         public Integer x;
         public Integer y;
-        public Boolean uvlock;
         public Variant(String blkname, String ext) {
             this(blkname, ext, 0, 0);
         }
@@ -35,8 +34,6 @@ public class DoorBlockModelExport extends ModelExport {
                 x = xrot;
             if (yrot != 0)
                 y = yrot;
-            if ((xrot != 0) || (yrot != 0))
-                uvlock = true;
         }
     }
     // Template objects for Gson export of block models
