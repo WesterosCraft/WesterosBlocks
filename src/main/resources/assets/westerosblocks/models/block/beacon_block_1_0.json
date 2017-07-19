@@ -25,7 +25,7 @@
     "txt17": "westerosblocks:blocks/beacon_block_1/transparent",
     "txt15": "westerosblocks:blocks/beacon_block_1/transparent",
     "txt16": "westerosblocks:blocks/beacon_block_1/transparent",
-    "txt6": "westerosblocks:blocks/beacon_block_1/transparent",
+    "txt6": "westerosblocks:blocks/beacon_block_1/brazier_ash",
     "txt7": "westerosblocks:blocks/beacon_block_1/brazier_ash",
     "txt4": "westerosblocks:blocks/beacon_block_1/brazier_side",
     "txt5": "westerosblocks:blocks/beacon_block_1/brazier_side",
@@ -328,79 +328,6 @@
           ],
           "texture": "#txt0",
           "cullface": "down"
-        }
-      }
-    },
-    {
-      "from": [
-        0.0,
-        16.0,
-        0.0
-      ],
-      "to": [
-        16.0,
-        16.0,
-        16.0
-      ],
-      "faces": {
-        "east": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            0.0
-          ],
-          "texture": "#txt5",
-          "cullface": "east"
-        },
-        "south": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            0.0
-          ],
-          "texture": "#txt3",
-          "cullface": "south"
-        },
-        "north": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            0.0
-          ],
-          "texture": "#txt2",
-          "cullface": "north"
-        },
-        "west": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            0.0
-          ],
-          "texture": "#txt4",
-          "cullface": "west"
-        },
-        "up": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "texture": "#txt1",
-          "cullface": "up"
-        },
-        "down": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "texture": "#txt0"
         }
       }
     },

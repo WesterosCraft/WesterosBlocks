@@ -30,7 +30,7 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
             new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0f, 1f, new int[] { 0, 1, 2, 3, 4, 5 }),
             new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 1f, 0f, new int[] { 0, 1, 2, 3, 4, 5 }),
             new WesterosBlockDef.Cuboid(1f, 0f, 0f, 1f, 1f, 1f, new int[] { 0, 1, 2, 3, 4, 5 }),
-            new WesterosBlockDef.Cuboid(0f, 1f, 0f, 1f, 1f, 1f, new int[] { 0, 1, 2, 3, 4, 5 }),
+            //new WesterosBlockDef.Cuboid(0f, 1f, 0f, 1f, 1f, 1f, new int[] { 0, 1, 2, 3, 4, 5 }),
             new WesterosBlockDef.Cuboid(0f, 0f, 1f, 1f, 1f, 1f, new int[] { 0, 1, 2, 3, 4, 5 }),
             new WesterosBlockDef.Cuboid(0.125f, 0.00625f, 0.125f, 0.125f, 0.1875f, 0.875f, new int[] { 6, 7, 8, 9, 10, 11 }),
             new WesterosBlockDef.Cuboid(0.125f, 0.00625f, 0.125f, 0.875f, 0.00625f, 0.875f, new int[] { 6, 7, 8, 9, 10, 11 }),
