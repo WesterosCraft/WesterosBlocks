@@ -66,6 +66,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.ColorizerFoliage;
@@ -124,6 +125,14 @@ public class WesterosBlockDef {
         public float yMax = 1.0F;
         public float zMin = 0.0F;
         public float zMax = 1.0F;
+        
+        private transient AxisAlignedBB aabb = null;
+        public AxisAlignedBB getAABB() {
+            if (aabb == null) {
+                aabb = new AxisAlignedBB(xMin, yMin, zMin, xMax, yMax, zMax);
+            }
+            return aabb;
+        }
     }
     public static class Vector {
         float x, y, z;
