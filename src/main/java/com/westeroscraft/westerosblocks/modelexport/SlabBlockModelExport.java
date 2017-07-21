@@ -114,6 +114,7 @@ public class SlabBlockModelExport extends ModelExport {
             ModelObject mo = new ModelObject();
             mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.getBlockName(0) + "_" + sb.meta + "_bottom";
             this.writeItemModelFile(def.getBlockName(0) + "_" + sb.meta, mo);
+            this.writeItemModelFile(def.getBlockName(1) + "_" + sb.meta, mo);
             // Handle tint resources
             if (isTinted) {
                 String tintres = def.getBlockColorMapResource(sb);

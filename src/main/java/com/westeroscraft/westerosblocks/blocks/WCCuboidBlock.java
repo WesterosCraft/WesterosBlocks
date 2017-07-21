@@ -197,13 +197,13 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {   
         BoundingBox bb = def.getBoundingBox(state, source, pos);
-        return new AxisAlignedBB(bb.xMin, bb.yMin, bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+        return bb.getAABB();
     }
 
     @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {   
         BoundingBox bb = def.getBoundingBox(state, source, pos);
-        return new AxisAlignedBB(bb.xMin, bb.yMin, bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+        return bb.getAABB();
     }
 
     /**

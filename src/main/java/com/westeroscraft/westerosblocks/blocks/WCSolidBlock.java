@@ -197,6 +197,9 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
                 addCollisionBoxToList(pos, entityBox, collidingBoxes, bb.getAABB());
             }
         }
+        else {
+            super.addCollisionBoxToList(state, worldIn, pos, entityBox, collidingBoxes, entityIn, p_185477_7_);
+        }
     }
 
     @Override
@@ -204,7 +207,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         if (def.hasCollisionBoxes()) {
             BoundingBox bb = def.getBoundingBox(state, source, pos);
             if (bb != null) {
-                return new AxisAlignedBB(bb.xMin, bb.yMin, bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+                return bb.getAABB();
             }
         }
         return FULL_BLOCK_AABB;
@@ -215,7 +218,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         if (def.hasCollisionBoxes()) {
             BoundingBox bb = def.getBoundingBox(state, source, pos);
             if (bb != null) {
-                return new AxisAlignedBB(bb.xMin, bb.yMin, bb.zMin, bb.xMax, bb.yMax, bb.zMax);
+                return bb.getAABB();
             }
         }
         return FULL_BLOCK_AABB;
