@@ -40,6 +40,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
@@ -330,7 +331,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
                 enumfacing = EnumFacing.fromAngle((double)placer.rotationYaw + 180.0F);
                 break;
             default:
-                enumfacing = facing.getOpposite();
+                enumfacing = facing;
                 break;
         }
         int i = enumfacing.getFrontOffsetX();
