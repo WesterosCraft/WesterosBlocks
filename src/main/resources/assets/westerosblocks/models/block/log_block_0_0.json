@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_column",
+  "parent": "westerosblocks:block/untinted/cube_log",
   "textures": {
     "end": "westerosblocks:blocks/log_block_0/barrel_top_closed",
     "side": "westerosblocks:blocks/log_block_0/barrel_side"

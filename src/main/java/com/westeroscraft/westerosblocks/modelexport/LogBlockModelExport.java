@@ -33,7 +33,7 @@ public class LogBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectColumn {
-        public String parent = "block/cube_column";    // Use 'cube_column' model
+        public String parent = "westerosblocks:block/untinted/cube_log";    // Use hacked 'cube_column' model (weirwood behaviors...)
         public Texture textures = new Texture();
     }
     public static class Texture {
