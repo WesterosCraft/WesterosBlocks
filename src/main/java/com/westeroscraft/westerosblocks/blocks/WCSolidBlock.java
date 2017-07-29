@@ -9,6 +9,10 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockPane;
+import net.minecraft.block.BlockWall;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -254,5 +258,11 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         }
 
         return raytraceresult1;
+    }
+    
+    @Override
+    public boolean canBeConnectedTo(IBlockAccess world, BlockPos pos, EnumFacing facing) {
+        Block connector = world.getBlockState(pos.offset(facing)).getBlock();
+        return connector instanceof BlockWall || connector instanceof BlockFenceGate || connector instanceof BlockFence || connector instanceof BlockPane;
     }
 }
