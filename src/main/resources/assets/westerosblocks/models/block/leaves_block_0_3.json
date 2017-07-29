@@ -3,7 +3,7 @@
   "textures": {
     "end": "westerosblocks:blocks/leaves_block_0/leaves_jungle",
     "side": "westerosblocks:blocks/leaves_block_0/leaves_jungle",
-    "partcle": "westerosblocks:blocks/leaves_block_0/leaves_jungle"
+    "particle": "westerosblocks:blocks/leaves_block_0/leaves_jungle"
   },
   "elements": [
     {

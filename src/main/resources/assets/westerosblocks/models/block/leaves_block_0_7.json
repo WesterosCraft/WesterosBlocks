@@ -3,7 +3,7 @@
   "textures": {
     "end": "westerosblocks:blocks/leaves_block_0/leaves_birch",
     "side": "westerosblocks:blocks/leaves_block_0/leaves_birch",
-    "partcle": "westerosblocks:blocks/leaves_block_0/leaves_birch"
+    "particle": "westerosblocks:blocks/leaves_block_0/leaves_birch"
   },
   "elements": [
     {

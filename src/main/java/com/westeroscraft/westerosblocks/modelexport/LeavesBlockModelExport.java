@@ -28,7 +28,7 @@ public class LeavesBlockModelExport extends ModelExport {
         public Elements elements[] = { new Elements() };
     }
     public static class Texture {
-        public String end, side, partcle;
+        public String end, side, particle;
     }
     public static class Elements {
     	int[] from = { 0, 0, 0 };
@@ -81,7 +81,7 @@ public class LeavesBlockModelExport extends ModelExport {
             mod.elements[0].faces.put("east", new Faces("#side", "east"));
             mod.textures.end = getTextureID(sb.getTextureByIndex(2)); 
             mod.textures.side = getTextureID(sb.getTextureByIndex(3)); 
-            mod.textures.partcle = mod.textures.side;
+            mod.textures.particle = mod.textures.side;
             this.writeBlockModelFile(def.blockName + "_" + sb.meta, mod);
             // Build simple item model that refers to block model
             ModelObject mo = new ModelObject();
