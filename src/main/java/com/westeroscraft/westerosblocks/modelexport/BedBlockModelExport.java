@@ -41,9 +41,13 @@ public class BedBlockModelExport extends ModelExport {
         public String bedtop;
         public String bedend;
         public String bedside;
+        public String bedtop2;
+        public String bedend2;
+        public String bedside2;
     }
     public static class ModelObject {
         public String parent;
+        public Texture textures = new Texture();
     }
     
     public BedBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
@@ -84,7 +88,13 @@ public class BedBlockModelExport extends ModelExport {
         this.writeBlockModelFile(def.blockName + "_foot", modf);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_head";
+        mo.parent = WesterosBlocks.MOD_ID + ":item/bed_item";
+        mo.textures.bedtop = mod.textures.bedtop;
+        mo.textures.bedend = mod.textures.bedend;
+        mo.textures.bedside = mod.textures.bedside;
+        mo.textures.bedtop2 = modf.textures.bedtop;
+        mo.textures.bedend2 = modf.textures.bedend;
+        mo.textures.bedside2 = modf.textures.bedside;
         this.writeItemModelFile(def.blockName, mo);
     }
 }
