@@ -1,6 +1,0 @@
-{
-  "parent": "block/pane_noside",
-  "textures": {
-    "pane": "westerosblocks:blocks/bars_iron_block_0/bars_iron_crossbars"
-  }
-}

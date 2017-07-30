@@ -1,7 +1,7 @@
 {
-  "parent": "block/pane_side_alt",
+  "parent": "westerosblocks:block/untinted/bars_side_alt",
   "textures": {
-    "edge": "westerosblocks:blocks/bars_iron_block_0/bars_iron_oxidized",
+    "edge": "westerosblocks:blocks/transparent",
     "pane": "westerosblocks:blocks/bars_iron_block_0/bars_iron_oxidized"
   }
 }

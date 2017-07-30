@@ -51,6 +51,7 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     private WesterosBlockDef def;
     private PropertyMeta variant;
     private boolean legacy_model[] = new boolean[16];
+    private boolean bars_model[] = new boolean[16];
     
     protected WCPaneBlock(WesterosBlockDef def) {
         super(def.getMaterial(), true);
@@ -64,6 +65,9 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
                     if (tok.equals("legacy-model")) {
                         legacy_model[sb.meta] = true;
                     }
+                    if (tok.equals("bars-model")) {
+                        bars_model[sb.meta] = true;
+                    }
                 }
             }
         }
@@ -71,6 +75,10 @@ public class WCPaneBlock extends BlockPane implements WesterosBlockLifecycle, We
     
     public boolean isLegacyModel(int meta) {
     	return legacy_model[meta];
+    }
+
+    public boolean isBarsModel(int meta) {
+        return bars_model[meta];
     }
 
     public boolean initializeBlockDefinition() {

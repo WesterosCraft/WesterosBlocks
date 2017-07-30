@@ -811,7 +811,7 @@
       "stepSound": "metal",
       "material": "iron",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "bars-model",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -833,7 +833,7 @@
           "label": "Oxidized Iron Bars",
           "textures": [
             "bars_iron_block_0/bars_iron_oxidized",
-            "bars_iron_block_0/bars_iron_oxidized"
+            "transparent"
           ]
         },
         {

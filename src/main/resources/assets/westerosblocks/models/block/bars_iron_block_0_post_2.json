@@ -1,7 +1,0 @@
-{
-  "parent": "block/pane_post",
-  "textures": {
-    "edge": "westerosblocks:blocks/bars_iron_block_0/bars_iron_oxidized_crossbars_top",
-    "pane": "westerosblocks:blocks/bars_iron_block_0/bars_iron_oxidized_crossbars"
-  }
-}
