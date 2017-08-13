@@ -38,11 +38,12 @@ public class LeavesBlockModelExport extends ModelExport {
     public static class Faces {
     	int[] uv = { 0, 0, 16, 16 };
     	String texture;
-    	int tintindex = 0;
+    	Integer tintindex;
     	String cullface;
-    	public Faces(String txt, String face) {
+    	public Faces(String txt, String face, boolean isTinted) {
     		texture = txt;
     		cullface = face;
+    		tintindex = (isTinted?0:null);
     	}
     }
     public static class ModelObject {
@@ -72,13 +73,14 @@ public class LeavesBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         for (Subblock sb : def.subBlocks) {
+            boolean isTinted = sb.isTinted(def);
             ModelObjectLeaves mod = new ModelObjectLeaves();
-            mod.elements[0].faces.put("down", new Faces("#end", "down"));
-            mod.elements[0].faces.put("up", new Faces("#end", "up"));
-            mod.elements[0].faces.put("north", new Faces("#side", "north"));
-            mod.elements[0].faces.put("south", new Faces("#side", "south"));
-            mod.elements[0].faces.put("west", new Faces("#side", "west"));
-            mod.elements[0].faces.put("east", new Faces("#side", "east"));
+            mod.elements[0].faces.put("down", new Faces("#end", "down", isTinted));
+            mod.elements[0].faces.put("up", new Faces("#end", "up", isTinted));
+            mod.elements[0].faces.put("north", new Faces("#side", "north", isTinted));
+            mod.elements[0].faces.put("south", new Faces("#side", "south", isTinted));
+            mod.elements[0].faces.put("west", new Faces("#side", "west", isTinted));
+            mod.elements[0].faces.put("east", new Faces("#side", "east", isTinted));
             mod.textures.end = getTextureID(sb.getTextureByIndex(2)); 
             mod.textures.side = getTextureID(sb.getTextureByIndex(3)); 
             mod.textures.particle = mod.textures.side;
