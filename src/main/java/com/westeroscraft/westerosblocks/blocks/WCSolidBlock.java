@@ -263,6 +263,6 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     @Override
     public boolean canBeConnectedTo(IBlockAccess world, BlockPos pos, EnumFacing facing) {
         Block connector = world.getBlockState(pos.offset(facing)).getBlock();
-        return connector instanceof BlockWall || connector instanceof BlockFenceGate || connector instanceof BlockFence || connector instanceof BlockPane;
+        return connector instanceof BlockWall || connector instanceof BlockFence || connector instanceof BlockPane;
     }
 }
