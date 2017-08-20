@@ -8,6 +8,7 @@
             "north": true
           },
           {
+            "variant": "0",
             "north": false,
             "south": false,
             "west": false,
@@ -28,6 +29,7 @@
             "east": true
           },
           {
+            "variant": "0",
             "north": false,
             "south": false,
             "west": false,
@@ -49,6 +51,7 @@
             "south": true
           },
           {
+            "variant": "0",
             "north": false,
             "south": false,
             "west": false,
@@ -69,6 +72,7 @@
             "west": true
           },
           {
+            "variant": "0",
             "north": false,
             "south": false,
             "west": false,
@@ -90,6 +94,7 @@
             "north": true
           },
           {
+            "variant": "1",
             "north": false,
             "south": false,
             "west": false,
@@ -110,6 +115,7 @@
             "east": true
           },
           {
+            "variant": "1",
             "north": false,
             "south": false,
             "west": false,
@@ -131,6 +137,7 @@
             "south": true
           },
           {
+            "variant": "1",
             "north": false,
             "south": false,
             "west": false,
@@ -151,6 +158,7 @@
             "west": true
           },
           {
+            "variant": "1",
             "north": false,
             "south": false,
             "west": false,
@@ -172,6 +180,7 @@
             "north": true
           },
           {
+            "variant": "2",
             "north": false,
             "south": false,
             "west": false,
@@ -192,6 +201,7 @@
             "east": true
           },
           {
+            "variant": "2",
             "north": false,
             "south": false,
             "west": false,
@@ -213,6 +223,7 @@
             "south": true
           },
           {
+            "variant": "2",
             "north": false,
             "south": false,
             "west": false,
@@ -233,6 +244,7 @@
             "west": true
           },
           {
+            "variant": "2",
             "north": false,
             "south": false,
             "west": false,

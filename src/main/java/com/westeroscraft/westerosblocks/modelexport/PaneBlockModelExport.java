@@ -87,13 +87,14 @@ public class PaneBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        // Record for when legacy model is needed (all false)
-        WhenRec wnone = new WhenRec();
-        wnone.north = wnone.south = wnone.east = wnone.west = Boolean.FALSE;
 
         for (Subblock sb : def.subBlocks) {
         	boolean is_legacy = legacy_model[sb.meta];
             boolean is_bars = bars_model[sb.meta];
+            // Record for when legacy model is needed (all false)
+            WhenRec wnone = new WhenRec();
+            wnone.north = wnone.south = wnone.east = wnone.west = Boolean.FALSE;
+            wnone.variant = Integer.toString(sb.meta);
         	// Add post based on our variant
             if (!is_bars) {
                 States ps = new States();
