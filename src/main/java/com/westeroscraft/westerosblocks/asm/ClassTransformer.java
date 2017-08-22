@@ -2,7 +2,9 @@ package com.westeroscraft.westerosblocks.asm;
 
 import java.util.Iterator;
 
+import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
@@ -53,6 +55,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         else if (name.equals("net.minecraft.network.play.server.SPacketChangeGameState")) {
         	bytes = transformSPacketChangeGameState(name, bytes, false);
+        }
+        else if (name.equals("anc")) {
+            bytes = transformEnchantmentTable(name, bytes, true);
+        }
+        else if (name.equals("net.minecraft.block.BlockEnchantmentTable")) {
+            bytes = transformEnchantmentTable(name, bytes, false);
         }
         
         return bytes;
@@ -529,6 +537,60 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         //ASM specific for cleaning up and returning the final bytes for JVM processing.
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
         classNode.accept(writer);
+        b = writer.toByteArray();
+
+        return b;
+    }    
+    
+    private class AddEnchantMethodVisitor extends ClassVisitor {
+        String targetMethodName = "";
+        String targetMethodSig = "";
+        String targetClassSig  = "";
+        String targetRetClass = "";
+        String targetRetEnum = "";
+
+        public AddEnchantMethodVisitor(ClassVisitor cv, boolean obfus) {
+            super(Opcodes.ASM5, cv);
+            if (obfus) {
+                targetClassSig  = "anc";
+                targetMethodName ="f";
+                targetMethodSig = "()Lajk;";
+                targetRetClass = "ajk";
+                targetRetEnum = "c";
+            }
+            else {
+                targetClassSig  = "net/minecraft/block/BlockEnchantmentTable";
+                targetMethodName ="getBlockLayer";
+                targetMethodSig = "()Lnet/minecraft/util/BlockRenderLayer;";
+                targetRetClass = "net/minecraft/util/BlockRenderLayer";
+                targetRetEnum = "CUTOUT";
+            }
+        }
+        @Override
+        public void visitEnd() {
+            MethodVisitor mv = cv.visitMethod(ACC_PUBLIC, targetMethodName, targetMethodSig, null, null);
+            AnnotationVisitor av0 = mv.visitAnnotation("Lnet/minecraftforge/fml/relauncher/SideOnly;", true);
+            av0.visitEnum("value", "Lnet/minecraftforge/fml/relauncher/Side;", "CLIENT");
+            av0.visitEnd();
+            mv.visitCode();
+            Label l0 = new Label();
+            mv.visitLabel(l0);
+            mv.visitFieldInsn(GETSTATIC, targetRetClass, targetRetEnum, "L" + targetRetClass + ";");
+            mv.visitInsn(ARETURN);
+            Label l1 = new Label();
+            mv.visitLabel(l1);
+            mv.visitLocalVariable("this", "L" + targetClassSig + ";", null, l0, l1, 0);
+            mv.visitMaxs(1, 1);
+            mv.visitEnd();
+            super.visitEnd();
+        }
+    }
+    private byte[] transformEnchantmentTable(String name, byte[] b, boolean obfus) {
+        //set up ASM class manipulation stuff. Consult the ASM docs for details
+        ClassReader classReader = new ClassReader(b);
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS + ClassWriter.COMPUTE_FRAMES);
+        ClassVisitor visitor = new AddEnchantMethodVisitor(writer, obfus);
+        classReader.accept(visitor, 0);
         b = writer.toByteArray();
 
         return b;
