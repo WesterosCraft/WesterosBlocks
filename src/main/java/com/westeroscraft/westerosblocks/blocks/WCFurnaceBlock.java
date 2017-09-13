@@ -103,9 +103,9 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
+    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)
     {
-        def.getStandardCreativeItems(this, itemIn, tab, list);
+        def.getStandardCreativeItems(this, tab, list);
     }
 
     @Override

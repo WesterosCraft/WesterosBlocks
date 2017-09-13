@@ -75,7 +75,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.fml.common.registry.GameData;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -828,11 +828,12 @@ public class WesterosBlockDef {
             }
             // block registration has to happen first
             ResourceLocation rl = new ResourceLocation(WesterosBlocks.MOD_ID, name);
-            GameData.getBlockRegistry().register(id, rl, block);
-            //GameRegistry.register(block);
+            //ForgeRegistries.BLOCKS.register(id, rl, block);
+            ForgeRegistries.BLOCKS.register(block);
             if (itm != null) {
-                GameData.getItemRegistry().register(id, rl, itm);
-            	//GameRegistry.register(itm, block.getRegistryName());
+                //ForgeRegistries.ITEMS.register(id, rl, itm);
+                itm.setRegistryName(rl);
+                ForgeRegistries.ITEMS.register(itm);
             	if (subBlocks != null) {
             		for (Subblock sb : subBlocks) {
                         if (sb.noInventoryItem) continue; 
@@ -1043,11 +1044,11 @@ public class WesterosBlockDef {
         };
     }
 
-    public void getStandardCreativeItems(Block blk, Item itemIn, CreativeTabs tab, NonNullList<ItemStack> subItems) {
+    public void getStandardCreativeItems(Block blk, CreativeTabs tab, NonNullList<ItemStack> subItems) {
         if (subBlocks != null) {
             for (Subblock sb : subBlocks) {
                 if (sb.noInventoryItem) continue;
-                subItems.add(new ItemStack(itemIn, 1, sb.meta));
+                subItems.add(new ItemStack(blk, 1, sb.meta));
             }
         }
     }
@@ -1719,7 +1720,12 @@ public class WesterosBlockDef {
     public static void processRegisterTileEntities() {
         for (String std_id : te_rec.keySet()) {
             TileEntityRec ter = te_rec.get(std_id);
-            GameRegistry.registerTileEntityWithAlternatives(ter.te_class, std_id, ter.legacy_ids.toArray(new String[0]));
+            //GameRegistry.registerTileEntityWithAlternatives(ter.te_class, std_id, ter.legacy_ids.toArray(new String[0]));
+            GameRegistry.registerTileEntity(ter.te_class, std_id);
+            //TODO: Still need this?
+            //for (String altid : ter.legacy_ids) {
+            //    GameRegistry.registerTileEntity(ter.te_class, altid);
+            //}
         }
     }
 }

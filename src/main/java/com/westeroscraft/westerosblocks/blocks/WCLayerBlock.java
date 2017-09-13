@@ -102,9 +102,9 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     }
 
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
+    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)
     {
-        def.getStandardCreativeItems(this, itemIn, tab, list);
+        def.getStandardCreativeItems(this, tab, list);
     }
 
     @Override 
@@ -138,13 +138,13 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     }
     
     @Override
-    public boolean blocksMovement(IBlockAccess worldIn, BlockPos pos)
+    public boolean isPassable(IBlockAccess worldIn, BlockPos pos)
     {
         return ((Integer)worldIn.getBlockState(pos).getValue(layers)).intValue() <= (layerCount/2);
     }
 
     @Override
-    public boolean isFullyOpaque(IBlockState state)
+    public boolean isTopSolid(IBlockState state)
     {
         return ((Integer)state.getValue(layers)).intValue() == layerCount;
     }
