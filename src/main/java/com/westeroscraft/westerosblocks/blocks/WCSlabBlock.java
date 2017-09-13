@@ -139,11 +139,12 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     	return state.getValue(variant).intValue();
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
+    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)
     {
-        if (itemIn != Item.getItemFromBlock(this.is_double?this:this.otherBlock)) {
-    		def.getStandardCreativeItems(this, itemIn, tab, list);
+        if (!this.is_double) {
+    		def.getStandardCreativeItems(this, tab, list);
         }
     }
     

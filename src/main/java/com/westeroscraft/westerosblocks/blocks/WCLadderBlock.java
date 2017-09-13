@@ -84,9 +84,9 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
     }
     
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
+    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)
     {
-        def.getStandardCreativeItems(this, itemIn, tab, list);
+        def.getStandardCreativeItems(this, tab, list);
     }
 
     @Override
@@ -202,13 +202,13 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
     }
 
     @Override
-    protected boolean canBlockStay(World worldIn, BlockPos pos, EnumFacing facing)
+    public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing facing)
     {
         IBlockState bs = worldIn.getBlockState(pos);
         if ((bs.getBlock() == this) && (allow_unsupported[bs.getValue(variant).intValue()])) {
             return true;
         }
-        return super.canBlockStay(worldIn, pos, facing);
+        return super.canPlaceBlockOnSide(worldIn, pos, facing);
     }
 
     @Override

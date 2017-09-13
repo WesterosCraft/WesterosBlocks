@@ -99,8 +99,8 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     
     @SideOnly(Side.CLIENT)
     @Override
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
-        def.getStandardCreativeItems(this, itemIn, tab, list);
+    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
+        def.getStandardCreativeItems(this, tab, list);
     }
 
     @Override

@@ -100,9 +100,9 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     }
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list)
+    public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list)
     {
-        def.getStandardCreativeItems(this, itemIn, tab, list);
+        def.getStandardCreativeItems(this, tab, list);
     }
         
     @Override
@@ -290,7 +290,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     }
     
     @Override
-    public boolean blocksMovement(IBlockAccess worldIn, BlockPos pos) {
+    public boolean isPassable(IBlockAccess worldIn, BlockPos pos) {
         return worldIn.getBlockState(pos).getValue(BlockDoor.OPEN).booleanValue();
     }
 
