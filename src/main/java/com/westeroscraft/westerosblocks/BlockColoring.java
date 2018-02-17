@@ -36,8 +36,8 @@ public class BlockColoring {
     
     public static final IItemColor BLOCK_ITEM_COLORING = new IItemColor()
     {
-        @Override
-        public int getColorFromItemstack(ItemStack stack, int tintIndex) 
+		@Override
+		public int colorMultiplier(ItemStack stack, int tintIndex)
         {
             @SuppressWarnings("deprecation")
 			IBlockState state = ((ItemBlock)stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata());

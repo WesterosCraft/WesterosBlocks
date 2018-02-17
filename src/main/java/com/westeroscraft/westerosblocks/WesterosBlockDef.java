@@ -500,7 +500,7 @@ public class WesterosBlockDef {
                 for (int zz = -1; zz <= 1; ++zz) {
                     BlockPos bp = pos.add(xx, 0, zz);
                     Biome biome = access.getBiome(bp);
-                    int mult = getColor(biome.getFloatTemperature(bp), biome.getRainfall());
+                    int mult = getColor(biome.getTemperature(bp), biome.getRainfall());
                     red += (mult & 0xFF0000) >> 16;
                     green += (mult & 0x00FF00) >> 8;
                     blue += (mult & 0x0000FF);
