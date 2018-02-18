@@ -1728,4 +1728,13 @@ public class WesterosBlockDef {
             //}
         }
     }
+    public void registerSoundEvents() {
+    	for(Subblock sb : subBlocks) {
+    		if (sb.soundList != null) {
+    			for (String snd : sb.soundList) {
+    				WesterosBlocks.registerSound(snd);
+    			}
+    		}
+    	}
+    }
 }

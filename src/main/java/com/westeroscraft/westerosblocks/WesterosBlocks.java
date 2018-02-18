@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLServerStoppedEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 import net.minecraftforge.fml.common.network.FMLEmbeddedChannel;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraft.block.Block;
@@ -20,6 +21,8 @@ import net.minecraft.crash.CrashReport;
 import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ReportedException;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 
 import java.io.File;
 import java.io.FileReader;
@@ -36,6 +39,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -195,6 +199,8 @@ public class WesterosBlocks
                     	}
                     }
                 }
+                // Register sound events
+                customBlockDefs[i].registerSoundEvents();
             }
             else {
                 crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
@@ -233,7 +239,7 @@ public class WesterosBlocks
         }
         // Register block models
         WesterosBlocks.proxy.registerBlockModels(customBlocks);
-
+        
         proxy.initRenderRegistry();
     }
 
@@ -286,6 +292,21 @@ public class WesterosBlocks
         }
 
         this.dynmap.complete();
+    }
+    
+    private static HashMap<String, SoundEvent> registered_sounds = new HashMap<String, SoundEvent>();
+    
+    public static SoundEvent registerSound(String soundName)
+    {
+    	SoundEvent event = registered_sounds.get(soundName);
+    	if (event == null) {
+    		ResourceLocation location = new ResourceLocation(WesterosBlocks.MOD_ID, soundName);
+    		event = new SoundEvent(location);
+    		event.setRegistryName(location);
+    		ForgeRegistries.SOUND_EVENTS.register(event);
+    		registered_sounds.put(soundName, event);
+    	}
+        return event;
     }
     
     private void migrateRP() throws IOException {
