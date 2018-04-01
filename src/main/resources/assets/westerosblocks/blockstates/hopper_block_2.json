@@ -6,9 +6,6 @@
     "variant=2": {
       "model": "westerosblocks:hopper_block_2_2"
     },
-    "variant=10": {
-      "model": "westerosblocks:hopper_block_2_10"
-    },
     "variant=1": {
       "model": "westerosblocks:hopper_block_2_1"
     },
@@ -27,11 +24,26 @@
     "variant=4": {
       "model": "westerosblocks:hopper_block_2_4"
     },
+    "variant=10": {
+      "model": "westerosblocks:hopper_block_2_10"
+    },
     "variant=9": {
       "model": "westerosblocks:hopper_block_2_9"
     },
     "variant=8": {
       "model": "westerosblocks:hopper_block_2_8"
+    },
+    "variant=13": {
+      "model": "westerosblocks:hopper_block_2_13"
+    },
+    "variant=14": {
+      "model": "westerosblocks:hopper_block_2_14"
+    },
+    "variant=11": {
+      "model": "westerosblocks:hopper_block_2_11"
+    },
+    "variant=12": {
+      "model": "westerosblocks:hopper_block_2_12"
     }
   }
 }

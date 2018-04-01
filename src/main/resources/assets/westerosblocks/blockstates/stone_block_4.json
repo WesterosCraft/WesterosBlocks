@@ -30,6 +30,9 @@
     "variant=9": {
       "model": "westerosblocks:stone_block_4_9"
     },
+    "variant=15": {
+      "model": "westerosblocks:stone_block_4_15"
+    },
     "variant=8": {
       "model": "westerosblocks:stone_block_4_8"
     },

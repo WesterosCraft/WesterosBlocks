@@ -72,9 +72,19 @@
               ,
               { "state": "variant=1", "colormap": [ "westerosblocks:colormap/cobblestone" ] }
               ,
+              { "state": "variant=10", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+              ,
               { "state": "variant=13", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
               ,
               { "state": "variant=14", "colormap": [ "westerosblocks:colormap/brick" ] }
+          ]
+          ,
+          "stone_block_7": [
+              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/brick" ] }
+          ]
+          ,
+          "stone_block_6": [
+              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/easternisland" ] }
           ]
           ,
           "stone_block_4": [
@@ -97,6 +107,8 @@
           ,
           "hopper_block_0": [
               { "state": "variant=12", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant=13", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
           ]
           ,
           "furnace_block_0": [
@@ -127,6 +139,10 @@
               { "state": "variant=9", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
               ,
               { "state": "variant=10", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+          ]
+          ,
+          "hopper_block_2": [
+              { "state": "variant=10", "colormap": [ "westerosblocks:colormap/brick" ] }
           ]
           ,
           "stone_block_0": [

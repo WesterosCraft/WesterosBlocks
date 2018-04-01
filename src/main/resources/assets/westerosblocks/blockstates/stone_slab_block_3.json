@@ -1,7 +1,16 @@
 {
   "variants": {
+    "half=top,variant=7": {
+      "model": "westerosblocks:stone_slab_block_3_7_top"
+    },
     "half=top,variant=5": {
       "model": "westerosblocks:stone_slab_block_3_5_top"
+    },
+    "half=bottom,variant=7": {
+      "model": "westerosblocks:stone_slab_block_3_7_bottom"
+    },
+    "half=top,variant=6": {
+      "model": "westerosblocks:stone_slab_block_3_6_top"
     },
     "half=top,variant=3": {
       "model": "westerosblocks:stone_slab_block_3_3_top"
@@ -29,6 +38,9 @@
     },
     "half=bottom,variant=5": {
       "model": "westerosblocks:stone_slab_block_3_5_bottom"
+    },
+    "half=bottom,variant=6": {
+      "model": "westerosblocks:stone_slab_block_3_6_bottom"
     },
     "half=bottom,variant=3": {
       "model": "westerosblocks:stone_slab_block_3_3_bottom"
