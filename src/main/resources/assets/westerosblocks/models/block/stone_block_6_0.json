@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
+    "up": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
+    "north": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
+    "south": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
+    "west": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
+    "east": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
+    "particle": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands"
+  }
+}

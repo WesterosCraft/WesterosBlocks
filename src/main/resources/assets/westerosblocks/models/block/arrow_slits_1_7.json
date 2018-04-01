@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/transparent",
+    "up": "westerosblocks:blocks/transparent",
+    "north": "westerosblocks:blocks/arrow_slits_1/brick_stormlands_small_arrow_slit",
+    "south": "westerosblocks:blocks/arrow_slits_1/brick_stormlands_small_arrow_slit",
+    "west": "westerosblocks:blocks/arrow_slits_1/brick_stormlands_small_arrow_slit",
+    "east": "westerosblocks:blocks/arrow_slits_1/brick_stormlands_small_arrow_slit",
+    "particle": "westerosblocks:blocks/arrow_slits_1/brick_stormlands_small_arrow_slit"
+  }
+}

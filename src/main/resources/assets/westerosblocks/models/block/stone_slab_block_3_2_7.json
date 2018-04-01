@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_block_2/brick_stormlands_small",
+    "up": "westerosblocks:blocks/stone_block_2/brick_stormlands_small",
+    "north": "westerosblocks:blocks/stone_block_2/brick_stormlands_small",
+    "south": "westerosblocks:blocks/stone_block_2/brick_stormlands_small",
+    "west": "westerosblocks:blocks/stone_block_2/brick_stormlands_small",
+    "east": "westerosblocks:blocks/stone_block_2/brick_stormlands_small",
+    "particle": "westerosblocks:blocks/stone_block_2/brick_stormlands_small"
+  }
+}
