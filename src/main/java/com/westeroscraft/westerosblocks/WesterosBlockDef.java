@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.BitSet;
@@ -79,6 +80,9 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.registries.ForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -817,11 +821,17 @@ public class WesterosBlockDef {
         registerBlock(blk, itmclass, this.getBlockName(idx), reqID);
     }
 
+    private Method add_registry;
+    
     @SuppressWarnings("deprecation")
 	private Block registerBlock(Block block, Class<? extends ItemBlock> itemclass, String name, int id)
     {
         try
         {
+        	if (add_registry == null) {
+        		add_registry = ForgeRegistry.class.getDeclaredMethod("add", int.class, IForgeRegistryEntry.class);
+        		add_registry.setAccessible(true);
+        	}
             Item itm = null;
             if (itemclass != null) {
                 itm = (Item)itemclass.getConstructor(Block.class).newInstance(block);
@@ -829,11 +839,13 @@ public class WesterosBlockDef {
             // block registration has to happen first
             ResourceLocation rl = new ResourceLocation(WesterosBlocks.MOD_ID, name);
             //ForgeRegistries.BLOCKS.register(id, rl, block);
-            ForgeRegistries.BLOCKS.register(block);
+            add_registry.invoke(ForgeRegistries.BLOCKS, id, block);
+            //ForgeRegistries.BLOCKS.register(block);
             if (itm != null) {
                 //ForgeRegistries.ITEMS.register(id, rl, itm);
                 itm.setRegistryName(rl);
-                ForgeRegistries.ITEMS.register(itm);
+                //ForgeRegistries.ITEMS.register(itm);
+                add_registry.invoke(ForgeRegistries.ITEMS, id, itm);
             	if (subBlocks != null) {
             		for (Subblock sb : subBlocks) {
                         if (sb.noInventoryItem) continue; 
