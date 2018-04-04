@@ -316,10 +316,13 @@ public class WesterosBlocks
     	}
     	// Build block ID to resouse ID map
     	HashMap<Integer, String> id_to_name = new HashMap<Integer, String>();
+        HashMap<String, Integer> name_to_id = new HashMap<String, Integer>();
+
     	for (int id = 0; id < 4096; id++) {
     		Block b = Block.getBlockById(id);
     		if ((b != null) && (b != Blocks.AIR)) {
     			id_to_name.put(id, b.getRegistryName().toString());
+    			name_to_id.put(id_to_name.get(id), id);
     			log.info(String.format("%d=%s", id, id_to_name.get(id)));
     		}
     	}
@@ -334,16 +337,19 @@ public class WesterosBlocks
     				LineNumberReader rdr = new LineNumberReader(fis);
     				String line;
     				List<String> lines = new ArrayList<String>();
-    				String matching = null;
-    				String tilesmatching = null;
+    				int match_id = -1;
 					while ((line = rdr.readLine()) != null) {
     					String[] parts = line.split("=");
     					if ((parts.length > 1) && (parts[0].trim().equalsIgnoreCase("matchBlocks"))) {
-    						matching = parts[1].trim();
-    						log.info(String.format("%s: found matchBlocks = %s", file.toString(), matching));
-    					}
-    					else if ((parts.length > 1) && (parts[0].trim().equalsIgnoreCase("tiles"))) {
-    					    tilesmatching = parts[1];
+    						String matching = parts[1].trim();
+    						if (name_to_id.containsKey(matching)) {
+    						    match_id = name_to_id.get(matching);
+                                log.info(String.format("%s: found matchBlocks = %s(%d)", file.toString(), matching, match_id));
+                                lines.add("#" + line);  // Keep line with comment
+    						}
+    						else {    // Keep line if we didn't match
+    						    lines.add(line);
+    						}
     					}
     					else {
     						lines.add(line);
@@ -351,93 +357,31 @@ public class WesterosBlocks
     				}
 					rdr.close();
 					fis.close();
-					if (matching == null) {	// Not found : see if we can infer from name
-						if (fn.startsWith("block")) {
-							int blkid = 0;
-							int off = 5;
-							while (Character.isDigit(fn.charAt(off))) {
-								blkid = (10*blkid) + (fn.charAt(off) - '0');
-								off++;
-							}
-    						log.info(String.format("%s: inferred matchBlocks = %d", file.toString(), blkid));
-    						matching = Integer.toString(blkid);
+					int blockfileid = -1;
+					int blocknameoff = 0;
+					if (fn.startsWith("block")) {
+						int blkid = 0;
+						blocknameoff = 5;
+						while (Character.isDigit(fn.charAt(blocknameoff))) {
+							blkid = (10*blkid) + (fn.charAt(blocknameoff) - '0');
+							blocknameoff++;
 						}
+						log.info(String.format("%s: inferred blockid = %d", file.toString(), blkid));
+						blockfileid = blkid;
 					}
-					// If we've got something to map, process it
-					if (matching != null) {
-						String[] ids = matching.split(" ");
-						String newline = "matchBlocks=";
-						for (String id : ids) {
-							try {
-								int idnum = Integer.parseInt(id.trim());
-								String name = id_to_name.get(idnum);
-								if (name == null) {
-									log.info(String.format("%s: ID not found!!!  %d", file.toString(), idnum));
-									newline += idnum + " ";
-								}
-								else {
-									newline += name + " ";
-								}
-							} catch (NumberFormatException nfx) {
-								log.info(String.format("%s: Non number - preserved - %s", file.toString(), id.trim()));
-								newline += id.trim() + " ";
-							}
-						}
-						lines.add(0, newline);	// Add at start
-					}
-					if (tilesmatching != null) {
-                        String[] ids = tilesmatching.split(" ");
-                        String newline = "tiles=";
-                        for (String id : ids) {
-                            if (id.indexOf('-') > 0) {  // Range?  Assume already numbers
-                                newline += id + " ";
-                            }
-                            else {
-                                try {
-                                    Integer.parseInt(id);
-                                    newline += id + " ";
-                                } catch (NumberFormatException nfx) {
-                                    String ourdir = file.toFile().getParent();
-                                    // Not a number - need to map it to one
-                                    File oldfile = new File(ourdir, id + ".png");
-                                    // See if already moved
-                                    Integer newnum = moved_files.get(oldfile);
-                                    if (newnum == null) { // Not yet?
-                                        if (oldfile.exists()) { // Found old file
-                                            // Find new number that isn't in use yet
-                                            for (int nn = 0; ; nn++) {
-                                                File newfile = new File(ourdir, nn + ".png");
-                                                if (newfile.exists() == false) {
-                                                    newnum = nn;
-                                                    log.info(String.format("%s: rename %s to %s", file.toString(), oldfile, newfile));
-                                                    oldfile.renameTo(newfile);
-                                                    moved_files.put(oldfile,  newnum);
-                                                    break;
-                                                }
-                                            }
-                                        }
-                                        else {
-                                            log.info(String.format("%s: file '%s' not found", file.toString(), oldfile));
-                                        }
-                                    }
-                                    if (newnum != null) {   // New value
-                                        newline += newnum + " ";
-                                    }
-                                    else {
-                                        log.info(String.format("%s: problem moving file %s", file.toString(), id.trim()));
-                                        newline += id.trim() + " ";
-                                    }
-                                }
-                            }
+					// If we have matchBlocks= field, strip it out
+					if (match_id >= 0) {
+                        FileWriter fw = new FileWriter(file.toFile());
+                        for (String l : lines) {
+                            fw.write(l.trim() + "\n");
                         }
-                        lines.add(newline);  // Add at end
+                        fw.close();
 					}
-					if ((matching != null) || (tilesmatching != null)) {
-						FileWriter fw = new FileWriter(file.toFile());
-						for (String l : lines) {
-							fw.write(l.trim() + "\n");
-						}
-						fw.close();
+					// If block ID in name not found, or didn't match, then rename fiel
+					if ((match_id > 0) && (blockfileid != match_id)) {
+					    String newfn = "block" + match_id + fn.substring(blocknameoff);
+					    Files.move(file, file.resolveSibling(newfn));
+                        log.info(String.format("%s: renamed to %s", file.toString(), newfn));
 					}
     			}
     			return FileVisitResult.CONTINUE;
