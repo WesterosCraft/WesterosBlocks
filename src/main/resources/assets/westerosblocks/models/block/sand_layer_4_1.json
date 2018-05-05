@@ -1,13 +1,13 @@
 {
   "parent": "block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
-    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
-    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
-    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
-    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
-    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands",
-    "particle": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands"
+    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "particle": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet"
   },
   "elements": [
     {

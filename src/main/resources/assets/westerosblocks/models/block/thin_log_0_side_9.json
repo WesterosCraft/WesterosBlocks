@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side",
+  "parent": "westerosblocks:block/untinted/wall_side_2",
   "textures": {
     "bottom": "westerosblocks:blocks/wood_block_1/wood_northern",
     "top": "westerosblocks:blocks/wood_block_1/wood_northern",

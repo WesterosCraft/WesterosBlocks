@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "westerosblocks:blocks/pebble_block_0/pebble_north_dry"
+  }
+}

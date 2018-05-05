@@ -133,6 +133,140 @@
         "y": 270,
         "uvlock": true
       }
+    },
+    {
+      "when": {
+        "variant": "2"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_post_2"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "2",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_2",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "2",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_2",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "2",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_2",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "2",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_2",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "variant": "3"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_post_3"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "3",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_3",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "3",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_3",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "3",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_3",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "3",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_3",
+        "y": 270,
+        "uvlock": true
+      }
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
   "parent": "block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_dorne",
-    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_dorne",
-    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_dorne",
-    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_dorne",
-    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_dorne",
-    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_dorne",
-    "particle": "westerosblocks:blocks/pebble_block_0/pebble_dorne"
+    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_dorne_wet",
+    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_dorne_wet",
+    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_dorne_wet",
+    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_dorne_wet",
+    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_dorne_wet",
+    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_dorne_wet",
+    "particle": "westerosblocks:blocks/pebble_block_0/pebble_dorne_wet"
   },
   "elements": [
     {

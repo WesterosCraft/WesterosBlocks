@@ -1,0 +1,87 @@
+{
+  "parent": "block/thin_block",
+  "textures": {
+    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_ocean_dry",
+    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_ocean_dry",
+    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_ocean_dry",
+    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_ocean_dry",
+    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_ocean_dry",
+    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_ocean_dry",
+    "particle": "westerosblocks:blocks/pebble_block_0/pebble_ocean_dry"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        10.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            6.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt5",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            6.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt3",
+          "cullface": "south"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            6.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt2",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            6.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt4",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

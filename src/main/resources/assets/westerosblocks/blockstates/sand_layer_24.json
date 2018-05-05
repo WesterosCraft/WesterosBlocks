@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=5": {
+      "model": "westerosblocks:sand_layer_24_5"
+    },
+    "layers=6": {
+      "model": "westerosblocks:sand_layer_24_6"
+    },
+    "layers=3": {
+      "model": "westerosblocks:sand_layer_24_3"
+    },
+    "layers=4": {
+      "model": "westerosblocks:sand_layer_24_4"
+    },
+    "layers=7": {
+      "model": "westerosblocks:sand_layer_24_7"
+    },
+    "layers=8": {
+      "model": "westerosblocks:sand_layer_24_8"
+    },
+    "layers=1": {
+      "model": "westerosblocks:sand_layer_24_1"
+    },
+    "layers=2": {
+      "model": "westerosblocks:sand_layer_24_2"
+    }
+  }
+}
