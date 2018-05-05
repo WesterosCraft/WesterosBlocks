@@ -30,6 +30,9 @@
     "variant=9": {
       "model": "westerosblocks:hopper_block_2_9"
     },
+    "variant=15": {
+      "model": "westerosblocks:hopper_block_2_15"
+    },
     "variant=8": {
       "model": "westerosblocks:hopper_block_2_8"
     },

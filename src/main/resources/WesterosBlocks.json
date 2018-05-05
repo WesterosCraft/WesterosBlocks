@@ -663,7 +663,7 @@
         },
         {
           "meta": 5,
-          "label": "Dark Cobble Wall",
+          "label": "Dark Cobblestone Wall",
           "textures": [
             "stone_block_1/stone_cobble_dark"
           ]
@@ -806,41 +806,6 @@
             "stone_wall_block_0/log_palm_top",
             "stone_wall_block_0/log_palm_top",
             "log_block_1/log_palm"
-          ]
-        },
-        {
-          "meta": 5,
-          "label": "Oak Wall",
-          "textures": [
-            "wood_block_0/planks_oak"
-          ]
-        },
-        {
-          "meta": 6,
-          "label": "Spruce Wall",
-          "textures": [
-            "wood_block_0/planks_spruce"
-          ]
-        },
-        {
-          "meta": 7,
-          "label": "Birch Wall",
-          "textures": [
-            "wood_block_0/planks_birch"
-          ]
-        },
-        {
-          "meta": 8,
-          "label": "Jungle Wall",
-          "textures": [
-            "wood_block_0/planks_jungle"
-          ]
-        },
-        {
-          "meta": 9,
-          "label": "Dark Northern Wood Wall",
-          "textures": [
-            "wood_block_1/wood_northern"
           ]
         }
       ]
@@ -3275,7 +3240,7 @@
         },
         {
           "meta": 14,
-          "label": "Dark Cobble",
+          "label": "Dark Cobblestone",
           "textures": [
             "stone_block_1/stone_cobble_dark"
           ]
@@ -4130,7 +4095,7 @@
         },
         {
           "meta": 7,
-          "label": "Dark Cobble Slab",
+          "label": "Dark Cobblestone Slab",
           "textures": [
             "stone_block_1/stone_cobble_dark"
           ]
@@ -4418,7 +4383,7 @@
         },
         {
           "meta": 11,
-          "label": "Dark Cobble Fence",
+          "label": "Dark Cobblestone Fence",
           "textures": [
             "stone_block_1/stone_cobble_dark"
           ]
@@ -8182,7 +8147,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Dark Cobble Stairs"
+          "label": "Dark Cobblestone Stairs"
         }
       ]
     },
@@ -9407,6 +9372,20 @@
           "textures": [
             "stone_block_2/brick_stormlands_small"
           ]
+        },
+        {
+          "meta": 13,
+          "label": "Stormlands Cobblestone Wall",
+          "textures": [
+            "stone_block_2/stone_cobble_stormlands"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Basalt Cobblestone Wall",
+          "textures": [
+            "stone_block_1/stone_cobble_basalt"
+          ]
         }
       ]
     },
@@ -10592,6 +10571,63 @@
           "label": "Stormlands Brick Hopper",
           "textures": [
             "stone_block_2/brick_stormlands_small"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Stormlands Cobblestone Hopper",
+          "textures": [
+            "stone_block_2/stone_cobble_stormlands"
           ],
           "cuboids": [
             {
@@ -15652,80 +15688,80 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Eastern Islands",
+          "label": "Pebbles Wet Eastern Islands",
           "colorMult": "textures/colormap/easternisland",
           "textures": [
-            "pebble_block_0/pebble_eastern_islands"
+            "pebble_block_0/pebble_eastern_islands_wet"
           ]
         },
         {
           "meta": 1,
-          "label": "Pebbles Iron Islands",
+          "label": "Pebbles Wet Iron Islands",
           "textures": [
-            "pebble_block_0/pebble_iron_islands"
+            "pebble_block_0/pebble_iron_islands_wet"
           ]
         },
         {
           "meta": 2,
-          "label": "Pebbles Mountains of the Moon",
+          "label": "Pebbles Wet Mountains of the Moon",
           "textures": [
-            "pebble_block_0/pebble_vale"
+            "pebble_block_0/pebble_vale_wet"
           ]
         },
         {
           "meta": 3,
-          "label": "Pebbles The North",
+          "label": "Pebbles Wet The North",
           "textures": [
-            "pebble_block_0/pebble_north"
+            "pebble_block_0/pebble_north_wet"
           ]
         },
         {
           "meta": 4,
-          "label": "Pebbles Ocean Rocks",
+          "label": "Pebbles Wet Ocean Rocks",
           "textures": [
-            "pebble_block_0/pebble_ocean"
+            "pebble_block_0/pebble_ocean_wet"
           ]
         },
         {
           "meta": 5,
-          "label": "Pebbles Red Mountains",
+          "label": "Pebbles Wet Red Mountains",
           "textures": [
-            "pebble_block_0/pebble_red_mountains"
+            "pebble_block_0/pebble_red_mountains_wet"
           ]
         },
         {
           "meta": 6,
-          "label": "Pebbles River Rocks",
+          "label": "Pebbles Wet River Rocks",
           "textures": [
-            "pebble_block_0/pebble_river"
+            "pebble_block_0/pebble_river_wet"
           ]
         },
         {
           "meta": 7,
-          "label": "Pebbles Westerlands",
+          "label": "Pebbles Wet Westerlands",
           "textures": [
-            "pebble_block_0/pebble_westerlands"
+            "pebble_block_0/pebble_westerlands_wet"
           ]
         },
         {
           "meta": 8,
-          "label": "Pebbles Arbor Dorne",
+          "label": "Pebbles Wet Arbor Dorne",
           "textures": [
-            "pebble_block_0/pebble_dorne"
+            "pebble_block_0/pebble_dorne_wet"
           ]
         },
         {
           "meta": 9,
-          "label": "Pebbles Stormlands",
+          "label": "Pebbles Wet Stormlands",
           "textures": [
-            "pebble_block_0/pebble_stormlands"
+            "pebble_block_0/pebble_stormlands_wet"
           ]
         },
         {
           "meta": 10,
-          "label": "Pebbles Reach",
+          "label": "Pebbles Wet Reach",
           "textures": [
-            "pebble_block_0/pebble_reach"
+            "pebble_block_0/pebble_reach_wet"
           ]
         }
       ]
@@ -15742,9 +15778,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Eastern Islands Layer",
+          "label": "Pebbles Wet Eastern Islands Layer",
           "textures": [
-            "pebble_block_0/pebble_eastern_islands"
+            "pebble_block_0/pebble_eastern_islands_wet"
           ]
         }
       ]
@@ -15761,9 +15797,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Iron Islands Layer",
+          "label": "Pebbles Wet Iron Islands Layer",
           "textures": [
-            "pebble_block_0/pebble_iron_islands"
+            "pebble_block_0/pebble_iron_islands_wet"
           ]
         }
       ]
@@ -15780,9 +15816,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Mountains of the Moon Layer",
+          "label": "Pebbles Wet Mountains of the Moon Layer",
           "textures": [
-            "pebble_block_0/pebble_vale"
+            "pebble_block_0/pebble_vale_wet"
           ]
         }
       ]
@@ -15799,9 +15835,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles North Layer",
+          "label": "Pebbles Wet North Layer",
           "textures": [
-            "pebble_block_0/pebble_north"
+            "pebble_block_0/pebble_north_wet"
           ]
         }
       ]
@@ -15818,9 +15854,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Ocean Layer",
+          "label": "Pebbles Wet Ocean Layer",
           "textures": [
-            "pebble_block_0/pebble_ocean"
+            "pebble_block_0/pebble_ocean_wet"
           ]
         }
       ]
@@ -15837,9 +15873,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Red Mountains Layer",
+          "label": "Pebbles Wet Red Mountains Layer",
           "textures": [
-            "pebble_block_0/pebble_red_mountains"
+            "pebble_block_0/pebble_red_mountains_wet"
           ]
         }
       ]
@@ -15856,9 +15892,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles River Layer",
+          "label": "Pebbles Wet River Layer",
           "textures": [
-            "pebble_block_0/pebble_river"
+            "pebble_block_0/pebble_river_wet"
           ]
         }
       ]
@@ -15875,9 +15911,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Westerlands Layer",
+          "label": "Pebbles Wet Westerlands Layer",
           "textures": [
-            "pebble_block_0/pebble_westerlands"
+            "pebble_block_0/pebble_westerlands_wet"
           ]
         }
       ]
@@ -15894,9 +15930,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Arbor Dorne Layer",
+          "label": "Pebbles Wet Arbor Dorne Layer",
           "textures": [
-            "pebble_block_0/pebble_dorne"
+            "pebble_block_0/pebble_dorne_wet"
           ]
         }
       ]
@@ -15913,9 +15949,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Stormlands Layer",
+          "label": "Pebbles Wet Stormlands Layer",
           "textures": [
-            "pebble_block_0/pebble_stormlands"
+            "pebble_block_0/pebble_stormlands_wet"
           ]
         }
       ]
@@ -15932,9 +15968,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Pebbles Reach Layer",
+          "label": "Pebbles Wet Reach Layer",
           "textures": [
-            "pebble_block_0/pebble_reach"
+            "pebble_block_0/pebble_reach_wet"
           ]
         }
       ]
@@ -16009,6 +16045,20 @@
           "label": "Stormlands Brick Fence",
           "textures": [
             "stone_block_2/brick_stormlands_small"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Stormlands Cobblestone Fence",
+          "textures": [
+            "stone_block_2/stone_cobble_stormlands"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Basalt Cobblestone Fence",
+          "textures": [
+            "stone_block_1/stone_cobble_basalt"
           ]
         }
       ]
@@ -17205,6 +17255,634 @@
             "zMax": 1
           },
           "itemTextureIndex": 2
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_8",
+      "blockID": 2246,
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Eastern Islands",
+          "colorMult": "textures/colormap/easternisland",
+          "textures": [
+            "pebble_block_0/pebble_eastern_islands_dry"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Pebbles Dry Iron Islands",
+          "textures": [
+            "pebble_block_0/pebble_iron_islands_dry"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Pebbles Dry Mountains of the Moon",
+          "textures": [
+            "pebble_block_0/pebble_vale_dry"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Pebbles Dry The North",
+          "textures": [
+            "pebble_block_0/pebble_north_dry"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Pebbles Dry Ocean Rocks",
+          "textures": [
+            "pebble_block_0/pebble_ocean_dry"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Pebbles Dry Red Mountains",
+          "textures": [
+            "pebble_block_0/pebble_red_mountains_dry"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Pebbles Dry River Rocks",
+          "textures": [
+            "pebble_block_0/pebble_river_dry"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Pebbles Dry Westerlands",
+          "textures": [
+            "pebble_block_0/pebble_westerlands_dry"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Pebbles Dry Arbor Dorne",
+          "textures": [
+            "pebble_block_0/pebble_dorne_dry"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Pebbles Dry Stormlands",
+          "textures": [
+            "pebble_block_0/pebble_stormlands_dry"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Pebbles Dry Reach",
+          "textures": [
+            "pebble_block_0/pebble_reach_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_15",
+      "blockID": 2247,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Eastern Islands Layer",
+          "textures": [
+            "pebble_block_0/pebble_eastern_islands_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_16",
+      "blockID": 2248,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Iron Islands Layer",
+          "textures": [
+            "pebble_block_0/pebble_iron_islands_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_17",
+      "blockID": 2249,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Mountains of the Moon Layer",
+          "textures": [
+            "pebble_block_0/pebble_vale_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_18",
+      "blockID": 2250,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry North Layer",
+          "textures": [
+            "pebble_block_0/pebble_north_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_19",
+      "blockID": 2251,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Ocean Layer",
+          "textures": [
+            "pebble_block_0/pebble_ocean_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_20",
+      "blockID": 2252,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Red Mountains Layer",
+          "textures": [
+            "pebble_block_0/pebble_red_mountains_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_21",
+      "blockID": 2253,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry River Layer",
+          "textures": [
+            "pebble_block_0/pebble_river_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_22",
+      "blockID": 2254,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Westerlands Layer",
+          "textures": [
+            "pebble_block_0/pebble_westerlands_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_23",
+      "blockID": 2255,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Arbor Dorne Layer",
+          "textures": [
+            "pebble_block_0/pebble_dorne_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_24",
+      "blockID": 2256,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Stormlands Layer",
+          "textures": [
+            "pebble_block_0/pebble_stormlands_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_25",
+      "blockID": 2257,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "gravel",
+      "material": "rock",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pebbles Dry Reach Layer",
+          "textures": [
+            "pebble_block_0/pebble_reach_dry"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_26",
+      "blockID": 2258,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Wet Sand Layer",
+          "textures": [
+            "sand_block_0/sand_wet"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_27",
+      "blockID": 2259,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Sand Stones Layer",
+          "colorMult": "textures/colormap/sand",
+          "textures": [
+            "sand_block_0/sand_stones"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "sand_layer_28",
+      "blockID": 2260,
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "creativeTab": "WesterosBlocks",
+      "type": "cnt:8",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Wet Sand Stones Layer",
+          "textures": [
+            "sand_block_0/sand_wet_stones"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_slab_block_4",
+      "blockIDs": [
+        2261,
+        2262
+      ],
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Stormlands Cobblestone Slab",
+          "textures": [
+            "stone_block_2/stone_cobble_stormlands"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Basalt Cobblestone Slab",
+          "textures": [
+            "stone_block_1/stone_cobble_basalt"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_9",
+      "blockID": 2263,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_2",
+      "modelBlockMeta": 10,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Stormlands Cobblestone Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_9",
+      "blockID": 2264,
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Basalt Cobblestone",
+          "textures": [
+            "stone_block_1/stone_cobble_basalt"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "hopper_block_3",
+      "blockID": 2265,
+      "blockType": "cuboid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 4,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Basalt Cobblestone Hopper",
+          "textures": [
+            "stone_block_1/stone_cobble_basalt"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_3_stair_10",
+      "blockID": 2266,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_9",
+      "modelBlockMeta": 0,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Basalt Cobblestone Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "wood_vertical",
+      "blockID": 2267,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oak Vertical Planks",
+          "textures": [
+            "wood_block_1/wood_vertical_oak"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Spruce Vertical Planks",
+          "textures": [
+            "wood_block_1/wood_vertical_spruce"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Birch Vertical Planks",
+          "textures": [
+            "wood_block_1/wood_vertical_birch"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Jungle Vertical Planks",
+          "textures": [
+            "wood_block_1/wood_vertical_jungle"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Dark Northern Vertical Planks",
+          "textures": [
+            "wood_block_1/wood_vertical_northern"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "wood_wall_block_0",
+      "blockID": 2268,
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Thatch Light Wall",
+          "textures": [
+            "wood_block_1/thatch_light"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Thatch Dark Wall",
+          "textures": [
+            "wood_block_1/thatch_dark"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Oak Wall",
+          "textures": [
+            "wood_block_0/planks_oak"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Spruce Wall",
+          "textures": [
+            "wood_block_0/planks_spruce"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Birch Wall",
+          "textures": [
+            "wood_block_0/planks_birch"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Jungle Wall",
+          "textures": [
+            "wood_block_0/planks_jungle"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Dark Northern Wood Wall",
+          "textures": [
+            "wood_block_1/wood_northern"
+          ]
         }
       ]
     }

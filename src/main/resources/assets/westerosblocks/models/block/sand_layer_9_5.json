@@ -1,13 +1,13 @@
 {
   "parent": "block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains",
-    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains",
-    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains",
-    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains",
-    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains",
-    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains",
-    "particle": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains"
+    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains_wet",
+    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains_wet",
+    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains_wet",
+    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains_wet",
+    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains_wet",
+    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains_wet",
+    "particle": "westerosblocks:blocks/pebble_block_0/pebble_red_mountains_wet"
   },
   "elements": [
     {

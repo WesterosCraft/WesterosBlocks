@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:wood_vertical_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:wood_vertical_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:wood_vertical_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:wood_vertical_0"
+    },
+    "variant=4": {
+      "model": "westerosblocks:wood_vertical_4"
+    }
+  }
+}

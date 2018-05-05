@@ -1,13 +1,13 @@
 {
   "parent": "block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_stormlands",
-    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_stormlands",
-    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_stormlands",
-    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_stormlands",
-    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_stormlands",
-    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_stormlands",
-    "particle": "westerosblocks:blocks/pebble_block_0/pebble_stormlands"
+    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_stormlands_wet",
+    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_stormlands_wet",
+    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_stormlands_wet",
+    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_stormlands_wet",
+    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_stormlands_wet",
+    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_stormlands_wet",
+    "particle": "westerosblocks:blocks/pebble_block_0/pebble_stormlands_wet"
   },
   "elements": [
     {

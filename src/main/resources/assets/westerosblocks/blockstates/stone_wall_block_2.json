@@ -935,6 +935,150 @@
         "y": 270,
         "uvlock": true
       }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_post_13"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_side_13",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_side_13",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_side_13",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_side_13",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_post_14"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_side_14",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_side_14",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_side_14",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_2_side_14",
+        "y": 270,
+        "uvlock": true
+      }
     }
   ]
 }
