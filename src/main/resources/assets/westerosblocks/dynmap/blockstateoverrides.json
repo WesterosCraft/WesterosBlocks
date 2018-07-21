@@ -119,6 +119,14 @@
           ,
           "arrow_slits_1": [
               { "state": "variant=1", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant=11", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+              ,
+              { "state": "variant=12", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant=13", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+              ,
+              { "state": "variant=14", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
           ]
           ,
           "stone_block_7": [

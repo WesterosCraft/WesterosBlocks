@@ -12,6 +12,9 @@
     "variant=0": {
       "model": "westerosblocks:leaves_block_2_0"
     },
+    "variant=6": {
+      "model": "westerosblocks:leaves_block_2_6"
+    },
     "variant=5": {
       "model": "westerosblocks:leaves_block_2_5"
     },

@@ -132,9 +132,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Weirwood Face",
+          "label": "Weirwood Face 0",
           "textures": [
-            "log_block_0/weirwood_face",
+            "log_block_0/weirwood_face_0",
             "wood_block_0/bark_birch"
           ]
         },
@@ -726,7 +726,7 @@
         },
         {
           "meta": 13,
-          "label": "Reach Pink Light Stone Wall",
+          "label": "Reach Light Stone Wall",
           "textures": [
             "stone_block_2/brick_reach_light_pink"
           ]
@@ -740,7 +740,7 @@
         },
         {
           "meta": 15,
-          "label": "Reach Pink Brick Wall",
+          "label": "Reach Brick Wall",
           "textures": [
             "stone_block_2/brick_reach_pink"
           ]
@@ -1462,9 +1462,9 @@
           "meta": 3,
           "label": "Unlit Candle",
           "textures": [
-            "torch_block_0/redstone_torch_off",
+            "torch_block_0/candle_off",
             "transparent",
-            "torch_block_0/redstone_torch_off"
+            "torch_block_0/candle_off"
           ],
           "boundingBox": {
             "xMin": 0.45,
@@ -1904,7 +1904,7 @@
           "meta": 0,
           "label": "Candle",
           "textures": [
-            "torch_block_0/redstone_torch_on"
+            "torch_block_0/candle_on"
           ]
         }
       ]
@@ -1950,7 +1950,7 @@
         },
         {
           "meta": 3,
-          "label": "Grape Fruit Leaves",
+          "label": "Purple Grape Fruit Leaves",
           "textures": [
             "leaves_block_0/leaves_jungle_opaque",
             "leaves_block_0/leaves_jungle_opaque",
@@ -2160,6 +2160,16 @@
             "leaves_block_0/leaves_palm",
             "leaves_block_0/leaves_palm"
           ]
+        },
+        {
+          "meta": 6,
+          "label": "White Grape Fruit Leaves",
+          "textures": [
+            "leaves_block_0/leaves_jungle_opaque",
+            "leaves_block_0/leaves_jungle_opaque",
+            "leaves_block_0/leaves_jungle",
+            "leaves_block_0/leaves_jungle"
+          ]
         }
       ]
     },
@@ -2301,10 +2311,10 @@
         },
         {
           "meta": 14,
-          "label": "Grape Crate",
+          "label": "Purple Grape Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
-            "crate_block_0/crate_top_grape",
+            "crate_block_0/crate_top_grape_purple",
             "crate_block_0/crate_side_crossbar_crossed"
           ]
         },
@@ -3026,7 +3036,7 @@
         },
         {
           "meta": 14,
-          "label": "Reach Pink Light Stone Arrow Slit",
+          "label": "Reach Light Stone Arrow Slit",
           "textures": [
             "transparent",
             "transparent",
@@ -3471,9 +3481,9 @@
         },
         {
           "meta": 3,
-          "label": "Gray Wood",
+          "label": "Grey Wood",
           "textures": [
-            "wood_block_1/wood_gray"
+            "wood_block_1/wood_grey"
           ]
         },
         {
@@ -3644,7 +3654,7 @@
         },
         {
           "meta": 12,
-          "label": "Daub Brick Crosshatch",
+          "label": "Red Brick Wattle Crosshatch",
           "colorMult": "textures/colormap/brick",
           "textures": [
             "daub_wattle_block_0/daub_brick_crossed"
@@ -3652,7 +3662,7 @@
         },
         {
           "meta": 13,
-          "label": "Daub Brick Lefthatch",
+          "label": "Red Brick Wattle Lefthatch",
           "colorMult": "textures/colormap/brick",
           "textures": [
             "daub_wattle_block_0/daub_brick_left"
@@ -3660,7 +3670,7 @@
         },
         {
           "meta": 14,
-          "label": "Daub Brick Righthatch",
+          "label": "Red Brick Wattle Righthatch",
           "colorMult": "textures/colormap/brick",
           "textures": [
             "daub_wattle_block_0/daub_brick_right"
@@ -3668,7 +3678,7 @@
         },
         {
           "meta": 15,
-          "label": "Daub Brick Frame",
+          "label": "Red Brick Wattle Frame",
           "colorMult": "textures/colormap/brick",
           "textures": [
             "daub_wattle_block_0/daub_brick_open"
@@ -4245,6 +4255,13 @@
           "label": "Dorne Dusty Dirt Slab",
           "textures": [
             "ground_block_0/dirt_dusty"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Mud Slab",
+          "textures": [
+            "ground_block_0/mud"
           ]
         }
       ]
@@ -5980,7 +5997,7 @@
         },
         {
           "meta": 14,
-          "label": "Reach Pink Light Stone Hopper",
+          "label": "Reach Light Stone Hopper",
           "textures": [
             "stone_block_2/brick_reach_light_pink"
           ],
@@ -6755,21 +6772,21 @@
         },
         {
           "meta": 6,
-          "label": "Reach Pink Light Stone",
+          "label": "Reach Light Stone",
           "textures": [
             "stone_block_2/brick_reach_light_pink"
           ]
         },
         {
           "meta": 7,
-          "label": "Reach Pink Cobblestone",
+          "label": "Reach Cobblestone",
           "textures": [
             "stone_block_2/stone_cobble_reach_pink"
           ]
         },
         {
           "meta": 8,
-          "label": "Reach Pink Brick",
+          "label": "Reach Brick",
           "textures": [
             "stone_block_2/brick_reach_pink"
           ]
@@ -8570,7 +8587,7 @@
         },
         {
           "meta": 2,
-          "label": "Reach Pink Light Stone Slab",
+          "label": "Reach Light Stone Slab",
           "textures": [
             "stone_block_2/brick_reach_light_pink"
           ]
@@ -8693,7 +8710,7 @@
         },
         {
           "meta": 5,
-          "label": "Reach Pink Light Stone Fence",
+          "label": "Reach Light Stone Fence",
           "textures": [
             "stone_block_2/brick_reach_light_pink"
           ]
@@ -8880,7 +8897,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Reach Pink Light Stone Stairs"
+          "label": "Reach Light Stone Stairs"
         }
       ]
     },
@@ -8954,9 +8971,9 @@
         },
         {
           "meta": 7,
-          "label": "Gray Wool Slab",
+          "label": "Grey Wool Slab",
           "textures": [
-            "wool_colours/wool_colored_gray"
+            "wool_colours/wool_colored_grey"
           ]
         }
       ]
@@ -8982,9 +8999,9 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Light Gray Wool Slab",
+          "label": "Light Grey Wool Slab",
           "textures": [
-            "wool_colours/wool_colored_light_gray"
+            "wool_colours/wool_colored_light_grey"
           ]
         },
         {
@@ -9385,6 +9402,13 @@
           "label": "Basalt Cobblestone Wall",
           "textures": [
             "stone_block_1/stone_cobble_basalt"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Lannisport Light Brick Wall",
+          "textures": [
+            "stone_block_2/brick_lannisport"
           ]
         }
       ]
@@ -10333,7 +10357,7 @@
         },
         {
           "meta": 11,
-          "label": "Reach Pink Brick Hopper",
+          "label": "Reach Brick Hopper",
           "textures": [
             "stone_block_2/brick_reach_pink"
           ],
@@ -10804,30 +10828,30 @@
         },
         {
           "meta": 5,
-          "label": "Oldtown Brown Plaster",
+          "label": "Unused Brown Plaster",
           "textures": [
-            "stone_block_3/plaster_oldtown_brown"
+            "stone_block_3/plaster_unused_brown"
           ]
         },
         {
           "meta": 6,
-          "label": "Oldtown Purple Plaster",
+          "label": "Unused Purple Plaster",
           "textures": [
-            "stone_block_3/plaster_oldtown_purple"
+            "stone_block_3/plaster_unused_purple"
           ]
         },
         {
           "meta": 7,
-          "label": "Oldtown Brown Brick",
+          "label": "Unused Brown Brick",
           "textures": [
-            "stone_block_3/plaster_oldtown_brown_brick"
+            "stone_block_3/plaster_unused_brown_brick"
           ]
         },
         {
           "meta": 8,
-          "label": "Oldtown Purple Brick",
+          "label": "Unused Purple Brick",
           "textures": [
-            "stone_block_3/plaster_oldtown_purple_brick"
+            "stone_block_3/plaster_unused_purple_brick"
           ]
         },
         {
@@ -11314,7 +11338,7 @@
         },
         {
           "meta": 5,
-          "label": "Reach Pink Brick Arrow Slit",
+          "label": "Reach Brick Arrow Slit",
           "textures": [
             "transparent",
             "transparent",
@@ -11357,7 +11381,7 @@
         },
         {
           "meta": 6,
-          "label": "Reach Pink Light Stone Arrow Slit Ornate",
+          "label": "Reach Light Stone Arrow Slit Ornate",
           "textures": [
             "transparent",
             "transparent",
@@ -11483,6 +11507,268 @@
               "zMax": 1.0
             }
           ]
+        },
+        {
+          "meta": 9,
+          "label": "Lannisport Light Brick Arrow Slit",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_lannisport_arrow_slit"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Lannisport Light Brick Arrow Slit Ornate",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_lannisport_arrow_slit_ornate"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Small Stone Brick Arrow Slit Ornate",
+          "colorMult": "textures/colormap/smallstonebrick",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_small_stone_arrow_slit_ornate"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Light Grey Stone Arrow Slit Ornate",
+          "colorMult": "textures/colormap/lightgreystone",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/light_grey_stone_arrow_slit_ornate"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Small Stone Brick Arrow Slit Window",
+          "colorMult": "textures/colormap/smallstonebrick",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_small_stone_arrow_slit_window"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Light Grey Stone Arrow Slit Window",
+          "colorMult": "textures/colormap/lightgreystone",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/light_grey_stone_arrow_slit_window"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
         }
       ]
     },
@@ -11553,7 +11839,7 @@
         },
         {
           "meta": 6,
-          "label": "Reach Pink Brick Slab",
+          "label": "Reach Brick Slab",
           "textures": [
             "stone_block_2/brick_reach_pink"
           ]
@@ -11791,6 +12077,42 @@
             "crate_block_0/crate_side_crossbar_right",
             "crate_block_1/crate_sourleaf",
             "crate_block_0/crate_side_crossbar_crossed"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "White Grape Crate",
+          "textures": [
+            "crate_block_0/crate_side_crossbar_right",
+            "crate_block_0/crate_top_grape_white",
+            "crate_block_0/crate_side_crossbar_crossed"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Turnip Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_turnip",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Grain Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_grain",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Apple Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_apple",
+            "crate_block_1/basket_side"
           ]
         }
       ]
@@ -12543,6 +12865,60 @@
           "textures": [
             "crate_block_1/basket_bottom",
             "crate_block_1/basket_pomegranates",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Turnip Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_turnip",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Grain Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_grain",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Apple Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_apple",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Carrot Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_carrot",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Berry Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_berry",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Fish Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_fish",
             "random_slab_block_0/basket_side_slab"
           ]
         }
@@ -13494,6 +13870,50 @@
                 1,
                 1,
                 1
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Citadel Glass Candle",
+          "textures": [
+            "translucent_block_0/candle_glass_bottom",
+            "translucent_block_0/candle_glass_top",
+            "translucent_block_0/candle_glass_side",
+            "transparent"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.40625,
+              "xMax": 0.59375,
+              "yMin": 0,
+              "yMax": 0.875,
+              "zMin": 0.40625,
+              "zMax": 0.59375,
+              "sideTextures": [
+                0,
+                1,
+                2,
+                2,
+                2,
+                2
+              ]
+            },
+            {
+              "xMin": 0.46875,
+              "xMax": 0.53125,
+              "yMin": 0.875,
+              "yMax": 0.96875,
+              "zMin": 0.46875,
+              "zMax": 0.53125,
+              "sideTextures": [
+                3,
+                1,
+                2,
+                2,
+                2,
+                2
               ]
             }
           ]
@@ -16019,7 +16439,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Reach Pink Brick Stairs"
+          "label": "Reach Brick Stairs"
         }
       ]
     },
@@ -16035,7 +16455,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Reach Pink Brick Fence",
+          "label": "Reach Brick Fence",
           "textures": [
             "stone_block_2/brick_reach_pink"
           ]
@@ -16059,6 +16479,48 @@
           "label": "Basalt Cobblestone Fence",
           "textures": [
             "stone_block_1/stone_cobble_basalt"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Lannisport Light Brick Fence",
+          "textures": [
+            "stone_block_2/brick_lannisport"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Oldtown Brick Fence",
+          "textures": [
+            "stone_block_3/brick_oldtown"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Arbor Brick Fence",
+          "textures": [
+            "stone_block_3/brick_arbor"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Arbor Cobble Fence",
+          "textures": [
+            "stone_block_3/stone_cobble_arbor"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Starry Sept Marble Fence",
+          "textures": [
+            "stone_block_2/stone_marble_starry_sept"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Citadel Green Marble Fence",
+          "textures": [
+            "stone_block_2/stone_marble_citadel_green"
           ]
         }
       ]
@@ -17647,6 +18109,48 @@
           "textures": [
             "stone_block_1/stone_cobble_basalt"
           ]
+        },
+        {
+          "meta": 2,
+          "label": "Lannisport Light Brick Slab",
+          "textures": [
+            "stone_block_2/brick_lannisport"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Oldtown Brick Slab",
+          "textures": [
+            "stone_block_3/brick_oldtown"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Arbor Brick Slab",
+          "textures": [
+            "stone_block_3/brick_arbor"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Arbor Cobble Slab",
+          "textures": [
+            "stone_block_3/stone_cobble_arbor"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Starry Sept Marble Slab",
+          "textures": [
+            "stone_block_2/stone_marble_starry_sept"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Citadel Green Marble Slab",
+          "textures": [
+            "stone_block_2/stone_marble_citadel_green"
+          ]
         }
       ]
     },
@@ -17680,6 +18184,69 @@
           "textures": [
             "stone_block_1/stone_cobble_basalt"
           ]
+        },
+        {
+          "meta": 1,
+          "label": "Light Oldtown Brick",
+          "textures": [
+            "stone_block_3/brick_oldtown_light"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Oldtown Brick",
+          "textures": [
+            "stone_block_3/brick_oldtown"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Oldtown Cobble",
+          "textures": [
+            "stone_block_3/stone_cobble_oldtown"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Arbor Brick",
+          "textures": [
+            "stone_block_3/brick_arbor"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Arbor Brick Ornate",
+          "textures": [
+            "stone_block_3/brick_arbor_ornate"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Arbor Cobble",
+          "textures": [
+            "stone_block_3/stone_cobble_arbor"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Arbor Light Stone",
+          "textures": [
+            "stone_block_3/stone_light_arbor"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Starry Sept Marble",
+          "textures": [
+            "stone_block_2/stone_marble_starry_sept"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Citadel Green Marble",
+          "textures": [
+            "stone_block_2/stone_marble_citadel_green"
+          ]
         }
       ]
     },
@@ -17704,6 +18271,348 @@
           "label": "Basalt Cobblestone Hopper",
           "textures": [
             "stone_block_1/stone_cobble_basalt"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Lannisport Light Brick Hopper",
+          "textures": [
+            "stone_block_2/brick_lannisport"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Oldtown Brick Hopper",
+          "textures": [
+            "stone_block_3/brick_oldtown"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Arbor Brick Hopper",
+          "textures": [
+            "stone_block_3/brick_arbor"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Arbor Cobble Hopper",
+          "textures": [
+            "stone_block_3/stone_cobble_arbor"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Starry Sept Marble Hopper",
+          "textures": [
+            "stone_block_2/stone_marble_starry_sept"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Citadel Green Marble Hopper",
+          "textures": [
+            "stone_block_2/stone_marble_citadel_green"
           ],
           "cuboids": [
             {
@@ -17883,6 +18792,840 @@
           "textures": [
             "wood_block_1/wood_northern"
           ]
+        },
+        {
+          "meta": 7,
+          "label": "Reach Oak Wood Panelling Wall",
+          "textures": [
+            "wood_block_1/wood_panelling_oak"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Reach Spruce Wood Panelling Wall",
+          "textures": [
+            "wood_block_1/wood_panelling_spruce"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "log_block_6",
+      "blockID": 2269,
+      "blockType": "log",
+      "stepSound": "wood",
+      "material": "wood",
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Weirwood Face 1",
+          "textures": [
+            "log_block_0/weirwood_face_1",
+            "wood_block_0/bark_birch"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Weirwood Face 2",
+          "textures": [
+            "log_block_0/weirwood_face_2",
+            "wood_block_0/bark_birch"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Weirwood Face 3",
+          "textures": [
+            "log_block_0/weirwood_face_3",
+            "wood_block_0/bark_birch"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Weirwood Face 4",
+          "textures": [
+            "log_block_0/weirwood_face_4",
+            "wood_block_0/bark_birch"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "log_block_7",
+      "blockID": 2270,
+      "blockType": "log",
+      "stepSound": "wood",
+      "material": "wood",
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Weirwood Face 5",
+          "textures": [
+            "log_block_0/weirwood_face_5",
+            "wood_block_0/bark_birch"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Weirwood Face 6",
+          "textures": [
+            "log_block_0/weirwood_face_6",
+            "wood_block_0/bark_birch"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "crate_block_2",
+      "blockID": 2271,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Carrot Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_carrot",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Berry Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_berry",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Fish Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_fish",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Purple Grape Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_grape_purple",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "White Grape Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_grape_white",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Hop Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_hop",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Lavender Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_lavender",
+            "crate_block_1/basket_side"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Sourleaf Basket",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_sourleaf",
+            "crate_block_1/basket_side"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "random_slab_block_4",
+      "blockIDs": [
+        2272,
+        2273
+      ],
+      "blockType": "slab",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "shovel",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Purple Grape Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_grape_purple",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "White Grape Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_grape_white",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Hop Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_hop",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Lavender Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_lavender",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Sourleaf Basket Slab",
+          "textures": [
+            "crate_block_1/basket_bottom",
+            "crate_block_1/basket_sourleaf",
+            "random_slab_block_0/basket_side_slab"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_2_stair_0",
+      "blockID": 2274,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_2",
+      "modelBlockMeta": 2,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Lannisport Light Brick Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_9_stair_0",
+      "blockID": 2275,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_9",
+      "modelBlockMeta": 2,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oldtown Brick Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_9_stair_1",
+      "blockID": 2276,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_9",
+      "modelBlockMeta": 4,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Arbor Brick Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_9_stair_2",
+      "blockID": 2277,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_9",
+      "modelBlockMeta": 6,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oldtown Cobble Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_wall_block_3",
+      "blockID": 2278,
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oldtown Brick Wall",
+          "textures": [
+            "stone_block_3/brick_oldtown"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Arbor Brick Wall",
+          "textures": [
+            "stone_block_3/brick_arbor"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Arbor Cobble Wall",
+          "textures": [
+            "stone_block_3/stone_cobble_arbor"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Starry Sept Marble Wall",
+          "textures": [
+            "stone_block_2/stone_marble_starry_sept"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Citadel Green Marble Wall",
+          "textures": [
+            "stone_block_2/stone_marble_citadel_green"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "arrow_slits_2",
+      "blockID": 2279,
+      "blockType": "solid",
+      "creativeTab": "WesterosDeco",
+      "nonOpaque": true,
+      "alphaRender": false,
+      "hardness": 2,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "lightOpacity": 0,
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oldtown Brick Arrow Slit",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_oldtown_arrow_slit"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Oldtown Brick Arrow Slit Window",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_oldtown_arrow_slit_window"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Oldtown Brick Arrow Slit Ornate",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_oldtown_arrow_slit_ornate"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Arbor Brick Arrow Slit",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_arbor_arrow_slit"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Arbor Brick Arrow Slit Window",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_arbor_arrow_slit_window"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Arbor Brick Arrow Slit Ornate",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_arbor_arrow_slit_ornate"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_9_stair_3",
+      "blockID": 2280,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_9",
+      "modelBlockMeta": 8,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Starry Sept Marble Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_9_stair_4",
+      "blockID": 2281,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_9",
+      "modelBlockMeta": 9,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Citadel Green Marble Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_valyrian_stairs",
+      "blockID": 2282,
+      "blockType": "stair",
+      "modelBlockName": "49",
+      "modelBlockMeta": 0,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Valyrian Stone Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_slab_block_5",
+      "blockIDs": [
+        2283,
+        2284
+      ],
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Valyrian Stone Slab",
+          "textures": [
+            "stone_block_1/stone_valyrian"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "daub_wattle_block_1",
+      "blockID": 2285,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Reach Brick Wattle Crosshatch",
+          "textures": [
+            "daub_wattle_block_1/daub_reach_crossed"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Reach Brick Wattle Lefthatch",
+          "textures": [
+            "daub_wattle_block_1/daub_reach_left"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Reach Brick Wattle Righthatch",
+          "textures": [
+            "daub_wattle_block_1/daub_reach_right"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Reach Brick Wattle Frame",
+          "textures": [
+            "daub_wattle_block_1/daub_reach_open"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Oldtown Brick Wattle Crosshatch",
+          "textures": [
+            "daub_wattle_block_1/daub_oldtown_crossed"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Oldtown Brick Wattle Righthatch",
+          "textures": [
+            "daub_wattle_block_1/daub_oldtown_left"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Oldtown Brick Wattle Lefthatch",
+          "textures": [
+            "daub_wattle_block_1/daub_oldtown_right"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Oldtown Brick Wattle Frame",
+          "textures": [
+            "daub_wattle_block_1/daub_oldtown_open"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "trapdoor_block_2",
+      "blockID": 2286,
+      "blockType": "trapdoor",
+      "hardness": 2.0,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 5.0,
+      "creativeTab": "WesterosDeco",
+      "type": "locked:false",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oldtown Sewer Manhole",
+          "textures": [
+            "trapdoor_block_0/oldtown_manhole"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "cuboid_block_8",
+      "blockID": 2287,
+      "blockType": "cuboid-nsew",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Dreadfort Skeleton Sconce Left",
+          "textures": [
+            "cuboid_block_1/skeleton_hand_base",
+            "cuboid_block_1/skeleton_hand"
+          ],
+          "boundingBox": {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          }
+        },
+        {
+          "meta": 1,
+          "label": "Dreadfort Skeleton Sconce Right",
+          "textures": [
+            "cuboid_block_1/skeleton_hand_base",
+            "cuboid_block_1/skeleton_hand"
+          ],
+          "boundingBox": {
+            "xMin": 0,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          }
         }
       ]
     }

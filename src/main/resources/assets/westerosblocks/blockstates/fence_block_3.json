@@ -267,6 +267,408 @@
         "y": 270,
         "uvlock": true
       }
+    },
+    {
+      "when": {
+        "variant": "4"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_post_4"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "4",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_4",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "4",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_4",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "4",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_4",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "4",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_4",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "variant": "5"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_post_5"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "5",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_5",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "5",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_5",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "5",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_5",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "5",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_5",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "variant": "6"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_post_6"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "6",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_6",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "6",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_6",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "6",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_6",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "6",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_6",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "variant": "7"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_post_7"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "7",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_7",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "7",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_7",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "7",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_7",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "7",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_7",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "variant": "8"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_post_8"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "8",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_8",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "8",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_8",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "8",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_8",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "8",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_8",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "variant": "9"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_post_9"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "9",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_9",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "9",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_9",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "9",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_9",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "9",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_3_side_9",
+        "y": 270,
+        "uvlock": true
+      }
     }
   ]
 }

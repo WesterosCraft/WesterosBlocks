@@ -3,6 +3,9 @@
     "half=top,variant=5": {
       "model": "westerosblocks:random_slab_block_1_5_top"
     },
+    "half=top,variant=6": {
+      "model": "westerosblocks:random_slab_block_1_6_top"
+    },
     "half=top,variant=3": {
       "model": "westerosblocks:random_slab_block_1_3_top"
     },
@@ -29,6 +32,9 @@
     },
     "half=bottom,variant=5": {
       "model": "westerosblocks:random_slab_block_1_5_bottom"
+    },
+    "half=bottom,variant=6": {
+      "model": "westerosblocks:random_slab_block_1_6_bottom"
     },
     "half=bottom,variant=3": {
       "model": "westerosblocks:random_slab_block_1_3_bottom"

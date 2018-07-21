@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_block_3/stone_cobble_arbor",
+    "up": "westerosblocks:blocks/stone_block_3/stone_cobble_arbor",
+    "north": "westerosblocks:blocks/stone_block_3/stone_cobble_arbor",
+    "south": "westerosblocks:blocks/stone_block_3/stone_cobble_arbor",
+    "west": "westerosblocks:blocks/stone_block_3/stone_cobble_arbor",
+    "east": "westerosblocks:blocks/stone_block_3/stone_cobble_arbor",
+    "particle": "westerosblocks:blocks/stone_block_3/stone_cobble_arbor"
+  }
+}
