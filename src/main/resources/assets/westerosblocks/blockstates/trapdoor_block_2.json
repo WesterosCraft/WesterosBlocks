@@ -1,0 +1,58 @@
+{
+  "variants": {
+    "facing=south,half=bottom,open=false": {
+      "model": "westerosblocks:trapdoor_block_2_bottom"
+    },
+    "facing=west,half=bottom,open=false": {
+      "model": "westerosblocks:trapdoor_block_2_bottom"
+    },
+    "facing=east,half=top,open=false": {
+      "model": "westerosblocks:trapdoor_block_2_top"
+    },
+    "facing=south,half=top,open=true": {
+      "model": "westerosblocks:trapdoor_block_2_open",
+      "y": 180
+    },
+    "facing=north,half=top,open=false": {
+      "model": "westerosblocks:trapdoor_block_2_top"
+    },
+    "facing=south,half=bottom,open=true": {
+      "model": "westerosblocks:trapdoor_block_2_open",
+      "y": 180
+    },
+    "facing=south,half=top,open=false": {
+      "model": "westerosblocks:trapdoor_block_2_top"
+    },
+    "facing=north,half=bottom,open=true": {
+      "model": "westerosblocks:trapdoor_block_2_open"
+    },
+    "facing=east,half=top,open=true": {
+      "model": "westerosblocks:trapdoor_block_2_open",
+      "y": 90
+    },
+    "facing=west,half=top,open=true": {
+      "model": "westerosblocks:trapdoor_block_2_open",
+      "y": 270
+    },
+    "facing=north,half=bottom,open=false": {
+      "model": "westerosblocks:trapdoor_block_2_bottom"
+    },
+    "facing=east,half=bottom,open=false": {
+      "model": "westerosblocks:trapdoor_block_2_bottom"
+    },
+    "facing=west,half=bottom,open=true": {
+      "model": "westerosblocks:trapdoor_block_2_open",
+      "y": 270
+    },
+    "facing=north,half=top,open=true": {
+      "model": "westerosblocks:trapdoor_block_2_open"
+    },
+    "facing=east,half=bottom,open=true": {
+      "model": "westerosblocks:trapdoor_block_2_open",
+      "y": 90
+    },
+    "facing=west,half=top,open=false": {
+      "model": "westerosblocks:trapdoor_block_2_top"
+    }
+  }
+}

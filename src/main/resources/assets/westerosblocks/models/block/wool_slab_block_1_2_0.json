@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/wool_colours/wool_colored_light_gray",
-    "up": "westerosblocks:blocks/wool_colours/wool_colored_light_gray",
-    "north": "westerosblocks:blocks/wool_colours/wool_colored_light_gray",
-    "south": "westerosblocks:blocks/wool_colours/wool_colored_light_gray",
-    "west": "westerosblocks:blocks/wool_colours/wool_colored_light_gray",
-    "east": "westerosblocks:blocks/wool_colours/wool_colored_light_gray",
-    "particle": "westerosblocks:blocks/wool_colours/wool_colored_light_gray"
+    "down": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
+    "up": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
+    "north": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
+    "south": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
+    "west": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
+    "east": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
+    "particle": "westerosblocks:blocks/wool_colours/wool_colored_light_grey"
   }
 }
