@@ -56,7 +56,7 @@ configurations {
 }
 
 dependencies {
-    westerosblocks group: 'us.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}", ext: 'jar'
+    compile group: 'us.dynmap', name:'DynmapCoreAPI', version: "${config.Dynmap_version}"
 }
 
 processResources
