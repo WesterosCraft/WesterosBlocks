@@ -41,6 +41,7 @@ import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map.Entry;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,6 +49,8 @@ import org.apache.logging.log4j.Logger;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
+import com.westeroscraft.westerosblocks.asm.ClassTransformer;
+import com.westeroscraft.westerosblocks.asm.ClassTransformer.TransformState;
 import com.westeroscraft.westerosblocks.commands.PTimeCommand;
 import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
@@ -411,11 +414,27 @@ public class WesterosBlocks
     @EventHandler
     public void serverStarted(FMLServerStartedEvent event)
     {
+        if (blockDevMode) {
+            log.info("--- Transform Status --- ");
+            HashMap<String, ClassTransformer.TransformState> m = ClassTransformer.patchState;
+            for (Entry<String, TransformState> x : m.entrySet()) {
+                log.info("Transform " + x.getKey() + "=" + x.getValue().toString());
+            }
+            log.info("--- Transform Status Done --- ");
+        }
     }
 
     @EventHandler
     public void serverStopping(FMLServerStoppingEvent event)
     {
+        if (blockDevMode) {
+            log.info("--- Transform Status --- ");
+            HashMap<String, ClassTransformer.TransformState> m = ClassTransformer.patchState;
+            for (Entry<String, TransformState> x : m.entrySet()) {
+                log.info("Transform " + x.getKey() + "=" + x.getValue().toString());
+            }
+            log.info("--- Transform Status Done --- ");
+        }
     }
 
     @EventHandler

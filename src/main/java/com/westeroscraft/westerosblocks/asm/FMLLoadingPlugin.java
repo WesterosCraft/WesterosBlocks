@@ -6,7 +6,7 @@ import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.MCVersion;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
 
-@MCVersion(value = "1.11.2")
+@MCVersion(value = "1.12.2")
 @TransformerExclusions({ "com.westeroscraft.westerosblocks.asm" })
 public class FMLLoadingPlugin  implements IFMLLoadingPlugin {
     @Override
