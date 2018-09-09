@@ -35,6 +35,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 import com.westeroscraft.westerosblocks.network.WesterosBlocksMessageDest;
@@ -57,7 +58,7 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
             }
             new_variant = PropertyMeta.create("variant", def.getDefinedBaseMeta());
 
-            def.registerTileEntity(WCFurnaceTileEntity.class, "WCFurnaceTileEntity");
+            def.registerTileEntity(WCFurnaceTileEntity.class, WesterosBlocks.MOD_ID + ":WCFurnaceTileEntity");
 
             return new Block[] { new WCFurnaceBlock(def) };
         }

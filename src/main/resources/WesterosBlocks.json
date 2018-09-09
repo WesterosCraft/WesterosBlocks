@@ -19453,7 +19453,7 @@
       "blockName": "stone_valyrian_stairs",
       "blockID": 2282,
       "blockType": "stair",
-      "modelBlockName": "49",
+      "modelBlockName": "minecraft:obsidian",
       "modelBlockMeta": 0,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [

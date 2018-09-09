@@ -31,7 +31,7 @@ public class WCSoundBlock extends WCSolidBlock implements ITileEntityProvider {
             }
             WCSolidBlock.new_variant = PropertyMeta.create("variant", def.getDefinedBaseMeta());
 
-            def.registerTileEntity(WCTileEntitySound.class, "WCTileEntitySound");
+            def.registerTileEntity(WCTileEntitySound.class, WesterosBlocks.MOD_ID + ":WCTileEntitySound");
             
             return new Block[] { new WCSoundBlock(def) };
         }
