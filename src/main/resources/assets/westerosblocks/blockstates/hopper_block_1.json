@@ -12,6 +12,9 @@
     "variant=0": {
       "model": "westerosblocks:hopper_block_1_0"
     },
+    "variant=6": {
+      "model": "westerosblocks:hopper_block_1_6"
+    },
     "variant=5": {
       "model": "westerosblocks:hopper_block_1_5"
     },

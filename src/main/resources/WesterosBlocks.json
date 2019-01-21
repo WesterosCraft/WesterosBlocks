@@ -2664,7 +2664,7 @@
         },
         {
           "meta": 3,
-          "label": "Stone Brick Window",
+          "label": "Stone Brick Arrow Slit Window",
           "colorMult": "textures/colormap/stonebrick",
           "textures": [
             "transparent",
@@ -2950,7 +2950,7 @@
         },
         {
           "meta": 12,
-          "label": "Stone Slab Arrow Slit",
+          "label": "Stone Slab Arrow Slit Window",
           "textures": [
             "transparent",
             "transparent",
@@ -5369,8 +5369,9 @@
         {
           "meta": 3,
           "label": "Cobblestone Hopper",
+          "colorMult": "textures/colormap/cobblestone",
           "textures": [
-            "stone_block_1/stone_cobble"
+            "stone_block_1/stone_cobble_unshaded"
           ],
           "cuboids": [
             {
@@ -5426,8 +5427,9 @@
         {
           "meta": 4,
           "label": "Mossy Cobblestone Hopper",
+          "colorMult": "textures/colormap/cobblestone",
           "textures": [
-            "stone_block_1/stone_cobble_mossy"
+            "stone_block_1/stone_cobble_mossy_unshaded"
           ],
           "cuboids": [
             {
@@ -6417,6 +6419,63 @@
           "label": "Gold Brick Tip",
           "textures": [
             "metal_block_0/brick_metal_normal_gold"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Lannisport Slate Tip",
+          "textures": [
+            "stone_slate_0/slate_lannisport"
           ],
           "cuboids": [
             {
@@ -10984,6 +11043,13 @@
           "textures": [
             "utility_block_0/wip"
           ]
+        },
+        {
+          "meta": 9,
+          "label": "'Industry' Utility Block",
+          "textures": [
+            "utility_block_0/industry"
+          ]
         }
       ]
     },
@@ -11338,7 +11404,7 @@
         },
         {
           "meta": 5,
-          "label": "Reach Brick Arrow Slit",
+          "label": "Reach Brick Arrow Slit Window",
           "textures": [
             "transparent",
             "transparent",
@@ -11734,6 +11800,49 @@
             "transparent",
             "transparent",
             "arrow_slits_1/light_grey_stone_arrow_slit_window"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Lannisport Light Brick Arrow Slit Window",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_1/brick_lannisport_arrow_slit_window"
           ],
           "collisionBoxes": [
             {
@@ -16199,6 +16308,7 @@
         {
           "meta": 0,
           "label": "Pebbles Wet Eastern Islands Layer",
+          "colorMult": "textures/colormap/easternisland",
           "textures": [
             "pebble_block_0/pebble_eastern_islands_wet"
           ]
@@ -16521,6 +16631,13 @@
           "label": "Citadel Green Marble Fence",
           "textures": [
             "stone_block_2/stone_marble_citadel_green"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Oldtown Cobble Fence",
+          "textures": [
+            "stone_block_3/stone_cobble_oldtown"
           ]
         }
       ]
@@ -17823,6 +17940,7 @@
         {
           "meta": 0,
           "label": "Pebbles Dry Eastern Islands Layer",
+          "colorMult": "textures/colormap/easternisland",
           "textures": [
             "pebble_block_0/pebble_eastern_islands_dry"
           ]
@@ -18664,6 +18782,63 @@
               ]
             }
           ]
+        },
+        {
+          "meta": 7,
+          "label": "Oldtown Cobble Hopper",
+          "textures": [
+            "stone_block_3/stone_cobble_oldtown"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
         }
       ]
     },
@@ -18806,6 +18981,20 @@
           "textures": [
             "wood_block_1/wood_panelling_spruce"
           ]
+        },
+        {
+          "meta": 9,
+          "label": "Mance's Camp Common Tent Wall",
+          "textures": [
+            "fur_block_0/leather_mance_common_outside_2"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Mance's Camp Mance's Tent Wall",
+          "textures": [
+            "fur_block_0/leather_mance_main_outside"
+          ]
         }
       ]
     },
@@ -18884,6 +19073,22 @@
           "label": "Weirwood Face 6",
           "textures": [
             "log_block_0/weirwood_face_6",
+            "wood_block_0/bark_birch"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Weirwood Face 7",
+          "textures": [
+            "log_block_0/weirwood_face_7",
+            "wood_block_0/bark_birch"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Weirwood Face 8",
+          "textures": [
+            "log_block_0/weirwood_face_8",
             "wood_block_0/bark_birch"
           ]
         }
@@ -19036,6 +19241,20 @@
             "crate_block_1/basket_sourleaf",
             "random_slab_block_0/basket_side_slab"
           ]
+        },
+        {
+          "meta": 5,
+          "label": "Mance's Camp Common Tent Slab",
+          "textures": [
+            "fur_block_0/leather_mance_common_outside_2"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Mance's Camp Mance's Tent Slab",
+          "textures": [
+            "fur_block_0/leather_mance_main_outside"
+          ]
         }
       ]
     },
@@ -19091,7 +19310,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Oldtown Cobble Stairs"
+          "label": "Arbor Cobble Stairs"
         }
       ]
     },
@@ -19144,6 +19363,13 @@
           "label": "Citadel Green Marble Wall",
           "textures": [
             "stone_block_2/stone_marble_citadel_green"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Oldtown Cobble Wall",
+          "textures": [
+            "stone_block_3/stone_cobble_oldtown"
           ]
         }
       ]
@@ -19488,6 +19714,13 @@
           "textures": [
             "stone_block_1/stone_valyrian"
           ]
+        },
+        {
+          "meta": 1,
+          "label": "Oldtown Cobble Slab",
+          "textures": [
+            "stone_block_3/stone_cobble_oldtown"
+          ]
         }
       ]
     },
@@ -19626,6 +19859,191 @@
             "zMin": 0,
             "zMax": 1
           }
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_9_stair_5",
+      "blockID": 2288,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_9",
+      "modelBlockMeta": 3,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oldtown Cobble Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "carpet_block_0",
+      "blockID": 2289,
+      "blockType": "cuboid",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oak Carpet",
+          "textures": [
+            "wood_block_0/planks_oak"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0,
+              "yMax": 0.0625,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Spruce Carpet",
+          "textures": [
+            "wood_block_0/planks_spruce"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0,
+              "yMax": 0.0625,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Birch Carpet",
+          "textures": [
+            "wood_block_0/planks_birch"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0,
+              "yMax": 0.0625,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Jungle Carpet",
+          "textures": [
+            "wood_block_0/planks_jungle"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0,
+              "yMax": 0.0625,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Dark Northern Wood Carpet",
+          "textures": [
+            "wood_block_1/wood_northern"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0,
+              "yMax": 0.0625,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "cuboid_block_7_stairs_0",
+      "blockID": 2290,
+      "blockType": "stair",
+      "modelBlockName": "wood_colours",
+      "modelBlockMeta": 10,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Mance's Camp Common Tent Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "cuboid_block_7_stairs_1",
+      "blockID": 2291,
+      "blockType": "stair",
+      "modelBlockName": "wood_colours",
+      "modelBlockMeta": 9,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Mance's Camp Mance's Tent Stairs"
         }
       ]
     }

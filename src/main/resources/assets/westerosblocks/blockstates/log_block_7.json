@@ -3,14 +3,31 @@
     "axis=y,variant=0": {
       "model": "westerosblocks:log_block_7_0"
     },
+    "axis=none,variant=2": {
+      "model": "westerosblocks:log_block_7_bark_2"
+    },
+    "axis=none,variant=3": {
+      "model": "westerosblocks:log_block_7_bark_3"
+    },
     "axis=none,variant=0": {
       "model": "westerosblocks:log_block_7_bark_0"
+    },
+    "axis=y,variant=2": {
+      "model": "westerosblocks:log_block_7_2"
+    },
+    "axis=z,variant=2": {
+      "model": "westerosblocks:log_block_7_2",
+      "x": 90
     },
     "axis=y,variant=1": {
       "model": "westerosblocks:log_block_7_1"
     },
     "axis=none,variant=1": {
       "model": "westerosblocks:log_block_7_bark_1"
+    },
+    "axis=z,variant=3": {
+      "model": "westerosblocks:log_block_7_3",
+      "x": 90
     },
     "axis=z,variant=0": {
       "model": "westerosblocks:log_block_7_0",
@@ -20,6 +37,9 @@
       "model": "westerosblocks:log_block_7_1",
       "x": 90
     },
+    "axis=y,variant=3": {
+      "model": "westerosblocks:log_block_7_3"
+    },
     "axis=x,variant=1": {
       "model": "westerosblocks:log_block_7_1",
       "x": 90,
@@ -27,6 +47,16 @@
     },
     "axis=x,variant=0": {
       "model": "westerosblocks:log_block_7_0",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,variant=3": {
+      "model": "westerosblocks:log_block_7_3",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,variant=2": {
+      "model": "westerosblocks:log_block_7_2",
       "x": 90,
       "y": 90
     }
