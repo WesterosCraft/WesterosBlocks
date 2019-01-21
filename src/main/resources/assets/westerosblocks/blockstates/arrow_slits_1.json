@@ -30,6 +30,9 @@
     "variant=9": {
       "model": "westerosblocks:arrow_slits_1_9"
     },
+    "variant=15": {
+      "model": "westerosblocks:arrow_slits_1_15"
+    },
     "variant=8": {
       "model": "westerosblocks:arrow_slits_1_8"
     },

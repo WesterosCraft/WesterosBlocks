@@ -359,6 +359,78 @@
         "y": 270,
         "uvlock": true
       }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "5",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_3_post_5"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "5",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_3_side_5",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "5",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_3_side_5",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "5",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_3_side_5",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "5",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:stone_wall_block_3_side_5",
+        "y": 270,
+        "uvlock": true
+      }
     }
   ]
 }

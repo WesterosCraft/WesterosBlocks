@@ -24,6 +24,9 @@
     "variant=4": {
       "model": "westerosblocks:utility_block_0_4"
     },
+    "variant=9": {
+      "model": "westerosblocks:utility_block_0_9"
+    },
     "variant=8": {
       "model": "westerosblocks:utility_block_0_8"
     }

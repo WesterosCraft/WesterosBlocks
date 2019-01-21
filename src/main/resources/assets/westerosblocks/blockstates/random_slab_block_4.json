@@ -1,5 +1,11 @@
 {
   "variants": {
+    "half=top,variant=5": {
+      "model": "westerosblocks:random_slab_block_4_5_top"
+    },
+    "half=top,variant=6": {
+      "model": "westerosblocks:random_slab_block_4_6_top"
+    },
     "half=top,variant=3": {
       "model": "westerosblocks:random_slab_block_4_3_top"
     },
@@ -23,6 +29,12 @@
     },
     "half=bottom,variant=0": {
       "model": "westerosblocks:random_slab_block_4_0_bottom"
+    },
+    "half=bottom,variant=5": {
+      "model": "westerosblocks:random_slab_block_4_5_bottom"
+    },
+    "half=bottom,variant=6": {
+      "model": "westerosblocks:random_slab_block_4_6_bottom"
     },
     "half=bottom,variant=3": {
       "model": "westerosblocks:random_slab_block_4_3_bottom"
