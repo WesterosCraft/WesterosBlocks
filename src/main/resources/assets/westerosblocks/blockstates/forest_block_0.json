@@ -12,6 +12,12 @@
     "variant=0": {
       "model": "westerosblocks:forest_block_0_0"
     },
+    "variant=7": {
+      "model": "westerosblocks:forest_block_0_7"
+    },
+    "variant=6": {
+      "model": "westerosblocks:forest_block_0_6"
+    },
     "variant=5": {
       "model": "westerosblocks:forest_block_0_5"
     },

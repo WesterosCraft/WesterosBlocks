@@ -1,0 +1,8 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/ground_block_0/peat_top",
+    "top": "westerosblocks:blocks/ground_block_0/peat_top",
+    "side": "westerosblocks:blocks/ground_block_0/peat_side"
+  }
+}

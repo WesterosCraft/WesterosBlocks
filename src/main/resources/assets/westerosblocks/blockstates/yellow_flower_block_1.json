@@ -33,6 +33,9 @@
     "variant=8": {
       "model": "westerosblocks:yellow_flower_block_1_8"
     },
+    "variant=13": {
+      "model": "westerosblocks:yellow_flower_block_1_13"
+    },
     "variant=11": {
       "model": "westerosblocks:yellow_flower_block_1_11"
     },

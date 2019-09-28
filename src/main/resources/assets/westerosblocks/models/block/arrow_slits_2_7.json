@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/transparent",
+    "up": "westerosblocks:blocks/transparent",
+    "north": "westerosblocks:blocks/arrow_slits_1/brick_dun_arrow_slit_ornate",
+    "south": "westerosblocks:blocks/arrow_slits_1/brick_dun_arrow_slit_ornate",
+    "west": "westerosblocks:blocks/arrow_slits_1/brick_dun_arrow_slit_ornate",
+    "east": "westerosblocks:blocks/arrow_slits_1/brick_dun_arrow_slit_ornate",
+    "particle": "westerosblocks:blocks/arrow_slits_1/brick_dun_arrow_slit_ornate"
+  }
+}

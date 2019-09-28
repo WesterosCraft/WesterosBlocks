@@ -6,6 +6,9 @@
     "variant=2": {
       "model": "westerosblocks:hopper_block_3_2"
     },
+    "variant=10": {
+      "model": "westerosblocks:hopper_block_3_10"
+    },
     "variant=1": {
       "model": "westerosblocks:hopper_block_3_1"
     },
@@ -23,6 +26,12 @@
     },
     "variant=4": {
       "model": "westerosblocks:hopper_block_3_4"
+    },
+    "variant=9": {
+      "model": "westerosblocks:hopper_block_3_9"
+    },
+    "variant=8": {
+      "model": "westerosblocks:hopper_block_3_8"
     }
   }
 }
