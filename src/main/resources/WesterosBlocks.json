@@ -6982,7 +6982,7 @@
       "blockName": "stone_slab_stair_0",
       "blockID": 2075,
       "blockType": "stair",
-      "modelBlockName": "43",
+      "modelBlockName": "minecraft:double_stone_slab",
       "modelBlockMeta": 0,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
@@ -8154,7 +8154,7 @@
       "blockName": "metal_block_0_stair_5",
       "blockID": 2110,
       "blockType": "stair",
-      "modelBlockName": "22",
+      "modelBlockName": "minecraft:lapis_block",
       "modelBlockMeta": 0,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
@@ -8168,7 +8168,7 @@
       "blockName": "metal_block_0_stair_6",
       "blockID": 2111,
       "blockType": "stair",
-      "modelBlockName": "42",
+      "modelBlockName": "minecraft:iron_block",
       "modelBlockMeta": 0,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
@@ -8182,7 +8182,7 @@
       "blockName": "metal_block_0_stair_7",
       "blockID": 2112,
       "blockType": "stair",
-      "modelBlockName": "133",
+      "modelBlockName": "minecraft:emerald_block",
       "modelBlockMeta": 0,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
@@ -8196,7 +8196,7 @@
       "blockName": "snow_stairs",
       "blockID": 2113,
       "blockType": "stair",
-      "modelBlockName": "80",
+      "modelBlockName": "minecraft:snow",
       "modelBlockMeta": 0,
       "creativeTab": "WesterosDeco",
       "subBlocks": [
@@ -8266,7 +8266,7 @@
       "blockName": "bedrock_stairs",
       "blockID": 2117,
       "blockType": "stair",
-      "modelBlockName": "7",
+      "modelBlockName": "minecraft:bedrock",
       "modelBlockMeta": 0,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
@@ -12036,7 +12036,7 @@
       "blockName": "stone_block_4_stair_1",
       "blockID": 2165,
       "blockType": "stair",
-      "modelBlockName": "24",
+      "modelBlockName": "minecraft:sandstone",
       "modelBlockMeta": 2,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
