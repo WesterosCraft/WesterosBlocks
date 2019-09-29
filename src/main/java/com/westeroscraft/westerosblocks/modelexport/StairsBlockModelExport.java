@@ -139,28 +139,31 @@ public class StairsBlockModelExport extends ModelExport {
         }
         else {  // Else, assume vanilla block: hack it for ones we use
             switch (def.modelBlockName) {
-                case "7": // "Bedrock Stairs"
+                case "minecraft:bedrock":
                     downtxt = uptxt = sidetxt = "blocks/bedrock";
                     break;
-                case "22": // "Bronze Stairs"
+                case "minecraft:lapis_block":
                     downtxt = uptxt = sidetxt = "blocks/lapis_block";
                     break;
-                case "24": // "Red Sandstone Stairs"
+                case "minecraft:sandstone":
                     downtxt = uptxt = "blocks/sandstone_top";
                     sidetxt = "blocks/sandstone_smooth";
                     break;
-                case "42": // "Iron Stairs"
+                case "minecraft:iron_block":
                     downtxt = uptxt = sidetxt = "blocks/iron_block";
                     break;
-                case "43": // "Stone Slab Stairs"
+                case "minecraft:double_stone_slab":
                     downtxt = uptxt = "blocks/stone_slab_top";
                     sidetxt = "blocks/stone_slab_side";
                     break;
-                case "80": // "Snow Stairs"
+                case "minecraft:snow":
                     downtxt = uptxt = sidetxt = "blocks/snow";
                     break;
-                case "133": // "Steel Stairs"
+                case "minecraft:emerald_block":
                     downtxt = uptxt = sidetxt = "blocks/emerald_block";
+                    break;
+                case "minecraft:obsidian":
+                    downtxt = uptxt = sidetxt = "blocks/obsidian";
                     break;
                 default:
                     throw new IOException(String.format("modelBlockName '%s:%d' not found for block '%s' - no vanilla", def.modelBlockName, def.modelBlockMeta, def.blockName));
