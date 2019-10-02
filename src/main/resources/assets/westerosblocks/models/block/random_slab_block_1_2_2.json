@@ -8,5 +8,6 @@
     "west": "westerosblocks:blocks/ground_block_0/snow",
     "east": "westerosblocks:blocks/ground_block_0/snow",
     "particle": "westerosblocks:blocks/ground_block_0/snow"
-  }
+  },
+  "ambientOcclusion": false
 }

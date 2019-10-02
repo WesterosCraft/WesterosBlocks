@@ -27,6 +27,7 @@ public class SlabBlockModelExport extends ModelExport {
     public static class ModelObjectCube {
         public String parent = "block/cube";    // Use 'cube' model for multiple textures
         public Texture textures = new Texture();
+        public Boolean ambientOcclusion;
     }
     public static class Texture {
         public String down, up, north, south, west, east, particle;
@@ -34,10 +35,12 @@ public class SlabBlockModelExport extends ModelExport {
     public static class ModelObjectHalfLower {
         public String parent = "block/half_slab";    // Use 'half_slab' model for multiple textures
         public TextureSlab textures = new TextureSlab();
+        public Boolean ambientOcclusion;
     }
     public static class ModelObjectHalfUpper {
         public String parent = "block/upper_slab";    // Use 'upper_slab' model for multiple textures
         public TextureSlab textures = new TextureSlab();
+        public Boolean ambientOcclusion;
     }
     public static class TextureSlab {
         public String bottom, top, side;
@@ -94,6 +97,7 @@ public class SlabBlockModelExport extends ModelExport {
             mod.textures.west = getTextureID(sb.getTextureByIndex(4));
             mod.textures.east = getTextureID(sb.getTextureByIndex(5));
             mod.textures.particle = getTextureID(sb.getTextureByIndex(3));
+            mod.ambientOcclusion = sb.ambientOcclusion;
             if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube";
             this.writeBlockModelFile(def.getBlockName(1) + "_" + sb.meta, mod);
             // Lower half block model
@@ -101,6 +105,7 @@ public class SlabBlockModelExport extends ModelExport {
             modl.textures.bottom = getTextureID(sb.getTextureByIndex(0));
             modl.textures.top = getTextureID(sb.getTextureByIndex(1));
             modl.textures.side = getTextureID(sb.getTextureByIndex(2));
+            modl.ambientOcclusion = sb.ambientOcclusion;
             if (isTinted) modl.parent = WesterosBlocks.MOD_ID + ":block/tinted/half_slab";
             this.writeBlockModelFile(def.getBlockName(0) + "_" + sb.meta + "_bottom", modl);
             // Upper half block model
@@ -108,6 +113,7 @@ public class SlabBlockModelExport extends ModelExport {
             modu.textures.bottom = getTextureID(sb.getTextureByIndex(0));
             modu.textures.top = getTextureID(sb.getTextureByIndex(1));
             modu.textures.side = getTextureID(sb.getTextureByIndex(2));
+            modu.ambientOcclusion = sb.ambientOcclusion;
             if (isTinted) modu.parent = WesterosBlocks.MOD_ID + ":block/tinted/upper_slab";
             this.writeBlockModelFile(def.getBlockName(0) + "_" + sb.meta + "_top", modu);
             // Build simple item model that refers to lower block model

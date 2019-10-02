@@ -47,14 +47,17 @@ public class StairsBlockModelExport extends ModelExport {
     public static class ModelObjectStair {
         public String parent = "block/stairs";    // Use 'stairs' model
         public Texture textures = new Texture();
+        public Boolean ambientOcclusion;
     }
     public static class ModelObjectInnerStair {
         public String parent = "block/inner_stairs";    // Use 'inner_stairs' model
         public Texture textures = new Texture();
+        public Boolean ambientOcclusion;
     }
     public static class ModelObjectOuterStair {
         public String parent = "block/outer_stairs";    // Use 'outer_stairs' model
         public Texture textures = new Texture();
+        public Boolean ambientOcclusion;
     }
     public static class Texture {
         public String bottom, top, side;
@@ -127,6 +130,7 @@ public class StairsBlockModelExport extends ModelExport {
         String downtxt = null;
         String uptxt = null;
         String sidetxt = null;
+        Boolean ambientOcclusion = def.subBlocks.get(0).ambientOcclusion;
         if (bblk instanceof WesterosBlockLifecycle) {
             WesterosBlockDef bbdef = ((WesterosBlockLifecycle) bblk).getWBDefinition();
             if (bbdef == null) {
@@ -174,6 +178,7 @@ public class StairsBlockModelExport extends ModelExport {
         base.textures.bottom = downtxt;
         base.textures.top = uptxt;
         base.textures.side = sidetxt;
+        base.ambientOcclusion = ambientOcclusion;
         if (isTinted) base.parent = WesterosBlocks.MOD_ID + ":block/tinted/stairs";
         this.writeBlockModelFile(def.blockName, base);
         // Outer model
@@ -181,6 +186,7 @@ public class StairsBlockModelExport extends ModelExport {
         outer.textures.bottom = downtxt;
         outer.textures.top = uptxt;
         outer.textures.side = sidetxt;
+        outer.ambientOcclusion = ambientOcclusion;
         if (isTinted) outer.parent = WesterosBlocks.MOD_ID + ":block/tinted/outer_stairs";
         this.writeBlockModelFile(def.blockName + "_outer", outer);
         // Inner model
@@ -188,6 +194,7 @@ public class StairsBlockModelExport extends ModelExport {
         inner.textures.bottom = downtxt;
         inner.textures.top = uptxt;
         inner.textures.side = sidetxt;
+        inner.ambientOcclusion = ambientOcclusion;
         if (isTinted) inner.parent = WesterosBlocks.MOD_ID + ":block/tinted/inner_stairs";
         this.writeBlockModelFile(def.blockName + "_inner", inner);
         // Build simple item model that refers to base block model

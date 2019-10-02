@@ -4,5 +4,6 @@
     "bottom": "blocks/snow",
     "top": "blocks/snow",
     "side": "blocks/snow"
-  }
+  },
+  "ambientOcclusion": false
 }

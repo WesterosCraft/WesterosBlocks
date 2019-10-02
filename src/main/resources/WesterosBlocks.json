@@ -4265,6 +4265,7 @@
         {
           "meta": 2,
           "label": "Snow Slab",
+          "ambientOcclusion": false,
           "textures": [
             "ground_block_0/snow"
           ]
@@ -4272,6 +4273,7 @@
         {
           "meta": 3,
           "label": "Muddy Snow Slab",
+          "ambientOcclusion": false,
           "textures": [
             "ground_block_0/snow_muddy"
           ]
@@ -8202,6 +8204,7 @@
       "subBlocks": [
         {
           "meta": 0,
+          "ambientOcclusion": false,
           "label": "Snow Stairs"
         }
       ]
