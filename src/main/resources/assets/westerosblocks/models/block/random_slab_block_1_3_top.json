@@ -5,5 +5,5 @@
     "top": "westerosblocks:blocks/ground_block_0/snow_muddy",
     "side": "westerosblocks:blocks/ground_block_0/snow_muddy"
   },
-  "ambientOcclusion": false
+  "ambientocclusion": false
 }

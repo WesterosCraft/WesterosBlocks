@@ -5,5 +5,5 @@
     "top": "blocks/snow",
     "side": "blocks/snow"
   },
-  "ambientOcclusion": false
+  "ambientocclusion": false
 }
