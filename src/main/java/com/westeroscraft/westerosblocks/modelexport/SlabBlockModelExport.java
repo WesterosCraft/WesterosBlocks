@@ -11,6 +11,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
+import com.westeroscraft.westerosblocks.modelexport.StairsBlockModelExport.Display;
 import com.westeroscraft.westerosblocks.modelexport.StairsBlockModelExport.Element;
 import com.westeroscraft.westerosblocks.modelexport.StairsBlockModelExport.Face;
 import com.westeroscraft.westerosblocks.modelexport.StairsBlockModelExport.Rotation;
@@ -28,10 +29,46 @@ public class SlabBlockModelExport extends ModelExport {
     public static class Variant {
         public String model;
     }
+    private static Map<String, Display> getBlockDisplay() {
+    	Display d;
+    	Map<String, Display> display = new HashMap<String, Display>();
+		// Add display from block/block
+    	d = new Display();
+    	d.rotation = new int[] { 30, 225, 0 };
+    	d.translation = new double[] { 0, 0, 0 };
+    	d.scale = new double[] { 0.625, 0.625, 0.625 };
+    	display.put("gui", d);
+    	d = new Display();
+    	d.rotation = new int[] { 0, 0, 0 };
+    	d.translation = new double[] { 0, 3, 0 };
+    	d.scale = new double[] { 0.25, 0.25, 0.25 };
+		display.put("ground", d);
+    	d = new Display();
+    	d.rotation = new int[] { 0, 0, 0 };
+    	d.translation = new double[] { 0, 0, 0 };
+    	d.scale = new double[] { 0.5, 0.5, 0.5 };
+		display.put("fixed", d);
+    	d = new Display();
+    	d.rotation = new int[] { 75, 45, 0 };
+    	d.translation = new double[] {  0, 2.5, 0 };
+    	d.scale = new double[] { 0.375, 0.375, 0.375 };
+		display.put("thirdperson_righthand", d);
+    	d = new Display();
+    	d.rotation = new int[] { 0, 45, 0 };
+    	d.translation = new double[] { 0, 0, 0 };
+    	d.scale = new double[] { 0.40, 0.40, 0.40 };
+		display.put("firstperson_righthand", d);
+    	d = new Display();
+    	d.rotation = new int[] { 0, 225, 0 };
+    	d.translation = new double[] { 0, 0, 0 };
+    	d.scale = new double[] { 0.40, 0.40, 0.40 };
+		display.put("firstperson_lefthand", d);
+		return display;
+    }
     // Template objects for Gson export of block models
     public static class ModelObjectCube {
-        public String parent = "block/block";
         public Boolean ambientocclusion;
+        public Map<String, Display> display = getBlockDisplay();
         public Texture textures = new Texture();
         public List<Element> elements = new ArrayList<Element>();
         public ModelObjectCube() {
@@ -58,8 +95,8 @@ public class SlabBlockModelExport extends ModelExport {
         public String down, up, north, south, west, east, particle;
     }
     public static class ModelObjectHalfLower {
-        public String parent = "block/block";
         public Boolean ambientocclusion;
+        public Map<String, Display> display = getBlockDisplay();
         public TextureSlab textures = new TextureSlab();
         public List<Element> elements = new ArrayList<Element>();
         public ModelObjectHalfLower() {
@@ -83,8 +120,8 @@ public class SlabBlockModelExport extends ModelExport {
         }
     }
     public static class ModelObjectHalfUpper {
-        public String parent = "block/block";
         public Boolean ambientocclusion;
+        public Map<String, Display> display = getBlockDisplay();
         public TextureSlab textures = new TextureSlab();
         public List<Element> elements = new ArrayList<Element>();
         public ModelObjectHalfUpper() {

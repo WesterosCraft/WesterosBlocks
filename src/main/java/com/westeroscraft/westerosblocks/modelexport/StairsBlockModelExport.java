@@ -51,15 +51,46 @@ public class StairsBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectStair {
-        public String parent = "block/block";
         public Boolean ambientocclusion;
         public Map<String, Display> display = new HashMap<String, Display>();
         public Texture textures = new Texture();
         public List<Element> elements = new ArrayList<Element>();
         
         public ModelObjectStair() {
+        	Display d;
+    		// Add display from block/block
+        	d = new Display();
+        	d.rotation = new int[] { 30, 225, 0 };
+        	d.translation = new double[] { 0, 0, 0 };
+        	d.scale = new double[] { 0.625, 0.625, 0.625 };
+        	display.put("gui", d);
+        	d = new Display();
+        	d.rotation = new int[] { 0, 0, 0 };
+        	d.translation = new double[] { 0, 3, 0 };
+        	d.scale = new double[] { 0.25, 0.25, 0.25 };
+    		display.put("ground", d);
+        	d = new Display();
+        	d.rotation = new int[] { 0, 0, 0 };
+        	d.translation = new double[] { 0, 0, 0 };
+        	d.scale = new double[] { 0.5, 0.5, 0.5 };
+    		display.put("fixed", d);
+        	d = new Display();
+        	d.rotation = new int[] { 75, 45, 0 };
+        	d.translation = new double[] {  0, 2.5, 0 };
+        	d.scale = new double[] { 0.375, 0.375, 0.375 };
+    		display.put("thirdperson_righthand", d);
+        	d = new Display();
+        	d.rotation = new int[] { 0, 45, 0 };
+        	d.translation = new double[] { 0, 0, 0 };
+        	d.scale = new double[] { 0.40, 0.40, 0.40 };
+    		display.put("firstperson_righthand", d);
+        	d = new Display();
+        	d.rotation = new int[] { 0, 225, 0 };
+        	d.translation = new double[] { 0, 0, 0 };
+        	d.scale = new double[] { 0.40, 0.40, 0.40 };
+    		display.put("firstperson_lefthand", d);
         	// Set up display to match block/stair
-        	Display d = new Display();
+        	d = new Display();
         	d.rotation = new int[] { 30, 135, 0 };
         	d.translation = new double[] { 0, 0, 0 };
         	d.scale = new double[] { 0.625, 0.625, 0.625 };
@@ -74,6 +105,7 @@ public class StairsBlockModelExport extends ModelExport {
         	d.translation = new double[] { 0, 2.5, 0 };
         	d.scale = new double[] { 0.375, 0.375, 0.375 };
     		display.put("thirdperson_lefthand", d);
+
     		// Add elements
     		Element e = new Element();
     		e.from = new float[] { 0, 0, 0 };
