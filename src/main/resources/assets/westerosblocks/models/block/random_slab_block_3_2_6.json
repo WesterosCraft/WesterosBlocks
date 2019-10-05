@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "block/block",
   "textures": {
     "down": "westerosblocks:blocks/crate_block_1/basket_bottom",
     "up": "westerosblocks:blocks/crate_block_1/basket_fish",
@@ -8,5 +8,45 @@
     "west": "westerosblocks:blocks/random_slab_block_0/basket_side_slab",
     "east": "westerosblocks:blocks/random_slab_block_0/basket_side_slab",
     "particle": "westerosblocks:blocks/random_slab_block_0/basket_side_slab"
-  }
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#up",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#down",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
 }

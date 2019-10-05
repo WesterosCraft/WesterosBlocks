@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "block/block",
   "textures": {
     "down": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_top",
     "up": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_top",
@@ -8,5 +8,45 @@
     "west": "westerosblocks:blocks/stone_block_0/sandstone_terracotta",
     "east": "westerosblocks:blocks/stone_block_0/sandstone_terracotta",
     "particle": "westerosblocks:blocks/stone_block_0/sandstone_terracotta"
-  }
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#up",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#down",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
 }

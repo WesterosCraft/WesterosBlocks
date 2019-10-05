@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "block/block",
   "textures": {
     "down": "westerosblocks:blocks/wool_colours/wool_colored_pink",
     "up": "westerosblocks:blocks/wool_colours/wool_colored_pink",
@@ -8,5 +8,45 @@
     "west": "westerosblocks:blocks/wool_colours/wool_colored_pink",
     "east": "westerosblocks:blocks/wool_colours/wool_colored_pink",
     "particle": "westerosblocks:blocks/wool_colours/wool_colored_pink"
-  }
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#up",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#down",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
 }

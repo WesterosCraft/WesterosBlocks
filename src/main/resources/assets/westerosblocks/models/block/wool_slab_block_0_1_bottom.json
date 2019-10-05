@@ -1,8 +1,84 @@
 {
-  "parent": "block/half_slab",
+  "parent": "block/block",
   "textures": {
     "bottom": "westerosblocks:blocks/wool_colours/wool_colored_orange",
     "top": "westerosblocks:blocks/wool_colours/wool_colored_orange",
-    "side": "westerosblocks:blocks/wool_colours/wool_colored_orange"
-  }
+    "side": "westerosblocks:blocks/wool_colours/wool_colored_orange",
+    "particle": "westerosblocks:blocks/wool_colours/wool_colored_orange"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        8.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#side",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#side",
+          "cullface": "south"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#side",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#side",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#top"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#bottom",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
 }

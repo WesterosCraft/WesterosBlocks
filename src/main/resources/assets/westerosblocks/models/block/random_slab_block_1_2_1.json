@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "block/block",
   "textures": {
     "down": "westerosblocks:blocks/miscellaneous_block_0/grain_sack",
     "up": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_cut",
@@ -8,5 +8,45 @@
     "west": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_side",
     "east": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_side",
     "particle": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front"
-  }
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#up",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#down",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
 }
