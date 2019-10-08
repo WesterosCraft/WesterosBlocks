@@ -20600,8 +20600,8 @@
             "transparent",
             "transparent",
             "transparent",
-            "cuboid_block_1/fence_wattle",
-            "cuboid_block_1/fence_wattle"
+            "cuboid_block_1/fence_wattle_short",
+            "cuboid_block_1/fence_wattle_short"
           ],
           "boundingBox": {
             "xMin": 0.010,
