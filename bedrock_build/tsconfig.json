@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "es2018",
+      "rootDir": "./src",
+      "outDir": "./dist",
+      "noImplicitAny": false,
+      "inlineSourceMap": true,
+      "allowJs": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "declaration": false,
+      "listFiles": false
+    },
+    "lib": [
+      "es2018"
+    ],
+    "include": [
+      "./src/**/*"
+    ],
+    "exclude": [
+      ".vscode",
+      ".serverless",
+      ".git",
+      "node_modules",
+      "./dist/**/*"
+    ],
+    "compileOnSave": true,
+    "buildOnSave": false
+  }
