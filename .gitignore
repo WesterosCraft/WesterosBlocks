@@ -11,6 +11,10 @@ WesterosBlocks-*.jar
 /*_Client.launch
 /*_Server.launch
 /.project
-/bedrock_build/WesterosBlocks/
+/bedrock_build/WesterosBP/
+/bedrock_build/WesterosRP/
+/bedrock_build/*.mcpack
+/bedrock_build/*.mcaddon
+/bedrock_build/zip
 /bedrock_build/node_modules/
 /bedrock_build/dist/

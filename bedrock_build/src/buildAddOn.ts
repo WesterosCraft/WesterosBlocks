@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 const uuidv5 = require('uuid/v5');
+import archiver from 'archiver-promise';
 
 // Map of block sounds from java to bedrock
 const soundmap = {
@@ -21,12 +22,15 @@ let content = fs.readFileSync("../src/main/resources/WesterosBlocks.json");
 
 let blockdefs = JSON.parse(content.toString('utf-8'));
 
-// Now select all the block definitions that are solid
-let solidblocks = blockdefs.blocks.filter(blk => blk.blockType === 'solid');
-console.log(`${solidblocks.length} solid blocks found`);
+const solidishBlocks = [ "solid", "sand", "soulsand", "leaves", 
+    "log", "furnace" ]; // log and furnace are not really simple, but close enough...
 
-const outpath = 'WesterosBlocks/WesterosRP';
-const bppath = 'WesterosBlocks/WesterosBP';
+// Now select all the block definitions that are solid
+let solidblocks = blockdefs.blocks.filter(blk => (solidishBlocks.indexOf(blk.blockType) >= 0));
+console.log(`${solidblocks.length} solid-ish blocks found`);
+
+const outpath = 'WesterosRP';
+const bppath = 'WesterosBP';
 // Make RP output tree
 fs.mkdirSync(outpath, { recursive: true });
 fs.mkdirSync(`${outpath}/textures/blocks`, { recursive: true });
@@ -82,7 +86,13 @@ let bpmanifest = {
             uuid: bp2uuid,
             version: version
         }
-    ]
+    ],
+    dependencies: [
+        {
+          uuid: rp2uuid,
+          version: version
+        }
+    ]    
 };
 fs.writeFileSync(`${bppath}/manifest.json`, JSON.stringify(bpmanifest, undefined, 2));
 
@@ -202,3 +212,31 @@ fs.copyFileSync('src/WesterosSealSquare.png',`${outpath}/pack_icon.png`);
 fs.copyFileSync('src/WesterosSealSquare.png',`${bppath}/pack_icon.png`);
 
 //console.log("content=" + JSON.stringify(solidblocks));
+console.log("Make RP file");
+let rpfile = fs.createWriteStream('WesterosBlocksRP.mcpack');
+let bpfile;
+let addonfile;
+let rppack = archiver('zip');
+rppack.pipe(rpfile);
+rppack.directory(`${outpath}/`);
+rppack.finalize().then(() => {
+    rpfile.close();
+    console.log("Make BP pack");
+    bpfile = fs.createWriteStream('WesterosBlocksBP.mcpack');
+    let bppack = archiver('zip');
+    bppack.pipe(bpfile);
+    bppack.directory(`${bppath}/`);
+    return bppack.finalize();
+}).then(() => {
+    bpfile.close();
+    console.log("Make mcaddon pack");
+    addonfile = fs.createWriteStream('WesterosBlocks.mcaddon');
+    let addon = archiver('zip');
+    addon.pipe(addonfile);
+    addon.file('WesterosBlocksRP.mcpack', { name: 'WesterosBlocksRP.mcpack' });    
+    addon.file('WesterosBlocksBP.mcpack', { name: 'WesterosBlocksBP.mcpack' });  
+    return addon.finalize();
+}).then(() => {
+    addonfile.close();
+    console.log("Add on done!");
+})
