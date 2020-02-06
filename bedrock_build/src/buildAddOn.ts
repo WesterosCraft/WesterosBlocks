@@ -89,7 +89,7 @@ let bpmanifest = {
     ],
     dependencies: [
         {
-          uuid: rp2uuid,
+          uuid: rpuuid,
           version: version
         }
     ]    
@@ -112,12 +112,18 @@ let terrain = {
     texture_data: {}
 };
 
+// Start building blockstates lines
+let blockstates = {};
+let blocknames = {};
+let blockids = {};
+
 // Loop through the solid blocks
 solidblocks.forEach(blk => {
     // Get base ID
     let blkid = blk.blockName;
     // Map the block sound
     let snd = soundmap[blk.stepSound] || 'stone';
+    let lastblkid = "air";
     // Loop through subBlocks
     blk.subBlocks.forEach(sub => {
         let baseid = blkid + "_" + sub.meta;    // Make full ID
@@ -146,6 +152,22 @@ solidblocks.forEach(blk => {
                 west: txt[5]
             }
         }
+        // Add line to blockstates.csv mapping
+        if (!(blkid in blockstates)) {
+            blockstates[blkid] = [];
+        }
+        if (!(blkid in blocknames)) {
+            blocknames[blkid] = [];
+        }
+        if (!(blk.blockID in blockids)) {
+            blockids[blk.blockID] = [];
+        }
+        blockstates[blkid].push(",,variant=" + sub.meta + "," +
+            id + ",,,HEIGHTMAP");
+        blocknames[blkid].push(",," + sub.meta + "," +
+            id + ",,,");
+        blockids[blk.blockID].push(",," + sub.meta + "," +
+            id + ",,,");
         // Copy texture files into pack
         sub.textures.forEach(oldtxt => {
             let newtxt = oldtxt.replace('/','_');
@@ -240,3 +262,33 @@ rppack.finalize().then(() => {
     addonfile.close();
     console.log("Add on done!");
 })
+
+// Sort blockstates.csv
+let blkstatekeys = Object.keys(blockstates).sort();
+let bs = "";
+blkstatekeys.forEach(k => {
+    bs += "westerosblocks:" + k + blockstates[k].join("\r\n") + "\r\n";
+});
+// Write out block_states.csv
+fs.writeFileSync(`blocks_states.csv`, bs);
+
+// Sort blocknames.csv
+let blknameskeys = Object.keys(blocknames).sort();
+let bn = "";
+blknameskeys.forEach(k => {
+    bn += "westerosblocks:" + k + blocknames[k].join("\r\n") + "\r\n";
+});
+// Write out block_names.csv
+fs.writeFileSync(`blocks_names.csv`, bn);
+
+// Sort block_ids.csv
+let blkidskeys = Object.keys(blockids).sort();
+let bi = "";
+blkidskeys.forEach(k => {
+    bi += k + blockids[k].join("\r\n") + "\r\n";
+});
+// Write out block_ids.csv
+fs.writeFileSync(`blocks_ids.csv`, bi);
+
+
+

@@ -18,3 +18,6 @@ WesterosBlocks-*.jar
 /bedrock_build/zip
 /bedrock_build/node_modules/
 /bedrock_build/dist/
+bedrock_build/blocks_ids.csv
+bedrock_build/blocks_names.csv
+bedrock_build/blocks_states.csv
