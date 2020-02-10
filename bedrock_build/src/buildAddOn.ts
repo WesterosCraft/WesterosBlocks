@@ -117,6 +117,11 @@ let blockstates = {};
 let blocknames = {};
 let blockids = {};
 
+let mccblocks = [];
+let mccblockids = [];
+let mccid = 4485;
+let elemid = 1;
+
 // Loop through the solid blocks
 solidblocks.forEach(blk => {
     // Get base ID
@@ -126,6 +131,10 @@ solidblocks.forEach(blk => {
     let lastblkid = "air";
     // Loop through subBlocks
     blk.subBlocks.forEach(sub => {
+//        if (elemid > 118) return;
+//        let baseid = "element_" + elemid;
+//        let id = baseid;
+//        elemid++;
         let baseid = blkid + "_" + sub.meta;    // Make full ID
         let id = "wb:" + baseid;
         // Add label to text file 
@@ -168,6 +177,39 @@ solidblocks.forEach(blk => {
             id + ",,,");
         blockids[blk.blockID].push(",," + sub.meta + "," +
             id + ",,,");
+        // Build MCC blocks.json record
+        let mccrec = {
+            Key: id,
+            Value: {
+                bedrock: {
+                    id: blk.blockID,
+                    data: sub.meta,
+                    name: "westerosblocks:" + blk.blockName,
+                    nameOld: null,
+                    properties: null,
+                    typeName: null
+                },
+                blockState: "",
+                cache: true,
+                color: 0,
+                java: {
+                    data: sub.meta,
+                    id: blk.blockID,
+                    name: "westerosblocks:" + blk.blockName,
+                    nameOld: null,
+                    properties: null,
+                    typeName: null
+                },
+                label: sub.label,
+                link: false,
+                linkable: true,
+                name: id,
+                transparent: false
+            }
+        };
+        mccblocks.push(mccrec);
+        mccblockids.push({ id: blk.blockID, data: sub.meta, name: "westerosblocks:" + blk.blockName, runtimeID: mccid });
+        mccid++;
         // Copy texture files into pack
         sub.textures.forEach(oldtxt => {
             let newtxt = oldtxt.replace('/','_');
@@ -290,5 +332,9 @@ blkidskeys.forEach(k => {
 // Write out block_ids.csv
 fs.writeFileSync(`blocks_ids.csv`, bi);
 
+// Write block.json
+fs.writeFileSync('block.json', JSON.stringify(mccblocks, null, 2));
 
+// Write BlockID.json
+fs.writeFileSync('BlockID.json', JSON.stringify(mccblockids, null, 2));
 
