@@ -21,3 +21,5 @@ WesterosBlocks-*.jar
 bedrock_build/blocks_ids.csv
 bedrock_build/blocks_names.csv
 bedrock_build/blocks_states.csv
+bedrock_build/block.json
+bedrock_build/BlockID.json
