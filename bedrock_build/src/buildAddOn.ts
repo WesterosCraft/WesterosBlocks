@@ -56,7 +56,7 @@ let manifest = {
         name: "WesterosBlocks Reource Pack",
         uuid: rpuuid,
         version: version,
-        min_engine_version: [ 1, 14, 0 ]
+        min_engine_version: [ 1, 15, 0 ]
     },
     modules: [
         {
@@ -77,7 +77,7 @@ let bpmanifest = {
         name: "WesterosBlocks Behavior Pack",
         uuid: bpuuid,
         version: version,
-        min_engine_version: [ 1, 14, 0 ]
+        min_engine_version: [ 1, 15, 0 ]
     },
     modules: [
         {
@@ -226,8 +226,7 @@ solidblocks.forEach(blk => {
             "minecraft:block": {
                 description: {
                     identifier: id,
-                    is_experimental: false,
-                    register_to_creative_menu: true
+                    is_experimental: false
                 },
                 components: {
                     "minecraft:destroy_time": {
