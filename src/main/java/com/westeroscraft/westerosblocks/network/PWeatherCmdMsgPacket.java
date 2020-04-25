@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.network;
 
-import com.westeroscraft.westerosblocks.commands.PTimeCommand;
 import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.commands.PWeatherCommand.PWEATHER_SETTING;
 

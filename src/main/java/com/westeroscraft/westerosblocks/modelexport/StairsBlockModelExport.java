@@ -2,41 +2,39 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.modelexport.CuboidBlockModelExport.Display;
-import com.westeroscraft.westerosblocks.modelexport.CuboidBlockModelExport.Element;
-import com.westeroscraft.westerosblocks.modelexport.CuboidBlockModelExport.Face;
-import com.westeroscraft.westerosblocks.modelexport.CuboidBlockModelExport.Rotation;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.block.Block;
 
 public class StairsBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
+    private final WesterosBlockDef def;
 
     // Template objects for Gson export of block state
     public static class StateObject {
         public Map<String, Variant> variants = new HashMap<String, Variant>();
     }
+
     public static class Variant {
         public String model = "";
         public Integer x;
         public Integer y;
         public Boolean uvlock;
-        public Variant(String blkname) {
+
+        public Variant(final String blkname) {
             this(blkname, null, 0, 0);
         }
-        public Variant(String blkname, String ext, int yrot) {
+
+        public Variant(final String blkname, final String ext, final int yrot) {
             this(blkname, ext, 0, yrot);
         }
-        public Variant(String blkname, String ext, int xrot, int yrot) {
+
+        public Variant(final String blkname, final String ext, final int xrot, final int yrot) {
             if (ext != null)
                 model = WesterosBlocks.MOD_ID + ":" + blkname + "_" + ext;
             else
@@ -49,229 +47,81 @@ public class StairsBlockModelExport extends ModelExport {
                 uvlock = true;
         }
     }
+
     // Template objects for Gson export of block models
     public static class ModelObjectStair {
-        public Boolean ambientocclusion;
-        public Map<String, Display> display = new HashMap<String, Display>();
+        public String parent;
         public Texture textures = new Texture();
-        public List<Element> elements = new ArrayList<Element>();
-        
-        public ModelObjectStair() {
-        	Display d;
-    		// Add display from block/block
-        	d = new Display();
-        	d.rotation = new int[] { 30, 225, 0 };
-        	d.translation = new double[] { 0, 0, 0 };
-        	d.scale = new double[] { 0.625, 0.625, 0.625 };
-        	display.put("gui", d);
-        	d = new Display();
-        	d.rotation = new int[] { 0, 0, 0 };
-        	d.translation = new double[] { 0, 3, 0 };
-        	d.scale = new double[] { 0.25, 0.25, 0.25 };
-    		display.put("ground", d);
-        	d = new Display();
-        	d.rotation = new int[] { 0, 0, 0 };
-        	d.translation = new double[] { 0, 0, 0 };
-        	d.scale = new double[] { 0.5, 0.5, 0.5 };
-    		display.put("fixed", d);
-        	d = new Display();
-        	d.rotation = new int[] { 75, 45, 0 };
-        	d.translation = new double[] {  0, 2.5, 0 };
-        	d.scale = new double[] { 0.375, 0.375, 0.375 };
-    		display.put("thirdperson_righthand", d);
-        	d = new Display();
-        	d.rotation = new int[] { 0, 45, 0 };
-        	d.translation = new double[] { 0, 0, 0 };
-        	d.scale = new double[] { 0.40, 0.40, 0.40 };
-    		display.put("firstperson_righthand", d);
-        	d = new Display();
-        	d.rotation = new int[] { 0, 225, 0 };
-        	d.translation = new double[] { 0, 0, 0 };
-        	d.scale = new double[] { 0.40, 0.40, 0.40 };
-    		display.put("firstperson_lefthand", d);
-        	// Set up display to match block/stair
-        	d = new Display();
-        	d.rotation = new int[] { 30, 135, 0 };
-        	d.translation = new double[] { 0, 0, 0 };
-        	d.scale = new double[] { 0.625, 0.625, 0.625 };
-        	display.put("gui", d);
-        	d = new Display();
-        	d.rotation = new int[] { 0, -90, 0 };
-        	d.translation = new double[] { 0, 0, 0 };
-        	d.scale = new double[] { 1, 1, 1 };
-        	display.put("head", d);
-        	d = new Display();
-        	d.rotation = new int[] { 75, -135, 0 };
-        	d.translation = new double[] { 0, 2.5, 0 };
-        	d.scale = new double[] { 0.375, 0.375, 0.375 };
-    		display.put("thirdperson_lefthand", d);
 
-    		// Add elements
-    		Element e = new Element();
-    		e.from = new float[] { 0, 0, 0 };
-    		e.to = new float[] { 16, 8, 16 };
-    		Face f = new Face(); f.texture = "#bottom"; f.cullface = "down";
-    		e.faces.put("down", f);
-    		f = new Face(); f.texture = "#top";
-    		e.faces.put("up", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "north"; f.uv = new float[] { 0, 8, 16, 16 };
-    		e.faces.put("north", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "south"; f.uv = new float[] { 0, 8, 16, 16 };
-    		e.faces.put("south", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "west"; f.uv = new float[] { 0, 8, 16, 16 };
-    		e.faces.put("west", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "east"; f.uv = new float[] { 0, 8, 16, 16 };
-    		e.faces.put("east", f);
-			elements.add(e);
-			e = new Element();
-    		e.from = new float[] { 8, 8, 0 };
-    		e.to = new float[] { 16, 16, 16 };
-    		f = new Face(); f.texture = "#bottom"; f.cullface = "down";
-    		e.faces.put("down", f);
-    		f = new Face(); f.texture = "#top"; f.cullface = "up";
-    		e.faces.put("up", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "north"; f.uv = new float[] { 0, 0, 8, 8 };
-    		e.faces.put("north", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "south"; f.uv = new float[] { 8, 0, 16, 8 };
-    		e.faces.put("south", f);
-    		f = new Face(); f.texture = "#side"; f.uv = new float[] { 8, 0, 16, 8 };
-    		e.faces.put("west", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "east"; f.uv = new float[] { 8, 0, 16, 8 };
-    		e.faces.put("east", f);
-			elements.add(e);
+        public ModelObjectStair(final boolean ambientocclusion, final boolean tinted) {
+            if (ambientocclusion) {
+                if (tinted) {
+                    parent = "westerosblocks:block/tinted/stairs";
+                } else {
+                    parent = "block/stairs"; // Vanilla block is
+                }
+            } else {
+                if (tinted) {
+                    parent = "westerosblocks:block/tintednoocclusion/stairs";
+                } else {
+                    parent = "westerosblocks:block/noocclusion/stairs";
+                }
+            }
         }
     }
+
     public static class ModelObjectInnerStair {
-        public Boolean ambientocclusion;
+        public String parent;
         public Texture textures = new Texture();
-        public List<Element> elements = new ArrayList<Element>();
-        public ModelObjectInnerStair() {
-    		// Add elements
-    		Element e = new Element();
-    		e.from = new float[] { 0, 0, 0 };
-    		e.to = new float[] { 16, 8, 16 };
-    		Face f = new Face(); f.texture = "#bottom"; f.cullface = "down";
-    		e.faces.put("down", f);
-    		f = new Face(); f.texture = "#top";
-    		e.faces.put("up", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "north";
-    		e.faces.put("north", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "south";
-    		e.faces.put("south", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "west";
-    		e.faces.put("west", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "east";
-    		e.faces.put("east", f);
-			elements.add(e);
-			e = new Element();
-    		e.from = new float[] { 8, 8, 0 };
-    		e.to = new float[] { 16, 16, 16 };
-    		f = new Face(); f.texture = "#bottom"; f.cullface = "down";
-    		e.faces.put("down", f);
-    		f = new Face(); f.texture = "#top"; f.cullface = "up";
-    		e.faces.put("up", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "north"; f.uv = new float[] { 0, 0, 8, 8 };
-    		e.faces.put("north", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "south"; f.uv = new float[] { 8, 0, 16, 8 };
-    		e.faces.put("south", f);
-    		f = new Face(); f.texture = "#side"; f.uv = new float[] { 8, 0, 16, 8 };
-    		e.faces.put("west", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "east"; f.uv = new float[] { 8, 0, 16, 8 };
-    		e.faces.put("east", f);
-			elements.add(e);        	
-			e = new Element();
-    		e.from = new float[] { 0, 8, 8 };
-    		e.to = new float[] { 8, 16, 16 };
-    		f = new Face(); f.texture = "#bottom"; f.cullface = "down"; f.uv = new float[] { 0, 0,  8,  8 };
-    		e.faces.put("down", f);
-    		f = new Face(); f.texture = "#top"; f.cullface = "up"; f.uv = new float[] { 0, 8,  8, 16 };
-    		e.faces.put("up", f);
-    		f = new Face(); f.texture = "#side"; f.uv = new float[] { 8, 0, 16,  8 };
-    		e.faces.put("north", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "south"; f.uv = new float[] { 0, 0,  8,  8 };
-    		e.faces.put("south", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "west"; f.uv = new float[] { 8, 0, 16,  8 };
-    		e.faces.put("west", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "east"; f.uv = new float[] { 0, 0,  8,  8 };
-    		e.faces.put("east", f);
-			elements.add(e);        	
+
+        public ModelObjectInnerStair(final boolean ambientocclusion, final boolean tinted) {
+            if (ambientocclusion) {
+                if (tinted) {
+                    parent = "westerosblocks:block/tinted/inner_stairs";
+                } else {
+                    parent = "block/inner_stairs"; // Vanilla block is
+                }
+            } else {
+                if (tinted) {
+                    parent = "westerosblocks:block/tintednoocclusion/inner_stairs";
+                } else {
+                    parent = "westerosblocks:block/noocclusion/inner_stairs";
+                }
+            }
         }
     }
+
     public static class ModelObjectOuterStair {
-        public Boolean ambientocclusion;
+        public String parent;
         public Texture textures = new Texture();
-        public List<Element> elements = new ArrayList<Element>();
-        public ModelObjectOuterStair() {
-    		// Add elements
-    		Element e = new Element();
-    		e.from = new float[] { 0, 0, 0 };
-    		e.to = new float[] { 16, 8, 16 };
-    		Face f = new Face(); f.texture = "#bottom"; f.cullface = "down";
-    		e.faces.put("down", f);
-    		f = new Face(); f.texture = "#top";
-    		e.faces.put("up", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "north";
-    		e.faces.put("north", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "south";
-    		e.faces.put("south", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "west";
-    		e.faces.put("west", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "east";
-    		e.faces.put("east", f);
-			elements.add(e);
-			e = new Element();
-    		e.from = new float[] { 8, 8, 8 };
-    		e.to = new float[] { 16, 16, 16 };
-    		f = new Face(); f.texture = "#bottom"; f.cullface = "down"; f.uv = new float[] { 8, 0, 16,  8 };
-    		e.faces.put("down", f);
-    		f = new Face(); f.texture = "#top"; f.cullface = "up"; f.uv = new float[] { 8, 8, 16, 16 };
-    		e.faces.put("up", f);
-    		f = new Face(); f.texture = "#side"; f.uv = new float[] { 0, 0,  8,  8 };
-    		e.faces.put("north", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "south"; f.uv = new float[] { 8, 0, 16,  8 };
-    		e.faces.put("south", f);
-    		f = new Face(); f.texture = "#side"; f.uv = new float[] { 8, 0, 16,  8 };
-    		e.faces.put("west", f);
-    		f = new Face(); f.texture = "#side"; f.cullface = "east"; f.uv = new float[] { 0, 0,  8,  8 };
-    		e.faces.put("east", f);
-			elements.add(e);        	
+
+        public ModelObjectOuterStair(final boolean ambientocclusion, final boolean tinted) {
+            if (ambientocclusion) {
+                if (tinted) {
+                    parent = "westerosblocks:block/tinted/outer_stairs";
+                } else {
+                    parent = "block/outer_stairs"; // Vanilla block is
+                }
+            } else {
+                if (tinted) {
+                    parent = "westerosblocks:block/tintednoocclusion/outer_stairs";
+                } else {
+                    parent = "westerosblocks:block/noocclusion/outer_stairs";
+                }
+            }
         }
     }
+
     public static class Texture {
         public String bottom, top, side;
         public String particle;
     }
-    public static class Display {
-        public int[] rotation = { 0, 90, 0 };
-        public double[] translation = { 0, 0, 0 };
-        public double[] scale = { 0.5, 0.5, 0.5 };
-    }
-    public static class Element {
-        public float[] from = { 0, 0, 0 };
-        public float[] to = { 16, 16, 16 };
-        public Rotation rotation;
-        public Boolean shade;
-        public Map<String, Face> faces = new HashMap<String, Face>();
-    }
-    public static class Rotation {
-        public float[] origin = { 8, 8, 8 };
-        public String axis = "y";
-        public float angle = 45;
-        public Boolean rescale = true;
-    }
-    public static class Face {
-        public float[] uv = { 0, 0, 16, 16 };
-        public String texture;
-        public Integer rotation;
-        public String cullface;
-        public Integer tintindex;
-    }
 
     public static class ModelObject {
-    	public String parent;
+        public String parent;
     }
 
-    public StairsBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
+    public StairsBlockModelExport(final Block blk, final WesterosBlockDef def, final File dest) {
         super(blk, def, dest);
         this.def = def;
         addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
@@ -279,8 +129,8 @@ public class StairsBlockModelExport extends ModelExport {
 
     @Override
     public void doBlockStateExport() throws IOException {
-        StateObject so = new StateObject();
-        String bn = def.blockName;
+        final StateObject so = new StateObject();
+        final String bn = def.blockName;
         so.variants.put("facing=east,half=bottom,shape=straight", new Variant(bn));
         so.variants.put("facing=west,half=bottom,shape=straight", new Variant(bn, null, 180));
         so.variants.put("facing=south,half=bottom,shape=straight", new Variant(bn, null, 90));
@@ -324,36 +174,33 @@ public class StairsBlockModelExport extends ModelExport {
         this.writeBlockStateFile(def.blockName, so);
     }
 
-    private void setTinted(List<Element> e) {
-    	for (Element em : e) {
-    		for (Face f : em.faces.values()) {
-    			f.tintindex = 0;
-    		}
-    	}
-    }
     @Override
     public void doModelExports() throws IOException {
-        boolean isTinted = def.subBlocks.get(0).isTinted(def);
+        final boolean isTinted = def.subBlocks.get(0).isTinted(def);
         // Find base block for stairs - textures come from there
-        Block bblk = WesterosBlocks.findBlockByName(def.modelBlockName);
+        final Block bblk = WesterosBlocks.findBlockByName(def.modelBlockName);
         if (bblk == null) {
-            throw new IOException(String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
+            throw new IOException(
+                    String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
         }
         String downtxt = null;
         String uptxt = null;
         String sidetxt = null;
-        Boolean ambientOcclusion = def.subBlocks.get(0).ambientOcclusion;
+        final boolean ambientOcclusion = (def.subBlocks.get(0).ambientOcclusion != null)
+                ? def.subBlocks.get(0).ambientOcclusion
+                : true;
+
         if (bblk instanceof WesterosBlockLifecycle) {
-            WesterosBlockDef bbdef = ((WesterosBlockLifecycle) bblk).getWBDefinition();
+            final WesterosBlockDef bbdef = ((WesterosBlockLifecycle) bblk).getWBDefinition();
             if (bbdef == null) {
-                throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no def", def.modelBlockName, def.blockName));
+                throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no def",
+                        def.modelBlockName, def.blockName));
             }
-            Subblock sb = bbdef.getByMeta(def.modelBlockMeta);
+            final Subblock sb = bbdef.getByMeta(def.modelBlockMeta);
             downtxt = getTextureID(sb.getTextureByIndex(0));
             uptxt = getTextureID(sb.getTextureByIndex(1));
             sidetxt = getTextureID(sb.getTextureByIndex(2));
-        }
-        else {  // Else, assume vanilla block: hack it for ones we use
+        } else { // Else, assume vanilla block: hack it for ones we use
             switch (def.modelBlockName) {
                 case "minecraft:bedrock":
                     downtxt = uptxt = sidetxt = "blocks/bedrock";
@@ -382,47 +229,36 @@ public class StairsBlockModelExport extends ModelExport {
                     downtxt = uptxt = sidetxt = "blocks/obsidian";
                     break;
                 default:
-                    throw new IOException(String.format("modelBlockName '%s:%d' not found for block '%s' - no vanilla", def.modelBlockName, def.modelBlockMeta, def.blockName));
+                    throw new IOException(String.format("modelBlockName '%s:%d' not found for block '%s' - no vanilla",
+                            def.modelBlockName, def.modelBlockMeta, def.blockName));
             }
         }
         // Base model
-        ModelObjectStair base = new ModelObjectStair();
+        final ModelObjectStair base = new ModelObjectStair(ambientOcclusion, isTinted);
         base.textures.bottom = downtxt;
         base.textures.top = uptxt;
         base.textures.side = base.textures.particle = sidetxt;
-        base.ambientocclusion = ambientOcclusion;
-        if (isTinted) {
-        	setTinted(base.elements);
-        }
         this.writeBlockModelFile(def.blockName, base);
         // Outer model
-        ModelObjectOuterStair outer = new ModelObjectOuterStair();
+        final ModelObjectOuterStair outer = new ModelObjectOuterStair(ambientOcclusion, isTinted);
         outer.textures.bottom = downtxt;
         outer.textures.top = uptxt;
         outer.textures.side = outer.textures.particle = sidetxt;
-        outer.ambientocclusion = ambientOcclusion;
-        if (isTinted) {
-        	setTinted(outer.elements);
-        }
         this.writeBlockModelFile(def.blockName + "_outer", outer);
         // Inner model
-        ModelObjectInnerStair inner = new ModelObjectInnerStair();
+        final ModelObjectInnerStair inner = new ModelObjectInnerStair(ambientOcclusion, isTinted);
         inner.textures.bottom = downtxt;
         inner.textures.top = uptxt;
         inner.textures.side = inner.textures.particle = sidetxt;
-        inner.ambientocclusion = ambientOcclusion;
-        if (isTinted) {
-        	setTinted(inner.elements);
-        }
         this.writeBlockModelFile(def.blockName + "_inner", inner);
         // Build simple item model that refers to base block model
-        ModelObject mo = new ModelObject();
+        final ModelObject mo = new ModelObject();
         mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
         this.writeItemModelFile(def.blockName, mo);
-        
+
         // Handle tint resources
         if (isTinted) {
-            String tintres = def.getBlockColorMapResource(def.subBlocks.get(0));
+            final String tintres = def.getBlockColorMapResource(def.subBlocks.get(0));
             if (tintres != null) {
                 ModelExport.addTintingOverride(def.blockName, null, tintres);
             }

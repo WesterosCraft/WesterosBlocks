@@ -2,7 +2,6 @@ package com.westeroscraft.westerosblocks.network;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

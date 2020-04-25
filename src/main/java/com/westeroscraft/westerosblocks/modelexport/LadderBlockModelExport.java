@@ -69,6 +69,8 @@ public class LadderBlockModelExport extends ModelExport {
         for (Subblock sb : def.subBlocks) {
             ModelObjectLadder mod = new ModelObjectLadder();
             mod.textures.ladder = getTextureID(sb.getTextureByIndex(0));
+            // Export if not set to custom model
+            if (!sb.isCustomModel())
             this.writeBlockModelFile(def.blockName + "_" + sb.meta, mod);
             // Build simple item model that refers to block model
             ModelObject mo = new ModelObject();

@@ -262,7 +262,9 @@ public class CuboidBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         for (Subblock sb : def.subBlocks) {
             boolean isTinted = sb.isTinted(def);
-            doCuboidModel(sb, sb.meta, sb.meta, def.blockName, isTinted);
+            // Export if not set to custom model
+            if (!sb.isCustomModel())
+                doCuboidModel(sb, sb.meta, sb.meta, def.blockName, isTinted);
             // Build simple item model that refers to block model
             ModelObject mo = new ModelObject();
             mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + sb.meta;

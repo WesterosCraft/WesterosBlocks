@@ -10,7 +10,6 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
-import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.properties.IProperty;

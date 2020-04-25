@@ -6,8 +6,6 @@ import java.io.IOException;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.modelexport.CuboidBlockModelExport.ModelObject;
-
 import net.minecraft.block.Block;
 
 public class CuboidNSEWUDBlockModelExport extends CuboidBlockModelExport {

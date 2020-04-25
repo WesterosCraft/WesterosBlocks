@@ -32,8 +32,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 
-import it.unimi.dsi.fastutil.Arrays;
-
 public class WCLogBlock extends BlockLog implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
     public static class Factory extends WesterosBlockFactory {
         @Override

@@ -4657,7 +4657,8 @@
           "textures": [
             "ladder_block_0/ladder_normal"
           ],
-          "type": "allow-unsupported"
+          "type": "allow-unsupported",
+          "isCustomModel": true
         }
       ]
     },
@@ -20249,7 +20250,8 @@
             "yMax": 1,
             "zMin": 0,
             "zMax": 1
-          }
+          },
+          "isCustomModel": true
         },
         {
           "meta": 1,
@@ -20265,7 +20267,8 @@
             "yMax": 1,
             "zMin": 0,
             "zMax": 1
-          }
+          },
+          "isCustomModel": true
         }
       ]
     },

@@ -283,7 +283,8 @@ public class WesterosBlockDef {
         public boolean noInventoryItem = false; // If true, don't register inventory item for subblock
         public List<Particle> particles = null; // List of particles to be randomly emitted
         public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
-        
+        public Boolean isCustomModel = null;    // If set and true, don't generate new custom model (hand crafted)
+
         public String getTextureByIndex(int idx) {
             if ((textures != null) && (textures.size() > 0)) {
                 if (idx >= textures.size()) {
@@ -292,6 +293,10 @@ public class WesterosBlockDef {
                 return textures.get(idx);
             }
             return null;
+        }
+
+        public boolean isCustomModel() {
+            return (isCustomModel != null) && (isCustomModel.booleanValue() == true);
         }
         
         public boolean isTinted(WesterosBlockDef def) {
