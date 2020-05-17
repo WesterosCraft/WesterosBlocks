@@ -6,6 +6,9 @@
     "variant=2": {
       "model": "westerosblocks:stone_block_9_2"
     },
+    "variant=10": {
+      "model": "westerosblocks:stone_block_9_10"
+    },
     "variant=1": {
       "model": "westerosblocks:stone_block_9_1"
     },

@@ -23,6 +23,12 @@
     },
     "variant=4": {
       "model": "westerosblocks:arrow_slits_2_4"
+    },
+    "variant=9": {
+      "model": "westerosblocks:arrow_slits_2_9"
+    },
+    "variant=8": {
+      "model": "westerosblocks:arrow_slits_2_8"
     }
   }
 }
