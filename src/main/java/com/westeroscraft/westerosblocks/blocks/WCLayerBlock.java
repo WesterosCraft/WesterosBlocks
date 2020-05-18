@@ -12,6 +12,7 @@ import org.dynmap.modsupport.TransparencyMode;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
@@ -244,6 +245,11 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     @Override
     public int damageDropped(IBlockState state) {
         return 0;
+    }
+    @Override
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        return BlockFaceShape.UNDEFINED;
     }
 
 }
