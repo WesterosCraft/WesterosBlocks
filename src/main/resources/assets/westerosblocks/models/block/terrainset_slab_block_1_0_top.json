@@ -1,0 +1,9 @@
+{
+  "parent": "block/upper_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne",
+    "top": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne",
+    "side": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne",
+    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne"
+  }
+}

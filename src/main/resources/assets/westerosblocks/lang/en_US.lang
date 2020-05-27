@@ -1,4 +1,8 @@
+<<<<<<< 1.12.2
 #Sun May 17 15:17:25 CDT 2020
+=======
+#Tue May 26 15:29:13 EDT 2020
+>>>>>>> 50777fa Update from Emot
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -1005,6 +1009,50 @@ tile.stone_wall_block_3_5.name=Oldtown Cobblestone Wall
 tile.stone_wall_block_3_6.name=Reach Cobblestone Wall
 tile.stone_wall_block_3_7.name=River Cobble Wall
 tile.stone_wall_block_3_8.name=Small Smooth Stone Brick Wall
+tile.terrainset_fence_block_3_0.name=TerrainSet Eastern Islands Fence
+tile.terrainset_fence_block_3_1.name=TerrainSet Iron Islands Fence
+tile.terrainset_fence_block_3_10.name=TerrainSet Reach Fence
+tile.terrainset_fence_block_3_2.name=TerrainSet Mountains of the Moon Fence
+tile.terrainset_fence_block_3_3.name=TerrainSet The North Fence
+tile.terrainset_fence_block_3_4.name=TerrainSet Ocean Rocks Fence
+tile.terrainset_fence_block_3_5.name=TerrainSet Red Mountains Fence
+tile.terrainset_fence_block_3_6.name=TerrainSet River Rocks Fence
+tile.terrainset_fence_block_3_7.name=TerrainSet Westerlands Fence
+tile.terrainset_fence_block_3_8.name=TerrainSet Arbor Dorne Fence
+tile.terrainset_fence_block_3_9.name=TerrainSet Stormlands Fence
+tile.terrainset_slab_block_0_0.name=TerrainSet Eastern Islands Slab
+tile.terrainset_slab_block_0_1.name=TerrainSet Iron Islands Slab
+tile.terrainset_slab_block_0_2.name=TerrainSet Mountains of the Moon Slab
+tile.terrainset_slab_block_0_3.name=TerrainSet The North Slab
+tile.terrainset_slab_block_0_4.name=TerrainSet Ocean Rocks Slab
+tile.terrainset_slab_block_0_5.name=TerrainSet Red Mountains Slab
+tile.terrainset_slab_block_0_6.name=TerrainSet River Rocks Slab
+tile.terrainset_slab_block_0_7.name=TerrainSet Westerlands Slab
+tile.terrainset_slab_block_1_0.name=TerrainSet Arbor Dorne Slab
+tile.terrainset_slab_block_1_1.name=TerrainSet Stormlands Slab
+tile.terrainset_slab_block_1_2.name=TerrainSet Reach Slab
+tile.terrainset_stair_0.name=TerrainSet Eastern Islands Stairs
+tile.terrainset_stair_1.name=TerrainSet Iron Islands Stairs
+tile.terrainset_stair_10.name=TerrainSet Reach Stairs
+tile.terrainset_stair_2.name=TerrainSet Mountains of the Moon Stairs
+tile.terrainset_stair_3.name=TerrainSet The North Stairs
+tile.terrainset_stair_4.name=TerrainSet Ocean Rocks Stairs
+tile.terrainset_stair_5.name=TerrainSet Red Mountains Stairs
+tile.terrainset_stair_6.name=TerrainSet River Rocks Stairs
+tile.terrainset_stair_7.name=TerrainSet Westerlands Stairs
+tile.terrainset_stair_8.name=TerrainSet Arbor Dorne Stairs
+tile.terrainset_stair_9.name=TerrainSet Stormlands Stairs
+tile.terrainset_wall_block_0_0.name=TerrainSet Eastern Islands Wall
+tile.terrainset_wall_block_0_1.name=TerrainSet Iron Islands Wall
+tile.terrainset_wall_block_0_10.name=TerrainSet Reach Wall
+tile.terrainset_wall_block_0_2.name=TerrainSet Mountains of the Moon Wall
+tile.terrainset_wall_block_0_3.name=TerrainSet The North Wall
+tile.terrainset_wall_block_0_4.name=TerrainSet Ocean Rocks Wall
+tile.terrainset_wall_block_0_5.name=TerrainSet Red Mountains Wall
+tile.terrainset_wall_block_0_6.name=TerrainSet River Rocks Wall
+tile.terrainset_wall_block_0_7.name=TerrainSet Westerlands Wall
+tile.terrainset_wall_block_0_8.name=TerrainSet Arbor Dorne Wall
+tile.terrainset_wall_block_0_9.name=TerrainSet Stormlands Wall
 tile.test_block_0.name=Test Block
 tile.test_block_1.name=Test Block 2
 tile.thatch_stair_0.name=Thatch Light Fur Stairs

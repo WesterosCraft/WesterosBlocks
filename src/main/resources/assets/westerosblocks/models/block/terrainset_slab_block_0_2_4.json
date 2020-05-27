@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_ocean",
+    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_ocean",
+    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_ocean",
+    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_ocean",
+    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_ocean",
+    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_ocean",
+    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_ocean"
+  }
+}

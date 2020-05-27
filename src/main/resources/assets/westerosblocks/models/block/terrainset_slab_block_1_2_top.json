@@ -1,0 +1,9 @@
+{
+  "parent": "block/upper_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
+    "top": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
+    "side": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
+    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_reach"
+  }
+}

@@ -20815,6 +20815,467 @@
           "colorMult": "textures/colormap/smallsmoothstonebrick"
         }
       ]
+    },
+    {
+      "blockName": "terrainset_stair_0",
+      "blockID": 2299,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 0,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Eastern Islands Stairs",
+          "colorMult": "textures/colormap/easternisland"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_1",
+      "blockID": 2300,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 1,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Iron Islands Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_2",
+      "blockID": 2301,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 2,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Mountains of the Moon Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_3",
+      "blockID": 2302,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 3,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet The North Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_4",
+      "blockID": 2303,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 4,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Ocean Rocks Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_5",
+      "blockID": 2304,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Red Mountains Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_6",
+      "blockID": 2305,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 6,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet River Rocks Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_7",
+      "blockID": 2306,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 7,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Westerlands Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_8",
+      "blockID": 2307,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_1",
+      "modelBlockMeta": 8,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Arbor Dorne Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_9",
+      "blockID": 2308,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_3",
+      "modelBlockMeta": 4,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Stormlands Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_10",
+      "blockID": 2309,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_4",
+      "modelBlockMeta": 3,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Reach Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_slab_block_0",
+      "blockIDs": [
+        2310,
+        2311
+      ],
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Eastern Islands Slab",
+          "colorMult": "textures/colormap/easternisland",
+          "textures": [
+            "stone_terrainsets_0/stone_eastern_islands"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "TerrainSet Iron Islands Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_iron_islands"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "TerrainSet Mountains of the Moon Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_vale"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "TerrainSet The North Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_north"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "TerrainSet Ocean Rocks Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_ocean"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "TerrainSet Red Mountains Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_red_mountains"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "TerrainSet River Rocks Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_river"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "TerrainSet Westerlands Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_westerlands"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_slab_block_1",
+      "blockIDs": [
+        2312,
+        2313
+      ],
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Arbor Dorne Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_dorne"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "TerrainSet Stormlands Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_stormlands"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "TerrainSet Reach Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_reach"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_wall_block_0",
+      "blockID": 2314,
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Eastern Islands Wall",
+          "colorMult": "textures/colormap/easternisland",
+          "textures": [
+            "stone_terrainsets_0/stone_eastern_islands"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "TerrainSet Iron Islands Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_iron_islands"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "TerrainSet Mountains of the Moon Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_vale"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "TerrainSet The North Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_north"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "TerrainSet Ocean Rocks Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_ocean"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "TerrainSet Red Mountains Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_red_mountains"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "TerrainSet River Rocks Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_river"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "TerrainSet Westerlands Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_westerlands"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "TerrainSet Arbor Dorne Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_dorne"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "TerrainSet Stormlands Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_stormlands"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "TerrainSet Reach Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_reach"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_fence_block_3",
+      "blockID": 2315,
+      "blockType": "fence",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Eastern Islands Fence",
+          "colorMult": "textures/colormap/easternisland",
+          "textures": [
+            "stone_terrainsets_0/stone_eastern_islands"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "TerrainSet Iron Islands Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_iron_islands"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "TerrainSet Mountains of the Moon Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_vale"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "TerrainSet The North Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_north"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "TerrainSet Ocean Rocks Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_ocean"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "TerrainSet Red Mountains Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_red_mountains"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "TerrainSet River Rocks Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_river"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "TerrainSet Westerlands Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_westerlands"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "TerrainSet Arbor Dorne Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_dorne"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "TerrainSet Stormlands Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_stormlands"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "TerrainSet Reach Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_reach"
+          ]
+        }
+      ]
     }
   ]
 }
