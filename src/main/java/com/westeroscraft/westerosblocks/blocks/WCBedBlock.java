@@ -12,12 +12,17 @@ import org.dynmap.renderer.RenderPatchFactory.SideVisible;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityBed;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
@@ -52,6 +57,7 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
     
     protected WCBedBlock(WesterosBlockDef def) {
         super();
+        this.hasTileEntity = false;	// No tile entity for us
         this.def = def;
         def.doStandardContructorSettings(this);
     }
@@ -226,5 +232,19 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
     {
         return false;
     }
-    
+    @Override
+    public MapColor getMapColor(IBlockState state, IBlockAccess worldIn, BlockPos pos)
+    {
+        return MapColor.CLOTH;
+    }
+    @Override
+    public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune)
+    {
+    }
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta)
+    {
+        return null;
+    }
+
 }
