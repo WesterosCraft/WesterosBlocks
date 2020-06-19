@@ -4379,7 +4379,7 @@
       "blockType": "fence",
       "hardness": 5,
       "stepSound": "stone",
-      "material": "rock",
+      "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "subBlocks": [
@@ -8816,7 +8816,7 @@
       "blockType": "fence",
       "hardness": 5,
       "stepSound": "stone",
-      "material": "rock",
+      "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "subBlocks": [
@@ -13414,7 +13414,7 @@
       "stepSound": "stone",
       "nonOpaque": true,
       "alphaRender": true,
-      "material": "rock",
+      "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "subBlocks": [
@@ -16668,7 +16668,7 @@
       "blockType": "fence",
       "hardness": 5,
       "stepSound": "stone",
-      "material": "rock",
+      "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "subBlocks": [
@@ -21193,7 +21193,7 @@
       "blockType": "fence",
       "hardness": 5,
       "stepSound": "stone",
-      "material": "rock",
+      "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "subBlocks": [

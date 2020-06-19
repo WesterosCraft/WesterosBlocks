@@ -52,6 +52,7 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
 
     private WesterosBlockDef def;
     private boolean allow_unsupported[] = new boolean[4];
+    private boolean no_climb[] = new boolean[4];
     private PropertyMeta variant;
     private static EnumFacing[] orientation = { EnumFacing.EAST, EnumFacing.WEST, EnumFacing.SOUTH, EnumFacing.NORTH };
 
@@ -65,6 +66,9 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
                 for (String tok : toks) {
                     if (tok.equals("allow-unsupported")) {
                         allow_unsupported[i] = true;
+                    }
+                    if (tok.equals("no-climb")) {
+                    	no_climb[i] = true;
                     }
                 }
             }
@@ -223,5 +227,8 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
     public int damageDropped(IBlockState state) {
         return state.getValue(variant).intValue();
     }
-
+    @Override
+    public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity) {
+    	return !no_climb[state.getValue(variant).intValue()];
+	}
 }
