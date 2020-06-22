@@ -78,6 +78,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
         super(def.getMaterial());
         this.def = def;
         this.layerCount = getLayerCount(def);
+        this.setSoundType(def.getStepSound());
         def.doStandardContructorSettings(this);
         for (int i = 0; i < layerCount; i++) {
             setBlockBoundsForMeta(i);

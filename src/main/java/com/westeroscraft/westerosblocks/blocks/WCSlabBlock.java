@@ -2,6 +2,9 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import com.westeroscraft.westerosblocks.*;
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.BoxBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
@@ -25,12 +28,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
-import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.items.WCSlabItem;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
+
+import javax.annotation.Nullable;
 
 public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -266,5 +267,10 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
         return new ItemStack((this.isDouble()?this.otherBlock:this), 1, state.getValue(variant).intValue());
+    }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return BlockSoundOverrider.getSoundType(blockState);
     }
 }

@@ -3,6 +3,9 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import com.westeroscraft.westerosblocks.*;
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.CopyBlockTextureRecord;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
@@ -21,14 +24,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
-import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
-
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import javax.annotation.Nullable;
 
 public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -73,6 +72,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         this.setCreativeTab(def.getCreativeTab());
         this.setUnlocalizedName(def.blockName);
         this.setRegistryName(def.blockName);
+        this.setSoundType(def.getStepSound());
 
         useNeighborBrightness = true;
     }
@@ -151,6 +151,11 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     @Override
     public int damageDropped(IBlockState state) {
         return 0;
+    }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return BlockSoundOverrider.getSoundType(blockState);
     }
 
 }
