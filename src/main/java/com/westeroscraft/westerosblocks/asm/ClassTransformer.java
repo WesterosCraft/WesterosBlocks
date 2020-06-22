@@ -13,6 +13,8 @@ import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+
 import org.objectweb.asm.Opcodes;
 
 import net.minecraft.launchwrapper.IClassTransformer;
@@ -31,43 +33,49 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
     {
         boolean match = true;
         
-        if (name.equals("aym")) { // Obfuscated name for net.minecraft.world.WorldProvider
+        if (name.equals("ayk")) { // Obfuscated name for net.minecraft.world.WorldProvider
             bytes = transformWorldProvider(name, bytes, true);
         }
         else if (name.equals("net.minecraft.world.WorldProvider")) {    // Clear name
             bytes = transformWorldProvider(name, bytes, false);
         }
-        else if (name.equals("aqy")) { // Obfuscated name for net.minecraft.block.BlockGlass
+        else 
+        if (name.equals("aqy")) { // Obfuscated name for net.minecraft.block.BlockGlass
             bytes = transformBlockGlass(name, bytes, true);
         }
         else if (name.equals("net.minecraft.block.BlockGlass")) {    // Clear name
             bytes = transformBlockGlass(name, bytes, false);
         }
-        else if (name.equals("auo")) { // Obfuscated name for net.minecraft.block.BlockPane
+        else 
+        if (name.equals("auo")) { // Obfuscated name for net.minecraft.block.BlockPane
             bytes = transformBlockGlassPane(name, bytes, true);
         }
         else if (name.equals("net.minecraft.block.BlockPane")) {    // Clear name
             bytes = transformBlockGlassPane(name, bytes, false);
         }
-        else if (name.equals("fd")) { // Obfuscated name for ObjectIntIdentityMap
+        else 
+        if (name.equals("fd")) { // Obfuscated name for ObjectIntIdentityMap
             bytes = transformObjectIntIdentityMap(name, bytes, true);
         }
         else if (name.equals("net.minecraft.util.ObjectIntIdentityMap")) {    // Clear name
             bytes = transformObjectIntIdentityMap(name, bytes, false);
         }
-        else if (name.equals("ko")) {
+        else
+        if (name.equals("ko")) {
         	bytes = transformSPacketTimeUpdate(name, bytes, true);
         }
         else if (name.equals("net.minecraft.network.play.server.SPacketTimeUpdate")) {
         	bytes = transformSPacketTimeUpdate(name, bytes, false);
         }
-        else if (name.equals("jc")) {
+        else
+        if (name.equals("jc")) {
         	bytes = transformSPacketChangeGameState(name, bytes, true);
         }
         else if (name.equals("net.minecraft.network.play.server.SPacketChangeGameState")) {
         	bytes = transformSPacketChangeGameState(name, bytes, false);
         }
-        else if (name.equals("aqf")) {
+        else
+        if (name.equals("aqf")) {
             bytes = transformEnchantmentTable(name, bytes, true);
         }
         else if (name.equals("net.minecraft.block.BlockEnchantmentTable")) {
@@ -196,7 +204,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodSig = "";
 
-        //WesterosBlocks.log.debug("Checking class " + name);
+        //System.out.println("Checking class " + name + ": transformBlockGlass");
 
         if (obfus) {
             targetMethodName ="f";
@@ -214,7 +222,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+        	//System.out.println("Cannot find "  + targetMethodName + targetMethodSig + " in " + name + " for patching");
             patchState.put(name, TransformState.CLIENTONLY);
             return b;
         }
@@ -237,7 +245,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         Label l1 = new Label();
         mv.visitLabel(l1);
         if (obfus) {
-            mv.visitLocalVariable("this", "Laqy;", null, l0, l1, 0);
+            mv.visitLocalVariable("this", "Laqw;", null, l0, l1, 0);
         }
         else {
             mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockGlass;", null, l0, l1, 0);
@@ -250,7 +258,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        //System.out.println("Method " + targetMethodName + targetMethodSig + " of " + name + " patched!");
         patchState.put(name, TransformState.DONE);
 
         return b;
@@ -268,7 +276,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetMethodName = "";
         String targetMethodSig = "";
 
-        //WesterosBlocks.log.debug("Checking class " + name);
+        //System.out.println("Checking class " + name + ":transformBlockGlassPane");
         
         if (obfus) {
             targetMethodName ="f";
@@ -286,7 +294,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+        	//System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             patchState.put(name, TransformState.CLIENTONLY);
             return b;
         }
@@ -309,14 +317,16 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         Label l1 = new Label();
         mv.visitLabel(l1);
         if (obfus) {
-            mv.visitLocalVariable("this", "Laqy;", null, l0, l1, 0);
+            mv.visitLocalVariable("this", "Laum;", null, l0, l1, 0);
         }
         else {
-            mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockGlass;", null, l0, l1, 0);
+            mv.visitLocalVariable("this", "Lnet/minecraft/block/BlockPane;", null, l0, l1, 0);
         }
         mv.visitMaxs(1, 1);
         mv.visitEnd();
         patchState.put(name, TransformState.DONE);
+
+        //System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
 
         return b;
     }
@@ -335,7 +345,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetClassSig  = "";
         String targetFieldID = "";
 
-        //WesterosBlocks.log.debug("Checking class " + name);
+        System.out.println("Checking class " + name);
 
         if (obfus) {
             targetMethodName ="a";
@@ -356,7 +366,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            //WesterosBlocks.log.debug("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+        	System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             return b;
         }
         // Replace method implementation
@@ -383,7 +393,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
         patchState.put(name, TransformState.DONE);
 
         return b;
@@ -405,7 +415,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetFieldID2 = "";
         String targetClassPacketBuffer = "";
 
-        //WesterosBlocks.log.debug("Checking class " + name);
+        System.out.println("Checking class " + name);
         
         if (obfus) {
             targetClassSig  = "ko";
@@ -432,7 +442,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+        	System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             patchState.put(name, TransformState.CLIENTONLY);
             return b;
         }
@@ -468,7 +478,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitMaxs(3, 2);
         mv.visitEnd();
         
-        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
         
         //ASM specific for cleaning up and returning the final bytes for JVM processing.
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
@@ -498,7 +508,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetFieldID = "";
         String targetFieldID2 = "";
 
-        //WesterosBlocks.log.debug("Checking class " + name);
+        System.out.println("Checking class " + name);
         
         if (obfus) {
             targetClassSig  = "jc";
@@ -525,7 +535,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-            //WesterosBlocks.log.warning("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+        	System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             patchState.put(name, TransformState.CLIENTONLY);
             return b;
         }
@@ -564,7 +574,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitMaxs(2, 2);
         mv.visitEnd();
         
-        //WesterosBlocks.log.debug("Method " + targetMethodName + "() of " + name + " patched!");
+        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
         
         //ASM specific for cleaning up and returning the final bytes for JVM processing.
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
@@ -596,7 +606,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         public AddEnchantMethodVisitor(ClassVisitor cv, boolean obfus) {
             super(Opcodes.ASM5, cv);
             if (obfus) {
-                targetClassSig  = "aqf";
+                targetClassSig  = "aqd";
                 targetMethodName ="f";
                 targetMethodSig = "()Lamm;";
                 targetRetClass = "amm";
@@ -640,6 +650,8 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classReader.accept(visitor, 0);
         b = writer.toByteArray();
 
+        System.out.println("Adding method to " + name + "(enchantmenttable)");
+        
         patchState.put(name, TransformState.DONE);
 
         return b;
