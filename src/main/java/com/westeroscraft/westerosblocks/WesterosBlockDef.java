@@ -81,7 +81,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.ForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
 //
@@ -269,6 +268,7 @@ public class WesterosBlockDef {
         public int harvestItemID = DEF_INT;     // Harvest item ID (-1=use block level)
         public int fireSpreadSpeed = DEF_INT;   // Fire spread speed (-1=use block level)
         public int flamability = DEF_INT;       // Flamability (-1=use block level)
+        public String stepSound = null; // an overriden step sound for a specific meta
         public float lightValue = DEF_FLOAT;    // Emitted light level (0.0-1.0)
         public int lightOpacity = DEF_INT;      // Light opacity
         public List<String> textures = null;    // List of textures
@@ -528,6 +528,7 @@ public class WesterosBlockDef {
     private transient Subblock subblock_by_meta[];
     private transient int fireSpreadSpeed_by_meta[] = null;
     private transient int flamability_by_meta[] = null;
+    private transient String stepSound_by_meta[] = null;
     private transient int lightValue_by_meta[] = null;
     private transient int lightOpacity_by_meta[] = null;
     private transient int lightValueInt;
@@ -568,8 +569,11 @@ public class WesterosBlockDef {
         }
         return m;
     }
-    
-    public SoundType getStepSound() {
+
+    /**
+     * Returns this WesterosBlockDef's default SoundType
+     */
+    public SoundType getSoundType() {
         SoundType ss = stepSoundTable.get(stepSound);
         if (ss == null) {
             WesterosBlocks.log.warn(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
@@ -577,7 +581,17 @@ public class WesterosBlockDef {
         }
         return ss;
     }
-    
+
+    /**
+     * Returns the SoundType for a Subblock of a specific meta
+     * @param meta The meta of the Subblock whose SoundType will be returned
+     * @return The SoundType associated with the Subblock whose meta was passed in
+     */
+    public SoundType getSoundType(int meta) {
+        Subblock subBlock = subblock_by_meta[meta & metaMask];
+        return subBlock.stepSound == null ? getSoundType() : stepSoundTable.get(subBlock.stepSound);
+    }
+
     public CreativeTabs getCreativeTab() {
         CreativeTabs ct = tabTable.get(creativeTab);
         if (ct == null) {
@@ -621,6 +635,15 @@ public class WesterosBlockDef {
                         }
                     }
                     flamability_by_meta[sb.meta] = sb.flamability; 
+                }
+                if (sb.stepSound != null) {
+                    if (stepSound_by_meta == null) {
+                        stepSound_by_meta = new String[metaMask+1];
+                        if (this.stepSound != null) {
+                            Arrays.fill(stepSound_by_meta, this.stepSound);
+                        }
+                    }
+                    stepSound_by_meta[sb.meta] = sb.stepSound;
                 }
                 if (sb.lightValue != DEF_FLOAT) {
                     if (lightValue_by_meta == null) {
@@ -689,6 +712,8 @@ public class WesterosBlockDef {
                     }
                     this.sounds_by_meta[sb.meta] = sb.soundList;
                 }
+                // If overridden SoundType (step and place sounds)
+
                 // If particle effects
                 if ((sb.particles != null) && (sb.particles.size() > 0)) {
                     if (this.particles_by_meta == null) {

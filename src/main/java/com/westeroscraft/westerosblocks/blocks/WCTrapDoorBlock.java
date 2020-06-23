@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
@@ -32,6 +34,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+
+import javax.annotation.Nullable;
 
 public class WCTrapDoorBlock extends BlockTrapDoor implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -178,4 +182,10 @@ public class WCTrapDoorBlock extends BlockTrapDoor implements WesterosBlockLifec
     public int damageDropped(IBlockState state) {
         return 0;
     }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
+    }
+
 }

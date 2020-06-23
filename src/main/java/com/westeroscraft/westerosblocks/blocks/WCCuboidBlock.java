@@ -20,7 +20,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
@@ -62,7 +61,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.getMaterial());
         this.def = def;
-        this.setSoundType(def.getStepSound());
+        this.setSoundType(def.getSoundType());
         def.doStandardContructorSettings(this);
     }
 
@@ -285,7 +284,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
 
     @Override
     public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
-        return BlockSoundOverrider.getSoundType(blockState);
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }

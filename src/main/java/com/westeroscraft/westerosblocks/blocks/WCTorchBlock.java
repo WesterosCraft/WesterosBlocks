@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.PatchBlockModel;
@@ -29,6 +31,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+
+import javax.annotation.Nullable;
 
 public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -149,4 +153,10 @@ public class WCTorchBlock extends BlockTorch implements WesterosBlockLifecycle, 
     }
     @Override
     public IProperty<?>[] getNonRenderingProperties() { return null; }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
+    }
+
 }

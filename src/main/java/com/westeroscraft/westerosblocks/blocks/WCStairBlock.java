@@ -72,7 +72,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         this.setCreativeTab(def.getCreativeTab());
         this.setUnlocalizedName(def.blockName);
         this.setRegistryName(def.blockName);
-        this.setSoundType(def.getStepSound());
+        this.setSoundType(def.getSoundType());
 
         useNeighborBrightness = true;
     }
@@ -155,7 +155,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
 
     @Override
     public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
-        return BlockSoundOverrider.getSoundType(blockState);
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }

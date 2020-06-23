@@ -7,9 +7,6 @@ import javax.annotation.Nullable;
 
 import com.westeroscraft.westerosblocks.*;
 import net.minecraft.block.*;
-import net.minecraft.util.text.TextComponentString;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
@@ -65,7 +62,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         this.isSolidOpaque = !def.nonOpaque;
         this.def = def;
         def.doStandardContructorSettings(this);
-        setSoundType(def.getStepSound());
+        setSoundType(def.getSoundType());
     }
     @Override
     public boolean initializeBlockDefinition() {
@@ -264,7 +261,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
 
     @Override
     public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
-        return BlockSoundOverrider.getSoundType(blockState);
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }

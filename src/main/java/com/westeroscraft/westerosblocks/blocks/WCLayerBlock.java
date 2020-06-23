@@ -4,6 +4,8 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.BoxBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
@@ -78,7 +80,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
         super(def.getMaterial());
         this.def = def;
         this.layerCount = getLayerCount(def);
-        this.setSoundType(def.getStepSound());
+        this.setSoundType(def.getSoundType());
         def.doStandardContructorSettings(this);
         for (int i = 0; i < layerCount; i++) {
             setBlockBoundsForMeta(i);
@@ -251,6 +253,11 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
     public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
     {
         return BlockFaceShape.UNDEFINED;
+    }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }

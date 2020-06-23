@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -44,4 +45,10 @@ public class WCSoulSandBlock extends WCSolidBlock {
         entityIn.motionX *= 0.4D;
         entityIn.motionZ *= 0.4D;
     }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
+    }
+
 }

@@ -10,6 +10,13 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
 
 public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
 
@@ -62,4 +69,5 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
     public List<WesterosBlockDef.Cuboid> getCuboidList(int meta) {
         return cuboidlist;
     }
+
 }

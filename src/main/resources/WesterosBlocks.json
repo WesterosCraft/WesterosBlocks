@@ -1277,6 +1277,7 @@
         },
         {
           "meta": 1,
+          "stepSound": "wood",
           "label": "Wooden Plate",
           "textures": [
             "transparent",
@@ -1636,6 +1637,7 @@
         },
         {
           "meta": 6,
+          "stepSound": "wood",
           "label": "Table",
           "textures": [
             "transparent",
@@ -3359,6 +3361,7 @@
         },
         {
           "meta": 5,
+          "stepSound": "stone",
           "label": "6-Sided Stone Slab",
           "textures": [
             "stone_block_1/stone_slab_top"
@@ -3568,6 +3571,7 @@
         },
         {
           "meta": 9,
+          "stepSound": "plant",
           "label": "Thatch Light Fur",
           "textures": [
             "fur_block_0/thatch_light"
@@ -3575,6 +3579,7 @@
         },
         {
           "meta": 10,
+          "stepSound": "plant",
           "label": "Thatch Dark Fur",
           "textures": [
             "fur_block_0/thatch_dark"
@@ -3582,6 +3587,7 @@
         },
         {
           "meta": 11,
+          "stepSound": "cloth",
           "label": "Leather",
           "textures": [
             "fur_block_0/leather_block_leather"
@@ -4201,6 +4207,7 @@
         },
         {
           "meta": 2,
+          "stepSound": "plant",
           "label": "Thatch Light Fur Slab",
           "textures": [
             "fur_block_0/thatch_light"
@@ -4208,6 +4215,7 @@
         },
         {
           "meta": 3,
+          "stepSound": "plant",
           "label": "Thatch Dark Fur Slab",
           "textures": [
             "fur_block_0/thatch_dark"
@@ -4215,6 +4223,7 @@
         },
         {
           "meta": 4,
+          "stepSound": "cloth",
           "label": "Leather Slab",
           "textures": [
             "fur_block_0/leather_block_leather"
@@ -4222,6 +4231,7 @@
         },
         {
           "meta": 5,
+          "stepSound": "wood",
           "label": "Stool",
           "lightOpacity": 0,
           "textures": [
@@ -4232,6 +4242,7 @@
         },
         {
           "meta": 6,
+          "stepSound": "wood",
           "label": "Stool Cushion",
           "lightOpacity": 0,
           "textures": [
@@ -5270,6 +5281,7 @@
       "subBlocks": [
         {
           "meta": 0,
+          "stepSound": "wood",
           "label": "Spruce Hopper",
           "textures": [
             "wood_block_0/planks_spruce"
@@ -5327,6 +5339,7 @@
         },
         {
           "meta": 1,
+          "stepSound": "wood",
           "label": "Birch Hopper",
           "textures": [
             "wood_block_0/planks_birch"
@@ -5384,6 +5397,7 @@
         },
         {
           "meta": 2,
+          "stepSound": "wood",
           "label": "Jungle Hopper",
           "textures": [
             "wood_block_0/planks_jungle"
@@ -7113,6 +7127,7 @@
     },
     {
       "blockName": "bed_block_1",
+      "stepSound": "wood",
       "blockID": 2082,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7134,6 +7149,7 @@
     },
     {
       "blockName": "bed_block_2",
+      "stepSound": "plant",
       "blockID": 2083,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7155,6 +7171,7 @@
     },
     {
       "blockName": "bed_block_3",
+      "stepSound": "plant",
       "blockID": 2084,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7176,6 +7193,7 @@
     },
     {
       "blockName": "bed_block_4",
+      "stepSound": "wood",
       "blockID": 2085,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7197,6 +7215,7 @@
     },
     {
       "blockName": "bed_block_5",
+      "stepSound": "wood",
       "blockID": 2086,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7218,6 +7237,7 @@
     },
     {
       "blockName": "bed_block_6",
+      "stepSound": "wood",
       "blockID": 2087,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7239,6 +7259,7 @@
     },
     {
       "blockName": "bed_block_7",
+      "stepSound": "wood",
       "blockID": 2088,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7260,6 +7281,7 @@
     },
     {
       "blockName": "bed_block_8",
+      "stepSound": "plant",
       "blockID": 2089,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -9800,6 +9822,7 @@
         },
         {
           "meta": 3,
+          "stepSound": "wood",
           "label": "Oak Hopper",
           "textures": [
             "wood_block_0/planks_oak"
@@ -9857,6 +9880,7 @@
         },
         {
           "meta": 4,
+          "stepSound": "wood",
           "label": "Hollow Oak Hopper",
           "textures": [
             "wood_block_0/planks_oak"
@@ -9978,6 +10002,7 @@
         },
         {
           "meta": 5,
+          "stepSound": "wood",
           "label": "Hollow Spruce Hopper",
           "textures": [
             "wood_block_0/planks_spruce"
@@ -10099,6 +10124,7 @@
         },
         {
           "meta": 6,
+          "stepSound": "wood",
           "label": "Hollow Birch Hopper",
           "textures": [
             "wood_block_0/planks_birch"
@@ -10220,6 +10246,7 @@
         },
         {
           "meta": 7,
+          "stepSound": "wood",
           "label": "Hollow Jungle Hopper",
           "textures": [
             "wood_block_0/planks_jungle"
@@ -10570,6 +10597,7 @@
         },
         {
           "meta": 12,
+          "stepSound": "wood",
           "label": "Dark Northern Wood Hopper",
           "textures": [
             "wood_block_1/wood_northern"
@@ -10627,6 +10655,7 @@
         },
         {
           "meta": 13,
+          "stepSound": "wood",
           "label": "Hollow Dark Northern Wood Hopper",
           "textures": [
             "wood_block_1/wood_northern"
@@ -19038,6 +19067,7 @@
         },
         {
           "meta": 9,
+          "stepSound": "wood",
           "label": "Grey Wood Hopper",
           "textures": [
             "wood_block_1/wood_grey"
@@ -19095,6 +19125,7 @@
         },
         {
           "meta": 10,
+          "stepSound": "wood",
           "label": "White Wood Hopper",
           "textures": [
             "wood_block_1/wood_white"

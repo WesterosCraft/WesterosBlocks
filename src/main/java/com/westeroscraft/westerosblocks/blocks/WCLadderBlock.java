@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.PatchBlockModel;
@@ -32,6 +34,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
+
+import javax.annotation.Nullable;
 
 public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -231,4 +235,9 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
     public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity) {
     	return !no_climb[state.getValue(variant).intValue()];
 	}
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
+    }
 }

@@ -271,6 +271,6 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
 
     @Override
     public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
-        return BlockSoundOverrider.getSoundType(blockState);
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
 }

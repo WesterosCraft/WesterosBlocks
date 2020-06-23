@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.ModTextureDefinition;
 
 import net.minecraft.block.Block;
@@ -41,6 +43,8 @@ import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 import com.westeroscraft.westerosblocks.network.WesterosBlocksMessageDest;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 import com.westeroscraft.westerosblocks.tileentity.WCFurnaceTileEntity;
+
+import javax.annotation.Nullable;
 
 // Custom furnace block
 // Distinct meta mapping, to allow 2 custom furnaces per block ID
@@ -334,6 +338,11 @@ public class WCFurnaceBlock extends BlockFurnace implements WesterosBlockLifecyc
     @Override
     public int damageDropped(IBlockState state) {
         return state.getValue(variant).intValue();
+    }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }

@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.PatchBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
@@ -39,6 +41,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.items.WCBedItem;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
+
+import javax.annotation.Nullable;
 
 public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -245,6 +249,11 @@ public class WCBedBlock extends BlockBed implements WesterosBlockLifecycle, West
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
         return null;
+    }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }
