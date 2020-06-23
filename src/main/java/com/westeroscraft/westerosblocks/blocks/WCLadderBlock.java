@@ -214,6 +214,14 @@ public class WCLadderBlock extends BlockLadder implements WesterosBlockLifecycle
         }
         return super.canPlaceBlockOnSide(worldIn, pos, facing);
     }
+    @Override
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
+        IBlockState bs = worldIn.getBlockState(pos);
+        if ((bs.getBlock() == this) && (allow_unsupported[bs.getValue(variant).intValue()])) {
+            return;
+        }
+    	super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
+    }
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
