@@ -11041,6 +11041,7 @@
         },
         {
           "meta": 9,
+          "stepSound": "wood",
           "label": "Reach Oak Wood Panelling",
           "textures": [
             "wood_block_1/wood_panelling_oak"
@@ -11048,6 +11049,7 @@
         },
         {
           "meta": 10,
+          "stepSound": "wood",
           "label": "Reach Spruce Wood Panelling",
           "textures": [
             "wood_block_1/wood_panelling_spruce"
@@ -19325,6 +19327,7 @@
         },
         {
           "meta": 7,
+          "stepSound": "wood",
           "label": "Reach Oak Wood Panelling Wall",
           "textures": [
             "wood_block_1/wood_panelling_oak"
@@ -19332,6 +19335,7 @@
         },
         {
           "meta": 8,
+          "stepSound": "wood",
           "label": "Reach Spruce Wood Panelling Wall",
           "textures": [
             "wood_block_1/wood_panelling_spruce"
