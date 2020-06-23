@@ -324,6 +324,12 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         }
         mv.visitMaxs(1, 1);
         mv.visitEnd();
+        
+        //ASM specific for cleaning up and returning the final bytes for JVM processing.
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        classNode.accept(writer);
+        b = writer.toByteArray();
+
         patchState.put(name, TransformState.DONE);
 
         //System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
@@ -393,7 +399,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classNode.accept(writer);
         b = writer.toByteArray();
         
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        //System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
         patchState.put(name, TransformState.DONE);
 
         return b;
@@ -415,7 +421,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetFieldID2 = "";
         String targetClassPacketBuffer = "";
 
-        System.out.println("Checking class " + name);
+        //System.out.println("Checking class " + name);
         
         if (obfus) {
             targetClassSig  = "ko";
@@ -442,7 +448,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-        	System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+        	//System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             patchState.put(name, TransformState.CLIENTONLY);
             return b;
         }
@@ -478,7 +484,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitMaxs(3, 2);
         mv.visitEnd();
         
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        //System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
         
         //ASM specific for cleaning up and returning the final bytes for JVM processing.
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
@@ -508,7 +514,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         String targetFieldID = "";
         String targetFieldID2 = "";
 
-        System.out.println("Checking class " + name);
+        //System.out.println("Checking class " + name);
         
         if (obfus) {
             targetClassSig  = "jc";
@@ -535,7 +541,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         // Now find the method
         MethodNode m = findMethod(classNode, targetMethodName, targetMethodSig);
         if (m == null) {
-        	System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
+        	//System.out.println("Cannot find "  + targetMethodName + "() in " + name + " for patching");
             patchState.put(name, TransformState.CLIENTONLY);
             return b;
         }
@@ -574,7 +580,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         mv.visitMaxs(2, 2);
         mv.visitEnd();
         
-        System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
+        //System.out.println("Method " + targetMethodName + "() of " + name + " patched!");
         
         //ASM specific for cleaning up and returning the final bytes for JVM processing.
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
@@ -650,7 +656,7 @@ public class ClassTransformer implements IClassTransformer, Opcodes {
         classReader.accept(visitor, 0);
         b = writer.toByteArray();
 
-        System.out.println("Adding method to " + name + "(enchantmenttable)");
+        //System.out.println("Adding method to " + name + "(enchantmenttable)");
         
         patchState.put(name, TransformState.DONE);
 
