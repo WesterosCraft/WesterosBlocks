@@ -66,6 +66,30 @@ public final class BlockSoundOverrider {
         overrides.add(new Override("cuboid_block_3", 1, SoundType.WOOD));
         // Table
         overrides.add(new Override("cuboid_block_3", 6, SoundType.WOOD));
+        // Spruce Hopper
+        overrides.add(new Override("hopper_block_0", 0, SoundType.WOOD));
+        // Birch Hopper
+        overrides.add(new Override("hopper_block_0", 1, SoundType.WOOD));
+        // Jungle Hopper
+        overrides.add(new Override("hopper_block_0", 2, SoundType.WOOD));
+        // Oak Hopper
+        overrides.add(new Override("hopper_block_2", 3, SoundType.WOOD));
+        // Hollow Oak Hopper
+        overrides.add(new Override("hopper_block_2", 4, SoundType.WOOD));
+        // Hollow Spruce Hopper
+        overrides.add(new Override("hopper_block_2", 5, SoundType.WOOD));
+        // Hollow Birch Hopper
+        overrides.add(new Override("hopper_block_2", 6, SoundType.WOOD));
+        // Hollow Jungle Hopper
+        overrides.add(new Override("hopper_block_2", 7, SoundType.WOOD));
+        // Dark Northern Wood Hopper
+        overrides.add(new Override("hopper_block_2", 12, SoundType.WOOD));
+        // Hollow Dark Northern Wood Hopper
+        overrides.add(new Override("hopper_block_2", 13, SoundType.WOOD));
+        // Grey Wood Hopper
+        overrides.add(new Override("hopper_block_3", 9, SoundType.WOOD));
+        // White Wood Hopper
+        overrides.add(new Override("hopper_block_3", 10, SoundType.WOOD));
     }
     /**
      * gets a SoundType from a BlockState, taking into account possible overrides
