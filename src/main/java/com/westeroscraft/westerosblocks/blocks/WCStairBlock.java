@@ -73,7 +73,7 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
         this.setCreativeTab(def.getCreativeTab());
         this.setUnlocalizedName(def.blockName);
         this.setRegistryName(def.blockName);
-        this.setSoundType(def.getSoundType());
+        this.setSoundType(bs.getBlock().getSoundType(bs, null, null, null));
 
         useNeighborBrightness = true;
     }
