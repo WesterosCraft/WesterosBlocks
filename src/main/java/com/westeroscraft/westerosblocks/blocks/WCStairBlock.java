@@ -153,4 +153,17 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     public int damageDropped(IBlockState state) {
         return 0;
     }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public Material getMaterial(IBlockState blockState) {
+        Block modelBlock = WesterosBlocks.findBlockByName(def.modelBlockName);
+        if (modelBlock instanceof WCSolidBlock) {
+            WCSolidBlock modelWCSolidBlock = (WCSolidBlock) modelBlock;
+            return modelWCSolidBlock.getMaterial(def.modelBlockMeta);
+        } else {
+            return Material.ROCK;
+        }
+    }
+
 }

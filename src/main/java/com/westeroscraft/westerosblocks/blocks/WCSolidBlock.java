@@ -271,4 +271,8 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         return def.getMaterial(blockState.getBlock().getMetaFromState(blockState));
     }
 
+    public Material getMaterial(int meta) {
+        return def.getMaterial(meta);
+    }
+
 }
