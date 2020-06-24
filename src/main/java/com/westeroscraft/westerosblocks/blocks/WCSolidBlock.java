@@ -5,13 +5,11 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.westeroscraft.westerosblocks.*;
+import net.minecraft.block.*;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
-import net.minecraft.block.BlockPane;
-import net.minecraft.block.BlockWall;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -31,11 +29,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.google.common.collect.Lists;
-import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
-import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
-import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 
@@ -68,7 +62,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         this.isSolidOpaque = !def.nonOpaque;
         this.def = def;
         def.doStandardContructorSettings(this);
-        setSoundType(def.getStepSound());
+        setSoundType(def.getSoundType());
     }
     @Override
     public boolean initializeBlockDefinition() {
@@ -264,4 +258,10 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
         Block connector = world.getBlockState(pos.offset(facing)).getBlock();
         return connector instanceof BlockWall || connector instanceof BlockFence || connector instanceof BlockPane;
     }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
+    }
+
 }

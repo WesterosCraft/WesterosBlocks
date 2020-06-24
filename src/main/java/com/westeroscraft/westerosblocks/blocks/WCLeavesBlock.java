@@ -4,6 +4,8 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.block.SoundType;
+import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.BlockSide;
 import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.ModTextureDefinition;
@@ -71,7 +73,7 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
             def.lightOpacity = 1;
         }
         def.doStandardContructorSettings(this);
-        setSoundType(def.getStepSound());
+        setSoundType(def.getSoundType());
         nodecay = new boolean[8];
         for (int i = 0; i < 8; i++) {
             String typ = def.getType(i);
@@ -251,6 +253,11 @@ public class WCLeavesBlock extends BlockLeaves implements IShearable, WesterosBl
     @Override
     public int damageDropped(IBlockState state) {
         return state.getValue(variant).intValue();
+    }
+
+    @Override
+    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
+        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
     
 }
