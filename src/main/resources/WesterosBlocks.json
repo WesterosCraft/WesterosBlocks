@@ -1278,6 +1278,7 @@
         {
           "meta": 1,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Wooden Plate",
           "textures": [
             "transparent",
@@ -1638,6 +1639,7 @@
         {
           "meta": 6,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Table",
           "textures": [
             "transparent",
@@ -3362,6 +3364,7 @@
         {
           "meta": 5,
           "stepSound": "stone",
+          "material": "rock",
           "label": "6-Sided Stone Slab",
           "textures": [
             "stone_block_1/stone_slab_top"
@@ -3572,6 +3575,7 @@
         {
           "meta": 9,
           "stepSound": "plant",
+          "material": "plants",
           "label": "Thatch Light Fur",
           "textures": [
             "fur_block_0/thatch_light"
@@ -3580,6 +3584,7 @@
         {
           "meta": 10,
           "stepSound": "plant",
+          "material": "plants",
           "label": "Thatch Dark Fur",
           "textures": [
             "fur_block_0/thatch_dark"
@@ -4193,6 +4198,7 @@
       "subBlocks": [
         {
           "meta": 0,
+          "material": "ground",
           "label": "Dirt Slab",
           "textures": [
             "ground_block_0/dirt"
@@ -4200,6 +4206,7 @@
         },
         {
           "meta": 1,
+          "material": "ground",
           "label": "Gravel Slab",
           "textures": [
             "ground_block_0/gravel"
@@ -4208,6 +4215,7 @@
         {
           "meta": 2,
           "stepSound": "plant",
+          "material": "plants",
           "label": "Thatch Light Fur Slab",
           "textures": [
             "fur_block_0/thatch_light"
@@ -4216,6 +4224,7 @@
         {
           "meta": 3,
           "stepSound": "plant",
+          "material": "plants",
           "label": "Thatch Dark Fur Slab",
           "textures": [
             "fur_block_0/thatch_dark"
@@ -4224,6 +4233,7 @@
         {
           "meta": 4,
           "stepSound": "cloth",
+          "material": "cloth",
           "label": "Leather Slab",
           "textures": [
             "fur_block_0/leather_block_leather"
@@ -4232,6 +4242,7 @@
         {
           "meta": 5,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Stool",
           "lightOpacity": 0,
           "textures": [
@@ -4243,6 +4254,7 @@
         {
           "meta": 6,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Stool Cushion",
           "lightOpacity": 0,
           "textures": [
@@ -4312,6 +4324,7 @@
         },
         {
           "meta": 4,
+          "material": "ground",
           "label": "Reach Gravel Slab",
           "textures": [
             "ground_block_0/gravel_reach"
@@ -4319,6 +4332,7 @@
         },
         {
           "meta": 5,
+          "material": "ground",
           "label": "Dorne Dusty Dirt Slab",
           "textures": [
             "ground_block_0/dirt_dusty"
@@ -5282,6 +5296,7 @@
         {
           "meta": 0,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Spruce Hopper",
           "textures": [
             "wood_block_0/planks_spruce"
@@ -5340,6 +5355,7 @@
         {
           "meta": 1,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Birch Hopper",
           "textures": [
             "wood_block_0/planks_birch"
@@ -5398,6 +5414,7 @@
         {
           "meta": 2,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Jungle Hopper",
           "textures": [
             "wood_block_0/planks_jungle"
@@ -6993,6 +7010,7 @@
       "blockID": 2073,
       "blockType": "stair",
       "stepSound": "plant",
+      "material": "plants",
       "modelBlockName": "wood_colours",
       "modelBlockMeta": 9,
       "creativeTab": "WesterosBlocks",
@@ -7008,6 +7026,7 @@
       "blockID": 2074,
       "blockType": "stair",
       "stepSound": "plant",
+      "material": "plants",
       "modelBlockName": "wood_colours",
       "modelBlockMeta": 10,
       "creativeTab": "WesterosBlocks",
@@ -7106,6 +7125,7 @@
     },
     {
       "blockName": "bed_block_0",
+      "material": "cloth",
       "blockID": 2081,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7128,6 +7148,7 @@
     {
       "blockName": "bed_block_1",
       "stepSound": "wood",
+      "material": "cloth",
       "blockID": 2082,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7150,6 +7171,7 @@
     {
       "blockName": "bed_block_2",
       "stepSound": "plant",
+      "material": "plants",
       "blockID": 2083,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7172,6 +7194,7 @@
     {
       "blockName": "bed_block_3",
       "stepSound": "plant",
+      "material": "plants",
       "blockID": 2084,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7194,6 +7217,7 @@
     {
       "blockName": "bed_block_4",
       "stepSound": "wood",
+      "material": "cloth",
       "blockID": 2085,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7216,6 +7240,7 @@
     {
       "blockName": "bed_block_5",
       "stepSound": "wood",
+      "material": "cloth",
       "blockID": 2086,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7238,6 +7263,7 @@
     {
       "blockName": "bed_block_6",
       "stepSound": "wood",
+      "material": "cloth",
       "blockID": 2087,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7260,6 +7286,7 @@
     {
       "blockName": "bed_block_7",
       "stepSound": "wood",
+      "material": "cloth",
       "blockID": 2088,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -7282,6 +7309,7 @@
     {
       "blockName": "bed_block_8",
       "stepSound": "plant",
+      "material": "plants",
       "blockID": 2089,
       "blockType": "bed",
       "creativeTab": "WesterosDeco",
@@ -9823,6 +9851,7 @@
         {
           "meta": 3,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Oak Hopper",
           "textures": [
             "wood_block_0/planks_oak"
@@ -9881,6 +9910,7 @@
         {
           "meta": 4,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Hollow Oak Hopper",
           "textures": [
             "wood_block_0/planks_oak"
@@ -10003,6 +10033,7 @@
         {
           "meta": 5,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Hollow Spruce Hopper",
           "textures": [
             "wood_block_0/planks_spruce"
@@ -10125,6 +10156,7 @@
         {
           "meta": 6,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Hollow Birch Hopper",
           "textures": [
             "wood_block_0/planks_birch"
@@ -10247,6 +10279,7 @@
         {
           "meta": 7,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Hollow Jungle Hopper",
           "textures": [
             "wood_block_0/planks_jungle"
@@ -10598,6 +10631,7 @@
         {
           "meta": 12,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Dark Northern Wood Hopper",
           "textures": [
             "wood_block_1/wood_northern"
@@ -10656,6 +10690,7 @@
         {
           "meta": 13,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Hollow Dark Northern Wood Hopper",
           "textures": [
             "wood_block_1/wood_northern"
@@ -11042,6 +11077,7 @@
         {
           "meta": 9,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Reach Oak Wood Panelling",
           "textures": [
             "wood_block_1/wood_panelling_oak"
@@ -11050,6 +11086,7 @@
         {
           "meta": 10,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Reach Spruce Wood Panelling",
           "textures": [
             "wood_block_1/wood_panelling_spruce"
@@ -16353,7 +16390,7 @@
       "blockType": "solid",
       "hardness": 5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
@@ -16443,7 +16480,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16463,7 +16500,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16482,7 +16519,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16501,7 +16538,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16520,7 +16557,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16539,7 +16576,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16558,7 +16595,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16577,7 +16614,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16596,7 +16633,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16615,7 +16652,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -16634,7 +16671,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18006,7 +18043,7 @@
       "blockType": "solid",
       "hardness": 5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "subBlocks": [
@@ -18096,7 +18133,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18116,7 +18153,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18135,7 +18172,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18154,7 +18191,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18173,7 +18210,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18192,7 +18229,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18211,7 +18248,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18230,7 +18267,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18249,7 +18286,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18268,7 +18305,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -18287,7 +18324,7 @@
       "blockType": "layer",
       "hardness": 0.5,
       "stepSound": "gravel",
-      "material": "rock",
+      "material": "ground",
       "creativeTab": "WesterosBlocks",
       "type": "cnt:8",
       "subBlocks": [
@@ -19070,6 +19107,7 @@
         {
           "meta": 9,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Grey Wood Hopper",
           "textures": [
             "wood_block_1/wood_grey"
@@ -19128,6 +19166,7 @@
         {
           "meta": 10,
           "stepSound": "wood",
+          "material": "wood",
           "label": "White Wood Hopper",
           "textures": [
             "wood_block_1/wood_white"
@@ -19328,6 +19367,7 @@
         {
           "meta": 7,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Reach Oak Wood Panelling Wall",
           "textures": [
             "wood_block_1/wood_panelling_oak"
@@ -19336,6 +19376,7 @@
         {
           "meta": 8,
           "stepSound": "wood",
+          "material": "wood",
           "label": "Reach Spruce Wood Panelling Wall",
           "textures": [
             "wood_block_1/wood_panelling_spruce"

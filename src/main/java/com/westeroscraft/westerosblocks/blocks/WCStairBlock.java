@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.westeroscraft.westerosblocks.*;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import org.dynmap.modsupport.CopyBlockTextureRecord;
 import org.dynmap.modsupport.ModModelDefinition;
@@ -156,6 +157,12 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     @Override
     public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
         return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public Material getMaterial(IBlockState blockState) {
+        return def.getMaterial(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }

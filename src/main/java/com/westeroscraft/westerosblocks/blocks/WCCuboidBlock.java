@@ -8,6 +8,7 @@ import javax.annotation.Nullable;
 
 import com.westeroscraft.westerosblocks.*;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import org.dynmap.modsupport.CuboidBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
@@ -285,6 +286,12 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     @Override
     public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
         return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public Material getMaterial(IBlockState blockState) {
+        return def.getMaterial(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }
