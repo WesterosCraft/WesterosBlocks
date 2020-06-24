@@ -153,16 +153,4 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     public int damageDropped(IBlockState state) {
         return 0;
     }
-
-    @Override
-    public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
-        return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
-    }
-
-    @SuppressWarnings("deprecation")
-    @Override
-    public Material getMaterial(IBlockState blockState) {
-        return def.getMaterial(blockState.getBlock().getMetaFromState(blockState));
-    }
-
 }
