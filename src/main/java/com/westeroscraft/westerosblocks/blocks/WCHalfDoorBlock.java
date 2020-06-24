@@ -400,4 +400,10 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
         return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
     }
 
+    @SuppressWarnings("deprecation")
+    @Override
+    public Material getMaterial(IBlockState blockState) {
+        return def.getMaterial(blockState.getBlock().getMetaFromState(blockState));
+    }
+
 }

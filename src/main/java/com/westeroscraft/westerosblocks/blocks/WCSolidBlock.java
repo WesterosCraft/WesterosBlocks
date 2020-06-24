@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 
 import com.westeroscraft.westerosblocks.*;
 import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
@@ -262,6 +263,12 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle, Weste
     @Override
     public SoundType getSoundType(IBlockState blockState, World world, BlockPos blockPos, @Nullable Entity entity) {
         return def.getSoundType(blockState.getBlock().getMetaFromState(blockState));
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public Material getMaterial(IBlockState blockState) {
+        return def.getMaterial(blockState.getBlock().getMetaFromState(blockState));
     }
 
 }

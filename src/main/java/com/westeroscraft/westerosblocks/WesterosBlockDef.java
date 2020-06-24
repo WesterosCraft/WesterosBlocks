@@ -268,7 +268,8 @@ public class WesterosBlockDef {
         public int harvestItemID = DEF_INT;     // Harvest item ID (-1=use block level)
         public int fireSpreadSpeed = DEF_INT;   // Fire spread speed (-1=use block level)
         public int flamability = DEF_INT;       // Flamability (-1=use block level)
-        public String stepSound = null; // an overriden step sound for a specific meta
+        public String stepSound = null;         // an overridden step sound for a specific meta
+        public String material = null;          // an overridden material for a specific meta
         public float lightValue = DEF_FLOAT;    // Emitted light level (0.0-1.0)
         public int lightOpacity = DEF_INT;      // Light opacity
         public List<String> textures = null;    // List of textures
@@ -529,6 +530,7 @@ public class WesterosBlockDef {
     private transient int fireSpreadSpeed_by_meta[] = null;
     private transient int flamability_by_meta[] = null;
     private transient String stepSound_by_meta[] = null;
+    private transient String material_by_meta[] = null;
     private transient int lightValue_by_meta[] = null;
     private transient int lightOpacity_by_meta[] = null;
     private transient int lightValueInt;
@@ -560,7 +562,11 @@ public class WesterosBlockDef {
         }
         return bf.buildBlockClasses(this);
     }
-    
+
+    /**
+     * Returns this WesterosBlockDef's default Material
+     * @return this WesterosBlockDef's default Material
+     */
     public Material getMaterial() {
         Material m = materialTable.get(material);
         if (m == null) {
@@ -571,7 +577,18 @@ public class WesterosBlockDef {
     }
 
     /**
+     * Returns the Material for a Subblock of a specific meta
+     * @param meta The meta of the Subblock whose Material will be returned
+     * @return The Material associated with the Subblock whose meta was passed in
+     */
+    public Material getMaterial(int meta) {
+        Subblock subBlock = subblock_by_meta[meta & metaMask];
+        return subBlock.material == null ? getMaterial() : materialTable.get(subBlock.material);
+    }
+
+    /**
      * Returns this WesterosBlockDef's default SoundType
+     * @return this WesterosBlockDef's default SoundType
      */
     public SoundType getSoundType() {
         SoundType ss = stepSoundTable.get(stepSound);
@@ -644,6 +661,15 @@ public class WesterosBlockDef {
                         }
                     }
                     stepSound_by_meta[sb.meta] = sb.stepSound;
+                }
+                if (sb.material != null) {
+                    if (material_by_meta == null) {
+                        material_by_meta = new String[metaMask + 1];
+                        if (this.material != null) {
+                            Arrays.fill(material_by_meta, this.material);
+                        }
+                    }
+                    material_by_meta[sb.meta] = sb.material;
                 }
                 if (sb.lightValue != DEF_FLOAT) {
                     if (lightValue_by_meta == null) {
