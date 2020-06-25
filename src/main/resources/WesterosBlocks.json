@@ -2270,6 +2270,7 @@
         },
         {
           "meta": 4,
+          "material": "cake",
           "label": "Turnip Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2279,6 +2280,7 @@
         },
         {
           "meta": 5,
+          "material": "cake",
           "label": "Fish Barrel",
           "textures": [
             "log_block_0/barrel_top_closed",
@@ -2288,6 +2290,7 @@
         },
         {
           "meta": 6,
+          "material": "sand",
           "label": "Grain Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2297,6 +2300,7 @@
         },
         {
           "meta": 7,
+          "material": "cake",
           "label": "Apple Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2306,6 +2310,7 @@
         },
         {
           "meta": 8,
+          "material": "cake",
           "label": "Carrot Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2315,6 +2320,7 @@
         },
         {
           "meta": 9,
+          "material": "sand",
           "label": "Salt Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2324,6 +2330,7 @@
         },
         {
           "meta": 10,
+          "material": "iron",
           "label": "Iron Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2333,6 +2340,7 @@
         },
         {
           "meta": 11,
+          "material": "cake",
           "label": "Berry Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2342,6 +2350,7 @@
         },
         {
           "meta": 12,
+          "material": "water",
           "label": "Water Barrel",
           "textures": [
             "log_block_0/barrel_top_closed",
@@ -2360,6 +2369,7 @@
         },
         {
           "meta": 14,
+          "material": "cake",
           "label": "Purple Grape Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2369,6 +2379,7 @@
         },
         {
           "meta": 15,
+          "material": "iron",
           "label": "Silver Tin Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -2791,6 +2802,8 @@
         },
         {
           "meta": 6,
+          "stepSound": "wood",
+          "material": "wood",
           "label": "Fish Trap",
           "textures": [
             "arrow_slits_0/fish_trap"
@@ -12247,6 +12260,8 @@
       "subBlocks": [
         {
           "meta": 0,
+          "stepSound": "cloth",
+          "material": "cloth",
           "label": "Closed Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12256,6 +12271,8 @@
         },
         {
           "meta": 1,
+          "stepSound": "cloth",
+          "material": "cloth",
           "label": "Open Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12265,6 +12282,8 @@
         },
         {
           "meta": 2,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Apricot Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12274,6 +12293,8 @@
         },
         {
           "meta": 3,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Date Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12283,6 +12304,8 @@
         },
         {
           "meta": 4,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Lemon Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12292,6 +12315,8 @@
         },
         {
           "meta": 5,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Lime Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12301,6 +12326,8 @@
         },
         {
           "meta": 6,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Olive Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12310,6 +12337,8 @@
         },
         {
           "meta": 7,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Orange Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12319,6 +12348,8 @@
         },
         {
           "meta": 8,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Pomegranate Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12328,6 +12359,8 @@
         },
         {
           "meta": 9,
+          "stepSound": "wood",
+          "material": "cake",
           "label": "Hop Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -12337,6 +12370,8 @@
         },
         {
           "meta": 10,
+          "stepSound": "wood",
+          "material": "plants",
           "label": "Lavender Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -12346,6 +12381,8 @@
         },
         {
           "meta": 11,
+          "stepSound": "wood",
+          "material": "plants",
           "label": "Sourleaf Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -12355,6 +12392,8 @@
         },
         {
           "meta": 12,
+          "stepSound": "wood",
+          "material": "cake",
           "label": "White Grape Crate",
           "textures": [
             "crate_block_0/crate_side_crossbar_right",
@@ -12364,6 +12403,8 @@
         },
         {
           "meta": 13,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Turnip Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12373,6 +12414,8 @@
         },
         {
           "meta": 14,
+          "stepSound": "cloth",
+          "material": "sand",
           "label": "Grain Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -12382,6 +12425,8 @@
         },
         {
           "meta": 15,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Apple Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13042,6 +13087,8 @@
       "subBlocks": [
         {
           "meta": 0,
+          "stepSound": "cloth",
+          "material": "cloth",
           "label": "Closed Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13051,6 +13098,8 @@
         },
         {
           "meta": 1,
+          "stepSound": "cloth",
+          "material": "cloth",
           "label": "Open Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13060,6 +13109,8 @@
         },
         {
           "meta": 2,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Apricot Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13069,6 +13120,8 @@
         },
         {
           "meta": 3,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Date Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13078,6 +13131,8 @@
         },
         {
           "meta": 4,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Lemon Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13087,6 +13142,8 @@
         },
         {
           "meta": 5,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Lime Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13096,6 +13153,8 @@
         },
         {
           "meta": 6,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Olive Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13105,6 +13164,8 @@
         },
         {
           "meta": 7,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Orange Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13135,6 +13196,8 @@
       "subBlocks": [
         {
           "meta": 0,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Pomegranate Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13144,6 +13207,8 @@
         },
         {
           "meta": 1,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Turnip Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13153,6 +13218,8 @@
         },
         {
           "meta": 2,
+          "stepSound": "cloth",
+          "material": "sand",
           "label": "Grain Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13162,6 +13229,8 @@
         },
         {
           "meta": 3,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Apple Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13171,6 +13240,8 @@
         },
         {
           "meta": 4,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Carrot Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13180,6 +13251,8 @@
         },
         {
           "meta": 5,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Berry Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -13189,6 +13262,8 @@
         },
         {
           "meta": 6,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Fish Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19520,6 +19595,8 @@
       "subBlocks": [
         {
           "meta": 0,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Carrot Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19529,6 +19606,8 @@
         },
         {
           "meta": 1,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Berry Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19538,6 +19617,8 @@
         },
         {
           "meta": 2,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Fish Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19547,6 +19628,8 @@
         },
         {
           "meta": 3,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Purple Grape Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19556,6 +19639,8 @@
         },
         {
           "meta": 4,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "White Grape Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19565,6 +19650,8 @@
         },
         {
           "meta": 5,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Hop Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19574,6 +19661,8 @@
         },
         {
           "meta": 6,
+          "stepSound": "cloth",
+          "material": "plants",
           "label": "Lavender Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19583,6 +19672,8 @@
         },
         {
           "meta": 7,
+          "stepSound": "cloth",
+          "material": "plants",
           "label": "Sourleaf Basket",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19613,6 +19704,8 @@
       "subBlocks": [
         {
           "meta": 0,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Purple Grape Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19622,6 +19715,8 @@
         },
         {
           "meta": 1,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "White Grape Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19631,6 +19726,8 @@
         },
         {
           "meta": 2,
+          "stepSound": "cloth",
+          "material": "cake",
           "label": "Hop Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19640,6 +19737,8 @@
         },
         {
           "meta": 3,
+          "stepSound": "cloth",
+          "material": "plants",
           "label": "Lavender Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
@@ -19649,6 +19748,8 @@
         },
         {
           "meta": 4,
+          "stepSound": "cloth",
+          "material": "plants",
           "label": "Sourleaf Basket Slab",
           "textures": [
             "crate_block_1/basket_bottom",
