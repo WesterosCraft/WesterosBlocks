@@ -6,6 +6,8 @@ import com.westeroscraft.westerosblocks.*;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+
 import org.dynmap.modsupport.BoxBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
@@ -279,6 +281,23 @@ public class WCSlabBlock extends BlockSlab implements WesterosBlockLifecycle, We
     @Override
     public Material getMaterial(IBlockState blockState) {
         return def.getMaterial(blockState.getBlock().getMetaFromState(blockState));
+    }
+
+    // Avoid exception with BlockSlab when we place already-double blocks....
+    @Override
+    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    {
+        IBlockState iblockstate = this.getStateFromMeta(meta);
+
+        if (this.isDouble())
+        {
+            return iblockstate;
+        }
+        else
+        {
+        	iblockstate = iblockstate.withProperty(HALF, BlockSlab.EnumBlockHalf.BOTTOM);
+            return facing != EnumFacing.DOWN && (facing == EnumFacing.UP || (double)hitY <= 0.5D) ? iblockstate : iblockstate.withProperty(HALF, BlockSlab.EnumBlockHalf.TOP);
+        }
     }
 
 }
