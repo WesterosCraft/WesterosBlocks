@@ -46,7 +46,7 @@ repositories {
     mavenLocal()
     maven {
         name = "dynmap"
-        url = "http://repo.mikeprimm.com"
+        url = "https://repo.mikeprimm.com"
     }
 }
 

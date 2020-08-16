@@ -1,8 +1,4 @@
-<<<<<<< 1.12.2
-#Sun May 17 15:17:25 CDT 2020
-=======
-#Tue May 26 15:29:13 EDT 2020
->>>>>>> 50777fa Update from Emot
+#Sun Aug 16 15:32:14 CDT 2020
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -1091,6 +1087,7 @@ tile.utility_block_0_6.name='House Count' Utility Block
 tile.utility_block_0_7.name='Done' Utility Block
 tile.utility_block_0_8.name='WIP' Utility Block
 tile.utility_block_0_9.name='Industry' Utility Block
+tile.vine_block_0.name=Jasmine Vines
 tile.web_block_0_0.name=Smoke
 tile.web_block_0_1.name=Vertical Rope
 tile.web_block_0_10.name=Dead Fowl

@@ -168,8 +168,7 @@
       "blockName": "yellow_flower_block_0",
       "blockID": 2005,
       "blockType": "plant",
-      "stepSound": "grass",
-      "material": "plants",
+      "material": "wood",
       "creativeTab": "WesterosPlants",
       "boundingBox": {
         "xMin": 0.3,
@@ -21455,6 +21454,24 @@
           ]
         }
       ]
-    }
+    },
+    {
+      "blockName": "vine_block_0",
+      "blockID": 2316,
+      "blockType": "vines",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Jasmine Vines",
+          "textures": [
+            "ladder_block_0/vine_jasmine"
+          ],
+          "type": "allow-unsupported,no-climb"
+        }
+      ]
+    }    
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/vines/vine_1",
+  "textures": {
+    "vines": "westerosblocks:blocks/ladder_block_0/vine_jasmine"
+  }
+}
