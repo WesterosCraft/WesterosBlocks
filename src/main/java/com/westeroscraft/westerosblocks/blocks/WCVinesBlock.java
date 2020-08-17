@@ -14,6 +14,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockLadder;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyBool;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.color.IBlockColor;
@@ -52,12 +54,12 @@ public class WCVinesBlock extends BlockVine implements WesterosBlockLifecycle, W
             return new Block[] { new WCVinesBlock(def) };
         }
     }
-    // Hack to pass in property, which is needed during 'block' constructor, but isn't static for us
-    protected static PropertyMeta new_variant = null;
 
     private WesterosBlockDef def;
     private boolean allow_unsupported = false;
     private boolean no_climb = false;
+    private boolean has_down = false;
+    public static final PropertyBool DOWN = PropertyBool.create("down");
 
     protected WCVinesBlock(WesterosBlockDef def) {
         this.def = def;        
@@ -73,8 +75,12 @@ public class WCVinesBlock extends BlockVine implements WesterosBlockLifecycle, W
                 if (tok.equals("no-climb")) {
                 	no_climb = true;
                 }
+                if (tok.equals("has-down")) {
+                	has_down = true;
+                }
             }
         }
+        this.setDefaultState(this.blockState.getBaseState().withProperty(UP, Boolean.valueOf(false)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)).withProperty(DOWN, Boolean.valueOf(false)));        
     }
     @Override
     public boolean initializeBlockDefinition() {
@@ -141,7 +147,7 @@ public class WCVinesBlock extends BlockVine implements WesterosBlockLifecycle, W
         ModModelDefinition md = mtd.getModelDefinition();
         String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
-        def.registerPatchTextureBlock(mtd, 1);
+        def.registerPatchTextureBlock(mtd, 2);
         /* Make base model */
         // Build 16 models, for each combination
         for (int meta = 0; meta < 16; meta++) {        	
@@ -157,6 +163,9 @@ public class WCVinesBlock extends BlockVine implements WesterosBlockLifecycle, W
             }
             if ((meta & 8) != 0) {	// East
                 mod.addPatch(1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, SideVisible.BOTH);
+            }
+            if (meta == 0) {	// Bottom
+                mod.addPatch(0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, SideVisible.BOTH);            	
             }
             mod.setMetaValue(meta);
         }
@@ -193,5 +202,53 @@ public class WCVinesBlock extends BlockVine implements WesterosBlockLifecycle, W
     @Override
     public Material getMaterial(IBlockState blockState) {
         return def.getMaterial(blockState.getBlock().getMetaFromState(blockState));
+    }
+    
+    @Override
+    protected BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, new IProperty[] {UP, NORTH, EAST, SOUTH, WEST, DOWN});
+    }
+    @Override
+    public int getMetaFromState(IBlockState state)
+    {
+    	if (has_down) {
+    		// Special case if down is set
+            if (((Boolean)state.getValue(DOWN)).booleanValue()) {
+            	return 0;
+            }
+    	}
+    	return super.getMetaFromState(state);
+    }
+    @Override
+    public IBlockState getStateFromMeta(int meta)
+    {
+    	if (has_down && (meta == 0)) {
+    		return this.getDefaultState().withProperty(DOWN, Boolean.TRUE);
+    	}
+    	return super.getStateFromMeta(meta);
+    }
+    @Override
+    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
+    {
+    	if ((has_down) && state.getValue(DOWN).booleanValue()) {	// Special case
+            BlockPos blockpos;
+            // Check north
+            blockpos = pos.north();
+            state = state.withProperty(NORTH, Boolean.valueOf(worldIn.getBlockState(blockpos).getBlockFaceShape(worldIn, blockpos, EnumFacing.SOUTH) == BlockFaceShape.SOLID));
+            // Check south
+            blockpos = pos.south();
+            state = state.withProperty(SOUTH, Boolean.valueOf(worldIn.getBlockState(blockpos).getBlockFaceShape(worldIn, blockpos, EnumFacing.NORTH) == BlockFaceShape.SOLID));
+            // Check east
+            blockpos = pos.east();
+            state = state.withProperty(EAST, Boolean.valueOf(worldIn.getBlockState(blockpos).getBlockFaceShape(worldIn, blockpos, EnumFacing.WEST) == BlockFaceShape.SOLID));
+            // Check west
+            blockpos = pos.west();
+            state = state.withProperty(WEST, Boolean.valueOf(worldIn.getBlockState(blockpos).getBlockFaceShape(worldIn, blockpos, EnumFacing.EAST) == BlockFaceShape.SOLID));
+            // Check up
+            blockpos = pos.up();
+            state = state.withProperty(UP, Boolean.valueOf(worldIn.getBlockState(blockpos).getBlockFaceShape(worldIn, blockpos, EnumFacing.DOWN) == BlockFaceShape.SOLID));
+            return state;    		
+    	}
+    	return super.getActualState(state, worldIn, pos);
     }
 }

@@ -53,6 +53,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     protected WCCuboidNEBlock(WesterosBlockDef def) {
         super(def);
         
+        meta_per_sub = 2;	// For NE cubiod - 2 per sub
         cuboids_by_meta = (List<WesterosBlockDef.Cuboid>[])new List[16];
         for (int i = 0; i < 8; i++) {
             List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(i);

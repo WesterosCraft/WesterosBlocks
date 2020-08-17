@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,8 +19,25 @@ public class VinesBlockModelExport extends ModelExport {
 
     // Template objects for Gson export of block state
     public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
+        public ArrayList<Conditions> multipart = new ArrayList<Conditions>();
+    };
+    public static class CondVal {
+    	public String north;
+    	public String south;
+    	public String east;
+    	public String west;
+    	public String up;
+    	public String down;
+    };
+    public static class CondModel {
+    	public String model;
+    	public Integer x;
+    	public Integer y;
+    };
+    public static class Conditions {
+    	public CondVal when = new CondVal();
+    	public CondModel apply = new CondModel();
+    };
     public static class Variant {
         public String model;
         public Integer y;
@@ -56,38 +74,32 @@ public class VinesBlockModelExport extends ModelExport {
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         String m = WesterosBlocks.MOD_ID + ":" + def.blockName;
-        so.variants.put("east=false,north=false,south=false,up=false,west=false", new Variant(m+"_1", 0));
-        so.variants.put("east=false,north=false,south=true,up=false,west=false", new Variant(m+"_1", 0));
-        so.variants.put("east=false,north=false,south=false,up=false,west=true", new Variant(m+"_1", 90));
-		so.variants.put("east=false,north=true,south=false,up=false,west=false", new Variant(m+"_1", 180));
-		so.variants.put("east=true,north=false,south=false,up=false,west=false", new Variant(m+"_1", 270));
-		so.variants.put("east=true,north=true,south=false,up=false,west=false", new Variant(m+"_2", 0));
-		so.variants.put("east=true,north=false,south=true,up=false,west=false", new Variant(m+"_2", 90));
-		so.variants.put("east=false,north=false,south=true,up=false,west=true", new Variant(m+"_2", 180));
-		so.variants.put("east=false,north=true,south=false,up=false,west=true", new Variant(m+"_2", 270));
-		so.variants.put("east=true,north=false,south=false,up=false,west=true", new Variant(m+"_2_opposite", 0));
-		so.variants.put("east=false,north=true,south=true,up=false,west=false", new Variant(m+"_2_opposite", 90));
-		so.variants.put("east=true,north=true,south=true,up=false,west=false", new Variant(m+"_3", 0));
-		so.variants.put("east=true,north=false,south=true,up=false,west=true", new Variant(m+"_3", 90));
-		so.variants.put("east=false,north=true,south=true,up=false,west=true", new Variant(m+"_3", 180));
-		so.variants.put("east=true,north=true,south=false,up=false,west=true", new Variant(m+"_3", 270));
-		so.variants.put("east=true,north=true,south=true,up=false,west=true", new Variant(m+"_4", 0));
-		so.variants.put("east=false,north=false,south=false,up=true,west=false", new Variant(m+"_u", 0));
-		so.variants.put("east=false,north=false,south=true,up=true,west=false", new Variant(m+"_1u", 0));
-		so.variants.put("east=false,north=false,south=false,up=true,west=true", new Variant(m+"_1u", 90));
-		so.variants.put("east=false,north=true,south=false,up=true,west=false", new Variant(m+"_1u", 180));
-		so.variants.put("east=true,north=false,south=false,up=true,west=false", new Variant(m+"_1u", 270));
-		so.variants.put("east=true,north=true,south=false,up=true,west=false", new Variant(m+"_2u", 0));
-		so.variants.put("east=true,north=false,south=true,up=true,west=false", new Variant(m+"_2u", 90));
-		so.variants.put("east=false,north=false,south=true,up=true,west=true", new Variant(m+"_2u", 180));
-		so.variants.put("east=false,north=true,south=false,up=true,west=true", new Variant(m+"_2u", 270));
-		so.variants.put("east=true,north=false,south=false,up=true,west=true", new Variant(m+"_2u_opposite", 0));
-		so.variants.put("east=false,north=true,south=true,up=true,west=false", new Variant(m+"_2u_opposite", 90));
-		so.variants.put("east=true,north=true,south=true,up=true,west=false", new Variant(m+"_3u", 0));
-		so.variants.put("east=true,north=false,south=true,up=true,west=true", new Variant(m+"_3u", 90));
-		so.variants.put("east=false,north=true,south=true,up=true,west=true", new Variant(m+"_3u", 180));
-		so.variants.put("east=true,north=true,south=false,up=true,west=true", new Variant(m+"_3u", 270));
-		so.variants.put("east=true,north=true,south=true,up=true,west=true", new Variant(m+"_4u", 0));
+        // Add part for each face
+        Conditions cond;
+        // South
+        cond = new Conditions();
+        cond.when.south = "true"; cond.apply.model = m + "_1";
+        so.multipart.add(cond);
+        // West
+        cond = new Conditions();
+        cond.when.west = "true"; cond.apply.model = m + "_1"; cond.apply.y = 90;
+        so.multipart.add(cond);
+        // North
+        cond = new Conditions();
+        cond.when.north = "true"; cond.apply.model = m + "_1"; cond.apply.y = 180;
+        so.multipart.add(cond);
+        // East
+        cond = new Conditions();
+        cond.when.east = "true"; cond.apply.model = m + "_1"; cond.apply.y = 270;
+        so.multipart.add(cond);
+        // Up
+        cond = new Conditions();
+        cond.when.up = "true"; cond.apply.model = m + "_u";
+        so.multipart.add(cond);
+        // Down
+        cond = new Conditions();
+        cond.when.down = "true"; cond.apply.model = m + "_u"; cond.apply.x = 180;
+        so.multipart.add(cond);
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -95,29 +107,12 @@ public class VinesBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
     	Subblock sb = def.subBlocks.get(0);
     	String txt = getTextureID(sb.getTextureByIndex(0));
+    	String txt2 = getTextureID(sb.getTextureByIndex(1));
     	// Build models
         if (!sb.isCustomModel()) {
         	ModelObject mo1 = new ModelObject("1", txt);
             this.writeBlockModelFile(def.blockName + "_1", mo1);
-        	ModelObject mo1u = new ModelObject("1u", txt);
-            this.writeBlockModelFile(def.blockName + "_1u", mo1u);
-        	ModelObject mo2_op = new ModelObject("2_opposite", txt);
-            this.writeBlockModelFile(def.blockName + "_2_opposite", mo2_op);
-        	ModelObject mo2 = new ModelObject("2", txt);
-            this.writeBlockModelFile(def.blockName + "_2", mo2);
-        	ModelObject mo2u_op = new ModelObject("2u_opposite", txt);
-            this.writeBlockModelFile(def.blockName + "_2u_opposite", mo2u_op);
-        	ModelObject mo2u = new ModelObject("2u", txt);
-            this.writeBlockModelFile(def.blockName + "_2u", mo2u);
-        	ModelObject mo3 = new ModelObject("3", txt);
-            this.writeBlockModelFile(def.blockName + "_3", mo3);
-        	ModelObject mo3u = new ModelObject("3u", txt);
-            this.writeBlockModelFile(def.blockName + "_3u", mo3u);
-        	ModelObject mo4 = new ModelObject("4", txt);
-            this.writeBlockModelFile(def.blockName + "_4", mo4);
-        	ModelObject mo4u = new ModelObject("4u", txt);
-            this.writeBlockModelFile(def.blockName + "_4u", mo4u);
-        	ModelObject mou = new ModelObject("u", txt);
+        	ModelObject mou = new ModelObject("u", txt2);
             this.writeBlockModelFile(def.blockName + "_u", mou);
         }
         // Build simple item model that refers to block model

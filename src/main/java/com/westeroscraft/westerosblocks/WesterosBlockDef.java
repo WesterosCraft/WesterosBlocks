@@ -1597,10 +1597,13 @@ public class WesterosBlockDef {
      * Default texture block registration for Dynmap (min patch count
      */
     public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount) {
-        registerPatchTextureBlock(mtd, minPatchCount, TransparencyMode.TRANSPARENT);
+        registerPatchTextureBlock(mtd, minPatchCount, TransparencyMode.TRANSPARENT, 16);
     }
     public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount, TransparencyMode tm) {
-        if (this.subblock_by_meta != null) {
+        registerPatchTextureBlock(mtd, minPatchCount, tm, 16);
+    }
+    public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount, TransparencyMode tm, int meta_per_sub) {
+    	if (this.subblock_by_meta != null) {
             TextureModifier tmod = TextureModifier.NONE;
             if (this.nonOpaque) {
                 tmod = TextureModifier.CLEARINSIDE;
@@ -1615,9 +1618,10 @@ public class WesterosBlockDef {
                             mtr.setTransparencyMode(tm);
                         }
                         // Set for all associated metas
-                        for (int meta = i; meta < 16; meta++) {
-                            if ((meta & metaMask) == (i & metaMask)) {
+                        for (int meta = i, cnt = 0; meta < 16; meta++) {
+                            if (((meta & metaMask) == (i & metaMask)) && (cnt < meta_per_sub)) {
                                 mtr.setMetaValue(meta);
+                                cnt++;
                             }
                         }
                         int cnt = sb.textures.size();
@@ -1642,12 +1646,18 @@ public class WesterosBlockDef {
      * Default texture block (6 face) registration for Dynmap
      */
     public void defaultRegisterTextureBlock(ModTextureDefinition mtd) {
-        defaultRegisterTextureBlock(mtd, 0, null);
+        defaultRegisterTextureBlock(mtd, 0, null, 16);
     }
     /**
      * Default texture block (6 face) registration for Dynmap
      */
     public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx, TransparencyMode tm) {
+        defaultRegisterTextureBlock(mtd, idx, tm, 16);    	
+    }
+    /**
+     * Default texture block (6 face) registration for Dynmap
+     */
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx, TransparencyMode tm, int meta_per_sub) {
         if (this.subblock_by_meta != null) {
             TextureModifier tmod = TextureModifier.NONE;
             if (this.nonOpaque) {
@@ -1662,9 +1672,10 @@ public class WesterosBlockDef {
                         mtr.setTransparencyMode(tm);
                     }
                     // Set for all associated metas
-                    for (int meta = i; meta < 16; meta++) {
-                        if ((meta & metaMask) == (i & metaMask)) {
+                    for (int meta = i, cnt = 0; meta < 16; meta++) {
+                        if (((meta & metaMask) == (i & metaMask)) && (cnt < meta_per_sub)) {
                             mtr.setMetaValue(meta);
+                            cnt++;
                         }
                     }
                     for (int face = 0; face < 6; face++) {

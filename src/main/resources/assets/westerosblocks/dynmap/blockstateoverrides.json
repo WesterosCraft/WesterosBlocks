@@ -54,7 +54,7 @@
           ]
           ,
           "furnace_block_2": [
-              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/furnace" ] }
+              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/furnace" ] }
           ]
           ,
           "web_block_1": [

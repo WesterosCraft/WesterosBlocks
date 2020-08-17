@@ -12,6 +12,7 @@ import net.minecraft.block.material.Material;
 import org.dynmap.modsupport.CuboidBlockModel;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
@@ -58,11 +59,13 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     
     protected WesterosBlockDef def;
     public PropertyMeta variant;
+    protected int meta_per_sub;	// How many metadata values per subtype
     
     protected WCCuboidBlock(WesterosBlockDef def) {
         super(def.getMaterial());
         this.def = def;
         this.setSoundType(def.getSoundType());
+        meta_per_sub = 1;	// For base cubiod - 1 per sub
         def.doStandardContructorSettings(this);
     }
 
@@ -142,7 +145,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         WesterosBlockDef def = this.getWBDefinition();
         String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
-        def.registerPatchTextureBlock(mtd, 6);
+        def.registerPatchTextureBlock(mtd, 6, TransparencyMode.TRANSPARENT, meta_per_sub);
         for (int meta = 0; meta < 16; meta++) {
             List<Cuboid> cl = def.getCuboidList(meta);   
             if (cl == null) continue;

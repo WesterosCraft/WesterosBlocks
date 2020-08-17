@@ -58,6 +58,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
         super(def);
 
         cuboids_by_meta = (List<WesterosBlockDef.Cuboid>[])new List[16];
+        meta_per_sub = 6;	// For NSEWUD cubiod - 6 per sub
         for (int i = 0; i < 2; i++) {
             List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(i);
             if (lst == null) continue;

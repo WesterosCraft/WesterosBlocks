@@ -52,6 +52,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     @SuppressWarnings("unchecked")
     protected WCCuboidNSEWBlock(WesterosBlockDef def) {
         super(def);
+        meta_per_sub = 4;	// For NSEW cubiod - 4 per sub
         cuboids_by_meta = (List<WesterosBlockDef.Cuboid>[])new List[16];
         for (int i = 0; i < 4; i++) {
             List<WesterosBlockDef.Cuboid> lst = def.getCuboidList(i);

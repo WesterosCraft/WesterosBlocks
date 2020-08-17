@@ -221,7 +221,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
         ModModelDefinition md = mtd.getModelDefinition();
         String blkname = def.getBlockName(0);
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.TRANSPARENT);
+        def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.TRANSPARENT, layerCount);
         /* Make models for each layer thickness */
         for (int i = 0; i < layerCount; i++) {
             BoxBlockModel mod = md.addBoxModel(blkname);

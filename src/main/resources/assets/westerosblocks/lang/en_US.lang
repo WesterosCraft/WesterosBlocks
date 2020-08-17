@@ -1,4 +1,4 @@
-#Sun Aug 16 15:32:14 CDT 2020
+#Sun Aug 16 21:02:51 CDT 2020
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -365,7 +365,7 @@ tile.furnace_block_0_0.name=Orange Brick Furnace
 tile.furnace_block_0_1.name=Always Active Brick Furnace
 tile.furnace_block_1_0.name=Sandstone Furnace
 tile.furnace_block_1_1.name=Always Active Brick Furnace
-tile.furnace_block_2_1.name=Always Active Furnace
+tile.furnace_block_2_0.name=Always Active Furnace
 tile.furnace_block_3_0.name=Dornish Mud Furnace
 tile.furnace_block_3_1.name=Always Active Dornish Mud Furnace
 tile.glasspane_net_0.name=Vertical Net
