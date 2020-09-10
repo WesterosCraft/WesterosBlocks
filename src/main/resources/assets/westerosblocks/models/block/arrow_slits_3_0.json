@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/transparent",
+    "up": "westerosblocks:blocks/transparent",
+    "north": "westerosblocks:blocks/arrow_slits_wood/oak_timber",
+    "south": "westerosblocks:blocks/arrow_slits_wood/oak_timber",
+    "west": "westerosblocks:blocks/arrow_slits_wood/oak_timber",
+    "east": "westerosblocks:blocks/arrow_slits_wood/oak_timber",
+    "particle": "westerosblocks:blocks/arrow_slits_wood/oak_timber"
+  }
+}

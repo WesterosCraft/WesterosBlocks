@@ -791,6 +791,366 @@
         "y": 270,
         "uvlock": true
       }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "11",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_post_11"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "11",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_11",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "11",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_11",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "11",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_11",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "11",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_11",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "12",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_post_12"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "12",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_12",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "12",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_12",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "12",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_12",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "12",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_12",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_post_13"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_13",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_13",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_13",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "13",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_13",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_post_14"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_14",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_14",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_14",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "14",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_14",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "15",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_post_15"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "15",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_15",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "15",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_15",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "15",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_15",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant2": "15",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:terrainset_wall_block_0_side_15",
+        "y": 270,
+        "uvlock": true
+      }
     }
   ]
 }

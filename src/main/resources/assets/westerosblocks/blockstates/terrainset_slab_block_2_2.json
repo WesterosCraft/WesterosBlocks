@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "variant=2": {
+      "model": "westerosblocks:terrainset_slab_block_2_2_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:terrainset_slab_block_2_2_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:terrainset_slab_block_2_2_0"
+    }
+  }
+}

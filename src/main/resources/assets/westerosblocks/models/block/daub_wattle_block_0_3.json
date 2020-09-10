@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/daub_wattle_block_0/daub_brown_open"
+    "all": "westerosblocks:blocks/daub_wattle_block_0/oak_brown_open"
   }
 }

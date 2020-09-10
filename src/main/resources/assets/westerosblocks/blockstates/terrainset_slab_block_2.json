@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "half=top,variant=1": {
+      "model": "westerosblocks:terrainset_slab_block_2_1_top"
+    },
+    "half=top,variant=2": {
+      "model": "westerosblocks:terrainset_slab_block_2_2_top"
+    },
+    "half=bottom,variant=1": {
+      "model": "westerosblocks:terrainset_slab_block_2_1_bottom"
+    },
+    "half=top,variant=0": {
+      "model": "westerosblocks:terrainset_slab_block_2_0_top"
+    },
+    "half=bottom,variant=2": {
+      "model": "westerosblocks:terrainset_slab_block_2_2_bottom"
+    },
+    "half=bottom,variant=0": {
+      "model": "westerosblocks:terrainset_slab_block_2_0_bottom"
+    }
+  }
+}

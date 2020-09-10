@@ -734,7 +734,7 @@
           "meta": 13,
           "label": "Reach Light Stone Wall",
           "textures": [
-            "stone_block_2/brick_reach_light_pink"
+            "stone_block_2/brick_reach_light"
           ]
         },
         {
@@ -748,7 +748,7 @@
           "meta": 15,
           "label": "Reach Brick Wall",
           "textures": [
-            "stone_block_2/brick_reach_pink"
+            "stone_block_2/brick_reach"
           ]
         }
       ]
@@ -3101,7 +3101,7 @@
           "textures": [
             "transparent",
             "transparent",
-            "arrow_slits_0/reach_pink_arrow_slit"
+            "arrow_slits_0/brick_reach_light_arrow_slit"
           ],
           "collisionBoxes": [
             {
@@ -3638,118 +3638,118 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Daub Wattle Brown Crosshatch",
+          "label": "Timber Oak Brown Crosshatch",
           "textures": [
-            "daub_wattle_block_0/daub_brown_crossed"
+            "daub_wattle_block_0/oak_brown_crossed"
           ]
         },
         {
           "meta": 1,
-          "label": "Daub Wattle Brown Lefthatch",
+          "label": "Timber Oak Brown Lefthatch",
           "textures": [
-            "daub_wattle_block_0/daub_brown_left"
+            "daub_wattle_block_0/oak_brown_left"
           ]
         },
         {
           "meta": 2,
-          "label": "Daub Wattle Brown Righthatch",
+          "label": "Timber Oak Brown Righthatch",
           "textures": [
-            "daub_wattle_block_0/daub_brown_right"
+            "daub_wattle_block_0/oak_brown_right"
           ]
         },
         {
           "meta": 3,
-          "label": "Daub Wattle Brown Frame",
+          "label": "Timber Oak Brown Frame",
           "textures": [
-            "daub_wattle_block_0/daub_brown_open"
+            "daub_wattle_block_0/oak_brown_open"
           ]
         },
         {
           "meta": 4,
-          "label": "Daub Wattle White Crosshatch",
+          "label": "Timber Oak White Crosshatch",
           "textures": [
-            "daub_wattle_block_0/daub_white_crossed"
+            "daub_wattle_block_0/oak_white_crossed"
           ]
         },
         {
           "meta": 5,
-          "label": "Daub Wattle White Righthatch",
+          "label": "Timber Oak White Righthatch",
           "textures": [
-            "daub_wattle_block_0/daub_white_left"
+            "daub_wattle_block_0/oak_white_left"
           ]
         },
         {
           "meta": 6,
-          "label": "Daub Wattle White Lefthatch",
+          "label": "Timber Oak White Lefthatch",
           "textures": [
-            "daub_wattle_block_0/daub_white_right"
+            "daub_wattle_block_0/oak_white_right"
           ]
         },
         {
           "meta": 7,
-          "label": "Daub Wattle White Frame",
+          "label": "Timber Oak White Frame",
           "textures": [
-            "daub_wattle_block_0/daub_white_open"
+            "daub_wattle_block_0/oak_white_open"
           ]
         },
         {
           "meta": 8,
-          "label": "Daub Wattle Red Crosshatch",
+          "label": "Timber Red White Crosshatch",
           "textures": [
-            "daub_wattle_block_0/daub_red_crossed"
+            "daub_wattle_block_0/red_white_crossed"
           ]
         },
         {
           "meta": 9,
-          "label": "Daub Wattle Red Lefthatch",
+          "label": "Timber Red White Lefthatch",
           "textures": [
-            "daub_wattle_block_0/daub_red_left"
+            "daub_wattle_block_0/red_white_left"
           ]
         },
         {
           "meta": 10,
-          "label": "Daub Wattle Red Righthatch",
+          "label": "Timber Red White Righthatch",
           "textures": [
-            "daub_wattle_block_0/daub_red_right"
+            "daub_wattle_block_0/red_white_right"
           ]
         },
         {
           "meta": 11,
-          "label": "Daub Wattle Red Frame",
+          "label": "Timber Red White Frame",
           "textures": [
-            "daub_wattle_block_0/daub_red_open"
+            "daub_wattle_block_0/red_white_open"
           ]
         },
         {
           "meta": 12,
-          "label": "Red Brick Wattle Crosshatch",
+          "label": "Timber Oak Orange Brick Crosshatch",
           "colorMult": "textures/colormap/brick",
           "textures": [
-            "daub_wattle_block_0/daub_brick_crossed"
+            "daub_wattle_block_0/oak_orange_brick_crossed"
           ]
         },
         {
           "meta": 13,
-          "label": "Red Brick Wattle Lefthatch",
+          "label": "Timber Oak Orange Brick Lefthatch",
           "colorMult": "textures/colormap/brick",
           "textures": [
-            "daub_wattle_block_0/daub_brick_left"
+            "daub_wattle_block_0/oak_orange_brick_left"
           ]
         },
         {
           "meta": 14,
-          "label": "Red Brick Wattle Righthatch",
+          "label": "Timber Oak Orange Brick Righthatch",
           "colorMult": "textures/colormap/brick",
           "textures": [
-            "daub_wattle_block_0/daub_brick_right"
+            "daub_wattle_block_0/oak_orange_brick_right"
           ]
         },
         {
           "meta": 15,
-          "label": "Red Brick Wattle Frame",
+          "label": "Timber Oak Orange Brick Frame",
           "colorMult": "textures/colormap/brick",
           "textures": [
-            "daub_wattle_block_0/daub_brick_open"
+            "daub_wattle_block_0/oak_orange_brick_open"
           ]
         }
       ]
@@ -6117,7 +6117,7 @@
           "meta": 14,
           "label": "Reach Light Stone Hopper",
           "textures": [
-            "stone_block_2/brick_reach_light_pink"
+            "stone_block_2/brick_reach_light"
           ],
           "cuboids": [
             {
@@ -6942,28 +6942,28 @@
           "label": "Faint Light Grey Stone",
           "colorMult": "textures/colormap/faintlightgreystone",
           "textures": [
-            "stone_block_2/brick_reach_light"
+            "stone_block_2/brick_faint_light_grey"
           ]
         },
         {
           "meta": 6,
           "label": "Reach Light Stone",
           "textures": [
-            "stone_block_2/brick_reach_light_pink"
+            "stone_block_2/brick_reach_light"
           ]
         },
         {
           "meta": 7,
           "label": "Reach Cobblestone",
           "textures": [
-            "stone_block_2/stone_cobble_reach_pink"
+            "stone_block_2/stone_cobble_reach"
           ]
         },
         {
           "meta": 8,
           "label": "Reach Brick",
           "textures": [
-            "stone_block_2/brick_reach_pink"
+            "stone_block_2/brick_reach"
           ]
         },
         {
@@ -8800,7 +8800,7 @@
           "meta": 2,
           "label": "Reach Light Stone Slab",
           "textures": [
-            "stone_block_2/brick_reach_light_pink"
+            "stone_block_2/brick_reach_light"
           ]
         },
         {
@@ -8923,7 +8923,7 @@
           "meta": 5,
           "label": "Reach Light Stone Fence",
           "textures": [
-            "stone_block_2/brick_reach_light_pink"
+            "stone_block_2/brick_reach_light"
           ]
         },
         {
@@ -10587,7 +10587,7 @@
           "meta": 11,
           "label": "Reach Brick Hopper",
           "textures": [
-            "stone_block_2/brick_reach_pink"
+            "stone_block_2/brick_reach"
           ],
           "cuboids": [
             {
@@ -11585,7 +11585,7 @@
           "textures": [
             "transparent",
             "transparent",
-            "arrow_slits_1/brick_reach_pink_arrow_slit"
+            "arrow_slits_1/brick_reach_arrow_slit"
           ],
           "collisionBoxes": [
             {
@@ -11628,7 +11628,7 @@
           "textures": [
             "transparent",
             "transparent",
-            "arrow_slits_1/brick_reach_light_pink_arrow_slit_ornate"
+            "arrow_slits_1/brick_reach_light_arrow_slit_ornate"
           ],
           "collisionBoxes": [
             {
@@ -12127,7 +12127,7 @@
           "meta": 6,
           "label": "Reach Brick Slab",
           "textures": [
-            "stone_block_2/brick_reach_pink"
+            "stone_block_2/brick_reach"
           ]
         },
         {
@@ -13503,6 +13503,55 @@
           "label": "Basalt Brick",
           "textures": [
             "stone_block_1/brick_basalt"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Vivid Dark Sandstone Engraved",
+          "textures": [
+            "stone_block_0/sandstone_vivid_dark_engraved"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Pink Sandstone",
+          "textures": [
+            "stone_block_4/sandstone_pink"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Pink Brick",
+          "textures": [
+            "stone_block_4/brick_pink"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Pink Large Brick",
+          "textures": [
+            "stone_block_4/brick_pink_large"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Pink Cobble",
+          "textures": [
+            "stone_block_4/stone_cobble_pink"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Pink Light Brick",
+          "textures": [
+            "stone_block_4/brick_pink_light"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Pink Faint Light Brick",
+          "textures": [
+            "stone_block_4/brick_pink_faint_light"
           ]
         }
       ]
@@ -16789,6 +16838,20 @@
           "textures": [
             "stone_block_2/plaster_highgarden_pink"
           ]
+        },
+        {
+          "meta": 3,
+          "label": "Gulltown Blue Plaster",
+          "textures": [
+            "stone_block_2/plaster_gulltown_blue"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Gulltown Green Plaster",
+          "textures": [
+            "stone_block_2/plaster_gulltown_green"
+          ]
         }
       ]
     },
@@ -16820,7 +16883,7 @@
           "meta": 0,
           "label": "Reach Brick Fence",
           "textures": [
-            "stone_block_2/brick_reach_pink"
+            "stone_block_2/brick_reach"
           ]
         },
         {
@@ -16897,7 +16960,7 @@
           "meta": 11,
           "label": "Reach Cobblestone Fence",
           "textures": [
-            "stone_block_2/stone_cobble_reach_pink"
+            "stone_block_2/stone_cobble_reach"
           ]
         },
         {
@@ -16912,6 +16975,13 @@
           "label": "White Wood Fence",
           "textures": [
             "wood_block_1/wood_white"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Pink Sandstone Fence",
+          "textures": [
+            "stone_block_4/sandstone_pink"
           ]
         }
       ]
@@ -19125,7 +19195,7 @@
           "meta": 8,
           "label": "Reach Cobblestone Hopper",
           "textures": [
-            "stone_block_2/stone_cobble_reach_pink"
+            "stone_block_2/stone_cobble_reach"
           ],
           "cuboids": [
             {
@@ -19890,7 +19960,7 @@
           "meta": 6,
           "label": "Reach Cobblestone Wall",
           "textures": [
-            "stone_block_2/stone_cobble_reach_pink"
+            "stone_block_2/stone_cobble_reach"
           ]
         },
         {
@@ -19907,6 +19977,41 @@
           "colorMult": "textures/colormap/smallsmoothstonebrick",
           "textures": [
             "stone_block_1/brick_stone_small_smooth"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Valyrian Stone Wall",
+          "textures": [
+            "stone_block_1/stone_valyrian"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Pink Sandstone Wall",
+          "textures": [
+            "stone_block_4/sandstone_pink"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Pink Large Brick Wall",
+          "textures": [
+            "stone_block_4/brick_pink_large"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Pink Cobble Wall",
+          "textures": [
+            "stone_block_4/stone_cobble_pink"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Pink Light Brick Wall",
+          "textures": [
+            "stone_block_4/brick_pink_light"
           ]
         }
       ]
@@ -20355,6 +20460,264 @@
               "zMax": 1.0
             }
           ]
+        },
+        {
+          "meta": 10,
+          "label": "Pink Sandstone Arrow Slit",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_0/sandstone_pink_arrow_slit"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Pink Sandstone Arrow Slit Window",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_0/sandstone_pink_arrow_slit_window"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Pink Sandstone Arrow Slit Ornate",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_0/sandstone_pink_arrow_slit_ornate"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Vivid Dark Sandstone Arrow Slit",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_0/sandstone_vivid_dark_arrow_slit"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Vivid Dark Sandstone Slit Window",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_0/sandstone_vivid_dark_arrow_slit_window"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Vivid Dark Sandstone Arrow Slit Ornate",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
         }
       ]
     },
@@ -20437,7 +20800,7 @@
           "meta": 2,
           "label": "Reach Cobblestone Slab",
           "textures": [
-            "stone_block_2/stone_cobble_reach_pink"
+            "stone_block_2/stone_cobble_reach"
           ]
         },
         {
@@ -20455,6 +20818,27 @@
           "textures": [
             "stone_block_1/brick_stone_small_smooth"
           ]
+        },
+        {
+          "meta": 5,
+          "label": "Pink Sandstone Slab",
+          "textures": [
+            "stone_block_4/sandstone_pink"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Pink Large Brick Slab",
+          "textures": [
+            "stone_block_4/brick_pink_large"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Pink Cobble Slab",
+          "textures": [
+            "stone_block_4/stone_cobble_pink"
+          ]
         }
       ]
     },
@@ -20470,58 +20854,114 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Reach Brick Wattle Crosshatch",
+          "label": "Timber Oak Reach Brick Crosshatch",
           "textures": [
-            "daub_wattle_block_1/daub_reach_crossed"
+            "daub_wattle_block_0/oak_reach_crossed"
           ]
         },
         {
           "meta": 1,
-          "label": "Reach Brick Wattle Lefthatch",
+          "label": "Timber Oak Reach Brick Lefthatch",
           "textures": [
-            "daub_wattle_block_1/daub_reach_left"
+            "daub_wattle_block_0/oak_reach_left"
           ]
         },
         {
           "meta": 2,
-          "label": "Reach Brick Wattle Righthatch",
+          "label": "Timber Oak Reach Brick Righthatch",
           "textures": [
-            "daub_wattle_block_1/daub_reach_right"
+            "daub_wattle_block_0/oak_reach_right"
           ]
         },
         {
           "meta": 3,
-          "label": "Reach Brick Wattle Frame",
+          "label": "Timber Oak Reach Brick Frame",
           "textures": [
-            "daub_wattle_block_1/daub_reach_open"
+            "daub_wattle_block_0/oak_reach_open"
           ]
         },
         {
           "meta": 4,
-          "label": "Oldtown Brick Wattle Crosshatch",
+          "label": "Timber Oak Oldtown Brick Crosshatch",
           "textures": [
-            "daub_wattle_block_1/daub_oldtown_crossed"
+            "daub_wattle_block_0/oak_oldtown_crossed"
           ]
         },
         {
           "meta": 5,
-          "label": "Oldtown Brick Wattle Righthatch",
+          "label": "Timber Oak Oldtown Brick Lefthatch",
           "textures": [
-            "daub_wattle_block_1/daub_oldtown_left"
+            "daub_wattle_block_0/oak_oldtown_left"
           ]
         },
         {
           "meta": 6,
-          "label": "Oldtown Brick Wattle Lefthatch",
+          "label": "Timber Oak Oldtown Brick Righthatch",
           "textures": [
-            "daub_wattle_block_1/daub_oldtown_right"
+            "daub_wattle_block_0/oak_oldtown_right"
           ]
         },
         {
           "meta": 7,
-          "label": "Oldtown Brick Wattle Frame",
+          "label": "Timber Oak Oldtown Brick Frame",
           "textures": [
-            "daub_wattle_block_1/daub_oldtown_open"
+            "daub_wattle_block_0/oak_oldtown_open"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Timber Oak Yellow Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/oak_yellow_crossed"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Timber Oak Yellow Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/oak_yellow_left"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Timber Oak Yellow Righthatch",
+          "textures": [
+            "daub_wattle_block_0/oak_yellow_right"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Timber Oak Yellow Frame",
+          "textures": [
+            "daub_wattle_block_0/oak_yellow_open"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Timber Oak Orange Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/oak_orange_crossed"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Timber Oak Orange Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/oak_orange_left"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Timber Oak Orange Righthatch",
+          "textures": [
+            "daub_wattle_block_0/oak_orange_right"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Timber Oak Orange Frame",
+          "textures": [
+            "daub_wattle_block_0/oak_orange_open"
           ]
         }
       ]
@@ -21266,6 +21706,41 @@
           "textures": [
             "stone_terrainsets_0/stone_reach"
           ]
+        },
+        {
+          "meta": 3,
+          "label": "TerrainSet Red Mountains Alt Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_red_mountains_alt"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "TerrainSet Westerlands Alt Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_westerlands_alt"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "TerrainSet Arbor Dorne Alt Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_dorne_alt"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "TerrainSet Stormlands Alt Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_stormlands_alt"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "TerrainSet Reach Alt Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_reach_alt"
+          ]
         }
       ]
     },
@@ -21362,6 +21837,41 @@
           "textures": [
             "stone_terrainsets_0/stone_reach"
           ]
+        },
+        {
+          "meta": 11,
+          "label": "TerrainSet Red Mountains Alt Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_red_mountains_alt"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "TerrainSet Westerlands Alt Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_westerlands_alt"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "TerrainSet Arbor Dorne Alt Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_dorne_alt"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "TerrainSet Stormlands Alt Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_stormlands_alt"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "TerrainSet Reach Alt Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_reach_alt"
+          ]
         }
       ]
     },
@@ -21371,7 +21881,7 @@
       "blockType": "fence",
       "hardness": 5,
       "stepSound": "stone",
-      "material": "wood",
+      "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "subBlocks": [
@@ -21452,6 +21962,41 @@
           "textures": [
             "stone_terrainsets_0/stone_reach"
           ]
+        },
+        {
+          "meta": 11,
+          "label": "TerrainSet Red Mountains Alt Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_red_mountains_alt"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "TerrainSet Westerlands Alt Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_westerlands_alt"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "TerrainSet Arbor Dorne Alt Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_dorne_alt"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "TerrainSet Stormlands Alt Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_stormlands_alt"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "TerrainSet Reach Alt Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_reach_alt"
+          ]
         }
       ]
     },
@@ -21461,7 +22006,7 @@
       "blockType": "vines",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosPlants",
       "subBlocks": [
         {
           "meta": 0,
@@ -21473,6 +22018,1404 @@
           "type": "allow-unsupported,no-climb,has-down"
         }
       ]
-    }    
+    },
+    {
+      "blockName": "stone_block_10",
+      "blockID": 2317,
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Red Mountains Alt",
+          "textures": [
+            "stone_terrainsets_0/stone_red_mountains_alt"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "TerrainSet Westerlands Alt",
+          "textures": [
+            "stone_terrainsets_0/stone_westerlands_alt"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "TerrainSet Arbor Dorne Alt",
+          "textures": [
+            "stone_terrainsets_0/stone_dorne_alt"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "TerrainSet Stormlands Alt",
+          "textures": [
+            "stone_terrainsets_0/stone_stormlands_alt"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "TerrainSet Reach Alt",
+          "textures": [
+            "stone_terrainsets_0/stone_reach_alt"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "TerrainSet Grey Sandstone",
+          "textures": [
+            "stone_terrainsets_0/stone_grey_sandstone"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Flowstone",
+          "textures": [
+            "stone_terrainsets_0/stone_flowstone"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Volcanic Rock",
+          "textures": [
+            "stone_terrainsets_0/stone_volcanic"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "moss_block_0",
+      "blockID": 2318,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 5,
+      "creativeTab": "WesterosPlants",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Cushion Moss",
+          "textures": [
+            "moss_block/moss_cushion"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "vine_block_1",
+      "blockID": 2319,
+      "blockType": "vines",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosPlants",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Jasmine Vines",
+          "colorMult": "textures/colormap/moss_dappled",
+          "textures": [
+            "moss_block/moss_dappled",
+            "moss_block/moss_dappled"
+          ],
+          "type": "allow-unsupported,no-climb,has-down"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_11",
+      "blockID": 2320,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_10",
+      "modelBlockMeta": 0,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Red Mountains Alt Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_12",
+      "blockID": 2321,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_10",
+      "modelBlockMeta": 1,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Westerlands Alt Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_13",
+      "blockID": 2322,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_10",
+      "modelBlockMeta": 2,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Arbor Dorne Alt Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_14",
+      "blockID": 2323,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_10",
+      "modelBlockMeta": 3,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Stormlands Alt Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_15",
+      "blockID": 2324,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_10",
+      "modelBlockMeta": 4,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Reach Alt Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_16",
+      "blockID": 2325,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_10",
+      "modelBlockMeta": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Grey Sandstone Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_17",
+      "blockID": 2326,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_10",
+      "modelBlockMeta": 6,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Flowstone Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_slab_block_2",
+      "blockIDs": [
+        2327,
+        2328
+      ],
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Grey Sandstone Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_grey_sandstone"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Flowstone Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_flowstone"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Volcanic Rock Slab",
+          "textures": [
+            "stone_terrainsets_0/stone_volcanic"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_wall_block_1",
+      "blockID": 2329,
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Grey Sandstone Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_grey_sandstone"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Flowstone Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_flowstone"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Volcanic Rock Wall",
+          "textures": [
+            "stone_terrainsets_0/stone_volcanic"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_fence_block_4",
+      "blockID": 2330,
+      "blockType": "fence",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "TerrainSet Grey Sandstone Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_grey_sandstone"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Flowstone Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_flowstone"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Volcanic Rock Fence",
+          "textures": [
+            "stone_terrainsets_0/stone_volcanic"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "daub_wattle_block_2",
+      "blockID": 2331,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Timber Oak Lannisport Brick Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/oak_lannisport_crossed"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Timber Oak Lannisport Brick Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/oak_lannisport_left"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Timber Oak Lannisport Brick Righthatch",
+          "textures": [
+            "daub_wattle_block_0/oak_lannisport_right"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Timber Oak Lannisport Brick Frame",
+          "textures": [
+            "daub_wattle_block_0/oak_lannisport_open"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Timber Whitewashed Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/whitewashed_crossed"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Timber Whitewashed Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/whitewashed_left"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Timber Whitewashed Righthatch",
+          "textures": [
+            "daub_wattle_block_0/whitewashed_right"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Timber Whitewashed Frame",
+          "textures": [
+            "daub_wattle_block_0/whitewashed_open"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Timber Northern Brown Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/northern_brown_crossed"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Timber Northern Brown Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_brown_left"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Timber Northern Brown Righthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_brown_right"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Timber Northern Brown Frame",
+          "textures": [
+            "daub_wattle_block_0/northern_brown_open"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Timber Northern White Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/northern_white_crossed"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Timber Northern White Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_white_left"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Timber Northern White Righthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_white_right"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Timber Northern White Frame",
+          "textures": [
+            "daub_wattle_block_0/northern_white_open"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "daub_wattle_block_3",
+      "blockID": 2332,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Timber Northern Orange Brick Crosshatch",
+          "colorMult": "textures/colormap/brick",
+          "textures": [
+            "daub_wattle_block_0/northern_orange_brick_crossed"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Timber Northern Orange Brick Lefthatch",
+          "colorMult": "textures/colormap/brick",
+          "textures": [
+            "daub_wattle_block_0/northern_orange_brick_left"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Timber Northern Orange Brick Righthatch",
+          "colorMult": "textures/colormap/brick",
+          "textures": [
+            "daub_wattle_block_0/northern_orange_brick_right"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Timber Northern Orange Brick Frame",
+          "colorMult": "textures/colormap/brick",
+          "textures": [
+            "daub_wattle_block_0/northern_orange_brick_open"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Timber Northern Grey Brick Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/northern_grey_brick_crossed"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Timber Northern Grey Brick Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_grey_brick_left"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Timber Northern Grey Brick Righthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_grey_brick_right"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Timber Northern Grey Brick Frame",
+          "textures": [
+            "daub_wattle_block_0/northern_grey_brick_open"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Timber Northern Red Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/northern_red_crossed"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Timber Northern Red Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_red_left"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Timber Northern Red Righthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_red_right"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Timber Northern Red Frame",
+          "textures": [
+            "daub_wattle_block_0/northern_red_open"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Timber Northern Yellow Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/northern_yellow_crossed"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Timber Northern Yellow Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_yellow_left"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Timber Northern Yellow Righthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_yellow_right"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Timber Northern Yellow Frame",
+          "textures": [
+            "daub_wattle_block_0/northern_yellow_open"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "daub_wattle_block_4",
+      "blockID": 2333,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Timber Northern Blue Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/northern_blue_crossed"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Timber Northern Blue Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_blue_left"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Timber Northern Blue Righthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_blue_right"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Timber Northern Blue Frame",
+          "textures": [
+            "daub_wattle_block_0/northern_blue_open"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Timber Northern Green Crosshatch",
+          "textures": [
+            "daub_wattle_block_0/northern_green_crossed"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Timber Northern Green Lefthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_green_left"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Timber Northern Green Righthatch",
+          "textures": [
+            "daub_wattle_block_0/northern_green_right"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Timber Northern Green Frame",
+          "textures": [
+            "daub_wattle_block_0/northern_green_open"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "daub_wattle_block_5",
+      "blockID": 2334,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Timber Oak Brown Vertical",
+          "textures": [
+            "daub_wattle_block_0/oak_brown_vert"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Timber Oak White Vertical",
+          "textures": [
+            "daub_wattle_block_0/oak_white_vert"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Timber Red White Vertical",
+          "textures": [
+            "daub_wattle_block_0/red_white_vert"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Timber Oak Orange Brick Vertical",
+          "colorMult": "textures/colormap/brick",
+          "textures": [
+            "daub_wattle_block_0/oak_orange_brick_vert"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Timber Oak Reach Brick Vertical",
+          "textures": [
+            "daub_wattle_block_0/oak_reach_vert"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Timber Oak Oldtown Brick Vertical",
+          "textures": [
+            "daub_wattle_block_0/oak_oldtown_vert"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Timber Oak Yellow Vertical",
+          "textures": [
+            "daub_wattle_block_0/oak_yellow_vert"
+          ]
+        },
+        {
+          "meta": 7,
+          "label": "Timber Oak Orange Vertical",
+          "textures": [
+            "daub_wattle_block_0/oak_orange_vert"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Timber Oak Lannisport Brick Vertical",
+          "textures": [
+            "daub_wattle_block_0/oak_lannisport_vert"
+          ]
+        },
+        {
+          "meta": 9,
+          "label": "Timber Whitewashed Vertical",
+          "textures": [
+            "daub_wattle_block_0/whitewashed_vert"
+          ]
+        },
+        {
+          "meta": 10,
+          "label": "Timber Northern Brown Vertical",
+          "textures": [
+            "daub_wattle_block_0/northern_brown_vert"
+          ]
+        },
+        {
+          "meta": 11,
+          "label": "Timber Northern White Vertical",
+          "textures": [
+            "daub_wattle_block_0/northern_white_vert"
+          ]
+        },
+        {
+          "meta": 12,
+          "label": "Timber Northern Orange Brick Vertical",
+          "colorMult": "textures/colormap/brick",
+          "textures": [
+            "daub_wattle_block_0/northern_orange_brick_vert"
+          ]
+        },
+        {
+          "meta": 13,
+          "label": "Timber Northern Grey Brick Vertical",
+          "textures": [
+            "daub_wattle_block_0/northern_grey_brick_vert"
+          ]
+        },
+        {
+          "meta": 14,
+          "label": "Timber Northern Red Vertical",
+          "textures": [
+            "daub_wattle_block_0/northern_red_vert"
+          ]
+        },
+        {
+          "meta": 15,
+          "label": "Timber Northern Yellow Vertical",
+          "textures": [
+            "daub_wattle_block_0/northern_yellow_vert"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "daub_wattle_block_6",
+      "blockID": 2335,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Timber Northern Blue Vertical",
+          "textures": [
+            "daub_wattle_block_0/northern_blue_vert"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Timber Northern Green Vertical",
+          "textures": [
+            "daub_wattle_block_0/northern_green_vert"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "daub_wattle_block_7",
+      "blockID": 2336,
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Timber Oak Brown Close Studding",
+          "textures": [
+            "daub_wattle_block_0/oak_brown_close"
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Timber Oak White Close Studding",
+          "textures": [
+            "daub_wattle_block_0/oak_white_close"
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Timber Oak Orange Brick Close Studding",
+          "colorMult": "textures/colormap/brick",
+          "textures": [
+            "daub_wattle_block_0/oak_orange_brick_close"
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Timber Whitewashed Close Studding",
+          "textures": [
+            "daub_wattle_block_0/whitewashed_close"
+          ]
+        },
+        {
+          "meta": 4,
+          "label": "Timber Northern Brown Close Studding",
+          "textures": [
+            "daub_wattle_block_0/northern_brown_close"
+          ]
+        },
+        {
+          "meta": 5,
+          "label": "Timber Northern White Close Studding",
+          "textures": [
+            "daub_wattle_block_0/northern_white_close"
+          ]
+        },
+        {
+          "meta": 6,
+          "label": "Timber Northern Orange Brick Close Studding",
+          "colorMult": "textures/colormap/brick",
+          "textures": [
+            "daub_wattle_block_0/northern_orange_brick_close"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "rope_block_3",
+      "blockID": 2337,
+      "blockType": "rail",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oak Cover",
+          "textures": [
+            "rail_block_0/cover_oak"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "rope_block_4",
+      "blockID": 2338,
+      "blockType": "rail",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Spruce Cover",
+          "textures": [
+            "rail_block_0/cover_spruce"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "rope_block_5",
+      "blockID": 2339,
+      "blockType": "rail",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Birch Cover",
+          "textures": [
+            "rail_block_0/cover_birch"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "rope_block_6",
+      "blockID": 2340,
+      "blockType": "rail",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Jungle Cover",
+          "textures": [
+            "rail_block_0/cover_jungle"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "rope_block_7",
+      "blockID": 2341,
+      "blockType": "rail",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Northern Wood Cover",
+          "textures": [
+            "rail_block_0/cover_northern"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "cuboid_block_10",
+      "blockID": 2342,
+      "blockType": "cuboid",
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Forest Path Dirt",
+          "textures": [
+            "ground_block_0/dirt"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0,
+              "yMax": 0.9375,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Forest Path Gravel",
+          "textures": [
+            "ground_block_0/gravel"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0,
+              "yMax": 0.9375,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "banner_block_31",
+      "blockID": 2343,
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [
+        {
+          "tool": "sword",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "type": "no-break-under",
+          "label": "Redwyne Banner",
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block_1/banner_redwyne_bottom",
+            "banner_block_1/banner_redwyne_bottom"
+          ],
+          "boundingBox": {
+            "xMin": 0.96875,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
+        },
+        {
+          "meta": 1,
+          "label": "Redwyne Banner Top",
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block_1/banner_redwyne_top",
+            "banner_block_1/banner_redwyne_top"
+          ],
+          "boundingBox": {
+            "xMin": 0.96875,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
+        }
+      ]
+    },
+    {
+      "blockName": "banner_block_32",
+      "blockID": 2344,
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [
+        {
+          "tool": "sword",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "type": "no-break-under",
+          "label": "Grafton Banner",
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block_1/banner_grafton_bottom",
+            "banner_block_1/banner_grafton_bottom"
+          ],
+          "boundingBox": {
+            "xMin": 0.96875,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
+        },
+        {
+          "meta": 1,
+          "label": "Grafton Banner Top",
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block_1/banner_grafton_top",
+            "banner_block_1/banner_grafton_top"
+          ],
+          "boundingBox": {
+            "xMin": 0.96875,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
+        }
+      ]
+    },
+    {
+      "blockName": "arrow_slits_3",
+      "blockID": 2345,
+      "blockType": "solid",
+      "creativeTab": "WesterosDeco",
+      "nonOpaque": true,
+      "alphaRender": false,
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "lightOpacity": 0,
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Oak Timber Window Frame",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_wood/oak_timber"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 1,
+          "label": "Red Timber Window Frame",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_wood/red_timber"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 2,
+          "label": "Northern Timber Window Frame",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_wood/northern_timber"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        },
+        {
+          "meta": 3,
+          "label": "Whitewashed Timber Window Frame",
+          "textures": [
+            "transparent",
+            "transparent",
+            "arrow_slits_wood/whitewashed_timber"
+          ],
+          "collisionBoxes": [
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.0,
+              "zMax": 0.20
+            },
+            {
+              "xMin": 0.0,
+              "xMax": 0.20,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            },
+            {
+              "xMin": 0.80,
+              "xMax": 1.0,
+              "yMin": 0,
+              "yMax": 1.0,
+              "zMin": 0.80,
+              "zMax": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_5_stair_3",
+      "blockID": 2346,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_5",
+      "modelBlockMeta": 9,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pink Sandstone Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_5_stair_4",
+      "blockID": 2347,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_5",
+      "modelBlockMeta": 11,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pink Large Brick Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_5_stair_5",
+      "blockID": 2348,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_5",
+      "modelBlockMeta": 12,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pink Cobble Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_5_stair_6",
+      "blockID": 2349,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_5",
+      "modelBlockMeta": 13,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pink Light Brick Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "stone_slab_block_6",
+      "blockIDs": [
+        2350,
+        2351
+      ],
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Pink Light Brick Slab",
+          "textures": [
+            "stone_block_4/brick_pink_light"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "terrainset_stair_18",
+      "blockID": 2352,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_10",
+      "modelBlockMeta": 7,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Volcanic Rock Stairs"
+        }
+      ]
+    }
   ]
 }

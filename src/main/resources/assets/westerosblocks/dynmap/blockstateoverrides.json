@@ -5,6 +5,18 @@
    },
   "tinting": {
       "westerosblocks": {
+          "daub_wattle_block_5": [
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant=12", "colormap": [ "westerosblocks:colormap/brick" ] }
+          ]
+          ,
+          "daub_wattle_block_7": [
+              { "state": "variant=2", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant=6", "colormap": [ "westerosblocks:colormap/brick" ] }
+          ]
+          ,
           "sand_block_0": [
               { "state": "variant=0", "colormap": [ "westerosblocks:colormap/sand" ] }
               ,
@@ -17,6 +29,16 @@
           ,
           "sand_layer_4": [
               { "colormap": [ "westerosblocks:colormap/easternisland" ] }
+          ]
+          ,
+          "daub_wattle_block_3": [
+              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant=2", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/brick" ] }
           ]
           ,
           "sand_layer_0": [

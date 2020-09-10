@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "variant=1": {
+      "model": "westerosblocks:daub_wattle_block_6_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:daub_wattle_block_6_0"
+    }
+  }
+}

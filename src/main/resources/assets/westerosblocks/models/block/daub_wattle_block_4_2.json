@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "westerosblocks:blocks/daub_wattle_block_0/northern_blue_right"
+  }
+}

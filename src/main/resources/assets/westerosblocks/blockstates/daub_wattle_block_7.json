@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:daub_wattle_block_7_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:daub_wattle_block_7_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:daub_wattle_block_7_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:daub_wattle_block_7_0"
+    },
+    "variant=6": {
+      "model": "westerosblocks:daub_wattle_block_7_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:daub_wattle_block_7_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:daub_wattle_block_7_4"
+    }
+  }
+}

@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/stone_block_2/stone_cobble_reach_pink",
-    "txt5": "westerosblocks:blocks/stone_block_2/stone_cobble_reach_pink",
-    "txt2": "westerosblocks:blocks/stone_block_2/stone_cobble_reach_pink",
-    "txt3": "westerosblocks:blocks/stone_block_2/stone_cobble_reach_pink",
-    "txt0": "westerosblocks:blocks/stone_block_2/stone_cobble_reach_pink",
-    "txt1": "westerosblocks:blocks/stone_block_2/stone_cobble_reach_pink",
-    "particle": "westerosblocks:blocks/stone_block_2/stone_cobble_reach_pink"
+    "txt4": "westerosblocks:blocks/stone_block_2/stone_cobble_reach",
+    "txt5": "westerosblocks:blocks/stone_block_2/stone_cobble_reach",
+    "txt2": "westerosblocks:blocks/stone_block_2/stone_cobble_reach",
+    "txt3": "westerosblocks:blocks/stone_block_2/stone_cobble_reach",
+    "txt0": "westerosblocks:blocks/stone_block_2/stone_cobble_reach",
+    "txt1": "westerosblocks:blocks/stone_block_2/stone_cobble_reach",
+    "particle": "westerosblocks:blocks/stone_block_2/stone_cobble_reach"
   },
   "elements": [
     {

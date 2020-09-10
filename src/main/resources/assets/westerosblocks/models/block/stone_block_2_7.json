@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/stone_block_2/stone_cobble_reach_pink"
+    "all": "westerosblocks:blocks/stone_block_2/stone_cobble_reach"
   }
 }
