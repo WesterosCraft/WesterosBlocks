@@ -2349,7 +2349,7 @@
         },
         {
           "meta": 12,
-          "material": "water",
+          "material": "wood",
           "label": "Water Barrel",
           "textures": [
             "log_block_0/barrel_top_closed",
@@ -22116,7 +22116,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Jasmine Vines",
+          "label": "Dappled Moss",
           "colorMult": "textures/colormap/moss_dappled",
           "textures": [
             "moss_block/moss_dappled",
