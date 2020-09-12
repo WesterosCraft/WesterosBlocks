@@ -1,0 +1,9 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/moss_block/moss_cushion",
+    "top": "westerosblocks:blocks/moss_block/moss_cushion",
+    "side": "westerosblocks:blocks/moss_block/moss_cushion",
+    "particle": "westerosblocks:blocks/moss_block/moss_cushion"
+  }
+}

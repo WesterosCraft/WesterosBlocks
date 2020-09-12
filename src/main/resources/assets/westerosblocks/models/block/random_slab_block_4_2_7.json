@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/moss_block/moss_cushion",
+    "up": "westerosblocks:blocks/moss_block/moss_cushion",
+    "north": "westerosblocks:blocks/moss_block/moss_cushion",
+    "south": "westerosblocks:blocks/moss_block/moss_cushion",
+    "west": "westerosblocks:blocks/moss_block/moss_cushion",
+    "east": "westerosblocks:blocks/moss_block/moss_cushion",
+    "particle": "westerosblocks:blocks/moss_block/moss_cushion"
+  }
+}

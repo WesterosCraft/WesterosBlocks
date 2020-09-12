@@ -1,4 +1,4 @@
-#Thu Sep 10 13:27:00 EDT 2020
+#Fri Sep 11 18:59:15 EDT 2020
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -107,6 +107,8 @@ tile.banner_block_31_0.name=Redwyne Banner
 tile.banner_block_31_1.name=Redwyne Banner Top
 tile.banner_block_32_0.name=Grafton Banner
 tile.banner_block_32_1.name=Grafton Banner Top
+tile.banner_block_33_0.name=Renly Banner
+tile.banner_block_33_1.name=Renly Banner Top
 tile.banner_block_3_0.name=The Faith of the Seven Banner
 tile.banner_block_3_1.name=Black Banner Top
 tile.banner_block_4_0.name=Cream Banner
@@ -593,8 +595,10 @@ tile.metal_slab_block_0_5.name=Steel Slab
 tile.metal_slab_block_0_6.name=Gold Brick Slab
 tile.metal_slab_block_0_7.name=Iron Throne Blade Slab
 tile.moss_block_0_0.name=Cushion Moss
+tile.moss_block_0_stair_0.name=Cushion Moss Stairs
 tile.northern_wood_stairs.name=Dark Northern Wood Stairs
 tile.orange_brick_stair_0.name=Lannisport Slate Stairs
+tile.plant_wall_block_0_0.name=Cushion Moss Wall
 tile.rail_block_0.name=Horizontal Rope
 tile.rail_block_1.name=Horizontal Chain
 tile.random_slab_block_0_0.name=Dirt Slab
@@ -634,6 +638,7 @@ tile.random_slab_block_4_3.name=Lavender Basket Slab
 tile.random_slab_block_4_4.name=Sourleaf Basket Slab
 tile.random_slab_block_4_5.name=Mance's Camp Common Tent Slab
 tile.random_slab_block_4_6.name=Mance's Camp Mance's Tent Slab
+tile.random_slab_block_4_7.name=Cushion Moss Slab
 tile.red_flower_block_0_0.name=Red Dark Roses
 tile.red_flower_block_0_1.name=Yellow Hellebore
 tile.red_flower_block_0_10.name=Blue Chicory

@@ -1,7 +1,13 @@
 {
   "variants": {
+    "half=top,variant=7": {
+      "model": "westerosblocks:random_slab_block_4_7_top"
+    },
     "half=top,variant=5": {
       "model": "westerosblocks:random_slab_block_4_5_top"
+    },
+    "half=bottom,variant=7": {
+      "model": "westerosblocks:random_slab_block_4_7_bottom"
     },
     "half=top,variant=6": {
       "model": "westerosblocks:random_slab_block_4_6_top"

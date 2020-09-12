@@ -19839,6 +19839,15 @@
           "textures": [
             "fur_block_0/leather_mance_main_outside"
           ]
+        },
+        {
+          "meta": 7,
+          "stepSound": "grass",
+          "material": "plants",
+          "label": "Cushion Moss Slab",
+          "textures": [
+            "moss_block/moss_cushion"
+          ]
         }
       ]
     },
@@ -23414,6 +23423,106 @@
         {
           "meta": 0,
           "label": "Volcanic Rock Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "moss_block_0_stair_0",
+      "blockID": 2353,
+      "blockType": "stair",
+      "modelBlockName": "moss_block_0",
+      "modelBlockMeta": 0,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Cushion Moss Stairs"
+        }
+      ]
+    },
+    {
+      "blockName": "plant_wall_block_0",
+      "blockID": 2354,
+      "blockType": "wall",
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Cushion Moss Wall",
+          "textures": [
+            "moss_block/moss_cushion"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "banner_block_33",
+      "blockID": 2355,
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [
+        {
+          "tool": "sword",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "type": "no-break-under",
+          "label": "Renly Banner",
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block_1/banner_renly_bottom",
+            "banner_block_1/banner_renly_bottom"
+          ],
+          "boundingBox": {
+            "xMin": 0.96875,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
+        },
+        {
+          "meta": 1,
+          "label": "Renly Banner Top",
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block_1/banner_renly_top",
+            "banner_block_1/banner_renly_top"
+          ],
+          "boundingBox": {
+            "xMin": 0.96875,
+            "xMax": 1,
+            "yMin": 0,
+            "yMax": 1,
+            "zMin": 0,
+            "zMax": 1
+          },
+          "itemTextureIndex": 2
         }
       ]
     }
