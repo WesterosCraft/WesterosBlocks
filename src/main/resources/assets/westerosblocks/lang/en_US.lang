@@ -1,4 +1,4 @@
-#Fri Sep 11 18:59:15 EDT 2020
+#Sat Sep 12 16:28:05 EDT 2020
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -253,10 +253,10 @@ tile.cuboid_block_5_0.name=Oak Half Door
 tile.cuboid_block_5_1.name=Birch Half Door
 tile.cuboid_block_5_2.name=Jungle Half Door
 tile.cuboid_block_5_3.name=Dark Northern Wood Half Door
-tile.cuboid_block_6_0.name=Falling Water Block One
-tile.cuboid_block_6_1.name=Falling Water Block Two
-tile.cuboid_block_6_2.name=Falling Water Block Three
-tile.cuboid_block_6_3.name=Falling Water Block Four
+tile.cuboid_block_6_0.name=Falling Water Block One (Old)
+tile.cuboid_block_6_1.name=Falling Water Block Two (Old)
+tile.cuboid_block_6_2.name=Falling Water Block Three (Old)
+tile.cuboid_block_6_3.name=Falling Water Block Four (Old)
 tile.cuboid_block_7_0.name=Mance's Camp Common Tent 1
 tile.cuboid_block_7_1.name=Mance's Camp Common Tent 2
 tile.cuboid_block_7_2.name=Mance's Camp Mance's Tent
@@ -1252,6 +1252,10 @@ tile.utility_block_0_8.name='WIP' Utility Block
 tile.utility_block_0_9.name='Industry' Utility Block
 tile.vine_block_0.name=Jasmine Vines
 tile.vine_block_1.name=Dappled Moss
+tile.vine_block_2.name=Falling Water Block One
+tile.vine_block_3.name=Falling Water Block Two
+tile.vine_block_4.name=Falling Water Block Three
+tile.vine_block_5.name=Falling Water Block Four
 tile.web_block_0_0.name=Smoke
 tile.web_block_0_1.name=Vertical Rope
 tile.web_block_0_10.name=Dead Fowl

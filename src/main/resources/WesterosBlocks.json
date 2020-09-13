@@ -17125,7 +17125,7 @@
       "subBlocks": [
         {
           "meta": 0,
-          "label": "Falling Water Block One",
+          "label": "Falling Water Block One (Old)",
           "textures": [
             "transparent",
             "transparent",
@@ -17145,7 +17145,7 @@
         },
         {
           "meta": 1,
-          "label": "Falling Water Block Two",
+          "label": "Falling Water Block Two (Old)",
           "textures": [
             "transparent",
             "transparent",
@@ -17165,7 +17165,7 @@
         },
         {
           "meta": 2,
-          "label": "Falling Water Block Three",
+          "label": "Falling Water Block Three (Old)",
           "textures": [
             "transparent",
             "transparent",
@@ -17185,7 +17185,7 @@
         },
         {
           "meta": 3,
-          "label": "Falling Water Block Four",
+          "label": "Falling Water Block Four (Old)",
           "textures": [
             "transparent",
             "transparent",
@@ -23523,6 +23523,90 @@
             "zMax": 1
           },
           "itemTextureIndex": 2
+        }
+      ]
+    },
+    {
+      "blockName": "vine_block_2",
+      "blockID": 2356,
+      "blockType": "vines",
+      "stepSound": "cloth",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material": "cloth",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Falling Water Block One",
+          "textures": [
+            "translucent_block_0/alyssas_tears_mist_one",
+            "translucent_block_0/alyssas_tears_mist_one"
+          ],
+          "type": "allow-unsupported,no-climb"
+        }
+      ]
+    },
+    {
+      "blockName": "vine_block_3",
+      "blockID": 2357,
+      "blockType": "vines",
+      "stepSound": "cloth",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material": "cloth",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Falling Water Block Two",
+          "textures": [
+            "translucent_block_0/alyssas_tears_mist_two",
+            "translucent_block_0/alyssas_tears_mist_two"
+          ],
+          "type": "allow-unsupported,no-climb"
+        }
+      ]
+    },
+    {
+      "blockName": "vine_block_4",
+      "blockID": 2358,
+      "blockType": "vines",
+      "stepSound": "cloth",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material": "cloth",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Falling Water Block Three",
+          "textures": [
+            "translucent_block_0/alyssas_tears_mist_three",
+            "translucent_block_0/alyssas_tears_mist_three"
+          ],
+          "type": "allow-unsupported,no-climb"
+        }
+      ]
+    },
+    {
+      "blockName": "vine_block_5",
+      "blockID": 2359,
+      "blockType": "vines",
+      "stepSound": "cloth",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "material": "cloth",
+      "creativeTab": "WesterosDeco",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Falling Water Block Four",
+          "textures": [
+            "translucent_block_0/alyssas_tears_mist_four",
+            "translucent_block_0/alyssas_tears_mist_four"
+          ],
+          "type": "allow-unsupported,no-climb"
         }
       ]
     }
