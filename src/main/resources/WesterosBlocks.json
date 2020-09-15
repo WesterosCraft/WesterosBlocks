@@ -16852,6 +16852,13 @@
           "textures": [
             "stone_block_2/plaster_gulltown_green"
           ]
+        },
+        {
+          "meta": 5,
+          "label": "Pale Yellow Plaster",
+          "textures": [
+            "stone_block_3/plaster_pale_yellow"
+          ]
         }
       ]
     },
@@ -22571,30 +22578,30 @@
         },
         {
           "meta": 12,
-          "label": "Timber Northern Yellow Crosshatch",
+          "label": "Timber Northern Pale Yellow Crosshatch",
           "textures": [
-            "daub_wattle_block_0/northern_yellow_crossed"
+            "daub_wattle_block_0/northern_pale_yellow_crossed"
           ]
         },
         {
           "meta": 13,
-          "label": "Timber Northern Yellow Lefthatch",
+          "label": "Timber Northern Pale Yellow Lefthatch",
           "textures": [
-            "daub_wattle_block_0/northern_yellow_left"
+            "daub_wattle_block_0/northern_pale_yellow_left"
           ]
         },
         {
           "meta": 14,
-          "label": "Timber Northern Yellow Righthatch",
+          "label": "Timber Northern Pale Yellow Righthatch",
           "textures": [
-            "daub_wattle_block_0/northern_yellow_right"
+            "daub_wattle_block_0/northern_pale_yellow_right"
           ]
         },
         {
           "meta": 15,
-          "label": "Timber Northern Yellow Frame",
+          "label": "Timber Northern Pale Yellow Frame",
           "textures": [
-            "daub_wattle_block_0/northern_yellow_open"
+            "daub_wattle_block_0/northern_pale_yellow_open"
           ]
         }
       ]
@@ -22786,9 +22793,9 @@
         },
         {
           "meta": 15,
-          "label": "Timber Northern Yellow Vertical",
+          "label": "Timber Northern Pale Yellow Vertical",
           "textures": [
-            "daub_wattle_block_0/northern_yellow_vert"
+            "daub_wattle_block_0/northern_pale_yellow_vert"
           ]
         }
       ]

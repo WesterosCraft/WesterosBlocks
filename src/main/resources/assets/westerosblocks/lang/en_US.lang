@@ -1,4 +1,4 @@
-#Sat Sep 12 16:28:05 EDT 2020
+#Mon Sep 14 15:06:46 EDT 2020
 itemGroup.WesterosBlocks=Westeros Blocks
 itemGroup.WesterosDeco=Westeros Decorative
 itemGroup.WesterosPlants=Westeros Plants
@@ -325,10 +325,10 @@ tile.daub_wattle_block_3_0.name=Timber Northern Orange Brick Crosshatch
 tile.daub_wattle_block_3_1.name=Timber Northern Orange Brick Lefthatch
 tile.daub_wattle_block_3_10.name=Timber Northern Red Righthatch
 tile.daub_wattle_block_3_11.name=Timber Northern Red Frame
-tile.daub_wattle_block_3_12.name=Timber Northern Yellow Crosshatch
-tile.daub_wattle_block_3_13.name=Timber Northern Yellow Lefthatch
-tile.daub_wattle_block_3_14.name=Timber Northern Yellow Righthatch
-tile.daub_wattle_block_3_15.name=Timber Northern Yellow Frame
+tile.daub_wattle_block_3_12.name=Timber Northern Pale Yellow Crosshatch
+tile.daub_wattle_block_3_13.name=Timber Northern Pale Yellow Lefthatch
+tile.daub_wattle_block_3_14.name=Timber Northern Pale Yellow Righthatch
+tile.daub_wattle_block_3_15.name=Timber Northern Pale Yellow Frame
 tile.daub_wattle_block_3_2.name=Timber Northern Orange Brick Righthatch
 tile.daub_wattle_block_3_3.name=Timber Northern Orange Brick Frame
 tile.daub_wattle_block_3_4.name=Timber Northern Grey Brick Crosshatch
@@ -352,7 +352,7 @@ tile.daub_wattle_block_5_11.name=Timber Northern White Vertical
 tile.daub_wattle_block_5_12.name=Timber Northern Orange Brick Vertical
 tile.daub_wattle_block_5_13.name=Timber Northern Grey Brick Vertical
 tile.daub_wattle_block_5_14.name=Timber Northern Red Vertical
-tile.daub_wattle_block_5_15.name=Timber Northern Yellow Vertical
+tile.daub_wattle_block_5_15.name=Timber Northern Pale Yellow Vertical
 tile.daub_wattle_block_5_2.name=Timber Red White Vertical
 tile.daub_wattle_block_5_3.name=Timber Oak Orange Brick Vertical
 tile.daub_wattle_block_5_4.name=Timber Oak Reach Brick Vertical
@@ -997,6 +997,7 @@ tile.stone_block_7_1.name=Highgarden Green Plaster
 tile.stone_block_7_2.name=Highgarden Pink Plaster
 tile.stone_block_7_3.name=Gulltown Blue Plaster
 tile.stone_block_7_4.name=Gulltown Green Plaster
+tile.stone_block_7_5.name=Pale Yellow Plaster
 tile.stone_block_8_0.name=Pebbles Dry Eastern Islands
 tile.stone_block_8_1.name=Pebbles Dry Iron Islands
 tile.stone_block_8_10.name=Pebbles Dry Reach
