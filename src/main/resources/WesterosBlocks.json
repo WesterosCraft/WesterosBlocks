@@ -23620,6 +23620,22 @@
           "type": "allow-unsupported,no-climb"
         }
       ]
+    },
+    {
+      "blockName": "fence_gate_block_0",
+      "blockID": 2360,
+      "blockType": "fencegate",
+      "stepSound": "wood",
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Test fence gate",
+          "textures": [
+            "stone_terrainsets_0/stone_westerlands"
+          ]
+        }
+      ]
     }
   ]
 }

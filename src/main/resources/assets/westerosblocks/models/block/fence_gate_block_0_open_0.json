@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_gate_open",
+  "textures": {
+    "texture": "westerosblocks:blocks/wood_block_1/wood_grey"
+  }
+}

@@ -444,6 +444,7 @@ tile.fence_block_3_6.name=Arbor Brick Fence
 tile.fence_block_3_7.name=Arbor Cobblestone Fence
 tile.fence_block_3_8.name=Starry Sept Marble Fence
 tile.fence_block_3_9.name=Citadel Green Marble Fence
+tile.fence_gate_block_0_0.name=Test Fence Gate
 tile.fire_block_0.name=Safe Fire
 tile.forest_block_0_0.name=Cow Parsely
 tile.forest_block_0_1.name=Bracken
