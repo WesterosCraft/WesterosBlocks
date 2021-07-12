@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-FMLCorePluginContainsFMLMod: true
-FMLAT: WesterosBlocks_at.cfg
-FMLCorePlugin: com.westeroscraft.westerosblocks.asm.FMLLoadingPlugin
-

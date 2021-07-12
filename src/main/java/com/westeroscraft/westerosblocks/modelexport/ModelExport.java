@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -90,8 +91,8 @@ public abstract class ModelExport {
     public static void addNLSString(String id, String val) {
         nls.put(id, val);
     }
-    public static void writeNLSFile(File dest) throws IOException {
-        File tgt = new File(dest, "assets/" + WesterosBlocks.MOD_ID + "/lang");
+    public static void writeNLSFile(Path dest) throws IOException {
+        File tgt = new File(dest.toFile(), "assets/" + WesterosBlocks.MOD_ID + "/lang");
         tgt.mkdirs();
         PrintStream fw = null;
         try {
@@ -127,8 +128,8 @@ public abstract class ModelExport {
         to.txt = txtfile;
         blst.add(to);
     }
-    public static void writeDynmapOverridesFile(File dest) throws IOException {
-        File tgt = new File(dest, "assets/" + WesterosBlocks.MOD_ID + "/dynmap");
+    public static void writeDynmapOverridesFile(Path dest) throws IOException {
+        File tgt = new File(dest.toFile(), "assets/" + WesterosBlocks.MOD_ID + "/dynmap");
         tgt.mkdirs();
         PrintStream fw = null;
         try {

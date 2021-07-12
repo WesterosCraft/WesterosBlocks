@@ -7,8 +7,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.block.Block;
 
@@ -124,7 +122,7 @@ public class StairsBlockModelExport extends ModelExport {
     public StairsBlockModelExport(final Block blk, final WesterosBlockDef def, final File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
 
     @Override
@@ -176,63 +174,17 @@ public class StairsBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        final boolean isTinted = def.subBlocks.get(0).isTinted(def);
-        // Find base block for stairs - textures come from there
-        final Block bblk = WesterosBlocks.findBlockByName(def.modelBlockName);
-        if (bblk == null) {
-            throw new IOException(
-                    String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
-        }
+        final boolean isTinted = def.isTinted();
         String downtxt = null;
         String uptxt = null;
         String sidetxt = null;
-        final boolean ambientOcclusion = (def.subBlocks.get(0).ambientOcclusion != null)
-                ? def.subBlocks.get(0).ambientOcclusion
+        final boolean ambientOcclusion = (def.ambientOcclusion != null)
+                ? def.ambientOcclusion
                 : true;
 
-        if (bblk instanceof WesterosBlockLifecycle) {
-            final WesterosBlockDef bbdef = ((WesterosBlockLifecycle) bblk).getWBDefinition();
-            if (bbdef == null) {
-                throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no def",
-                        def.modelBlockName, def.blockName));
-            }
-            final Subblock sb = bbdef.getByMeta(def.modelBlockMeta);
-            downtxt = getTextureID(sb.getTextureByIndex(0));
-            uptxt = getTextureID(sb.getTextureByIndex(1));
-            sidetxt = getTextureID(sb.getTextureByIndex(2));
-        } else { // Else, assume vanilla block: hack it for ones we use
-            switch (def.modelBlockName) {
-                case "minecraft:bedrock":
-                    downtxt = uptxt = sidetxt = "blocks/bedrock";
-                    break;
-                case "minecraft:lapis_block":
-                    downtxt = uptxt = sidetxt = "blocks/lapis_block";
-                    break;
-                case "minecraft:sandstone":
-                    downtxt = uptxt = "blocks/sandstone_top";
-                    sidetxt = "blocks/sandstone_smooth";
-                    break;
-                case "minecraft:iron_block":
-                    downtxt = uptxt = sidetxt = "blocks/iron_block";
-                    break;
-                case "minecraft:double_stone_slab":
-                    downtxt = uptxt = "blocks/stone_slab_top";
-                    sidetxt = "blocks/stone_slab_side";
-                    break;
-                case "minecraft:snow":
-                    downtxt = uptxt = sidetxt = "blocks/snow";
-                    break;
-                case "minecraft:emerald_block":
-                    downtxt = uptxt = sidetxt = "blocks/emerald_block";
-                    break;
-                case "minecraft:obsidian":
-                    downtxt = uptxt = sidetxt = "blocks/obsidian";
-                    break;
-                default:
-                    throw new IOException(String.format("modelBlockName '%s:%d' not found for block '%s' - no vanilla",
-                            def.modelBlockName, def.modelBlockMeta, def.blockName));
-            }
-        }
+        downtxt = getTextureID(def.getTextureByIndex(0));
+        uptxt = getTextureID(def.getTextureByIndex(1));
+        sidetxt = getTextureID(def.getTextureByIndex(2));
         // Base model
         final ModelObjectStair base = new ModelObjectStair(ambientOcclusion, isTinted);
         base.textures.bottom = downtxt;
@@ -258,7 +210,7 @@ public class StairsBlockModelExport extends ModelExport {
 
         // Handle tint resources
         if (isTinted) {
-            final String tintres = def.getBlockColorMapResource(def.subBlocks.get(0));
+            final String tintres = def.getBlockColorMapResource();
             if (tintres != null) {
                 ModelExport.addTintingOverride(def.blockName, null, tintres);
             }

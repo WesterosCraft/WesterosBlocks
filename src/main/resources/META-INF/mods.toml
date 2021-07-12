@@ -1,0 +1,28 @@
+modLoader="javafml" #mandatory
+loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="Apache Public License v2"
+[[mods]] #mandatory
+modId="westerosblocks" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="WesterosBlocks" #mandatory
+displayURL="https://www.westeroscraft.com/" #optional
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="westerosblocks.jpg" #optional
+# A text field displayed in the mod UI
+authors="mikeprimm, Thamus_Knoward, Emoticone11" #optional
+credits="Design and code by mikeprimm, artwork and block design by Thamus_Knoward, Emoticone11"
+description='''
+This mod provides the custom blocks needed by WesterosCraft (www.westeroscraft.com)
+'''
+[[dependencies.examplemod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[36,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
