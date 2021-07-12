@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -40,33 +39,26 @@ public class CropBlockModelExport extends ModelExport {
     public CropBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        for (Subblock sb : def.subBlocks) {
-            addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
-        }
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
     
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        for (Subblock sb : def.subBlocks) {
-            Variant var = new Variant();
-            var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
-            so.variants.put(String.format("variant=%d", sb.meta), var);
-        }
+        Variant var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":" + def.blockName;
+        so.variants.put("", var);
         this.writeBlockStateFile(def.blockName, so);
     }
 
     @Override
     public void doModelExports() throws IOException {
-        for (Subblock sb : def.subBlocks) {
-            ModelObjectCrop mod = new ModelObjectCrop();
-            mod.textures.crop = getTextureID(sb.getTextureByIndex(0)); 
-            this.writeBlockModelFile(def.blockName + "_" + sb.meta, mod);
-            // Build simple item model that refers to block model
-            ModelObject mo = new ModelObject();
-            mo.textures.layer0 = mod.textures.crop;
-            this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
-        }
+        ModelObjectCrop mod = new ModelObjectCrop();
+        mod.textures.crop = getTextureID(def.getTextureByIndex(0)); 
+        this.writeBlockModelFile(def.blockName, mod);
+        // Build simple item model that refers to block model
+        ModelObject mo = new ModelObject();
+        mo.textures.layer0 = mod.textures.crop;
+        this.writeItemModelFile(def.blockName, mo);
     }
-
 }

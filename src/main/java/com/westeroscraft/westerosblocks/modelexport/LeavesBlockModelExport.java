@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -54,42 +53,36 @@ public class LeavesBlockModelExport extends ModelExport {
     public LeavesBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        for (Subblock sb : def.subBlocks) {
-            addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
-        }
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
     
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        for (Subblock sb : def.subBlocks) {
-            Variant var = new Variant();
-            var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
-            so.variants.put(String.format("variant=%d", sb.meta), var);
-        }
+        Variant var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":" + def.blockName;
+        so.variants.put("", var);
         this.writeBlockStateFile(def.blockName, so);
     }
     
     @Override
     public void doModelExports() throws IOException {
-        for (Subblock sb : def.subBlocks) {
-            boolean isTinted = sb.isTinted(def);
-            ModelObjectLeaves mod = new ModelObjectLeaves();
-            mod.elements[0].faces.put("down", new Faces("#end", "down", isTinted));
-            mod.elements[0].faces.put("up", new Faces("#end", "up", isTinted));
-            mod.elements[0].faces.put("north", new Faces("#side", "north", isTinted));
-            mod.elements[0].faces.put("south", new Faces("#side", "south", isTinted));
-            mod.elements[0].faces.put("west", new Faces("#side", "west", isTinted));
-            mod.elements[0].faces.put("east", new Faces("#side", "east", isTinted));
-            mod.textures.end = getTextureID(sb.getTextureByIndex(2)); 
-            mod.textures.side = getTextureID(sb.getTextureByIndex(3)); 
-            mod.textures.particle = mod.textures.side;
-            this.writeBlockModelFile(def.blockName + "_" + sb.meta, mod);
-            // Build simple item model that refers to block model
-            ModelObject mo = new ModelObject();
-            mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + sb.meta;
-            this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
-        }
+        boolean isTinted = def.isTinted();
+        ModelObjectLeaves mod = new ModelObjectLeaves();
+        mod.elements[0].faces.put("down", new Faces("#end", "down", isTinted));
+        mod.elements[0].faces.put("up", new Faces("#end", "up", isTinted));
+        mod.elements[0].faces.put("north", new Faces("#side", "north", isTinted));
+        mod.elements[0].faces.put("south", new Faces("#side", "south", isTinted));
+        mod.elements[0].faces.put("west", new Faces("#side", "west", isTinted));
+        mod.elements[0].faces.put("east", new Faces("#side", "east", isTinted));
+        mod.textures.end = getTextureID(def.getTextureByIndex(2)); 
+        mod.textures.side = getTextureID(def.getTextureByIndex(3)); 
+        mod.textures.particle = mod.textures.side;
+        this.writeBlockModelFile(def.blockName, mod);
+        // Build simple item model that refers to block model
+        ModelObject mo = new ModelObject();
+        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        this.writeItemModelFile(def.blockName, mo);
     }
 
 }

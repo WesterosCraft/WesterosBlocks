@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -54,7 +53,7 @@ public class TorchBlockModelExport extends ModelExport {
     public TorchBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
     
     @Override
@@ -73,8 +72,7 @@ public class TorchBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        Subblock sb = def.subBlocks.get(0);
-        String txt = getTextureID(sb.getTextureByIndex(0));
+        String txt = getTextureID(def.getTextureByIndex(0));
         ModelObjectTorch mod = new ModelObjectTorch();
         mod.textures.torch = txt; 
         this.writeBlockModelFile(def.blockName, mod);

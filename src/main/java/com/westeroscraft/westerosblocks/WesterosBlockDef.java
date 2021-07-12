@@ -470,12 +470,6 @@ public class WesterosBlockDef {
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
     private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
     private static final Map<String, BasicParticleType> particles = new HashMap<String, BasicParticleType>();
-
-    private int metaMask = 0xF; // Bitmask for translating raw metadata values to base (subblock) meta values
-    
-    public void setMetaMask(int mask) {
-        metaMask = mask;
-    }
     
     public Block[] createBlocks() {
         WesterosBlockFactory bf = typeTable.get(blockType);
@@ -486,6 +480,10 @@ public class WesterosBlockDef {
         return bf.buildBlockClasses(this);
     }
 
+    public boolean isCustomModel() {
+        return (isCustomModel != null) && (isCustomModel.booleanValue() == true);
+    }
+    
     /**
      * Returns this WesterosBlockDef's default Material
      * @return this WesterosBlockDef's default Material

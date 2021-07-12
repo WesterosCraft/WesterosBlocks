@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -51,7 +50,7 @@ public class TrapDoorBlockModelExport extends ModelExport {
     public TrapDoorBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
     
     @Override
@@ -81,8 +80,7 @@ public class TrapDoorBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        Subblock sb = def.subBlocks.get(0);
-        String txt = getTextureID(sb.getTextureByIndex(0));
+        String txt = getTextureID(def.getTextureByIndex(0));
         ModelObjectTrapdoorBottom modb = new ModelObjectTrapdoorBottom();
         modb.textures.texture = txt; 
         this.writeBlockModelFile(def.blockName + "_bottom", modb);

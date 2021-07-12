@@ -10,58 +10,58 @@ public class ModelExportFactory {
     public static ModelExport   forBlock(Block blk, WesterosBlockDef def, File dest) {
         ModelExport me = null;
         switch (def.blockType) {
-//            case "solid":
-//            case "soulsand":
-//            case "sound":
-//            case "sand":
-//                me = new SolidBlockModelExport(blk, def, dest);
-//                break;
-//            case "stair":
-//                me = new StairsBlockModelExport(blk, def, dest);
-//                break;
-//            case "leaves":
-//                me = new LeavesBlockModelExport(blk, def, dest);
-//                break;
-//            case "log":
-//                me = new LogBlockModelExport(blk, def, dest);
-//                break;
-//            case "plant":
-//            case "web":
-//                me = new CrossBlockModelExport(blk, def, dest);
-//                break;
+            case "solid":
+            case "soulsand":
+            case "sound":
+            case "sand":
+                me = new SolidBlockModelExport(blk, def, dest);
+                break;
+            case "stair":
+                me = new StairsBlockModelExport(blk, def, dest);
+                break;
+            case "leaves":
+                me = new LeavesBlockModelExport(blk, def, dest);
+                break;
+            case "log":
+                me = new LogBlockModelExport(blk, def, dest);
+                break;
+            case "plant":
+            case "web":
+                me = new CrossBlockModelExport(blk, def, dest);
+                break;
 //            case "pane":
 //                me = new PaneBlockModelExport(blk, def, dest);
 //                break;
-//            case "crop":
-//                me = new CropBlockModelExport(blk, def, dest);
-//                break;
-//            case "door":
-//                me = new DoorBlockModelExport(blk, def, dest);
-//                break;
+            case "crop":
+                me = new CropBlockModelExport(blk, def, dest);
+                break;
+            case "door":
+                me = new DoorBlockModelExport(blk, def, dest);
+                break;
 //            case "slab":
 //                me = new SlabBlockModelExport(blk, def, dest);
 //                break;
-//            case "fence":
-//                me = new FenceBlockModelExport(blk, def, dest);
-//                break;
-//            case "wall":
-//                me = new WallBlockModelExport(blk, def, dest);
-//                break;
-//            case "trapdoor":
-//                me = new TrapDoorBlockModelExport(blk, def, dest);
-//                break;
-//            case "torch":
-//                me = new TorchBlockModelExport(blk, def, dest);
-//                break;
-//            case "ladder":
-//                me = new LadderBlockModelExport(blk, def, dest);
-//                break;
-//            case "fire":
-//                me = new FireBlockModelExport(blk, def, dest);
-//                break;
-//            case "bed":
-//                me = new BedBlockModelExport(blk, def, dest);
-//                break;
+            case "fence":
+                me = new FenceBlockModelExport(blk, def, dest);
+                break;
+            case "wall":
+                me = new WallBlockModelExport(blk, def, dest);
+                break;
+            case "trapdoor":
+                me = new TrapDoorBlockModelExport(blk, def, dest);
+                break;
+            case "torch":
+                me = new TorchBlockModelExport(blk, def, dest);
+                break;
+            case "ladder":
+                me = new LadderBlockModelExport(blk, def, dest);
+                break;
+            case "fire":
+                me = new FireBlockModelExport(blk, def, dest);
+                break;
+            case "bed":
+                me = new BedBlockModelExport(blk, def, dest);
+                break;
 //            case "cuboid":
 //            case "beacon":
 //                me = new CuboidBlockModelExport(blk, def, dest);
@@ -84,21 +84,21 @@ public class ModelExportFactory {
 //            case "layer":
 //                me = new LayerBlockModelExport(blk, def, dest);
 //                break;
-//            case "rail":
-//                me = new RailBlockModelExport(blk, def, dest);
-//                break;
-//            case "halfdoor":
-//                me = new HalfDoorBlockModelExport(blk, def, dest);
-//                break;
-//            case "cake":
-//                me = new CakeBlockModelExport(blk, def, dest);
-//                break;
-//            case "furnace":
-//                me = new FurnaceBlockModelExport(blk, def, dest);
-//                break;
-//            case "vines":
-//                me = new VinesBlockModelExport(blk, def, dest);
-//                break;
+            case "rail":
+                me = new RailBlockModelExport(blk, def, dest);
+                break;
+            case "halfdoor":
+                me = new HalfDoorBlockModelExport(blk, def, dest);
+                break;
+            case "cake":
+                me = new CakeBlockModelExport(blk, def, dest);
+                break;
+            case "furnace":
+                me = new FurnaceBlockModelExport(blk, def, dest);
+                break;
+            case "vines":
+                me = new VinesBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

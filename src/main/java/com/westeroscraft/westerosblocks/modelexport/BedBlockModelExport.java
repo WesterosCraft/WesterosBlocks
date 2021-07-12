@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -53,7 +52,7 @@ public class BedBlockModelExport extends ModelExport {
     public BedBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
     
     @Override
@@ -75,16 +74,15 @@ public class BedBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        Subblock sb = def.subBlocks.get(0);
         ModelObjectBedHead mod = new ModelObjectBedHead();
-        mod.textures.bedtop = getTextureID(sb.getTextureByIndex(0));
-        mod.textures.bedend = getTextureID(sb.getTextureByIndex(4));
-        mod.textures.bedside = getTextureID(sb.getTextureByIndex(2));
+        mod.textures.bedtop = getTextureID(def.getTextureByIndex(0));
+        mod.textures.bedend = getTextureID(def.getTextureByIndex(4));
+        mod.textures.bedside = getTextureID(def.getTextureByIndex(2));
         this.writeBlockModelFile(def.blockName + "_head", mod);
         ModelObjectBedFoot modf = new ModelObjectBedFoot();
-        modf.textures.bedtop = getTextureID(sb.getTextureByIndex(1));
-        modf.textures.bedend = getTextureID(sb.getTextureByIndex(5));
-        modf.textures.bedside = getTextureID(sb.getTextureByIndex(3));
+        modf.textures.bedtop = getTextureID(def.getTextureByIndex(1));
+        modf.textures.bedend = getTextureID(def.getTextureByIndex(5));
+        modf.textures.bedside = getTextureID(def.getTextureByIndex(3));
         this.writeBlockModelFile(def.blockName + "_foot", modf);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();

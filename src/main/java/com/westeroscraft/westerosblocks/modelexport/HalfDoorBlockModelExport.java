@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -75,7 +74,7 @@ public class HalfDoorBlockModelExport extends ModelExport {
     public HalfDoorBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
 
     @Override
@@ -104,8 +103,7 @@ public class HalfDoorBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        Subblock sb = def.subBlocks.get(0);
-        String uptxt = getTextureID(sb.getTextureByIndex(0));
+        String uptxt = getTextureID(def.getTextureByIndex(0));
         // Top
         ModelObjectTop top = new ModelObjectTop();
         top.textures.top = uptxt;

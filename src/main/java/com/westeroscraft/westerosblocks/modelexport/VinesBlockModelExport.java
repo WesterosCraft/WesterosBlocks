@@ -3,13 +3,9 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
-import com.westeroscraft.westerosblocks.modelexport.FireBlockModelExport.ModelObject;
 import com.westeroscraft.westerosblocks.modelexport.FireBlockModelExport.TextureLayer0;
 
 import net.minecraft.block.Block;
@@ -66,8 +62,7 @@ public class VinesBlockModelExport extends ModelExport {
     public VinesBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        Subblock sb = def.subBlocks.get(0);
-        addNLSString("tile." + def.blockName + ".name", sb.label);
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
     
     @Override
@@ -105,11 +100,10 @@ public class VinesBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-    	Subblock sb = def.subBlocks.get(0);
-    	String txt = getTextureID(sb.getTextureByIndex(0));
-    	String txt2 = getTextureID(sb.getTextureByIndex(1));
+    	String txt = getTextureID(def.getTextureByIndex(0));
+    	String txt2 = getTextureID(def.getTextureByIndex(1));
     	// Build models
-        if (!sb.isCustomModel()) {
+        if (!def.isCustomModel()) {
         	ModelObject mo1 = new ModelObject("1", txt);
             this.writeBlockModelFile(def.blockName + "_1", mo1);
         	ModelObject mou = new ModelObject("u", txt2);

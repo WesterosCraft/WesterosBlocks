@@ -9,7 +9,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -57,7 +56,7 @@ public class CakeBlockModelExport extends ModelExport {
         super(blk, def, dest);
         this.def = def;
 
-        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
     
     @Override
@@ -77,11 +76,10 @@ public class CakeBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        Subblock sb = def.subBlocks.get(0);
-        String bottxt = getTextureID(sb.getTextureByIndex(0));
-        String toptxt = getTextureID(sb.getTextureByIndex(1));
-        String sidetxt = getTextureID(sb.getTextureByIndex(2));
-        String insidetxt = getTextureID(sb.getTextureByIndex(3));
+        String bottxt = getTextureID(def.getTextureByIndex(0));
+        String toptxt = getTextureID(def.getTextureByIndex(1));
+        String sidetxt = getTextureID(def.getTextureByIndex(2));
+        String insidetxt = getTextureID(def.getTextureByIndex(3));
 
         for (int i = 0; i < 7; i++) {
             ModelObjectCake mod = new ModelObjectCake();

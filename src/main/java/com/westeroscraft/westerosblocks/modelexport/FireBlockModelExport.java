@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -85,7 +84,7 @@ public class FireBlockModelExport extends ModelExport {
     public FireBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
+        addNLSString("tile." + def.blockName + ".name", def.label);
     }
     
     @Override
@@ -157,9 +156,8 @@ public class FireBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        Subblock sb = def.subBlocks.get(0);
-        String txt0 = getTextureID(sb.getTextureByIndex(0)); 
-        String txt1 = getTextureID(sb.getTextureByIndex(1)); 
+        String txt0 = getTextureID(def.getTextureByIndex(0)); 
+        String txt1 = getTextureID(def.getTextureByIndex(1)); 
         // floor0
         ModelObjectFloor modf = new ModelObjectFloor();
         modf.textures.particle = modf.textures.fire = txt0;
