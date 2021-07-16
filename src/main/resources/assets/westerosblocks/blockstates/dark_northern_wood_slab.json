@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/dark_northern_wood_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/dark_northern_wood_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/dark_northern_wood_slab_top"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_red_mountains",
+    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_red_mountains",
+    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_red_mountains",
+    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_red_mountains",
+    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_red_mountains",
+    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_red_mountains",
+    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_red_mountains"
+  }
+}

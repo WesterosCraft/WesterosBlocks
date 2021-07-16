@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/ground_block_0/dirt_dusty",
+    "up": "westerosblocks:blocks/ground_block_0/dirt_dusty",
+    "north": "westerosblocks:blocks/ground_block_0/dirt_dusty",
+    "south": "westerosblocks:blocks/ground_block_0/dirt_dusty",
+    "west": "westerosblocks:blocks/ground_block_0/dirt_dusty",
+    "east": "westerosblocks:blocks/ground_block_0/dirt_dusty",
+    "particle": "westerosblocks:blocks/ground_block_0/dirt_dusty"
+  }
+}

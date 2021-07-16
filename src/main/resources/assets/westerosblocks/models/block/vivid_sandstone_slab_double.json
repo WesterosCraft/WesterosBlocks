@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_block_0/sandstone_vivid_top",
+    "up": "westerosblocks:blocks/stone_block_0/sandstone_vivid_top",
+    "north": "westerosblocks:blocks/stone_block_0/sandstone_vivid",
+    "south": "westerosblocks:blocks/stone_block_0/sandstone_vivid",
+    "west": "westerosblocks:blocks/stone_block_0/sandstone_vivid",
+    "east": "westerosblocks:blocks/stone_block_0/sandstone_vivid",
+    "particle": "westerosblocks:blocks/stone_block_0/sandstone_vivid"
+  }
+}

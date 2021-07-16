@@ -38,9 +38,9 @@ public class ModelExportFactory {
             case "door":
                 me = new DoorBlockModelExport(blk, def, dest);
                 break;
-//            case "slab":
-//                me = new SlabBlockModelExport(blk, def, dest);
-//                break;
+            case "slab":
+                me = new SlabBlockModelExport(blk, def, dest);
+                break;
             case "fence":
                 me = new FenceBlockModelExport(blk, def, dest);
                 break;

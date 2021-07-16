@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/metal_block_0/metal_block_bronze",
+    "up": "westerosblocks:blocks/metal_block_0/metal_block_bronze",
+    "north": "westerosblocks:blocks/metal_block_0/metal_block_bronze",
+    "south": "westerosblocks:blocks/metal_block_0/metal_block_bronze",
+    "west": "westerosblocks:blocks/metal_block_0/metal_block_bronze",
+    "east": "westerosblocks:blocks/metal_block_0/metal_block_bronze",
+    "particle": "westerosblocks:blocks/metal_block_0/metal_block_bronze"
+  }
+}

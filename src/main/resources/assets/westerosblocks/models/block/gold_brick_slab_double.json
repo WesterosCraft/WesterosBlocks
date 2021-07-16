@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "up": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "north": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "south": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "west": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "east": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "particle": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_1/stone_bedrock",
+    "top": "westerosblocks:blocks/stone_block_1/stone_bedrock",
+    "side": "westerosblocks:blocks/stone_block_1/stone_bedrock",
+    "particle": "westerosblocks:blocks/stone_block_1/stone_bedrock"
+  }
+}

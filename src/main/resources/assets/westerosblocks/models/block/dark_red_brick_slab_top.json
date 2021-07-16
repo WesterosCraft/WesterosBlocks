@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_3/brick_dark_red",
+    "top": "westerosblocks:blocks/stone_block_3/brick_dark_red",
+    "side": "westerosblocks:blocks/stone_block_3/brick_dark_red",
+    "particle": "westerosblocks:blocks/stone_block_3/brick_dark_red"
+  }
+}

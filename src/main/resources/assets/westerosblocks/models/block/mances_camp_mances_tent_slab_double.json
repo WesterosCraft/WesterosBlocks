@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
+    "up": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
+    "north": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
+    "south": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
+    "west": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
+    "east": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
+    "particle": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside"
+  }
+}

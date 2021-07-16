@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/leather_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/leather_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/leather_slab_top"
+    }
+  }
+}

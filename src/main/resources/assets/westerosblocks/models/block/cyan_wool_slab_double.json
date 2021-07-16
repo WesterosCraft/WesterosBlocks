@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/wool_colours/wool_colored_cyan",
+    "up": "westerosblocks:blocks/wool_colours/wool_colored_cyan",
+    "north": "westerosblocks:blocks/wool_colours/wool_colored_cyan",
+    "south": "westerosblocks:blocks/wool_colours/wool_colored_cyan",
+    "west": "westerosblocks:blocks/wool_colours/wool_colored_cyan",
+    "east": "westerosblocks:blocks/wool_colours/wool_colored_cyan",
+    "particle": "westerosblocks:blocks/wool_colours/wool_colored_cyan"
+  }
+}

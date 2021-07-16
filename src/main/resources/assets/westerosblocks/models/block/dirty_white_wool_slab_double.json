@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/wool_colours/wool_colored_dirty_white",
+    "up": "westerosblocks:blocks/wool_colours/wool_colored_dirty_white",
+    "north": "westerosblocks:blocks/wool_colours/wool_colored_dirty_white",
+    "south": "westerosblocks:blocks/wool_colours/wool_colored_dirty_white",
+    "west": "westerosblocks:blocks/wool_colours/wool_colored_dirty_white",
+    "east": "westerosblocks:blocks/wool_colours/wool_colored_dirty_white",
+    "particle": "westerosblocks:blocks/wool_colours/wool_colored_dirty_white"
+  }
+}

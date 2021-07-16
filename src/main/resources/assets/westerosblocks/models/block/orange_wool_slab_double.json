@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/wool_colours/wool_colored_orange",
+    "up": "westerosblocks:blocks/wool_colours/wool_colored_orange",
+    "north": "westerosblocks:blocks/wool_colours/wool_colored_orange",
+    "south": "westerosblocks:blocks/wool_colours/wool_colored_orange",
+    "west": "westerosblocks:blocks/wool_colours/wool_colored_orange",
+    "east": "westerosblocks:blocks/wool_colours/wool_colored_orange",
+    "particle": "westerosblocks:blocks/wool_colours/wool_colored_orange"
+  }
+}

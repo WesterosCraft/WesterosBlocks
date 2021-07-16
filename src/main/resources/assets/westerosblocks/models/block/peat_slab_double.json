@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/ground_block_0/peat_top",
+    "up": "westerosblocks:blocks/ground_block_0/peat_top",
+    "north": "westerosblocks:blocks/ground_block_0/peat_side",
+    "south": "westerosblocks:blocks/ground_block_0/peat_side",
+    "west": "westerosblocks:blocks/ground_block_0/peat_side",
+    "east": "westerosblocks:blocks/ground_block_0/peat_side",
+    "particle": "westerosblocks:blocks/ground_block_0/peat_side"
+  }
+}

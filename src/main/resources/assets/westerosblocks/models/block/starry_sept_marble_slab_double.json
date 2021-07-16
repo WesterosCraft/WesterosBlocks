@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
+    "up": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
+    "north": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
+    "south": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
+    "west": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
+    "east": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
+    "particle": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept"
+  }
+}

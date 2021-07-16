@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/stool_cushion_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/stool_cushion_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/stool_cushion_top"
+    }
+  }
+}

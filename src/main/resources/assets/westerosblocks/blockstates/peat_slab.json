@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/peat_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/peat_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/peat_slab_top"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/ground_block_0/gravel",
+    "up": "westerosblocks:blocks/ground_block_0/gravel",
+    "north": "westerosblocks:blocks/ground_block_0/gravel",
+    "south": "westerosblocks:blocks/ground_block_0/gravel",
+    "west": "westerosblocks:blocks/ground_block_0/gravel",
+    "east": "westerosblocks:blocks/ground_block_0/gravel",
+    "particle": "westerosblocks:blocks/ground_block_0/gravel"
+  }
+}

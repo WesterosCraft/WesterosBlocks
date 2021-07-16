@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/kl_dun_brick_slab_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/kl_dun_brick_slab_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/kl_dun_brick_slab_top"
+    }
+  }
+}

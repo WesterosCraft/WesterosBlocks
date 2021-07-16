@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
+    "top": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
+    "side": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
+    "particle": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_2/brick_reach_light",
+    "top": "westerosblocks:blocks/stone_block_2/brick_reach_light",
+    "side": "westerosblocks:blocks/stone_block_2/brick_reach_light",
+    "particle": "westerosblocks:blocks/stone_block_2/brick_reach_light"
+  }
+}

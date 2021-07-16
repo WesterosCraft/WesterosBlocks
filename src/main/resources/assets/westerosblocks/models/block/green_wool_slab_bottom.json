@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/wool_colours/wool_colored_green",
+    "top": "westerosblocks:blocks/wool_colours/wool_colored_green",
+    "side": "westerosblocks:blocks/wool_colours/wool_colored_green",
+    "particle": "westerosblocks:blocks/wool_colours/wool_colored_green"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/grain_flour_sack_bottom"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/grain_flour_sack_double"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/grain_flour_sack_top"
+    }
+  }
+}
