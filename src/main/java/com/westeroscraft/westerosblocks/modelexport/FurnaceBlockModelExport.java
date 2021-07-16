@@ -21,7 +21,7 @@ public class FurnaceBlockModelExport extends ModelExport {
         public String model;
         public Integer y;
         public Variant(String bn, int y) {
-            model = WesterosBlocks.MOD_ID + ":" + bn;
+            model = WesterosBlocks.MOD_ID + ":block/" + bn;
             if (y != 0)
                 this.y = y;
         }
@@ -44,7 +44,7 @@ public class FurnaceBlockModelExport extends ModelExport {
     public FurnaceBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override

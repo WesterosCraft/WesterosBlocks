@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:blocks/wood_block_0/planks_birch_vines",
-    "top": "westerosblocks:blocks/wood_block_0/planks_birch_vines",
-    "side": "westerosblocks:blocks/wood_block_0/planks_birch_vines"
-  }
-}

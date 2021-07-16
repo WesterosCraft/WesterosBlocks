@@ -56,7 +56,7 @@ public class CakeBlockModelExport extends ModelExport {
         super(blk, def, dest);
         this.def = def;
 
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
@@ -66,9 +66,9 @@ public class CakeBlockModelExport extends ModelExport {
         for (int i = 0; i < 7; i++) {
             Variant var = new Variant();
             if (i == 0)
-                var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_uneaten";
+                var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_uneaten";
             else
-                var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_slice" + i;
+                var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_slice" + i;
             so.variants.put(String.format("bites=%d", i), var);
         }
         this.writeBlockStateFile(def.blockName, so);

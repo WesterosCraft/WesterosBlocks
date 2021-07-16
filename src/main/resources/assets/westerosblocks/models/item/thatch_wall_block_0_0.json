@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:blocks/wood_block_1/thatch_light",
-    "top": "westerosblocks:blocks/wood_block_1/thatch_light",
-    "side": "westerosblocks:blocks/wood_block_1/thatch_light"
-  }
-}

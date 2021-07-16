@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_side",
-  "textures": {
-    "bottom": "westerosblocks:blocks/wood_block_1/wood_panelling_oak",
-    "top": "westerosblocks:blocks/wood_block_1/wood_panelling_oak",
-    "side": "westerosblocks:blocks/wood_block_1/wood_panelling_oak"
-  }
-}

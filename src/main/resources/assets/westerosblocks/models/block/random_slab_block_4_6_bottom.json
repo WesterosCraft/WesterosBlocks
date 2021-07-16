@@ -1,9 +1,0 @@
-{
-  "parent": "block/half_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "top": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "side": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "particle": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside"
-  }
-}

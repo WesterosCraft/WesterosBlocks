@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_2/stone_marble_citadel_green",
-    "top": "westerosblocks:blocks/stone_block_2/stone_marble_citadel_green",
-    "side": "westerosblocks:blocks/stone_block_2/stone_marble_citadel_green"
-  }
-}

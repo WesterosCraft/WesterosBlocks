@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_side",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_slate_0/slate_brown",
-    "top": "westerosblocks:blocks/stone_slate_0/slate_brown",
-    "side": "westerosblocks:blocks/stone_slate_0/slate_brown"
-  }
-}

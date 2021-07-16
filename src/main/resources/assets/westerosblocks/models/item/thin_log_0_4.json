@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_wall_block_0/log_palm_top",
-    "top": "westerosblocks:blocks/stone_wall_block_0/log_palm_top",
-    "side": "westerosblocks:blocks/log_block_1/log_palm"
-  }
-}

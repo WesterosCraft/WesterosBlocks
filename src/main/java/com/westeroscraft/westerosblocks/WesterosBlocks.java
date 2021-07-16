@@ -29,6 +29,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
+import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -73,10 +74,7 @@ public class WesterosBlocks
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void setup(final FMLCommonSetupEvent event)
-    {
+        
         Path configPath = FMLPaths.CONFIGDIR.get();
         
         modConfigPath = Paths.get(configPath.toAbsolutePath().toString(), MOD_ID);
@@ -94,8 +92,14 @@ public class WesterosBlocks
         {
             log.error("Failed to create westerosblocks config directory", e);
         }
-
+        
         ModLoadingContext.get().registerConfig(net.minecraftforge.fml.config.ModConfig.Type.COMMON, Config.SPEC, MOD_ID + "/" + MOD_ID + ".toml");
+    }
+
+    private void setup(final FMLCommonSetupEvent event)
+    {
+        log.info("HELLO from setup");
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -112,6 +116,42 @@ public class WesterosBlocks
 
     private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
     {
+        // Initialize with standard block IDs
+        if (Config.snowInTaiga.get()) {
+//        	Biomes.TAIGA = -0.5F;	// Access set up using AccessTransformer
+            log.info("Enabled snow in TAIGA");
+        }
+        if (Config.blockDevMode.get()) {
+        	log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/" + MOD_ID);
+        }
+        // Do blocks state export here
+        if (Config.blockDevMode.get()) {
+        	for (int i = 0; i < customBlockDefs.length; i++) {
+        		if (customBlockDefs[i] == null) continue;
+        		Block blk = customBlocksByName.get(customBlockDefs[i].getBlockName(0));
+        		if (blk != null) {
+                	ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
+                	if (exp != null) {
+                		try {
+                			exp.doBlockStateExport();
+                			exp.doModelExports();
+                		} catch (IOException iox) {
+                			log.warn(String.format("Error exporting block %s - %s",  blk.getRegistryName(), iox));
+                		}
+                	}
+                }
+        	}
+        	try {
+        		ModelExport.writeNLSFile(modConfigPath);
+        	} catch (IOException iox) {
+        		log.warn(String.format("Error writing NLS - %s", iox));
+        	}
+            try {
+                ModelExport.writeDynmapOverridesFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
+            }
+        }
     }
     
     public static void crash(Exception x, String msg) {
@@ -177,63 +217,37 @@ public class WesterosBlocks
                 crash("WesterosBlocks.json failed sanity check");
                 return;
             }
-            
-            // Initialize with standard block IDs
-            if (Config.snowInTaiga.get()) {
-//            	Biomes.TAIGA = -0.5F;	// Access set up using AccessTransformer
-//                log.info("Enabled snow in TAIGA");
-            }
-            if (Config.blockDevMode.get()) {
-            	log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/" + MOD_ID);
-            }
             // Construct custom block definitions
             ArrayList<Block> blklist = new ArrayList<Block>();
             customBlocksByName = new HashMap<String, Block>();
             for (int i = 0; i < customBlockDefs.length; i++) {
-//                if (customBlockDefs[i] == null) continue;
-//                Block[] blks = customBlockDefs[i].createBlocks();
-//                if (blks != null) {
-//                    for (int j = 0; j < blks.length; j++) {
-//                        Block blk = blks[j];
-//                        blklist.add(blk);
-//                        customBlocksByName.put(customBlockDefs[i].getBlockName(j), blk);
-//                        
-//                        // Do blocks state export here
-//                        if (blockDevMode) {
-//                        	ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modcfgdir);
-//                        	if (exp != null) {
-//                        		try {
-//                        			exp.doBlockStateExport();
-//                        			exp.doModelExports();
-//                        		} catch (IOException iox) {
-//                        			log.warn(String.format("Error exporting block %s - %s",  blk.getUnlocalizedName(), iox));
-//                        		}
-//                        	}
-//                        }
-//                    }
-//                    // Register sound events
-//                    customBlockDefs[i].registerSoundEvents();
-//                }
-//                else {
-//                    crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
-//                    return;
-//                }
+                if (customBlockDefs[i] == null) continue;
+                Block blk = customBlockDefs[i].createBlock();
+                if (blk != null) {
+                    blklist.add(blk);
+                    customBlocksByName.put(customBlockDefs[i].getBlockName(0), blk);
+                    // Do blocks state export here
+                    if (Config.blockDevMode.get()) {
+                    	ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
+                    	if (exp != null) {
+                    		try {
+                    			exp.doBlockStateExport();
+                    			exp.doModelExports();
+                    		} catch (IOException iox) {
+                    			log.warn(String.format("Error exporting block %s - %s",  blk.getRegistryName(), iox));
+                    		}
+                    	}
+                    }
+                    // Register sound events
+                    //TODO customBlockDefs[i].registerSoundEvents();
+                }
+                else {
+                    //crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
+                    //return;
+                }
             }
             customBlocks = blklist.toArray(new Block[blklist.size()]);
             
-            if (Config.blockDevMode.get()) {
-            	try {
-            		ModelExport.writeNLSFile(modConfigPath);
-            	} catch (IOException iox) {
-            		log.warn(String.format("Error writing NLS - %s", iox));
-            	}
-                try {
-                    ModelExport.writeDynmapOverridesFile(modConfigPath);
-                } catch (IOException iox) {
-                    log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
-                }
-            }
-
             // Register tile entities
 //            WesterosBlockDef.processRegisterTileEntities();
 //            // Initialize custom block definitions

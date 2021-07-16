@@ -62,13 +62,13 @@ public class VinesBlockModelExport extends ModelExport {
     public VinesBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String m = WesterosBlocks.MOD_ID + ":" + def.blockName;
+        String m = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
         // Add part for each face
         Conditions cond;
         // South

@@ -1,7 +1,0 @@
-{
-  "parent": "block/pane_side",
-  "textures": {
-    "edge": "westerosblocks:blocks/glass_pane_block_0/moorish_wood_window_pane",
-    "pane": "westerosblocks:blocks/glass_pane_block_0/moorish_wood_window_pane"
-  }
-}

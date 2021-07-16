@@ -1,9 +1,0 @@
-{
-  "parent": "block/upper_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/wool_colours/wool_colored_orange",
-    "top": "westerosblocks:blocks/wool_colours/wool_colored_orange",
-    "side": "westerosblocks:blocks/wool_colours/wool_colored_orange",
-    "particle": "westerosblocks:blocks/wool_colours/wool_colored_orange"
-  }
-}

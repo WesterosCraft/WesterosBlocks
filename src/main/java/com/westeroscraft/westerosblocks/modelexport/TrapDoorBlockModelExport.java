@@ -21,7 +21,7 @@ public class TrapDoorBlockModelExport extends ModelExport {
         public String model;
         public Integer y;
         public Variant(String blkname, String ext, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":" + blkname + "_" + ext;
+            model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
             if (yrot != 0)
                 y = yrot;
         }
@@ -50,7 +50,7 @@ public class TrapDoorBlockModelExport extends ModelExport {
     public TrapDoorBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override

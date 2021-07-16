@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/half_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_1/brick_light_grey",
-    "top": "westerosblocks:blocks/stone_block_1/brick_light_grey",
-    "side": "westerosblocks:blocks/stone_block_1/brick_light_grey",
-    "particle": "westerosblocks:blocks/stone_block_1/brick_light_grey"
-  }
-}

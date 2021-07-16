@@ -1,9 +1,0 @@
-{
-  "parent": "block/upper_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_1/stone_valyrian",
-    "top": "westerosblocks:blocks/stone_block_1/stone_valyrian",
-    "side": "westerosblocks:blocks/stone_block_1/stone_valyrian",
-    "particle": "westerosblocks:blocks/stone_block_1/stone_valyrian"
-  }
-}

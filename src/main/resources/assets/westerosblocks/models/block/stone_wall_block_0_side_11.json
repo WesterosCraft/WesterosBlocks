@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_side",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_wall_block_0/wall_marble_top",
-    "top": "westerosblocks:blocks/stone_wall_block_0/wall_marble_top",
-    "side": "westerosblocks:blocks/stone_wall_block_0/wall_marble_side"
-  }
-}

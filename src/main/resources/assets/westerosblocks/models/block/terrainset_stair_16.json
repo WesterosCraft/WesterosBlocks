@@ -1,9 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "top": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "side": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone"
-  }
-}

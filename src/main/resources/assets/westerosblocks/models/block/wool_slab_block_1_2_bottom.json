@@ -1,9 +1,0 @@
-{
-  "parent": "block/half_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/wool_colours/wool_colored_purple",
-    "top": "westerosblocks:blocks/wool_colours/wool_colored_purple",
-    "side": "westerosblocks:blocks/wool_colours/wool_colored_purple",
-    "particle": "westerosblocks:blocks/wool_colours/wool_colored_purple"
-  }
-}

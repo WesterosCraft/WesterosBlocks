@@ -7,7 +7,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import org.dynmap.modsupport.BlockSide;
+import org.dynmap.modsupport.BlockTextureRecord;
 import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TextureModifier;
+import org.dynmap.modsupport.TransparencyMode;
+
+import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
+
+import net.minecraft.block.AbstractBlock;
 
 //import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
 //import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
@@ -46,12 +55,16 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.particles.BasicParticleType;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MathHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -62,21 +75,16 @@ public class WesterosBlockDef {
     
     public String blockName;                // Locally unique block name
     public String blockType = "solid";      // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
-    public int blockID = DEF_INT;           // Block ID number (default)
-    public int[] blockIDs = null;           // Block ID numbers (default) - for definitions with more than one block
     public float hardness = DEF_FLOAT;      // Block hardness
     public String stepSound = null;         // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
     public String material = null;          // Generic material (ai, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc)
     public float resistance = DEF_FLOAT;    // Explosion resistance
     public int lightOpacity = DEF_INT;      // Light opacity
     public List<HarvestLevel> harvestLevel = null;  // List of harvest levels
-    public int harvestItemID = DEF_INT;     // Harvest item ID
     public int fireSpreadSpeed = 0;         // Fire spread speed
     public int flamability = 0;             // Flamability
     public String creativeTab = null;       // Creative tab for items
     public float lightValue = 0.0F;         // Emitted light level (0.0-1.0)
-    public String modelBlockName = null;    // Name of solid block modelled from (used by 'stairs' type) - can be number of block ID
-    public int modelBlockMeta = DEF_INT;    // Metadata of model block to use 
     public BoundingBox boundingBox = null;  // Bounding box
     public String colorMult = "#FFFFFF";    // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
     public String type = "";                // Type field (used for plant types or other block type specific values)
@@ -471,13 +479,41 @@ public class WesterosBlockDef {
     private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
     private static final Map<String, BasicParticleType> particles = new HashMap<String, BasicParticleType>();
     
-    public Block[] createBlocks() {
+    public Block createBlock() {
         WesterosBlockFactory bf = typeTable.get(blockType);
         if (bf == null) {
             WesterosBlocks.log.error(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));
             return null;
         }
-        return bf.buildBlockClasses(this);
+        return bf.buildBlockClass(this);
+    }
+
+    public Block registerBlock(Block block)
+    {
+        BlockItem itemBlock = new BlockItem(block, new Item.Properties().tab(getCreativeTab()));
+        block.setRegistryName(this.blockName);
+        itemBlock.setRegistryName(this.blockName);
+        ForgeRegistries.BLOCKS.register(block);
+        ForgeRegistries.ITEMS.register(itemBlock);
+        return block;
+    }
+
+    public AbstractBlock.Properties makeProperties() {
+    	Material mat = getMaterial();
+    	AbstractBlock.Properties props = AbstractBlock.Properties.of(mat);	// TODO - material color?
+    	if (hardness >= 0.0F) {
+    		if (resistance >= 0.0)
+    			props = props.strength(hardness, resistance);
+    		else 
+    			props = props.strength(hardness);
+    	}
+    	if (stepSound != null) {
+    		props = props.sound(getSoundType());
+    	}
+    	if (lightValue > 0.0F) {
+    		props = props.lightLevel((state) -> (int)(16.0 * lightValue));
+    	}
+    	return props;
     }
 
     public boolean isCustomModel() {
@@ -552,42 +588,7 @@ public class WesterosBlockDef {
             if (names.add(def.blockName) == false) {    // If alreay defined
                 WesterosBlocks.log.error(String.format("Block '%s' - blockName duplicated", def.blockName));
                 return false;
-            }
-            
-            if (def.blockIDs != null) {
-                for (int i = 0; i < def.blockIDs.length; i++) {
-                    if (def.blockIDs[i] < 0) {  // Autoassign is OK
-                        continue;
-                    }
-                    else if (def.blockIDs[i] > 4095) {
-                        WesterosBlocks.log.error(String.format("Block '%s' - blockIDs[%d] invalid", def.blockName, i));
-                        return false;
-                    }
-                    else if (ids.get(def.blockIDs[i])) {    // If already defined
-                        WesterosBlocks.log.error(String.format("Block '%s' - blockIDs[%d] duplicated", def.blockName, i));
-                        return false;
-                    }
-                    ids.set(def.blockIDs[i]);
-                }
-                def.blockID = def.blockIDs[0];
-            }
-            else {
-                if (def.blockID < 0) {  // Autoassign is OK
-                    
-                }
-                else if (def.blockID > 4095) {
-                    WesterosBlocks.log.error(String.format("Block '%s' - blockID invalid", def.blockName));
-                    return false;
-                }
-                else if (ids.get(def.blockID)) {    // If already defined
-                    WesterosBlocks.log.error(String.format("Block '%s' - blockID duplicated", def.blockName));
-                    return false;
-                }
-                else {
-                    ids.set(def.blockID);
-                }
-                def.blockIDs = new int[] { def.blockID };
-            }
+            }            
         }
         WesterosBlocks.log.info("WesterosBlocks.json passed sanity check");
         return true;
@@ -649,12 +650,12 @@ public class WesterosBlockDef {
         tabTable.put("materials", ItemGroup.TAB_MATERIALS);
 
         // Standard block types
-//        typeTable.put("solid", new WCSolidBlock.Factory());
+        typeTable.put("solid", new WCSolidBlock.Factory());
 //        typeTable.put("stair", new WCStairBlock.Factory());
 //        typeTable.put("log", new WCLogBlock.Factory());
 //        typeTable.put("plant", new WCPlantBlock.Factory());
 //        typeTable.put("crop", new WCCropBlock.Factory());
-//        typeTable.put("slab", new WCSlabBlock.Factory());
+        typeTable.put("slab", new WCSlabBlock.Factory());
 //        typeTable.put("wall", new WCWallBlock.Factory());
 //        typeTable.put("fence", new WCFenceBlock.Factory());
 //        typeTable.put("web", new WCWebBlock.Factory());
@@ -756,6 +757,94 @@ public class WesterosBlockDef {
         }
 
         return cmh;
+    }
+    /**
+     * Default texture block registration for Dynmap (min patch count
+     */
+    public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount) {
+        registerPatchTextureBlock(mtd, minPatchCount, TransparencyMode.TRANSPARENT, 16);
+    }
+    public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount, TransparencyMode tm) {
+        registerPatchTextureBlock(mtd, minPatchCount, tm, 16);
+    }
+    public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount, TransparencyMode tm, int meta_per_sub) {
+        TextureModifier tmod = TextureModifier.NONE;
+        if (this.nonOpaque) {
+            tmod = TextureModifier.CLEARINSIDE;
+        }
+        for (int idx = 0; idx < this.blockIDCount; idx++) {
+        	String blkname = this.getBlockName(idx);
+            if (textures != null) {
+                BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
+                if (tm != null) {
+                    mtr.setTransparencyMode(tm);
+                }
+                // Set for all associated metas
+                for (int meta = 0, cnt = 0; meta < meta_per_sub; meta++) {
+                    mtr.setMetaValue(meta);
+                }
+                int cnt = textures.size();
+                if (cnt < minPatchCount) {
+                    cnt = minPatchCount;
+                }
+                for (int patch = 0; patch < cnt; patch++) {
+                	int fidx = patch;
+                	if (fidx >= textures.size()) {
+                        fidx = textures.size() - 1;
+                    }
+                    String txtid = textures.get(fidx);
+                    mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
+                }
+                setBlockColorMap(mtr);
+            }
+        }
+    }
+    /**
+     * Default texture block (6 face) registration for Dynmap
+     */
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd) {
+        defaultRegisterTextureBlock(mtd, 0, null, 0, 16);
+    }
+    /**
+     * Default texture block (6 face) registration for Dynmap
+     */
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx, TransparencyMode tm) {
+        defaultRegisterTextureBlock(mtd, idx, tm, 0, 16);    	
+    }
+    /**
+     * Default texture block (6 face) registration for Dynmap
+     */
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx, TransparencyMode tm, int startidx, int statecnt) {
+        TextureModifier tmod = TextureModifier.NONE;
+        if (this.nonOpaque) {
+            tmod = TextureModifier.CLEARINSIDE;
+        }
+        String blkname = this.getBlockName(idx);
+        if (textures != null) {
+            BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
+            if (tm != null) {
+                mtr.setTransparencyMode(tm);
+            }
+            // Set for all associated metas
+            for (int meta = startidx, cnt = 0; cnt < statecnt; meta++) {
+                mtr.setMetaValue(meta);
+            }
+            for (int face = 0; face < 6; face++) {
+                int fidx = face;
+                if (fidx >= textures.size()) {
+                	fidx = textures.size() - 1;
+                }
+                String txtid = textures.get(fidx);
+                mtr.setSideTexture(txtid.replace(':', '_'), tmod, BlockSide.valueOf("FACE_" + face));
+            }
+            setBlockColorMap(mtr);
+        }
+    }
+    public void setBlockColorMap(BlockTextureRecord mtr) {
+        String blockColor = colorMult;
+        if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
+            mtr.setBlockColorMapTexture(blockColor.replace(':', '_'));
+        }
     }
     /**
      * Default texture registration for Dynmap

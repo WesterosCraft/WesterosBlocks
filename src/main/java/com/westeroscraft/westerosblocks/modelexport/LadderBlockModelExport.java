@@ -37,7 +37,7 @@ public class LadderBlockModelExport extends ModelExport {
     public LadderBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
@@ -47,7 +47,7 @@ public class LadderBlockModelExport extends ModelExport {
         Variant vars = new Variant();
         Variant vare = new Variant();
         Variant varw = new Variant();
-        String mod = WesterosBlocks.MOD_ID + ":" + def.blockName;
+        String mod = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
         varn.model = vars.model = vare.model = varw.model = mod;
         vare.y = 90;
         vars.y = 180;

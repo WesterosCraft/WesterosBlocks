@@ -45,7 +45,7 @@ public class LogBlockModelExport extends ModelExport {
     public LogBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
@@ -55,7 +55,7 @@ public class LogBlockModelExport extends ModelExport {
         Variant vary = new Variant();
         Variant varz = new Variant();
         Variant varn = new Variant();
-        String mod = WesterosBlocks.MOD_ID + ":" + def.blockName;
+        String mod = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
         varx.model = vary.model = varz.model = mod;
         so.variants.put("axis=y", vary);
         varz.x = 90;
@@ -63,7 +63,7 @@ public class LogBlockModelExport extends ModelExport {
         varx.x = 90;
         varx.y = 90;
         so.variants.put("axis=x", varx);
-        varn.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_bark";
+        varn.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_bark";
         so.variants.put("axis=none", varn);
         this.writeBlockStateFile(def.blockName, so);
     }

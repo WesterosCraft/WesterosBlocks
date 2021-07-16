@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_post",
-  "textures": {
-    "bottom": "westerosblocks:blocks/wood_block_0/planks_birch",
-    "top": "westerosblocks:blocks/wood_block_0/planks_birch",
-    "side": "westerosblocks:blocks/wood_block_0/planks_birch"
-  }
-}

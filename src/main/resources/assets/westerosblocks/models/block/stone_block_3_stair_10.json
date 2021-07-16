@@ -1,9 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_1/stone_cobble_basalt",
-    "top": "westerosblocks:blocks/stone_block_1/stone_cobble_basalt",
-    "side": "westerosblocks:blocks/stone_block_1/stone_cobble_basalt",
-    "particle": "westerosblocks:blocks/stone_block_1/stone_cobble_basalt"
-  }
-}

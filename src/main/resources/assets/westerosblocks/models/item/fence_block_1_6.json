@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_inventory",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
-    "top": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
-    "side": "westerosblocks:blocks/stone_block_0/sandstone_monochrome"
-  }
-}

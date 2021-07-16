@@ -87,27 +87,22 @@ public abstract class ModelExport {
     public abstract void doBlockStateExport() throws IOException;
     public abstract void doModelExports() throws IOException;
 
-    private static Properties nls = new Properties();
+    private static HashMap<String, String> nls = new HashMap<String, String>();
     public static void addNLSString(String id, String val) {
         nls.put(id, val);
     }
     public static void writeNLSFile(Path dest) throws IOException {
         File tgt = new File(dest.toFile(), "assets/" + WesterosBlocks.MOD_ID + "/lang");
         tgt.mkdirs();
-        PrintStream fw = null;
+        FileWriter fos = null;
         try {
-            fw = new PrintStream(new File(tgt, "en_US.lang"));
-            Properties tmp = new Properties() {
-				private static final long serialVersionUID = 1L;
-				@Override
-                public synchronized Enumeration<Object> keys() {
-                    return Collections.enumeration(new TreeSet<Object>(super.keySet()));
-                }
-            };
-            tmp.putAll(nls);
-            tmp.store(fw, null);
+            fos = new FileWriter(new File(tgt, "en_us.json"));
+            Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();                
+            gson.toJson(nls, fos);
         } finally {
-            if (fw != null) fw.close();
+            if (fos != null) {
+                fos.close();
+            }
         }
     }
     

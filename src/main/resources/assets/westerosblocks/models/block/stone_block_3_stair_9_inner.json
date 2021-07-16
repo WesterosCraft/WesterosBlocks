@@ -1,9 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands",
-    "top": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands",
-    "side": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands",
-    "particle": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands"
-  }
-}

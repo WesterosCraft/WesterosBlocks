@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/ladder",
-  "textures": {
-    "ladder": "westerosblocks:blocks/ladder_block_0/ladder_cobblestone"
-  }
-}

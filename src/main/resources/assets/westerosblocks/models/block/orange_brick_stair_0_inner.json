@@ -1,9 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_slate_0/slate_lannisport",
-    "top": "westerosblocks:blocks/stone_slate_0/slate_lannisport",
-    "side": "westerosblocks:blocks/stone_slate_0/slate_lannisport",
-    "particle": "westerosblocks:blocks/stone_slate_0/slate_lannisport"
-  }
-}

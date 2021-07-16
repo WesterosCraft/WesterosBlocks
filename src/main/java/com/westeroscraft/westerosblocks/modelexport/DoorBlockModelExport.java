@@ -28,7 +28,7 @@ public class DoorBlockModelExport extends ModelExport {
             this(blkname, ext, 0, yrot);
         }
         public Variant(String blkname, String ext, int xrot, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":" + blkname + "_" + ext;
+            model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
             if (xrot != 0)
                 x = xrot;
             if (yrot != 0)
@@ -66,7 +66,7 @@ public class DoorBlockModelExport extends ModelExport {
     public DoorBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 
     @Override

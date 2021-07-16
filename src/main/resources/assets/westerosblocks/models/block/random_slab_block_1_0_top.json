@@ -1,9 +1,0 @@
-{
-  "parent": "block/upper_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/miscellaneous_block_0/grain_sack",
-    "top": "westerosblocks:blocks/miscellaneous_block_0/grain_sack",
-    "side": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front",
-    "particle": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front"
-  }
-}

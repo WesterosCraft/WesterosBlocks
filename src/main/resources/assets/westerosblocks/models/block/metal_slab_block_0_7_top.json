@@ -1,9 +1,0 @@
-{
-  "parent": "block/upper_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/metal_block_0/blades_molten",
-    "top": "westerosblocks:blocks/metal_block_0/blades_molten",
-    "side": "westerosblocks:blocks/metal_block_0/blades_molten",
-    "particle": "westerosblocks:blocks/metal_block_0/blades_molten"
-  }
-}

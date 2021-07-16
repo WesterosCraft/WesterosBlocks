@@ -1,9 +1,0 @@
-{
-  "parent": "block/upper_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "top": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "side": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "particle": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept"
-  }
-}

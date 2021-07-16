@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/noocclusion/upper_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/ground_block_0/snow_muddy",
-    "top": "westerosblocks:blocks/ground_block_0/snow_muddy",
-    "side": "westerosblocks:blocks/ground_block_0/snow_muddy",
-    "particle": "westerosblocks:blocks/ground_block_0/snow_muddy"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "parent": "block/half_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/ground_block_0/gravel_reach",
-    "top": "westerosblocks:blocks/ground_block_0/gravel_reach",
-    "side": "westerosblocks:blocks/ground_block_0/gravel_reach",
-    "particle": "westerosblocks:blocks/ground_block_0/gravel_reach"
-  }
-}

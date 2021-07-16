@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/noocclusion/half_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/ground_block_0/snow",
-    "top": "westerosblocks:blocks/ground_block_0/snow",
-    "side": "westerosblocks:blocks/ground_block_0/snow",
-    "particle": "westerosblocks:blocks/ground_block_0/snow"
-  }
-}

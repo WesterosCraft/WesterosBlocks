@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands_dark",
-    "top": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands_dark",
-    "side": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands_dark"
-  }
-}

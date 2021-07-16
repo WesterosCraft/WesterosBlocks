@@ -44,14 +44,14 @@ public class SolidBlockModelExport extends ModelExport {
     public SolidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         Variant var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":" + def.blockName;
+        var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
         so.variants.put("", var);
         this.writeBlockStateFile(def.blockName, so);
     }

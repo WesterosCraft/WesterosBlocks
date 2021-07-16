@@ -1,9 +1,0 @@
-{
-  "parent": "block/stairs",
-  "textures": {
-    "bottom": "westerosblocks:blocks/metal_block_0/metal_block_bronzeoxidized",
-    "top": "westerosblocks:blocks/metal_block_0/metal_block_bronzeoxidized",
-    "side": "westerosblocks:blocks/metal_block_0/metal_block_bronzeoxidized",
-    "particle": "westerosblocks:blocks/metal_block_0/metal_block_bronzeoxidized"
-  }
-}

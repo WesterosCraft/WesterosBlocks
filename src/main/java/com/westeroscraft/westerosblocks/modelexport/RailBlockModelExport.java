@@ -24,7 +24,7 @@ public class RailBlockModelExport extends ModelExport {
             this(blkname, ext, 0);
         }
         public Variant(String blkname, String ext, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":" + blkname + "_" + ext;
+            model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
             if (yrot != 0)
                 y = yrot;
         }
@@ -61,7 +61,7 @@ public class RailBlockModelExport extends ModelExport {
     public RailBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override

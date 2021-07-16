@@ -1,9 +1,0 @@
-{
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_3/stone_cobble_oldtown",
-    "top": "westerosblocks:blocks/stone_block_3/stone_cobble_oldtown",
-    "side": "westerosblocks:blocks/stone_block_3/stone_cobble_oldtown",
-    "particle": "westerosblocks:blocks/stone_block_3/stone_cobble_oldtown"
-  }
-}

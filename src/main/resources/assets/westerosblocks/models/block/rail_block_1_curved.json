@@ -1,6 +1,0 @@
-{
-  "parent": "block/rail_curved",
-  "textures": {
-    "rail": "westerosblocks:blocks/rail_block_0/chain_turned"
-  }
-}

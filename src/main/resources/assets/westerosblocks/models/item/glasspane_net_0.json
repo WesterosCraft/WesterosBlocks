@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:blocks/glass_pane_block_0/glass_pane_net"
-  }
-}

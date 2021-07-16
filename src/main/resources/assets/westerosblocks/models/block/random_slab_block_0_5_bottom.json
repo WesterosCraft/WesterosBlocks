@@ -1,9 +1,0 @@
-{
-  "parent": "block/half_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/random_slab_block_0/seat_bottom",
-    "top": "westerosblocks:blocks/random_slab_block_0/seat_top",
-    "side": "westerosblocks:blocks/random_slab_block_0/seat_side",
-    "particle": "westerosblocks:blocks/random_slab_block_0/seat_side"
-  }
-}

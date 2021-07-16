@@ -1,6 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "westerosblocks:blocks/flower_block_0/green_leafy_herb"
-  }
-}

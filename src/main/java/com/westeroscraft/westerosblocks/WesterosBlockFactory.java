@@ -9,9 +9,5 @@ public abstract class WesterosBlockFactory {
      * @param def - definition loaded for block
      * @returns block based on definition
      */
-    public abstract Block[] buildBlockClasses(WesterosBlockDef def);
-    /**
-     * Get number of blocks defined for factory
-     */
-    public int getBlockClassCount() { return 1; }
+    public abstract Block buildBlockClass(WesterosBlockDef def);
 }

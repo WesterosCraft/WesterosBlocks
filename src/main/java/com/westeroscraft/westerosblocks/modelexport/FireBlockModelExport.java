@@ -84,13 +84,13 @@ public class FireBlockModelExport extends ModelExport {
     public FireBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String bn = WesterosBlocks.MOD_ID + ":" + def.blockName;
+        String bn = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
         // Make when (all false)
         WhenRec whennone = new WhenRec();
         whennone.north = false;

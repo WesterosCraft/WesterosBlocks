@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/bed_head",
-  "textures": {
-    "bedtop": "westerosblocks:blocks/bed_block_0/bed_noble_red_0",
-    "bedend": "westerosblocks:blocks/bed_block_0/bed_noble_red_4",
-    "bedside": "westerosblocks:blocks/bed_block_0/bed_noble_red_2"
-  }
-}

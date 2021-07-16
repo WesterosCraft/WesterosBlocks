@@ -1,9 +1,0 @@
-{
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:blocks/metal_block_0/metal_block_ironoxidized",
-    "top": "westerosblocks:blocks/metal_block_0/metal_block_ironoxidized",
-    "side": "westerosblocks:blocks/metal_block_0/metal_block_ironoxidized",
-    "particle": "westerosblocks:blocks/metal_block_0/metal_block_ironoxidized"
-  }
-}

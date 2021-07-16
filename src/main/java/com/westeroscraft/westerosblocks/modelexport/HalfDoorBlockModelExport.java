@@ -26,9 +26,9 @@ public class HalfDoorBlockModelExport extends ModelExport {
         }
         public Variant(String blkname, String ext, int yrot) {
         	if (ext != null)
-        		model = WesterosBlocks.MOD_ID + ":" + blkname + "_" + ext;
+        		model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
         	else
-        		model = WesterosBlocks.MOD_ID + ":" + blkname;
+        		model = WesterosBlocks.MOD_ID + ":block/" + blkname;
             if (yrot != 0) {
                 y = yrot;
             }
@@ -74,7 +74,7 @@ public class HalfDoorBlockModelExport extends ModelExport {
     public HalfDoorBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 
     @Override

@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/wall_inventory",
-  "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_3/brick_orange_small_side",
-    "top": "westerosblocks:blocks/stone_block_3/brick_orange_small_side",
-    "side": "westerosblocks:blocks/stone_block_3/brick_orange_small_side"
-  }
-}

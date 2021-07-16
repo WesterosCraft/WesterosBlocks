@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:blocks/fire_block_0/fire_layer_0"
-  }
-}

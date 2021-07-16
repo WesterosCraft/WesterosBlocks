@@ -1,9 +1,0 @@
-{
-  "parent": "block/half_slab",
-  "textures": {
-    "bottom": "westerosblocks:blocks/metal_block_0/metal_block_steel",
-    "top": "westerosblocks:blocks/metal_block_0/metal_block_steel",
-    "side": "westerosblocks:blocks/metal_block_0/metal_block_steel",
-    "particle": "westerosblocks:blocks/metal_block_0/metal_block_steel"
-  }
-}

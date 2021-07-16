@@ -1,7 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/cube_log",
-  "textures": {
-    "end": "westerosblocks:blocks/log_block_0/weirwood_face_1",
-    "side": "westerosblocks:blocks/wood_block_0/bark_birch"
-  }
-}

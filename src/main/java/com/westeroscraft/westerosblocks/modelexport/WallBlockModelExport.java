@@ -55,7 +55,7 @@ public class WallBlockModelExport extends ModelExport {
     public WallBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
-        addNLSString("tile." + def.blockName + ".name", def.label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
@@ -66,14 +66,14 @@ public class WallBlockModelExport extends ModelExport {
         WhenRec wr = new WhenRec();
         wr.up = "true";
         ssn.when.OR.add(wr);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_post";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_post";
     	so.multipart.add(ssn);
     	// Add north variant
     	ssn = new SideStates();
     	wr = new WhenRec();
     	wr.north = "true";
     	ssn.when.OR.add(wr);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_side";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
     	ssn.apply.uvlock = true;
     	so.multipart.add(ssn);
     	// Add east variant
@@ -81,7 +81,7 @@ public class WallBlockModelExport extends ModelExport {
     	wr = new WhenRec();
     	wr.east = "true";
     	ssn.when.OR.add(wr);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_side";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
     	ssn.apply.uvlock = true;
     	ssn.apply.y = 90;
     	so.multipart.add(ssn);
@@ -90,7 +90,7 @@ public class WallBlockModelExport extends ModelExport {
         wr = new WhenRec();
         wr.south = "true";
         ssn.when.OR.add(wr);
-        ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_side";
+        ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
         ssn.apply.uvlock = true;
         ssn.apply.y = 180;
         so.multipart.add(ssn);
@@ -99,7 +99,7 @@ public class WallBlockModelExport extends ModelExport {
         wr = new WhenRec();
         wr.west = "true";
         ssn.when.OR.add(wr);
-        ssn.apply.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_side";
+        ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
         ssn.apply.uvlock = true;
         ssn.apply.y = 270;
         so.multipart.add(ssn);
