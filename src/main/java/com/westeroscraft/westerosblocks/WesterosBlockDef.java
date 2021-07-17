@@ -13,6 +13,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
+import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
@@ -473,10 +474,6 @@ public class WesterosBlockDef {
     
     private transient int lightValueInt;
     private transient ColorMultHandler colorMultHandler;
-    private transient ColorMultHandler colorMultHandlerByMeta[];
-    private transient BoundingBox boundingBoxByMeta[];
-    private transient List<String> sounds_by_meta[] = null;
-    private transient List<Particle> particles_by_meta[] = null;
     private transient boolean hasCollisionBoxes = false;
     
     private static final Map<String, Material> materialTable = new HashMap<String, Material>();
@@ -596,10 +593,6 @@ public class WesterosBlockDef {
             return this.blockName + "_" + (blknum+1);
     }
 
-    public BoundingBox getBoundingBox(int meta) {
-        return boundingBoxByMeta[meta];
-    }
-
     public static void addCreativeTab(String name, ItemGroup tab) {
         tabTable.put(name,  tab);
     }
@@ -684,7 +677,7 @@ public class WesterosBlockDef {
         typeTable.put("stair", new WCStairBlock.Factory());
 //        typeTable.put("log", new WCLogBlock.Factory());
         typeTable.put("plant", new WCPlantBlock.Factory());
-//        typeTable.put("crop", new WCCropBlock.Factory());
+        typeTable.put("crop", new WCCropBlock.Factory());
         typeTable.put("slab", new WCSlabBlock.Factory());
 //        typeTable.put("wall", new WCWallBlock.Factory());
 //        typeTable.put("fence", new WCFenceBlock.Factory());

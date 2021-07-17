@@ -1,41 +1,28 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import net.minecraft.block.SoundType;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.dynmap.modsupport.ModModelDefinition;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.PatchBlockModel;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.properties.PropertyMeta;
-
-import javax.annotation.Nullable;
 
 public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupport {
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block[] buildBlockClasses(WesterosBlockDef def) {
-            if (!def.validateMetaValues(null, null)) {
-                return null;
-            }
-            WCPlantBlock.new_variant = PropertyMeta.create("variant", def.getDefinedBaseMeta());
-
-            return new Block[] { new WCCropBlock(def) };
+        public Block buildBlockClass(WesterosBlockDef def) {
+        	AbstractBlock.Properties props = def.makeProperties().noCollission().instabreak();
+        	return def.registerRenderType(def.registerBlock(new WCCropBlock(props, def)), false);
         }
     }
 
-    protected WCCropBlock(WesterosBlockDef def) {
-        super(def);
+    protected WCCropBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+        super(props, def);
     }
-
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
@@ -49,8 +36,5 @@ public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupp
         mod.addPatch(1.0, 0.0, 0.75, 0.0, 0.0, 0.75, 1.0, 1.0, 0.75);
         mod.addPatch(1.0, 0.0, 0.25, 0.0, 0.0, 0.25, 1.0, 1.0, 0.25);
     }
-
-    @Override
-    public IProperty<?>[] getNonRenderingProperties() { return null; }
 
 }
