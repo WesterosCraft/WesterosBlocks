@@ -75,6 +75,7 @@ public class WesterosBlockDef {
     
     public String blockName;                // Locally unique block name
     public String blockType = "solid";      // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
+    public String modelBlockName;           // Model block name (stairs use this)
     public float hardness = DEF_FLOAT;      // Block hardness
     public String stepSound = null;         // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand, snow, ladder, anvil)
     public String material = null;          // Generic material (ai, grass, ground, wood, rock, iron, anvil, water, lava, leaves, plants, vine, sponge, etc)

@@ -11,7 +11,7 @@ function makeName(label) {
     label = label.replace(/\s+/g,"_");
     return label.replace(/[^0-9a-z_]/gi, '')
 }
-const skippedFields = [ 'blockName', 'blockID', 'blockIDs', 'subBlocks' ];
+const skippedFields = [ 'blockName', 'blockID', 'blockIDs', 'subBlocks', 'modelBlockMeta' ];
 const skippedSubBlockFields = [ 'meta' ];
 
 let ids = new Set();
@@ -34,9 +34,31 @@ content.blocks.forEach(block => {
             newblock[k] = subblock[k];
         });
         newblock.legacyBlockID = block.blockName + ":" + subblock.meta;
+        subblock.newName = newblock.blockName;	// Remember new name
         
         newcontent.blocks.push(newblock);
     });
+});
+// Second pass for sake of modelBlockNames
+content.blocks.forEach(block => {
+	if (block.modelBlockName) {
+		let modelLegacyID = block.modelBlockName + ":" + block.modelBlockMeta;
+		let model = newcontent.blocks.find(r => r.legacyBlockID == modelLegacyID);
+		let modelID;
+		if (model) {
+			modelID = model.blockName;
+		}
+		else if (block.modelBlockName.startsWith("minecraft:")) {
+			modelID = block.modelBlockName;
+		}
+		else {
+			console.log(`Bad modelBlockName ${block.modelBlockName} for ${block.blockName}`);
+		}
+		if (modelID) {
+			let newrec = newcontent.blocks.find(r => r.blockName == block.subBlocks[0].newName);
+			newrec.modelBlockName = modelID;
+		}
+    }
 });
 
 console.log(JSON.stringify(newcontent, null, '    '));
