@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log",
+  "textures": {
+    "end": "westerosblocks:blocks/log_block_0/column_block_marble_top_bottom",
+    "side": "westerosblocks:blocks/log_block_0/column_block_marble_side"
+  }
+}
