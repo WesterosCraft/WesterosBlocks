@@ -11,7 +11,7 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	AbstractBlock.Properties props = def.makeProperties();
-        	return def.registerBlock(new WCSolidBlock(props, def));
+        	return def.registerRenderType(def.registerBlock(new WCSolidBlock(props, def)), true);
         }
     }    
     protected WesterosBlockDef def;

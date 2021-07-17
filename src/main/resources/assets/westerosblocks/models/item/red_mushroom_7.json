@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:blocks/red_mushroom_block_0/mushroom_red_6"
+  }
+}

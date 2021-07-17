@@ -1,0 +1,6 @@
+{
+  "parent": "block/tinted_cross",
+  "textures": {
+    "cross": "westerosblocks:blocks/tallgrass_block_0/dorne_bush_thorny"
+  }
+}

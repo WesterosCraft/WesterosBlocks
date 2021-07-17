@@ -13,6 +13,7 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
+import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
@@ -57,6 +58,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -65,6 +68,8 @@ import net.minecraft.particles.ParticleTypes;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MathHelper;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.ForgeRegistries;
 
 //
@@ -496,8 +501,21 @@ public class WesterosBlockDef {
         block.setRegistryName(this.blockName);
         itemBlock.setRegistryName(this.blockName);
         ForgeRegistries.BLOCKS.register(block);
-        ForgeRegistries.ITEMS.register(itemBlock);
+        ForgeRegistries.ITEMS.register(itemBlock);        
         return block;
+    }
+    
+    public Block registerRenderType(Block block, boolean isSolid) {
+        if (FMLEnvironment.dist == Dist.CLIENT)
+        {
+        	if (this.alphaRender) {
+        		RenderTypeLookup.setRenderLayer(block, RenderType.translucent());
+        	}
+        	else if (!isSolid) {
+        		RenderTypeLookup.setRenderLayer(block, RenderType.cutout());        		
+        	}
+        }    	
+    	return block;
     }
 
     public AbstractBlock.Properties makeProperties() {
@@ -665,7 +683,7 @@ public class WesterosBlockDef {
         typeTable.put("solid", new WCSolidBlock.Factory());
         typeTable.put("stair", new WCStairBlock.Factory());
 //        typeTable.put("log", new WCLogBlock.Factory());
-//        typeTable.put("plant", new WCPlantBlock.Factory());
+        typeTable.put("plant", new WCPlantBlock.Factory());
 //        typeTable.put("crop", new WCCropBlock.Factory());
         typeTable.put("slab", new WCSlabBlock.Factory());
 //        typeTable.put("wall", new WCWallBlock.Factory());

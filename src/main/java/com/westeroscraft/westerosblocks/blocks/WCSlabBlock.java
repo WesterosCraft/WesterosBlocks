@@ -17,7 +17,7 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	AbstractBlock.Properties props = def.makeProperties();
-        	return def.registerBlock(new WCSlabBlock(props, def));
+        	return def.registerRenderType(def.registerBlock(new WCSlabBlock(props, def)), false);
         }
     }
     protected WesterosBlockDef def;

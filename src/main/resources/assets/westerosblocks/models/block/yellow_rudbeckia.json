@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "westerosblocks:blocks/flower_block_3/yellow_rudbeckia"
+  }
+}
