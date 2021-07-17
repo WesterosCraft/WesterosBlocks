@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_3/plaster_casterly_crimson",
+    "top": "westerosblocks:blocks/stone_block_3/plaster_casterly_crimson",
+    "side": "westerosblocks:blocks/stone_block_3/plaster_casterly_crimson",
+    "particle": "westerosblocks:blocks/stone_block_3/plaster_casterly_crimson"
+  }
+}

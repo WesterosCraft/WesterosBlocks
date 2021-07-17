@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.crash.ReportedException;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
@@ -21,6 +22,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -226,18 +228,6 @@ public class WesterosBlocks
                 if (blk != null) {
                     blklist.add(blk);
                     customBlocksByName.put(customBlockDefs[i].getBlockName(0), blk);
-                    // Do blocks state export here
-                    if (Config.blockDevMode.get()) {
-                    	ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
-                    	if (exp != null) {
-                    		try {
-                    			exp.doBlockStateExport();
-                    			exp.doModelExports();
-                    		} catch (IOException iox) {
-                    			log.warn(String.format("Error exporting block %s - %s",  blk.getRegistryName(), iox));
-                    		}
-                    	}
-                    }
                     // Register sound events
                     //TODO customBlockDefs[i].registerSoundEvents();
                 }
@@ -257,16 +247,19 @@ public class WesterosBlocks
 //                }
 //            }
             
-            // Register custom block definitions
-            for (int i = 0; i < customBlocks.length; i++) {
-                if (customBlocks[i] instanceof WesterosBlockLifecycle) {
-                    ((WesterosBlockLifecycle)customBlocks[i]).registerBlockDefinition();
-                }
-            }
             // Register block models
             WesterosBlocks.proxy.registerBlockModels(customBlocks);
             
             proxy.initRenderRegistry();            
         }
+    }
+    
+    public static Block findBlockByName(String blkname) {
+        Block blk = customBlocksByName.get(blkname);
+        if (blk != null) {
+            return blk;
+        }
+        blk = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(blkname));
+        return blk;
     }
 }

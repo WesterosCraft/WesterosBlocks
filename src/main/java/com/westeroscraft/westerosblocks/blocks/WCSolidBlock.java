@@ -5,7 +5,7 @@ import net.minecraft.block.*;
 import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TransparencyMode;
 
-public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport {
+public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -20,6 +20,11 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport {
         super(props);
         this.def = def;
     }
+    @Override
+    public WesterosBlockDef getWBDefinition() {
+        return def;
+    }
+
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_3/brick_oldtown",
+    "top": "westerosblocks:blocks/stone_block_3/brick_oldtown",
+    "side": "westerosblocks:blocks/stone_block_3/brick_oldtown",
+    "particle": "westerosblocks:blocks/stone_block_3/brick_oldtown"
+  }
+}

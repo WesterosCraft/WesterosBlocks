@@ -15,6 +15,7 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 
 import net.minecraft.block.AbstractBlock;
 
@@ -500,8 +501,17 @@ public class WesterosBlockDef {
     }
 
     public AbstractBlock.Properties makeProperties() {
-    	Material mat = getMaterial();
-    	AbstractBlock.Properties props = AbstractBlock.Properties.of(mat);	// TODO - material color?
+    	return makeAndCopyProperties(null);
+    }
+    public AbstractBlock.Properties makeAndCopyProperties(Block blk) {
+    	AbstractBlock.Properties props;
+    	if (blk != null) {
+    		props = AbstractBlock.Properties.copy(blk);
+    	}
+    	else {
+        	Material mat = getMaterial();
+    		props = AbstractBlock.Properties.of(mat);	// TODO - material color?
+    	}
     	if (hardness >= 0.0F) {
     		if (resistance >= 0.0)
     			props = props.strength(hardness, resistance);
@@ -617,6 +627,7 @@ public class WesterosBlockDef {
         materialTable.put("coral", Material.CORAL);
         materialTable.put("ice", Material.ICE);
         materialTable.put("snow", Material.SNOW);
+        materialTable.put("craftedSnow", Material.SNOW);
         materialTable.put("cactus", Material.CACTUS);
         materialTable.put("clay", Material.CLAY);
         materialTable.put("portal", Material.PORTAL);
@@ -652,7 +663,7 @@ public class WesterosBlockDef {
 
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
-//        typeTable.put("stair", new WCStairBlock.Factory());
+        typeTable.put("stair", new WCStairBlock.Factory());
 //        typeTable.put("log", new WCLogBlock.Factory());
 //        typeTable.put("plant", new WCPlantBlock.Factory());
 //        typeTable.put("crop", new WCCropBlock.Factory());

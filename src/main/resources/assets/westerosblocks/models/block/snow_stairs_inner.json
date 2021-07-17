@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/noocclusion/inner_stairs",
+  "textures": {
+    "bottom": "minecraft:block/snow",
+    "top": "minecraft:block/snow",
+    "side": "minecraft:block/snow",
+    "particle": "minecraft:block/snow"
+  }
+}

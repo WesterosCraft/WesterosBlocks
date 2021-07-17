@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.block.Block;
 
@@ -56,7 +57,7 @@ public class StairsBlockModelExport extends ModelExport {
                 if (tinted) {
                     parent = "westerosblocks:block/tinted/stairs";
                 } else {
-                    parent = "block/stairs"; // Vanilla block is
+                    parent = "minecraft:block/stairs"; // Vanilla block is
                 }
             } else {
                 if (tinted) {
@@ -77,7 +78,7 @@ public class StairsBlockModelExport extends ModelExport {
                 if (tinted) {
                     parent = "westerosblocks:block/tinted/inner_stairs";
                 } else {
-                    parent = "block/inner_stairs"; // Vanilla block is
+                    parent = "minecraft:block/inner_stairs"; // Vanilla block is
                 }
             } else {
                 if (tinted) {
@@ -98,7 +99,7 @@ public class StairsBlockModelExport extends ModelExport {
                 if (tinted) {
                     parent = "westerosblocks:block/tinted/outer_stairs";
                 } else {
-                    parent = "block/outer_stairs"; // Vanilla block is
+                    parent = "minecraft:block/outer_stairs"; // Vanilla block is
                 }
             } else {
                 if (tinted) {
@@ -175,6 +176,12 @@ public class StairsBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         final boolean isTinted = def.isTinted();
+        // Find base block for stairs - textures come from there
+        final Block bblk = WesterosBlocks.findBlockByName(def.modelBlockName);
+        if (bblk == null) {
+            throw new IOException(
+                    String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
+        }
         String downtxt = null;
         String uptxt = null;
         String sidetxt = null;
@@ -182,9 +189,51 @@ public class StairsBlockModelExport extends ModelExport {
                 ? def.ambientOcclusion
                 : true;
 
-        downtxt = getTextureID(def.getTextureByIndex(0));
-        uptxt = getTextureID(def.getTextureByIndex(1));
-        sidetxt = getTextureID(def.getTextureByIndex(2));
+        if (bblk instanceof WesterosBlockLifecycle) {
+            final WesterosBlockDef bbdef = ((WesterosBlockLifecycle) bblk).getWBDefinition();
+            if (bbdef == null) {
+                throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no def",
+                        def.modelBlockName, def.blockName));
+            }
+            downtxt = getTextureID(bbdef.getTextureByIndex(0));
+            uptxt = getTextureID(bbdef.getTextureByIndex(1));
+            sidetxt = getTextureID(bbdef.getTextureByIndex(2));
+        } else { // Else, assume vanilla block: hack it for ones we use
+            switch (def.modelBlockName) {
+                case "minecraft:bedrock":
+                    downtxt = uptxt = sidetxt = "minecraft:block/bedrock";
+                    break;
+                case "minecraft:lapis_block":
+                    downtxt = uptxt = sidetxt = "minecraft:block/lapis_block";
+                    break;
+                case "minecraft:sandstone":
+                    downtxt = uptxt = "minecraft:block/sandstone_top";
+                    sidetxt = "minecraft:block/sandstone_smooth";
+                    break;
+                case "minecraft:iron_block":
+                    downtxt = uptxt = sidetxt = "minecraft:block/iron_block";
+                    break;
+                case "minecraft:stone_slab":
+                    downtxt = uptxt = "minecraft:block/stone_slab_top";
+                    sidetxt = "minecraft:block/stone_slab_side";
+                    break;
+                case "minecraft:snow":
+                    downtxt = uptxt = sidetxt = "minecraft:block/snow";
+                    break;
+                case "minecraft:emerald_block":
+                    downtxt = uptxt = sidetxt = "minecraft:block/emerald_block";
+                    break;
+                case "minecraft:obsidian":
+                    downtxt = uptxt = sidetxt = "minecraft:block/obsidian";
+                    break;
+                case "minecraft:terracotta":
+                	downtxt = uptxt = sidetxt = "minecraft:block/terracotta";
+                	break;
+                default:
+                    throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no vanilla",
+                            def.modelBlockName, def.blockName));
+            }
+        }
         // Base model
         final ModelObjectStair base = new ModelObjectStair(ambientOcclusion, isTinted);
         base.textures.bottom = downtxt;
@@ -217,4 +266,3 @@ public class StairsBlockModelExport extends ModelExport {
         }
     }
 }
-

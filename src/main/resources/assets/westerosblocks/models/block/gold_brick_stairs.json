@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "top": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "side": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
+    "particle": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold"
+  }
+}

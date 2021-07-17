@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "minecraft:block/bedrock",
+    "top": "minecraft:block/bedrock",
+    "side": "minecraft:block/bedrock",
+    "particle": "minecraft:block/bedrock"
+  }
+}

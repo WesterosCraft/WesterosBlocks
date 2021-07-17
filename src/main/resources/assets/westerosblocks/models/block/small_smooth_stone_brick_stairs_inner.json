@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_1/brick_stone_small_smooth",
+    "top": "westerosblocks:blocks/stone_block_1/brick_stone_small_smooth",
+    "side": "westerosblocks:blocks/stone_block_1/brick_stone_small_smooth",
+    "particle": "westerosblocks:blocks/stone_block_1/brick_stone_small_smooth"
+  }
+}

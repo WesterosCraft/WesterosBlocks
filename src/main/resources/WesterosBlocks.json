@@ -10499,7 +10499,7 @@
         {
             "blockName": "stone_slab_stairs",
             "blockType": "stair",
-            "modelBlockName": "minecraft:double_stone_slab",
+            "modelBlockName": "minecraft:stone_slab",
             "creativeTab": "WesterosBlocks",
             "label": "Stone Slab Stairs",
             "legacyBlockID": "stone_slab_stair_0:0"
@@ -29053,7 +29053,7 @@
         {
             "blockName": "river_cobble_stairs",
             "blockType": "stair",
-            "modelBlockName": "minecraft:hardened_clay",
+            "modelBlockName": "minecraft:terracotta",
             "creativeTab": "WesterosBlocks",
             "label": "River Cobble Stairs",
             "colorMult": "textures/colormap/lightgreystone",

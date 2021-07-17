@@ -49,7 +49,12 @@ content.blocks.forEach(block => {
 			modelID = model.blockName;
 		}
 		else if (block.modelBlockName.startsWith("minecraft:")) {
-			modelID = block.modelBlockName;
+			if (block.modelBlockName == 'minecraft:hardened_clay')
+				modelID = 'minecraft:terracotta';
+			else if (block.modelBlockName == 'minecraft:double_stone_slab')
+				modelID = 'minecraft:stone_slab';
+			else
+				modelID = block.modelBlockName;
 		}
 		else {
 			console.log(`Bad modelBlockName ${block.modelBlockName} for ${block.blockName}`);

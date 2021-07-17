@@ -11,7 +11,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SlabBlock;
 
-public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport {
+public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -25,6 +25,10 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport
     protected WCSlabBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
+    }
+    @Override
+    public WesterosBlockDef getWBDefinition() {
+        return def;
     }
 
     @Override

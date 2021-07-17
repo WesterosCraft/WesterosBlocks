@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_0/sandstone_bricks_large",
+    "top": "westerosblocks:blocks/stone_block_0/sandstone_bricks_large",
+    "side": "westerosblocks:blocks/stone_block_0/sandstone_bricks_large",
+    "particle": "westerosblocks:blocks/stone_block_0/sandstone_bricks_large"
+  }
+}
