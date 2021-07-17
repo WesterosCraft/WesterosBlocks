@@ -118,6 +118,7 @@ public class WesterosBlocks
 
     private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
     {
+    	
         // Initialize with standard block IDs
         if (Config.snowInTaiga.get()) {
 //        	Biomes.TAIGA = -0.5F;	// Access set up using AccessTransformer
@@ -154,6 +155,8 @@ public class WesterosBlocks
                 log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
             }
         }
+    	proxy.initRenderRegistry();
+
     }
     
     public static void crash(Exception x, String msg) {
@@ -245,12 +248,7 @@ public class WesterosBlocks
 //                if (customBlocks[i] instanceof WesterosBlockLifecycle) {
 //                    ((WesterosBlockLifecycle)customBlocks[i]).initializeBlockDefinition();
 //                }
-//            }
-            
-            // Register block models
-            WesterosBlocks.proxy.registerBlockModels(customBlocks);
-            
-            proxy.initRenderRegistry();            
+//            }            
         }
     }
     

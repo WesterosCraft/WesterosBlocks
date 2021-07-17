@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=none": {
-      "model": "westerosblocks:block/spruce_log_chain_bark"
-    },
     "axis=z": {
       "model": "westerosblocks:block/spruce_log_chain",
       "x": 90

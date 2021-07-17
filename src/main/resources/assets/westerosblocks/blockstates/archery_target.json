@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=none": {
-      "model": "westerosblocks:block/archery_target_bark"
-    },
     "axis=z": {
       "model": "westerosblocks:block/archery_target",
       "x": 90

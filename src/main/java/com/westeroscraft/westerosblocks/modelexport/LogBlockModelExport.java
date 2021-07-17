@@ -63,8 +63,6 @@ public class LogBlockModelExport extends ModelExport {
         varx.x = 90;
         varx.y = 90;
         so.variants.put("axis=x", varx);
-        varn.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_bark";
-        so.variants.put("axis=none", varn);
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -74,10 +72,6 @@ public class LogBlockModelExport extends ModelExport {
         mod.textures.end = getTextureID(def.getTextureByIndex(0));
         mod.textures.side = getTextureID(def.getTextureByIndex(1));
         this.writeBlockModelFile(def.blockName, mod);
-        // Add all bark model
-        ModelObjectCubeAll mod2 = new ModelObjectCubeAll();
-        mod2.textures.all = getTextureID(def.getTextureByIndex(1));
-        this.writeBlockModelFile(def.blockName + "_bark", mod2);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;

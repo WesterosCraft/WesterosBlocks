@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=none": {
-      "model": "westerosblocks:block/oak_log_rope_bark"
-    },
     "axis=z": {
       "model": "westerosblocks:block/oak_log_rope",
       "x": 90

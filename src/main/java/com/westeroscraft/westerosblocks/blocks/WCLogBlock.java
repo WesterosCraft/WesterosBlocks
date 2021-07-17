@@ -19,7 +19,7 @@ public class WCLogBlock extends RotatedPillarBlock implements WesterosBlockLifec
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	AbstractBlock.Properties props = def.makeProperties();
-        	return def.registerRenderType(def.registerBlock(new WCLogBlock(props, def)), false);
+        	return def.registerRenderType(def.registerBlock(new WCLogBlock(props, def)), false, false);
         }
     }
     protected WesterosBlockDef def;
@@ -40,18 +40,16 @@ public class WCLogBlock extends RotatedPillarBlock implements WesterosBlockLifec
         TextureModifier tmod[][] = { 
             { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE },
             { TextureModifier.NONE, TextureModifier.NONE, TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE },
-            { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.ROT90, TextureModifier.ROT270 },
-            { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE }
+            { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.ROT90, TextureModifier.ROT270 }
         };
         // Texture index for each orientation
         int txtid[][] = {
             { 0, 0, 1, 1, 1, 1 },
             { 1, 1, 1, 1, 0, 0 },
-            { 1, 1, 0, 0, 1, 1 },
-            { 1, 1, 1, 1, 1, 1 }
+            { 1, 1, 0, 0, 1, 1 }
         };
 
-        for (int i = 0; i < 4; i++) {   // 4 orientations
+        for (int i = 0; i < 3; i++) {   // 3 orientations
             BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
             mtr.setMetaValue(i);
             for (int face = 0; face < 6; face++) {

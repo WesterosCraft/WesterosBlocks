@@ -1,6 +1,8 @@
 package com.westeroscraft.westerosblocks;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.BitSet;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -14,6 +16,7 @@ import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
@@ -57,20 +60,39 @@ import net.minecraft.block.AbstractBlock;
 //import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.color.BlockColors;
+import net.minecraft.client.renderer.color.IBlockColor;
+import net.minecraft.client.renderer.color.IItemColor;
+import net.minecraft.client.renderer.color.ItemColors;
+import net.minecraft.client.resources.ColorMapLoader;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.particles.BasicParticleType;
 import net.minecraft.particles.ParticleTypes;
+import net.minecraft.resources.IResourceManager;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.FoliageColors;
+import net.minecraft.world.GrassColors;
+import net.minecraft.world.IBlockDisplayReader;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeColors;
+import net.minecraft.world.level.ColorResolver;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -261,12 +283,15 @@ public class WesterosBlockDef {
     public static abstract class ColorMultHandler {
         ColorMultHandler() {
         }
-        public int getBlockColor() { return 0; }
-//        public abstract int colorMultiplier(IBlockAccess access, BlockPos pos);
-        protected void setBaseColor() {
+        @OnlyIn(Dist.CLIENT)
+		public int getItemColor(ItemStack stack, int tintIndex) {
+			BlockColors blockColors = Minecraft.getInstance().getBlockColors();
+			BlockState BlockState = ((BlockItem)stack.getItem()).getBlock().defaultBlockState();
+            return blockColors.getColor(BlockState, null, null, tintIndex);
         }
-        protected void loadRes(String rname, String blkname) {
-        }
+        @OnlyIn(Dist.CLIENT)
+		public abstract int getColor(BlockState arg0, IBlockDisplayReader arg1, BlockPos arg2, int arg3);
+
     }
     // Fixed color multiplier (fixed)
     public static class FixedColorMultHandler extends ColorMultHandler {
@@ -275,129 +300,73 @@ public class WesterosBlockDef {
         FixedColorMultHandler(int mult) {
             fixedMult = mult;
         }
-        @Override
-        public int getBlockColor() {
-            return fixedMult;
-        }
-        @Override
- //       public int colorMultiplier(IBlockAccess access, BlockPos pos) {
- //           return fixedMult;
- //       }
-        protected void setBaseColor() {
-        }
-        protected void loadRes(String rname, String blkname) {
-        }
+
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(BlockState arg0, IBlockDisplayReader arg1, BlockPos arg2, int arg3) {
+			return fixedMult;
+		}
+
     }
     // Foliage color multiplier
     public static class FoliageColorMultHandler extends ColorMultHandler {
         FoliageColorMultHandler() {
         }
-//        @Override
-//        public int getBlockColor() {
-//            return ColorizerFoliage.getFoliageColor(0.5, 1.0);
-//        }
-//        @Override
-//        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
-//            int red = 0;
-//            int green = 0;
-//            int blue = 0;
-//
-//            for (int xx = -1; xx <= 1; ++xx) {
-//                for (int zz = -1; zz <= 1; ++zz) {
-//                    BlockPos bp = pos.add(xx, 0, zz);
-//                    int mult = access.getBiome(bp).getFoliageColorAtPos(bp);
-//                    red += (mult & 0xFF0000) >> 16;
-//                    green += (mult & 0x00FF00) >> 8;
-//                    blue += (mult & 0x0000FF);
-//                }
-//            }
-//            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
-//        }
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+			if (world != null && pos != null) 
+				return BiomeColors.getAverageFoliageColor(world, pos);
+			else
+				return FoliageColors.getDefaultColor();
+		}
     }
     // Grass color multiplier
     public static class GrassColorMultHandler extends ColorMultHandler {
         GrassColorMultHandler() {
         }
-//        @Override
-//        public int getBlockColor() {
-//            return ColorizerGrass.getGrassColor(0.5, 1.0);
-//        }
-//        @Override
-//        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
-//            int red = 0;
-//            int green = 0;
-//            int blue = 0;
-//
-//            for (int xx = -1; xx <= 1; ++xx) {
-//                for (int zz = -1; zz <= 1; ++zz) {
-//                    BlockPos bp = pos.add(xx, 0, zz);
-//                    int mult = access.getBiome(bp).getGrassColorAtPos(bp);
-//                    red += (mult & 0xFF0000) >> 16;
-//                    green += (mult & 0x00FF00) >> 8;
-//                    blue += (mult & 0x0000FF);
-//                }
-//            }
-//            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
-//        }
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+			if (world != null && pos != null) 
+				return BiomeColors.getAverageGrassColor(world, pos);
+			else
+				return GrassColors.get(0.5D, 1.0D);
+		}
     }
     // Water color multiplier
     public static class WaterColorMultHandler extends ColorMultHandler {
         WaterColorMultHandler() {
         }
-//        @Override
-//        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
-//            int red = 0;
-//            int green = 0;
-//            int blue = 0;
-//
-//            for (int xx = -1; xx <= 1; ++xx) {
-//                for (int zz = -1; zz <= 1; ++zz) {
-//                    BlockPos bp = pos.add(xx, 0, zz);
-//                    int mult = access.getBiome(bp).getWaterColorMultiplier();
-//                    red += (mult & 0xFF0000) >> 16;
-//                    green += (mult & 0x00FF00) >> 8;
-//                    blue += (mult & 0x0000FF);
-//                }
-//            }
-//            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
-//        }
-//        @Override
-//		public int getBlockColor() {
-//			return 0xFFFFFF;
-//		}
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+			return BiomeColors.getAverageWaterColor(world, pos) | 0xFF000000;
+		}
     }
 
     public static class PineColorMultHandler extends ColorMultHandler {
-//        @Override
-//        public int getBlockColor() {
-//            return ColorizerFoliage.getFoliageColorPine();
-//        }
-//        @Override
-//        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
-//            return ColorizerFoliage.getFoliageColorPine();
-//        }
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+			return FoliageColors.getEvergreenColor();
+		}
     }
     
     public static class BirchColorMultHandler extends ColorMultHandler {
-//        @Override
-//        public int getBlockColor() {
-//            return ColorizerFoliage.getFoliageColorBirch();
-//        }
-//        @Override
-//        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
-//            return ColorizerFoliage.getFoliageColorBirch();
-//        }
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+			return FoliageColors.getBirchColor();
+		}
     }
 
     public static class BasicColorMultHandler extends ColorMultHandler {
-//        @Override
-//        public int getBlockColor() {
-//            return ColorizerFoliage.getFoliageColorBasic();
-//        }
-//        @Override
-//        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
-//            return ColorizerFoliage.getFoliageColorBasic();
-//        }
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+			return FoliageColors.getDefaultColor();
+		}
     }
 
     public boolean isTinted() {
@@ -415,31 +384,40 @@ public class WesterosBlockDef {
     }
     
     // Custom color multiplier
-    public static class CustomColorMultHandler extends ColorMultHandler {
+    public static class CustomColorMultHandler extends ColorMultHandler implements ColorResolver {
         private int[] colorBuffer = new int[65536];
         
         CustomColorMultHandler(String rname, String blockName) {
-            super();
+            super();       
             
-            loadRes(rname, blockName);
+            loadColorMap(rname, blockName);
         }
-        @Override
-        public int getBlockColor() {
-            return getColor(0.5F, 1.0F);
-        }
-        protected void loadRes(String rname, String blkname) {
-//            if (rname.indexOf(':') < 0)
-//                rname = WesterosBlocks.MOD_ID + ":" + rname;
-//            if (rname.endsWith(".png") == false)
-//                rname += ".png";
-//            try {
-//                colorBuffer = TextureUtil.readImageData(Minecraft.getMinecraft().getResourceManager(), new ResourceLocation(rname));
-//            } catch (Exception e) {
-//                WesterosBlocks.log.error(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
-//                Arrays.fill(colorBuffer,  0xFFFFFF);
-//            }
-        }
-        private int getColor(float tmp, float hum)
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(BlockState state, IBlockDisplayReader world, BlockPos pos, int txtindx) {
+			if ((world != null) && (pos != null) && (world instanceof IWorldReader)) {
+				IWorldReader rdr = (IWorldReader) world;
+	            int red = 0;
+	            int green = 0;
+	            int blue = 0;
+
+	            for (int xx = -1; xx <= 1; ++xx) {
+	                for (int zz = -1; zz <= 1; ++zz) {
+	                    BlockPos bp = pos.offset(xx, 0, zz);
+	                    Biome biome = rdr.getBiome(bp);
+	                    int mult = getColor(biome.getTemperature(bp), biome.getDownfall());
+	                    red += (mult & 0xFF0000) >> 16;
+	                    green += (mult & 0x00FF00) >> 8;
+	                    blue += (mult & 0x0000FF);
+	                }
+	            }
+	            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+			}
+			else {
+				return getColor(null, 0.5D, 1.0D);				
+			}
+		}
+		private int getColor(float tmp, float hum)
         {
             tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
             hum = MathHelper.clamp(hum, 0.0F, 1.0F);
@@ -448,30 +426,34 @@ public class WesterosBlockDef {
             int j = (int)((1.0D - hum) * 255.0D);
             return colorBuffer[j << 8 | i];
         }
-//        @Override
-//        public int colorMultiplier(IBlockAccess access, BlockPos pos) {
-//            int red = 0;
-//            int green = 0;
-//            int blue = 0;
-//
-//            for (int xx = -1; xx <= 1; ++xx) {
-//                for (int zz = -1; zz <= 1; ++zz) {
-//                    BlockPos bp = pos.add(xx, 0, zz);
-//                    Biome biome = access.getBiome(bp);
-//                    int mult = getColor(biome.getTemperature(bp), biome.getRainfall());
-//                    red += (mult & 0xFF0000) >> 16;
-//                    green += (mult & 0x00FF00) >> 8;
-//                    blue += (mult & 0x0000FF);
-//                }
-//            }
-//            return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
-//        }
+		@Override
+	    @OnlyIn(Dist.CLIENT)
+		public int getColor(net.minecraft.world.biome.Biome biome, double tmp, double hum) {
+            tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
+            hum = MathHelper.clamp(hum, 0.0F, 1.0F);
+            hum *= tmp;
+            int i = (int)((1.0D - tmp) * 255.0D);
+            int j = (int)((1.0D - hum) * 255.0D);
+            return colorBuffer[j << 8 | i];			
+		}
+	    @OnlyIn(Dist.CLIENT)
+		private void loadColorMap(String rname, String blkname) {
+            if (rname.indexOf(':') < 0)
+                rname = WesterosBlocks.MOD_ID + ":" + rname;
+            if (rname.endsWith(".png") == false)
+                rname += ".png";
+            try {
+                colorBuffer = ColorMapLoader.getPixels(Minecraft.getInstance().getResourceManager(), new ResourceLocation(rname));
+            } catch (Exception e) {
+                WesterosBlocks.log.error(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
+                Arrays.fill(colorBuffer,  0xFFFFFF);
+            }			
+		}
     }
-
     
-//    @SideOnly(Side.CLIENT)
-//    private transient IIcon[][] icons_by_meta;
-//    private transient IIcon[] itemicons_by_meta;
+    public String getType() {
+        return this.type;
+    }    
     
     private transient int lightValueInt;
     private transient ColorMultHandler colorMultHandler;
@@ -503,7 +485,7 @@ public class WesterosBlockDef {
         return block;
     }
     
-    public Block registerRenderType(Block block, boolean isSolid) {
+    public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
         if (FMLEnvironment.dist == Dist.CLIENT)
         {
         	if (this.alphaRender) {
@@ -511,6 +493,9 @@ public class WesterosBlockDef {
         	}
         	else if (!isSolid) {
         		RenderTypeLookup.setRenderLayer(block, RenderType.cutout());        		
+        	}
+        	else if (isTransparent) {
+        		RenderTypeLookup.setRenderLayer(block,  RenderType.cutoutMipped());        		        		
         	}
         }    	
     	return block;
@@ -693,7 +678,7 @@ public class WesterosBlockDef {
 //        typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
 //        typeTable.put("door", new WCDoorBlock.Factory());
 //        typeTable.put("fire", new WCFireBlock.Factory());
-//        typeTable.put("leaves", new WCLeavesBlock.Factory());
+        typeTable.put("leaves", new WCLeavesBlock.Factory());
 //        typeTable.put("pane", new WCPaneBlock.Factory());
 //        typeTable.put("layer", new WCLayerBlock.Factory());
 //        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
@@ -709,14 +694,14 @@ public class WesterosBlockDef {
 //        typeTable.put("vines", new WCVinesBlock.Factory());
         
         // Standard color multipliers
-        colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
-        colorMultTable.put("water", new WaterColorMultHandler());
-        colorMultTable.put("foliage", new FoliageColorMultHandler());
-        colorMultTable.put("grass", new GrassColorMultHandler());
-        colorMultTable.put("pine", new PineColorMultHandler());
-        colorMultTable.put("birch", new BirchColorMultHandler());
-        colorMultTable.put("basic", new BasicColorMultHandler());
-        colorMultTable.put("lily", new FixedColorMultHandler(2129968));
+    	colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
+    	colorMultTable.put("water", new WaterColorMultHandler());
+    	colorMultTable.put("foliage", new FoliageColorMultHandler());
+    	colorMultTable.put("grass", new GrassColorMultHandler());
+    	colorMultTable.put("pine", new PineColorMultHandler());
+    	colorMultTable.put("birch", new BirchColorMultHandler());
+    	colorMultTable.put("basic", new BasicColorMultHandler());
+    	colorMultTable.put("lily", new FixedColorMultHandler(2129968));
         
         // Valid particle values
         particles.put("hugeexplosion", ParticleTypes.EXPLOSION);
@@ -950,4 +935,16 @@ public class WesterosBlockDef {
             //}
         }
     }
+    // Handle registration of tint handling and other client rendering
+    @OnlyIn(Dist.CLIENT)
+    public void registerRender(Block blk) {
+    	if (this.isTinted()) {
+    		BlockColors blockColors = Minecraft.getInstance().getBlockColors();
+    		ItemColors itemColors = Minecraft.getInstance().getItemColors();
+        	ColorMultHandler handler = getColorHandler(this.colorMult);
+        	blockColors.register((BlockState state, IBlockDisplayReader world, BlockPos pos, int txtindx) -> handler.getColor(state, world, pos, txtindx), blk);
+        	itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
+    	}            	
+    }
+
 }

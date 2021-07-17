@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=none": {
-      "model": "westerosblocks:block/mossy_jungle_log_bark"
-    },
     "axis=z": {
       "model": "westerosblocks:block/mossy_jungle_log",
       "x": 90

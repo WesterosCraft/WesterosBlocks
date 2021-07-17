@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=none": {
-      "model": "westerosblocks:block/mossy_birch_log_bark"
-    },
     "axis=z": {
       "model": "westerosblocks:block/mossy_birch_log",
       "x": 90

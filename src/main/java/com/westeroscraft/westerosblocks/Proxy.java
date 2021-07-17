@@ -12,20 +12,7 @@ public class Proxy
     {
     }
     
-    public void initCleanupHooks() {
-    	
-    }
-    
     public void initRenderRegistry() {
-    }
-        
-    public void registerItemRenderer(Item item, int meta, String name) {
-    }
-
-    public void registerBlockModels(Block[] blocks) {
-    }
-
-    public void registerColoring() {
     }
 }
 

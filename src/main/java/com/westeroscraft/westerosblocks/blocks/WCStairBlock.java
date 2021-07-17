@@ -27,7 +27,7 @@ public class WCStairBlock extends StairsBlock implements WesterosBlockDynmapSupp
                 return null;
             }
         	AbstractBlock.Properties props = def.makeAndCopyProperties(blk);
-        	return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def)), false);
+        	return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def)), false, false);
         }
     }
     

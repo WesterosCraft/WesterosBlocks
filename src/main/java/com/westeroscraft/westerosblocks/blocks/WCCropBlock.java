@@ -16,7 +16,7 @@ public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupp
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	AbstractBlock.Properties props = def.makeProperties().noCollission().instabreak();
-        	return def.registerRenderType(def.registerBlock(new WCCropBlock(props, def)), false);
+        	return def.registerRenderType(def.registerBlock(new WCCropBlock(props, def)), false, false);
         }
     }
 

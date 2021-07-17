@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=none": {
-      "model": "westerosblocks:block/marble_pillar_bark"
-    },
     "axis=z": {
       "model": "westerosblocks:block/marble_pillar",
       "x": 90

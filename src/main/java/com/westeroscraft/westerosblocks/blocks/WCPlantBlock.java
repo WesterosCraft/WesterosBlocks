@@ -23,7 +23,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	AbstractBlock.Properties props = def.makeProperties().noCollission().instabreak();
-        	return def.registerRenderType(def.registerBlock(new WCPlantBlock(props, def)), false);
+        	return def.registerRenderType(def.registerBlock(new WCPlantBlock(props, def)), false, false);
         }
     }    
     private WesterosBlockDef def;

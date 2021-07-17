@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=none": {
-      "model": "westerosblocks:block/weirwood_face_0_bark"
-    },
     "axis=z": {
       "model": "westerosblocks:block/weirwood_face_0",
       "x": 90

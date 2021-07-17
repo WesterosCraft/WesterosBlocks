@@ -1,8 +1,5 @@
 {
   "variants": {
-    "axis=none": {
-      "model": "westerosblocks:block/firewood_bark"
-    },
     "axis=z": {
       "model": "westerosblocks:block/firewood",
       "x": 90
