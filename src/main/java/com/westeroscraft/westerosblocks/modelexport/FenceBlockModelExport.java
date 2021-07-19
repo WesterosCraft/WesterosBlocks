@@ -18,13 +18,10 @@ public class FenceBlockModelExport extends ModelExport {
     	public List<States> multipart = new ArrayList<States>();
     }
     public static class States {
-    	public WhenRec when = new WhenRec();
     	public Apply apply = new Apply();
     }
     public static class SideStates extends States {
-    	SideStates() {
-    		when.OR = new ArrayList<WhenRec>();
-    	}
+    	public WhenRec when = new WhenRec();
     }
     public static class WhenRec {
     	String north, south, west, east;
@@ -68,35 +65,27 @@ public class FenceBlockModelExport extends ModelExport {
     	so.multipart.add(ps);
     	// Add north variant
     	SideStates ssn = new SideStates();
-    	WhenRec wr = new WhenRec();
-    	wr.north = "true";
-    	ssn.when.OR.add(wr);
+    	ssn.when.north = "true";
     	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
     	ssn.apply.uvlock = true;
     	so.multipart.add(ssn);
     	// Add east variant
     	ssn = new SideStates();
-    	wr = new WhenRec();
-    	wr.east = "true";
-    	ssn.when.OR.add(wr);
+    	ssn.when.east = "true";
     	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
     	ssn.apply.uvlock = true;
     	ssn.apply.y = 90;
     	so.multipart.add(ssn);
     	// Add south variant
         ssn = new SideStates();
-        wr = new WhenRec();
-        wr.south = "true";
-        ssn.when.OR.add(wr);
+    	ssn.when.south = "true";
         ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
         ssn.apply.uvlock = true;
         ssn.apply.y = 180;
         so.multipart.add(ssn);
     	// Add west variant
         ssn = new SideStates();
-        wr = new WhenRec();
-        wr.west = "true";
-        ssn.when.OR.add(wr);
+    	ssn.when.west = "true";
         ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
         ssn.apply.uvlock = true;
         ssn.apply.y = 270;

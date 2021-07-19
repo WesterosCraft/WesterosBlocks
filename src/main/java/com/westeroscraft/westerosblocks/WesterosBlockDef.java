@@ -16,6 +16,7 @@ import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
@@ -668,7 +669,7 @@ public class WesterosBlockDef {
         typeTable.put("crop", new WCCropBlock.Factory());
         typeTable.put("slab", new WCSlabBlock.Factory());
         typeTable.put("wall", new WCWallBlock.Factory());
-//        typeTable.put("fence", new WCFenceBlock.Factory());
+        typeTable.put("fence", new WCFenceBlock.Factory());
 //        typeTable.put("web", new WCWebBlock.Factory());
 //        typeTable.put("torch", new WCTorchBlock.Factory());
 //        typeTable.put("ladder", new WCLadderBlock.Factory());
