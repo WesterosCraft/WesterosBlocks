@@ -25,6 +25,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 import net.minecraft.block.AbstractBlock;
 
@@ -670,7 +671,7 @@ public class WesterosBlockDef {
         typeTable.put("slab", new WCSlabBlock.Factory());
         typeTable.put("wall", new WCWallBlock.Factory());
         typeTable.put("fence", new WCFenceBlock.Factory());
-//        typeTable.put("web", new WCWebBlock.Factory());
+        typeTable.put("web", new WCWebBlock.Factory());
 //        typeTable.put("torch", new WCTorchBlock.Factory());
 //        typeTable.put("ladder", new WCLadderBlock.Factory());
 //        typeTable.put("cuboid", new WCCuboidBlock.Factory());
