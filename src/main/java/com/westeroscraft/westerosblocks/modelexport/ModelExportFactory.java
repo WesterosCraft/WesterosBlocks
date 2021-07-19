@@ -29,9 +29,9 @@ public class ModelExportFactory {
             case "web":
                 me = new CrossBlockModelExport(blk, def, dest);
                 break;
-//            case "pane":
-//                me = new PaneBlockModelExport(blk, def, dest);
-//                break;
+            case "pane":
+                me = new PaneBlockModelExport(blk, def, dest);
+                break;
             case "crop":
                 me = new CropBlockModelExport(blk, def, dest);
                 break;

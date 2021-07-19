@@ -1,0 +1,141 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_post"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": true
+          },
+          {
+            "north": false,
+            "south": false,
+            "west": false,
+            "east": false
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_side",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "east": true
+          },
+          {
+            "north": false,
+            "south": false,
+            "west": false,
+            "east": false
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_side",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": true
+          },
+          {
+            "north": false,
+            "south": false,
+            "west": false,
+            "east": false
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_side_alt",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "west": true
+          },
+          {
+            "north": false,
+            "south": false,
+            "west": false,
+            "east": false
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_side_alt",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "north": false
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_noside",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "east": false
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_noside_alt",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "south": false
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_noside_alt",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "west": false
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:block/stained_glass_pane_yellow_noside",
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  ]
+}
