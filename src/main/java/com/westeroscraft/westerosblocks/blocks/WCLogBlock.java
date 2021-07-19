@@ -63,4 +63,10 @@ public class WCLogBlock extends RotatedPillarBlock implements WesterosBlockLifec
             def.setBlockColorMap(mtr);
         }
     }
+    private static String[] TAGS = { "logs" };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
+
 }

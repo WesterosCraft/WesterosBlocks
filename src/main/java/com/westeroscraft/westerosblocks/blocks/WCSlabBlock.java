@@ -47,4 +47,10 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport
         bottom.setMetaValue(0);
         top.setMetaValue(1);
     }
+    private static String[] TAGS = { "slabs" };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
+
 }

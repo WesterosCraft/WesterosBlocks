@@ -6,12 +6,15 @@ import org.dynmap.modsupport.PatchBlockModel;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ITag;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
-public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupport {
+public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
@@ -35,6 +38,11 @@ public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupp
         mod.addPatch(0.25, 0.0, 1.0, 0.25, 0.0, 0.0, 0.25, 1.0, 1.0);
         mod.addPatch(1.0, 0.0, 0.75, 0.0, 0.0, 0.75, 1.0, 1.0, 0.75);
         mod.addPatch(1.0, 0.0, 0.25, 0.0, 0.0, 0.25, 1.0, 1.0, 0.25);
+    }
+    private static String[] TAGS = { "crops" };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
     }
 
 }

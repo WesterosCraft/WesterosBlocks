@@ -66,4 +66,10 @@ public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle, We
         // Make pane model
         PaneBlockModel pbm = md.addPaneModel(blkname);
     }
+    private static String[] TAGS = {  };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
+
 }

@@ -35,6 +35,7 @@ public class WallBlockModelExport extends ModelExport {
     	Integer y;
     	Boolean uvlock;
     }
+    
     // Template objects for Gson export of block models
     public static class ModelObjectPost {
         public String parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_post";    // Use 'wall_post' model for single texture
@@ -42,6 +43,10 @@ public class WallBlockModelExport extends ModelExport {
     }
     public static class ModelObjectSide {
         public String parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_side";    // Use 'wall_side' model for single texture
+        public Texture textures = new Texture();
+    }
+    public static class ModelObjectTall {
+        public String parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_side_tall";    // Use 'wall_side_tall' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {
@@ -65,41 +70,72 @@ public class WallBlockModelExport extends ModelExport {
         SideStates ssn = new SideStates();
         WhenRec wr = new WhenRec();
         wr.up = "true";
-        ssn.when.OR.add(wr);
+        ssn.when = wr;
     	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_post";
     	so.multipart.add(ssn);
     	// Add north variant
     	ssn = new SideStates();
     	wr = new WhenRec();
-    	wr.north = "true";
-    	ssn.when.OR.add(wr);
+    	wr.north = "low";
+        ssn.when = wr;
     	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
+    	ssn.apply.uvlock = true;
+    	so.multipart.add(ssn);
+    	ssn = new SideStates();
+    	wr = new WhenRec();
+    	wr.north = "tall";
+        ssn.when = wr;
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side_tall";
     	ssn.apply.uvlock = true;
     	so.multipart.add(ssn);
     	// Add east variant
     	ssn = new SideStates();
     	wr = new WhenRec();
-    	wr.east = "true";
-    	ssn.when.OR.add(wr);
+    	wr.east = "low";
+        ssn.when = wr;
     	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
+    	ssn.apply.uvlock = true;
+    	ssn.apply.y = 90;
+    	so.multipart.add(ssn);
+    	ssn = new SideStates();
+    	wr = new WhenRec();
+    	wr.east = "tall";
+        ssn.when = wr;
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side_tall";
     	ssn.apply.uvlock = true;
     	ssn.apply.y = 90;
     	so.multipart.add(ssn);
     	// Add south variant
         ssn = new SideStates();
         wr = new WhenRec();
-        wr.south = "true";
-        ssn.when.OR.add(wr);
+        wr.south = "low";
+        ssn.when = wr;
         ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
+        ssn.apply.uvlock = true;
+        ssn.apply.y = 180;
+        so.multipart.add(ssn);
+        ssn = new SideStates();
+        wr = new WhenRec();
+        wr.south = "tall";
+        ssn.when = wr;
+        ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side_tall";
         ssn.apply.uvlock = true;
         ssn.apply.y = 180;
         so.multipart.add(ssn);
     	// Add west variant
         ssn = new SideStates();
         wr = new WhenRec();
-        wr.west = "true";
-        ssn.when.OR.add(wr);
+        wr.west = "low";
+        ssn.when = wr;
         ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
+        ssn.apply.uvlock = true;
+        ssn.apply.y = 270;
+        so.multipart.add(ssn);
+        ssn = new SideStates();
+        wr = new WhenRec();
+        wr.west = "tall";
+        ssn.when = wr;
+        ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side_tall";
         ssn.apply.uvlock = true;
         ssn.apply.y = 270;
         so.multipart.add(ssn);
@@ -123,6 +159,13 @@ public class WallBlockModelExport extends ModelExport {
         smod.textures.side = getTextureID(def.getTextureByIndex(2)); 
         if (isTinted) smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_side";
         this.writeBlockModelFile(def.blockName + "_side", smod);
+        // Tall side model
+        ModelObjectSide tsmod = new ModelObjectSide();
+        tsmod.textures.bottom = getTextureID(def.getTextureByIndex(0)); 
+        tsmod.textures.top = getTextureID(def.getTextureByIndex(1)); 
+        tsmod.textures.side = getTextureID(def.getTextureByIndex(2)); 
+        if (isTinted) tsmod.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_side_tall";
+        this.writeBlockModelFile(def.blockName + "_side_tall", tsmod);
         // Build simple item model that refers to fence inventory model
         ModelObject mo = new ModelObject();
         mo.textures.bottom = getTextureID(def.getTextureByIndex(0));

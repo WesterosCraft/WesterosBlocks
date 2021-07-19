@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/wall_side",
+  "textures": {
+    "bottom": "westerosblocks:blocks/translucent_block_0/crystal_block_wall_top",
+    "top": "westerosblocks:blocks/translucent_block_0/crystal_block_wall_top",
+    "side": "westerosblocks:blocks/translucent_block_0/crystal_block_wall"
+  }
+}

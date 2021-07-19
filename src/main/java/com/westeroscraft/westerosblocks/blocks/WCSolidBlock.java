@@ -30,4 +30,10 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd, 0, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
     }
+    private static String[] TAGS = { };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
+
 }

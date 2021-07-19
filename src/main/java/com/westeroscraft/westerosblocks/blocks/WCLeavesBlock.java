@@ -57,4 +57,9 @@ public class WCLeavesBlock extends LeavesBlock implements WesterosBlockLifecycle
         btr.setSideTexture(sides, BlockSide.ALLSIDES);
         def.setBlockColorMap(btr);
     }
+    private static String[] TAGS = { "leaves" };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
 }

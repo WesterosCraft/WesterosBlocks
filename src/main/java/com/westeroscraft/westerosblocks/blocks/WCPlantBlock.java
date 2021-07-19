@@ -59,4 +59,10 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
 	public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 		return state.getFluidState().isEmpty();
     }
+    private static String[] TAGS = { "flowers" };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
+	
 }

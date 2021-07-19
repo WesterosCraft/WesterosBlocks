@@ -53,4 +53,10 @@ public class WCStairBlock extends StairsBlock implements WesterosBlockDynmapSupp
         // Get stair model
         md.addStairModel(blkname);
     }
+    private static String[] TAGS = { "stairs" };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
+
 }
