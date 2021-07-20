@@ -24,7 +24,7 @@ public class LadderBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectLadder {
-        public String parent = WesterosBlocks.MOD_ID + ":block/ladder";    // Use 'ladder' model for single texture
+        public String parent = WesterosBlocks.MOD_ID + ":block/untinted/ladder";    // Use 'ladder' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {

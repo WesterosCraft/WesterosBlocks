@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/iron_rungs",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "westerosblocks:block/iron_rungs",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/iron_rungs"
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/iron_rungs",
+      "y": 270
+    }
+  }
+}
