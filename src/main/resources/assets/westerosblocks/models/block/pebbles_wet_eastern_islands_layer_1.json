@@ -1,0 +1,93 @@
+{
+  "parent": "minecraft:block/thin_block",
+  "textures": {
+    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet",
+    "particle": "westerosblocks:blocks/pebble_block_0/pebble_eastern_islands_wet"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        2.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            14.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt5",
+          "cullface": "east",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [
+            0.0,
+            14.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt3",
+          "cullface": "south",
+          "tintindex": 0
+        },
+        "north": {
+          "uv": [
+            0.0,
+            14.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt2",
+          "cullface": "north",
+          "tintindex": 0
+        },
+        "west": {
+          "uv": [
+            0.0,
+            14.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt4",
+          "cullface": "west",
+          "tintindex": 0
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt1",
+          "tintindex": 0
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "down",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}

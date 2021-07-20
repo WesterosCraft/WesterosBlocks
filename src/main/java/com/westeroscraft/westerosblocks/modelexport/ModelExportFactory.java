@@ -81,9 +81,9 @@ public class ModelExportFactory {
 //            case "cuboid-nsewud":
 //                me = new CuboidNSEWUDBlockModelExport(blk, def, dest);
 //                break;
-//            case "layer":
-//                me = new LayerBlockModelExport(blk, def, dest);
-//                break;
+            case "layer":
+                me = new LayerBlockModelExport(blk, def, dest);
+                break;
             case "rail":
                 me = new RailBlockModelExport(blk, def, dest);
                 break;

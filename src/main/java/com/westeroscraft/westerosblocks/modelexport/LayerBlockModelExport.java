@@ -10,7 +10,6 @@ import java.util.Map;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -31,7 +30,7 @@ public class LayerBlockModelExport extends ModelExport {
     
     // Template objects for Gson export of block models
     public static class ModelObjectCuboid {
-        public String parent = "block/thin_block";    // Use 'thin_block' model for single texture
+        public String parent = "minecraft:block/thin_block";    // Use 'thin_block' model for single texture
         public Map<String, String> textures = new HashMap<String, String>();
         public List<Element> elements = new ArrayList<Element>();
     }
@@ -64,7 +63,7 @@ public class LayerBlockModelExport extends ModelExport {
         this.def = def;
         this.blk = (WCLayerBlock) blk;
 
-        addNLSString("tile." + def.blockName + ".name", def.subBlocks.get(0).label);
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
@@ -73,7 +72,7 @@ public class LayerBlockModelExport extends ModelExport {
         
         for (int i = 0; i < this.blk.layerCount; i++) {
             Variant var = new Variant();
-            var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + (i+1);
+            var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + (i+1);
             so.variants.put(String.format("layers=%d", i+1), var);
         }
         this.writeBlockStateFile(def.blockName, so);
@@ -81,14 +80,13 @@ public class LayerBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        Subblock sb = def.subBlocks.get(0);
-        boolean is_tinted = sb.isTinted(def);
+        boolean is_tinted = def.isTinted();
         for (int i = 0; i < blk.layerCount; i++) {
             ModelObjectCuboid mod = new ModelObjectCuboid();
-            mod.textures.put("particle", getTextureID(sb.getTextureByIndex(0)));
-            int cnt = Math.max(6, sb.textures.size());
+            mod.textures.put("particle", getTextureID(def.getTextureByIndex(0)));
+            int cnt = Math.max(6, def.textures.size());
             for (int j = 0; j < cnt; j++) {
-                mod.textures.put("txt" + j, getTextureID(sb.getTextureByIndex(j)));
+                mod.textures.put("txt" + j, getTextureID(def.getTextureByIndex(j)));
             }
             float ymax = (float)((16.0 / blk.layerCount) * (i+1));
             // Handle normal cuboid
@@ -169,7 +167,7 @@ public class LayerBlockModelExport extends ModelExport {
         this.writeItemModelFile(def.blockName, mo);
         // Handle tint resources
         if (is_tinted) {
-            String tintres = def.getBlockColorMapResource(sb);
+            String tintres = def.getBlockColorMapResource();
             if (tintres != null) {
                 ModelExport.addTintingOverride(def.blockName, null, tintres);
             }
