@@ -22,7 +22,7 @@ public class LeavesBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectLeaves {
-        public String parent = "block/block";    // Use 'block'
+        public String parent = "minecraft:block/block";    // Use 'block'
         public Texture textures = new Texture();
         public Elements elements[] = { new Elements() };
     }

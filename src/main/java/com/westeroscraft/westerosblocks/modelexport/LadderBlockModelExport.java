@@ -48,6 +48,8 @@ public class LadderBlockModelExport extends ModelExport {
         Variant vare = new Variant();
         Variant varw = new Variant();
         String mod = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        if (def.isCustomModel())
+        	mod = WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName;
         varn.model = vars.model = vare.model = varw.model = mod;
         vare.y = 90;
         vars.y = 180;
@@ -68,7 +70,10 @@ public class LadderBlockModelExport extends ModelExport {
         	this.writeBlockModelFile(def.blockName, mod);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        if (!def.isCustomModel())
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        else
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName;        	
         this.writeItemModelFile(def.blockName, mo);
     }
 }

@@ -27,6 +27,7 @@ import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
@@ -689,7 +690,7 @@ public class WesterosBlockDef {
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
-//        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
+        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
         typeTable.put("rail", new WCRailBlock.Factory());
 //        typeTable.put("cake", new WCCakeBlock.Factory());
 //        typeTable.put("bed", new WCBedBlock.Factory());
