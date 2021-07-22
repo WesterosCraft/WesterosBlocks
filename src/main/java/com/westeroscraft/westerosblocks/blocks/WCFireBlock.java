@@ -14,78 +14,32 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFire;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.color.IBlockColor;
-import net.minecraft.item.ItemBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.FireBlock;
+import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.world.server.ServerWorld;
 
-public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, WesterosBlockDynmapSupport
+
+public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle, WesterosBlockDynmapSupport
 {
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block[] buildBlockClasses(WesterosBlockDef def) {
-            if (!def.validateMetaValues(new int[] { 0 }, new int[] { 0 })) {
-                return null;
-            }
-            return new Block[] { new WCFireBlock(def) };
+        public Block buildBlockClass(WesterosBlockDef def) {
+        	AbstractBlock.Properties props = def.makeProperties().noCollission().instabreak(); //.randomTicks();
+        	return def.registerRenderType(def.registerBlock(new WCFireBlock(props, def)), false, false);
         }
     }
     private WesterosBlockDef def;
 
-    protected WCFireBlock(WesterosBlockDef def) {
-        super();
-        
+    protected WCFireBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+        super(props);
         this.def = def;
-        def.doStandardContructorSettings(this);
-        this.setTickRandomly(false);
-    }
-
-    public boolean initializeBlockDefinition() {
-        def.doStandardInitializeActions(this);
-
-        return true;
-    }
-
-    public boolean registerBlockDefinition() {
-        def.doStandardRegisterActions(this, ItemBlock.class);
-        
-        return true;
-    }
-
-
-    /**
-     * Ticks the block if it's been scheduled
-     */
-    @Override
-    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-    {
-    }
-
-    @Override
-    protected boolean canDie(World worldIn, BlockPos pos) {
-        return false;
-    }
-
-    /**
-     * Called whenever the block is added into the world. Args: world, x, y, z
-     */
-    @Override
-    public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
-    {
-    }
-
-    @Deprecated // Use Block.getFlammability
-    public int getEncouragement(Block blockIn)
-    {
-        return 0;
     }
 
     @Override
@@ -94,10 +48,8 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
         def.defaultRegisterTextures(mtd);
         String blkname = def.getBlockName(0);
         // Register textures
-        Subblock sb = def.getByMeta(0);
-        if ((sb == null) || (sb.textures == null) || (sb.textures.size() < 2)) return;
-        String txt1 = sb.textures.get(0);
-        String txt2 = sb.textures.get(1);
+        String txt1 = def.textures.get(0);
+        String txt2 = def.textures.get(1);
         BlockTextureRecord btr = mtd.addBlockTextureRecord(blkname);
         btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
         btr.setPatchTexture(txt1, TextureModifier.NONE, 0);
@@ -108,7 +60,7 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
         btr.setPatchTexture(txt2, TextureModifier.NONE, 5);
         btr.setPatchTexture(txt2, TextureModifier.NONE, 6);
         btr.setPatchTexture(txt2, TextureModifier.NONE, 7);
-        def.setBlockColorMap(btr, sb);
+        def.setBlockColorMap(btr);
         /* Make base model */
         PatchBlockModel mod = md.addPatchModel(blkname);
         // patchblock:id=51,data=*,patch0=VertX0,patch1=VertX0@90,patch2=VertX0@180,patch3=VertX0@270,patch4=SlopeXUpZTop675,patch5=SlopeXUpZTop675@90,patch6=SlopeXUpZTop675@180,patch4=SlopeXUpZTop675@270
@@ -125,15 +77,27 @@ public class WCFireBlock extends BlockFire implements WesterosBlockLifecycle, We
     }
 
     @Override
-    public WesterosBlockDef getWBDefinition() {
-        return def;
+    public boolean canSurvive(BlockState p_196260_1_, IWorldReader p_196260_2_, BlockPos p_196260_3_) {
+    	return true;
+    }
+    
+    @Override
+    public void tick(BlockState p_225534_1_, ServerWorld p_225534_2_, BlockPos p_225534_3_, Random p_225534_4_) {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public IBlockColor getBlockColor() {
-        return def.colorMultiplier();
+    public boolean canCatchFire(IBlockReader world, BlockPos pos, Direction face) {
+    	return false;
     }
+
     @Override
-    public IProperty<?>[] getNonRenderingProperties() { return null; }
+    public WesterosBlockDef getWBDefinition() {
+        return def;
+    }
+    private static String[] TAGS = { "fire" };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
+
 }

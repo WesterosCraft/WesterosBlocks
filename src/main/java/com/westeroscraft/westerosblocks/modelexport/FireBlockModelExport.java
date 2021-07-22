@@ -25,7 +25,7 @@ public class FireBlockModelExport extends ModelExport {
     	SideStates() {
     		when.OR = new ArrayList<WhenRec>();
     		WhenRec wr = new WhenRec();
-    		wr.north = wr.south = wr.east = wr.west = Boolean.FALSE;
+    		wr.north = wr.south = wr.east = wr.west = wr.up = Boolean.FALSE;
     		when.OR.add(wr);
     	}
     }
@@ -50,27 +50,26 @@ public class FireBlockModelExport extends ModelExport {
     
     // Template objects for Gson export of block models
     public static class ModelObjectFloor {
-        public String parent = "block/fire_floor";    // Use 'fire_floor' model for single texture
+        public String parent = "minecraft:block/template_fire_floor";    // Use 'fire_floor' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectSide {
-        public String parent = "block/fire_side";    // Use 'fire_side' model for single texture
+        public String parent = "minecraft:block/template_fire_side";    // Use 'fire_side' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectSideAlt {
-        public String parent = "block/fire_side_alt";    // Use 'fire_sida_alt' model for single texture
+        public String parent = "minecraft:block/template_fire_side_alt";    // Use 'fire_sida_alt' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectUp {
-        public String parent = "block/fire_up";    // Use 'fire_up' model for single texture
+        public String parent = "minecraft:block/template_fire_up";    // Use 'fire_up' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectUpAlt {
-        public String parent = "block/fire_up_alt";    // Use 'fire_up_alt' model for single texture
+        public String parent = "minecraft:block/template_fire_up_alt";    // Use 'fire_up_alt' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {
-        public String particle;
         public String fire;
     }
     public static class TextureLayer0 {
@@ -97,6 +96,7 @@ public class FireBlockModelExport extends ModelExport {
         whennone.south = false;
         whennone.east = false;
         whennone.west = false;
+        whennone.up = false;
         // Add firefloor
         States ps = new States();
         ps.when = whennone;
@@ -160,43 +160,43 @@ public class FireBlockModelExport extends ModelExport {
         String txt1 = getTextureID(def.getTextureByIndex(1)); 
         // floor0
         ModelObjectFloor modf = new ModelObjectFloor();
-        modf.textures.particle = modf.textures.fire = txt0;
+        modf.textures.fire = txt0;
         this.writeBlockModelFile(def.blockName + "_floor0", modf);
         // floor1
         modf = new ModelObjectFloor();
-        modf.textures.particle = modf.textures.fire = txt1;
+        modf.textures.fire = txt1;
         this.writeBlockModelFile(def.blockName + "_floor1", modf);
         // side0
         ModelObjectSide mods = new ModelObjectSide();
-        mods.textures.particle = mods.textures.fire = txt0;
+        mods.textures.fire = txt0;
         this.writeBlockModelFile(def.blockName + "_side0", mods);
         // side1
         mods = new ModelObjectSide();
-        mods.textures.particle = mods.textures.fire = txt1;
+        mods.textures.fire = txt1;
         this.writeBlockModelFile(def.blockName + "_side1", mods);
         // side_alt0
         ModelObjectSideAlt modsa = new ModelObjectSideAlt();
-        modsa.textures.particle = modsa.textures.fire = txt0;
+        modsa.textures.fire = txt0;
         this.writeBlockModelFile(def.blockName + "_side_alt0", modsa);
         // side_alt1
         modsa = new ModelObjectSideAlt();
-        modsa.textures.particle = modsa.textures.fire = txt1;
+        modsa.textures.fire = txt1;
         this.writeBlockModelFile(def.blockName + "_side_alt1", modsa);
         // up0
         ModelObjectUp modu = new ModelObjectUp();
-        modu.textures.particle = modu.textures.fire = txt0;
+        modu.textures.fire = txt0;
         this.writeBlockModelFile(def.blockName + "_up0", modu);
         // up1
         modu = new ModelObjectUp();
-        modu.textures.particle = modu.textures.fire = txt1;
+        modu.textures.fire = txt1;
         this.writeBlockModelFile(def.blockName + "_up1", modu);
         // up_alt0
         ModelObjectUpAlt modua = new ModelObjectUpAlt();
-        modua.textures.particle = modua.textures.fire = txt0;
+        modua.textures.fire = txt0;
         this.writeBlockModelFile(def.blockName + "_up_alt0", modsa);
         // up_alt1
         modua = new ModelObjectUpAlt();
-        modua.textures.particle = modua.textures.fire = txt1;
+        modua.textures.fire = txt1;
         this.writeBlockModelFile(def.blockName + "_up_alt1", modsa);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
