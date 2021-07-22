@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/sand_block_0/sand_skeleton",
+    "up": "westerosblocks:blocks/sand_block_0/sand_skeleton",
+    "north": "westerosblocks:blocks/sand_block_0/sand_skeleton",
+    "south": "westerosblocks:blocks/sand_block_0/sand_skeleton",
+    "west": "westerosblocks:blocks/sand_block_0/sand_skeleton",
+    "east": "westerosblocks:blocks/sand_block_0/sand_skeleton",
+    "particle": "westerosblocks:blocks/sand_block_0/sand_skeleton"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "westerosblocks:mossy_oak_log",
+    "westerosblocks:weirwood_face_3",
+    "westerosblocks:weirwood_face_4",
+    "westerosblocks:weirwood_face_5",
+    "westerosblocks:weirwood_face_6",
+    "westerosblocks:weirwood_face_0",
+    "westerosblocks:weirwood_face_1",
+    "westerosblocks:weirwood_face_2",
+    "westerosblocks:weirwood_face_7",
+    "westerosblocks:weirwood_face_8",
+    "westerosblocks:closed_barrel",
+    "westerosblocks:oak_log_rope",
+    "westerosblocks:mossy_birch_log",
+    "westerosblocks:oak_log_chain",
+    "westerosblocks:marble_pillar_vertical_ctm",
+    "westerosblocks:palm_tree_log",
+    "westerosblocks:jungle_log_rope",
+    "westerosblocks:jungle_log_chain",
+    "westerosblocks:spruce_log_rope",
+    "westerosblocks:spruce_log_chain",
+    "westerosblocks:mossy_spruce_log",
+    "westerosblocks:marble_pillar",
+    "westerosblocks:archery_target",
+    "westerosblocks:mossy_jungle_log",
+    "westerosblocks:firewood"
+  ]
+}
