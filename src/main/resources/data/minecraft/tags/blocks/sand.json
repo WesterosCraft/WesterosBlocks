@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "westerosblocks:sand_skeleton",
+    "westerosblocks:red_sand",
+    "westerosblocks:wet_sand_stones",
+    "westerosblocks:pinkorange_sand",
+    "westerosblocks:terracotta_sand",
+    "westerosblocks:sand_stones",
+    "westerosblocks:wet_sand"
+  ]
+}
