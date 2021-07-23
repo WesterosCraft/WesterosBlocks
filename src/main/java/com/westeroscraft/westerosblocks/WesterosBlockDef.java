@@ -31,6 +31,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
+import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
@@ -700,7 +701,7 @@ public class WesterosBlockDef {
 //        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
 //        typeTable.put("furnace", new WCFurnaceBlock.Factory());
 //        typeTable.put("sound", new WCSoundBlock.Factory());
-//        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
+        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
 //        typeTable.put("beacon", new WCBeaconBlock.Factory());
 //        typeTable.put("vines", new WCVinesBlock.Factory());
         

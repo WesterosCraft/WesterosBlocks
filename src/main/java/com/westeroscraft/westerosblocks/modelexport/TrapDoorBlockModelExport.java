@@ -28,15 +28,15 @@ public class TrapDoorBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectTrapdoorBottom {
-        public String parent = "block/trapdoor_bottom";    // Use 'trapdoor_bottom' model for single texture
+        public String parent = "minecraft:block/template_trapdoor_bottom";    // Use 'trapdoor_bottom' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectTrapdoorTop {
-        public String parent = "block/trapdoor_top";    // Use 'trapdoor_top' model for single texture
+        public String parent = "minecraft:block/template_trapdoor_top";    // Use 'trapdoor_top' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectTrapdoorOpen {
-        public String parent = "block/trapdoor_open";    // Use 'trapdoor_open' model for single texture
+        public String parent = "minecraft:block/template_trapdoor_open";    // Use 'trapdoor_open' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {
