@@ -3137,6 +3137,7 @@
             "blockType": "torch",
             "stepSound": "powder",
             "creativeTab": "WesterosDeco",
+            "material": "decoration",
             "lightValue": 0.625,
             "label": "Candle",
             "textures": [
@@ -10566,6 +10567,7 @@
             "blockType": "rail",
             "creativeTab": "WesterosDeco",
             "label": "Horizontal Rope",
+            "material": "decoration",
             "textures": [
                 "rail_block_0/rope",
                 "rail_block_0/rope_turned"
@@ -10576,6 +10578,7 @@
             "blockName": "horizontal_net",
             "blockType": "rail",
             "creativeTab": "WesterosDeco",
+            "material": "decoration",
             "label": "Horizontal Net",
             "textures": [
                 "rail_block_0/net_large",
@@ -11869,6 +11872,7 @@
         {
             "blockName": "packed_snow",
             "blockType": "rail",
+            "material": "snow",
             "creativeTab": "WesterosDeco",
             "label": "Packed Snow",
             "textures": [
@@ -12197,6 +12201,7 @@
             "blockName": "safe_fire",
             "blockType": "fire",
             "creativeTab": "WesterosDeco",
+            "material": "fire",
             "lightValue": 1,
             "label": "Safe Fire",
             "textures": [
@@ -12266,6 +12271,7 @@
             "blockType": "rail",
             "creativeTab": "WesterosDeco",
             "label": "Horizontal Chain",
+            "material": "iron",
             "textures": [
                 "rail_block_0/chain",
                 "rail_block_0/chain_turned"
@@ -31319,6 +31325,7 @@
             "blockName": "oak_cover",
             "blockType": "rail",
             "creativeTab": "WesterosDeco",
+            "material": "wood",
             "label": "Oak Cover",
             "textures": [
                 "rail_block_0/cover_oak"
@@ -31329,6 +31336,7 @@
             "blockName": "spruce_cover",
             "blockType": "rail",
             "creativeTab": "WesterosDeco",
+            "material": "wood",
             "label": "Spruce Cover",
             "textures": [
                 "rail_block_0/cover_spruce"
@@ -31339,6 +31347,7 @@
             "blockName": "birch_cover",
             "blockType": "rail",
             "creativeTab": "WesterosDeco",
+            "material": "wood",
             "label": "Birch Cover",
             "textures": [
                 "rail_block_0/cover_birch"
@@ -31348,6 +31357,7 @@
         {
             "blockName": "jungle_cover",
             "blockType": "rail",
+            "material": "wood",
             "creativeTab": "WesterosDeco",
             "label": "Jungle Cover",
             "textures": [
@@ -31359,6 +31369,7 @@
             "blockName": "northern_wood_cover",
             "blockType": "rail",
             "creativeTab": "WesterosDeco",
+            "material": "wood",
             "label": "Northern Wood Cover",
             "textures": [
                 "rail_block_0/cover_northern"

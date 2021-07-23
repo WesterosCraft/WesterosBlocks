@@ -31,6 +31,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
+import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
@@ -88,6 +89,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.WallOrFloorItem;
 import net.minecraft.particles.BasicParticleType;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.resources.IResourceManager;
@@ -496,6 +498,17 @@ public class WesterosBlockDef {
         ForgeRegistries.ITEMS.register(itemBlock);        
         return block;
     }
+
+    public void registerWallOrFloorBlock(Block floorblock, Block wallblock)
+    {
+    	BlockItem itemBlock = new WallOrFloorItem(floorblock, wallblock, (new Item.Properties()).tab(ItemGroup.TAB_DECORATIONS));
+        floorblock.setRegistryName(this.blockName);
+        wallblock.setRegistryName("wall_" + this.blockName);
+        itemBlock.setRegistryName(this.blockName);
+        ForgeRegistries.BLOCKS.register(floorblock);
+        ForgeRegistries.BLOCKS.register(wallblock);
+        ForgeRegistries.ITEMS.register(itemBlock);        
+    }
     
     public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
         if (FMLEnvironment.dist == Dist.CLIENT)
@@ -643,6 +656,7 @@ public class WesterosBlockDef {
         materialTable.put("cake", Material.CAKE);
         materialTable.put("web", Material.WEB);
         materialTable.put("piston", Material.PISTON);
+        materialTable.put("decoration", Material.DECORATION);
 
         stepSoundTable.put("powder", SoundType.SAND);
         stepSoundTable.put("wood", SoundType.WOOD);
@@ -680,7 +694,7 @@ public class WesterosBlockDef {
         typeTable.put("wall", new WCWallBlock.Factory());
         typeTable.put("fence", new WCFenceBlock.Factory());
         typeTable.put("web", new WCWebBlock.Factory());
-//        typeTable.put("torch", new WCTorchBlock.Factory());
+        typeTable.put("torch", new WCTorchBlock.Factory());
         typeTable.put("ladder", new WCLadderBlock.Factory());
 //        typeTable.put("cuboid", new WCCuboidBlock.Factory());
 //        typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());

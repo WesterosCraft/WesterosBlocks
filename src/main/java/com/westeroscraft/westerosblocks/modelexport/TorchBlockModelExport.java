@@ -23,19 +23,19 @@ public class TorchBlockModelExport extends ModelExport {
         public Variant(String blkname) {
             model = WesterosBlocks.MOD_ID + ":block/" + blkname;
         }
-        public Variant(String blkname, String ext, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
+        public Variant(String blkname, int yrot) {
+            model = WesterosBlocks.MOD_ID + ":block/" + blkname;
             if (yrot != 0)
                 y = yrot;
         }
     }
     // Template objects for Gson export of block models
     public static class ModelObjectTorch {
-        public String parent = "block/torch";    // Use 'torch' model for single texture
+        public String parent = "minecraft:block/template_torch";    // Use 'torch' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectTorchWall {
-        public String parent = "block/torch_wall";    // Use 'torch_wall' model for single texture
+        public String parent = "minecraft:block/template_torch_wall";    // Use 'torch_wall' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {
@@ -48,7 +48,6 @@ public class TorchBlockModelExport extends ModelExport {
     public static class Texture0 {
         public String layer0;
     }
-
     
     public TorchBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
@@ -61,13 +60,19 @@ public class TorchBlockModelExport extends ModelExport {
         StateObject so = new StateObject();
         String bn = def.blockName;
         
-        so.variants.put("facing=up", new Variant(bn));
-        so.variants.put("facing=east", new Variant(bn, "wall", 0));
-        so.variants.put("facing=south", new Variant(bn, "wall", 90));
-        so.variants.put("facing=west", new Variant(bn, "wall", 180));
-        so.variants.put("facing=north", new Variant(bn, "wall", 270));
+        so.variants.put("", new Variant(bn));
         
-        this.writeBlockStateFile(def.blockName, so);
+        this.writeBlockStateFile(bn, so);
+        // Make wall block too
+        so = new StateObject();
+        bn = "wall_" + def.blockName;
+        
+        so.variants.put("facing=east", new Variant(bn, 0));
+        so.variants.put("facing=south", new Variant(bn, 90));
+        so.variants.put("facing=west", new Variant(bn, 180));
+        so.variants.put("facing=north", new Variant(bn, 270));        
+        
+        this.writeBlockStateFile(bn, so);
     }
 
     @Override
@@ -76,15 +81,16 @@ public class TorchBlockModelExport extends ModelExport {
         ModelObjectTorch mod = new ModelObjectTorch();
         mod.textures.torch = txt; 
         this.writeBlockModelFile(def.blockName, mod);
-        
+        // Build wall block model
         ModelObjectTorchWall modw = new ModelObjectTorchWall();
         modw.textures.torch = txt; 
-        this.writeBlockModelFile(def.blockName + "_wall", modw);
-        
+        this.writeBlockModelFile("wall_" + def.blockName, modw);        
+                
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         mo.textures.layer0 = txt;
         this.writeItemModelFile(def.blockName, mo);
+
     }
 
 }

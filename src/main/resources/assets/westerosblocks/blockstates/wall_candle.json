@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/wall_candle"
+    },
+    "facing=south": {
+      "model": "westerosblocks:block/wall_candle",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/wall_candle",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/wall_candle",
+      "y": 180
+    }
+  }
+}
