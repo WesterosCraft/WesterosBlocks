@@ -37,19 +37,19 @@ public class DoorBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectBottom {
-        public String parent = "block/door_bottom";    // Use 'door_bottom' model
+        public String parent = "minecraft:block/door_bottom";    // Use 'door_bottom' model
         public Texture textures = new Texture();
     }
     public static class ModelObjectBottomRH {
-        public String parent = "block/door_bottom_rh";    // Use 'door_bottom_rh' model
+        public String parent = "minecraft:block/door_bottom_rh";    // Use 'door_bottom_rh' model
         public Texture textures = new Texture();
     }
     public static class ModelObjectTop {
-        public String parent = "block/door_top";    // Use 'door_top' model
+        public String parent = "minecraft:block/door_top";    // Use 'door_top' model
         public Texture textures = new Texture();
     }
     public static class ModelObjectTopRH {
-        public String parent = "block/door_top_rh";    // Use 'door_top_rh' model
+        public String parent = "minecraft:block/door_top_rh";    // Use 'door_top_rh' model
         public Texture textures = new Texture();
     }
     public static class Texture {
