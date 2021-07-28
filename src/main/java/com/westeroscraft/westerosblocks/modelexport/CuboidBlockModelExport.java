@@ -11,7 +11,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -71,19 +70,18 @@ public class CuboidBlockModelExport extends ModelExport {
         super(blk, def, dest);
         this.def = def;
         this.blk = (WCCuboidBlock) blk;
-        for (Subblock sb : def.subBlocks) {
-            addNLSString("tile." + def.blockName + "_" + sb.meta + ".name", sb.label);
-        }
+        addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        for (Subblock sb : def.subBlocks) {
-            Variant var = new Variant();
-            var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
-            so.variants.put(String.format("variant=%d", sb.meta), var);
-        }
+        Variant var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        if (def.isCustomModel())
+            var.model = WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName;
+
+        so.variants.put("", var);
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -108,14 +106,14 @@ public class CuboidBlockModelExport extends ModelExport {
     	}
     }
      
-    protected void doCuboidModel(Subblock sb, int meta, int modelmeta, String name, boolean isTinted) throws IOException {
+    protected void doCuboidModel(String name, boolean isTinted) throws IOException {
         ModelObjectCuboid mod = new ModelObjectCuboid();
-        mod.textures.put("particle", getTextureID(sb.getTextureByIndex(0)));
-        int cnt = Math.max(6, sb.textures.size());
+        mod.textures.put("particle", getTextureID(def.getTextureByIndex(0)));
+        int cnt = Math.max(6, def.textures.size());
         for (int i = 0; i < cnt; i++) {
-            mod.textures.put("txt" + i, getTextureID(sb.getTextureByIndex(i)));
+            mod.textures.put("txt" + i, getTextureID(def.getTextureByIndex(i)));
         }
-        List<Cuboid> cubs = blk.getCuboidList(modelmeta);
+        List<Cuboid> cubs = blk.getWBDefinition().getCuboidList();
         for (Cuboid c : cubs) { 
             Face f;
             Element elem;
@@ -255,29 +253,25 @@ public class CuboidBlockModelExport extends ModelExport {
                 mod.elements.add(elem);
             }
         }
-        this.writeBlockModelFile(name + "_" + meta, mod);
+        this.writeBlockModelFile(name, mod);
     }
     private static final int[] STDTXTIDX = { 0, 1, 2, 3, 4, 5 };
     @Override
     public void doModelExports() throws IOException {
-        for (Subblock sb : def.subBlocks) {
-            boolean isTinted = sb.isTinted(def);
-            // Export if not set to custom model
-            if (!sb.isCustomModel())
-                doCuboidModel(sb, sb.meta, sb.meta, def.blockName, isTinted);
-            // Build simple item model that refers to block model
-            ModelObject mo = new ModelObject();
-            mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + sb.meta;
-            this.writeItemModelFile(def.blockName + "_" + sb.meta, mo);
-
-            // Add tint overrides
-            if (isTinted) {
-                String tintres = def.getBlockColorMapResource(sb);
-                if (tintres != null) {
-                    ModelExport.addTintingOverride(def.blockName, String.format("variant=%s", sb.meta), tintres);
-                }
+        boolean isTinted = def.isTinted();
+        // Export if not set to custom model
+        if (!def.isCustomModel())
+            doCuboidModel(def.blockName, isTinted);
+        // Build simple item model that refers to block model
+        ModelObject mo = new ModelObject();
+        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        this.writeItemModelFile(def.blockName, mo);
+        // Add tint overrides
+        if (isTinted) {
+            String tintres = def.getBlockColorMapResource();
+            if (tintres != null) {
+                ModelExport.addTintingOverride(def.blockName, "", tintres);
             }
         }
     }
-
 }

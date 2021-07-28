@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.BitSet;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -16,6 +17,7 @@ import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
@@ -284,6 +286,20 @@ public class WesterosBlockDef {
         }
     }
     
+    public BoundingBox getBoundingBox() {
+        return boundingBox;
+    }
+
+    public List<Cuboid> getCuboidList() {
+       if (this.cuboids != null) return this.cuboids;
+       return Collections.emptyList();
+    }
+
+    public List<BoundingBox> getCollisionBoxList() {
+    	if (this.collisionBoxes != null) return this.collisionBoxes;
+        return Collections.emptyList();
+    }
+    
     public static class Particle {
         public float x = 0.5F, y = 0.5F, z = 0.5F;  // Default position of effect
         public float vx = 0.0F, vy = 0.0F, vz = 0.0F;   // Default velocity of effect
@@ -480,7 +496,40 @@ public class WesterosBlockDef {
     private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
     private static final Map<String, BasicParticleType> particles = new HashMap<String, BasicParticleType>();
     
+    private transient boolean didInit = false;
+    
+    public void doInit() {
+    	if (didInit) return;
+    	// If we have bounding box, but no cuboids, make trivial cuboid
+        if ((this.boundingBox != null) && (this.cuboids == null)) {
+            Cuboid c = new Cuboid();
+            c.xMin = this.boundingBox.xMin;
+            c.xMax = this.boundingBox.xMax;
+            c.yMin = this.boundingBox.yMin;
+            c.yMax = this.boundingBox.yMax;
+            c.zMin = this.boundingBox.zMin;
+            c.zMax = this.boundingBox.zMax;
+            this.cuboids = Collections.singletonList(c);
+        }
+        // If cuboids but no bounding box, compute bounding box
+        if ((this.cuboids != null) && (this.boundingBox == null)) {
+        	this.boundingBox = new BoundingBox();
+        	this.boundingBox.xMin = this.boundingBox.yMin = this.boundingBox.zMin = 1.0F;
+        	this.boundingBox.xMax = this.boundingBox.yMax = this.boundingBox.zMax = 0.0F;
+            for (BoundingBox bb : this.cuboids) {
+                if (bb.xMin < this.boundingBox.xMin) this.boundingBox.xMin = bb.xMin;
+                if (bb.yMin < this.boundingBox.yMin) this.boundingBox.yMin = bb.yMin;
+                if (bb.zMin < this.boundingBox.zMin) this.boundingBox.zMin = bb.zMin;
+                if (bb.xMax > this.boundingBox.xMax) this.boundingBox.xMax = bb.xMax;
+                if (bb.yMax > this.boundingBox.yMax) this.boundingBox.yMax = bb.yMax;
+                if (bb.zMax > this.boundingBox.zMax) this.boundingBox.zMax = bb.zMax;
+            }
+        }    	
+    	didInit = true;
+    }
     public Block createBlock() {
+    	doInit();	// Prime the block model
+    	
         WesterosBlockFactory bf = typeTable.get(blockType);
         if (bf == null) {
             WesterosBlocks.log.error(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));
@@ -696,7 +745,7 @@ public class WesterosBlockDef {
         typeTable.put("web", new WCWebBlock.Factory());
         typeTable.put("torch", new WCTorchBlock.Factory());
         typeTable.put("ladder", new WCLadderBlock.Factory());
-//        typeTable.put("cuboid", new WCCuboidBlock.Factory());
+        typeTable.put("cuboid", new WCCuboidBlock.Factory());
 //        typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
 //        typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
 //        typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
