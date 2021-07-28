@@ -107,7 +107,7 @@ public class SlabBlockModelExport extends ModelExport {
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         // Do state for half block
-        String bn = def.getBlockName(0);
+        String bn = def.getBlockName();
         Variant var = new Variant();
         var.model = WesterosBlocks.MOD_ID + ":block/" + bn + "_top";
         so.variants.put("type=top", var);
@@ -124,6 +124,7 @@ public class SlabBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
         boolean isOccluded = (def.ambientOcclusion != null) ? def.ambientOcclusion : true;
+        String bn = def.blockName;
     	// Double block model
         ModelObjectCube mod = new ModelObjectCube(isOccluded, isTinted);
         mod.textures.down = getTextureID(def.getTextureByIndex(0));
@@ -133,28 +134,28 @@ public class SlabBlockModelExport extends ModelExport {
         mod.textures.west = getTextureID(def.getTextureByIndex(4));
         mod.textures.east = getTextureID(def.getTextureByIndex(5));
         mod.textures.particle = getTextureID(def.getTextureByIndex(3));
-        this.writeBlockModelFile(def.getBlockName(0) + "_double", mod);
+        this.writeBlockModelFile(bn + "_double", mod);
         // Lower half block model
         ModelObjectHalfLower modl = new ModelObjectHalfLower(isOccluded, isTinted);
         modl.textures.bottom = getTextureID(def.getTextureByIndex(0));
         modl.textures.top = getTextureID(def.getTextureByIndex(1));
         modl.textures.side = modl.textures.particle = getTextureID(def.getTextureByIndex(2));
-        this.writeBlockModelFile(def.getBlockName(0) + "_bottom", modl);
+        this.writeBlockModelFile(bn + "_bottom", modl);
         // Upper half block model
         ModelObjectHalfUpper modu = new ModelObjectHalfUpper(isOccluded, isTinted);
         modu.textures.bottom = getTextureID(def.getTextureByIndex(0));
         modu.textures.top = getTextureID(def.getTextureByIndex(1));
         modu.textures.side = modu.textures.particle = getTextureID(def.getTextureByIndex(2));
-        this.writeBlockModelFile(def.getBlockName(0) + "_top", modu);
+        this.writeBlockModelFile(bn + "_top", modu);
         // Build simple item model that refers to lower block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.getBlockName(0) + "_bottom";
-        this.writeItemModelFile(def.getBlockName(0), mo);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/" + bn + "_bottom";
+        this.writeItemModelFile(bn, mo);
         // Handle tint resources
         if (isTinted) {
             String tintres = def.getBlockColorMapResource();
             if (tintres != null) {
-                ModelExport.addTintingOverride(def.blockName, "", tintres);
+                ModelExport.addTintingOverride(bn, "", tintres);
             }
         }
     }

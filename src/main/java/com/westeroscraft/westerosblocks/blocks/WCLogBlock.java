@@ -35,7 +35,7 @@ public class WCLogBlock extends RotatedPillarBlock implements WesterosBlockLifec
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         // Modifiers for each orientation
         TextureModifier tmod[][] = { 
             { TextureModifier.ROT90, TextureModifier.ROT270, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE, TextureModifier.NONE },

@@ -37,7 +37,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	AbstractBlock.Properties props = def.makeProperties().noOcclusion();
+        	AbstractBlock.Properties props = def.makeProperties();
         	return def.registerRenderType(def.registerBlock(new WCCuboidBlock(props, def)), false, false);
         }
     }
@@ -137,7 +137,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         WesterosBlockDef def = this.getWBDefinition();
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 6, TransparencyMode.TRANSPARENT, 1);
         List<Cuboid> cl = def.getCuboidList();   

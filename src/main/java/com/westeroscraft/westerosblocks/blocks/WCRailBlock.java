@@ -42,7 +42,7 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         def.defaultRegisterTextures(mtd);
         WesterosBlockDef def = this.getWBDefinition();
         // Register textures 

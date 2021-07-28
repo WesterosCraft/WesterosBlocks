@@ -47,7 +47,7 @@ public class WCLeavesBlock extends LeavesBlock implements WesterosBlockLifecycle
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         String topbot = def.getTextureByIndex(2);
         String sides = def.getTextureByIndex(3);
         BlockTextureRecord btr = mtd.addBlockTextureRecord(blkname);

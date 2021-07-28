@@ -146,11 +146,8 @@ public class WesterosBlockDef {
     public List<Cuboid> cuboids = null;     // List of cuboids composing block (for 'cuboid', and others)
     public List<BoundingBox> collisionBoxes = null;     // For 'solid', used for raytrace (arrow shots)
     public List<String> soundList = null;   // List of custom sound names or sound IDs (for 'sound' blocks)
-    public boolean noInventoryItem = false; // If true, don't register inventory item for subblock
     public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
     public Boolean isCustomModel = null;    // If set and true, don't generate new custom model (hand crafted)
-    
-    private int blockIDCount = 1;           // NUmber of block IDs for definition (set by block type handler)
     
     public static class HarvestLevel {
         public String tool;
@@ -501,6 +498,7 @@ public class WesterosBlockDef {
     
     public void doInit() {
     	if (didInit) return;
+    	if (this.ambientOcclusion == null) this.ambientOcclusion = true;	// Default to true
     	// If we have bounding box, but no cuboids, make trivial cuboid
         if ((this.boundingBox != null) && (this.cuboids == null)) {
             Cuboid c = new Cuboid();
@@ -600,6 +598,9 @@ public class WesterosBlockDef {
     	if (lightValue > 0.0F) {
     		props = props.lightLevel((state) -> (int)(16.0 * lightValue));
     	}
+    	if (!ambientOcclusion) {	// If no ambient occlusion
+    		props = props.noOcclusion();
+    	}
     	return props;
     }
 
@@ -647,11 +648,8 @@ public class WesterosBlockDef {
     }
         
     
-    public String getBlockName(int blknum) {
-        if (blknum == 0)
-            return this.blockName;
-        else
-            return this.blockName + "_" + (blknum+1);
+    public String getBlockName() {
+        return this.blockName;
     }
 
     public static void addCreativeTab(String name, ItemGroup tab) {
@@ -857,54 +855,52 @@ public class WesterosBlockDef {
         if (this.nonOpaque) {
             tmod = TextureModifier.CLEARINSIDE;
         }
-        for (int idx = 0; idx < this.blockIDCount; idx++) {
-        	String blkname = this.getBlockName(idx);
-            if (textures != null) {
-                BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
-                if (tm != null) {
-                    mtr.setTransparencyMode(tm);
-                }
-                // Set for all associated metas
-                for (int meta = 0, cnt = 0; meta < meta_per_sub; meta++) {
-                    mtr.setMetaValue(meta);
-                }
-                int cnt = textures.size();
-                if (cnt < minPatchCount) {
-                    cnt = minPatchCount;
-                }
-                for (int patch = 0; patch < cnt; patch++) {
-                	int fidx = patch;
-                	if (fidx >= textures.size()) {
-                        fidx = textures.size() - 1;
-                    }
-                    String txtid = textures.get(fidx);
-                    mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
-                }
-                setBlockColorMap(mtr);
+    	String blkname = this.getBlockName();
+        if (textures != null) {
+            BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
+            if (tm != null) {
+                mtr.setTransparencyMode(tm);
             }
+            // Set for all associated metas
+            for (int meta = 0, cnt = 0; meta < meta_per_sub; meta++) {
+                mtr.setMetaValue(meta);
+            }
+            int cnt = textures.size();
+            if (cnt < minPatchCount) {
+                cnt = minPatchCount;
+            }
+            for (int patch = 0; patch < cnt; patch++) {
+            	int fidx = patch;
+            	if (fidx >= textures.size()) {
+                    fidx = textures.size() - 1;
+                }
+                String txtid = textures.get(fidx);
+                mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
+            }
+            setBlockColorMap(mtr);
         }
     }
     /**
      * Default texture block (6 face) registration for Dynmap
      */
     public void defaultRegisterTextureBlock(ModTextureDefinition mtd) {
-        defaultRegisterTextureBlock(mtd, 0, null, 0, 16);
+        defaultRegisterTextureBlock(mtd, null, 0, 16);
     }
     /**
      * Default texture block (6 face) registration for Dynmap
      */
-    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx, TransparencyMode tm) {
-        defaultRegisterTextureBlock(mtd, idx, tm, 0, 16);    	
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, TransparencyMode tm) {
+        defaultRegisterTextureBlock(mtd, tm, 0, 16);    	
     }
     /**
      * Default texture block (6 face) registration for Dynmap
      */
-    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, int idx, TransparencyMode tm, int startidx, int statecnt) {
+    public void defaultRegisterTextureBlock(ModTextureDefinition mtd, TransparencyMode tm, int startidx, int statecnt) {
         TextureModifier tmod = TextureModifier.NONE;
         if (this.nonOpaque) {
             tmod = TextureModifier.CLEARINSIDE;
         }
-        String blkname = this.getBlockName(idx);
+        String blkname = this.getBlockName();
         if (textures != null) {
             BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
             if (tm != null) {
@@ -983,9 +979,6 @@ public class WesterosBlockDef {
         return res;
     }    
 
-    public void setBlockIDCount(int cnt) {
-        blockIDCount = cnt;
-    }
     private static class TileEntityRec {
         Class<? extends TileEntity> te_class;
         List<String> legacy_ids = new ArrayList<String>();

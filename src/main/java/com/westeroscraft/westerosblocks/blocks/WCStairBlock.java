@@ -45,7 +45,7 @@ public class WCStairBlock extends StairsBlock implements WesterosBlockDynmapSupp
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         String modblkname = def.modelBlockName;
         // Make copy of model block textu def
         CopyBlockTextureRecord btr = mtd.addCopyBlockTextureRecord(blkname, modblkname, 0);

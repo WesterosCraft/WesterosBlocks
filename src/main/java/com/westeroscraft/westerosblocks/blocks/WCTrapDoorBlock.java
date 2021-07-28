@@ -65,7 +65,7 @@ public class WCTrapDoorBlock extends TrapDoorBlock implements WesterosBlockLifec
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd, 0, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
+        def.defaultRegisterTextureBlock(mtd, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
     }
     private static String[] TAGS = { "trapdoors" };
     @Override

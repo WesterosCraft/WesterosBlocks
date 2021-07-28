@@ -131,7 +131,7 @@ public class WesterosBlocks
         if (Config.blockDevMode.get()) {
         	for (int i = 0; i < customBlockDefs.length; i++) {
         		if (customBlockDefs[i] == null) continue;
-        		Block blk = customBlocksByName.get(customBlockDefs[i].getBlockName(0));
+        		Block blk = customBlocksByName.get(customBlockDefs[i].blockName);
         		if (blk != null) {
                 	ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
                 	if (exp != null) {
@@ -235,7 +235,7 @@ public class WesterosBlocks
                 Block blk = customBlockDefs[i].createBlock();
                 if (blk != null) {
                     blklist.add(blk);
-                    customBlocksByName.put(customBlockDefs[i].getBlockName(0), blk);
+                    customBlocksByName.put(customBlockDefs[i].blockName, blk);
                     // Register sound events
                     //TODO customBlockDefs[i].registerSoundEvents();
                 }

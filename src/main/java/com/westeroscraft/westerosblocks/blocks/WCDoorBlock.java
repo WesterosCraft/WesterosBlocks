@@ -66,7 +66,7 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle, We
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         WesterosBlockDef def = this.getWBDefinition();
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 2);
         // Get door model, and set for all defined meta

@@ -34,7 +34,7 @@ public class WCSoulSandBlock extends SoulSandBlock implements WesterosBlockLifec
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd, 0, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
+        def.defaultRegisterTextureBlock(mtd, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
     }
     private static String[] TAGS = { "soul_speed_blocks" };
     @Override

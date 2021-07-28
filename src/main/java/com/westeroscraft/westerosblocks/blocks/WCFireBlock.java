@@ -46,7 +46,7 @@ public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle, We
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         def.defaultRegisterTextures(mtd);
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         // Register textures
         String txt1 = def.textures.get(0);
         String txt2 = def.textures.get(1);

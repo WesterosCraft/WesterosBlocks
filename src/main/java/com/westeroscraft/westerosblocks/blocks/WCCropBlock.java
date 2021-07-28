@@ -30,7 +30,7 @@ public class WCCropBlock extends WCPlantBlock implements WesterosBlockDynmapSupp
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
         WesterosBlockDef def = this.getWBDefinition();
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 4);
         PatchBlockModel mod = md.addPatchModel(blkname);

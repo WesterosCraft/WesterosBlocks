@@ -37,7 +37,7 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, We
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();
-        String blkname = def.getBlockName(0);
+        String blkname = def.getBlockName();
         def.defaultRegisterTextures(mtd);
         def.registerPatchTextureBlock(mtd, 3);
         // Get plant model, and set for all defined meta

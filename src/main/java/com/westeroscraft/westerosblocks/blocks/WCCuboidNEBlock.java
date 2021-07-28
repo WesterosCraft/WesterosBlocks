@@ -30,7 +30,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	AbstractBlock.Properties props = def.makeProperties().noOcclusion();
+        	AbstractBlock.Properties props = def.makeProperties();
         	return def.registerRenderType(def.registerBlock(new WCCuboidNEBlock(props, def)), false, false);
         }
     }

@@ -37,9 +37,9 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport
         def.defaultRegisterTextures(mtd);
         
         /* Add models for half slabs */
-        String blkname = def.getBlockName(0);
-        def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.SEMITRANSPARENT, 0, 2);
-        def.defaultRegisterTextureBlock(mtd, 0, TransparencyMode.OPAQUE, 2, 1);
+        String blkname = def.getBlockName();
+        def.defaultRegisterTextureBlock(mtd, TransparencyMode.SEMITRANSPARENT, 0, 2);
+        def.defaultRegisterTextureBlock(mtd, TransparencyMode.OPAQUE, 2, 1);
         BoxBlockModel bottom = md.addBoxModel(blkname);
         bottom.setYRange(0.0, 0.5);
         BoxBlockModel top = md.addBoxModel(blkname);
