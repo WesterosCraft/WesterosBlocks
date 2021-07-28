@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/sword_rack"
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/sword_rack",
+      "y": 90
+    }
+  }
+}

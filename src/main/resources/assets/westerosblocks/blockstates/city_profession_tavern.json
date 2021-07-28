@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/city_profession_tavern"
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/city_profession_tavern",
+      "y": 90
+    }
+  }
+}

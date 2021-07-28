@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/city_profession_blacksmith"
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/city_profession_blacksmith",
+      "y": 90
+    }
+  }
+}

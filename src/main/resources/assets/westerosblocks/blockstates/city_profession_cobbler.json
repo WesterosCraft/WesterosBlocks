@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/city_profession_cobbler"
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/city_profession_cobbler",
+      "y": 90
+    }
+  }
+}

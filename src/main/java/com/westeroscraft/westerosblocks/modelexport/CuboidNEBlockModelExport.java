@@ -5,7 +5,6 @@ import java.io.IOException;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 
 import net.minecraft.block.Block;
 
@@ -18,16 +17,19 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        for (Subblock sb : def.subBlocks) {
-            Variant var = new Variant();
-            var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
-            so.variants.put(String.format("facing=east,variant=%d", sb.meta), var);
-
-            var = new Variant();
-            var.model = WesterosBlocks.MOD_ID + ":" + def.blockName + "_" + sb.meta;
-            var.y = 90;
-            so.variants.put(String.format("facing=north,variant=%d", sb.meta), var);
-        }
+        String mod = def.isCustomModel() ? 
+        		WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName : 
+    			WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        // East is base model
+        Variant var = new Variant();
+        var.model = mod;
+        so.variants.put("facing=east", var);
+        // North is 90 degree rotate
+        var = new Variant();
+        var.model = mod;
+        var.y = 90;
+        so.variants.put("facing=north", var);
+        
         this.writeBlockStateFile(def.blockName, so);
     }
 }

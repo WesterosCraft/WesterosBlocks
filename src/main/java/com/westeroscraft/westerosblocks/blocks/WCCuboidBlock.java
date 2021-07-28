@@ -52,7 +52,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         super(props);
         this.def = def;
         SHAPE_BY_INDEX = new VoxelShape[1];
-        SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList();
+        SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList(def.getCuboidList());
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));
 
     }
@@ -65,21 +65,25 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
        stateContainer.add(WATERLOGGED);
     }
 
+    protected int getIndexFromState(BlockState state) {
+    	return 0;
+    }
+    
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
-        return SHAPE_BY_INDEX[0];
+        return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
     @Override
     public VoxelShape getCollisionShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
-        return SHAPE_BY_INDEX[0];
+        return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
     @Override
     public VoxelShape getBlockSupportShape(BlockState state, IBlockReader reader, BlockPos pos) {
-        return SHAPE_BY_INDEX[0];
+        return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
     @Override
     public VoxelShape getVisualShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
-        return SHAPE_BY_INDEX[0];
+        return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
     @Override
     public BlockState updateShape(BlockState state, Direction face, BlockState state2, IWorld world, BlockPos pos, BlockPos pos2) {
@@ -114,8 +118,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     }
 
 
-    protected VoxelShape getBoundingBoxFromCuboidList() {
-        List<WesterosBlockDef.Cuboid> cl = def.getCuboidList();
+    protected VoxelShape getBoundingBoxFromCuboidList(List<WesterosBlockDef.Cuboid> cl) {
         if (cl.size() == 0) return VoxelShapes.empty();
         float xmin = 100.0F, ymin = 100.0F, zmin = 100.0F;
         float xmax = -100.0F, ymax = -100.0F, zmax = -100.0F;

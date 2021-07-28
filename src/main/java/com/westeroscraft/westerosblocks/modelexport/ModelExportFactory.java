@@ -66,9 +66,9 @@ public class ModelExportFactory {
             case "beacon":
                 me = new CuboidBlockModelExport(blk, def, dest);
                 break;
-//            case "cuboid-ne":
-//                me = new CuboidNEBlockModelExport(blk, def, dest);
-//                break;
+            case "cuboid-ne":
+                me = new CuboidNEBlockModelExport(blk, def, dest);
+                break;
 //            case "cuboid-ne-stack":
 //                me = new CuboidNEStackBlockModelExport(blk, def, dest);
 //                break;
