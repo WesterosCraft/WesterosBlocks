@@ -598,7 +598,7 @@ public class WesterosBlockDef {
     	if (lightValue > 0.0F) {
     		props = props.lightLevel((state) -> (int)(16.0 * lightValue));
     	}
-    	if (!ambientOcclusion) {	// If no ambient occlusion
+    	if ((!ambientOcclusion) || (nonOpaque)) {	// If no ambient occlusion
     		props = props.noOcclusion();
     	}
     	return props;

@@ -22,7 +22,7 @@ public class SolidBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectCubeAll {
-        public String parent = "block/cube_all";    // Use 'cube_all' model for single texture
+        public String parent = "minecraft:block/cube_all";    // Use 'cube_all' model for single texture
         public TextureAll textures = new TextureAll();
     }
     public static class TextureAll {
@@ -30,7 +30,7 @@ public class SolidBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectCube {
-        public String parent = "block/cube";    // Use 'cube' model for multiple textures
+        public String parent = "minecraft:block/cube";    // Use 'cube' model for multiple textures
         public Texture textures = new Texture();
     }
     public static class Texture {
