@@ -17,6 +17,24 @@ const skippedSubBlockFields = [ 'meta' ];
 let ids = new Set();
 
 content.blocks.forEach(block => {
+	// If stack, build stack data and drop extra subblocks
+	if (block.blockType.includes("-stack")) {
+		let first = block.subBlocks[0];
+		first.stack = [];
+		block.subBlocks.forEach(subblock => {
+			let rec = { };
+			if (subblock.textures) rec.textures = subblock.textures;
+			if (subblock.boundingBox) rec.boundingBox = subblock.boundingBox;
+			if (subblock.cuboids) rec.cuboids = subblock.cuboids;
+			if (subblock.collisionBoxes) rec.collisionBoxes = subblock.collisionBoxes;
+			delete subblock.textures;
+			delete subblock.boundingBox;
+			delete subblock.cuboids;
+			delete subblock.collisionBoxes;
+			first.stack.push(rec);
+		});
+		block.subBlocks = [ first ]; 			
+	}
     block.subBlocks.forEach(subblock => {
         let newblock = { blockName: makeName(subblock.label) };
         let cnt = 1;

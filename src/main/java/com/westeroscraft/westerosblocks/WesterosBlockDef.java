@@ -151,6 +151,24 @@ public class WesterosBlockDef {
     public List<String> soundList = null;   // List of custom sound names or sound IDs (for 'sound' blocks)
     public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
     public Boolean isCustomModel = null;    // If set and true, don't generate new custom model (hand crafted)
+    public List<StackElement> stack = null;	// List of elements for a stack, first is bottom-most (for *-stack)
+    
+    public static class StackElement {
+        public List<String> textures = null;    // List of textures
+        public BoundingBox boundingBox = null;  // Bounding box
+        public List<Cuboid> cuboids = null;     // List of cuboids composing block (for 'cuboid', and others)
+        public List<BoundingBox> collisionBoxes = null;     // For 'solid', used for raytrace (arrow shots)    	
+        
+        public String getTextureByIndex(int idx) {
+            if ((textures != null) && (textures.size() > 0)) {
+                if (idx >= textures.size()) {
+                    idx = textures.size() - 1;
+                }
+                return textures.get(idx);
+            }
+            return null;
+        }
+    };
     
     public static class HarvestLevel {
         public String tool;
@@ -414,6 +432,16 @@ public class WesterosBlockDef {
         return null;
     }
     
+    public StackElement getStackElementByIndex(int idx) {
+        if ((stack != null) && (stack.size() > 0)) {
+            if (idx >= stack.size()) {
+                idx = stack.size() - 1;
+            }
+            return stack.get(idx);
+        }
+        return null;    	
+    }
+    
     // Custom color multiplier
     public static class CustomColorMultHandler extends ColorMultHandler implements ColorResolver {
         private int[] colorBuffer = new int[65536];
@@ -527,6 +555,36 @@ public class WesterosBlockDef {
                 if (bb.zMax > this.boundingBox.zMax) this.boundingBox.zMax = bb.zMax;
             }
         }    	
+        // If stacks, process these too
+        if (this.stack != null) {
+        	for (StackElement se : this.stack) {
+            	// If we have bounding box, but no cuboids, make trivial cuboid
+                if ((se.boundingBox != null) && (se.cuboids == null)) {
+                    Cuboid c = new Cuboid();
+                    c.xMin = se.boundingBox.xMin;
+                    c.xMax = se.boundingBox.xMax;
+                    c.yMin = se.boundingBox.yMin;
+                    c.yMax = se.boundingBox.yMax;
+                    c.zMin = se.boundingBox.zMin;
+                    c.zMax = se.boundingBox.zMax;
+                    this.cuboids = Collections.singletonList(c);
+                }
+                // If cuboids but no bounding box, compute bounding box
+                if ((se.cuboids != null) && (se.boundingBox == null)) {
+                	se.boundingBox = new BoundingBox();
+                	se.boundingBox.xMin = se.boundingBox.yMin = se.boundingBox.zMin = 1.0F;
+                	se.boundingBox.xMax = se.boundingBox.yMax = se.boundingBox.zMax = 0.0F;
+                    for (BoundingBox bb : se.cuboids) {
+                        if (bb.xMin < se.boundingBox.xMin) se.boundingBox.xMin = bb.xMin;
+                        if (bb.yMin < se.boundingBox.yMin) se.boundingBox.yMin = bb.yMin;
+                        if (bb.zMin < se.boundingBox.zMin) se.boundingBox.zMin = bb.zMin;
+                        if (bb.xMax > se.boundingBox.xMax) se.boundingBox.xMax = bb.xMax;
+                        if (bb.yMax > se.boundingBox.yMax) se.boundingBox.yMax = bb.yMax;
+                        if (bb.zMax > se.boundingBox.zMax) se.boundingBox.zMax = bb.zMax;
+                    }
+                }    	
+        	}
+        }
     	didInit = true;
     }
     public Block createBlock() {
