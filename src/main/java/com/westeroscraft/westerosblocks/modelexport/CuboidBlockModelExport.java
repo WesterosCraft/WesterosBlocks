@@ -119,8 +119,7 @@ public class CuboidBlockModelExport extends ModelExport {
         for (int i = 0; i < cnt; i++) {
         	textures[i] = def.getTextureByIndex(i);
         }
-        List<Cuboid> cubs = blk.getWBDefinition().getCuboidList();
-        doCuboidModel(name, isTinted, txt0, textures, cubs);
+        doCuboidModel(name, isTinted, txt0, textures, blk.getModelCuboids());
     }
     
     protected void doCuboidModel(String name, boolean isTinted, String txt0, String[] textures, List<Cuboid> cubs) throws IOException {

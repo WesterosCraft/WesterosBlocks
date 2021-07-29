@@ -62,7 +62,11 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
        stateContainer.add(FACING, WATERLOGGED);
     }
-    
+    @Override
+    public List<WesterosBlockDef.Cuboid> getModelCuboids() {
+    	return cuboid_by_facing[3];		// Correct cuboid rotation for export
+    }
+
     @Override
     protected int getIndexFromState(BlockState state) {
     	switch (state.getValue(FACING)) {
