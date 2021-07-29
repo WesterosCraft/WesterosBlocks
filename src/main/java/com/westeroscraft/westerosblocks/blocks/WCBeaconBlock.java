@@ -3,32 +3,21 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.Arrays;
 import java.util.List;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Subblock;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.properties.PropertyMeta;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
 
 public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block[] buildBlockClasses(WesterosBlockDef def) {
-            if (!def.validateMetaValues(null, null)) {
-                return null;
-            }
-            new_variant = PropertyMeta.create("variant", def.getDefinedBaseMeta());
-
-            return new Block[] { new WCBeaconBlock(def) };
+        public Block buildBlockClass(WesterosBlockDef def) {
+        	def.nonOpaque = true;
+        	AbstractBlock.Properties props = def.makeProperties();
+        	return def.registerRenderType(def.registerBlock(new WCBeaconBlock(props, def)), false, false);
         }
     }
     
@@ -54,20 +43,9 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
     };
     private static List<WesterosBlockDef.Cuboid> cuboidlist = Arrays.asList(cuboids);
     
-    protected WCBeaconBlock(WesterosBlockDef def) {
-        super(def);
-        for (Subblock sb : def.subBlocks) {
-            sb.cuboids = cuboidlist;
-            setBoundingBoxFromCuboidList(sb.meta);
-        }
+    protected WCBeaconBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+        super(props, def);
+        def.cuboids = cuboidlist;
+        SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList(def.getCuboidList());
     }
-            
-    /**
-     *  Get cuboid list at given meta
-     *  @param meta
-     */
-    public List<WesterosBlockDef.Cuboid> getCuboidList(int meta) {
-        return cuboidlist;
-    }
-
 }
