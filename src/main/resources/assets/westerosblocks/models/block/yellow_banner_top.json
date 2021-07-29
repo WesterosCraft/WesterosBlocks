@@ -1,0 +1,104 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt4": "westerosblocks:blocks/banner_block_0/banner_yellow_top",
+    "txt5": "westerosblocks:blocks/banner_block_0/banner_yellow_top",
+    "txt2": "westerosblocks:blocks/transparent",
+    "txt3": "westerosblocks:blocks/transparent",
+    "txt0": "westerosblocks:blocks/transparent",
+    "txt1": "westerosblocks:blocks/transparent",
+    "particle": "westerosblocks:blocks/transparent"
+  },
+  "elements": [
+    {
+      "from": [
+        15.5,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt5",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            15.5,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt3",
+          "cullface": "south"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            0.5,
+            16.0
+          ],
+          "texture": "#txt2",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt4"
+        },
+        "up": {
+          "uv": [
+            15.5,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt1",
+          "cullface": "up"
+        },
+        "down": {
+          "uv": [
+            15.5,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

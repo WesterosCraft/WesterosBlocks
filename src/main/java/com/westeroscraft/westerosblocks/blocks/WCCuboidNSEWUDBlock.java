@@ -89,7 +89,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
        Direction[] adirection = ctx.getNearestLookingDirections();
        Direction dir = Direction.EAST;	// Default
        for (Direction d : adirection) {
-		   dir = d.getOpposite();
+		   dir = d;
 		   break;
        }
        return this.defaultBlockState().setValue(FACING, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));

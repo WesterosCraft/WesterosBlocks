@@ -87,7 +87,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
        Direction dir = Direction.EAST;	// Default
        for (Direction d : adirection) {
     	   if (d == Direction.EAST || d == Direction.WEST || d == Direction.NORTH || d == Direction.SOUTH) {
-    		   dir = d.getOpposite();
+    		   dir = d;
     		   break;
     	   }
        }

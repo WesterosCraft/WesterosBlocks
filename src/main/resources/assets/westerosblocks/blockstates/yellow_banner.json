@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=west,top=true": {
+      "model": "westerosblocks:block/yellow_banner_top",
+      "y": 180
+    },
+    "facing=east,top=true": {
+      "model": "westerosblocks:block/yellow_banner_top"
+    },
+    "facing=north,top=true": {
+      "model": "westerosblocks:block/yellow_banner_top",
+      "y": 270
+    },
+    "facing=north,top=false": {
+      "model": "westerosblocks:block/yellow_banner",
+      "y": 270
+    },
+    "facing=south,top=true": {
+      "model": "westerosblocks:block/yellow_banner_top",
+      "y": 90
+    },
+    "facing=east,top=false": {
+      "model": "westerosblocks:block/yellow_banner"
+    },
+    "facing=south,top=false": {
+      "model": "westerosblocks:block/yellow_banner",
+      "y": 90
+    },
+    "facing=west,top=false": {
+      "model": "westerosblocks:block/yellow_banner",
+      "y": 180
+    }
+  }
+}

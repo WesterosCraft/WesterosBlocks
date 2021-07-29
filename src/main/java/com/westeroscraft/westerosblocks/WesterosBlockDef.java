@@ -21,6 +21,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
@@ -567,7 +568,7 @@ public class WesterosBlockDef {
                     c.yMax = se.boundingBox.yMax;
                     c.zMin = se.boundingBox.zMin;
                     c.zMax = se.boundingBox.zMax;
-                    this.cuboids = Collections.singletonList(c);
+                    se.cuboids = Collections.singletonList(c);
                 }
                 // If cuboids but no bounding box, compute bounding box
                 if ((se.cuboids != null) && (se.boundingBox == null)) {
@@ -809,8 +810,7 @@ public class WesterosBlockDef {
         typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
         typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
-//        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
-//        typeTable.put("cuboid-ne-stack", new WCCuboidNEStackBlock.Factory());
+        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
         typeTable.put("door", new WCDoorBlock.Factory());
         typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());

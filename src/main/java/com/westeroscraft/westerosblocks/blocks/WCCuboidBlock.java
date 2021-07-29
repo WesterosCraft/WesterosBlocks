@@ -120,7 +120,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
 
 
     protected VoxelShape getBoundingBoxFromCuboidList(List<WesterosBlockDef.Cuboid> cl) {
-        if (cl.size() == 0) return VoxelShapes.empty();
+        if ((cl == null) || (cl.size() == 0)) return VoxelShapes.empty();
         float xmin = 100.0F, ymin = 100.0F, zmin = 100.0F;
         float xmax = -100.0F, ymax = -100.0F, zmax = -100.0F;
         for(WesterosBlockDef.Cuboid c : cl) {

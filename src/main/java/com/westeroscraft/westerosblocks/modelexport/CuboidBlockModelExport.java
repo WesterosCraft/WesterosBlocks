@@ -109,15 +109,26 @@ public class CuboidBlockModelExport extends ModelExport {
     		}
     	}
     }
-     
+
     protected void doCuboidModel(String name, boolean isTinted) throws IOException {
         ModelObjectCuboid mod = new ModelObjectCuboid();
+        String txt0 = def.getTextureByIndex(0);
         mod.textures.put("particle", getTextureID(def.getTextureByIndex(0)));
         int cnt = Math.max(6, def.textures.size());
+        String[] textures = new String[cnt];
         for (int i = 0; i < cnt; i++) {
-            mod.textures.put("txt" + i, getTextureID(def.getTextureByIndex(i)));
+        	textures[i] = def.getTextureByIndex(i);
         }
         List<Cuboid> cubs = blk.getWBDefinition().getCuboidList();
+        doCuboidModel(name, isTinted, txt0, textures, cubs);
+    }
+    
+    protected void doCuboidModel(String name, boolean isTinted, String txt0, String[] textures, List<Cuboid> cubs) throws IOException {
+        ModelObjectCuboid mod = new ModelObjectCuboid();
+        mod.textures.put("particle", getTextureID(txt0));
+        for (int i = 0; i < textures.length; i++) {
+            mod.textures.put("txt" + i, getTextureID(textures[i]));
+        }
         for (Cuboid c : cubs) { 
             Face f;
             Element elem;
