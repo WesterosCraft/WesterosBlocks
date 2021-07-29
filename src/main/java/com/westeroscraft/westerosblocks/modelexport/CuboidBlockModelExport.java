@@ -73,13 +73,17 @@ public class CuboidBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
+    public String modelName() {
+    	if (def.isCustomModel())
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName;
+    	else
+    		return WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+    }
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         Variant var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
-        if (def.isCustomModel())
-            var.model = WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName;
+        var.model = modelName();
 
         so.variants.put("", var);
         this.writeBlockStateFile(def.blockName, so);
@@ -264,7 +268,7 @@ public class CuboidBlockModelExport extends ModelExport {
             doCuboidModel(def.blockName, isTinted);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        mo.parent = modelName();
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

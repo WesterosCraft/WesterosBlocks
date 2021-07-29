@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "minecraft:block/cube",
   "textures": {
     "down": "westerosblocks:blocks/bench_block_0/spruce_top",
     "up": "westerosblocks:blocks/bench_block_0/table_top",

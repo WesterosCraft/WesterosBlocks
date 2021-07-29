@@ -17,9 +17,7 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String mod = def.isCustomModel() ? 
-        		WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName : 
-    			WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        String mod = modelName();
         // East is base model
         Variant var = new Variant();
         var.model = mod;

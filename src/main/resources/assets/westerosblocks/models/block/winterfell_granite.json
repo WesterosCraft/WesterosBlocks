@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "minecraft:block/cube",
   "textures": {
     "down": "westerosblocks:blocks/stone_block_2/brick_winterfell_granite_top",
     "up": "westerosblocks:blocks/stone_block_2/brick_winterfell_granite_top",

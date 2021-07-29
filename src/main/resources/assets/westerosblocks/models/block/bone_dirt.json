@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
     "all": "westerosblocks:blocks/ground_block_0/dirt_bone"
   }

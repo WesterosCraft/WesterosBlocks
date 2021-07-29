@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "minecraft:block/cube",
   "textures": {
     "down": "westerosblocks:blocks/ground_block_0/dirt",
     "up": "westerosblocks:blocks/ground_block_0/ash_top",

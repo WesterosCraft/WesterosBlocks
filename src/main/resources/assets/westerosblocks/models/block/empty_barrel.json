@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "minecraft:block/cube",
   "textures": {
     "down": "westerosblocks:blocks/log_block_0/barrel_top_closed",
     "up": "westerosblocks:blocks/crate_block_0/barrel_top_empty",

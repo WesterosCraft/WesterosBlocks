@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
     "all": "westerosblocks:blocks/daub_wattle_block_0/northern_white_left"
   }

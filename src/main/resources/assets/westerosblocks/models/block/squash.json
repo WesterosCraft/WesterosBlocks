@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "minecraft:block/cube",
   "textures": {
     "down": "westerosblocks:blocks/miscellaneous_block_0/food_squash_top",
     "up": "westerosblocks:blocks/miscellaneous_block_0/food_squash_top",

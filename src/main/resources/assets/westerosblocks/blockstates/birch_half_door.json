@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/birch_half_door"
+    },
+    "facing=south": {
+      "model": "westerosblocks:block/birch_half_door",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/birch_half_door",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/birch_half_door",
+      "y": 180
+    }
+  }
+}
