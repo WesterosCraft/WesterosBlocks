@@ -28,7 +28,7 @@ public class CakeBlockModelExport extends ModelExport {
     
     // Template objects for Gson export of block models
     public static class ModelObjectCake {
-        public String parent = "block/thin_block";    // Use 'thin_block' model for single texture
+        public String parent = "minecraft:block/thin_block";    // Use 'thin_block' model for single texture
         public Texture textures = new Texture();
         public List<Element> elements = new ArrayList<Element>();
     }
