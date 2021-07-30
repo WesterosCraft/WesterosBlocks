@@ -28,12 +28,12 @@ public class BedBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectBedHead {
-        public String parent = WesterosBlocks.MOD_ID + ":block/bed_head";    // Use 'bed_head' model for single texture
+        public String parent = WesterosBlocks.MOD_ID + ":block/untinted/bed_head";    // Use 'bed_head' model for single texture
         public Texture textures = new Texture();
     }
     // Template objects for Gson export of block models
     public static class ModelObjectBedFoot {
-        public String parent = WesterosBlocks.MOD_ID + ":block/bed_foot";    // Use 'bed_foot' model for single texture
+        public String parent = WesterosBlocks.MOD_ID + ":block/untinted/bed_foot";    // Use 'bed_foot' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {
@@ -86,7 +86,7 @@ public class BedBlockModelExport extends ModelExport {
         this.writeBlockModelFile(def.blockName + "_foot", modf);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":item/bed_item";
+        mo.parent = WesterosBlocks.MOD_ID + ":item/untinted/bed_item";
         mo.textures.bedtop = mod.textures.bedtop;
         mo.textures.bedend = mod.textures.bedend;
         mo.textures.bedside = mod.textures.bedside;

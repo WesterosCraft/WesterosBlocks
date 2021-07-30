@@ -1,0 +1,47 @@
+{
+    "parent": "block/block",
+    "textures": {
+        "particle": "#bedtop",
+        "top": "#bedtop",
+        "bottom": "minecraft:blocks/planks_oak",
+        "end": "#bedend",
+        "side": "#bedside",
+        "top2": "#bedtop2",
+        "bottom2": "minecraft:blocks/planks_oak",
+        "end2": "#bedend2",
+        "side2": "#bedside2"
+    },
+    "elements": [
+        {   "from": [ 4, 6, 8 ],
+            "to": [ 12, 10.5, 16 ],
+            "faces": {
+                "up":    { "uv": [  0, 16, 16,  0 ], "texture": "#top", "rotation": 90 },
+                "south": { "uv": [  0,  7, 16, 16 ], "texture": "#end" },
+                "west":  { "uv": [  0,  7, 16, 16 ], "texture": "#side" },
+                "east":  { "uv": [ 16,  7,  0, 16 ], "texture": "#side" }
+            }
+        },
+        {   "from": [ 4, 7.5, 8 ],
+            "to": [ 12, 7.5, 16 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom" }
+            }
+        },
+        {   "from": [ 4, 6, 0 ],
+            "to": [ 12, 10.5, 8 ],
+            "faces": {
+                "up":    { "uv": [  0, 16, 16,  0 ], "texture": "#top2", "rotation": 90 },
+                "north": { "uv": [  0,  7, 16, 16 ], "texture": "#end2" },
+                "west":  { "uv": [  0,  7, 16, 16 ], "texture": "#side2" },
+                "east":  { "uv": [ 16,  7,  0, 16 ], "texture": "#side2" }
+            }
+        },
+        {   "from": [ 4, 7.5, 0 ],
+            "to": [ 12, 7.5, 8 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom2" }
+            }
+        }
+        
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "westerosblocks:noble_red_bed",
+    "westerosblocks:pale_red_bed",
+    "westerosblocks:pale_green_bed",
+    "westerosblocks:itchy_straw_bed",
+    "westerosblocks:hammock",
+    "westerosblocks:northern_bed",
+    "westerosblocks:straw_bed",
+    "westerosblocks:noble_blue_bed",
+    "westerosblocks:nights_watch_bed"
+  ]
+}
