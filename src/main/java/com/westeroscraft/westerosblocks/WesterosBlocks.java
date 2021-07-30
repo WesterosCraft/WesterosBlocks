@@ -5,6 +5,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.crash.ReportedException;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
@@ -237,7 +238,7 @@ public class WesterosBlocks
                     blklist.add(blk);
                     customBlocksByName.put(customBlockDefs[i].blockName, blk);
                     // Register sound events
-                    //TODO customBlockDefs[i].registerSoundEvents();
+                    customBlockDefs[i].registerSoundEvents();
                 }
                 else {
                     //crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
@@ -265,4 +266,20 @@ public class WesterosBlocks
         blk = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(blkname));
         return blk;
     }
+    
+    private static HashMap<String, SoundEvent> registered_sounds = new HashMap<String, SoundEvent>();
+    
+    public static SoundEvent registerSound(String soundName)
+    {
+    	SoundEvent event = registered_sounds.get(soundName);
+    	if (event == null) {
+    		ResourceLocation location = new ResourceLocation(WesterosBlocks.MOD_ID, soundName);
+    		event = new SoundEvent(location);
+    		event.setRegistryName(location);
+    		ForgeRegistries.SOUND_EVENTS.register(event);
+    		registered_sounds.put(soundName, event);
+    	}
+        return event;
+    }
+    
 }

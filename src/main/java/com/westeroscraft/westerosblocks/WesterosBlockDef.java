@@ -40,6 +40,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
@@ -48,40 +49,6 @@ import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 import net.minecraft.block.AbstractBlock;
-
-//import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCCuboidNEStackBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
-//import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -827,7 +794,7 @@ public class WesterosBlockDef {
         typeTable.put("sand", new WCSandBlock.Factory());
         typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
 //        typeTable.put("furnace", new WCFurnaceBlock.Factory());
-//        typeTable.put("sound", new WCSoundBlock.Factory());
+        typeTable.put("sound", new WCSoundBlock.Factory());
         typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         typeTable.put("beacon", new WCBeaconBlock.Factory());
         typeTable.put("vines", new WCVinesBlock.Factory());
@@ -1080,5 +1047,11 @@ public class WesterosBlockDef {
         	itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
     	}            	
     }
-
+    public void registerSoundEvents() {
+		if (this.soundList != null) {
+			for (String snd : this.soundList) {
+				WesterosBlocks.registerSound(snd);
+			}
+		}
+    }
 }
