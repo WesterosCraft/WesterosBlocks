@@ -13,6 +13,7 @@ import org.dynmap.modsupport.TransparencyMode;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.FluidState;
@@ -22,6 +23,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -37,6 +39,7 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.state.DirectionProperty;
+import net.minecraft.state.EnumProperty;
 
 public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
 
@@ -51,7 +54,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH);
-    public static final BooleanProperty TOP = BooleanProperty.create("top");
+    public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     
     protected WesterosBlockDef def;
     
@@ -78,17 +81,17 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
             SHAPE_BY_INDEX[j] = getBoundingBoxFromCuboidList(cuboid_by_facing[j]);
         }
         this.registerDefaultState(this.stateDefinition.any()
-        		.setValue(TOP, Boolean.valueOf(false))
+        		.setValue(HALF, DoubleBlockHalf.LOWER)
         		.setValue(FACING, Direction.EAST)
         		.setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
-    	stateContainer.add(FACING, TOP, WATERLOGGED);
+    	stateContainer.add(FACING, HALF, WATERLOGGED);
     }
     @Override
     protected int getIndexFromState(BlockState state) {
-    	int topoff = state.getValue(TOP) ? 4 : 0;
+    	int topoff = (state.getValue(HALF) == DoubleBlockHalf.LOWER) ? 0 : 4;
     	switch (state.getValue(FACING)) {
     	case EAST:
     	default:
@@ -101,37 +104,63 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     		return topoff+3;
     	}
     }    
-    @Override
     @Nullable
+    @Override
     public BlockState getStateForPlacement(BlockItemUseContext ctx) {
-        BlockPos blockpos = ctx.getClickedPos();
-        if (blockpos.getY() < 255 && ctx.getLevel().getBlockState(blockpos.above()).canBeReplaced(ctx)) {
-            FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
-            Direction[] adirection = ctx.getNearestLookingDirections();
-            Direction dir = Direction.EAST;	// Default
-            for (Direction d : adirection) {
-            	if (d == Direction.EAST || d == Direction.WEST || d == Direction.NORTH || d == Direction.SOUTH) {
-        			dir = d;
-        			break;
-            	}
-            }
-            return this.defaultBlockState()
-        		.setValue(FACING, dir)
-        		.setValue(TOP, Boolean.valueOf(false))
-        		.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
-        }
-        else {
-        	return null;
-        }
+       BlockPos blockpos = ctx.getClickedPos();
+       if (blockpos.getY() < 255 && ctx.getLevel().getBlockState(blockpos.above()).canBeReplaced(ctx)) {
+           FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
+           Direction[] adirection = ctx.getNearestLookingDirections();
+           Direction dir = Direction.EAST;	// Default
+           for (Direction d : adirection) {
+           	if (d == Direction.EAST || d == Direction.WEST || d == Direction.NORTH || d == Direction.SOUTH) {
+       			dir = d;
+       			break;
+           	}
+           }
+           return this.defaultBlockState()
+       		.setValue(FACING, dir)
+       		.setValue(HALF, DoubleBlockHalf.LOWER)
+       		.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       }
+       else {
+    	   return null;
+       }
     }
+
+    @Override
+    public BlockState updateShape(BlockState state, Direction dir, BlockState state2, IWorld world, BlockPos pos, BlockPos pos2) {
+        DoubleBlockHalf doubleblockhalf = state.getValue(HALF);
+        if (dir.getAxis() != Direction.Axis.Y || doubleblockhalf == DoubleBlockHalf.LOWER != (dir == Direction.UP) || state2.is(this) && state2.getValue(HALF) != doubleblockhalf) {
+           return doubleblockhalf == DoubleBlockHalf.LOWER && dir == Direction.DOWN && !state.canSurvive(world, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, dir, state2, world, pos, pos2);
+        } else {
+           return Blocks.AIR.defaultBlockState();
+        }
+     }
+
     @Override
     public void setPlacedBy(World world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack item) {
-        world.setBlock(pos.above(), state.setValue(TOP, Boolean.valueOf(true)), 3);
+    	BlockPos above = pos.above();
+        FluidState fluidstate =world.getFluidState(above);
+        BlockState newstate = this.defaultBlockState()
+			.setValue(FACING, state.getValue(FACING))
+			.setValue(HALF, DoubleBlockHalf.UPPER)
+			.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+        world.setBlock(pos.above(), newstate, 3);
     }
+
     @Override
     public boolean canSurvive(BlockState state, IWorldReader reader, BlockPos pos) {
-        BlockPos blockpos = pos.below();
-        BlockState blockstate = reader.getBlockState(blockpos);
-        return state.getValue(TOP) == Boolean.valueOf(false) ? blockstate.isFaceSturdy(reader, blockpos, Direction.UP) : blockstate.is(this);
-    }
+        if (state.getValue(HALF) != DoubleBlockHalf.UPPER) {
+           return super.canSurvive(state, reader, pos);
+        }
+        else {
+           BlockState blockstate = reader.getBlockState(pos.below());
+           if (state.getBlock() != this) {
+        	   return super.canSurvive(state, reader, pos); 
+           }
+           return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
+        }
+     }
+
 }

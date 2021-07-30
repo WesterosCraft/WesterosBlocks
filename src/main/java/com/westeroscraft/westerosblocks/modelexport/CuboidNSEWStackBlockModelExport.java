@@ -62,41 +62,41 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         Variant var = new Variant();
         var.model = mod;
         var.y = 270;
-        so.variants.put("facing=north,top=false", var);
+        so.variants.put("facing=north,half=lower", var);
         //
         var = new Variant();
         var.model = mod;
-        so.variants.put("facing=east,top=false", var);
+        so.variants.put("facing=east,half=lower", var);
         //
         var = new Variant();
         var.model = mod;
         var.y = 90;
-        so.variants.put("facing=south,top=false", var);
+        so.variants.put("facing=south,half=lower", var);
         //
         var = new Variant();
         var.model = mod;
         var.y = 180;
-        so.variants.put("facing=west,top=false", var);
+        so.variants.put("facing=west,half=lower", var);
         // Top states
         mod = mod + "_top";
         var = new Variant();
         var.model = mod;
         var.y = 270;
-        so.variants.put("facing=north,top=true", var);
+        so.variants.put("facing=north,half=upper", var);
         //
         var = new Variant();
         var.model = mod;
-        so.variants.put("facing=east,top=true", var);
+        so.variants.put("facing=east,half=upper", var);
         //
         var = new Variant();
         var.model = mod;
         var.y = 90;
-        so.variants.put("facing=south,top=true", var);
+        so.variants.put("facing=south,half=upper", var);
         //
         var = new Variant();
         var.model = mod;
         var.y = 180;
-        so.variants.put("facing=west,top=true", var);
+        so.variants.put("facing=west,half=upper", var);
         
         this.writeBlockStateFile(def.blockName, so);
     }
