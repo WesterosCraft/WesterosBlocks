@@ -281,5 +281,7 @@ public class WesterosBlocks
     	}
         return event;
     }
-    
+    public static SoundEvent getRegisteredSound(String soundName) {
+    	return registered_sounds.get(soundName);
+    }
 }

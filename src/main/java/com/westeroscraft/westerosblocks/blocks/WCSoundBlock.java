@@ -1,111 +1,209 @@
 package com.westeroscraft.westerosblocks.blocks;
 
- 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
+
+import java.util.Random;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 public class WCSoundBlock extends WCSolidBlock {
-    public static class Factory extends WesterosBlockFactory {
-        @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
-        	AbstractBlock.Properties props = def.makeProperties();
-        	return def.registerRenderType(def.registerBlock(new WCSoundBlock(props, def)), true, def.nonOpaque);
-        }
-    }
-    
-    public static final BooleanProperty POWERED = BlockStateProperties.POWERED;    
+	public static class Factory extends WesterosBlockFactory {
+		@Override
+		public Block buildBlockClass(WesterosBlockDef def) {
+			AbstractBlock.Properties props = def.makeProperties().randomTicks();
+			if ((def.soundList == null) || (def.soundList.size() == 0)) {
+	            WesterosBlocks.log.error(String.format("Non-empty soundList rrquired for ''%s'", def.blockName));
+	            return null;
+			}
+			if ((def.soundList != null) && (def.soundList.size() > 1)) {
+				protoINDEX = IntegerProperty.create("index", 0, def.soundList.size()-1);
+			}								
+			return def.registerRenderType(def.registerBlock(new WCSoundBlock(props, def)), true, def.nonOpaque);
+		}
+	}
 
-    public int def_period;
-    public int def_addition;
-    public int def_starttime;
-    public int def_endtime;
+	private static IntegerProperty protoINDEX; // Hand off for registration
 
-    protected WCSoundBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
-        super(props, def);
-        String type = def.getType();
-        if (type != null) {
-            String[] toks = type.split(",");
-            for (String tok : toks) {
-                String [] flds = tok.split(":");
-                if (flds.length < 2) continue;
-                if (flds[0].equals("period")) {
-                    def_period = (int) Math.round(20.0 * Double.parseDouble(flds[1]));
-                }
-                else if (flds[0].equals("random-add")) {
-                    def_addition = (int) Math.round(20.0 * Double.parseDouble(flds[1]));
-                }
-                else if (flds[0].equals("start-time")) {
-                    def_starttime = ((Integer.parseInt(flds[1]) * 10) + 18000) % 24000;
-                }
-                else if (flds[0].equals("end-time")) {
-                    def_endtime = ((Integer.parseInt(flds[1]) * 10) + 18000) % 24000;
-                }
-                else {
-                    WesterosBlocks.log.warn("Invalid type attribute '" + flds[0] + "' in " + def.blockName);
-                }
-            }
-        }
-        this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, Boolean.valueOf(false)));
-    }
+	public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
+	public IntegerProperty INDEX; // 0 = no sound selected, else soundList[val-1]
+	public int playback_period;
+	public int random_playback_addition;
+	public int startTime;
+	public int endTime;
 
-    @Override
-    public void neighborChanged(BlockState p_220069_1_, World p_220069_2_, BlockPos p_220069_3_, Block p_220069_4_, BlockPos p_220069_5_, boolean p_220069_6_) {
-        boolean flag = p_220069_2_.hasNeighborSignal(p_220069_3_);
-        if (flag != p_220069_1_.getValue(POWERED)) {
-           if (flag) {
-              this.playNote(p_220069_2_, p_220069_3_);
-           }
+	protected WCSoundBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+		super(props, def);
+		String type = def.getType();
+		if (type != null) {
+			String[] toks = type.split(",");
+			for (String tok : toks) {
+				String[] flds = tok.split(":");
+				if (flds.length < 2)
+					continue;
+				if (flds[0].equals("period")) { // In seconds - convert to ticks
+					playback_period = (int) Math.round(20.0 * Double.parseDouble(flds[1]));
+				} else if (flds[0].equals("random-add")) { // In seconds - convert to ticks
+					random_playback_addition = (int) Math.round(20.0 * Double.parseDouble(flds[1])); // In ticks
+				} else if (flds[0].equals("start-time")) { // Start time (hour of day * 100) - convert to ticks
+					startTime = ((Integer.parseInt(flds[1]) * 10) + 18000) % 24000;
+				} else if (flds[0].equals("end-time")) { // End time (hour of day * 100) - convert to ticks
+					endTime = ((Integer.parseInt(flds[1]) * 10) + 18000) % 24000;
+				} else {
+					WesterosBlocks.log.warn("Invalid type attribute '" + flds[0] + "' in " + def.blockName);
+				}
+			}
+		}
+		if (INDEX != null) {
+			this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, Boolean.valueOf(false)).setValue(INDEX, 1));
+		}
+		else {
+			this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, Boolean.valueOf(false)));
+		}
+	}
 
-           p_220069_2_.setBlock(p_220069_3_, p_220069_1_.setValue(POWERED, Boolean.valueOf(flag)), 3);
-        }
+	@Override
+	public void neighborChanged(BlockState state, World world, BlockPos pos, Block block, BlockPos pos2, boolean chgflag) {
+		boolean flag = world.hasNeighborSignal(pos);
+		if (flag != state.getValue(POWERED)) {
+			if (flag) {
+				this.playNote(world, pos);
+				world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
+			}
+			world.setBlock(pos, state.setValue(POWERED, Boolean.valueOf(flag)), 3);
+		}
 
-     }
+	}
 
-     private void playNote(World p_196482_1_, BlockPos p_196482_2_) {
-        if (p_196482_1_.isEmptyBlock(p_196482_2_.above())) {
-           p_196482_1_.blockEvent(p_196482_2_, this, 0, 0);
-        }
-     }
+	// Trigger block event to cause play of sound
+	private void playNote(World world, BlockPos pos) {
+		world.blockEvent(pos, this, 0, 0);
+	}
 
-     @Override
-     public ActionResultType use(BlockState p_225533_1_, World p_225533_2_, BlockPos p_225533_3_, PlayerEntity p_225533_4_, Hand p_225533_5_, BlockRayTraceResult p_225533_6_) {
-        if (p_225533_2_.isClientSide) {
-           return ActionResultType.SUCCESS;
-        } else {
-           this.playNote(p_225533_2_, p_225533_3_);
-           return ActionResultType.CONSUME;
-        }
-     } 
-     
-     @Override
-     public boolean triggerEvent(BlockState p_189539_1_, World p_189539_2_, BlockPos p_189539_3_, int p_189539_4_, int p_189539_5_) {
-         //net.minecraftforge.event.world.NoteBlockEvent.Play e = new net.minecraftforge.event.world.NoteBlockEvent.Play(p_189539_2_, p_189539_3_, p_189539_1_, p_189539_1_.getValue(NOTE), p_189539_1_.getValue(INSTRUMENT));
-         //if (net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(e)) return false;
-         //p_189539_1_ = p_189539_1_.setValue(NOTE, e.getVanillaNoteId()).setValue(INSTRUMENT, e.getInstrument());
-         //int i = p_189539_1_.getValue(NOTE);
-    	 int i = 0;
-         //float f = (float)Math.pow(2.0D, (double)(i - 12) / 12.0D);
-         //p_189539_2_.playSound((PlayerEntity)null, p_189539_3_, p_189539_1_.getValue(INSTRUMENT).getSoundEvent(), SoundCategory.RECORDS, 3.0F, f);
-         p_189539_2_.addParticle(ParticleTypes.NOTE, (double)p_189539_3_.getX() + 0.5D, (double)p_189539_3_.getY() + 1.2D, (double)p_189539_3_.getZ() + 0.5D, (double)i / 24.0D, 0.0D, 0.0D);
-         return true;
+	@Override
+	public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand,
+			BlockRayTraceResult ctx) {
+		if (world.isClientSide) {
+			return ActionResultType.SUCCESS;
+		} else { // Rotate state on server side, and play new note
+			if (INDEX != null) {
+				int index = state.getValue(INDEX);
+				index = (index + 1) % def.soundList.size();
+				state = state.setValue(INDEX, index); // Rotate sounds selection
+				world.setBlock(pos, state, 3);
+				//WesterosBlocks.log.info("WCSoundBlock.use(" + pos + ") - set to INDEX=" + index);
+			}
+			this.playNote(world, pos);
+			world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
+			return ActionResultType.CONSUME;
+		}
+	}
+
+	@Override
+	public boolean triggerEvent(BlockState state, World world, BlockPos ppos, int eventID, int eventArg) {
+		//WesterosBlocks.log.info("WCSoundBlock.trigger(" + ppos + ")");
+		int i = 0;
+		int sndindex = (INDEX != null) ? state.getValue(INDEX) : 0;
+		String soundid = def.soundList.get(sndindex);
+		SoundEvent event = WesterosBlocks.getRegisteredSound(soundid);
+		if (event != null) {
+			float f = (float) Math.pow(2.0D, (double) (i - 12) / 12.0D);
+			world.playSound((PlayerEntity) null, ppos, event, SoundCategory.RECORDS, 3.0F, f);
+			//WesterosBlocks.log.info("WCSoundBlock.trigger(" + ppos + ") - playing " + soundid);
+		}
+		return true;
+	}
+
+	// Compute time for next trigger
+	private int getNextTriggerTick(Random rnd) {
+		return playback_period + rnd.nextInt(random_playback_addition + 1);
+	}
+	@Override
+   public void onPlace(BlockState state, World world, BlockPos pos, BlockState state2, boolean flg) {
+      super.onPlace(state, world, pos, state2, flg);
+      // Add our tick schedule, if needed
+      if (playback_period > 0) {
+          world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
       }
+   }
 
-      protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> p_206840_1_) {
-         p_206840_1_.add(POWERED);
-      } 
+   @Override
+   public boolean isRandomlyTicking(BlockState state) {
+	   return (playback_period >= 0);
+   }
+
+   @Override
+   public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+	   if (playback_period >= 0) {
+			//WesterosBlocks.log.info("WCSoundBlock.randomTick(" + pos + ")");
+		   // No tick?  Add it (migration)
+		   if (!world.getBlockTicks().hasScheduledTick(pos, this)) {
+				//WesterosBlocks.log.info("WCSoundBlock.randomTick(" + pos + ") - schuled");
+				// Compute time for next trigger
+				world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
+		   }
+	   }
+   }
+
+	@Override
+	public void tick(BlockState state, ServerWorld world, BlockPos pos, Random rnd) {
+		//WesterosBlocks.log.info("WCSoundBlock.tick(" + pos + ")");
+		if (playback_period <= 0) { // Not periodic, so quit
+			//WesterosBlocks.log.info("WCSoundBlock.tick(" + pos + ") - not periodic");
+			return;
+		}
+
+		// Get time of day of trigger - see if we are going to trigger
+		long wt = (world.getDayTime() % 24000);
+		if (wt < 0)
+			wt += 24000;
+		//WesterosBlocks.log.info("WCSoundBlock.tick(" + pos + ") - consider sound at wt=" + wt + ",startTime=" + startTime + ",endTime=" + endTime);
+		
+		boolean trigger = true;
+		if (this.startTime == this.endTime) {	// No limit?
+			
+		}
+		else if (this.startTime > this.endTime) { // Split across 0 (e.g. nighttime)
+			trigger = ((wt < this.endTime) || (wt >= this.startTime));// And between end and start
+		}
+		else {
+			trigger = ((wt >= this.startTime) && (wt < this.endTime));
+		}
+		if (trigger) {
+			//WesterosBlocks.log.info("WCSoundBlock.tick(" + pos + ") - trigger sound");
+			playNote(world, pos);
+		}
+		// Compute time for next trigger
+		world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
+	}
+
+	protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
+		if (protoINDEX != null) {
+			INDEX = protoINDEX;
+			protoINDEX = null;
+		}
+		// Only use index for blocks with multiple sounds in list
+		if (INDEX != null) {
+			container.add(POWERED, INDEX);
+		}
+		else {
+			container.add(POWERED);			
+		}
+	}
 }
