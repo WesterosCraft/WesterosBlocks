@@ -47,6 +47,7 @@ import java.util.Optional;
 import net.minecraftforge.fml.network.NetworkRegistry;
 
 import com.westeroscraft.westerosblocks.network.ClientMessageHandler;
+import com.westeroscraft.westerosblocks.network.PWeatherMessage;
 import com.westeroscraft.westerosblocks.network.PTimeMessage;
 import com.westeroscraft.westerosblocks.network.ServerMessageHandler;
 import net.minecraftforge.fml.network.NetworkDirection;
@@ -298,18 +299,17 @@ public class WesterosBlocks {
 
     @SubscribeEvent
     public void onCommonSetupEvent(FMLCommonSetupEvent event) {
-    	log.info("register simpleChannel");
 	    simpleChannel = NetworkRegistry.newSimpleChannel(simpleChannelRL, () -> MESSAGE_PROTOCOL_VERSION,
 	            ClientMessageHandler::isThisProtocolAcceptedByClient,
 	            ServerMessageHandler::isThisProtocolAcceptedByServer);
 
-	    // Register the two different types of messages:
-	    //  AirStrike, which is sent from the client to the server to say "call an air strike on {this location} that I just clicked on"
-	    //  TargetEffect, which is sent from the server to all clients to say "someone called an air strike on {this location}, draw some particles there"
-
 	    simpleChannel.registerMessage(PTimeMessage.PTIME_MSGID, PTimeMessage.class,
 	    		PTimeMessage::encode, PTimeMessage::decode,
 	            ClientMessageHandler::onPTimeMessageReceived,
+	            Optional.of(NetworkDirection.PLAY_TO_CLIENT));
+	    simpleChannel.registerMessage(PWeatherMessage.PWEATHER_MSGID, PWeatherMessage.class,
+	    		PWeatherMessage::encode, PWeatherMessage::decode,
+	            ClientMessageHandler::onPWeatherMessageReceived,
 	            Optional.of(NetworkDirection.PLAY_TO_CLIENT));
 	  }
 }
