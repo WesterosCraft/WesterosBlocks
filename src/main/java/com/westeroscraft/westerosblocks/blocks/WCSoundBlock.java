@@ -206,4 +206,10 @@ public class WCSoundBlock extends WCSolidBlock {
 			container.add(POWERED);			
 		}
 	}
+    private static String[] TAGS = {  };
+    @Override
+    public String[] getBlockTags() {
+    	return TAGS;
+    }    
+
 }
