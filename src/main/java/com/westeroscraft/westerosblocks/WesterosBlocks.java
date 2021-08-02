@@ -1,29 +1,25 @@
 package com.westeroscraft.westerosblocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.command.CommandSource;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.crash.ReportedException;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import net.minecraftforge.fml.network.simple.SimpleChannel;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import org.apache.logging.log4j.LogManager;
@@ -32,6 +28,9 @@ import org.apache.logging.log4j.Logger;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
+import com.mojang.brigadier.CommandDispatcher;
+import com.westeroscraft.westerosblocks.commands.PTimeCommand;
+import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 
@@ -44,11 +43,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.stream.Collectors;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
+import java.util.Optional;
+import net.minecraftforge.fml.network.NetworkRegistry;
+
+import com.westeroscraft.westerosblocks.network.ClientMessageHandler;
+import com.westeroscraft.westerosblocks.network.PTimeMessage;
+import com.westeroscraft.westerosblocks.network.ServerMessageHandler;
+import net.minecraftforge.fml.network.NetworkDirection;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(WesterosBlocks.MOD_ID)
@@ -72,12 +73,12 @@ public class WesterosBlocks {
 	public static Path modConfigPath;
 
 	public WesterosBlocks() {
-		// Register the setup method for modloading
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		// Register the doClientStuff method for modloading
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 		// Register the setup method for load complete
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::loadComplete);
+		// Register the doClientStuff method for modloading
+		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onCommonSetupEvent);
 		// Register the setup method for tile entities
 		WesterosBlockDef.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
@@ -101,23 +102,18 @@ public class WesterosBlocks {
 				MOD_ID + "/" + MOD_ID + ".toml");
 	}
 
-	private void setup(final FMLCommonSetupEvent event) {
-		log.info("HELLO from setup");
-
-	}
-
 	private void doClientStuff(final FMLClientSetupEvent event) {
 		// do something that can only be done on the client
 		log.info("Got game settings {}", event.getMinecraftSupplier().get().options);
 	}
 
-	// You can use SubscribeEvent and let the Event Bus discover methods to call
 	@SubscribeEvent
-	public void onServerStarting(FMLServerStartingEvent event) {
-		// do something when the server starts
-		log.info("HELLO from server starting");
+	public void onRegisterCommandEvent(RegisterCommandsEvent event) {
+	    CommandDispatcher<CommandSource> commandDispatcher = event.getDispatcher();
+		PTimeCommand.register(commandDispatcher);
+		PWeatherCommand.register(commandDispatcher);
 	}
-
+	
 	private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
 	{
 
@@ -293,4 +289,27 @@ public class WesterosBlocks {
 	public static SoundEvent getRegisteredSound(String soundName) {
 		return registered_sounds.get(soundName);
 	}
+	
+	// Network setup
+	public static SimpleChannel simpleChannel;    // used to transmit your network messages
+    public static final String CHANNEL = "wbchannel";
+    public static final String MESSAGE_PROTOCOL_VERSION = "5.0";
+    public static final ResourceLocation simpleChannelRL = new ResourceLocation("westerosblocks", CHANNEL);
+
+    @SubscribeEvent
+    public void onCommonSetupEvent(FMLCommonSetupEvent event) {
+    	log.info("register simpleChannel");
+	    simpleChannel = NetworkRegistry.newSimpleChannel(simpleChannelRL, () -> MESSAGE_PROTOCOL_VERSION,
+	            ClientMessageHandler::isThisProtocolAcceptedByClient,
+	            ServerMessageHandler::isThisProtocolAcceptedByServer);
+
+	    // Register the two different types of messages:
+	    //  AirStrike, which is sent from the client to the server to say "call an air strike on {this location} that I just clicked on"
+	    //  TargetEffect, which is sent from the server to all clients to say "someone called an air strike on {this location}, draw some particles there"
+
+	    simpleChannel.registerMessage(PTimeMessage.PTIME_MSGID, PTimeMessage.class,
+	    		PTimeMessage::encode, PTimeMessage::decode,
+	            ClientMessageHandler::onPTimeMessageReceived,
+	            Optional.of(NetworkDirection.PLAY_TO_CLIENT));
+	  }
 }
