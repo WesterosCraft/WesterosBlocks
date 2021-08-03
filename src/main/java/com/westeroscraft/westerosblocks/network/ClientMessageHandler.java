@@ -71,13 +71,37 @@ public class ClientMessageHandler {
 	}
 
 	public static PWeatherMessage.WeatherCond weatherCond = PWeatherMessage.WeatherCond.RESET;
-	
+	public static boolean savedRain = false;
+	public static float savedRainLevel = 0.0F;
+	public static float savedThunderLevel = 0.0F;
 	// This message is called from the Client thread.
 	// It spawns a number of Particle particles at the target location within a
 	// short range around the target location
 	private static void processPWeatherMessage(ClientWorld worldClient, PWeatherMessage message) {
 		WesterosBlocks.log.info("Got PWeatherMessage: " + message.weather);
 		weatherCond = message.weather;
+		switch (weatherCond) {
+		case RESET:
+			worldClient.getLevelData().setRaining(savedRain);
+			worldClient.setRainLevel(savedRainLevel);
+			worldClient.setThunderLevel(savedThunderLevel);
+			break;
+		case CLEAR:
+			worldClient.getLevelData().setRaining(false);
+			worldClient.setRainLevel(0.0F);
+			worldClient.setThunderLevel(0.0F);
+			break;
+		case RAIN:
+			worldClient.getLevelData().setRaining(true);
+			worldClient.setRainLevel(1.0F);
+			worldClient.setThunderLevel(0.0F);
+			break;
+		case THUNDER:
+			worldClient.getLevelData().setRaining(true);
+			worldClient.setRainLevel(1.0F);
+			worldClient.setThunderLevel(1.0F);
+			break;
+		}		
 	}
 
 	public static boolean isThisProtocolAcceptedByClient(String protocolVersion) {
