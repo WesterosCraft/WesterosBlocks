@@ -6,6 +6,8 @@ import net.minecraft.crash.CrashReport;
 import net.minecraft.crash.ReportedException;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -117,12 +119,7 @@ public class WesterosBlocks {
 	
 	private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
 	{
-
 		// Initialize with standard block IDs
-		if (Config.snowInTaiga.get()) {
-//        	Biomes.TAIGA = -0.5F;	// Access set up using AccessTransformer
-			log.info("Enabled snow in TAIGA");
-		}
 		if (Config.blockDevMode.get()) {
 			log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/"
 					+ MOD_ID);
@@ -200,6 +197,15 @@ public class WesterosBlocks {
 			// Initialize
 			WesterosBlockDef.initialize();
 			WesterosBlocksCreativeTab.init();
+
+			if (Config.snowInTaiga.get()) {
+				Biome b = ForgeRegistries.BIOMES.getValue(new ResourceLocation("minecraft:taiga"));
+				if (b != null) {
+					b.climateSettings.temperature = -0.5F; 
+					b.climateSettings.precipitation = Biome.RainType.SNOW;
+				}
+				log.info("Enabled snow in TAIGA");
+			}
 
 			// Read our block definition resource
 			InputStream in = WesterosBlocks.class.getResourceAsStream("/WesterosBlocks.json");
