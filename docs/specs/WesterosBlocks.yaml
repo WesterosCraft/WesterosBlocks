@@ -133,7 +133,6 @@ components:
 	                - "hoe"
 	                - "pickaxe"
 	                - "shovel"
-	                - "pickaxe"
 	            level:
 	              type: integer
 	              minimum: 0
