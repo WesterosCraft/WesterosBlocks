@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/flag_flapping"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/flag_flapping"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/mud"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/mud"
+      }
+    ]
   }
 }

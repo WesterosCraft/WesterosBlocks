@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terrainset_stormlands"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terrainset_stormlands"
+      }
+    ]
   }
 }

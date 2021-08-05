@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/date_basket"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/date_basket"
+      }
+    ]
   }
 }

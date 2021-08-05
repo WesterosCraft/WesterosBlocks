@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/basalt_cobblestone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/basalt_cobblestone"
+      }
+    ]
   }
 }

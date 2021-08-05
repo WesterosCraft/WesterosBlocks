@@ -15,10 +15,11 @@ public class LeavesBlockModelExport extends ModelExport {
 
     // Template objects for Gson export of block state
     public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
+        public Map<String, Variant[]> variants = new HashMap<String, Variant[]>();
     }
     public static class Variant {
         public String model;
+        public Integer y;
     }
     // Template objects for Gson export of block models
     public static class ModelObjectLeaves {
@@ -59,9 +60,20 @@ public class LeavesBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        Variant var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
-        so.variants.put("", var);
+        Variant[] vars;
+        if (def.rotateRandom) {
+        	vars = new Variant[4];
+        }
+        else {
+        	vars = new Variant[1];
+        }
+        for (int i = 0; i < vars.length; i++) {
+        	Variant var = new Variant();
+        	var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        	if (i > 0) var.y = 90*i;
+        	vars[i] = var;
+        }
+        so.variants.put("", vars);
         this.writeBlockStateFile(def.blockName, so);
     }
     

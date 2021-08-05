@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/netherbrick_keystone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/netherbrick_keystone"
+      }
+    ]
   }
 }

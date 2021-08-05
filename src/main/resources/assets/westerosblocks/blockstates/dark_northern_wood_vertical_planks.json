@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/dark_northern_wood_vertical_planks"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/dark_northern_wood_vertical_planks"
+      }
+    ]
   }
 }

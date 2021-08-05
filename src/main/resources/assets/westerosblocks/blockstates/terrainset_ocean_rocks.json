@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terrainset_ocean_rocks"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terrainset_ocean_rocks"
+      }
+    ]
   }
 }

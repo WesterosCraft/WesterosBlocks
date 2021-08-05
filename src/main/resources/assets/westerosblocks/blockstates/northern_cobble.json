@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/northern_cobble"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/northern_cobble"
+      }
+    ]
   }
 }

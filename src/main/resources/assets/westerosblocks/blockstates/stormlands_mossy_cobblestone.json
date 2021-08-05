@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/stormlands_mossy_cobblestone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/stormlands_mossy_cobblestone"
+      }
+    ]
   }
 }

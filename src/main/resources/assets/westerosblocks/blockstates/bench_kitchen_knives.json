@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bench_kitchen_knives"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/bench_kitchen_knives"
+      }
+    ]
   }
 }

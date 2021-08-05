@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/blacksmith_small"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/blacksmith_small"
+      }
+    ]
   }
 }

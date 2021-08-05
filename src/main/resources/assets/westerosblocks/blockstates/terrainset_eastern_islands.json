@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terrainset_eastern_islands"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terrainset_eastern_islands"
+      }
+    ]
   }
 }

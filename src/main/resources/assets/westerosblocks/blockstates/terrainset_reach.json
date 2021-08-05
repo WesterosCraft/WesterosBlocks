@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terrainset_reach"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terrainset_reach"
+      }
+    ]
   }
 }

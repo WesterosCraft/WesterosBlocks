@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/starry_sept_marble"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/starry_sept_marble"
+      }
+    ]
   }
 }

@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/raspberry_bush"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/raspberry_bush"
+      },
+      {
+        "model": "westerosblocks:block/raspberry_bush",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/raspberry_bush",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/raspberry_bush",
+        "y": 270
+      }
+    ]
   }
 }

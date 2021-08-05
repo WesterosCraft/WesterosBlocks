@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/silver_tin_crate"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/silver_tin_crate"
+      }
+    ]
   }
 }

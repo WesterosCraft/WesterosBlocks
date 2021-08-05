@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/stormlands_brick_arrow_slit"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/stormlands_brick_arrow_slit"
+      }
+    ]
   }
 }

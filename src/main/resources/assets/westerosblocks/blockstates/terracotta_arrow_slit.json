@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terracotta_arrow_slit"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terracotta_arrow_slit"
+      }
+    ]
   }
 }

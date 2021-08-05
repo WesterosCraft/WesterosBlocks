@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/blacksmith_large"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/blacksmith_large"
+      }
+    ]
   }
 }

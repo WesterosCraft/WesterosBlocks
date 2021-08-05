@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/lannisport_light_brick_arrow_slit_window"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/lannisport_light_brick_arrow_slit_window"
+      }
+    ]
   }
 }

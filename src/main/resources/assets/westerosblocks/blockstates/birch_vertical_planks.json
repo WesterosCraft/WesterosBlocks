@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/birch_vertical_planks"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/birch_vertical_planks"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/6sided_jungle"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/6sided_jungle"
+      }
+    ]
   }
 }

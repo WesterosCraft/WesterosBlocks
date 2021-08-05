@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/rangers_hornblast"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/rangers_hornblast"
+      }
+    ]
   }
 }

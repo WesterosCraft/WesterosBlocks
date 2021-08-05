@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/juniper_bush"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/juniper_bush"
+      },
+      {
+        "model": "westerosblocks:block/juniper_bush",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/juniper_bush",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/juniper_bush",
+        "y": 270
+      }
+    ]
   }
 }

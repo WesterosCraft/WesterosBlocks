@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/fallen_leaves"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/fallen_leaves"
+      }
+    ]
   }
 }

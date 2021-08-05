@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/small_orange_bricks_ornate_top"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/small_orange_bricks_ornate_top"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/ship_sails"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/ship_sails"
+      }
+    ]
   }
 }

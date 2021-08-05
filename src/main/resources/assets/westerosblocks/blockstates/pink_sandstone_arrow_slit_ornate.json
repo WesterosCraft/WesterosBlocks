@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/pink_sandstone_arrow_slit_ornate"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/pink_sandstone_arrow_slit_ornate"
+      }
+    ]
   }
 }

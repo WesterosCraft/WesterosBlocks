@@ -127,7 +127,8 @@ public class WesterosBlockDef {
 	public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
 	public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
 	public List<StackElement> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
-
+	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
+	
 	public static class StackElement {
 		public List<String> textures = null; // List of textures
 		public BoundingBox boundingBox = null; // Bounding box

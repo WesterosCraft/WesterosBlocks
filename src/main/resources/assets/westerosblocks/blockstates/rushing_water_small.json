@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/rushing_water_small"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/rushing_water_small"
+      }
+    ]
   }
 }

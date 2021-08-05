@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/pebbles_wet_westerlands"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/pebbles_wet_westerlands"
+      }
+    ]
   }
 }

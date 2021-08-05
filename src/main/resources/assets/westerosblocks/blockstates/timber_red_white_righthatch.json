@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/timber_red_white_righthatch"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/timber_red_white_righthatch"
+      }
+    ]
   }
 }

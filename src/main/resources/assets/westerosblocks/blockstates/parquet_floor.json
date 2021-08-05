@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/parquet_floor"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/parquet_floor"
+      }
+    ]
   }
 }

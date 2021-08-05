@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terracotta"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terracotta"
+      }
+    ]
   }
 }

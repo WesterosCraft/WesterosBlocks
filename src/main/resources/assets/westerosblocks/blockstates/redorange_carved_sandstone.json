@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/redorange_carved_sandstone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/redorange_carved_sandstone"
+      }
+    ]
   }
 }

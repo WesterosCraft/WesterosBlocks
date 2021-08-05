@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/coloured_sept_window"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/coloured_sept_window"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/spit_roast"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/spit_roast"
+      }
+    ]
   }
 }

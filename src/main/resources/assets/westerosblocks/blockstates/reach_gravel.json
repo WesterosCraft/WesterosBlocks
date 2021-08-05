@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/reach_gravel"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/reach_gravel"
+      }
+    ]
   }
 }

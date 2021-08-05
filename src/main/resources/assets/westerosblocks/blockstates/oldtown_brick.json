@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/oldtown_brick"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/oldtown_brick"
+      }
+    ]
   }
 }

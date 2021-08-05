@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bench_carpentry_hammer_saw"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/bench_carpentry_hammer_saw"
+      }
+    ]
   }
 }

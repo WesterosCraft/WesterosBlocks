@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terrainset_iron_islands"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terrainset_iron_islands"
+      }
+    ]
   }
 }

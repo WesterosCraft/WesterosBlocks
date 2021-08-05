@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/grey_keystone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/grey_keystone"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/lannisport_orange_plaster"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/lannisport_orange_plaster"
+      }
+    ]
   }
 }

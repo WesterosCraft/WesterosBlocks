@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bookshelf_abandoned"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/bookshelf_abandoned"
+      }
+    ]
   }
 }

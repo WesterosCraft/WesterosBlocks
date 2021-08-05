@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bog"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/bog"
+      }
+    ]
   }
 }

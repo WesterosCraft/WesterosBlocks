@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/coarse_red_carved_sandstone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/coarse_red_carved_sandstone"
+      }
+    ]
   }
 }

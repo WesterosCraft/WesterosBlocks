@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/training_yard_small"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/training_yard_small"
+      }
+    ]
   }
 }

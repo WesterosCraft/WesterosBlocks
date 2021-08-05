@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bookshelf_maester"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/bookshelf_maester"
+      }
+    ]
   }
 }

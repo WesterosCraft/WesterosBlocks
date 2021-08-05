@@ -5,8 +5,8 @@
     "up": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_cut",
     "north": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front",
     "south": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front",
-    "west": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_side",
-    "east": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_side",
+    "west": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front",
+    "east": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front",
     "particle": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front"
   }
 }

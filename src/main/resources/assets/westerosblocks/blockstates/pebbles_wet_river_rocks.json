@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/pebbles_wet_river_rocks"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/pebbles_wet_river_rocks"
+      }
+    ]
   }
 }

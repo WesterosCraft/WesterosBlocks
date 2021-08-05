@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/warning_bells_small"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/warning_bells_small"
+      }
+    ]
   }
 }

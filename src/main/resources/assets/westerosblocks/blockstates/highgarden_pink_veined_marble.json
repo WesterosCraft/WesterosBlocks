@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/highgarden_pink_veined_marble"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/highgarden_pink_veined_marble"
+      }
+    ]
   }
 }

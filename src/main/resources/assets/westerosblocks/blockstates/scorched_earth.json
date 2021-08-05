@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/scorched_earth"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/scorched_earth"
+      }
+    ]
   }
 }

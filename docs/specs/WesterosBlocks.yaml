@@ -121,22 +121,24 @@ components:
           type: integer
           description: Block explosion resistance
         harvestLevel:
-          type: object
-          description: Harvest level information
-          properties:
-            tool:
-              type: string
-              enum: 
-                - "axe"
-                - "hoe"
-                - "pickaxe"
-                - "shovel"
-                - "pickaxe"
-            level:
-              type: integer
-              minimum: 0
-              maximum: 4
-              description: Tool level required for harvesting
+          type: array
+          items:
+	          type: object
+		      description: Harvest level information
+	    	  properties:
+	        	tool:
+	          	  type: string
+	          	  enum: 
+	                - "axe"
+	                - "hoe"
+	                - "pickaxe"
+	                - "shovel"
+	                - "pickaxe"
+	            level:
+	              type: integer
+	              minimum: 0
+	              maximum: 4
+	              description: Tool level required for harvesting
         creativeTab:
           type: string
           description: Which creative tab the block item should be placed in
@@ -214,6 +216,12 @@ components:
               $ref: "#/components/schemas/colorMult"
             collisionBoxes:
               $ref: "#/components/schemas/CollisionBoxes"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
     sound:
       title: blockType='sound'
       allOf:
@@ -277,6 +285,12 @@ components:
                 - "end-time": time of day (as 100 times
                   the 24-hour time) for the latest 
                   playing of the sounds.
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
                 
     sand:
       title: blockType='sand'
@@ -308,6 +322,12 @@ components:
                   beyond the length of the list.
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
     soulsand:
       title: blockType='soulsand'
       allOf:
@@ -338,6 +358,12 @@ components:
                   beyond the length of the list.
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
     layer:
       title: blockType='layer'
       allOf:
@@ -688,6 +714,12 @@ components:
                   - 3: sides
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
             type:
               type: string
               description: |-
@@ -1116,6 +1148,9 @@ components:
         "birch" - tint using birch tinting map
         "basic" - tint using basic color multiplier
         "lily" - tint using lily tinting map
+        
+        Otherwise, value is assumed to be that of a colormap
+        file located at assets/westerosblocks/<path>
     ambientOcclusion:
       type: boolean
       default: false

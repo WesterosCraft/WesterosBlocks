@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/market_large"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/market_large"
+      }
+    ]
   }
 }

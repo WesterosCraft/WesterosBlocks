@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/grain_crate"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/grain_crate"
+      }
+    ]
   }
 }

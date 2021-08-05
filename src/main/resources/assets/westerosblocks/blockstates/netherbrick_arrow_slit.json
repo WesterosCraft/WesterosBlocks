@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/netherbrick_arrow_slit"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/netherbrick_arrow_slit"
+      }
+    ]
   }
 }

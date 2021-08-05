@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/pebbles_dry_eastern_islands"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/pebbles_dry_eastern_islands"
+      }
+    ]
   }
 }

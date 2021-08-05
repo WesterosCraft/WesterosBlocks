@@ -3160,6 +3160,7 @@
                 "leaves_block_0/leaves_birch",
                 "leaves_block_0/leaves_birch"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:0"
         },
         {
@@ -3177,6 +3178,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:1"
         },
         {
@@ -3194,6 +3196,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:2"
         },
         {
@@ -3211,6 +3214,7 @@
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:3"
         },
         {
@@ -3228,6 +3232,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:4"
         },
         {
@@ -3245,6 +3250,7 @@
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:5"
         },
         {
@@ -3262,6 +3268,7 @@
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:6"
         },
         {
@@ -3279,6 +3286,7 @@
                 "leaves_block_0/leaves_birch",
                 "leaves_block_0/leaves_birch"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:7"
         },
         {
@@ -3296,6 +3304,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:0"
         },
         {
@@ -3313,6 +3322,7 @@
                 "leaves_block_0/leaves_birch",
                 "leaves_block_0/leaves_birch"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:1"
         },
         {
@@ -3329,6 +3339,7 @@
                 "leaves_block_0/leaves_weirwood",
                 "leaves_block_0/leaves_weirwood"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:2"
         },
         {
@@ -3346,6 +3357,7 @@
                 "leaves_block_0/leaves_birch",
                 "leaves_block_0/leaves_birch"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:3"
         },
         {
@@ -3363,6 +3375,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:4"
         },
         {
@@ -3380,6 +3393,7 @@
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:5"
         },
         {
@@ -3397,6 +3411,7 @@
                 "leaves_block_0/leaves_spruce",
                 "leaves_block_0/leaves_spruce"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:6"
         },
         {
@@ -3414,6 +3429,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:7"
         },
         {
@@ -3431,6 +3447,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:0"
         },
         {
@@ -3448,6 +3465,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:1"
         },
         {
@@ -3465,6 +3483,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:2"
         },
         {
@@ -3482,6 +3501,7 @@
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:3"
         },
         {
@@ -3499,6 +3519,7 @@
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:4"
         },
         {
@@ -3516,6 +3537,7 @@
                 "leaves_block_0/leaves_palm",
                 "leaves_block_0/leaves_palm"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:5"
         },
         {
@@ -3533,6 +3555,7 @@
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
+            "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:6"
         },
         {

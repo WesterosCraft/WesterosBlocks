@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/spruce_vertical_planks"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/spruce_vertical_planks"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/reach_brick"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/reach_brick"
+      }
+    ]
   }
 }

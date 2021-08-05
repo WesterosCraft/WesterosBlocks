@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bench_kitchen_pans"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/bench_kitchen_pans"
+      }
+    ]
   }
 }

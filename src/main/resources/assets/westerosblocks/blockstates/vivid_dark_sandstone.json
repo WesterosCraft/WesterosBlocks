@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/vivid_dark_sandstone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/vivid_dark_sandstone"
+      }
+    ]
   }
 }

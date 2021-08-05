@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/oxidized_iron_block"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/oxidized_iron_block"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terrainset_grey_sandstone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terrainset_grey_sandstone"
+      }
+    ]
   }
 }

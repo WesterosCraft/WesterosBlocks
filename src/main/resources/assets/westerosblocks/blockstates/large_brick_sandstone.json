@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/large_brick_sandstone"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/large_brick_sandstone"
+      }
+    ]
   }
 }

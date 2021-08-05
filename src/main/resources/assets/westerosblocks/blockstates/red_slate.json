@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/red_slate"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/red_slate"
+      }
+    ]
   }
 }

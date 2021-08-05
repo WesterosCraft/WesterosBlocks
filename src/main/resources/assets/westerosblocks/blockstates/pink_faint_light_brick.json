@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/pink_faint_light_brick"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/pink_faint_light_brick"
+      }
+    ]
   }
 }

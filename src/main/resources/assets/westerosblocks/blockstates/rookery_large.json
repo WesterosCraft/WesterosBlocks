@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/rookery_large"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/rookery_large"
+      }
+    ]
   }
 }

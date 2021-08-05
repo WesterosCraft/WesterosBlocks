@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/orange_fruit_leaves"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/orange_fruit_leaves"
+      },
+      {
+        "model": "westerosblocks:block/orange_fruit_leaves",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/orange_fruit_leaves",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/orange_fruit_leaves",
+        "y": 270
+      }
+    ]
   }
 }

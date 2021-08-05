@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/6sided_stone_slab"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/6sided_stone_slab"
+      }
+    ]
   }
 }
