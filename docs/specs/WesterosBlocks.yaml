@@ -31,6 +31,7 @@ components:
               - $ref: "#/components/schemas/furnace"
               - $ref: "#/components/schemas/halfdoor"
               - $ref: "#/components/schemas/ladder"
+              - $ref: "#/components/schemas/layer"
               - $ref: "#/components/schemas/leaves"
               - $ref: "#/components/schemas/log"
               - $ref: "#/components/schemas/pane"
@@ -40,6 +41,7 @@ components:
               - $ref: "#/components/schemas/slab"
               - $ref: "#/components/schemas/solid"
               - $ref: "#/components/schemas/soulsand"
+              - $ref: "#/components/schemas/sound"
               - $ref: "#/components/schemas/stair"
               - $ref: "#/components/schemas/torch"
               - $ref: "#/components/schemas/trapdoor"
@@ -114,6 +116,7 @@ components:
             - "web"
             - "piston"
             - "decoration"
+            - "stone"
         resistance:
           type: integer
           description: Block explosion resistance
