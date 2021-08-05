@@ -123,21 +123,22 @@ components:
         harvestLevel:
           type: array
           items:
-	          type: object
-		      description: Harvest level information
-	    	  properties:
-	        	tool:
-	          	  type: string
-	          	  enum: 
-	                - "axe"
-	                - "hoe"
-	                - "pickaxe"
-	                - "shovel"
-	            level:
-	              type: integer
-	              minimum: 0
-	              maximum: 4
-	              description: Tool level required for harvesting
+            type: object
+            description: Harvest level information
+            properties:
+              tool:
+                type: string
+                enum: 
+                  - "axe"
+                  - "hoe"
+                  - "pickaxe"
+                  - "shovel"
+              level:
+                type: integer
+                minimum: 0
+                maximum: 4
+                description: |-
+                  Tool level required for harvesting
         creativeTab:
           type: string
           description: Which creative tab the block item should be placed in
