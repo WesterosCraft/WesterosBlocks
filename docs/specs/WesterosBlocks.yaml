@@ -211,6 +211,70 @@ components:
               $ref: "#/components/schemas/colorMult"
             collisionBoxes:
               $ref: "#/components/schemas/CollisionBoxes"
+    sound:
+      title: blockType='sound'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for simple 'sound' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: north texture
+                  - 3: south texture
+                  - 4: west texture
+                  - 5: east texture
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            soundList:
+              type: array
+              items:
+                type: string
+              description: |-
+                List of sound sets available to be
+                chosen for the sound block.  If only
+                one is provied, no settings are available,
+                while 2 or more sets can be toggled through
+                by 'using' the block.
+                Sounds sets are lists of files in
+                'assets/westeroscraft/sounds' with the
+                name of the set (for one file) or
+                with the name followed by a 1-based index
+                (for multiple sounds).
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "period": periodic time, in seconds, for
+                  playing the sound.  If zero, no automatic
+                  repeating is done.
+                - "random-add": maximum number of seconds
+                  to randomly add to each replay period.  If
+                  zero, repeated plays will be consistently
+                  timed.
+                - "start-time": time of day (as 100 times
+                  the 24-hour time) for earliest playing
+                  of the sounds.  If same as end-time, all
+                  times are acceptable.
+                - "end-time": time of day (as 100 times
+                  the 24-hour time) for the latest 
+                  playing of the sounds.
+                
     sand:
       title: blockType='sand'
       allOf:
@@ -321,7 +385,17 @@ components:
                   path.
                   Index mapping for textures is:
                   - 0: single texture
-
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "no-climb": If value is defined and
+                "true", climbing is not allowed
+                - "allow-unsupported": If value is
+                defined and "true", block does not break
+                when unsupported.
     fire:
       title: blockType='fire'
       allOf:
@@ -471,7 +545,18 @@ components:
                   - 1: edge texture
                   If the list is shorter than 2, the
                   last texture is used for all indexes
-                  beyond the length of the list.                  
+                  beyond the length of the list.    
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "legacy-model": If value is defined and
+                "true", use old model for panes
+                - "bars-model": If value is defined and
+                "true", use bars model (versus glass panes)
+
     bed:
       title: blockType='bed'
       allOf:
@@ -600,6 +685,15 @@ components:
                   - 3: sides
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "no-decay": If value is defined and
+                "true", blocks never decay
+
     web:
       title: blockType='web'
       allOf:
@@ -623,6 +717,15 @@ components:
                   - 0: single texture
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "no-in-web": If value is defined and
+                "true", web block does not slow movement
+              
     cuboid:
       title: blockType='cuboid'
       allOf:
@@ -735,6 +838,15 @@ components:
                   If the list is shorter than 2, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "locked": If value is defined and
+                "true", door is locked (not opened by hand)
+                  
     halfdoor:
       title: blockType='halfdoor'
       allOf:
@@ -756,7 +868,15 @@ components:
                   path.
                   Index mapping for textures is:
                   - 0: single texture
-     
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "locked": If value is defined and
+                "true", door is locked (not opened by hand)
+
     trapdoor:
       title: blockType='trapdoor'
       allOf:
@@ -778,6 +898,15 @@ components:
                   path.
                   Index mapping for textures is:
                   - 0: all sides
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "locked": If value is defined and
+                "true", door is locked (not opened by hand)
+                  
     furnace:
       title: blockType='furnace'
       allOf:
@@ -851,6 +980,20 @@ components:
                   Index mapping for textures is:
                   - 0: side texture
                   - 1: top/bottom texture
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "no-climb": If value is defined and
+                "true", climbing is not allowed
+                - "allow-unsupported": If value is
+                defined and "true", block does not break
+                when unsupported.
+                - "has-down": If value is defined and
+                "true", vines have bottom side also
+                  
     fence:
       title: blockType='fence'
       allOf:
