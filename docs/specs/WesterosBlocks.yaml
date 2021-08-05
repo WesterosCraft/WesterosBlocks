@@ -1,0 +1,1054 @@
+openapi: 3.0.1
+info:
+  title: WesterosBlocks.json data schema
+  version: '0.1'
+servers:
+  - url: /
+paths: {}
+components:
+  schemas:
+    baseObject:
+      type: object
+      description: Base object for whole WesterosBlocks.json file
+      properties:
+        blocks:
+          type: array
+          description: List of block definitions
+          items:
+            oneOf:
+              - $ref: "#/components/schemas/bed"
+              - $ref: "#/components/schemas/cake"
+              - $ref: "#/components/schemas/crop"
+              - $ref: "#/components/schemas/beacon"
+              - $ref: "#/components/schemas/cuboid"
+              - $ref: "#/components/schemas/cuboid-ne"
+              - $ref: "#/components/schemas/cuboid-nsew"
+              - $ref: "#/components/schemas/cuboid-nsewud"
+              - $ref: "#/components/schemas/cuboid-nsew-stack"
+              - $ref: "#/components/schemas/door"
+              - $ref: "#/components/schemas/fence"
+              - $ref: "#/components/schemas/fire"
+              - $ref: "#/components/schemas/furnace"
+              - $ref: "#/components/schemas/halfdoor"
+              - $ref: "#/components/schemas/ladder"
+              - $ref: "#/components/schemas/leaves"
+              - $ref: "#/components/schemas/log"
+              - $ref: "#/components/schemas/pane"
+              - $ref: "#/components/schemas/plant"
+              - $ref: "#/components/schemas/rail"
+              - $ref: "#/components/schemas/sand"
+              - $ref: "#/components/schemas/slab"
+              - $ref: "#/components/schemas/solid"
+              - $ref: "#/components/schemas/soulsand"
+              - $ref: "#/components/schemas/stair"
+              - $ref: "#/components/schemas/torch"
+              - $ref: "#/components/schemas/trapdoor"
+              - $ref: "#/components/schemas/vines"
+              - $ref: "#/components/schemas/wall"
+              - $ref: "#/components/schemas/web"
+    Block:
+      type: object
+      required: [ blockName, blockType, label, creativeTab, material ]
+      properties:
+        blockName:
+          type: string
+          description: |-
+            Name of block type - must be lower case string.  Full name for
+            block will always be 'westerosblocks:' plus this name.
+        blockType:
+          type: string
+          description: Type of block being defined
+        hardness:
+          type: integer
+          description: Hardness or durability of the block
+        stepSound:
+          type: string
+          description: Sound to be used when block is walked on
+          default: "stone"
+          enum:
+            - "powder"
+            - "wood"
+            - "gravel"
+            - "grass"
+            - "stone"
+            - "metal"
+            - "glass"
+            - "cloth"
+            - "sand"
+            - "snow"
+            - "ladder"
+            - "anvil"
+            - "plant"
+            - "slime"
+        material:
+          type: string
+          description: Type of material for block
+          default: "stone"
+          enum:
+            - "air"
+            - "grass"
+            - "ground"
+            - "wood"
+            - "rock"
+            - "iron"
+            - "anvil"
+            - "water"
+            - "lava"
+            - "leaves"
+            - "plants"
+            - "vine"
+            - "sponge"
+            - "cloth"
+            - "fire"
+            - "sand"
+            - "glass"
+            - "tnt"
+            - "coral"
+            - "ice"
+            - "snow"
+            - "craftedSnow"
+            - "cactus"
+            - "clay"
+            - "portal"
+            - "cake"
+            - "web"
+            - "piston"
+            - "decoration"
+        resistance:
+          type: integer
+          description: Block explosion resistance
+        harvestLevel:
+          type: object
+          description: Harvest level information
+          properties:
+            tool:
+              type: string
+              enum: 
+                - "axe"
+                - "hoe"
+                - "pickaxe"
+                - "shovel"
+                - "pickaxe"
+            level:
+              type: integer
+              minimum: 0
+              maximum: 4
+              description: Tool level required for harvesting
+        creativeTab:
+          type: string
+          description: Which creative tab the block item should be placed in
+          enum: 
+            - "buildingBlocks"
+            - "decorations"
+            - "redstone"
+            - "transportation"
+            - "misc"
+            - "food"
+            - "tools"
+            - "combat"
+            - "brewing"
+            - "materials"
+            - "WesterosBlocks"
+            - "WesterosDeco"
+            - "WesterosPlants"
+            - "WesterosSounds"
+        lightValue:
+          type: number
+          minimum: 0
+          maximum: 1
+          default: 0
+          description: |-
+            Emitted light level of block- 0=none, 1=max (light level 16)
+        label:
+          type: string
+          description: Label for block
+        legacyBlockID:
+          type: string
+          description: |-
+            Legacy block-id:base-metadata value for the
+            block, from 1.12.2 version
+        alphaRender:
+          type: boolean
+          default: false
+          description: |-
+            If true, use alpha blending render (translucent)
+        nonOpaque:
+          type: boolean
+          default: false
+          description: |-
+            If true, block is not solid and opaque
+      discriminator:
+        propertyName: blockType
+    solid:
+      title: blockType='solid'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for simple 'solid' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: north texture
+                  - 3: south texture
+                  - 4: west texture
+                  - 5: east texture
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            collisionBoxes:
+              $ref: "#/components/schemas/CollisionBoxes"
+    sand:
+      title: blockType='sand'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for simple 'sand' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: north texture
+                  - 3: south texture
+                  - 4: west texture
+                  - 5: east texture
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    soulsand:
+      title: blockType='soulsand'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for simple 'soulsand' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: north texture
+                  - 3: south texture
+                  - 4: west texture
+                  - 5: east texture
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    layer:
+      title: blockType='layer'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for simple 'layer' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: north texture
+                  - 3: south texture
+                  - 4: west texture
+                  - 5: east texture
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    ladder:
+      title: blockType='ladder'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for simple 'ladder' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: single texture
+
+    fire:
+      title: blockType='fire'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for simple 'fire' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: fire texture 1
+                  - 1: fire texture 2
+                  If the list is shorter than 2, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+    log:
+      title: blockType='log'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for simple 'log' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: end texture
+                  - 1: side texture
+                  If the list is shorter than 2, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+              
+    stair:
+      title: blockType='stair'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'stair' blocks
+          required: [ modelBlockName ]
+          properties:
+            modelBlockName:
+              type: string
+              description: |-
+                Block name of the block used as template
+                for the stairs, both for textures
+                and for materials.
+                Textures for the block are drawn from
+                the bottom, top, and north side of the
+                source block.
+            ambientOcclusion:
+              $ref: "#/components/schemas/ambientOcclusion"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    slab:
+      title: blockType='slab'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'slab' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: side texture
+                  If the list is shorter than 3, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            ambientOcclusion:
+              $ref: "#/components/schemas/ambientOcclusion"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    rail:
+      title: blockType='rail'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'rail' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: straight track
+                  - 1: curved track
+                  If the list is shorter than 2, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+    pane:
+      title: blockType='pane'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'pane' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: pane texture
+                  - 1: edge texture
+                  If the list is shorter than 2, the
+                  last texture is used for all indexes
+                  beyond the length of the list.                  
+    bed:
+      title: blockType='bed'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'bed' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: top of head of bed
+                  - 1: top of foot of bed
+                  - 2: side of head of bed
+                  - 3: side of foot of bed
+                  - 4: end of head of bed
+                  - 5: end of foot of bed
+
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+    cake:
+      title: blockType='cake'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'cake' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: side texture
+                  - 3: inside of cake texture
+
+                  If the list is shorter than 4, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+    crop:
+      title: blockType='crop'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'crop' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: single texture
+    plant:
+      title: blockType='plant'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'plant' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: single texture
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    leaves:
+      title: blockType='leaves'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'leaves' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: unused
+                  - 1: unused
+                  - 2: up/down
+                  - 3: sides
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    web:
+      title: blockType='web'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'web' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: single texture
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    cuboid:
+      title: blockType='cuboid'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'cuboid' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: single texture
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            cuboids:
+              $ref: "#/components/schemas/Cuboids"
+            isCustomModel:
+              type: boolean
+              default: false
+              description: |-
+                If set to true, model is not generated,
+                and is instead expected to be found at
+                models/custom/<blockid>.json.
+    cuboid-ne:
+      title: blockType='cuboid-ne'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'cuboid-ne' blocks
+    cuboid-nsew:
+      title: blockType='cuboid-nsew'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'cuboid-nsew' blocks
+    cuboid-nsewud:
+      title: blockType='cuboid-nsewud'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'cuboid-nsewud' blocks
+    cuboid-nsew-stack:
+      title: blockType='cuboid-nsew-stack'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'cuboid-nsew-stack' blocks
+          required: [ stack ]
+          properties:
+            stack:
+              type: array
+              minItems: 1
+              maxItems: 2
+              items:
+                type: object
+                description: |-
+                  Model information for each part of
+                  the stack - first is for the bottom,
+                  second is for the top.
+                properties:                
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of texures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is:
+                        - 0: single texture
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"
+                  cuboids:
+                    $ref: "#/components/schemas/Cuboids"
+    door:
+      title: blockType='door'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'door' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: top texture
+                  - 1: bottom texture
+
+                  If the list is shorter than 2, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+    halfdoor:
+      title: blockType='halfdoor'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'halfdoor' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: single texture
+     
+    trapdoor:
+      title: blockType='trapdoor'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'trapdoor' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: all sides
+    furnace:
+      title: blockType='furnace'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'furnace' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: non-front side texture
+                  - 3: front on texture
+                  - 4: front off texture
+
+                  If the list is shorter than 5, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+                  
+    torch:
+      title: blockType='torch'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'torch' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: all sides
+    vines:
+      title: blockType='vines'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'vines' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: side texture
+                  - 1: top/bottom texture
+    fence:
+      title: blockType='fence'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'fence' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: side texture
+
+                  If the list is shorter than 3, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+    wall:
+      title: blockType='wall'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'wall' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: side texture
+
+                  If the list is shorter than 3, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+    beacon:
+      title: blockType='beacon'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'beacon' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  - 0: bottom texture of outside box
+                  - 1: top texture of outside box
+                  - 2: north texture of outside box
+                  - 3: south texture of outside box
+                  - 4: west texture of outside box
+                  - 5: east texture of outside box
+                  - 6: bottom texture of center box
+                  - 7: top texture of center box
+                  - 8: north texture of center box
+                  - 9: south texture of center box
+                  - 10: west texture of center box
+                  - 11: east texture of center box
+                  - 12: bottom texture of bottom box
+                  - 13: top texture of bottom box
+                  - 14: north texture of bottom box
+                  - 15: south texture of bottom box
+                  - 16: west texture of bottom box
+                  - 17: east texture of bottom box
+                  
+                  If the list is shorter than 18, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            isCustomModel:
+              type: boolean
+              default: false
+              description: |-
+                If set to true, model is not generated,
+                and is instead expected to be found at
+                models/custom/<blockid>.json.                  
+    colorMult:
+      type: string
+      description: |-
+        Color multiplier to be used for tinting the blocks.
+        Values include:
+        
+        "#RRGGBB" - custom color, with given red/green/blue values
+        "water" - tint using water tinting map
+        "foliage" - tint using foliage (leaves) tinting map
+        "grass" - tint using grass tinting map
+        "pine" - tint using pine tinting map
+        "birch" - tint using birch tinting map
+        "basic" - tint using basic color multiplier
+        "lily" - tint using lily tinting map
+    ambientOcclusion:
+      type: boolean
+      default: false
+      description: |-
+        Control whether block has ambient occlusion
+    Cuboids:
+      type: array
+      description: List of cuboid components
+      items:
+        type: object
+        properties:
+          xMin:
+            type: number
+            description: Minimum X value
+          xMax:
+            type: number
+            description: Maximum X value
+          yMin:
+            type: number
+            description: Minimum Y value
+          yMax:
+            type: number
+            description: Maximum Y value
+          zMin:
+            type: number
+            description: Minimum Z value
+          zMax:
+            type: number
+            description: Maximum Z value
+          sideTextures:
+            type: array
+            items:
+              type: integer
+              default: 0
+            description: |-
+              Index in textures array to be used for
+              given side.
+              Sides are for (for shape=box)
+                - 0: bottom texture
+                - 1: top texture
+                - 2: north texture
+                - 3: south texture
+                - 4: west texture
+                - 5: east texture
+              Sides are for (for shape=crossed)
+                - 0: single texture
+          sideRotations:
+            type: array
+            items:
+              type: integer
+            description: |-
+              Rotation, in degrees, for each of the
+              faces
+          shape:
+            type: string
+            enum:
+              - "box"
+              - "crossed"
+    CollisionBoxes:
+      type: array
+      description: List of collision boxes
+      items:
+        type: object
+        properties:
+          xMin:
+            type: number
+            description: Minimum X value
+          xMax:
+            type: number
+            description: Maximum X value
+          yMin:
+            type: number
+            description: Minimum Y value
+          yMax:
+            type: number
+            description: Maximum Y value
+          zMin:
+            type: number
+            description: Minimum Z value
+          zMax:
+            type: number
+            description: Maximum Z value

@@ -129,11 +129,8 @@ public class SlabBlockModelExport extends ModelExport {
         ModelObjectCube mod = new ModelObjectCube(isOccluded, isTinted);
         mod.textures.down = getTextureID(def.getTextureByIndex(0));
         mod.textures.up = getTextureID(def.getTextureByIndex(1));
-        mod.textures.north = getTextureID(def.getTextureByIndex(2));
-        mod.textures.south = getTextureID(def.getTextureByIndex(3));
-        mod.textures.west = getTextureID(def.getTextureByIndex(4));
-        mod.textures.east = getTextureID(def.getTextureByIndex(5));
-        mod.textures.particle = getTextureID(def.getTextureByIndex(3));
+        mod.textures.north = mod.textures.south = mod.textures.west = mod.textures.east = getTextureID(def.getTextureByIndex(2));
+        mod.textures.particle = getTextureID(def.getTextureByIndex(2));
         this.writeBlockModelFile(bn + "_double", mod);
         // Lower half block model
         ModelObjectHalfLower modl = new ModelObjectHalfLower(isOccluded, isTinted);
