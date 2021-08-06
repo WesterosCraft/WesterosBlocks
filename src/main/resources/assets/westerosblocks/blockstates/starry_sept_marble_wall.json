@@ -4,87 +4,105 @@
       "when": {
         "up": "true"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_post"
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_post"
+        }
+      ]
     },
     {
       "when": {
         "north": "low"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_side",
-        "uvlock": true
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_side",
+          "uvlock": true
+        }
+      ]
     },
     {
       "when": {
         "north": "tall"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_side_tall",
-        "uvlock": true
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_side_tall",
+          "uvlock": true
+        }
+      ]
     },
     {
       "when": {
         "east": "low"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_side",
-        "y": 90,
-        "uvlock": true
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_side",
+          "y": 90,
+          "uvlock": true
+        }
+      ]
     },
     {
       "when": {
         "east": "tall"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_side_tall",
-        "y": 90,
-        "uvlock": true
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_side_tall",
+          "y": 90,
+          "uvlock": true
+        }
+      ]
     },
     {
       "when": {
         "south": "low"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_side",
-        "y": 180,
-        "uvlock": true
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_side",
+          "y": 180,
+          "uvlock": true
+        }
+      ]
     },
     {
       "when": {
         "south": "tall"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_side_tall",
-        "y": 180,
-        "uvlock": true
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_side_tall",
+          "y": 180,
+          "uvlock": true
+        }
+      ]
     },
     {
       "when": {
         "west": "low"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_side",
-        "y": 270,
-        "uvlock": true
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_side",
+          "y": 270,
+          "uvlock": true
+        }
+      ]
     },
     {
       "when": {
         "west": "tall"
       },
-      "apply": {
-        "model": "westerosblocks:block/starry_sept_marble_wall_side_tall",
-        "y": 270,
-        "uvlock": true
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/starry_sept_marble_wall_side_tall",
+          "y": 270,
+          "uvlock": true
+        }
+      ]
     }
   ]
 }
