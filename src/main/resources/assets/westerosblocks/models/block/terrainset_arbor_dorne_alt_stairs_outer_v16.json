@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_dorne_alt/16",
+    "top": "westerosblocks:blocks/terrainset_dorne_alt/16",
+    "side": "westerosblocks:blocks/terrainset_dorne_alt/16",
+    "particle": "westerosblocks:blocks/terrainset_dorne_alt/16"
+  }
+}

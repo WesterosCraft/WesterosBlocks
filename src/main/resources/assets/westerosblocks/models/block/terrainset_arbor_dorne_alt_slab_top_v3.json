@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_dorne_alt/3",
+    "top": "westerosblocks:blocks/terrainset_dorne_alt/3",
+    "side": "westerosblocks:blocks/terrainset_dorne_alt/3",
+    "particle": "westerosblocks:blocks/terrainset_dorne_alt/3"
+  }
+}

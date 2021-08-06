@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne_alt",
-    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne_alt",
-    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne_alt",
-    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne_alt",
-    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne_alt",
-    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne_alt",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_dorne_alt"
+    "down": "westerosblocks:blocks/terrainset_dorne_alt/1",
+    "up": "westerosblocks:blocks/terrainset_dorne_alt/1",
+    "north": "westerosblocks:blocks/terrainset_dorne_alt/1",
+    "south": "westerosblocks:blocks/terrainset_dorne_alt/1",
+    "west": "westerosblocks:blocks/terrainset_dorne_alt/1",
+    "east": "westerosblocks:blocks/terrainset_dorne_alt/1",
+    "particle": "westerosblocks:blocks/terrainset_dorne_alt/1"
   }
 }

@@ -5316,8 +5316,23 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Arbor Dorne",
-            "textures": [
-                "stone_terrainsets_0/stone_dorne"
+            "randomTextures": [
+            	{ textures: [ "terrainset_dorne/1" ] },
+            	{ textures: [ "terrainset_dorne/2" ] },
+            	{ textures: [ "terrainset_dorne/3" ] },
+            	{ textures: [ "terrainset_dorne/4" ] },
+            	{ textures: [ "terrainset_dorne/5" ] },
+            	{ textures: [ "terrainset_dorne/6" ] },
+            	{ textures: [ "terrainset_dorne/7" ] },
+            	{ textures: [ "terrainset_dorne/8" ] },
+            	{ textures: [ "terrainset_dorne/9" ] },
+            	{ textures: [ "terrainset_dorne/10" ] },
+            	{ textures: [ "terrainset_dorne/11" ] },
+            	{ textures: [ "terrainset_dorne/12" ] },
+            	{ textures: [ "terrainset_dorne/13" ] },
+            	{ textures: [ "terrainset_dorne/14" ] },
+            	{ textures: [ "terrainset_dorne/15" ] },
+            	{ textures: [ "terrainset_dorne/16" ] }
             ],
             "legacyBlockID": "stone_block_1:8"
         },
@@ -29064,8 +29079,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Arbor Dorne Slab",
-            "textures": [
-                "stone_terrainsets_0/stone_dorne"
+            "randomTextures": [
+            	{ textures: [ "terrainset_dorne/1" ] },
+            	{ textures: [ "terrainset_dorne/2" ] },
+            	{ textures: [ "terrainset_dorne/3" ] },
+            	{ textures: [ "terrainset_dorne/4" ] },
+            	{ textures: [ "terrainset_dorne/5" ] },
+            	{ textures: [ "terrainset_dorne/6" ] },
+            	{ textures: [ "terrainset_dorne/7" ] },
+            	{ textures: [ "terrainset_dorne/8" ] },
+            	{ textures: [ "terrainset_dorne/9" ] },
+            	{ textures: [ "terrainset_dorne/10" ] },
+            	{ textures: [ "terrainset_dorne/11" ] },
+            	{ textures: [ "terrainset_dorne/12" ] },
+            	{ textures: [ "terrainset_dorne/13" ] },
+            	{ textures: [ "terrainset_dorne/14" ] },
+            	{ textures: [ "terrainset_dorne/15" ] },
+            	{ textures: [ "terrainset_dorne/16" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_1:0"
         },
@@ -29194,8 +29224,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Arbor Dorne Alt Slab",
-            "textures": [
-                "stone_terrainsets_0/stone_dorne_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_dorne_alt/1" ] },
+            	{ textures: [ "terrainset_dorne_alt/2" ] },
+            	{ textures: [ "terrainset_dorne_alt/3" ] },
+            	{ textures: [ "terrainset_dorne_alt/4" ] },
+            	{ textures: [ "terrainset_dorne_alt/5" ] },
+            	{ textures: [ "terrainset_dorne_alt/6" ] },
+            	{ textures: [ "terrainset_dorne_alt/7" ] },
+            	{ textures: [ "terrainset_dorne_alt/8" ] },
+            	{ textures: [ "terrainset_dorne_alt/9" ] },
+            	{ textures: [ "terrainset_dorne_alt/10" ] },
+            	{ textures: [ "terrainset_dorne_alt/11" ] },
+            	{ textures: [ "terrainset_dorne_alt/12" ] },
+            	{ textures: [ "terrainset_dorne_alt/13" ] },
+            	{ textures: [ "terrainset_dorne_alt/14" ] },
+            	{ textures: [ "terrainset_dorne_alt/15" ] },
+            	{ textures: [ "terrainset_dorne_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_1:5"
         },
@@ -29460,8 +29505,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Arbor Dorne Wall",
-            "textures": [
-                "stone_terrainsets_0/stone_dorne"
+            "randomTextures": [
+            	{ textures: [ "terrainset_dorne/1" ] },
+            	{ textures: [ "terrainset_dorne/2" ] },
+            	{ textures: [ "terrainset_dorne/3" ] },
+            	{ textures: [ "terrainset_dorne/4" ] },
+            	{ textures: [ "terrainset_dorne/5" ] },
+            	{ textures: [ "terrainset_dorne/6" ] },
+            	{ textures: [ "terrainset_dorne/7" ] },
+            	{ textures: [ "terrainset_dorne/8" ] },
+            	{ textures: [ "terrainset_dorne/9" ] },
+            	{ textures: [ "terrainset_dorne/10" ] },
+            	{ textures: [ "terrainset_dorne/11" ] },
+            	{ textures: [ "terrainset_dorne/12" ] },
+            	{ textures: [ "terrainset_dorne/13" ] },
+            	{ textures: [ "terrainset_dorne/14" ] },
+            	{ textures: [ "terrainset_dorne/15" ] },
+            	{ textures: [ "terrainset_dorne/16" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_0:8"
         },
@@ -29590,8 +29650,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Arbor Dorne Alt Wall",
-            "textures": [
-                "stone_terrainsets_0/stone_dorne_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_dorne_alt/1" ] },
+            	{ textures: [ "terrainset_dorne_alt/2" ] },
+            	{ textures: [ "terrainset_dorne_alt/3" ] },
+            	{ textures: [ "terrainset_dorne_alt/4" ] },
+            	{ textures: [ "terrainset_dorne_alt/5" ] },
+            	{ textures: [ "terrainset_dorne_alt/6" ] },
+            	{ textures: [ "terrainset_dorne_alt/7" ] },
+            	{ textures: [ "terrainset_dorne_alt/8" ] },
+            	{ textures: [ "terrainset_dorne_alt/9" ] },
+            	{ textures: [ "terrainset_dorne_alt/10" ] },
+            	{ textures: [ "terrainset_dorne_alt/11" ] },
+            	{ textures: [ "terrainset_dorne_alt/12" ] },
+            	{ textures: [ "terrainset_dorne_alt/13" ] },
+            	{ textures: [ "terrainset_dorne_alt/14" ] },
+            	{ textures: [ "terrainset_dorne_alt/15" ] },
+            	{ textures: [ "terrainset_dorne_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_0:13"
         },
@@ -29802,8 +29877,23 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet Arbor Dorne Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_dorne"
+            "randomTextures": [
+            	{ textures: [ "terrainset_dorne/1" ] },
+            	{ textures: [ "terrainset_dorne/2" ] },
+            	{ textures: [ "terrainset_dorne/3" ] },
+            	{ textures: [ "terrainset_dorne/4" ] },
+            	{ textures: [ "terrainset_dorne/5" ] },
+            	{ textures: [ "terrainset_dorne/6" ] },
+            	{ textures: [ "terrainset_dorne/7" ] },
+            	{ textures: [ "terrainset_dorne/8" ] },
+            	{ textures: [ "terrainset_dorne/9" ] },
+            	{ textures: [ "terrainset_dorne/10" ] },
+            	{ textures: [ "terrainset_dorne/11" ] },
+            	{ textures: [ "terrainset_dorne/12" ] },
+            	{ textures: [ "terrainset_dorne/13" ] },
+            	{ textures: [ "terrainset_dorne/14" ] },
+            	{ textures: [ "terrainset_dorne/15" ] },
+            	{ textures: [ "terrainset_dorne/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_3:8"
         },
@@ -29902,8 +29992,23 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet Arbor Dorne Alt Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_dorne_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_dorne_alt/1" ] },
+            	{ textures: [ "terrainset_dorne_alt/2" ] },
+            	{ textures: [ "terrainset_dorne_alt/3" ] },
+            	{ textures: [ "terrainset_dorne_alt/4" ] },
+            	{ textures: [ "terrainset_dorne_alt/5" ] },
+            	{ textures: [ "terrainset_dorne_alt/6" ] },
+            	{ textures: [ "terrainset_dorne_alt/7" ] },
+            	{ textures: [ "terrainset_dorne_alt/8" ] },
+            	{ textures: [ "terrainset_dorne_alt/9" ] },
+            	{ textures: [ "terrainset_dorne_alt/10" ] },
+            	{ textures: [ "terrainset_dorne_alt/11" ] },
+            	{ textures: [ "terrainset_dorne_alt/12" ] },
+            	{ textures: [ "terrainset_dorne_alt/13" ] },
+            	{ textures: [ "terrainset_dorne_alt/14" ] },
+            	{ textures: [ "terrainset_dorne_alt/15" ] },
+            	{ textures: [ "terrainset_dorne_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_3:13"
         },
@@ -30016,8 +30121,23 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Arbor Dorne Alt",
-            "textures": [
-                "stone_terrainsets_0/stone_dorne_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_dorne_alt/1" ] },
+            	{ textures: [ "terrainset_dorne_alt/2" ] },
+            	{ textures: [ "terrainset_dorne_alt/3" ] },
+            	{ textures: [ "terrainset_dorne_alt/4" ] },
+            	{ textures: [ "terrainset_dorne_alt/5" ] },
+            	{ textures: [ "terrainset_dorne_alt/6" ] },
+            	{ textures: [ "terrainset_dorne_alt/7" ] },
+            	{ textures: [ "terrainset_dorne_alt/8" ] },
+            	{ textures: [ "terrainset_dorne_alt/9" ] },
+            	{ textures: [ "terrainset_dorne_alt/10" ] },
+            	{ textures: [ "terrainset_dorne_alt/11" ] },
+            	{ textures: [ "terrainset_dorne_alt/12" ] },
+            	{ textures: [ "terrainset_dorne_alt/13" ] },
+            	{ textures: [ "terrainset_dorne_alt/14" ] },
+            	{ textures: [ "terrainset_dorne_alt/15" ] },
+            	{ textures: [ "terrainset_dorne_alt/16" ] }
             ],
             "legacyBlockID": "stone_block_10:2"
         },

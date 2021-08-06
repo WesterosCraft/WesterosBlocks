@@ -1,7 +1,54 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/terrainset_arbor_dorne"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne-v16"
+      }
+    ]
   }
 }

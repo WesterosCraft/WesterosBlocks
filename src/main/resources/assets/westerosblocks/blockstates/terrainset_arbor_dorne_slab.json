@@ -3,16 +3,151 @@
     "type=bottom": [
       {
         "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_bottom_v16"
       }
     ],
     "type=double": [
       {
         "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_double_v16"
       }
     ],
     "type=top": [
       {
         "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_arbor_dorne_slab_top_v16"
       }
     ]
   }
