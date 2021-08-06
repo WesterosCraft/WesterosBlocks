@@ -29650,8 +29650,23 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet Reach Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_reach"
+            "randomTextures": [
+            	{ textures: [ "terrainset_reach/1" ] },
+            	{ textures: [ "terrainset_reach/2" ] },
+            	{ textures: [ "terrainset_reach/3" ] },
+            	{ textures: [ "terrainset_reach/4" ] },
+            	{ textures: [ "terrainset_reach/5" ] },
+            	{ textures: [ "terrainset_reach/6" ] },
+            	{ textures: [ "terrainset_reach/7" ] },
+            	{ textures: [ "terrainset_reach/8" ] },
+            	{ textures: [ "terrainset_reach/9" ] },
+            	{ textures: [ "terrainset_reach/10" ] },
+            	{ textures: [ "terrainset_reach/11" ] },
+            	{ textures: [ "terrainset_reach/12" ] },
+            	{ textures: [ "terrainset_reach/13" ] },
+            	{ textures: [ "terrainset_reach/14" ] },
+            	{ textures: [ "terrainset_reach/15" ] },
+            	{ textures: [ "terrainset_reach/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_3:10"
         },

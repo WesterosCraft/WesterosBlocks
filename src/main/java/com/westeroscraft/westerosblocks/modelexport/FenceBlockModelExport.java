@@ -18,7 +18,7 @@ public class FenceBlockModelExport extends ModelExport {
     	public List<States> multipart = new ArrayList<States>();
     }
     public static class States {
-    	public Apply apply = new Apply();
+    	public List<Apply> apply = new ArrayList<Apply>();
     }
     public static class SideStates extends States {
     	public WhenRec when = new WhenRec();
@@ -32,6 +32,7 @@ public class FenceBlockModelExport extends ModelExport {
     	Integer x;
     	Integer y;
     	Boolean uvlock;
+    	Integer weight;
     }
     // Template objects for Gson export of block models
     public static class ModelObjectPost {
@@ -55,40 +56,74 @@ public class FenceBlockModelExport extends ModelExport {
         this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
-    
+
+    private String getModelName(String ext, int setidx) {
+    	return def.blockName + "_" + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    }
+
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
     	// Add post based on our variant
     	States ps = new States();
-    	ps.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_post";
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Apply a = new Apply();
+        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("post", setidx);
+        	a.weight = set.weight;
+        	ps.apply.add(a);
+        }
     	so.multipart.add(ps);
     	// Add north variant
     	SideStates ssn = new SideStates();
     	ssn.when.north = "true";
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
-    	ssn.apply.uvlock = true;
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Apply a = new Apply();
+        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side", setidx);
+        	a.weight = set.weight;
+        	a.uvlock = true;
+        	ssn.apply.add(a);
+        }
     	so.multipart.add(ssn);
     	// Add east variant
     	ssn = new SideStates();
     	ssn.when.east = "true";
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
-    	ssn.apply.uvlock = true;
-    	ssn.apply.y = 90;
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Apply a = new Apply();
+        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side", setidx);
+        	a.weight = set.weight;
+        	a.uvlock = true;
+        	a.y = 90;
+        	ssn.apply.add(a);
+        }
     	so.multipart.add(ssn);
     	// Add south variant
         ssn = new SideStates();
     	ssn.when.south = "true";
-        ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
-        ssn.apply.uvlock = true;
-        ssn.apply.y = 180;
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Apply a = new Apply();
+        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side", setidx);
+        	a.weight = set.weight;
+        	a.uvlock = true;
+        	a.y = 180;
+        	ssn.apply.add(a);
+        }
         so.multipart.add(ssn);
     	// Add west variant
         ssn = new SideStates();
     	ssn.when.west = "true";
-        ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
-        ssn.apply.uvlock = true;
-        ssn.apply.y = 270;
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Apply a = new Apply();
+        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side", setidx);
+        	a.weight = set.weight;
+        	a.uvlock = true;
+        	a.y = 270;
+        	ssn.apply.add(a);
+        }
         so.multipart.add(ssn);
         this.writeBlockStateFile(def.blockName, so);
     }
@@ -96,31 +131,38 @@ public class FenceBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
-        ModelObjectPost mod = new ModelObjectPost();
-        mod.textures.bottom = getTextureID(def.getTextureByIndex(0)); 
-        mod.textures.top = getTextureID(def.getTextureByIndex(1)); 
-        mod.textures.side = getTextureID(def.getTextureByIndex(2)); 
-        if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_post";
-        this.writeBlockModelFile(def.blockName + "_post", mod);
-        // Side model
-        ModelObjectSide smod = new ModelObjectSide();
-        smod.textures.bottom = getTextureID(def.getTextureByIndex(0)); 
-        smod.textures.top = getTextureID(def.getTextureByIndex(1)); 
-        smod.textures.side = getTextureID(def.getTextureByIndex(2)); 
-        if (isTinted) smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_side";
-        this.writeBlockModelFile(def.blockName + "_side", smod);
-        // Build simple item model that refers to fence inventory model
-        ModelObject mo = new ModelObject();
-        mo.textures.bottom = getTextureID(def.getTextureByIndex(0)); 
-        mo.textures.top = getTextureID(def.getTextureByIndex(1)); 
-        mo.textures.side = getTextureID(def.getTextureByIndex(2)); 
-        if (isTinted) mo.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_inventory";
-        this.writeItemModelFile(def.blockName, mo);
+    	WesterosBlockDef.RandomTextureSet set;
+
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	set = def.getRandomTextureSet(setidx);
+        
+        	ModelObjectPost mod = new ModelObjectPost();
+        	mod.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
+        	mod.textures.top = getTextureID(set.getTextureByIndex(1)); 
+        	mod.textures.side = getTextureID(set.getTextureByIndex(2)); 
+        	if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_post";
+        	this.writeBlockModelFile(getModelName("post", setidx), mod);
+        	// Side model
+        	ModelObjectSide smod = new ModelObjectSide();
+        	smod.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
+        	smod.textures.top = getTextureID(set.getTextureByIndex(1)); 
+        	smod.textures.side = getTextureID(set.getTextureByIndex(2)); 
+        	if (isTinted) smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_side";
+        	this.writeBlockModelFile(getModelName("side", setidx), smod);
+        }
+    	// Build simple item model that refers to fence inventory model
+    	ModelObject mo = new ModelObject();
+    	set = def.getRandomTextureSet(0);
+    	mo.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
+    	mo.textures.top = getTextureID(set.getTextureByIndex(1)); 
+    	mo.textures.side = getTextureID(set.getTextureByIndex(2)); 
+    	if (isTinted) mo.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_inventory";
+    	this.writeItemModelFile(def.getBlockName(), mo);
         // Handle tint resources
         if (isTinted) {
             String tintres = def.getBlockColorMapResource();
             if (tintres != null) {
-                ModelExport.addTintingOverride(def.blockName, "", tintres);
+                ModelExport.addTintingOverride(def.getBlockName(), "", tintres);
             }
         }
     }
