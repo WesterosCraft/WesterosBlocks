@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/terrainset_reach_alt/3",
+    "up": "westerosblocks:blocks/terrainset_reach_alt/3",
+    "north": "westerosblocks:blocks/terrainset_reach_alt/3",
+    "south": "westerosblocks:blocks/terrainset_reach_alt/3",
+    "west": "westerosblocks:blocks/terrainset_reach_alt/3",
+    "east": "westerosblocks:blocks/terrainset_reach_alt/3",
+    "particle": "westerosblocks:blocks/terrainset_reach_alt/3"
+  }
+}

@@ -29159,8 +29159,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Reach Alt Slab",
-            "textures": [
-                "stone_terrainsets_0/stone_reach_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_reach_alt/1" ] },
+            	{ textures: [ "terrainset_reach_alt/2" ] },
+            	{ textures: [ "terrainset_reach_alt/3" ] },
+            	{ textures: [ "terrainset_reach_alt/4" ] },
+            	{ textures: [ "terrainset_reach_alt/5" ] },
+            	{ textures: [ "terrainset_reach_alt/6" ] },
+            	{ textures: [ "terrainset_reach_alt/7" ] },
+            	{ textures: [ "terrainset_reach_alt/8" ] },
+            	{ textures: [ "terrainset_reach_alt/9" ] },
+            	{ textures: [ "terrainset_reach_alt/10" ] },
+            	{ textures: [ "terrainset_reach_alt/11" ] },
+            	{ textures: [ "terrainset_reach_alt/12" ] },
+            	{ textures: [ "terrainset_reach_alt/13" ] },
+            	{ textures: [ "terrainset_reach_alt/14" ] },
+            	{ textures: [ "terrainset_reach_alt/15" ] },
+            	{ textures: [ "terrainset_reach_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_1:7"
         },
@@ -29495,8 +29510,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Reach Alt Wall",
-            "textures": [
-                "stone_terrainsets_0/stone_reach_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_reach_alt/1" ] },
+            	{ textures: [ "terrainset_reach_alt/2" ] },
+            	{ textures: [ "terrainset_reach_alt/3" ] },
+            	{ textures: [ "terrainset_reach_alt/4" ] },
+            	{ textures: [ "terrainset_reach_alt/5" ] },
+            	{ textures: [ "terrainset_reach_alt/6" ] },
+            	{ textures: [ "terrainset_reach_alt/7" ] },
+            	{ textures: [ "terrainset_reach_alt/8" ] },
+            	{ textures: [ "terrainset_reach_alt/9" ] },
+            	{ textures: [ "terrainset_reach_alt/10" ] },
+            	{ textures: [ "terrainset_reach_alt/11" ] },
+            	{ textures: [ "terrainset_reach_alt/12" ] },
+            	{ textures: [ "terrainset_reach_alt/13" ] },
+            	{ textures: [ "terrainset_reach_alt/14" ] },
+            	{ textures: [ "terrainset_reach_alt/15" ] },
+            	{ textures: [ "terrainset_reach_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_0:15"
         },
@@ -29735,8 +29765,23 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet Reach Alt Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_reach_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_reach_alt/1" ] },
+            	{ textures: [ "terrainset_reach_alt/2" ] },
+            	{ textures: [ "terrainset_reach_alt/3" ] },
+            	{ textures: [ "terrainset_reach_alt/4" ] },
+            	{ textures: [ "terrainset_reach_alt/5" ] },
+            	{ textures: [ "terrainset_reach_alt/6" ] },
+            	{ textures: [ "terrainset_reach_alt/7" ] },
+            	{ textures: [ "terrainset_reach_alt/8" ] },
+            	{ textures: [ "terrainset_reach_alt/9" ] },
+            	{ textures: [ "terrainset_reach_alt/10" ] },
+            	{ textures: [ "terrainset_reach_alt/11" ] },
+            	{ textures: [ "terrainset_reach_alt/12" ] },
+            	{ textures: [ "terrainset_reach_alt/13" ] },
+            	{ textures: [ "terrainset_reach_alt/14" ] },
+            	{ textures: [ "terrainset_reach_alt/15" ] },
+            	{ textures: [ "terrainset_reach_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_3:15"
         },
@@ -29819,8 +29864,23 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Reach Alt",
-            "textures": [
-                "stone_terrainsets_0/stone_reach_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_reach_alt/1" ] },
+            	{ textures: [ "terrainset_reach_alt/2" ] },
+            	{ textures: [ "terrainset_reach_alt/3" ] },
+            	{ textures: [ "terrainset_reach_alt/4" ] },
+            	{ textures: [ "terrainset_reach_alt/5" ] },
+            	{ textures: [ "terrainset_reach_alt/6" ] },
+            	{ textures: [ "terrainset_reach_alt/7" ] },
+            	{ textures: [ "terrainset_reach_alt/8" ] },
+            	{ textures: [ "terrainset_reach_alt/9" ] },
+            	{ textures: [ "terrainset_reach_alt/10" ] },
+            	{ textures: [ "terrainset_reach_alt/11" ] },
+            	{ textures: [ "terrainset_reach_alt/12" ] },
+            	{ textures: [ "terrainset_reach_alt/13" ] },
+            	{ textures: [ "terrainset_reach_alt/14" ] },
+            	{ textures: [ "terrainset_reach_alt/15" ] },
+            	{ textures: [ "terrainset_reach_alt/16" ] }
             ],
             "legacyBlockID": "stone_block_10:4"
         },
