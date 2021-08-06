@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_vale",
-    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_vale",
-    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_vale",
-    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_vale",
-    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_vale",
-    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_vale",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_vale"
+    "down": "westerosblocks:blocks/terrainset_eyrie/1",
+    "up": "westerosblocks:blocks/terrainset_eyrie/1",
+    "north": "westerosblocks:blocks/terrainset_eyrie/1",
+    "south": "westerosblocks:blocks/terrainset_eyrie/1",
+    "west": "westerosblocks:blocks/terrainset_eyrie/1",
+    "east": "westerosblocks:blocks/terrainset_eyrie/1",
+    "particle": "westerosblocks:blocks/terrainset_eyrie/1"
   }
 }

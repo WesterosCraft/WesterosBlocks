@@ -5,11 +5,352 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=inner_right": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -20,11 +361,352 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
         "x": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
+        "x": 180,
+        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=inner_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -35,11 +717,352 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=east,half=top,shape=inner_right": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -50,6 +1073,161 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
         "x": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
+        "x": 180,
+        "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=inner_right": [
@@ -57,11 +1235,352 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=west,half=top,shape=inner_right": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -73,11 +1592,352 @@
         "x": 180,
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=inner_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
         "y": 270,
         "uvlock": true
       }
@@ -87,16 +1947,450 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=outer_right": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32"
       }
     ],
     "facing=north,half=top,shape=outer_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -107,11 +2401,321 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs",
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v2",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v3",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v4",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v5",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v6",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v7",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v8",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v9",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v10",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v11",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v12",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v13",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v14",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v15",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v16",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v17",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v18",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v19",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v20",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v21",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v22",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v23",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v24",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v25",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v26",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v27",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v28",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v29",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v30",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v31",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v32",
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=inner_right": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
         "y": 270,
         "uvlock": true
       }
@@ -121,11 +2725,321 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=east,half=top,shape=outer_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
         "x": 180,
         "uvlock": true
       }
@@ -135,6 +3049,161 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs",
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v2",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v4",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v5",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v6",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v7",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v8",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v9",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v10",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v11",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v12",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v13",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v14",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v15",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v16",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v17",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v18",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v19",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v20",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v21",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v22",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v23",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v24",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v25",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v26",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v27",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v28",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v29",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v30",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v31",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v32",
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=north,half=top,shape=outer_right": [
@@ -142,11 +3211,352 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
         "x": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "x": 180,
+        "uvlock": true
       }
     ],
     "facing=west,half=top,shape=inner_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -158,11 +3568,383 @@
         "x": 180,
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=outer_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -174,21 +3956,579 @@
         "x": 180,
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=inner_right": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32"
       }
     ],
     "facing=south,half=bottom,shape=inner_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32"
       }
     ],
     "facing=west,half=top,shape=straight": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v2",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v3",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v4",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v5",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v6",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v7",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v8",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v9",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v10",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v11",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v12",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v13",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v14",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v15",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v16",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v17",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v18",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v19",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v20",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v21",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v22",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v23",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v24",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v25",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v26",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v27",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v28",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v29",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v30",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v31",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v32",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -200,11 +4540,383 @@
         "x": 180,
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=straight": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v2",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v3",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v5",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v6",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v7",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v8",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v9",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v10",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v11",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v12",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v13",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v14",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v15",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v16",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v17",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v18",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v19",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v20",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v21",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v22",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v23",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v24",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v25",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v26",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v27",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v28",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v29",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v30",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v31",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v32",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -215,11 +4927,321 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs",
         "x": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v2",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v3",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v4",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v5",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v6",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v7",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v8",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v9",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v10",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v11",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v12",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v13",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v14",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v15",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v16",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v17",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v18",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v19",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v20",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v21",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v22",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v23",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v24",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v25",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v26",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v27",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v28",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v29",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v30",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v31",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v32",
+        "x": 180,
+        "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=outer_right": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
         "y": 180,
         "uvlock": true
       }
@@ -230,16 +5252,450 @@
         "x": 180,
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=straight": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v16"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v17"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v18"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v19"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v20"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v21"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v22"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v23"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v24"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v25"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v26"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v27"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v28"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v29"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v30"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v31"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v32"
       }
     ],
     "facing=west,half=bottom,shape=outer_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
         "y": 90,
         "uvlock": true
       }
@@ -249,6 +5705,161 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=straight": [
@@ -256,11 +5867,321 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs",
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v2",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v3",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v4",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v5",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v6",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v7",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v8",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v9",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v10",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v11",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v12",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v13",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v14",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v15",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v16",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v17",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v18",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v19",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v20",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v21",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v22",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v23",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v24",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v25",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v26",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v27",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v28",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v29",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v30",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v31",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v32",
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=inner_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v2",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v4",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v5",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v6",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v7",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v8",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v9",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v10",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v11",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v12",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v13",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v14",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v15",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v16",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v17",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v18",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v19",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v20",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v21",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v22",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v23",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v24",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v25",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v26",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v27",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v28",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v29",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v30",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v31",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_inner_v32",
         "y": 180,
         "uvlock": true
       }
@@ -271,6 +6192,192 @@
         "x": 180,
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v2",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v3",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v5",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v6",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v7",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v8",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v9",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v10",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v11",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v12",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v13",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v14",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v15",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v16",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v17",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v18",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v19",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v20",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v21",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v22",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v23",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v24",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v25",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v26",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v27",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v28",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v29",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v30",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v31",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_v32",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=outer_right": [
@@ -278,11 +6385,259 @@
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer",
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32",
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=outer_left": [
       {
         "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v2"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v3"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v4"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v5"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v6"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v7"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v8"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v9"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v10"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v11"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v12"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v13"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v14"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v15"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v16"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v17"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v18"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v19"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v20"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v21"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v22"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v23"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v24"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v25"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v26"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v27"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v28"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v29"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v30"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v31"
+      },
+      {
+        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_stairs_outer_v32"
       }
     ]
   }

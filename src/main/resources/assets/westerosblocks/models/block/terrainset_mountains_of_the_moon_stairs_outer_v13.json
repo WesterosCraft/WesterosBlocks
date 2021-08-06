@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_eyrie/13",
+    "top": "westerosblocks:blocks/terrainset_eyrie/13",
+    "side": "westerosblocks:blocks/terrainset_eyrie/13",
+    "particle": "westerosblocks:blocks/terrainset_eyrie/13"
+  }
+}

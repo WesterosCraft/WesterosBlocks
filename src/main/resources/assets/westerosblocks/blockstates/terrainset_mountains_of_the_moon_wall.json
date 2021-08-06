@@ -7,6 +7,99 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v2"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v3"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v4"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v5"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v6"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v7"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v8"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v9"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v10"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v11"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v12"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v13"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v14"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v15"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v16"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v17"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v18"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v19"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v20"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v21"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v22"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v23"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v24"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v25"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v26"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v27"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v28"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v29"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v30"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v31"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_post-v32"
         }
       ]
     },
@@ -17,6 +110,130 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v3",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v4",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v5",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v6",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v7",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v8",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v9",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v10",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v11",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v12",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v13",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v14",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v15",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v16",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v17",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v18",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v19",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v20",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v21",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v22",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v23",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v24",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v25",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v26",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v27",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v28",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v29",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v30",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v31",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v32",
           "uvlock": true
         }
       ]
@@ -29,6 +246,130 @@
         {
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall",
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v3",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v4",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v5",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v6",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v7",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v8",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v9",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v10",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v11",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v12",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v13",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v14",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v15",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v16",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v17",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v18",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v19",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v20",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v21",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v22",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v23",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v24",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v25",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v26",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v27",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v28",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v29",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v30",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v31",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v32",
+          "uvlock": true
         }
       ]
     },
@@ -39,6 +380,161 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v3",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v4",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v5",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v6",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v7",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v8",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v9",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v10",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v11",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v12",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v13",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v14",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v15",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v16",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v17",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v18",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v19",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v20",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v21",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v22",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v23",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v24",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v25",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v26",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v27",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v28",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v29",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v30",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v31",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v32",
           "y": 90,
           "uvlock": true
         }
@@ -53,6 +549,161 @@
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall",
           "y": 90,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v3",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v4",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v5",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v6",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v7",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v8",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v9",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v10",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v11",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v12",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v13",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v14",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v15",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v16",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v17",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v18",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v19",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v20",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v21",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v22",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v23",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v24",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v25",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v26",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v27",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v28",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v29",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v30",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v31",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v32",
+          "y": 90,
+          "uvlock": true
         }
       ]
     },
@@ -63,6 +714,161 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v3",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v4",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v5",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v6",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v7",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v8",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v9",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v10",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v11",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v12",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v13",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v14",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v15",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v16",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v17",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v18",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v19",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v20",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v21",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v22",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v23",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v24",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v25",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v26",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v27",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v28",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v29",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v30",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v31",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v32",
           "y": 180,
           "uvlock": true
         }
@@ -77,6 +883,161 @@
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall",
           "y": 180,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v3",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v4",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v5",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v6",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v7",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v8",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v9",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v10",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v11",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v12",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v13",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v14",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v15",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v16",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v17",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v18",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v19",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v20",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v21",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v22",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v23",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v24",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v25",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v26",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v27",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v28",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v29",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v30",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v31",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v32",
+          "y": 180,
+          "uvlock": true
         }
       ]
     },
@@ -89,6 +1050,161 @@
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side",
           "y": 270,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v3",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v4",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v5",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v6",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v7",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v8",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v9",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v10",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v11",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v12",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v13",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v14",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v15",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v16",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v17",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v18",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v19",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v20",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v21",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v22",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v23",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v24",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v25",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v26",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v27",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v28",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v29",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v30",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v31",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side-v32",
+          "y": 270,
+          "uvlock": true
         }
       ]
     },
@@ -99,6 +1215,161 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v3",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v4",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v5",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v6",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v7",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v8",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v9",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v10",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v11",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v12",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v13",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v14",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v15",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v16",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v17",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v18",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v19",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v20",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v21",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v22",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v23",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v24",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v25",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v26",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v27",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v28",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v29",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v30",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v31",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_mountains_of_the_moon_wall_side_tall-v32",
           "y": 270,
           "uvlock": true
         }

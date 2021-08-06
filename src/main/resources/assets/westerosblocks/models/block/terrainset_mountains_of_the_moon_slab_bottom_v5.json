@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_eyrie/5",
+    "top": "westerosblocks:blocks/terrainset_eyrie/5",
+    "side": "westerosblocks:blocks/terrainset_eyrie/5",
+    "particle": "westerosblocks:blocks/terrainset_eyrie/5"
+  }
+}
