@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_east/2",
+    "top": "westerosblocks:blocks/terrainset_east/2",
+    "side": "westerosblocks:blocks/terrainset_east/2",
+    "particle": "westerosblocks:blocks/terrainset_east/2"
+  }
+}

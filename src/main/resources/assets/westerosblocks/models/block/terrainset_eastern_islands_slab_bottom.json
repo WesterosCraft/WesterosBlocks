@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_terrainsets_0/stone_eastern_islands",
-    "top": "westerosblocks:blocks/stone_terrainsets_0/stone_eastern_islands",
-    "side": "westerosblocks:blocks/stone_terrainsets_0/stone_eastern_islands",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_eastern_islands"
+    "bottom": "westerosblocks:blocks/terrainset_east/1",
+    "top": "westerosblocks:blocks/terrainset_east/1",
+    "side": "westerosblocks:blocks/terrainset_east/1",
+    "particle": "westerosblocks:blocks/terrainset_east/1"
   }
 }

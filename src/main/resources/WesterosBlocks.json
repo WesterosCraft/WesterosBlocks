@@ -5174,8 +5174,23 @@
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Eastern Islands",
             "colorMult": "textures/colormap/easternisland",
-            "textures": [
-                "stone_terrainsets_0/stone_eastern_islands"
+            "randomTextures": [
+            	{ textures: [ "terrainset_east/1" ] },
+            	{ textures: [ "terrainset_east/2" ] },
+            	{ textures: [ "terrainset_east/3" ] },
+            	{ textures: [ "terrainset_east/4" ] },
+            	{ textures: [ "terrainset_east/5" ] },
+            	{ textures: [ "terrainset_east/6" ] },
+            	{ textures: [ "terrainset_east/7" ] },
+            	{ textures: [ "terrainset_east/8" ] },
+            	{ textures: [ "terrainset_east/9" ] },
+            	{ textures: [ "terrainset_east/10" ] },
+            	{ textures: [ "terrainset_east/11" ] },
+            	{ textures: [ "terrainset_east/12" ] },
+            	{ textures: [ "terrainset_east/13" ] },
+            	{ textures: [ "terrainset_east/14" ] },
+            	{ textures: [ "terrainset_east/15" ] },
+            	{ textures: [ "terrainset_east/16" ] }
             ],
             "legacyBlockID": "stone_block_1:0"
         },
@@ -28889,8 +28904,23 @@
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Eastern Islands Slab",
             "colorMult": "textures/colormap/easternisland",
-            "textures": [
-                "stone_terrainsets_0/stone_eastern_islands"
+            "randomTextures": [
+            	{ textures: [ "terrainset_east/1" ] },
+            	{ textures: [ "terrainset_east/2" ] },
+            	{ textures: [ "terrainset_east/3" ] },
+            	{ textures: [ "terrainset_east/4" ] },
+            	{ textures: [ "terrainset_east/5" ] },
+            	{ textures: [ "terrainset_east/6" ] },
+            	{ textures: [ "terrainset_east/7" ] },
+            	{ textures: [ "terrainset_east/8" ] },
+            	{ textures: [ "terrainset_east/9" ] },
+            	{ textures: [ "terrainset_east/10" ] },
+            	{ textures: [ "terrainset_east/11" ] },
+            	{ textures: [ "terrainset_east/12" ] },
+            	{ textures: [ "terrainset_east/13" ] },
+            	{ textures: [ "terrainset_east/14" ] },
+            	{ textures: [ "terrainset_east/15" ] },
+            	{ textures: [ "terrainset_east/16" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_0:0"
         },
@@ -29315,8 +29345,23 @@
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Eastern Islands Wall",
             "colorMult": "textures/colormap/easternisland",
-            "textures": [
-                "stone_terrainsets_0/stone_eastern_islands"
+            "randomTextures": [
+            	{ textures: [ "terrainset_east/1" ] },
+            	{ textures: [ "terrainset_east/2" ] },
+            	{ textures: [ "terrainset_east/3" ] },
+            	{ textures: [ "terrainset_east/4" ] },
+            	{ textures: [ "terrainset_east/5" ] },
+            	{ textures: [ "terrainset_east/6" ] },
+            	{ textures: [ "terrainset_east/7" ] },
+            	{ textures: [ "terrainset_east/8" ] },
+            	{ textures: [ "terrainset_east/9" ] },
+            	{ textures: [ "terrainset_east/10" ] },
+            	{ textures: [ "terrainset_east/11" ] },
+            	{ textures: [ "terrainset_east/12" ] },
+            	{ textures: [ "terrainset_east/13" ] },
+            	{ textures: [ "terrainset_east/14" ] },
+            	{ textures: [ "terrainset_east/15" ] },
+            	{ textures: [ "terrainset_east/16" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_0:0"
         },
@@ -29735,8 +29780,23 @@
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet Eastern Islands Fence",
             "colorMult": "textures/colormap/easternisland",
-            "textures": [
-                "stone_terrainsets_0/stone_eastern_islands"
+            "randomTextures": [
+            	{ textures: [ "terrainset_east/1" ] },
+            	{ textures: [ "terrainset_east/2" ] },
+            	{ textures: [ "terrainset_east/3" ] },
+            	{ textures: [ "terrainset_east/4" ] },
+            	{ textures: [ "terrainset_east/5" ] },
+            	{ textures: [ "terrainset_east/6" ] },
+            	{ textures: [ "terrainset_east/7" ] },
+            	{ textures: [ "terrainset_east/8" ] },
+            	{ textures: [ "terrainset_east/9" ] },
+            	{ textures: [ "terrainset_east/10" ] },
+            	{ textures: [ "terrainset_east/11" ] },
+            	{ textures: [ "terrainset_east/12" ] },
+            	{ textures: [ "terrainset_east/13" ] },
+            	{ textures: [ "terrainset_east/14" ] },
+            	{ textures: [ "terrainset_east/15" ] },
+            	{ textures: [ "terrainset_east/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_3:0"
         },
