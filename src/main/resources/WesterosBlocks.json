@@ -5273,8 +5273,23 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet River Rocks",
-            "textures": [
-                "stone_terrainsets_0/stone_river"
+            "randomTextures": [
+            	{ textures: [ "terrainset_river/1" ] },
+            	{ textures: [ "terrainset_river/2" ] },
+            	{ textures: [ "terrainset_river/3" ] },
+            	{ textures: [ "terrainset_river/4" ] },
+            	{ textures: [ "terrainset_river/5" ] },
+            	{ textures: [ "terrainset_river/6" ] },
+            	{ textures: [ "terrainset_river/7" ] },
+            	{ textures: [ "terrainset_river/8" ] },
+            	{ textures: [ "terrainset_river/9" ] },
+            	{ textures: [ "terrainset_river/10" ] },
+            	{ textures: [ "terrainset_river/11" ] },
+            	{ textures: [ "terrainset_river/12" ] },
+            	{ textures: [ "terrainset_river/13" ] },
+            	{ textures: [ "terrainset_river/14" ] },
+            	{ textures: [ "terrainset_river/15" ] },
+            	{ textures: [ "terrainset_river/16" ] }
             ],
             "legacyBlockID": "stone_block_1:6"
         },
@@ -28994,8 +29009,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet River Rocks Slab",
-            "textures": [
-                "stone_terrainsets_0/stone_river"
+            "randomTextures": [
+            	{ textures: [ "terrainset_river/1" ] },
+            	{ textures: [ "terrainset_river/2" ] },
+            	{ textures: [ "terrainset_river/3" ] },
+            	{ textures: [ "terrainset_river/4" ] },
+            	{ textures: [ "terrainset_river/5" ] },
+            	{ textures: [ "terrainset_river/6" ] },
+            	{ textures: [ "terrainset_river/7" ] },
+            	{ textures: [ "terrainset_river/8" ] },
+            	{ textures: [ "terrainset_river/9" ] },
+            	{ textures: [ "terrainset_river/10" ] },
+            	{ textures: [ "terrainset_river/11" ] },
+            	{ textures: [ "terrainset_river/12" ] },
+            	{ textures: [ "terrainset_river/13" ] },
+            	{ textures: [ "terrainset_river/14" ] },
+            	{ textures: [ "terrainset_river/15" ] },
+            	{ textures: [ "terrainset_river/16" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_0:6"
         },
@@ -29375,8 +29405,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet River Rocks Wall",
-            "textures": [
-                "stone_terrainsets_0/stone_river"
+            "randomTextures": [
+            	{ textures: [ "terrainset_river/1" ] },
+            	{ textures: [ "terrainset_river/2" ] },
+            	{ textures: [ "terrainset_river/3" ] },
+            	{ textures: [ "terrainset_river/4" ] },
+            	{ textures: [ "terrainset_river/5" ] },
+            	{ textures: [ "terrainset_river/6" ] },
+            	{ textures: [ "terrainset_river/7" ] },
+            	{ textures: [ "terrainset_river/8" ] },
+            	{ textures: [ "terrainset_river/9" ] },
+            	{ textures: [ "terrainset_river/10" ] },
+            	{ textures: [ "terrainset_river/11" ] },
+            	{ textures: [ "terrainset_river/12" ] },
+            	{ textures: [ "terrainset_river/13" ] },
+            	{ textures: [ "terrainset_river/14" ] },
+            	{ textures: [ "terrainset_river/15" ] },
+            	{ textures: [ "terrainset_river/16" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_0:6"
         },
@@ -29714,8 +29759,23 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet River Rocks Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_river"
+            "randomTextures": [
+            	{ textures: [ "terrainset_river/1" ] },
+            	{ textures: [ "terrainset_river/2" ] },
+            	{ textures: [ "terrainset_river/3" ] },
+            	{ textures: [ "terrainset_river/4" ] },
+            	{ textures: [ "terrainset_river/5" ] },
+            	{ textures: [ "terrainset_river/6" ] },
+            	{ textures: [ "terrainset_river/7" ] },
+            	{ textures: [ "terrainset_river/8" ] },
+            	{ textures: [ "terrainset_river/9" ] },
+            	{ textures: [ "terrainset_river/10" ] },
+            	{ textures: [ "terrainset_river/11" ] },
+            	{ textures: [ "terrainset_river/12" ] },
+            	{ textures: [ "terrainset_river/13" ] },
+            	{ textures: [ "terrainset_river/14" ] },
+            	{ textures: [ "terrainset_river/15" ] },
+            	{ textures: [ "terrainset_river/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_3:6"
         },
