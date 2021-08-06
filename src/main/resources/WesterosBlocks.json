@@ -30377,8 +30377,23 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Grey Sandstone",
-            "textures": [
-                "stone_terrainsets_0/stone_grey_sandstone"
+            "randomTextures": [
+            	{ textures: [ "terrainset_grey_sandstone/1" ] },
+            	{ textures: [ "terrainset_grey_sandstone/2" ] },
+            	{ textures: [ "terrainset_grey_sandstone/3" ] },
+            	{ textures: [ "terrainset_grey_sandstone/4" ] },
+            	{ textures: [ "terrainset_grey_sandstone/5" ] },
+            	{ textures: [ "terrainset_grey_sandstone/6" ] },
+            	{ textures: [ "terrainset_grey_sandstone/7" ] },
+            	{ textures: [ "terrainset_grey_sandstone/8" ] },
+            	{ textures: [ "terrainset_grey_sandstone/9" ] },
+            	{ textures: [ "terrainset_grey_sandstone/10" ] },
+            	{ textures: [ "terrainset_grey_sandstone/11" ] },
+            	{ textures: [ "terrainset_grey_sandstone/12" ] },
+            	{ textures: [ "terrainset_grey_sandstone/13" ] },
+            	{ textures: [ "terrainset_grey_sandstone/14" ] },
+            	{ textures: [ "terrainset_grey_sandstone/15" ] },
+            	{ textures: [ "terrainset_grey_sandstone/16" ] }
             ],
             "legacyBlockID": "stone_block_10:5"
         },
@@ -30510,8 +30525,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Grey Sandstone Slab",
-            "textures": [
-                "stone_terrainsets_0/stone_grey_sandstone"
+            "randomTextures": [
+            	{ textures: [ "terrainset_grey_sandstone/1" ] },
+            	{ textures: [ "terrainset_grey_sandstone/2" ] },
+            	{ textures: [ "terrainset_grey_sandstone/3" ] },
+            	{ textures: [ "terrainset_grey_sandstone/4" ] },
+            	{ textures: [ "terrainset_grey_sandstone/5" ] },
+            	{ textures: [ "terrainset_grey_sandstone/6" ] },
+            	{ textures: [ "terrainset_grey_sandstone/7" ] },
+            	{ textures: [ "terrainset_grey_sandstone/8" ] },
+            	{ textures: [ "terrainset_grey_sandstone/9" ] },
+            	{ textures: [ "terrainset_grey_sandstone/10" ] },
+            	{ textures: [ "terrainset_grey_sandstone/11" ] },
+            	{ textures: [ "terrainset_grey_sandstone/12" ] },
+            	{ textures: [ "terrainset_grey_sandstone/13" ] },
+            	{ textures: [ "terrainset_grey_sandstone/14" ] },
+            	{ textures: [ "terrainset_grey_sandstone/15" ] },
+            	{ textures: [ "terrainset_grey_sandstone/16" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_2:0"
         },
@@ -30570,8 +30600,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Grey Sandstone Wall",
-            "textures": [
-                "stone_terrainsets_0/stone_grey_sandstone"
+            "randomTextures": [
+            	{ textures: [ "terrainset_grey_sandstone/1" ] },
+            	{ textures: [ "terrainset_grey_sandstone/2" ] },
+            	{ textures: [ "terrainset_grey_sandstone/3" ] },
+            	{ textures: [ "terrainset_grey_sandstone/4" ] },
+            	{ textures: [ "terrainset_grey_sandstone/5" ] },
+            	{ textures: [ "terrainset_grey_sandstone/6" ] },
+            	{ textures: [ "terrainset_grey_sandstone/7" ] },
+            	{ textures: [ "terrainset_grey_sandstone/8" ] },
+            	{ textures: [ "terrainset_grey_sandstone/9" ] },
+            	{ textures: [ "terrainset_grey_sandstone/10" ] },
+            	{ textures: [ "terrainset_grey_sandstone/11" ] },
+            	{ textures: [ "terrainset_grey_sandstone/12" ] },
+            	{ textures: [ "terrainset_grey_sandstone/13" ] },
+            	{ textures: [ "terrainset_grey_sandstone/14" ] },
+            	{ textures: [ "terrainset_grey_sandstone/15" ] },
+            	{ textures: [ "terrainset_grey_sandstone/16" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_1:0"
         },
@@ -30624,8 +30669,23 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet Grey Sandstone Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_grey_sandstone"
+            "randomTextures": [
+            	{ textures: [ "terrainset_grey_sandstone/1" ] },
+            	{ textures: [ "terrainset_grey_sandstone/2" ] },
+            	{ textures: [ "terrainset_grey_sandstone/3" ] },
+            	{ textures: [ "terrainset_grey_sandstone/4" ] },
+            	{ textures: [ "terrainset_grey_sandstone/5" ] },
+            	{ textures: [ "terrainset_grey_sandstone/6" ] },
+            	{ textures: [ "terrainset_grey_sandstone/7" ] },
+            	{ textures: [ "terrainset_grey_sandstone/8" ] },
+            	{ textures: [ "terrainset_grey_sandstone/9" ] },
+            	{ textures: [ "terrainset_grey_sandstone/10" ] },
+            	{ textures: [ "terrainset_grey_sandstone/11" ] },
+            	{ textures: [ "terrainset_grey_sandstone/12" ] },
+            	{ textures: [ "terrainset_grey_sandstone/13" ] },
+            	{ textures: [ "terrainset_grey_sandstone/14" ] },
+            	{ textures: [ "terrainset_grey_sandstone/15" ] },
+            	{ textures: [ "terrainset_grey_sandstone/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_4:0"
         },

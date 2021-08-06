@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_grey_sandstone/10",
+    "top": "westerosblocks:blocks/terrainset_grey_sandstone/10",
+    "side": "westerosblocks:blocks/terrainset_grey_sandstone/10",
+    "particle": "westerosblocks:blocks/terrainset_grey_sandstone/10"
+  }
+}

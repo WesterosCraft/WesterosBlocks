@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_grey_sandstone/2",
+    "top": "westerosblocks:blocks/terrainset_grey_sandstone/2",
+    "side": "westerosblocks:blocks/terrainset_grey_sandstone/2",
+    "particle": "westerosblocks:blocks/terrainset_grey_sandstone/2"
+  }
+}

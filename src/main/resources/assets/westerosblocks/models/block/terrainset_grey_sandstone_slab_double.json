@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone"
+    "down": "westerosblocks:blocks/terrainset_grey_sandstone/1",
+    "up": "westerosblocks:blocks/terrainset_grey_sandstone/1",
+    "north": "westerosblocks:blocks/terrainset_grey_sandstone/1",
+    "south": "westerosblocks:blocks/terrainset_grey_sandstone/1",
+    "west": "westerosblocks:blocks/terrainset_grey_sandstone/1",
+    "east": "westerosblocks:blocks/terrainset_grey_sandstone/1",
+    "particle": "westerosblocks:blocks/terrainset_grey_sandstone/1"
   }
 }

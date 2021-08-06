@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "top": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone",
-    "side": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone"
+    "bottom": "westerosblocks:blocks/terrainset_grey_sandstone/1",
+    "top": "westerosblocks:blocks/terrainset_grey_sandstone/1",
+    "side": "westerosblocks:blocks/terrainset_grey_sandstone/1"
   }
 }

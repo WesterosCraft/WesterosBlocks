@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/stone_terrainsets_0/stone_grey_sandstone"
+    "all": "westerosblocks:blocks/terrainset_grey_sandstone/1"
   }
 }
