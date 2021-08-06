@@ -7,6 +7,51 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v2"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v3"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v4"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v5"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v6"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v7"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v8"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v9"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v10"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v11"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v12"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v13"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v14"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v15"
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_post-v16"
         }
       ]
     },
@@ -17,6 +62,66 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v3",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v4",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v5",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v6",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v7",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v8",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v9",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v10",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v11",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v12",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v13",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v14",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v15",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v16",
           "uvlock": true
         }
       ]
@@ -29,6 +134,66 @@
         {
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall",
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v3",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v4",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v5",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v6",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v7",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v8",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v9",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v10",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v11",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v12",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v13",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v14",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v15",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v16",
+          "uvlock": true
         }
       ]
     },
@@ -39,6 +204,81 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v3",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v4",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v5",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v6",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v7",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v8",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v9",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v10",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v11",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v12",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v13",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v14",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v15",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v16",
           "y": 90,
           "uvlock": true
         }
@@ -53,6 +293,81 @@
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall",
           "y": 90,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v3",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v4",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v5",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v6",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v7",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v8",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v9",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v10",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v11",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v12",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v13",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v14",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v15",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v16",
+          "y": 90,
+          "uvlock": true
         }
       ]
     },
@@ -63,6 +378,81 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v3",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v4",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v5",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v6",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v7",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v8",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v9",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v10",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v11",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v12",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v13",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v14",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v15",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v16",
           "y": 180,
           "uvlock": true
         }
@@ -77,6 +467,81 @@
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall",
           "y": 180,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v3",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v4",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v5",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v6",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v7",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v8",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v9",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v10",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v11",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v12",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v13",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v14",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v15",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v16",
+          "y": 180,
+          "uvlock": true
         }
       ]
     },
@@ -89,6 +554,81 @@
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side",
           "y": 270,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v3",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v4",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v5",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v6",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v7",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v8",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v9",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v10",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v11",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v12",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v13",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v14",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v15",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side-v16",
+          "y": 270,
+          "uvlock": true
         }
       ]
     },
@@ -99,6 +639,81 @@
       "apply": [
         {
           "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v3",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v4",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v5",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v6",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v7",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v8",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v9",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v10",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v11",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v12",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v13",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v14",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v15",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/terrainset_red_mountains_alt_wall_side_tall-v16",
           "y": 270,
           "uvlock": true
         }

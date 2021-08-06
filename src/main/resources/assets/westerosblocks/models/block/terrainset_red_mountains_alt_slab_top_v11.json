@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_red_mountains_alt/11",
+    "top": "westerosblocks:blocks/terrainset_red_mountains_alt/11",
+    "side": "westerosblocks:blocks/terrainset_red_mountains_alt/11",
+    "particle": "westerosblocks:blocks/terrainset_red_mountains_alt/11"
+  }
+}

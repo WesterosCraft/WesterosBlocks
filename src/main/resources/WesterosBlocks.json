@@ -5244,8 +5244,23 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Red Mountains",
-            "textures": [
-                "stone_terrainsets_0/stone_red_mountains"
+            "randomTextures": [
+            	{ textures: [ "terrainset_red_mountains/1" ] },
+            	{ textures: [ "terrainset_red_mountains/2" ] },
+            	{ textures: [ "terrainset_red_mountains/3" ] },
+            	{ textures: [ "terrainset_red_mountains/4" ] },
+            	{ textures: [ "terrainset_red_mountains/5" ] },
+            	{ textures: [ "terrainset_red_mountains/6" ] },
+            	{ textures: [ "terrainset_red_mountains/7" ] },
+            	{ textures: [ "terrainset_red_mountains/8" ] },
+            	{ textures: [ "terrainset_red_mountains/9" ] },
+            	{ textures: [ "terrainset_red_mountains/10" ] },
+            	{ textures: [ "terrainset_red_mountains/11" ] },
+            	{ textures: [ "terrainset_red_mountains/12" ] },
+            	{ textures: [ "terrainset_red_mountains/13" ] },
+            	{ textures: [ "terrainset_red_mountains/14" ] },
+            	{ textures: [ "terrainset_red_mountains/15" ] },
+            	{ textures: [ "terrainset_red_mountains/16" ] }
             ],
             "legacyBlockID": "stone_block_1:5"
         },
@@ -28944,8 +28959,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Red Mountains Slab",
-            "textures": [
-                "stone_terrainsets_0/stone_red_mountains"
+            "randomTextures": [
+            	{ textures: [ "terrainset_red_mountains/1" ] },
+            	{ textures: [ "terrainset_red_mountains/2" ] },
+            	{ textures: [ "terrainset_red_mountains/3" ] },
+            	{ textures: [ "terrainset_red_mountains/4" ] },
+            	{ textures: [ "terrainset_red_mountains/5" ] },
+            	{ textures: [ "terrainset_red_mountains/6" ] },
+            	{ textures: [ "terrainset_red_mountains/7" ] },
+            	{ textures: [ "terrainset_red_mountains/8" ] },
+            	{ textures: [ "terrainset_red_mountains/9" ] },
+            	{ textures: [ "terrainset_red_mountains/10" ] },
+            	{ textures: [ "terrainset_red_mountains/11" ] },
+            	{ textures: [ "terrainset_red_mountains/12" ] },
+            	{ textures: [ "terrainset_red_mountains/13" ] },
+            	{ textures: [ "terrainset_red_mountains/14" ] },
+            	{ textures: [ "terrainset_red_mountains/15" ] },
+            	{ textures: [ "terrainset_red_mountains/16" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_0:5"
         },
@@ -29079,8 +29109,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Red Mountains Alt Slab",
-            "textures": [
-                "stone_terrainsets_0/stone_red_mountains_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_red_mountains_alt/1" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/2" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/3" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/4" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/5" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/6" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/7" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/8" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/9" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/10" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/11" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/12" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/13" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/14" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/15" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_1:3"
         },
@@ -29295,8 +29340,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Red Mountains Wall",
-            "textures": [
-                "stone_terrainsets_0/stone_red_mountains"
+            "randomTextures": [
+            	{ textures: [ "terrainset_red_mountains/1" ] },
+            	{ textures: [ "terrainset_red_mountains/2" ] },
+            	{ textures: [ "terrainset_red_mountains/3" ] },
+            	{ textures: [ "terrainset_red_mountains/4" ] },
+            	{ textures: [ "terrainset_red_mountains/5" ] },
+            	{ textures: [ "terrainset_red_mountains/6" ] },
+            	{ textures: [ "terrainset_red_mountains/7" ] },
+            	{ textures: [ "terrainset_red_mountains/8" ] },
+            	{ textures: [ "terrainset_red_mountains/9" ] },
+            	{ textures: [ "terrainset_red_mountains/10" ] },
+            	{ textures: [ "terrainset_red_mountains/11" ] },
+            	{ textures: [ "terrainset_red_mountains/12" ] },
+            	{ textures: [ "terrainset_red_mountains/13" ] },
+            	{ textures: [ "terrainset_red_mountains/14" ] },
+            	{ textures: [ "terrainset_red_mountains/15" ] },
+            	{ textures: [ "terrainset_red_mountains/16" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_0:5"
         },
@@ -29430,8 +29490,23 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Red Mountains Alt Wall",
-            "textures": [
-                "stone_terrainsets_0/stone_red_mountains_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_red_mountains_alt/1" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/2" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/3" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/4" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/5" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/6" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/7" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/8" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/9" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/10" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/11" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/12" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/13" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/14" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/15" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_0:11"
         },
@@ -29610,8 +29685,23 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet Red Mountains Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_red_mountains"
+            "randomTextures": [
+            	{ textures: [ "terrainset_red_mountains/1" ] },
+            	{ textures: [ "terrainset_red_mountains/2" ] },
+            	{ textures: [ "terrainset_red_mountains/3" ] },
+            	{ textures: [ "terrainset_red_mountains/4" ] },
+            	{ textures: [ "terrainset_red_mountains/5" ] },
+            	{ textures: [ "terrainset_red_mountains/6" ] },
+            	{ textures: [ "terrainset_red_mountains/7" ] },
+            	{ textures: [ "terrainset_red_mountains/8" ] },
+            	{ textures: [ "terrainset_red_mountains/9" ] },
+            	{ textures: [ "terrainset_red_mountains/10" ] },
+            	{ textures: [ "terrainset_red_mountains/11" ] },
+            	{ textures: [ "terrainset_red_mountains/12" ] },
+            	{ textures: [ "terrainset_red_mountains/13" ] },
+            	{ textures: [ "terrainset_red_mountains/14" ] },
+            	{ textures: [ "terrainset_red_mountains/15" ] },
+            	{ textures: [ "terrainset_red_mountains/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_3:5"
         },
@@ -29709,8 +29799,23 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "TerrainSet Red Mountains Alt Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_red_mountains_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_red_mountains_alt/1" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/2" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/3" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/4" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/5" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/6" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/7" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/8" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/9" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/10" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/11" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/12" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/13" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/14" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/15" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/16" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_3:11"
         },
@@ -29808,8 +29913,23 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "TerrainSet Red Mountains Alt",
-            "textures": [
-                "stone_terrainsets_0/stone_red_mountains_alt"
+            "randomTextures": [
+            	{ textures: [ "terrainset_red_mountains_alt/1" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/2" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/3" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/4" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/5" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/6" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/7" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/8" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/9" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/10" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/11" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/12" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/13" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/14" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/15" ] },
+            	{ textures: [ "terrainset_red_mountains_alt/16" ] }
             ],
             "legacyBlockID": "stone_block_10:0"
         },
