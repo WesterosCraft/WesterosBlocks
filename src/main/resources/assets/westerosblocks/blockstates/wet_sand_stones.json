@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/wet_sand_stones"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/wet_sand_stones"
+    }
   }
 }

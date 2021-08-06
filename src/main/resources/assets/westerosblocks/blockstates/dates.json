@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/dates"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/dates"
+    }
   }
 }

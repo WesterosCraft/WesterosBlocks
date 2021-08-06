@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/kl_dun_carved_brick"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/kl_dun_carved_brick"
+    }
   }
 }

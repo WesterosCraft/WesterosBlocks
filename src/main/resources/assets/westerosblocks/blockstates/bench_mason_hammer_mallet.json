@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/bench_mason_hammer_mallet"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/bench_mason_hammer_mallet"
+    }
   }
 }

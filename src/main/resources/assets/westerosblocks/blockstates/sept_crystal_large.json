@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/sept_crystal_large"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/sept_crystal_large"
+    }
   }
 }

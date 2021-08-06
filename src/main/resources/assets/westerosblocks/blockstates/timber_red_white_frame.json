@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/timber_red_white_frame"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/timber_red_white_frame"
+    }
   }
 }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/pebbles_wet_stormlands"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/pebbles_wet_stormlands"
+    }
   }
 }

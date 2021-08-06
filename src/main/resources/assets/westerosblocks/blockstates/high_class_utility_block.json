@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/high_class_utility_block"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/high_class_utility_block"
+    }
   }
 }

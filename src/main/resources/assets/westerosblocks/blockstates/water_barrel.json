@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/water_barrel"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/water_barrel"
+    }
   }
 }

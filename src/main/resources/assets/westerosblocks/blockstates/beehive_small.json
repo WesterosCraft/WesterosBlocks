@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/beehive_small"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/beehive_small"
+    }
   }
 }

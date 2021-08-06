@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/turnip_basket"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/turnip_basket"
+    }
   }
 }

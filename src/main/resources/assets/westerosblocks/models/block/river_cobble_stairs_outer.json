@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/outer_stairs",
+  "parent": "minecraft:block/outer_stairs",
   "textures": {
     "bottom": "minecraft:block/terracotta",
     "top": "minecraft:block/terracotta",

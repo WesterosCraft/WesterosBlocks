@@ -54,10 +54,7 @@ public class WCLogBlock extends RotatedPillarBlock implements WesterosBlockLifec
             mtr.setMetaValue(i);
             for (int face = 0; face < 6; face++) {
                 int fidx = txtid[i][face];
-                if (fidx >= def.textures.size()) {
-                    fidx = def.textures.size() - 1;
-                }
-                String txt = def.textures.get(fidx);
+                String txt = def.getTextureByIndex(fidx);
                 mtr.setSideTexture(txt.replace(':', '_'), tmod[i][face], BlockSide.valueOf("FACE_" + face));
             }
             def.setBlockColorMap(mtr);

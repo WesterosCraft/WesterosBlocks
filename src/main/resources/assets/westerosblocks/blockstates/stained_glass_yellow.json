@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/stained_glass_yellow"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/stained_glass_yellow"
+    }
   }
 }

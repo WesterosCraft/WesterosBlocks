@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/plain_white_daub"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/plain_white_daub"
+    }
   }
 }

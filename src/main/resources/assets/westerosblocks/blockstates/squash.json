@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/squash"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/squash"
+    }
   }
 }

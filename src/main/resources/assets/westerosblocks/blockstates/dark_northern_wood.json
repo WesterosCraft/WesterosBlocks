@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/dark_northern_wood"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/dark_northern_wood"
+    }
   }
 }

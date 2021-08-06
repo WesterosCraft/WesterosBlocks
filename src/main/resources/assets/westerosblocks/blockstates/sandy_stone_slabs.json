@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/sandy_stone_slabs"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/sandy_stone_slabs"
+    }
   }
 }

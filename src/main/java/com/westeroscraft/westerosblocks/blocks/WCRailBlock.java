@@ -57,11 +57,7 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle, We
         for (int meta = 0; meta < 6; meta++) {
             mtr.setMetaValue(meta);
         }
-        int fidx = 0;
-        if (fidx >= def.textures.size()) {
-            fidx = def.textures.size() - 1;
-        }
-        String txtid = def.textures.get(fidx);
+        String txtid = def.getTextureByIndex(0);
         mtr.setPatchTexture(txtid.replace(':', '_'), tmod, 0);
         // Make record for curved tracks
         mtr = mtd.addBlockTextureRecord(blkname);
@@ -70,11 +66,7 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle, We
         for (int meta = 6; meta < 10; meta++) {
             mtr.setMetaValue(meta);
         }
-        fidx = 1;
-        if (fidx >= def.textures.size()) {
-            fidx = def.textures.size() - 1;
-        }
-        txtid = def.textures.get(fidx);
+        txtid = def.getTextureByIndex(1);
         mtr.setPatchTexture(txtid.replace(':', '_'), tmod, 0);
         def.setBlockColorMap(mtr);
         // Make models for flat tracks

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/reach_spruce_wood_panelling"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/reach_spruce_wood_panelling"
+    }
   }
 }

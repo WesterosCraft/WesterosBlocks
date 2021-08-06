@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/piston_top"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/piston_top"
+    }
   }
 }

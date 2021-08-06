@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/small_white_brick"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/small_white_brick"
+    }
   }
 }

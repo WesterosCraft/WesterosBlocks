@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/carpenter_large"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/carpenter_large"
+    }
   }
 }

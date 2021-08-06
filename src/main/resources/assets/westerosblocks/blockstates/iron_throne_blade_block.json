@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/iron_throne_blade_block"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/iron_throne_blade_block"
+    }
   }
 }

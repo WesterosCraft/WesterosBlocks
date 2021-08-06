@@ -1,13 +1,19 @@
 {
   "variants": {
-    "type=bottom": {
-      "model": "westerosblocks:block/lannisport_light_brick_slab_bottom"
-    },
-    "type=double": {
-      "model": "westerosblocks:block/lannisport_light_brick_slab_double"
-    },
-    "type=top": {
-      "model": "westerosblocks:block/lannisport_light_brick_slab_top"
-    }
+    "type=bottom": [
+      {
+        "model": "westerosblocks:block/lannisport_light_brick_slab_bottom"
+      }
+    ],
+    "type=double": [
+      {
+        "model": "westerosblocks:block/lannisport_light_brick_slab_double"
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/lannisport_light_brick_slab_top"
+      }
+    ]
   }
 }

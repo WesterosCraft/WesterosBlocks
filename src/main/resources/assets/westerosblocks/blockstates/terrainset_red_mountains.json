@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/terrainset_red_mountains"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/terrainset_red_mountains"
+    }
   }
 }

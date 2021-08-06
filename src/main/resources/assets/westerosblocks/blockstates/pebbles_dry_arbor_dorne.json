@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/pebbles_dry_arbor_dorne"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/pebbles_dry_arbor_dorne"
+    }
   }
 }

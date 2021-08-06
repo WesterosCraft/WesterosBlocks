@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/pebbles_wet_iron_islands"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/pebbles_wet_iron_islands"
+    }
   }
 }

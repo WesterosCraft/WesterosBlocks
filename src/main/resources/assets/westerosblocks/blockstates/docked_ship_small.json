@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/docked_ship_small"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/docked_ship_small"
+    }
   }
 }

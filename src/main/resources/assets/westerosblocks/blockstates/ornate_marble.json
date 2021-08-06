@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/ornate_marble"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/ornate_marble"
+    }
   }
 }

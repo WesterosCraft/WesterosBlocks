@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/timber_oak_oldtown_brick_vertical"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/timber_oak_oldtown_brick_vertical"
+    }
   }
 }

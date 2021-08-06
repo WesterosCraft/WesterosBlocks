@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/pebbles_dry_reach"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/pebbles_dry_reach"
+    }
   }
 }

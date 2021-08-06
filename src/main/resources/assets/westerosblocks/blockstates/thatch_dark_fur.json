@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/thatch_dark_fur"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/thatch_dark_fur"
+    }
   }
 }

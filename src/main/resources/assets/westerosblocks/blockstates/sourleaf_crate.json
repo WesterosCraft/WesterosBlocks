@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/sourleaf_crate"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/sourleaf_crate"
+    }
   }
 }

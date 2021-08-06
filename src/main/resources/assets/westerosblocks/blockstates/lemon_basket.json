@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/lemon_basket"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/lemon_basket"
+    }
   }
 }

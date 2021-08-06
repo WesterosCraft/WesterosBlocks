@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/ash"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/ash"
+    }
   }
 }

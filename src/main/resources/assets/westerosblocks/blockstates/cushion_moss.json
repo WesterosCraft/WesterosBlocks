@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/cushion_moss"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/cushion_moss"
+    }
   }
 }

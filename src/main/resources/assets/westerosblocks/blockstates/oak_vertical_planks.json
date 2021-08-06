@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/oak_vertical_planks"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/oak_vertical_planks"
+    }
   }
 }

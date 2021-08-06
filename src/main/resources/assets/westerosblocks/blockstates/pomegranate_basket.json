@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/pomegranate_basket"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/pomegranate_basket"
+    }
   }
 }

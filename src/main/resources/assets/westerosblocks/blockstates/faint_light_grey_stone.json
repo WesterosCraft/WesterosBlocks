@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/faint_light_grey_stone"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/faint_light_grey_stone"
+    }
   }
 }

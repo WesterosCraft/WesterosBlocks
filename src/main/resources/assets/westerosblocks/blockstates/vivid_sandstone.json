@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/vivid_sandstone"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/vivid_sandstone"
+    }
   }
 }

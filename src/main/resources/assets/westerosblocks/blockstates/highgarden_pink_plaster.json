@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/highgarden_pink_plaster"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/highgarden_pink_plaster"
+    }
   }
 }

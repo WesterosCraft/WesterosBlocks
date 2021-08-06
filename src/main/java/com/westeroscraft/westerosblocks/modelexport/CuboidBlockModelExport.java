@@ -114,7 +114,7 @@ public class CuboidBlockModelExport extends ModelExport {
         ModelObjectCuboid mod = new ModelObjectCuboid();
         String txt0 = def.getTextureByIndex(0);
         mod.textures.put("particle", getTextureID(def.getTextureByIndex(0)));
-        int cnt = Math.max(6, def.textures.size());
+        int cnt = Math.max(6, def.getTextureCount());
         String[] textures = new String[cnt];
         for (int i = 0; i < cnt; i++) {
         	textures[i] = def.getTextureByIndex(i);

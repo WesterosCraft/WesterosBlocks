@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/jungle_vertical_planks"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/jungle_vertical_planks"
+    }
   }
 }

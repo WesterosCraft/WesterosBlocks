@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/hop_crate"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/hop_crate"
+    }
   }
 }

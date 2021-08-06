@@ -48,8 +48,8 @@ public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle, We
         def.defaultRegisterTextures(mtd);
         String blkname = def.getBlockName();
         // Register textures
-        String txt1 = def.textures.get(0);
-        String txt2 = def.textures.get(1);
+        String txt1 = def.getTextureByIndex(0);
+        String txt2 = def.getTextureByIndex(1);
         BlockTextureRecord btr = mtd.addBlockTextureRecord(blkname);
         btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
         btr.setPatchTexture(txt1, TextureModifier.NONE, 0);

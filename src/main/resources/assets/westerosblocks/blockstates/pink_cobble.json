@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/pink_cobble"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/pink_cobble"
+    }
   }
 }

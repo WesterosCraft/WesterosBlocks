@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/closed_basket"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/closed_basket"
+    }
   }
 }

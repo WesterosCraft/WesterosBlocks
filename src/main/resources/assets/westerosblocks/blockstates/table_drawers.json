@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/table_drawers"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/table_drawers"
+    }
   }
 }

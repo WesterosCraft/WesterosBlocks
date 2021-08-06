@@ -256,8 +256,8 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
         String blkname = def.getBlockName();
         def.defaultRegisterTextures(mtd);
         // Register texture, and flip version
-        if ((def.textures == null) || (def.textures.size() == 0)) return;
-        String txt = def.textures.get(0);
+        if (def.getTextureCount() == 0) return;
+        String txt = def.getTextureByIndex(0);
         BlockTextureRecord btr = mtd.addBlockTextureRecord(blkname);
         btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
         btr.setPatchTexture(txt, TextureModifier.NONE, 0);

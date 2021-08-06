@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/sand_skeleton"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/sand_skeleton"
+    }
   }
 }

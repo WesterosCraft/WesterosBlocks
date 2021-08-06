@@ -1,13 +1,19 @@
 {
   "variants": {
-    "type=bottom": {
-      "model": "westerosblocks:block/dorne_dusty_dirt_slab_bottom"
-    },
-    "type=double": {
-      "model": "westerosblocks:block/dorne_dusty_dirt_slab_double"
-    },
-    "type=top": {
-      "model": "westerosblocks:block/dorne_dusty_dirt_slab_top"
-    }
+    "type=bottom": [
+      {
+        "model": "westerosblocks:block/dorne_dusty_dirt_slab_bottom"
+      }
+    ],
+    "type=double": [
+      {
+        "model": "westerosblocks:block/dorne_dusty_dirt_slab_double"
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/dorne_dusty_dirt_slab_top"
+      }
+    ]
   }
 }

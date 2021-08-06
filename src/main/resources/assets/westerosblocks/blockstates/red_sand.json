@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/red_sand"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/red_sand"
+    }
   }
 }

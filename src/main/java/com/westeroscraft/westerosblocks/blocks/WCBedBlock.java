@@ -65,7 +65,7 @@ public class WCBedBlock extends BedBlock implements WesterosBlockLifecycle, West
         def.defaultRegisterTextures(mtd);
         WesterosBlockDef def = this.getWBDefinition();
         String blkname = def.getBlockName();
-        if (def.textures != null) {
+        if (def.getTextureCount() > 0) {
             // Register textures 
             TextureModifier tmod = TextureModifier.NONE;
             if (def.nonOpaque) {
@@ -79,11 +79,7 @@ public class WCBedBlock extends BedBlock implements WesterosBlockLifecycle, West
             }
             int[] face_to_idx = new int[] { 1, 1, 3, 3, 5, 5 };
             for (int face = 0; face < 6; face++) {
-                int fidx = face_to_idx[face];
-                if (fidx >= def.textures.size()) {
-                    fidx = def.textures.size() - 1;
-                }
-                String txtid = def.textures.get(fidx);
+                String txtid = def.getTextureByIndex(face_to_idx[face]);
                 mtr.setPatchTexture(txtid.replace(':', '_'), tmod, face);
             }
             def.setBlockColorMap(mtr);
@@ -96,11 +92,7 @@ public class WCBedBlock extends BedBlock implements WesterosBlockLifecycle, West
             }
             face_to_idx = new int[] { 0, 0, 2, 2, 4, 4 };
             for (int face = 0; face < 6; face++) {
-                int fidx = face_to_idx[face];
-                if (fidx >= def.textures.size()) {
-                    fidx = def.textures.size() - 1;
-                }
-                String txtid = def.textures.get(fidx);
+                String txtid = def.getTextureByIndex(face_to_idx[face]);
                 mtr.setPatchTexture(txtid.replace(':', '_'), tmod, face);
             }
             def.setBlockColorMap(mtr);

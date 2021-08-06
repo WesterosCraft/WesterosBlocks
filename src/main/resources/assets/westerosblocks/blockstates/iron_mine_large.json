@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/iron_mine_large"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/iron_mine_large"
+    }
   }
 }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/dungeon_large"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/dungeon_large"
+    }
   }
 }

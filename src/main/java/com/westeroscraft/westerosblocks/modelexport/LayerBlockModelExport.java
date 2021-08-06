@@ -84,7 +84,7 @@ public class LayerBlockModelExport extends ModelExport {
         for (int i = 0; i < blk.layerCount; i++) {
             ModelObjectCuboid mod = new ModelObjectCuboid();
             mod.textures.put("particle", getTextureID(def.getTextureByIndex(0)));
-            int cnt = Math.max(6, def.textures.size());
+            int cnt = Math.max(6, def.getTextureCount());
             for (int j = 0; j < cnt; j++) {
                 mod.textures.put("txt" + j, getTextureID(def.getTextureByIndex(j)));
             }

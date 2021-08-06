@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -15,10 +17,11 @@ public class SlabBlockModelExport extends ModelExport {
 
     // Template objects for Gson export of block state
     public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
+        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
     }
     public static class Variant {
         public String model;
+        public Integer weight;
     }
     // Template objects for Gson export of block models
     public static class ModelObjectCube {
@@ -103,20 +106,44 @@ public class SlabBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
+    private String getModelName(String mod, int setidx) {
+    	return def.getBlockName() + "_" + mod + ((setidx == 0) ? "" : ("_v" + (setidx+1)));
+    }
+    
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        // Do state for half block
+        // Do state for top half block
         String bn = def.getBlockName();
-        Variant var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/" + bn + "_top";
-        so.variants.put("type=top", var);
-        var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/" + bn + "_bottom";
-        so.variants.put("type=bottom", var);
-        var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/" + bn + "_double";
-        so.variants.put("type=double", var);
+        List<Variant> vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("top", setidx);
+        	var.weight = set.weight;
+        	vars.add(var);
+        }
+    	so.variants.put("type=top", vars);
+    	// Do bottom half slab
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("bottom", setidx);
+        	var.weight = set.weight;
+        	vars.add(var);
+        }
+        so.variants.put("type=bottom", vars);
+        // Do full slab
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("double", setidx);
+        	var.weight = set.weight;
+        	vars.add(var);
+        }
+        so.variants.put("type=double", vars);
         this.writeBlockStateFile(bn, so);
     }
 
@@ -124,37 +151,38 @@ public class SlabBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
         boolean isOccluded = (def.ambientOcclusion != null) ? def.ambientOcclusion : true;
-        String bn = def.blockName;
-    	// Double block model
-        ModelObjectCube mod = new ModelObjectCube(isOccluded, isTinted);
-        mod.textures.down = getTextureID(def.getTextureByIndex(0));
-        mod.textures.up = getTextureID(def.getTextureByIndex(1));
-        mod.textures.north = mod.textures.south = mod.textures.west = mod.textures.east = getTextureID(def.getTextureByIndex(2));
-        mod.textures.particle = getTextureID(def.getTextureByIndex(2));
-        this.writeBlockModelFile(bn + "_double", mod);
-        // Lower half block model
-        ModelObjectHalfLower modl = new ModelObjectHalfLower(isOccluded, isTinted);
-        modl.textures.bottom = getTextureID(def.getTextureByIndex(0));
-        modl.textures.top = getTextureID(def.getTextureByIndex(1));
-        modl.textures.side = modl.textures.particle = getTextureID(def.getTextureByIndex(2));
-        this.writeBlockModelFile(bn + "_bottom", modl);
-        // Upper half block model
-        ModelObjectHalfUpper modu = new ModelObjectHalfUpper(isOccluded, isTinted);
-        modu.textures.bottom = getTextureID(def.getTextureByIndex(0));
-        modu.textures.top = getTextureID(def.getTextureByIndex(1));
-        modu.textures.side = modu.textures.particle = getTextureID(def.getTextureByIndex(2));
-        this.writeBlockModelFile(bn + "_top", modu);
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	// Double block model
+        	ModelObjectCube mod = new ModelObjectCube(isOccluded, isTinted);
+        	mod.textures.down = getTextureID(set.getTextureByIndex(0));
+        	mod.textures.up = getTextureID(set.getTextureByIndex(1));
+        	mod.textures.north = mod.textures.south = mod.textures.west = mod.textures.east = getTextureID(set.getTextureByIndex(2));
+        	mod.textures.particle = getTextureID(set.getTextureByIndex(2));
+        	this.writeBlockModelFile(getModelName("double", setidx), mod);
+        	// Lower half block model
+        	ModelObjectHalfLower modl = new ModelObjectHalfLower(isOccluded, isTinted);
+        	modl.textures.bottom = getTextureID(set.getTextureByIndex(0));
+        	modl.textures.top = getTextureID(set.getTextureByIndex(1));
+        	modl.textures.side = modl.textures.particle = getTextureID(set.getTextureByIndex(2));
+        	this.writeBlockModelFile(getModelName("bottom", setidx), modl);
+        	// Upper half block model
+        	ModelObjectHalfUpper modu = new ModelObjectHalfUpper(isOccluded, isTinted);
+        	modu.textures.bottom = getTextureID(set.getTextureByIndex(0));
+        	modu.textures.top = getTextureID(set.getTextureByIndex(1));
+        	modu.textures.side = modu.textures.particle = getTextureID(set.getTextureByIndex(2));
+        	this.writeBlockModelFile(getModelName("top", setidx), modu);
+        }
         // Build simple item model that refers to lower block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + bn + "_bottom";
-        this.writeItemModelFile(bn, mo);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName("bottom", 0);
+        this.writeItemModelFile(def.getBlockName(), mo);
         // Handle tint resources
         if (isTinted) {
             String tintres = def.getBlockColorMapResource();
             if (tintres != null) {
-                ModelExport.addTintingOverride(bn, "", tintres);
+                ModelExport.addTintingOverride(def.getBlockName(), "", tintres);
             }
         }
     }
-
 }

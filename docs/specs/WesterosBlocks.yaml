@@ -212,6 +212,8 @@ components:
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
             colorMult:
               $ref: "#/components/schemas/colorMult"
             collisionBoxes:
@@ -250,6 +252,8 @@ components:
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
             soundList:
               type: array
               items:
@@ -320,6 +324,8 @@ components:
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
             colorMult:
               $ref: "#/components/schemas/colorMult"
             rotateRandom:
@@ -356,6 +362,8 @@ components:
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
             colorMult:
               $ref: "#/components/schemas/colorMult"
             rotateRandom:
@@ -491,6 +499,8 @@ components:
                 Textures for the block are drawn from
                 the bottom, top, and north side of the
                 source block.
+                If the model block support randomTextures,
+                they will be used for the stairs block, as well.
             ambientOcclusion:
               $ref: "#/components/schemas/ambientOcclusion"
             colorMult:
@@ -521,6 +531,8 @@ components:
                   If the list is shorter than 3, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
             ambientOcclusion:
               $ref: "#/components/schemas/ambientOcclusion"
             colorMult:
@@ -1156,6 +1168,34 @@ components:
       default: false
       description: |-
         Control whether block has ambient occlusion
+    RandomTextureSets:
+      type: array
+      description: |-
+        List of texture sets to be used for random models for block.  When
+        defined, these are alternatives to the 'textures' field.
+      items:
+        type: object
+        properties:
+          textures:
+            type: array
+            items:
+              type: string
+              description: |-
+                List of texures paths, relative to 
+                assets/westerosblocks/textures/blocks, unless
+                the module ID is included (e.g. minecraft:xxx or
+                westerosblocks:xxx), in which case the
+                value is relative to the assets/<module>/textures
+                path.  The indexes for this list correspond to
+                those defined for the 'textures' field in the block.
+          weight:
+            type: integer
+            default: 1
+            description: |-
+              If defined, provides the weight this texture set will
+              receive when being randomly selected from among the
+              other sets in the list (where the set will be selected
+              based on 'weight / sum(all weight across sets)'.
     Cuboids:
       type: array
       description: List of cuboid components

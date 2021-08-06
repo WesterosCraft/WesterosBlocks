@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/red_wood"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/red_wood"
+    }
   }
 }

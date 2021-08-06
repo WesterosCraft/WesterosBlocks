@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/bone_dirt"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/bone_dirt"
+    }
   }
 }

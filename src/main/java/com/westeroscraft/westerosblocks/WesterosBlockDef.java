@@ -118,7 +118,10 @@ public class WesterosBlockDef {
 										// allow torches
 										// ('solid', 'sound', 'sand', 'soulsand' blocks)
 	public String label; // Label for item associated with block
-	public List<String> textures = null; // List of textures
+	public List<String> textures = null; // List of textures (for single texture set)
+	public List<RandomTextureSet> randomTextures = null;	// On supported blocks (solid, leaves, slabs, stairs), 
+										// defines sets of textures used for additional random models
+										// If randomTextures is used, textures is ignored
 	public String itemTexture = null; // Item texture, if any
 	public int itemTextureIndex = 0; // Index of texture for item icon
 	public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
@@ -128,6 +131,31 @@ public class WesterosBlockDef {
 	public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
 	public List<StackElement> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
 	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
+	
+	public static class RandomTextureSet {
+		public List<String> textures = null; // List of textures (for single texture set)
+		public Integer weight = null;		// Weight for texture set (default = 1)
+		
+		// Get number of base textures
+		public int getTextureCount() {
+			if (textures != null) {
+				return textures.size();
+			}
+			return 0;
+		}
+
+		public String getTextureByIndex(int idx) {
+			int cnt = getTextureCount();
+			if (cnt > 0) {
+				if (idx >= cnt) {
+					idx = cnt - 1;
+				}
+				return textures.get(idx);
+			}
+			return null;
+		}
+
+	};
 	
 	public static class StackElement {
 		public List<String> textures = null; // List of textures
@@ -429,12 +457,38 @@ public class WesterosBlockDef {
 		return ((colorMult != null) && (colorMult.equals("#FFFFFF") == false));
 	}
 
+	// Get number of base textures
+	public int getTextureCount() {
+		RandomTextureSet set = getRandomTextureSet(0);
+		if (set != null) {
+			return set.getTextureCount();
+		}
+		return 0;
+	}
+ 
 	public String getTextureByIndex(int idx) {
-		if ((textures != null) && (textures.size() > 0)) {
-			if (idx >= textures.size()) {
-				idx = textures.size() - 1;
+		RandomTextureSet set = getRandomTextureSet(0);
+		if (set != null) {
+			return set.getTextureByIndex(idx);
+		}
+		return null;
+	}
+	
+	// Get number of random texture sets
+	public int getRandomTextureSetCount() {
+		if ((randomTextures != null) && (randomTextures.size() > 0)) {
+			return randomTextures.size();
+		}
+		return 0;
+	}
+	
+	// Get given random texture set
+	public RandomTextureSet getRandomTextureSet(int setnum) {
+		if ((randomTextures != null) && (randomTextures.size() > 0)) {
+			if (setnum >= randomTextures.size()) {
+				setnum = randomTextures.size() - 1;
 			}
-			return textures.get(idx);
+			return randomTextures.get(setnum);
 		}
 		return null;
 	}
@@ -562,6 +616,13 @@ public class WesterosBlockDef {
 	public void doInit() {
 		if (didInit)
 			return;
+		// If just base texrures, generate equivalent random textures (simpler logic for blocks that support them
+		if ((textures != null) && (randomTextures == null)) {
+			randomTextures = new ArrayList<RandomTextureSet>();
+			RandomTextureSet set = new RandomTextureSet();
+			set.textures = textures;
+			randomTextures.add(set);
+		}
 		if (this.ambientOcclusion == null)
 			this.ambientOcclusion = true; // Default to true
 		// If we have bounding box, but no cuboids, make trivial cuboid
@@ -966,7 +1027,7 @@ public class WesterosBlockDef {
 			tmod = TextureModifier.CLEARINSIDE;
 		}
 		String blkname = this.getBlockName();
-		if (textures != null) {
+		if (getTextureCount() > 0) {
 			BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
 			if (tm != null) {
 				mtr.setTransparencyMode(tm);
@@ -975,16 +1036,13 @@ public class WesterosBlockDef {
 			for (int meta = 0, cnt = 0; meta < meta_per_sub; meta++) {
 				mtr.setMetaValue(meta);
 			}
-			int cnt = textures.size();
+			int cnt = getTextureCount();
 			if (cnt < minPatchCount) {
 				cnt = minPatchCount;
 			}
 			for (int patch = 0; patch < cnt; patch++) {
-				int fidx = patch;
-				if (fidx >= textures.size()) {
-					fidx = textures.size() - 1;
-				}
-				String txtid = textures.get(fidx);
+				String txtid = getTextureByIndex(patch);
+				
 				mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
 			}
 			setBlockColorMap(mtr);
@@ -1014,7 +1072,7 @@ public class WesterosBlockDef {
 			tmod = TextureModifier.CLEARINSIDE;
 		}
 		String blkname = this.getBlockName();
-		if (textures != null) {
+		if (getTextureCount() > 0) {
 			BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
 			if (tm != null) {
 				mtr.setTransparencyMode(tm);
@@ -1024,11 +1082,7 @@ public class WesterosBlockDef {
 				mtr.setMetaValue(meta);
 			}
 			for (int face = 0; face < 6; face++) {
-				int fidx = face;
-				if (fidx >= textures.size()) {
-					fidx = textures.size() - 1;
-				}
-				String txtid = textures.get(fidx);
+				String txtid = getTextureByIndex(face);
 				mtr.setSideTexture(txtid.replace(':', '_'), tmod, BlockSide.valueOf("FACE_" + face));
 			}
 			setBlockColorMap(mtr);

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/full_cabinet"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/full_cabinet"
+    }
   }
 }

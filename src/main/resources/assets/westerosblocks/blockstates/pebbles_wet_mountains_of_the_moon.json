@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/pebbles_wet_mountains_of_the_moon"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/pebbles_wet_mountains_of_the_moon"
+    }
   }
 }

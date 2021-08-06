@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/noocclusion/outer_stairs",
+  "parent": "minecraft:block/outer_stairs",
   "textures": {
     "bottom": "minecraft:block/snow",
     "top": "minecraft:block/snow",

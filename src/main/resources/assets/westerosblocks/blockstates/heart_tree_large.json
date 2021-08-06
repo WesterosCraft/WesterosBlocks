@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/heart_tree_large"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/heart_tree_large"
+    }
   }
 }

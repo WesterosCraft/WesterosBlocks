@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/butcher_large"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/butcher_large"
+    }
   }
 }

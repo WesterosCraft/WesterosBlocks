@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
-    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
-    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
-    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
-    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
-    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_reach",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_reach"
+    "down": "westerosblocks:blocks/terrainset_reach/1",
+    "up": "westerosblocks:blocks/terrainset_reach/1",
+    "north": "westerosblocks:blocks/terrainset_reach/1",
+    "south": "westerosblocks:blocks/terrainset_reach/1",
+    "west": "westerosblocks:blocks/terrainset_reach/1",
+    "east": "westerosblocks:blocks/terrainset_reach/1",
+    "particle": "westerosblocks:blocks/terrainset_reach/1"
   }
 }

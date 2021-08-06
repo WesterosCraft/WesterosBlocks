@@ -1,13 +1,19 @@
 {
   "variants": {
-    "type=bottom": {
-      "model": "westerosblocks:block/snow_slab_bottom"
-    },
-    "type=double": {
-      "model": "westerosblocks:block/snow_slab_double"
-    },
-    "type=top": {
-      "model": "westerosblocks:block/snow_slab_top"
-    }
+    "type=bottom": [
+      {
+        "model": "westerosblocks:block/snow_slab_bottom"
+      }
+    ],
+    "type=double": [
+      {
+        "model": "westerosblocks:block/snow_slab_double"
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/snow_slab_top"
+      }
+    ]
   }
 }

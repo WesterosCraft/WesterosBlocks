@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/arbor_light_stone"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/arbor_light_stone"
+    }
   }
 }

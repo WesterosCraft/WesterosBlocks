@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/mossy_stone_brick_arrow_slit"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/mossy_stone_brick_arrow_slit"
+    }
   }
 }

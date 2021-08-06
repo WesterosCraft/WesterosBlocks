@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/timber_oak_reach_brick_righthatch"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/timber_oak_reach_brick_righthatch"
+    }
   }
 }

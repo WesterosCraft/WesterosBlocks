@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/cave_ambience"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/cave_ambience"
+    }
   }
 }

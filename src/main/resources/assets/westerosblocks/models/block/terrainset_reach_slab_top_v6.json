@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_reach/6",
+    "top": "westerosblocks:blocks/terrainset_reach/6",
+    "side": "westerosblocks:blocks/terrainset_reach/6",
+    "particle": "westerosblocks:blocks/terrainset_reach/6"
+  }
+}

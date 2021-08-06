@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/terrainset_the_north"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/terrainset_the_north"
+    }
   }
 }

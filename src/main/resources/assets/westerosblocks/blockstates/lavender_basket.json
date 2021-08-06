@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/lavender_basket"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/lavender_basket"
+    }
   }
 }

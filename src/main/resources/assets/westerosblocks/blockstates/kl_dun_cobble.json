@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/kl_dun_cobble"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/kl_dun_cobble"
+    }
   }
 }

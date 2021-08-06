@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/white_harbor_cobblestone"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/white_harbor_cobblestone"
+    }
   }
 }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/pebbles_dry_ocean_rocks"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/pebbles_dry_ocean_rocks"
+    }
   }
 }

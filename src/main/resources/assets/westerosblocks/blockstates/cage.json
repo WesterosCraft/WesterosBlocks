@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/cage"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/cage"
+    }
   }
 }
