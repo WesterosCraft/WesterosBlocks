@@ -796,8 +796,13 @@ components:
                   westerosblocks:xxx), in which case the
                   value is relative to the assets/<module>/textures
                   path.
-                  Index mapping for textures is:
-                  - 0: single texture
+                  Index mapping for textures is based on values
+                  used in the cuboids list (the sideTextures values).
+
+                  If an index beyond the length of the list is
+                  referenced, the last element in the list is used.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
             colorMult:
               $ref: "#/components/schemas/colorMult"
             cuboids:
@@ -815,18 +820,108 @@ components:
         - $ref: "#/components/schemas/Block"
         - type: object
           description: Block type for 'cuboid-ne' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is based on values
+                  used in the cuboids list (the sideTextures values).
+
+                  If an index beyond the length of the list is
+                  referenced, the last element in the list is used.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            cuboids:
+              $ref: "#/components/schemas/Cuboids"
+            isCustomModel:
+              type: boolean
+              default: false
+              description: |-
+                If set to true, model is not generated,
+                and is instead expected to be found at
+                models/custom/<blockid>.json.
     cuboid-nsew:
       title: blockType='cuboid-nsew'
       allOf:
         - $ref: "#/components/schemas/Block"
         - type: object
           description: Block type for 'cuboid-nsew' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is based on values
+                  used in the cuboids list (the sideTextures values).
+
+                  If an index beyond the length of the list is
+                  referenced, the last element in the list is used.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            cuboids:
+              $ref: "#/components/schemas/Cuboids"
+            isCustomModel:
+              type: boolean
+              default: false
+              description: |-
+                If set to true, model is not generated,
+                and is instead expected to be found at
+                models/custom/<blockid>.json.
     cuboid-nsewud:
       title: blockType='cuboid-nsewud'
       allOf:
         - $ref: "#/components/schemas/Block"
         - type: object
           description: Block type for 'cuboid-nsewud' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is based on values
+                  used in the cuboids list (the sideTextures values).
+
+                  If an index beyond the length of the list is
+                  referenced, the last element in the list is used.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            cuboids:
+              $ref: "#/components/schemas/Cuboids"
+            isCustomModel:
+              type: boolean
+              default: false
+              description: |-
+                If set to true, model is not generated,
+                and is instead expected to be found at
+                models/custom/<blockid>.json.
     cuboid-nsew-stack:
       title: blockType='cuboid-nsew-stack'
       allOf:
@@ -857,8 +952,13 @@ components:
                         westerosblocks:xxx), in which case the
                         value is relative to the assets/<module>/textures
                         path.
-                        Index mapping for textures is:
-                        - 0: single texture
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
                   colorMult:
                     $ref: "#/components/schemas/colorMult"
                   cuboids:
