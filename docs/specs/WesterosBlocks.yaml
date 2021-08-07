@@ -720,10 +720,14 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
-                  - 0: unused
-                  - 1: unused
-                  - 2: up/down
-                  - 3: sides
+                  - 0: up/down
+                  - 1: sides
+                  
+                  If the list is shorter than 2, the
+                  last texture is used for all indexes
+                  beyond the length of the list.                  
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
             colorMult:
               $ref: "#/components/schemas/colorMult"
             rotateRandom:

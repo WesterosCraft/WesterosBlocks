@@ -3155,8 +3155,6 @@
             "label": "Apple Fruit Leaves",
             "colorMult": "textures/colormap/birch",
             "textures": [
-                "leaves_block_0/leaves_birch_opaque",
-                "leaves_block_0/leaves_birch_opaque",
                 "leaves_block_0/leaves_birch",
                 "leaves_block_0/leaves_birch"
             ],
@@ -3173,8 +3171,6 @@
             "label": "Apricot Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3191,8 +3187,6 @@
             "label": "Cherry Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3209,8 +3203,6 @@
             "label": "Purple Grape Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
-                "leaves_block_0/leaves_jungle_opaque",
-                "leaves_block_0/leaves_jungle_opaque",
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
@@ -3227,8 +3219,6 @@
             "label": "Lemon Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3245,8 +3235,6 @@
             "label": "Lime Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
-                "leaves_block_0/leaves_jungle_opaque",
-                "leaves_block_0/leaves_jungle_opaque",
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
@@ -3263,8 +3251,6 @@
             "label": "Orange Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
-                "leaves_block_0/leaves_jungle_opaque",
-                "leaves_block_0/leaves_jungle_opaque",
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
@@ -3281,8 +3267,6 @@
             "label": "Peach Fruit Leaves",
             "colorMult": "textures/colormap/birch",
             "textures": [
-                "leaves_block_0/leaves_birch_opaque",
-                "leaves_block_0/leaves_birch_opaque",
                 "leaves_block_0/leaves_birch",
                 "leaves_block_0/leaves_birch"
             ],
@@ -3299,8 +3283,6 @@
             "label": "Plum Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3317,8 +3299,6 @@
             "label": "Pomegranate Fruit Leaves",
             "colorMult": "textures/colormap/birch",
             "textures": [
-                "leaves_block_0/leaves_birch_opaque",
-                "leaves_block_0/leaves_birch_opaque",
                 "leaves_block_0/leaves_birch",
                 "leaves_block_0/leaves_birch"
             ],
@@ -3334,8 +3314,6 @@
             "creativeTab": "WesterosPlants",
             "label": "Weirwood Leaves",
             "textures": [
-                "leaves_block_0/leaves_weirwood_opaque",
-                "leaves_block_0/leaves_weirwood_opaque",
                 "leaves_block_0/leaves_weirwood",
                 "leaves_block_0/leaves_weirwood"
             ],
@@ -3352,8 +3330,6 @@
             "label": "Blackberry Bush",
             "colorMult": "textures/colormap/birch",
             "textures": [
-                "leaves_block_0/leaves_birch_opaque",
-                "leaves_block_0/leaves_birch_opaque",
                 "leaves_block_0/leaves_birch",
                 "leaves_block_0/leaves_birch"
             ],
@@ -3370,8 +3346,6 @@
             "label": "Blueberry Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3388,8 +3362,6 @@
             "label": "Raspberry Bush",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
-                "leaves_block_0/leaves_jungle_opaque",
-                "leaves_block_0/leaves_jungle_opaque",
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
@@ -3406,8 +3378,6 @@
             "label": "Juniper Bush",
             "colorMult": "textures/colormap/pine",
             "textures": [
-                "leaves_block_0/leaves_spruce_opaque",
-                "leaves_block_0/leaves_spruce_opaque",
                 "leaves_block_0/leaves_spruce",
                 "leaves_block_0/leaves_spruce"
             ],
@@ -3424,8 +3394,6 @@
             "label": "Red Rose Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3442,8 +3410,6 @@
             "label": "Pink Rose Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3460,8 +3426,6 @@
             "label": "White Rose Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3478,8 +3442,6 @@
             "label": "Yellow Rose Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3496,8 +3458,6 @@
             "label": "Hop Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
-                "leaves_block_0/leaves_jungle_opaque",
-                "leaves_block_0/leaves_jungle_opaque",
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
@@ -3514,8 +3474,6 @@
             "label": "Olive Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
-                "leaves_block_0/leaves_oak_opaque",
-                "leaves_block_0/leaves_oak_opaque",
                 "leaves_block_0/leaves_oak",
                 "leaves_block_0/leaves_oak"
             ],
@@ -3532,8 +3490,6 @@
             "label": "Palm Leaves",
             "colorMult": "textures/colormap/foliagepalm",
             "textures": [
-                "leaves_block_0/leaves_palm_opaque",
-                "leaves_block_0/leaves_palm_opaque",
                 "leaves_block_0/leaves_palm",
                 "leaves_block_0/leaves_palm"
             ],
@@ -3550,8 +3506,6 @@
             "label": "White Grape Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
-                "leaves_block_0/leaves_jungle_opaque",
-                "leaves_block_0/leaves_jungle_opaque",
                 "leaves_block_0/leaves_jungle",
                 "leaves_block_0/leaves_jungle"
             ],
@@ -28805,8 +28759,6 @@
             "creativeTab": "WesterosPlants",
             "label": "Snowy Spruce Leaves",
             "textures": [
-                "leaves_block_0/leaves_spruce_snowy_opaque",
-                "leaves_block_0/leaves_spruce_snowy_opaque",
                 "leaves_block_0/leaves_spruce_snowy",
                 "leaves_block_0/leaves_spruce_snowy"
             ],
