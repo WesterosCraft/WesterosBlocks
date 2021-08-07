@@ -1,11 +1,15 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/city_profession_armorer"
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/city_profession_armorer",
-      "y": 90
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/city_profession_armorer"
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/city_profession_armorer",
+        "y": 90
+      }
+    ]
   }
 }

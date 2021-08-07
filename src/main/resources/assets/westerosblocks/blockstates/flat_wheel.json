@@ -1,19 +1,27 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/flat_wheel"
-    },
-    "facing=south": {
-      "model": "westerosblocks:block/flat_wheel",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/flat_wheel",
-      "y": 270
-    },
-    "facing=west": {
-      "model": "westerosblocks:block/flat_wheel",
-      "y": 180
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/flat_wheel"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "westerosblocks:block/flat_wheel",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/flat_wheel",
+        "y": 270
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "westerosblocks:block/flat_wheel",
+        "y": 180
+      }
+    ]
   }
 }

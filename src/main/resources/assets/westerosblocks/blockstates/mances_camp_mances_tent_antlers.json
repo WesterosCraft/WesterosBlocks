@@ -1,19 +1,27 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/mances_camp_mances_tent_antlers"
-    },
-    "facing=south": {
-      "model": "westerosblocks:block/mances_camp_mances_tent_antlers",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/mances_camp_mances_tent_antlers",
-      "y": 270
-    },
-    "facing=west": {
-      "model": "westerosblocks:block/mances_camp_mances_tent_antlers",
-      "y": 180
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/mances_camp_mances_tent_antlers"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "westerosblocks:block/mances_camp_mances_tent_antlers",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/mances_camp_mances_tent_antlers",
+        "y": 270
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "westerosblocks:block/mances_camp_mances_tent_antlers",
+        "y": 180
+      }
+    ]
   }
 }

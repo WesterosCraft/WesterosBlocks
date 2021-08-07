@@ -20,6 +20,9 @@ public class CuboidBlockModelExport extends ModelExport {
 
     // Template objects for Gson export of block state
     public static class StateObject {
+        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
+    }
+    public static class StateObject1 {
         public Map<String, Variant> variants = new HashMap<String, Variant>();
     }
     public static class Variant {
@@ -72,21 +75,37 @@ public class CuboidBlockModelExport extends ModelExport {
         this.blk = (WCCuboidBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
-    
-    public String modelName() {
+
+    public String modelName(String ext, int setidx) {
     	if (def.isCustomModel())
-    		return WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName;
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
     	else
-    		return WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+    		return WesterosBlocks.MOD_ID + ":block/" + def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    }
+    public String modelName(int setidx) {
+    	return modelName("", setidx);
     }
     @Override
     public void doBlockStateExport() throws IOException {
-        StateObject so = new StateObject();
-        Variant var = new Variant();
-        var.model = modelName();
-
-        so.variants.put("", var);
-        this.writeBlockStateFile(def.blockName, so);
+        List<Variant> vars = new ArrayList<Variant>();
+        // Loop over the random sets we've got
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	String model = WesterosBlocks.MOD_ID + ":block/" + modelName(setidx);
+            Variant var = new Variant();
+            var.model = modelName(setidx);
+        	vars.add(var);
+        }
+        if (vars.size() == 1) {
+        	StateObject1 so = new StateObject1();
+        	so.variants.put("", vars.get(0));
+        	this.writeBlockStateFile(def.blockName, so);
+        }
+        else {
+        	StateObject so = new StateObject();
+        	so.variants.put("", vars);
+        	this.writeBlockStateFile(def.blockName, so);        	
+        }
     }
 
     private static float getClamped(float v) {
@@ -110,14 +129,15 @@ public class CuboidBlockModelExport extends ModelExport {
     	}
     }
 
-    protected void doCuboidModel(String name, boolean isTinted) throws IOException {
+    protected void doCuboidModel(String name, boolean isTinted, int setidx) throws IOException {
         ModelObjectCuboid mod = new ModelObjectCuboid();
-        String txt0 = def.getTextureByIndex(0);
-        mod.textures.put("particle", getTextureID(def.getTextureByIndex(0)));
-        int cnt = Math.max(6, def.getTextureCount());
+    	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        String txt0 = set.getTextureByIndex(0);
+        mod.textures.put("particle", getTextureID(set.getTextureByIndex(0)));
+        int cnt = Math.max(6, set.getTextureCount());
         String[] textures = new String[cnt];
         for (int i = 0; i < cnt; i++) {
-        	textures[i] = def.getTextureByIndex(i);
+        	textures[i] = set.getTextureByIndex(i);
         }
         doCuboidModel(name, isTinted, txt0, textures, blk.getModelCuboids());
     }
@@ -274,11 +294,15 @@ public class CuboidBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
         // Export if not set to custom model
-        if (!def.isCustomModel())
-            doCuboidModel(def.blockName, isTinted);
+        if (!def.isCustomModel()) {
+            // Loop over the random sets we've got
+            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+            	doCuboidModel(modelName(setidx), isTinted, setidx);
+            }
+        }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = modelName();
+        mo.parent = modelName(0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

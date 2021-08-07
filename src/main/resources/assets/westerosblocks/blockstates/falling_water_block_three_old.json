@@ -1,19 +1,27 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/falling_water_block_three_old"
-    },
-    "facing=south": {
-      "model": "westerosblocks:block/falling_water_block_three_old",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/falling_water_block_three_old",
-      "y": 270
-    },
-    "facing=west": {
-      "model": "westerosblocks:block/falling_water_block_three_old",
-      "y": 180
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/falling_water_block_three_old"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "westerosblocks:block/falling_water_block_three_old",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/falling_water_block_three_old",
+        "y": 270
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "westerosblocks:block/falling_water_block_three_old",
+        "y": 180
+      }
+    ]
   }
 }

@@ -1,11 +1,15 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/city_profession_barber"
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/city_profession_barber",
-      "y": 90
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/city_profession_barber"
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/city_profession_barber",
+        "y": 90
+      }
+    ]
   }
 }

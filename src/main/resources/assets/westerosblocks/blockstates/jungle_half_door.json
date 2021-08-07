@@ -1,19 +1,27 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/jungle_half_door"
-    },
-    "facing=south": {
-      "model": "westerosblocks:block/jungle_half_door",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/jungle_half_door",
-      "y": 270
-    },
-    "facing=west": {
-      "model": "westerosblocks:block/jungle_half_door",
-      "y": 180
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/jungle_half_door"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "westerosblocks:block/jungle_half_door",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/jungle_half_door",
+        "y": 270
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "westerosblocks:block/jungle_half_door",
+        "y": 180
+      }
+    ]
   }
 }

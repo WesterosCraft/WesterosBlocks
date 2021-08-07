@@ -162,6 +162,9 @@ public class WesterosBlockDef {
 		public BoundingBox boundingBox = null; // Bounding box
 		public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
 		public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
+		public List<RandomTextureSet> randomTextures = null;	// On supported blocks (solid, leaves, slabs, stairs), 
+		// defines sets of textures used for additional random models
+		// If randomTextures is used, textures is ignored
 
 		public String getTextureByIndex(int idx) {
 			if ((textures != null) && (textures.size() > 0)) {
@@ -172,6 +175,25 @@ public class WesterosBlockDef {
 			}
 			return null;
 		}
+		// Get number of random texture sets
+		public int getRandomTextureSetCount() {
+			if ((randomTextures != null) && (randomTextures.size() > 0)) {
+				return randomTextures.size();
+			}
+			return 0;
+		}
+		
+		// Get given random texture set
+		public RandomTextureSet getRandomTextureSet(int setnum) {
+			if ((randomTextures != null) && (randomTextures.size() > 0)) {
+				if (setnum >= randomTextures.size()) {
+					setnum = randomTextures.size() - 1;
+				}
+				return randomTextures.get(setnum);
+			}
+			return null;
+		}
+
 	};
 
 	public static class HarvestLevel {
@@ -659,6 +681,13 @@ public class WesterosBlockDef {
 		// If stacks, process these too
 		if (this.stack != null) {
 			for (StackElement se : this.stack) {
+				// If just base texrures, generate equivalent random textures (simpler logic for blocks that support them
+				if ((se.textures != null) && (se.randomTextures == null)) {
+					se.randomTextures = new ArrayList<RandomTextureSet>();
+					RandomTextureSet set = new RandomTextureSet();
+					set.textures = se.textures;
+					se.randomTextures.add(set);
+				}
 				// If we have bounding box, but no cuboids, make trivial cuboid
 				if ((se.boundingBox != null) && (se.cuboids == null)) {
 					Cuboid c = new Cuboid();

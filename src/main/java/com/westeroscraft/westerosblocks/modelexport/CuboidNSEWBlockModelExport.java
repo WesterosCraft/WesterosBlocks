@@ -7,6 +7,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.block.Block;
+import java.util.List;
+import java.util.ArrayList;
 
 public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
     
@@ -16,27 +18,46 @@ public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
     
     @Override
     public void doBlockStateExport() throws IOException {
-        StateObject so = new StateObject();
-        String mod = modelName();
-        
-        Variant var = new Variant();
-        var.model = mod;
-        var.y = 270;
-        so.variants.put("facing=north", var);
+        StateObject so = new StateObject();        
+        // Loop over the random sets we've got
+        List<Variant> vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);
+        	var.y = 270;
+        	vars.add(var);
+        }
+        so.variants.put("facing=north", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        so.variants.put("facing=east", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);
+        	vars.add(var);
+        }
+        so.variants.put("facing=east", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        var.y = 90;
-        so.variants.put("facing=south", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);
+        	var.y = 90;
+        	vars.add(var);
+        }
+        so.variants.put("facing=south", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        var.y = 180;
-        so.variants.put("facing=west", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);
+        	var.y = 180;
+        	vars.add(var);
+        }
+        so.variants.put("facing=west", vars);
         
         this.writeBlockStateFile(def.blockName, so);
     }

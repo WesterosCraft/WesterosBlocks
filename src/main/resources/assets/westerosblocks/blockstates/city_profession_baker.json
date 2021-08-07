@@ -1,11 +1,15 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/city_profession_baker"
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/city_profession_baker",
-      "y": 90
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/city_profession_baker"
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/city_profession_baker",
+        "y": 90
+      }
+    ]
   }
 }

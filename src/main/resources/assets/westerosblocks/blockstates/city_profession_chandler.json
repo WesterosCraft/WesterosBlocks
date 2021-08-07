@@ -1,11 +1,15 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/city_profession_chandler"
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/city_profession_chandler",
-      "y": 90
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/city_profession_chandler"
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/city_profession_chandler",
+        "y": 90
+      }
+    ]
   }
 }

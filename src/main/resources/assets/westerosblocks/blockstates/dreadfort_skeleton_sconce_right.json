@@ -1,19 +1,27 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right"
-    },
-    "facing=south": {
-      "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right",
-      "y": 90
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right",
-      "y": 270
-    },
-    "facing=west": {
-      "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right",
-      "y": 180
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right",
+        "y": 270
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "westerosblocks:block/custom/dreadfort_skeleton_sconce_right",
+        "y": 180
+      }
+    ]
   }
 }

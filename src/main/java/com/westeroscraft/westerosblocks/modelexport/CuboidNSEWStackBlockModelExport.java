@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 
@@ -19,31 +21,39 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         // Export if not set to custom model
         if (!def.isCustomModel()) {
         	// Bottom model
-            ModelObjectCuboid mod = new ModelObjectCuboid();
-            WesterosBlockDef.StackElement se = def.getStackElementByIndex(0);
-            String txt0 = se.getTextureByIndex(0);
-            mod.textures.put("particle", getTextureID(se.getTextureByIndex(0)));
-            int cnt = Math.max(6, se.textures.size());
-            String[] textures = new String[cnt];
-            for (int i = 0; i < cnt; i++) {
-            	textures[i] = se.getTextureByIndex(i);
+        	WesterosBlockDef.StackElement se = def.getStackElementByIndex(0);
+            // Loop over the random sets we've got
+            for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+            	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
+            	ModelObjectCuboid mod = new ModelObjectCuboid();
+            	String txt0 = set.getTextureByIndex(0);
+            	mod.textures.put("particle", getTextureID(set.getTextureByIndex(0)));
+            	int cnt = Math.max(6, set.getTextureCount());
+            	String[] textures = new String[cnt];
+            	for (int i = 0; i < cnt; i++) {
+            		textures[i] = set.getTextureByIndex(i);
+            	}
+            	doCuboidModel(modelName(setidx), isTinted, txt0, textures, se.cuboids);
             }
-            doCuboidModel(def.blockName, isTinted, txt0, textures, se.cuboids);
         	// Top model
-            ModelObjectCuboid mod2 = new ModelObjectCuboid();
-            WesterosBlockDef.StackElement se2 = def.getStackElementByIndex(1);
-            String txt02 = se.getTextureByIndex(0);
-            mod2.textures.put("particle", getTextureID(se2.getTextureByIndex(0)));
-            int cnt2 = Math.max(6, se2.textures.size());
-            String[] textures2 = new String[cnt2];
-            for (int i = 0; i < cnt; i++) {
-            	textures2[i] = se2.getTextureByIndex(i);
+        	WesterosBlockDef.StackElement se2 = def.getStackElementByIndex(1);
+            // Loop over the random sets we've got
+            for (int setidx = 0; setidx < se2.getRandomTextureSetCount(); setidx++) {
+            	WesterosBlockDef.RandomTextureSet set = se2.getRandomTextureSet(setidx);        	
+            	ModelObjectCuboid mod2 = new ModelObjectCuboid();
+            	String txt02 = set.getTextureByIndex(0);
+            	mod2.textures.put("particle", getTextureID(set.getTextureByIndex(0)));
+            	int cnt2 = Math.max(6, set.getTextureCount());
+            	String[] textures2 = new String[cnt2];
+            	for (int i = 0; i < cnt2; i++) {
+            		textures2[i] = set.getTextureByIndex(i);
+            	}
+            	doCuboidModel(modelName("_top", setidx), isTinted, txt02, textures2, se2.cuboids);
             }
-            doCuboidModel(def.blockName+"_top", isTinted, txt02, textures2, se2.cuboids);
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = modelName();
+        mo.parent = modelName(0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {
@@ -57,46 +67,80 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String mod = modelName();
         // Bottom states
-        Variant var = new Variant();
-        var.model = mod;
-        var.y = 270;
-        so.variants.put("facing=north,half=lower", var);
+    	WesterosBlockDef.StackElement se = def.getStackElementByIndex(0);
+        // Loop over the random sets we've got
+    	List<Variant> vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);
+        	var.y = 270;
+        	vars.add(var);
+        }
+        so.variants.put("facing=north,half=lower", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        so.variants.put("facing=east,half=lower", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);        
+        	vars.add(var);
+        }
+    	so.variants.put("facing=east,half=lower", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        var.y = 90;
-        so.variants.put("facing=south,half=lower", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);        
+        	var.y = 90;
+        	vars.add(var);
+        }
+        so.variants.put("facing=south,half=lower", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        var.y = 180;
-        so.variants.put("facing=west,half=lower", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);        
+        	var.y = 180;
+        	vars.add(var);
+        }
+        so.variants.put("facing=west,half=lower", vars);
+
         // Top states
-        mod = mod + "_top";
-        var = new Variant();
-        var.model = mod;
-        var.y = 270;
-        so.variants.put("facing=north,half=upper", var);
+        se = def.getStackElementByIndex(1);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	Variant var = new Variant();
+        	var.model = modelName("_top", setidx);        
+        	var.y = 270;
+        	vars.add(var);
+        }
+        so.variants.put("facing=north,half=upper", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        so.variants.put("facing=east,half=upper", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	Variant var = new Variant();
+        	var.model = modelName("_top", setidx);        
+        	vars.add(var);
+        }
+    	so.variants.put("facing=east,half=upper", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        var.y = 90;
-        so.variants.put("facing=south,half=upper", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	Variant var = new Variant();
+        	var.model = modelName("_top", setidx);        
+        	var.y = 90;
+        	vars.add(var);
+        }
+        so.variants.put("facing=south,half=upper", vars);
         //
-        var = new Variant();
-        var.model = mod;
-        var.y = 180;
-        so.variants.put("facing=west,half=upper", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	Variant var = new Variant();
+        	var.model = modelName("_top", setidx);        
+        	var.y = 180;
+        	vars.add(var);
+        }
+        so.variants.put("facing=west,half=upper", vars);
         
         this.writeBlockStateFile(def.blockName, so);
     }

@@ -1,11 +1,15 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/coins"
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/coins",
-      "y": 90
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/coins"
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/coins",
+        "y": 90
+      }
+    ]
   }
 }

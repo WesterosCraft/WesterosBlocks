@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -17,16 +19,28 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String mod = modelName();
-        // East is base model
-        Variant var = new Variant();
-        var.model = mod;
-        so.variants.put("facing=east", var);
+        // Loop over the random sets we've got
+        List<Variant> vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	String mod = modelName(setidx);
+        	// East is base model
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);
+        	vars.add(var);
+        }
+        so.variants.put("facing=east", vars);
+        
         // North is 90 degree rotate
-        var = new Variant();
-        var.model = mod;
-        var.y = 90;
-        so.variants.put("facing=north", var);
+        vars = new ArrayList<Variant>();
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = modelName(setidx);
+        	var.y = 90;
+        	vars.add(var);
+        }
+        so.variants.put("facing=north", vars);
         
         this.writeBlockStateFile(def.blockName, so);
     }
