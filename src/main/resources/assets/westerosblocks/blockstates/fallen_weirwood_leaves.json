@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/fallen_weirwood_leaves"
+      "model": "fallen_weirwood_leaves"
     }
   }
 }

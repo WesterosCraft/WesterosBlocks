@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/city_profession_tanner"
+        "model": "city_profession_tanner"
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/city_profession_tanner",
+        "model": "city_profession_tanner",
         "y": 90
       }
     ]

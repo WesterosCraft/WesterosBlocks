@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/monochrome_dark_sandstone_hopper"
+      "model": "monochrome_dark_sandstone_hopper"
     }
   }
 }

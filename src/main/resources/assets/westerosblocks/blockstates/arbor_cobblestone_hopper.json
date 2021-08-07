@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/arbor_cobblestone_hopper"
+      "model": "arbor_cobblestone_hopper"
     }
   }
 }

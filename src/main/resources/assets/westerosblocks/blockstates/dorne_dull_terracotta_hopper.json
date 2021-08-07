@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/dorne_dull_terracotta_hopper"
+      "model": "dorne_dull_terracotta_hopper"
     }
   }
 }

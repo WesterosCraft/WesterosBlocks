@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/baelors_sphere_smith_orange"
+      "model": "baelors_sphere_smith_orange"
     }
   }
 }

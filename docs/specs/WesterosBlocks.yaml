@@ -749,6 +749,7 @@ components:
                   
                   - 0: up/down
                   - 1: sides
+                  - 2: better foliage branch texture (if better-foliage defined)
                   
                   If the list is shorter than 2, the
                   last texture is used for all indexes
@@ -769,8 +770,11 @@ components:
                 Comma separated list of 'token:value" and
                 "token" fields.  Defined toknes include:
                 
-                - "no-decay": If value is defined and
-                "true", blocks never decay
+                - "no-decay": If value is defined,
+                blocks never decay
+                - "better-foliage": If value is defined, 
+                block models will have better foliage
+                style extensions
 
     web:
       title: blockType='web'

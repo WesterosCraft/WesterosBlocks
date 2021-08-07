@@ -53,7 +53,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = modelName(0);
+        mo.parent = modelFileName("", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {
@@ -73,7 +73,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
     	List<Variant> vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
-        	var.model = modelName(setidx);
+        	var.model = modelFileName("", setidx);
         	var.y = 270;
         	vars.add(var);
         }
@@ -82,7 +82,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
-        	var.model = modelName(setidx);        
+        	var.model = modelFileName("", setidx);        
         	vars.add(var);
         }
     	so.variants.put("facing=east,half=lower", vars);
@@ -90,7 +90,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
-        	var.model = modelName(setidx);        
+        	var.model = modelFileName("", setidx);        
         	var.y = 90;
         	vars.add(var);
         }
@@ -99,7 +99,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
-        	var.model = modelName(setidx);        
+        	var.model = modelFileName("", setidx);        
         	var.y = 180;
         	vars.add(var);
         }
@@ -110,7 +110,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
-        	var.model = modelName("_top", setidx);        
+        	var.model = modelFileName("_top", setidx);        
         	var.y = 270;
         	vars.add(var);
         }
@@ -119,7 +119,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
-        	var.model = modelName("_top", setidx);        
+        	var.model = modelFileName("_top", setidx);        
         	vars.add(var);
         }
     	so.variants.put("facing=east,half=upper", vars);
@@ -127,7 +127,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
-        	var.model = modelName("_top", setidx);        
+        	var.model = modelFileName("_top", setidx);        
         	var.y = 90;
         	vars.add(var);
         }
@@ -136,7 +136,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
-        	var.model = modelName("_top", setidx);        
+        	var.model = modelFileName("_top", setidx);        
         	var.y = 180;
         	vars.add(var);
         }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/glass_flagon"
+      "model": "glass_flagon"
     }
   }
 }

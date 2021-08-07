@@ -2,36 +2,36 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/test_block",
+        "model": "test_block",
         "y": 90
       }
     ],
     "facing=south": [
       {
-        "model": "westerosblocks:block/test_block",
+        "model": "test_block",
         "y": 180
       }
     ],
     "facing=down": [
       {
-        "model": "westerosblocks:block/test_block",
+        "model": "test_block",
         "x": 90
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/test_block"
+        "model": "test_block"
       }
     ],
     "facing=up": [
       {
-        "model": "westerosblocks:block/test_block",
+        "model": "test_block",
         "x": 270
       }
     ],
     "facing=west": [
       {
-        "model": "westerosblocks:block/test_block",
+        "model": "test_block",
         "y": 270
       }
     ]

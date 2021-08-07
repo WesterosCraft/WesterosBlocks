@@ -76,11 +76,18 @@ public class CuboidBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 
+    public String modelFileName(String ext, int setidx) {
+    	if (def.isCustomModel())
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + modelName(ext, setidx);
+    	else
+    		return WesterosBlocks.MOD_ID + ":block/" + modelName(ext, setidx);
+    }
+
     public String modelName(String ext, int setidx) {
     	if (def.isCustomModel())
-    		return WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    		return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
     	else
-    		return WesterosBlocks.MOD_ID + ":block/" + def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    		return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
     }
     public String modelName(int setidx) {
     	return modelName("", setidx);

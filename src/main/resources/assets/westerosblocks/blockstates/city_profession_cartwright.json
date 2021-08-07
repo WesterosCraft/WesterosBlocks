@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/city_profession_cartwright"
+        "model": "city_profession_cartwright"
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/city_profession_cartwright",
+        "model": "city_profession_cartwright",
         "y": 90
       }
     ]

@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/mances_camp_common_tent_1"
+        "model": "mances_camp_common_tent_1"
       }
     ],
     "facing=south": [
       {
-        "model": "westerosblocks:block/mances_camp_common_tent_1",
+        "model": "mances_camp_common_tent_1",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/mances_camp_common_tent_1",
+        "model": "mances_camp_common_tent_1",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "westerosblocks:block/mances_camp_common_tent_1",
+        "model": "mances_camp_common_tent_1",
         "y": 180
       }
     ]

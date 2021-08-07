@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/citadel_green_marble_hopper"
+      "model": "citadel_green_marble_hopper"
     }
   }
 }

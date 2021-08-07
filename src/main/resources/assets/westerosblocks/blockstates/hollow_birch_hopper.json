@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/hollow_birch_hopper"
+      "model": "hollow_birch_hopper"
     }
   }
 }

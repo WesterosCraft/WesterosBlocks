@@ -15,6 +15,25 @@
       {
         "model": "westerosblocks:block/olive_fruit_leaves",
         "y": 270
+      },
+      {
+        "model": "westerosblocks:block/olive_fruit_leaves",
+        "x": 180
+      },
+      {
+        "model": "westerosblocks:block/olive_fruit_leaves",
+        "x": 180,
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/olive_fruit_leaves",
+        "x": 180,
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/olive_fruit_leaves",
+        "x": 180,
+        "y": 270
       }
     ]
   }

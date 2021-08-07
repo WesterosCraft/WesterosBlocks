@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/oak_carpet"
+      "model": "oak_carpet"
     }
   }
 }

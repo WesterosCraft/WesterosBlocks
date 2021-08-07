@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/hollow_jungle_hopper"
+      "model": "hollow_jungle_hopper"
     }
   }
 }

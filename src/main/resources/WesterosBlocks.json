@@ -3151,12 +3151,13 @@
             "stepSound": "grass",
             "material": "leaves",
             "creativeTab": "WesterosPlants",
-            "type": "no-decay",
+            "type": "no-decay,better-foliage",
             "label": "Apple Fruit Leaves",
             "colorMult": "textures/colormap/birch",
             "textures": [
                 "leaves_block_0/leaves_birch",
-                "leaves_block_0/leaves_birch"
+                "leaves_block_0/leaves_birch",
+                "leaves_block_bf/leaves_bf_birch"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:0"
@@ -3167,12 +3168,13 @@
             "stepSound": "grass",
             "material": "leaves",
             "creativeTab": "WesterosPlants",
-            "type": "no-decay",
+            "type": "no-decay,better-foliage",
             "label": "Apricot Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:1"
@@ -3183,12 +3185,13 @@
             "stepSound": "grass",
             "material": "leaves",
             "creativeTab": "WesterosPlants",
-            "type": "no-decay",
+            "type": "no-decay,better-foliage",
             "label": "Cherry Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak",
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:2"
@@ -3199,12 +3202,13 @@
             "stepSound": "grass",
             "material": "leaves",
             "creativeTab": "WesterosPlants",
-            "type": "no-decay",
+            "type": "no-decay,better-foliage",
             "label": "Purple Grape Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
                 "leaves_block_0/leaves_jungle",
-                "leaves_block_0/leaves_jungle"
+                "leaves_block_0/leaves_jungle",
+                "leaves_block_bf/leaves_bf_jungle"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:3"
@@ -3215,12 +3219,13 @@
             "stepSound": "grass",
             "material": "leaves",
             "creativeTab": "WesterosPlants",
-            "type": "no-decay",
+            "type": "no-decay,better-foliage",
             "label": "Lemon Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:4"
@@ -3231,12 +3236,13 @@
             "stepSound": "grass",
             "material": "leaves",
             "creativeTab": "WesterosPlants",
-            "type": "no-decay",
+            "type": "no-decay,better-foliage",
             "label": "Lime Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
                 "leaves_block_0/leaves_jungle",
-                "leaves_block_0/leaves_jungle"
+                "leaves_block_0/leaves_jungle",
+                "leaves_block_bf/leaves_bf_jungle",
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:5"
@@ -3247,12 +3253,13 @@
             "stepSound": "grass",
             "material": "leaves",
             "creativeTab": "WesterosPlants",
-            "type": "no-decay",
+            "type": "no-decay,better-foliage",
             "label": "Orange Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
                 "leaves_block_0/leaves_jungle",
-                "leaves_block_0/leaves_jungle"
+                "leaves_block_0/leaves_jungle",
+                "leaves_block_bf/leaves_bf_jungle"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:6"
@@ -3263,12 +3270,13 @@
             "stepSound": "grass",
             "material": "leaves",
             "creativeTab": "WesterosPlants",
-            "type": "no-decay",
+            "type": "no-decay,better-foliage",
             "label": "Peach Fruit Leaves",
             "colorMult": "textures/colormap/birch",
             "textures": [
                 "leaves_block_0/leaves_birch",
-                "leaves_block_0/leaves_birch"
+                "leaves_block_0/leaves_birch",
+                "leaves_block_bf/leaves_bf_birch"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_0:7"
@@ -3278,13 +3286,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Plum Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak",
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:0"
@@ -3294,13 +3303,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Pomegranate Fruit Leaves",
             "colorMult": "textures/colormap/birch",
             "textures": [
                 "leaves_block_0/leaves_birch",
-                "leaves_block_0/leaves_birch"
+                "leaves_block_0/leaves_birch",
+                "leaves_block_bf/leaves_bf_birch"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:1"
@@ -3310,12 +3320,13 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Weirwood Leaves",
             "textures": [
                 "leaves_block_0/leaves_weirwood",
-                "leaves_block_0/leaves_weirwood"
+                "leaves_block_0/leaves_weirwood",
+                "leaves_block_bf/leaves_bf_weirwood"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:2"
@@ -3325,13 +3336,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Blackberry Bush",
             "colorMult": "textures/colormap/birch",
             "textures": [
                 "leaves_block_0/leaves_birch",
-                "leaves_block_0/leaves_birch"
+                "leaves_block_0/leaves_birch",
+                "leaves_block_bf/leaves_bf_birch"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:3"
@@ -3341,13 +3353,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Blueberry Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:4"
@@ -3357,13 +3370,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Raspberry Bush",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
                 "leaves_block_0/leaves_jungle",
-                "leaves_block_0/leaves_jungle"
+                "leaves_block_0/leaves_jungle",
+                "leaves_block_bf/leaves_bf_jungle"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:5"
@@ -3373,13 +3387,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Juniper Bush",
             "colorMult": "textures/colormap/pine",
             "textures": [
                 "leaves_block_0/leaves_spruce",
-                "leaves_block_0/leaves_spruce"
+                "leaves_block_0/leaves_spruce",
+                "leaves_block_bf/leaves_bf_spruce"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:6"
@@ -3389,13 +3404,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Red Rose Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_1:7"
@@ -3405,13 +3421,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Pink Rose Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:0"
@@ -3421,13 +3438,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "White Rose Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:1"
@@ -3437,13 +3455,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Yellow Rose Bush",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:2"
@@ -3453,13 +3472,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Hop Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
                 "leaves_block_0/leaves_jungle",
-                "leaves_block_0/leaves_jungle"
+                "leaves_block_0/leaves_jungle",
+                "leaves_block_bf/leaves_bf_jungle"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:3"
@@ -3469,13 +3489,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Olive Fruit Leaves",
             "colorMult": "textures/colormap/foliageoak",
             "textures": [
                 "leaves_block_0/leaves_oak",
-                "leaves_block_0/leaves_oak"
+                "leaves_block_0/leaves_oak",
+                "leaves_block_bf/leaves_bf_oak"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:4"
@@ -3485,13 +3506,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "Palm Leaves",
             "colorMult": "textures/colormap/foliagepalm",
             "textures": [
                 "leaves_block_0/leaves_palm",
-                "leaves_block_0/leaves_palm"
+                "leaves_block_0/leaves_palm",
+                "leaves_block_bf/leaves_bf_palm"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:5"
@@ -3501,13 +3523,14 @@
             "blockType": "leaves",
             "stepSound": "grass",
             "material": "leaves",
-            "type": "no-decay",
+	        "type": "no-decay,better-foliage",
             "creativeTab": "WesterosPlants",
             "label": "White Grape Fruit Leaves",
             "colorMult": "textures/colormap/foliagejungle",
             "textures": [
                 "leaves_block_0/leaves_jungle",
-                "leaves_block_0/leaves_jungle"
+                "leaves_block_0/leaves_jungle",
+                "leaves_block_bf/leaves_bf_jungle"
             ],
             "rotateRandom": true,
             "legacyBlockID": "leaves_block_2:6"

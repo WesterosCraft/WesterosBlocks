@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/blood"
+      "model": "blood"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/brazier2"
+      "model": "brazier2"
     }
   }
 }
