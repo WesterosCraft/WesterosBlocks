@@ -203,12 +203,14 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: north texture
                   - 3: south texture
                   - 4: west texture
                   - 5: east texture
+                  
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -243,12 +245,14 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: north texture
                   - 3: south texture
                   - 4: west texture
                   - 5: east texture
+                  
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -289,6 +293,7 @@ components:
                 - "end-time": time of day (as 100 times
                   the 24-hour time) for the latest 
                   playing of the sounds.
+                  
             rotateRandom:
               type: boolean
               description: |-
@@ -315,12 +320,14 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: north texture
                   - 3: south texture
                   - 4: west texture
                   - 5: east texture
+                  
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -353,12 +360,14 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: north texture
                   - 3: south texture
                   - 4: west texture
                   - 5: east texture
+                  
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -391,12 +400,14 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: north texture
                   - 3: south texture
                   - 4: west texture
                   - 5: east texture
+                  
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -421,6 +432,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: single texture
             type:
               type: string
@@ -452,8 +464,10 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: fire texture 1
                   - 1: fire texture 2
+                  
                   If the list is shorter than 2, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -476,8 +490,10 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: end texture
                   - 1: side texture
+                  
                   If the list is shorter than 2, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -525,9 +541,11 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: side texture
+                  
                   If the list is shorter than 3, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -557,8 +575,10 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: straight track
                   - 1: curved track
+                  
                   If the list is shorter than 2, the
                   last texture is used for all indexes
                   beyond the length of the list.
@@ -582,8 +602,10 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: pane texture
                   - 1: edge texture
+                  
                   If the list is shorter than 2, the
                   last texture is used for all indexes
                   beyond the length of the list.    
@@ -618,6 +640,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: top of head of bed
                   - 1: top of foot of bed
                   - 2: side of head of bed
@@ -648,6 +671,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: side texture
@@ -676,6 +700,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: single texture
     plant:
       title: blockType='plant'
@@ -697,6 +722,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: single texture
             colorMult:
               $ref: "#/components/schemas/colorMult"
@@ -720,6 +746,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: up/down
                   - 1: sides
                   
@@ -765,6 +792,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: single texture
             colorMult:
               $ref: "#/components/schemas/colorMult"
@@ -983,6 +1011,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: top texture
                   - 1: bottom texture
 
@@ -1018,6 +1047,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: single texture
             type:
               type: string
@@ -1048,6 +1078,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: all sides
             type:
               type: string
@@ -1078,6 +1109,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: non-front side texture
@@ -1108,6 +1140,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: all sides
     vines:
       title: blockType='vines'
@@ -1129,6 +1162,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: side texture
                   - 1: top/bottom texture
             type:
@@ -1165,6 +1199,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: side texture
@@ -1192,6 +1227,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture
                   - 1: top texture
                   - 2: side texture
@@ -1219,6 +1255,7 @@ components:
                   value is relative to the assets/<module>/textures
                   path.
                   Index mapping for textures is:
+                  
                   - 0: bottom texture of outside box
                   - 1: top texture of outside box
                   - 2: north texture of outside box
@@ -1256,14 +1293,14 @@ components:
         Color multiplier to be used for tinting the blocks.
         Values include:
         
-        "#RRGGBB" - custom color, with given red/green/blue values
-        "water" - tint using water tinting map
-        "foliage" - tint using foliage (leaves) tinting map
-        "grass" - tint using grass tinting map
-        "pine" - tint using pine tinting map
-        "birch" - tint using birch tinting map
-        "basic" - tint using basic color multiplier
-        "lily" - tint using lily tinting map
+        - "#RRGGBB" - custom color, with given red/green/blue values
+        - "water" - tint using water tinting map
+        - "foliage" - tint using foliage (leaves) tinting map
+        - "grass" - tint using grass tinting map
+        - "pine" - tint using pine tinting map
+        - "birch" - tint using birch tinting map
+        - "basic" - tint using basic color multiplier
+        - "lily" - tint using lily tinting map
         
         Otherwise, value is assumed to be that of a colormap
         file located at assets/westerosblocks/<path>
