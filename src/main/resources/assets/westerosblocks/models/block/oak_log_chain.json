@@ -1,7 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log",
   "textures": {
-    "end": "westerosblocks:blocks/log_block_0/tree_top",
-    "side": "westerosblocks:blocks/log_block_0/bark_oak_chain"
+    "down": "westerosblocks:blocks/log_block_0/tree_top",
+    "up": "westerosblocks:blocks/log_block_0/tree_top",
+    "north": "westerosblocks:blocks/log_block_0/bark_oak_chain",
+    "south": "westerosblocks:blocks/log_block_0/bark_oak_chain",
+    "east": "westerosblocks:blocks/log_block_0/bark_oak_chain",
+    "west": "westerosblocks:blocks/log_block_0/bark_oak_chain",
+    "particle": "westerosblocks:blocks/log_block_0/bark_oak_chain"
   }
 }

@@ -1,7 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log",
   "textures": {
-    "end": "westerosblocks:blocks/log_block_1/bark_jungle_mossy_top",
-    "side": "westerosblocks:blocks/log_block_1/bark_jungle_mossy"
+    "down": "westerosblocks:blocks/log_block_1/bark_jungle_mossy_top",
+    "up": "westerosblocks:blocks/log_block_1/bark_jungle_mossy_top",
+    "north": "westerosblocks:blocks/log_block_1/bark_jungle_mossy",
+    "south": "westerosblocks:blocks/log_block_1/bark_jungle_mossy",
+    "east": "westerosblocks:blocks/log_block_1/bark_jungle_mossy",
+    "west": "westerosblocks:blocks/log_block_1/bark_jungle_mossy",
+    "particle": "westerosblocks:blocks/log_block_1/bark_jungle_mossy"
   }
 }

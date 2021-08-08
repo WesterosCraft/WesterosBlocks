@@ -1,7 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log",
   "textures": {
-    "end": "westerosblocks:blocks/log_block_0/target_front",
-    "side": "westerosblocks:blocks/log_block_0/target_sides"
+    "down": "westerosblocks:blocks/log_block_0/target_front",
+    "up": "westerosblocks:blocks/log_block_0/target_front",
+    "north": "westerosblocks:blocks/log_block_0/target_sides",
+    "south": "westerosblocks:blocks/log_block_0/target_sides",
+    "east": "westerosblocks:blocks/log_block_0/target_sides",
+    "west": "westerosblocks:blocks/log_block_0/target_sides",
+    "particle": "westerosblocks:blocks/log_block_0/target_sides"
   }
 }

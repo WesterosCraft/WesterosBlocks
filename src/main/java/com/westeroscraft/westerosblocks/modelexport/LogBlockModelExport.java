@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -15,12 +17,13 @@ public class LogBlockModelExport extends ModelExport {
 
     // Template objects for Gson export of block state
     public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
+        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
     }
     public static class Variant {
         public String model;
         public Integer x;
         public Integer y;
+        public Integer weight;
     }
     // Template objects for Gson export of block models
     public static class ModelObjectCubeAll {
@@ -32,49 +35,78 @@ public class LogBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectColumn {
-        public String parent = "westerosblocks:block/untinted/cube_log";    // Use hacked 'cube_column' model (weirwood behaviors...)
+        public String parent;    // Use hacked 'cube_column' model (weirwood behaviors...)
         public Texture textures = new Texture();
+        public ModelObjectColumn(boolean isTinted) {
+        	if (isTinted) {
+        		this.parent = "westerosblocks:block/tinted/cube_log";
+        	}
+        	else {
+        		this.parent = "westerosblocks:block/untinted/cube_log";;
+        	}
+        }
     }
     public static class Texture {
-        public String end, side;
+        public String down, up, north, south, east, west, particle;
     }
     public static class ModelObject {
     	public String parent;
     }
     
+    private String getModelName(int setidx) {
+    	return def.blockName + ((setidx == 0)?"":("-v" + (setidx+1)));
+    }
+
     public LogBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
+    private static final String[] states = { "axis=x", "axis=y", "axis=z" };
+    private static final int[] xrot = { 90, 0, 90 };
+    private static final int[] yrot = { 90, 0, 0 };
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        Variant varx = new Variant();
-        Variant vary = new Variant();
-        Variant varz = new Variant();
-        Variant varn = new Variant();
-        String mod = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
-        varx.model = vary.model = varz.model = mod;
-        so.variants.put("axis=y", vary);
-        varz.x = 90;
-        so.variants.put("axis=z", varz);
-        varx.x = 90;
-        varx.y = 90;
-        so.variants.put("axis=x", varx);
+        
+        for (int i = 0; i < states.length; i++) {
+        	List<Variant> vars = new ArrayList<Variant>();
+        	// Loop over the random sets we've got
+        	for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        		WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        		Variant var = new Variant();
+        		var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName(setidx);
+        		if (xrot[i] > 0) var.x = xrot[i];
+        		if (yrot[i] > 0) var.y = yrot[i];
+        		var.weight = set.weight;
+        		vars.add(var);
+        	}
+        	so.variants.put(states[i], vars);
+        }
         this.writeBlockStateFile(def.blockName, so);
     }
 
     @Override
     public void doModelExports() throws IOException {
-        ModelObjectColumn mod = new ModelObjectColumn();
-        mod.textures.end = getTextureID(def.getTextureByIndex(0));
-        mod.textures.side = getTextureID(def.getTextureByIndex(1));
-        this.writeBlockModelFile(def.blockName, mod);
+        boolean isTinted = def.isTinted();
+
+    	// Loop over the random sets we've got
+    	for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+    		WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+            ModelObjectColumn mod = new ModelObjectColumn(isTinted);
+    		mod.textures.down = getTextureID(set.getTextureByIndex(0));
+    		mod.textures.up = getTextureID(set.getTextureByIndex(0));	// first is for both ends
+    		mod.textures.north = getTextureID(set.getTextureByIndex(1));
+    		mod.textures.south = getTextureID(set.getTextureByIndex(2));
+    		mod.textures.west = getTextureID(set.getTextureByIndex(3));
+    		mod.textures.east = getTextureID(set.getTextureByIndex(4));
+    		mod.textures.particle = getTextureID(set.getTextureByIndex(1));
+            this.writeBlockModelFile(getModelName(setidx), mod);
+    	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName(0);
         this.writeItemModelFile(def.blockName, mo);
     }
 

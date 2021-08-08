@@ -1,16 +1,22 @@
 {
   "variants": {
-    "axis=z": {
-      "model": "westerosblocks:block/jungle_log_chain",
-      "x": 90
-    },
-    "axis=x": {
-      "model": "westerosblocks:block/jungle_log_chain",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y": {
-      "model": "westerosblocks:block/jungle_log_chain"
-    }
+    "axis=z": [
+      {
+        "model": "westerosblocks:block/jungle_log_chain",
+        "x": 90
+      }
+    ],
+    "axis=x": [
+      {
+        "model": "westerosblocks:block/jungle_log_chain",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "westerosblocks:block/jungle_log_chain"
+      }
+    ]
   }
 }
