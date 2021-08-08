@@ -41,6 +41,7 @@ components:
               - $ref: "#/components/schemas/sand"
               - $ref: "#/components/schemas/slab"
               - $ref: "#/components/schemas/solid"
+              - $ref: "#/components/schemas/solidhoriz"
               - $ref: "#/components/schemas/solidvert"
               - $ref: "#/components/schemas/soulsand"
               - $ref: "#/components/schemas/soulsandvert"
@@ -217,6 +218,50 @@ components:
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            collisionBoxes:
+              $ref: "#/components/schemas/CollisionBoxes"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
+    solidhoriz:
+      title: blockType='solidhoriz'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'solidhoriz' blocks (solid with horizontal CTM)
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: side texture (with no match left or right)
+                  - 3: side texture (with match to right)
+                  - 4: side texture (with match to left)
+                  - 5: side texture (with match to right and left)
+                  
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            connectTo:
+              $ref: "#/components/schemas/ConnectTo"
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
             colorMult:
