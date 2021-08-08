@@ -73,11 +73,12 @@ public class WCLadderVertBlock extends LadderBlock implements WesterosBlockLifec
         return def;
     }
     
+    // See if connected - avoid connection if ladders aren't on same facing
     private BlockState updateStateVertical(BlockState bs, IBlockReader reader, BlockPos pos) {
     	BlockState bsneighbor = reader.getBlockState(pos.above());
-    	boolean up = def.isConnectMatch(bs, bsneighbor);
+    	Boolean up = Boolean.valueOf((bs.getValue(FACING) == bsneighbor.getValue(FACING)) && def.isConnectMatch(bs, bsneighbor));
     	bsneighbor = reader.getBlockState(pos.below());
-    	boolean down = def.isConnectMatch(bs, bsneighbor);
+    	Boolean down = Boolean.valueOf((bs.getValue(FACING) == bsneighbor.getValue(FACING)) && def.isConnectMatch(bs, bsneighbor));
     	return bs.setValue(UP, up).setValue(DOWN, down);
     }
 

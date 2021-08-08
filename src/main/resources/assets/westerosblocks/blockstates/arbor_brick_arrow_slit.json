@@ -1,7 +1,24 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/arbor_brick_arrow_slit"
-    }
+    "down=false,up=true": [
+      {
+        "model": "westerosblocks:block/arbor_brick_arrow_slit_up"
+      }
+    ],
+    "down=true,up=false": [
+      {
+        "model": "westerosblocks:block/arbor_brick_arrow_slit_down"
+      }
+    ],
+    "down=false,up=false": [
+      {
+        "model": "westerosblocks:block/arbor_brick_arrow_slit"
+      }
+    ],
+    "down=true,up=true": [
+      {
+        "model": "westerosblocks:block/arbor_brick_arrow_slit_both"
+      }
+    ]
   }
 }

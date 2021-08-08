@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "westerosblocks:blocks/bookshelves_block_0/spruce_top",
+    "up": "westerosblocks:blocks/bookshelves_block_0/spruce_top",
+    "down": "westerosblocks:blocks/bookshelves_block_0/spruce_top",
+    "north": "westerosblocks:blocks/bookshelf_cramped/right",
+    "south": "westerosblocks:blocks/bookshelf_cramped/left",
+    "east": "westerosblocks:blocks/bookshelf_cramped/right",
+    "west": "westerosblocks:blocks/bookshelf_cramped/left"
+  }
+}

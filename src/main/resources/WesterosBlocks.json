@@ -4016,17 +4016,35 @@
         },
         {
             "blockName": "bookshelf_library",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
             "resistance": 5,
             "creativeTab": "WesterosDeco",
             "label": "Bookshelf Library",
-            "textures": [
-                "bookshelves_block_0/spruce_top",
-                "bookshelves_block_0/spruce_top",
-                "bookshelves_block_0/bookshelf_library"
+            "randomTextures": [
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_cramped/side",
+        	        "bookshelf_cramped/left",
+        	        "bookshelf_cramped/right",
+        	        "bookshelf_cramped/both" ] },
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_cramped/side",
+        	        "bookshelf_cramped/left",
+        	        "bookshelf_cramped/right",
+        	        "bookshelf_cramped/both2" ] },
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_cramped/side",
+        	        "bookshelf_cramped/left",
+        	        "bookshelf_cramped/right",
+        	        "bookshelf_cramped/both3" ] }
             ],
             "legacyBlockID": "bookshelves_block_0:0"
         },
@@ -4048,17 +4066,28 @@
         },
         {
             "blockName": "bookshelf_abandoned",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
             "resistance": 5,
             "creativeTab": "WesterosDeco",
             "label": "Bookshelf Abandoned",
-            "textures": [
-                "bookshelves_block_0/spruce_top",
-                "bookshelves_block_0/spruce_top",
-                "bookshelves_block_0/bookshelf_abandoned"
+            "randomTextures": [
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_abandoned/side",
+        	        "bookshelf_abandoned/left",
+        	        "bookshelf_abandoned/right",
+        	        "bookshelf_abandoned/both" ] },
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_abandoned/side",
+        	        "bookshelf_abandoned/left",
+        	        "bookshelf_abandoned/right",
+        	        "bookshelf_abandoned/both2" ] }
             ],
             "legacyBlockID": "bookshelves_block_0:2"
         },
@@ -12197,6 +12226,7 @@
             "creativeTab": "WesterosDeco",
             "lightValue": 1,
             "label": "Safe Fire",
+            "material": "fire",
             "textures": [
                 "fire_block_0/fire_layer_0",
                 "fire_block_0/fire_layer_1"
@@ -27267,7 +27297,7 @@
         },
         {
             "blockName": "arbor_brick_arrow_slit",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -27280,7 +27310,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_1/brick_arbor_arrow_slit"
+                "arrow_slit_brick_arbor/side",
+                "arrow_slit_brick_arbor/down",
+                "arrow_slit_brick_arbor/up",
+                "arrow_slit_brick_arbor/both"
             ],
             "collisionBoxes": [
                 {

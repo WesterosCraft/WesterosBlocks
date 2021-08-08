@@ -103,6 +103,9 @@ public class ModelExportFactory {
             case "laddervert":
                 me = new LadderVertBlockModelExport(blk, def, dest);
                 break;
+            case "solidhoriz":
+                me = new SolidHorizBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

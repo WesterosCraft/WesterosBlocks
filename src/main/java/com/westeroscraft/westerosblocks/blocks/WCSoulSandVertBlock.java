@@ -51,9 +51,9 @@ public class WCSoulSandVertBlock extends SoulSandBlock implements WesterosBlockL
     
     private BlockState updateStateVertical(BlockState bs, IBlockReader reader, BlockPos pos) {
     	BlockState bsneighbor = reader.getBlockState(pos.above());
-    	boolean up = def.isConnectMatch(bs, bsneighbor);
+    	Boolean up = Boolean.valueOf(def.isConnectMatch(bs, bsneighbor));
     	bsneighbor = reader.getBlockState(pos.below());
-    	boolean down = def.isConnectMatch(bs, bsneighbor);
+    	Boolean down = Boolean.valueOf(def.isConnectMatch(bs, bsneighbor));
     	return bs.setValue(UP, up).setValue(DOWN, down);
     }
 

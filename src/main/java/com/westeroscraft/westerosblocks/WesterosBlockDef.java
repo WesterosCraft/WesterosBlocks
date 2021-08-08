@@ -42,6 +42,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidVertBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSolidHorizBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
@@ -979,6 +980,7 @@ public class WesterosBlockDef {
 		typeTable.put("solidvert", new WCSolidVertBlock.Factory());
 		typeTable.put("soulsandvert", new WCSoulSandVertBlock.Factory());
 		typeTable.put("laddervert", new WCLadderVertBlock.Factory());
+		typeTable.put("solidhoriz", new WCSolidHorizBlock.Factory());
 
 		// Standard color multipliers
 		colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
