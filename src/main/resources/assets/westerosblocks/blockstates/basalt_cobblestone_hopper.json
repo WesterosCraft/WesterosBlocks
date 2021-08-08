@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "basalt_cobblestone_hopper"
+      "model": "westerosblocks:block/basalt_cobblestone_hopper"
     }
   }
 }

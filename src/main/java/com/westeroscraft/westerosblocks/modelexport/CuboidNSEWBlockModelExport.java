@@ -24,7 +24,7 @@ public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelName(setidx);
+        	var.model = modelFileName("", setidx);
         	var.y = 270;
         	vars.add(var);
         }
@@ -34,7 +34,7 @@ public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelName(setidx);
+        	var.model = modelFileName("", setidx);
         	vars.add(var);
         }
         so.variants.put("facing=east", vars);
@@ -43,7 +43,7 @@ public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelName(setidx);
+        	var.model = modelFileName("", setidx);
         	var.y = 90;
         	vars.add(var);
         }
@@ -53,7 +53,7 @@ public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelName(setidx);
+        	var.model = modelFileName("", setidx);
         	var.y = 180;
         	vars.add(var);
         }

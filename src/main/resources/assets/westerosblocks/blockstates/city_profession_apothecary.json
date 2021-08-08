@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "city_profession_apothecary"
+        "model": "westerosblocks:block/city_profession_apothecary"
       }
     ],
     "facing=north": [
       {
-        "model": "city_profession_apothecary",
+        "model": "westerosblocks:block/city_profession_apothecary",
         "y": 90
       }
     ]

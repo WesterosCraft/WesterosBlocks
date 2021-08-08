@@ -23,10 +23,9 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
         List<Variant> vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	String mod = modelName(setidx);
         	// East is base model
         	Variant var = new Variant();
-        	var.model = modelName(setidx);
+        	var.model = modelFileName("", setidx);
         	vars.add(var);
         }
         so.variants.put("facing=east", vars);
@@ -36,7 +35,7 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelName(setidx);
+        	var.model = modelFileName("", setidx);
         	var.y = 90;
         	vars.add(var);
         }

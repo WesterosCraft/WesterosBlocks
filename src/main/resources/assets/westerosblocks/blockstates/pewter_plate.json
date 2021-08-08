@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "pewter_plate"
+      "model": "westerosblocks:block/pewter_plate"
     }
   }
 }

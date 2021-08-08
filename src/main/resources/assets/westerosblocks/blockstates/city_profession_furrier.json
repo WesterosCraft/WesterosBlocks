@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "city_profession_furrier"
+        "model": "westerosblocks:block/city_profession_furrier"
       }
     ],
     "facing=north": [
       {
-        "model": "city_profession_furrier",
+        "model": "westerosblocks:block/city_profession_furrier",
         "y": 90
       }
     ]

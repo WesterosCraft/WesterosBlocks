@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "white_wood_half_door"
+        "model": "westerosblocks:block/white_wood_half_door"
       }
     ],
     "facing=south": [
       {
-        "model": "white_wood_half_door",
+        "model": "westerosblocks:block/white_wood_half_door",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "white_wood_half_door",
+        "model": "westerosblocks:block/white_wood_half_door",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "white_wood_half_door",
+        "model": "westerosblocks:block/white_wood_half_door",
         "y": 180
       }
     ]

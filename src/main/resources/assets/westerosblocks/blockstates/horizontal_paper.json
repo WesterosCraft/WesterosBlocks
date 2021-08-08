@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "horizontal_paper"
+        "model": "westerosblocks:block/horizontal_paper"
       }
     ],
     "facing=south": [
       {
-        "model": "horizontal_paper",
+        "model": "westerosblocks:block/horizontal_paper",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "horizontal_paper",
+        "model": "westerosblocks:block/horizontal_paper",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "horizontal_paper",
+        "model": "westerosblocks:block/horizontal_paper",
         "y": 180
       }
     ]

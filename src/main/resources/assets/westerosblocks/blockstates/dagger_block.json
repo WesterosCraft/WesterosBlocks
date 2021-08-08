@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "dagger_block"
+        "model": "westerosblocks:block/dagger_block"
       }
     ],
     "facing=south": [
       {
-        "model": "dagger_block",
+        "model": "westerosblocks:block/dagger_block",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "dagger_block",
+        "model": "westerosblocks:block/dagger_block",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "dagger_block",
+        "model": "westerosblocks:block/dagger_block",
         "y": 180
       }
     ]

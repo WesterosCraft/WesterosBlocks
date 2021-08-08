@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "oak_hopper"
+      "model": "westerosblocks:block/oak_hopper"
     }
   }
 }

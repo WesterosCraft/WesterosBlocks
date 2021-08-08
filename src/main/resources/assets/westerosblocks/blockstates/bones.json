@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "bones"
+        "model": "westerosblocks:block/bones"
       }
     ],
     "facing=north": [
       {
-        "model": "bones",
+        "model": "westerosblocks:block/bones",
         "y": 90
       }
     ]

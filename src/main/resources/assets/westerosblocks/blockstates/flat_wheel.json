@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "flat_wheel"
+        "model": "westerosblocks:block/flat_wheel"
       }
     ],
     "facing=south": [
       {
-        "model": "flat_wheel",
+        "model": "westerosblocks:block/flat_wheel",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "flat_wheel",
+        "model": "westerosblocks:block/flat_wheel",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "flat_wheel",
+        "model": "westerosblocks:block/flat_wheel",
         "y": 180
       }
     ]

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "reach_light_stone_hopper"
+      "model": "westerosblocks:block/reach_light_stone_hopper"
     }
   }
 }

@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "oak_half_door"
+        "model": "westerosblocks:block/oak_half_door"
       }
     ],
     "facing=south": [
       {
-        "model": "oak_half_door",
+        "model": "westerosblocks:block/oak_half_door",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "oak_half_door",
+        "model": "westerosblocks:block/oak_half_door",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "oak_half_door",
+        "model": "westerosblocks:block/oak_half_door",
         "y": 180
       }
     ]

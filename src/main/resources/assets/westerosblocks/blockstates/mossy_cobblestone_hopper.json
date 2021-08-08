@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "mossy_cobblestone_hopper"
+      "model": "westerosblocks:block/mossy_cobblestone_hopper"
     }
   }
 }

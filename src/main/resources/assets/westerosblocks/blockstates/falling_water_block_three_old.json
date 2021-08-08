@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "falling_water_block_three_old"
+        "model": "westerosblocks:block/falling_water_block_three_old"
       }
     ],
     "facing=south": [
       {
-        "model": "falling_water_block_three_old",
+        "model": "westerosblocks:block/falling_water_block_three_old",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "falling_water_block_three_old",
+        "model": "westerosblocks:block/falling_water_block_three_old",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "falling_water_block_three_old",
+        "model": "westerosblocks:block/falling_water_block_three_old",
         "y": 180
       }
     ]

@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "cleaver_block"
+        "model": "westerosblocks:block/cleaver_block"
       }
     ],
     "facing=south": [
       {
-        "model": "cleaver_block",
+        "model": "westerosblocks:block/cleaver_block",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "cleaver_block",
+        "model": "westerosblocks:block/cleaver_block",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "cleaver_block",
+        "model": "westerosblocks:block/cleaver_block",
         "y": 180
       }
     ]

@@ -98,9 +98,8 @@ public class CuboidBlockModelExport extends ModelExport {
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	String model = WesterosBlocks.MOD_ID + ":block/" + modelName(setidx);
             Variant var = new Variant();
-            var.model = modelName(setidx);
+            var.model = modelFileName("", setidx);
         	vars.add(var);
         }
         if (vars.size() == 1) {
@@ -309,7 +308,7 @@ public class CuboidBlockModelExport extends ModelExport {
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = modelName(0);
+        mo.parent = modelFileName("", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

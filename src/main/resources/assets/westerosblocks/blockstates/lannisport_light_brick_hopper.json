@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "lannisport_light_brick_hopper"
+      "model": "westerosblocks:block/lannisport_light_brick_hopper"
     }
   }
 }

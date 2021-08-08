@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/ladder",
+  "parent": "minecraft:block/ladder",
 "textures": {"1": "westerosblocks:blocks/ladder_block_0/ladder_normal"},
     "elements": [
         {

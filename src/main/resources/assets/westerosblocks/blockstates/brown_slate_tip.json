@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "brown_slate_tip"
+      "model": "westerosblocks:block/brown_slate_tip"
     }
   }
 }

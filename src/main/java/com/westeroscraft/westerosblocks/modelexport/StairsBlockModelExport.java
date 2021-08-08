@@ -236,15 +236,16 @@ public class StairsBlockModelExport extends ModelExport {
                 		downtxt = uptxt = sidetxt = "minecraft:block/lapis_block";
                 		break;
                 	case "minecraft:sandstone":
-                		downtxt = uptxt = "minecraft:block/sandstone_top";
-                		sidetxt = "minecraft:block/sandstone_smooth";
+                		downtxt = "minecraft:block/sandstone_bottom"; 
+                		uptxt = "minecraft:block/sandstone_top";
+                		sidetxt = "minecraft:block/sandstone";
                 		break;
                 	case "minecraft:iron_block":
                 		downtxt = uptxt = sidetxt = "minecraft:block/iron_block";
                 		break;
                 	case "minecraft:stone_slab":
-                		downtxt = uptxt = "minecraft:block/stone_slab_top";
-                		sidetxt = "minecraft:block/stone_slab_side";
+                		downtxt = uptxt = "minecraft:block/stone";
+                		sidetxt = "minecraft:block/stone";
                 		break;
                 	case "minecraft:snow":
                 		downtxt = uptxt = sidetxt = "minecraft:block/snow";

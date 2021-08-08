@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "forest_path_dirt"
+      "model": "westerosblocks:block/forest_path_dirt"
     }
   }
 }

@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "city_profession_scribe"
+        "model": "westerosblocks:block/city_profession_scribe"
       }
     ],
     "facing=north": [
       {
-        "model": "city_profession_scribe",
+        "model": "westerosblocks:block/city_profession_scribe",
         "y": 90
       }
     ]

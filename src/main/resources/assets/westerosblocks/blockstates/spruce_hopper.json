@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "spruce_hopper"
+      "model": "westerosblocks:block/spruce_hopper"
     }
   }
 }

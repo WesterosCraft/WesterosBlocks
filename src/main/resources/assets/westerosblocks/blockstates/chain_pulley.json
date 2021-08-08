@@ -2,36 +2,36 @@
   "variants": {
     "facing=east": [
       {
-        "model": "chain_pulley",
+        "model": "westerosblocks:block/chain_pulley",
         "y": 90
       }
     ],
     "facing=south": [
       {
-        "model": "chain_pulley",
+        "model": "westerosblocks:block/chain_pulley",
         "y": 180
       }
     ],
     "facing=down": [
       {
-        "model": "chain_pulley",
+        "model": "westerosblocks:block/chain_pulley",
         "x": 90
       }
     ],
     "facing=north": [
       {
-        "model": "chain_pulley"
+        "model": "westerosblocks:block/chain_pulley"
       }
     ],
     "facing=up": [
       {
-        "model": "chain_pulley",
+        "model": "westerosblocks:block/chain_pulley",
         "x": 270
       }
     ],
     "facing=west": [
       {
-        "model": "chain_pulley",
+        "model": "westerosblocks:block/chain_pulley",
         "y": 270
       }
     ]

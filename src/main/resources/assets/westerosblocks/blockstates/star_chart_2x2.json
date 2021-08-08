@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "star_chart_2x2"
+        "model": "westerosblocks:block/star_chart_2x2"
       }
     ],
     "facing=south": [
       {
-        "model": "star_chart_2x2",
+        "model": "westerosblocks:block/star_chart_2x2",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "star_chart_2x2",
+        "model": "westerosblocks:block/star_chart_2x2",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "star_chart_2x2",
+        "model": "westerosblocks:block/star_chart_2x2",
         "y": 180
       }
     ]

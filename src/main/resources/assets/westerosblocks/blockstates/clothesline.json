@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "clothesline"
+        "model": "westerosblocks:block/clothesline"
       }
     ],
     "facing=north": [
       {
-        "model": "clothesline",
+        "model": "westerosblocks:block/clothesline",
         "y": 90
       }
     ]

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "duckweed"
+      "model": "westerosblocks:block/duckweed"
     }
   }
 }

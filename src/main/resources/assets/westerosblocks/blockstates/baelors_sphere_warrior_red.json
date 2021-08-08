@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "baelors_sphere_warrior_red"
+      "model": "westerosblocks:block/baelors_sphere_warrior_red"
     }
   }
 }

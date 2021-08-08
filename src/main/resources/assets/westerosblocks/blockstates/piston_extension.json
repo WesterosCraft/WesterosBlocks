@@ -2,36 +2,36 @@
   "variants": {
     "facing=east": [
       {
-        "model": "piston_extension",
+        "model": "westerosblocks:block/piston_extension",
         "y": 90
       }
     ],
     "facing=south": [
       {
-        "model": "piston_extension",
+        "model": "westerosblocks:block/piston_extension",
         "y": 180
       }
     ],
     "facing=down": [
       {
-        "model": "piston_extension",
+        "model": "westerosblocks:block/piston_extension",
         "x": 90
       }
     ],
     "facing=north": [
       {
-        "model": "piston_extension"
+        "model": "westerosblocks:block/piston_extension"
       }
     ],
     "facing=up": [
       {
-        "model": "piston_extension",
+        "model": "westerosblocks:block/piston_extension",
         "x": 270
       }
     ],
     "facing=west": [
       {
-        "model": "piston_extension",
+        "model": "westerosblocks:block/piston_extension",
         "y": 270
       }
     ]

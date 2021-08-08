@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "small_white_brick_hopper"
+      "model": "westerosblocks:block/small_white_brick_hopper"
     }
   }
 }

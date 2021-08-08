@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "lannisport_slate_tip"
+      "model": "westerosblocks:block/lannisport_slate_tip"
     }
   }
 }

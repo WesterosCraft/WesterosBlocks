@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "axe_block"
+        "model": "westerosblocks:block/axe_block"
       }
     ],
     "facing=south": [
       {
-        "model": "axe_block",
+        "model": "westerosblocks:block/axe_block",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "axe_block",
+        "model": "westerosblocks:block/axe_block",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "axe_block",
+        "model": "westerosblocks:block/axe_block",
         "y": 180
       }
     ]

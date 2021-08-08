@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "wattle_fence"
+        "model": "westerosblocks:block/wattle_fence"
       }
     ],
     "facing=south": [
       {
-        "model": "wattle_fence",
+        "model": "westerosblocks:block/wattle_fence",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "wattle_fence",
+        "model": "westerosblocks:block/wattle_fence",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "wattle_fence",
+        "model": "westerosblocks:block/wattle_fence",
         "y": 180
       }
     ]

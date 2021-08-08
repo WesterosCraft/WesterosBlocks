@@ -211,4 +211,38 @@ public abstract class ModelExport {
         }
     }
 
+    public static class ForgeModel {
+    	public Map<String, String> textures;
+    	public String model;
+    	public Boolean uvlock;
+    	public Integer weight;
+    }
+    public static class ForgeDefaults extends ForgeModel {
+    	public String transform = "forge:default-item";
+    	public Boolean ambientocclusion;
+    	public ForgeDefaults() {
+    		textures = new HashMap<String, String>();
+    	}
+    }
+    public static class ForgeBlockState {
+    	public int forge_marker = 1;
+    	public ForgeDefaults defaults = new ForgeDefaults();
+    	public Map<String, AbstractForgeVariant> variants = new HashMap<String, AbstractForgeVariant>();
+    }
+    public static interface AbstractForgeVariant {
+    }
+    public static class ForgeVariantMap extends HashMap<String, ForgeVariant> implements AbstractForgeVariant {
+    }
+    public static class ForgeVariantList extends ArrayList<ForgeVariant> implements AbstractForgeVariant {
+    }
+    public static class ForgeVariant extends ForgeModel implements AbstractForgeVariant {
+    	public Integer x, y, z;
+    	public AbstractForgeSubmodel submodel;
+    }
+    public static interface AbstractForgeSubmodel {
+    }
+    public static class ForgeSubmodel extends ForgeModel implements AbstractForgeSubmodel {
+    }
+    public static class ForgeSubmodelMap extends HashMap<String, ForgeModel> implements AbstractForgeSubmodel {
+    }
 }

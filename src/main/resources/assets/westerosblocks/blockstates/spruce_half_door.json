@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "spruce_half_door"
+        "model": "westerosblocks:block/spruce_half_door"
       }
     ],
     "facing=south": [
       {
-        "model": "spruce_half_door",
+        "model": "westerosblocks:block/spruce_half_door",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "spruce_half_door",
+        "model": "westerosblocks:block/spruce_half_door",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "spruce_half_door",
+        "model": "westerosblocks:block/spruce_half_door",
         "y": 180
       }
     ]

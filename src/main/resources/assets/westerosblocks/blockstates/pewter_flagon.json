@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "pewter_flagon"
+      "model": "westerosblocks:block/pewter_flagon"
     }
   }
 }

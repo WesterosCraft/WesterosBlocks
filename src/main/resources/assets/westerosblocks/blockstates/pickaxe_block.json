@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "pickaxe_block"
+        "model": "westerosblocks:block/pickaxe_block"
       }
     ],
     "facing=south": [
       {
-        "model": "pickaxe_block",
+        "model": "westerosblocks:block/pickaxe_block",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "pickaxe_block",
+        "model": "westerosblocks:block/pickaxe_block",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "pickaxe_block",
+        "model": "westerosblocks:block/pickaxe_block",
         "y": 180
       }
     ]

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "spruce_carpet"
+      "model": "westerosblocks:block/spruce_carpet"
     }
   }
 }

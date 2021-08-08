@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "city_profession_potter"
+        "model": "westerosblocks:block/city_profession_potter"
       }
     ],
     "facing=north": [
       {
-        "model": "city_profession_potter",
+        "model": "westerosblocks:block/city_profession_potter",
         "y": 90
       }
     ]

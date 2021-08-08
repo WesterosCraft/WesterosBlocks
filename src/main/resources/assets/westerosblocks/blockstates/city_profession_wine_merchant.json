@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "city_profession_wine_merchant"
+        "model": "westerosblocks:block/city_profession_wine_merchant"
       }
     ],
     "facing=north": [
       {
-        "model": "city_profession_wine_merchant",
+        "model": "westerosblocks:block/city_profession_wine_merchant",
         "y": 90
       }
     ]
