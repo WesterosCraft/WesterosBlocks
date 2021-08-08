@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: WesterosBlocks.json data schema
-  version: '0.1'
+  version: '0.2'
 servers:
   - url: /
 paths: {}
@@ -37,6 +37,7 @@ components:
               - $ref: "#/components/schemas/log"
               - $ref: "#/components/schemas/pane"
               - $ref: "#/components/schemas/plant"
+              - $ref: "#/components/schemas/plantvert"
               - $ref: "#/components/schemas/rail"
               - $ref: "#/components/schemas/sand"
               - $ref: "#/components/schemas/slab"
@@ -52,6 +53,7 @@ components:
               - $ref: "#/components/schemas/vines"
               - $ref: "#/components/schemas/wall"
               - $ref: "#/components/schemas/web"
+              - $ref: "#/components/schemas/webvert"
     Block:
       type: object
       required: [ blockName, blockType, label, creativeTab, material ]
@@ -235,7 +237,7 @@ components:
       allOf:
         - $ref: "#/components/schemas/Block"
         - type: object
-          description: Block type for 'solidhoriz' blocks (solid with horizontal CTM)
+          description: Block type for 'solidhoris' blocks (solid with horizontal CTM)
           properties:
             textures:
               type: array
@@ -903,6 +905,53 @@ components:
                   Index mapping for textures is:
                   
                   - 0: single texture
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+    plantvert:
+      title: blockType='plantvert'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'plantvert' blocks (plant block with vertical CTM)
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: texture (with no match above nor below)
+                  - 1: texture (with match below)
+                  - 2: texture (with match above)
+                  - 3: texture (with match above and below)
+                  
+                  If the list is shorter than 4, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
             colorMult:
               $ref: "#/components/schemas/colorMult"
     leaves:
@@ -977,6 +1026,61 @@ components:
                   Index mapping for textures is:
                   
                   - 0: single texture
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "no-in-web": If value is defined and
+                "true", web block does not slow movement
+    webvert:
+      title: blockType='webvert'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'webvert' blocks (web blocks with vertical CTM)
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: texture (with no match above nor below)
+                  - 1: texture (with match below)
+                  - 2: texture (with match above)
+                  - 3: texture (with match above and below)
+                  
+                  If the list is shorter than 4, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
             colorMult:
               $ref: "#/components/schemas/colorMult"
             type:
