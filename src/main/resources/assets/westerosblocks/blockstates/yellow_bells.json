@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/yellow_bells"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/yellow_bells"
+      }
+    ]
   }
 }

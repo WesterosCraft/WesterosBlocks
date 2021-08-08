@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/pink_sweet_peas"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/pink_sweet_peas"
+      }
+    ]
   }
 }

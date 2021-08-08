@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/yellow_bedstraw"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/yellow_bedstraw"
+      }
+    ]
   }
 }

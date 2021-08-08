@@ -37,6 +37,7 @@ import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+import com.westeroscraft.westerosblocks.blocks.WCPlantVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
@@ -52,6 +53,7 @@ import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWebVertBlock;
 
 import net.minecraft.block.AbstractBlock;
 
@@ -981,6 +983,8 @@ public class WesterosBlockDef {
 		typeTable.put("soulsandvert", new WCSoulSandVertBlock.Factory());
 		typeTable.put("laddervert", new WCLadderVertBlock.Factory());
 		typeTable.put("solidhoriz", new WCSolidHorizBlock.Factory());
+		typeTable.put("webvert", new WCWebVertBlock.Factory());
+		typeTable.put("plantvert", new WCPlantVertBlock.Factory());
 
 		// Standard color multipliers
 		colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/purple_violets"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/purple_violets"
+      }
+    ]
   }
 }

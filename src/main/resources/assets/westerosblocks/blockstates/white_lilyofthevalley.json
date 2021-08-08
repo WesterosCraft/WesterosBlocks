@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/white_lilyofthevalley"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/white_lilyofthevalley"
+      }
+    ]
   }
 }

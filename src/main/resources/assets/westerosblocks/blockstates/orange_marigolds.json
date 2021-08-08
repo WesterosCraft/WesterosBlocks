@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/orange_marigolds"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/orange_marigolds"
+      }
+    ]
   }
 }

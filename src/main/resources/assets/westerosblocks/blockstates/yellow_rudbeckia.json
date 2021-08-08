@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/yellow_rudbeckia"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/yellow_rudbeckia"
+      }
+    ]
   }
 }

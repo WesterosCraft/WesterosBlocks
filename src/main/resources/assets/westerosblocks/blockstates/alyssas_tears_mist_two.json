@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/alyssas_tears_mist_two"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/alyssas_tears_mist_two"
+      }
+    ]
   }
 }

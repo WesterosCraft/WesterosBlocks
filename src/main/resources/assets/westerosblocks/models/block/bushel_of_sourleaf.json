@@ -1,5 +1,5 @@
 {
-  "parent": "block/cross",
+  "parent": "minecraft:block/cross",
   "textures": {
     "cross": "westerosblocks:blocks/web_block_1/food_sourleaf"
   }

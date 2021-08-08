@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/orange_trollius"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/orange_trollius"
+      }
+    ]
   }
 }

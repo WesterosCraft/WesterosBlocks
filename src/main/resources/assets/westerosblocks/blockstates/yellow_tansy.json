@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/yellow_tansy"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/yellow_tansy"
+      }
+    ]
   }
 }

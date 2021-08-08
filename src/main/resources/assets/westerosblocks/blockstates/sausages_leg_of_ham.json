@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/sausages_leg_of_ham"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/sausages_leg_of_ham"
+      }
+    ]
   }
 }

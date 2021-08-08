@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/green_spiny_herb"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/green_spiny_herb"
+      }
+    ]
   }
 }

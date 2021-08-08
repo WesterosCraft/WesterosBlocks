@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/vertical_rope"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/vertical_rope"
+      }
+    ]
   }
 }

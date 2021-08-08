@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/garlic_strand"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/garlic_strand"
+      }
+    ]
   }
 }

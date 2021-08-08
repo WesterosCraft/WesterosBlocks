@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/chili_ristra"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/chili_ristra"
+      }
+    ]
   }
 }

@@ -106,6 +106,10 @@ public class ModelExportFactory {
             case "solidhoriz":
                 me = new SolidHorizBlockModelExport(blk, def, dest);
                 break;
+            case "plantvert":
+            case "webvert":
+                me = new CrossBlockVertModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/nettle"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/nettle"
+      }
+    ]
   }
 }

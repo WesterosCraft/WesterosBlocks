@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/purple_alpine_sowthistle"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/purple_alpine_sowthistle"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/jungle_tall_grass"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/jungle_tall_grass"
+      }
+    ]
   }
 }

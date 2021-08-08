@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/red_mushroom_7"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/red_mushroom_7"
+      }
+    ]
   }
 }

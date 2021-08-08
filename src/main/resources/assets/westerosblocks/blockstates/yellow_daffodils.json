@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/yellow_daffodils"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/yellow_daffodils"
+      }
+    ]
   }
 }

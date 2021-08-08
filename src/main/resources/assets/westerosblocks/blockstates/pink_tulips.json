@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/pink_tulips"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/pink_tulips"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bushel_of_sourleaf"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/bushel_of_sourleaf"
+      }
+    ]
   }
 }

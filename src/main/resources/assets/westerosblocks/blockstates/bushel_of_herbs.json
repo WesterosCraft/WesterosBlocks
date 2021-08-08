@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bushel_of_herbs"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/bushel_of_herbs"
+      }
+    ]
   }
 }

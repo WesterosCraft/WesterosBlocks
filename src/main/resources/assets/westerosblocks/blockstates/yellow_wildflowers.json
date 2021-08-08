@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/yellow_wildflowers"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/yellow_wildflowers"
+      }
+    ]
   }
 }

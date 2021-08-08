@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/vertical_chain"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/vertical_chain"
+      }
+    ]
   }
 }
