@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "minecraft:block/stone_slab_top",
-    "top": "minecraft:block/stone_slab_top",
-    "side": "minecraft:block/stone_slab_side",
-    "particle": "minecraft:block/stone_slab_side"
+    "bottom": "minecraft:block/stone",
+    "top": "minecraft:block/stone",
+    "side": "minecraft:block/stone",
+    "particle": "minecraft:block/stone"
   }
 }
