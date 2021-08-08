@@ -23,6 +23,7 @@ public class LadderVertBlockModelExport extends ModelExport {
         public String model;
         public Integer x;
         public Integer y;
+        public Integer weight;
     }
     // Template objects for Gson export of block models
     public static class ModelObjectLadder {
@@ -64,6 +65,7 @@ public class LadderVertBlockModelExport extends ModelExport {
     	        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
 	            	Variant var = new Variant();
     	            var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName(ext[i], setidx);
+                	var.weight = set.weight;
     	            if (def.isCustomModel())
     	            	var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext[i], setidx);
 	            	if (y[faceidx] > 0) var.y = y[faceidx];

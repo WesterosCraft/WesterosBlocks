@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -15,12 +17,13 @@ public class LadderBlockModelExport extends ModelExport {
 
     // Template objects for Gson export of block state
     public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
+        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
     }
     public static class Variant {
         public String model;
         public Integer x;
         public Integer y;
+        public Integer weight;
     }
     // Template objects for Gson export of block models
     public static class ModelObjectLadder {
@@ -33,47 +36,62 @@ public class LadderBlockModelExport extends ModelExport {
     public static class ModelObject {
     	public String parent;
     }
-    
+
+    private String getModelName(String ext, int setidx) {
+    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    }
+
     public LadderBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
+	static final String faces[] = { "north", "south", "east", "west" };
+	static final int[] y = { 0, 180, 90, 270 };
+	static final String up[] = { "false", "false", "true", "true" };
+	static final String down[] = { "false", "true", "false", "true" };
+	static final String ext[] = { "", "_down", "_up", "_both" };
+
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        Variant varn = new Variant();
-        Variant vars = new Variant();
-        Variant vare = new Variant();
-        Variant varw = new Variant();
-        String mod = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
-        if (def.isCustomModel())
-        	mod = WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName;
-        varn.model = vars.model = vare.model = varw.model = mod;
-        vare.y = 90;
-        vars.y = 180;
-        varw.y = 270;
-        so.variants.put("facing=north", varn);
-        so.variants.put("facing=east", vare);
-        so.variants.put("facing=south", vars);
-        so.variants.put("facing=west", varw);
+    	for (int faceidx = 0; faceidx < 4; faceidx++) {
+	        List<Variant> varn = new ArrayList<Variant>();
+	    	// Loop over the random sets we've got
+	        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+	        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+            	Variant var = new Variant();
+	            var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("", setidx);
+            	var.weight = set.weight;
+	            if (def.isCustomModel())
+	            	var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", setidx);
+            	if (y[faceidx] > 0) var.y = y[faceidx];
+            	varn.add(var);
+	        }
+            so.variants.put("facing=" + faces[faceidx], varn);
+    	}
         this.writeBlockStateFile(def.blockName, so);
     }
 
     @Override
     public void doModelExports() throws IOException {
-        ModelObjectLadder mod = new ModelObjectLadder();
-        mod.textures.ladder = getTextureID(def.getTextureByIndex(0));
         // Export if not set to custom model
-        if (!def.isCustomModel())
-        	this.writeBlockModelFile(def.blockName, mod);
+        if (!def.isCustomModel()) {
+	        List<Variant> varn = new ArrayList<Variant>();
+	    	// Loop over the random sets we've got
+	        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+	        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+	            ModelObjectLadder mod = new ModelObjectLadder();
+	            mod.textures.ladder = getTextureID(set.getTextureByIndex(0));
+	        	this.writeBlockModelFile(getModelName("", setidx), mod);
+	        }
+        }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         if (!def.isCustomModel())
-        	mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName("", 0);
         else
-        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + def.blockName;        	
-        this.writeItemModelFile(def.blockName, mo);
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", 0);        	
     }
 }

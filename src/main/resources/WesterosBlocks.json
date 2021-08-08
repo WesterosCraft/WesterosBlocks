@@ -7365,8 +7365,12 @@
             "material": "iron",
             "creativeTab": "WesterosDeco",
             "label": "Iron Rungs",
-            "textures": [
-                "ladder_block_0/ladder_iron"
+            "randomTextures": [
+            	{ "textures": [ "ladder_iron/ladder" ], "weight": 10 },
+            	{ "textures": [ "ladder_iron/ladder2" ] },
+            	{ "textures": [ "ladder_iron/ladder3" ] },
+            	{ "textures": [ "ladder_iron/ladder4" ] },
+            	{ "textures": [ "ladder_iron/ladder5" ] }
             ],
             "type": "allow-unsupported",
             "legacyBlockID": "ladder_block_0:0"

@@ -22,6 +22,7 @@ public class CrossBlockModelExport extends ModelExport {
     public static class Variant {
         public String model;
         public Integer y;
+        public Integer weight;
     }
     // Template objects for Gson export of block models
     public static class ModelObjectCross {
@@ -61,6 +62,7 @@ public class CrossBlockModelExport extends ModelExport {
         	for (int rot = 0; rot < cnt; rot++) {
         		Variant var = new Variant();
         		var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("", setidx);
+            	var.weight = set.weight;
         		if (def.isCustomModel())
         			var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", setidx);
         		if (rot > 0) var.y = (90 * rot);
