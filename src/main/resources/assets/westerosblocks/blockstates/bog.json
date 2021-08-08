@@ -1,7 +1,172 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/bog"
-    }
+    "down=false,up=true": [
+      {
+        "model": "westerosblocks:block/bog_up",
+        "weight": 6
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v2",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v3",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v4",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v5",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v6",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v7",
+        "weight": 1
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v8",
+        "weight": 1
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v9",
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/bog_up-v10",
+        "weight": 2
+      }
+    ],
+    "down=true,up=false": [
+      {
+        "model": "westerosblocks:block/bog_down",
+        "weight": 6
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v2",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v3",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v4",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v5",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v6",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v7",
+        "weight": 1
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v8",
+        "weight": 1
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v9",
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/bog_down-v10",
+        "weight": 2
+      }
+    ],
+    "down=false,up=false": [
+      {
+        "model": "westerosblocks:block/bog",
+        "weight": 6
+      },
+      {
+        "model": "westerosblocks:block/bog-v2",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog-v3",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog-v4",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog-v5",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog-v6",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog-v7",
+        "weight": 1
+      },
+      {
+        "model": "westerosblocks:block/bog-v8",
+        "weight": 1
+      },
+      {
+        "model": "westerosblocks:block/bog-v9",
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/bog-v10",
+        "weight": 2
+      }
+    ],
+    "down=true,up=true": [
+      {
+        "model": "westerosblocks:block/bog_both",
+        "weight": 6
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v2",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v3",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v4",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v5",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v6",
+        "weight": 3
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v7",
+        "weight": 1
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v8",
+        "weight": 1
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v9",
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/bog_both-v10",
+        "weight": 2
+      }
+    ]
   }
 }

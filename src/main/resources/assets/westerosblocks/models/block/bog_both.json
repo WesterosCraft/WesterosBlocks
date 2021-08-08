@@ -4,6 +4,6 @@
     "particle": "westerosblocks:blocks/bog/bog_side",
     "bottom": "westerosblocks:blocks/bog/mud",
     "top": "westerosblocks:blocks/bog/bog",
-    "side": "westerosblocks:blocks/bog/bog_side"
+    "side": "westerosblocks:blocks/bog/mud"
   }
 }
