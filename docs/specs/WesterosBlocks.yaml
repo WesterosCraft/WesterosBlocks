@@ -564,6 +564,8 @@ components:
                   beyond the length of the list.
             connectTo:
               $ref: "#/components/schemas/ConnectTo"
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
             type:
               type: string
               description: |-
