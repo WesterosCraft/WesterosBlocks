@@ -96,6 +96,10 @@ public class ModelExportFactory {
             case "vines":
                 me = new VinesBlockModelExport(blk, def, dest);
                 break;
+            case "solidvert":
+            case "soulsandvert":
+                me = new SolidVertBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

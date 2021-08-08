@@ -40,7 +40,9 @@ import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSolidVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoulSandVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
@@ -131,6 +133,18 @@ public class WesterosBlockDef {
 	public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
 	public List<StackElement> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
 	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
+	
+	public String connectBy = "block";	// Connection logic - by block, material - only for CTM-like blocks
+	
+	
+	public boolean isConnectMatch(BlockState bs1, BlockState bs2) {
+		if (this.connectBy.equals("material")) {
+			return bs1.getMaterial() == bs2.getMaterial();
+		}
+		else {
+			return bs1.getBlock() == bs2.getBlock();			
+		}
+	}
 	
 	public static class RandomTextureSet {
 		public List<String> textures = null; // List of textures (for single texture set)
@@ -961,6 +975,8 @@ public class WesterosBlockDef {
 		typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
 		typeTable.put("beacon", new WCBeaconBlock.Factory());
 		typeTable.put("vines", new WCVinesBlock.Factory());
+		typeTable.put("solidvert", new WCSolidVertBlock.Factory());
+		typeTable.put("soulsandvert", new WCSoulSandVertBlock.Factory());
 
 		// Standard color multipliers
 		colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
