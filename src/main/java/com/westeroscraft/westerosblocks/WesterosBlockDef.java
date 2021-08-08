@@ -31,6 +31,7 @@ import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLadderVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
@@ -977,6 +978,7 @@ public class WesterosBlockDef {
 		typeTable.put("vines", new WCVinesBlock.Factory());
 		typeTable.put("solidvert", new WCSolidVertBlock.Factory());
 		typeTable.put("soulsandvert", new WCSoulSandVertBlock.Factory());
+		typeTable.put("laddervert", new WCLadderVertBlock.Factory());
 
 		// Standard color multipliers
 		colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));

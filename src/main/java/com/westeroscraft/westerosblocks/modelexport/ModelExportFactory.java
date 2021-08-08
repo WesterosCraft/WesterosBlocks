@@ -100,6 +100,9 @@ public class ModelExportFactory {
             case "soulsandvert":
                 me = new SolidVertBlockModelExport(blk, def, dest);
                 break;
+            case "laddervert":
+                me = new LadderVertBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }

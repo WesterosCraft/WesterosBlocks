@@ -31,6 +31,7 @@ components:
               - $ref: "#/components/schemas/furnace"
               - $ref: "#/components/schemas/halfdoor"
               - $ref: "#/components/schemas/ladder"
+              - $ref: "#/components/schemas/laddervert"
               - $ref: "#/components/schemas/layer"
               - $ref: "#/components/schemas/leaves"
               - $ref: "#/components/schemas/log"
@@ -40,7 +41,9 @@ components:
               - $ref: "#/components/schemas/sand"
               - $ref: "#/components/schemas/slab"
               - $ref: "#/components/schemas/solid"
+              - $ref: "#/components/schemas/solidvert"
               - $ref: "#/components/schemas/soulsand"
+              - $ref: "#/components/schemas/soulsandvert"
               - $ref: "#/components/schemas/sound"
               - $ref: "#/components/schemas/stair"
               - $ref: "#/components/schemas/torch"
@@ -226,6 +229,50 @@ components:
                 If true, causes block to have its model
                 randomly rotated with 4 different angles
                 around Y axis (0, 90, 180, 270 degrees)
+    solidvert:
+      title: blockType='solidvert'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'solidvert' blocks (solid with vertical CTM)
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: side texture (with no match above nor below)
+                  - 3: side texture (with match below)
+                  - 4: side texture (with match above)
+                  - 5: side texture (with match above and below)
+                  
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            connectTo:
+              $ref: "#/components/schemas/ConnectTo"
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            collisionBoxes:
+              $ref: "#/components/schemas/CollisionBoxes"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)                
     sound:
       title: blockType='sound'
       allOf:
@@ -381,6 +428,48 @@ components:
                 If true, causes block to have its model
                 randomly rotated with 4 different angles
                 around Y axis (0, 90, 180, 270 degrees)
+    soulsandvert:
+      title: blockType='soulsandvert'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'soulsandvert' blocks (soulsand with vertical CTM)
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: side texture (with no match above nor below)
+                  - 3: side texture (with match below)
+                  - 4: side texture (with match above)
+                  - 5: side texture (with match above and below)
+                  
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            connectTo:
+              $ref: "#/components/schemas/ConnectTo"
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
     layer:
       title: blockType='layer'
       allOf:
@@ -445,6 +534,49 @@ components:
                 - "allow-unsupported": If value is
                 defined and "true", block does not break
                 when unsupported.
+    laddervert:
+      title: blockType='laddervert'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'laddervert' blocks (ladder with vertical CTM
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: texture (with no match above nor below)
+                  - 1: texture (with match below)
+                  - 2: texture (with match above)
+                  - 3: texture (with match above and below)
+                  
+                  If the list is shorter than 4, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            connectTo:
+              $ref: "#/components/schemas/ConnectTo"
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "no-climb": If value is defined and
+                "true", climbing is not allowed
+                - "allow-unsupported": If value is
+                defined and "true", block does not break
+                when unsupported.
+                
+
     fire:
       title: blockType='fire'
       allOf:
@@ -1418,3 +1550,15 @@ components:
           zMax:
             type: number
             description: Maximum Z value
+    ConnectTo:
+      type: string
+      enum: [ material, block ]
+      default: block
+      description: |-
+        For built in CTM, this controls what quality is matched
+        on for determining if an adjacent block should be counted
+        as matching.  Values include
+  
+        - block: (default) Match on the block name/type
+        - material: Match on the block material 
+            

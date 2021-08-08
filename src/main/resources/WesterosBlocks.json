@@ -7341,13 +7341,16 @@
         },
         {
             "blockName": "rope_ladder",
-            "blockType": "ladder",
+            "blockType": "laddervert",
             "stepSound": "ladder",
             "material": "iron",
             "creativeTab": "WesterosDeco",
             "label": "Rope Ladder",
             "textures": [
-                "ladder_block_0/ladder_rope"
+                "ladder_rope/top",
+                "ladder_rope/top",
+                "ladder_rope/middle",
+                "ladder_rope/middle"                
             ],
             "type": "allow-unsupported",
             "legacyBlockID": "ladder_block_0:1"
