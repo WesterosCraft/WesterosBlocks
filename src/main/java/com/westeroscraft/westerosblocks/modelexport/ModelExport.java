@@ -33,7 +33,7 @@ public abstract class ModelExport {
         this.destdir = dest;
         this.blockstatedir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/blockstates");
         this.blockstatedir.mkdirs();
-        this.blockmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/block");
+        this.blockmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/block/generated");
         this.blockmodeldir.mkdirs();
         this.itemmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/item");
         this.itemmodeldir.mkdirs();

@@ -2,20 +2,20 @@
   "variants": {
     "axis=z": [
       {
-        "model": "westerosblocks:block/weirwood_face_4",
+        "model": "westerosblocks:block/generated/weirwood_face_4",
         "x": 90
       }
     ],
     "axis=x": [
       {
-        "model": "westerosblocks:block/weirwood_face_4",
+        "model": "westerosblocks:block/generated/weirwood_face_4",
         "x": 90,
         "y": 90
       }
     ],
     "axis=y": [
       {
-        "model": "westerosblocks:block/weirwood_face_4"
+        "model": "westerosblocks:block/generated/weirwood_face_4"
       }
     ]
   }

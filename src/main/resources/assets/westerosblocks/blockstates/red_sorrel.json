@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/red_sorrel"
+        "model": "westerosblocks:block/generated/red_sorrel"
       }
     ]
   }

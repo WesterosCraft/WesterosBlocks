@@ -2,20 +2,20 @@
   "variants": {
     "axis=z": [
       {
-        "model": "westerosblocks:block/closed_barrel",
+        "model": "westerosblocks:block/generated/closed_barrel",
         "x": 90
       }
     ],
     "axis=x": [
       {
-        "model": "westerosblocks:block/closed_barrel",
+        "model": "westerosblocks:block/generated/closed_barrel",
         "x": 90,
         "y": 90
       }
     ],
     "axis=y": [
       {
-        "model": "westerosblocks:block/closed_barrel"
+        "model": "westerosblocks:block/generated/closed_barrel"
       }
     ]
   }

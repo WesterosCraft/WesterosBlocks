@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/iron_throne_random_blades"
+        "model": "westerosblocks:block/generated/iron_throne_random_blades"
       }
     ]
   }

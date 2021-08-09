@@ -2,296 +2,296 @@
   "variants": {
     "type=bottom": [
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v2"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v3"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v4"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v5"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v6"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v7"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v8"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v9"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v10"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v11"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v12"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v13"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v14"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v15"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v16"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v16"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v17"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v17"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v18"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v18"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v19"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v19"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v20"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v20"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v21"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v21"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v22"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v22"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v23"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v23"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v24"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v24"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v25"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v25"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v26"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v26"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v27"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v27"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v28"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v28"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v29"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v29"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v30"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v30"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v31"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v31"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_bottom_v32"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_bottom_v32"
       }
     ],
     "type=double": [
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v2"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v3"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v4"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v5"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v6"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v7"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v8"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v9"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v10"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v11"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v12"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v13"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v14"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v15"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v16"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v16"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v17"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v17"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v18"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v18"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v19"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v19"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v20"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v20"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v21"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v21"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v22"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v22"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v23"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v23"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v24"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v24"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v25"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v25"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v26"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v26"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v27"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v27"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v28"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v28"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v29"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v29"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v30"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v30"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v31"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v31"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_double_v32"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_double_v32"
       }
     ],
     "type=top": [
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v2"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v3"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v4"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v5"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v6"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v7"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v8"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v9"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v10"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v11"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v12"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v13"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v14"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v15"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v16"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v16"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v17"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v17"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v18"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v18"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v19"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v19"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v20"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v20"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v21"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v21"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v22"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v22"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v23"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v23"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v24"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v24"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v25"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v25"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v26"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v26"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v27"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v27"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v28"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v28"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v29"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v29"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v30"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v30"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v31"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v31"
       },
       {
-        "model": "westerosblocks:block/terrainset_mountains_of_the_moon_slab_top_v32"
+        "model": "westerosblocks:block/generated/terrainset_mountains_of_the_moon_slab_top_v32"
       }
     ]
   }

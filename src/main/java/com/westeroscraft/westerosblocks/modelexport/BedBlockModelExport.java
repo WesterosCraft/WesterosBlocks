@@ -58,7 +58,7 @@ public class BedBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String bn = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        String bn = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
         
         so.variants.put("facing=north,part=foot", new Variant(bn, "foot", 180));
         so.variants.put("facing=east,part=foot", new Variant(bn, "foot", 270));

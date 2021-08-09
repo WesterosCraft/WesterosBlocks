@@ -1,33 +1,33 @@
 {
   "variants": {
     "facing=north,lit=false": {
-      "model": "westerosblocks:block/always_active_dornish_mud_furnace"
+      "model": "westerosblocks:block/generated/always_active_dornish_mud_furnace"
     },
     "facing=east,lit=false": {
-      "model": "westerosblocks:block/always_active_dornish_mud_furnace",
+      "model": "westerosblocks:block/generated/always_active_dornish_mud_furnace",
       "y": 90
     },
     "facing=south,lit=true": {
-      "model": "westerosblocks:block/always_active_dornish_mud_furnace_lit",
+      "model": "westerosblocks:block/generated/always_active_dornish_mud_furnace_lit",
       "y": 180
     },
     "facing=east,lit=true": {
-      "model": "westerosblocks:block/always_active_dornish_mud_furnace_lit",
+      "model": "westerosblocks:block/generated/always_active_dornish_mud_furnace_lit",
       "y": 90
     },
     "facing=west,lit=false": {
-      "model": "westerosblocks:block/always_active_dornish_mud_furnace",
+      "model": "westerosblocks:block/generated/always_active_dornish_mud_furnace",
       "y": 270
     },
     "facing=north,lit=true": {
-      "model": "westerosblocks:block/always_active_dornish_mud_furnace_lit"
+      "model": "westerosblocks:block/generated/always_active_dornish_mud_furnace_lit"
     },
     "facing=south,lit=false": {
-      "model": "westerosblocks:block/always_active_dornish_mud_furnace",
+      "model": "westerosblocks:block/generated/always_active_dornish_mud_furnace",
       "y": 180
     },
     "facing=west,lit=true": {
-      "model": "westerosblocks:block/always_active_dornish_mud_furnace_lit",
+      "model": "westerosblocks:block/generated/always_active_dornish_mud_furnace_lit",
       "y": 270
     }
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/highgarden_green_plaster"
+      "model": "westerosblocks:block/generated/highgarden_green_plaster"
     }
   }
 }

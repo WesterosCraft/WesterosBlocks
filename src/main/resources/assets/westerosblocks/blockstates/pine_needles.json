@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/pine_needles"
+      "model": "westerosblocks:block/generated/pine_needles"
     }
   }
 }

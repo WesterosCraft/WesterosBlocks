@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/hop_basket"
+      "model": "westerosblocks:block/generated/hop_basket"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/reach_oak_wood_panelling"
+      "model": "westerosblocks:block/generated/reach_oak_wood_panelling"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/arbor_brick"
+      "model": "westerosblocks:block/generated/arbor_brick"
     }
   }
 }

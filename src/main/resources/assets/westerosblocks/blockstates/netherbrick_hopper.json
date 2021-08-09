@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/netherbrick_hopper"
+      "model": "westerosblocks:block/generated/netherbrick_hopper"
     }
   }
 }

@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/nettle"
+        "model": "westerosblocks:block/generated/nettle"
       }
     ]
   }

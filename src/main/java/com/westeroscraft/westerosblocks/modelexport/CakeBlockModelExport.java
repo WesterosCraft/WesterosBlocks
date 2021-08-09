@@ -66,9 +66,9 @@ public class CakeBlockModelExport extends ModelExport {
         for (int i = 0; i < 7; i++) {
             Variant var = new Variant();
             if (i == 0)
-                var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_uneaten";
+                var.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_uneaten";
             else
-                var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_slice" + i;
+                var.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_slice" + i;
             so.variants.put(String.format("bites=%d", i), var);
         }
         this.writeBlockStateFile(def.blockName, so);
@@ -129,7 +129,7 @@ public class CakeBlockModelExport extends ModelExport {
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_uneaten";
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_uneaten";
         this.writeItemModelFile(def.blockName, mo);
     }
 

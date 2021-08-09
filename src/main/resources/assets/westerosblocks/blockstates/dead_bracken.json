@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/dead_bracken"
+        "model": "westerosblocks:block/generated/dead_bracken"
       }
     ]
   }

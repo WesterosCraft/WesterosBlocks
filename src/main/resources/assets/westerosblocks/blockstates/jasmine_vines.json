@@ -5,7 +5,7 @@
         "south": "true"
       },
       "apply": {
-        "model": "westerosblocks:block/jasmine_vines_1"
+        "model": "westerosblocks:block/generated/jasmine_vines_1"
       }
     },
     {
@@ -13,7 +13,7 @@
         "west": "true"
       },
       "apply": {
-        "model": "westerosblocks:block/jasmine_vines_1",
+        "model": "westerosblocks:block/generated/jasmine_vines_1",
         "y": 90
       }
     },
@@ -22,7 +22,7 @@
         "north": "true"
       },
       "apply": {
-        "model": "westerosblocks:block/jasmine_vines_1",
+        "model": "westerosblocks:block/generated/jasmine_vines_1",
         "y": 180
       }
     },
@@ -31,7 +31,7 @@
         "east": "true"
       },
       "apply": {
-        "model": "westerosblocks:block/jasmine_vines_1",
+        "model": "westerosblocks:block/generated/jasmine_vines_1",
         "y": 270
       }
     },
@@ -40,7 +40,7 @@
         "up": "true"
       },
       "apply": {
-        "model": "westerosblocks:block/jasmine_vines_u"
+        "model": "westerosblocks:block/generated/jasmine_vines_u"
       }
     },
     {
@@ -48,7 +48,7 @@
         "down": "true"
       },
       "apply": {
-        "model": "westerosblocks:block/jasmine_vines_u",
+        "model": "westerosblocks:block/generated/jasmine_vines_u",
         "x": 180
       }
     }

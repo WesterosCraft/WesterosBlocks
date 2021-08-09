@@ -28,7 +28,7 @@ public class DoorBlockModelExport extends ModelExport {
             this(blkname, ext, 0, yrot);
         }
         public Variant(String blkname, String ext, int xrot, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
+            model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname + "_" + ext;
             if (xrot != 0)
                 x = xrot;
             if (yrot != 0)

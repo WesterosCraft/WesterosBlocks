@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/red_carnations"
+        "model": "westerosblocks:block/generated/red_carnations"
       }
     ]
   }

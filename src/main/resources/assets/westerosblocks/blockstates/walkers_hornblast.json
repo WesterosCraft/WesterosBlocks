@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/walkers_hornblast"
+      "model": "westerosblocks:block/generated/walkers_hornblast"
     }
   }
 }

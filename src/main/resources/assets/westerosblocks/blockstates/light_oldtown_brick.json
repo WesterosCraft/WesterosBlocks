@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/light_oldtown_brick"
+      "model": "westerosblocks:block/generated/light_oldtown_brick"
     }
   }
 }

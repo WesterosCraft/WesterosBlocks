@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/strawberry_bush"
+        "model": "westerosblocks:block/generated/strawberry_bush"
       }
     ]
   }

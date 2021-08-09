@@ -119,7 +119,7 @@ public class SlabBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("top", setidx);
+        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("top", setidx);
         	var.weight = set.weight;
         	vars.add(var);
         }
@@ -129,7 +129,7 @@ public class SlabBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("bottom", setidx);
+        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("bottom", setidx);
         	var.weight = set.weight;
         	vars.add(var);
         }
@@ -139,7 +139,7 @@ public class SlabBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("double", setidx);
+        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("double", setidx);
         	var.weight = set.weight;
         	vars.add(var);
         }
@@ -175,7 +175,7 @@ public class SlabBlockModelExport extends ModelExport {
         }
         // Build simple item model that refers to lower block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName("bottom", 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("bottom", 0);
         this.writeItemModelFile(def.getBlockName(), mo);
         // Handle tint resources
         if (isTinted) {

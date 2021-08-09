@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/yellow_lupine"
+        "model": "westerosblocks:block/generated/yellow_lupine"
       }
     ]
   }

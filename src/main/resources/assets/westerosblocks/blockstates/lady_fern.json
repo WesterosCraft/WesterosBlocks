@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/lady_fern"
+        "model": "westerosblocks:block/generated/lady_fern"
       }
     ]
   }

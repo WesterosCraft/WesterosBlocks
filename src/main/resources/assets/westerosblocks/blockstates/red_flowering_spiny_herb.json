@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/red_flowering_spiny_herb"
+        "model": "westerosblocks:block/generated/red_flowering_spiny_herb"
       }
     ]
   }

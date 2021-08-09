@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/icy_northern_cobble"
+      "model": "westerosblocks:block/generated/icy_northern_cobble"
     }
   }
 }

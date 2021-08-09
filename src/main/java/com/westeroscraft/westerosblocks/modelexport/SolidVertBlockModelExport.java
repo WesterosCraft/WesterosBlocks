@@ -61,10 +61,10 @@ public class SolidVertBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	// Default for up=false, down=false
-        	String model = WesterosBlocks.MOD_ID + ":block/" + getModelName("", setidx);
-        	String model2 = WesterosBlocks.MOD_ID + ":block/" + getModelName("_up", setidx);
-        	String model3 = WesterosBlocks.MOD_ID + ":block/" + getModelName("_down", setidx);
-        	String model4 = WesterosBlocks.MOD_ID + ":block/" + getModelName("_both", setidx);
+        	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", setidx);
+        	String model2 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_up", setidx);
+        	String model3 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_down", setidx);
+        	String model4 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_both", setidx);
             for (int i = 0; i < cnt; i++) {
             	// down=false,up=false
             	Variant var = new Variant();
@@ -148,7 +148,7 @@ public class SolidVertBlockModelExport extends ModelExport {
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName("", 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

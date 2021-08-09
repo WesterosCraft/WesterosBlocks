@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/basalt_brick"
+      "model": "westerosblocks:block/generated/basalt_brick"
     }
   }
 }

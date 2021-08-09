@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/red_dark_roses"
+        "model": "westerosblocks:block/generated/red_dark_roses"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/6sided_spruce"
+      "model": "westerosblocks:block/generated/6sided_spruce"
     }
   }
 }

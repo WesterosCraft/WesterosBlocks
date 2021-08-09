@@ -68,7 +68,7 @@ public class VinesBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String m = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        String m = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
         // Add part for each face
         Conditions cond;
         // South

@@ -2,24 +2,24 @@
   "variants": {
     "facing=south": [
       {
-        "model": "westerosblocks:block/vine_jasmine",
+        "model": "westerosblocks:block/generated/vine_jasmine",
         "y": 180
       }
     ],
     "facing=east": [
       {
-        "model": "westerosblocks:block/vine_jasmine",
+        "model": "westerosblocks:block/generated/vine_jasmine",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/vine_jasmine"
+        "model": "westerosblocks:block/generated/vine_jasmine"
       }
     ],
     "facing=west": [
       {
-        "model": "westerosblocks:block/vine_jasmine",
+        "model": "westerosblocks:block/generated/vine_jasmine",
         "y": 270
       }
     ]

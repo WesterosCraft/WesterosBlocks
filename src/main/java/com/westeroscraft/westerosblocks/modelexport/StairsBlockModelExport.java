@@ -30,7 +30,7 @@ public class StairsBlockModelExport extends ModelExport {
         public Integer weight;
 
         public Variant(final String modname, final int xrot, final int yrot, Integer weight) {
-            model = WesterosBlocks.MOD_ID + ":block/" + modname;
+            model = WesterosBlocks.MOD_ID + ":block/generated/" + modname;
             if (xrot != 0)
                 x = xrot;
             if (yrot != 0)
@@ -285,7 +285,7 @@ public class StairsBlockModelExport extends ModelExport {
         }
     	// Build simple item model that refers to base block model
         final ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName(null, 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(null, 0);
         this.writeItemModelFile(def.getBlockName(), mo);
 
         // Handle tint resources

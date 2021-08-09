@@ -2,52 +2,52 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/terrainset_reach"
+        "model": "westerosblocks:block/generated/terrainset_reach"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v2"
+        "model": "westerosblocks:block/generated/terrainset_reach-v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v3"
+        "model": "westerosblocks:block/generated/terrainset_reach-v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v4"
+        "model": "westerosblocks:block/generated/terrainset_reach-v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v5"
+        "model": "westerosblocks:block/generated/terrainset_reach-v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v6"
+        "model": "westerosblocks:block/generated/terrainset_reach-v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v7"
+        "model": "westerosblocks:block/generated/terrainset_reach-v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v8"
+        "model": "westerosblocks:block/generated/terrainset_reach-v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v9"
+        "model": "westerosblocks:block/generated/terrainset_reach-v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v10"
+        "model": "westerosblocks:block/generated/terrainset_reach-v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v11"
+        "model": "westerosblocks:block/generated/terrainset_reach-v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v12"
+        "model": "westerosblocks:block/generated/terrainset_reach-v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v13"
+        "model": "westerosblocks:block/generated/terrainset_reach-v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v14"
+        "model": "westerosblocks:block/generated/terrainset_reach-v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v15"
+        "model": "westerosblocks:block/generated/terrainset_reach-v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_reach-v16"
+        "model": "westerosblocks:block/generated/terrainset_reach-v16"
       }
     ]
   }

@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/yellow_tansy"
+        "model": "westerosblocks:block/generated/yellow_tansy"
       }
     ]
   }

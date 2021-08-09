@@ -92,7 +92,7 @@ public class PaneBlockModelExport extends ModelExport {
     	// Add post based on our variant
         if (!is_bars) {
             States ps = new States();
-            ps.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_post";
+            ps.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_post";
             ps.when = null;
             so.multipart.add(ps);
         }
@@ -102,7 +102,7 @@ public class PaneBlockModelExport extends ModelExport {
     	wr.north = true;
     	ssn.when.OR.add(wr);
     	if (is_legacy || is_bars) ssn.when.OR.add(wnone);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_side";
     	ssn.apply.uvlock = true;
     	so.multipart.add(ssn);
     	// Add east variant
@@ -111,7 +111,7 @@ public class PaneBlockModelExport extends ModelExport {
     	wr.east = true;
     	ssn.when.OR.add(wr);
     	if (is_legacy || is_bars) ssn.when.OR.add(wnone);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_side";
     	ssn.apply.uvlock = true;
     	ssn.apply.y = 90;
     	so.multipart.add(ssn);
@@ -121,7 +121,7 @@ public class PaneBlockModelExport extends ModelExport {
     	wr.south = true;
     	ssn.when.OR.add(wr);
     	if (is_legacy || is_bars) ssn.when.OR.add(wnone);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side_alt";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_side_alt";
     	ssn.apply.uvlock = true;
     	so.multipart.add(ssn);
     	// Add west variant
@@ -130,7 +130,7 @@ public class PaneBlockModelExport extends ModelExport {
     	wr.west = true;
     	ssn.when.OR.add(wr);
     	if (is_legacy || is_bars) ssn.when.OR.add(wnone);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_side_alt";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_side_alt";
     	ssn.apply.uvlock = true;
     	ssn.apply.y = 90;
     	so.multipart.add(ssn);
@@ -140,7 +140,7 @@ public class PaneBlockModelExport extends ModelExport {
     	    wr = new WhenRec();
     	    wr.north = false;
     	    ssn.when.OR.add(wr);
-    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_noside";
+    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_noside";
     	    ssn.apply.uvlock = true;
     	    so.multipart.add(ssn);
     	    // Add east not connected variant
@@ -148,7 +148,7 @@ public class PaneBlockModelExport extends ModelExport {
     	    wr = new WhenRec();
     	    wr.east = false;
     	    ssn.when.OR.add(wr);
-    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_noside_alt";
+    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_noside_alt";
     	    ssn.apply.uvlock = true;
     	    so.multipart.add(ssn);
     	    // Add south not connected variant
@@ -156,7 +156,7 @@ public class PaneBlockModelExport extends ModelExport {
     	    wr = new WhenRec();
     	    wr.south = false;
     	    ssn.when.OR.add(wr);
-    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_noside_alt";
+    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_noside_alt";
     	    ssn.apply.y = 90;
     	    ssn.apply.uvlock = true;
     	    so.multipart.add(ssn);
@@ -165,7 +165,7 @@ public class PaneBlockModelExport extends ModelExport {
     	    wr = new WhenRec();
     	    wr.west = false;
     	    ssn.when.OR.add(wr);
-    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_noside";
+    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_noside";
     	    ssn.apply.uvlock = true;
     	    ssn.apply.y = 270;
     	    so.multipart.add(ssn);

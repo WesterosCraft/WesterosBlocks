@@ -26,9 +26,9 @@ public class HalfDoorBlockModelExport extends ModelExport {
         }
         public Variant(String blkname, String ext, int yrot) {
         	if (ext != null)
-        		model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
+        		model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname + "_" + ext;
         	else
-        		model = WesterosBlocks.MOD_ID + ":block/" + blkname;
+        		model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname;
             if (yrot != 0) {
                 y = yrot;
             }
@@ -116,7 +116,7 @@ public class HalfDoorBlockModelExport extends ModelExport {
         this.writeBlockModelFile(def.blockName + "_rh", trh);
         // Build simple item model that refers to base block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
         this.writeItemModelFile(def.blockName, mo);
     }
 }

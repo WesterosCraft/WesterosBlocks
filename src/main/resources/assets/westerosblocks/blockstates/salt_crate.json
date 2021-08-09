@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/salt_crate"
+      "model": "westerosblocks:block/generated/salt_crate"
     }
   }
 }

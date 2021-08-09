@@ -107,7 +107,7 @@ public class SolidHorizBlockModelExport extends ModelExport {
             // Loop over the random sets we've got
             for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
             	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-            	String model = WesterosBlocks.MOD_ID + ":block/" + getModelName(ext[link], setidx);
+            	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext[link], setidx);
             	Variant var = new Variant();
             	var.model = model;
             	var.weight = set.weight;
@@ -145,7 +145,7 @@ public class SolidHorizBlockModelExport extends ModelExport {
     	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName("", 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

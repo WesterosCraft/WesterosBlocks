@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/city_profession_weaponsmith"
+        "model": "westerosblocks:block/generated/city_profession_weaponsmith"
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/city_profession_weaponsmith",
+        "model": "westerosblocks:block/generated/city_profession_weaponsmith",
         "y": 90
       }
     ]

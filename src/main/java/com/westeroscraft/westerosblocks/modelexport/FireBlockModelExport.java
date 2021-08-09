@@ -89,7 +89,7 @@ public class FireBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String bn = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        String bn = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
         // Make when (all false)
         WhenRec whennone = new WhenRec();
         whennone.north = false;

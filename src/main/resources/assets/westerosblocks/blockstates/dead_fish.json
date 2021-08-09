@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/dead_fish"
+        "model": "westerosblocks:block/generated/dead_fish"
       }
     ]
   }

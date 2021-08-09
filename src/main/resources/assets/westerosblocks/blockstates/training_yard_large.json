@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/training_yard_large"
+      "model": "westerosblocks:block/generated/training_yard_large"
     }
   }
 }

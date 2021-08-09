@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/yellow_hellebore"
+        "model": "westerosblocks:block/generated/yellow_hellebore"
       }
     ]
   }

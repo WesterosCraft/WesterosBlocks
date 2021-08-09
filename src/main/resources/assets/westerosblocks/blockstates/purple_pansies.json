@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/purple_pansies"
+        "model": "westerosblocks:block/generated/purple_pansies"
       }
     ]
   }

@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/green_scrub_grass"
+        "model": "westerosblocks:block/generated/green_scrub_grass"
       }
     ]
   }

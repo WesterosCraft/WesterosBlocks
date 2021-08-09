@@ -2,179 +2,179 @@
   "variants": {
     "facing=north,half=bottom,shape=outer_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "y": 270,
         "uvlock": true
       }
     ],
     "facing=south,half=top,shape=inner_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -182,179 +182,179 @@
     ],
     "facing=north,half=top,shape=inner_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "x": 180,
         "uvlock": true
       }
     ],
     "facing=south,half=top,shape=inner_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -362,179 +362,179 @@
     ],
     "facing=north,half=bottom,shape=outer_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "y": 180,
         "uvlock": true
       }
     ],
     "facing=east,half=top,shape=inner_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -542,261 +542,261 @@
     ],
     "facing=east,half=top,shape=inner_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "x": 180,
         "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=inner_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "y": 180,
         "uvlock": true
       }
     ],
     "facing=west,half=top,shape=inner_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -804,97 +804,97 @@
     ],
     "facing=north,half=top,shape=inner_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -902,311 +902,311 @@
     ],
     "facing=east,half=bottom,shape=inner_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "y": 270,
         "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=inner_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "y": 90,
         "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=outer_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16"
       }
     ],
     "facing=north,half=top,shape=outer_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -1214,589 +1214,589 @@
     ],
     "facing=south,half=bottom,shape=straight": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v2",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v3",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v4",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v5",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v6",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v7",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v8",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v9",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v10",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v11",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v12",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v13",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v14",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v15",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v16",
         "y": 90,
         "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=inner_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "y": 270,
         "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=inner_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "y": 90,
         "uvlock": true
       }
     ],
     "facing=east,half=top,shape=outer_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "x": 180,
         "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=straight": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v2",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v3",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v4",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v5",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v6",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v7",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v8",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v9",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v10",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v11",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v12",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v13",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v14",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v15",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v16",
         "y": 180,
         "uvlock": true
       }
     ],
     "facing=north,half=top,shape=outer_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "x": 180,
         "uvlock": true
       }
     ],
     "facing=west,half=top,shape=inner_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -1804,97 +1804,97 @@
     ],
     "facing=west,half=top,shape=outer_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -1902,97 +1902,97 @@
     ],
     "facing=south,half=top,shape=outer_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -2000,97 +2000,97 @@
     ],
     "facing=east,half=top,shape=outer_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -2098,197 +2098,197 @@
     ],
     "facing=east,half=bottom,shape=inner_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16"
       }
     ],
     "facing=south,half=bottom,shape=inner_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16"
       }
     ],
     "facing=west,half=top,shape=straight": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v2",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v3",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v4",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v5",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v6",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v7",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v8",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v9",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v10",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v11",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v12",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v13",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v14",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v15",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v16",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -2296,97 +2296,97 @@
     ],
     "facing=west,half=top,shape=outer_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -2394,97 +2394,97 @@
     ],
     "facing=south,half=top,shape=straight": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v2",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v3",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v4",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v5",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v6",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v7",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v8",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v9",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v10",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v11",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v12",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v13",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v14",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v15",
         "x": 180,
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v16",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -2492,261 +2492,261 @@
     ],
     "facing=east,half=top,shape=straight": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v2",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v3",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v4",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v5",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v6",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v7",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v8",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v9",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v10",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v11",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v12",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v13",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v14",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v15",
         "x": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v16",
         "x": 180,
         "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=outer_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "y": 180,
         "uvlock": true
       }
     ],
     "facing=south,half=top,shape=outer_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "x": 180,
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -2754,475 +2754,475 @@
     ],
     "facing=east,half=bottom,shape=straight": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v2"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v3"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v4"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v5"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v6"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v7"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v8"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v9"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v10"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v11"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v12"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v13"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v14"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v15"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v16"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v16"
       }
     ],
     "facing=west,half=bottom,shape=outer_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "y": 90,
         "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=outer_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "y": 270,
         "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=straight": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v2",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v3",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v4",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v5",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v6",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v7",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v8",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v9",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v10",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v11",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v12",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v13",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v14",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v15",
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v16",
         "y": 270,
         "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=inner_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v2",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v3",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v4",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v5",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v6",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v7",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v8",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v9",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v10",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v11",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v12",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v13",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v14",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v15",
         "y": 180,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_inner_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_inner_v16",
         "y": 180,
         "uvlock": true
       }
     ],
     "facing=north,half=top,shape=straight": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v2",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v3",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v4",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v5",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v6",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v7",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v8",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v9",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v10",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v11",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v12",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v13",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v14",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v15",
         "x": 180,
         "y": 270,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_v16",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -3230,134 +3230,134 @@
     ],
     "facing=south,half=bottom,shape=outer_right": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15",
         "y": 90,
         "uvlock": true
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16",
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16",
         "y": 90,
         "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=outer_left": [
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v2"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v3"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v4"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v5"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v6"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v7"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v8"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v9"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v10"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v11"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v12"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v13"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v14"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v15"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_eastern_islands_stairs_outer_v16"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands_stairs_outer_v16"
       }
     ]
   }

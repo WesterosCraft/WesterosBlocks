@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/oak_timber_window_frame"
+      "model": "westerosblocks:block/generated/oak_timber_window_frame"
     }
   }
 }

@@ -21,10 +21,10 @@ public class TorchBlockModelExport extends ModelExport {
         public String model;
         public Integer y;
         public Variant(String blkname) {
-            model = WesterosBlocks.MOD_ID + ":block/" + blkname;
+            model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname;
         }
         public Variant(String blkname, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":block/" + blkname;
+            model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname;
             if (yrot != 0)
                 y = yrot;
         }

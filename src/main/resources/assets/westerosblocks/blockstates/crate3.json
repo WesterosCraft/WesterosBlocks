@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/crate3"
+      "model": "westerosblocks:block/generated/crate3"
     }
   }
 }

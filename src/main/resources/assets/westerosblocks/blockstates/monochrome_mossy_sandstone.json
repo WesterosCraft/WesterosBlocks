@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/monochrome_mossy_sandstone"
+      "model": "westerosblocks:block/generated/monochrome_mossy_sandstone"
     }
   }
 }

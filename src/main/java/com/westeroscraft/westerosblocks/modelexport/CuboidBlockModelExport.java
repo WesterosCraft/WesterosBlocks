@@ -80,7 +80,7 @@ public class CuboidBlockModelExport extends ModelExport {
     	if (def.isCustomModel())
     		return WesterosBlocks.MOD_ID + ":block/custom/" + modelName(ext, setidx);
     	else
-    		return WesterosBlocks.MOD_ID + ":block/" + modelName(ext, setidx);
+    		return WesterosBlocks.MOD_ID + ":block/generated/" + modelName(ext, setidx);
     }
 
     public String modelName(String ext, int setidx) {

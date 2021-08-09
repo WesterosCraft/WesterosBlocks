@@ -2,52 +2,52 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/terrainset_river_rocks"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v2"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v3"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v4"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v5"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v6"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v7"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v8"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v9"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v10"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v11"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v12"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v13"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v14"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v15"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_river_rocks-v16"
+        "model": "westerosblocks:block/generated/terrainset_river_rocks-v16"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/white_harbor_granite"
+      "model": "westerosblocks:block/generated/white_harbor_granite"
     }
   }
 }

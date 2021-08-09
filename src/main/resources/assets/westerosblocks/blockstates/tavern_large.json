@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/tavern_large"
+      "model": "westerosblocks:block/generated/tavern_large"
     }
   }
 }

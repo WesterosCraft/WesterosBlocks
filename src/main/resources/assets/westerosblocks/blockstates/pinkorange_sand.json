@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/pinkorange_sand"
+      "model": "westerosblocks:block/generated/pinkorange_sand"
     }
   }
 }

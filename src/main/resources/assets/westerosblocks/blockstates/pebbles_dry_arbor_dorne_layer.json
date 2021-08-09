@@ -1,28 +1,28 @@
 {
   "variants": {
     "layers=5": {
-      "model": "westerosblocks:block/pebbles_dry_arbor_dorne_layer_5"
+      "model": "westerosblocks:block/generated/pebbles_dry_arbor_dorne_layer_5"
     },
     "layers=6": {
-      "model": "westerosblocks:block/pebbles_dry_arbor_dorne_layer_6"
+      "model": "westerosblocks:block/generated/pebbles_dry_arbor_dorne_layer_6"
     },
     "layers=3": {
-      "model": "westerosblocks:block/pebbles_dry_arbor_dorne_layer_3"
+      "model": "westerosblocks:block/generated/pebbles_dry_arbor_dorne_layer_3"
     },
     "layers=4": {
-      "model": "westerosblocks:block/pebbles_dry_arbor_dorne_layer_4"
+      "model": "westerosblocks:block/generated/pebbles_dry_arbor_dorne_layer_4"
     },
     "layers=7": {
-      "model": "westerosblocks:block/pebbles_dry_arbor_dorne_layer_7"
+      "model": "westerosblocks:block/generated/pebbles_dry_arbor_dorne_layer_7"
     },
     "layers=8": {
-      "model": "westerosblocks:block/pebbles_dry_arbor_dorne_layer_8"
+      "model": "westerosblocks:block/generated/pebbles_dry_arbor_dorne_layer_8"
     },
     "layers=1": {
-      "model": "westerosblocks:block/pebbles_dry_arbor_dorne_layer_1"
+      "model": "westerosblocks:block/generated/pebbles_dry_arbor_dorne_layer_1"
     },
     "layers=2": {
-      "model": "westerosblocks:block/pebbles_dry_arbor_dorne_layer_2"
+      "model": "westerosblocks:block/generated/pebbles_dry_arbor_dorne_layer_2"
     }
   }
 }

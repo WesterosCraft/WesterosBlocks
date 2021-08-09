@@ -2,52 +2,52 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v2"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v2"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v3"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v3"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v4"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v4"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v5"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v5"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v6"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v6"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v7"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v7"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v8"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v8"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v9"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v9"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v10"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v10"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v11"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v11"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v12"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v12"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v13"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v13"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v14"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v14"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v15"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v15"
       },
       {
-        "model": "westerosblocks:block/terrainset_grey_sandstone-v16"
+        "model": "westerosblocks:block/generated/terrainset_grey_sandstone-v16"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/rookery_small"
+      "model": "westerosblocks:block/generated/rookery_small"
     }
   }
 }

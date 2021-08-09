@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/red_sourleaf_bush"
+        "model": "westerosblocks:block/generated/red_sourleaf_bush"
       }
     ]
   }

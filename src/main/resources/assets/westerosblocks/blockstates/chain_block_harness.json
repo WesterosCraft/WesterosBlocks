@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/chain_block_harness"
+        "model": "westerosblocks:block/generated/chain_block_harness"
       }
     ]
   }

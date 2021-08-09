@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/jungle_carpet"
+      "model": "westerosblocks:block/generated/jungle_carpet"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/gulltown_blue_plaster"
+      "model": "westerosblocks:block/generated/gulltown_blue_plaster"
     }
   }
 }

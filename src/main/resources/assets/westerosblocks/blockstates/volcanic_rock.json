@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/volcanic_rock"
+      "model": "westerosblocks:block/generated/volcanic_rock"
     }
   }
 }

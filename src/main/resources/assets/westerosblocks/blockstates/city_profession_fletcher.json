@@ -2,12 +2,12 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/city_profession_fletcher"
+        "model": "westerosblocks:block/generated/city_profession_fletcher"
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/city_profession_fletcher",
+        "model": "westerosblocks:block/generated/city_profession_fletcher",
         "y": 90
       }
     ]

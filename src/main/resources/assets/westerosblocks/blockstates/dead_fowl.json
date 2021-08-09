@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/dead_fowl"
+        "model": "westerosblocks:block/generated/dead_fowl"
       }
     ]
   }

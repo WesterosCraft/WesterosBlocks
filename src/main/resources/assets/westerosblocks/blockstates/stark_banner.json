@@ -2,47 +2,47 @@
   "variants": {
     "facing=north,half=lower": [
       {
-        "model": "westerosblocks:block/stark_banner",
+        "model": "westerosblocks:block/generated/stark_banner",
         "y": 270
       }
     ],
     "facing=west,half=upper": [
       {
-        "model": "westerosblocks:block/stark_banner_top",
+        "model": "westerosblocks:block/generated/stark_banner_top",
         "y": 180
       }
     ],
     "facing=west,half=lower": [
       {
-        "model": "westerosblocks:block/stark_banner",
+        "model": "westerosblocks:block/generated/stark_banner",
         "y": 180
       }
     ],
     "facing=north,half=upper": [
       {
-        "model": "westerosblocks:block/stark_banner_top",
+        "model": "westerosblocks:block/generated/stark_banner_top",
         "y": 270
       }
     ],
     "facing=south,half=upper": [
       {
-        "model": "westerosblocks:block/stark_banner_top",
+        "model": "westerosblocks:block/generated/stark_banner_top",
         "y": 90
       }
     ],
     "facing=east,half=upper": [
       {
-        "model": "westerosblocks:block/stark_banner_top"
+        "model": "westerosblocks:block/generated/stark_banner_top"
       }
     ],
     "facing=east,half=lower": [
       {
-        "model": "westerosblocks:block/stark_banner"
+        "model": "westerosblocks:block/generated/stark_banner"
       }
     ],
     "facing=south,half=lower": [
       {
-        "model": "westerosblocks:block/stark_banner",
+        "model": "westerosblocks:block/generated/stark_banner",
         "y": 90
       }
     ]

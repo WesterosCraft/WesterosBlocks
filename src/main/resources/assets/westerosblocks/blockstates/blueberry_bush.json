@@ -2,36 +2,36 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/blueberry_bush"
+        "model": "westerosblocks:block/generated/blueberry_bush"
       },
       {
-        "model": "westerosblocks:block/blueberry_bush",
+        "model": "westerosblocks:block/generated/blueberry_bush",
         "y": 90
       },
       {
-        "model": "westerosblocks:block/blueberry_bush",
+        "model": "westerosblocks:block/generated/blueberry_bush",
         "y": 180
       },
       {
-        "model": "westerosblocks:block/blueberry_bush",
+        "model": "westerosblocks:block/generated/blueberry_bush",
         "y": 270
       },
       {
-        "model": "westerosblocks:block/blueberry_bush",
+        "model": "westerosblocks:block/generated/blueberry_bush",
         "x": 180
       },
       {
-        "model": "westerosblocks:block/blueberry_bush",
+        "model": "westerosblocks:block/generated/blueberry_bush",
         "x": 180,
         "y": 90
       },
       {
-        "model": "westerosblocks:block/blueberry_bush",
+        "model": "westerosblocks:block/generated/blueberry_bush",
         "x": 180,
         "y": 180
       },
       {
-        "model": "westerosblocks:block/blueberry_bush",
+        "model": "westerosblocks:block/generated/blueberry_bush",
         "x": 180,
         "y": 270
       }

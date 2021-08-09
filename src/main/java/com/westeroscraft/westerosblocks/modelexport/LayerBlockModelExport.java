@@ -72,7 +72,7 @@ public class LayerBlockModelExport extends ModelExport {
         
         for (int i = 0; i < this.blk.layerCount; i++) {
             Variant var = new Variant();
-            var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_" + (i+1);
+            var.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_" + (i+1);
             so.variants.put(String.format("layers=%d", i+1), var);
         }
         this.writeBlockStateFile(def.blockName, so);
@@ -163,7 +163,7 @@ public class LayerBlockModelExport extends ModelExport {
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_1";
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_1";
         this.writeItemModelFile(def.blockName, mo);
         // Handle tint resources
         if (is_tinted) {

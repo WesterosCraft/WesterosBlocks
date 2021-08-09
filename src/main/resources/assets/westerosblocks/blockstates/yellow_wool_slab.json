@@ -2,17 +2,17 @@
   "variants": {
     "type=bottom": [
       {
-        "model": "westerosblocks:block/yellow_wool_slab_bottom"
+        "model": "westerosblocks:block/generated/yellow_wool_slab_bottom"
       }
     ],
     "type=double": [
       {
-        "model": "westerosblocks:block/yellow_wool_slab_double"
+        "model": "westerosblocks:block/generated/yellow_wool_slab_double"
       }
     ],
     "type=top": [
       {
-        "model": "westerosblocks:block/yellow_wool_slab_top"
+        "model": "westerosblocks:block/generated/yellow_wool_slab_top"
       }
     ]
   }

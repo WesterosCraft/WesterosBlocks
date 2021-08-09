@@ -21,7 +21,7 @@ public class TrapDoorBlockModelExport extends ModelExport {
         public String model;
         public Integer y;
         public Variant(String blkname, String ext, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
+            model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname + "_" + ext;
             if (yrot != 0)
                 y = yrot;
         }
@@ -92,7 +92,7 @@ public class TrapDoorBlockModelExport extends ModelExport {
         this.writeBlockModelFile(def.blockName + "_open", modo);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName + "_bottom";
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_bottom";
         this.writeItemModelFile(def.blockName, mo);
     }
 

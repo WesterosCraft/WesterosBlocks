@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/dead_hare"
+        "model": "westerosblocks:block/generated/dead_hare"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/cheese_block"
+      "model": "westerosblocks:block/generated/cheese_block"
     }
   }
 }

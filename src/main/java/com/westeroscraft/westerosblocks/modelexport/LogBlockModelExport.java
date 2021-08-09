@@ -27,7 +27,7 @@ public class LogBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectCubeAll {
-        public String parent = "block/cube_all";    // Use 'cube_all' model for single texture
+        public String parent = "minecraft:block/cube_all";    // Use 'cube_all' model for single texture
         public TextureAll textures = new TextureAll();
     }
     public static class TextureAll {
@@ -76,7 +76,7 @@ public class LogBlockModelExport extends ModelExport {
         	for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         		WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         		Variant var = new Variant();
-        		var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName(setidx);
+        		var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(setidx);
         		if (xrot[i] > 0) var.x = xrot[i];
         		if (yrot[i] > 0) var.y = yrot[i];
         		var.weight = set.weight;
@@ -106,7 +106,7 @@ public class LogBlockModelExport extends ModelExport {
     	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName(0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(0);
         this.writeItemModelFile(def.blockName, mo);
     }
 

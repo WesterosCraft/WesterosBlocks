@@ -2,36 +2,36 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/weirwood_leaves"
+        "model": "westerosblocks:block/generated/weirwood_leaves"
       },
       {
-        "model": "westerosblocks:block/weirwood_leaves",
+        "model": "westerosblocks:block/generated/weirwood_leaves",
         "y": 90
       },
       {
-        "model": "westerosblocks:block/weirwood_leaves",
+        "model": "westerosblocks:block/generated/weirwood_leaves",
         "y": 180
       },
       {
-        "model": "westerosblocks:block/weirwood_leaves",
+        "model": "westerosblocks:block/generated/weirwood_leaves",
         "y": 270
       },
       {
-        "model": "westerosblocks:block/weirwood_leaves",
+        "model": "westerosblocks:block/generated/weirwood_leaves",
         "x": 180
       },
       {
-        "model": "westerosblocks:block/weirwood_leaves",
+        "model": "westerosblocks:block/generated/weirwood_leaves",
         "x": 180,
         "y": 90
       },
       {
-        "model": "westerosblocks:block/weirwood_leaves",
+        "model": "westerosblocks:block/generated/weirwood_leaves",
         "x": 180,
         "y": 180
       },
       {
-        "model": "westerosblocks:block/weirwood_leaves",
+        "model": "westerosblocks:block/generated/weirwood_leaves",
         "x": 180,
         "y": 270
       }

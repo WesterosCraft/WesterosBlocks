@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/lavender_crate"
+      "model": "westerosblocks:block/generated/lavender_crate"
     }
   }
 }

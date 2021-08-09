@@ -1,4 +1,4 @@
 {
-  "parent": "westerosblocks:block/icicle",
+  "parent": "westerosblocks:block/generated/icicle",
   "textures": {}
 }

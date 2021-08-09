@@ -2,22 +2,22 @@
   "variants": {
     "down=false,up=true": [
       {
-        "model": "westerosblocks:block/arbor_brick_arrow_slit_up"
+        "model": "westerosblocks:block/generated/arbor_brick_arrow_slit_up"
       }
     ],
     "down=true,up=false": [
       {
-        "model": "westerosblocks:block/arbor_brick_arrow_slit_down"
+        "model": "westerosblocks:block/generated/arbor_brick_arrow_slit_down"
       }
     ],
     "down=false,up=false": [
       {
-        "model": "westerosblocks:block/arbor_brick_arrow_slit"
+        "model": "westerosblocks:block/generated/arbor_brick_arrow_slit"
       }
     ],
     "down=true,up=true": [
       {
-        "model": "westerosblocks:block/arbor_brick_arrow_slit_both"
+        "model": "westerosblocks:block/generated/arbor_brick_arrow_slit_both"
       }
     ]
   }

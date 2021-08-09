@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/timber_oak_lannisport_brick_frame"
+      "model": "westerosblocks:block/generated/timber_oak_lannisport_brick_frame"
     }
   }
 }

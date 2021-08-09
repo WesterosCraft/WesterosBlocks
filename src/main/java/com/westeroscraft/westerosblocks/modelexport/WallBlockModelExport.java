@@ -78,7 +78,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("post", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("post", setidx);
         	a.weight = set.weight;
         	ssn.apply.add(a);
         }
@@ -91,7 +91,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", setidx);
         	a.weight = set.weight;
         	a.uvlock = true;
         	ssn.apply.add(a);
@@ -105,7 +105,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side_tall", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_tall", setidx);
         	a.weight = set.weight;
         	a.uvlock = true;
         	ssn.apply.add(a);
@@ -120,7 +120,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", setidx);
         	a.weight = set.weight;
         	a.uvlock = true;
         	a.y = 90;
@@ -135,7 +135,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side_tall", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_tall", setidx);
         	a.weight = set.weight;
         	a.uvlock = true;
         	a.y = 90;
@@ -151,7 +151,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", setidx);
         	a.weight = set.weight;
         	a.uvlock = true;
         	a.y = 180;
@@ -166,7 +166,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side_tall", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_tall", setidx);
         	a.weight = set.weight;
         	a.uvlock = true;
         	a.y = 180;
@@ -182,7 +182,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", setidx);
         	a.weight = set.weight;
         	a.uvlock = true;
         	a.y = 270;
@@ -197,7 +197,7 @@ public class WallBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("side_tall", setidx);
+        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_tall", setidx);
         	a.weight = set.weight;
         	a.uvlock = true;
         	a.y = 270;

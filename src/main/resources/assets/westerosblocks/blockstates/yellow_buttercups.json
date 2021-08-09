@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/yellow_buttercups"
+        "model": "westerosblocks:block/generated/yellow_buttercups"
       }
     ]
   }

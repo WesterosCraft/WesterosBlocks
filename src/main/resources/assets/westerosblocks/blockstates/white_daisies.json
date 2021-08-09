@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/white_daisies"
+        "model": "westerosblocks:block/generated/white_daisies"
       }
     ]
   }

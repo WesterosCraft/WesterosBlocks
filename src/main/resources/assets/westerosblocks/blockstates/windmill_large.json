@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/windmill_large"
+      "model": "westerosblocks:block/generated/windmill_large"
     }
   }
 }

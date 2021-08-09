@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/dead_frog"
+        "model": "westerosblocks:block/generated/dead_frog"
       }
     ]
   }

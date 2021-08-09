@@ -6,7 +6,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_post"
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_post"
         }
       ]
     },
@@ -16,7 +16,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_side",
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_side",
           "uvlock": true
         }
       ]
@@ -27,7 +27,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_side_tall",
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_side_tall",
           "uvlock": true
         }
       ]
@@ -38,7 +38,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_side",
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_side",
           "y": 90,
           "uvlock": true
         }
@@ -50,7 +50,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_side_tall",
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_side_tall",
           "y": 90,
           "uvlock": true
         }
@@ -62,7 +62,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_side",
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_side",
           "y": 180,
           "uvlock": true
         }
@@ -74,7 +74,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_side_tall",
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_side_tall",
           "y": 180,
           "uvlock": true
         }
@@ -86,7 +86,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_side",
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_side",
           "y": 270,
           "uvlock": true
         }
@@ -98,7 +98,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/vivid_sandstone_wall_side_tall",
+          "model": "westerosblocks:block/generated/vivid_sandstone_wall_side_tall",
           "y": 270,
           "uvlock": true
         }

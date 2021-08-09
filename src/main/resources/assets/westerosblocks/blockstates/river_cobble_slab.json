@@ -2,17 +2,17 @@
   "variants": {
     "type=bottom": [
       {
-        "model": "westerosblocks:block/river_cobble_slab_bottom"
+        "model": "westerosblocks:block/generated/river_cobble_slab_bottom"
       }
     ],
     "type=double": [
       {
-        "model": "westerosblocks:block/river_cobble_slab_double"
+        "model": "westerosblocks:block/generated/river_cobble_slab_double"
       }
     ],
     "type=top": [
       {
-        "model": "westerosblocks:block/river_cobble_slab_top"
+        "model": "westerosblocks:block/generated/river_cobble_slab_top"
       }
     ]
   }

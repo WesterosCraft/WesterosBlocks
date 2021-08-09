@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/blue_orchid"
+        "model": "westerosblocks:block/generated/blue_orchid"
       }
     ]
   }

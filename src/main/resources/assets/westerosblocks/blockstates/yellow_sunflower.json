@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/yellow_sunflower"
+        "model": "westerosblocks:block/generated/yellow_sunflower"
       }
     ]
   }

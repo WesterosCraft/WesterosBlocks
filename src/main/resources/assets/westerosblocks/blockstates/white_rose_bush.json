@@ -2,36 +2,36 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/white_rose_bush"
+        "model": "westerosblocks:block/generated/white_rose_bush"
       },
       {
-        "model": "westerosblocks:block/white_rose_bush",
+        "model": "westerosblocks:block/generated/white_rose_bush",
         "y": 90
       },
       {
-        "model": "westerosblocks:block/white_rose_bush",
+        "model": "westerosblocks:block/generated/white_rose_bush",
         "y": 180
       },
       {
-        "model": "westerosblocks:block/white_rose_bush",
+        "model": "westerosblocks:block/generated/white_rose_bush",
         "y": 270
       },
       {
-        "model": "westerosblocks:block/white_rose_bush",
+        "model": "westerosblocks:block/generated/white_rose_bush",
         "x": 180
       },
       {
-        "model": "westerosblocks:block/white_rose_bush",
+        "model": "westerosblocks:block/generated/white_rose_bush",
         "x": 180,
         "y": 90
       },
       {
-        "model": "westerosblocks:block/white_rose_bush",
+        "model": "westerosblocks:block/generated/white_rose_bush",
         "x": 180,
         "y": 180
       },
       {
-        "model": "westerosblocks:block/white_rose_bush",
+        "model": "westerosblocks:block/generated/white_rose_bush",
         "x": 180,
         "y": 270
       }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/leather"
+      "model": "westerosblocks:block/generated/leather"
     }
   }
 }

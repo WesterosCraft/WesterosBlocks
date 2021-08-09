@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/bench_butcher_knives"
+      "model": "westerosblocks:block/generated/bench_butcher_knives"
     }
   }
 }

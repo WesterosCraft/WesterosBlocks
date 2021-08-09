@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/unused_purple_brick"
+      "model": "westerosblocks:block/generated/unused_purple_brick"
     }
   }
 }

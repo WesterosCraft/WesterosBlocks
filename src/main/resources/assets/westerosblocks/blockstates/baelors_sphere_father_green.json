@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/baelors_sphere_father_green"
+      "model": "westerosblocks:block/generated/baelors_sphere_father_green"
     }
   }
 }

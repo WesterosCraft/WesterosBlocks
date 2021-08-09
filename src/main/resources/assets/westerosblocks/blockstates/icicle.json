@@ -2,22 +2,22 @@
   "variants": {
     "up=false,down=true": [
       {
-        "model": "westerosblocks:block/icicle_down"
+        "model": "westerosblocks:block/generated/icicle_down"
       }
     ],
     "up=false,down=false": [
       {
-        "model": "westerosblocks:block/icicle"
+        "model": "westerosblocks:block/generated/icicle"
       }
     ],
     "up=true,down=true": [
       {
-        "model": "westerosblocks:block/icicle_both"
+        "model": "westerosblocks:block/generated/icicle_both"
       }
     ],
     "up=true,down=false": [
       {
-        "model": "westerosblocks:block/icicle_up"
+        "model": "westerosblocks:block/generated/icicle_up"
       }
     ]
   }

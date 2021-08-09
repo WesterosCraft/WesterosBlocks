@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/fish_trap"
+      "model": "westerosblocks:block/generated/fish_trap"
     }
   }
 }

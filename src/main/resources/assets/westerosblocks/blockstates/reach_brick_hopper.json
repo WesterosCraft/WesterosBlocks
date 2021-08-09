@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/reach_brick_hopper"
+      "model": "westerosblocks:block/generated/reach_brick_hopper"
     }
   }
 }

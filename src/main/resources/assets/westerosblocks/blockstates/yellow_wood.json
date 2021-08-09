@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/yellow_wood"
+      "model": "westerosblocks:block/generated/yellow_wood"
     }
   }
 }

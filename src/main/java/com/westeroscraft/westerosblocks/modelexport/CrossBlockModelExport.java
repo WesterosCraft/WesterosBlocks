@@ -61,7 +61,7 @@ public class CrossBlockModelExport extends ModelExport {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	for (int rot = 0; rot < cnt; rot++) {
         		Variant var = new Variant();
-        		var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName("", setidx);
+        		var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", setidx);
             	var.weight = set.weight;
         		if (def.isCustomModel())
         			var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", setidx);

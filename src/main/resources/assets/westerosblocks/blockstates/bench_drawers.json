@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/bench_drawers"
+      "model": "westerosblocks:block/generated/bench_drawers"
     }
   }
 }

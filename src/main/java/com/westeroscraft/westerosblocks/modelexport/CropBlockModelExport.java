@@ -46,7 +46,7 @@ public class CropBlockModelExport extends ModelExport {
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         Variant var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
         so.variants.put("", var);
         this.writeBlockStateFile(def.blockName, so);
     }

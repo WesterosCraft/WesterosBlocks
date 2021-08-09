@@ -2,36 +2,36 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/wagon_wheel__axle",
+        "model": "westerosblocks:block/generated/wagon_wheel__axle",
         "y": 90
       }
     ],
     "facing=south": [
       {
-        "model": "westerosblocks:block/wagon_wheel__axle",
+        "model": "westerosblocks:block/generated/wagon_wheel__axle",
         "y": 180
       }
     ],
     "facing=down": [
       {
-        "model": "westerosblocks:block/wagon_wheel__axle",
+        "model": "westerosblocks:block/generated/wagon_wheel__axle",
         "x": 90
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/wagon_wheel__axle"
+        "model": "westerosblocks:block/generated/wagon_wheel__axle"
       }
     ],
     "facing=up": [
       {
-        "model": "westerosblocks:block/wagon_wheel__axle",
+        "model": "westerosblocks:block/generated/wagon_wheel__axle",
         "x": 270
       }
     ],
     "facing=west": [
       {
-        "model": "westerosblocks:block/wagon_wheel__axle",
+        "model": "westerosblocks:block/generated/wagon_wheel__axle",
         "y": 270
       }
     ]

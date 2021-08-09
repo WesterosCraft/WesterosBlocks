@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/jungle_tall_fern"
+        "model": "westerosblocks:block/generated/jungle_tall_fern"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/terrainset_westerlands_alt"
+      "model": "westerosblocks:block/generated/terrainset_westerlands_alt"
     }
   }
 }

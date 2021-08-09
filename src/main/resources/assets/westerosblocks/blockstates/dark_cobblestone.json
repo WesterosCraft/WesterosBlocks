@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/dark_cobblestone"
+      "model": "westerosblocks:block/generated/dark_cobblestone"
     }
   }
 }

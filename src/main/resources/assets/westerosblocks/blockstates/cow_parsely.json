@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/cow_parsely"
+        "model": "westerosblocks:block/generated/cow_parsely"
       }
     ]
   }

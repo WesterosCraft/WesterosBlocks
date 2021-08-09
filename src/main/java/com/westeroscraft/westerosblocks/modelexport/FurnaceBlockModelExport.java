@@ -21,7 +21,7 @@ public class FurnaceBlockModelExport extends ModelExport {
         public String model;
         public Integer y;
         public Variant(String bn, int y) {
-            model = WesterosBlocks.MOD_ID + ":block/" + bn;
+            model = WesterosBlocks.MOD_ID + ":block/generated/" + bn;
             if (y != 0)
                 this.y = y;
         }
@@ -81,7 +81,7 @@ public class FurnaceBlockModelExport extends ModelExport {
         this.writeBlockModelFile(def.blockName, mod);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/" + def.blockName;
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
         this.writeItemModelFile(def.blockName, mo);
         // Handle tint resources
         if (isTinted) {

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/gold_ingots"
+      "model": "westerosblocks:block/generated/gold_ingots"
     }
   }
 }

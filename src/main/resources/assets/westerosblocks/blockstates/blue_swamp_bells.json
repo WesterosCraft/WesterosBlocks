@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/blue_swamp_bells"
+        "model": "westerosblocks:block/generated/blue_swamp_bells"
       }
     ]
   }

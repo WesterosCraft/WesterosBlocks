@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/sunspear_yellow_veined_marble"
+      "model": "westerosblocks:block/generated/sunspear_yellow_veined_marble"
     }
   }
 }

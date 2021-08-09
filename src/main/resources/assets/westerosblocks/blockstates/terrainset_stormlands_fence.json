@@ -3,7 +3,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/terrainset_stormlands_fence_post"
+          "model": "westerosblocks:block/generated/terrainset_stormlands_fence_post"
         }
       ]
     },
@@ -13,7 +13,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/terrainset_stormlands_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_stormlands_fence_side",
           "uvlock": true
         }
       ]
@@ -24,7 +24,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/terrainset_stormlands_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_stormlands_fence_side",
           "y": 90,
           "uvlock": true
         }
@@ -36,7 +36,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/terrainset_stormlands_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_stormlands_fence_side",
           "y": 180,
           "uvlock": true
         }
@@ -48,7 +48,7 @@
       },
       "apply": [
         {
-          "model": "westerosblocks:block/terrainset_stormlands_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_stormlands_fence_side",
           "y": 270,
           "uvlock": true
         }

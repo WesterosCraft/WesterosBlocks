@@ -2,17 +2,17 @@
   "variants": {
     "type=bottom": [
       {
-        "model": "westerosblocks:block/muddy_snow_slab_bottom"
+        "model": "westerosblocks:block/generated/muddy_snow_slab_bottom"
       }
     ],
     "type=double": [
       {
-        "model": "westerosblocks:block/muddy_snow_slab_double"
+        "model": "westerosblocks:block/generated/muddy_snow_slab_double"
       }
     ],
     "type=top": [
       {
-        "model": "westerosblocks:block/muddy_snow_slab_top"
+        "model": "westerosblocks:block/generated/muddy_snow_slab_top"
       }
     ]
   }

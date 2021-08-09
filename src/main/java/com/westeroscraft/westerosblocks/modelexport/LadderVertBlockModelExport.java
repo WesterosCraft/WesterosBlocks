@@ -64,7 +64,7 @@ public class LadderVertBlockModelExport extends ModelExport {
     	        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
     	        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
 	            	Variant var = new Variant();
-    	            var.model = WesterosBlocks.MOD_ID + ":block/" + getModelName(ext[i], setidx);
+    	            var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext[i], setidx);
                 	var.weight = set.weight;
     	            if (def.isCustomModel())
     	            	var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext[i], setidx);
@@ -95,7 +95,7 @@ public class LadderVertBlockModelExport extends ModelExport {
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         if (!def.isCustomModel())
-        	mo.parent = WesterosBlocks.MOD_ID + ":block/" + getModelName("", 0);
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", 0);
         else
         	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", 0);        	
         this.writeItemModelFile(def.blockName, mo);

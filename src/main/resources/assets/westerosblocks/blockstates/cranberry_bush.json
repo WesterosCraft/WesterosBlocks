@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/cranberry_bush"
+        "model": "westerosblocks:block/generated/cranberry_bush"
       }
     ]
   }

@@ -2,24 +2,24 @@
   "variants": {
     "facing=south": [
       {
-        "model": "westerosblocks:block/winterfell_stone_ladder",
+        "model": "westerosblocks:block/generated/winterfell_stone_ladder",
         "y": 180
       }
     ],
     "facing=east": [
       {
-        "model": "westerosblocks:block/winterfell_stone_ladder",
+        "model": "westerosblocks:block/generated/winterfell_stone_ladder",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/winterfell_stone_ladder"
+        "model": "westerosblocks:block/generated/winterfell_stone_ladder"
       }
     ],
     "facing=west": [
       {
-        "model": "westerosblocks:block/winterfell_stone_ladder",
+        "model": "westerosblocks:block/generated/winterfell_stone_ladder",
         "y": 270
       }
     ]

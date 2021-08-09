@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/desert_sandstone_arrow_slit"
+      "model": "westerosblocks:block/generated/desert_sandstone_arrow_slit"
     }
   }
 }

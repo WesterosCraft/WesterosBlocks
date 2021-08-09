@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/low_class_utility_block"
+      "model": "westerosblocks:block/generated/low_class_utility_block"
     }
   }
 }

@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/red_tulips"
+        "model": "westerosblocks:block/generated/red_tulips"
       }
     ]
   }

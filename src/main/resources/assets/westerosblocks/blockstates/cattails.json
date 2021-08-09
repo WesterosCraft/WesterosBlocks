@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/cattails"
+        "model": "westerosblocks:block/generated/cattails"
       }
     ]
   }

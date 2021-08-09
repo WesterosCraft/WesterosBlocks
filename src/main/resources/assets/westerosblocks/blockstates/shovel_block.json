@@ -2,24 +2,24 @@
   "variants": {
     "facing=east": [
       {
-        "model": "westerosblocks:block/shovel_block"
+        "model": "westerosblocks:block/generated/shovel_block"
       }
     ],
     "facing=south": [
       {
-        "model": "westerosblocks:block/shovel_block",
+        "model": "westerosblocks:block/generated/shovel_block",
         "y": 90
       }
     ],
     "facing=north": [
       {
-        "model": "westerosblocks:block/shovel_block",
+        "model": "westerosblocks:block/generated/shovel_block",
         "y": 270
       }
     ],
     "facing=west": [
       {
-        "model": "westerosblocks:block/shovel_block",
+        "model": "westerosblocks:block/generated/shovel_block",
         "y": 180
       }
     ]

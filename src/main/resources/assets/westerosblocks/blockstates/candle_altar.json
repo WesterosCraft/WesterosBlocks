@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/candle_altar"
+      "model": "westerosblocks:block/generated/candle_altar"
     }
   }
 }

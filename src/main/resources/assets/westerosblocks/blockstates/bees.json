@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/bees"
+        "model": "westerosblocks:block/generated/bees"
       }
     ]
   }
