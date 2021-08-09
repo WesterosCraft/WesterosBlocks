@@ -33,51 +33,13 @@ public class LeavesBlockModelExport extends ModelExport {
     }
     // Template objects for Gson export of block models
     public static class ModelObjectLeaves {
-        public String parent = "minecraft:block/block";    // Use 'block'
+        public String parent = "westeroscraft:block/tinted/leaves";
         public Texture textures = new Texture();
-        public List<Elements> elements = new ArrayList<Elements>();
     }
     public static class Texture {
-        public String end, side, branch, particle;
-    }
-    public static class Rotation {
-    	float angle;
-    	String axis = "y";
-    	int origin[] = { 8, 8, 8 };
-    	public Rotation(float angle) {
-    		this.angle = angle;
-    	}
-    };
-    
-    public static class Elements {
-    	int[] from = { 0, 0, 0 };
-    	int[] to = { 16, 16, 16 };
-    	Rotation rotation;
-    	Map<String, Faces> faces = new HashMap<String, Faces>();
-    }
-    public static class Faces {
-    	int[] uv = { 0, 0, 16, 16 };
-    	String texture;
-    	Integer tintindex;
-    	String cullface;
-    	public Faces(String txt, String face, boolean isTinted) {
-    		texture = txt;
-    		cullface = face;
-    		tintindex = (isTinted?0:null);
-    	}
-    }
-    // Template objects for Gson export of block models
-    public static class ModelObjectBFLeaves {
-        public String parent = "minecraft:block/block";    // Use 'block'
-        public Texture textures = new Texture();
-        public Elements elements[] = { new Elements() };
+        public String end, side, bf, overlayend, overlayside, particle;
     }
 
-    public static class ModelObject {
-    	public String parent;
-    }
-
-    
     public LeavesBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
@@ -129,55 +91,50 @@ public class LeavesBlockModelExport extends ModelExport {
         }
     }
     
-    private ModelObjectLeaves makeBaseModel(int setidx, boolean isTinted) {
+    private ModelObjectLeaves makeModel(int setidx, boolean isTinted, boolean bf, boolean overlay) {
     	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
     	
         ModelObjectLeaves mod = new ModelObjectLeaves();
-        Elements base = new Elements();
-        base.faces.put("down", new Faces("#end", "down", isTinted));
-        base.faces.put("up", new Faces("#end", "up", isTinted));
-        base.faces.put("north", new Faces("#side", "north", isTinted));
-        base.faces.put("south", new Faces("#side", "south", isTinted));
-        base.faces.put("west", new Faces("#side", "west", isTinted));
-        base.faces.put("east", new Faces("#side", "east", isTinted));
-        mod.elements.add(base);
         mod.textures.end = getTextureID(set.getTextureByIndex(0)); 
         mod.textures.side = getTextureID(set.getTextureByIndex(1)); 
         mod.textures.particle = mod.textures.side;
+        if (bf) {
+    		mod.textures.bf = getTextureID(set.getTextureByIndex(2)); 
+        	if (overlay) {
+        		mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_overlay_bf" : "westerosblocks:block/untinted/leaves_overlay_bf";
+        		mod.textures.overlayend = getTextureID(set.getTextureByIndex(3)); 
+        		mod.textures.overlayside = getTextureID(set.getTextureByIndex(4)); 
+        	}
+        	else {
+        		mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_bf" : "westerosblocks:block/untinted/leaves_bf";        		
+        	}
+        }
+        else {
+        	if (overlay) {
+        		mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_overlay" : "westerosblocks:block/untinted/leaves_overlay";
+        		mod.textures.overlayend = getTextureID(set.getTextureByIndex(3)); 
+        		mod.textures.overlayside = getTextureID(set.getTextureByIndex(4)); 
+        	}
+        	else {
+        		mod.parent = isTinted ? "westerosblocks:block/tinted/leaves" : "westerosblocks:block/untinted/leaves";        		
+        	}        	
+        }
         return mod;
     }
     @Override
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
+        
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	
-            ModelObjectLeaves mod = makeBaseModel(setidx, isTinted);
-            // If better foliage, add branch elements and texture
-            if (blk.betterfoliage) {
-            	int from[][] = { { -11, -11, 5 }, { -11, -11, 7 }, { 10, -11, -11 }, { 12, -11, -11 } };
-            	int to[][] = { { 27, 27, 5 }, { 27, 27, 7 }, { 10, 27, 27 }, { 12, 27, 27 } };
-            	float angle[] = { -22.5f, 22.5f, -22.5f, 22.5f }; 
-            	for (int i = 0; i < 4; i++) {
-            		Elements cross = new Elements();
-            		cross.from = from[i];
-            		cross.to = to[i];
-            		cross.rotation = new Rotation(angle[i]);
-                    cross.faces.put("down", new Faces("#branch", "down", isTinted));
-                    cross.faces.put("up", new Faces("#branch", "up", isTinted));
-                    cross.faces.put("north", new Faces("#branch", "north", isTinted));
-                    cross.faces.put("south", new Faces("#branch", "south", isTinted));
-                    cross.faces.put("west", new Faces("#branch", "west", isTinted));
-                    cross.faces.put("east", new Faces("#branch", "east", isTinted));      
-                    mod.elements.add(cross);
-            	}
-            	mod.textures.branch = getTextureID(set.getTextureByIndex(2)); 
-            }
+            ModelObjectLeaves mod = makeModel(setidx, isTinted, blk.betterfoliage, blk.overlay);
+
             this.writeBlockModelFile(getModelName("", setidx), mod);
         }
         // Build base model for item
-        ModelObjectLeaves mo = makeBaseModel(0, isTinted);
+        ModelObjectLeaves mo = makeModel(0, isTinted, false, blk.overlay);
         this.writeItemModelFile(def.getBlockName(), mo);
         // Add tint overrides
         if (isTinted) {

@@ -1,40 +1,40 @@
 {
   "variants": {
     "shape=east_west": {
-      "model": "westerosblocks:block/horizontal_net_flat",
+      "model": "westerosblocks:block/generated/horizontal_net_flat",
       "y": 90
     },
     "shape=ascending_west": {
-      "model": "westerosblocks:block/horizontal_net_raised_sw",
+      "model": "westerosblocks:block/generated/horizontal_net_raised_sw",
       "y": 90
     },
     "shape=north_east": {
-      "model": "westerosblocks:block/horizontal_net_curved",
+      "model": "westerosblocks:block/generated/horizontal_net_curved",
       "y": 270
     },
     "shape=south_west": {
-      "model": "westerosblocks:block/horizontal_net_curved",
+      "model": "westerosblocks:block/generated/horizontal_net_curved",
       "y": 90
     },
     "shape=south_east": {
-      "model": "westerosblocks:block/horizontal_net_curved"
+      "model": "westerosblocks:block/generated/horizontal_net_curved"
     },
     "shape=north_south": {
-      "model": "westerosblocks:block/horizontal_net_flat"
+      "model": "westerosblocks:block/generated/horizontal_net_flat"
     },
     "shape=ascending_south": {
-      "model": "westerosblocks:block/horizontal_net_raised_sw"
+      "model": "westerosblocks:block/generated/horizontal_net_raised_sw"
     },
     "shape=ascending_east": {
-      "model": "westerosblocks:block/horizontal_net_raised_ne",
+      "model": "westerosblocks:block/generated/horizontal_net_raised_ne",
       "y": 90
     },
     "shape=north_west": {
-      "model": "westerosblocks:block/horizontal_net_curved",
+      "model": "westerosblocks:block/generated/horizontal_net_curved",
       "y": 180
     },
     "shape=ascending_north": {
-      "model": "westerosblocks:block/horizontal_net_raised_ne"
+      "model": "westerosblocks:block/generated/horizontal_net_raised_ne"
     }
   }
 }

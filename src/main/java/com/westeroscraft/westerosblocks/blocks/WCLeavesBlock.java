@@ -30,12 +30,14 @@ public class WCLeavesBlock extends LeavesBlock implements WesterosBlockLifecycle
     protected WesterosBlockDef def;
     private final boolean nodecay;
     public final boolean betterfoliage;
+    public final boolean overlay;
     
     protected WCLeavesBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         String typ = def.getType();
     	betterfoliage = (typ != null) && typ.contains("better-foliage");
+    	overlay = (typ != null) && typ.contains("overlay");
     	nodecay = (typ != null) && typ.contains("no-decay");
         this.registerDefaultState(this.stateDefinition.any().setValue(DISTANCE, Integer.valueOf(7)).setValue(PERSISTENT, Boolean.valueOf(!nodecay)));
     }

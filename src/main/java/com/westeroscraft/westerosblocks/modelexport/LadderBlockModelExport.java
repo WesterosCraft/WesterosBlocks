@@ -92,6 +92,8 @@ public class LadderBlockModelExport extends ModelExport {
         if (!def.isCustomModel())
         	mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", 0);
         else
-        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", 0);        	
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", 0);  
+        this.writeItemModelFile(def.blockName, mo);
+        
     }
 }

@@ -24,26 +24,26 @@ public class RailBlockModelExport extends ModelExport {
             this(blkname, ext, 0);
         }
         public Variant(String blkname, String ext, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":block/" + blkname + "_" + ext;
+            model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname + "_" + ext;
             if (yrot != 0)
                 y = yrot;
         }
     }
     // Template objects for Gson export of block models
     public static class ModelObjectRailFlat {
-        public String parent = "block/rail_flat";    // Use 'rail_flst' model for single texture
+        public String parent = "minecraft:block/rail_flat";    // Use 'rail_flst' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectRailCurved {
-        public String parent = "block/rail_curved";    // Use 'rail_curved' model for single texture
+        public String parent = "minecraft:block/rail_curved";    // Use 'rail_curved' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectRailRaisedNE {
-        public String parent = "block/rail_raised_ne";    // Use 'rail_raised_ne' model for single texture
+        public String parent = "minecraft:block/rail_raised_ne";    // Use 'rail_raised_ne' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectRailRaisedSW {
-        public String parent = "block/rail_raised_sw";    // Use 'rail_raised_sw' model for single texture
+        public String parent = "minecraft:block/rail_raised_sw";    // Use 'rail_raised_sw' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {

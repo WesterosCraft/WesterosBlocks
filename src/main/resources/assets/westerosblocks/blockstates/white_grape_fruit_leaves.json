@@ -2,38 +2,172 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/white_grape_fruit_leaves"
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
+        "weight": 10
       },
       {
         "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
-        "y": 90
+        "y": 90,
+        "weight": 10
       },
       {
         "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
-        "y": 180
+        "y": 180,
+        "weight": 10
       },
       {
         "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
-        "y": 270
-      },
-      {
-        "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
-        "x": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
-        "x": 180,
-        "y": 90
+        "y": 270,
+        "weight": 10
       },
       {
         "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
         "x": 180,
-        "y": 180
+        "weight": 10
       },
       {
         "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
         "x": 180,
-        "y": 270
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
+        "x": 180,
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves",
+        "x": 180,
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v2",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v2",
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v2",
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v2",
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v2",
+        "x": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v2",
+        "x": 180,
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v2",
+        "x": 180,
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v2",
+        "x": 180,
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v3",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v3",
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v3",
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v3",
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v3",
+        "x": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v3",
+        "x": 180,
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v3",
+        "x": 180,
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v3",
+        "x": 180,
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v4",
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v4",
+        "y": 90,
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v4",
+        "y": 180,
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v4",
+        "y": 270,
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v4",
+        "x": 180,
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v4",
+        "x": 180,
+        "y": 90,
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v4",
+        "x": 180,
+        "y": 180,
+        "weight": 2
+      },
+      {
+        "model": "westerosblocks:block/generated/white_grape_fruit_leaves-v4",
+        "x": 180,
+        "y": 270,
+        "weight": 2
       }
     ]
   }
