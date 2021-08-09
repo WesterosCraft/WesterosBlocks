@@ -983,8 +983,10 @@ components:
                   - 0: up/down
                   - 1: sides
                   - 2: better foliage branch texture (if better-foliage defined)
+                  - 4: up/down overlay (if overlay defined)
+                  - 5: sides overlay (if overlay defined)
                   
-                  If the list is shorter than 2, the
+                  If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.                  
             randomTextures:
@@ -1008,6 +1010,9 @@ components:
                 - "better-foliage": If value is defined, 
                 block models will have better foliage
                 style extensions
+                - "overlay": If value is defined, block
+                models will have a transparent overlay just
+                outside the normal leaf block layer
 
     web:
       title: blockType='web'
