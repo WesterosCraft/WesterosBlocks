@@ -672,10 +672,13 @@ components:
                   path.
                   Index mapping for textures is:
                   
-                  - 0: end texture
-                  - 1: side texture
-                  
-                  If the list is shorter than 2, the
+                  - 0: end texture (bottom and top)
+                  - 1: north texture
+                  - 2: south texture
+                  - 3: west texture
+                  - 4: east texture
+
+                  If the list is shorter than 5, the
                   last texture is used for all indexes
                   beyond the length of the list.
             randomTextures:
