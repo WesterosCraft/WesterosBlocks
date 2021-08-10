@@ -251,6 +251,8 @@ public class WesterosBlocks {
 			// Construct custom block definitions
 			ArrayList<Block> blklist = new ArrayList<Block>();
 			customBlocksByName = new HashMap<String, Block>();
+			HashMap<String, Integer> countsByType = new HashMap<String, Integer>();
+			int blockcount = 0;
 			for (int i = 0; i < customBlockDefs.length; i++) {
 				if (customBlockDefs[i] == null)
 					continue;
@@ -260,6 +262,11 @@ public class WesterosBlocks {
 					customBlocksByName.put(customBlockDefs[i].blockName, blk);
 					// Register sound events
 					customBlockDefs[i].registerSoundEvents();
+					// Add to counts
+					Integer cnt = countsByType.get(customBlockDefs[i].blockType);
+					cnt = (cnt == null) ? 1 : (cnt+1);
+					countsByType.put(customBlockDefs[i].blockType, cnt);					
+					blockcount++;
 				} else {
 					// crash("Invalid block definition for " + customBlockDefs[i].blockName + " -
 					// aborted during load()");
@@ -267,6 +274,12 @@ public class WesterosBlocks {
 				}
 			}
 			customBlocks = blklist.toArray(new Block[blklist.size()]);
+			// Brag on block type counts
+			log.info("Count of custom blocks by type:");
+			for (String type : countsByType.keySet()) {
+				log.info(type + ": " + countsByType.get(type) + " blocks");				
+			}
+			log.info("TOTAL: " + blockcount + " blocks");
 		}
 	}
 
