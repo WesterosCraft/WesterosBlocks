@@ -32,7 +32,7 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 
 // Solid block, with horizontal CTM - adds four boolean states for north, south, east, west (boolean)
-public class WCSolidHorizBlock extends Block implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
+public class WCSolidHorizBlock extends WCSolidBlock implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -41,7 +41,6 @@ public class WCSolidHorizBlock extends Block implements WesterosBlockDynmapSuppo
         	return def.registerRenderType(def.registerBlock(new WCSolidHorizBlock(props, def)), true, def.nonOpaque);
         }
     }    
-    protected WesterosBlockDef def;
     public static final BooleanProperty NORTH = BlockStateProperties.NORTH;
     public static final BooleanProperty SOUTH = BlockStateProperties.SOUTH;
     public static final BooleanProperty EAST = BlockStateProperties.EAST;
@@ -49,13 +48,8 @@ public class WCSolidHorizBlock extends Block implements WesterosBlockDynmapSuppo
 
     
     protected WCSolidHorizBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
-        super(props);
-        this.def = def;
+        super(props, def);
         this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, Boolean.valueOf(false)).setValue(SOUTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false)));
-    }
-    @Override
-    public WesterosBlockDef getWBDefinition() {
-        return def;
     }
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
@@ -98,10 +92,4 @@ public class WCSolidHorizBlock extends Block implements WesterosBlockDynmapSuppo
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
     }
-    private static String[] TAGS = { };
-    @Override
-    public String[] getBlockTags() {
-    	return TAGS;
-    }    
-
 }

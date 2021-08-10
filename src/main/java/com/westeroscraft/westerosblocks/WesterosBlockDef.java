@@ -93,6 +93,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -227,11 +229,11 @@ public class WesterosBlockDef {
 		public float zMin = 0.0F;
 		public float zMax = 1.0F;
 
-		private transient AxisAlignedBB aabb = null;
+		private transient VoxelShape aabb = null;
 
-		public AxisAlignedBB getAABB() {
+		public VoxelShape getAABB() {
 			if (aabb == null) {
-				aabb = new AxisAlignedBB(xMin, yMin, zMin, xMax, yMax, zMax);
+				aabb = VoxelShapes.box(xMin, yMin, zMin, xMax, yMax, zMax);
 			}
 			return aabb;
 		}
@@ -1247,5 +1249,15 @@ public class WesterosBlockDef {
 			}
 		}
 	}
-
+	// Get customized collision box for default solid block
+	public VoxelShape makeCollisionBoxShape() {
+		if (collisionBoxes == null) {
+			return VoxelShapes.block();	// Default to solid block
+		}
+		VoxelShape s = VoxelShapes.empty();
+		for (BoundingBox b : collisionBoxes) {
+			s = VoxelShapes.or(s, b.getAABB());
+		}
+		return s;		
+	}
 }

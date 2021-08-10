@@ -122,18 +122,13 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     	return def.cuboids;
     }
     protected VoxelShape getBoundingBoxFromCuboidList(List<WesterosBlockDef.Cuboid> cl) {
-        if ((cl == null) || (cl.size() == 0)) return VoxelShapes.empty();
-        float xmin = 100.0F, ymin = 100.0F, zmin = 100.0F;
-        float xmax = -100.0F, ymax = -100.0F, zmax = -100.0F;
-        for(WesterosBlockDef.Cuboid c : cl) {
-            if (c.xMin < xmin) xmin = c.xMin;
-            if (c.yMin < ymin) ymin = c.yMin;
-            if (c.zMin < zmin) zmin = c.zMin;
-            if (c.xMax > xmax) xmax = c.xMax;
-            if (c.yMax > ymax) ymax = c.yMax;
-            if (c.zMax > zmax) zmax = c.zMax;
+        VoxelShape vs = VoxelShapes.empty();
+        if (cl != null) {
+            for(WesterosBlockDef.Cuboid c : cl) {
+            	vs = VoxelShapes.or(vs, VoxelShapes.box(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax));
+            }
         }
-        return Block.box(16*xmin, 16*ymin, 16*zmin, 16*xmax, 16*ymax, 16*zmax);
+        return vs;
     }
 
     @Override

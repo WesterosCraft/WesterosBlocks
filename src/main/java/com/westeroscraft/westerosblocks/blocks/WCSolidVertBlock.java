@@ -32,7 +32,7 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 
 // Solid block, with vertical CTM - adds two boolean states for ctmup and ctmdown (boolean)
-public class WCSolidVertBlock extends Block implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
+public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
@@ -41,19 +41,13 @@ public class WCSolidVertBlock extends Block implements WesterosBlockDynmapSuppor
         	return def.registerRenderType(def.registerBlock(new WCSolidVertBlock(props, def)), true, def.nonOpaque);
         }
     }    
-    protected WesterosBlockDef def;
     public static final BooleanProperty DOWN = BlockStateProperties.DOWN;
     public static final BooleanProperty UP = BlockStateProperties.UP;
 
     
     protected WCSolidVertBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
-        super(props);
-        this.def = def;
+        super(props, def);
         this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
-    }
-    @Override
-    public WesterosBlockDef getWBDefinition() {
-        return def;
     }
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
@@ -92,10 +86,4 @@ public class WCSolidVertBlock extends Block implements WesterosBlockDynmapSuppor
         def.defaultRegisterTextures(mtd);
         def.defaultRegisterTextureBlock(mtd, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
     }
-    private static String[] TAGS = { };
-    @Override
-    public String[] getBlockTags() {
-    	return TAGS;
-    }    
-
 }
