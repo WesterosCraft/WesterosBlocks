@@ -19,13 +19,14 @@ public class LayerBlockModelExport extends ModelExport {
 
     // Template objects for Gson export of block state
     public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
+        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
     }
     public static class Variant {
         public String model;
         public Integer x;
         public Integer y;
         public Boolean uvlock;
+        public Integer weight;
     }
     
     // Template objects for Gson export of block models
@@ -57,7 +58,11 @@ public class LayerBlockModelExport extends ModelExport {
     public static class ModelObject {
     	public String parent;
     }
-    
+
+    private String getModelName(String ext, int setidx) {
+    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    }
+
     public LayerBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.def = def;
@@ -71,9 +76,15 @@ public class LayerBlockModelExport extends ModelExport {
         StateObject so = new StateObject();
         
         for (int i = 0; i < this.blk.layerCount; i++) {
-            Variant var = new Variant();
-            var.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_" + (i+1);
-            so.variants.put(String.format("layers=%d", i+1), var);
+        	List<Variant> vars = new ArrayList<Variant>();
+            // Loop over the random sets we've got
+            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+            	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+            	Variant var = new Variant();
+            	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_" + (i+1), setidx);
+            	vars.add(var);
+            }
+            so.variants.put(String.format("layers=%d", i+1), vars);
         }
         this.writeBlockStateFile(def.blockName, so);
     }
@@ -82,88 +93,91 @@ public class LayerBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         boolean is_tinted = def.isTinted();
         for (int i = 0; i < blk.layerCount; i++) {
-            ModelObjectCuboid mod = new ModelObjectCuboid();
-            mod.textures.put("particle", getTextureID(def.getTextureByIndex(0)));
-            int cnt = Math.max(6, def.getTextureCount());
-            for (int j = 0; j < cnt; j++) {
-                mod.textures.put("txt" + j, getTextureID(def.getTextureByIndex(j)));
+            // Loop over the random sets we've got
+            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+            	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+            	ModelObjectCuboid mod = new ModelObjectCuboid();
+            	mod.textures.put("particle", getTextureID(set.getTextureByIndex(0)));
+            	int cnt = Math.max(6, set.getTextureCount());
+            	for (int j = 0; j < cnt; j++) {
+            		mod.textures.put("txt" + j, getTextureID(set.getTextureByIndex(j)));
+            	}
+            	float ymax = (float)((16.0 / blk.layerCount) * (i+1));
+            	// Handle normal cuboid
+	            Element elem = new Element();
+	            elem.from[0] = 0;
+	            elem.from[1] = 0;
+	            elem.from[2] = 0;
+	            elem.to[0] = 16;
+	            elem.to[1] = ymax;
+	            elem.to[2] = 16;
+	            // Add down face
+	            Face f = new Face();
+	            f.uv[0] = 0;
+	            f.uv[2] = 16;
+	            f.uv[1] = 0;
+	            f.uv[3] = 16;
+	            f.texture = "#txt0";
+	            f.cullface = "down";
+	            if (is_tinted) f.tintindex = 0;
+	            elem.faces.put("down", f);
+	            // Add up face
+	            f = new Face();
+	            f.uv[0] = 0;
+	            f.uv[2] = 16;
+	            f.uv[1] = 0;
+	            f.uv[3] = 16;
+	            f.texture = "#txt1";
+	            if (elem.to[1] >= 16) f.cullface = "up";
+	            if (is_tinted) f.tintindex = 0;
+	            elem.faces.put("up", f);
+	            // Add north face
+	            f = new Face();
+	            f.uv[0] = 0;
+	            f.uv[2] = 16;
+	            f.uv[1] = 16-ymax;
+	            f.uv[3] = 16;
+	            f.texture = "#txt2";
+	            f.cullface = "north";
+	            if (is_tinted) f.tintindex = 0;
+	            elem.faces.put("north", f);
+	            // Add south face
+	            f = new Face();
+	            f.uv[0] = 0;
+	            f.uv[2] = 16;
+	            f.uv[1] = 16-ymax;
+	            f.uv[3] = 16;
+	            f.texture = "#txt3";
+	            f.cullface = "south";
+	            if (is_tinted) f.tintindex = 0;
+	            elem.faces.put("south", f);
+	            // Add west face
+	            f = new Face();
+	            f.uv[0] = 0;
+	            f.uv[2] = 16;
+	            f.uv[1] = 16-ymax;
+	            f.uv[3] = 16;
+	            f.texture = "#txt4";
+	            f.cullface = "west";
+	            if (is_tinted) f.tintindex = 0;
+	            elem.faces.put("west", f);
+	            // Add eath face
+	            f = new Face();
+	            f.uv[0] = 0;
+	            f.uv[2] = 16;
+	            f.uv[1] = 16-ymax;
+	            f.uv[3] = 16;
+	            f.texture = "#txt5";
+	            f.cullface = "east";
+	            if (is_tinted) f.tintindex = 0;
+	            elem.faces.put("east", f);
+	            mod.elements.add(elem);
+	            this.writeBlockModelFile(getModelName("_" + (i+1), setidx), mod);
             }
-            float ymax = (float)((16.0 / blk.layerCount) * (i+1));
-            // Handle normal cuboid
-            Element elem = new Element();
-            elem.from[0] = 0;
-            elem.from[1] = 0;
-            elem.from[2] = 0;
-            elem.to[0] = 16;
-            elem.to[1] = ymax;
-            elem.to[2] = 16;
-            // Add down face
-            Face f = new Face();
-            f.uv[0] = 0;
-            f.uv[2] = 16;
-            f.uv[1] = 0;
-            f.uv[3] = 16;
-            f.texture = "#txt0";
-            f.cullface = "down";
-            if (is_tinted) f.tintindex = 0;
-            elem.faces.put("down", f);
-            // Add up face
-            f = new Face();
-            f.uv[0] = 0;
-            f.uv[2] = 16;
-            f.uv[1] = 0;
-            f.uv[3] = 16;
-            f.texture = "#txt1";
-            if (elem.to[1] >= 16) f.cullface = "up";
-            if (is_tinted) f.tintindex = 0;
-            elem.faces.put("up", f);
-            // Add north face
-            f = new Face();
-            f.uv[0] = 0;
-            f.uv[2] = 16;
-            f.uv[1] = 16-ymax;
-            f.uv[3] = 16;
-            f.texture = "#txt2";
-            f.cullface = "north";
-            if (is_tinted) f.tintindex = 0;
-            elem.faces.put("north", f);
-            // Add south face
-            f = new Face();
-            f.uv[0] = 0;
-            f.uv[2] = 16;
-            f.uv[1] = 16-ymax;
-            f.uv[3] = 16;
-            f.texture = "#txt3";
-            f.cullface = "south";
-            if (is_tinted) f.tintindex = 0;
-            elem.faces.put("south", f);
-            // Add west face
-            f = new Face();
-            f.uv[0] = 0;
-            f.uv[2] = 16;
-            f.uv[1] = 16-ymax;
-            f.uv[3] = 16;
-            f.texture = "#txt4";
-            f.cullface = "west";
-            if (is_tinted) f.tintindex = 0;
-            elem.faces.put("west", f);
-            // Add eath face
-            f = new Face();
-            f.uv[0] = 0;
-            f.uv[2] = 16;
-            f.uv[1] = 16-ymax;
-            f.uv[3] = 16;
-            f.texture = "#txt5";
-            f.cullface = "east";
-            if (is_tinted) f.tintindex = 0;
-            elem.faces.put("east", f);
-            mod.elements.add(elem);
-            
-            this.writeBlockModelFile(def.blockName + "_" + (i+1), mod);
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_1";
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_1", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Handle tint resources
         if (is_tinted) {
