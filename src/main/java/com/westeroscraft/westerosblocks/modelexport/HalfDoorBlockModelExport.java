@@ -116,5 +116,25 @@ public class HalfDoorBlockModelExport extends ModelExport {
         mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
         this.writeItemModelFile(def.blockName, mo);
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("facing", "$0");
+    	oldstate.put("hinge", "$1");
+    	oldstate.put("open", "$2");
+    	oldstate.put("powered", "$3");
+    	newstate.put("facing", "$0");
+    	newstate.put("hinge", "$1");
+    	newstate.put("open", "$2");
+    	newstate.put("powered", "$3");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
+
 }
 

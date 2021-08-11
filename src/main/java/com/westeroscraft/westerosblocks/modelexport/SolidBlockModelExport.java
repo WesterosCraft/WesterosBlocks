@@ -131,7 +131,7 @@ public class SolidBlockModelExport extends ModelExport {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
     	String oldVariant = def.getLegacyBlockVariant();
-    	addWorldConverterComment(def.legacyBlockID);
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);

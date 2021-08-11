@@ -128,5 +128,17 @@ public class CakeBlockModelExport extends ModelExport {
         mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_uneaten";
         this.writeItemModelFile(def.blockName, mo);
     }
-
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("bites","$0");
+    	newstate.put("bites","$0");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
 }

@@ -88,5 +88,20 @@ public class FurnaceBlockModelExport extends ModelExport {
             }
         }
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("facing", "$0");
+    	oldstate.put("lit", "$1");
+    	newstate.put("facing", "$0");
+    	newstate.put("lit", "$1");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
 
 }

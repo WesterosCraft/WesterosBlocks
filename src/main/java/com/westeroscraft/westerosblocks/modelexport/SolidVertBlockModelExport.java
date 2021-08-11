@@ -159,7 +159,7 @@ public class SolidVertBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	addWorldConverterComment(def.legacyBlockID + " (need vert CTM handler)");
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") (need vert CTM handler)");
     	String oldVariant = def.getLegacyBlockVariant();
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();

@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -43,4 +45,19 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
         
         this.writeBlockStateFile(def.blockName, so);
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	HashMap<String, String> oldstate = new HashMap<String, String>();
+    	HashMap<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("variant", oldVariant);
+    	oldstate.put("facing", "$0");
+    	newstate.put("facing", "$0");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
+
 }

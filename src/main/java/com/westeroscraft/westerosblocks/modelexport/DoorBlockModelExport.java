@@ -135,5 +135,26 @@ public class DoorBlockModelExport extends ModelExport {
         mo.textures.layer0 = uptxt;
         this.writeItemModelFile(def.blockName, mo);
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("facing", "$0");
+    	oldstate.put("half", "$1");
+    	oldstate.put("hinge", "$2");
+    	oldstate.put("open", "$3");
+    	oldstate.put("powered", "$4");
+    	newstate.put("facing", "$0");
+    	newstate.put("half", "$1");
+    	newstate.put("hinge", "$2");
+    	newstate.put("open", "$3");
+    	newstate.put("powered", "$4");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
 }
 

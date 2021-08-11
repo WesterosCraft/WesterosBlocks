@@ -182,4 +182,29 @@ public class SlabBlockModelExport extends ModelExport {
             }
         }
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("variant", oldVariant);
+    	newstate.put("waterlogged", "false");
+    	// Bottom half
+    	oldstate.put("half", "bottom");
+    	newstate.put("type", "bottom");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+       	// Top half
+       	oldstate.put("half", "top");
+    	newstate.put("type", "top");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+       	// Double slab
+    	oldstate.remove("half");
+    	newstate.put("type", "double");
+        addWorldConverterRecord(oldID + "_2", oldstate, def.getBlockName(), newstate);
+    }
+
 }

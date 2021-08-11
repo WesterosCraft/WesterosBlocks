@@ -93,5 +93,16 @@ public class CrossBlockModelExport extends ModelExport {
             }
         }
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	Map<String, String> oldstate = new HashMap<String, String>();
+    	oldstate.put("variant", oldVariant);
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), null);
+    }
 
 }
