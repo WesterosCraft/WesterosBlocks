@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.TreeSet;
+import java.util.LinkedList;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -24,19 +25,31 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public abstract class ModelExport {
-    private File destdir;
-    private File blockstatedir;
-    private File blockmodeldir;
-    private File itemmodeldir;
+    private static File destdir;
+    private static File blockstatedir;
+    private static File blockmodeldir;
+    private static File itemmodeldir;
+    private static boolean didInit = false;
     
+    public static void doInit(File dest) {
+    	if (!didInit) {
+            destdir = dest;
+            blockstatedir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/blockstates");
+            blockstatedir.mkdirs();
+            blockmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/block/generated");
+            blockmodeldir.mkdirs();
+            itemmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/item");
+            itemmodeldir.mkdirs();
+    		didInit = true;
+    	}
+    }
+    
+    protected final Block block;
+    protected final WesterosBlockDef def;
     public ModelExport(Block block, WesterosBlockDef def, File dest) {
-        this.destdir = dest;
-        this.blockstatedir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/blockstates");
-        this.blockstatedir.mkdirs();
-        this.blockmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/block/generated");
-        this.blockmodeldir.mkdirs();
-        this.itemmodeldir = new File(destdir, "assets/" + WesterosBlocks.MOD_ID + "/models/item");
-        this.itemmodeldir.mkdirs();
+    	doInit(dest);
+    	this.block = block;
+    	this.def = def;
     }
     public void writeBlockStateFile(String blockname, Object obj) throws IOException {
         File f = new File(blockstatedir, blockname + ".json");
@@ -87,6 +100,9 @@ public abstract class ModelExport {
     }
     public abstract void doBlockStateExport() throws IOException;
     public abstract void doModelExports() throws IOException;
+    public void doWorldConverterMigrate() throws IOException {
+    	WesterosBlocks.log.info("No WoeldConverter support for " + def.blockType);
+    }
 
     private static HashMap<String, String> nls = new HashMap<String, String>();
     public static void addNLSString(String id, String val) {
@@ -100,6 +116,53 @@ public abstract class ModelExport {
             fos = new FileWriter(new File(tgt, "en_us.json"));
             Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();                
             gson.toJson(nls, fos);
+        } finally {
+            if (fos != null) {
+                fos.close();
+            }
+        }
+    }
+    
+    private static LinkedList<String> wcList = new LinkedList<String>();
+    
+    public static void addWorldConverterRecord(String oldBlockName, Map<String, String> oldBlockState, String newBlockName, Map<String, String> newBlockState) {
+    	if (oldBlockName.indexOf(':') < 0) oldBlockName = WesterosBlocks.MOD_ID + ":" + oldBlockName;
+    	if (newBlockName.indexOf(':') < 0) newBlockName = WesterosBlocks.MOD_ID + ":" + newBlockName;
+    	StringBuilder sb = new StringBuilder(oldBlockName);
+    	if ((oldBlockState != null) && (oldBlockState.size() > 0)) {
+    		sb.append('[');
+    		boolean first = true;
+    		for (String key : oldBlockState.keySet()) {
+    			if (!first) sb.append(',');
+    			sb.append(key).append("=").append(oldBlockState.get(key));
+    			first = false;
+    		}
+    		sb.append(']');    		
+    	}
+    	sb.append(" -> ");
+    	sb.append(newBlockName);
+    	if ((newBlockState != null) && (newBlockState.size() > 0)) {
+    		sb.append('[');
+    		boolean first = true;
+    		for (String key : newBlockState.keySet()) {
+    			if (!first) sb.append(',');
+    			sb.append(key).append("=").append(newBlockState.get(key));
+    			first = false;
+    		}
+    		sb.append(']');    		
+    	}
+    	wcList.add(sb.toString());
+    }
+    public static void addWorldConverterComment(String txt) {
+    	wcList.add("# " + txt);
+    }
+    public static void writeWorldConverterFile(Path dest) throws IOException {
+        FileWriter fos = null;
+        try {
+            fos = new FileWriter(new File(dest.toFile(), "blocks_1.12-1.16__westerosblocks.txt"));
+            for (String line : wcList) {
+            	fos.write(line + "\r\n");
+            }
         } finally {
             if (fos != null) {
                 fos.close();

@@ -11,8 +11,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class TorchBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
-
     // Template objects for Gson export of block state
     public static class StateObject {
         public Map<String, Variant> variants = new HashMap<String, Variant>();
@@ -51,7 +49,6 @@ public class TorchBlockModelExport extends ModelExport {
     
     public TorchBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     

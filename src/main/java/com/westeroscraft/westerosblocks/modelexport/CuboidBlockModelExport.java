@@ -15,7 +15,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
 import net.minecraft.block.Block;
 
 public class CuboidBlockModelExport extends ModelExport {
-    protected WesterosBlockDef def;
     protected WCCuboidBlock blk;
 
     // Template objects for Gson export of block state
@@ -71,7 +70,6 @@ public class CuboidBlockModelExport extends ModelExport {
     
     public CuboidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.def = def;
         this.blk = (WCCuboidBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }

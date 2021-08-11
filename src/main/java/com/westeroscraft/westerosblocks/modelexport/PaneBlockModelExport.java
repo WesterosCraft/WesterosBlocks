@@ -12,7 +12,6 @@ import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import net.minecraft.block.Block;
 
 public class PaneBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
     private boolean legacy_model;
     private boolean bars_model;
 
@@ -74,7 +73,6 @@ public class PaneBlockModelExport extends ModelExport {
 
     public PaneBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
         legacy_model = ((WCPaneBlock) blk).isLegacyModel();
         bars_model = ((WCPaneBlock) blk).isBarsModel();

@@ -142,6 +142,7 @@ public class WesterosBlockDef {
 	
 	public String connectBy = "block";	// Connection logic - by block, material - only for CTM-like blocks
 	
+    public String legacyBlockID = null;
 	
 	public boolean isConnectMatch(BlockState bs1, BlockState bs2) {
 		if (this.connectBy.equals("material")) {
@@ -1260,4 +1261,16 @@ public class WesterosBlockDef {
 		}
 		return s;		
 	}
+	
+    public String getLegacyBlockName() {
+    	if (legacyBlockID == null) return null;
+    	String[] tok = legacyBlockID.split(":");
+    	return (tok.length >= 1) ? tok[0] : null;
+    }
+    public String getLegacyBlockVariant() {
+    	if (legacyBlockID == null) return null;
+    	String[] tok = legacyBlockID.split(":");
+    	return (tok.length >= 2) ? tok[1] : null;
+    }
+
 }

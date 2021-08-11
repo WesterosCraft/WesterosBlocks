@@ -15,8 +15,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import net.minecraft.block.Block;
 
 public class StairsBlockModelExport extends ModelExport {
-    private final WesterosBlockDef def;
-
     // Template objects for Gson export of block state
     public static class StateObject {
         public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
@@ -126,7 +124,6 @@ public class StairsBlockModelExport extends ModelExport {
 
     public StairsBlockModelExport(final Block blk, final WesterosBlockDef def, final File dest) {
         super(blk, def, dest);
-        this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 

@@ -11,8 +11,6 @@ import com.westeroscraft.westerosblocks.modelexport.FireBlockModelExport.Texture
 import net.minecraft.block.Block;
 
 public class VinesBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
-
     // Template objects for Gson export of block state
     public static class StateObject {
         public ArrayList<Conditions> multipart = new ArrayList<Conditions>();
@@ -61,7 +59,6 @@ public class VinesBlockModelExport extends ModelExport {
     
     public VinesBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     

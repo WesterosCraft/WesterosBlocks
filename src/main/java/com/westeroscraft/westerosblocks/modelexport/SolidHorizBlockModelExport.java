@@ -14,8 +14,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class SolidHorizBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
-
     // Template objects for Gson export of block state
     public static class StateObject {
         public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
@@ -41,7 +39,6 @@ public class SolidHorizBlockModelExport extends ModelExport {
     
     public SolidHorizBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
@@ -154,6 +151,18 @@ public class SolidHorizBlockModelExport extends ModelExport {
                 ModelExport.addTintingOverride(def.blockName, "", tintres);
             }
         }
+    }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	addWorldConverterComment(def.legacyBlockID + " (need horiz CTM handler)");
+    	String oldVariant = def.getLegacyBlockVariant();
+    	// BUild old variant map
+    	Map<String, String> oldstate = new HashMap<String, String>();
+    	oldstate.put("variant", oldVariant);
+    	//TODO: need to add handler to WorldConverter for the horizontal CTM states
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), null);
     }
 
 }

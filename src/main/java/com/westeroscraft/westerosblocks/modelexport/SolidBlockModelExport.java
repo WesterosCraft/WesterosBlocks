@@ -14,8 +14,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class SolidBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
-
     // Template objects for Gson export of block state
     public static class StateObject {
         public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
@@ -51,7 +49,6 @@ public class SolidBlockModelExport extends ModelExport {
     
     public SolidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
@@ -129,4 +126,15 @@ public class SolidBlockModelExport extends ModelExport {
         }
     }
 
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID);
+    	// BUild old variant map
+    	Map<String, String> oldstate = new HashMap<String, String>();
+    	oldstate.put("variant", oldVariant);
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), null);
+    }
 }

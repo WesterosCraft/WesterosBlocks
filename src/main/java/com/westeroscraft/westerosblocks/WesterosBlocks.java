@@ -136,6 +136,7 @@ public class WesterosBlocks {
 						try {
 							exp.doBlockStateExport();
 							exp.doModelExports();
+							exp.doWorldConverterMigrate();
 						} catch (IOException iox) {
 							log.warn(String.format("Error exporting block %s - %s", blk.getRegistryName(), iox));
 						}
@@ -151,6 +152,11 @@ public class WesterosBlocks {
 				ModelExport.writeTagDataFiles(modConfigPath);
 			} catch (IOException iox) {
 				log.warn(String.format("Error writing tag data files - %s", iox));
+			}
+			try {
+				ModelExport.writeWorldConverterFile(modConfigPath);
+			} catch (IOException iox) {
+				log.warn(String.format("Error writing WorldConfig mapping - %s", iox));
 			}
 			try {
 				ModelExport.writeDynmapOverridesFile(modConfigPath);

@@ -13,8 +13,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class LadderVertBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
-
     // Template objects for Gson export of block state
     public static class StateObject {
         public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
@@ -39,7 +37,6 @@ public class LadderVertBlockModelExport extends ModelExport {
     
     public LadderVertBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.def = def;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     

@@ -14,7 +14,6 @@ import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import net.minecraft.block.Block;
 
 public class LeavesBlockModelExport extends ModelExport {
-    private WesterosBlockDef def;
     private WCLeavesBlock blk;
 
     // Template objects for Gson export of block state
@@ -42,7 +41,6 @@ public class LeavesBlockModelExport extends ModelExport {
 
     public LeavesBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
-        this.def = def;
         this.blk = (WCLeavesBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
