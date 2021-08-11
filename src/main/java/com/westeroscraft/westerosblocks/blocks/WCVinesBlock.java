@@ -51,7 +51,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
     private WesterosBlockDef def;
     private boolean allow_unsupported = false;
     private boolean no_climb = false;
-    private boolean has_down = false;
+    public boolean has_down = false;
     public static final BooleanProperty DOWN = SixWayBlock.DOWN;
     private static final VoxelShape UP_AABB = Block.box(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     private static final VoxelShape DOWN_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);

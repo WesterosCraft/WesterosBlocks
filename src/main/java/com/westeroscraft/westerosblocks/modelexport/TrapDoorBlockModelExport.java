@@ -92,5 +92,25 @@ public class TrapDoorBlockModelExport extends ModelExport {
         mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_bottom";
         this.writeItemModelFile(def.blockName, mo);
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	HashMap<String, String> oldstate = new HashMap<String, String>();
+    	HashMap<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("variant", oldVariant);
+    	oldstate.put("facing", "$0");
+    	newstate.put("facing", "$0");
+    	oldstate.put("half", "$1");
+    	newstate.put("half", "$1");
+    	oldstate.put("open", "$2");
+    	newstate.put("open", "$2");
+    	newstate.put("powered", "false");
+    	newstate.put("waterlogged", "false");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
 
 }

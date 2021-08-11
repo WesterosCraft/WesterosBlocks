@@ -89,5 +89,28 @@ public class TorchBlockModelExport extends ModelExport {
         this.writeItemModelFile(def.blockName, mo);
 
     }
-
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	HashMap<String, String> oldstate = new HashMap<String, String>();
+    	HashMap<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("facing", "north");
+    	newstate.put("facing", "north");
+        addWorldConverterRecord(oldID, oldstate, "wall_" + def.getBlockName(), newstate);
+    	oldstate.put("facing", "south");
+    	newstate.put("facing", "south");
+        addWorldConverterRecord(oldID, oldstate, "wall_" + def.getBlockName(), newstate);
+    	oldstate.put("facing", "east");
+    	newstate.put("facing", "east");
+        addWorldConverterRecord(oldID, oldstate, "wall_" + def.getBlockName(), newstate);
+    	oldstate.put("facing", "west");
+    	newstate.put("facing", "west");
+        addWorldConverterRecord(oldID, oldstate, "wall_" + def.getBlockName(), newstate);
+    	oldstate.put("facing", "up");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), null);
+    }
 }

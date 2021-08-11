@@ -293,4 +293,23 @@ public class StairsBlockModelExport extends ModelExport {
             }
         }
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") (need stairs connection filter)");
+    	// BUild old variant map
+    	HashMap<String, String> oldstate = new HashMap<String, String>();
+    	HashMap<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("facing", "$0");
+    	newstate.put("facing", "$0");
+    	oldstate.put("half", "$1");
+    	newstate.put("half", "$1");
+    	oldstate.put("shape", "$2");
+    	newstate.put("shape", "$2");
+    	newstate.put("waterlogged", "false");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
+
 }

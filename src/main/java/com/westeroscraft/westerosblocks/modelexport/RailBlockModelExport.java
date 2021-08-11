@@ -106,5 +106,18 @@ public class RailBlockModelExport extends ModelExport {
         mo.textures.layer0 = txt_norm;
         this.writeItemModelFile(def.blockName, mo);
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	// BUild old variant map
+    	HashMap<String, String> oldstate = new HashMap<String, String>();
+    	HashMap<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("shape", "$0");
+    	newstate.put("shape", "$0");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
 
 }

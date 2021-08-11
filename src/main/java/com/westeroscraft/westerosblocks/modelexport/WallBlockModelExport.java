@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
@@ -250,6 +251,29 @@ public class WallBlockModelExport extends ModelExport {
                 ModelExport.addTintingOverride(def.getBlockName(), "", tintres);
             }
         }
+    }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") - need wall connection mapping");
+    	// BUild old variant map
+    	HashMap<String, String> oldstate = new HashMap<String, String>();
+    	HashMap<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("variant", "cobblestone");
+    	oldstate.put("variant2", oldVariant);
+    	oldstate.put("north", "$0");
+    	oldstate.put("east", "$1");
+    	oldstate.put("south", "$2");
+    	oldstate.put("west", "$3");
+    	oldstate.put("up", "$4");
+    	newstate.put("north", "$0");
+    	newstate.put("east", "$1");
+    	newstate.put("south", "$2");
+    	newstate.put("west", "$3");
+    	newstate.put("up", "$4");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
 }

@@ -3,10 +3,12 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.modelexport.FireBlockModelExport.TextureLayer0;
+import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
 
 import net.minecraft.block.Block;
 
@@ -57,8 +59,11 @@ public class VinesBlockModelExport extends ModelExport {
         public TextureLayer0 textures = new TextureLayer0();
     }
     
+    WCVinesBlock vblk;
+    
     public VinesBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
+        vblk = (WCVinesBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
@@ -111,4 +116,33 @@ public class VinesBlockModelExport extends ModelExport {
         mo.textures.layer0 = txt;
         this.writeItemModelFile(def.blockName, mo);
     }
+    @Override
+    public void doWorldConverterMigrate() throws IOException {
+    	String oldID = def.getLegacyBlockName();
+    	if (oldID == null) return;
+    	String oldVariant = def.getLegacyBlockVariant();
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") - need fence connection mapping");
+    	// BUild old variant map
+    	HashMap<String, String> oldstate = new HashMap<String, String>();
+    	HashMap<String, String> newstate = new HashMap<String, String>();
+    	oldstate.put("north", "$0");
+    	oldstate.put("east", "$1");
+    	oldstate.put("south", "$2");
+    	oldstate.put("west", "$3");
+    	oldstate.put("up", "$4");
+    	newstate.put("north", "$0");
+    	newstate.put("east", "$1");
+    	newstate.put("south", "$2");
+    	newstate.put("west", "$3");
+    	newstate.put("up", "$4");
+    	if (vblk.has_down) {
+        	oldstate.put("down", "$5");
+        	newstate.put("down", "$5");
+    	}
+    	else {
+        	newstate.put("down", "false");
+    	}
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    }
+
 }
