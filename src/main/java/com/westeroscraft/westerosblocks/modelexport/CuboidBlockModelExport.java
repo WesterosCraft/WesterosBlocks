@@ -324,8 +324,10 @@ public class CuboidBlockModelExport extends ModelExport {
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), null);
+    	newstate.put("waterlogged", "false");
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
 }

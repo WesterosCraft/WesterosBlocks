@@ -30,7 +30,24 @@ public abstract class ModelExport {
     private static File blockmodeldir;
     private static File itemmodeldir;
     private static boolean didInit = false;
-    
+
+    // Common state lists
+    public static final String[] FACING = {  "north", "south", "east", "west" };
+    public static final String[] BOOLEAN = {  "true", "false" };
+    public static final String[] TOPBOTTOM = {  "top", "bottom" };
+    public static final String[] UPPERLOWER = {  "upper", "lower" };
+    public static final String[] LEFTRIGHT = {  "left", "right" };
+    public static final String[] ALLFACING = {  "north", "south", "east", "west", "up", "down" };
+    public static final String[] UPFACING = {  "north", "south", "east", "west", "up" };
+    public static final String[] HEADFOOT = { "head", "foot" };
+    public static final String[] AGE15 = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15" };
+    public static final String[] DISTANCE7 = { "0", "1", "2", "3", "4", "5", "6", "7" };
+    public static final String[] BITES7 = { "0", "1", "2", "3", "4", "5", "6", "7" };
+    public static final String[] SHAPE5 = { "straight", "inner_right", "inner_left", "outer_right", "outer_left" };
+    public static final String[] AXIS = { "x", "y", "z" };
+    public static final String[] FACINGNE = {  "north", "east" };
+    public static final String[] RAILSHAPE = { "north_south", "east_west", "ascending_east", "ascending_west", "ascending_north", "ascending_south","south_east", "south_west", "north_west", "north_east" };
+
     public static void doInit(File dest) {
     	if (!didInit) {
             destdir = dest;
@@ -132,7 +149,8 @@ public abstract class ModelExport {
     	if ((oldBlockState != null) && (oldBlockState.size() > 0)) {
     		sb.append('[');
     		boolean first = true;
-    		for (String key : oldBlockState.keySet()) {
+    		TreeSet<String> keys = new TreeSet<String>(oldBlockState.keySet());
+    		for (String key : keys) {
     			if (!first) sb.append(',');
     			sb.append(key).append("=").append(oldBlockState.get(key));
     			first = false;
@@ -144,7 +162,8 @@ public abstract class ModelExport {
     	if ((newBlockState != null) && (newBlockState.size() > 0)) {
     		sb.append('[');
     		boolean first = true;
-    		for (String key : newBlockState.keySet()) {
+    		TreeSet<String> keys = new TreeSet<String>(newBlockState.keySet());
+    		for (String key : keys) {
     			if (!first) sb.append(',');
     			sb.append(key).append("=").append(newBlockState.get(key));
     			first = false;
@@ -154,7 +173,7 @@ public abstract class ModelExport {
     	wcList.add(sb.toString());
     }
     public static void addWorldConverterComment(String txt) {
-    	wcList.add("# " + txt);
+    	//wcList.add("# " + txt);
     }
     public static void writeWorldConverterFile(Path dest) throws IOException {
         FileWriter fos = null;

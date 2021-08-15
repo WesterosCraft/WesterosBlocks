@@ -210,19 +210,21 @@ public class FireBlockModelExport extends ModelExport {
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("north", "$0");
-    	oldstate.put("east", "$1");
-    	oldstate.put("south", "$2");
-    	oldstate.put("west", "$3");
-    	oldstate.put("up", "$4");
-    	oldstate.put("age", "$5");
-    	newstate.put("north", "$0");
-    	newstate.put("east", "$1");
-    	newstate.put("south", "$2");
-    	newstate.put("west", "$3");
-    	newstate.put("up", "$4");
-    	newstate.put("age", "$5");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	oldstate.put("north", "false");
+    	newstate.put("north", "false");
+    	oldstate.put("south", "false");
+    	newstate.put("south", "false");
+    	oldstate.put("east", "false");
+    	newstate.put("east", "false");
+    	oldstate.put("west", "false");
+    	newstate.put("west", "false");
+    	oldstate.put("up", "false");
+    	newstate.put("up", "false");
+		for (String age : AGE15) {
+	    	oldstate.put("age", age);
+	    	newstate.put("age", age);
+	        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	}
     }
 
 }

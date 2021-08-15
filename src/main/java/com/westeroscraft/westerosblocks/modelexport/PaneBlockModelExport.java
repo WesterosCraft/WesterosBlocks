@@ -219,15 +219,17 @@ public class PaneBlockModelExport extends ModelExport {
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
-    	oldstate.put("north", "$0");
-    	oldstate.put("east", "$1");
-    	oldstate.put("south", "$2");
-    	oldstate.put("west", "$3");
-    	newstate.put("north", "$0");
-    	newstate.put("east", "$1");
-    	newstate.put("south", "$2");
-    	newstate.put("west", "$3");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	// No metadata other than variant - need filter for all of this - just pass one combination
+    	oldstate.put("north", "false");
+    	newstate.put("north", "false");
+    	oldstate.put("south", "false");
+    	newstate.put("south", "false");
+    	oldstate.put("east", "false");
+    	newstate.put("east", "false");
+    	oldstate.put("west", "false");
+    	newstate.put("west", "false");
+    	newstate.put("waterlogged", "false");
+    	addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
 }

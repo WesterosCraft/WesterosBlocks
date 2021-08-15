@@ -163,9 +163,13 @@ public class SolidVertBlockModelExport extends ModelExport {
     	String oldVariant = def.getLegacyBlockVariant();
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
     	//TODO: need to add handler to WorldConverter for the vertical CTM states
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), null);
+    	newstate.put("down", "false");
+    	newstate.put("up", "false");    	
+    	
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
 }

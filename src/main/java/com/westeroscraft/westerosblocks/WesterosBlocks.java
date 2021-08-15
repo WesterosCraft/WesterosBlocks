@@ -36,6 +36,7 @@ import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -126,6 +127,10 @@ public class WesterosBlocks {
 		}
 		// Do blocks state export here
 		if (Config.blockDevMode.get()) {
+			// Clean up old export
+			deleteDirectory(new File(modConfigPath.toFile(), "assets"));
+			deleteDirectory(new File(modConfigPath.toFile(), "data"));
+			
 			for (int i = 0; i < customBlockDefs.length; i++) {
 				if (customBlockDefs[i] == null)
 					continue;
@@ -337,4 +342,15 @@ public class WesterosBlocks {
 	            ClientMessageHandler::onPWeatherMessageReceived,
 	            Optional.of(NetworkDirection.PLAY_TO_CLIENT));
 	  }
+    
+    // Directory tree delete
+    public static boolean deleteDirectory(File directoryToBeDeleted) {
+        File[] allContents = directoryToBeDeleted.listFiles();
+        if (allContents != null) {
+            for (File file : allContents) {
+                deleteDirectory(file);
+            }
+        }
+        return directoryToBeDeleted.delete();
+    }
 }

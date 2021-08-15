@@ -115,9 +115,11 @@ public class RailBlockModelExport extends ModelExport {
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("shape", "$0");
-    	newstate.put("shape", "$0");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	for (String railshape : RAILSHAPE) {
+    		oldstate.put("shape", railshape);
+    		newstate.put("shape", railshape);
+    		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	}
     }
 
 }

@@ -97,11 +97,16 @@ public class FurnaceBlockModelExport extends ModelExport {
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("facing", "$0");
-    	oldstate.put("lit", "$1");
-    	newstate.put("facing", "$0");
-    	newstate.put("lit", "$1");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	oldstate.put("variant", oldVariant);
+    	for (String facing : FACING) {
+        	oldstate.put("facing", facing);
+        	newstate.put("facing", facing);
+    		for (String lit : BOOLEAN) {
+    	    	oldstate.put("lit", lit);
+    	    	newstate.put("lit", lit);
+    	        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);    			
+    		}
+    	}
     }
 
 }

@@ -302,14 +302,22 @@ public class StairsBlockModelExport extends ModelExport {
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("facing", "$0");
-    	newstate.put("facing", "$0");
-    	oldstate.put("half", "$1");
-    	newstate.put("half", "$1");
-    	oldstate.put("shape", "$2");
-    	newstate.put("shape", "$2");
     	newstate.put("waterlogged", "false");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	for (String facing : FACING) {
+        	oldstate.put("facing", facing);
+        	newstate.put("facing", facing);
+    		for (String half : TOPBOTTOM) {
+    	    	oldstate.put("half", half);
+    	    	newstate.put("half", half);
+    			//for (String shape : SHAPE5) {
+    	    	{
+    	    		String shape = "straight";	// This needs to be handled by filter - WorldConverter doesn't like duplicate meta values in mapping
+    		    	oldstate.put("shape", shape);
+    		    	newstate.put("shape", shape);
+    		        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);    				
+    			}
+    		}
+    	}
     }
 
 }

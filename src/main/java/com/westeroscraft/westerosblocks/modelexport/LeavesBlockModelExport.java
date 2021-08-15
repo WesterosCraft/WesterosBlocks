@@ -151,11 +151,12 @@ public class LeavesBlockModelExport extends ModelExport {
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
-    	oldstate.put("check_decay", "false");
-    	newstate.put("distance", "$0");
-    	oldstate.put("decayable", "$1");
-    	newstate.put("distance", "7");
-       	newstate.put("persistent", "true");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	oldstate.put("decayable", "false");
+    	for (String check_decay : BOOLEAN) {
+        	oldstate.put("check_decay", check_decay);
+           	newstate.put("persistent", check_decay.equals("true") ? "false" : "true");
+        	newstate.put("distance", "7");           		
+            addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	}
     }
 }

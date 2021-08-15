@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
-
 import net.minecraft.block.Block;
 
 public class DoorBlockModelExport extends ModelExport {
@@ -140,21 +139,42 @@ public class DoorBlockModelExport extends ModelExport {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
     	String oldVariant = def.getLegacyBlockVariant();
-    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") (needs filter)");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("facing", "$0");
-    	oldstate.put("half", "$1");
-    	oldstate.put("hinge", "$2");
-    	oldstate.put("open", "$3");
-    	oldstate.put("powered", "$4");
-    	newstate.put("facing", "$0");
-    	newstate.put("half", "$1");
-    	newstate.put("hinge", "$2");
-    	newstate.put("open", "$3");
-    	newstate.put("powered", "$4");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	// Split state - upper has HINGE and POWEED
+    	oldstate.put("half", "upper");
+    	newstate.put("half", "upper");
+    	oldstate.put("facing", "north");
+    	newstate.put("facing", "north");
+    	oldstate.put("open", "false");
+    	newstate.put("open", "false");
+    	for (String hinge : LEFTRIGHT) {
+        	oldstate.put("hinge", hinge);
+        	newstate.put("hinge", hinge);
+        	for (String powered : BOOLEAN) {
+            	oldstate.put("powered", powered);
+            	newstate.put("powered", powered);
+                addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);                    		
+        	}
+    	}
+    	// lower has FACING and OPEN
+    	oldstate.put("half", "lower");
+    	newstate.put("half", "lower");
+    	oldstate.put("powered", "false");
+    	newstate.put("powered", "false");
+    	oldstate.put("hinge", "left");
+    	newstate.put("hinge", "left");
+    	for (String facing : FACING) {
+    		oldstate.put("facing", facing); 
+        	newstate.put("facing", facing);
+        	for (String open : BOOLEAN) {
+            	oldstate.put("open", open);
+            	newstate.put("open", open);
+                addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);                    		
+        	}
+    	}
     }
 }
 

@@ -97,18 +97,20 @@ public class BedBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
-    	oldstate.put("facing","$0");
-    	newstate.put("facing","$0");
-    	oldstate.put("occupied","$1");
-    	newstate.put("occupied","$1");
-    	oldstate.put("part","$2");
-    	newstate.put("part","$2");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	oldstate.put("occupied","false");
+    	newstate.put("occupied","false");
+    	for (String facing : FACING) {
+	    	oldstate.put("facing",facing);
+	    	newstate.put("facing",facing);
+	    	for (String part : HEADFOOT) {
+		    	oldstate.put("part",part);
+		    	newstate.put("part",part);
+		        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    		}
+    	}
     }
 }

@@ -263,17 +263,18 @@ public class WallBlockModelExport extends ModelExport {
     	HashMap<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", "cobblestone");
     	oldstate.put("variant2", oldVariant);
-    	oldstate.put("north", "$0");
-    	oldstate.put("east", "$1");
-    	oldstate.put("south", "$2");
-    	oldstate.put("west", "$3");
-    	oldstate.put("up", "$4");
-    	newstate.put("north", "$0");
-    	newstate.put("east", "$1");
-    	newstate.put("south", "$2");
-    	newstate.put("west", "$3");
-    	newstate.put("up", "$4");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	// No metadata other than variant - need filter for all of this - just pass one combination
+    	oldstate.put("north", "false");
+    	newstate.put("north", "none");
+    	oldstate.put("south", "false");
+    	newstate.put("south", "none");
+    	oldstate.put("east", "false");
+    	newstate.put("east", "none");
+    	oldstate.put("west", "false");
+    	newstate.put("west", "none");
+    	oldstate.put("up", "false");
+    	newstate.put("up", "false");
+    	newstate.put("waterlogged", "false");
+		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
-
 }

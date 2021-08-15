@@ -137,8 +137,10 @@ public class CakeBlockModelExport extends ModelExport {
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("bites","$0");
-    	newstate.put("bites","$0");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	for (String bites : BITES7) {
+    		oldstate.put("bites", bites);
+    		newstate.put("bites", bites);
+    		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	}
     }
 }

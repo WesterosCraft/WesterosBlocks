@@ -96,21 +96,25 @@ public class TrapDoorBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
-    	oldstate.put("facing", "$0");
-    	newstate.put("facing", "$0");
-    	oldstate.put("half", "$1");
-    	newstate.put("half", "$1");
-    	oldstate.put("open", "$2");
-    	newstate.put("open", "$2");
     	newstate.put("powered", "false");
     	newstate.put("waterlogged", "false");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	for (String facing : FACING) {
+    		oldstate.put("facing", facing); 
+        	newstate.put("facing", facing);
+        	for (String open : BOOLEAN) {
+            	oldstate.put("open", open);
+            	newstate.put("open", open);
+            	for (String half : TOPBOTTOM) {
+                	oldstate.put("half", half);
+                	newstate.put("half", half);
+                	addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);            		
+            	}
+        	}
+    	}
     }
 
 }

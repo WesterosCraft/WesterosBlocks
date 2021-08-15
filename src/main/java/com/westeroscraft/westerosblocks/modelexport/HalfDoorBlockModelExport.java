@@ -125,16 +125,20 @@ public class HalfDoorBlockModelExport extends ModelExport {
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("facing", "$0");
-    	oldstate.put("hinge", "$1");
-    	oldstate.put("open", "$2");
-    	oldstate.put("powered", "$3");
-    	newstate.put("facing", "$0");
-    	newstate.put("hinge", "$1");
-    	newstate.put("open", "$2");
-    	newstate.put("powered", "$3");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	newstate.put("powered", "false");
+    	for (String facing : FACING) {
+    		oldstate.put("facing", facing); 
+        	newstate.put("facing", facing);
+        	for (String hinge : LEFTRIGHT) {
+            	oldstate.put("hinge", hinge);
+            	newstate.put("hinge", hinge);
+            	for (String open : BOOLEAN) {
+                	oldstate.put("open", open);
+                	newstate.put("open", open);
+                    addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);                    		
+            	}
+        	}
+    	}
     }
-
 }
 

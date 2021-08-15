@@ -116,9 +116,14 @@ public class LogBlockModelExport extends ModelExport {
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
-    	oldstate.put("axis", "$0");
-    	newstate.put("axis", "$0");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	for (String axis : AXIS) {
+    		oldstate.put("axis", axis);
+    		newstate.put("axis", axis);
+    		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	}
+		oldstate.put("axis", "none");
+		newstate.put("axis", "y");
+		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
 }

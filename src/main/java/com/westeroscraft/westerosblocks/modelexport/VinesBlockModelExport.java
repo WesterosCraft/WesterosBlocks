@@ -121,28 +121,37 @@ public class VinesBlockModelExport extends ModelExport {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
     	String oldVariant = def.getLegacyBlockVariant();
-    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") - need fence connection mapping");
+    	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") - need vine connection mapping");
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("north", "$0");
-    	oldstate.put("east", "$1");
-    	oldstate.put("south", "$2");
-    	oldstate.put("west", "$3");
-    	oldstate.put("up", "$4");
-    	newstate.put("north", "$0");
-    	newstate.put("east", "$1");
-    	newstate.put("south", "$2");
-    	newstate.put("west", "$3");
-    	newstate.put("up", "$4");
-    	if (vblk.has_down) {
-        	oldstate.put("down", "$5");
-        	newstate.put("down", "$5");
+    	oldstate.put("up", "false");
+    	newstate.put("up", "false");
+    	for (String north : BOOLEAN) {
+        	oldstate.put("north", north);
+        	newstate.put("north", north);
+    		for (String south : BOOLEAN) {
+    	    	oldstate.put("south", south);
+    	    	newstate.put("south", south);
+    			for (String east : BOOLEAN) {
+    		    	oldstate.put("east", east);
+    		    	newstate.put("east", east);
+    				for (String west : BOOLEAN) {
+    			    	oldstate.put("west", west);
+    			    	newstate.put("west", west);
+    			    	if (north.equals("false") && south.equals("false") && east.equals("false") && west.equals("false") && vblk.has_down) {
+    			        	oldstate.put("down", "false");	// We want to include default state, which maps this way for 1.12.2
+    			        	newstate.put("down", "true");
+    			    	}
+    			    	else {
+    			        	oldstate.put("down", "false");
+    			        	newstate.put("down", "false");    			    		
+    			    	}
+			    		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    				}
+    			}
+    		}
     	}
-    	else {
-        	newstate.put("down", "false");
-    	}
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
 }

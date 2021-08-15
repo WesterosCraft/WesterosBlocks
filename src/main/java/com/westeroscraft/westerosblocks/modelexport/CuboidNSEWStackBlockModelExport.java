@@ -156,14 +156,19 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
-    	oldstate.put("facing", "$0");
-    	newstate.put("facing", "$0");
-    	oldstate.put("top", "true");
-    	newstate.put("half", "upper");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
-    	oldstate.put("top", "false");
-    	newstate.put("half", "lower");
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	newstate.put("waterlogged", "false");
+    	for (String facing : FACING) {
+    		oldstate.put("facing", facing);
+    		newstate.put("facing", facing);
+    		
+    		oldstate.put("top", "true");
+    		newstate.put("half", "upper");
+    		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	
+			oldstate.put("top", "false");
+			newstate.put("half", "lower");
+			addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+    	}
     }
 
 }
