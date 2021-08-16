@@ -194,6 +194,7 @@ public class LayerBlockModelExport extends ModelExport {
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
+    	newstate.put("waterlogged", "false");
         for (int i = 1; i <= blk.layerCount; i++) {
         	oldstate.put("layers", Integer.toString(i));
         	newstate.put("layers", Integer.toString(i));
