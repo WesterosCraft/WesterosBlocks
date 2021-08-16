@@ -90,31 +90,31 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_,
-			ISelectionContext p_220053_4_) {
-		return SHAPE_BY_LAYER[p_220053_1_.getValue(LAYERS)];
+	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos,
+			ISelectionContext ctx) {
+		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
 	}
 
 	@Override
-	public VoxelShape getCollisionShape(BlockState p_220071_1_, IBlockReader p_220071_2_, BlockPos p_220071_3_,
-			ISelectionContext p_220071_4_) {
-		return SHAPE_BY_LAYER[p_220071_1_.getValue(LAYERS) - 1];
+	public VoxelShape getCollisionShape(BlockState state_, IBlockReader world, BlockPos pos,
+			ISelectionContext ctx) {
+		return SHAPE_BY_LAYER[state_.getValue(LAYERS) - 1];
 	}
 
 	@Override
-	public VoxelShape getBlockSupportShape(BlockState p_230335_1_, IBlockReader p_230335_2_, BlockPos p_230335_3_) {
-		return SHAPE_BY_LAYER[p_230335_1_.getValue(LAYERS)];
+	public VoxelShape getBlockSupportShape(BlockState state, IBlockReader world, BlockPos pos) {
+		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
 	}
 
 	@Override
-	public VoxelShape getVisualShape(BlockState p_230322_1_, IBlockReader p_230322_2_, BlockPos p_230322_3_,
-			ISelectionContext p_230322_4_) {
-		return SHAPE_BY_LAYER[p_230322_1_.getValue(LAYERS)];
+	public VoxelShape getVisualShape(BlockState state, IBlockReader world, BlockPos pos,
+			ISelectionContext ctx) {
+		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
 	}
 
 	@Override
-	public boolean useShapeForLightOcclusion(BlockState p_220074_1_) {
-		return true;
+	public boolean useShapeForLightOcclusion(BlockState state) {
+		return (state.getValue(LAYERS) < layerCount);
 	}
 
 	@Override
