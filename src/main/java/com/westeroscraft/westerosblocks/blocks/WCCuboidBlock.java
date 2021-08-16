@@ -13,6 +13,7 @@ import org.dynmap.modsupport.TransparencyMode;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.IWaterLoggable;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItemUseContext;
@@ -32,7 +33,7 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 
-public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
+public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport, IWaterLoggable {
 
     public static class Factory extends WesterosBlockFactory {
         @Override

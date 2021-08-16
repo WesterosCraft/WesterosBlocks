@@ -141,14 +141,15 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 	public BlockState getStateForPlacement(BlockItemUseContext itemContext) {
 		BlockPos blockpos = itemContext.getClickedPos();
 		BlockState blockstate = itemContext.getLevel().getBlockState(blockpos);
+		FluidState fluidstate = itemContext.getLevel().getFluidState(blockpos);
 		if (blockstate.is(this)) {
 			int i = blockstate.getValue(LAYERS);
-			FluidState fluidstate = itemContext.getLevel().getFluidState(blockpos);
 			int newCount = Math.min(layerCount, i + 1);
-			return blockstate.setValue(LAYERS, Integer.valueOf(newCount)).setValue(WATERLOGGED,
-					Boolean.valueOf((newCount < layerCount) && (fluidstate.getType() == Fluids.WATER)));
-		} else {
-			return super.getStateForPlacement(itemContext);
+			return blockstate.setValue(LAYERS, Integer.valueOf(newCount)).
+					setValue(WATERLOGGED, Boolean.valueOf((newCount < layerCount) && fluidstate.is(FluidTags.WATER)));
+		}
+		else {
+			return this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
 		}
 	}
 
