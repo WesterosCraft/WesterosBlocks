@@ -75,6 +75,8 @@ public class WesterosBlocks {
 	public static Block[] customBlocks = new Block[0];
 
 	public static Path modConfigPath;
+	
+	public static WesterosBlockColorMap[] colorMaps;
 
 	public WesterosBlocks() {
 		// Register the doClientStuff method for modloading
@@ -291,6 +293,7 @@ public class WesterosBlocks {
 				log.info(type + ": " + countsByType.get(type) + " blocks");				
 			}
 			log.info("TOTAL: " + blockcount + " blocks");
+			colorMaps = customConfig.colorMaps;
 		}
 	}
 

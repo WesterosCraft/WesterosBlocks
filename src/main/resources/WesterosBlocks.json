@@ -1,4 +1,10 @@
 {
+    "colorMaps": [
+    	{
+    		"blockNames": [ "minecraft:clay" ],
+            "colorMult": "textures/colormap/clay"
+        }
+    ],	
     "blocks": [
         {
             "blockName": "oxidized_iron_block",

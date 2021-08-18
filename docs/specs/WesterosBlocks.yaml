@@ -11,6 +11,16 @@ components:
       type: object
       description: Base object for whole WesterosBlocks.json file
       properties:
+        colorMaps:
+          type: array
+          description: |-
+            Array of color maps to inject as tintindex-usable
+            color tints for blocks outside of WesterosBlocks, 
+            such as vanilla blocks.  Injecting the color map
+            should be coordinated with a custom model to make
+            use of the textureindex.
+          items:
+            $ref: "#/components/schemas/ColorMap"
         blocks:
           type: array
           description: List of block definitions
@@ -1726,4 +1736,20 @@ components:
   
         - block: (default) Match on the block name/type
         - material: Match on the block material 
+    ColorMap:
+      type: object
+      description: |-
+        Each record describes a specific color multiplier map
+        (whether constant or a file), and a list of block names
+        to associate with them.
+      properties:
+        blockNames:
+          type: array
+          items:
+            type: string
+          description: |-
+            List of namespaced block names (e.g. minecraft:clay)
+            to use the given color map
+        colorMult:
+          $ref: "#/components/schemas/colorMult"
             

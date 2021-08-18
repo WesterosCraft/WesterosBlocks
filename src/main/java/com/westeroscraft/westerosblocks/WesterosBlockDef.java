@@ -1035,7 +1035,7 @@ public class WesterosBlockDef {
 	}
 
 	// Get color muliplier
-	public ColorMultHandler getColorHandler(String hnd) {
+	public static ColorMultHandler getColorHandler(String hnd, String blockName) {
 		String hndid = hnd.toUpperCase();
 		ColorMultHandler cmh = colorMultTable.get(hndid);
 		if (cmh == null) {
@@ -1236,11 +1236,22 @@ public class WesterosBlockDef {
 		if (this.isTinted()) {
 			BlockColors blockColors = Minecraft.getInstance().getBlockColors();
 			ItemColors itemColors = Minecraft.getInstance().getItemColors();
-			ColorMultHandler handler = getColorHandler(this.colorMult);
+			ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);
 			blockColors.register((BlockState state, IBlockDisplayReader world, BlockPos pos, int txtindx) -> handler
 					.getColor(state, world, pos, txtindx), blk);
 			itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 		}
+	}
+
+	// Handle registration of tint handling and other client rendering
+	@OnlyIn(Dist.CLIENT)
+	public static void registerVanillaColorMap(String blockName, Block blk, String colorMult) {
+		BlockColors blockColors = Minecraft.getInstance().getBlockColors();
+		ItemColors itemColors = Minecraft.getInstance().getItemColors();
+		ColorMultHandler handler = getColorHandler(colorMult, blockName);
+		blockColors.register((BlockState state, IBlockDisplayReader world, BlockPos pos, int txtindx) -> handler
+				.getColor(state, world, pos, txtindx), blk);
+		itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 	}
 
 	public void registerSoundEvents() {
