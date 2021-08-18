@@ -1,8 +1,56 @@
 {
     "colorMaps": [
     	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/stone"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/lightgreystone"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/stonebrick"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/reed"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/cobblestone"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/furnace"
+        },
+    	{
     		"blockNames": [ "minecraft:clay" ],
             "colorMult": "textures/colormap/clay"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/sand"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/foliagejungle"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/foliageoak"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/foliagevine"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/brick"
+        },
+    	{
+    		"blockNames": [ ],
+            "colorMult": "textures/colormap/ice"
         }
     ],	
     "blocks": [
