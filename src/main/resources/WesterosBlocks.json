@@ -1,57 +1,104 @@
 {
     "colorMaps": [
     	{
-    		"blockNames": [ ],
+    		"blockNames": [ 
+    			"minecraft:stone", 
+    			"minecraft:stone_pressure_plate", 
+    			"minecraft:stone_button", 
+    			"minecraft:iron_ore", 
+    			"minecraft:gold_ore"
+			],
             "colorMult": "textures/colormap/stone"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+    			"minecraft:terracotta"
+    		 ],
             "colorMult": "textures/colormap/lightgreystone"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+    			"minecraft:stone_brick_slab", 
+    			"minecraft:stone_bricks", 
+    			"minecraft:mossy_stone_bricks", 
+    			"minecraft:cracked_stone_bricks",
+    			"minecraft:stone_brick_stairs"
+    		],
             "colorMult": "textures/colormap/stonebrick"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+	    		"minecraft:sugar_cane"
+    		],
             "colorMult": "textures/colormap/reed"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+	    		"minecraft:cobblestone",
+	    		"minecraft:stone_stairs",
+	    		"minecraft:cobblestone_slab",
+	    		"minecraft:cobblestone_wall",
+	    		"minecraft:mossy_cobblestone",
+	    		"minecraft:lever"
+    		],
             "colorMult": "textures/colormap/cobblestone"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+    			"minecraft:furnace"
+    		],
             "colorMult": "textures/colormap/furnace"
         },
     	{
-    		"blockNames": [ "minecraft:clay" ],
+    		"blockNames": [
+    			"minecraft:clay"
+			],
             "colorMult": "textures/colormap/clay"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+    			"minecraft:sand"
+    		],
             "colorMult": "textures/colormap/sand"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+    			"minecraft:jungle_leaves"
+    		],
             "colorMult": "textures/colormap/foliagejungle"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+    			"minecraft:oak_leaves"
+			],
             "colorMult": "textures/colormap/foliageoak"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+	    		"minecraft:vine"
+    		],
             "colorMult": "textures/colormap/foliagevine"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+				"minecraft:bricks",
+				"minecraft:brick_slab",
+				"minecraft:brick_stairs"
+    		],
             "colorMult": "textures/colormap/brick"
         },
     	{
-    		"blockNames": [ ],
+    		"blockNames": [
+	    		"minecraft:ice"
+    		],
             "colorMult": "textures/colormap/ice"
-        }
+        },
+        {
+        	"blockNames": [
+        		"minecraft:lily_pad"
+        	],
+        	"colorMult": "#FFFFFF"
+        }        
     ],	
     "blocks": [
         {

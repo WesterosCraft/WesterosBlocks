@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/tinted/button_pressed",
+  "textures": {
+    "texture": "westerosblocks:blocks/stone/stone"
+  }
+}
