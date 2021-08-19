@@ -1557,6 +1557,17 @@ components:
                   If the list is shorter than 3, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "size": Height of the wall side model.  Values include:
+                
+                   - "normal": default (14/16ths of block)
+                   - "short" : short (13/16ths of block)
+                  
     beacon:
       title: blockType='beacon'
       allOf:

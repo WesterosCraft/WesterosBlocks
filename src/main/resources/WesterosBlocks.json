@@ -1578,6 +1578,7 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Marble Wall",
+            "type": "size:short",
             "textures": [
                 "stone_wall_block_0/wall_marble_top",
                 "stone_wall_block_0/wall_marble_top",
@@ -1600,6 +1601,7 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Thin Marble Column",
+            "type": "size:short",
             "textures": [
                 "stone_wall_block_0/wall_marble_top",
                 "stone_wall_block_0/wall_marble_top",

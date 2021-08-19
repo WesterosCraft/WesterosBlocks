@@ -23,10 +23,21 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, We
         }
     }
     private WesterosBlockDef def;
-    
+    public static enum WallSize {
+    	NORMAL,	// 14/16 high wall
+    	SHORT	// 13/16 high wall
+    };
+    public final WallSize wallSize;	// "normal", or "short"
     protected WCWallBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
+        String height = def.getTypeValue("size", "normal");
+        if (height.equals("short")) { 
+        	wallSize = WallSize.SHORT;
+        }
+        else {
+        	wallSize = WallSize.NORMAL;
+        }
     }
 
     @Override

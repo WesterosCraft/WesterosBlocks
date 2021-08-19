@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 
 import net.minecraft.block.Block;
 
@@ -57,8 +58,11 @@ public class WallBlockModelExport extends ModelExport {
         public Texture textures = new Texture();
     }
 
+    private final WCWallBlock wblk;
+    
     public WallBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
+        wblk = (WCWallBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     private String getModelName(String ext, int setidx) {
@@ -225,7 +229,14 @@ public class WallBlockModelExport extends ModelExport {
         	smod.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
         	smod.textures.top = getTextureID(set.getTextureByIndex(1)); 
         	smod.textures.side = getTextureID(set.getTextureByIndex(2)); 
-        	if (isTinted) smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_side";
+        	if (isTinted) {
+        		smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_side" +
+        			((wblk.wallSize == WCWallBlock.WallSize.SHORT) ? "_2" : "");
+        	}
+        	else {
+        		smod.parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_side" + 
+        			((wblk.wallSize == WCWallBlock.WallSize.SHORT) ? "_2" : "");        		
+        	}
         	this.writeBlockModelFile(getModelName("side", setidx), smod);
         	// Tall side model
         	ModelObjectSide tsmod = new ModelObjectSide();
