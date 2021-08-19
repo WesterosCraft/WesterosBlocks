@@ -2,7 +2,7 @@
     "textures": {
         "particle": "#bedtop",
         "top": "#bedtop",
-        "bottom": "minecraft:block/oak_planks",
+        "bottom": "blocks/planks_oak",
         "end": "#bedend",
         "side": "#bedside"
     },
@@ -16,10 +16,10 @@
                 "east":  { "uv": [ 16,  7,  0, 16 ], "texture": "#side" }
             }
         },
-        {   "from": [ 0, 0, 0 ],
-            "to": [ 16, 0, 16 ],
+        {   "from": [ 0, 8, 0 ],
+            "to": [ 16, 8, 16 ],
             "faces": {
-                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom" }
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "rotation": 270 }
             }
         }
     ]

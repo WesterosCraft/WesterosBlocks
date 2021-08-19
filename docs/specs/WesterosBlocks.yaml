@@ -851,6 +851,17 @@ components:
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined toknes include:
+                
+                - "shape": Shape of the bed model.  Values include:
+                
+                   - "normal": default bed
+                   - "raised": raised noble bed
+                   - "hammock": hammock bed                  
     cake:
       title: blockType='cake'
       allOf:

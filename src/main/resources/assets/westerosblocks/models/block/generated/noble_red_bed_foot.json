@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/bed_foot",
+  "parent": "westerosblocks:block/untinted/bed_raised_foot",
   "textures": {
     "bedtop": "westerosblocks:blocks/bed_block_0/bed_noble_red_1",
     "bedend": "westerosblocks:blocks/bed_block_0/bed_noble_red_5",

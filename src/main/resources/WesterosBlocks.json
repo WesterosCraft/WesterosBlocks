@@ -10900,6 +10900,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Nights Watch Bed",
+            "type": "shape:normal",
             "itemTexture": "bed_block_0/bed_night_watch_1",
             "textures": [
                 "bed_block_0/bed_night_watch_0",
@@ -10918,6 +10919,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Northern Bed",
+            "type": "shape:normal",
             "itemTexture": "bed_block_0/bed_north_1",
             "textures": [
                 "bed_block_0/bed_north_0",
@@ -10936,6 +10938,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Straw Bed",
+            "type": "shape:normal",
             "itemTexture": "bed_block_0/bed_straw_1",
             "textures": [
                 "bed_block_0/bed_straw_0",
@@ -10954,6 +10957,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Itchy Straw Bed",
+            "type": "shape:normal",
             "itemTexture": "bed_block_0/bed_straw_itchy_1",
             "textures": [
                 "bed_block_0/bed_straw_itchy_0",
@@ -10972,6 +10976,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Noble Blue Bed",
+            "type": "shape:raised",
             "itemTexture": "bed_block_0/bed_noble_blue_1",
             "textures": [
                 "bed_block_0/bed_noble_blue_0",
@@ -10990,6 +10995,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Noble Red Bed",
+            "type": "shape:raised",
             "itemTexture": "bed_block_0/bed_noble_red_1",
             "textures": [
                 "bed_block_0/bed_noble_red_0",
@@ -11008,6 +11014,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Pale Red Bed",
+            "type": "shape:normal",
             "itemTexture": "bed_block_0/bed_patchy_red_1",
             "textures": [
                 "bed_block_0/bed_patchy_red_0",
@@ -11026,6 +11033,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Pale Green Bed",
+            "type": "shape:normal",
             "itemTexture": "bed_block_0/bed_patchy_green_1",
             "textures": [
                 "bed_block_0/bed_patchy_green_0",
@@ -11044,6 +11052,7 @@
             "blockType": "bed",
             "creativeTab": "WesterosDeco",
             "label": "Hammock",
+            "type": "shape:hammock",
             "itemTexture": "bed_block_0/bed_hammock_1",
             "textures": [
                 "bed_block_0/bed_hammock_0",

@@ -48,10 +48,21 @@ public class WCBedBlock extends BedBlock implements WesterosBlockLifecycle, West
     }
     
     private WesterosBlockDef def;
+    public static enum BedType {
+    	NORMAL, RAISED, HAMMOCK
+    };
+    public final BedType bedType;
     
     protected WCBedBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(DyeColor.RED, props);
         this.def = def;
+        String type = def.getTypeValue("shape", "normal");
+        if (type.equals("raised"))
+        	bedType = BedType.RAISED;
+        else if (type.equals("hammock"))
+        	bedType = BedType.HAMMOCK;
+        else
+        	bedType = BedType.NORMAL;        
     }
 
     @Override

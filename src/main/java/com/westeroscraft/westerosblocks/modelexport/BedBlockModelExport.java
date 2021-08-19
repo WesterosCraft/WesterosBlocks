@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 
 import net.minecraft.block.Block;
 
@@ -47,8 +48,11 @@ public class BedBlockModelExport extends ModelExport {
         public Texture textures = new Texture();
     }
     
+    private WCBedBlock bblk;
+    
     public BedBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
+        bblk = (WCBedBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
@@ -69,14 +73,25 @@ public class BedBlockModelExport extends ModelExport {
         this.writeBlockStateFile(def.blockName, so);
     }
 
+    private String getBaseModel(boolean head) {
+    	if (bblk.bedType == WCBedBlock.BedType.RAISED)
+    		return WesterosBlocks.MOD_ID + ":block/untinted/bed_raised" + (head ? "_head" : "_foot");
+    	else if (bblk.bedType == WCBedBlock.BedType.HAMMOCK)
+    		return WesterosBlocks.MOD_ID + ":block/untinted/bed_hammock" + (head ? "_head" : "_foot");
+    	else
+    		return WesterosBlocks.MOD_ID + ":block/untinted/bed" + (head ? "_head" : "_foot");    		
+    }
+    
     @Override
     public void doModelExports() throws IOException {
         ModelObjectBedHead mod = new ModelObjectBedHead();
+        mod.parent = getBaseModel(true);
         mod.textures.bedtop = getTextureID(def.getTextureByIndex(0));
         mod.textures.bedend = getTextureID(def.getTextureByIndex(4));
         mod.textures.bedside = getTextureID(def.getTextureByIndex(2));
         this.writeBlockModelFile(def.blockName + "_head", mod);
         ModelObjectBedFoot modf = new ModelObjectBedFoot();
+        modf.parent = getBaseModel(false);
         modf.textures.bedtop = getTextureID(def.getTextureByIndex(1));
         modf.textures.bedend = getTextureID(def.getTextureByIndex(5));
         modf.textures.bedside = getTextureID(def.getTextureByIndex(3));
