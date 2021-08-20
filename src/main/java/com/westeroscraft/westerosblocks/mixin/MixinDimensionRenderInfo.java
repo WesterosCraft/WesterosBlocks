@@ -17,7 +17,6 @@ public abstract class MixinDimensionRenderInfo
 	// Replace method
 	public float getCloudHeight()
 	{
-		System.out.println("getCloudHeight() returning 255.0");
 		return 255.0f;
 	}
 }

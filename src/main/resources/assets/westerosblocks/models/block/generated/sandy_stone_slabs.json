@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/stone_block_0/stone_slab_sandy"
+    "all": "westerosblocks:blocks/sandy_stone/sandy_stone_0"
   }
 }

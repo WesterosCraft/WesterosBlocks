@@ -2,7 +2,7 @@
     "textures": {
         "particle": "#bedtop",
         "top": "#bedtop",
-        "bottom": "blocks/planks_oak",
+        "bottom": "minecraft:block/oak_planks",
         "end": "#bedend",
         "side": "#bedside"
     },

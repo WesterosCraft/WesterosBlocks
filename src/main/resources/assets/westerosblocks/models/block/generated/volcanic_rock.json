@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/stone_terrainsets_0/stone_volcanic"
+    "all": "westerosblocks:blocks/terrainset_volcanic/1"
   }
 }

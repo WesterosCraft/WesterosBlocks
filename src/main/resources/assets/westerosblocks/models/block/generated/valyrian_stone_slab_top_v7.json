@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_valyrian/6",
+    "top": "westerosblocks:blocks/stone_valyrian/6",
+    "side": "westerosblocks:blocks/stone_valyrian/6",
+    "particle": "westerosblocks:blocks/stone_valyrian/6"
+  }
+}

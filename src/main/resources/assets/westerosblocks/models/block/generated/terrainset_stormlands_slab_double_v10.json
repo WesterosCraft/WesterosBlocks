@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/terrainset_stormlands/10",
+    "up": "westerosblocks:blocks/terrainset_stormlands/10",
+    "north": "westerosblocks:blocks/terrainset_stormlands/10",
+    "south": "westerosblocks:blocks/terrainset_stormlands/10",
+    "west": "westerosblocks:blocks/terrainset_stormlands/10",
+    "east": "westerosblocks:blocks/terrainset_stormlands/10",
+    "particle": "westerosblocks:blocks/terrainset_stormlands/10"
+  }
+}

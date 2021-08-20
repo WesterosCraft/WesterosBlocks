@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_volcanic",
-    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_volcanic",
-    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_volcanic",
-    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_volcanic",
-    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_volcanic",
-    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_volcanic",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_volcanic"
+    "down": "westerosblocks:blocks/terrainset_volcanic/1",
+    "up": "westerosblocks:blocks/terrainset_volcanic/1",
+    "north": "westerosblocks:blocks/terrainset_volcanic/1",
+    "south": "westerosblocks:blocks/terrainset_volcanic/1",
+    "west": "westerosblocks:blocks/terrainset_volcanic/1",
+    "east": "westerosblocks:blocks/terrainset_volcanic/1",
+    "particle": "westerosblocks:blocks/terrainset_volcanic/1"
   }
 }

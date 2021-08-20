@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_westerlandhills/13",
+    "top": "westerosblocks:blocks/terrainset_westerlandhills/13",
+    "side": "westerosblocks:blocks/terrainset_westerlandhills/13",
+    "particle": "westerosblocks:blocks/terrainset_westerlandhills/13"
+  }
+}

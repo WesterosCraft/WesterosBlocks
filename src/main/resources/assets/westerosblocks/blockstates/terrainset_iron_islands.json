@@ -1,7 +1,54 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/terrainset_iron_islands"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v8"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v9"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v10"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v11"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v12"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v13"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v14"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v15"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_iron_islands-v16"
+      }
+    ]
   }
 }

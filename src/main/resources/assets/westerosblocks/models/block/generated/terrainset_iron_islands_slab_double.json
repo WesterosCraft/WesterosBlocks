@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_iron_islands",
-    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_iron_islands",
-    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_iron_islands",
-    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_iron_islands",
-    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_iron_islands",
-    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_iron_islands",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_iron_islands"
+    "down": "westerosblocks:blocks/terrainset_iron/1",
+    "up": "westerosblocks:blocks/terrainset_iron/1",
+    "north": "westerosblocks:blocks/terrainset_iron/1",
+    "south": "westerosblocks:blocks/terrainset_iron/1",
+    "west": "westerosblocks:blocks/terrainset_iron/1",
+    "east": "westerosblocks:blocks/terrainset_iron/1",
+    "particle": "westerosblocks:blocks/terrainset_iron/1"
   }
 }

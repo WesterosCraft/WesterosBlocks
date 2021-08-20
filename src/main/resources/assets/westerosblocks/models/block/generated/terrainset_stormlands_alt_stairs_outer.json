@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_terrainsets_0/stone_stormlands_alt",
-    "top": "westerosblocks:blocks/stone_terrainsets_0/stone_stormlands_alt",
-    "side": "westerosblocks:blocks/stone_terrainsets_0/stone_stormlands_alt",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_stormlands_alt"
+    "bottom": "westerosblocks:blocks/terrainset_stormlands_alt/1",
+    "top": "westerosblocks:blocks/terrainset_stormlands_alt/1",
+    "side": "westerosblocks:blocks/terrainset_stormlands_alt/1",
+    "particle": "westerosblocks:blocks/terrainset_stormlands_alt/1"
   }
 }

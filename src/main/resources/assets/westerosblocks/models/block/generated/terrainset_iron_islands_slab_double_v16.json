@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/terrainset_iron/16",
+    "up": "westerosblocks:blocks/terrainset_iron/16",
+    "north": "westerosblocks:blocks/terrainset_iron/16",
+    "south": "westerosblocks:blocks/terrainset_iron/16",
+    "west": "westerosblocks:blocks/terrainset_iron/16",
+    "east": "westerosblocks:blocks/terrainset_iron/16",
+    "particle": "westerosblocks:blocks/terrainset_iron/16"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_stormlands/12",
+    "top": "westerosblocks:blocks/terrainset_stormlands/12",
+    "side": "westerosblocks:blocks/terrainset_stormlands/12",
+    "particle": "westerosblocks:blocks/terrainset_stormlands/12"
+  }
+}

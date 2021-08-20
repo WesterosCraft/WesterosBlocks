@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_terrainsets_0/stone_westerlands",
-    "up": "westerosblocks:blocks/stone_terrainsets_0/stone_westerlands",
-    "north": "westerosblocks:blocks/stone_terrainsets_0/stone_westerlands",
-    "south": "westerosblocks:blocks/stone_terrainsets_0/stone_westerlands",
-    "west": "westerosblocks:blocks/stone_terrainsets_0/stone_westerlands",
-    "east": "westerosblocks:blocks/stone_terrainsets_0/stone_westerlands",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_westerlands"
+    "down": "westerosblocks:blocks/terrainset_westerlandhills/1",
+    "up": "westerosblocks:blocks/terrainset_westerlandhills/1",
+    "north": "westerosblocks:blocks/terrainset_westerlandhills/1",
+    "south": "westerosblocks:blocks/terrainset_westerlandhills/1",
+    "west": "westerosblocks:blocks/terrainset_westerlandhills/1",
+    "east": "westerosblocks:blocks/terrainset_westerlandhills/1",
+    "particle": "westerosblocks:blocks/terrainset_westerlandhills/1"
   }
 }

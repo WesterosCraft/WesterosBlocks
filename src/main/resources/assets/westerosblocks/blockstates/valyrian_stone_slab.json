@@ -3,16 +3,79 @@
     "type=bottom": [
       {
         "model": "westerosblocks:block/generated/valyrian_stone_slab_bottom"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_bottom_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_bottom_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_bottom_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_bottom_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_bottom_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_bottom_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_bottom_v8"
       }
     ],
     "type=double": [
       {
         "model": "westerosblocks:block/generated/valyrian_stone_slab_double"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_double_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_double_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_double_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_double_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_double_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_double_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_double_v8"
       }
     ],
     "type=top": [
       {
         "model": "westerosblocks:block/generated/valyrian_stone_slab_top"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_top_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_top_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_top_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_top_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_top_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_top_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/valyrian_stone_slab_top_v8"
       }
     ]
   }

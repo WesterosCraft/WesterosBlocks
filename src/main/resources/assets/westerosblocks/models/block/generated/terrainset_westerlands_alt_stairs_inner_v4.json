@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_westerlandhills_alt/4",
+    "top": "westerosblocks:blocks/terrainset_westerlandhills_alt/4",
+    "side": "westerosblocks:blocks/terrainset_westerlandhills_alt/4",
+    "particle": "westerosblocks:blocks/terrainset_westerlandhills_alt/4"
+  }
+}
