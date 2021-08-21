@@ -10,14 +10,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(DimensionRenderInfo.class) 
 public abstract class MixinDimensionRenderInfo
-{	@Shadow float cloudLevel;
+{	
+	@Shadow float cloudLevel;
 
 	// This constructor is fake and never used
 	protected MixinDimensionRenderInfo()
 	{
 	}
 
-	@Inject(method = "getCloudHeight", at = @At("TAIL"), cancellable=true)	
+	@Inject(method = "getCloudHeight()F", at = @At("TAIL"), cancellable=true)	
 	private void doGetCloudHeight(CallbackInfoReturnable<Float> ci) {
 		if (cloudLevel == 128.0F) {
 			ci.setReturnValue(255.0F);
