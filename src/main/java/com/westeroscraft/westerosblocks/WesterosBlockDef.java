@@ -3,11 +3,14 @@ package com.westeroscraft.westerosblocks;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.BitSet;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 import java.util.function.Supplier;
 
 import org.dynmap.modsupport.BlockSide;
@@ -74,6 +77,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.WallOrFloorItem;
 import net.minecraft.particles.BasicParticleType;
 import net.minecraft.particles.ParticleTypes;
+import net.minecraft.state.EnumProperty;
+import net.minecraft.state.Property;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
@@ -84,6 +89,7 @@ import net.minecraft.world.FoliageColors;
 import net.minecraft.world.GrassColors;
 import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.world.IWorldReader;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeColors;
 import net.minecraft.world.level.ColorResolver;
@@ -95,6 +101,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.registry.WorldGenRegistries;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -144,6 +151,17 @@ public class WesterosBlockDef {
 	
     public String legacyBlockID = null;
 	
+    public List<ConditionRec> condStates;	// List of condition states (drives 'cond' blockstate variable, and associated values
+    											// Condition matches are first match is the value: last record should be the default state (and have no conditions)
+    
+    public static class ConditionRec {
+    	public String condID;	// Condition ID (required) - value for enum state attribute
+    	public Set<String> biomes;	// If defined, list of biomes that must match for condition to apply
+    	public Integer minY, maxY;	// If defined minimunm and/or maximum Y coordinate for condition to match
+    	public Set<Integer> randomTextureIndices;	// List of randomTexture indexes that apply to this condition, if matched (if undefined, all randomTextures apply)
+    	public transient Biome biomeList[];
+    };
+    
 	public boolean isConnectMatch(BlockState bs1, BlockState bs2) {
 		if (this.connectBy.equals("material")) {
 			return bs1.getMaterial() == bs2.getMaterial();
@@ -1282,6 +1300,106 @@ public class WesterosBlockDef {
     	if (legacyBlockID == null) return null;
     	String[] tok = legacyBlockID.split(":");
     	return (tok.length >= 2) ? tok[1] : null;
+    }
+
+    public static class CondProperty extends Property<String> {
+    	public List<String> condIDs;
+    	public String defValue;
+    	public CondProperty(List<String> condIDs) {
+    		super("cond", String.class);
+    		this.condIDs = new ArrayList<String>(condIDs);
+    		this.defValue = this.condIDs.get(this.condIDs.size()-1);
+    	}
+    	@Override
+    	public Collection<String> getPossibleValues() {
+    		return this.condIDs;
+    	}
+    	@Override
+    	public Optional<String> getValue(String key) {
+    		int idx = condIDs.indexOf(key);
+	   		return Optional.ofNullable((idx >= 0) ? condIDs.get(idx) : null);
+    	}
+    	@Override
+    	public String getName(String val) {
+    		int idx = condIDs.indexOf(val);
+    		return (idx >= 0) ? condIDs.get(idx) : null;
+    	}
+    	@Override
+    	public boolean equals(Object obj) {
+    		if (this == obj) {
+    			return true;
+    		}
+    		else if (obj instanceof CondProperty) {
+		         CondProperty condproperty = (CondProperty) obj;
+		         return this.condIDs.equals(condproperty.condIDs);
+    		}
+    		else {
+    		     return false;
+    		}
+    	}
+    	@Override
+    	public int generateHashCode() {
+    		int i = super.generateHashCode();
+    		return 31 * i + this.condIDs.hashCode();
+    	}
+    }
+    
+    private transient ConditionRec[] condrecs;
+    
+    // Build 'cond' property for the 
+    public CondProperty buildCondProperty() {
+    	if ((condStates == null) || (condStates.size() < 2)) return null;
+    	condrecs = condStates.toArray(new ConditionRec[0]);	// Make flat array
+
+    	ArrayList<String> ids = new ArrayList<String>();    	
+    	for (ConditionRec rec : condStates) {
+    		ids.add(rec.condID);
+    		if (rec.biomes != null) {
+    			ArrayList<Biome> blist = new ArrayList<Biome>();
+    			for (String bn : rec.biomes) {
+    				ResourceLocation rloc = new ResourceLocation(bn);
+    				Biome b = WorldGenRegistries.BIOME.get(rloc);
+    				if (b != null) {
+    					blist.add(b);
+    				}
+    				else {
+    					WesterosBlocks.log.warn("Invalid biome in condition " + rec.condID + " of block " + this.blockName);
+    				}
+    			}
+    			rec.biomeList = blist.toArray(new Biome[0]);
+    		}
+    	}
+    	// Check that the last condition is good default (no conditions)
+    	ConditionRec def = condStates.get(condStates.size()-1);
+    	if ((def != null) && ((def.minY != null) || (def.maxY != null) || (def.biomes != null))) {
+    		WesterosBlocks.log.warn("Block " + this.blockName + ": last condState record is not pure default (it has constraints)");
+    	}
+    	return new CondProperty(ids);
+    }
+    
+    // Find condition match, given position
+    public String getMatchingCondition(World world, BlockPos pos) {
+    	int y = pos.getY();
+    	Biome biome = null;
+    	for (int i = 0; i < condrecs.length; i++) {
+    		ConditionRec r = condrecs[i];
+    		if ((r.minY != null) && (y < r.minY)) continue;
+    		if ((r.maxY != null) && (y > r.maxY)) continue;
+    		if (r.biomes != null) {
+    			if (biome == null) biome = world.getBiome(pos);
+    			boolean match = false;
+    			for (int j = 0; j < r.biomeList.length; j++) {
+    				if (r.biomeList[j] == biome) {
+    					match = true;
+    					break;
+    				}
+    			}
+    			if (!match) continue;
+    		}
+    		return r.condID;
+    	}
+    	// Last is always default, even if condition is there
+    	return condrecs[condrecs.length-1].condID;
     }
 
 }
