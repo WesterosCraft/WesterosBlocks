@@ -1,22 +1,16 @@
 {
   "variants": {
-    "axis=z": [
-      {
-        "model": "westerosblocks:block/generated/oak_log_rope",
-        "x": 90
-      }
-    ],
-    "axis=x": [
-      {
-        "model": "westerosblocks:block/generated/oak_log_rope",
-        "x": 90,
-        "y": 90
-      }
-    ],
-    "axis=y": [
-      {
-        "model": "westerosblocks:block/generated/oak_log_rope"
-      }
-    ]
+    "axis=z": {
+      "model": "westerosblocks:block/generated/oak_log_rope/base_v1",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "westerosblocks:block/generated/oak_log_rope/base_v1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/generated/oak_log_rope/base_v1"
+    }
   }
 }

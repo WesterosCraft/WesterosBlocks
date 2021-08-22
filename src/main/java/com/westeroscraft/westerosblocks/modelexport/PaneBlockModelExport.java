@@ -92,7 +92,7 @@ public class PaneBlockModelExport extends ModelExport {
     	// Add post based on our variant
         if (!is_bars) {
             States ps = new States();
-            ps.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_post";
+            ps.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("post", 0);
             ps.when = null;
             so.multipart.add(ps);
         }
@@ -102,7 +102,7 @@ public class PaneBlockModelExport extends ModelExport {
     	wr.north = true;
     	ssn.when.OR.add(wr);
     	if (is_legacy || is_bars) ssn.when.OR.add(wnone);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_side";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", 0);
     	ssn.apply.uvlock = true;
     	so.multipart.add(ssn);
     	// Add east variant
@@ -111,7 +111,7 @@ public class PaneBlockModelExport extends ModelExport {
     	wr.east = true;
     	ssn.when.OR.add(wr);
     	if (is_legacy || is_bars) ssn.when.OR.add(wnone);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_side";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", 0);
     	ssn.apply.uvlock = true;
     	ssn.apply.y = 90;
     	so.multipart.add(ssn);
@@ -121,7 +121,7 @@ public class PaneBlockModelExport extends ModelExport {
     	wr.south = true;
     	ssn.when.OR.add(wr);
     	if (is_legacy || is_bars) ssn.when.OR.add(wnone);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_side_alt";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_alt", 0);
     	ssn.apply.uvlock = true;
     	so.multipart.add(ssn);
     	// Add west variant
@@ -130,7 +130,7 @@ public class PaneBlockModelExport extends ModelExport {
     	wr.west = true;
     	ssn.when.OR.add(wr);
     	if (is_legacy || is_bars) ssn.when.OR.add(wnone);
-    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_side_alt";
+    	ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_alt", 0);
     	ssn.apply.uvlock = true;
     	ssn.apply.y = 90;
     	so.multipart.add(ssn);
@@ -140,7 +140,7 @@ public class PaneBlockModelExport extends ModelExport {
     	    wr = new WhenRec();
     	    wr.north = false;
     	    ssn.when.OR.add(wr);
-    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_noside";
+    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("noside", 0);
     	    ssn.apply.uvlock = true;
     	    so.multipart.add(ssn);
     	    // Add east not connected variant
@@ -148,7 +148,7 @@ public class PaneBlockModelExport extends ModelExport {
     	    wr = new WhenRec();
     	    wr.east = false;
     	    ssn.when.OR.add(wr);
-    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_noside_alt";
+    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("noside_alt", 0);
     	    ssn.apply.uvlock = true;
     	    so.multipart.add(ssn);
     	    // Add south not connected variant
@@ -156,7 +156,7 @@ public class PaneBlockModelExport extends ModelExport {
     	    wr = new WhenRec();
     	    wr.south = false;
     	    ssn.when.OR.add(wr);
-    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_noside_alt";
+    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("noside_alt", 0);
     	    ssn.apply.y = 90;
     	    ssn.apply.uvlock = true;
     	    so.multipart.add(ssn);
@@ -165,7 +165,7 @@ public class PaneBlockModelExport extends ModelExport {
     	    wr = new WhenRec();
     	    wr.west = false;
     	    ssn.when.OR.add(wr);
-    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_noside";
+    	    ssn.apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("noside", 0);
     	    ssn.apply.uvlock = true;
     	    ssn.apply.y = 270;
     	    so.multipart.add(ssn);
@@ -180,29 +180,29 @@ public class PaneBlockModelExport extends ModelExport {
             ModelObjectPost mod = new ModelObjectPost();
             mod.textures.pane = getTextureID(def.getTextureByIndex(0)); 
             mod.textures.edge = getTextureID(def.getTextureByIndex(1)); 
-            this.writeBlockModelFile(def.blockName + "_post", mod);
+            this.writeBlockModelFile(getModelName("post", 0), mod);
         }
         // Side model
         ModelObjectSide smod = new ModelObjectSide();
         smod.textures.pane = getTextureID(def.getTextureByIndex(0)); 
         smod.textures.edge = getTextureID(def.getTextureByIndex(1)); 
         if (is_bars) smod.parent = "westerosblocks:block/untinted/bars_side";
-        this.writeBlockModelFile(def.blockName + "_side", smod);
+        this.writeBlockModelFile(getModelName("side", 0), smod);
         // Side-alt model
         ModelObjectSideAlt samod = new ModelObjectSideAlt();
         samod.textures.pane = getTextureID(def.getTextureByIndex(0)); 
         samod.textures.edge = getTextureID(def.getTextureByIndex(1)); 
         if (is_bars) samod.parent = "westerosblocks:block/untinted/bars_side_alt";
-        this.writeBlockModelFile(def.blockName + "_side_alt", samod);
+        this.writeBlockModelFile(getModelName("side_alt", 0), samod);
         if (!is_bars) {
             // NoSide model
             ModelObjectNoSide nsmod = new ModelObjectNoSide();
             nsmod.textures.pane = getTextureID(def.getTextureByIndex(0)); 
-            this.writeBlockModelFile(def.blockName + "_noside", nsmod);
+            this.writeBlockModelFile(getModelName("noside", 0), nsmod);
             // NoSide-alt model
             ModelObjectNoSideAlt nsamod = new ModelObjectNoSideAlt();
             nsamod.textures.pane = getTextureID(def.getTextureByIndex(0)); 
-            this.writeBlockModelFile(def.blockName + "_noside_alt", nsamod);
+            this.writeBlockModelFile(getModelName("noside_alt", 0), nsamod);
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();

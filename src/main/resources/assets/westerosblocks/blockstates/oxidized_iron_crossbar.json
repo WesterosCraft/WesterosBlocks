@@ -15,7 +15,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/oxidized_iron_crossbar_side",
+        "model": "westerosblocks:block/generated/oxidized_iron_crossbar/side_v1",
         "uvlock": true
       }
     },
@@ -34,7 +34,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/oxidized_iron_crossbar_side",
+        "model": "westerosblocks:block/generated/oxidized_iron_crossbar/side_v1",
         "y": 90,
         "uvlock": true
       }
@@ -54,7 +54,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/oxidized_iron_crossbar_side_alt",
+        "model": "westerosblocks:block/generated/oxidized_iron_crossbar/side_alt_v1",
         "uvlock": true
       }
     },
@@ -73,7 +73,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/oxidized_iron_crossbar_side_alt",
+        "model": "westerosblocks:block/generated/oxidized_iron_crossbar/side_alt_v1",
         "y": 90,
         "uvlock": true
       }

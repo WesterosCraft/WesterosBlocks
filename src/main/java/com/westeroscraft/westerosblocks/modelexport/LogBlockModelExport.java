@@ -13,16 +13,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class LogBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer x;
-        public Integer y;
-        public Integer weight;
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectCubeAll {
         public String parent = "minecraft:block/cube_all";    // Use 'cube_all' model for single texture
@@ -51,10 +41,6 @@ public class LogBlockModelExport extends ModelExport {
     	public String parent;
     }
     
-    private String getModelName(int setidx) {
-    	return def.blockName + ((setidx == 0)?"":("-v" + (setidx+1)));
-    }
-
     public LogBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
@@ -73,13 +59,12 @@ public class LogBlockModelExport extends ModelExport {
         	for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         		WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         		Variant var = new Variant();
-        		var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(setidx);
+        		var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
         		if (xrot[i] > 0) var.x = xrot[i];
         		if (yrot[i] > 0) var.y = yrot[i];
         		var.weight = set.weight;
-        		vars.add(var);
+        		so.addVariant(states[i], var, set.condIDs);
         	}
-        	so.variants.put(states[i], vars);
         }
         this.writeBlockStateFile(def.blockName, so);
     }
@@ -99,11 +84,11 @@ public class LogBlockModelExport extends ModelExport {
     		mod.textures.west = getTextureID(set.getTextureByIndex(3));
     		mod.textures.east = getTextureID(set.getTextureByIndex(4));
     		mod.textures.particle = getTextureID(set.getTextureByIndex(1));
-            this.writeBlockModelFile(getModelName(setidx), mod);
+            this.writeBlockModelFile(getModelName("base", setidx), mod);
     	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
     }
     @Override

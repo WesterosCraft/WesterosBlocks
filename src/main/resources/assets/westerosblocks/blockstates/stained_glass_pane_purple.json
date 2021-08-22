@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_post"
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/post_v1"
       }
     },
     {
@@ -20,7 +20,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_side",
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/side_v1",
         "uvlock": true
       }
     },
@@ -39,7 +39,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_side",
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/side_v1",
         "y": 90,
         "uvlock": true
       }
@@ -59,7 +59,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_side_alt",
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/side_alt_v1",
         "uvlock": true
       }
     },
@@ -78,7 +78,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_side_alt",
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/side_alt_v1",
         "y": 90,
         "uvlock": true
       }
@@ -92,7 +92,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_noside",
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/noside_v1",
         "uvlock": true
       }
     },
@@ -105,7 +105,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_noside_alt",
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/noside_alt_v1",
         "uvlock": true
       }
     },
@@ -118,7 +118,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_noside_alt",
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/noside_alt_v1",
         "y": 90,
         "uvlock": true
       }
@@ -132,7 +132,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_purple_noside",
+        "model": "westerosblocks:block/generated/stained_glass_pane_purple/noside_v1",
         "y": 270,
         "uvlock": true
       }

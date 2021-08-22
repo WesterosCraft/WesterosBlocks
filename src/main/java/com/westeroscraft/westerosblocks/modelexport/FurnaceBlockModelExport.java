@@ -11,22 +11,9 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class FurnaceBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer y;
-        public Variant(String bn, int y) {
-            model = WesterosBlocks.MOD_ID + ":block/generated/" + bn;
-            if (y != 0)
-                this.y = y;
-        }
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectCubeAll {
-        public String parent = "block/orientable";    // Use 'orientable' model for single texture
+        public String parent = "minecraft:block/orientable";    // Use 'orientable' model for single texture
         public TextureOrient textures = new TextureOrient();
     }
     public static class TextureOrient {
@@ -38,25 +25,41 @@ public class FurnaceBlockModelExport extends ModelExport {
     	public String parent;
     }
 
-    
     public FurnaceBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
+    private static class ModelRec {
+    	String cond;
+    	int y;
+    	String ext;
+    	ModelRec(String cond, String ext, int y) {
+    		this.cond = cond;
+    		this.y = y;
+    		this.ext = ext;
+    	}
+    };
+    private static final ModelRec[] MODELS = {
+        new ModelRec("facing=north,lit=true", "lit", 0),
+        new ModelRec("facing=south,lit=true", "lit", 180),
+        new ModelRec("facing=west,lit=true", "lit", 270),
+        new ModelRec("facing=east,lit=true", "lit", 90),
+        new ModelRec("facing=north,lit=false", "base", 0),
+        new ModelRec("facing=south,lit=false", "base", 180),
+        new ModelRec("facing=west,lit=false", "base", 270),
+        new ModelRec("facing=east,lit=false", "base", 90)
+    };
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String bn = def.blockName + "_lit";
-        so.variants.put("facing=north,lit=true", new Variant(bn, 0));
-        so.variants.put("facing=south,lit=true", new Variant(bn, 180));
-        so.variants.put("facing=west,lit=true", new Variant(bn, 270));
-        so.variants.put("facing=east,lit=true", new Variant(bn, 90));
-        bn = def.blockName;
-        so.variants.put("facing=north,lit=false", new Variant(bn, 0));
-        so.variants.put("facing=south,lit=false", new Variant(bn, 180));
-        so.variants.put("facing=west,lit=false", new Variant(bn, 270));
-        so.variants.put("facing=east,lit=false", new Variant(bn, 90));
+        // Add records for our models
+        for (ModelRec rec : MODELS) {
+        	Variant var = new Variant();
+        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(rec.ext, 0);
+        	if (rec.y != 0) var.y = rec.y;
+        	so.addVariant(rec.cond, var, null);
+        }
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -68,17 +71,17 @@ public class FurnaceBlockModelExport extends ModelExport {
         mod.textures.side = getTextureID(def.getTextureByIndex(2)); 
         mod.textures.front = getTextureID(def.getTextureByIndex(3)); // ON
         if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/orientable";
-        this.writeBlockModelFile(def.blockName + "_lit", mod);
+        this.writeBlockModelFile(getModelName("lit", 0), mod);
             
         mod = new ModelObjectCubeAll();
         mod.textures.top = getTextureID(def.getTextureByIndex(1)); 
         mod.textures.side = getTextureID(def.getTextureByIndex(2)); 
         mod.textures.front = getTextureID(def.getTextureByIndex(4)); // Off
         if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/orientable";
-        this.writeBlockModelFile(def.blockName, mod);
+        this.writeBlockModelFile(getModelName("base", 0), mod);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Handle tint resources
         if (isTinted) {

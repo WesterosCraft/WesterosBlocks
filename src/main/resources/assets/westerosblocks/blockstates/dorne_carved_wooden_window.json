@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_post"
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/post_v1"
       }
     },
     {
@@ -20,7 +20,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_side",
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/side_v1",
         "uvlock": true
       }
     },
@@ -39,7 +39,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_side",
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/side_v1",
         "y": 90,
         "uvlock": true
       }
@@ -59,7 +59,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_side_alt",
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/side_alt_v1",
         "uvlock": true
       }
     },
@@ -78,7 +78,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_side_alt",
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/side_alt_v1",
         "y": 90,
         "uvlock": true
       }
@@ -92,7 +92,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_noside",
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/noside_v1",
         "uvlock": true
       }
     },
@@ -105,7 +105,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_noside_alt",
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/noside_alt_v1",
         "uvlock": true
       }
     },
@@ -118,7 +118,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_noside_alt",
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/noside_alt_v1",
         "y": 90,
         "uvlock": true
       }
@@ -132,7 +132,7 @@
         ]
       },
       "apply": {
-        "model": "westerosblocks:block/generated/dorne_carved_wooden_window_noside",
+        "model": "westerosblocks:block/generated/dorne_carved_wooden_window/noside_v1",
         "y": 270,
         "uvlock": true
       }
