@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/dorne_dark_mud_plaster"
+      "model": "westerosblocks:block/generated/dorne_dark_mud_plaster/base_v1"
     }
   }
 }

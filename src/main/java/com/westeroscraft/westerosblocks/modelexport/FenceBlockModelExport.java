@@ -33,10 +33,6 @@ public class FenceBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + "_" + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
-    }
-
     private static class ModelPart {
     	String modExt;
     	WhenRec when;
@@ -134,7 +130,7 @@ public class FenceBlockModelExport extends ModelExport {
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
     	if (def.condStates != null) {
-        	newstate.put("cond", def.condStates.get(def.condStates.size()-1).condID);    		
+        	newstate.put("cond", def.getDefaultCondID());    		
     	}
     	// No metadata other than variant - need filter for all of this - just pass one combination
     	oldstate.put("north", "false");

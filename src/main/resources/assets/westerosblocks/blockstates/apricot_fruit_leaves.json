@@ -2,169 +2,169 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v1",
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v1",
         "y": 90,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v1",
         "y": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v1",
         "y": 270,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v1",
         "x": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves",
-        "x": 180,
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves",
-        "x": 180,
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves",
-        "x": 180,
-        "y": 270,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v2",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v2",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v2",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v2",
-        "y": 270,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v2",
-        "x": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v2",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v1",
         "x": 180,
         "y": 90,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v2",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v1",
         "x": 180,
         "y": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v2",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v1",
         "x": 180,
         "y": 270,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v3",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v2",
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v3",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v2",
         "y": 90,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v3",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v2",
         "y": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v3",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v2",
         "y": 270,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v3",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v2",
         "x": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v3",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v2",
         "x": 180,
         "y": 90,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v3",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v2",
         "x": 180,
         "y": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v3",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v2",
         "x": 180,
         "y": 270,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v4",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v3",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v3",
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v3",
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v3",
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v3",
+        "x": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v3",
+        "x": 180,
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v3",
+        "x": 180,
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v3",
+        "x": 180,
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v4",
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v4",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v4",
         "y": 90,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v4",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v4",
         "y": 180,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v4",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v4",
         "y": 270,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v4",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v4",
         "x": 180,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v4",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v4",
         "x": 180,
         "y": 90,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v4",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v4",
         "x": 180,
         "y": 180,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/apricot_fruit_leaves-v4",
+        "model": "westerosblocks:block/generated/apricot_fruit_leaves/base-v4",
         "x": 180,
         "y": 270,
         "weight": 2

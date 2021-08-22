@@ -2,22 +2,22 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/sandy_stone_slabs"
+        "model": "westerosblocks:block/generated/sandy_stone_slabs/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/sandy_stone_slabs-v2"
+        "model": "westerosblocks:block/generated/sandy_stone_slabs/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/sandy_stone_slabs-v3"
+        "model": "westerosblocks:block/generated/sandy_stone_slabs/base_v3"
       },
       {
-        "model": "westerosblocks:block/generated/sandy_stone_slabs-v4"
+        "model": "westerosblocks:block/generated/sandy_stone_slabs/base_v4"
       },
       {
-        "model": "westerosblocks:block/generated/sandy_stone_slabs-v5"
+        "model": "westerosblocks:block/generated/sandy_stone_slabs/base_v5"
       },
       {
-        "model": "westerosblocks:block/generated/sandy_stone_slabs-v6"
+        "model": "westerosblocks:block/generated/sandy_stone_slabs/base_v6"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/pebbles_dry_stormlands"
+      "model": "westerosblocks:block/generated/pebbles_dry_stormlands/base_v1"
     }
   }
 }

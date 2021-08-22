@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/blue_forgetmenots"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/blue_forgetmenots/base_v1"
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/dorne_light_terracotta"
+      "model": "westerosblocks:block/generated/dorne_light_terracotta/base_v1"
     }
   }
 }

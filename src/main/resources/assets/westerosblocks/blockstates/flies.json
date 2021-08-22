@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/flies"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/flies/base_v1"
+    }
   }
 }

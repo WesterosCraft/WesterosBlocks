@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/timber_whitewashed_vertical"
+      "model": "westerosblocks:block/generated/timber_whitewashed_vertical/base_v1"
     }
   }
 }

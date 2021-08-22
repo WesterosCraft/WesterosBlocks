@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/pink_thistle"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/pink_thistle/base_v1"
+    }
   }
 }

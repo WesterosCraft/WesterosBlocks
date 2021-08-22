@@ -3,119 +3,119 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v1"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v2"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v2"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v3"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v3"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v4"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v4"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v5"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v5"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v6"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v6"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v7"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v7"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v8"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v8"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v9"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v9"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v10"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v10"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v11"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v11"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v12"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v12"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v13"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v13"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v14"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v14"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v15"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v15"
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_post-v16"
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/post_v16"
         }
       ]
     },
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v1",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v2",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v2",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v3",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v3",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v4",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v4",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v5",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v5",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v6",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v6",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v7",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v7",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v8",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v8",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v9",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v9",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v10",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v10",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v11",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v11",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v12",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v12",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v13",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v13",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v14",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v14",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v15",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v15",
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v16",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v16",
           "uvlock": true
         }
       ],
@@ -126,82 +126,82 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v1",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v2",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v2",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v3",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v3",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v4",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v4",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v5",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v5",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v6",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v6",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v7",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v7",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v8",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v8",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v9",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v9",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v10",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v10",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v11",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v11",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v12",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v12",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v13",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v13",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v14",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v14",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v15",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v15",
           "y": 90,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v16",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v16",
           "y": 90,
           "uvlock": true
         }
@@ -213,82 +213,82 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v1",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v2",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v2",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v3",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v3",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v4",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v4",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v5",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v5",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v6",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v6",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v7",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v7",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v8",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v8",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v9",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v9",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v10",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v10",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v11",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v11",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v12",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v12",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v13",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v13",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v14",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v14",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v15",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v15",
           "y": 180,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v16",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v16",
           "y": 180,
           "uvlock": true
         }
@@ -300,82 +300,82 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v1",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v2",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v2",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v3",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v3",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v4",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v4",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v5",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v5",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v6",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v6",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v7",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v7",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v8",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v8",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v9",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v9",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v10",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v10",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v11",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v11",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v12",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v12",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v13",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v13",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v14",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v14",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v15",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v15",
           "y": 270,
           "uvlock": true
         },
         {
-          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence_side-v16",
+          "model": "westerosblocks:block/generated/terrainset_westerlands_alt_fence/side_v16",
           "y": 270,
           "uvlock": true
         }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/terracotta_engraved"
+      "model": "westerosblocks:block/generated/terracotta_engraved/base_v1"
     }
   }
 }

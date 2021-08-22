@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/grey_wood_carpet"
+      "model": "westerosblocks:block/generated/grey_wood_carpet/base_v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/dorne_dusty_dirt"
+      "model": "westerosblocks:block/generated/dorne_dusty_dirt/base_v1"
     }
   }
 }

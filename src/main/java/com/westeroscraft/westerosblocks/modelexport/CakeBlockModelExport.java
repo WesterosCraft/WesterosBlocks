@@ -13,17 +13,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class CakeBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer x;
-        public Integer y;
-        public Boolean uvlock;
-    }
-    
     // Template objects for Gson export of block models
     public static class ModelObjectCake {
         public String parent = "minecraft:block/thin_block";    // Use 'thin_block' model for single texture
@@ -54,7 +43,7 @@ public class CakeBlockModelExport extends ModelExport {
         super(blk, def, dest);
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
-    
+
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
@@ -62,10 +51,10 @@ public class CakeBlockModelExport extends ModelExport {
         for (int i = 0; i < 7; i++) {
             Variant var = new Variant();
             if (i == 0)
-                var.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_uneaten";
+                var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("uneaten", 0);
             else
-                var.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_slice" + i;
-            so.variants.put(String.format("bites=%d", i), var);
+                var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("slice" + i, 0);
+            so.addVariant(String.format("bites=%d", i), var, null);
         }
         this.writeBlockStateFile(def.blockName, so);
     }
@@ -119,13 +108,13 @@ public class CakeBlockModelExport extends ModelExport {
             mod.elements.add(elem);
             
             if (i == 0)
-                this.writeBlockModelFile(def.blockName + "_uneaten", mod);
+                this.writeBlockModelFile(getModelName("uneaten", 0), mod);
             else
-                this.writeBlockModelFile(def.blockName + "_slice" + i, mod);
+                this.writeBlockModelFile(getModelName("slice" + i, 0), mod);
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "_uneaten";
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("uneaten", 0);
         this.writeItemModelFile(def.blockName, mo);
     }
     @Override

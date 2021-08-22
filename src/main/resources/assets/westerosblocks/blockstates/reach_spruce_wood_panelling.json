@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/reach_spruce_wood_panelling"
+      "model": "westerosblocks:block/generated/reach_spruce_wood_panelling/base_v1"
     }
   }
 }

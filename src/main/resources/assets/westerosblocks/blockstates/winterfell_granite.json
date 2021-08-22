@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/winterfell_granite"
+      "model": "westerosblocks:block/generated/winterfell_granite/base_v1"
     }
   }
 }

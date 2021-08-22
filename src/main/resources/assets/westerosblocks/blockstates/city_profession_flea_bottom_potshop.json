@@ -1,15 +1,11 @@
 {
   "variants": {
-    "facing=east": [
-      {
-        "model": "westerosblocks:block/generated/city_profession_flea_bottom_potshop"
-      }
-    ],
-    "facing=north": [
-      {
-        "model": "westerosblocks:block/generated/city_profession_flea_bottom_potshop",
-        "y": 90
-      }
-    ]
+    "facing=east": {
+      "model": "westerosblocks:block/generated/city_profession_flea_bottom_potshop/base_v1"
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/generated/city_profession_flea_bottom_potshop/base_v1",
+      "y": 90
+    }
   }
 }

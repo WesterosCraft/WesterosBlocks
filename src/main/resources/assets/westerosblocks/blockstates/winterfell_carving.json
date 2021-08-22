@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/winterfell_carving"
+      "model": "westerosblocks:block/generated/winterfell_carving/base_v1"
     }
   }
 }

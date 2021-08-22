@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/meadow_fescue/base_v1"
+    }
   }
 }

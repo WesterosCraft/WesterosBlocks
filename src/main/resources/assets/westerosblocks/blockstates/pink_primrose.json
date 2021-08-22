@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/pink_primrose"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/pink_primrose/base_v1"
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/peat"
+      "model": "westerosblocks:block/generated/peat/base_v1"
     }
   }
 }

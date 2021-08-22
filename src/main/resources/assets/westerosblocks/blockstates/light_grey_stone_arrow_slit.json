@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/light_grey_stone_arrow_slit"
+      "model": "westerosblocks:block/generated/light_grey_stone_arrow_slit/base_v1"
     }
   }
 }

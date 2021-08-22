@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/warning_bells_large"
+      "model": "westerosblocks:block/generated/warning_bells_large/base_v1"
     }
   }
 }

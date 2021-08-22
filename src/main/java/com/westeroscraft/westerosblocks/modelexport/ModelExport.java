@@ -71,6 +71,7 @@ public abstract class ModelExport {
     }
     public void writeBlockStateFile(String blockname, Object obj) throws IOException {
         File f = new File(blockstatedir, blockname + ".json");
+        f.getParentFile().mkdirs();
         FileWriter fos = null;
         try {
             fos = new FileWriter(f);
@@ -82,8 +83,14 @@ public abstract class ModelExport {
             }
         }
     }
+    
+    protected String getModelName(String ext, int setidx) {
+    	return def.blockName + "/" + ext + ("_v" + (setidx+1));
+    }
+
     public void writeBlockModelFile(String model, Object obj) throws IOException {
         File f = new File(blockmodeldir, model + ".json");
+        f.getParentFile().mkdirs();
         FileWriter fos = null;
         try {
             fos = new FileWriter(f);
@@ -97,6 +104,7 @@ public abstract class ModelExport {
     }
     public void writeItemModelFile(String model, Object obj) throws IOException {
         File f = new File(itemmodeldir, model + ".json");
+        f.getParentFile().mkdirs();
         FileWriter fos = null;
         try {
             fos = new FileWriter(f);

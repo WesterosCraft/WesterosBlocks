@@ -1,27 +1,19 @@
 {
   "variants": {
-    "facing=south": [
-      {
-        "model": "westerosblocks:block/custom/wood_ladder",
-        "y": 180
-      }
-    ],
-    "facing=east": [
-      {
-        "model": "westerosblocks:block/custom/wood_ladder",
-        "y": 90
-      }
-    ],
-    "facing=north": [
-      {
-        "model": "westerosblocks:block/custom/wood_ladder"
-      }
-    ],
-    "facing=west": [
-      {
-        "model": "westerosblocks:block/custom/wood_ladder",
-        "y": 270
-      }
-    ]
+    "facing=south": {
+      "model": "westerosblocks:block/custom/wood_ladder/base_v1",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "westerosblocks:block/custom/wood_ladder/base_v1",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/custom/wood_ladder/base_v1"
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/custom/wood_ladder/base_v1",
+      "y": 270
+    }
   }
 }

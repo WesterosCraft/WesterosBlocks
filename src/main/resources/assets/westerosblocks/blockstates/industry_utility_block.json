@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/industry_utility_block"
+      "model": "westerosblocks:block/generated/industry_utility_block/base_v1"
     }
   }
 }

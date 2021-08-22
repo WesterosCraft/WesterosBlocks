@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/baelors_sphere_crone_yellow"
+      "model": "westerosblocks:block/generated/baelors_sphere_crone_yellow/base_v1"
     }
   }
 }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/red_poppies"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/red_poppies/base_v1"
+    }
   }
 }

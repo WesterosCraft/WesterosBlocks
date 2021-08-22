@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/heather"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/heather/base_v1"
+    }
   }
 }

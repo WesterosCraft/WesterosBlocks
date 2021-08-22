@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/blue_hyacinth"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/blue_hyacinth/base_v1"
+    }
   }
 }

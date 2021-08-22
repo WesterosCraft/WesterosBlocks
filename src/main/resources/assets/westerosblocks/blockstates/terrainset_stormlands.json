@@ -2,52 +2,52 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v2"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v3"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v3"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v4"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v4"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v5"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v5"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v6"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v6"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v7"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v7"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v8"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v8"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v9"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v9"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v10"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v10"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v11"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v11"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v12"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v12"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v13"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v13"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v14"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v14"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v15"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v15"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_stormlands-v16"
+        "model": "westerosblocks:block/generated/terrainset_stormlands/base_v16"
       }
     ]
   }

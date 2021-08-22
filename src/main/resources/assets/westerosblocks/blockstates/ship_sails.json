@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/ship_sails"
+      "model": "westerosblocks:block/generated/ship_sails/base_v1"
     }
   }
 }

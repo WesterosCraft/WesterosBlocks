@@ -1,3 +1,3 @@
 {
-  "parent": "westerosblocks:block/generated/table_widgets"
+  "parent": "westerosblocks:block/generated/table_widgets/base_v1"
 }

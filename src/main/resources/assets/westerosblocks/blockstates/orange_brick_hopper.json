@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/orange_brick_hopper"
+      "model": "westerosblocks:block/generated/orange_brick_hopper/base_v1"
     }
   }
 }

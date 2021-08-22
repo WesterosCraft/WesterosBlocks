@@ -13,14 +13,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class CrossBlockVertModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer y;
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectCross {
         public String parent = "minecraft:block/cross";    // Use 'cross' model for single texture
@@ -36,14 +28,10 @@ public class CrossBlockVertModelExport extends ModelExport {
     	public String parent = "item/generated";
         public TextureLayer0 textures = new TextureLayer0();
     }
-    
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
-    }
 
 	static final String up[] = { "false", "false", "true", "true" };
 	static final String down[] = { "false", "true", "false", "true" };
-	static final String ext[] = { "", "_down", "_up", "_both" };
+	static final String ext[] = { "base", "down", "up", "both" };
 
     public CrossBlockVertModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
@@ -56,7 +44,6 @@ public class CrossBlockVertModelExport extends ModelExport {
     	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
         
 		for (int i = 0; i < 4; i++) {
-	        List<Variant> varn = new ArrayList<Variant>();
 	    	// Loop over the random sets we've got
 	        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
 	        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
@@ -66,10 +53,9 @@ public class CrossBlockVertModelExport extends ModelExport {
 	        		if (def.isCustomModel())
 	        			var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext[i], setidx);
 	        		if (rot > 0) var.y = (90 * rot);
-	        		varn.add(var);
+	                so.addVariant("up=" + up[i] + ",down=" + down[i], var, set.condIDs);
 	        	}
 	        }
-            so.variants.put("up=" + up[i] + ",down=" + down[i], varn);
 		}
         this.writeBlockStateFile(def.blockName, so);
     }
@@ -96,9 +82,9 @@ public class CrossBlockVertModelExport extends ModelExport {
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         if (!def.isCustomModel())
-        	mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", 0);
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         else
-        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", 0);        	
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("base", 0);        	
         this.writeItemModelFile(def.blockName, mo);
 
         // Add tint overrides

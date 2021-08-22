@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/netherbrick_keystone"
+      "model": "westerosblocks:block/generated/netherbrick_keystone/base_v1"
     }
   }
 }

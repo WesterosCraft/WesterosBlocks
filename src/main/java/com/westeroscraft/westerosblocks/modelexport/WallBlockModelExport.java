@@ -42,8 +42,8 @@ public class WallBlockModelExport extends ModelExport {
         wblk = (WCWallBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + "_" + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    protected String getModelName(String ext, int setidx) {
+    	return def.blockName + "/" + ext + ("-v" + (setidx+1));
     }
     
     private static class ModelPart {
@@ -181,7 +181,7 @@ public class WallBlockModelExport extends ModelExport {
     	newstate.put("up", "false");
     	newstate.put("waterlogged", "false");
     	if (def.condStates != null) {
-        	newstate.put("cond", def.condStates.get(def.condStates.size()-1).condID);    		
+        	newstate.put("cond", def.getDefaultCondID());    		
     	}
 		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }

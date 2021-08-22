@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/pebbles_dry_the_north"
+      "model": "westerosblocks:block/generated/pebbles_dry_the_north/base_v1"
     }
   }
 }

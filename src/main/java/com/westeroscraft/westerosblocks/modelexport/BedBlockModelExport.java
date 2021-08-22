@@ -12,19 +12,6 @@ import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import net.minecraft.block.Block;
 
 public class BedBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer y;
-        public Variant(String bn, String ext, int y) {
-            model = bn + "_" + ext;
-            if (y != 0)
-                this.y = y;
-        }
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectBedHead {
         public String parent = WesterosBlocks.MOD_ID + ":block/untinted/bed_head";    // Use 'bed_head' model for single texture
@@ -55,21 +42,35 @@ public class BedBlockModelExport extends ModelExport {
         bblk = (WCBedBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
-    
+    private static class ModelRec {
+    	public String cond;
+    	public String ext;
+    	public int y;
+    	ModelRec(String c, String x, int y) {
+    		cond = c; ext = x;
+    		this.y = y;
+    	}
+    };
+    private static final ModelRec MODELS[] = {
+		new ModelRec("facing=north,part=foot", "foot", 180),
+		new ModelRec("facing=east,part=foot", "foot", 270),
+		new ModelRec("facing=south,part=foot", "foot", 0),
+		new ModelRec("facing=west,part=foot", "foot", 90),
+		new ModelRec("facing=north,part=head", "head", 180),
+		new ModelRec("facing=east,part=head", "head", 270),
+		new ModelRec("facing=south,part=head", "head", 0),
+		new ModelRec("facing=west,part=head", "head", 90)
+    };
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String bn = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
         
-        so.variants.put("facing=north,part=foot", new Variant(bn, "foot", 180));
-        so.variants.put("facing=east,part=foot", new Variant(bn, "foot", 270));
-        so.variants.put("facing=south,part=foot", new Variant(bn, "foot", 0));
-        so.variants.put("facing=west,part=foot", new Variant(bn, "foot", 90));
-        so.variants.put("facing=north,part=head", new Variant(bn, "head", 180));
-        so.variants.put("facing=east,part=head", new Variant(bn, "head", 270));
-        so.variants.put("facing=south,part=head", new Variant(bn, "head", 0));
-        so.variants.put("facing=west,part=head", new Variant(bn, "head", 90));
-
+        for (ModelRec rec : MODELS) {
+        	Variant var = new Variant();
+        	var.model =  WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(rec.ext, 0);
+        	if (rec.y != 0) var.y = rec.y;
+        	so.addVariant(rec.cond, var, null);
+        }
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -89,13 +90,13 @@ public class BedBlockModelExport extends ModelExport {
         mod.textures.bedtop = getTextureID(def.getTextureByIndex(0));
         mod.textures.bedend = getTextureID(def.getTextureByIndex(4));
         mod.textures.bedside = getTextureID(def.getTextureByIndex(2));
-        this.writeBlockModelFile(def.blockName + "_head", mod);
+        this.writeBlockModelFile(getModelName("head", 0), mod);
         ModelObjectBedFoot modf = new ModelObjectBedFoot();
         modf.parent = getBaseModel(false);
         modf.textures.bedtop = getTextureID(def.getTextureByIndex(1));
         modf.textures.bedend = getTextureID(def.getTextureByIndex(5));
         modf.textures.bedside = getTextureID(def.getTextureByIndex(3));
-        this.writeBlockModelFile(def.blockName + "_foot", modf);
+        this.writeBlockModelFile(getModelName("foot", 0), modf);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         mo.parent = WesterosBlocks.MOD_ID + ":item/untinted/bed_item";

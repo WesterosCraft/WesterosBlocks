@@ -95,15 +95,14 @@ public class SlabBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
-    private String getModelName(String mod, int setidx) {
-    	return def.getBlockName() + "_" + mod + ((setidx == 0) ? "" : ("_v" + (setidx+1)));
+    protected String getModelName(String ext, int setidx) {
+    	return def.getBlockName() + "/" + ext + ("_v" + (setidx+1));
     }
     
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         // Do state for top half block
-        String bn = def.getBlockName();
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
@@ -127,7 +126,7 @@ public class SlabBlockModelExport extends ModelExport {
         	var.weight = set.weight;
         	so.addVariant("type=double", var, set.condIDs);
         }
-        this.writeBlockStateFile(bn, so);
+        this.writeBlockStateFile(def.getBlockName(), so);
     }
 
     @Override

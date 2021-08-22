@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/timber_oak_yellow_lefthatch"
+      "model": "westerosblocks:block/generated/timber_oak_yellow_lefthatch/base_v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/sewer"
+      "model": "westerosblocks:block/generated/sewer/base_v1"
     }
   }
 }

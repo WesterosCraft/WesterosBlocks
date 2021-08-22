@@ -13,16 +13,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class LadderVertBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer x;
-        public Integer y;
-        public Integer weight;
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectLadder {
         public String parent = WesterosBlocks.MOD_ID + ":block/untinted/ladder";    // Use 'ladder' model for single texture
@@ -40,15 +30,11 @@ public class LadderVertBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
-    }
-
 	static final String faces[] = { "north", "south", "east", "west" };
 	static final int[] y = { 0, 180, 90, 270 };
 	static final String up[] = { "false", "false", "true", "true" };
 	static final String down[] = { "false", "true", "false", "true" };
-	static final String ext[] = { "", "_down", "_up", "_both" };
+	static final String ext[] = { "base", "down", "up", "both" };
 
     @Override
     public void doBlockStateExport() throws IOException {
@@ -56,7 +42,6 @@ public class LadderVertBlockModelExport extends ModelExport {
 
     	for (int faceidx = 0; faceidx < 4; faceidx++) {
     		for (int i = 0; i < 4; i++) {
-    	        List<Variant> varn = new ArrayList<Variant>();
     	    	// Loop over the random sets we've got
     	        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
     	        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
@@ -66,9 +51,8 @@ public class LadderVertBlockModelExport extends ModelExport {
     	            if (def.isCustomModel())
     	            	var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext[i], setidx);
 	            	if (y[faceidx] > 0) var.y = y[faceidx];
-	            	varn.add(var);
+	            	so.addVariant("facing=" + faces[faceidx] + ",up=" + up[i] + ",down=" + down[i], var, set.condIDs);
     	        }
-	            so.variants.put("facing=" + faces[faceidx] + ",up=" + up[i] + ",down=" + down[i], varn);
     		}
     	}
         this.writeBlockStateFile(def.blockName, so);
@@ -92,9 +76,9 @@ public class LadderVertBlockModelExport extends ModelExport {
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         if (!def.isCustomModel())
-        	mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", 0);
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         else
-        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", 0);        	
+        	mo.parent = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("base", 0);        	
         this.writeItemModelFile(def.blockName, mo);
     }
     @Override

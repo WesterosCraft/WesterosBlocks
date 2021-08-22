@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/dead_scrub_grass"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/dead_scrub_grass/base_v1"
+    }
   }
 }

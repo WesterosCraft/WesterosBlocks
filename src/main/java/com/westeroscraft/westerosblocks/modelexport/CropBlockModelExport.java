@@ -11,13 +11,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class CropBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model;
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectCrop {
         public String parent = "block/crop";    // Use 'crop' model for single texture
@@ -43,8 +36,8 @@ public class CropBlockModelExport extends ModelExport {
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         Variant var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
-        so.variants.put("", var);
+        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
+        so.addVariant("", var, null);
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -52,7 +45,7 @@ public class CropBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         ModelObjectCrop mod = new ModelObjectCrop();
         mod.textures.crop = getTextureID(def.getTextureByIndex(0)); 
-        this.writeBlockModelFile(def.blockName, mod);
+        this.writeBlockModelFile(getModelName("base", 0), mod);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         mo.textures.layer0 = mod.textures.crop;

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/table_books"
+      "model": "westerosblocks:block/generated/table_books/base_v1"
     }
   }
 }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/white_peony"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/white_peony/base_v1"
+    }
   }
 }

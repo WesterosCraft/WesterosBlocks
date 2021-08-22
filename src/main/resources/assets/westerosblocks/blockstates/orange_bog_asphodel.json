@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/orange_bog_asphodel"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/orange_bog_asphodel/base_v1"
+    }
   }
 }

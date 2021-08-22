@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/stormlands_large_brick"
+      "model": "westerosblocks:block/generated/stormlands_large_brick/base_v1"
     }
   }
 }

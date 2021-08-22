@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/orange_sun_star"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/orange_sun_star/base_v1"
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/portcullis_4_sec"
+      "model": "westerosblocks:block/generated/portcullis_4_sec/base_v1"
     }
   }
 }

@@ -2,16 +2,16 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/northern_cobble"
+        "model": "westerosblocks:block/generated/northern_cobble/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/northern_cobble-v2"
+        "model": "westerosblocks:block/generated/northern_cobble/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/northern_cobble-v3"
+        "model": "westerosblocks:block/generated/northern_cobble/base_v3"
       },
       {
-        "model": "westerosblocks:block/generated/northern_cobble-v4"
+        "model": "westerosblocks:block/generated/northern_cobble/base_v4"
       }
     ]
   }

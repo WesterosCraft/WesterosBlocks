@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/purple_lavender"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/purple_lavender/base_v1"
+    }
   }
 }

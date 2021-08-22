@@ -15,18 +15,6 @@ import net.minecraft.block.Block;
 
 public class LayerBlockModelExport extends ModelExport {
     protected WCLayerBlock blk;
-
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer x;
-        public Integer y;
-        public Boolean uvlock;
-        public Integer weight;
-    }
     
     // Template objects for Gson export of block models
     public static class ModelObjectCuboid {
@@ -58,10 +46,6 @@ public class LayerBlockModelExport extends ModelExport {
     	public String parent;
     }
 
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
-    }
-
     public LayerBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         this.blk = (WCLayerBlock) blk;
@@ -79,10 +63,9 @@ public class LayerBlockModelExport extends ModelExport {
             for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
             	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
             	Variant var = new Variant();
-            	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_" + (i+1), setidx);
-            	vars.add(var);
+            	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("layer" + (i+1), setidx);
+            	so.addVariant(String.format("layers=%d", i+1), var, set.condIDs);
             }
-            so.variants.put(String.format("layers=%d", i+1), vars);
         }
         this.writeBlockStateFile(def.blockName, so);
     }
@@ -170,12 +153,12 @@ public class LayerBlockModelExport extends ModelExport {
 	            if (is_tinted) f.tintindex = 0;
 	            elem.faces.put("east", f);
 	            mod.elements.add(elem);
-	            this.writeBlockModelFile(getModelName("_" + (i+1), setidx), mod);
+	            this.writeBlockModelFile(getModelName("layer" + (i+1), setidx), mod);
             }
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_1", 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("layer1", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Handle tint resources
         if (is_tinted) {

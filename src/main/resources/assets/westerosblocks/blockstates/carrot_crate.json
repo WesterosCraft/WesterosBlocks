@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/carrot_crate"
+      "model": "westerosblocks:block/generated/carrot_crate/base_v1"
     }
   }
 }

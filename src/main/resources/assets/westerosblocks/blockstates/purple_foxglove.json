@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/purple_foxglove"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/purple_foxglove/base_v1"
+    }
   }
 }

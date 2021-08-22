@@ -2,169 +2,169 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/raspberry_bush",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v1",
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v1",
         "y": 90,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v1",
         "y": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v1",
         "y": 270,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v1",
         "x": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush",
-        "x": 180,
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/raspberry_bush",
-        "x": 180,
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/raspberry_bush",
-        "x": 180,
-        "y": 270,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/raspberry_bush-v2",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/raspberry_bush-v2",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/raspberry_bush-v2",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/raspberry_bush-v2",
-        "y": 270,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/raspberry_bush-v2",
-        "x": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/raspberry_bush-v2",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v1",
         "x": 180,
         "y": 90,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v2",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v1",
         "x": 180,
         "y": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v2",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v1",
         "x": 180,
         "y": 270,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v3",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v2",
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v3",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v2",
         "y": 90,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v3",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v2",
         "y": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v3",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v2",
         "y": 270,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v3",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v2",
         "x": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v3",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v2",
         "x": 180,
         "y": 90,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v3",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v2",
         "x": 180,
         "y": 180,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v3",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v2",
         "x": 180,
         "y": 270,
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v4",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v3",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v3",
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v3",
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v3",
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v3",
+        "x": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v3",
+        "x": 180,
+        "y": 90,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v3",
+        "x": 180,
+        "y": 180,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v3",
+        "x": 180,
+        "y": 270,
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v4",
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v4",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v4",
         "y": 90,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v4",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v4",
         "y": 180,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v4",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v4",
         "y": 270,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v4",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v4",
         "x": 180,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v4",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v4",
         "x": 180,
         "y": 90,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v4",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v4",
         "x": 180,
         "y": 180,
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/raspberry_bush-v4",
+        "model": "westerosblocks:block/generated/raspberry_bush/base-v4",
         "x": 180,
         "y": 270,
         "weight": 2

@@ -3,55 +3,1240 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence_post"
-        }
-      ]
-    },
-    {
-      "apply": [
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v1"
+        },
         {
-          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence_side",
-          "uvlock": true
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v2"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v3"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v4"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v5"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v6"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v7"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v8"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v9"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v10"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v11"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v12"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v13"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v14"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v15"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v16"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v17"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v18"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v19"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v20"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v21"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v22"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v23"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v24"
         }
       ],
       "when": {
-        "north": "true"
+        "cond": "default"
       }
     },
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v25"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v26"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v27"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v28"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v29"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v30"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v31"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v32"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v33"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v34"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v35"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v36"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v37"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v38"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v39"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v40"
+        }
+      ],
+      "when": {
+        "cond": "wet"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v41"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v42"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v43"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v44"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v45"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v46"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v47"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v48"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v49"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v50"
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/post_v51"
+        }
+      ],
+      "when": {
+        "cond": "dry"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v1",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v3",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v4",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v5",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v6",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v7",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v8",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v9",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v10",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v11",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v12",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v13",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v14",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v15",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v16",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v17",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v18",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v19",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v20",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v21",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v22",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v23",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v24",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "true",
+        "cond": "default"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v25",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v26",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v27",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v28",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v29",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v30",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v31",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v32",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v33",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v34",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v35",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v36",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v37",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v38",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v39",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v40",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "true",
+        "cond": "wet"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v41",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v42",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v43",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v44",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v45",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v46",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v47",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v48",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v49",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v50",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v51",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "true",
+        "cond": "dry"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v1",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v3",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v4",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v5",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v6",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v7",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v8",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v9",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v10",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v11",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v12",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v13",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v14",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v15",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v16",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v17",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v18",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v19",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v20",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v21",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v22",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v23",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v24",
           "y": 90,
           "uvlock": true
         }
       ],
       "when": {
-        "east": "true"
+        "east": "true",
+        "cond": "default"
       }
     },
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v25",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v26",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v27",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v28",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v29",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v30",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v31",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v32",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v33",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v34",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v35",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v36",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v37",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v38",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v39",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v40",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "true",
+        "cond": "wet"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v41",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v42",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v43",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v44",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v45",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v46",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v47",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v48",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v49",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v50",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v51",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "true",
+        "cond": "dry"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v1",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v3",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v4",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v5",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v6",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v7",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v8",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v9",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v10",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v11",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v12",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v13",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v14",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v15",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v16",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v17",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v18",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v19",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v20",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v21",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v22",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v23",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v24",
           "y": 180,
           "uvlock": true
         }
       ],
       "when": {
-        "south": "true"
+        "south": "true",
+        "cond": "default"
       }
     },
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence_side",
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v25",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v26",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v27",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v28",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v29",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v30",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v31",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v32",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v33",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v34",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v35",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v36",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v37",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v38",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v39",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v40",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "true",
+        "cond": "wet"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v41",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v42",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v43",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v44",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v45",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v46",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v47",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v48",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v49",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v50",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v51",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "true",
+        "cond": "dry"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v1",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v3",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v4",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v5",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v6",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v7",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v8",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v9",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v10",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v11",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v12",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v13",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v14",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v15",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v16",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v17",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v18",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v19",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v20",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v21",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v22",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v23",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v24",
           "y": 270,
           "uvlock": true
         }
       ],
       "when": {
-        "west": "true"
+        "west": "true",
+        "cond": "default"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v25",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v26",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v27",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v28",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v29",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v30",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v31",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v32",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v33",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v34",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v35",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v36",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v37",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v38",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v39",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v40",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "true",
+        "cond": "wet"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v41",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v42",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v43",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v44",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v45",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v46",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v47",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v48",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v49",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v50",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/terrainset_ocean_rocks_fence/side_v51",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "true",
+        "cond": "dry"
       }
     }
   ]

@@ -1425,5 +1425,11 @@ public class WesterosBlockDef {
     	// Last is always default, even if condition is there
     	return condrecs[condrecs.length-1].condID;
     }
-
+    // Get default condition ID
+    public String getDefaultCondID() {
+    	if (this.condStates != null) {
+    		return this.condStates.get(this.condStates.size() - 1).condID;
+    	}
+    	return null;
+    }
 }

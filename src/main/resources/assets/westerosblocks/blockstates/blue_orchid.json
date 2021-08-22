@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/blue_orchid"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/blue_orchid/base_v1"
+    }
   }
 }

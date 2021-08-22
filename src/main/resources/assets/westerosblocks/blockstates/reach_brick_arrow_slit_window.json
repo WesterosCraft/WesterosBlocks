@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/reach_brick_arrow_slit_window"
+      "model": "westerosblocks:block/generated/reach_brick_arrow_slit_window/base_v1"
     }
   }
 }

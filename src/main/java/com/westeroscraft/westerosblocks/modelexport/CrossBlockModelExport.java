@@ -13,15 +13,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class CrossBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer y;
-        public Integer weight;
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectCross {
         public String parent = "minecraft:block/cross";    // Use 'cross' model for single texture
@@ -38,10 +29,6 @@ public class CrossBlockModelExport extends ModelExport {
         public TextureLayer0 textures = new TextureLayer0();
     }
     
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
-    }
-
     public CrossBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
@@ -58,15 +45,14 @@ public class CrossBlockModelExport extends ModelExport {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	for (int rot = 0; rot < cnt; rot++) {
         		Variant var = new Variant();
-        		var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", setidx);
+        		var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
             	var.weight = set.weight;
         		if (def.isCustomModel())
-        			var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("", setidx);
+        			var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("base", setidx);
         		if (rot > 0) var.y = (90 * rot);
-        		varn.add(var);
+        		so.addVariant("", var, set.condIDs);
         	}
         }
-        so.variants.put("", varn);
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -79,7 +65,7 @@ public class CrossBlockModelExport extends ModelExport {
         if (isTinted) {
             mod.parent = "minecraft:block/tinted_cross";
         }
-        this.writeBlockModelFile(def.blockName, mod);
+        this.writeBlockModelFile(getModelName("base", 0), mod);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         mo.textures.layer0 = mod.textures.cross;

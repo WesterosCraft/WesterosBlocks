@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/purple_grape_crate"
+      "model": "westerosblocks:block/generated/purple_grape_crate/base_v1"
     }
   }
 }

@@ -3,7 +3,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_post"
+          "model": "westerosblocks:block/generated/reach_brick_wall/post-v1"
         }
       ],
       "when": {
@@ -13,7 +13,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_side",
+          "model": "westerosblocks:block/generated/reach_brick_wall/side-v1",
           "uvlock": true
         }
       ],
@@ -24,7 +24,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_side_tall",
+          "model": "westerosblocks:block/generated/reach_brick_wall/side_tall-v1",
           "uvlock": true
         }
       ],
@@ -35,7 +35,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_side",
+          "model": "westerosblocks:block/generated/reach_brick_wall/side-v1",
           "y": 90,
           "uvlock": true
         }
@@ -47,7 +47,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_side_tall",
+          "model": "westerosblocks:block/generated/reach_brick_wall/side_tall-v1",
           "y": 90,
           "uvlock": true
         }
@@ -59,7 +59,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_side",
+          "model": "westerosblocks:block/generated/reach_brick_wall/side-v1",
           "y": 180,
           "uvlock": true
         }
@@ -71,7 +71,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_side_tall",
+          "model": "westerosblocks:block/generated/reach_brick_wall/side_tall-v1",
           "y": 180,
           "uvlock": true
         }
@@ -83,7 +83,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_side",
+          "model": "westerosblocks:block/generated/reach_brick_wall/side-v1",
           "y": 270,
           "uvlock": true
         }
@@ -95,7 +95,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/reach_brick_wall_side_tall",
+          "model": "westerosblocks:block/generated/reach_brick_wall/side_tall-v1",
           "y": 270,
           "uvlock": true
         }

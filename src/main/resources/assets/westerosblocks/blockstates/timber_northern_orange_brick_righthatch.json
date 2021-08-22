@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/timber_northern_orange_brick_righthatch"
+      "model": "westerosblocks:block/generated/timber_northern_orange_brick_righthatch/base_v1"
     }
   }
 }

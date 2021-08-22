@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/small_orange_bricks"
+      "model": "westerosblocks:block/generated/small_orange_bricks/base_v1"
     }
   }
 }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/bees"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/bees/base_v1"
+    }
   }
 }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/cow_parsely"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/cow_parsely/base_v1"
+    }
   }
 }

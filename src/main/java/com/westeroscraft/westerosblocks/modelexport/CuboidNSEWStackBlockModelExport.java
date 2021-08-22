@@ -35,7 +35,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
             	for (int i = 0; i < cnt; i++) {
             		textures[i] = set.getTextureByIndex(i);
             	}
-            	doCuboidModel(modelName(setidx), isTinted, txt0, textures, se.cuboids);
+            	doCuboidModel(getModelName("base", setidx), isTinted, txt0, textures, se.cuboids);
             }
         	// Top model
         	WesterosBlockDef.StackElement se2 = def.getStackElementByIndex(1);
@@ -50,12 +50,12 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
             	for (int i = 0; i < cnt2; i++) {
             		textures2[i] = set.getTextureByIndex(i);
             	}
-            	doCuboidModel(modelName("_top", setidx), isTinted, txt02, textures2, se2.cuboids);
+            	doCuboidModel(getModelName("top", setidx), isTinted, txt02, textures2, se2.cuboids);
             }
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = modelFileName("", 0);
+        mo.parent = modelFileName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {
@@ -72,77 +72,69 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         // Bottom states
     	WesterosBlockDef.StackElement se = def.getStackElementByIndex(0);
         // Loop over the random sets we've got
-    	List<Variant> vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelFileName("", setidx);
+        	var.model = modelFileName("base", setidx);
         	var.y = 270;
-        	vars.add(var);
+        	so.addVariant("facing=north,half=lower", var, set.condIDs);
         }
-        so.variants.put("facing=north,half=lower", vars);
         //
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelFileName("", setidx);        
-        	vars.add(var);
+        	var.model = modelFileName("base", setidx);        
+        	so.addVariant("facing=east,half=lower", var, set.condIDs);
         }
-    	so.variants.put("facing=east,half=lower", vars);
         //
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelFileName("", setidx);        
+        	var.model = modelFileName("base", setidx);        
         	var.y = 90;
-        	vars.add(var);
+        	so.addVariant("facing=south,half=lower", var, set.condIDs);
         }
-        so.variants.put("facing=south,half=lower", vars);
         //
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelFileName("", setidx);        
+        	var.model = modelFileName("base", setidx);        
         	var.y = 180;
-        	vars.add(var);
+        	so.addVariant("facing=west,half=lower", var, set.condIDs);
         }
-        so.variants.put("facing=west,half=lower", vars);
 
         // Top states
         se = def.getStackElementByIndex(1);
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelFileName("_top", setidx);        
+        	var.model = modelFileName("top", setidx);        
         	var.y = 270;
-        	vars.add(var);
+        	so.addVariant("facing=north,half=upper", var, set.condIDs);
         }
-        so.variants.put("facing=north,half=upper", vars);
         //
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelFileName("_top", setidx);        
-        	vars.add(var);
+        	var.model = modelFileName("top", setidx);        
+        	so.addVariant("facing=east,half=upper", var, set.condIDs);
         }
-    	so.variants.put("facing=east,half=upper", vars);
         //
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelFileName("_top", setidx);        
+        	var.model = modelFileName("top", setidx);        
         	var.y = 90;
-        	vars.add(var);
+        	so.addVariant("facing=south,half=upper", var, set.condIDs);
         }
-        so.variants.put("facing=south,half=upper", vars);
         //
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
-        	var.model = modelFileName("_top", setidx);        
+        	var.model = modelFileName("top", setidx);        
         	var.y = 180;
-        	vars.add(var);
+        	so.addVariant("facing=west,half=upper", var, set.condIDs);
         }
-        so.variants.put("facing=west,half=upper", vars);
         
         this.writeBlockStateFile(def.blockName, so);
     }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/wooden_plate"
+      "model": "westerosblocks:block/generated/wooden_plate/base_v1"
     }
   }
 }

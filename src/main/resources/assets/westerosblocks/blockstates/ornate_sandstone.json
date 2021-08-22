@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/ornate_sandstone"
+      "model": "westerosblocks:block/generated/ornate_sandstone/base_v1"
     }
   }
 }

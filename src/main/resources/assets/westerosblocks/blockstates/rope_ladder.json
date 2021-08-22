@@ -1,96 +1,64 @@
 {
   "variants": {
-    "facing=south,up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_both",
-        "y": 180
-      }
-    ],
-    "facing=east,up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_up",
-        "y": 90
-      }
-    ],
-    "facing=south,up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_up",
-        "y": 180
-      }
-    ],
-    "facing=north,up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_both"
-      }
-    ],
-    "facing=south,up=false,down=true": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_down",
-        "y": 180
-      }
-    ],
-    "facing=west,up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_both",
-        "y": 270
-      }
-    ],
-    "facing=south,up=false,down=false": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder",
-        "y": 180
-      }
-    ],
-    "facing=east,up=false,down=false": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder",
-        "y": 90
-      }
-    ],
-    "facing=north,up=false,down=false": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder"
-      }
-    ],
-    "facing=east,up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_both",
-        "y": 90
-      }
-    ],
-    "facing=west,up=false,down=false": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder",
-        "y": 270
-      }
-    ],
-    "facing=west,up=false,down=true": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_down",
-        "y": 270
-      }
-    ],
-    "facing=west,up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_up",
-        "y": 270
-      }
-    ],
-    "facing=north,up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_up"
-      }
-    ],
-    "facing=north,up=false,down=true": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_down"
-      }
-    ],
-    "facing=east,up=false,down=true": [
-      {
-        "model": "westerosblocks:block/generated/rope_ladder_down",
-        "y": 90
-      }
-    ]
+    "facing=south,up=true,down=true": {
+      "model": "westerosblocks:block/generated/rope_ladder/both_v1",
+      "y": 180
+    },
+    "facing=east,up=true,down=false": {
+      "model": "westerosblocks:block/generated/rope_ladder/up_v1",
+      "y": 90
+    },
+    "facing=south,up=true,down=false": {
+      "model": "westerosblocks:block/generated/rope_ladder/up_v1",
+      "y": 180
+    },
+    "facing=north,up=true,down=true": {
+      "model": "westerosblocks:block/generated/rope_ladder/both_v1"
+    },
+    "facing=south,up=false,down=true": {
+      "model": "westerosblocks:block/generated/rope_ladder/down_v1",
+      "y": 180
+    },
+    "facing=west,up=true,down=true": {
+      "model": "westerosblocks:block/generated/rope_ladder/both_v1",
+      "y": 270
+    },
+    "facing=south,up=false,down=false": {
+      "model": "westerosblocks:block/generated/rope_ladder/base_v1",
+      "y": 180
+    },
+    "facing=east,up=false,down=false": {
+      "model": "westerosblocks:block/generated/rope_ladder/base_v1",
+      "y": 90
+    },
+    "facing=north,up=false,down=false": {
+      "model": "westerosblocks:block/generated/rope_ladder/base_v1"
+    },
+    "facing=east,up=true,down=true": {
+      "model": "westerosblocks:block/generated/rope_ladder/both_v1",
+      "y": 90
+    },
+    "facing=west,up=false,down=false": {
+      "model": "westerosblocks:block/generated/rope_ladder/base_v1",
+      "y": 270
+    },
+    "facing=west,up=false,down=true": {
+      "model": "westerosblocks:block/generated/rope_ladder/down_v1",
+      "y": 270
+    },
+    "facing=west,up=true,down=false": {
+      "model": "westerosblocks:block/generated/rope_ladder/up_v1",
+      "y": 270
+    },
+    "facing=north,up=true,down=false": {
+      "model": "westerosblocks:block/generated/rope_ladder/up_v1"
+    },
+    "facing=north,up=false,down=true": {
+      "model": "westerosblocks:block/generated/rope_ladder/down_v1"
+    },
+    "facing=east,up=false,down=true": {
+      "model": "westerosblocks:block/generated/rope_ladder/down_v1",
+      "y": 90
+    }
   }
 }

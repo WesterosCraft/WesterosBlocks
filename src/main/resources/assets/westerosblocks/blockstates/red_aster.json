@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/red_aster"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/red_aster/base_v1"
+    }
   }
 }

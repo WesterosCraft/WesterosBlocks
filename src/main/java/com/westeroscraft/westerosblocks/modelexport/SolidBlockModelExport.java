@@ -39,8 +39,8 @@ public class SolidBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
-    private String getModelName(int setidx) {
-    	return def.blockName + ((setidx == 0)?"":("-v" + (setidx+1)));
+    protected String getModelName(String ext, int setidx) {
+    	return def.blockName + "/" + ext + ("_v" + (setidx+1));
     }
     @Override
     public void doBlockStateExport() throws IOException {
@@ -49,7 +49,7 @@ public class SolidBlockModelExport extends ModelExport {
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(setidx);
+        	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
         	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
             for (int i = 0; i < cnt; i++) {
             	Variant var = new Variant();
@@ -88,11 +88,11 @@ public class SolidBlockModelExport extends ModelExport {
         		mod.textures.all = getTextureID(set.getTextureByIndex(0)); 
         		model = mod;
         	}
-        	this.writeBlockModelFile(getModelName(setidx), model);
+        	this.writeBlockModelFile(getModelName("base", setidx), model);
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {
@@ -114,7 +114,7 @@ public class SolidBlockModelExport extends ModelExport {
     	Map<String, String> newstate = null;
     	if (def.condStates != null) {
     		newstate = new HashMap<String, String>();
-    		newstate.put("cond", def.condStates.get(def.condStates.size()-1).condID);    		
+    		newstate.put("cond", def.getDefaultCondID());    		
     	}
     	oldstate.put("variant", oldVariant);
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);

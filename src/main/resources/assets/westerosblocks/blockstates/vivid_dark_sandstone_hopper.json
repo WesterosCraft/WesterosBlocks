@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/vivid_dark_sandstone_hopper"
+      "model": "westerosblocks:block/generated/vivid_dark_sandstone_hopper/base_v1"
     }
   }
 }

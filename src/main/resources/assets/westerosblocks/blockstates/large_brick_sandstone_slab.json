@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "westerosblocks:block/generated/large_brick_sandstone_slab_bottom"
+      "model": "westerosblocks:block/generated/large_brick_sandstone_slab/bottom_v1"
     },
     "type=double": {
-      "model": "westerosblocks:block/generated/large_brick_sandstone_slab_double"
+      "model": "westerosblocks:block/generated/large_brick_sandstone_slab/double_v1"
     },
     "type=top": {
-      "model": "westerosblocks:block/generated/large_brick_sandstone_slab_top"
+      "model": "westerosblocks:block/generated/large_brick_sandstone_slab/top_v1"
     }
   }
 }

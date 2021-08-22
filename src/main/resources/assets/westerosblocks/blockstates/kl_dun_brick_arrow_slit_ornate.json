@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/kl_dun_brick_arrow_slit_ornate"
+      "model": "westerosblocks:block/generated/kl_dun_brick_arrow_slit_ornate/base_v1"
     }
   }
 }

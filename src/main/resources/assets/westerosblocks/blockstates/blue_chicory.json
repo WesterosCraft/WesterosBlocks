@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/blue_chicory"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/blue_chicory/base_v1"
+    }
   }
 }

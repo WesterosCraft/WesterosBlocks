@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/white_chamomile"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/white_chamomile/base_v1"
+    }
   }
 }

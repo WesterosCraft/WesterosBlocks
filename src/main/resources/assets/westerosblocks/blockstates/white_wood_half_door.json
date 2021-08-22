@@ -1,27 +1,19 @@
 {
   "variants": {
-    "facing=east": [
-      {
-        "model": "westerosblocks:block/generated/white_wood_half_door"
-      }
-    ],
-    "facing=south": [
-      {
-        "model": "westerosblocks:block/generated/white_wood_half_door",
-        "y": 90
-      }
-    ],
-    "facing=north": [
-      {
-        "model": "westerosblocks:block/generated/white_wood_half_door",
-        "y": 270
-      }
-    ],
-    "facing=west": [
-      {
-        "model": "westerosblocks:block/generated/white_wood_half_door",
-        "y": 180
-      }
-    ]
+    "facing=east": {
+      "model": "westerosblocks:block/generated/white_wood_half_door/base_v1"
+    },
+    "facing=south": {
+      "model": "westerosblocks:block/generated/white_wood_half_door/base_v1",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/generated/white_wood_half_door/base_v1",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/generated/white_wood_half_door/base_v1",
+      "y": 180
+    }
   }
 }

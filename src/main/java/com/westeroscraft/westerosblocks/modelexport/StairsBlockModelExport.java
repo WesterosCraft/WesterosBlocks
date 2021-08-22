@@ -28,10 +28,8 @@ public class StairsBlockModelExport extends ModelExport {
         }
     }
 
-    private String getModelName(String ext, int setidx) {
-    	return def.getBlockName() + 
-    			((ext != null) ? ("_" + ext) : "") +
-    			((setidx == 0) ? "" : ("_v" + (setidx+1)));
+    protected String getModelName(String ext, int setidx) {
+    	return def.getBlockName() + "/" + ext + ("_v" + (setidx+1));
     }
     // Template objects for Gson export of block models
     public static class ModelObjectStair {
@@ -159,10 +157,10 @@ public class StairsBlockModelExport extends ModelExport {
     public void doBlockStateExport() throws IOException {
         final StateObject so = new StateObject();
         doInit();
-        buildVariantList(so,"facing=east,half=bottom,shape=straight", null, 0, 0);
-        buildVariantList(so,"facing=west,half=bottom,shape=straight", null, 0, 180);
-        buildVariantList(so,"facing=south,half=bottom,shape=straight", null, 0, 90);
-        buildVariantList(so,"facing=north,half=bottom,shape=straight", null, 0, 270);
+        buildVariantList(so,"facing=east,half=bottom,shape=straight", "base", 0, 0);
+        buildVariantList(so,"facing=west,half=bottom,shape=straight", "base", 0, 180);
+        buildVariantList(so,"facing=south,half=bottom,shape=straight", "base", 0, 90);
+        buildVariantList(so,"facing=north,half=bottom,shape=straight", "base", 0, 270);
         buildVariantList(so,"facing=east,half=bottom,shape=outer_right", "outer", 0, 0);
         buildVariantList(so,"facing=west,half=bottom,shape=outer_right", "outer", 0, 180);
         buildVariantList(so,"facing=south,half=bottom,shape=outer_right", "outer", 0, 90);
@@ -179,10 +177,10 @@ public class StairsBlockModelExport extends ModelExport {
         buildVariantList(so,"facing=west,half=bottom,shape=inner_left", "inner", 0, 90);
         buildVariantList(so,"facing=south,half=bottom,shape=inner_left", "inner", 0, 0);
         buildVariantList(so,"facing=north,half=bottom,shape=inner_left", "inner", 0, 180);
-        buildVariantList(so,"facing=east,half=top,shape=straight", null, 180, 0);
-        buildVariantList(so,"facing=west,half=top,shape=straight", null, 180, 180);
-        buildVariantList(so,"facing=south,half=top,shape=straight", null, 180, 90);
-        buildVariantList(so,"facing=north,half=top,shape=straight", null, 180, 270);
+        buildVariantList(so,"facing=east,half=top,shape=straight", "base", 180, 0);
+        buildVariantList(so,"facing=west,half=top,shape=straight", "base", 180, 180);
+        buildVariantList(so,"facing=south,half=top,shape=straight", "base", 180, 90);
+        buildVariantList(so,"facing=north,half=top,shape=straight", "base", 180, 270);
         buildVariantList(so,"facing=east,half=top,shape=outer_right", "outer", 180, 90);
         buildVariantList(so,"facing=west,half=top,shape=outer_right", "outer", 180, 270);
         buildVariantList(so,"facing=south,half=top,shape=outer_right", "outer", 180, 180);
@@ -258,7 +256,7 @@ public class StairsBlockModelExport extends ModelExport {
         	base.textures.bottom = downtxt;
         	base.textures.top = uptxt;
         	base.textures.side = base.textures.particle = sidetxt;
-        	this.writeBlockModelFile(getModelName(null, setidx), base);
+        	this.writeBlockModelFile(getModelName("base", setidx), base);
         	// Outer model
         	final ModelObjectOuterStair outer = new ModelObjectOuterStair(ambientOcclusion, isTinted);
         	outer.textures.bottom = downtxt;
@@ -274,7 +272,7 @@ public class StairsBlockModelExport extends ModelExport {
         }
     	// Build simple item model that refers to base block model
         final ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(null, 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         this.writeItemModelFile(def.getBlockName(), mo);
 
         // Handle tint resources
@@ -295,6 +293,9 @@ public class StairsBlockModelExport extends ModelExport {
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
     	newstate.put("waterlogged", "false");
+    	if ((bbdef != null) && (bbdef.condStates != null)) {
+        	newstate.put("cond", bbdef.getDefaultCondID());    		
+    	}
     	for (String facing : FACING) {
         	oldstate.put("facing", facing);
         	newstate.put("facing", facing);

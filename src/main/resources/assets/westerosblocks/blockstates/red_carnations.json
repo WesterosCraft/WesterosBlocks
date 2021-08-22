@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/red_carnations"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/red_carnations/base_v1"
+    }
   }
 }

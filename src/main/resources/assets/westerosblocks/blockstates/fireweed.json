@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/fireweed"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/fireweed/base_v1"
+    }
   }
 }

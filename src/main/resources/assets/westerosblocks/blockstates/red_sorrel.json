@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/red_sorrel"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/red_sorrel/base_v1"
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/armory_large"
+      "model": "westerosblocks:block/generated/armory_large/base_v1"
     }
   }
 }

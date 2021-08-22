@@ -42,9 +42,6 @@ public class SolidHorizBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
-    }
     static final String state[] = {
 		"north=false,south=false,east=false,west=false",
 		"north=true,south=false,east=false,west=false",
@@ -64,22 +61,22 @@ public class SolidHorizBlockModelExport extends ModelExport {
 		"north=true,south=true,east=true,west=true"
     };
     static final String ext[] = {
-		"", 
-		"_n", 
-		"_s", 
-		"_ns",
-		"_e",
-		"_ne",
-		"_se",
-		"_nse",
-		"_w",
-		"_nw",
-		"_sw",
-		"_nsw",
-		"_ew", 
-		"_new", 
-		"_sew", 
-		"_nsew"
+		"base", 
+		"n", 
+		"s", 
+		"ns",
+		"e",
+		"ne",
+		"se",
+		"nse",
+		"w",
+		"nw",
+		"sw",
+		"nsw",
+		"ew", 
+		"new", 
+		"sew", 
+		"nsew"
 	};
     // Texture indexes - 2=none, 3=left, 4=right, 5=both
     static final int txtidx_n[] = {
@@ -114,6 +111,9 @@ public class SolidHorizBlockModelExport extends ModelExport {
     	}
     	this.writeBlockStateFile(def.blockName, so);
     }
+    protected String getModelName(String ext, int setidx) {
+    	return def.getBlockName() + "/" + ext + ("_v" + (setidx+1));
+    }
 
     @Override
     public void doModelExports() throws IOException {
@@ -142,7 +142,7 @@ public class SolidHorizBlockModelExport extends ModelExport {
     	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

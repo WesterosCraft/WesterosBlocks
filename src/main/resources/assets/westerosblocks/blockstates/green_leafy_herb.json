@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/green_leafy_herb"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/green_leafy_herb/base_v1"
+    }
   }
 }

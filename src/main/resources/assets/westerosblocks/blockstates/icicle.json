@@ -1,24 +1,16 @@
 {
   "variants": {
-    "up=false,down=true": [
-      {
-        "model": "westerosblocks:block/generated/icicle_down"
-      }
-    ],
-    "up=false,down=false": [
-      {
-        "model": "westerosblocks:block/generated/icicle"
-      }
-    ],
-    "up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/icicle_both"
-      }
-    ],
-    "up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/icicle_up"
-      }
-    ]
+    "up=false,down=true": {
+      "model": "westerosblocks:block/generated/icicle/down_v1"
+    },
+    "up=false,down=false": {
+      "model": "westerosblocks:block/generated/icicle/base_v1"
+    },
+    "up=true,down=true": {
+      "model": "westerosblocks:block/generated/icicle/both_v1"
+    },
+    "up=true,down=false": {
+      "model": "westerosblocks:block/generated/icicle/up_v1"
+    }
   }
 }

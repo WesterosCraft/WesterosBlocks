@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/red_chrysanthemum"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/red_chrysanthemum/base_v1"
+    }
   }
 }

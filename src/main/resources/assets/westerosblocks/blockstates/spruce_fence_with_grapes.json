@@ -3,14 +3,14 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/spruce_fence_with_grapes_post"
+          "model": "westerosblocks:block/generated/spruce_fence_with_grapes/post_v1"
         }
       ]
     },
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/spruce_fence_with_grapes_side",
+          "model": "westerosblocks:block/generated/spruce_fence_with_grapes/side_v1",
           "uvlock": true
         }
       ],
@@ -21,7 +21,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/spruce_fence_with_grapes_side",
+          "model": "westerosblocks:block/generated/spruce_fence_with_grapes/side_v1",
           "y": 90,
           "uvlock": true
         }
@@ -33,7 +33,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/spruce_fence_with_grapes_side",
+          "model": "westerosblocks:block/generated/spruce_fence_with_grapes/side_v1",
           "y": 180,
           "uvlock": true
         }
@@ -45,7 +45,7 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/spruce_fence_with_grapes_side",
+          "model": "westerosblocks:block/generated/spruce_fence_with_grapes/side_v1",
           "y": 270,
           "uvlock": true
         }

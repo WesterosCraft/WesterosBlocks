@@ -2,52 +2,52 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v2"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v3"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v3"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v4"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v4"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v5"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v5"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v6"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v6"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v7"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v7"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v8"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v8"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v9"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v9"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v10"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v10"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v11"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v11"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v12"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v12"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v13"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v13"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v14"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v14"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v15"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v15"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_reach_alt-v16"
+        "model": "westerosblocks:block/generated/terrainset_reach_alt/base_v16"
       }
     ]
   }

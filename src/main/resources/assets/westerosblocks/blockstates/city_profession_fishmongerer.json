@@ -1,15 +1,11 @@
 {
   "variants": {
-    "facing=east": [
-      {
-        "model": "westerosblocks:block/generated/city_profession_fishmongerer"
-      }
-    ],
-    "facing=north": [
-      {
-        "model": "westerosblocks:block/generated/city_profession_fishmongerer",
-        "y": 90
-      }
-    ]
+    "facing=east": {
+      "model": "westerosblocks:block/generated/city_profession_fishmongerer/base_v1"
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/generated/city_profession_fishmongerer/base_v1",
+      "y": 90
+    }
   }
 }

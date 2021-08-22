@@ -16,20 +16,6 @@ import net.minecraft.block.Block;
 
 public class CuboidBlockModelExport extends ModelExport {
     protected WCCuboidBlock blk;
-
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class StateObject1 {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer x;
-        public Integer y;
-        public Boolean uvlock;
-    }
     
     // Template objects for Gson export of block models
     public static class ModelObjectCuboid {
@@ -76,40 +62,22 @@ public class CuboidBlockModelExport extends ModelExport {
 
     public String modelFileName(String ext, int setidx) {
     	if (def.isCustomModel())
-    		return WesterosBlocks.MOD_ID + ":block/custom/" + modelName(ext, setidx);
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx);
     	else
-    		return WesterosBlocks.MOD_ID + ":block/generated/" + modelName(ext, setidx);
+    		return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx);
     }
 
-    public String modelName(String ext, int setidx) {
-    	if (def.isCustomModel())
-    		return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
-    	else
-    		return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
-    }
-    public String modelName(int setidx) {
-    	return modelName("", setidx);
-    }
     @Override
     public void doBlockStateExport() throws IOException {
-        List<Variant> vars = new ArrayList<Variant>();
+    	StateObject so = new StateObject();
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
             Variant var = new Variant();
-            var.model = modelFileName("", setidx);
-        	vars.add(var);
+            var.model = modelFileName("base", setidx);
+            so.addVariant("", var, set.condIDs);
         }
-        if (vars.size() == 1) {
-        	StateObject1 so = new StateObject1();
-        	so.variants.put("", vars.get(0));
-        	this.writeBlockStateFile(def.blockName, so);
-        }
-        else {
-        	StateObject so = new StateObject();
-        	so.variants.put("", vars);
-        	this.writeBlockStateFile(def.blockName, so);        	
-        }
+    	this.writeBlockStateFile(def.blockName, so);        	
     }
 
     private static float getClamped(float v) {
@@ -301,12 +269,12 @@ public class CuboidBlockModelExport extends ModelExport {
         if (!def.isCustomModel()) {
             // Loop over the random sets we've got
             for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-            	doCuboidModel(modelName(setidx), isTinted, setidx);
+            	doCuboidModel(getModelName("base", setidx), isTinted, setidx);
             }
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = modelFileName("", 0);
+        mo.parent = modelFileName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

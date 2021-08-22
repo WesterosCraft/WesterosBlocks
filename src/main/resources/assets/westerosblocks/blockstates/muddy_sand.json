@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/muddy_sand"
+      "model": "westerosblocks:block/generated/muddy_sand/base_v1"
     }
   }
 }

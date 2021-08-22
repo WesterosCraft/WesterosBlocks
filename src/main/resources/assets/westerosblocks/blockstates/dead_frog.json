@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/dead_frog"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/dead_frog/base_v1"
+    }
   }
 }

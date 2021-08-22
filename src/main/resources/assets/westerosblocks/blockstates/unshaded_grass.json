@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/unshaded_grass/base_v1"
+    }
   }
 }

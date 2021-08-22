@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/bracken"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/bracken/base_v1"
+    }
   }
 }

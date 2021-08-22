@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/starry_sept_marble"
+      "model": "westerosblocks:block/generated/starry_sept_marble/base_v1"
     }
   }
 }

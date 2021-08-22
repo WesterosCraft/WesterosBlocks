@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/fish_barrel"
+      "model": "westerosblocks:block/generated/fish_barrel/base_v1"
     }
   }
 }

@@ -43,9 +43,10 @@ public class SolidVertBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    protected String getModelName(String ext, int setidx) {
+    	return def.getBlockName() + "/" + ext + ("_v" + (setidx+1));
     }
+
     @Override
     public void doBlockStateExport() throws IOException {
     	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
@@ -58,10 +59,10 @@ public class SolidVertBlockModelExport extends ModelExport {
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	// Default for up=false, down=false
-        	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", setidx);
-        	String model2 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_up", setidx);
-        	String model3 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_down", setidx);
-        	String model4 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("_both", setidx);
+        	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
+        	String model2 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("up", setidx);
+        	String model3 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("down", setidx);
+        	String model4 = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("both", setidx);
             for (int i = 0; i < cnt; i++) {
             	// down=false,up=false
             	Variant var = new Variant();
@@ -111,7 +112,7 @@ public class SolidVertBlockModelExport extends ModelExport {
     		if (isTinted) {
     			mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube_bottom_top";
     		}
-        	this.writeBlockModelFile(getModelName("", setidx), mod);
+        	this.writeBlockModelFile(getModelName("base", setidx), mod);
         	// down=true, up=false
     		mod = new ModelObjectBottomTop();
     		mod.textures.bottom = getTextureID(set.getTextureByIndex(0));
@@ -121,7 +122,7 @@ public class SolidVertBlockModelExport extends ModelExport {
     		if (isTinted) {
     			mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube_bottom_top";
     		}
-        	this.writeBlockModelFile(getModelName("_down", setidx), mod);
+        	this.writeBlockModelFile(getModelName("down", setidx), mod);
         	// down=false, up=true
     		mod = new ModelObjectBottomTop();
     		mod.textures.bottom = getTextureID(set.getTextureByIndex(0));
@@ -131,7 +132,7 @@ public class SolidVertBlockModelExport extends ModelExport {
     		if (isTinted) {
     			mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube_bottom_top";
     		}
-        	this.writeBlockModelFile(getModelName("_up", setidx), mod);
+        	this.writeBlockModelFile(getModelName("up", setidx), mod);
         	// down=true, up=true
     		mod = new ModelObjectBottomTop();
     		mod.textures.bottom = getTextureID(set.getTextureByIndex(0));
@@ -141,11 +142,11 @@ public class SolidVertBlockModelExport extends ModelExport {
     		if (isTinted) {
     			mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube_bottom_top";
     		}
-        	this.writeBlockModelFile(getModelName("_both", setidx), mod);
+        	this.writeBlockModelFile(getModelName("both", setidx), mod);
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

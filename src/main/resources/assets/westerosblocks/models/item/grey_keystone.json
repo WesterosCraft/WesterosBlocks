@@ -1,3 +1,3 @@
 {
-  "parent": "westerosblocks:block/generated/grey_keystone"
+  "parent": "westerosblocks:block/generated/grey_keystone/base_v1"
 }

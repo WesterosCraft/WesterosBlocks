@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/smoke"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/smoke/base_v1"
+    }
   }
 }

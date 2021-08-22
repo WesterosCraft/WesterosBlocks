@@ -2,161 +2,161 @@
   "variants": {
     ",cond=dry": [
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v41"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v41"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v42"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v42"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v43"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v43"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v44"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v44"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v45"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v45"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v46"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v46"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v47"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v47"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v48"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v48"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v49"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v49"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v50"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v50"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v51"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v51"
       }
     ],
     ",cond=default": [
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v2"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v3"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v3"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v4"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v4"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v5"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v5"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v6"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v6"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v7"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v7"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v8"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v8"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v9"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v9"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v10"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v10"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v11"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v11"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v12"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v12"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v13"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v13"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v14"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v14"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v15"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v15"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v16"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v16"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v17"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v17"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v18"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v18"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v19"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v19"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v20"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v20"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v21"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v21"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v22"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v22"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v23"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v23"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v24"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v24"
       }
     ],
     ",cond=wet": [
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v25"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v25"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v26"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v26"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v27"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v27"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v28"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v28"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v29"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v29"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v30"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v30"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v31"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v31"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v32"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v32"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v33"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v33"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v34"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v34"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v35"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v35"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v36"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v36"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v37"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v37"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v38"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v38"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v39"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v39"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks-v40"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks/base_v40"
       }
     ]
   }

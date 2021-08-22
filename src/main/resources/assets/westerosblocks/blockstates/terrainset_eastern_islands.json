@@ -2,52 +2,52 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v2"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v3"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v3"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v4"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v4"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v5"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v5"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v6"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v6"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v7"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v7"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v8"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v8"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v9"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v9"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v10"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v10"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v11"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v11"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v12"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v12"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v13"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v13"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v14"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v14"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v15"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v15"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_eastern_islands-v16"
+        "model": "westerosblocks:block/generated/terrainset_eastern_islands/base_v16"
       }
     ]
   }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/dead_bush"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/dead_bush/base_v1"
+    }
   }
 }

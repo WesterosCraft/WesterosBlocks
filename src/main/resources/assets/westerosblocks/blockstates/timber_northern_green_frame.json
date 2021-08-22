@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/timber_northern_green_frame"
+      "model": "westerosblocks:block/generated/timber_northern_green_frame/base_v1"
     }
   }
 }

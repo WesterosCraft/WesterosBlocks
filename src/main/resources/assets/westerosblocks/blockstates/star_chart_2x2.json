@@ -1,27 +1,19 @@
 {
   "variants": {
-    "facing=east": [
-      {
-        "model": "westerosblocks:block/generated/star_chart_2x2"
-      }
-    ],
-    "facing=south": [
-      {
-        "model": "westerosblocks:block/generated/star_chart_2x2",
-        "y": 90
-      }
-    ],
-    "facing=north": [
-      {
-        "model": "westerosblocks:block/generated/star_chart_2x2",
-        "y": 270
-      }
-    ],
-    "facing=west": [
-      {
-        "model": "westerosblocks:block/generated/star_chart_2x2",
-        "y": 180
-      }
-    ]
+    "facing=east": {
+      "model": "westerosblocks:block/generated/star_chart_2x2/base_v1"
+    },
+    "facing=south": {
+      "model": "westerosblocks:block/generated/star_chart_2x2/base_v1",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/generated/star_chart_2x2/base_v1",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/generated/star_chart_2x2/base_v1",
+      "y": 180
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/baelors_brown_veined_marble"
+      "model": "westerosblocks:block/generated/baelors_brown_veined_marble/base_v1"
     }
   }
 }

@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/dead_rat"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/dead_rat/base_v1"
+    }
   }
 }

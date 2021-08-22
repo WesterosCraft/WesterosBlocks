@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/blue_bells"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/blue_bells/base_v1"
+    }
   }
 }

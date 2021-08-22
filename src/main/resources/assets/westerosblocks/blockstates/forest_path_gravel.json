@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/forest_path_gravel"
+      "model": "westerosblocks:block/generated/forest_path_gravel/base_v1"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/red_lantern2"
+      "model": "westerosblocks:block/generated/red_lantern2/base_v1"
     }
   }
 }

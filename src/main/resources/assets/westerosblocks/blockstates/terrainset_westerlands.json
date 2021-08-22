@@ -2,52 +2,52 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v2"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v3"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v3"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v4"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v4"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v5"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v5"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v6"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v6"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v7"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v7"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v8"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v8"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v9"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v9"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v10"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v10"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v11"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v11"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v12"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v12"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v13"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v13"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v14"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v14"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v15"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v15"
       },
       {
-        "model": "westerosblocks:block/generated/terrainset_westerlands-v16"
+        "model": "westerosblocks:block/generated/terrainset_westerlands/base_v16"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/pebbles_wet_red_mountains"
+      "model": "westerosblocks:block/generated/pebbles_wet_red_mountains/base_v1"
     }
   }
 }

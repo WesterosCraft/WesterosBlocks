@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/pink_allium"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/pink_allium/base_v1"
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/white_wood_hopper"
+      "model": "westerosblocks:block/generated/white_wood_hopper/base_v1"
     }
   }
 }

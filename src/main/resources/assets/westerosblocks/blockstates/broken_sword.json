@@ -1,15 +1,11 @@
 {
   "variants": {
-    "facing=east": [
-      {
-        "model": "westerosblocks:block/generated/broken_sword"
-      }
-    ],
-    "facing=north": [
-      {
-        "model": "westerosblocks:block/generated/broken_sword",
-        "y": 90
-      }
-    ]
+    "facing=east": {
+      "model": "westerosblocks:block/generated/broken_sword/base_v1"
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/generated/broken_sword/base_v1",
+      "y": 90
+    }
   }
 }

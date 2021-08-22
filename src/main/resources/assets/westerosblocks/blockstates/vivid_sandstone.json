@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/vivid_sandstone"
+      "model": "westerosblocks:block/generated/vivid_sandstone/base_v1"
     }
   }
 }

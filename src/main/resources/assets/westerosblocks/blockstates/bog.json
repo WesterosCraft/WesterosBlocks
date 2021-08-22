@@ -2,169 +2,169 @@
   "variants": {
     "down=false,up=true": [
       {
-        "model": "westerosblocks:block/generated/bog_up",
+        "model": "westerosblocks:block/generated/bog/up_v1",
         "weight": 6
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v2",
+        "model": "westerosblocks:block/generated/bog/up_v2",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v3",
+        "model": "westerosblocks:block/generated/bog/up_v3",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v4",
+        "model": "westerosblocks:block/generated/bog/up_v4",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v5",
+        "model": "westerosblocks:block/generated/bog/up_v5",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v6",
+        "model": "westerosblocks:block/generated/bog/up_v6",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v7",
+        "model": "westerosblocks:block/generated/bog/up_v7",
         "weight": 1
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v8",
+        "model": "westerosblocks:block/generated/bog/up_v8",
         "weight": 1
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v9",
+        "model": "westerosblocks:block/generated/bog/up_v9",
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/bog_up-v10",
+        "model": "westerosblocks:block/generated/bog/up_v10",
         "weight": 2
       }
     ],
     "down=true,up=false": [
       {
-        "model": "westerosblocks:block/generated/bog_down",
+        "model": "westerosblocks:block/generated/bog/down_v1",
         "weight": 6
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v2",
+        "model": "westerosblocks:block/generated/bog/down_v2",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v3",
+        "model": "westerosblocks:block/generated/bog/down_v3",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v4",
+        "model": "westerosblocks:block/generated/bog/down_v4",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v5",
+        "model": "westerosblocks:block/generated/bog/down_v5",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v6",
+        "model": "westerosblocks:block/generated/bog/down_v6",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v7",
+        "model": "westerosblocks:block/generated/bog/down_v7",
         "weight": 1
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v8",
+        "model": "westerosblocks:block/generated/bog/down_v8",
         "weight": 1
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v9",
+        "model": "westerosblocks:block/generated/bog/down_v9",
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/bog_down-v10",
+        "model": "westerosblocks:block/generated/bog/down_v10",
         "weight": 2
       }
     ],
     "down=false,up=false": [
       {
-        "model": "westerosblocks:block/generated/bog",
+        "model": "westerosblocks:block/generated/bog/base_v1",
         "weight": 6
       },
       {
-        "model": "westerosblocks:block/generated/bog-v2",
+        "model": "westerosblocks:block/generated/bog/base_v2",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog-v3",
+        "model": "westerosblocks:block/generated/bog/base_v3",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog-v4",
+        "model": "westerosblocks:block/generated/bog/base_v4",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog-v5",
+        "model": "westerosblocks:block/generated/bog/base_v5",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog-v6",
+        "model": "westerosblocks:block/generated/bog/base_v6",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog-v7",
+        "model": "westerosblocks:block/generated/bog/base_v7",
         "weight": 1
       },
       {
-        "model": "westerosblocks:block/generated/bog-v8",
+        "model": "westerosblocks:block/generated/bog/base_v8",
         "weight": 1
       },
       {
-        "model": "westerosblocks:block/generated/bog-v9",
+        "model": "westerosblocks:block/generated/bog/base_v9",
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/bog-v10",
+        "model": "westerosblocks:block/generated/bog/base_v10",
         "weight": 2
       }
     ],
     "down=true,up=true": [
       {
-        "model": "westerosblocks:block/generated/bog_both",
+        "model": "westerosblocks:block/generated/bog/both_v1",
         "weight": 6
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v2",
+        "model": "westerosblocks:block/generated/bog/both_v2",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v3",
+        "model": "westerosblocks:block/generated/bog/both_v3",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v4",
+        "model": "westerosblocks:block/generated/bog/both_v4",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v5",
+        "model": "westerosblocks:block/generated/bog/both_v5",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v6",
+        "model": "westerosblocks:block/generated/bog/both_v6",
         "weight": 3
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v7",
+        "model": "westerosblocks:block/generated/bog/both_v7",
         "weight": 1
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v8",
+        "model": "westerosblocks:block/generated/bog/both_v8",
         "weight": 1
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v9",
+        "model": "westerosblocks:block/generated/bog/both_v9",
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/bog_both-v10",
+        "model": "westerosblocks:block/generated/bog/both_v10",
         "weight": 2
       }
     ]

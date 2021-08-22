@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/yellow_sunflower"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/yellow_sunflower/base_v1"
+    }
   }
 }

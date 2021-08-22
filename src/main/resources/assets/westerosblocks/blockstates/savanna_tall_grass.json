@@ -1,9 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/savanna_tall_grass"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/savanna_tall_grass/base_v1"
+    }
   }
 }

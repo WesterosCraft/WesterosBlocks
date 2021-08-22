@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/open_basket"
+      "model": "westerosblocks:block/generated/open_basket/base_v1"
     }
   }
 }

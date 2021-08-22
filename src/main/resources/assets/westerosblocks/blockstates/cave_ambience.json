@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/cave_ambience"
+      "model": "westerosblocks:block/generated/cave_ambience/base_v1"
     }
   }
 }

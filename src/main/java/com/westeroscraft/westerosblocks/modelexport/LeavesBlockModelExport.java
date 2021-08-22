@@ -45,8 +45,8 @@ public class LeavesBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
-    private String getModelName(String ext, int setidx) {
-    	return def.blockName + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
+    protected String getModelName(String ext, int setidx) {
+    	return def.blockName + "/" + ext + ("-v" + (setidx+1));
     }
 
     @Override
@@ -55,7 +55,7 @@ public class LeavesBlockModelExport extends ModelExport {
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("", setidx);
+        	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
         	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
             for (int i = 0; i < cnt; i++) {
             	Variant var = new Variant();
@@ -125,11 +125,9 @@ public class LeavesBlockModelExport extends ModelExport {
         
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	
             ModelObjectLeaves mod = makeModel(setidx, isTinted, blk.betterfoliage, blk.overlay);
 
-            this.writeBlockModelFile(getModelName("", setidx), mod);
+            this.writeBlockModelFile(getModelName("base", setidx), mod);
         }
         // Build base model for item
         ModelObjectLeaves mo = makeModel(0, isTinted, false, blk.overlay);
