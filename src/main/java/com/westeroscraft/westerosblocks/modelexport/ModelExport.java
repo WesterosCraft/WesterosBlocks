@@ -293,38 +293,59 @@ public abstract class ModelExport {
         }
     }
 
-    public static class ForgeModel {
-    	public Map<String, String> textures;
-    	public String model;
-    	public Boolean uvlock;
-    	public Integer weight;
+    // Template objects for Gson export of block state
+    public static class StateObject {
+        public Map<String, VarOrVarList> variants;
+    	public List<States> multipart;
+        
+        public void addVariant(String cond, Variant v) {
+        	if (variants == null) {
+        		 variants = new HashMap<String, VarOrVarList>();
+        	}
+        	VarOrVarList existing = variants.get(cond);	// See if exists
+        	if (existing == null) {
+        		variants.put(cond, v);	// Add single
+        	}
+        	else if (existing instanceof Variant) {	// Only one?
+        		VariantList vlist = new VariantList();
+        		vlist.add((Variant) existing);	// Convert to list
+        		vlist.add(v);
+        		variants.put(cond, vlist);
+        	}
+        	else {
+        		((VariantList) existing).add(v);	// Append to list
+        	}
+        }
+        public void addStates(States st) {
+        	if (multipart == null) {
+        		multipart = new ArrayList<States>();
+        	}
+        	multipart.add(st);
+        }
     }
-    public static class ForgeDefaults extends ForgeModel {
-    	public String transform = "forge:default-item";
-    	public Boolean ambientocclusion;
-    	public ForgeDefaults() {
-    		textures = new HashMap<String, String>();
-    	}
+    public static interface VarOrVarList {};
+    
+    public static class Variant implements VarOrVarList {
+        public String model;
+        public Integer x, y, z;
+        public Integer weight;
     }
-    public static class ForgeBlockState {
-    	public int forge_marker = 1;
-    	public ForgeDefaults defaults = new ForgeDefaults();
-    	public Map<String, AbstractForgeVariant> variants = new HashMap<String, AbstractForgeVariant>();
+    public static class VariantList extends ArrayList<Variant> implements VarOrVarList {
+		private static final long serialVersionUID = 1L;    	
     }
-    public static interface AbstractForgeVariant {
+    public static class States {
+    	public List<Apply> apply = new ArrayList<Apply>();
+    	public WhenRec when;
+    }    
+    public static class WhenRec {
+    	String north, south, west, east, up, cond;
+    	public List<WhenRec> OR;
     }
-    public static class ForgeVariantMap extends HashMap<String, ForgeVariant> implements AbstractForgeVariant {
-    }
-    public static class ForgeVariantList extends ArrayList<ForgeVariant> implements AbstractForgeVariant {
-    }
-    public static class ForgeVariant extends ForgeModel implements AbstractForgeVariant {
-    	public Integer x, y, z;
-    	public AbstractForgeSubmodel submodel;
-    }
-    public static interface AbstractForgeSubmodel {
-    }
-    public static class ForgeSubmodel extends ForgeModel implements AbstractForgeSubmodel {
-    }
-    public static class ForgeSubmodelMap extends HashMap<String, ForgeModel> implements AbstractForgeSubmodel {
+    public static class Apply {
+    	String model;
+    	Integer x;
+    	Integer y;
+    	Boolean uvlock;
+    	Integer weight;
     }
 }

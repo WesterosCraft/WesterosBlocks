@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: WesterosBlocks.json data schema
-  version: '0.2.1'
+  version: '0.2.2'
 servers:
   - url: /
 paths: {}
@@ -242,6 +242,8 @@ components:
                 If true, causes block to have its model
                 randomly rotated with 4 different angles
                 around Y axis (0, 90, 180, 270 degrees)
+            condStates:
+              $ref: "#/components/schemas/CondStates"
     solidhoriz:
       title: blockType='solidhoriz'
       allOf:
@@ -851,17 +853,6 @@ components:
                   If the list is shorter than 6, the
                   last texture is used for all indexes
                   beyond the length of the list.
-            type:
-              type: string
-              description: |-
-                Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
-                
-                - "shape": Shape of the bed model.  Values include:
-                
-                   - "normal": default bed
-                   - "raised": raised noble bed
-                   - "hammock": hammock bed                  
     cake:
       title: blockType='cake'
       allOf:
@@ -1557,17 +1548,6 @@ components:
                   If the list is shorter than 3, the
                   last texture is used for all indexes
                   beyond the length of the list.
-            type:
-              type: string
-              description: |-
-                Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
-                
-                - "size": Height of the wall side model.  Values include:
-                
-                   - "normal": default (14/16ths of block)
-                   - "short" : short (13/16ths of block)
-                  
     beacon:
       title: blockType='beacon'
       allOf:
@@ -1670,6 +1650,15 @@ components:
               receive when being randomly selected from among the
               other sets in the list (where the set will be selected
               based on 'weight / sum(all weight across sets)'.
+          condIDs:
+            type: array
+            items:
+              type: string
+            description: |-
+              If condStates are set, this field determines which of
+              those states will incorporate a model based on this set
+              of textures.  If not defined, the model is assumed to
+              apply to all condState values.
     Cuboids:
       type: array
       description: List of cuboid components
@@ -1774,4 +1763,38 @@ components:
             to use the given color map
         colorMult:
           $ref: "#/components/schemas/colorMult"
+    CondStates:
+      type: array
+      description: |-
+        List of conditional states for blocks - causes a generated
+        state field, 'cond', with a value set corresponding to the
+        condID fields in this list.  The last records is always the
+        default state - and it should be unconditionally matching.
+      items:
+        type: object
+        description: A single condition record
+        required: [ condID ]
+        properties:
+          condID:
+            type: string
+            description: ID of state value - state attribute will be 'cond=<condID>'
+          minY:
+            type: integer
+            description: |-
+              If defined, condition only matches if Y coordinate of block
+              is greater than or equals to this value.
+          maxY:
+            type: integer
+            description: |-
+              If defined, condition only matches if Y coordinate of block
+              is less than or equal to this value.
+          biomes:
+            type: array
+            items:
+              type: string
+            description: |-
+              If defined, biome of the location of the block must match
+              one of the provided values.  Values in the list are resource
+              locator values (e.g. minecraft:taiga)
+
             

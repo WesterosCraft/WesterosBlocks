@@ -13,30 +13,6 @@ import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import net.minecraft.block.Block;
 
 public class WallBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-    	public List<States> multipart = new ArrayList<States>();
-    }
-    public static class States {
-    	public WhenRec when = new WhenRec();
-    	public List<Apply> apply = new ArrayList<Apply>();
-    }
-    public static class SideStates extends States {
-    	SideStates() {
-    		when.OR = new ArrayList<WhenRec>();
-    	}
-    }
-    public static class WhenRec {
-    	String up, north, south, west, east;
-    	public List<WhenRec> OR;
-    }
-    public static class Apply {
-    	String model;
-    	Integer y;
-    	Boolean uvlock;
-    	Integer weight;
-    }
-    
     // Template objects for Gson export of block models
     public static class ModelObjectPost {
         public String parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_post";    // Use 'wall_post' model for single texture
@@ -69,144 +45,61 @@ public class WallBlockModelExport extends ModelExport {
     	return def.blockName + "_" + ext + ((setidx == 0)?"":("-v" + (setidx+1)));
     }
     
+    private static class ModelPart {
+    	String modExt;
+    	WhenRec when;
+    	Boolean uvlock;
+    	Integer y;
+    	ModelPart(String mx, String u, String n, String s, String e, String w, Boolean uvlock, Integer y) {
+    		this.modExt = mx;
+    		this.when = new WhenRec();
+    		this.when.up = u; this.when.north = n; this.when.south = s; 
+    		this.when.east = e; this.when.west = w; 
+    		this.uvlock = uvlock;
+    		this.y = y;
+    	}
+    };
+    private static ModelPart[] PARTS = {
+    		// Post
+    		new ModelPart("post", "true", null, null, null, null, null, null),
+    		// North low
+    		new ModelPart("side", null, "low", null, null, null, true, null),    		
+    		// North tall
+    		new ModelPart("side_tall", null, "tall", null, null, null, true, null),    		
+    		// East low
+    		new ModelPart("side", null, null, null, "low", null, true, 90),    		
+    		// East tall
+    		new ModelPart("side_tall", null, null, null, "tall", null, true, 90),    		
+    		// South low
+    		new ModelPart("side", null, null, "low", null, null, true, 180),    		
+    		// South tall
+    		new ModelPart("side_tall", null, null, "tall", null, null, true, 180),    		
+    		// East low
+    		new ModelPart("side", null, null, null, null, "low", true, 270),    		
+    		// East tall
+    		new ModelPart("side_tall", null, null, null, null, "tall", true, 270)
+    };
+    
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-    	// Add post based on our variant and up state
-        SideStates ssn = new SideStates();
-        WhenRec wr = new WhenRec();
-        wr.up = "true";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("post", setidx);
-        	a.weight = set.weight;
-        	ssn.apply.add(a);
+        // Loop through the parts
+        for (ModelPart mp : PARTS) {
+            States ssn = new States();
+            ssn.when = mp.when;
+            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+            	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+            	Apply a = new Apply();
+            	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(mp.modExt, setidx);
+            	a.weight = set.weight;
+            	if (mp.uvlock != null) a.uvlock = mp.uvlock;
+            	if (mp.y != null) a.y = mp.y;
+            	
+            	ssn.apply.add(a);
+            }
+            so.addStates(ssn);
         }
-    	so.multipart.add(ssn);
-    	// Add north variant
-    	ssn = new SideStates();
-    	wr = new WhenRec();
-    	wr.north = "low";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", setidx);
-        	a.weight = set.weight;
-        	a.uvlock = true;
-        	ssn.apply.add(a);
-        }
-    	so.multipart.add(ssn);
-    	
-    	ssn = new SideStates();
-    	wr = new WhenRec();
-    	wr.north = "tall";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_tall", setidx);
-        	a.weight = set.weight;
-        	a.uvlock = true;
-        	ssn.apply.add(a);
-        }
-    	so.multipart.add(ssn);
-    	
-    	// Add east variant
-    	ssn = new SideStates();
-    	wr = new WhenRec();
-    	wr.east = "low";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", setidx);
-        	a.weight = set.weight;
-        	a.uvlock = true;
-        	a.y = 90;
-        	ssn.apply.add(a);
-        }
-    	so.multipart.add(ssn);
-    	
-    	ssn = new SideStates();
-    	wr = new WhenRec();
-    	wr.east = "tall";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_tall", setidx);
-        	a.weight = set.weight;
-        	a.uvlock = true;
-        	a.y = 90;
-        	ssn.apply.add(a);
-        }
-    	so.multipart.add(ssn);
-    	
-    	// Add south variant
-        ssn = new SideStates();
-        wr = new WhenRec();
-        wr.south = "low";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", setidx);
-        	a.weight = set.weight;
-        	a.uvlock = true;
-        	a.y = 180;
-        	ssn.apply.add(a);
-        }
-        so.multipart.add(ssn);
-        
-        ssn = new SideStates();
-        wr = new WhenRec();
-        wr.south = "tall";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_tall", setidx);
-        	a.weight = set.weight;
-        	a.uvlock = true;
-        	a.y = 180;
-        	ssn.apply.add(a);
-        }
-        so.multipart.add(ssn);
 
-        // Add west variant
-        ssn = new SideStates();
-        wr = new WhenRec();
-        wr.west = "low";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side", setidx);
-        	a.weight = set.weight;
-        	a.uvlock = true;
-        	a.y = 270;
-        	ssn.apply.add(a);
-        }
-        so.multipart.add(ssn);
-        
-        ssn = new SideStates();
-        wr = new WhenRec();
-        wr.west = "tall";
-        ssn.when = wr;
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Apply a = new Apply();
-        	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("side_tall", setidx);
-        	a.weight = set.weight;
-        	a.uvlock = true;
-        	a.y = 270;
-        	ssn.apply.add(a);
-        }
-        so.multipart.add(ssn);
-        
         this.writeBlockStateFile(def.blockName, so);
     }
 

@@ -158,7 +158,6 @@ public class WesterosBlockDef {
     	public String condID;	// Condition ID (required) - value for enum state attribute
     	public Set<String> biomes;	// If defined, list of biomes that must match for condition to apply
     	public Integer minY, maxY;	// If defined minimunm and/or maximum Y coordinate for condition to match
-    	public Set<Integer> randomTextureIndices;	// List of randomTexture indexes that apply to this condition, if matched (if undefined, all randomTextures apply)
     	public transient Biome biomeList[];
     };
     
@@ -174,7 +173,7 @@ public class WesterosBlockDef {
 	public static class RandomTextureSet {
 		public List<String> textures = null; // List of textures (for single texture set)
 		public Integer weight = null;		// Weight for texture set (default = 1)
-		
+		public Set<String> condIDs;	// List of matching condition IDs (if condStates defined) - if undefined, all will match
 		// Get number of base textures
 		public int getTextureCount() {
 			if (textures != null) {

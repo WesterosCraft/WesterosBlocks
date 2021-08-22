@@ -14,18 +14,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class SolidBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class StateObject1 {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer y;
-        public Integer weight;
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectCubeAll {
         public String parent = "minecraft:block/cube_all";    // Use 'cube_all' model for single texture
@@ -45,7 +33,6 @@ public class SolidBlockModelExport extends ModelExport {
     public static class ModelObject {
     	public String parent;
     }
-
     
     public SolidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
@@ -57,14 +44,8 @@ public class SolidBlockModelExport extends ModelExport {
     }
     @Override
     public void doBlockStateExport() throws IOException {
-        List<Variant> vars = new ArrayList<Variant>();
-        Map<String, List<Variant>> condMap = new HashMap<String, List<Variant>>();
-        // If we are doing conditions, build list for each value
-        if (def.condStates != null) {
-        	for (WesterosBlockDef.ConditionRec rec : def.condStates) {
-        		condMap.put(rec.condID, new ArrayList<Variant>());
-        	}
-        }
+    	StateObject so = new StateObject();
+
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
@@ -75,40 +56,21 @@ public class SolidBlockModelExport extends ModelExport {
             	var.model = model;
             	var.weight = set.weight;
             	if (i > 0) var.y = 90*i;
-            	vars.add(var);
+            	// If we have condition states
+                if (def.condStates != null) {
+                	for (WesterosBlockDef.ConditionRec rec : def.condStates) {
+                		// If no limits, or this set is part of it, add it
+                		if ((set.condIDs == null) || set.condIDs.contains(rec.condID)) {
+                			so.addVariant("cond=" + rec.condID, var);	// Add our variant
+                		}
+                	}
+                }
+                else {
+        			so.addVariant("", var);	// Add our variant                	
+                }
             }
-            // If conditions, add to the right lists
-            if (def.condStates != null) {
-            	for (WesterosBlockDef.ConditionRec rec : def.condStates) {
-            		// If no limits, or this set is part of it, add it
-            		if ((rec.randomTextureIndices == null) || rec.randomTextureIndices.contains(setidx)) {
-            			 List<Variant> var = condMap.get(rec.condID);
-            			 var.addAll(vars);
-            		}
-            	}
-            	vars.clear();	// Empty the list
-            }
         }
-        if (def.condStates != null) {
-        	StateObject so = new StateObject();
-        	for (WesterosBlockDef.ConditionRec rec : def.condStates) {
-    			 List<Variant> var = condMap.get(rec.condID);
-    			 so.variants.put("cond=" + rec.condID, var);
-        	}
-        	this.writeBlockStateFile(def.blockName, so);        	
-        }
-        else if (vars.size() == 1) {
-            StateObject1 so = new StateObject1();
-            Variant v = vars.get(0);
-            v.weight = null;
-        	so.variants.put("", v);
-            this.writeBlockStateFile(def.blockName, so);        	
-        }
-        else {
-        	StateObject so = new StateObject();
-        	so.variants.put("", vars);
-        	this.writeBlockStateFile(def.blockName, so);
-        }
+    	this.writeBlockStateFile(def.blockName, so);
     }
 
     @Override
