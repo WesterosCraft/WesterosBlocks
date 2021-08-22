@@ -134,7 +134,10 @@ public class WallBlockModelExport extends ModelExport {
         	tsmod.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
         	tsmod.textures.top = getTextureID(set.getTextureByIndex(1)); 
         	tsmod.textures.side = getTextureID(set.getTextureByIndex(2)); 
-        	if (isTinted) tsmod.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_side_tall";
+        	if (isTinted) 
+        		tsmod.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_side_tall";
+        	else
+        		tsmod.parent = WesterosBlocks.MOD_ID + ":block/untinted/wall_side_tall";
         	this.writeBlockModelFile(getModelName("side_tall", setidx), tsmod);
         }
         // Build simple item model that refers to fence inventory model

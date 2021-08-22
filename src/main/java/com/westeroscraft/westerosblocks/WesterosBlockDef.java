@@ -19,6 +19,9 @@ import org.dynmap.modsupport.ModTextureDefinition;
 import org.dynmap.modsupport.TextureModifier;
 import org.dynmap.modsupport.TransparencyMode;
 
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Maps;
 import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
@@ -1322,44 +1325,46 @@ public class WesterosBlockDef {
     }
 
     public static class CondProperty extends Property<String> {
-    	public List<String> condIDs;
+    	public ImmutableSet<String> values;
+    	public ImmutableMap<String, String> valMap; 
     	public String defValue;
     	public CondProperty(List<String> condIDs) {
     		super("cond", String.class);
-    		this.condIDs = new ArrayList<String>(condIDs);
-    		this.defValue = this.condIDs.get(this.condIDs.size()-1);
+    		Map<String, String> map = Maps.newHashMap();
+    		for (String s : condIDs) {
+    			map.put(s, s);
+    		}
+            this.values = ImmutableSet.copyOf(map.values());
+            this.valMap = ImmutableMap.copyOf(map);
+    		this.defValue = condIDs.get(condIDs.size()-1);
     	}
     	@Override
     	public Collection<String> getPossibleValues() {
-    		return this.condIDs;
-    	}
-    	@Override
-    	public Optional<String> getValue(String key) {
-    		int idx = condIDs.indexOf(key);
-	   		return Optional.ofNullable((idx >= 0) ? condIDs.get(idx) : null);
-    	}
-    	@Override
-    	public String getName(String val) {
-    		int idx = condIDs.indexOf(val);
-    		return (idx >= 0) ? condIDs.get(idx) : null;
+    		return this.values;
     	}
     	@Override
     	public boolean equals(Object obj) {
     		if (this == obj) {
-    			return true;
-    		}
-    		else if (obj instanceof CondProperty) {
-		         CondProperty condproperty = (CondProperty) obj;
-		         return this.condIDs.equals(condproperty.condIDs);
-    		}
-    		else {
+				return true;
+    		} else if (obj instanceof CondProperty && super.equals(obj)) {
+		         CondProperty condproperty = (CondProperty)obj;
+		         return this.values.equals(condproperty.values);
+    		} else {
     		     return false;
     		}
     	}
     	@Override
     	public int generateHashCode() {
-    		int i = super.generateHashCode();
-    		return 31 * i + this.condIDs.hashCode();
+    		return 31 * super.generateHashCode() + this.values.hashCode();
+    	}
+    	@Override
+    	public Optional<String> getValue(String key) {
+			String val = this.valMap.get(key);
+			return (val != null) ? Optional.of(val) : Optional.empty();
+    	}
+    	@Override
+    	public String getName(String val) {
+    		return val;
     	}
     }
     

@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side",
+  "parent": "westerosblocks:block/untinted/wall_side_tall",
   "textures": {
     "bottom": "westerosblocks:blocks/stone_block_2/brick_lannisport",
     "top": "westerosblocks:blocks/stone_block_2/brick_lannisport",

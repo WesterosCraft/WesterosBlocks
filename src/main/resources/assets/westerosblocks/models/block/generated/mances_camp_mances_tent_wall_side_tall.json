@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side",
+  "parent": "westerosblocks:block/untinted/wall_side_tall",
   "textures": {
     "bottom": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
     "top": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",

@@ -1,5 +1,10 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import java.util.Map;
+
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMap.Builder;
+
 import javax.annotation.Nullable;
 
 import net.minecraft.block.WallBlock;
@@ -13,6 +18,12 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.WallHeight;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.StateContainer;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.util.math.BlockPos;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -38,6 +49,9 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, We
     private static WesterosBlockDef.CondProperty tempCOND;
     private WesterosBlockDef.CondProperty COND;
 
+    public final Map<BlockState, VoxelShape> ourShapeByIndex;
+    public final Map<BlockState, VoxelShape> ourCollisionShapeByIndex;
+
     public static enum WallSize {
     	NORMAL,	// 14/16 high wall
     	SHORT	// 13/16 high wall
@@ -55,6 +69,33 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, We
         }
         if (COND != null) {
             this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(true)).setValue(NORTH_WALL, WallHeight.NONE).setValue(EAST_WALL, WallHeight.NONE).setValue(SOUTH_WALL, WallHeight.NONE).setValue(WEST_WALL, WallHeight.NONE).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(COND, COND.defValue));
+
+            // Now, need to fix the shape by index mappings
+            Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
+            for (BlockState bs : this.shapeByIndex.keySet()) {
+            	VoxelShape shape = this.shapeByIndex.get(bs);
+            	// Add our combinations with COND to new map
+            	for (String val : COND.getPossibleValues()) {
+            		BlockState bsnew = bs.setValue(COND, val);
+            		builder.put(bsnew, shape);
+            	}
+            }
+            this.ourShapeByIndex = builder.build();
+            // Now, need to fix the collision  by index mappings
+            builder = builder = ImmutableMap.builder();
+            for (BlockState bs : this.collisionShapeByIndex.keySet()) {
+            	VoxelShape shape = this.collisionShapeByIndex.get(bs);
+            	// See if the other cond values are in place
+            	for (String val : COND.getPossibleValues()) {
+            		BlockState bsnew = bs.setValue(COND, val);
+            		builder.put(bsnew, shape);
+            	}
+            }
+            this.ourCollisionShapeByIndex = builder.build();
+        }
+        else {	// Just use parent's one
+        	this.ourCollisionShapeByIndex = this.collisionShapeByIndex;
+        	this.ourShapeByIndex = this.shapeByIndex;
         }
     }
  
@@ -75,6 +116,16 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, We
     	else {
     		stateContainer.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED); 	       
     	}
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
+        return this.ourShapeByIndex.get(p_220053_1_);
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState p_220071_1_, IBlockReader p_220071_2_, BlockPos p_220071_3_, ISelectionContext p_220071_4_) {
+        return this.ourCollisionShapeByIndex.get(p_220071_1_);
     }
 
     @Override
