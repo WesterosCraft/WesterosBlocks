@@ -56,18 +56,7 @@ public class SolidBlockModelExport extends ModelExport {
             	var.model = model;
             	var.weight = set.weight;
             	if (i > 0) var.y = 90*i;
-            	// If we have condition states
-                if (def.condStates != null) {
-                	for (WesterosBlockDef.ConditionRec rec : def.condStates) {
-                		// If no limits, or this set is part of it, add it
-                		if ((set.condIDs == null) || set.condIDs.contains(rec.condID)) {
-                			so.addVariant("cond=" + rec.condID, var);	// Add our variant
-                		}
-                	}
-                }
-                else {
-        			so.addVariant("", var);	// Add our variant                	
-                }
+    			so.addVariant("", var, set.condIDs);	// Add our variant                	
             }
         }
     	this.writeBlockStateFile(def.blockName, so);
@@ -122,7 +111,12 @@ public class SolidBlockModelExport extends ModelExport {
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = null;
+    	if (def.condStates != null) {
+    		newstate = new HashMap<String, String>();
+    		newstate.put("cond", def.condStates.get(def.condStates.size()-1).condID);    		
+    	}
     	oldstate.put("variant", oldVariant);
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), null);
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 }

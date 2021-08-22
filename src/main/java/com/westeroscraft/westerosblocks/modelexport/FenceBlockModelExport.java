@@ -71,8 +71,6 @@ public class FenceBlockModelExport extends ModelExport {
         // Loop through parts
         for (ModelPart mp : PARTS) {
         	// Add post based on our variant
-        	States ps = new States();
-        	if (mp.when != null) ps.when = mp.when;
             for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
             	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
             	Apply a = new Apply();
@@ -80,9 +78,9 @@ public class FenceBlockModelExport extends ModelExport {
             	a.weight = set.weight;
             	if (mp.uvlock != null) a.uvlock = mp.uvlock;
             	if (mp.y != null) a.y = mp.y;
-            	ps.apply.add(a);
+
+            	so.addStates(mp.when, a, set.condIDs);
             }
-        	so.addStates(ps);
         }
         this.writeBlockStateFile(def.blockName, so);
     }
@@ -135,6 +133,9 @@ public class FenceBlockModelExport extends ModelExport {
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
+    	if (def.condStates != null) {
+        	newstate.put("cond", def.condStates.get(def.condStates.size()-1).condID);    		
+    	}
     	// No metadata other than variant - need filter for all of this - just pass one combination
     	oldstate.put("north", "false");
     	newstate.put("north", "false");

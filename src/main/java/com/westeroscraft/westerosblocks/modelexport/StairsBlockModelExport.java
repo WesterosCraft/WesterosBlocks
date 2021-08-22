@@ -15,19 +15,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import net.minecraft.block.Block;
 
 public class StairsBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-
-    public static class Variant {
-        public String model = "";
-        public Integer x;
-        public Integer y;
-        public Boolean uvlock;
-        public Integer weight;
-
-        public Variant(final String modname, final int xrot, final int yrot, Integer weight) {
+    public static class OurVariant extends Variant {
+        public OurVariant(final String modname, final int xrot, final int yrot, Integer weight) {
             model = WesterosBlocks.MOD_ID + ":block/generated/" + modname;
             if (xrot != 0)
                 x = xrot;
@@ -127,17 +116,20 @@ public class StairsBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 
-    private List<Variant> buildVariantList(String ext, int xrot, int yrot) {
+    private List<Variant> buildVariantList(StateObject so, String cond, String ext, int xrot, int yrot) {
     	List<Variant> vars = new ArrayList<Variant>();
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < setcnt; setidx++) {
     		String modname = getModelName(ext, setidx);
+    		Variant var;
         	if (bbdef != null) {
         		WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);
-        		vars.add(new Variant(modname, xrot, yrot, set.weight));
+        		var = new OurVariant(modname, xrot, yrot, set.weight);
+        		so.addVariant(cond, var, set.condIDs);
         	}
         	else {
-        		vars.add(new Variant(modname, xrot, yrot, null));        		
+        		var = new OurVariant(modname, xrot, yrot, null);
+        		so.addVariant(cond, var, null);
         	}
         }
     	return vars;
@@ -167,46 +159,46 @@ public class StairsBlockModelExport extends ModelExport {
     public void doBlockStateExport() throws IOException {
         final StateObject so = new StateObject();
         doInit();
-        so.variants.put("facing=east,half=bottom,shape=straight", buildVariantList(null, 0, 0));
-        so.variants.put("facing=west,half=bottom,shape=straight", buildVariantList(null, 0, 180));
-        so.variants.put("facing=south,half=bottom,shape=straight", buildVariantList(null, 0, 90));
-        so.variants.put("facing=north,half=bottom,shape=straight", buildVariantList(null, 0, 270));
-        so.variants.put("facing=east,half=bottom,shape=outer_right", buildVariantList("outer", 0, 0));
-        so.variants.put("facing=west,half=bottom,shape=outer_right", buildVariantList("outer", 0, 180));
-        so.variants.put("facing=south,half=bottom,shape=outer_right", buildVariantList("outer", 0, 90));
-        so.variants.put("facing=north,half=bottom,shape=outer_right", buildVariantList("outer", 0, 270));
-        so.variants.put("facing=east,half=bottom,shape=outer_left", buildVariantList("outer", 0, 270));
-        so.variants.put("facing=west,half=bottom,shape=outer_left", buildVariantList("outer", 0, 90));
-        so.variants.put("facing=south,half=bottom,shape=outer_left", buildVariantList("outer", 0, 0));
-        so.variants.put("facing=north,half=bottom,shape=outer_left", buildVariantList("outer", 0, 180));
-        so.variants.put("facing=east,half=bottom,shape=inner_right", buildVariantList("inner", 0, 0));
-        so.variants.put("facing=west,half=bottom,shape=inner_right", buildVariantList("inner", 0, 180));
-        so.variants.put("facing=south,half=bottom,shape=inner_right", buildVariantList("inner", 0, 90));
-        so.variants.put("facing=north,half=bottom,shape=inner_right", buildVariantList("inner", 0, 270));
-        so.variants.put("facing=east,half=bottom,shape=inner_left", buildVariantList("inner", 0, 270));
-        so.variants.put("facing=west,half=bottom,shape=inner_left", buildVariantList("inner", 0, 90));
-        so.variants.put("facing=south,half=bottom,shape=inner_left", buildVariantList("inner", 0, 0));
-        so.variants.put("facing=north,half=bottom,shape=inner_left", buildVariantList("inner", 0, 180));
-        so.variants.put("facing=east,half=top,shape=straight", buildVariantList(null, 180, 0));
-        so.variants.put("facing=west,half=top,shape=straight", buildVariantList(null, 180, 180));
-        so.variants.put("facing=south,half=top,shape=straight", buildVariantList(null, 180, 90));
-        so.variants.put("facing=north,half=top,shape=straight", buildVariantList(null, 180, 270));
-        so.variants.put("facing=east,half=top,shape=outer_right", buildVariantList("outer", 180, 90));
-        so.variants.put("facing=west,half=top,shape=outer_right", buildVariantList("outer", 180, 270));
-        so.variants.put("facing=south,half=top,shape=outer_right", buildVariantList("outer", 180, 180));
-        so.variants.put("facing=north,half=top,shape=outer_right", buildVariantList("outer", 180, 0));
-        so.variants.put("facing=east,half=top,shape=outer_left", buildVariantList("outer", 180, 0));
-        so.variants.put("facing=west,half=top,shape=outer_left", buildVariantList("outer", 180, 180));
-        so.variants.put("facing=south,half=top,shape=outer_left", buildVariantList("outer", 180, 90));
-        so.variants.put("facing=north,half=top,shape=outer_left", buildVariantList("outer", 180, 270));
-        so.variants.put("facing=east,half=top,shape=inner_right", buildVariantList("inner", 180, 90));
-        so.variants.put("facing=west,half=top,shape=inner_right", buildVariantList("inner", 180, 270));
-        so.variants.put("facing=south,half=top,shape=inner_right", buildVariantList("inner", 180, 180));
-        so.variants.put("facing=north,half=top,shape=inner_right", buildVariantList("inner", 180, 0));
-        so.variants.put("facing=east,half=top,shape=inner_left", buildVariantList("inner", 180, 0));
-        so.variants.put("facing=west,half=top,shape=inner_left", buildVariantList("inner", 180, 180));
-        so.variants.put("facing=south,half=top,shape=inner_left", buildVariantList("inner", 180, 90));
-        so.variants.put("facing=north,half=top,shape=inner_left", buildVariantList("inner", 180, 270));
+        buildVariantList(so,"facing=east,half=bottom,shape=straight", null, 0, 0);
+        buildVariantList(so,"facing=west,half=bottom,shape=straight", null, 0, 180);
+        buildVariantList(so,"facing=south,half=bottom,shape=straight", null, 0, 90);
+        buildVariantList(so,"facing=north,half=bottom,shape=straight", null, 0, 270);
+        buildVariantList(so,"facing=east,half=bottom,shape=outer_right", "outer", 0, 0);
+        buildVariantList(so,"facing=west,half=bottom,shape=outer_right", "outer", 0, 180);
+        buildVariantList(so,"facing=south,half=bottom,shape=outer_right", "outer", 0, 90);
+        buildVariantList(so,"facing=north,half=bottom,shape=outer_right", "outer", 0, 270);
+        buildVariantList(so,"facing=east,half=bottom,shape=outer_left", "outer", 0, 270);
+        buildVariantList(so,"facing=west,half=bottom,shape=outer_left", "outer", 0, 90);
+        buildVariantList(so,"facing=south,half=bottom,shape=outer_left", "outer", 0, 0);
+        buildVariantList(so,"facing=north,half=bottom,shape=outer_left", "outer", 0, 180);
+        buildVariantList(so,"facing=east,half=bottom,shape=inner_right", "inner", 0, 0);
+        buildVariantList(so,"facing=west,half=bottom,shape=inner_right", "inner", 0, 180);
+        buildVariantList(so,"facing=south,half=bottom,shape=inner_right", "inner", 0, 90);
+        buildVariantList(so,"facing=north,half=bottom,shape=inner_right", "inner", 0, 270);
+        buildVariantList(so,"facing=east,half=bottom,shape=inner_left", "inner", 0, 270);
+        buildVariantList(so,"facing=west,half=bottom,shape=inner_left", "inner", 0, 90);
+        buildVariantList(so,"facing=south,half=bottom,shape=inner_left", "inner", 0, 0);
+        buildVariantList(so,"facing=north,half=bottom,shape=inner_left", "inner", 0, 180);
+        buildVariantList(so,"facing=east,half=top,shape=straight", null, 180, 0);
+        buildVariantList(so,"facing=west,half=top,shape=straight", null, 180, 180);
+        buildVariantList(so,"facing=south,half=top,shape=straight", null, 180, 90);
+        buildVariantList(so,"facing=north,half=top,shape=straight", null, 180, 270);
+        buildVariantList(so,"facing=east,half=top,shape=outer_right", "outer", 180, 90);
+        buildVariantList(so,"facing=west,half=top,shape=outer_right", "outer", 180, 270);
+        buildVariantList(so,"facing=south,half=top,shape=outer_right", "outer", 180, 180);
+        buildVariantList(so,"facing=north,half=top,shape=outer_right", "outer", 180, 0);
+        buildVariantList(so,"facing=east,half=top,shape=outer_left", "outer", 180, 0);
+        buildVariantList(so,"facing=west,half=top,shape=outer_left", "outer", 180, 180);
+        buildVariantList(so,"facing=south,half=top,shape=outer_left", "outer", 180, 90);
+        buildVariantList(so,"facing=north,half=top,shape=outer_left", "outer", 180, 270);
+        buildVariantList(so,"facing=east,half=top,shape=inner_right", "inner", 180, 90);
+        buildVariantList(so,"facing=west,half=top,shape=inner_right", "inner", 180, 270);
+        buildVariantList(so,"facing=south,half=top,shape=inner_right", "inner", 180, 180);
+        buildVariantList(so,"facing=north,half=top,shape=inner_right", "inner", 180, 0);
+        buildVariantList(so,"facing=east,half=top,shape=inner_left", "inner", 180, 0);
+        buildVariantList(so,"facing=west,half=top,shape=inner_left", "inner", 180, 180);
+        buildVariantList(so,"facing=south,half=top,shape=inner_left", "inner", 180, 90);
+        buildVariantList(so,"facing=north,half=top,shape=inner_left", "inner", 180, 270);
         this.writeBlockStateFile(def.getBlockName(), so);
     }
 

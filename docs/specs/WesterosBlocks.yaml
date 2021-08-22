@@ -757,6 +757,8 @@ components:
               $ref: "#/components/schemas/ambientOcclusion"
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            condStates:
+              $ref: "#/components/schemas/CondStates"
     rail:
       title: blockType='rail'
       allOf:
@@ -1520,6 +1522,10 @@ components:
                   If the list is shorter than 3, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            randomTextures:
+	          $ref: "#/components/schemas/RandomTextureSets"
+            condStates:
+              $ref: "#/components/schemas/CondStates"
     wall:
       title: blockType='wall'
       allOf:
@@ -1548,6 +1554,10 @@ components:
                   If the list is shorter than 3, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            randomTextures:
+	          $ref: "#/components/schemas/RandomTextureSets"
+            condStates:
+              $ref: "#/components/schemas/CondStates"
     beacon:
       title: blockType='beacon'
       allOf:

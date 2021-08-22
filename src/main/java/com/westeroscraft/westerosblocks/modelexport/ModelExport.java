@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
+import java.util.Set;
 import java.util.TreeSet;
 import java.util.LinkedList;
 
@@ -298,29 +299,92 @@ public abstract class ModelExport {
         public Map<String, VarOrVarList> variants;
     	public List<States> multipart;
         
-        public void addVariant(String cond, Variant v) {
+        public void addVariant(String cond, Variant v, Set<String> condIDs) {
         	if (variants == null) {
         		 variants = new HashMap<String, VarOrVarList>();
         	}
-        	VarOrVarList existing = variants.get(cond);	// See if exists
-        	if (existing == null) {
-        		variants.put(cond, v);	// Add single
-        	}
-        	else if (existing instanceof Variant) {	// Only one?
-        		VariantList vlist = new VariantList();
-        		vlist.add((Variant) existing);	// Convert to list
-        		vlist.add(v);
-        		variants.put(cond, vlist);
+        	ArrayList<String> conds = new ArrayList<String>();
+        	if (condIDs == null) {
+        		conds.add(cond);
         	}
         	else {
-        		((VariantList) existing).add(v);	// Append to list
+        		for (String cval : condIDs) {
+        			conds.add(cond + ",cond=" + cval);
+        		}
+        	}
+        	// Add to all the matching condIDs
+        	for (String condval : conds) {
+		    	VarOrVarList existing = variants.get(condval);	// See if exists
+		    	if (existing == null) {
+		    		variants.put(condval, v);	// Add single
+		    	}
+		    	else if (existing instanceof Variant) {	// Only one?
+		    		VariantList vlist = new VariantList();
+		    		vlist.add((Variant) existing);	// Convert to list
+		    		vlist.add(v);
+		    		variants.put(condval, vlist);
+		    	}
+		    	else {
+		    		((VariantList) existing).add(v);	// Append to list
+		    	}
         	}
         }
-        public void addStates(States st) {
+        public void addStates(States st, Set<String> condIDs) {
         	if (multipart == null) {
         		multipart = new ArrayList<States>();
         	}
-        	multipart.add(st);
+        	if (condIDs == null) {
+        		multipart.add(st);
+        	}
+        	else {
+        		for (String cond : condIDs) {
+        			States newst = new States(st, cond);
+            		multipart.add(newst);        			
+        		}
+        	}
+        }
+        private void addState(WhenRec rec, Apply a, String cond) {
+        	States matchst = null;
+        	WhenRec wr = rec;
+        	// Add condition to whenrec
+        	if (cond != null) {
+        		if (rec != null) {
+        			wr = new WhenRec(rec, cond);
+        		}
+        		else {
+        			wr = new WhenRec();
+        			wr.cond = cond;
+        		}
+        	}
+        	for (States st : multipart) {
+        		if (((st.when == null) && (wr == null)) ||
+        			((st.when != null) && (wr != null) && st.when.equals(wr))) {
+        			matchst = st;
+        			break;
+        		}
+        	}
+        	// Add new rec, if needed
+        	if (matchst == null) {
+        		matchst = new States();
+        		matchst.when = wr;
+        		multipart.add(matchst);
+        	}
+        	// Now add our apply
+        	matchst.apply.add(a);
+        }
+        
+        public void addStates(WhenRec rec, Apply a, Set<String> condIDs) {
+        	if (multipart == null) {
+        		multipart = new ArrayList<States>();
+        	}
+        	if (condIDs == null) {
+        		addState(rec, a, null);
+        	}
+        	else {
+        		for (String cond : condIDs) {
+            		addState(rec, a, cond);
+        		}
+        	}
         }
     }
     public static interface VarOrVarList {};
@@ -329,6 +393,7 @@ public abstract class ModelExport {
         public String model;
         public Integer x, y, z;
         public Integer weight;
+        public Boolean uvlock;
     }
     public static class VariantList extends ArrayList<Variant> implements VarOrVarList {
 		private static final long serialVersionUID = 1L;    	
@@ -336,10 +401,53 @@ public abstract class ModelExport {
     public static class States {
     	public List<Apply> apply = new ArrayList<Apply>();
     	public WhenRec when;
+    	public States() {}
+    	public States(States orig, String cond) {
+    		this.apply = orig.apply;
+    		if (orig.when != null) {
+    			this.when = new WhenRec(orig.when, cond);
+    		}
+    		else {
+    			this.when = new WhenRec();
+    			this.when.cond = cond;
+    		}
+    	}
     }    
     public static class WhenRec {
     	String north, south, west, east, up, cond;
     	public List<WhenRec> OR;
+    	
+    	public WhenRec() {}
+    	public WhenRec(WhenRec orig, String cond) {
+    		this.north = orig.north;
+    		this.south = orig.south;
+    		this.east = orig.east;
+    		this.west = orig.west;
+       		this.up = orig.up;
+       		this.OR = orig.OR;
+       		this.cond = cond;
+    	}
+    	private boolean isSame(String a, String b) {
+    		if ((a == null) && (b == null)) return true;
+    		if ((a != null) && (b != null) && a.equals(b)) return true;
+    		return false;
+    	}
+    	public boolean equals(Object o) {
+    		if (this == o) return true;
+    		if (o instanceof WhenRec) {
+    			WhenRec or = (WhenRec)o;
+    			if (isSame(or.north, this.north) &&
+					isSame(or.south, this.south) &&
+					isSame(or.east, this.east) &&
+					isSame(or.west, this.west) &&
+					isSame(or.up, this.up) &&
+					isSame(or.cond, this.cond)) {
+    				if ((or.OR == null) && (this.OR == null)) return true;
+    				if ((or.OR != null) && (this.OR != null) && (this.OR.equals(or.OR))) return true;
+    			}
+    		}
+    		return false;
+    	}
     }
     public static class Apply {
     	String model;

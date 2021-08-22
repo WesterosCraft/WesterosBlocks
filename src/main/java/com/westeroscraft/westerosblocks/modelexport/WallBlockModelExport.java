@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -85,8 +86,6 @@ public class WallBlockModelExport extends ModelExport {
         StateObject so = new StateObject();
         // Loop through the parts
         for (ModelPart mp : PARTS) {
-            States ssn = new States();
-            ssn.when = mp.when;
             for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
             	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
             	Apply a = new Apply();
@@ -95,9 +94,8 @@ public class WallBlockModelExport extends ModelExport {
             	if (mp.uvlock != null) a.uvlock = mp.uvlock;
             	if (mp.y != null) a.y = mp.y;
             	
-            	ssn.apply.add(a);
+                so.addStates(mp.when, a, set.condIDs);
             }
-            so.addStates(ssn);
         }
 
         this.writeBlockStateFile(def.blockName, so);
@@ -179,6 +177,9 @@ public class WallBlockModelExport extends ModelExport {
     	oldstate.put("up", "false");
     	newstate.put("up", "false");
     	newstate.put("waterlogged", "false");
+    	if (def.condStates != null) {
+        	newstate.put("cond", def.condStates.get(def.condStates.size()-1).condID);    		
+    	}
 		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 }

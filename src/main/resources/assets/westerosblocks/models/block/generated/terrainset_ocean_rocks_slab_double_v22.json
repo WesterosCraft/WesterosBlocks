@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/terrainset_ocean/22",
+    "up": "westerosblocks:blocks/terrainset_ocean/22",
+    "north": "westerosblocks:blocks/terrainset_ocean/22",
+    "south": "westerosblocks:blocks/terrainset_ocean/22",
+    "west": "westerosblocks:blocks/terrainset_ocean/22",
+    "east": "westerosblocks:blocks/terrainset_ocean/22",
+    "particle": "westerosblocks:blocks/terrainset_ocean/22"
+  }
+}

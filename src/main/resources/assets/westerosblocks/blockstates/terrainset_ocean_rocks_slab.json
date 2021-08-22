@@ -1,18 +1,480 @@
 {
   "variants": {
-    "type=bottom": [
+    "type=top,cond=dry": [
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v41"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v42"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v43"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v44"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v45"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v46"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v47"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v48"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v49"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v50"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v51"
+      }
+    ],
+    "type=bottom,cond=default": [
       {
         "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom"
-      }
-    ],
-    "type=double": [
+      },
       {
-        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double"
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v8"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v9"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v10"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v11"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v12"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v13"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v14"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v15"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v16"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v17"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v18"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v19"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v20"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v21"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v22"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v23"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v24"
       }
     ],
-    "type=top": [
+    "type=bottom,cond=wet": [
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v25"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v26"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v27"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v28"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v29"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v30"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v31"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v32"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v33"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v34"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v35"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v36"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v37"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v38"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v39"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v40"
+      }
+    ],
+    "type=bottom,cond=dry": [
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v41"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v42"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v43"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v44"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v45"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v46"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v47"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v48"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v49"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v50"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_bottom_v51"
+      }
+    ],
+    "type=double,cond=dry": [
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v41"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v42"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v43"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v44"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v45"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v46"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v47"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v48"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v49"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v50"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v51"
+      }
+    ],
+    "type=top,cond=default": [
       {
         "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v8"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v9"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v10"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v11"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v12"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v13"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v14"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v15"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v16"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v17"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v18"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v19"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v20"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v21"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v22"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v23"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v24"
+      }
+    ],
+    "type=double,cond=wet": [
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v25"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v26"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v27"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v28"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v29"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v30"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v31"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v32"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v33"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v34"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v35"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v36"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v37"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v38"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v39"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v40"
+      }
+    ],
+    "type=top,cond=wet": [
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v25"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v26"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v27"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v28"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v29"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v30"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v31"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v32"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v33"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v34"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v35"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v36"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v37"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v38"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v39"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_top_v40"
+      }
+    ],
+    "type=double,cond=default": [
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v8"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v9"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v10"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v11"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v12"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v13"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v14"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v15"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v16"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v17"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v18"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v19"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v20"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v21"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v22"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v23"
+      },
+      {
+        "model": "westerosblocks:block/generated/terrainset_ocean_rocks_slab_double_v24"
       }
     ]
   }

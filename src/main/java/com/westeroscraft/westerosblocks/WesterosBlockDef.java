@@ -676,12 +676,32 @@ public class WesterosBlockDef {
 	public void doInit() {
 		if (didInit)
 			return;
-		// If just base texrures, generate equivalent random textures (simpler logic for blocks that support them
+		// Handle condStates
+		Set<String> allCondIDs = null;
+		if (condStates != null) {
+			allCondIDs = new HashSet<String>();
+			for (ConditionRec rec : condStates) {
+				allCondIDs.add(rec.condID);
+			}
+		}
+		// If just base textures, generate equivalent random textures (simpler logic for blocks that support them
 		if ((textures != null) && (randomTextures == null)) {
 			randomTextures = new ArrayList<RandomTextureSet>();
 			RandomTextureSet set = new RandomTextureSet();
 			set.textures = textures;
 			randomTextures.add(set);
+		}
+		if (randomTextures != null) {
+			for (RandomTextureSet set : randomTextures) {
+				// If no conditions, no condIDs
+				if (allCondIDs == null) {
+					set.condIDs = null;
+				}
+				// If no condIDs, default to matching all
+				else if (set.condIDs == null) {
+					set.condIDs = allCondIDs;
+				}
+			}
 		}
 		if (this.ambientOcclusion == null)
 			this.ambientOcclusion = true; // Default to true

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/terrainset_ocean/73",
+    "top": "westerosblocks:blocks/terrainset_ocean/73",
+    "side": "westerosblocks:blocks/terrainset_ocean/73",
+    "particle": "westerosblocks:blocks/terrainset_ocean/73"
+  }
+}

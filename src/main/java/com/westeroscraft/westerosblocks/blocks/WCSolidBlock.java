@@ -67,6 +67,7 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
 
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
+    	super.createBlockStateDefinition(stateContainer);
     	if (tempCOND != null) {
     		COND = tempCOND;
     		tempCOND = null;

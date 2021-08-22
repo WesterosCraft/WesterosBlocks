@@ -13,14 +13,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class SlabBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer weight;
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectCube {
         public String parent;
@@ -112,35 +104,29 @@ public class SlabBlockModelExport extends ModelExport {
         StateObject so = new StateObject();
         // Do state for top half block
         String bn = def.getBlockName();
-        List<Variant> vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("top", setidx);
         	var.weight = set.weight;
-        	vars.add(var);
+        	so.addVariant("type=top", var, set.condIDs);
         }
-    	so.variants.put("type=top", vars);
     	// Do bottom half slab
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("bottom", setidx);
         	var.weight = set.weight;
-        	vars.add(var);
+        	so.addVariant("type=bottom", var, set.condIDs);
         }
-        so.variants.put("type=bottom", vars);
         // Do full slab
-        vars = new ArrayList<Variant>();
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("double", setidx);
         	var.weight = set.weight;
-        	vars.add(var);
+        	so.addVariant("type=double", var, set.condIDs);
         }
-        so.variants.put("type=double", vars);
         this.writeBlockStateFile(bn, so);
     }
 
@@ -193,6 +179,9 @@ public class SlabBlockModelExport extends ModelExport {
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
     	newstate.put("waterlogged", "false");
+    	if (def.condStates != null) {
+        	newstate.put("cond", def.condStates.get(def.condStates.size()-1).condID);    		
+    	}
     	// Bottom half
     	oldstate.put("half", "bottom");
     	newstate.put("type", "bottom");
