@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/cuboid_block_0/flagon_glass_top_body",
-    "txt5": "westerosblocks:blocks/cuboid_block_0/flagon_glass_top_body",
-    "txt2": "westerosblocks:blocks/cuboid_block_0/flagon_glass_side",
-    "txt3": "westerosblocks:blocks/cuboid_block_0/flagon_glass_top_body",
-    "txt0": "westerosblocks:blocks/cuboid_block_0/flagon_glass_bottom",
-    "txt1": "westerosblocks:blocks/cuboid_block_0/flagon_glass_top_lid",
-    "particle": "westerosblocks:blocks/cuboid_block_0/flagon_glass_bottom"
+    "txt4": "westerosblocks:block/cuboid_block_0/flagon_glass_top_body",
+    "txt5": "westerosblocks:block/cuboid_block_0/flagon_glass_top_body",
+    "txt2": "westerosblocks:block/cuboid_block_0/flagon_glass_side",
+    "txt3": "westerosblocks:block/cuboid_block_0/flagon_glass_top_body",
+    "txt0": "westerosblocks:block/cuboid_block_0/flagon_glass_bottom",
+    "txt1": "westerosblocks:block/cuboid_block_0/flagon_glass_top_lid",
+    "particle": "westerosblocks:block/cuboid_block_0/flagon_glass_bottom"
   },
   "elements": [
     {

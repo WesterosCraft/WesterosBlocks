@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_north/5",
-    "top": "westerosblocks:blocks/terrainset_north/5",
-    "side": "westerosblocks:blocks/terrainset_north/5",
-    "particle": "westerosblocks:blocks/terrainset_north/5"
+    "bottom": "westerosblocks:block/terrainset_north/5",
+    "top": "westerosblocks:block/terrainset_north/5",
+    "side": "westerosblocks:block/terrainset_north/5",
+    "particle": "westerosblocks:block/terrainset_north/5"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_0/sandstone_vivid_top",
-    "top": "westerosblocks:blocks/stone_block_0/sandstone_vivid_top",
-    "side": "westerosblocks:blocks/stone_block_0/sandstone_vivid",
-    "particle": "westerosblocks:blocks/stone_block_0/sandstone_vivid"
+    "bottom": "westerosblocks:block/stone_block_0/sandstone_vivid_top",
+    "top": "westerosblocks:block/stone_block_0/sandstone_vivid_top",
+    "side": "westerosblocks:block/stone_block_0/sandstone_vivid",
+    "particle": "westerosblocks:block/stone_block_0/sandstone_vivid"
   }
 }

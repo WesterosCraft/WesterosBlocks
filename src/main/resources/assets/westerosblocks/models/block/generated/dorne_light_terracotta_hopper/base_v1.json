@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_light",
-    "txt5": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_light",
-    "txt2": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_light",
-    "txt3": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_light",
-    "txt0": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_light",
-    "txt1": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_light",
-    "particle": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_light"
+    "txt4": "westerosblocks:block/stone_block_0/sandstone_terracotta_light",
+    "txt5": "westerosblocks:block/stone_block_0/sandstone_terracotta_light",
+    "txt2": "westerosblocks:block/stone_block_0/sandstone_terracotta_light",
+    "txt3": "westerosblocks:block/stone_block_0/sandstone_terracotta_light",
+    "txt0": "westerosblocks:block/stone_block_0/sandstone_terracotta_light",
+    "txt1": "westerosblocks:block/stone_block_0/sandstone_terracotta_light",
+    "particle": "westerosblocks:block/stone_block_0/sandstone_terracotta_light"
   },
   "elements": [
     {

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/terrainset_westerlandhills/5",
-    "up": "westerosblocks:blocks/terrainset_westerlandhills/5",
-    "north": "westerosblocks:blocks/terrainset_westerlandhills/5",
-    "south": "westerosblocks:blocks/terrainset_westerlandhills/5",
-    "west": "westerosblocks:blocks/terrainset_westerlandhills/5",
-    "east": "westerosblocks:blocks/terrainset_westerlandhills/5",
-    "particle": "westerosblocks:blocks/terrainset_westerlandhills/5"
+    "down": "westerosblocks:block/terrainset_westerlandhills/5",
+    "up": "westerosblocks:block/terrainset_westerlandhills/5",
+    "north": "westerosblocks:block/terrainset_westerlandhills/5",
+    "south": "westerosblocks:block/terrainset_westerlandhills/5",
+    "west": "westerosblocks:block/terrainset_westerlandhills/5",
+    "east": "westerosblocks:block/terrainset_westerlandhills/5",
+    "particle": "westerosblocks:block/terrainset_westerlandhills/5"
   }
 }

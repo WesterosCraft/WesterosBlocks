@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/ground_block_0/dirt",
-    "top": "westerosblocks:blocks/ground_block_0/dirt",
-    "side": "westerosblocks:blocks/ground_block_0/dirt",
-    "particle": "westerosblocks:blocks/ground_block_0/dirt"
+    "bottom": "westerosblocks:block/ground_block_0/dirt",
+    "top": "westerosblocks:block/ground_block_0/dirt",
+    "side": "westerosblocks:block/ground_block_0/dirt",
+    "particle": "westerosblocks:block/ground_block_0/dirt"
   }
 }

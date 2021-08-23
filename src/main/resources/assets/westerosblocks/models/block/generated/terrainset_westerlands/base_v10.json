@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/terrainset_westerlandhills/10"
+    "all": "westerosblocks:block/terrainset_westerlandhills/10"
   }
 }

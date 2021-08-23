@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "up": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "north": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "south": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "west": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "east": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "particle": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor"
+    "down": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "up": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "north": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "south": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "west": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "east": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "particle": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor"
   }
 }

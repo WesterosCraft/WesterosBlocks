@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:blocks/moss_block/moss_dappled"
+    "layer0": "westerosblocks:block/moss_block/moss_dappled"
   }
 }

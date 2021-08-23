@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/ladder",
   "textures": {
-    "ladder": "westerosblocks:blocks/ladder_rope/top"
+    "ladder": "westerosblocks:block/ladder_rope/top"
   }
 }

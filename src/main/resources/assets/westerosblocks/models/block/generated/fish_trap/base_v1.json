@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/arrow_slits_0/fish_trap"
+    "all": "westerosblocks:block/arrow_slits_0/fish_trap"
   }
 }

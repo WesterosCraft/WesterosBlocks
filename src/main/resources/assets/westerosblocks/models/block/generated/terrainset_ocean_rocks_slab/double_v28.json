@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/terrainset_ocean/35",
-    "up": "westerosblocks:blocks/terrainset_ocean/35",
-    "north": "westerosblocks:blocks/terrainset_ocean/35",
-    "south": "westerosblocks:blocks/terrainset_ocean/35",
-    "west": "westerosblocks:blocks/terrainset_ocean/35",
-    "east": "westerosblocks:blocks/terrainset_ocean/35",
-    "particle": "westerosblocks:blocks/terrainset_ocean/35"
+    "down": "westerosblocks:block/terrainset_ocean/35",
+    "up": "westerosblocks:block/terrainset_ocean/35",
+    "north": "westerosblocks:block/terrainset_ocean/35",
+    "south": "westerosblocks:block/terrainset_ocean/35",
+    "west": "westerosblocks:block/terrainset_ocean/35",
+    "east": "westerosblocks:block/terrainset_ocean/35",
+    "particle": "westerosblocks:block/terrainset_ocean/35"
   }
 }

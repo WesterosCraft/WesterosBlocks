@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/metal_block_0/metal_block_ironoxidized"
+    "all": "westerosblocks:block/metal_block_0/metal_block_ironoxidized"
   }
 }

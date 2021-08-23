@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_iron/1",
-    "top": "westerosblocks:blocks/terrainset_iron/1",
-    "side": "westerosblocks:blocks/terrainset_iron/1",
-    "particle": "westerosblocks:blocks/terrainset_iron/1"
+    "bottom": "westerosblocks:block/terrainset_iron/1",
+    "top": "westerosblocks:block/terrainset_iron/1",
+    "side": "westerosblocks:block/terrainset_iron/1",
+    "particle": "westerosblocks:block/terrainset_iron/1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/sound_ext"
+    "all": "westerosblocks:block/sound_ext"
   }
 }

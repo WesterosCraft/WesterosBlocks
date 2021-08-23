@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/fur_block_0/thatch_light",
-    "top": "westerosblocks:blocks/fur_block_0/thatch_light",
-    "side": "westerosblocks:blocks/fur_block_0/thatch_light",
-    "particle": "westerosblocks:blocks/fur_block_0/thatch_light"
+    "bottom": "westerosblocks:block/fur_block_0/thatch_light",
+    "top": "westerosblocks:block/fur_block_0/thatch_light",
+    "side": "westerosblocks:block/fur_block_0/thatch_light",
+    "particle": "westerosblocks:block/fur_block_0/thatch_light"
   }
 }

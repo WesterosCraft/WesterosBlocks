@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/ladder",
-"textures": {"1": "westerosblocks:blocks/ladder_block_0/ladder_normal"},
+"textures": {"1": "westerosblocks:block/ladder_block_0/ladder_normal"},
     "elements": [
         {
             "name": "Bar",

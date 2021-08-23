@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/miscellaneous_block_0/food_squash_top",
-    "up": "westerosblocks:blocks/miscellaneous_block_0/food_squash_top",
-    "north": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
-    "south": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
-    "west": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
-    "east": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side",
-    "particle": "westerosblocks:blocks/miscellaneous_block_0/food_squash_side"
+    "down": "westerosblocks:block/miscellaneous_block_0/food_squash_top",
+    "up": "westerosblocks:block/miscellaneous_block_0/food_squash_top",
+    "north": "westerosblocks:block/miscellaneous_block_0/food_squash_side",
+    "south": "westerosblocks:block/miscellaneous_block_0/food_squash_side",
+    "west": "westerosblocks:block/miscellaneous_block_0/food_squash_side",
+    "east": "westerosblocks:block/miscellaneous_block_0/food_squash_side",
+    "particle": "westerosblocks:block/miscellaneous_block_0/food_squash_side"
   }
 }

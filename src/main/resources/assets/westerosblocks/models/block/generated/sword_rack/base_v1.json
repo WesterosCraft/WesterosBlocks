@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/cuboid_block_0/rack_bottom",
-    "txt5": "westerosblocks:blocks/cuboid_block_0/rack_bottom",
-    "txt2": "westerosblocks:blocks/cuboid_block_0/rack_rest",
-    "txt3": "westerosblocks:blocks/cuboid_block_0/rack_rest",
-    "txt0": "westerosblocks:blocks/cuboid_block_0/rack_bottom",
-    "txt1": "westerosblocks:blocks/cuboid_block_0/rack_top",
-    "particle": "westerosblocks:blocks/cuboid_block_0/rack_bottom"
+    "txt4": "westerosblocks:block/cuboid_block_0/rack_bottom",
+    "txt5": "westerosblocks:block/cuboid_block_0/rack_bottom",
+    "txt2": "westerosblocks:block/cuboid_block_0/rack_rest",
+    "txt3": "westerosblocks:block/cuboid_block_0/rack_rest",
+    "txt0": "westerosblocks:block/cuboid_block_0/rack_bottom",
+    "txt1": "westerosblocks:block/cuboid_block_0/rack_top",
+    "particle": "westerosblocks:block/cuboid_block_0/rack_bottom"
   },
   "elements": [
     {

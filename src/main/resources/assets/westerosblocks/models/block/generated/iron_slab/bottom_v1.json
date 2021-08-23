@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/metal_block_0/metal_block_iron",
-    "top": "westerosblocks:blocks/metal_block_0/metal_block_iron",
-    "side": "westerosblocks:blocks/metal_block_0/metal_block_iron",
-    "particle": "westerosblocks:blocks/metal_block_0/metal_block_iron"
+    "bottom": "westerosblocks:block/metal_block_0/metal_block_iron",
+    "top": "westerosblocks:block/metal_block_0/metal_block_iron",
+    "side": "westerosblocks:block/metal_block_0/metal_block_iron",
+    "particle": "westerosblocks:block/metal_block_0/metal_block_iron"
   }
 }

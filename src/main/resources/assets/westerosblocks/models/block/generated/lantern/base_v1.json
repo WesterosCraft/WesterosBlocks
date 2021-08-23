@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_bottom",
-    "txt5": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_bottom",
-    "txt2": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_bottom",
-    "txt3": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_bottom",
-    "txt0": "westerosblocks:blocks/metal_block_0/metal_block_iron",
-    "txt1": "westerosblocks:blocks/light_emitting_blocks_0/lantern_handheld_center",
-    "particle": "westerosblocks:blocks/metal_block_0/metal_block_iron"
+    "txt4": "westerosblocks:block/light_emitting_blocks_0/lantern_red_bottom",
+    "txt5": "westerosblocks:block/light_emitting_blocks_0/lantern_red_bottom",
+    "txt2": "westerosblocks:block/light_emitting_blocks_0/lantern_red_bottom",
+    "txt3": "westerosblocks:block/light_emitting_blocks_0/lantern_red_bottom",
+    "txt0": "westerosblocks:block/metal_block_0/metal_block_iron",
+    "txt1": "westerosblocks:block/light_emitting_blocks_0/lantern_handheld_center",
+    "particle": "westerosblocks:block/metal_block_0/metal_block_iron"
   },
   "elements": [
     {

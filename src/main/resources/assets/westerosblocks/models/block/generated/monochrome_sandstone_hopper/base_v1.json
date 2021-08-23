@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
-    "txt5": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
-    "txt2": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
-    "txt3": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
-    "txt0": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
-    "txt1": "westerosblocks:blocks/stone_block_0/sandstone_monochrome",
-    "particle": "westerosblocks:blocks/stone_block_0/sandstone_monochrome"
+    "txt4": "westerosblocks:block/stone_block_0/sandstone_monochrome",
+    "txt5": "westerosblocks:block/stone_block_0/sandstone_monochrome",
+    "txt2": "westerosblocks:block/stone_block_0/sandstone_monochrome",
+    "txt3": "westerosblocks:block/stone_block_0/sandstone_monochrome",
+    "txt0": "westerosblocks:block/stone_block_0/sandstone_monochrome",
+    "txt1": "westerosblocks:block/stone_block_0/sandstone_monochrome",
+    "particle": "westerosblocks:block/stone_block_0/sandstone_monochrome"
   },
   "elements": [
     {

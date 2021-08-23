@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/log_block_0/barrel_top_closed",
-    "up": "westerosblocks:blocks/crate_block_0/barrel_top_empty",
-    "north": "westerosblocks:blocks/log_block_0/barrel_side",
-    "south": "westerosblocks:blocks/log_block_0/barrel_side",
-    "west": "westerosblocks:blocks/log_block_0/barrel_side",
-    "east": "westerosblocks:blocks/log_block_0/barrel_side",
-    "particle": "westerosblocks:blocks/log_block_0/barrel_side"
+    "down": "westerosblocks:block/log_block_0/barrel_top_closed",
+    "up": "westerosblocks:block/crate_block_0/barrel_top_empty",
+    "north": "westerosblocks:block/log_block_0/barrel_side",
+    "south": "westerosblocks:block/log_block_0/barrel_side",
+    "west": "westerosblocks:block/log_block_0/barrel_side",
+    "east": "westerosblocks:block/log_block_0/barrel_side",
+    "particle": "westerosblocks:block/log_block_0/barrel_side"
   }
 }

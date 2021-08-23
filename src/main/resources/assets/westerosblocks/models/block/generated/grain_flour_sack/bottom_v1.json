@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/miscellaneous_block_0/grain_sack",
-    "top": "westerosblocks:blocks/miscellaneous_block_0/grain_sack",
-    "side": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front",
-    "particle": "westerosblocks:blocks/miscellaneous_block_0/grain_sack_front"
+    "bottom": "westerosblocks:block/miscellaneous_block_0/grain_sack",
+    "top": "westerosblocks:block/miscellaneous_block_0/grain_sack",
+    "side": "westerosblocks:block/miscellaneous_block_0/grain_sack_front",
+    "particle": "westerosblocks:block/miscellaneous_block_0/grain_sack_front"
   }
 }

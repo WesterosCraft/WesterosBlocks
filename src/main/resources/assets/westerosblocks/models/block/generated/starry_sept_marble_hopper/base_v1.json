@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "txt5": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "txt2": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "txt3": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "txt0": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "txt1": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept",
-    "particle": "westerosblocks:blocks/stone_block_2/stone_marble_starry_sept"
+    "txt4": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
+    "txt5": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
+    "txt2": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
+    "txt3": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
+    "txt0": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
+    "txt1": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
+    "particle": "westerosblocks:block/stone_block_2/stone_marble_starry_sept"
   },
   "elements": [
     {

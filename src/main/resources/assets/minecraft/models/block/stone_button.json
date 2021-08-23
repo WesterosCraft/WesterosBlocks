@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/tinted/button",
   "textures": {
-    "texture": "westerosblocks:blocks/tinted/stone"
+    "texture": "westerosblocks:block/tinted/stone"
   }
 }

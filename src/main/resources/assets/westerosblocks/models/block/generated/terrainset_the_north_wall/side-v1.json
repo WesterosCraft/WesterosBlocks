@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_side",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_north/1",
-    "top": "westerosblocks:blocks/terrainset_north/1",
-    "side": "westerosblocks:blocks/terrainset_north/1"
+    "bottom": "westerosblocks:block/terrainset_north/1",
+    "top": "westerosblocks:block/terrainset_north/1",
+    "side": "westerosblocks:block/terrainset_north/1"
   }
 }

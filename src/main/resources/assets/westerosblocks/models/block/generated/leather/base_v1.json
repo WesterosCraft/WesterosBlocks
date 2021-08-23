@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/fur_block_0/leather_block_leather"
+    "all": "westerosblocks:block/fur_block_0/leather_block_leather"
   }
 }

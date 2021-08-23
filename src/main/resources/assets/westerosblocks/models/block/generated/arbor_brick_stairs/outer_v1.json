@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_3/brick_arbor",
-    "top": "westerosblocks:blocks/stone_block_3/brick_arbor",
-    "side": "westerosblocks:blocks/stone_block_3/brick_arbor",
-    "particle": "westerosblocks:blocks/stone_block_3/brick_arbor"
+    "bottom": "westerosblocks:block/stone_block_3/brick_arbor",
+    "top": "westerosblocks:block/stone_block_3/brick_arbor",
+    "side": "westerosblocks:block/stone_block_3/brick_arbor",
+    "particle": "westerosblocks:block/stone_block_3/brick_arbor"
   }
 }

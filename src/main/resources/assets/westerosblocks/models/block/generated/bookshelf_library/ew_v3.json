@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "westerosblocks:blocks/bookshelves_block_0/spruce_top",
-    "up": "westerosblocks:blocks/bookshelves_block_0/spruce_top",
-    "down": "westerosblocks:blocks/bookshelves_block_0/spruce_top",
-    "north": "westerosblocks:blocks/bookshelf_cramped/both3",
-    "south": "westerosblocks:blocks/bookshelf_cramped/both3",
-    "east": "westerosblocks:blocks/bookshelf_cramped/side",
-    "west": "westerosblocks:blocks/bookshelf_cramped/side"
+    "particle": "westerosblocks:block/bookshelves_block_0/spruce_top",
+    "up": "westerosblocks:block/bookshelves_block_0/spruce_top",
+    "down": "westerosblocks:block/bookshelves_block_0/spruce_top",
+    "north": "westerosblocks:block/bookshelf_cramped/both3",
+    "south": "westerosblocks:block/bookshelf_cramped/both3",
+    "east": "westerosblocks:block/bookshelf_cramped/side",
+    "west": "westerosblocks:block/bookshelf_cramped/side"
   }
 }

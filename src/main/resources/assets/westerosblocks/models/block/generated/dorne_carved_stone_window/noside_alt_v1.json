@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_glass_pane_noside_alt",
   "textures": {
-    "pane": "westerosblocks:blocks/glass_pane_block_0/moorish_stone_window_pane"
+    "pane": "westerosblocks:block/glass_pane_block_0/moorish_stone_window_pane"
   }
 }

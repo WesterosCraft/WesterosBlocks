@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:blocks/brown_mushroom_block_0/mushroom_brown_12"
+    "cross": "westerosblocks:block/brown_mushroom_block_0/mushroom_brown_12"
   }
 }

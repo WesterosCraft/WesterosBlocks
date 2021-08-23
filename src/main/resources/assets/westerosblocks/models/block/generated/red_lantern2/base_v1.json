@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_bottom",
-    "up": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_top",
-    "north": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_side",
-    "south": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_side",
-    "west": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_side",
-    "east": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_side",
-    "particle": "westerosblocks:blocks/light_emitting_blocks_0/lantern_red_side"
+    "down": "westerosblocks:block/light_emitting_blocks_0/lantern_red_bottom",
+    "up": "westerosblocks:block/light_emitting_blocks_0/lantern_red_top",
+    "north": "westerosblocks:block/light_emitting_blocks_0/lantern_red_side",
+    "south": "westerosblocks:block/light_emitting_blocks_0/lantern_red_side",
+    "west": "westerosblocks:block/light_emitting_blocks_0/lantern_red_side",
+    "east": "westerosblocks:block/light_emitting_blocks_0/lantern_red_side",
+    "particle": "westerosblocks:block/light_emitting_blocks_0/lantern_red_side"
   }
 }

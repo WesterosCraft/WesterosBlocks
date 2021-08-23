@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/fence_post",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_eyrie/26",
-    "top": "westerosblocks:blocks/terrainset_eyrie/26",
-    "side": "westerosblocks:blocks/terrainset_eyrie/26"
+    "bottom": "westerosblocks:block/terrainset_eyrie/26",
+    "top": "westerosblocks:block/terrainset_eyrie/26",
+    "side": "westerosblocks:block/terrainset_eyrie/26"
   }
 }

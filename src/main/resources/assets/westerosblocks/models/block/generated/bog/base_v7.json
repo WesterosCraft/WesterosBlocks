@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "particle": "westerosblocks:blocks/bog/bog_side",
-    "bottom": "westerosblocks:blocks/bog/mud",
-    "top": "westerosblocks:blocks/bog/bog7",
-    "side": "westerosblocks:blocks/bog/bog_side"
+    "particle": "westerosblocks:block/bog/bog_side",
+    "bottom": "westerosblocks:block/bog/mud",
+    "top": "westerosblocks:block/bog/bog7",
+    "side": "westerosblocks:block/bog/bog_side"
   }
 }

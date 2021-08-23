@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "top": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "side": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "particle": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside"
+    "bottom": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "top": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "side": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "particle": "westerosblocks:block/fur_block_0/leather_mance_main_outside"
   }
 }

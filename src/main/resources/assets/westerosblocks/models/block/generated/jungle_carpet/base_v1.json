@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/wood_block_0/planks_jungle",
-    "txt5": "westerosblocks:blocks/wood_block_0/planks_jungle",
-    "txt2": "westerosblocks:blocks/wood_block_0/planks_jungle",
-    "txt3": "westerosblocks:blocks/wood_block_0/planks_jungle",
-    "txt0": "westerosblocks:blocks/wood_block_0/planks_jungle",
-    "txt1": "westerosblocks:blocks/wood_block_0/planks_jungle",
-    "particle": "westerosblocks:blocks/wood_block_0/planks_jungle"
+    "txt4": "westerosblocks:block/wood_block_0/planks_jungle",
+    "txt5": "westerosblocks:block/wood_block_0/planks_jungle",
+    "txt2": "westerosblocks:block/wood_block_0/planks_jungle",
+    "txt3": "westerosblocks:block/wood_block_0/planks_jungle",
+    "txt0": "westerosblocks:block/wood_block_0/planks_jungle",
+    "txt1": "westerosblocks:block/wood_block_0/planks_jungle",
+    "particle": "westerosblocks:block/wood_block_0/planks_jungle"
   },
   "elements": [
     {

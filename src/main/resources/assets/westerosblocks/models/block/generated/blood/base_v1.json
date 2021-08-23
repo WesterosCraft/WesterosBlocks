@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/cuboid_block_0/blood",
-    "txt5": "westerosblocks:blocks/cuboid_block_0/blood",
-    "txt2": "westerosblocks:blocks/cuboid_block_0/blood",
-    "txt3": "westerosblocks:blocks/cuboid_block_0/blood",
-    "txt0": "westerosblocks:blocks/cuboid_block_0/blood",
-    "txt1": "westerosblocks:blocks/cuboid_block_0/blood",
-    "particle": "westerosblocks:blocks/cuboid_block_0/blood"
+    "txt4": "westerosblocks:block/cuboid_block_0/blood",
+    "txt5": "westerosblocks:block/cuboid_block_0/blood",
+    "txt2": "westerosblocks:block/cuboid_block_0/blood",
+    "txt3": "westerosblocks:block/cuboid_block_0/blood",
+    "txt0": "westerosblocks:block/cuboid_block_0/blood",
+    "txt1": "westerosblocks:block/cuboid_block_0/blood",
+    "particle": "westerosblocks:block/cuboid_block_0/blood"
   },
   "elements": [
     {

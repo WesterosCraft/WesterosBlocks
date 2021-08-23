@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_block_1/brick_basalt",
-    "up": "westerosblocks:blocks/stone_block_1/brick_basalt",
-    "north": "westerosblocks:blocks/stone_block_1/brick_basalt",
-    "south": "westerosblocks:blocks/stone_block_1/brick_basalt",
-    "west": "westerosblocks:blocks/stone_block_1/brick_basalt",
-    "east": "westerosblocks:blocks/stone_block_1/brick_basalt",
-    "particle": "westerosblocks:blocks/stone_block_1/brick_basalt"
+    "down": "westerosblocks:block/stone_block_1/brick_basalt",
+    "up": "westerosblocks:block/stone_block_1/brick_basalt",
+    "north": "westerosblocks:block/stone_block_1/brick_basalt",
+    "south": "westerosblocks:block/stone_block_1/brick_basalt",
+    "west": "westerosblocks:block/stone_block_1/brick_basalt",
+    "east": "westerosblocks:block/stone_block_1/brick_basalt",
+    "particle": "westerosblocks:block/stone_block_1/brick_basalt"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_east/8",
-    "top": "westerosblocks:blocks/terrainset_east/8",
-    "side": "westerosblocks:blocks/terrainset_east/8",
-    "particle": "westerosblocks:blocks/terrainset_east/8"
+    "bottom": "westerosblocks:block/terrainset_east/8",
+    "top": "westerosblocks:block/terrainset_east/8",
+    "side": "westerosblocks:block/terrainset_east/8",
+    "particle": "westerosblocks:block/terrainset_east/8"
   }
 }

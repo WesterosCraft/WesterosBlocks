@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:blocks/flower_block_0/orange_trollius"
+    "cross": "westerosblocks:block/flower_block_0/orange_trollius"
   }
 }

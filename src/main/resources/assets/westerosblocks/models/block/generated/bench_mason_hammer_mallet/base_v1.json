@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/bench_block_0/spruce_top",
-    "up": "westerosblocks:blocks/bench_block_0/crafting_table_top",
-    "north": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet",
-    "south": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet",
-    "west": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet",
-    "east": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet",
-    "particle": "westerosblocks:blocks/bench_block_0/bench_mason_hammer_mallet"
+    "down": "westerosblocks:block/bench_block_0/spruce_top",
+    "up": "westerosblocks:block/bench_block_0/crafting_table_top",
+    "north": "westerosblocks:block/bench_block_0/bench_mason_hammer_mallet",
+    "south": "westerosblocks:block/bench_block_0/bench_mason_hammer_mallet",
+    "west": "westerosblocks:block/bench_block_0/bench_mason_hammer_mallet",
+    "east": "westerosblocks:block/bench_block_0/bench_mason_hammer_mallet",
+    "particle": "westerosblocks:block/bench_block_0/bench_mason_hammer_mallet"
   }
 }

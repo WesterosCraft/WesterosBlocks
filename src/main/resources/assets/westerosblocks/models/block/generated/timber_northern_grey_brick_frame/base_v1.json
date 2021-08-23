@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/daub_wattle_block_0/northern_grey_brick_open"
+    "all": "westerosblocks:block/daub_wattle_block_0/northern_grey_brick_open"
   }
 }

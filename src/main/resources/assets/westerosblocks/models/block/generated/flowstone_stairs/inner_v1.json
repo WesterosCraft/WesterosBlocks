@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_terrainsets_0/stone_flowstone",
-    "top": "westerosblocks:blocks/stone_terrainsets_0/stone_flowstone",
-    "side": "westerosblocks:blocks/stone_terrainsets_0/stone_flowstone",
-    "particle": "westerosblocks:blocks/stone_terrainsets_0/stone_flowstone"
+    "bottom": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
+    "top": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
+    "side": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
+    "particle": "westerosblocks:block/stone_terrainsets_0/stone_flowstone"
   }
 }

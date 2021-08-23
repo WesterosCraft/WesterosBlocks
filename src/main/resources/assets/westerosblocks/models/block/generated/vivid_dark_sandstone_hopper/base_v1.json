@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark",
-    "txt5": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark",
-    "txt2": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark",
-    "txt3": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark",
-    "txt0": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark",
-    "txt1": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark",
-    "particle": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark"
+    "txt4": "westerosblocks:block/stone_block_0/sandstone_vivid_dark",
+    "txt5": "westerosblocks:block/stone_block_0/sandstone_vivid_dark",
+    "txt2": "westerosblocks:block/stone_block_0/sandstone_vivid_dark",
+    "txt3": "westerosblocks:block/stone_block_0/sandstone_vivid_dark",
+    "txt0": "westerosblocks:block/stone_block_0/sandstone_vivid_dark",
+    "txt1": "westerosblocks:block/stone_block_0/sandstone_vivid_dark",
+    "particle": "westerosblocks:block/stone_block_0/sandstone_vivid_dark"
   },
   "elements": [
     {

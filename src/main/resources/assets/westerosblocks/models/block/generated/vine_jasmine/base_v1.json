@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/ladder",
   "textures": {
-    "ladder": "westerosblocks:blocks/ladder_block_0/vine_jasmine"
+    "ladder": "westerosblocks:block/ladder_block_0/vine_jasmine"
   }
 }

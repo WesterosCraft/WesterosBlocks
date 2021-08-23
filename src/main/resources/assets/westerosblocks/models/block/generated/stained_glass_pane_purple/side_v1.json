@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_side",
   "textures": {
-    "edge": "westerosblocks:blocks/translucent_block_0/glass_pane_purple",
-    "pane": "westerosblocks:blocks/translucent_block_0/glass_pane_purple"
+    "edge": "westerosblocks:block/translucent_block_0/glass_pane_purple",
+    "pane": "westerosblocks:block/translucent_block_0/glass_pane_purple"
   }
 }

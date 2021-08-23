@@ -1,7 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/half_door_rh",
   "textures": {
-    "top": "westerosblocks:blocks/halfdoor_block_0/shutters_lannisport",
-    "bottom": "westerosblocks:blocks/halfdoor_block_0/shutters_lannisport"
+    "top": "westerosblocks:block/halfdoor_block_0/shutters_lannisport",
+    "bottom": "westerosblocks:block/halfdoor_block_0/shutters_lannisport"
   }
 }

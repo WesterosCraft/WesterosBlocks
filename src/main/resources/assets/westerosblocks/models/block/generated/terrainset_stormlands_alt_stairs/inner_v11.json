@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_stormlands_alt/11",
-    "top": "westerosblocks:blocks/terrainset_stormlands_alt/11",
-    "side": "westerosblocks:blocks/terrainset_stormlands_alt/11",
-    "particle": "westerosblocks:blocks/terrainset_stormlands_alt/11"
+    "bottom": "westerosblocks:block/terrainset_stormlands_alt/11",
+    "top": "westerosblocks:block/terrainset_stormlands_alt/11",
+    "side": "westerosblocks:block/terrainset_stormlands_alt/11",
+    "particle": "westerosblocks:block/terrainset_stormlands_alt/11"
   }
 }

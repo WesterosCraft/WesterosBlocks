@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_reach_alt/4",
-    "top": "westerosblocks:blocks/terrainset_reach_alt/4",
-    "side": "westerosblocks:blocks/terrainset_reach_alt/4",
-    "particle": "westerosblocks:blocks/terrainset_reach_alt/4"
+    "bottom": "westerosblocks:block/terrainset_reach_alt/4",
+    "top": "westerosblocks:block/terrainset_reach_alt/4",
+    "side": "westerosblocks:block/terrainset_reach_alt/4",
+    "particle": "westerosblocks:block/terrainset_reach_alt/4"
   }
 }

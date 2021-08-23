@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_block_4/brick_pink_light",
-    "up": "westerosblocks:blocks/stone_block_4/brick_pink_light",
-    "north": "westerosblocks:blocks/stone_block_4/brick_pink_light",
-    "south": "westerosblocks:blocks/stone_block_4/brick_pink_light",
-    "west": "westerosblocks:blocks/stone_block_4/brick_pink_light",
-    "east": "westerosblocks:blocks/stone_block_4/brick_pink_light",
-    "particle": "westerosblocks:blocks/stone_block_4/brick_pink_light"
+    "down": "westerosblocks:block/stone_block_4/brick_pink_light",
+    "up": "westerosblocks:block/stone_block_4/brick_pink_light",
+    "north": "westerosblocks:block/stone_block_4/brick_pink_light",
+    "south": "westerosblocks:block/stone_block_4/brick_pink_light",
+    "west": "westerosblocks:block/stone_block_4/brick_pink_light",
+    "east": "westerosblocks:block/stone_block_4/brick_pink_light",
+    "particle": "westerosblocks:block/stone_block_4/brick_pink_light"
   }
 }

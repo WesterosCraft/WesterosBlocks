@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:blocks/flower_block_1/white_lily_valley"
+    "cross": "westerosblocks:block/flower_block_1/white_lily_valley"
   }
 }

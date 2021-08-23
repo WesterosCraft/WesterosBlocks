@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:blocks/bars_iron_block_0/bars_iron_crossbars"
+    "layer0": "westerosblocks:block/bars_iron_block_0/bars_iron_crossbars"
   }
 }

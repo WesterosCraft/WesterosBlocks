@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log",
   "textures": {
-    "down": "westerosblocks:blocks/log_block_0/firewood_top",
-    "up": "westerosblocks:blocks/log_block_0/firewood_top",
-    "north": "westerosblocks:blocks/log_block_0/firewood_side",
-    "south": "westerosblocks:blocks/log_block_0/firewood_side",
-    "east": "westerosblocks:blocks/log_block_0/firewood_side",
-    "west": "westerosblocks:blocks/log_block_0/firewood_side",
-    "particle": "westerosblocks:blocks/log_block_0/firewood_side"
+    "down": "westerosblocks:block/log_block_0/firewood_top",
+    "up": "westerosblocks:block/log_block_0/firewood_top",
+    "north": "westerosblocks:block/log_block_0/firewood_side",
+    "south": "westerosblocks:block/log_block_0/firewood_side",
+    "east": "westerosblocks:block/log_block_0/firewood_side",
+    "west": "westerosblocks:block/log_block_0/firewood_side",
+    "particle": "westerosblocks:block/log_block_0/firewood_side"
   }
 }

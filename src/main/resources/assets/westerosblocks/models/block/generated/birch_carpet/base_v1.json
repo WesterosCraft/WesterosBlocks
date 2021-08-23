@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/wood_block_0/planks_birch",
-    "txt5": "westerosblocks:blocks/wood_block_0/planks_birch",
-    "txt2": "westerosblocks:blocks/wood_block_0/planks_birch",
-    "txt3": "westerosblocks:blocks/wood_block_0/planks_birch",
-    "txt0": "westerosblocks:blocks/wood_block_0/planks_birch",
-    "txt1": "westerosblocks:blocks/wood_block_0/planks_birch",
-    "particle": "westerosblocks:blocks/wood_block_0/planks_birch"
+    "txt4": "westerosblocks:block/wood_block_0/planks_birch",
+    "txt5": "westerosblocks:block/wood_block_0/planks_birch",
+    "txt2": "westerosblocks:block/wood_block_0/planks_birch",
+    "txt3": "westerosblocks:block/wood_block_0/planks_birch",
+    "txt0": "westerosblocks:block/wood_block_0/planks_birch",
+    "txt1": "westerosblocks:block/wood_block_0/planks_birch",
+    "particle": "westerosblocks:block/wood_block_0/planks_birch"
   },
   "elements": [
     {

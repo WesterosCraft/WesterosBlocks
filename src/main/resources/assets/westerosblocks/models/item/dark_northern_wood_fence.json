@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/fence_inventory",
   "textures": {
-    "bottom": "westerosblocks:blocks/wood_block_1/wood_northern",
-    "top": "westerosblocks:blocks/wood_block_1/wood_northern",
-    "side": "westerosblocks:blocks/wood_block_1/wood_northern"
+    "bottom": "westerosblocks:block/wood_block_1/wood_northern",
+    "top": "westerosblocks:block/wood_block_1/wood_northern",
+    "side": "westerosblocks:block/wood_block_1/wood_northern"
   }
 }

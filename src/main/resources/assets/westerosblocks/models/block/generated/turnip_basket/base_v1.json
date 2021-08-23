@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/crate_block_1/basket_bottom",
-    "up": "westerosblocks:blocks/crate_block_1/basket_turnip",
-    "north": "westerosblocks:blocks/crate_block_1/basket_side",
-    "south": "westerosblocks:blocks/crate_block_1/basket_side",
-    "west": "westerosblocks:blocks/crate_block_1/basket_side",
-    "east": "westerosblocks:blocks/crate_block_1/basket_side",
-    "particle": "westerosblocks:blocks/crate_block_1/basket_side"
+    "down": "westerosblocks:block/crate_block_1/basket_bottom",
+    "up": "westerosblocks:block/crate_block_1/basket_turnip",
+    "north": "westerosblocks:block/crate_block_1/basket_side",
+    "south": "westerosblocks:block/crate_block_1/basket_side",
+    "west": "westerosblocks:block/crate_block_1/basket_side",
+    "east": "westerosblocks:block/crate_block_1/basket_side",
+    "particle": "westerosblocks:block/crate_block_1/basket_side"
   }
 }

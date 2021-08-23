@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_post",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_dorne/13",
-    "top": "westerosblocks:blocks/terrainset_dorne/13",
-    "side": "westerosblocks:blocks/terrainset_dorne/13"
+    "bottom": "westerosblocks:block/terrainset_dorne/13",
+    "top": "westerosblocks:block/terrainset_dorne/13",
+    "side": "westerosblocks:block/terrainset_dorne/13"
   }
 }

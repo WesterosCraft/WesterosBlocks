@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_volcanic/1",
-    "top": "westerosblocks:blocks/terrainset_volcanic/1",
-    "side": "westerosblocks:blocks/terrainset_volcanic/1",
-    "particle": "westerosblocks:blocks/terrainset_volcanic/1"
+    "bottom": "westerosblocks:block/terrainset_volcanic/1",
+    "top": "westerosblocks:block/terrainset_volcanic/1",
+    "side": "westerosblocks:block/terrainset_volcanic/1",
+    "particle": "westerosblocks:block/terrainset_volcanic/1"
   }
 }

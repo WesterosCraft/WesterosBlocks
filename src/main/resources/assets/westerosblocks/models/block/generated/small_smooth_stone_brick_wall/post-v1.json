@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/tinted/wall_post",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_1/brick_stone_small_smooth",
-    "top": "westerosblocks:blocks/stone_block_1/brick_stone_small_smooth",
-    "side": "westerosblocks:blocks/stone_block_1/brick_stone_small_smooth"
+    "bottom": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
+    "top": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
+    "side": "westerosblocks:block/stone_block_1/brick_stone_small_smooth"
   }
 }

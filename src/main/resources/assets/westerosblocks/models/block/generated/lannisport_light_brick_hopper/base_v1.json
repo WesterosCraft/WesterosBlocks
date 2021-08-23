@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/stone_block_2/brick_lannisport",
-    "txt5": "westerosblocks:blocks/stone_block_2/brick_lannisport",
-    "txt2": "westerosblocks:blocks/stone_block_2/brick_lannisport",
-    "txt3": "westerosblocks:blocks/stone_block_2/brick_lannisport",
-    "txt0": "westerosblocks:blocks/stone_block_2/brick_lannisport",
-    "txt1": "westerosblocks:blocks/stone_block_2/brick_lannisport",
-    "particle": "westerosblocks:blocks/stone_block_2/brick_lannisport"
+    "txt4": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "txt5": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "txt2": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "txt3": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "txt0": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "txt1": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "particle": "westerosblocks:block/stone_block_2/brick_lannisport"
   },
   "elements": [
     {

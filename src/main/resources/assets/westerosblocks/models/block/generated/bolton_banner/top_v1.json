@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/banner_block_1/banner_bolton_top",
-    "txt5": "westerosblocks:blocks/banner_block_1/banner_bolton_top",
-    "txt2": "westerosblocks:blocks/transparent",
-    "txt3": "westerosblocks:blocks/transparent",
-    "txt0": "westerosblocks:blocks/transparent",
-    "txt1": "westerosblocks:blocks/transparent",
-    "particle": "westerosblocks:blocks/transparent"
+    "txt4": "westerosblocks:block/banner_block_1/banner_bolton_top",
+    "txt5": "westerosblocks:block/banner_block_1/banner_bolton_top",
+    "txt2": "westerosblocks:block/transparent",
+    "txt3": "westerosblocks:block/transparent",
+    "txt0": "westerosblocks:block/transparent",
+    "txt1": "westerosblocks:block/transparent",
+    "particle": "westerosblocks:block/transparent"
   },
   "elements": [
     {

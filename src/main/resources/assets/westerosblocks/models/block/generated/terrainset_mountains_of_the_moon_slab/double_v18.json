@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/terrainset_eyrie/22",
-    "up": "westerosblocks:blocks/terrainset_eyrie/22",
-    "north": "westerosblocks:blocks/terrainset_eyrie/22",
-    "south": "westerosblocks:blocks/terrainset_eyrie/22",
-    "west": "westerosblocks:blocks/terrainset_eyrie/22",
-    "east": "westerosblocks:blocks/terrainset_eyrie/22",
-    "particle": "westerosblocks:blocks/terrainset_eyrie/22"
+    "down": "westerosblocks:block/terrainset_eyrie/22",
+    "up": "westerosblocks:block/terrainset_eyrie/22",
+    "north": "westerosblocks:block/terrainset_eyrie/22",
+    "south": "westerosblocks:block/terrainset_eyrie/22",
+    "west": "westerosblocks:block/terrainset_eyrie/22",
+    "east": "westerosblocks:block/terrainset_eyrie/22",
+    "particle": "westerosblocks:block/terrainset_eyrie/22"
   }
 }

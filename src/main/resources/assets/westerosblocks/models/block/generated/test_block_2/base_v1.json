@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/test_block/s_texture",
-    "txt5": "westerosblocks:blocks/test_block/n_texture",
-    "txt2": "westerosblocks:blocks/test_block/w_texture",
-    "txt3": "westerosblocks:blocks/test_block/e_texture",
-    "txt0": "westerosblocks:blocks/test_block/d_texture",
-    "txt1": "westerosblocks:blocks/test_block/u_texture",
-    "particle": "westerosblocks:blocks/test_block/d_texture"
+    "txt4": "westerosblocks:block/test_block/s_texture",
+    "txt5": "westerosblocks:block/test_block/n_texture",
+    "txt2": "westerosblocks:block/test_block/w_texture",
+    "txt3": "westerosblocks:block/test_block/e_texture",
+    "txt0": "westerosblocks:block/test_block/d_texture",
+    "txt1": "westerosblocks:block/test_block/u_texture",
+    "particle": "westerosblocks:block/test_block/d_texture"
   },
   "elements": [
     {

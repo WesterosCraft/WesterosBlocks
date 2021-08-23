@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/utility_block_0/note"
+    "all": "westerosblocks:block/utility_block_0/note"
   }
 }

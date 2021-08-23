@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "txt5": "westerosblocks:blocks/fur_block_0/leather_mance_main_inside",
-    "txt2": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "txt3": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "txt0": "westerosblocks:blocks/fur_block_0/leather_mance_main_inside",
-    "txt1": "westerosblocks:blocks/fur_block_0/leather_mance_main_outside",
-    "particle": "westerosblocks:blocks/fur_block_0/leather_mance_main_inside"
+    "txt4": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "txt5": "westerosblocks:block/fur_block_0/leather_mance_main_inside",
+    "txt2": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "txt3": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "txt0": "westerosblocks:block/fur_block_0/leather_mance_main_inside",
+    "txt1": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "particle": "westerosblocks:block/fur_block_0/leather_mance_main_inside"
   },
   "elements": [
     {

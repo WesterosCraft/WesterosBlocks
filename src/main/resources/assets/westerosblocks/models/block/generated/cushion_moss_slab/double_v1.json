@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/moss_block/moss_cushion",
-    "up": "westerosblocks:blocks/moss_block/moss_cushion",
-    "north": "westerosblocks:blocks/moss_block/moss_cushion",
-    "south": "westerosblocks:blocks/moss_block/moss_cushion",
-    "west": "westerosblocks:blocks/moss_block/moss_cushion",
-    "east": "westerosblocks:blocks/moss_block/moss_cushion",
-    "particle": "westerosblocks:blocks/moss_block/moss_cushion"
+    "down": "westerosblocks:block/moss_block/moss_cushion",
+    "up": "westerosblocks:block/moss_block/moss_cushion",
+    "north": "westerosblocks:block/moss_block/moss_cushion",
+    "south": "westerosblocks:block/moss_block/moss_cushion",
+    "west": "westerosblocks:block/moss_block/moss_cushion",
+    "east": "westerosblocks:block/moss_block/moss_cushion",
+    "particle": "westerosblocks:block/moss_block/moss_cushion"
   }
 }

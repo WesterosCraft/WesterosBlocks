@@ -1,11 +1,11 @@
 {
   "parent": "westerosblocks:item/untinted/bed_item",
   "textures": {
-    "bedtop": "westerosblocks:blocks/bed_block_0/bed_night_watch_0",
-    "bedend": "westerosblocks:blocks/bed_block_0/bed_night_watch_4",
-    "bedside": "westerosblocks:blocks/bed_block_0/bed_night_watch_2",
-    "bedtop2": "westerosblocks:blocks/bed_block_0/bed_night_watch_1",
-    "bedend2": "westerosblocks:blocks/bed_block_0/bed_night_watch_5",
-    "bedside2": "westerosblocks:blocks/bed_block_0/bed_night_watch_3"
+    "bedtop": "westerosblocks:block/bed_block_0/bed_night_watch_0",
+    "bedend": "westerosblocks:block/bed_block_0/bed_night_watch_4",
+    "bedside": "westerosblocks:block/bed_block_0/bed_night_watch_2",
+    "bedtop2": "westerosblocks:block/bed_block_0/bed_night_watch_1",
+    "bedend2": "westerosblocks:block/bed_block_0/bed_night_watch_5",
+    "bedside2": "westerosblocks:block/bed_block_0/bed_night_watch_3"
   }
 }

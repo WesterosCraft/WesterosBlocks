@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/terrainset_reach_alt/6"
+    "all": "westerosblocks:block/terrainset_reach_alt/6"
   }
 }

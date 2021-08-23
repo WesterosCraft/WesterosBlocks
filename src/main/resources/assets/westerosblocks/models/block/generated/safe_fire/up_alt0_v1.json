@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_fire_side_alt",
   "textures": {
-    "fire": "westerosblocks:blocks/fire_block_0/fire_layer_1"
+    "fire": "westerosblocks:block/fire_block_0/fire_layer_1"
   }
 }

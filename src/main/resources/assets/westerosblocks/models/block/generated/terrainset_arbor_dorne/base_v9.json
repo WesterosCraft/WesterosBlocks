@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/terrainset_dorne/9"
+    "all": "westerosblocks:block/terrainset_dorne/9"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark_top",
-    "top": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark_top",
-    "side": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark",
-    "particle": "westerosblocks:blocks/stone_block_0/sandstone_vivid_dark"
+    "bottom": "westerosblocks:block/stone_block_0/sandstone_vivid_dark_top",
+    "top": "westerosblocks:block/stone_block_0/sandstone_vivid_dark_top",
+    "side": "westerosblocks:block/stone_block_0/sandstone_vivid_dark",
+    "particle": "westerosblocks:block/stone_block_0/sandstone_vivid_dark"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_east/10",
-    "top": "westerosblocks:blocks/terrainset_east/10",
-    "side": "westerosblocks:blocks/terrainset_east/10",
-    "particle": "westerosblocks:blocks/terrainset_east/10"
+    "bottom": "westerosblocks:block/terrainset_east/10",
+    "top": "westerosblocks:block/terrainset_east/10",
+    "side": "westerosblocks:block/terrainset_east/10",
+    "particle": "westerosblocks:block/terrainset_east/10"
   }
 }

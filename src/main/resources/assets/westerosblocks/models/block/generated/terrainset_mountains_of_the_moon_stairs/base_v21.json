@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_eyrie/25",
-    "top": "westerosblocks:blocks/terrainset_eyrie/25",
-    "side": "westerosblocks:blocks/terrainset_eyrie/25",
-    "particle": "westerosblocks:blocks/terrainset_eyrie/25"
+    "bottom": "westerosblocks:block/terrainset_eyrie/25",
+    "top": "westerosblocks:block/terrainset_eyrie/25",
+    "side": "westerosblocks:block/terrainset_eyrie/25",
+    "particle": "westerosblocks:block/terrainset_eyrie/25"
   }
 }

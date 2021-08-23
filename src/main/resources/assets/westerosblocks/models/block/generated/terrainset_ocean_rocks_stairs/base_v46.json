@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_ocean/69",
-    "top": "westerosblocks:blocks/terrainset_ocean/69",
-    "side": "westerosblocks:blocks/terrainset_ocean/69",
-    "particle": "westerosblocks:blocks/terrainset_ocean/69"
+    "bottom": "westerosblocks:block/terrainset_ocean/69",
+    "top": "westerosblocks:block/terrainset_ocean/69",
+    "side": "westerosblocks:block/terrainset_ocean/69",
+    "particle": "westerosblocks:block/terrainset_ocean/69"
   }
 }

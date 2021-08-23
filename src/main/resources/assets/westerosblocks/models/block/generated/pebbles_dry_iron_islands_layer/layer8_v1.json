@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:blocks/pebble_block_0/pebble_iron_islands_dry",
-    "txt5": "westerosblocks:blocks/pebble_block_0/pebble_iron_islands_dry",
-    "txt2": "westerosblocks:blocks/pebble_block_0/pebble_iron_islands_dry",
-    "txt3": "westerosblocks:blocks/pebble_block_0/pebble_iron_islands_dry",
-    "txt0": "westerosblocks:blocks/pebble_block_0/pebble_iron_islands_dry",
-    "txt1": "westerosblocks:blocks/pebble_block_0/pebble_iron_islands_dry",
-    "particle": "westerosblocks:blocks/pebble_block_0/pebble_iron_islands_dry"
+    "txt4": "westerosblocks:block/pebble_block_0/pebble_iron_islands_dry",
+    "txt5": "westerosblocks:block/pebble_block_0/pebble_iron_islands_dry",
+    "txt2": "westerosblocks:block/pebble_block_0/pebble_iron_islands_dry",
+    "txt3": "westerosblocks:block/pebble_block_0/pebble_iron_islands_dry",
+    "txt0": "westerosblocks:block/pebble_block_0/pebble_iron_islands_dry",
+    "txt1": "westerosblocks:block/pebble_block_0/pebble_iron_islands_dry",
+    "particle": "westerosblocks:block/pebble_block_0/pebble_iron_islands_dry"
   },
   "elements": [
     {

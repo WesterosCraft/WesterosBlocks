@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/ground_block_0/mud"
+    "all": "westerosblocks:block/ground_block_0/mud"
   }
 }

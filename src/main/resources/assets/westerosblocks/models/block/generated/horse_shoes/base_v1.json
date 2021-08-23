@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/cuboid_block_0/horseshoes",
-    "txt5": "westerosblocks:blocks/cuboid_block_0/horseshoes",
-    "txt2": "westerosblocks:blocks/cuboid_block_0/horseshoes",
-    "txt3": "westerosblocks:blocks/cuboid_block_0/horseshoes",
-    "txt0": "westerosblocks:blocks/cuboid_block_0/horseshoes",
-    "txt1": "westerosblocks:blocks/cuboid_block_0/horseshoes",
-    "particle": "westerosblocks:blocks/cuboid_block_0/horseshoes"
+    "txt4": "westerosblocks:block/cuboid_block_0/horseshoes",
+    "txt5": "westerosblocks:block/cuboid_block_0/horseshoes",
+    "txt2": "westerosblocks:block/cuboid_block_0/horseshoes",
+    "txt3": "westerosblocks:block/cuboid_block_0/horseshoes",
+    "txt0": "westerosblocks:block/cuboid_block_0/horseshoes",
+    "txt1": "westerosblocks:block/cuboid_block_0/horseshoes",
+    "particle": "westerosblocks:block/cuboid_block_0/horseshoes"
   },
   "elements": [
     {

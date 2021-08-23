@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_post",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_4/brick_pink_light",
-    "top": "westerosblocks:blocks/stone_block_4/brick_pink_light",
-    "side": "westerosblocks:blocks/stone_block_4/brick_pink_light"
+    "bottom": "westerosblocks:block/stone_block_4/brick_pink_light",
+    "top": "westerosblocks:block/stone_block_4/brick_pink_light",
+    "side": "westerosblocks:block/stone_block_4/brick_pink_light"
   }
 }

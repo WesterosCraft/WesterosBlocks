@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:blocks/web_block_0/chain_vertical"
+    "cross": "westerosblocks:block/web_block_0/chain_vertical"
   }
 }

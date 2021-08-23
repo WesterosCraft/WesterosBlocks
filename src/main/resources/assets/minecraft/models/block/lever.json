@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "westerosblocks:blocks/tinted/cobblestone",
-        "base": "westerosblocks:blocks/tinted/cobblestone",
+        "particle": "westerosblocks:block/tinted/cobblestone",
+        "base": "westerosblocks:block/tinted/cobblestone",
         "lever": "minecraft:block/lever"
     },
     "elements": [

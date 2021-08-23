@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/ground_block_0/gravel",
-    "txt5": "westerosblocks:blocks/ground_block_0/gravel",
-    "txt2": "westerosblocks:blocks/ground_block_0/gravel",
-    "txt3": "westerosblocks:blocks/ground_block_0/gravel",
-    "txt0": "westerosblocks:blocks/ground_block_0/gravel",
-    "txt1": "westerosblocks:blocks/ground_block_0/gravel",
-    "particle": "westerosblocks:blocks/ground_block_0/gravel"
+    "txt4": "westerosblocks:block/ground_block_0/gravel",
+    "txt5": "westerosblocks:block/ground_block_0/gravel",
+    "txt2": "westerosblocks:block/ground_block_0/gravel",
+    "txt3": "westerosblocks:block/ground_block_0/gravel",
+    "txt0": "westerosblocks:block/ground_block_0/gravel",
+    "txt1": "westerosblocks:block/ground_block_0/gravel",
+    "particle": "westerosblocks:block/ground_block_0/gravel"
   },
   "elements": [
     {

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
-    "up": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
-    "north": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
-    "south": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
-    "west": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
-    "east": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2",
-    "particle": "westerosblocks:blocks/fur_block_0/leather_mance_common_outside_2"
+    "down": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
+    "up": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
+    "north": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
+    "south": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
+    "west": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
+    "east": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
+    "particle": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2"
   }
 }

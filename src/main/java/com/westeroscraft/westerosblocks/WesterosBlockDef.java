@@ -1196,7 +1196,7 @@ public class WesterosBlockDef {
 	 * Default texture registration for Dynmap
 	 */
 	public void defaultRegisterTextures(ModTextureDefinition mtd) {
-		mtd.setTexturePath("assets/westerosblocks/textures/blocks/");
+		mtd.setTexturePath("assets/westerosblocks/textures/block/");
 		HashSet<String> txtids = new HashSet<String>(); // Build set if distinct IDs
 		HashSet<String> maptxtids = new HashSet<String>(); // Build set if distinct IDs
 		if ((colorMult != null) && (colorMult.startsWith("#") == false)) {
@@ -1209,7 +1209,7 @@ public class WesterosBlockDef {
 				mtd.registerTextureFile(txtid);
 			} else {
 				mtd.registerTextureFile(txtid.replace(':', '_'), "assets/" + txtid.substring(0, colon).toLowerCase()
-						+ "/textures/blocks/" + txtid.substring(colon + 1) + ".png");
+						+ "/textures/block/" + txtid.substring(colon + 1) + ".png");
 			}
 		}
 		// Register the maps

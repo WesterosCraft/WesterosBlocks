@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_1/stone_cobble_basalt",
-    "top": "westerosblocks:blocks/stone_block_1/stone_cobble_basalt",
-    "side": "westerosblocks:blocks/stone_block_1/stone_cobble_basalt"
+    "bottom": "westerosblocks:block/stone_block_1/stone_cobble_basalt",
+    "top": "westerosblocks:block/stone_block_1/stone_cobble_basalt",
+    "side": "westerosblocks:block/stone_block_1/stone_cobble_basalt"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/daub_wattle_block_0/oak_lannisport_left"
+    "all": "westerosblocks:block/daub_wattle_block_0/oak_lannisport_left"
   }
 }

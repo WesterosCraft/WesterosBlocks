@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/transparent",
-    "up": "westerosblocks:blocks/transparent",
-    "north": "westerosblocks:blocks/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate",
-    "south": "westerosblocks:blocks/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate",
-    "west": "westerosblocks:blocks/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate",
-    "east": "westerosblocks:blocks/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate",
-    "particle": "westerosblocks:blocks/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate"
+    "down": "westerosblocks:block/transparent",
+    "up": "westerosblocks:block/transparent",
+    "north": "westerosblocks:block/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate",
+    "south": "westerosblocks:block/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate",
+    "west": "westerosblocks:block/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate",
+    "east": "westerosblocks:block/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate",
+    "particle": "westerosblocks:block/arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate"
   }
 }

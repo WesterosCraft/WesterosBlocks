@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
-    "up": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
-    "north": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
-    "south": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
-    "west": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
-    "east": "westerosblocks:blocks/wool_colours/wool_colored_light_grey",
-    "particle": "westerosblocks:blocks/wool_colours/wool_colored_light_grey"
+    "down": "westerosblocks:block/wool_colours/wool_colored_light_grey",
+    "up": "westerosblocks:block/wool_colours/wool_colored_light_grey",
+    "north": "westerosblocks:block/wool_colours/wool_colored_light_grey",
+    "south": "westerosblocks:block/wool_colours/wool_colored_light_grey",
+    "west": "westerosblocks:block/wool_colours/wool_colored_light_grey",
+    "east": "westerosblocks:block/wool_colours/wool_colored_light_grey",
+    "particle": "westerosblocks:block/wool_colours/wool_colored_light_grey"
   }
 }

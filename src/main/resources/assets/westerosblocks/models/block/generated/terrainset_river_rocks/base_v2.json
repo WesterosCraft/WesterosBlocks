@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/terrainset_river/2"
+    "all": "westerosblocks:block/terrainset_river/2"
   }
 }

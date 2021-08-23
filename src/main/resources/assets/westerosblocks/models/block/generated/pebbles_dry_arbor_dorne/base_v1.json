@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/pebble_block_0/pebble_dorne_dry"
+    "all": "westerosblocks:block/pebble_block_0/pebble_dorne_dry"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "top": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "side": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor",
-    "particle": "westerosblocks:blocks/stone_block_2/stone_cobble_whiteharbor"
+    "bottom": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "top": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "side": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor",
+    "particle": "westerosblocks:block/stone_block_2/stone_cobble_whiteharbor"
   }
 }

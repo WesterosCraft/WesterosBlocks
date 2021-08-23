@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_dull_top",
-    "top": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_dull_top",
-    "side": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_dull",
-    "particle": "westerosblocks:blocks/stone_block_0/sandstone_terracotta_dull"
+    "bottom": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
+    "top": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
+    "side": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
+    "particle": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull"
   }
 }

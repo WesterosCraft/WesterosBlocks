@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_grey_sandstone/5",
-    "top": "westerosblocks:blocks/terrainset_grey_sandstone/5",
-    "side": "westerosblocks:blocks/terrainset_grey_sandstone/5",
-    "particle": "westerosblocks:blocks/terrainset_grey_sandstone/5"
+    "bottom": "westerosblocks:block/terrainset_grey_sandstone/5",
+    "top": "westerosblocks:block/terrainset_grey_sandstone/5",
+    "side": "westerosblocks:block/terrainset_grey_sandstone/5",
+    "particle": "westerosblocks:block/terrainset_grey_sandstone/5"
   }
 }

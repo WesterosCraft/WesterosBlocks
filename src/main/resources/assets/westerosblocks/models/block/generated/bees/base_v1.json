@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:blocks/web_block_0/bug_bees"
+    "cross": "westerosblocks:block/web_block_0/bug_bees"
   }
 }

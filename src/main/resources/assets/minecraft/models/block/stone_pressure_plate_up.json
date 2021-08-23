@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/tinted/pressure_plate_up",
   "textures": {
-    "texture": "westerosblocks:blocks/tinted/stone"
+    "texture": "westerosblocks:block/tinted/stone"
   }
 }

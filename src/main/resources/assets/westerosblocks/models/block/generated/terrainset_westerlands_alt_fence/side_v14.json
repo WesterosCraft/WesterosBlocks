@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/fence_side",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_westerlandhills_alt/14",
-    "top": "westerosblocks:blocks/terrainset_westerlandhills_alt/14",
-    "side": "westerosblocks:blocks/terrainset_westerlandhills_alt/14"
+    "bottom": "westerosblocks:block/terrainset_westerlandhills_alt/14",
+    "top": "westerosblocks:block/terrainset_westerlandhills_alt/14",
+    "side": "westerosblocks:block/terrainset_westerlandhills_alt/14"
   }
 }

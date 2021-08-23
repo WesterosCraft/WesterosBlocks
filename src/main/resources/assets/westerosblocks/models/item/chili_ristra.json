@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:blocks/web_block_0/food_chili_ristra"
+    "layer0": "westerosblocks:block/web_block_0/food_chili_ristra"
   }
 }

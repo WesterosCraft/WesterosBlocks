@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:blocks/tallgrass_block_0/grass_unshaded_icon"
+    "cross": "westerosblocks:block/tallgrass_block_0/grass_unshaded_icon"
   }
 }

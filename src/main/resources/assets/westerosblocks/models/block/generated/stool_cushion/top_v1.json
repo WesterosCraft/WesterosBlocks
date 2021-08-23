@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "westerosblocks:blocks/random_slab_block_0/seat_bottom",
-    "top": "westerosblocks:blocks/random_slab_block_0/seat_top_cushion",
-    "side": "westerosblocks:blocks/random_slab_block_0/seat_side_cushion",
-    "particle": "westerosblocks:blocks/random_slab_block_0/seat_side_cushion"
+    "bottom": "westerosblocks:block/random_slab_block_0/seat_bottom",
+    "top": "westerosblocks:block/random_slab_block_0/seat_top_cushion",
+    "side": "westerosblocks:block/random_slab_block_0/seat_side_cushion",
+    "particle": "westerosblocks:block/random_slab_block_0/seat_side_cushion"
   }
 }

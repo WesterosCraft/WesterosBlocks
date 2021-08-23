@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "up": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "north": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "south": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "west": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "east": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "particle": "westerosblocks:blocks/stone_block_1/stone_cobble_dark"
+    "down": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "up": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "north": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "south": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "west": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "east": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "particle": "westerosblocks:block/stone_block_1/stone_cobble_dark"
   }
 }

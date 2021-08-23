@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_red_mountains/10",
-    "top": "westerosblocks:blocks/terrainset_red_mountains/10",
-    "side": "westerosblocks:blocks/terrainset_red_mountains/10",
-    "particle": "westerosblocks:blocks/terrainset_red_mountains/10"
+    "bottom": "westerosblocks:block/terrainset_red_mountains/10",
+    "top": "westerosblocks:block/terrainset_red_mountains/10",
+    "side": "westerosblocks:block/terrainset_red_mountains/10",
+    "particle": "westerosblocks:block/terrainset_red_mountains/10"
   }
 }

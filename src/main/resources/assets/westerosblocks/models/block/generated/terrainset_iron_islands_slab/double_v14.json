@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/terrainset_iron/14",
-    "up": "westerosblocks:blocks/terrainset_iron/14",
-    "north": "westerosblocks:blocks/terrainset_iron/14",
-    "south": "westerosblocks:blocks/terrainset_iron/14",
-    "west": "westerosblocks:blocks/terrainset_iron/14",
-    "east": "westerosblocks:blocks/terrainset_iron/14",
-    "particle": "westerosblocks:blocks/terrainset_iron/14"
+    "down": "westerosblocks:block/terrainset_iron/14",
+    "up": "westerosblocks:block/terrainset_iron/14",
+    "north": "westerosblocks:block/terrainset_iron/14",
+    "south": "westerosblocks:block/terrainset_iron/14",
+    "west": "westerosblocks:block/terrainset_iron/14",
+    "east": "westerosblocks:block/terrainset_iron/14",
+    "particle": "westerosblocks:block/terrainset_iron/14"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_slate_0/slate_brown",
-    "top": "westerosblocks:blocks/stone_slate_0/slate_brown",
-    "side": "westerosblocks:blocks/stone_slate_0/slate_brown",
-    "particle": "westerosblocks:blocks/stone_slate_0/slate_brown"
+    "bottom": "westerosblocks:block/stone_slate_0/slate_brown",
+    "top": "westerosblocks:block/stone_slate_0/slate_brown",
+    "side": "westerosblocks:block/stone_slate_0/slate_brown",
+    "particle": "westerosblocks:block/stone_slate_0/slate_brown"
   }
 }

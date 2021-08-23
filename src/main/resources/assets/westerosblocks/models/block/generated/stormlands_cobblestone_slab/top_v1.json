@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands",
-    "top": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands",
-    "side": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands",
-    "particle": "westerosblocks:blocks/stone_block_2/stone_cobble_stormlands"
+    "bottom": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
+    "top": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
+    "side": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
+    "particle": "westerosblocks:block/stone_block_2/stone_cobble_stormlands"
   }
 }

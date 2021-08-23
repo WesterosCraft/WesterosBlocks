@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_right",
-    "up": "westerosblocks:blocks/crate_block_0/crate_top_grape_white",
-    "north": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed",
-    "south": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed",
-    "west": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed",
-    "east": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed",
-    "particle": "westerosblocks:blocks/crate_block_0/crate_side_crossbar_crossed"
+    "down": "westerosblocks:block/crate_block_0/crate_side_crossbar_right",
+    "up": "westerosblocks:block/crate_block_0/crate_top_grape_white",
+    "north": "westerosblocks:block/crate_block_0/crate_side_crossbar_crossed",
+    "south": "westerosblocks:block/crate_block_0/crate_side_crossbar_crossed",
+    "west": "westerosblocks:block/crate_block_0/crate_side_crossbar_crossed",
+    "east": "westerosblocks:block/crate_block_0/crate_side_crossbar_crossed",
+    "particle": "westerosblocks:block/crate_block_0/crate_side_crossbar_crossed"
   }
 }

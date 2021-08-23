@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/terrainset_red_mountains/7"
+    "all": "westerosblocks:block/terrainset_red_mountains/7"
   }
 }

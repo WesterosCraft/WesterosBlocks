@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_1/stone_cobble_river",
-    "top": "westerosblocks:blocks/stone_block_1/stone_cobble_river",
-    "side": "westerosblocks:blocks/stone_block_1/stone_cobble_river",
-    "particle": "westerosblocks:blocks/stone_block_1/stone_cobble_river"
+    "bottom": "westerosblocks:block/stone_block_1/stone_cobble_river",
+    "top": "westerosblocks:block/stone_block_1/stone_cobble_river",
+    "side": "westerosblocks:block/stone_block_1/stone_cobble_river",
+    "particle": "westerosblocks:block/stone_block_1/stone_cobble_river"
   }
 }

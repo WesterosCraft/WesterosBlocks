@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/transparent",
-    "txt5": "westerosblocks:blocks/transparent",
-    "txt2": "westerosblocks:blocks/sign_block_0/bookbinder",
-    "txt3": "westerosblocks:blocks/sign_block_0/sign_cut",
-    "txt0": "westerosblocks:blocks/sign_block_0/sign_bottom",
-    "txt1": "westerosblocks:blocks/sign_block_0/sign_top",
-    "particle": "westerosblocks:blocks/sign_block_0/sign_bottom"
+    "txt4": "westerosblocks:block/transparent",
+    "txt5": "westerosblocks:block/transparent",
+    "txt2": "westerosblocks:block/sign_block_0/bookbinder",
+    "txt3": "westerosblocks:block/sign_block_0/sign_cut",
+    "txt0": "westerosblocks:block/sign_block_0/sign_bottom",
+    "txt1": "westerosblocks:block/sign_block_0/sign_top",
+    "particle": "westerosblocks:block/sign_block_0/sign_bottom"
   },
   "elements": [
     {

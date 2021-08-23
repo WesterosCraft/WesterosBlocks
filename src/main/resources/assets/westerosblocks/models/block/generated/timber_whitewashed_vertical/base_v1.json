@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/daub_wattle_block_0/whitewashed_vert"
+    "all": "westerosblocks:block/daub_wattle_block_0/whitewashed_vert"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "top": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "side": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
-    "particle": "westerosblocks:blocks/stone_block_1/stone_cobble_dark"
+    "bottom": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "top": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "side": "westerosblocks:block/stone_block_1/stone_cobble_dark",
+    "particle": "westerosblocks:block/stone_block_1/stone_cobble_dark"
   }
 }

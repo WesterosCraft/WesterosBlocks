@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:blocks/wood_block_0/planks_jungle",
-    "top": "westerosblocks:blocks/wood_block_0/planks_jungle",
-    "side": "westerosblocks:blocks/wood_block_0/planks_jungle"
+    "bottom": "westerosblocks:block/wood_block_0/planks_jungle",
+    "top": "westerosblocks:block/wood_block_0/planks_jungle",
+    "side": "westerosblocks:block/wood_block_0/planks_jungle"
   }
 }

@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:blocks/cuboid_nsewud_block_0/piston_top_normal",
-    "txt5": "westerosblocks:blocks/cuboid_nsewud_block_0/piston_top_normal",
-    "txt2": "westerosblocks:blocks/cuboid_nsewud_block_0/piston_top_normal",
-    "txt3": "westerosblocks:blocks/cuboid_nsewud_block_0/piston_top_normal",
-    "txt0": "westerosblocks:blocks/cuboid_nsewud_block_0/piston_side",
-    "txt1": "westerosblocks:blocks/cuboid_nsewud_block_0/piston_side_rotated",
-    "particle": "westerosblocks:blocks/cuboid_nsewud_block_0/piston_side"
+    "txt4": "westerosblocks:block/cuboid_nsewud_block_0/piston_top_normal",
+    "txt5": "westerosblocks:block/cuboid_nsewud_block_0/piston_top_normal",
+    "txt2": "westerosblocks:block/cuboid_nsewud_block_0/piston_top_normal",
+    "txt3": "westerosblocks:block/cuboid_nsewud_block_0/piston_top_normal",
+    "txt0": "westerosblocks:block/cuboid_nsewud_block_0/piston_side",
+    "txt1": "westerosblocks:block/cuboid_nsewud_block_0/piston_side_rotated",
+    "particle": "westerosblocks:block/cuboid_nsewud_block_0/piston_side"
   },
   "elements": [
     {

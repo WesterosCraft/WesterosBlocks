@@ -121,7 +121,7 @@ public abstract class ModelExport {
             return id;
         }
         else {
-            return WesterosBlocks.MOD_ID + ":blocks/" + id;
+            return WesterosBlocks.MOD_ID + ":block/" + id;
         }
     }
     public abstract void doBlockStateExport() throws IOException;

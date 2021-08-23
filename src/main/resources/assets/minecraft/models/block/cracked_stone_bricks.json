@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/tinted/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/tinted/cracked_stone_bricks"
+    "all": "westerosblocks:block/tinted/cracked_stone_bricks"
   }
 }

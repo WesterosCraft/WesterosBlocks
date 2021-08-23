@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:blocks/web_block_1/red_fern"
+    "cross": "westerosblocks:block/web_block_1/red_fern"
   }
 }

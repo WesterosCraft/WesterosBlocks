@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_side_alt",
   "textures": {
-    "edge": "westerosblocks:blocks/glass_pane_block_0/moorish_wood_window_pane",
-    "pane": "westerosblocks:blocks/glass_pane_block_0/moorish_wood_window_pane"
+    "edge": "westerosblocks:block/glass_pane_block_0/moorish_wood_window_pane",
+    "pane": "westerosblocks:block/glass_pane_block_0/moorish_wood_window_pane"
   }
 }

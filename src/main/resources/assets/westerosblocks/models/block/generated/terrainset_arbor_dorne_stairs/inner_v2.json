@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_dorne/2",
-    "top": "westerosblocks:blocks/terrainset_dorne/2",
-    "side": "westerosblocks:blocks/terrainset_dorne/2",
-    "particle": "westerosblocks:blocks/terrainset_dorne/2"
+    "bottom": "westerosblocks:block/terrainset_dorne/2",
+    "top": "westerosblocks:block/terrainset_dorne/2",
+    "side": "westerosblocks:block/terrainset_dorne/2",
+    "particle": "westerosblocks:block/terrainset_dorne/2"
   }
 }

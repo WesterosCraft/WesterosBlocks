@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:blocks/icicle/up"
+    "cross": "westerosblocks:block/icicle/up"
   }
 }

@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_side",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_volcanic/4",
-    "top": "westerosblocks:blocks/terrainset_volcanic/4",
-    "side": "westerosblocks:blocks/terrainset_volcanic/4"
+    "bottom": "westerosblocks:block/terrainset_volcanic/4",
+    "top": "westerosblocks:block/terrainset_volcanic/4",
+    "side": "westerosblocks:block/terrainset_volcanic/4"
   }
 }

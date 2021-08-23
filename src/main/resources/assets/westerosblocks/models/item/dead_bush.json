@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:blocks/tallgrass_block_0/dorne_bush_thorny"
+    "layer0": "westerosblocks:block/tallgrass_block_0/dorne_bush_thorny"
   }
 }

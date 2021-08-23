@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/vines/vine_u",
   "textures": {
-    "vines": "westerosblocks:blocks/moss_block/moss_dappled"
+    "vines": "westerosblocks:block/moss_block/moss_dappled"
   }
 }

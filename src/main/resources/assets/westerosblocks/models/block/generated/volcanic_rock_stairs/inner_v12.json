@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/terrainset_volcanic/12",
-    "top": "westerosblocks:blocks/terrainset_volcanic/12",
-    "side": "westerosblocks:blocks/terrainset_volcanic/12",
-    "particle": "westerosblocks:blocks/terrainset_volcanic/12"
+    "bottom": "westerosblocks:block/terrainset_volcanic/12",
+    "top": "westerosblocks:block/terrainset_volcanic/12",
+    "side": "westerosblocks:block/terrainset_volcanic/12",
+    "particle": "westerosblocks:block/terrainset_volcanic/12"
   }
 }

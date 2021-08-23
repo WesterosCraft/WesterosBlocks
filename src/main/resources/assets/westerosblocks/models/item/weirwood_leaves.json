@@ -1,10 +1,10 @@
 {
   "parent": "westerosblocks:block/untinted/leaves_overlay",
   "textures": {
-    "end": "westerosblocks:blocks/leaves_block_0/leaves_weirwood",
-    "side": "westerosblocks:blocks/leaves_block_0/leaves_weirwood",
-    "overlayend": "westerosblocks:blocks/leaves_block_bf/leaves_bf_weirwood",
-    "overlayside": "westerosblocks:blocks/leaves_block_bf/leaves_bf_weirwood",
-    "particle": "westerosblocks:blocks/leaves_block_0/leaves_weirwood"
+    "end": "westerosblocks:block/leaves_block_0/leaves_weirwood",
+    "side": "westerosblocks:block/leaves_block_0/leaves_weirwood",
+    "overlayend": "westerosblocks:block/leaves_block_bf/leaves_bf_weirwood",
+    "overlayside": "westerosblocks:block/leaves_block_bf/leaves_bf_weirwood",
+    "particle": "westerosblocks:block/leaves_block_0/leaves_weirwood"
   }
 }
