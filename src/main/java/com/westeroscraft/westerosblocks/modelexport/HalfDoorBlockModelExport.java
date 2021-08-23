@@ -11,27 +11,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class HalfDoorBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model = "";
-        public Integer x;
-        public Integer y;
-        public Variant(String blkname) {
-            this(blkname, null, 0);
-        }
-        public Variant(String blkname, String ext, int yrot) {
-        	if (ext != null)
-        		model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname + "_" + ext;
-        	else
-        		model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname;
-            if (yrot != 0) {
-                y = yrot;
-            }
-        }
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectTop {
         public String parent = "westerosblocks:block/untinted/half_door";
@@ -74,27 +53,43 @@ public class HalfDoorBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 
+    private static class ModelRec {
+    	String cond;
+    	String ext;
+    	int y;
+    	ModelRec(String c, String e, int y) {
+    		cond = c; ext = e; this.y = y;
+    	}
+    };
+    private static final ModelRec[] MODELS = {
+        new ModelRec("facing=east,hinge=left,open=false", "base", 0),
+        new ModelRec("facing=south,hinge=left,open=false", "base", 90),
+        new ModelRec("facing=west,hinge=left,open=false", "base", 180),
+        new ModelRec("facing=north,hinge=left,open=false", "base", 270),
+        new ModelRec("facing=east,hinge=right,open=false", "rh", 0),
+        new ModelRec("facing=south,hinge=right,open=false", "rh", 90),
+        new ModelRec("facing=west,hinge=right,open=false", "rh", 180),
+        new ModelRec("facing=north,hinge=right,open=false", "rh", 270),
+        new ModelRec("facing=east,hinge=left,open=true", "rh", 90),
+        new ModelRec("facing=south,hinge=left,open=true", "rh", 180),
+        new ModelRec("facing=west,hinge=left,open=true", "rh", 270),
+        new ModelRec("facing=north,hinge=left,open=true", "rh", 0),
+        new ModelRec("facing=east,hinge=right,open=true", "base", 270),
+        new ModelRec("facing=south,hinge=right,open=true", "base", 0),
+        new ModelRec("facing=west,hinge=right,open=true", "base", 90),
+        new ModelRec("facing=north,hinge=right,open=true", "base", 180)
+    };
+    
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String bn = def.blockName;
-        so.variants.put("facing=east,hinge=left,open=false", new Variant(bn));
-        so.variants.put("facing=south,hinge=left,open=false", new Variant(bn, null, 90));
-        so.variants.put("facing=west,hinge=left,open=false", new Variant(bn, null, 180));
-        so.variants.put("facing=north,hinge=left,open=false", new Variant(bn, null, 270));
-        so.variants.put("facing=east,hinge=right,open=false", new Variant(bn, "rh", 0));
-        so.variants.put("facing=south,hinge=right,open=false", new Variant(bn, "rh", 90));
-        so.variants.put("facing=west,hinge=right,open=false", new Variant(bn, "rh", 180));
-        so.variants.put("facing=north,hinge=right,open=false", new Variant(bn, "rh", 270));
-        so.variants.put("facing=east,hinge=left,open=true", new Variant(bn, "rh", 90));
-        so.variants.put("facing=south,hinge=left,open=true", new Variant(bn, "rh", 180));
-        so.variants.put("facing=west,hinge=left,open=true", new Variant(bn, "rh", 270));
-        so.variants.put("facing=north,hinge=left,open=true", new Variant(bn, "rh", 0));
-        so.variants.put("facing=east,hinge=right,open=true", new Variant(bn, null, 270));
-        so.variants.put("facing=south,hinge=right,open=true", new Variant(bn));
-        so.variants.put("facing=west,hinge=right,open=true", new Variant(bn, null, 90));
-        so.variants.put("facing=north,hinge=right,open=true", new Variant(bn, null, 180));
         
+        for (ModelRec rec : MODELS) {
+        	Variant var = new Variant();
+        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(rec.ext, 0);
+        	if (rec.y != 0) var.y = rec.y;
+        	so.addVariant(rec.cond, var, null);
+        }        
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -105,15 +100,15 @@ public class HalfDoorBlockModelExport extends ModelExport {
         ModelObjectTop top = new ModelObjectTop();
         top.textures.top = uptxt;
         top.textures.bottom = uptxt;
-        this.writeBlockModelFile(def.blockName, top);
+        this.writeBlockModelFile(getModelName("base", 0), top);
         // Top RH
         ModelObjectTopRH trh = new ModelObjectTopRH();
         trh.textures.top = uptxt;
 		trh.textures.bottom = uptxt;
-        this.writeBlockModelFile(def.blockName + "_rh", trh);
+        this.writeBlockModelFile(getModelName("rh", 0), trh);
         // Build simple item model that refers to base block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
     }
     @Override
