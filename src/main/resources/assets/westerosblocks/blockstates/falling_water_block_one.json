@@ -1,55 +1,67 @@
 {
   "multipart": [
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/falling_water_block_one/base_v1"
+        }
+      ],
       "when": {
         "south": "true"
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/falling_water_block_one_1"
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/falling_water_block_one/base_v1",
+          "y": 90
+        }
+      ],
       "when": {
         "west": "true"
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/falling_water_block_one_1",
-        "y": 90
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/falling_water_block_one/base_v1",
+          "y": 180
+        }
+      ],
       "when": {
         "north": "true"
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/falling_water_block_one_1",
-        "y": 180
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/falling_water_block_one/base_v1",
+          "y": 270
+        }
+      ],
       "when": {
         "east": "true"
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/falling_water_block_one_1",
-        "y": 270
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/falling_water_block_one/top_v1"
+        }
+      ],
       "when": {
         "up": "true"
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/falling_water_block_one_u"
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/falling_water_block_one/top_v1",
+          "x": 180
+        }
+      ],
       "when": {
         "down": "true"
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/falling_water_block_one_u",
-        "x": 180
       }
     }
   ]

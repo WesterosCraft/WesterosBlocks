@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "westerosblocks:block/generated/candle"
+      "model": "westerosblocks:block/generated/candle/base_v1"
     }
   }
 }

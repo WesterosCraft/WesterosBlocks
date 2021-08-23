@@ -422,7 +422,7 @@ public abstract class ModelExport {
     	}
     }    
     public static class WhenRec {
-    	String north, south, west, east, up, cond;
+    	String north, south, west, east, up, down, cond;
     	public List<WhenRec> OR;
     	
     	public WhenRec() {}
@@ -432,6 +432,7 @@ public abstract class ModelExport {
     		this.east = orig.east;
     		this.west = orig.west;
        		this.up = orig.up;
+       		this.down = orig.down;
        		this.OR = orig.OR;
        		this.cond = cond;
     	}
@@ -449,6 +450,7 @@ public abstract class ModelExport {
 					isSame(or.east, this.east) &&
 					isSame(or.west, this.west) &&
 					isSame(or.up, this.up) &&
+					isSame(or.down, this.down) &&
 					isSame(or.cond, this.cond)) {
     				if ((or.OR == null) && (this.OR == null)) return true;
     				if ((or.OR != null) && (this.OR != null) && (this.OR.equals(or.OR))) return true;

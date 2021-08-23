@@ -12,38 +12,20 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class FireBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-    	public List<States> multipart = new ArrayList<States>();
-    }
-    public static class States {
-    	public WhenRec when = new WhenRec();
-    	public List<Apply> apply = new ArrayList<Apply>();
-    }
     public static class SideStates extends States {
     	SideStates() {
+    		when = new WhenRec();
     		when.OR = new ArrayList<WhenRec>();
     		WhenRec wr = new WhenRec();
-    		wr.north = wr.south = wr.east = wr.west = wr.up = Boolean.FALSE;
+    		wr.north = wr.south = wr.east = wr.west = wr.up = "false";
     		when.OR.add(wr);
     	}
     }
-    public static class WhenRec {
-    	Boolean north, south, west, east, up;
-    	public List<WhenRec> OR;
-    }
-    public static class Apply {
-    	String model;
-    	Integer y;
-        public Apply(String bn, String ext) {
-            this(bn, ext, 0);
-        }
-    	public Apply(String bn, String ext, int y) {
-    	    model = bn;
-    	    if (ext != null)
-    	        model = model + "_" + ext;
-    	    if (y != 0)
-    	        this.y = y; 
+    
+    private static class OurApply extends Apply {
+    	OurApply(String mn, int y) {
+    		model = WesterosBlocks.MOD_ID + ":block/generated/" + mn;
+    		if (y != 0) this.y = y;
     	}
     }
     
@@ -87,68 +69,69 @@ public class FireBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String bn = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName;
+        String bn = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
         // Make when (all false)
         WhenRec whennone = new WhenRec();
-        whennone.north = false;
-        whennone.south = false;
-        whennone.east = false;
-        whennone.west = false;
-        whennone.up = false;
+        whennone.north = "false";
+        whennone.south = "false";
+        whennone.east = "false";
+        whennone.west = "false";
+        whennone.up = "false";
         // Add firefloor
         States ps = new States();
         ps.when = whennone;
-        ps.apply.add(new Apply(bn, "floor0"));
-        ps.apply.add(new Apply(bn, "floor1"));
-        so.multipart.add(ps);
+        ps.apply.add(new OurApply(getModelName("floor0", 0), 0));
+        ps.apply.add(new OurApply(getModelName("floor1", 0), 0));
+        so.addStates(ps, null);
         // Add north:true
         ps = new SideStates();
         WhenRec wrec = new WhenRec();
-        wrec.north = true;
+        wrec.north = "true";
         ps.when.OR.add(wrec);
-        ps.apply.add(new Apply(bn, "side0"));
-        ps.apply.add(new Apply(bn, "side1"));
-        ps.apply.add(new Apply(bn, "side_alt0"));
-        ps.apply.add(new Apply(bn, "side_alt1"));
-        so.multipart.add(ps);
+        ps.apply.add(new OurApply(getModelName("side0", 0), 0));
+        ps.apply.add(new OurApply(getModelName("side1", 0), 0));
+        ps.apply.add(new OurApply(getModelName("side_alt0", 0), 0));
+        ps.apply.add(new OurApply(getModelName("side_alt1", 0), 0));
+        so.addStates(ps, null);
         // Add east:true
         ps = new SideStates();
         wrec = new WhenRec();
-        wrec.east = true;
+        wrec.east = "true";
         ps.when.OR.add(wrec);
-        ps.apply.add(new Apply(bn, "side0", 90));
-        ps.apply.add(new Apply(bn, "side1", 90));
-        ps.apply.add(new Apply(bn, "side_alt0", 90));
-        ps.apply.add(new Apply(bn, "side_alt1", 90));
-        so.multipart.add(ps);
+        ps.apply.add(new OurApply(getModelName("side0", 0), 90));
+        ps.apply.add(new OurApply(getModelName("side1", 0), 90));
+        ps.apply.add(new OurApply(getModelName("side_alt0", 0), 90));
+        ps.apply.add(new OurApply(getModelName("side_alt1", 0), 90));
+        so.addStates(ps, null);
         // Add south:true
         ps = new SideStates();
         wrec = new WhenRec();
-        wrec.south = true;
+        wrec.south = "true";
         ps.when.OR.add(wrec);
-        ps.apply.add(new Apply(bn, "side0", 180));
-        ps.apply.add(new Apply(bn, "side1", 180));
-        ps.apply.add(new Apply(bn, "side_alt0", 180));
-        ps.apply.add(new Apply(bn, "side_alt1", 180));
-        so.multipart.add(ps);
+        ps.apply.add(new OurApply(getModelName("side0", 0), 180));
+        ps.apply.add(new OurApply(getModelName("side1", 0), 180));
+        ps.apply.add(new OurApply(getModelName("side_alt0", 0), 180));
+        ps.apply.add(new OurApply(getModelName("side_alt1", 0), 180));
+        so.addStates(ps, null);
         // Add west:true
         ps = new SideStates();
         wrec = new WhenRec();
-        wrec.west = true;
+        wrec.west = "true";
         ps.when.OR.add(wrec);
-        ps.apply.add(new Apply(bn, "side0", 270));
-        ps.apply.add(new Apply(bn, "side1", 270));
-        ps.apply.add(new Apply(bn, "side_alt0", 270));
-        ps.apply.add(new Apply(bn, "side_alt1", 270));
-        so.multipart.add(ps);
+        ps.apply.add(new OurApply(getModelName("side0", 0), 270));
+        ps.apply.add(new OurApply(getModelName("side1", 0), 270));
+        ps.apply.add(new OurApply(getModelName("side_alt0", 0), 270));
+        ps.apply.add(new OurApply(getModelName("side_alt1", 0), 270));
+        so.addStates(ps, null);
         // Add up:true
         ps = new States();
-        ps.when.up = true;
-        ps.apply.add(new Apply(bn, "up0"));
-        ps.apply.add(new Apply(bn, "up1"));
-        ps.apply.add(new Apply(bn, "up_alt0"));
-        ps.apply.add(new Apply(bn, "up_alt1"));
-        so.multipart.add(ps);
+        ps.when = new WhenRec();
+        ps.when.up = "true";
+        ps.apply.add(new OurApply(getModelName("up0", 0), 0));
+        ps.apply.add(new OurApply(getModelName("up1", 0), 0));
+        ps.apply.add(new OurApply(getModelName("up_alt0", 0), 0));
+        ps.apply.add(new OurApply(getModelName("up_alt1", 0), 0));
+        so.addStates(ps, null);
         this.writeBlockStateFile(def.blockName, so);
     }
 
@@ -159,43 +142,43 @@ public class FireBlockModelExport extends ModelExport {
         // floor0
         ModelObjectFloor modf = new ModelObjectFloor();
         modf.textures.fire = txt0;
-        this.writeBlockModelFile(def.blockName + "_floor0", modf);
+        this.writeBlockModelFile(getModelName("floor0", 0), modf);
         // floor1
         modf = new ModelObjectFloor();
         modf.textures.fire = txt1;
-        this.writeBlockModelFile(def.blockName + "_floor1", modf);
+        this.writeBlockModelFile(getModelName("floor1", 0), modf);
         // side0
         ModelObjectSide mods = new ModelObjectSide();
         mods.textures.fire = txt0;
-        this.writeBlockModelFile(def.blockName + "_side0", mods);
+        this.writeBlockModelFile(getModelName("side0", 0), mods);
         // side1
         mods = new ModelObjectSide();
         mods.textures.fire = txt1;
-        this.writeBlockModelFile(def.blockName + "_side1", mods);
+        this.writeBlockModelFile(getModelName("side1", 0), mods);
         // side_alt0
         ModelObjectSideAlt modsa = new ModelObjectSideAlt();
         modsa.textures.fire = txt0;
-        this.writeBlockModelFile(def.blockName + "_side_alt0", modsa);
+        this.writeBlockModelFile(getModelName("side_alt0", 0), modsa);
         // side_alt1
         modsa = new ModelObjectSideAlt();
         modsa.textures.fire = txt1;
-        this.writeBlockModelFile(def.blockName + "_side_alt1", modsa);
+        this.writeBlockModelFile(getModelName("side_alt1", 0), modsa);
         // up0
         ModelObjectUp modu = new ModelObjectUp();
         modu.textures.fire = txt0;
-        this.writeBlockModelFile(def.blockName + "_up0", modu);
+        this.writeBlockModelFile(getModelName("up0", 0), modu);
         // up1
         modu = new ModelObjectUp();
         modu.textures.fire = txt1;
-        this.writeBlockModelFile(def.blockName + "_up1", modu);
+        this.writeBlockModelFile(getModelName("up1", 0), modu);
         // up_alt0
         ModelObjectUpAlt modua = new ModelObjectUpAlt();
         modua.textures.fire = txt0;
-        this.writeBlockModelFile(def.blockName + "_up_alt0", modsa);
+        this.writeBlockModelFile(getModelName("up_alt0", 0), modsa);
         // up_alt1
         modua = new ModelObjectUpAlt();
         modua.textures.fire = txt1;
-        this.writeBlockModelFile(def.blockName + "_up_alt1", modsa);
+        this.writeBlockModelFile(getModelName("up_alt1", 0), modsa);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         mo.textures.layer0 = txt0;

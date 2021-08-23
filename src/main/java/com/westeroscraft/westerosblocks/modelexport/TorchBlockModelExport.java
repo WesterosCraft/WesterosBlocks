@@ -11,22 +11,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class TorchBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer y;
-        public Variant(String blkname) {
-            model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname;
-        }
-        public Variant(String blkname, int yrot) {
-            model = WesterosBlocks.MOD_ID + ":block/generated/" + blkname;
-            if (yrot != 0)
-                y = yrot;
-        }
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectTorch {
         public String parent = "minecraft:block/template_torch";    // Use 'torch' model for single texture
@@ -55,21 +39,34 @@ public class TorchBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        String bn = def.blockName;
         
-        so.variants.put("", new Variant(bn));
-        
-        this.writeBlockStateFile(bn, so);
+        Variant var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
+        so.addVariant("", var, null);
+
+        this.writeBlockStateFile(def.blockName, so);
+
         // Make wall block too
         so = new StateObject();
-        bn = "wall_" + def.blockName;
+
+        var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("wall", 0);
+        var.y = 0;
+        so.addVariant("facing=east", var, null);
+        var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("wall", 0);
+        var.y = 90;
+        so.addVariant("facing=south", var, null);
+        var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("wall", 0);
+        var.y = 180;
+        so.addVariant("facing=west", var, null);
+        var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("wall", 0);
+        var.y = 270;
+        so.addVariant("facing=north", var, null);
         
-        so.variants.put("facing=east", new Variant(bn, 0));
-        so.variants.put("facing=south", new Variant(bn, 90));
-        so.variants.put("facing=west", new Variant(bn, 180));
-        so.variants.put("facing=north", new Variant(bn, 270));        
-        
-        this.writeBlockStateFile(bn, so);
+        this.writeBlockStateFile("wall_" + def.blockName, so);
     }
 
     @Override
@@ -77,18 +74,18 @@ public class TorchBlockModelExport extends ModelExport {
         String txt = getTextureID(def.getTextureByIndex(0));
         ModelObjectTorch mod = new ModelObjectTorch();
         mod.textures.torch = txt; 
-        this.writeBlockModelFile(def.blockName, mod);
+        this.writeBlockModelFile(getModelName("base", 0), mod);
         // Build wall block model
         ModelObjectTorchWall modw = new ModelObjectTorchWall();
         modw.textures.torch = txt; 
-        this.writeBlockModelFile("wall_" + def.blockName, modw);        
+        this.writeBlockModelFile(getModelName("wall", 0), modw);        
                 
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
         mo.textures.layer0 = txt;
         this.writeItemModelFile(def.blockName, mo);
-
     }
+    
     @Override
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
