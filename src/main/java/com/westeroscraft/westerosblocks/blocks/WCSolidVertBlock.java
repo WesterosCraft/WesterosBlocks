@@ -38,6 +38,11 @@ public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynma
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	AbstractBlock.Properties props = def.makeProperties();
+        	// See if we have a cond property
+        	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
+        	if (prop != null) {
+        		tempCOND = prop;
+        	}        	        	
         	return def.registerRenderType(def.registerBlock(new WCSolidVertBlock(props, def)), true, def.nonOpaque);
         }
     }    
@@ -47,10 +52,17 @@ public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynma
     
     protected WCSolidVertBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props, def);
-        this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        if (COND != null) {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(COND, COND.defValue));
+        }
+        else {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        }        	
     }
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
+    	super.createBlockStateDefinition(container);
+
     	container.add(UP, DOWN);
     }
     
@@ -76,7 +88,7 @@ public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynma
     public BlockState getStateForPlacement(BlockItemUseContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
     	if (bs != null) {
-    		bs = updateStateVertical(this.defaultBlockState(), ctx.getLevel(), ctx.getClickedPos());
+    		bs = updateStateVertical(bs, ctx.getLevel(), ctx.getClickedPos());
     	}
     	return bs;
     }

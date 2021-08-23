@@ -31,8 +31,8 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
     protected WesterosBlockDef def;
     protected VoxelShape collisionbox;
     
-    private static WesterosBlockDef.CondProperty tempCOND;
-    private WesterosBlockDef.CondProperty COND;
+    protected static WesterosBlockDef.CondProperty tempCOND;
+    protected WesterosBlockDef.CondProperty COND;
     
     protected WCSolidBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
@@ -80,10 +80,11 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
     @Override
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext ctx) {
-    	if (COND != null) {
-    		return this.defaultBlockState().setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
+    	BlockState bs = super.getStateForPlacement(ctx);
+    	if ((COND != null) && (bs != null)) {
+    		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
     	}
-    	return super.getStateForPlacement(ctx);
+    	return bs;
     }
 
     @Override

@@ -104,6 +104,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 
 //
@@ -161,7 +162,6 @@ public class WesterosBlockDef {
     	public String condID;	// Condition ID (required) - value for enum state attribute
     	public Set<String> biomes;	// If defined, list of biomes that must match for condition to apply
     	public Integer minY, maxY;	// If defined minimunm and/or maximum Y coordinate for condition to match
-    	public transient Biome biomeList[];
     };
     
 	public boolean isConnectMatch(BlockState bs1, BlockState bs2) {
@@ -1379,18 +1379,13 @@ public class WesterosBlockDef {
     	for (ConditionRec rec : condStates) {
     		ids.add(rec.condID);
     		if (rec.biomes != null) {
-    			ArrayList<Biome> blist = new ArrayList<Biome>();
     			for (String bn : rec.biomes) {
     				ResourceLocation rloc = new ResourceLocation(bn);
     				Biome b = WorldGenRegistries.BIOME.get(rloc);
-    				if (b != null) {
-    					blist.add(b);
-    				}
-    				else {
-    					WesterosBlocks.log.warn("Invalid biome in condition " + rec.condID + " of block " + this.blockName);
+    				if (b == null) {
+    					WesterosBlocks.log.warn("Invalid biome " + bn + " in condition " + rec.condID + " of block " + this.blockName);
     				}
     			}
-    			rec.biomeList = blist.toArray(new Biome[0]);
     		}
     	}
     	// Check that the last condition is good default (no conditions)
@@ -1404,21 +1399,19 @@ public class WesterosBlockDef {
     // Find condition match, given position
     public String getMatchingCondition(World world, BlockPos pos) {
     	int y = pos.getY();
-    	Biome biome = null;
+    	String biomeid = null;
     	for (int i = 0; i < condrecs.length; i++) {
     		ConditionRec r = condrecs[i];
     		if ((r.minY != null) && (y < r.minY)) continue;
     		if ((r.maxY != null) && (y > r.maxY)) continue;
     		if (r.biomes != null) {
-    			if (biome == null) biome = world.getBiome(pos);
-    			boolean match = false;
-    			for (int j = 0; j < r.biomeList.length; j++) {
-    				if (r.biomeList[j] == biome) {
-    					match = true;
-    					break;
+    			if (biomeid == null) {
+    				ResourceLocation loc = world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(world.getBiome(pos));
+    				if (loc != null) {
+    					biomeid = loc.toString();
     				}
     			}
-    			if (!match) continue;
+    			if (!r.biomes.contains(biomeid)) continue;
     		}
     		return r.condID;
     	}

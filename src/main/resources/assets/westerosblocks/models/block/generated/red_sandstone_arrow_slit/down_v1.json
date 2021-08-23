@@ -4,6 +4,6 @@
     "particle": "westerosblocks:block/arrow_slit_sandstone_red/base_side",
     "bottom": "westerosblocks:block/transparent",
     "top": "westerosblocks:block/transparent",
-    "side": "westerosblocks:block/arrow_slit_sandstone_red/base_side"
+    "side": "westerosblocks:block/arrow_slit_sandstone_red/base_down"
   }
 }

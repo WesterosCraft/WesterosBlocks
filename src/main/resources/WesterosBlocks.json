@@ -16315,7 +16315,7 @@
         },
         {
             "blockName": "red_sandstone_arrow_slit",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -16325,11 +16325,56 @@
             "resistance": 10,
             "lightOpacity": 0,
             "label": "Red Sandstone Arrow Slit",
-            "textures": [
-                "transparent",
-                "transparent",
-                "arrow_slits_1/sandstone_red_arrow_slit"
+            "randomTextures": [
+            	{ "textures": [
+	                "transparent",
+    	            "transparent",
+        	        "arrow_slit_sandstone_red/base_side",
+            	    "arrow_slit_sandstone_red/base_down",
+                	"arrow_slit_sandstone_red/base_up",
+                	"arrow_slit_sandstone_red/base_both"
+                	], "condIDs": [ "default" ] },
+            	{ "textures": [
+	                "transparent",
+    	            "transparent",
+        	        "arrow_slit_sandstone_red/dark_side",
+            	    "arrow_slit_sandstone_red/dark_down",
+                	"arrow_slit_sandstone_red/dark_up",
+                	"arrow_slit_sandstone_red/dark_both"
+                	], "condIDs": [ "dark" ] },
+            	{ "textures": [
+	                "transparent",
+    	            "transparent",
+        	        "arrow_slit_sandstone_red/jungle_side",
+            	    "arrow_slit_sandstone_red/jungle_down",
+                	"arrow_slit_sandstone_red/jungle_up",
+                	"arrow_slit_sandstone_red/jungle_both"
+                	], "condIDs": [ "jungle" ] }
             ],
+            "condStates": [ 
+            	{ "condID": "jungle", 
+            	  "biomes": [ 
+            		"minecraft:jungle", 
+            		"minecraft:modified_jungle", 
+            		"minecraft:jungle_hills" ] },
+            	{ "condID": "dark", 
+            	  "biomes": [ 
+            	    "minecraft:frozen_ocean",
+            	    "minecraft:taiga_hills",
+            	    "minecraft:snowy_tundra",
+            	    "minecraft:mushroom_fields",
+            	    "minecraft:mushroom_field_shore",
+            	    "minecraft:ocean",
+            	    "minecraft:swamp",
+            	    "minecraft:wooded_hills",
+            	    "minecraft:desert",
+            	    "minecraft:desert_hills",
+            	    "minecraft:nether",
+            	    "minecraft:mountain_edge",
+            	    "minecraft:jungle_edge",
+            	    "minecraft:modified_jungle_edge" ] },
+            	{ "condID": "default" }
+            ],            	
             "collisionBoxes": [
                 {
                     "xMin": 0,
