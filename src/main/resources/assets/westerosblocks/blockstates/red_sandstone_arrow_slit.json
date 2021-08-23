@@ -1,48 +1,40 @@
 {
   "variants": {
-    "down=false,up=true": [
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/up_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/up_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/up_v3"
-      }
-    ],
-    "down=true,up=false": [
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/down_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/down_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/down_v3"
-      }
-    ],
-    "down=false,up=false": [
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/base_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/base_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/base_v3"
-      }
-    ],
-    "down=true,up=true": [
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/both_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/both_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/both_v3"
-      }
-    ]
+    "down=true,up=true,cond=dark": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/both_v2"
+    },
+    "down=false,up=false,cond=jungle": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/base_v3"
+    },
+    "down=false,up=true,cond=default": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/up_v1"
+    },
+    "down=true,up=false,cond=dark": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/down_v2"
+    },
+    "down=true,up=true,cond=default": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/both_v1"
+    },
+    "down=true,up=false,cond=jungle": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/down_v3"
+    },
+    "down=false,up=false,cond=dark": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/base_v2"
+    },
+    "down=false,up=true,cond=dark": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/up_v2"
+    },
+    "down=false,up=false,cond=default": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/base_v1"
+    },
+    "down=true,up=false,cond=default": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/down_v1"
+    },
+    "down=false,up=true,cond=jungle": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/up_v3"
+    },
+    "down=true,up=true,cond=jungle": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit/both_v3"
+    }
   }
 }

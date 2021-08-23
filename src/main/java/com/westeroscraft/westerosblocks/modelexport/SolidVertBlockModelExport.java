@@ -14,18 +14,6 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.block.Block;
 
 public class SolidVertBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block state
-    public static class StateObject {
-        public Map<String, List<Variant>> variants = new HashMap<String, List<Variant>>();
-    }
-    public static class StateObject1 {
-        public Map<String, Variant> variants = new HashMap<String, Variant>();
-    }
-    public static class Variant {
-        public String model;
-        public Integer y;
-        public Integer weight;
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectBottomTop {
         public String parent = "minecraft:block/cube_bottom_top";    // Use 'cube' model for multiple textures
@@ -51,10 +39,6 @@ public class SolidVertBlockModelExport extends ModelExport {
     public void doBlockStateExport() throws IOException {
     	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
     	StateObject so = new StateObject();
-        List<Variant> vars = new ArrayList<Variant>();
-        List<Variant> vars2 = new ArrayList<Variant>();
-        List<Variant> vars3 = new ArrayList<Variant>();
-        List<Variant> vars4 = new ArrayList<Variant>();
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
@@ -69,31 +53,27 @@ public class SolidVertBlockModelExport extends ModelExport {
             	var.model = model;
             	var.weight = set.weight;
             	if (i > 0) var.y = 90*i;
-            	vars.add(var);
+            	so.addVariant("down=false,up=false", var, set.condIDs);
             	// down=false,up=true
             	var = new Variant();
             	var.model = model2;
             	var.weight = set.weight;
             	if (i > 0) var.y = 90*i;
-            	vars2.add(var);
+            	so.addVariant("down=false,up=true", var, set.condIDs);
             	// down=true,up=false
             	var = new Variant();
             	var.model = model3;
             	var.weight = set.weight;
             	if (i > 0) var.y = 90*i;
-            	vars3.add(var);
+            	so.addVariant("down=true,up=false", var, set.condIDs);
             	// down=true,up=true
             	var = new Variant();
             	var.model = model4;
             	var.weight = set.weight;
             	if (i > 0) var.y = 90*i;
-            	vars4.add(var);
+            	so.addVariant("down=true,up=true", var, set.condIDs);
             }            
         }
-    	so.variants.put("down=false,up=false", vars);
-    	so.variants.put("down=false,up=true", vars2);
-    	so.variants.put("down=true,up=false", vars3);
-    	so.variants.put("down=true,up=true", vars4);
     	this.writeBlockStateFile(def.blockName, so);
     }
 
