@@ -1,140 +1,145 @@
 {
   "multipart": [
     {
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/post_v1"
-      }
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/post_v1",
+          "uvlock": true
+        }
+      ]
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/side_v1",
+          "uvlock": true
+        }
+      ],
       "when": {
         "OR": [
           {
-            "north": true
+            "north": "true"
           },
           {
-            "north": false,
-            "south": false,
-            "west": false,
-            "east": false
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false"
           }
         ]
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/side_v1",
-        "uvlock": true
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/side_v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
       "when": {
         "OR": [
           {
-            "east": true
+            "east": "true"
           },
           {
-            "north": false,
-            "south": false,
-            "west": false,
-            "east": false
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false"
           }
         ]
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/side_v1",
-        "y": 90,
-        "uvlock": true
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/side_v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
       "when": {
         "OR": [
           {
-            "south": true
+            "south": "true"
           },
           {
-            "north": false,
-            "south": false,
-            "west": false,
-            "east": false
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false"
           }
         ]
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/side_alt_v1",
-        "uvlock": true
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/side_v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
       "when": {
         "OR": [
           {
-            "west": true
+            "west": "true"
           },
           {
-            "north": false,
-            "south": false,
-            "west": false,
-            "east": false
+            "north": "false",
+            "south": "false",
+            "west": "false",
+            "east": "false"
           }
         ]
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/side_alt_v1",
-        "y": 90,
-        "uvlock": true
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/noside_v1",
+          "uvlock": true
+        }
+      ],
       "when": {
-        "OR": [
-          {
-            "north": false
-          }
-        ]
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/noside_v1",
-        "uvlock": true
+        "north": "false"
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/noside_v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
       "when": {
-        "OR": [
-          {
-            "east": false
-          }
-        ]
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/noside_alt_v1",
-        "uvlock": true
+        "east": "false"
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/noside_v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
       "when": {
-        "OR": [
-          {
-            "south": false
-          }
-        ]
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/noside_alt_v1",
-        "y": 90,
-        "uvlock": true
+        "south": "false"
       }
     },
     {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/stained_glass_pane_orange/noside_v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
       "when": {
-        "OR": [
-          {
-            "west": false
-          }
-        ]
-      },
-      "apply": {
-        "model": "westerosblocks:block/generated/stained_glass_pane_orange/noside_v1",
-        "y": 270,
-        "uvlock": true
+        "west": "false"
       }
     }
   ]

@@ -436,6 +436,10 @@ public abstract class ModelExport {
        		this.OR = orig.OR;
        		this.cond = cond;
     	}
+    	public void addOR(WhenRec r) {
+    		if (OR == null) OR = new ArrayList<WhenRec>();
+    		OR.add(r);
+    	}
     	private boolean isSame(String a, String b) {
     		if ((a == null) && (b == null)) return true;
     		if ((a != null) && (b != null) && a.equals(b)) return true;

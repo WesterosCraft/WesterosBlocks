@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "#pane",
-        "bars": "#pane",
-        "baredge": "#edge"
+        "particle": "#side",
+        "bars": "#side",
+        "baredge": "#cap"
     },
     "elements": [
         {   "from": [ 8, 0, 0 ],

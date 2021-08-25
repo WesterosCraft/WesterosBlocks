@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/template_glass_pane_noside",
+  "parent": "westerosblocks:block/untinted/ctm_pane_noside",
   "textures": {
-    "pane": "westerosblocks:block/glass_pane_block_0/glass_pane_net"
+    "side": "westerosblocks:block/glass_pane_block_0/glass_pane_net"
   }
 }
