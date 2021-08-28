@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "top": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "side": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "particle": "westerosblocks:block/metal_block_0/metal_block_bronze"
+    "bottom": "westerosblocks:block/bronze_slab/side1",
+    "top": "westerosblocks:block/bronze_slab/side1",
+    "side": "westerosblocks:block/bronze_slab/side1",
+    "particle": "westerosblocks:block/bronze_slab/side1"
   }
 }

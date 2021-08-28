@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block_1/blades_random"
+    "cross": "westerosblocks:block/blades_random/side1"
   }
 }

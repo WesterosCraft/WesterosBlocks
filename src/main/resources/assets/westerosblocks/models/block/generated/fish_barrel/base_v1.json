@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/log_block_0/barrel_top_closed",
     "up": "westerosblocks:block/crate_block_0/barrel_top_fish",
-    "north": "westerosblocks:block/log_block_0/barrel_side",
-    "south": "westerosblocks:block/log_block_0/barrel_side",
-    "west": "westerosblocks:block/log_block_0/barrel_side",
-    "east": "westerosblocks:block/log_block_0/barrel_side",
-    "particle": "westerosblocks:block/log_block_0/barrel_side"
+    "north": "westerosblocks:block/barrel_sides/side0",
+    "south": "westerosblocks:block/barrel_sides/side0",
+    "west": "westerosblocks:block/barrel_sides/side0",
+    "east": "westerosblocks:block/barrel_sides/side0",
+    "particle": "westerosblocks:block/barrel_sides/side0"
   }
 }

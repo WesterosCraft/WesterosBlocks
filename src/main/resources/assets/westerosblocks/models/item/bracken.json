@@ -1,6 +1,4 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/web_block_1/bracken"
-  }
+  "parent": "westerosblocks:block/generated/bracken/base_v1",
+  "textures": {}
 }

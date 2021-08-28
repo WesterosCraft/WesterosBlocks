@@ -1,11 +1,29 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/generated/bones/base_v1"
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/generated/bones/base_v1",
-      "y": 90
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/generated/bones/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/bones/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/bones/base_v3"
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/generated/bones/base_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/bones/base_v2",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/bones/base_v3",
+        "y": 90
+      }
+    ]
   }
 }

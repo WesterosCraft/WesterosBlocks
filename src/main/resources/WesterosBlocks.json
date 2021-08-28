@@ -138,8 +138,10 @@
             "creativeTab": "WesterosBlocks",
             "lightValue": 0,
             "label": "Oxidized Bronze Block",
-            "textures": [
-                "metal_block_0/metal_block_bronzeoxidized"
+            "randomTextures": [
+              { "textures": [ "bronze_block_oxidized/side1" ] },
+              { "textures": [ "bronze_block_oxidized/side2" ] },
+              { "textures": [ "bronze_block_oxidized/side3" ] }
             ],
             "legacyBlockID": "metal_block_0:1"
         },
@@ -1009,8 +1011,11 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Bronze Slab",
-            "textures": [
-                "metal_block_0/metal_block_bronze"
+            "randomTextures": [
+               { "textures": [ "bronze_slab/side1" ] },
+               { "textures": [ "bronze_slab/side2" ] },
+               { "textures": [ "bronze_slab/side3" ] }
+               
             ],
             "legacyBlockID": "metal_slab_block_0:2"
         },
@@ -2373,9 +2378,10 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Bones",
-            "textures": [
-                "transparent",
-                "cuboid_block_0/bone"
+            "randomTextures": [
+            	{ "textures": [ "transparent", "bones/side1" ] },
+            	{ "textures": [ "transparent", "bones/side2" ] },
+            	{ "textures": [ "transparent", "bones/side3" ] }
             ],
             "boundingBox": {
                 "xMin": 0,
@@ -3752,10 +3758,19 @@
             "resistance": 5,
             "creativeTab": "WesterosDeco",
             "label": "Fish Barrel",
-            "textures": [
-                "log_block_0/barrel_top_closed",
-                "crate_block_0/barrel_top_fish",
-                "log_block_0/barrel_side"
+            "randomTextures": [
+            	{ "textures": [
+	                "log_block_0/barrel_top_closed",
+    	            "crate_block_0/barrel_top_fish",
+        	        "barrel_sides/side0"
+        	      ]
+        	    },
+            	{ "textures": [
+	                "log_block_0/barrel_top_closed",
+    	            "crate_block_0/barrel_top_fish",
+        	        "barrel_sides/side1"
+        	      ]
+        	    }
             ],
             "legacyBlockID": "crate_block_0:5"
         },
@@ -4185,11 +4200,50 @@
             "resistance": 5,
             "creativeTab": "WesterosDeco",
             "label": "Bookshelf Maester",
-            "textures": [
-                "bookshelves_block_0/spruce_top",
-                "bookshelves_block_0/spruce_top",
-                "bookshelves_block_0/bookshelf_maester"
-            ],
+            "randomTextures": [
+            	{ "textures": [
+        	        "bookshelves_block_0/spruce_top",
+            	    "bookshelves_block_0/spruce_top",
+        	        "bookshelf_alchemist/side",
+        	        "bookshelf_alchemist/left1",
+        	        "bookshelf_alchemist/right1",
+        	        "bookshelf_alchemist/both1" ] },
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_alchemist/side",
+        	        "bookshelf_alchemist/left1",
+        	        "bookshelf_alchemist/right1",
+        	        "bookshelf_alchemist/both2" ] },
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_alchemist/side",
+        	        "bookshelf_alchemist/left1",
+        	        "bookshelf_alchemist/right1",
+        	        "bookshelf_alchemist/both3" ] },
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_alchemist/side",
+        	        "bookshelf_alchemist/left2",
+        	        "bookshelf_alchemist/right2",
+        	        "bookshelf_alchemist/both1" ] },
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_alchemist/side",
+        	        "bookshelf_alchemist/left2",
+        	        "bookshelf_alchemist/right2",
+        	        "bookshelf_alchemist/both2" ] },
+            	{ "textures": [
+	                "bookshelves_block_0/spruce_top",
+    	            "bookshelves_block_0/spruce_top",
+        	        "bookshelf_alchemist/side",
+        	        "bookshelf_alchemist/left2",
+        	        "bookshelf_alchemist/right2",
+        	        "bookshelf_alchemist/both3" ] }
+            ],            
             "legacyBlockID": "bookshelves_block_0:1"
         },
         {
@@ -18792,8 +18846,14 @@
             "material": "web",
             "creativeTab": "WesterosDeco",
             "label": "Iron Throne Random Blades",
-            "textures": [
-                "web_block_1/blades_random"
+            "randomTextures": [
+            	{ "textures": [ "blades_random/side1" ] },
+            	{ "textures": [ "blades_random/side2" ] },
+            	{ "textures": [ "blades_random/side3" ] },
+            	{ "textures": [ "blades_random/side4" ] },
+            	{ "textures": [ "blades_random/side5" ] },
+            	{ "textures": [ "blades_random/side6" ] },
+            	{ "textures": [ "blades_random/side7" ] }
             ],
             "type": "no-in-web",
             "legacyBlockID": "web_block_2:1"
@@ -22984,7 +23044,7 @@
         },
         {
             "blockName": "bracken",
-            "blockType": "plant",
+            "blockType": "plantvert",
             "stepSound": "grass",
             "material": "plants",
             "creativeTab": "WesterosPlants",
@@ -22997,9 +23057,16 @@
                 "zMax": 0.7
             },
             "label": "Bracken",
-            "textures": [
-                "web_block_1/bracken"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "bracken/side1", "bracken/top1", "bracken/up_both", "bracken/up_both" ] },
+              { "textures": [ "bracken/side2", "bracken/top2", "bracken/up_both", "bracken/up_both" ] },
+              { "textures": [ "bracken/side3", "bracken/top3", "bracken/up_both", "bracken/up_both" ] },
+              { "textures": [ "bracken/side4", "bracken/top4", "bracken/up_both", "bracken/up_both" ] },
+              { "textures": [ "bracken/side5", "bracken/top1", "bracken/up_both", "bracken/up_both" ] },
+              { "textures": [ "bracken/side6", "bracken/top2", "bracken/up_both", "bracken/up_both" ] },
+              { "textures": [ "bracken/side7", "bracken/top3", "bracken/up_both", "bracken/up_both" ] },
+              { "textures": [ "bracken/side1", "bracken/top4", "bracken/up_both", "bracken/up_both" ] }
+			],
             "legacyBlockID": "forest_block_0:1"
         },
         {

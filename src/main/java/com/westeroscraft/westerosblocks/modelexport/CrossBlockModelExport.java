@@ -58,17 +58,21 @@ public class CrossBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-        ModelObjectCross mod = new ModelObjectCross();
-        mod.textures.cross = getTextureID(def.getTextureByIndex(0)); 
-        // Use tinted cross if 
-        boolean isTinted = def.isTinted();
-        if (isTinted) {
-            mod.parent = "minecraft:block/tinted_cross";
+    	boolean isTinted = def.isTinted();
+    	// Loop over the random sets we've got
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	ModelObjectCross mod = new ModelObjectCross();
+        	mod.textures.cross = getTextureID(set.getTextureByIndex(0)); 
+        	// Use tinted cross if 
+        	if (isTinted) {
+        		mod.parent = "minecraft:block/tinted_cross";
+        	}
+        	this.writeBlockModelFile(getModelName("base", setidx), mod);
         }
-        this.writeBlockModelFile(getModelName("base", 0), mod);
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.textures.layer0 = mod.textures.cross;
+        mo.textures.layer0 = getTextureID(def.getRandomTextureSet(0).getTextureByIndex(0));
         this.writeItemModelFile(def.blockName, mo);
             
         // Add tint overrides

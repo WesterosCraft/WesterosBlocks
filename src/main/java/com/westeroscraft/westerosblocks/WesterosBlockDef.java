@@ -787,8 +787,12 @@ public class WesterosBlockDef {
 	}
 
 	public Block createBlock() {
-		doInit(); // Prime the block model
-
+		try {
+			doInit(); // Prime the block model
+		} catch (Exception x) {
+			WesterosBlocks.log.error("Exception during doInit: blockName=" + this.blockName);
+			throw x;
+		}
 		WesterosBlockFactory bf = typeTable.get(blockType);
 		if (bf == null) {
 			WesterosBlocks.log.error(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));

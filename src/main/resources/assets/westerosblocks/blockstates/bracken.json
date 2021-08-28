@@ -1,7 +1,108 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/bracken/base_v1"
-    }
+    "up=false,down=true": [
+      {
+        "model": "westerosblocks:block/generated/bracken/down_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/down_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/down_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/down_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/down_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/down_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/down_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/down_v8"
+      }
+    ],
+    "up=false,down=false": [
+      {
+        "model": "westerosblocks:block/generated/bracken/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/base_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/base_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/base_v8"
+      }
+    ],
+    "up=true,down=true": [
+      {
+        "model": "westerosblocks:block/generated/bracken/both_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/both_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/both_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/both_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/both_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/both_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/both_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/both_v8"
+      }
+    ],
+    "up=true,down=false": [
+      {
+        "model": "westerosblocks:block/generated/bracken/up_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/up_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/up_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/up_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/up_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/up_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/up_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/bracken/up_v8"
+      }
+    ]
   }
 }

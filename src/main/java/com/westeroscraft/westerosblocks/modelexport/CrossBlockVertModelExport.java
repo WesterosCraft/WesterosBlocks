@@ -43,7 +43,7 @@ public class CrossBlockVertModelExport extends ModelExport {
         StateObject so = new StateObject();
     	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
         
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < ext.length; i++) {
 	    	// Loop over the random sets we've got
 	        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
 	        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
@@ -65,7 +65,7 @@ public class CrossBlockVertModelExport extends ModelExport {
         boolean isTinted = def.isTinted();
         // Export if not set to custom model
         if (!def.isCustomModel()) {
-    		for (int i = 0; i < 4; i++) {
+    		for (int i = 0; i < ext.length; i++) {
     	        List<Variant> varn = new ArrayList<Variant>();
     	    	// Loop over the random sets we've got
     	        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {

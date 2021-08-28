@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
-    "top": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
-    "side": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
-    "particle": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized"
+    "bottom": "westerosblocks:block/bronze_block_oxidized/side1",
+    "top": "westerosblocks:block/bronze_block_oxidized/side1",
+    "side": "westerosblocks:block/bronze_block_oxidized/side1",
+    "particle": "westerosblocks:block/bronze_block_oxidized/side1"
   }
 }
