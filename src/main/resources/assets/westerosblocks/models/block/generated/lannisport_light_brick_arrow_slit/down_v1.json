@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "westerosblocks:block/arrow_slit_brick_lannisport/side",
+    "bottom": "westerosblocks:block/transparent",
+    "top": "westerosblocks:block/transparent",
+    "side": "westerosblocks:block/arrow_slit_brick_lannisport/down"
+  }
+}
