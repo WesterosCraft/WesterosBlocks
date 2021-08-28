@@ -1,12 +1,9 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "down": "westerosblocks:block/transparent",
-    "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/arrow_slits_1/brick_stormlands_small_arrow_slit",
-    "south": "westerosblocks:block/arrow_slits_1/brick_stormlands_small_arrow_slit",
-    "west": "westerosblocks:block/arrow_slits_1/brick_stormlands_small_arrow_slit",
-    "east": "westerosblocks:block/arrow_slits_1/brick_stormlands_small_arrow_slit",
-    "particle": "westerosblocks:block/arrow_slits_1/brick_stormlands_small_arrow_slit"
+    "particle": "westerosblocks:block/arrow_slit_brick_stormlands_window/side",
+    "bottom": "westerosblocks:block/transparent",
+    "top": "westerosblocks:block/transparent",
+    "side": "westerosblocks:block/arrow_slit_brick_stormlands_window/side"
   }
 }

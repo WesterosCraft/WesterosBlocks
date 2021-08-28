@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "down=false,up=true": {
+      "model": "westerosblocks:block/generated/stormlands_brick_arrow_slit_window/up_v1"
+    },
+    "down=true,up=false": {
+      "model": "westerosblocks:block/generated/stormlands_brick_arrow_slit_window/down_v1"
+    },
+    "down=false,up=false": {
       "model": "westerosblocks:block/generated/stormlands_brick_arrow_slit_window/base_v1"
+    },
+    "down=true,up=true": {
+      "model": "westerosblocks:block/generated/stormlands_brick_arrow_slit_window/both_v1"
     }
   }
 }

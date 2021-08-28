@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "down=false,up=true": {
+      "model": "westerosblocks:block/generated/small_stone_brick_arrow_slit_ornate/up_v1"
+    },
+    "down=true,up=false": {
+      "model": "westerosblocks:block/generated/small_stone_brick_arrow_slit_ornate/down_v1"
+    },
+    "down=false,up=false": {
       "model": "westerosblocks:block/generated/small_stone_brick_arrow_slit_ornate/base_v1"
+    },
+    "down=true,up=true": {
+      "model": "westerosblocks:block/generated/small_stone_brick_arrow_slit_ornate/both_v1"
     }
   }
 }
