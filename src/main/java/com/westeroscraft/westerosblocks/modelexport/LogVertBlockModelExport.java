@@ -150,6 +150,8 @@ public class LogVertBlockModelExport extends ModelExport {
 		HashMap<String, String> oldstate = new HashMap<String, String>();
 		HashMap<String, String> newstate = new HashMap<String, String>();
 		oldstate.put("variant", oldVariant);
+		newstate.put("up", "false");
+		newstate.put("down", "false");
 		for (String axis : AXIS) {
 			oldstate.put("axis", axis);
 			newstate.put("axis", axis);
