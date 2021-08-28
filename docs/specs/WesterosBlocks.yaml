@@ -1558,7 +1558,7 @@ components:
                   last texture is used for all indexes
                   beyond the length of the list.
             randomTextures:
-	          $ref: "#/components/schemas/RandomTextureSets"
+              $ref: "#/components/schemas/RandomTextureSets"
             condStates:
               $ref: "#/components/schemas/CondStates"
     wall:
