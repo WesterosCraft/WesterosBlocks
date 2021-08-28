@@ -4,6 +4,6 @@
     "particle": "westerosblocks:block/marble_pillar_vertical_ctm/base",
     "bottom": "westerosblocks:block/log_block_0/column_block_marble_top_bottom",
     "top": "westerosblocks:block/log_block_0/column_block_marble_top_bottom",
-    "side": "westerosblocks:block/marble_pillar_vertical_ctm/base"
+    "side": "westerosblocks:block/marble_pillar_vertical_ctm/down"
   }
 }
