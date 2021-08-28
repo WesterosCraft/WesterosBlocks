@@ -27,6 +27,9 @@ public class ModelExportFactory {
             case "log":
                 me = new LogBlockModelExport(blk, def, dest);
                 break;
+            case "logvert":
+                me = new LogVertBlockModelExport(blk, def, dest);
+                break;
             case "plant":
             case "web":
                 me = new CrossBlockModelExport(blk, def, dest);

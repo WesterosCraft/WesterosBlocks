@@ -45,6 +45,7 @@ components:
               - $ref: "#/components/schemas/layer"
               - $ref: "#/components/schemas/leaves"
               - $ref: "#/components/schemas/log"
+              - $ref: "#/components/schemas/logvert"
               - $ref: "#/components/schemas/pane"
               - $ref: "#/components/schemas/plant"
               - $ref: "#/components/schemas/plantvert"
@@ -699,6 +700,40 @@ components:
                   beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
+
+    logvert:
+      title: blockType='logvert'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'log' blocks with vertical CTM
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: side texture (with no match above nor below)
+                  - 3: side texture (with match below)
+                  - 4: side texture (with match above)
+                  - 5: side texture (with match above and below)
+
+                  If the list is shorter than 6, the
+                  last texture is used for all indexes
+                  beyond the length of the list.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+              
               
     stair:
       title: blockType='stair'

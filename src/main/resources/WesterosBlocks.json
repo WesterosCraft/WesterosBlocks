@@ -349,7 +349,7 @@
         },
         {
             "blockName": "marble_pillar_vertical_ctm",
-            "blockType": "log",
+            "blockType": "logvert",
             "stepSound": "wood",
             "material": "wood",
             "harvestLevel": [
@@ -362,7 +362,11 @@
             "label": "Marble Pillar Vertical CTM",
             "textures": [
                 "log_block_0/column_block_marble_top_bottom",
-                "log_block_0/column_block_marble_side"
+                "log_block_0/column_block_marble_top_bottom",
+                "marble_pillar_vertical_ctm/base",
+                "marble_pillar_vertical_ctm/down",
+                "marble_pillar_vertical_ctm/up",
+                "marble_pillar_vertical_ctm/both"
             ],
             "legacyBlockID": "log_block_1:3"
         },
