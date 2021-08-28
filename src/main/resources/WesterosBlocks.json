@@ -4392,7 +4392,7 @@
         },
         {
             "blockName": "stone_brick_arrow_slit_window",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": true,
@@ -4406,7 +4406,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/brick_stone_large_window"
+    	        "arrow_slit_window_brick_stone/side",
+        	    "arrow_slit_window_brick_stone/down",
+            	"arrow_slit_window_brick_stone/up",
+            	"arrow_slit_window_brick_stone/both"                
             ],
             "collisionBoxes": [
                 {
@@ -4612,7 +4615,7 @@
         },
         {
             "blockName": "desert_sandstone_arrow_slit",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": true,
@@ -4625,7 +4628,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_dorne_arrow_slit"
+    	        "arrow_slit_embellished_sandstone_desert/side",
+        	    "arrow_slit_embellished_sandstone_desert/down",
+            	"arrow_slit_embellished_sandstone_desert/up",
+            	"arrow_slit_embellished_sandstone_desert/both"                
             ],
             "collisionBoxes": [
                 {
@@ -4665,7 +4671,7 @@
         },
         {
             "blockName": "vivid_sandstone_arrow_slit",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": true,
@@ -4678,7 +4684,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_vivid_arrow_slit"
+    	        "arrow_slit_sandstone_vivid/side",
+        	    "arrow_slit_sandstone_vivid/down",
+            	"arrow_slit_sandstone_vivid/up",
+            	"arrow_slit_sandstone_vivid/both"                
             ],
             "collisionBoxes": [
                 {
@@ -4718,7 +4727,7 @@
         },
         {
             "blockName": "terracotta_arrow_slit",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": true,
@@ -4731,7 +4740,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_terracotta_arrow_slit"
+    	        "arrow_slit_embellished_sandstone_terracotta/side",
+        	    "arrow_slit_embellished_sandstone_terracotta/down",
+            	"arrow_slit_embellished_sandstone_terracotta/up",
+            	"arrow_slit_embellished_sandstone_terracotta/both"                
             ],
             "collisionBoxes": [
                 {
@@ -4771,7 +4783,7 @@
         },
         {
             "blockName": "stone_slab_arrow_slit_window",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": true,
@@ -4784,7 +4796,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/stone_slab_window"
+    	        "arrow_slit_window_stone_slab/side",
+        	    "arrow_slit_window_stone_slab/down",
+            	"arrow_slit_window_stone_slab/up",
+            	"arrow_slit_window_stone_slab/both"                
             ],
             "collisionBoxes": [
                 {
@@ -28080,7 +28095,7 @@
         },
         {
             "blockName": "pink_sandstone_arrow_slit",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -28093,7 +28108,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_pink_arrow_slit"
+                "arrow_slit_sandstone_pink/side",
+                "arrow_slit_sandstone_pink/down",
+                "arrow_slit_sandstone_pink/up",
+                "arrow_slit_sandstone_pink/both"
             ],
             "collisionBoxes": [
                 {
@@ -28133,7 +28151,7 @@
         },
         {
             "blockName": "pink_sandstone_arrow_slit_window",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -28146,7 +28164,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_pink_arrow_slit_window"
+                "arrow_slit_sandstone_pink_window/side",
+                "arrow_slit_sandstone_pink_window/down",
+                "arrow_slit_sandstone_pink_window/up",
+                "arrow_slit_sandstone_pink_window/both"
             ],
             "collisionBoxes": [
                 {
@@ -28186,7 +28207,7 @@
         },
         {
             "blockName": "pink_sandstone_arrow_slit_ornate",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -28199,7 +28220,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_pink_arrow_slit_ornate"
+                "arrow_slit_sandstone_pink_ornate/side",
+                "arrow_slit_sandstone_pink_ornate/down",
+                "arrow_slit_sandstone_pink_ornate/up",
+                "arrow_slit_sandstone_pink_ornate/both"
             ],
             "collisionBoxes": [
                 {
@@ -28239,7 +28263,7 @@
         },
         {
             "blockName": "vivid_dark_sandstone_arrow_slit",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -28252,7 +28276,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_vivid_dark_arrow_slit"
+                "arrow_slit_sandstone_vivid_dark/side",
+                "arrow_slit_sandstone_vivid_dark/down",
+                "arrow_slit_sandstone_vivid_dark/up",
+                "arrow_slit_sandstone_vivid_dark/both"
             ],
             "collisionBoxes": [
                 {
@@ -28292,7 +28319,7 @@
         },
         {
             "blockName": "vivid_dark_sandstone_slit_window",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -28305,7 +28332,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_vivid_dark_arrow_slit_window"
+                "arrow_slit_sandstone_vivid_dark_window/side",
+                "arrow_slit_sandstone_vivid_dark_window/down",
+                "arrow_slit_sandstone_vivid_dark_window/up",
+                "arrow_slit_sandstone_vivid_dark_window/both"
             ],
             "collisionBoxes": [
                 {
@@ -28345,7 +28375,7 @@
         },
         {
             "blockName": "vivid_dark_sandstone_arrow_slit_ornate",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -28358,7 +28388,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_0/sandstone_vivid_dark_arrow_slit_ornate"
+                "arrow_slit_sandstone_vivid_dark_ornate/side",
+                "arrow_slit_sandstone_vivid_dark_ornate/down",
+                "arrow_slit_sandstone_vivid_dark_ornate/up",
+                "arrow_slit_sandstone_vivid_dark_ornate/both"
             ],
             "collisionBoxes": [
                 {
@@ -32897,7 +32930,7 @@
         },
         {
             "blockName": "oak_timber_window_frame",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -32910,7 +32943,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_wood/oak_timber"
+    	        "arrow_slit_timber_oak/side",
+        	    "arrow_slit_timber_oak/down",
+            	"arrow_slit_timber_oak/up",
+            	"arrow_slit_timber_oak/both"                
             ],
             "collisionBoxes": [
                 {
@@ -32950,7 +32986,7 @@
         },
         {
             "blockName": "red_timber_window_frame",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -32963,7 +32999,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_wood/red_timber"
+    	        "arrow_slit_timber_red/side",
+        	    "arrow_slit_timber_red/down",
+            	"arrow_slit_timber_red/up",
+            	"arrow_slit_timber_red/both"                
             ],
             "collisionBoxes": [
                 {
@@ -33003,7 +33042,7 @@
         },
         {
             "blockName": "northern_timber_window_frame",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -33016,7 +33055,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_wood/northern_timber"
+    	        "arrow_slit_timber_northern/side",
+        	    "arrow_slit_timber_northern/down",
+            	"arrow_slit_timber_northern/up",
+            	"arrow_slit_timber_northern/both"                
             ],
             "collisionBoxes": [
                 {
@@ -33056,7 +33098,7 @@
         },
         {
             "blockName": "whitewashed_timber_window_frame",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -33069,7 +33111,10 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits_wood/whitewashed_timber"
+    	        "arrow_slit_timber_whitewashed/side",
+        	    "arrow_slit_timber_whitewashed/down",
+            	"arrow_slit_timber_whitewashed/up",
+            	"arrow_slit_timber_whitewashed/both"                
             ],
             "collisionBoxes": [
                 {

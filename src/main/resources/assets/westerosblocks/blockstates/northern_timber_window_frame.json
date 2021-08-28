@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "down=false,up=true": {
+      "model": "westerosblocks:block/generated/northern_timber_window_frame/up_v1"
+    },
+    "down=true,up=false": {
+      "model": "westerosblocks:block/generated/northern_timber_window_frame/down_v1"
+    },
+    "down=false,up=false": {
       "model": "westerosblocks:block/generated/northern_timber_window_frame/base_v1"
+    },
+    "down=true,up=true": {
+      "model": "westerosblocks:block/generated/northern_timber_window_frame/both_v1"
     }
   }
 }

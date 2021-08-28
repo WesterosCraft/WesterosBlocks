@@ -1,12 +1,9 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "down": "westerosblocks:block/transparent",
-    "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/arrow_slits_wood/northern_timber",
-    "south": "westerosblocks:block/arrow_slits_wood/northern_timber",
-    "west": "westerosblocks:block/arrow_slits_wood/northern_timber",
-    "east": "westerosblocks:block/arrow_slits_wood/northern_timber",
-    "particle": "westerosblocks:block/arrow_slits_wood/northern_timber"
+    "particle": "westerosblocks:block/arrow_slit_timber_northern/side",
+    "bottom": "westerosblocks:block/transparent",
+    "top": "westerosblocks:block/transparent",
+    "side": "westerosblocks:block/arrow_slit_timber_northern/side"
   }
 }
