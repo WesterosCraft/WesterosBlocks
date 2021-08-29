@@ -941,6 +941,8 @@ components:
                   Index mapping for textures is:
                   
                   - 0: single texture
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"                  
     plant:
       title: blockType='plant'
       allOf:
