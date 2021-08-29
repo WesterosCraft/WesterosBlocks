@@ -102,6 +102,56 @@
     ],	
     "blocks": [
         {
+            "blockName": "dirt",
+            "blockType": "solid",
+            "hardness": 2,
+            "stepSound": "gravel",
+            "material": "ground",
+            "resistance": 2,
+            "harvestLevel": [
+                {
+                    "tool": "shovel",
+                    "level": 1
+                }
+            ],
+            "creativeTab": "WesterosBlocks",
+            "label": "Dirt",
+            "randomTextures": [
+              { "textures": [ "dirt/top_bot1", "dirt/top_bot1", "ground_block_0/dirt" ], "weight": 100, "condIDs": [ "default" ] },
+              { "textures": [ "dirt/top_bot2", "dirt/top_bot2", "ground_block_0/dirt" ], "weight": 33, "condIDs": [ "default" ] },
+              { "textures": [ "dirt/top_bot3", "dirt/top_bot3", "ground_block_0/dirt" ], "weight": 45, "condIDs": [ "default" ] },
+              { "textures": [ "dirt/top_bot4", "dirt/top_bot4", "ground_block_0/dirt" ], "weight": 140, "condIDs": [ "default" ] },
+              { "textures": [ "dirt/top_bot5", "dirt/top_bot5", "ground_block_0/dirt" ], "weight": 193, "condIDs": [ "default" ] },
+              { "textures": [ "dirt/top_bot6", "dirt/top_bot6", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "default" ] },
+              { "textures": [ "dirt/top_bot7", "dirt/top_bot7", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "default" ] },
+              { "textures": [ "dirt/top_bot8", "dirt/top_bot8", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "default" ] },
+              { "textures": [ "dirt_forest/top_bot1", "dirt_forest/top_bot1", "ground_block_0/dirt" ], "weight": 100, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot2", "dirt_forest/top_bot2", "ground_block_0/dirt" ], "weight": 33, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot3", "dirt_forest/top_bot3", "ground_block_0/dirt" ], "weight": 20, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot4", "dirt_forest/top_bot4", "ground_block_0/dirt" ], "weight": 45, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot5", "dirt_forest/top_bot5", "ground_block_0/dirt" ], "weight": 140, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot6", "dirt_forest/top_bot6", "ground_block_0/dirt" ], "weight": 193, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot7", "dirt_forest/top_bot7", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot8", "dirt_forest/top_bot8", "ground_block_0/dirt" ], "weight": 20, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot9", "dirt_forest/top_bot9", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "forest" ] },
+              { "textures": [ "dirt_forest/top_bot10", "dirt_forest/top_bot10", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "forest" ] }              
+            ],
+            "condStates": [ 
+            	{ "condID": "forest", 
+            	  "biomes": [ 
+            	    "minecraft:forest",
+            	    "minecraft:flower_forest",
+            	    "minecraft:wooded_hills",
+            	    "minecraft:dark_forest",
+            	    "minecraft:dark_forest_hills",
+            	    "minecraft:jungle",
+            	    "minecraft:jungle_hills",
+            	    "minecraft:modified_jungle" ] },
+            	{ "condID": "default" }
+            ],            	                    
+            "legacyBlockID": "minecraft:dirt:snowy=false,variant=dirt"
+        },
+	    {
             "blockName": "oxidized_iron_block",
             "blockType": "solid",
             "hardness": 5,
@@ -33534,56 +33584,7 @@
             ],
             "type": "allow-unsupported,no-climb",
             "legacyBlockID": "vine_block_5:0"
-        },
-        {
-            "blockName": "dirt",
-            "blockType": "solid",
-            "hardness": 2,
-            "stepSound": "gravel",
-            "material": "ground",
-            "resistance": 2,
-            "harvestLevel": [
-                {
-                    "tool": "shovel",
-                    "level": 1
-                }
-            ],
-            "creativeTab": "WesterosBlocks",
-            "label": "Dirt",
-            "randomTextures": [
-              { "textures": [ "dirt/top_bot1", "dirt/top_bot1", "ground_block_0/dirt" ], "weight": 100, "condIDs": [ "default" ] },
-              { "textures": [ "dirt/top_bot2", "dirt/top_bot2", "ground_block_0/dirt" ], "weight": 33, "condIDs": [ "default" ] },
-              { "textures": [ "dirt/top_bot3", "dirt/top_bot3", "ground_block_0/dirt" ], "weight": 45, "condIDs": [ "default" ] },
-              { "textures": [ "dirt/top_bot4", "dirt/top_bot4", "ground_block_0/dirt" ], "weight": 140, "condIDs": [ "default" ] },
-              { "textures": [ "dirt/top_bot5", "dirt/top_bot5", "ground_block_0/dirt" ], "weight": 193, "condIDs": [ "default" ] },
-              { "textures": [ "dirt/top_bot6", "dirt/top_bot6", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "default" ] },
-              { "textures": [ "dirt/top_bot7", "dirt/top_bot7", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "default" ] },
-              { "textures": [ "dirt/top_bot8", "dirt/top_bot8", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "default" ] },
-              { "textures": [ "dirt_forest/top_bot1", "dirt_forest/top_bot1", "ground_block_0/dirt" ], "weight": 100, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot2", "dirt_forest/top_bot2", "ground_block_0/dirt" ], "weight": 33, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot3", "dirt_forest/top_bot3", "ground_block_0/dirt" ], "weight": 20, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot4", "dirt_forest/top_bot4", "ground_block_0/dirt" ], "weight": 45, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot5", "dirt_forest/top_bot5", "ground_block_0/dirt" ], "weight": 140, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot6", "dirt_forest/top_bot6", "ground_block_0/dirt" ], "weight": 193, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot7", "dirt_forest/top_bot7", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot8", "dirt_forest/top_bot8", "ground_block_0/dirt" ], "weight": 20, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot9", "dirt_forest/top_bot9", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "forest" ] },
-              { "textures": [ "dirt_forest/top_bot10", "dirt_forest/top_bot10", "ground_block_0/dirt" ], "weight": 77, "condIDs": [ "forest" ] }              
-            ],
-            "condStates": [ 
-            	{ "condID": "forest", 
-            	  "biomes": [ 
-            	    "minecraft:forest",
-            	    "minecraft:flower_forest",
-            	    "minecraft:wooded_hills",
-            	    "minecraft:dark_forest",
-            	    "minecraft:dark_forest_hills",
-            	    "minecraft:jungle",
-            	    "minecraft:jungle_hills",
-            	    "minecraft:modified_jungle" ] },
-            	{ "condID": "default" }
-            ],            	                    
-            "legacyBlockID": "minecraft:dirt:default"
         }
+
     ]
 }

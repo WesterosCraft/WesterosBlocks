@@ -1328,7 +1328,31 @@ public class WesterosBlockDef {
     public String getLegacyBlockVariant() {
     	if (legacyBlockID == null) return null;
     	String[] tok = legacyBlockID.split(":");
-    	return (tok.length >= 2) ? tok[tok.length-1] : null;
+    	if (tok.length >= 2) {
+    		return tok[tok.length - 1];
+    	}
+    	return null;
+    }
+    public Map<String, String> getLegacyBlockMap() {
+    	if (legacyBlockID == null) return null;
+    	Map<String, String> mval = new HashMap<String, String>();
+    	String[] tok = legacyBlockID.split(":");
+    	if (tok.length >= 2) {
+    		String v = tok[tok.length - 1];
+    		if (v.indexOf('=') < 0) {
+    			mval.put("variant", v);
+    		}
+    		else {
+    			String[] stok = v.split(",");
+    			for (String sv : stok) {
+    				String[] vtok = sv.split("=");
+    				if (vtok.length > 1)
+    					mval.put(vtok[0], vtok[1]);
+    			}
+    		}
+    		return mval;
+    	}
+    	return null;
     }
 
     public static class CondProperty extends Property<String> {

@@ -108,6 +108,7 @@ public class SolidBlockModelExport extends ModelExport {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
     	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
@@ -116,8 +117,11 @@ public class SolidBlockModelExport extends ModelExport {
     		newstate = new HashMap<String, String>();
     		newstate.put("cond", def.getDefaultCondID());    		
     	}
-    	if (!oldVariant.equals("default"))
-    		oldstate.put("variant", oldVariant);
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 }
