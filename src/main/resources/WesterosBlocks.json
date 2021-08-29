@@ -4099,23 +4099,26 @@
         },
         {
             "blockName": "full_cabinet",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
             "resistance": 5,
             "creativeTab": "WesterosDeco",
             "label": "Full Cabinet",
-            "textures": [
-                "bench_block_0/spruce_top",
-                "bench_block_0/spruce_top",
-                "bench_block_0/cabinet_full"
+           "textures": [
+                "cabinet_full/top_bottom",
+                "cabinet_full/top_bottom",
+                "cabinet_full/side",
+                "cabinet_full/left",
+                "cabinet_full/right",
+                "cabinet_full/both"
             ],
-            "legacyBlockID": "bench_block_0:10"
+             "legacyBlockID": "bench_block_0:10"
         },
         {
             "blockName": "empty_cabinet",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -4123,9 +4126,12 @@
             "creativeTab": "WesterosDeco",
             "label": "Empty Cabinet",
             "textures": [
-                "bench_block_0/spruce_top",
-                "bench_block_0/spruce_top",
-                "bench_block_0/cabinet_empty"
+                "cabinet_full/top_bottom",
+                "cabinet_full/top_bottom",
+                "cabinet_empty/side",
+                "cabinet_empty/left",
+                "cabinet_empty/right",
+                "cabinet_empty/both"
             ],
             "legacyBlockID": "bench_block_0:11"
         },
@@ -4139,8 +4145,8 @@
             "creativeTab": "WesterosDeco",
             "label": "Broken Cabinet",
             "textures": [
-                "bench_block_0/spruce_top",
-                "bench_block_0/spruce_top",
+                "cabinet_full/top_bottom",
+                "cabinet_full/top_bottom",
                 "bench_block_0/cabinet_broken"
             ],
             "legacyBlockID": "bench_block_0:12"
@@ -4154,11 +4160,10 @@
             "resistance": 5,
             "creativeTab": "WesterosDeco",
             "label": "Cabinet Drawer",
-            "textures": [
-                "bench_block_0/spruce_top",
-                "bench_block_0/spruce_top",
-                "bench_block_0/cabinet_drawer"
-            ],
+            "randomTextures": [
+            	{ "textures": [ "cabinet_full/top_bottom", "cabinet_full/top_bottom", "cabinet_drawer/side1" ] },
+            	{ "textures": [ "cabinet_full/top_bottom", "cabinet_full/top_bottom", "cabinet_drawer/side2" ] }
+        	],
             "legacyBlockID": "bench_block_0:13"
         },
         {
@@ -19334,8 +19339,10 @@
                 "zMax": 0.875
             },
             "label": "Candle Altar",
-            "textures": [
-                "crop_block_0/altar_candles"
+            "randomTextures": [
+            	{ "textures" : [ "candle_altar/side1" ] },
+            	{ "textures" : [ "candle_altar/side2" ] },
+            	{ "textures" : [ "candle_altar/side3" ] }
             ],
             "legacyBlockID": "crop_block_1:0"
         },
@@ -19409,8 +19416,8 @@
             	"stone_block_3/brick_dun",
             	"stone_block_3/brick_dun",
             	"brick_dun/side",
-            	"brick_dun/right",
             	"brick_dun/left",
+            	"brick_dun/right",
             	"brick_dun/both"
             ],
             "legacyBlockID": "stone_block_5:0"
@@ -20211,10 +20218,10 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Baelors Sphere Stranger Grey",
-            "textures": [
-                "translucent_block_0/baelors_sphere_grey_topbottom",
-                "translucent_block_0/baelors_sphere_grey_side"
-            ],
+            "randomTextures": [
+            	{ "textures": [ "bugs_bees/bugs_bees1", "bugs_bees/bugs_bees1" ] },
+            	{ "textures": [ "bugs_bees/bugs_bees2", "bugs_bees/bugs_bees2" ] }
+            ],            
             "cuboids": [
                 {
                     "xMin": 0.40625,
@@ -20317,10 +20324,10 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Baelors Sphere Warrior Red",
-            "textures": [
-                "translucent_block_0/baelors_sphere_red_topbottom",
-                "translucent_block_0/baelors_sphere_red_side"
-            ],
+            "randomTextures": [
+            	{ "textures": [ "bugs_flies/bugs_flies1", "bugs_flies/bugs_flies1" ] },
+            	{ "textures": [ "bugs_flies/bugs_flies2", "bugs_flies/bugs_flies2" ] }
+            ],            
             "cuboids": [
                 {
                     "xMin": 0.40625,

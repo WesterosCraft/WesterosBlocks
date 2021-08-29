@@ -35,20 +35,28 @@ public class CropBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        Variant var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
-        so.addVariant("", var, null);
+    	// Loop over the random sets we've got
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	Variant var = new Variant();
+        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
+        	so.addVariant("", var, set.condIDs);
+        }
         this.writeBlockStateFile(def.blockName, so);
     }
 
     @Override
     public void doModelExports() throws IOException {
-        ModelObjectCrop mod = new ModelObjectCrop();
-        mod.textures.crop = getTextureID(def.getTextureByIndex(0)); 
-        this.writeBlockModelFile(getModelName("base", 0), mod);
+    	// Loop over the random sets we've got
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+        	ModelObjectCrop mod = new ModelObjectCrop();
+        	mod.textures.crop = getTextureID(set.getTextureByIndex(0)); 
+        	this.writeBlockModelFile(getModelName("base", setidx), mod);
+        }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.textures.layer0 = mod.textures.crop;
+        mo.textures.layer0 = getTextureID(def.getRandomTextureSet(0).getTextureByIndex(0)); 
         this.writeItemModelFile(def.blockName, mo);
     }
     @Override

@@ -6,7 +6,7 @@
     "down": "westerosblocks:block/stone_block_3/brick_dun",
     "north": "westerosblocks:block/brick_dun/side",
     "south": "westerosblocks:block/brick_dun/side",
-    "east": "westerosblocks:block/brick_dun/left",
-    "west": "westerosblocks:block/brick_dun/right"
+    "east": "westerosblocks:block/brick_dun/right",
+    "west": "westerosblocks:block/brick_dun/left"
   }
 }

@@ -268,8 +268,8 @@ components:
                   - 0: bottom texture
                   - 1: top texture
                   - 2: side texture (with no match left or right)
-                  - 3: side texture (with match to right)
-                  - 4: side texture (with match to left)
+                  - 3: side texture (with match to left)
+                  - 4: side texture (with match to right)
                   - 5: side texture (with match to right and left)
                   
                   If the list is shorter than 6, the
