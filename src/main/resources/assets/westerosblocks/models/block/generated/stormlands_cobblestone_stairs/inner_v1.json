@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "top": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "side": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "particle": "westerosblocks:block/stone_block_2/stone_cobble_stormlands"
+    "bottom": "westerosblocks:block/cobblestone_texture_variants/stormlands1",
+    "top": "westerosblocks:block/cobblestone_texture_variants/stormlands1",
+    "side": "westerosblocks:block/cobblestone_texture_variants/stormlands1",
+    "particle": "westerosblocks:block/cobblestone_texture_variants/stormlands1"
   }
 }

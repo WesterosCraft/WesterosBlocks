@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone_texture_variants/stormlands5",
+    "top": "westerosblocks:block/cobblestone_texture_variants/stormlands5",
+    "side": "westerosblocks:block/cobblestone_texture_variants/stormlands5",
+    "particle": "westerosblocks:block/cobblestone_texture_variants/stormlands5"
+  }
+}

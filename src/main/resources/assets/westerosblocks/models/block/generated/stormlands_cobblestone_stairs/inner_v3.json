@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone_texture_variants/stormlands3",
+    "top": "westerosblocks:block/cobblestone_texture_variants/stormlands3",
+    "side": "westerosblocks:block/cobblestone_texture_variants/stormlands3",
+    "particle": "westerosblocks:block/cobblestone_texture_variants/stormlands3"
+  }
+}

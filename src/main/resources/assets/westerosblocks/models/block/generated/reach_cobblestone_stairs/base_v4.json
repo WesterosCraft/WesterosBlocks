@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone_texture_variants/reach4",
+    "top": "westerosblocks:block/cobblestone_texture_variants/reach4",
+    "side": "westerosblocks:block/cobblestone_texture_variants/reach4",
+    "particle": "westerosblocks:block/cobblestone_texture_variants/reach4"
+  }
+}

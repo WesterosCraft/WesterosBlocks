@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone_texture_variants/stormlands2",
+    "top": "westerosblocks:block/cobblestone_texture_variants/stormlands2",
+    "side": "westerosblocks:block/cobblestone_texture_variants/stormlands2",
+    "particle": "westerosblocks:block/cobblestone_texture_variants/stormlands2"
+  }
+}
