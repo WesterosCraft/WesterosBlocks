@@ -179,7 +179,7 @@ public class SlabBlockModelExport extends ModelExport {
     	oldstate.put("variant", oldVariant);
     	newstate.put("waterlogged", "false");
     	if (def.condStates != null) {
-        	newstate.put("cond", def.condStates.get(def.condStates.size()-1).condID);    		
+    		newstate.put("cond", def.getDefaultCondID());    		
     	}
     	// Bottom half
     	oldstate.put("half", "bottom");

@@ -149,6 +149,9 @@ public class SolidVertBlockModelExport extends ModelExport {
     	//TODO: need to add handler to WorldConverter for the vertical CTM states
     	newstate.put("down", "false");
     	newstate.put("up", "false");    	
+    	if (def.condStates != null) {
+    		newstate.put("cond", def.getDefaultCondID());    		
+    	}
     	
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }

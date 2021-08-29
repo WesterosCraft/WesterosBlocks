@@ -91,8 +91,13 @@ public class CrossBlockModelExport extends ModelExport {
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
+    	Map<String, String> newstate = null;
     	oldstate.put("variant", oldVariant);
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), null);
+    	if (def.condStates != null) {
+    		newstate = new HashMap<String, String>();
+    		newstate.put("cond", def.getDefaultCondID());    		
+    	}
+        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
 }
