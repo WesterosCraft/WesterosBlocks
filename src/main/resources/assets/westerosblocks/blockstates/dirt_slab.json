@@ -1,13 +1,232 @@
 {
   "variants": {
-    "type=bottom": {
-      "model": "westerosblocks:block/generated/dirt_slab/bottom_v1"
-    },
-    "type=double": {
-      "model": "westerosblocks:block/generated/dirt_slab/double_v1"
-    },
-    "type=top": {
-      "model": "westerosblocks:block/generated/dirt_slab/top_v1"
-    }
+    "type=bottom,cond=default": [
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v1",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v2",
+        "weight": 33
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v3",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v4",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v5",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v6",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v7",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v8",
+        "weight": 77
+      }
+    ],
+    "type=top,cond=forest": [
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v9",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v10",
+        "weight": 33
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v11",
+        "weight": 20
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v12",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v13",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v14",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v15",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v16",
+        "weight": 20
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v17",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v18",
+        "weight": 77
+      }
+    ],
+    "type=double,cond=forest": [
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v9",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v10",
+        "weight": 33
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v11",
+        "weight": 20
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v12",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v13",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v14",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v15",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v16",
+        "weight": 20
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v17",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v18",
+        "weight": 77
+      }
+    ],
+    "type=bottom,cond=forest": [
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v9",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v10",
+        "weight": 33
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v11",
+        "weight": 20
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v12",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v13",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v14",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v15",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v16",
+        "weight": 20
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v17",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v18",
+        "weight": 77
+      }
+    ],
+    "type=top,cond=default": [
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v1",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v2",
+        "weight": 33
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v3",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v4",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v5",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v6",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v7",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v8",
+        "weight": 77
+      }
+    ],
+    "type=double,cond=default": [
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v1",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v2",
+        "weight": 33
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v3",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v4",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v5",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v6",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v7",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v8",
+        "weight": 77
+      }
+    ]
   }
 }

@@ -116,7 +116,8 @@ public class SolidBlockModelExport extends ModelExport {
     		newstate = new HashMap<String, String>();
     		newstate.put("cond", def.getDefaultCondID());    		
     	}
-    	oldstate.put("variant", oldVariant);
+    	if (!oldVariant.equals("default"))
+    		oldstate.put("variant", oldVariant);
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 }

@@ -1,0 +1,80 @@
+{
+  "variants": {
+    ",cond=default": [
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v1",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v2",
+        "weight": 33
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v3",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v4",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v5",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v6",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v7",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v8",
+        "weight": 77
+      }
+    ],
+    ",cond=forest": [
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v9",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v10",
+        "weight": 33
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v11",
+        "weight": 20
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v12",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v13",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v14",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v15",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v16",
+        "weight": 20
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v17",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt/base_v18",
+        "weight": 77
+      }
+    ]
+  }
+}

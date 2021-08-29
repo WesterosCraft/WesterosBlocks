@@ -22,9 +22,9 @@
     "txt5": "westerosblocks:block/ground_block_0/dirt",
     "txt2": "westerosblocks:block/ground_block_0/dirt",
     "txt3": "westerosblocks:block/ground_block_0/dirt",
-    "txt0": "westerosblocks:block/ground_block_0/dirt",
-    "txt1": "westerosblocks:block/ground_block_0/dirt",
-    "particle": "westerosblocks:block/ground_block_0/dirt"
+    "txt0": "westerosblocks:block/dirt/top_bot1",
+    "txt1": "westerosblocks:block/dirt/top_bot1",
+    "particle": "westerosblocks:block/dirt/top_bot1"
   },
   "elements": [
     {

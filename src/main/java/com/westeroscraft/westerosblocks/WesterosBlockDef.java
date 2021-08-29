@@ -1322,12 +1322,13 @@ public class WesterosBlockDef {
     public String getLegacyBlockName() {
     	if (legacyBlockID == null) return null;
     	String[] tok = legacyBlockID.split(":");
+    	if (tok.length > 2) return tok[0] + ":" + tok[1];
     	return (tok.length >= 1) ? tok[0] : null;
     }
     public String getLegacyBlockVariant() {
     	if (legacyBlockID == null) return null;
     	String[] tok = legacyBlockID.split(":");
-    	return (tok.length >= 2) ? tok[1] : null;
+    	return (tok.length >= 2) ? tok[tok.length-1] : null;
     }
 
     public static class CondProperty extends Property<String> {
