@@ -10880,8 +10880,12 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Reach Cobblestone",
-            "textures": [
-                "stone_block_2/stone_cobble_reach"
+            "randomTextures": [
+              { "textures": [ "cobblestone_texture_variants/reach1" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/reach2" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/reach3" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/reach4" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/reach5" ], "weight": 20 }              
             ],
             "legacyBlockID": "stone_block_2:7"
         },
@@ -10922,8 +10926,12 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Stormlands Cobblestone",
-            "textures": [
-                "stone_block_2/stone_cobble_stormlands"
+            "randomTextures": [
+              { "textures": [ "cobblestone_texture_variants/stormlands1" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/stormlands2" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/stormlands3" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/stormlands4" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/stormlands5" ], "weight": 20 }              
             ],
             "legacyBlockID": "stone_block_2:10"
         },
@@ -10992,8 +11000,12 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Stormlands Mossy Cobblestone",
-            "textures": [
-                "stone_block_2/stone_cobble_stormlands_mossy"
+            "randomTextures": [
+              { "textures": [ "cobblestone_texture_variants/stormlands_mossy1" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/stormlands_mossy2" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/stormlands_mossy3" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/stormlands_mossy4" ], "weight": 5 },
+              { "textures": [ "cobblestone_texture_variants/stormlands_mossy5" ], "weight": 20 }              
             ],
             "legacyBlockID": "stone_block_2:15"
         },

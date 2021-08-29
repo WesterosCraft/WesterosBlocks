@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/tinted/cube_all",
+  "textures": {
+    "all": "westerosblocks:block/cobblestone_texture_variants/cobblestone5"
+  }
+}
