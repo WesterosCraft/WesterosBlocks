@@ -15788,14 +15788,21 @@
         },
         {
             "blockName": "cattails",
-            "blockType": "web",
+            "blockType": "webvert",
             "stepSound": "plant",
             "material": "web",
             "creativeTab": "WesterosPlants",
             "label": "Cattails",
-            "textures": [
-                "web_block_1/cattails"
-            ],
+            "randomTextures": [
+              { "textures": [ "cattails_reeds/side", "cattails_reeds/down1", "cattails_reeds/up", "cattails_reeds/both1" ] },
+              { "textures": [ "cattails_reeds/side", "cattails_reeds/down2", "cattails_reeds/up", "cattails_reeds/both1" ] },
+              { "textures": [ "cattails_reeds/side", "cattails_reeds/down3", "cattails_reeds/up", "cattails_reeds/both2" ] },
+              { "textures": [ "cattails_reeds/side", "cattails_reeds/down4", "cattails_reeds/up", "cattails_reeds/both2" ] },
+              { "textures": [ "cattails_reeds/side", "cattails_reeds/down5", "cattails_reeds/up", "cattails_reeds/both3" ] },
+              { "textures": [ "cattails_reeds/side", "cattails_reeds/down6", "cattails_reeds/up", "cattails_reeds/both3" ] },
+              { "textures": [ "cattails_reeds/side", "cattails_reeds/down7", "cattails_reeds/up", "cattails_reeds/both4" ] },
+              { "textures": [ "cattails_reeds/side", "cattails_reeds/down8", "cattails_reeds/up", "cattails_reeds/both4" ] }
+			],              
             "colorMult": "textures/colormap/reed",
             "type": "no-in-web",
             "legacyBlockID": "web_block_1:3"
