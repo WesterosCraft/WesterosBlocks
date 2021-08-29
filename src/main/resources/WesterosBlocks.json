@@ -19398,7 +19398,7 @@
         },
         {
             "blockName": "kl_dun_brick",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 5,
             "stepSound": "stone",
             "material": "rock",
@@ -19406,7 +19406,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "KL Dun Brick",
             "textures": [
-                "stone_block_3/brick_dun"
+            	"stone_block_3/brick_dun",
+            	"stone_block_3/brick_dun",
+            	"brick_dun/side",
+            	"brick_dun/right",
+            	"brick_dun/left",
+            	"brick_dun/both"
             ],
             "legacyBlockID": "stone_block_5:0"
         },
