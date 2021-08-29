@@ -18,12 +18,12 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/coins/top1",
-    "txt5": "westerosblocks:block/coins/top1",
-    "txt2": "westerosblocks:block/coins/top1",
-    "txt3": "westerosblocks:block/coins/top1",
+    "txt4": "westerosblocks:block/coins/top2",
+    "txt5": "westerosblocks:block/coins/top2",
+    "txt2": "westerosblocks:block/coins/top2",
+    "txt3": "westerosblocks:block/coins/top2",
     "txt0": "westerosblocks:block/transparent",
-    "txt1": "westerosblocks:block/coins/top1",
+    "txt1": "westerosblocks:block/coins/top2",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

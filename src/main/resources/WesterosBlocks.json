@@ -2288,9 +2288,13 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Coins",
-            "textures": [
-                "transparent",
-                "cuboid_block_0/coins"
+            "randomTextures": [
+              { "textures": [ "transparent", "coins/top1" ] },
+              { "textures": [ "transparent", "coins/top2" ] },
+              { "textures": [ "transparent", "coins/top3" ] },
+              { "textures": [ "transparent", "coins/top4" ] },
+              { "textures": [ "transparent", "coins/top5" ] },
+              { "textures": [ "transparent", "coins/top6" ] }
             ],
             "boundingBox": {
                 "xMin": 0,
@@ -16279,8 +16283,9 @@
             "material": "rock",
             "creativeTab": "WesterosDeco",
             "label": "Winterfell Stone Ladder",
-            "textures": [
-                "ladder_block_0/ladder_cobblestone"
+            "randomTextures": [
+                { "textures" : [ "winterfell_stone_ladder/side1" ] },
+                { "textures" : [ "winterfell_stone_ladder/side2" ] }
             ],
             "type": "allow-unsupported",
             "legacyBlockID": "ladder_block_1:0"
