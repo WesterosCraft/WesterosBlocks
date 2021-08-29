@@ -20,8 +20,8 @@
   "textures": {
     "txt4": "westerosblocks:block/transparent",
     "txt5": "westerosblocks:block/transparent",
-    "txt2": "westerosblocks:block/clothesline/laundry_pants_towel",
-    "txt3": "westerosblocks:block/clothesline/laundry_pants_towel",
+    "txt2": "westerosblocks:block/clothesline/laundry_shirt_towel",
+    "txt3": "westerosblocks:block/clothesline/laundry_shirt_towel",
     "txt0": "westerosblocks:block/transparent",
     "txt1": "westerosblocks:block/transparent",
     "particle": "westerosblocks:block/transparent"

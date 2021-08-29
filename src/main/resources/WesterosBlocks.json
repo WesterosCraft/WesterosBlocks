@@ -2219,13 +2219,10 @@
             "creativeTab": "WesterosDeco",
             "label": "Clothesline",
             "lightOpacity": 0,
-            "textures": [
-                "transparent",
-                "transparent",
-                "cuboid_block_0/laundry_shirt_towel",
-                "cuboid_block_0/laundry_shirt_towel_mirrored",
-                "transparent",
-                "transparent"
+            "randomTextures": [
+              { "textures": [ "transparent", "transparent", "clothesline/laundry_pants_towel", "clothesline/laundry_pants_towel", "transparent", "transparent" ] },
+              { "textures": [ "transparent", "transparent", "clothesline/laundry_sheet_white", "clothesline/laundry_sheet_white", "transparent", "transparent" ] },
+              { "textures": [ "transparent", "transparent", "clothesline/laundry_shirt_towel", "clothesline/laundry_shirt_towel", "transparent", "transparent" ] }              
             ],
             "boundingBox": {
                 "xMin": 0,
