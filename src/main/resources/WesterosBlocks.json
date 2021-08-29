@@ -27493,8 +27493,11 @@
             "creativeTab": "WesterosBlocks",
             "label": "River Cobble Wall",
             "colorMult": "textures/colormap/lightgreystone",
-            "textures": [
-                "stone_block_1/stone_cobble_river"
+            "randomTextures": [
+              { "textures": [ "cobblestone_river/all1" ], "weight": 30 },
+              { "textures": [ "cobblestone_river/all2" ], "weight": 10 },
+              { "textures": [ "cobblestone_river/all3" ], "weight": 30 },
+              { "textures": [ "cobblestone_river/all4" ], "weight": 30 }
             ],
             "legacyBlockID": "stone_wall_block_3:7"
         },
@@ -28648,8 +28651,11 @@
             "creativeTab": "WesterosBlocks",
             "label": "Small Smooth Stone Brick Slab",
             "colorMult": "textures/colormap/smallsmoothstonebrick",
-            "textures": [
-                "stone_block_1/brick_stone_small_smooth"
+            "randomTextures": [
+              { "textures": [ "cobblestone_river/all1" ], "weight": 30 },
+              { "textures": [ "cobblestone_river/all2" ], "weight": 10 },
+              { "textures": [ "cobblestone_river/all3" ], "weight": 30 },
+              { "textures": [ "cobblestone_river/all4" ], "weight": 30 }
             ],
             "legacyBlockID": "stone_slab_block_5:4"
         },
