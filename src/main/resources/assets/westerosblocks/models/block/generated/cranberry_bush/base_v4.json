@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/cranberry/base1"
+    "cross": "westerosblocks:block/cranberry/north2"
   }
 }

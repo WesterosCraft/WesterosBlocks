@@ -1,7 +1,20 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/cranberry_bush/base_v1"
-    }
+    ",cond=default": [
+      {
+        "model": "westerosblocks:block/generated/cranberry_bush/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/cranberry_bush/base_v2"
+      }
+    ],
+    ",cond=north": [
+      {
+        "model": "westerosblocks:block/generated/cranberry_bush/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/cranberry_bush/base_v4"
+      }
+    ]
   }
 }
