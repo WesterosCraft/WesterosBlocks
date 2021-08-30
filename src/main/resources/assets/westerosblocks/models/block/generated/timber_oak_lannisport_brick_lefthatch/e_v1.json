@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "westerosblocks:block/daub_wattle_lannisport_brick_oak/top",
+    "up": "westerosblocks:block/daub_wattle_lannisport_brick_oak/top",
+    "down": "westerosblocks:block/daub_wattle_lannisport_brick_oak/cross_side",
+    "north": "westerosblocks:block/daub_wattle_lannisport_brick_oak/left_left",
+    "south": "westerosblocks:block/daub_wattle_lannisport_brick_oak/left_right",
+    "east": "westerosblocks:block/daub_wattle_lannisport_brick_oak/left_side",
+    "west": "westerosblocks:block/daub_wattle_lannisport_brick_oak/left_side"
+  }
+}

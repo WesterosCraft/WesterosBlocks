@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/daub_wattle_block_0/northern_grey_brick_open"
+    "particle": "westerosblocks:block/daub_wattle_grey_brick_northern/top",
+    "up": "westerosblocks:block/daub_wattle_grey_brick_northern/top",
+    "down": "westerosblocks:block/daub_wattle_grey_brick_northern/cross_side",
+    "north": "westerosblocks:block/daub_wattle_grey_brick_northern/open_side",
+    "south": "westerosblocks:block/daub_wattle_grey_brick_northern/open_side",
+    "east": "westerosblocks:block/daub_wattle_grey_brick_northern/open_side",
+    "west": "westerosblocks:block/daub_wattle_grey_brick_northern/open_side"
   }
 }

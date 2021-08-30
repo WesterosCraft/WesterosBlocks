@@ -32016,7 +32016,7 @@
         },
         {
             "blockName": "timber_oak_lannisport_brick_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32024,13 +32024,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Lannisport Brick Crosshatch",
             "textures": [
-                "daub_wattle_block_0/oak_lannisport_crossed"
+                "daub_wattle_lannisport_brick_oak/cross_side",
+                "daub_wattle_lannisport_brick_oak/top",
+                "daub_wattle_lannisport_brick_oak/cross_side",
+                "daub_wattle_lannisport_brick_oak/cross_left",
+                "daub_wattle_lannisport_brick_oak/cross_right",
+                "daub_wattle_lannisport_brick_oak/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:0"
         },
         {
             "blockName": "timber_oak_lannisport_brick_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32038,13 +32043,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Lannisport Brick Lefthatch",
             "textures": [
-                "daub_wattle_block_0/oak_lannisport_left"
+                "daub_wattle_lannisport_brick_oak/cross_side",
+                "daub_wattle_lannisport_brick_oak/top",
+                "daub_wattle_lannisport_brick_oak/left_side",
+                "daub_wattle_lannisport_brick_oak/left_left",
+                "daub_wattle_lannisport_brick_oak/left_right",
+                "daub_wattle_lannisport_brick_oak/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:1"
         },
         {
             "blockName": "timber_oak_lannisport_brick_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32052,13 +32062,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Lannisport Brick Righthatch",
             "textures": [
-                "daub_wattle_block_0/oak_lannisport_right"
+                "daub_wattle_lannisport_brick_oak/cross_side",
+                "daub_wattle_lannisport_brick_oak/top",
+                "daub_wattle_lannisport_brick_oak/right_side",
+                "daub_wattle_lannisport_brick_oak/right_left",
+                "daub_wattle_lannisport_brick_oak/right_right",
+                "daub_wattle_lannisport_brick_oak/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:2"
         },
         {
             "blockName": "timber_oak_lannisport_brick_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32066,7 +32081,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Lannisport Brick Frame",
             "textures": [
-                "daub_wattle_block_0/oak_lannisport_open"
+                "daub_wattle_lannisport_brick_oak/cross_side",
+                "daub_wattle_lannisport_brick_oak/top",
+                "daub_wattle_lannisport_brick_oak/open_side",
+                "daub_wattle_lannisport_brick_oak/open_left",
+                "daub_wattle_lannisport_brick_oak/open_right",
+                "daub_wattle_lannisport_brick_oak/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:3"
         },
@@ -32320,7 +32340,7 @@
         },
         {
             "blockName": "timber_northern_grey_brick_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32328,13 +32348,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Grey Brick Crosshatch",
             "textures": [
-                "daub_wattle_block_0/northern_grey_brick_crossed"
+                "daub_wattle_grey_brick_northern/cross_side",
+                "daub_wattle_grey_brick_northern/top",
+                "daub_wattle_grey_brick_northern/cross_side",
+                "daub_wattle_grey_brick_northern/cross_left",
+                "daub_wattle_grey_brick_northern/cross_right",
+                "daub_wattle_grey_brick_northern/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_3:4"
         },
         {
             "blockName": "timber_northern_grey_brick_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32342,27 +32367,37 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Grey Brick Lefthatch",
             "textures": [
-                "daub_wattle_block_0/northern_grey_brick_left"
+                "daub_wattle_grey_brick_northern/cross_side",
+                "daub_wattle_grey_brick_northern/top",
+                "daub_wattle_grey_brick_northern/left_side",
+                "daub_wattle_grey_brick_northern/left_left",
+                "daub_wattle_grey_brick_northern/left_right",
+                "daub_wattle_grey_brick_northern/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_3:5"
         },
         {
             "blockName": "timber_northern_grey_brick_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
             "resistance": 5,
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Grey Brick Righthatch",
-            "textures": [
-                "daub_wattle_block_0/northern_grey_brick_right"
+             "textures": [
+                "daub_wattle_grey_brick_northern/cross_side",
+                "daub_wattle_grey_brick_northern/top",
+                "daub_wattle_grey_brick_northern/right_side",
+                "daub_wattle_grey_brick_northern/right_left",
+                "daub_wattle_grey_brick_northern/right_right",
+                "daub_wattle_grey_brick_northern/right_both"
             ],
-            "legacyBlockID": "daub_wattle_block_3:6"
+           "legacyBlockID": "daub_wattle_block_3:6"
         },
         {
             "blockName": "timber_northern_grey_brick_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32370,7 +32405,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Grey Brick Frame",
             "textures": [
-                "daub_wattle_block_0/northern_grey_brick_open"
+                "daub_wattle_grey_brick_northern/cross_side",
+                "daub_wattle_grey_brick_northern/top",
+                "daub_wattle_grey_brick_northern/open_side",
+                "daub_wattle_grey_brick_northern/open_left",
+                "daub_wattle_grey_brick_northern/open_right",
+                "daub_wattle_grey_brick_northern/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_3:7"
         },
@@ -32564,7 +32604,7 @@
         },
         {
             "blockName": "timber_northern_green_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32572,13 +32612,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Green Crosshatch",
             "textures": [
-                "daub_wattle_block_0/northern_green_crossed"
+                "daub_wattle_green_northern/cross_side",
+                "daub_wattle_green_northern/top",
+                "daub_wattle_green_northern/cross_side",
+                "daub_wattle_green_northern/cross_left",
+                "daub_wattle_green_northern/cross_right",
+                "daub_wattle_green_northern/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_4:4"
         },
         {
             "blockName": "timber_northern_green_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32586,13 +32631,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Green Lefthatch",
             "textures": [
-                "daub_wattle_block_0/northern_green_left"
+                "daub_wattle_green_northern/cross_side",
+                "daub_wattle_green_northern/top",
+                "daub_wattle_green_northern/left_side",
+                "daub_wattle_green_northern/left_left",
+                "daub_wattle_green_northern/left_right",
+                "daub_wattle_green_northern/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_4:5"
         },
         {
             "blockName": "timber_northern_green_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32600,13 +32650,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Green Righthatch",
             "textures": [
-                "daub_wattle_block_0/northern_green_right"
+                "daub_wattle_green_northern/cross_side",
+                "daub_wattle_green_northern/top",
+                "daub_wattle_green_northern/right_side",
+                "daub_wattle_green_northern/right_left",
+                "daub_wattle_green_northern/right_right",
+                "daub_wattle_green_northern/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_4:6"
         },
         {
             "blockName": "timber_northern_green_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32614,7 +32669,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Green Frame",
             "textures": [
-                "daub_wattle_block_0/northern_green_open"
+                "daub_wattle_green_northern/cross_side",
+                "daub_wattle_green_northern/top",
+                "daub_wattle_green_northern/open_side",
+                "daub_wattle_green_northern/open_left",
+                "daub_wattle_green_northern/open_right",
+                "daub_wattle_green_northern/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_4:7"
         },
@@ -32738,7 +32798,7 @@
         },
         {
             "blockName": "timber_oak_lannisport_brick_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32746,7 +32806,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Lannisport Brick Vertical",
             "textures": [
-                "daub_wattle_block_0/oak_lannisport_vert"
+                "daub_wattle_lannisport_brick_oak/cross_side",
+                "daub_wattle_lannisport_brick_oak/top",
+                "daub_wattle_lannisport_brick_oak/vert_side",
+                "daub_wattle_lannisport_brick_oak/vert_down",
+                "daub_wattle_lannisport_brick_oak/vert_up",
+                "daub_wattle_lannisport_brick_oak/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:8"
         },
@@ -32814,7 +32879,7 @@
         },
         {
             "blockName": "timber_northern_grey_brick_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32822,7 +32887,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Grey Brick Vertical",
             "textures": [
-                "daub_wattle_block_0/northern_grey_brick_vert"
+                "daub_wattle_grey_brick_northern/cross_side",
+                "daub_wattle_grey_brick_northern/top",
+                "daub_wattle_grey_brick_northern/vert_side",
+                "daub_wattle_grey_brick_northern/vert_down",
+                "daub_wattle_grey_brick_northern/vert_up",
+                "daub_wattle_grey_brick_northern/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:13"
         },
@@ -32876,7 +32946,7 @@
         },
         {
             "blockName": "timber_northern_green_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32884,7 +32954,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Green Vertical",
             "textures": [
-                "daub_wattle_block_0/northern_green_vert"
+                "daub_wattle_green_northern/cross_side",
+                "daub_wattle_green_northern/top",
+    	        "daub_wattle_green_northern/vert_side",
+        	    "daub_wattle_green_northern/vert_down",
+            	"daub_wattle_green_northern/vert_up",
+            	"daub_wattle_green_northern/vert_both"           
             ],
             "legacyBlockID": "daub_wattle_block_6:1"
         },
