@@ -6067,7 +6067,7 @@
         },
         {
             "blockName": "timber_oak_brown_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6075,13 +6075,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Brown Crosshatch",
             "textures": [
-                "daub_wattle_block_0/oak_brown_crossed"
+                "daub_wattle_brown_oak/cross_side",
+                "daub_wattle_brown_oak/top",
+                "daub_wattle_brown_oak/cross_side",
+                "daub_wattle_brown_oak/cross_left",
+                "daub_wattle_brown_oak/cross_right",
+                "daub_wattle_brown_oak/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_0:0"
         },
         {
             "blockName": "timber_oak_brown_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6089,13 +6094,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Brown Lefthatch",
             "textures": [
-                "daub_wattle_block_0/oak_brown_left"
+                "daub_wattle_brown_oak/cross_side",
+                "daub_wattle_brown_oak/top",
+                "daub_wattle_brown_oak/left_side",
+                "daub_wattle_brown_oak/left_left",
+                "daub_wattle_brown_oak/left_right",
+                "daub_wattle_brown_oak/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_0:1"
         },
         {
             "blockName": "timber_oak_brown_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6103,13 +6113,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Brown Righthatch",
             "textures": [
-                "daub_wattle_block_0/oak_brown_right"
+                "daub_wattle_brown_oak/cross_side",
+                "daub_wattle_brown_oak/top",
+                "daub_wattle_brown_oak/right_side",
+                "daub_wattle_brown_oak/right_left",
+                "daub_wattle_brown_oak/right_right",
+                "daub_wattle_brown_oak/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_0:2"
         },
         {
             "blockName": "timber_oak_brown_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6117,7 +6132,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Brown Frame",
             "textures": [
-                "daub_wattle_block_0/oak_brown_open"
+                "daub_wattle_brown_oak/cross_side",
+                "daub_wattle_brown_oak/top",
+                "daub_wattle_brown_oak/open_side",
+                "daub_wattle_brown_oak/open_left",
+                "daub_wattle_brown_oak/open_right",
+                "daub_wattle_brown_oak/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_0:3"
         },
@@ -32108,7 +32128,7 @@
         },
         {
             "blockName": "timber_northern_brown_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32116,13 +32136,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Brown Crosshatch",
             "textures": [
-                "daub_wattle_block_0/northern_brown_crossed"
+                "daub_wattle_brown_northern/cross_side",
+                "daub_wattle_brown_northern/top",
+                "daub_wattle_brown_northern/cross_side",
+                "daub_wattle_brown_northern/cross_left",
+                "daub_wattle_brown_northern/cross_right",
+                "daub_wattle_brown_northern/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:8"
         },
         {
             "blockName": "timber_northern_brown_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32130,13 +32155,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Brown Lefthatch",
             "textures": [
-                "daub_wattle_block_0/northern_brown_left"
+                "daub_wattle_brown_northern/cross_side",
+                "daub_wattle_brown_northern/top",
+                "daub_wattle_brown_northern/left_side",
+                "daub_wattle_brown_northern/left_left",
+                "daub_wattle_brown_northern/left_right",
+                "daub_wattle_brown_northern/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:9"
         },
         {
             "blockName": "timber_northern_brown_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32144,13 +32174,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Brown Righthatch",
             "textures": [
-                "daub_wattle_block_0/northern_brown_right"
+                "daub_wattle_brown_northern/cross_side",
+                "daub_wattle_brown_northern/top",
+                "daub_wattle_brown_northern/right_side",
+                "daub_wattle_brown_northern/right_left",
+                "daub_wattle_brown_northern/right_right",
+                "daub_wattle_brown_northern/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:10"
         },
         {
             "blockName": "timber_northern_brown_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32158,7 +32193,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Brown Frame",
             "textures": [
-                "daub_wattle_block_0/northern_brown_open"
+                "daub_wattle_brown_northern/cross_side",
+                "daub_wattle_brown_northern/top",
+                "daub_wattle_brown_northern/open_side",
+                "daub_wattle_brown_northern/open_left",
+                "daub_wattle_brown_northern/open_right",
+                "daub_wattle_brown_northern/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:11"
         },
@@ -32448,7 +32488,7 @@
         },
         {
             "blockName": "timber_northern_blue_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32456,13 +32496,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Blue Crosshatch",
             "textures": [
-                "daub_wattle_block_0/northern_blue_crossed"
+                "daub_wattle_blue_northern/cross_side",
+                "daub_wattle_blue_northern/top",
+                "daub_wattle_blue_northern/cross_side",
+                "daub_wattle_blue_northern/cross_left",
+                "daub_wattle_blue_northern/cross_right",
+                "daub_wattle_blue_northern/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_4:0"
         },
         {
             "blockName": "timber_northern_blue_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32470,13 +32515,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Blue Lefthatch",
             "textures": [
-                "daub_wattle_block_0/northern_blue_left"
+                "daub_wattle_blue_northern/cross_side",
+                "daub_wattle_blue_northern/top",
+                "daub_wattle_blue_northern/left_side",
+                "daub_wattle_blue_northern/left_left",
+                "daub_wattle_blue_northern/left_right",
+                "daub_wattle_blue_northern/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_4:1"
         },
         {
             "blockName": "timber_northern_blue_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32484,13 +32534,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Blue Righthatch",
             "textures": [
-                "daub_wattle_block_0/northern_blue_right"
+                "daub_wattle_blue_northern/cross_side",
+                "daub_wattle_blue_northern/top",
+                "daub_wattle_blue_northern/right_side",
+                "daub_wattle_blue_northern/right_left",
+                "daub_wattle_blue_northern/right_right",
+                "daub_wattle_blue_northern/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_4:2"
         },
         {
             "blockName": "timber_northern_blue_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32498,7 +32553,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Blue Frame",
             "textures": [
-                "daub_wattle_block_0/northern_blue_open"
+                "daub_wattle_blue_northern/cross_side",
+                "daub_wattle_blue_northern/top",
+                "daub_wattle_blue_northern/open_side",
+                "daub_wattle_blue_northern/open_left",
+                "daub_wattle_blue_northern/open_right",
+                "daub_wattle_blue_northern/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_4:3"
         },
@@ -32560,7 +32620,7 @@
         },
         {
             "blockName": "timber_oak_brown_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32568,7 +32628,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Brown Vertical",
             "textures": [
-                "daub_wattle_block_0/oak_brown_vert"
+                "daub_wattle_brown_oak/cross_side",
+                "daub_wattle_brown_oak/top",
+                "daub_wattle_brown_oak/vert_side",
+                "daub_wattle_brown_oak/vert_down",
+                "daub_wattle_brown_oak/vert_up",
+                "daub_wattle_brown_oak/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:0"
         },
@@ -32701,7 +32766,7 @@
         },
         {
             "blockName": "timber_northern_brown_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32709,7 +32774,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Brown Vertical",
             "textures": [
-                "daub_wattle_block_0/northern_brown_vert"
+                "daub_wattle_brown_northern/cross_side",
+                "daub_wattle_brown_northern/top",
+                "daub_wattle_brown_northern/vert_side",
+                "daub_wattle_brown_northern/vert_down",
+                "daub_wattle_brown_northern/vert_up",
+                "daub_wattle_brown_northern/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:10"
         },
@@ -32786,7 +32856,7 @@
         },
         {
             "blockName": "timber_northern_blue_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32794,7 +32864,13 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Blue Vertical",
             "textures": [
-                "daub_wattle_block_0/northern_blue_vert"
+                "daub_wattle_blue_northern/cross_side",
+                "daub_wattle_blue_northern/top",
+    	        "daub_wattle_blue_northern/vert_side",
+        	    "daub_wattle_blue_northern/vert_down",
+            	"daub_wattle_blue_northern/vert_up",
+            	"daub_wattle_blue_northern/vert_both"           
+            	     
             ],
             "legacyBlockID": "daub_wattle_block_6:0"
         },
@@ -32814,7 +32890,7 @@
         },
         {
             "blockName": "timber_oak_brown_close_studding",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32822,7 +32898,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Brown Close Studding",
             "textures": [
-                "daub_wattle_block_0/oak_brown_close"
+                "daub_wattle_brown_oak/cross_side",
+                "daub_wattle_brown_oak/top",
+                "daub_wattle_brown_oak/close_side",
+                "daub_wattle_brown_oak/close_down",
+                "daub_wattle_brown_oak/close_up",
+                "daub_wattle_brown_oak/close_both"
             ],
             "legacyBlockID": "daub_wattle_block_7:0"
         },
@@ -32871,7 +32952,7 @@
         },
         {
             "blockName": "timber_northern_brown_close_studding",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32879,7 +32960,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Northern Brown Close Studding",
             "textures": [
-                "daub_wattle_block_0/northern_brown_close"
+                "daub_wattle_brown_northern/cross_side",
+                "daub_wattle_brown_northern/top",
+                "daub_wattle_brown_northern/close_side",
+                "daub_wattle_brown_northern/close_down",
+                "daub_wattle_brown_northern/close_up",
+                "daub_wattle_brown_northern/close_both"
             ],
             "legacyBlockID": "daub_wattle_block_7:4"
         },

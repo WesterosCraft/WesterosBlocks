@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "westerosblocks:block/daub_wattle_brown_oak/close_side",
+    "bottom": "westerosblocks:block/daub_wattle_brown_oak/cross_side",
+    "top": "westerosblocks:block/daub_wattle_brown_oak/top",
+    "side": "westerosblocks:block/daub_wattle_brown_oak/close_down"
+  }
+}
