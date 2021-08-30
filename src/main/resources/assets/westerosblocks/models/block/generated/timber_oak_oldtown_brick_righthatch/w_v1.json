@@ -4,8 +4,8 @@
     "particle": "westerosblocks:block/daub_wattle_oldtown_brick_oak/top",
     "up": "westerosblocks:block/daub_wattle_oldtown_brick_oak/top",
     "down": "westerosblocks:block/daub_wattle_oldtown_brick_oak/cross_side",
-    "north": "westerosblocks:block/daub_wattle_oldtown_brick_oak/right_side",
-    "south": "westerosblocks:block/daub_wattle_oldtown_brick_oak/right_side",
+    "north": "westerosblocks:block/daub_wattle_oldtown_brick_oak/right_right",
+    "south": "westerosblocks:block/daub_wattle_oldtown_brick_oak/right_left",
     "east": "westerosblocks:block/daub_wattle_oldtown_brick_oak/right_side",
     "west": "westerosblocks:block/daub_wattle_oldtown_brick_oak/right_side"
   }

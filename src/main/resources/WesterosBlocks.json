@@ -28920,7 +28920,7 @@
         },
         {
             "blockName": "timber_oak_oldtown_brick_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -28928,13 +28928,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Oldtown Brick Crosshatch",
             "textures": [
-                "daub_wattle_block_0/oak_oldtown_crossed"
+                "daub_wattle_oldtown_brick_oak/cross_side",
+                "daub_wattle_oldtown_brick_oak/top",
+                "daub_wattle_oldtown_brick_oak/cross_side",
+                "daub_wattle_oldtown_brick_oak/cross_left",
+                "daub_wattle_oldtown_brick_oak/cross_right",
+                "daub_wattle_oldtown_brick_oak/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:4"
         },
         {
             "blockName": "timber_oak_oldtown_brick_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -28942,13 +28947,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Oldtown Brick Lefthatch",
             "textures": [
-                "daub_wattle_block_0/oak_oldtown_left"
+                "daub_wattle_oldtown_brick_oak/cross_side",
+                "daub_wattle_oldtown_brick_oak/top",
+                "daub_wattle_oldtown_brick_oak/left_side",
+                "daub_wattle_oldtown_brick_oak/left_left",
+                "daub_wattle_oldtown_brick_oak/left_right",
+                "daub_wattle_oldtown_brick_oak/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:5"
         },
         {
             "blockName": "timber_oak_oldtown_brick_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -28956,13 +28966,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Oldtown Brick Righthatch",
             "textures": [
-                "daub_wattle_block_0/oak_oldtown_right"
+                "daub_wattle_oldtown_brick_oak/cross_side",
+                "daub_wattle_oldtown_brick_oak/top",
+                "daub_wattle_oldtown_brick_oak/right_side",
+                "daub_wattle_oldtown_brick_oak/right_left",
+                "daub_wattle_oldtown_brick_oak/right_right",
+                "daub_wattle_oldtown_brick_oak/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:6"
         },
         {
             "blockName": "timber_oak_oldtown_brick_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -28970,7 +28985,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Oldtown Brick Frame",
             "textures": [
-                "daub_wattle_block_0/oak_oldtown_open"
+                "daub_wattle_oldtown_brick_oak/cross_side",
+                "daub_wattle_oldtown_brick_oak/top",
+                "daub_wattle_oldtown_brick_oak/open_side",
+                "daub_wattle_oldtown_brick_oak/open_left",
+                "daub_wattle_oldtown_brick_oak/open_right",
+                "daub_wattle_oldtown_brick_oak/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:7"
         },
@@ -32756,7 +32776,7 @@
         },
         {
             "blockName": "timber_oak_oldtown_brick_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32764,7 +32784,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Oldtown Brick Vertical",
             "textures": [
-                "daub_wattle_block_0/oak_oldtown_vert"
+                "daub_wattle_oldtown_brick_oak/cross_side",
+                "daub_wattle_oldtown_brick_oak/top",
+                "daub_wattle_oldtown_brick_oak/vert_side",
+                "daub_wattle_oldtown_brick_oak/vert_down",
+                "daub_wattle_oldtown_brick_oak/vert_up",
+                "daub_wattle_oldtown_brick_oak/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:5"
         },
