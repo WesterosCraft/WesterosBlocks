@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "westerosblocks:block/daub_wattle_orange_oak/top",
+    "up": "westerosblocks:block/daub_wattle_orange_oak/top",
+    "down": "westerosblocks:block/daub_wattle_orange_oak/cross_side",
+    "north": "westerosblocks:block/daub_wattle_orange_oak/open_left",
+    "south": "westerosblocks:block/daub_wattle_orange_oak/open_right",
+    "east": "westerosblocks:block/daub_wattle_orange_oak/open_side",
+    "west": "westerosblocks:block/daub_wattle_orange_oak/open_side"
+  }
+}

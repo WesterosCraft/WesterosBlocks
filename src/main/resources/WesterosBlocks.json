@@ -28884,7 +28884,7 @@
         },
         {
             "blockName": "timber_oak_reach_brick_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -28892,13 +28892,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Reach Brick Crosshatch",
             "textures": [
-                "daub_wattle_block_0/oak_reach_crossed"
+                "daub_wattle_reach_brick_oak/cross_side",
+                "daub_wattle_reach_brick_oak/top",
+                "daub_wattle_reach_brick_oak/cross_side",
+                "daub_wattle_reach_brick_oak/cross_left",
+                "daub_wattle_reach_brick_oak/cross_right",
+                "daub_wattle_reach_brick_oak/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:0"
         },
         {
             "blockName": "timber_oak_reach_brick_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -28906,13 +28911,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Reach Brick Lefthatch",
             "textures": [
-                "daub_wattle_block_0/oak_reach_left"
+                "daub_wattle_reach_brick_oak/cross_side",
+                "daub_wattle_reach_brick_oak/top",
+                "daub_wattle_reach_brick_oak/left_side",
+                "daub_wattle_reach_brick_oak/left_left",
+                "daub_wattle_reach_brick_oak/left_right",
+                "daub_wattle_reach_brick_oak/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:1"
         },
         {
             "blockName": "timber_oak_reach_brick_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -28920,13 +28930,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Reach Brick Righthatch",
             "textures": [
-                "daub_wattle_block_0/oak_reach_right"
+                "daub_wattle_reach_brick_oak/cross_side",
+                "daub_wattle_reach_brick_oak/top",
+                "daub_wattle_reach_brick_oak/right_side",
+                "daub_wattle_reach_brick_oak/right_left",
+                "daub_wattle_reach_brick_oak/right_right",
+                "daub_wattle_reach_brick_oak/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:2"
         },
         {
             "blockName": "timber_oak_reach_brick_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -28934,7 +28949,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Reach Brick Frame",
             "textures": [
-                "daub_wattle_block_0/oak_reach_open"
+                "daub_wattle_reach_brick_oak/cross_side",
+                "daub_wattle_reach_brick_oak/top",
+                "daub_wattle_reach_brick_oak/open_side",
+                "daub_wattle_reach_brick_oak/open_left",
+                "daub_wattle_reach_brick_oak/open_right",
+                "daub_wattle_reach_brick_oak/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:3"
         },
@@ -29072,7 +29092,7 @@
         },
         {
             "blockName": "timber_oak_orange_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -29080,13 +29100,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Orange Crosshatch",
             "textures": [
-                "daub_wattle_block_0/oak_orange_crossed"
+                "daub_wattle_orange_oak/cross_side",
+                "daub_wattle_orange_oak/top",
+                "daub_wattle_orange_oak/cross_side",
+                "daub_wattle_orange_oak/cross_left",
+                "daub_wattle_orange_oak/cross_right",
+                "daub_wattle_orange_oak/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:12"
         },
         {
             "blockName": "timber_oak_orange_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -29094,13 +29119,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Orange Lefthatch",
             "textures": [
-                "daub_wattle_block_0/oak_orange_left"
+                "daub_wattle_orange_oak/cross_side",
+                "daub_wattle_orange_oak/top",
+                "daub_wattle_orange_oak/left_side",
+                "daub_wattle_orange_oak/left_left",
+                "daub_wattle_orange_oak/left_right",
+                "daub_wattle_orange_oak/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:13"
         },
         {
             "blockName": "timber_oak_orange_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -29108,13 +29138,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Orange Righthatch",
             "textures": [
-                "daub_wattle_block_0/oak_orange_right"
+                "daub_wattle_orange_oak/cross_side",
+                "daub_wattle_orange_oak/top",
+                "daub_wattle_orange_oak/right_side",
+                "daub_wattle_orange_oak/right_left",
+                "daub_wattle_orange_oak/right_right",
+                "daub_wattle_orange_oak/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:14"
         },
         {
             "blockName": "timber_oak_orange_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -29122,7 +29157,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Orange Frame",
             "textures": [
-                "daub_wattle_block_0/oak_orange_open"
+                "daub_wattle_orange_oak/cross_side",
+                "daub_wattle_orange_oak/top",
+                "daub_wattle_orange_oak/open_side",
+                "daub_wattle_orange_oak/open_left",
+                "daub_wattle_orange_oak/open_right",
+                "daub_wattle_orange_oak/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_1:15"
         },
@@ -32807,7 +32847,7 @@
         },
         {
             "blockName": "timber_oak_reach_brick_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32815,7 +32855,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Reach Brick Vertical",
             "textures": [
-                "daub_wattle_block_0/oak_reach_vert"
+                "daub_wattle_reach_brick_oak/cross_side",
+                "daub_wattle_reach_brick_oak/top",
+                "daub_wattle_reach_brick_oak/vert_side",
+                "daub_wattle_reach_brick_oak/vert_down",
+                "daub_wattle_reach_brick_oak/vert_up",
+                "daub_wattle_reach_brick_oak/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:4"
         },
@@ -32854,7 +32899,7 @@
         },
         {
             "blockName": "timber_oak_orange_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32862,7 +32907,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Oak Orange Vertical",
             "textures": [
-                "daub_wattle_block_0/oak_orange_vert"
+                "daub_wattle_orange_oak/cross_side",
+                "daub_wattle_orange_oak/top",
+                "daub_wattle_orange_oak/vert_side",
+                "daub_wattle_orange_oak/vert_down",
+                "daub_wattle_orange_oak/vert_up",
+                "daub_wattle_orange_oak/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:7"
         },
