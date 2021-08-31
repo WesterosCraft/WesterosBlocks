@@ -6219,7 +6219,7 @@
         },
         {
             "blockName": "timber_red_white_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6227,13 +6227,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Red White Crosshatch",
             "textures": [
-                "daub_wattle_block_0/red_white_crossed"
+                "daub_wattle_white_red/cross_side",
+                "daub_wattle_white_red/top",
+                "daub_wattle_white_red/cross_side",
+                "daub_wattle_white_red/cross_left",
+                "daub_wattle_white_red/cross_right",
+                "daub_wattle_white_red/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_0:8"
         },
         {
             "blockName": "timber_red_white_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6241,13 +6246,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Red White Lefthatch",
             "textures": [
-                "daub_wattle_block_0/red_white_left"
+                "daub_wattle_white_red/cross_side",
+                "daub_wattle_white_red/top",
+                "daub_wattle_white_red/left_side",
+                "daub_wattle_white_red/left_left",
+                "daub_wattle_white_red/left_right",
+                "daub_wattle_white_red/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_0:9"
         },
         {
             "blockName": "timber_red_white_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6255,13 +6265,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Red White Righthatch",
             "textures": [
-                "daub_wattle_block_0/red_white_right"
+                "daub_wattle_white_red/cross_side",
+                "daub_wattle_white_red/top",
+                "daub_wattle_white_red/right_side",
+                "daub_wattle_white_red/right_left",
+                "daub_wattle_white_red/right_right",
+                "daub_wattle_white_red/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_0:10"
         },
         {
             "blockName": "timber_red_white_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6269,7 +6284,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Red White Frame",
             "textures": [
-                "daub_wattle_block_0/red_white_open"
+                "daub_wattle_white_red/cross_side",
+                "daub_wattle_white_red/top",
+                "daub_wattle_white_red/open_side",
+                "daub_wattle_white_red/open_left",
+                "daub_wattle_white_red/open_right",
+                "daub_wattle_white_red/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_0:11"
         },
@@ -32192,7 +32212,7 @@
         },
         {
             "blockName": "timber_whitewashed_crosshatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32200,13 +32220,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Whitewashed Crosshatch",
             "textures": [
-                "daub_wattle_block_0/whitewashed_crossed"
+                "daub_wattle_whitewashed/cross_side",
+                "daub_wattle_whitewashed/top",
+                "daub_wattle_whitewashed/cross_side",
+                "daub_wattle_whitewashed/cross_left",
+                "daub_wattle_whitewashed/cross_right",
+                "daub_wattle_whitewashed/cross_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:4"
         },
         {
             "blockName": "timber_whitewashed_lefthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32214,13 +32239,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Whitewashed Lefthatch",
             "textures": [
-                "daub_wattle_block_0/whitewashed_left"
+                "daub_wattle_whitewashed/cross_side",
+                "daub_wattle_whitewashed/top",
+                "daub_wattle_whitewashed/left_side",
+                "daub_wattle_whitewashed/left_left",
+                "daub_wattle_whitewashed/left_right",
+                "daub_wattle_whitewashed/left_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:5"
         },
         {
             "blockName": "timber_whitewashed_righthatch",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32228,13 +32258,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Whitewashed Righthatch",
             "textures": [
-                "daub_wattle_block_0/whitewashed_right"
+                "daub_wattle_whitewashed/cross_side",
+                "daub_wattle_whitewashed/top",
+                "daub_wattle_whitewashed/right_side",
+                "daub_wattle_whitewashed/right_left",
+                "daub_wattle_whitewashed/right_right",
+                "daub_wattle_whitewashed/right_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:6"
         },
         {
             "blockName": "timber_whitewashed_frame",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32242,7 +32277,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Whitewashed Frame",
             "textures": [
-                "daub_wattle_block_0/whitewashed_open"
+                "daub_wattle_whitewashed/cross_side",
+                "daub_wattle_whitewashed/top",
+                "daub_wattle_whitewashed/open_side",
+                "daub_wattle_whitewashed/open_left",
+                "daub_wattle_whitewashed/open_right",
+                "daub_wattle_whitewashed/open_both"
             ],
             "legacyBlockID": "daub_wattle_block_2:7"
         },
@@ -32878,7 +32918,7 @@
         },
         {
             "blockName": "timber_red_white_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32886,7 +32926,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Red White Vertical",
             "textures": [
-                "daub_wattle_block_0/red_white_vert"
+                "daub_wattle_white_red/cross_side",
+                "daub_wattle_white_red/top",
+                "daub_wattle_white_red/vert_side",
+                "daub_wattle_white_red/vert_down",
+                "daub_wattle_white_red/vert_up",
+                "daub_wattle_white_red/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:2"
         },
@@ -33002,7 +33047,7 @@
         },
         {
             "blockName": "timber_whitewashed_vertical",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33010,7 +33055,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Whitewashed Vertical",
             "textures": [
-                "daub_wattle_block_0/whitewashed_vert"
+                "daub_wattle_whitewashed/cross_side",
+                "daub_wattle_whitewashed/top",
+                "daub_wattle_whitewashed/vert_side",
+                "daub_wattle_whitewashed/vert_down",
+                "daub_wattle_whitewashed/vert_up",
+                "daub_wattle_whitewashed/vert_both"
             ],
             "legacyBlockID": "daub_wattle_block_5:9"
         },
@@ -33223,7 +33273,7 @@
         },
         {
             "blockName": "timber_whitewashed_close_studding",
-            "blockType": "solid",
+            "blockType": "solidvert",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33231,7 +33281,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Timber Whitewashed Close Studding",
             "textures": [
-                "daub_wattle_block_0/whitewashed_close"
+                "daub_wattle_whitewashed/cross_side",
+                "daub_wattle_whitewashed/top",
+                "daub_wattle_whitewashed/close_side",
+                "daub_wattle_whitewashed/close_down",
+                "daub_wattle_whitewashed/close_up",
+                "daub_wattle_whitewashed/close_both"
             ],
             "legacyBlockID": "daub_wattle_block_7:3"
         },
