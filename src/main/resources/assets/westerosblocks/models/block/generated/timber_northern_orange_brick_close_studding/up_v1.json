@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/cube_bottom_top",
+  "textures": {
+    "particle": "westerosblocks:block/daub_wattle_orange_brick_northern/close_side",
+    "bottom": "westerosblocks:block/daub_wattle_orange_brick_northern/cross_side",
+    "top": "westerosblocks:block/daub_wattle_orange_brick_northern/top",
+    "side": "westerosblocks:block/daub_wattle_orange_brick_northern/close_up"
+  }
+}
