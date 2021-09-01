@@ -3251,8 +3251,10 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Fallen Weirwood Leaves",
-            "textures": [
-                "cuboid_block_0/fallen_leaves_weirwood"
+            "randomTextures": [
+               { "textures": [ "fallen_leaves_weirwood/side1" ] },
+               { "textures": [ "fallen_leaves_weirwood/side2" ] },
+               { "textures": [ "fallen_leaves_weirwood/side3" ] }
             ],
             "boundingBox": {
                 "xMin": 0,
