@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "westerosblocks:block/deadbush/desert_grass_tall_light"
+  }
+}

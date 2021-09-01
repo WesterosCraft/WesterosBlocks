@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "westerosblocks:block/deadbush/forest_grass_thicktuft_light"
+  }
+}
