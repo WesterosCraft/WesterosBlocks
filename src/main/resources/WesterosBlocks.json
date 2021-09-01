@@ -23335,7 +23335,7 @@
         },
         {
             "blockName": "dead_bracken",
-            "blockType": "plant",
+            "blockType": "plantvert",
             "stepSound": "grass",
             "material": "plants",
             "creativeTab": "WesterosPlants",
@@ -23348,8 +23348,19 @@
                 "zMax": 0.7
             },
             "label": "Dead Bracken",
-            "textures": [
-                "web_block_1/bracken_dead"
+            "randomTextures": [
+              { "textures": [ "dead_bracken/side1", "dead_bracken/top1", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side2", "dead_bracken/top2", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side3", "dead_bracken/top3", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side4", "dead_bracken/top4", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side5", "dead_bracken/top1", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side6", "dead_bracken/top2", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side1", "dead_bracken/top3", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side2", "dead_bracken/top4", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side3", "dead_bracken/top1", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side4", "dead_bracken/top2", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side5", "dead_bracken/top3", "dead_bracken/up_both", "dead_bracken/up_both" ] }, 
+              { "textures": [ "dead_bracken/side6", "dead_bracken/top4", "dead_bracken/up_both", "dead_bracken/up_both" ] }
             ],
             "legacyBlockID": "forest_block_0:4"
         },

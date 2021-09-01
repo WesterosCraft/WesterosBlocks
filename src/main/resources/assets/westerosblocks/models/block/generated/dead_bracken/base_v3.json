@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/dead_bracken/side1"
+    "cross": "westerosblocks:block/dead_bracken/side3"
   }
 }
