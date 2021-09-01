@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/fallen_leaves_weirwood/side1",
-    "txt5": "westerosblocks:block/fallen_leaves_weirwood/side1",
-    "txt2": "westerosblocks:block/fallen_leaves_weirwood/side1",
-    "txt3": "westerosblocks:block/fallen_leaves_weirwood/side1",
-    "txt0": "westerosblocks:block/fallen_leaves_weirwood/side1",
-    "txt1": "westerosblocks:block/fallen_leaves_weirwood/side1",
-    "particle": "westerosblocks:block/fallen_leaves_weirwood/side1"
+    "txt4": "westerosblocks:block/fallen_leaves_weirwood/side2",
+    "txt5": "westerosblocks:block/fallen_leaves_weirwood/side2",
+    "txt2": "westerosblocks:block/fallen_leaves_weirwood/side2",
+    "txt3": "westerosblocks:block/fallen_leaves_weirwood/side2",
+    "txt0": "westerosblocks:block/fallen_leaves_weirwood/side2",
+    "txt1": "westerosblocks:block/fallen_leaves_weirwood/side2",
+    "particle": "westerosblocks:block/fallen_leaves_weirwood/side2"
   },
   "elements": [
     {
