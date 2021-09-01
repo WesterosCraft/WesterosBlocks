@@ -7338,8 +7338,17 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Dorne Dusty Dirt Slab",
-            "textures": [
-                "ground_block_0/dirt_dusty"
+            "randomTextures": [
+              { "textures": [ "dorne_dusty_dirt/side1" ], "weight": 100 },
+              { "textures": [ "dorne_dusty_dirt/side2" ], "weight": 100 },
+              { "textures": [ "dorne_dusty_dirt/side3" ], "weight": 20 },
+              { "textures": [ "dorne_dusty_dirt/side4" ], "weight": 100 },
+              { "textures": [ "dorne_dusty_dirt/side5" ], "weight": 100 },
+              { "textures": [ "dorne_dusty_dirt/side6" ], "weight": 153 },
+              { "textures": [ "dorne_dusty_dirt/side7" ], "weight": 77 },
+              { "textures": [ "dorne_dusty_dirt/side8" ], "weight": 20 },
+              { "textures": [ "dorne_dusty_dirt/side9" ], "weight": 77 },
+              { "textures": [ "dorne_dusty_dirt/side10" ], "weight": 77 }
             ],
             "legacyBlockID": "random_slab_block_1:5"
         },
@@ -14183,8 +14192,16 @@
             "resistance": 2,
             "creativeTab": "WesterosBlocks",
             "label": "Dorne Dry Soil",
-            "textures": [
-                "ground_block_0/soil_dried"
+            "randomTextures": [
+              { "textures": [ "dorne_dry_soil/side1" ] },
+              { "textures": [ "dorne_dry_soil/side2" ] },
+              { "textures": [ "dorne_dry_soil/side3" ] },
+              { "textures": [ "dorne_dry_soil/side4" ] },
+              { "textures": [ "dorne_dry_soil/side5" ] },
+              { "textures": [ "dorne_dry_soil/side6" ] },
+              { "textures": [ "dorne_dry_soil/side7" ] },
+              { "textures": [ "dorne_dry_soil/side8" ] },
+              { "textures": [ "dorne_dry_soil/side9" ] }
             ],
             "legacyBlockID": "solid_blocks_1:1"
         },
@@ -14197,8 +14214,17 @@
             "resistance": 2,
             "creativeTab": "WesterosBlocks",
             "label": "Dorne Dusty Dirt",
-            "textures": [
-                "ground_block_0/dirt_dusty"
+            "randomTextures": [
+              { "textures": [ "dorne_dusty_dirt/side1" ], "weight": 100 },
+              { "textures": [ "dorne_dusty_dirt/side2" ], "weight": 100 },
+              { "textures": [ "dorne_dusty_dirt/side3" ], "weight": 20 },
+              { "textures": [ "dorne_dusty_dirt/side4" ], "weight": 100 },
+              { "textures": [ "dorne_dusty_dirt/side5" ], "weight": 100 },
+              { "textures": [ "dorne_dusty_dirt/side6" ], "weight": 153 },
+              { "textures": [ "dorne_dusty_dirt/side7" ], "weight": 77 },
+              { "textures": [ "dorne_dusty_dirt/side8" ], "weight": 20 },
+              { "textures": [ "dorne_dusty_dirt/side9" ], "weight": 77 },
+              { "textures": [ "dorne_dusty_dirt/side10" ], "weight": 77 }
             ],
             "legacyBlockID": "solid_blocks_1:2"
         },
@@ -16102,8 +16128,10 @@
             },
             "label": "Dead Bush",
             "colorMult": "textures/colormap/deadbush",
-            "textures": [
-                "tallgrass_block_0/dorne_bush_thorny"
+            "randomTextures": [
+              { "textures": [ "dorne_bush_thorny/side1" ] },
+              { "textures": [ "dorne_bush_thorny/side2" ] },
+              { "textures": [ "dorne_bush_thorny/side3" ] }
             ],
             "legacyBlockID": "dead_bush_block_0:0"
         },

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "westerosblocks:block/dorne_dusty_dirt/side6",
+    "top": "westerosblocks:block/dorne_dusty_dirt/side6",
+    "side": "westerosblocks:block/dorne_dusty_dirt/side6",
+    "particle": "westerosblocks:block/dorne_dusty_dirt/side6"
+  }
+}

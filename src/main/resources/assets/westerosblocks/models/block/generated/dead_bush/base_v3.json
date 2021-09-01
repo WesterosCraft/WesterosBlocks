@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/tinted_cross",
   "textures": {
-    "cross": "westerosblocks:block/dorne_bush_thorny/side1"
+    "cross": "westerosblocks:block/dorne_bush_thorny/side3"
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "up": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "north": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "south": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "west": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "east": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "particle": "westerosblocks:block/ground_block_0/dirt_dusty"
+    "down": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "up": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "north": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "south": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "west": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "east": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "particle": "westerosblocks:block/dorne_dusty_dirt/side1"
   }
 }

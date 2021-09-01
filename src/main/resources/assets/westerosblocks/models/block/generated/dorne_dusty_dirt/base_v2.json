@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/dorne_dusty_dirt/side1"
+    "all": "westerosblocks:block/dorne_dusty_dirt/side2"
   }
 }
