@@ -1016,6 +1016,8 @@ components:
                 around Y axis (0, 90, 180, 270 degrees)
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            condStates:
+              $ref: "#/components/schemas/CondStates"
     leaves:
       title: blockType='leaves'
       allOf:
