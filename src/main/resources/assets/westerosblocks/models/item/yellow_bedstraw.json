@@ -1,6 +1,4 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/flower_block_0/yellow_bedstraw"
-  }
+  "parent": "westerosblocks:block/generated/yellow_bedstraw/base_v1",
+  "textures": {}
 }

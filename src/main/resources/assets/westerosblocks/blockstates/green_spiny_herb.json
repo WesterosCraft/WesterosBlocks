@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/green_spiny_herb/base_v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/green_spiny_herb/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/green_spiny_herb/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/green_spiny_herb/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/green_spiny_herb/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/green_spiny_herb/base_v5"
+      }
+    ]
   }
 }

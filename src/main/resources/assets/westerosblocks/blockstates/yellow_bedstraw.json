@@ -1,7 +1,48 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/yellow_bedstraw/base_v1"
-    }
+    "up=false,down=true": [
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/down_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/down_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/down_v3"
+      }
+    ],
+    "up=false,down=false": [
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/base_v3"
+      }
+    ],
+    "up=true,down=true": [
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/both_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/both_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/both_v3"
+      }
+    ],
+    "up=true,down=false": [
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/up_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/up_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_bedstraw/up_v3"
+      }
+    ]
   }
 }

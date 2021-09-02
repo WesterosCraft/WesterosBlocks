@@ -1,6 +1,4 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/flower_block_1/yellow_sunflower"
-  }
+  "parent": "westerosblocks:block/generated/yellow_sunflower/base_v1",
+  "textures": {}
 }

@@ -1,7 +1,42 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/dead_scrub_grass/base_v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v1",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v2",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v3",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v4",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v5",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v6",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v7",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v8",
+        "weight": 15
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_scrub_grass/base_v9",
+        "weight": 15
+      }
+    ]
   }
 }

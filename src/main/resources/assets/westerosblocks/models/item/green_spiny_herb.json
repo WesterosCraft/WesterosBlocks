@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/flower_block_0/green_spiny_herb"
+    "layer0": "westerosblocks:block/flowers/flower_block_0/green_spiny_herb1"
   }
 }

@@ -1,7 +1,12 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/yellow_daisies/base_v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/yellow_daisies/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/yellow_daisies/base_v2"
+      }
+    ]
   }
 }

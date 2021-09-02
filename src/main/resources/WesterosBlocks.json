@@ -437,7 +437,7 @@
             },
             "label": "Yellow Wildflowers",
             "textures": [
-                "flower_block_0/yellow_wildflowers"
+                "flowers/flower_block_0/yellow_wildflowers"
             ],
             "legacyBlockID": "yellow_flower_block_0:0"
         },
@@ -455,8 +455,12 @@
                 "zMax": 0.7
             },
             "label": "Green Spiny Herb",
-            "textures": [
-                "flower_block_0/green_spiny_herb"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_0/green_spiny_herb1" ] },
+              { "textures": [ "flowers/flower_block_0/green_spiny_herb2" ] },
+              { "textures": [ "flowers/flower_block_0/green_spiny_herb3" ] },
+              { "textures": [ "flowers/flower_block_0/green_spiny_herb4" ] },
+              { "textures": [ "flowers/flower_block_0/green_spiny_herb5" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:1"
         },
@@ -475,7 +479,7 @@
             },
             "label": "Green Leafy Herb",
             "textures": [
-                "flower_block_0/green_leafy_herb"
+                "flowers/flower_block_0/green_leafy_herb"
             ],
             "legacyBlockID": "yellow_flower_block_0:2"
         },
@@ -493,8 +497,11 @@
                 "zMax": 0.7
             },
             "label": "Orange Marigolds",
-            "textures": [
-                "flower_block_0/orange_marigolds"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_0/orange_marigolds1" ] },
+              { "textures": [ "flowers/flower_block_0/orange_marigolds2" ] },
+              { "textures": [ "flowers/flower_block_0/orange_marigolds3" ] },
+              { "textures": [ "flowers/flower_block_0/orange_marigolds4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:3"
         },
@@ -512,8 +519,9 @@
                 "zMax": 0.7
             },
             "label": "Orange Trollius",
-            "textures": [
-                "flower_block_0/orange_trollius"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_0/orange_trollius1" ] },
+               { "textures": [ "flowers/flower_block_0/orange_trollius2" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:4"
         },
@@ -531,8 +539,11 @@
                 "zMax": 0.7
             },
             "label": "Blue Forget-me-nots",
-            "textures": [
-                "flower_block_0/blue_forgetmenots"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_0/blue_forgetmenots1" ] },
+              { "textures": [ "flowers/flower_block_0/blue_forgetmenots2" ] },
+              { "textures": [ "flowers/flower_block_0/blue_forgetmenots3" ] },
+              { "textures": [ "flowers/flower_block_0/blue_forgetmenots4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:5"
         },
@@ -551,7 +562,7 @@
             },
             "label": "Pink Wildflowers",
             "textures": [
-                "flower_block_0/pink_wildflowers"
+                "flowers/flower_block_0/pink_wildflowers"
             ],
             "legacyBlockID": "yellow_flower_block_0:6"
         },
@@ -570,7 +581,7 @@
             },
             "label": "Yellow Tansy",
             "textures": [
-                "flower_block_0/yellow_tansy"
+                "flowers/flower_block_0/yellow_tansy"
             ],
             "legacyBlockID": "yellow_flower_block_0:7"
         },
@@ -588,8 +599,11 @@
                 "zMax": 0.7
             },
             "label": "Blue Flax",
-            "textures": [
-                "flower_block_0/blue_flax"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_0/blue_flax1" ] },
+              { "textures": [ "flowers/flower_block_0/blue_flax2" ] },
+              { "textures": [ "flowers/flower_block_0/blue_flax3" ] },
+              { "textures": [ "flowers/flower_block_0/blue_flax4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:8"
         },
@@ -607,8 +621,11 @@
                 "zMax": 0.7
             },
             "label": "White Daisies",
-            "textures": [
-                "flower_block_0/white_daisies"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_0/white_daisies1" ] },
+              { "textures": [ "flowers/flower_block_0/white_daisies2" ] },
+              { "textures": [ "flowers/flower_block_0/white_daisies3" ] },
+              { "textures": [ "flowers/flower_block_0/white_daisies4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:9"
         },
@@ -626,8 +643,9 @@
                 "zMax": 0.7
             },
             "label": "Yellow Daisies",
-            "textures": [
-                "flower_block_0/yellow_daisies"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_0/yellow_daisies1" ] },
+               { "textures": [ "flowers/flower_block_0/yellow_daisies2" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:10"
         },
@@ -645,8 +663,13 @@
                 "zMax": 0.7
             },
             "label": "Green Scrub Grass",
-            "textures": [
-                "flower_block_0/green_scrub_grass"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_0/green_scrub_grass1" ] },
+              { "textures": [ "flowers/flower_block_0/green_scrub_grass2" ] },
+              { "textures": [ "flowers/flower_block_0/green_scrub_grass3" ] },
+              { "textures": [ "flowers/flower_block_0/green_scrub_grass4" ] },
+              { "textures": [ "flowers/flower_block_0/green_scrub_grass5" ] },
+              { "textures": [ "flowers/flower_block_0/green_scrub_grass6" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:11"
         },
@@ -664,14 +687,22 @@
                 "zMax": 0.7
             },
             "label": "Dead Scrub Grass",
-            "textures": [
-                "flower_block_0/dead_scrub_grass"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass1" ], "weight": 10 },
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass2" ], "weight": 10 },
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass3" ], "weight": 10 },
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass4" ], "weight": 10 },
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass5" ], "weight": 10 },
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass6" ], "weight": 10 },
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass7" ], "weight": 10 },
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass8" ], "weight": 15 },
+              { "textures": [ "flowers/flower_block_0/dead_scrub_grass9" ], "weight": 15 }
             ],
             "legacyBlockID": "yellow_flower_block_0:12"
         },
         {
             "blockName": "yellow_bedstraw",
-            "blockType": "plant",
+            "blockType": "plantvert",
             "material": "wood",
             "creativeTab": "WesterosPlants",
             "boundingBox": {
@@ -683,8 +714,10 @@
                 "zMax": 0.7
             },
             "label": "Yellow Bedstraw",
-            "textures": [
-                "flower_block_0/yellow_bedstraw"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_0/yellow_bedstraw_side1", "flowers/flower_block_0/yellow_bedstraw_down", "flowers/flower_block_0/yellow_bedstraw_up_both", "flowers/flower_block_0/yellow_bedstraw_up_both" ] },
+              { "textures": [ "flowers/flower_block_0/yellow_bedstraw_side2", "flowers/flower_block_0/yellow_bedstraw_down", "flowers/flower_block_0/yellow_bedstraw_up_both", "flowers/flower_block_0/yellow_bedstraw_up_both" ] },
+              { "textures": [ "flowers/flower_block_0/yellow_bedstraw_side3", "flowers/flower_block_0/yellow_bedstraw_down", "flowers/flower_block_0/yellow_bedstraw_up_both", "flowers/flower_block_0/yellow_bedstraw_up_both" ] }
             ],
             "legacyBlockID": "yellow_flower_block_0:13"
         },
@@ -703,7 +736,7 @@
             },
             "label": "Orange Bells",
             "textures": [
-                "flower_block_0/orange_bells"
+                "flowers/flower_block_0/orange_bells1"
             ],
             "legacyBlockID": "yellow_flower_block_0:14"
         },
@@ -722,7 +755,7 @@
             },
             "label": "Blue Bells",
             "textures": [
-                "flower_block_0/blue_bells"
+                "flowers/flower_block_0/blue_bells"
             ],
             "legacyBlockID": "yellow_flower_block_0:15"
         },
@@ -742,7 +775,7 @@
             },
             "label": "Blue Swamp Bells",
             "textures": [
-                "flower_block_1/blue_swamp_bells"
+                "flowers/flower_block_1/blue_swamp_bells1"
             ],
             "legacyBlockID": "yellow_flower_block_1:0"
         },
@@ -761,8 +794,11 @@
                 "zMax": 0.7
             },
             "label": "Yellow Buttercups",
-            "textures": [
-                "flower_block_1/yellow_buttercups"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_1/yellow_buttercups1" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_buttercups2" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_buttercups3" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_buttercups4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:1"
         },
@@ -781,8 +817,11 @@
                 "zMax": 0.7
             },
             "label": "Orange Bog Asphodel",
-            "textures": [
-                "flower_block_1/orange_bog_asphodel"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_1/orange_bog_asphodel1" ] },
+               { "textures": [ "flowers/flower_block_1/orange_bog_asphodel2" ] },
+               { "textures": [ "flowers/flower_block_1/orange_bog_asphodel3" ] },
+               { "textures": [ "flowers/flower_block_1/orange_bog_asphodel4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:2"
         },
@@ -801,8 +840,11 @@
                 "zMax": 0.7
             },
             "label": "Yellow Lupine",
-            "textures": [
-                "flower_block_1/yellow_lupine"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_1/yellow_lupine1" ] },
+              { "textures": [ "flowers/flower_block_1/yellow_lupine2" ] },
+              { "textures": [ "flowers/flower_block_1/yellow_lupine3" ] },
+              { "textures": [ "flowers/flower_block_1/yellow_lupine4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:3"
         },
@@ -821,14 +863,17 @@
                 "zMax": 0.7
             },
             "label": "Blue Hyacinth",
-            "textures": [
-                "flower_block_1/blue_hyacinth"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_1/blue_hyacinth1" ] },
+               { "textures": [ "flowers/flower_block_1/blue_hyacinth2" ] },
+               { "textures": [ "flowers/flower_block_1/blue_hyacinth3" ] },
+               { "textures": [ "flowers/flower_block_1/blue_hyacinth4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:4"
         },
         {
             "blockName": "pink_thistle",
-            "blockType": "plant",
+            "blockType": "plantvert",
             "stepSound": "grass",
             "material": "plants",
             "creativeTab": "WesterosPlants",
@@ -841,8 +886,11 @@
                 "zMax": 0.7
             },
             "label": "Pink Thistle",
-            "textures": [
-                "flower_block_1/pink_thistle"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_1/pink_thistle_side1", "flowers/flower_block_1/pink_thistle_down2", "flowers/flower_block_1/pink_thistle_up_both1", "flowers/flower_block_1/pink_thistle_up_both1" ], "weight": 40 },
+              { "textures": [ "flowers/flower_block_1/pink_thistle_side2", "flowers/flower_block_1/pink_thistle_down1", "flowers/flower_block_1/pink_thistle_up_both2", "flowers/flower_block_1/pink_thistle_up_both2" ], "weight": 10 },
+              { "textures": [ "flowers/flower_block_1/pink_thistle_side3", "flowers/flower_block_1/pink_thistle_down3", "flowers/flower_block_1/pink_thistle_up_both3", "flowers/flower_block_1/pink_thistle_up_both3" ], "weight": 40 },
+              { "textures": [ "flowers/flower_block_1/pink_thistle_side4", "flowers/flower_block_1/pink_thistle_down1", "flowers/flower_block_1/pink_thistle_up_both4", "flowers/flower_block_1/pink_thistle_up_both4" ], "weight": 10 }
             ],
             "legacyBlockID": "yellow_flower_block_1:5"
         },
@@ -861,8 +909,10 @@
                 "zMax": 0.7
             },
             "label": "Yellow Dandelions",
-            "textures": [
-                "flower_block_1/yellow_dandelions"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_1/yellow_dandelions1" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_dandelions2" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_dandelions3" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:6"
         },
@@ -881,8 +931,11 @@
                 "zMax": 0.7
             },
             "label": "Yellow Daffodils",
-            "textures": [
-                "flower_block_1/yellow_daffodils"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_1/yellow_daffodils1" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_daffodils2" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_daffodils3" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_daffodils4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:7"
         },
@@ -901,8 +954,11 @@
                 "zMax": 0.7
             },
             "label": "Yellow Roses",
-            "textures": [
-                "flower_block_1/yellow_roses"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_1/yellow_roses1" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_roses2" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_roses3" ] },
+               { "textures": [ "flowers/flower_block_1/yellow_roses4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:8"
         },
@@ -942,7 +998,7 @@
             },
             "label": "White Lily-of-the-valley",
             "textures": [
-                "flower_block_1/white_lily_valley"
+                "flowers/flower_block_1/white_lily_valley1"
             ],
             "legacyBlockID": "yellow_flower_block_1:10"
         },
@@ -962,13 +1018,13 @@
             },
             "label": "Yellow Bells",
             "textures": [
-                "flower_block_1/yellow_bells"
+                "flowers/flower_block_1/yellow_bells1"
             ],
             "legacyBlockID": "yellow_flower_block_1:11"
         },
         {
             "blockName": "yellow_sunflower",
-            "blockType": "plant",
+            "blockType": "plantvert",
             "stepSound": "grass",
             "material": "plants",
             "creativeTab": "WesterosPlants",
@@ -981,8 +1037,10 @@
                 "zMax": 0.7
             },
             "label": "Yellow Sunflower",
-            "textures": [
-                "flower_block_1/yellow_sunflower"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_1/yellow_sunflower_side1", "flowers/flower_block_1/yellow_sunflower_down1", "flowers/flower_block_1/yellow_sunflower_up_both1", "flowers/flower_block_1/yellow_sunflower_up_both1" ] },
+              { "textures": [ "flowers/flower_block_1/yellow_sunflower_side2", "flowers/flower_block_1/yellow_sunflower_down2", "flowers/flower_block_1/yellow_sunflower_up_both2", "flowers/flower_block_1/yellow_sunflower_up_both1" ] },
+              { "textures": [ "flowers/flower_block_1/yellow_sunflower_side3", "flowers/flower_block_1/yellow_sunflower_down3", "flowers/flower_block_1/yellow_sunflower_up_both2", "flowers/flower_block_1/yellow_sunflower_up_both2" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:12"
         },
@@ -1001,8 +1059,11 @@
                 "zMax": 0.7
             },
             "label": "White Roses",
-            "textures": [
-                "flower_block_1/white_roses"
+            "randomTextures": [
+               { "textures": [ "flowers/flower_block_1/white_roses1" ] },
+               { "textures": [ "flowers/flower_block_1/white_roses2" ] },
+               { "textures": [ "flowers/flower_block_1/white_roses3" ] },
+               { "textures": [ "flowers/flower_block_1/white_roses4" ] }
             ],
             "legacyBlockID": "yellow_flower_block_1:13"
         },
@@ -8232,7 +8293,7 @@
             },
             "label": "Red Flowering Spiny Herb",
             "textures": [
-                "flower_block_2/red_flowering_spiny_herb"
+                "flowers/flower_block_2/red_flowering_spiny_herb1"
             ],
             "legacyBlockID": "red_flower_block_0:11"
         },
