@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/flower_block_3/pink_sweet_peas"
+    "layer0": "westerosblocks:block/flowers/flower_block_3/pink_sweet_peas1"
   }
 }

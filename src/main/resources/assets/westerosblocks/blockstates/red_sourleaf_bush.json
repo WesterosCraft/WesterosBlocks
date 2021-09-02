@@ -1,7 +1,12 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/red_sourleaf_bush/base_v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/red_sourleaf_bush/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/red_sourleaf_bush/base_v2"
+      }
+    ]
   }
 }

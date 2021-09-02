@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/flower_block_3/pink_sweet_peas"
+    "cross": "westerosblocks:block/flowers/flower_block_3/pink_sweet_peas1"
   }
 }

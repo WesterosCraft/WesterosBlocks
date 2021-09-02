@@ -1,7 +1,60 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/purple_alpine_sowthistle/base_v1"
-    }
+    "up=false,down=true": [
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/down_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/down_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/down_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/down_v4"
+      }
+    ],
+    "up=false,down=false": [
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/base_v4"
+      }
+    ],
+    "up=true,down=true": [
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/both_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/both_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/both_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/both_v4"
+      }
+    ],
+    "up=true,down=false": [
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/up_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/up_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/up_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/purple_alpine_sowthistle/up_v4"
+      }
+    ]
   }
 }
