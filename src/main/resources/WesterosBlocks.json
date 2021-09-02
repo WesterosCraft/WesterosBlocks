@@ -8099,7 +8099,7 @@
         },
         {
             "blockName": "meadow_fescue",
-            "blockType": "plant",
+            "blockType": "plantvert",
             "stepSound": "grass",
             "material": "plants",
             "creativeTab": "WesterosPlants",
@@ -8112,9 +8112,40 @@
                 "zMax": 0.7
             },
             "label": "Meadow Fescue",
-            "textures": [
-                "flower_block_2/meadow_fescue"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_2/meadow_fescue_side1", "flowers/flower_block_2/meadow_fescue_down1", "flowers/flower_block_2/meadow_fescue_up_both1", "flowers/flower_block_2/meadow_fescue_up_both1" ], "condIDs": [ "default" ] },
+              { "textures": [ "flowers/flower_block_2/meadow_fescue_side2", "flowers/flower_block_2/meadow_fescue_down2", "flowers/flower_block_2/meadow_fescue_up_both2", "flowers/flower_block_2/meadow_fescue_up_both2" ], "condIDs": [ "default" ] },
+              { "textures": [ "flowers/flower_block_2/meadow_fescue_north_side1", "flowers/flower_block_2/meadow_fescue_north_down1", "flowers/flower_block_2/meadow_fescue_north_up_both1", "flowers/flower_block_2/meadow_fescue_north_up_both1" ], "condIDs": [ "north" ] },
+              { "textures": [ "flowers/flower_block_2/meadow_fescue_north_side2", "flowers/flower_block_2/meadow_fescue_north_down2", "flowers/flower_block_2/meadow_fescue_north_up_both2", "flowers/flower_block_2/meadow_fescue_north_up_both2" ], "condIDs": [ "north" ] }
             ],
+            "condStates": [ 
+            	{ "condID": "north", 
+            	  "biomes": [ 
+            	    "minecraft:mountains",
+            	    "minecraft:gravelly_mountains",
+            	    "minecraft:mountain_edge",
+            	    "minecraft:wooded_mountains",
+            	    "minecraft:modified_gravelly_mountains",
+            	    "minecraft:stone_shore",
+            	    "minecraft:taiga",
+            	    "minecraft:taiga_hills",
+            	    "minecraft:taiga_mountains",
+            	    "minecraft:snowy_taiga_hills",
+            	    "minecraft:giant_tree_taiga",
+            	    "minecraft:giant_tree_taiga_hills",
+            	    "minecraft:snowy_taiga_mountains",
+            	    "minecraft:snowy_taiga",
+            	    "minecraft:giant_spruce_taiga",
+            	    "minecraft:giant_spruce_taiga_hills",
+            	    "minecraft:snowy_tundra",
+            	    "minecraft:frozen_river",
+            	    "minecraft:snowy_mountains",
+            	    "minecraft:frozen_ocean",
+            	    "minecraft:snowy_beach",
+            	    "minecraft:snowy_taiga_hills",
+            	    "minecraft:ice_spikes" ] },
+            	{ "condID": "default" }
+            ],                 
             "legacyBlockID": "red_flower_block_0:2"
         },
         {
@@ -8212,8 +8243,9 @@
                 "zMax": 0.7
             },
             "label": "Orange Sun Star",
-            "textures": [
-                "flower_block_2/orange_sun_star"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_2/orange_sun_star1" ] },
+              { "textures": [ "flowers/flower_block_2/orange_sun_star2" ] }
             ],
             "legacyBlockID": "red_flower_block_0:7"
         },
@@ -8259,7 +8291,7 @@
         },
         {
             "blockName": "blue_chicory",
-            "blockType": "plant",
+            "blockType": "plantvert",
             "stepSound": "grass",
             "material": "plants",
             "creativeTab": "WesterosPlants",
@@ -8272,8 +8304,11 @@
                 "zMax": 0.7
             },
             "label": "Blue Chicory",
-            "textures": [
-                "flower_block_2/blue_chicory"
+            "randomTextures": [
+              { "textures": [ "flowers/flower_block_2/blue_chicory_side1", "flowers/flower_block_2/blue_chicory_down1", "flowers/flower_block_2/blue_chicory_up_both1", "flowers/flower_block_2/blue_chicory_up_both1" ] },
+              { "textures": [ "flowers/flower_block_2/blue_chicory_side2", "flowers/flower_block_2/blue_chicory_down2", "flowers/flower_block_2/blue_chicory_up_both2", "flowers/flower_block_2/blue_chicory_up_both2" ] },
+              { "textures": [ "flowers/flower_block_2/blue_chicory_side3", "flowers/flower_block_2/blue_chicory_down2", "flowers/flower_block_2/blue_chicory_up_both3", "flowers/flower_block_2/blue_chicory_up_both3" ] },
+              { "textures": [ "flowers/flower_block_2/blue_chicory_side4", "flowers/flower_block_2/blue_chicory_down3", "flowers/flower_block_2/blue_chicory_up_both4", "flowers/flower_block_2/blue_chicory_up_both4" ] }
             ],
             "legacyBlockID": "red_flower_block_0:10"
         },

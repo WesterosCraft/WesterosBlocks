@@ -1,6 +1,4 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/flower_block_2/meadow_fescue"
-  }
+  "parent": "westerosblocks:block/generated/meadow_fescue/base_v1",
+  "textures": {}
 }

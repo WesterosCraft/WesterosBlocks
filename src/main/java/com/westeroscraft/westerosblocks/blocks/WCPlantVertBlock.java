@@ -53,17 +53,29 @@ public class WCPlantVertBlock extends Block implements WesterosBlockLifecycle, I
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	AbstractBlock.Properties props = def.makeProperties().noCollission().instabreak();
+        	// See if we have a cond property
+        	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
+        	if (prop != null) {
+        		tempCOND = prop;
+        	}        	
         	return def.registerRenderType(def.registerBlock(new WCPlantVertBlock(props, def)), false, false);
         }
     }    
     private WesterosBlockDef def;
     public static final BooleanProperty DOWN = BlockStateProperties.DOWN;
     public static final BooleanProperty UP = BlockStateProperties.UP;
+    protected static WesterosBlockDef.CondProperty tempCOND;
+    protected WesterosBlockDef.CondProperty COND;
 
     protected WCPlantVertBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
-        this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        if (COND != null) {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(COND, COND.defValue));
+        }
+        else {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        }
     }
     @Override
     public WesterosBlockDef getWBDefinition() {
@@ -71,7 +83,15 @@ public class WCPlantVertBlock extends Block implements WesterosBlockLifecycle, I
     }
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
+    	super.createBlockStateDefinition(container);
+    	if (tempCOND != null) {
+    		COND = tempCOND;
+    		tempCOND = null;
+    	}
     	container.add(UP, DOWN);
+    	if (COND != null) {
+        	container.add(COND);    		
+    	}
     }
     
     private BlockState updateStateVertical(BlockState bs, IBlockReader reader, BlockPos pos) {
@@ -95,11 +115,15 @@ public class WCPlantVertBlock extends Block implements WesterosBlockLifecycle, I
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
+    	if ((COND != null) && (bs != null)) {
+    		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
+    	}
     	if (bs != null) {
     		bs = updateStateVertical(this.defaultBlockState(), ctx.getLevel(), ctx.getClickedPos());
     	}
     	return bs;
     }
+    
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "westerosblocks:block/flowers/flower_block_2/blue_chicory_down3"
+  }
+}

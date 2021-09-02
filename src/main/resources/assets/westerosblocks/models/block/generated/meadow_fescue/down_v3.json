@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "westerosblocks:block/flowers/flower_block_2/meadow_fescue_north_down1"
+  }
+}
