@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/flower_block_2/white_chamomile"
+    "layer0": "westerosblocks:block/flowers/flower_block_2/white_chamomile1"
   }
 }
