@@ -55,6 +55,11 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	AbstractBlock.Properties props = def.makeProperties().noCollission();
+        	// See if we have a cond property
+        	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
+        	if (prop != null) {
+        		tempCOND = prop;
+        	}        	
         	return def.registerRenderType(def.registerBlock(new WCWebVertBlock(props, def)), false, false);
         }
     }
@@ -62,6 +67,8 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
     private boolean noInWeb = false;
     public static final BooleanProperty DOWN = BlockStateProperties.DOWN;
     public static final BooleanProperty UP = BlockStateProperties.UP;
+    protected static WesterosBlockDef.CondProperty tempCOND;
+    protected WesterosBlockDef.CondProperty COND;
     
     protected WCWebVertBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
@@ -75,7 +82,12 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
                 }
             }
         }
-        this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        if (COND != null) {
+            this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(COND, COND.defValue));
+        }
+        else {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        }
     }
 
     @Override
@@ -85,6 +97,14 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
 
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
+    	super.createBlockStateDefinition(container);
+    	if (tempCOND != null) {
+    		COND = tempCOND;
+    		tempCOND = null;
+    	}
+    	if (COND != null) {
+	       container.add(COND);
+    	}
     	container.add(UP, DOWN);
     }
     
@@ -112,9 +132,12 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
     	if (bs != null) {
     		bs = updateStateVertical(this.defaultBlockState(), ctx.getLevel(), ctx.getClickedPos());
     	}
+    	if ((COND != null) && (bs != null)) {
+    		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
+    	}
     	return bs;
     }
-    
+
     @Override
     public void entityInside(BlockState state, World world, BlockPos pos, Entity entity) {
     	if (!noInWeb)

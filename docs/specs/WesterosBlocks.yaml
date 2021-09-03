@@ -1103,6 +1103,8 @@ components:
                 If true, causes block to have its model
                 randomly rotated with 4 different angles
                 around Y axis (0, 90, 180, 270 degrees)
+            condStates:
+              $ref: "#/components/schemas/CondStates"
             colorMult:
               $ref: "#/components/schemas/colorMult"
             type:

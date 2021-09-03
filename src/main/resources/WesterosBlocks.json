@@ -7850,10 +7850,43 @@
             "material": "web",
             "creativeTab": "WesterosDeco",
             "label": "Dead Fowl",
-            "textures": [
-                "web_block_0/food_fowl_dead"
+            "randomTextures": [
+               { "textures": [ "food_fowl/fowl" ], "condIDs": [ "default" ] },
+               { "textures": [ "food_fowl/gooseplains" ], "condIDs": [ "default" ] },
+               { "textures": [ "food_fowl/goosetaiga" ], "condIDs": [ "north" ] },
+               { "textures": [ "food_fowl/snowshrikes" ], "condIDs": [ "north" ] },
+               { "textures": [ "food_fowl/snowshrikesbrokenwing" ], "condIDs": [ "north" ] },
+               { "textures": [ "food_fowl/snowshrikesfeather" ], "condIDs": [ "north" ] }
             ],
             "type": "no-in-web",
+            "condStates": [ 
+            	{ "condID": "north", 
+            	  "biomes": [ 
+            	    "minecraft:mountains",
+            	    "minecraft:gravelly_mountains",
+            	    "minecraft:mountain_edge",
+            	    "minecraft:wooded_mountains",
+            	    "minecraft:modified_gravelly_mountains",
+            	    "minecraft:stone_shore",
+            	    "minecraft:taiga",
+            	    "minecraft:taiga_hills",
+            	    "minecraft:taiga_mountains",
+            	    "minecraft:snowy_taiga_hills",
+            	    "minecraft:giant_tree_taiga",
+            	    "minecraft:giant_tree_taiga_hills",
+            	    "minecraft:snowy_taiga_mountains",
+            	    "minecraft:snowy_taiga",
+            	    "minecraft:giant_spruce_taiga",
+            	    "minecraft:giant_spruce_taiga_hills",
+            	    "minecraft:snowy_tundra",
+            	    "minecraft:frozen_river",
+            	    "minecraft:snowy_mountains",
+            	    "minecraft:frozen_ocean",
+            	    "minecraft:snowy_beach",
+            	    "minecraft:snowy_taiga_hills",
+            	    "minecraft:ice_spikes" ] },
+            	{ "condID": "default" }
+            ],                 
             "legacyBlockID": "web_block_0:10"
         },
         {
@@ -7863,8 +7896,12 @@
             "material": "web",
             "creativeTab": "WesterosDeco",
             "label": "Dead Fish",
-            "textures": [
-                "web_block_0/food_fish_dead"
+            "randomTextures": [
+               { "textures": [ "food_fish/fish_dead1" ] },
+               { "textures": [ "food_fish/fish_dead2" ] },
+               { "textures": [ "food_fish/fish_dead3" ] },
+               { "textures": [ "food_fish/fish_dead4" ] },
+               { "textures": [ "food_fish/fish_dead5" ] }
             ],
             "type": "no-in-web",
             "legacyBlockID": "web_block_0:11"

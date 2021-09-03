@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/web_block_0/food_fish_dead"
+    "layer0": "westerosblocks:block/food_fish/fish_dead1"
   }
 }

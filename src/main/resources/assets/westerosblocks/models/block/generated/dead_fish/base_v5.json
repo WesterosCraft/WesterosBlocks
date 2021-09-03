@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/food_fish/fish_dead1"
+    "cross": "westerosblocks:block/food_fish/fish_dead5"
   }
 }
