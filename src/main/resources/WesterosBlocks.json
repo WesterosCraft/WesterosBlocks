@@ -7165,8 +7165,23 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Gravel Slab",
-            "textures": [
-                "ground_block_0/gravel"
+            "randomTextures": [
+               { "textures": [ "gravel/gravel1" ], "weight": 10 },
+               { "textures": [ "gravel/gravel2" ], "weight": 1 },
+               { "textures": [ "gravel/gravel3" ], "weight": 1 },
+               { "textures": [ "gravel/gravel4" ], "weight": 1 },
+               { "textures": [ "gravel/gravel5" ], "weight": 1 },
+               { "textures": [ "gravel/gravel6" ], "weight": 1 },
+               { "textures": [ "gravel/gravel7" ], "weight": 1 },
+               { "textures": [ "gravel/gravel8" ], "weight": 1 },
+               { "textures": [ "gravel/gravel9" ], "weight": 1 },
+               { "textures": [ "gravel/gravel10" ], "weight": 1 },
+               { "textures": [ "gravel/gravel11" ], "weight": 1 },
+               { "textures": [ "gravel/gravel12" ], "weight": 1 },
+               { "textures": [ "gravel/gravel13" ], "weight": 1 },
+               { "textures": [ "gravel/gravel14" ], "weight": 1 },
+               { "textures": [ "gravel/gravel15" ], "weight": 1 },
+               { "textures": [ "gravel/gravel16" ], "weight": 1 }
             ],
             "legacyBlockID": "random_slab_block_0:1"
         },
@@ -8106,8 +8121,12 @@
             "creativeTab": "WesterosDeco",
             "type": "legacy-model",
             "label": "Vertical Net",
-            "textures": [
-                "glass_pane_block_0/glass_pane_net"
+            "randomTextures": [
+               { "textures": [ "vertical_net/vertical_net1" ] },
+               { "textures": [ "vertical_net/vertical_net2" ] },
+               { "textures": [ "vertical_net/vertical_net3" ] },
+               { "textures": [ "vertical_net/vertical_net4" ] },
+               { "textures": [ "vertical_net/vertical_net5" ] }
             ],
             "legacyBlockID": "glasspane_net:0"
         },
@@ -33850,8 +33869,15 @@
             "resistance": 2,
             "creativeTab": "WesterosBlocks",
             "label": "Forest Path Gravel",
-            "textures": [
-                "ground_block_0/gravel"
+            "randomTextures": [
+               { "textures": [ "gravel/gravel1" ], "weight": 100 },
+               { "textures": [ "gravel/gravel2" ], "weight": 33},
+               { "textures": [ "gravel/gravel4" ], "weight": 45 },
+               { "textures": [ "gravel/gravel5" ], "weight": 140 },
+               { "textures": [ "gravel/gravel6" ], "weight": 193 },
+               { "textures": [ "gravel/gravel7" ], "weight": 77 },
+               { "textures": [ "gravel/gravel9" ], "weight": 77 },
+               { "textures": [ "gravel/gravel10" ], "weight": 77 }
             ],
             "cuboids": [
                 {

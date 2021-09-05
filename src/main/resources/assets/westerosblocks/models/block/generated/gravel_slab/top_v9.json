@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "westerosblocks:block/gravel/gravel9",
+    "top": "westerosblocks:block/gravel/gravel9",
+    "side": "westerosblocks:block/gravel/gravel9",
+    "particle": "westerosblocks:block/gravel/gravel9"
+  }
+}
