@@ -1080,9 +1080,23 @@ public class WesterosBlockDef {
 		particles.put("happyVillager", ParticleTypes.HAPPY_VILLAGER);
 	}
 
+	// Force reload of color handlers
+	public static void reloadColorHandler() {
+		Set<String> hndids = new HashSet<String>(colorMultTable.keySet());
+		for (String hndid : hndids) {
+			ColorMultHandler prev = colorMultTable.get(hndid);
+			// Only reload those from resources
+			if (prev instanceof CustomColorMultHandler) {
+				colorMultTable.remove(hndid);
+				if (getColorHandler(hndid, "<reload>") == null) {
+					colorMultTable.put(hndid, prev);
+				}
+			}
+		}		
+	}
 	// Get color muliplier
 	public static ColorMultHandler getColorHandler(String hnd, String blockName) {
-		String hndid = hnd.toUpperCase();
+		String hndid = hnd.toLowerCase();
 		ColorMultHandler cmh = colorMultTable.get(hndid);
 		if (cmh == null) {
 			// See if color code
@@ -1098,7 +1112,7 @@ public class WesterosBlockDef {
 				int idx = hnd.indexOf(':');
 				if (idx < 0) {
 					hnd = WesterosBlocks.MOD_ID + ":" + hnd;
-					hndid = hnd.toUpperCase();
+					hndid = hnd.toLowerCase();
 				}
 				cmh = colorMultTable.get(hndid);
 				if (cmh == null) {
