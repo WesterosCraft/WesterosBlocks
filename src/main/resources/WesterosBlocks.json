@@ -19412,13 +19412,13 @@
             "creativeTab": "WesterosDeco",
             "label": "Dead Rat",
             "randomTextures": [
-               { "textures": [ "dear_rat/rat1" ] },
-               { "textures": [ "dear_rat/rat2" ] },
-               { "textures": [ "dear_rat/rat3" ] },
-               { "textures": [ "dear_rat/rat4" ] },
-               { "textures": [ "dear_rat/rat5" ] },
-               { "textures": [ "dear_rat/rat6" ] },
-               { "textures": [ "dear_rat/rat7" ] }
+               { "textures": [ "dead_rat/rat1" ] },
+               { "textures": [ "dead_rat/rat2" ] },
+               { "textures": [ "dead_rat/rat3" ] },
+               { "textures": [ "dead_rat/rat4" ] },
+               { "textures": [ "dead_rat/rat5" ] },
+               { "textures": [ "dead_rat/rat6" ] },
+               { "textures": [ "dead_rat/rat7" ] }
             ],
             "type": "no-in-web",
             "legacyBlockID": "web_block_2:2"

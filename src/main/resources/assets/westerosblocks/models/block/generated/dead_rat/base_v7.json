@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/dear_rat/rat7"
+    "cross": "westerosblocks:block/dead_rat/rat7"
   }
 }
