@@ -1,7 +1,23 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/dead_hare/base_v1"
-    }
+    ",cond=default": [
+      {
+        "model": "westerosblocks:block/generated/dead_hare/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_hare/base_v2"
+      }
+    ],
+    ",cond=north": [
+      {
+        "model": "westerosblocks:block/generated/dead_hare/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_hare/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/dead_hare/base_v5"
+      }
+    ]
   }
 }

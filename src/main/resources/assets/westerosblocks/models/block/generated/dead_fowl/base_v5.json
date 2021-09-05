@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/food_fowl/snowshrikesbrokenwing"
+    "cross": "westerosblocks:block/dead_fowl/snowshrikesbrokenwing"
   }
 }

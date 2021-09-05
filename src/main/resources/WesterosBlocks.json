@@ -7837,9 +7837,41 @@
             "material": "web",
             "creativeTab": "WesterosDeco",
             "label": "Dead Hare",
-            "textures": [
-                "web_block_0/food_rabbit_dead"
+            "randomTextures": [ 
+              { "textures": [ "dead_hare/rabbit_dead1" ], "condIDs": [ "default" ] },
+              { "textures": [ "dead_hare/rabbit_dead2" ], "condIDs": [ "default" ] },
+              { "textures": [ "dead_hare/snowrabbit_dead1" ], "condIDs": [ "north" ] },
+              { "textures": [ "dead_hare/snowrabbit_dead2" ], "condIDs": [ "north" ] },
+              { "textures": [ "dead_hare/snowrabbit_dead3" ], "condIDs": [ "north" ] }
             ],
+            "condStates": [ 
+            	{ "condID": "north", 
+            	  "biomes": [ 
+            	    "minecraft:mountains",
+            	    "minecraft:gravelly_mountains",
+            	    "minecraft:mountain_edge",
+            	    "minecraft:wooded_mountains",
+            	    "minecraft:modified_gravelly_mountains",
+            	    "minecraft:stone_shore",
+            	    "minecraft:taiga",
+            	    "minecraft:taiga_hills",
+            	    "minecraft:taiga_mountains",
+            	    "minecraft:snowy_taiga_hills",
+            	    "minecraft:giant_tree_taiga",
+            	    "minecraft:giant_tree_taiga_hills",
+            	    "minecraft:snowy_taiga_mountains",
+            	    "minecraft:snowy_taiga",
+            	    "minecraft:giant_spruce_taiga",
+            	    "minecraft:giant_spruce_taiga_hills",
+            	    "minecraft:snowy_tundra",
+            	    "minecraft:frozen_river",
+            	    "minecraft:snowy_mountains",
+            	    "minecraft:frozen_ocean",
+            	    "minecraft:snowy_beach",
+            	    "minecraft:snowy_taiga_hills",
+            	    "minecraft:ice_spikes" ] },
+            	{ "condID": "default" }
+            ],                 
             "type": "no-in-web",
             "legacyBlockID": "web_block_0:9"
         },
@@ -7851,12 +7883,12 @@
             "creativeTab": "WesterosDeco",
             "label": "Dead Fowl",
             "randomTextures": [
-               { "textures": [ "food_fowl/fowl" ], "condIDs": [ "default" ] },
-               { "textures": [ "food_fowl/gooseplains" ], "condIDs": [ "default" ] },
-               { "textures": [ "food_fowl/goosetaiga" ], "condIDs": [ "north" ] },
-               { "textures": [ "food_fowl/snowshrikes" ], "condIDs": [ "north" ] },
-               { "textures": [ "food_fowl/snowshrikesbrokenwing" ], "condIDs": [ "north" ] },
-               { "textures": [ "food_fowl/snowshrikesfeather" ], "condIDs": [ "north" ] }
+               { "textures": [ "dead_fowl/fowl" ], "condIDs": [ "default" ] },
+               { "textures": [ "dead_fowl/gooseplains" ], "condIDs": [ "default" ] },
+               { "textures": [ "dead_fowl/goosetaiga" ], "condIDs": [ "north" ] },
+               { "textures": [ "dead_fowl/snowshrikes" ], "condIDs": [ "north" ] },
+               { "textures": [ "dead_fowl/snowshrikesbrokenwing" ], "condIDs": [ "north" ] },
+               { "textures": [ "dead_fowl/snowshrikesfeather" ], "condIDs": [ "north" ] }
             ],
             "type": "no-in-web",
             "condStates": [ 
@@ -7897,11 +7929,11 @@
             "creativeTab": "WesterosDeco",
             "label": "Dead Fish",
             "randomTextures": [
-               { "textures": [ "food_fish/fish_dead1" ] },
-               { "textures": [ "food_fish/fish_dead2" ] },
-               { "textures": [ "food_fish/fish_dead3" ] },
-               { "textures": [ "food_fish/fish_dead4" ] },
-               { "textures": [ "food_fish/fish_dead5" ] }
+               { "textures": [ "dead_fish/fish_dead1" ] },
+               { "textures": [ "dead_fish/fish_dead2" ] },
+               { "textures": [ "dead_fish/fish_dead3" ] },
+               { "textures": [ "dead_fish/fish_dead4" ] },
+               { "textures": [ "dead_fish/fish_dead5" ] }
             ],
             "type": "no-in-web",
             "legacyBlockID": "web_block_0:11"
@@ -7952,8 +7984,9 @@
             "material": "web",
             "creativeTab": "WesterosDeco",
             "label": "Dead Frog",
-            "textures": [
-                "web_block_0/food_toad_dead"
+            "randomTextures": [
+               { "textures": [ "dead_frog/toad_dead1" ] },
+               { "textures": [ "dead_frog/toad_dead2" ] }
             ],
             "type": "no-in-web",
             "legacyBlockID": "web_block_0:15"
@@ -7966,11 +7999,11 @@
             "creativeTab": "WesterosDeco",
             "label": "Iron Rungs",
             "randomTextures": [
-            	{ "textures": [ "ladder_iron/ladder" ], "weight": 10 },
-            	{ "textures": [ "ladder_iron/ladder2" ] },
-            	{ "textures": [ "ladder_iron/ladder3" ] },
-            	{ "textures": [ "ladder_iron/ladder4" ] },
-            	{ "textures": [ "ladder_iron/ladder5" ] }
+            	{ "textures": [ "iron_rungs/ladder" ], "weight": 10 },
+            	{ "textures": [ "iron_rungs/ladder2" ] },
+            	{ "textures": [ "iron_rungs/ladder3" ] },
+            	{ "textures": [ "iron_rungs/ladder4" ] },
+            	{ "textures": [ "iron_rungs/ladder5" ] }
             ],
             "type": "allow-unsupported",
             "legacyBlockID": "ladder_block_0:0"
@@ -7983,10 +8016,10 @@
             "creativeTab": "WesterosDeco",
             "label": "Rope Ladder",
             "textures": [
-                "ladder_rope/top",
-                "ladder_rope/top",
-                "ladder_rope/middle",
-                "ladder_rope/middle"                
+                "rope_ladder/side",
+                "rope_ladder/down",
+                "rope_ladder/up",
+                "rope_ladder/both"                
             ],
             "type": "allow-unsupported",
             "legacyBlockID": "ladder_block_0:1"
@@ -8006,13 +8039,16 @@
         },
         {
             "blockName": "wood_ladder",
-            "blockType": "ladder",
+            "blockType": "laddervert",
             "stepSound": "ladder",
             "material": "iron",
             "creativeTab": "WesterosDeco",
             "label": "Wood Ladder",
             "textures": [
-                "ladder_block_0/ladder_normal"
+                "wood_ladder/side",
+                "wood_ladder/down",
+                "wood_ladder/up",
+                "wood_ladder/both"                
             ],
             "type": "allow-unsupported",
             "isCustomModel": true,
@@ -13055,8 +13091,8 @@
             "label": "Safe Fire",
             "material": "fire",
             "textures": [
-                "fire_block_0/fire_layer_0",
-                "fire_block_0/fire_layer_1"
+                "safe_fire/fire_layer_0",
+                "safe_fire/fire_layer_1"
             ],
             "legacyBlockID": "fire_block_0:0"
         },
@@ -19375,8 +19411,14 @@
             "material": "web",
             "creativeTab": "WesterosDeco",
             "label": "Dead Rat",
-            "textures": [
-                "web_block_1/rat_dead"
+            "randomTextures": [
+               { "textures": [ "dear_rat/rat1" ] },
+               { "textures": [ "dear_rat/rat2" ] },
+               { "textures": [ "dear_rat/rat3" ] },
+               { "textures": [ "dear_rat/rat4" ] },
+               { "textures": [ "dear_rat/rat5" ] },
+               { "textures": [ "dear_rat/rat6" ] },
+               { "textures": [ "dear_rat/rat7" ] }
             ],
             "type": "no-in-web",
             "legacyBlockID": "web_block_2:2"
@@ -23692,8 +23734,11 @@
                 "zMax": 0.7
             },
             "label": "Heather",
-            "textures": [
-                "web_block_1/heather"
+            "randomTextures": [
+              { "textures": [ "heather/side1" ] },
+              { "textures": [ "heather/side2" ] },
+              { "textures": [ "heather/side3" ] },
+              { "textures": [ "heather/side4" ] }
             ],
             "legacyBlockID": "forest_block_0:6"
         },

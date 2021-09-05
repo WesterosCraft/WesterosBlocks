@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/web_block_1/rat_dead"
+    "layer0": "westerosblocks:block/dear_rat/rat1"
   }
 }

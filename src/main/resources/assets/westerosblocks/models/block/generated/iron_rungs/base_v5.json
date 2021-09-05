@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/ladder",
   "textures": {
-    "ladder": "westerosblocks:block/ladder_iron/ladder5"
+    "ladder": "westerosblocks:block/iron_rungs/ladder5"
   }
 }

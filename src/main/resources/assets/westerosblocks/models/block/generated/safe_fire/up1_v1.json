@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_fire_up",
   "textures": {
-    "fire": "westerosblocks:block/fire_block_0/fire_layer_1"
+    "fire": "westerosblocks:block/safe_fire/fire_layer_1"
   }
 }

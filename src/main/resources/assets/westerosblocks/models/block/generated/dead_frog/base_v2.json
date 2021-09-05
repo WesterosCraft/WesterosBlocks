@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "westerosblocks:block/dead_frog/toad_dead2"
+  }
+}

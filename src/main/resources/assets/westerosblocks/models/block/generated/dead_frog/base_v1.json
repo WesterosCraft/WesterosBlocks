@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block_0/food_toad_dead"
+    "cross": "westerosblocks:block/dead_frog/toad_dead1"
   }
 }
