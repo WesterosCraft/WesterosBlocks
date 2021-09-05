@@ -623,10 +623,10 @@ public class WesterosBlockDef {
     private void initMeta() {
         subblock_by_meta = new Subblock[metaMask+1];
         lightValueInt = (int)(15.0F * lightValue);
-        this.colorMultHandler = getColorHandler(this.colorMult);
+        this.colorMultHandler = getColorHandler(this.colorMult, this.blockName);
         if (this.colorMultHandler == null) {
             WesterosBlocks.log.warn(String.format("Invalid colorMult '%s' in block '%s'", this.colorMult, blockName));
-            this.colorMultHandler = getColorHandler("#FFFFFF");
+            this.colorMultHandler = getColorHandler("#FFFFFF", this.blockName);
         }
         boundingBoxByMeta = new BoundingBox[16];    // Always do all 16: rotated blocks change this
         for (int i = 0; i < 16; i++) {
@@ -695,7 +695,7 @@ public class WesterosBlockDef {
                         this.colorMultHandlerByMeta = new ColorMultHandler[metaMask+1];
                         Arrays.fill(this.colorMultHandlerByMeta, this.colorMultHandler);
                     }
-                    this.colorMultHandlerByMeta[sb.meta] = getColorHandler(sb.colorMult);
+                    this.colorMultHandlerByMeta[sb.meta] = getColorHandler(sb.colorMult, this.blockName);
                     if (this.colorMultHandlerByMeta[sb.meta] == null) {
                         WesterosBlocks.log.warn(String.format("Invalid colorMult '%s' in block '%s'", sb.colorMult, blockName));
                         this.colorMultHandlerByMeta[sb.meta] = this.colorMultHandler;
@@ -1517,8 +1517,24 @@ public class WesterosBlockDef {
         particles.put("angryVillager", EnumParticleTypes.VILLAGER_ANGRY);
         particles.put("happyVillager", EnumParticleTypes.VILLAGER_HAPPY);
      }
+
+    // Force reload of color handlers
+	public static void reloadColorHandler() {
+		HashSet<String> hndids = new HashSet<String>(colorMultTable.keySet());
+		for (String hndid : hndids) {
+			ColorMultHandler prev = colorMultTable.get(hndid);
+			// Only reload those from resources
+			if (prev instanceof CustomColorMultHandler) {
+				colorMultTable.remove(hndid);
+				if (getColorHandler(hndid, "<reload>") == null) {
+					colorMultTable.put(hndid, prev);
+				}
+			}
+		}		
+	}
+
     // Get color muliplier
-    public ColorMultHandler getColorHandler(String hnd) {
+    public static ColorMultHandler getColorHandler(String hnd, String blockname) {
         String hndid = hnd.toUpperCase();
         ColorMultHandler cmh = colorMultTable.get(hndid);
         if (cmh == null) { 
@@ -1539,7 +1555,7 @@ public class WesterosBlockDef {
                 }
                 cmh = colorMultTable.get(hndid);
                 if (cmh == null) {
-                    cmh = new CustomColorMultHandler(hnd, blockName);
+                    cmh = new CustomColorMultHandler(hnd, blockname);
                     colorMultTable.put(hndid, cmh);
                 }
             }

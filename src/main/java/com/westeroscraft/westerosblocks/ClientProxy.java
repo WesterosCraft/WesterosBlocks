@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import javax.annotation.Nullable;
 
@@ -26,13 +27,17 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.biome.BiomeColorHelper;
+import net.minecraft.client.resources.IReloadableResourceManager;
+import net.minecraft.client.resources.IResourceManager;
+import net.minecraftforge.client.resource.ISelectiveResourceReloadListener;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent;
+import net.minecraftforge.client.resource.IResourceType;
 
-public class ClientProxy extends Proxy {
+public class ClientProxy extends Proxy implements ISelectiveResourceReloadListener {
 	public ClientProxy() {
 	}
 	
@@ -116,5 +121,14 @@ public class ClientProxy extends Proxy {
                 return worldIn != null && pos != null ? BiomeColorHelper.getWaterColorAtPos(worldIn, pos) : -1;
             }
         }, Blocks.CAULDRON);
-    }
+
+		((IReloadableResourceManager) Minecraft.getMinecraft().getResourceManager()).registerReloadListener(this);
+	}
+	@Override
+	public void onResourceManagerReload(IResourceManager resourceManager, Predicate<IResourceType> resourcePredicate) {
+		WesterosBlocks.log.info("Handling resource reload");
+		WesterosBlockDef.reloadColorHandler();
+		WesterosBlocks.log.info("Handling resource reload completed");
+		
+	}
 }
