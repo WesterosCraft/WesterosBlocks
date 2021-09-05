@@ -6491,10 +6491,11 @@
             "resistance": 2,
             "creativeTab": "WesterosBlocks",
             "label": "Scorched Earth",
-            "textures": [
-                "ground_block_0/dirt",
-                "ground_block_0/soil_scorched_top",
-                "ground_block_0/soil_scorched"
+            "randomTextures": [
+              { "textures": [ "ground_block_0/dirt", "scorched_earth/top1", "scorched_earth/side1" ] },
+              { "textures": [ "ground_block_0/dirt", "scorched_earth/top2", "scorched_earth/side1" ] },
+              { "textures": [ "ground_block_0/dirt", "scorched_earth/top3", "scorched_earth/side1" ] },
+              { "textures": [ "ground_block_0/dirt", "scorched_earth/top4", "scorched_earth/side1" ] }
             ],
             "legacyBlockID": "solid_blocks_0:1"
         },
@@ -13854,7 +13855,7 @@
                 "furnace_block_0/brick_furnace_bottom",
                 "furnace_block_0/brick_furnace_top",
                 "furnace_block_0/brick_furnace_side",
-                "furnace_block_0/brick_furnace_front_on_still",
+                "furnace_block_0/brick_furnace_front_on",
                 "furnace_block_0/brick_furnace_front_off"
             ],
             "legacyBlockID": "furnace_block_0:0"
@@ -13875,8 +13876,8 @@
                 "furnace_block_0/brick_furnace_bottom",
                 "furnace_block_0/brick_furnace_top",
                 "furnace_block_0/brick_furnace_side",
-                "furnace_block_0/brick_furnace_front_on_still",
-                "furnace_block_0/brick_furnace_front_on_still"
+                "furnace_block_0/brick_furnace_front_on",
+                "furnace_block_0/brick_furnace_front_on"
             ],
             "legacyBlockID": "furnace_block_0:1"
         },
@@ -13894,7 +13895,7 @@
                 "furnace_block_0/sandstone_mono_furnace_bottom",
                 "furnace_block_0/sandstone_mono_furnace_top",
                 "furnace_block_0/sandstone_mono_furnace_side",
-                "furnace_block_0/sandstone_mono_furnace_front_on_still",
+                "furnace_block_0/sandstone_mono_furnace_front_on",
                 "furnace_block_0/sandstone_mono_furnace_front_off"
             ],
             "legacyBlockID": "furnace_block_1:0"
@@ -13914,8 +13915,8 @@
                 "furnace_block_0/sandstone_mono_furnace_bottom",
                 "furnace_block_0/sandstone_mono_furnace_top",
                 "furnace_block_0/sandstone_mono_furnace_side",
-                "furnace_block_0/sandstone_mono_furnace_front_on_still",
-                "furnace_block_0/sandstone_mono_furnace_front_on_still"
+                "furnace_block_0/sandstone_mono_furnace_front_on",
+                "furnace_block_0/sandstone_mono_furnace_front_on"
             ],
             "legacyBlockID": "furnace_block_1:1"
         },
@@ -13935,8 +13936,8 @@
                 "furnace_block_0/furnace_bottom",
                 "furnace_block_0/furnace_top",
                 "furnace_block_0/furnace_side",
-                "furnace_block_0/furnace_front_on_still",
-                "furnace_block_0/furnace_front_on_still"
+                "furnace_block_0/furnace_front_on",
+                "furnace_block_0/furnace_front_on"
             ],
             "legacyBlockID": "furnace_block_2:0"
         },
@@ -16292,13 +16293,16 @@
         },
         {
             "blockName": "savanna_tall_grass",
-            "blockType": "web",
+            "blockType": "webvert",
             "stepSound": "plant",
             "material": "web",
             "creativeTab": "WesterosPlants",
             "label": "Savanna Tall Grass",
             "textures": [
-                "web_block_1/tall_grass_savanna"
+                "savanna_tall_grass/down_side1", 
+                "savanna_tall_grass/down_side1", 
+                "savanna_tall_grass/up1", 
+                "savanna_tall_grass/both1"
             ],
             "colorMult": "textures/colormap/grass",
             "type": "no-in-web",
@@ -16306,13 +16310,16 @@
         },
         {
             "blockName": "jungle_tall_fern",
-            "blockType": "web",
+            "blockType": "webvert",
             "stepSound": "plant",
             "material": "web",
             "creativeTab": "WesterosPlants",
             "label": "Jungle Tall Fern",
             "textures": [
-                "web_block_1/tall_fern_jungle"
+                "jungle_tall_fern/down_side1", 
+                "jungle_tall_fern/down_side1", 
+                "jungle_tall_fern/up1", 
+                "jungle_tall_fern/both1"
             ],
             "colorMult": "textures/colormap/grass",
             "type": "no-in-web",
@@ -16326,7 +16333,10 @@
             "creativeTab": "WesterosPlants",
             "label": "Jungle Tall Grass",
             "textures": [
-                "web_block_1/tall_grass_jungle"
+                "jungle_tall_grass/down_side1", 
+                "jungle_tall_grass/down_side1", 
+                "jungle_tall_grass/up_both1", 
+                "jungle_tall_grass/up_both1"
             ],
             "colorMult": "textures/colormap/grass",
             "type": "no-in-web",
@@ -18167,7 +18177,7 @@
                 "furnace_block_0/mud_furnace_top",
                 "furnace_block_0/mud_furnace_top",
                 "furnace_block_0/mud_furnace_side",
-                "furnace_block_0/mud_furnace_front_on_still",
+                "furnace_block_0/mud_furnace_front_on",
                 "furnace_block_0/mud_furnace_front_off"
             ],
             "legacyBlockID": "furnace_block_3:0"
@@ -18187,8 +18197,8 @@
                 "furnace_block_0/mud_furnace_top",
                 "furnace_block_0/mud_furnace_top",
                 "furnace_block_0/mud_furnace_side",
-                "furnace_block_0/mud_furnace_front_on_still",
-                "furnace_block_0/mud_furnace_front_on_still"
+                "furnace_block_0/mud_furnace_front_on",
+                "furnace_block_0/mud_furnace_front_on"
             ],
             "legacyBlockID": "furnace_block_3:1"
         },

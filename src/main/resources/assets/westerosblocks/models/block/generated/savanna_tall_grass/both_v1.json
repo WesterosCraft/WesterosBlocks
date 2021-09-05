@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/tinted_cross",
   "textures": {
-    "cross": "westerosblocks:block/jungle_tall_fern/down_side1"
+    "cross": "westerosblocks:block/savanna_tall_grass/both1"
   }
 }

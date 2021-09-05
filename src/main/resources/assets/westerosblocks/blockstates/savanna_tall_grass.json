@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "up=false,down=true": {
+      "model": "westerosblocks:block/generated/savanna_tall_grass/down_v1"
+    },
+    "up=false,down=false": {
       "model": "westerosblocks:block/generated/savanna_tall_grass/base_v1"
+    },
+    "up=true,down=true": {
+      "model": "westerosblocks:block/generated/savanna_tall_grass/both_v1"
+    },
+    "up=true,down=false": {
+      "model": "westerosblocks:block/generated/savanna_tall_grass/up_v1"
     }
   }
 }
