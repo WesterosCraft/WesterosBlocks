@@ -23951,8 +23951,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Mountains of the Moon",
-            "textures": [
-                "pebble_block_0/pebble_vale_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_vale/wet1" ] },
+              { "textures": [ "pebble_vale/wet2" ] },
+              { "textures": [ "pebble_vale/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:2"
         },
@@ -24035,8 +24037,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Arbor Dorne",
-            "textures": [
-                "pebble_block_0/pebble_dorne_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_dorne/wet1" ] },
+              { "textures": [ "pebble_dorne/wet2" ] },
+              { "textures": [ "pebble_dorne/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:8"
         },
@@ -24106,8 +24110,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet Mountains of the Moon Layer",
-            "textures": [
-                "pebble_block_0/pebble_vale_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_vale/wet1" ] },
+              { "textures": [ "pebble_vale/wet2" ] },
+              { "textures": [ "pebble_vale/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_6:0"
         },
@@ -24190,8 +24196,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet Arbor Dorne Layer",
-            "textures": [
-                "pebble_block_0/pebble_dorne_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_dorne/wet1" ] },
+              { "textures": [ "pebble_dorne/wet2" ] },
+              { "textures": [ "pebble_dorne/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_12:0"
         },
@@ -25704,8 +25712,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Mountains of the Moon",
-            "textures": [
-                "pebble_block_0/pebble_vale_dry"
+            "randomTextures": [
+               { "textures": [ "pebble_vale/dry1" ] },
+               { "textures": [ "pebble_vale/dry2" ] },
+               { "textures": [ "pebble_vale/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:2"
         },
@@ -25788,8 +25798,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Arbor Dorne",
-            "textures": [
-                "pebble_block_0/pebble_dorne_dry"
+            "randomTextures": [
+               { "textures": [ "pebble_dorne/dry1" ] },
+               { "textures": [ "pebble_dorne/dry2" ] },
+               { "textures": [ "pebble_dorne/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:8"
         },
@@ -25859,8 +25871,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry Mountains of the Moon Layer",
-            "textures": [
-                "pebble_block_0/pebble_vale_dry"
+            "randomTextures": [
+               { "textures": [ "pebble_vale/dry1" ] },
+               { "textures": [ "pebble_vale/dry2" ] },
+               { "textures": [ "pebble_vale/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_17:0"
         },
@@ -25943,8 +25957,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry Arbor Dorne Layer",
-            "textures": [
-                "pebble_block_0/pebble_dorne_dry"
+            "randomTextures": [
+               { "textures": [ "pebble_dorne/dry1" ] },
+               { "textures": [ "pebble_dorne/dry2" ] },
+               { "textures": [ "pebble_dorne/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_23:0"
         },
