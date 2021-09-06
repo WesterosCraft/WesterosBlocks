@@ -23981,8 +23981,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Ocean Rocks",
-            "textures": [
-                "pebble_block_0/pebble_ocean_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_ocean/wet1" ] },
+              { "textures": [ "pebble_ocean/wet2" ] },
+              { "textures": [ "pebble_ocean/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:4"
         },
@@ -24009,8 +24011,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet River Rocks",
-            "textures": [
-                "pebble_block_0/pebble_river_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_river/wet1" ] },
+              { "textures": [ "pebble_river/wet2" ] },
+              { "textures": [ "pebble_river/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:6"
         },
@@ -24067,8 +24071,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Reach",
-            "textures": [
-                "pebble_block_0/pebble_reach_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_reach/wet1" ] },
+              { "textures": [ "pebble_reach/wet2" ] },
+              { "textures": [ "pebble_reach/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:10"
         },
@@ -24126,8 +24132,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet North Layer",
-            "textures": [
-                "pebble_block_0/pebble_north_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_north/wet1" ] },
+              { "textures": [ "pebble_north/wet2" ] },
+              { "textures": [ "pebble_north/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_7:0"
         },
@@ -24140,8 +24148,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet Ocean Layer",
-            "textures": [
-                "pebble_block_0/pebble_ocean_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_ocean/wet1" ] },
+              { "textures": [ "pebble_ocean/wet2" ] },
+              { "textures": [ "pebble_ocean/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_8:0"
         },
@@ -24168,8 +24178,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet River Layer",
-            "textures": [
-                "pebble_block_0/pebble_river_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_river/wet1" ] },
+              { "textures": [ "pebble_river/wet2" ] },
+              { "textures": [ "pebble_river/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_10:0"
         },
@@ -24226,8 +24238,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet Reach Layer",
-            "textures": [
-                "pebble_block_0/pebble_reach_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_reach/wet1" ] },
+              { "textures": [ "pebble_reach/wet2" ] },
+              { "textures": [ "pebble_reach/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_14:0"
         },
@@ -25728,8 +25742,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry The North",
-            "textures": [
-                "pebble_block_0/pebble_north_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_north/dry1" ] },
+              { "textures": [ "pebble_north/dry2" ] },
+              { "textures": [ "pebble_north/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:3"
         },
@@ -25742,8 +25758,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Ocean Rocks",
-            "textures": [
-                "pebble_block_0/pebble_ocean_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_ocean/dry1" ] },
+              { "textures": [ "pebble_ocean/dry2" ] },
+              { "textures": [ "pebble_ocean/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:4"
         },
@@ -25770,8 +25788,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry River Rocks",
-            "textures": [
-                "pebble_block_0/pebble_river_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_river/dry1" ] },
+              { "textures": [ "pebble_river/dry2" ] },
+              { "textures": [ "pebble_river/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:6"
         },
@@ -25828,8 +25848,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Reach",
-            "textures": [
-                "pebble_block_0/pebble_reach_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_reach/dry1" ] },
+              { "textures": [ "pebble_reach/dry2" ] },
+              { "textures": [ "pebble_reach/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:10"
         },
@@ -25887,8 +25909,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry North Layer",
-            "textures": [
-                "pebble_block_0/pebble_north_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_north/dry1" ] },
+              { "textures": [ "pebble_north/dry2" ] },
+              { "textures": [ "pebble_north/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_18:0"
         },
@@ -25901,8 +25925,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry Ocean Layer",
-            "textures": [
-                "pebble_block_0/pebble_ocean_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_ocean/dry1" ] },
+              { "textures": [ "pebble_ocean/dry2" ] },
+              { "textures": [ "pebble_ocean/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_19:0"
         },
@@ -25929,8 +25955,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry River Layer",
-            "textures": [
-                "pebble_block_0/pebble_river_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_river/dry1" ] },
+              { "textures": [ "pebble_river/dry2" ] },
+              { "textures": [ "pebble_river/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_21:0"
         },
@@ -25987,8 +26015,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry Reach Layer",
-            "textures": [
-                "pebble_block_0/pebble_reach_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_reach/dry1" ] },
+              { "textures": [ "pebble_reach/dry2" ] },
+              { "textures": [ "pebble_reach/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_25:0"
         },
