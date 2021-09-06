@@ -2271,8 +2271,13 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Horizontal Paper",
-            "textures": [
-                "cuboid_block_0/paper"
+            "randomTextures": [
+               { "textures": [ "paper/paperwork1" ], "weight": 20 },
+               { "textures": [ "paper/paperwork2" ], "weight": 10 },
+               { "textures": [ "paper/paperwork3" ], "weight": 10 },
+               { "textures": [ "paper/paperwork4" ], "weight": 20 },
+               { "textures": [ "paper/paperwork5" ], "weight": 15 },
+               { "textures": [ "paper/paperwork6" ], "weight": 25 }
             ],
             "boundingBox": {
                 "xMin": 0,
@@ -7774,8 +7779,14 @@
             "material": "web",
             "creativeTab": "WesterosDeco",
             "label": "Smoke",
-            "textures": [
-                "web_block_0/smoke"
+            "randomTextures": [
+               { "textures": [ "smoke/smoke1" ] },
+               { "textures": [ "smoke/smoke2" ] },
+               { "textures": [ "smoke/smoke3" ] },
+               { "textures": [ "smoke/smoke4" ] },
+               { "textures": [ "smoke/smoke5" ] },
+               { "textures": [ "smoke/smoke6" ] },
+               { "textures": [ "smoke/smoke7" ] }
             ],
             "type": "no-in-web",
             "legacyBlockID": "web_block_0:0"

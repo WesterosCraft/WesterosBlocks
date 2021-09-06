@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/paper/paperwork1",
-    "txt5": "westerosblocks:block/paper/paperwork1",
-    "txt2": "westerosblocks:block/paper/paperwork1",
-    "txt3": "westerosblocks:block/paper/paperwork1",
-    "txt0": "westerosblocks:block/paper/paperwork1",
-    "txt1": "westerosblocks:block/paper/paperwork1",
-    "particle": "westerosblocks:block/paper/paperwork1"
+    "txt4": "westerosblocks:block/paper/paperwork2",
+    "txt5": "westerosblocks:block/paper/paperwork2",
+    "txt2": "westerosblocks:block/paper/paperwork2",
+    "txt3": "westerosblocks:block/paper/paperwork2",
+    "txt0": "westerosblocks:block/paper/paperwork2",
+    "txt1": "westerosblocks:block/paper/paperwork2",
+    "particle": "westerosblocks:block/paper/paperwork2"
   },
   "elements": [
     {

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/smoke/smoke1"
+    "cross": "westerosblocks:block/smoke/smoke2"
   }
 }
