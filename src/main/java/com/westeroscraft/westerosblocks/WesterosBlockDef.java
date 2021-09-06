@@ -480,7 +480,7 @@ public class WesterosBlockDef {
             return getColor(0.5F, 1.0F);
         }
         @SideOnly(Side.CLIENT)
-        protected void loadRes(String rname, String blkname) {
+        public void loadRes(String rname, String blkname) {
             if (rname.indexOf(':') < 0)
                 rname = WesterosBlocks.MOD_ID + ":" + rname;
             if (rname.endsWith(".png") == false)
@@ -1526,10 +1526,7 @@ public class WesterosBlockDef {
 			ColorMultHandler prev = colorMultTable.get(hndid);
 			// Only reload those from resources
 			if (prev instanceof CustomColorMultHandler) {
-				colorMultTable.remove(hndid);
-				if (getColorHandler(hndid, "<reload>") == null) {
-					colorMultTable.put(hndid, prev);
-				}
+				((CustomColorMultHandler) prev).loadRes(hndid, "<reload>");	// Reload 
 			}
 		}		
 	}
