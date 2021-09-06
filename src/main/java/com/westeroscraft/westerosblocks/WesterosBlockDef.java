@@ -1354,7 +1354,9 @@ public class WesterosBlockDef {
     	if (tok.length >= 2) {
     		String v = tok[tok.length - 1];
     		if (v.indexOf('=') < 0) {
-    			mval.put("variant", v);
+    			if (!v.equals("default")) {
+    				mval.put("variant", v);
+    			}
     		}
     		else {
     			String[] stok = v.split(",");

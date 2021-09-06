@@ -1,0 +1,292 @@
+{
+  "variants": {
+    "north=true,south=false,east=true,west=false": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ne_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ne_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ne_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ne_v4",
+        "weight": 1
+      }
+    ],
+    "north=false,south=false,east=false,west=false": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/base_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/base_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/base_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/base_v4",
+        "weight": 1
+      }
+    ],
+    "north=true,south=false,east=false,west=true": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nw_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nw_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nw_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nw_v4",
+        "weight": 1
+      }
+    ],
+    "north=false,south=true,east=false,west=false": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/s_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/s_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/s_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/s_v4",
+        "weight": 1
+      }
+    ],
+    "north=false,south=false,east=false,west=true": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/w_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/w_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/w_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/w_v4",
+        "weight": 1
+      }
+    ],
+    "north=true,south=true,east=true,west=false": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nse_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nse_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nse_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nse_v4",
+        "weight": 1
+      }
+    ],
+    "north=false,south=false,east=true,west=false": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/e_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/e_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/e_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/e_v4",
+        "weight": 1
+      }
+    ],
+    "north=true,south=true,east=false,west=true": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nsw_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nsw_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nsw_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nsw_v4",
+        "weight": 1
+      }
+    ],
+    "north=false,south=false,east=true,west=true": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ew_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ew_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ew_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ew_v4",
+        "weight": 1
+      }
+    ],
+    "north=false,south=true,east=true,west=false": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/se_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/se_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/se_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/se_v4",
+        "weight": 1
+      }
+    ],
+    "north=true,south=false,east=false,west=false": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/n_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/n_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/n_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/n_v4",
+        "weight": 1
+      }
+    ],
+    "north=true,south=false,east=true,west=true": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/new_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/new_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/new_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/new_v4",
+        "weight": 1
+      }
+    ],
+    "north=true,south=true,east=true,west=true": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nsew_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nsew_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nsew_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/nsew_v4",
+        "weight": 1
+      }
+    ],
+    "north=false,south=true,east=false,west=true": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/sw_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/sw_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/sw_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/sw_v4",
+        "weight": 1
+      }
+    ],
+    "north=false,south=true,east=true,west=true": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/sew_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/sew_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/sew_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/sew_v4",
+        "weight": 1
+      }
+    ],
+    "north=true,south=true,east=false,west=false": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ns_v1",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ns_v2",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ns_v3",
+        "weight": 80
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf/ns_v4",
+        "weight": 1
+      }
+    ]
+  }
+}

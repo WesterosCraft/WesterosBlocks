@@ -157,11 +157,15 @@ public class SolidHorizBlockModelExport extends ModelExport {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") (need horiz CTM handler)");
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	//TODO: need to add handler to WorldConverter for the horizontal CTM states
     	newstate.put("north", "false");
     	newstate.put("south", "false");    	

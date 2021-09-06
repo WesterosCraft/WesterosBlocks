@@ -4393,6 +4393,47 @@
             "legacyBlockID": "bookshelves_block_0:2"
         },
         {
+            "blockName": "bookshelf",
+            "blockType": "solidhoriz",
+            "hardness": 2,
+            "stepSound": "wood",
+            "material": "wood",
+            "resistance": 5,
+            "creativeTab": "WesterosDeco",
+            "label": "Bookshelf",
+            "randomTextures": [
+            	{ "textures": [
+	                "bookshelf/bookshelf_top",
+	                "bookshelf/bookshelf_top",
+        	        "bookshelf/side1",
+        	        "bookshelf/left1",
+        	        "bookshelf/right1",
+        	        "bookshelf/both1" ], "weight": 80 },
+            	{ "textures": [
+	                "bookshelf/bookshelf_top",
+	                "bookshelf/bookshelf_top",
+        	        "bookshelf/side2",
+        	        "bookshelf/left2",
+        	        "bookshelf/right2",
+        	        "bookshelf/both2" ], "weight": 80 },
+            	{ "textures": [
+	                "bookshelf/bookshelf_top",
+	                "bookshelf/bookshelf_top",
+        	        "bookshelf/side3",
+        	        "bookshelf/left3",
+        	        "bookshelf/right3",
+        	        "bookshelf/both3" ], "weight": 80 },
+            	{ "textures": [
+	                "bookshelf/bookshelf_top",
+	                "bookshelf/bookshelf_top",
+        	        "bookshelf/side4",
+        	        "bookshelf/left3",
+        	        "bookshelf/right3",
+        	        "bookshelf/both3" ], "weight": 1 }
+            ],
+            "legacyBlockID": "minecraft:bookshelf:default"
+        },
+        {
             "blockName": "small_stone_brick_arrow_slit",
             "blockType": "solidvert",
             "creativeTab": "WesterosDeco",

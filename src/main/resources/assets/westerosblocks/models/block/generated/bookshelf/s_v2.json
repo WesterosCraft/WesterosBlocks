@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "westerosblocks:block/bookshelf/bookshelf_top",
+    "up": "westerosblocks:block/bookshelf/bookshelf_top",
+    "down": "westerosblocks:block/bookshelf/bookshelf_top",
+    "north": "westerosblocks:block/bookshelf/side2",
+    "south": "westerosblocks:block/bookshelf/side2",
+    "east": "westerosblocks:block/bookshelf/left2",
+    "west": "westerosblocks:block/bookshelf/right2"
+  }
+}
