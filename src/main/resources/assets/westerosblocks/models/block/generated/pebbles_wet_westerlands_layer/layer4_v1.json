@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:block/pebble_block_0/pebble_westerlands_wet",
-    "txt5": "westerosblocks:block/pebble_block_0/pebble_westerlands_wet",
-    "txt2": "westerosblocks:block/pebble_block_0/pebble_westerlands_wet",
-    "txt3": "westerosblocks:block/pebble_block_0/pebble_westerlands_wet",
-    "txt0": "westerosblocks:block/pebble_block_0/pebble_westerlands_wet",
-    "txt1": "westerosblocks:block/pebble_block_0/pebble_westerlands_wet",
-    "particle": "westerosblocks:block/pebble_block_0/pebble_westerlands_wet"
+    "txt4": "westerosblocks:block/pebble_westerlands/wet1",
+    "txt5": "westerosblocks:block/pebble_westerlands/wet1",
+    "txt2": "westerosblocks:block/pebble_westerlands/wet1",
+    "txt3": "westerosblocks:block/pebble_westerlands/wet1",
+    "txt0": "westerosblocks:block/pebble_westerlands/wet1",
+    "txt1": "westerosblocks:block/pebble_westerlands/wet1",
+    "particle": "westerosblocks:block/pebble_westerlands/wet1"
   },
   "elements": [
     {

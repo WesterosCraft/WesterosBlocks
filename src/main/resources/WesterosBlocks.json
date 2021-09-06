@@ -23923,8 +23923,10 @@
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Eastern Islands",
             "colorMult": "textures/colormap/easternisland",
-            "textures": [
-                "pebble_block_0/pebble_eastern_islands_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_eastern_islands/wet1" ] },
+              { "textures": [ "pebble_eastern_islands/wet2" ] },
+              { "textures": [ "pebble_eastern_islands/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:0"
         },
@@ -23937,8 +23939,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Iron Islands",
-            "textures": [
-                "pebble_block_0/pebble_iron_islands_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_iron_islands/wet1" ] },
+              { "textures": [ "pebble_iron_islands/wet2" ] },
+              { "textures": [ "pebble_iron_islands/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:1"
         },
@@ -23997,8 +24001,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Red Mountains",
-            "textures": [
-                "pebble_block_0/pebble_red_mountains_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_red_mountains/wet1" ] },
+              { "textures": [ "pebble_red_mountains/wet2" ] },
+              { "textures": [ "pebble_red_mountains/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:5"
         },
@@ -24027,8 +24033,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Westerlands",
-            "textures": [
-                "pebble_block_0/pebble_westerlands_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_westerlands/wet1" ] },
+              { "textures": [ "pebble_westerlands/wet2" ] },
+              { "textures": [ "pebble_westerlands/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:7"
         },
@@ -24057,8 +24065,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Wet Stormlands",
-            "textures": [
-                "pebble_block_0/pebble_stormlands_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_stormlands/wet1" ] },
+              { "textures": [ "pebble_stormlands/wet2" ] },
+              { "textures": [ "pebble_stormlands/wet3" ] }
             ],
             "legacyBlockID": "stone_block_6:9"
         },
@@ -24088,8 +24098,10 @@
             "type": "cnt:8",
             "label": "Pebbles Wet Eastern Islands Layer",
             "colorMult": "textures/colormap/easternisland",
-            "textures": [
-                "pebble_block_0/pebble_eastern_islands_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_eastern_islands/wet1" ] },
+              { "textures": [ "pebble_eastern_islands/wet2" ] },
+              { "textures": [ "pebble_eastern_islands/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_4:0"
         },
@@ -24102,8 +24114,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet Iron Islands Layer",
-            "textures": [
-                "pebble_block_0/pebble_iron_islands_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_iron_islands/wet1" ] },
+              { "textures": [ "pebble_iron_islands/wet2" ] },
+              { "textures": [ "pebble_iron_islands/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_5:0"
         },
@@ -24164,8 +24178,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet Red Mountains Layer",
-            "textures": [
-                "pebble_block_0/pebble_red_mountains_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_red_mountains/wet1" ] },
+              { "textures": [ "pebble_red_mountains/wet2" ] },
+              { "textures": [ "pebble_red_mountains/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_9:0"
         },
@@ -24194,8 +24210,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet Westerlands Layer",
-            "textures": [
-                "pebble_block_0/pebble_westerlands_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_westerlands/wet1" ] },
+              { "textures": [ "pebble_westerlands/wet2" ] },
+              { "textures": [ "pebble_westerlands/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_11:0"
         },
@@ -24224,8 +24242,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Wet Stormlands Layer",
-            "textures": [
-                "pebble_block_0/pebble_stormlands_wet"
+            "randomTextures": [
+              { "textures": [ "pebble_stormlands/wet1" ] },
+              { "textures": [ "pebble_stormlands/wet2" ] },
+              { "textures": [ "pebble_stormlands/wet3" ] }
             ],
             "legacyBlockID": "sand_layer_13:0"
         },
@@ -25698,8 +25718,10 @@
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Eastern Islands",
             "colorMult": "textures/colormap/easternisland",
-            "textures": [
-                "pebble_block_0/pebble_eastern_islands_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_eastern_islands/dry1" ] },
+              { "textures": [ "pebble_eastern_islands/dry2" ] },
+              { "textures": [ "pebble_eastern_islands/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:0"
         },
@@ -25712,8 +25734,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Iron Islands",
-            "textures": [
-                "pebble_block_0/pebble_iron_islands_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_iron_islands/dry1" ] },
+              { "textures": [ "pebble_iron_islands/dry2" ] },
+              { "textures": [ "pebble_iron_islands/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:1"
         },
@@ -25774,8 +25798,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Red Mountains",
-            "textures": [
-                "pebble_block_0/pebble_red_mountains_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_red_mountains/dry1" ] },
+              { "textures": [ "pebble_red_mountains/dry2" ] },
+              { "textures": [ "pebble_red_mountains/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:5"
         },
@@ -25804,8 +25830,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Westerlands",
-            "textures": [
-                "pebble_block_0/pebble_westerlands_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_westerlands/dry1" ] },
+              { "textures": [ "pebble_westerlands/dry2" ] },
+              { "textures": [ "pebble_westerlands/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:7"
         },
@@ -25834,8 +25862,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pebbles Dry Stormlands",
-            "textures": [
-                "pebble_block_0/pebble_stormlands_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_stormlands/dry1" ] },
+              { "textures": [ "pebble_stormlands/dry2" ] },
+              { "textures": [ "pebble_stormlands/dry3" ] }
             ],
             "legacyBlockID": "stone_block_8:9"
         },
@@ -25865,8 +25895,10 @@
             "type": "cnt:8",
             "label": "Pebbles Dry Eastern Islands Layer",
             "colorMult": "textures/colormap/easternisland",
-            "textures": [
-                "pebble_block_0/pebble_eastern_islands_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_eastern_islands/dry1" ] },
+              { "textures": [ "pebble_eastern_islands/dry2" ] },
+              { "textures": [ "pebble_eastern_islands/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_15:0"
         },
@@ -25879,8 +25911,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry Iron Islands Layer",
-            "textures": [
-                "pebble_block_0/pebble_iron_islands_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_iron_islands/dry1" ] },
+              { "textures": [ "pebble_iron_islands/dry2" ] },
+              { "textures": [ "pebble_iron_islands/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_16:0"
         },
@@ -25941,8 +25975,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry Red Mountains Layer",
-            "textures": [
-                "pebble_block_0/pebble_red_mountains_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_red_mountains/dry1" ] },
+              { "textures": [ "pebble_red_mountains/dry2" ] },
+              { "textures": [ "pebble_red_mountains/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_20:0"
         },
@@ -25971,8 +26007,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry Westerlands Layer",
-            "textures": [
-                "pebble_block_0/pebble_westerlands_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_westerlands/dry1" ] },
+              { "textures": [ "pebble_westerlands/dry2" ] },
+              { "textures": [ "pebble_westerlands/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_22:0"
         },
@@ -26001,8 +26039,10 @@
             "creativeTab": "WesterosBlocks",
             "type": "cnt:8",
             "label": "Pebbles Dry Stormlands Layer",
-            "textures": [
-                "pebble_block_0/pebble_stormlands_dry"
+            "randomTextures": [
+              { "textures": [ "pebble_stormlands/dry1" ] },
+              { "textures": [ "pebble_stormlands/dry2" ] },
+              { "textures": [ "pebble_stormlands/dry3" ] }
             ],
             "legacyBlockID": "sand_layer_24:0"
         },

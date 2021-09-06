@@ -1,0 +1,87 @@
+{
+  "parent": "minecraft:block/thin_block",
+  "textures": {
+    "txt4": "westerosblocks:block/pebble_westerlands/dry2",
+    "txt5": "westerosblocks:block/pebble_westerlands/dry2",
+    "txt2": "westerosblocks:block/pebble_westerlands/dry2",
+    "txt3": "westerosblocks:block/pebble_westerlands/dry2",
+    "txt0": "westerosblocks:block/pebble_westerlands/dry2",
+    "txt1": "westerosblocks:block/pebble_westerlands/dry2",
+    "particle": "westerosblocks:block/pebble_westerlands/dry2"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        12.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            4.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt5",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            4.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt3",
+          "cullface": "south"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            4.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt2",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            4.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt4",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}
