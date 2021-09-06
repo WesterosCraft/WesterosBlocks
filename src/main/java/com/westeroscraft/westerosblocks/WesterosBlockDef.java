@@ -487,6 +487,7 @@ public class WesterosBlockDef {
                 rname += ".png";
             try {
                 colorBuffer = TextureUtil.readImageData(Minecraft.getMinecraft().getResourceManager(), new ResourceLocation(rname));
+                //WesterosBlocks.log.info("Loaded " + rname);
             } catch (Exception e) {
                 WesterosBlocks.log.error(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
                 Arrays.fill(colorBuffer,  0xFFFFFF);
@@ -1535,7 +1536,7 @@ public class WesterosBlockDef {
 
     // Get color muliplier
     public static ColorMultHandler getColorHandler(String hnd, String blockname) {
-        String hndid = hnd.toUpperCase();
+        String hndid = hnd.toLowerCase();
         ColorMultHandler cmh = colorMultTable.get(hndid);
         if (cmh == null) { 
             // See if color code
@@ -1551,7 +1552,7 @@ public class WesterosBlockDef {
                 int idx = hnd.indexOf(':');
                 if (idx < 0) {
                     hnd = WesterosBlocks.MOD_ID + ":" + hnd;
-                    hndid = hnd.toUpperCase();
+                    hndid = hnd.toLowerCase();
                 }
                 cmh = colorMultTable.get(hndid);
                 if (cmh == null) {
