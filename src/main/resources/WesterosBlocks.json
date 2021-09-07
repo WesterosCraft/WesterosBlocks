@@ -5274,7 +5274,7 @@
         },
         {
             "blockName": "vivid_sandstone",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5284,29 +5284,35 @@
             "textures": [
                 "stone_block_0/sandstone_vivid_top",
                 "stone_block_0/sandstone_vivid_top",
-                "stone_block_0/sandstone_vivid"
+                "vivid_sandstone/side1",
+                "vivid_sandstone/left1",
+                "vivid_sandstone/right1",
+                "vivid_sandstone/both1"
             ],
             "legacyBlockID": "stone_block_0:1"
         },
         {
             "blockName": "vivid_mossy_sandstone",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Vivid Mossy Sandstone",
-            "textures": [
-                "stone_block_0/sandstone_vivid_top",
-                "stone_block_0/sandstone_vivid_top",
-                "stone_block_0/sandstone_vivid_mossy"
+            "randomTextures": [
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both1" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both2" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both3" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both4" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both5" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both6" ] }
             ],
             "legacyBlockID": "stone_block_0:2"
         },
         {
             "blockName": "vivid_dark_sandstone",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5314,9 +5320,12 @@
             "creativeTab": "WesterosBlocks",
             "label": "Vivid Dark Sandstone",
             "textures": [
-                "stone_block_0/sandstone_vivid_dark_top",
-                "stone_block_0/sandstone_vivid_dark_top",
-                "stone_block_0/sandstone_vivid_dark"
+                "vivid_dark_sandstone/top_bottom1",
+                "vivid_dark_sandstone/top_bottom1",
+                "vivid_dark_sandstone/side1",
+                "vivid_dark_sandstone/left1",
+                "vivid_dark_sandstone/right1",
+                "vivid_dark_sandstone/both1"
             ],
             "legacyBlockID": "stone_block_0:3"
         },

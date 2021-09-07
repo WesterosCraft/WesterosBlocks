@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_0/sandstone_vivid_top",
+    "particle": "westerosblocks:block/stone_block_0/sandstone_vivid_top",
     "up": "westerosblocks:block/stone_block_0/sandstone_vivid_top",
-    "north": "westerosblocks:block/stone_block_0/sandstone_vivid",
-    "south": "westerosblocks:block/stone_block_0/sandstone_vivid",
-    "west": "westerosblocks:block/stone_block_0/sandstone_vivid",
-    "east": "westerosblocks:block/stone_block_0/sandstone_vivid",
-    "particle": "westerosblocks:block/stone_block_0/sandstone_vivid"
+    "down": "westerosblocks:block/stone_block_0/sandstone_vivid_top",
+    "north": "westerosblocks:block/vivid_sandstone/side1",
+    "south": "westerosblocks:block/vivid_sandstone/side1",
+    "east": "westerosblocks:block/vivid_sandstone/side1",
+    "west": "westerosblocks:block/vivid_sandstone/side1"
   }
 }
