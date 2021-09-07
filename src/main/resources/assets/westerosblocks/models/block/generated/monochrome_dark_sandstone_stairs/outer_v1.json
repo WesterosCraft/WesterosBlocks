@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark_top",
-    "top": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark_top",
-    "side": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark",
-    "particle": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark"
+    "bottom": "westerosblocks:block/monochrome_dark_sandstone/top_bottom1",
+    "top": "westerosblocks:block/monochrome_dark_sandstone/top_bottom1",
+    "side": "westerosblocks:block/monochrome_dark_sandstone/side1",
+    "particle": "westerosblocks:block/monochrome_dark_sandstone/side1"
   }
 }
