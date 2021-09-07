@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "westerosblocks:block/stone_block_0/sandstone_terracotta_top",
     "top": "westerosblocks:block/stone_block_0/sandstone_terracotta_top",
-    "side": "westerosblocks:block/stone_block_0/sandstone_terracotta",
-    "particle": "westerosblocks:block/stone_block_0/sandstone_terracotta"
+    "side": "westerosblocks:block/terracotta/side1",
+    "particle": "westerosblocks:block/terracotta/side1"
   }
 }

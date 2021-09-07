@@ -4,9 +4,9 @@
     "particle": "westerosblocks:block/stone_block_0/sandstone_terracotta_top",
     "up": "westerosblocks:block/stone_block_0/sandstone_terracotta_top",
     "down": "westerosblocks:block/stone_block_0/sandstone_terracotta_top",
-    "north": "westerosblocks:block/terracotta/side1",
-    "south": "westerosblocks:block/terracotta/side1",
-    "east": "westerosblocks:block/terracotta/side1",
-    "west": "westerosblocks:block/terracotta/side1"
+    "north": "westerosblocks:block/terracotta/left1",
+    "south": "westerosblocks:block/terracotta/right1",
+    "east": "westerosblocks:block/terracotta/both1",
+    "west": "westerosblocks:block/terracotta/both1"
   }
 }

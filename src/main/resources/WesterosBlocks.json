@@ -5398,7 +5398,7 @@
         },
         {
             "blockName": "terracotta",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5408,7 +5408,10 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_top",
                 "stone_block_0/sandstone_terracotta_top",
-                "stone_block_0/sandstone_terracotta"
+                "terracotta/side1",
+                "terracotta/left1",
+                "terracotta/right1",
+                "terracotta/both1"
             ],
             "legacyBlockID": "stone_block_0:8"
         },
@@ -13446,7 +13449,7 @@
         },
         {
             "blockName": "dorne_light_terracotta",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 5,
             "stepSound": "stone",
             "material": "rock",
@@ -13456,7 +13459,10 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_light_top",
                 "stone_block_0/sandstone_terracotta_light_top",
-                "stone_block_0/sandstone_terracotta_light"
+            	"dorne_light_terracotta/side1",
+            	"dorne_light_terracotta/left1",
+            	"dorne_light_terracotta/right1",
+            	"dorne_light_terracotta/both1"
             ],
             "legacyBlockID": "stone_block_3:10"
         },

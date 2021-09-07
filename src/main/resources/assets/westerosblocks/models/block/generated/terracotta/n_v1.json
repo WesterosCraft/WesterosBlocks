@@ -6,7 +6,7 @@
     "down": "westerosblocks:block/stone_block_0/sandstone_terracotta_top",
     "north": "westerosblocks:block/terracotta/side1",
     "south": "westerosblocks:block/terracotta/side1",
-    "east": "westerosblocks:block/terracotta/side1",
-    "west": "westerosblocks:block/terracotta/side1"
+    "east": "westerosblocks:block/terracotta/right1",
+    "west": "westerosblocks:block/terracotta/left1"
   }
 }
