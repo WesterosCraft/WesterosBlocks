@@ -181,7 +181,7 @@
                { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both12" ] },
                { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both13" ] }
             ],
-            "legacyBlockID": "minecraft:sandstone:default"
+            "legacyBlockID": "minecraft:sandstone:type=sandstone"
         },
         
 	    {
