@@ -5341,7 +5341,7 @@
         },
         {
             "blockName": "monochrome_sandstone",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5351,7 +5351,10 @@
             "textures": [
                 "stone_block_0/sandstone_monochrome_top",
                 "stone_block_0/sandstone_monochrome_top",
-                "stone_block_0/sandstone_monochrome"
+                "monochrome_sandstone/side1",
+                "monochrome_sandstone/left1",
+                "monochrome_sandstone/right1",
+                "monochrome_sandstone/both1"
             ],
             "legacyBlockID": "stone_block_0:5"
         },
