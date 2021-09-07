@@ -107,6 +107,9 @@ public class CrossBlockVertModelExport extends ModelExport {
     	oldstate.put("variant", oldVariant);
     	newstate.put("up", "false");
     	newstate.put("down", "false");
+    	if (def.condStates != null) {
+    		newstate.put("cond", def.getDefaultCondID());    		
+    	}
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 

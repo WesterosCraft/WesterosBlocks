@@ -182,8 +182,7 @@
                { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both13" ] }
             ],
             "legacyBlockID": "minecraft:sandstone:type=sandstone"
-        },
-        
+        },        
 	    {
             "blockName": "oxidized_iron_block",
             "blockType": "solid",
