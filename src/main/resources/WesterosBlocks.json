@@ -13450,7 +13450,7 @@
         },
         {
             "blockName": "dorne_dark_sandstone",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 5,
             "stepSound": "stone",
             "material": "rock",
@@ -13460,7 +13460,10 @@
             "textures": [
                 "stone_block_0/sandstone_normal_dark_top",
                 "stone_block_0/sandstone_normal_dark_top",
-                "stone_block_0/sandstone_normal_dark"
+            	"dorne_dark_sandstone/side1",
+            	"dorne_dark_sandstone/left1",
+            	"dorne_dark_sandstone/right1",
+            	"dorne_dark_sandstone/both1"
             ],
             "legacyBlockID": "stone_block_3:11"
         },

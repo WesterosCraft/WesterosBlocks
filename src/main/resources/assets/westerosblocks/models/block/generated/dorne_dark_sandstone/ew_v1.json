@@ -4,8 +4,8 @@
     "particle": "westerosblocks:block/stone_block_0/sandstone_normal_dark_top",
     "up": "westerosblocks:block/stone_block_0/sandstone_normal_dark_top",
     "down": "westerosblocks:block/stone_block_0/sandstone_normal_dark_top",
-    "north": "westerosblocks:block/dorne_dark_sandstone/side1",
-    "south": "westerosblocks:block/dorne_dark_sandstone/side1",
+    "north": "westerosblocks:block/dorne_dark_sandstone/both1",
+    "south": "westerosblocks:block/dorne_dark_sandstone/both1",
     "east": "westerosblocks:block/dorne_dark_sandstone/side1",
     "west": "westerosblocks:block/dorne_dark_sandstone/side1"
   }
