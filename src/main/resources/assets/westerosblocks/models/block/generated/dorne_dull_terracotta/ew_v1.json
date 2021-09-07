@@ -4,8 +4,8 @@
     "particle": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
     "up": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
     "down": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
-    "north": "westerosblocks:block/dorne_dull_terracotta/side1",
-    "south": "westerosblocks:block/dorne_dull_terracotta/side1",
+    "north": "westerosblocks:block/dorne_dull_terracotta/both1",
+    "south": "westerosblocks:block/dorne_dull_terracotta/both1",
     "east": "westerosblocks:block/dorne_dull_terracotta/side1",
     "west": "westerosblocks:block/dorne_dull_terracotta/side1"
   }
