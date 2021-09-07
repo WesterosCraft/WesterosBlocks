@@ -4,8 +4,8 @@
     "particle": "westerosblocks:block/stone_block_0/sandstone_monochrome_top",
     "up": "westerosblocks:block/stone_block_0/sandstone_monochrome_top",
     "down": "westerosblocks:block/stone_block_0/sandstone_monochrome_top",
-    "north": "westerosblocks:block/monochrome_mossy_sandstone/side1",
-    "south": "westerosblocks:block/monochrome_mossy_sandstone/side1",
+    "north": "westerosblocks:block/monochrome_mossy_sandstone/both2",
+    "south": "westerosblocks:block/monochrome_mossy_sandstone/both2",
     "east": "westerosblocks:block/monochrome_mossy_sandstone/side1",
     "west": "westerosblocks:block/monochrome_mossy_sandstone/side1"
   }

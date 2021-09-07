@@ -5360,17 +5360,20 @@
         },
         {
             "blockName": "monochrome_mossy_sandstone",
-            "blockType": "solid",
+            "blockType": "solidhoriz",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Monochrome Mossy Sandstone",
-            "textures": [
-                "stone_block_0/sandstone_monochrome_top",
-                "stone_block_0/sandstone_monochrome_top",
-                "stone_block_0/sandstone_monochrome_mossy"
+            "randomTextures": [
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both1" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both2" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both3" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both4" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both5" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both6" ] }
             ],
             "legacyBlockID": "stone_block_0:6"
         },
