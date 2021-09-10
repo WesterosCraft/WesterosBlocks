@@ -23798,7 +23798,7 @@
         },
         {
             "blockName": "nettle",
-            "blockType": "plant",
+            "blockType": "plantvert",
             "stepSound": "grass",
             "material": "plants",
             "creativeTab": "WesterosPlants",
@@ -23811,8 +23811,12 @@
                 "zMax": 0.7
             },
             "label": "Nettle",
-            "textures": [
-                "web_block_1/nettle"
+            "randomTextures": [
+              { "textures": [ "nettle/side1", "nettle/down1", "nettle/up_both1", "nettle/up_both1" ], "weight": 15  }, 
+              { "textures": [ "nettle/side2", "nettle/down1", "nettle/up_both1", "nettle/up_both1" ], "weight": 15  }, 
+              { "textures": [ "nettle/side3", "nettle/down2", "nettle/up_both2", "nettle/up_both2" ], "weight": 5  }, 
+              { "textures": [ "nettle/side4", "nettle/down2", "nettle/up_both2", "nettle/up_both2" ], "weight": 5  }, 
+              { "textures": [ "nettle/side5", "nettle/down2", "nettle/up_both2", "nettle/up_both2" ], "weight": 20  }
             ],
             "legacyBlockID": "forest_block_0:3"
         },

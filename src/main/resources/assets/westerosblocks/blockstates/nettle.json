@@ -1,7 +1,72 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/nettle/base_v1"
-    }
+    "up=false,down=true": [
+      {
+        "model": "westerosblocks:block/generated/nettle/down_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/down_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/down_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/down_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/down_v5"
+      }
+    ],
+    "up=false,down=false": [
+      {
+        "model": "westerosblocks:block/generated/nettle/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/base_v5"
+      }
+    ],
+    "up=true,down=true": [
+      {
+        "model": "westerosblocks:block/generated/nettle/both_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/both_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/both_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/both_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/both_v5"
+      }
+    ],
+    "up=true,down=false": [
+      {
+        "model": "westerosblocks:block/generated/nettle/up_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/up_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/up_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/up_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/nettle/up_v5"
+      }
+    ]
   }
 }

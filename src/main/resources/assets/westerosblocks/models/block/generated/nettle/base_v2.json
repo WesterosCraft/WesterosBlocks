@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/nettle/side1"
+    "cross": "westerosblocks:block/nettle/side2"
   }
 }

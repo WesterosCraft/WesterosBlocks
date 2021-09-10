@@ -1,6 +1,4 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/web_block_1/nettle"
-  }
+  "parent": "westerosblocks:block/generated/nettle/base_v1",
+  "textures": {}
 }
