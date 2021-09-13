@@ -6046,7 +6046,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Purple Wood",
             "textures": [
-                "wood_block_1/wood_purple"
+                "purple_wood/top_bottom",
+                "purple_wood/top_bottom",
+                "purple_wood/side"
             ],
             "legacyBlockID": "wood_colours:0"
         },
