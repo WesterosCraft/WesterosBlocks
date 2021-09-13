@@ -6060,7 +6060,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "White Wood",
             "textures": [
-                "wood_block_1/wood_white"
+                "white_wood/top_bottom",
+                "white_wood/top_bottom",
+                "white_wood/side"
             ],
             "legacyBlockID": "wood_colours:1"
         },
@@ -6074,7 +6076,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Green Wood",
             "textures": [
-                "wood_block_1/wood_green"
+                "green_wood/top_bottom",
+                "green_wood/top_bottom",
+                "green_wood/side"
             ],
             "legacyBlockID": "wood_colours:2"
         },
@@ -6088,7 +6092,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Grey Wood",
             "textures": [
-                "wood_block_1/wood_grey"
+                "grey_wood/top_bottom",
+                "grey_wood/top_bottom",
+                "grey_wood/side"
             ],
             "legacyBlockID": "wood_colours:3"
         },
@@ -6102,7 +6108,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Red Wood",
             "textures": [
-                "wood_block_1/wood_red"
+                "red_wood/top_bottom",
+                "red_wood/top_bottom",
+                "red_wood/side"
             ],
             "legacyBlockID": "wood_colours:4"
         },
@@ -6132,7 +6140,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Blue Wood",
             "textures": [
-                "wood_block_1/wood_blue"
+                "blue_wood/top_bottom",
+                "blue_wood/top_bottom",
+                "blue_wood/side"
             ],
             "legacyBlockID": "wood_colours:6"
         },
@@ -6146,7 +6156,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Yellow Wood",
             "textures": [
-                "wood_block_1/wood_yellow"
+                "yellow_wood/top_bottom",
+                "yellow_wood/top_bottom",
+                "yellow_wood/side"
             ],
             "legacyBlockID": "wood_colours:7"
         },
@@ -12847,7 +12859,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Grey Wood Slab",
             "textures": [
-                "wood_block_1/wood_grey"
+                "grey_wood/top_bottom",
+                "grey_wood/top_bottom",
+                "grey_wood/side"
             ],
             "legacyBlockID": "wood_slab_block_0:1"
         },
@@ -12867,7 +12881,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "White Wood Slab",
             "textures": [
-                "wood_block_1/wood_white"
+                "white_wood/top_bottom",
+                "white_wood/top_bottom",
+                "white_wood/side"
             ],
             "legacyBlockID": "wood_slab_block_0:2"
         },
@@ -24620,7 +24636,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Grey Wood Fence",
             "textures": [
-                "wood_block_1/wood_grey"
+                "grey_wood/side"
             ],
             "legacyBlockID": "fence_block_3:12"
         },
@@ -24634,7 +24650,7 @@
             "creativeTab": "WesterosDeco",
             "label": "White Wood Fence",
             "textures": [
-                "wood_block_1/wood_white"
+                "white_wood/side"
             ],
             "legacyBlockID": "fence_block_3:13"
         },
@@ -27157,7 +27173,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Grey Wood Hopper",
             "textures": [
-                "wood_block_1/wood_grey"
+                "grey_wood/side"
             ],
             "cuboids": [
                 {
@@ -27227,7 +27243,7 @@
             "creativeTab": "WesterosDeco",
             "label": "White Wood Hopper",
             "textures": [
-                "wood_block_1/wood_white"
+                "white_wood/side"
             ],
             "cuboids": [
                 {
@@ -27623,7 +27639,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Grey Wood Wall",
             "textures": [
-                "wood_block_1/wood_grey"
+                "grey_wood/side"
             ],
             "legacyBlockID": "wood_wall_block_0:11"
         },
@@ -27643,7 +27659,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "White Wood Wall",
             "textures": [
-                "wood_block_1/wood_white"
+                "white_wood/side"
             ],
             "legacyBlockID": "wood_wall_block_0:12"
         },
@@ -30104,7 +30120,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Grey Wood Carpet",
             "textures": [
-                "wood_block_1/wood_grey"
+                "grey_wood/side"
             ],
             "cuboids": [
                 {
@@ -30142,7 +30158,7 @@
             "creativeTab": "WesterosDeco",
             "label": "White Wood Carpet",
             "textures": [
-                "wood_block_1/wood_white"
+                "white_wood/side"
             ],
             "cuboids": [
                 {

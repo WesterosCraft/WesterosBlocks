@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/wood_block_1/wood_yellow"
+    "down": "westerosblocks:block/yellow_wood/top_bottom",
+    "up": "westerosblocks:block/yellow_wood/top_bottom",
+    "north": "westerosblocks:block/yellow_wood/side",
+    "south": "westerosblocks:block/yellow_wood/side",
+    "west": "westerosblocks:block/yellow_wood/side",
+    "east": "westerosblocks:block/yellow_wood/side",
+    "particle": "westerosblocks:block/yellow_wood/side"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "westerosblocks:block/wood_block_1/wood_white",
-    "top": "westerosblocks:block/wood_block_1/wood_white",
-    "side": "westerosblocks:block/wood_block_1/wood_white",
-    "particle": "westerosblocks:block/wood_block_1/wood_white"
+    "bottom": "westerosblocks:block/white_wood/top_bottom",
+    "top": "westerosblocks:block/white_wood/top_bottom",
+    "side": "westerosblocks:block/white_wood/side",
+    "particle": "westerosblocks:block/white_wood/side"
   }
 }
