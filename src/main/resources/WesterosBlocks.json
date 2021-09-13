@@ -6116,7 +6116,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Black Wood",
             "textures": [
-                "wood_block_1/wood_black"
+                "black_wood/top_bottom",
+                "black_wood/top_bottom",
+                "black_wood/side"
             ],
             "legacyBlockID": "wood_colours:5"
         },
