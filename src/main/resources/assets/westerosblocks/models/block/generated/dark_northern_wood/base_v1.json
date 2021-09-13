@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/wood_block_1/wood_northern"
+    "down": "westerosblocks:block/dark_northern_wood/top_bottom",
+    "up": "westerosblocks:block/dark_northern_wood/top_bottom",
+    "north": "westerosblocks:block/dark_northern_wood/side",
+    "south": "westerosblocks:block/dark_northern_wood/side",
+    "west": "westerosblocks:block/dark_northern_wood/side",
+    "east": "westerosblocks:block/dark_northern_wood/side",
+    "particle": "westerosblocks:block/dark_northern_wood/side"
   }
 }

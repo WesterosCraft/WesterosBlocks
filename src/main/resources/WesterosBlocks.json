@@ -6244,7 +6244,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Dark Northern Wood",
             "textures": [
-                "wood_block_1/wood_northern"
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/side"
             ],
             "legacyBlockID": "wood_colours:13"
         },
@@ -7755,7 +7757,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Dark Northern Wood Fence",
             "textures": [
-                "wood_block_1/wood_northern"
+                "dark_northern_wood/side"
             ],
             "legacyBlockID": "fence_block_1:9"
         },
@@ -12841,7 +12843,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Dark Northern Wood Slab",
             "textures": [
-                "wood_block_1/wood_northern"
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/side"
             ],
             "legacyBlockID": "wood_slab_block_0:0"
         },
@@ -16102,7 +16106,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Dark Northern Wood Hopper",
             "textures": [
-                "wood_block_1/wood_northern"
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/side"
             ],
             "cuboids": [
                 {
@@ -16172,7 +16178,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Hollow Dark Northern Wood Hopper",
             "textures": [
-                "wood_block_1/wood_northern"
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/side"
             ],
             "cuboids": [
                 {
@@ -27541,7 +27549,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Dark Northern Wood Wall",
             "textures": [
-                "wood_block_1/wood_northern"
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/top_bottom",
+                "dark_northern_wood/side"
             ],
             "legacyBlockID": "wood_wall_block_0:6"
         },
@@ -30084,7 +30094,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Dark Northern Wood Carpet",
             "textures": [
-                "wood_block_1/wood_northern"
+                "dark_northern_wood/side"
             ],
             "cuboids": [
                 {

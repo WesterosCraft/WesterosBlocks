@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/wood_block_1/wood_northern",
-    "top": "westerosblocks:block/wood_block_1/wood_northern",
-    "side": "westerosblocks:block/wood_block_1/wood_northern",
-    "particle": "westerosblocks:block/wood_block_1/wood_northern"
+    "bottom": "westerosblocks:block/dark_northern_wood/top_bottom",
+    "top": "westerosblocks:block/dark_northern_wood/top_bottom",
+    "side": "westerosblocks:block/dark_northern_wood/side",
+    "particle": "westerosblocks:block/dark_northern_wood/side"
   }
 }
