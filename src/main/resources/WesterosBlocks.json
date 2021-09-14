@@ -3319,8 +3319,14 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Blood",
-            "textures": [
-                "cuboid_block_0/blood"
+            "randomTextures": [
+              {  "textures": [ "blood/blood1" ] },
+              {  "textures": [ "blood/blood2" ] },
+              {  "textures": [ "blood/blood3" ] },
+              {  "textures": [ "blood/blood4" ] },
+              {  "textures": [ "blood/blood5" ] },
+              {  "textures": [ "blood/blood6" ] },
+              {  "textures": [ "blood/blood7" ] }
             ],
             "boundingBox": {
                 "xMin": 0,
