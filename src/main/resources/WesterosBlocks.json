@@ -3381,10 +3381,11 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Duckweed",
-            "textures": [
-                "cuboid_block_0/duckweed",
-                "cuboid_block_0/duckweed",
-                "transparent"
+            "randomTextures": [
+              { "textures": [ "duckweed/top_bottom1", "duckweed/top_bottom1", "transparent" ] },
+              { "textures": [ "duckweed/top_bottom2", "duckweed/top_bottom2", "transparent" ] },
+              { "textures": [ "duckweed/top_bottom3", "duckweed/top_bottom3", "transparent" ] },
+              { "textures": [ "duckweed/top_bottom4", "duckweed/top_bottom4", "transparent" ] }
             ],
             "boundingBox": {
                 "xMin": 0,
@@ -4764,8 +4765,12 @@
             "resistance": 10,
             "lightOpacity": 0,
             "label": "Fish Trap",
-            "textures": [
-                "arrow_slits_0/fish_trap"
+            "randomTextures": [
+              { "textures": [ "fish_trap/side1" ] },
+              { "textures": [ "fish_trap/side2" ] },
+              { "textures": [ "fish_trap/side3" ] },
+              { "textures": [ "fish_trap/side4" ] },
+              { "textures": [ "fish_trap/side5" ] }
             ],
             "collisionBoxes": [
                 {

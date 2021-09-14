@@ -22,9 +22,9 @@
     "txt5": "westerosblocks:block/transparent",
     "txt2": "westerosblocks:block/transparent",
     "txt3": "westerosblocks:block/transparent",
-    "txt0": "westerosblocks:block/duckweed/top_bottom1",
-    "txt1": "westerosblocks:block/duckweed/top_bottom1",
-    "particle": "westerosblocks:block/duckweed/top_bottom1"
+    "txt0": "westerosblocks:block/duckweed/top_bottom2",
+    "txt1": "westerosblocks:block/duckweed/top_bottom2",
+    "particle": "westerosblocks:block/duckweed/top_bottom2"
   },
   "elements": [
     {
