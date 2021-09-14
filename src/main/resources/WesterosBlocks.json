@@ -13418,7 +13418,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Blue/Green Carved Sandstone",
             "textures": [
-                "stone_block_0/sandstone_carved_blue"
+                "bluegreen_carved_sandstone/side"
             ],
             "legacyBlockID": "stone_block_3:5"
         },
@@ -13432,7 +13432,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Red/Orange Carved Sandstone",
             "textures": [
-                "stone_block_0/sandstone_carved_red"
+                "redorange_carved_sandstone/side"
             ],
             "legacyBlockID": "stone_block_3:6"
         },
