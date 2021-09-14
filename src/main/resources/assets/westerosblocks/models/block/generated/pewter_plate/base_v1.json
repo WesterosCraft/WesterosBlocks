@@ -18,12 +18,12 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cuboid_block_0/plate_pewter",
-    "txt5": "westerosblocks:block/cuboid_block_0/plate_pewter",
-    "txt2": "westerosblocks:block/cuboid_block_0/plate_pewter",
-    "txt3": "westerosblocks:block/cuboid_block_0/plate_pewter",
+    "txt4": "westerosblocks:block/pewter_plate/side1",
+    "txt5": "westerosblocks:block/pewter_plate/side1",
+    "txt2": "westerosblocks:block/pewter_plate/side1",
+    "txt3": "westerosblocks:block/pewter_plate/side1",
     "txt0": "westerosblocks:block/transparent",
-    "txt1": "westerosblocks:block/cuboid_block_0/plate_pewter",
+    "txt1": "westerosblocks:block/pewter_plate/side1",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

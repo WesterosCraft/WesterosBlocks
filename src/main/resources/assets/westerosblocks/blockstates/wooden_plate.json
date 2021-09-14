@@ -1,7 +1,12 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/wooden_plate/base_v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/wooden_plate/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/wooden_plate/base_v2"
+      }
+    ]
   }
 }

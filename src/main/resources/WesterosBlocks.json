@@ -2560,9 +2560,9 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Pewter Plate",
-            "textures": [
-                "transparent",
-                "cuboid_block_0/plate_pewter"
+            "randomTextures": [
+              { "textures": [ "transparent", "pewter_plate/side1" ] },
+              { "textures": [ "transparent", "pewter_plate/side2" ] }
             ],
             "boundingBox": {
                 "xMin": 0,
@@ -2592,9 +2592,9 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Wooden Plate",
-            "textures": [
-                "transparent",
-                "cuboid_block_0/plate_wood"
+            "randomTextures": [
+              { "textures": [ "transparent", "wooden_plate/side1" ] },
+              { "textures": [ "transparent", "wooden_plate/side2" ] }
             ],
             "boundingBox": {
                 "xMin": 0,
@@ -13361,7 +13361,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Ornate Sandstone",
             "textures": [
-                "stone_block_0/sandstone_ornate"
+                "ornate_sandstone/side"
             ],
             "legacyBlockID": "stone_block_3:2"
         },
@@ -23942,8 +23942,10 @@
                 "zMax": 0.7
             },
             "label": "Red Fern",
-            "textures": [
-                "web_block_1/red_fern"
+            "randomTextures": [
+               { "textures": [ "red_fern/side1" ] },
+               { "textures": [ "red_fern/side2" ] },
+               { "textures": [ "red_fern/side3" ] }
             ],
             "legacyBlockID": "forest_block_0:7"
         },
