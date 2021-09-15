@@ -41,14 +41,14 @@ public class SlabBlockModelExport extends ModelExport {
     }
     public static class ModelObjectHalfLower {
         public String parent;
-        public TextureSlab textures = new TextureSlab();
+        public Texture textures = new Texture();
         public ModelObjectHalfLower(boolean ambientocclusion, boolean tinted) {
             if (ambientocclusion) {
                 if (tinted) {
                     parent = "westerosblocks:block/tinted/half_slab";
                 } 
                 else {
-                    parent = "minecraft:block/slab";    // Vanilla block is
+                    parent = "westerosblocks:block/untinted/half_slab";
                 }
             }
             else {
@@ -63,14 +63,14 @@ public class SlabBlockModelExport extends ModelExport {
     }
     public static class ModelObjectHalfUpper {
         public String parent;
-        public TextureSlab textures = new TextureSlab();
+        public Texture textures = new Texture();
         public ModelObjectHalfUpper(boolean ambientocclusion, boolean tinted) {
             if (ambientocclusion) {
                 if (tinted) {
                     parent = "westerosblocks:block/tinted/upper_slab";
                 } 
                 else {
-                    parent = "minecraft:block/slab_top";    // Vanilla block is
+                    parent = "westerosblocks:block/untinted/upper_slab";
                 }
             }
             else {
@@ -139,20 +139,31 @@ public class SlabBlockModelExport extends ModelExport {
         	ModelObjectCube mod = new ModelObjectCube(isOccluded, isTinted);
         	mod.textures.down = getTextureID(set.getTextureByIndex(0));
         	mod.textures.up = getTextureID(set.getTextureByIndex(1));
-        	mod.textures.north = mod.textures.south = mod.textures.west = mod.textures.east = getTextureID(set.getTextureByIndex(2));
+        	mod.textures.north = getTextureID(set.getTextureByIndex(2));
+			mod.textures.south = getTextureID(set.getTextureByIndex(3));
+			mod.textures.west = getTextureID(set.getTextureByIndex(4));
+			mod.textures.east = getTextureID(set.getTextureByIndex(5));
         	mod.textures.particle = getTextureID(set.getTextureByIndex(2));
         	this.writeBlockModelFile(getModelName("double", setidx), mod);
         	// Lower half block model
         	ModelObjectHalfLower modl = new ModelObjectHalfLower(isOccluded, isTinted);
-        	modl.textures.bottom = getTextureID(set.getTextureByIndex(0));
-        	modl.textures.top = getTextureID(set.getTextureByIndex(1));
-        	modl.textures.side = modl.textures.particle = getTextureID(set.getTextureByIndex(2));
+        	modl.textures.down = getTextureID(set.getTextureByIndex(0));
+        	modl.textures.up = getTextureID(set.getTextureByIndex(1));
+        	modl.textures.north = getTextureID(set.getTextureByIndex(2));
+			modl.textures.south = getTextureID(set.getTextureByIndex(3));
+			modl.textures.west = getTextureID(set.getTextureByIndex(4));
+			modl.textures.east = getTextureID(set.getTextureByIndex(5));
+        	modl.textures.particle = getTextureID(set.getTextureByIndex(2));
         	this.writeBlockModelFile(getModelName("bottom", setidx), modl);
         	// Upper half block model
         	ModelObjectHalfUpper modu = new ModelObjectHalfUpper(isOccluded, isTinted);
-        	modu.textures.bottom = getTextureID(set.getTextureByIndex(0));
-        	modu.textures.top = getTextureID(set.getTextureByIndex(1));
-        	modu.textures.side = modu.textures.particle = getTextureID(set.getTextureByIndex(2));
+        	modu.textures.down = getTextureID(set.getTextureByIndex(0));
+        	modu.textures.up = getTextureID(set.getTextureByIndex(1));
+        	modu.textures.north = getTextureID(set.getTextureByIndex(2));
+			modu.textures.south = getTextureID(set.getTextureByIndex(3));
+			modu.textures.west = getTextureID(set.getTextureByIndex(4));
+			modu.textures.east = getTextureID(set.getTextureByIndex(5));
+        	modu.textures.particle = getTextureID(set.getTextureByIndex(2));
         	this.writeBlockModelFile(getModelName("top", setidx), modu);
         }
         // Build simple item model that refers to lower block model

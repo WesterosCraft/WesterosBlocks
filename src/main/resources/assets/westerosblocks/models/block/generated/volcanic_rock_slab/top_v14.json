@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/terrainset_volcanic/14",
-    "top": "westerosblocks:block/terrainset_volcanic/14",
-    "side": "westerosblocks:block/terrainset_volcanic/14",
+    "down": "westerosblocks:block/terrainset_volcanic/14",
+    "up": "westerosblocks:block/terrainset_volcanic/14",
+    "north": "westerosblocks:block/terrainset_volcanic/14",
+    "south": "westerosblocks:block/terrainset_volcanic/14",
+    "west": "westerosblocks:block/terrainset_volcanic/14",
+    "east": "westerosblocks:block/terrainset_volcanic/14",
     "particle": "westerosblocks:block/terrainset_volcanic/14"
   }
 }

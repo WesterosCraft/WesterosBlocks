@@ -7511,7 +7511,12 @@
             "label": "Muddy Snow Slab",
             "ambientOcclusion": false,
             "textures": [
-                "ground_block_0/snow_muddy"
+                "muddy_snow_slab/top_bottom",
+                "muddy_snow_slab/top_bottom",
+                "muddy_snow_slab/north_south",
+                "muddy_snow_slab/north_south",
+                "muddy_snow_slab/east_west",
+                "muddy_snow_slab/east_west"
             ],
             "legacyBlockID": "random_slab_block_1:3"
         },

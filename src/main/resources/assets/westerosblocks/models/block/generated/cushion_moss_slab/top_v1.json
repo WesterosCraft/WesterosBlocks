@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/moss_block/moss_cushion",
-    "top": "westerosblocks:block/moss_block/moss_cushion",
-    "side": "westerosblocks:block/moss_block/moss_cushion",
+    "down": "westerosblocks:block/moss_block/moss_cushion",
+    "up": "westerosblocks:block/moss_block/moss_cushion",
+    "north": "westerosblocks:block/moss_block/moss_cushion",
+    "south": "westerosblocks:block/moss_block/moss_cushion",
+    "west": "westerosblocks:block/moss_block/moss_cushion",
+    "east": "westerosblocks:block/moss_block/moss_cushion",
     "particle": "westerosblocks:block/moss_block/moss_cushion"
   }
 }

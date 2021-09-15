@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/fur_block_0/thatch_dark",
-    "top": "westerosblocks:block/fur_block_0/thatch_dark",
-    "side": "westerosblocks:block/fur_block_0/thatch_dark",
+    "down": "westerosblocks:block/fur_block_0/thatch_dark",
+    "up": "westerosblocks:block/fur_block_0/thatch_dark",
+    "north": "westerosblocks:block/fur_block_0/thatch_dark",
+    "south": "westerosblocks:block/fur_block_0/thatch_dark",
+    "west": "westerosblocks:block/fur_block_0/thatch_dark",
+    "east": "westerosblocks:block/fur_block_0/thatch_dark",
     "particle": "westerosblocks:block/fur_block_0/thatch_dark"
   }
 }

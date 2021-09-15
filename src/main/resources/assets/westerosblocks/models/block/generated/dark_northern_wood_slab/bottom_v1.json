@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/dark_northern_wood/top_bottom",
-    "top": "westerosblocks:block/dark_northern_wood/top_bottom",
-    "side": "westerosblocks:block/dark_northern_wood/side",
+    "down": "westerosblocks:block/dark_northern_wood/top_bottom",
+    "up": "westerosblocks:block/dark_northern_wood/top_bottom",
+    "north": "westerosblocks:block/dark_northern_wood/side",
+    "south": "westerosblocks:block/dark_northern_wood/side",
+    "west": "westerosblocks:block/dark_northern_wood/side",
+    "east": "westerosblocks:block/dark_northern_wood/side",
     "particle": "westerosblocks:block/dark_northern_wood/side"
   }
 }

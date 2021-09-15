@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/fur_block_0/leather_block_leather",
-    "top": "westerosblocks:block/fur_block_0/leather_block_leather",
-    "side": "westerosblocks:block/fur_block_0/leather_block_leather",
+    "down": "westerosblocks:block/fur_block_0/leather_block_leather",
+    "up": "westerosblocks:block/fur_block_0/leather_block_leather",
+    "north": "westerosblocks:block/fur_block_0/leather_block_leather",
+    "south": "westerosblocks:block/fur_block_0/leather_block_leather",
+    "west": "westerosblocks:block/fur_block_0/leather_block_leather",
+    "east": "westerosblocks:block/fur_block_0/leather_block_leather",
     "particle": "westerosblocks:block/fur_block_0/leather_block_leather"
   }
 }

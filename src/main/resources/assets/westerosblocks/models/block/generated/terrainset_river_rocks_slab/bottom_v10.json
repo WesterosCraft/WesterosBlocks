@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/terrainset_river/10",
-    "top": "westerosblocks:block/terrainset_river/10",
-    "side": "westerosblocks:block/terrainset_river/10",
+    "down": "westerosblocks:block/terrainset_river/10",
+    "up": "westerosblocks:block/terrainset_river/10",
+    "north": "westerosblocks:block/terrainset_river/10",
+    "south": "westerosblocks:block/terrainset_river/10",
+    "west": "westerosblocks:block/terrainset_river/10",
+    "east": "westerosblocks:block/terrainset_river/10",
     "particle": "westerosblocks:block/terrainset_river/10"
   }
 }

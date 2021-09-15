@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/terrainset_ocean/39",
-    "top": "westerosblocks:block/terrainset_ocean/39",
-    "side": "westerosblocks:block/terrainset_ocean/39",
+    "down": "westerosblocks:block/terrainset_ocean/39",
+    "up": "westerosblocks:block/terrainset_ocean/39",
+    "north": "westerosblocks:block/terrainset_ocean/39",
+    "south": "westerosblocks:block/terrainset_ocean/39",
+    "west": "westerosblocks:block/terrainset_ocean/39",
+    "east": "westerosblocks:block/terrainset_ocean/39",
     "particle": "westerosblocks:block/terrainset_ocean/39"
   }
 }

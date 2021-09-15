@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
-    "top": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
-    "side": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
+    "down": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
+    "up": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
+    "north": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
+    "south": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
+    "west": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
+    "east": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
     "particle": "westerosblocks:block/stone_block_2/stone_marble_citadel_green"
   }
 }

@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
-    "top": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
-    "side": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
+    "down": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
+    "up": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
+    "north": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
+    "south": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
+    "west": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
+    "east": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized",
     "particle": "westerosblocks:block/metal_block_0/metal_block_bronzeoxidized"
   }
 }

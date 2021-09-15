@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
-    "top": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
-    "side": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "down": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "up": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "north": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "south": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "west": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
+    "east": "westerosblocks:block/fur_block_0/leather_mance_main_outside",
     "particle": "westerosblocks:block/fur_block_0/leather_mance_main_outside"
   }
 }

@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
-    "top": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
-    "side": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
+    "down": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
+    "up": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
+    "north": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
+    "south": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
+    "west": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
+    "east": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
     "particle": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull"
   }
 }

@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/crate_block_1/basket_bottom",
-    "top": "westerosblocks:block/crate_block_1/basket_apricot",
-    "side": "westerosblocks:block/random_slab_block_0/basket_side_slab",
+    "down": "westerosblocks:block/crate_block_1/basket_bottom",
+    "up": "westerosblocks:block/crate_block_1/basket_apricot",
+    "north": "westerosblocks:block/random_slab_block_0/basket_side_slab",
+    "south": "westerosblocks:block/random_slab_block_0/basket_side_slab",
+    "west": "westerosblocks:block/random_slab_block_0/basket_side_slab",
+    "east": "westerosblocks:block/random_slab_block_0/basket_side_slab",
     "particle": "westerosblocks:block/random_slab_block_0/basket_side_slab"
   }
 }

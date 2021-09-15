@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
-    "top": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
-    "side": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
+    "down": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
+    "up": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
+    "north": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
+    "south": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
+    "west": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
+    "east": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
     "particle": "westerosblocks:block/metal_block_0/brick_metal_normal_gold"
   }
 }

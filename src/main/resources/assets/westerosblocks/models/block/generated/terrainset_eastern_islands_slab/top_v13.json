@@ -1,9 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/terrainset_east/13",
-    "top": "westerosblocks:block/terrainset_east/13",
-    "side": "westerosblocks:block/terrainset_east/13",
+    "down": "westerosblocks:block/terrainset_east/13",
+    "up": "westerosblocks:block/terrainset_east/13",
+    "north": "westerosblocks:block/terrainset_east/13",
+    "south": "westerosblocks:block/terrainset_east/13",
+    "west": "westerosblocks:block/terrainset_east/13",
+    "east": "westerosblocks:block/terrainset_east/13",
     "particle": "westerosblocks:block/terrainset_east/13"
   }
 }

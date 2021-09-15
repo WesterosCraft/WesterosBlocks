@@ -1,9 +1,12 @@
 {
   "parent": "westerosblocks:block/noocclusion/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/ground_block_0/snow",
-    "top": "westerosblocks:block/ground_block_0/snow",
-    "side": "westerosblocks:block/ground_block_0/snow",
+    "down": "westerosblocks:block/ground_block_0/snow",
+    "up": "westerosblocks:block/ground_block_0/snow",
+    "north": "westerosblocks:block/ground_block_0/snow",
+    "south": "westerosblocks:block/ground_block_0/snow",
+    "west": "westerosblocks:block/ground_block_0/snow",
+    "east": "westerosblocks:block/ground_block_0/snow",
     "particle": "westerosblocks:block/ground_block_0/snow"
   }
 }

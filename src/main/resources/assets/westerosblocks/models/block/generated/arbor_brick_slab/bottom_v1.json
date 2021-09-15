@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_3/brick_arbor",
-    "top": "westerosblocks:block/stone_block_3/brick_arbor",
-    "side": "westerosblocks:block/stone_block_3/brick_arbor",
+    "down": "westerosblocks:block/stone_block_3/brick_arbor",
+    "up": "westerosblocks:block/stone_block_3/brick_arbor",
+    "north": "westerosblocks:block/stone_block_3/brick_arbor",
+    "south": "westerosblocks:block/stone_block_3/brick_arbor",
+    "west": "westerosblocks:block/stone_block_3/brick_arbor",
+    "east": "westerosblocks:block/stone_block_3/brick_arbor",
     "particle": "westerosblocks:block/stone_block_3/brick_arbor"
   }
 }

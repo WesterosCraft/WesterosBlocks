@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/stone_slate_0/slate_brown",
-    "top": "westerosblocks:block/stone_slate_0/slate_brown",
-    "side": "westerosblocks:block/stone_slate_0/slate_brown",
+    "down": "westerosblocks:block/stone_slate_0/slate_brown",
+    "up": "westerosblocks:block/stone_slate_0/slate_brown",
+    "north": "westerosblocks:block/stone_slate_0/slate_brown",
+    "south": "westerosblocks:block/stone_slate_0/slate_brown",
+    "west": "westerosblocks:block/stone_slate_0/slate_brown",
+    "east": "westerosblocks:block/stone_slate_0/slate_brown",
     "particle": "westerosblocks:block/stone_slate_0/slate_brown"
   }
 }

@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "top": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "side": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "down": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "up": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "north": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "south": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "west": "westerosblocks:block/stone_block_2/brick_lannisport",
+    "east": "westerosblocks:block/stone_block_2/brick_lannisport",
     "particle": "westerosblocks:block/stone_block_2/brick_lannisport"
   }
 }

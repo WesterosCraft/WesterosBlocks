@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "bottom": "westerosblocks:block/terrainset_red_mountains/16",
-    "top": "westerosblocks:block/terrainset_red_mountains/16",
-    "side": "westerosblocks:block/terrainset_red_mountains/16",
+    "down": "westerosblocks:block/terrainset_red_mountains/16",
+    "up": "westerosblocks:block/terrainset_red_mountains/16",
+    "north": "westerosblocks:block/terrainset_red_mountains/16",
+    "south": "westerosblocks:block/terrainset_red_mountains/16",
+    "west": "westerosblocks:block/terrainset_red_mountains/16",
+    "east": "westerosblocks:block/terrainset_red_mountains/16",
     "particle": "westerosblocks:block/terrainset_red_mountains/16"
   }
 }

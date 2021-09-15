@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/dirt_forest/top_bot1",
-    "top": "westerosblocks:block/dirt_forest/top_bot1",
-    "side": "westerosblocks:block/ground_block_0/dirt",
+    "down": "westerosblocks:block/dirt_forest/top_bot1",
+    "up": "westerosblocks:block/dirt_forest/top_bot1",
+    "north": "westerosblocks:block/ground_block_0/dirt",
+    "south": "westerosblocks:block/ground_block_0/dirt",
+    "west": "westerosblocks:block/ground_block_0/dirt",
+    "east": "westerosblocks:block/ground_block_0/dirt",
     "particle": "westerosblocks:block/ground_block_0/dirt"
   }
 }

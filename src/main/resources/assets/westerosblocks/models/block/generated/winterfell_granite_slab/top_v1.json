@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_2/brick_winterfell_granite_top",
-    "top": "westerosblocks:block/stone_block_2/brick_winterfell_granite_top",
-    "side": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
+    "down": "westerosblocks:block/stone_block_2/brick_winterfell_granite_top",
+    "up": "westerosblocks:block/stone_block_2/brick_winterfell_granite_top",
+    "north": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
+    "south": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
+    "west": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
+    "east": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
     "particle": "westerosblocks:block/stone_block_2/brick_winterfell_granite"
   }
 }

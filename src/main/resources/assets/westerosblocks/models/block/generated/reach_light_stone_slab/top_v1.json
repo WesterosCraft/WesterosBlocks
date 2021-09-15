@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "top": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "side": "westerosblocks:block/stone_block_2/brick_reach_light",
+    "down": "westerosblocks:block/stone_block_2/brick_reach_light",
+    "up": "westerosblocks:block/stone_block_2/brick_reach_light",
+    "north": "westerosblocks:block/stone_block_2/brick_reach_light",
+    "south": "westerosblocks:block/stone_block_2/brick_reach_light",
+    "west": "westerosblocks:block/stone_block_2/brick_reach_light",
+    "east": "westerosblocks:block/stone_block_2/brick_reach_light",
     "particle": "westerosblocks:block/stone_block_2/brick_reach_light"
   }
 }

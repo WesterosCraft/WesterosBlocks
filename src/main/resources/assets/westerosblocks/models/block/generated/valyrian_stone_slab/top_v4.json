@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/stone_valyrian/3",
-    "top": "westerosblocks:block/stone_valyrian/3",
-    "side": "westerosblocks:block/stone_valyrian/3",
+    "down": "westerosblocks:block/stone_valyrian/3",
+    "up": "westerosblocks:block/stone_valyrian/3",
+    "north": "westerosblocks:block/stone_valyrian/3",
+    "south": "westerosblocks:block/stone_valyrian/3",
+    "west": "westerosblocks:block/stone_valyrian/3",
+    "east": "westerosblocks:block/stone_valyrian/3",
     "particle": "westerosblocks:block/stone_valyrian/3"
   }
 }
