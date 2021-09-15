@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy"
+    "all": "westerosblocks:block/icy_northern_cobble/side0"
   }
 }

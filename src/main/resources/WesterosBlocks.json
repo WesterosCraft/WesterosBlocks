@@ -11497,8 +11497,15 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Icy Northern Cobble",
-            "textures": [
-                "stone_block_1/stone_cobble_northern_icy"
+            "randomTextures": [
+              { "textures": [ "icy_northern_cobble/side0" ] },
+              { "textures": [ "icy_northern_cobble/side1" ] },
+              { "textures": [ "icy_northern_cobble/side2" ] },
+              { "textures": [ "icy_northern_cobble/side3" ] },
+              { "textures": [ "icy_northern_cobble/side4" ] },
+              { "textures": [ "icy_northern_cobble/side5" ] },
+              { "textures": [ "icy_northern_cobble/side6" ] },
+              { "textures": [ "icy_northern_cobble/side7" ] }
             ],
             "legacyBlockID": "stone_block_2:4"
         },
@@ -13381,7 +13388,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Ornate Marble",
             "textures": [
-                "stone_block_3/marble_ornate"
+                "ornate_marble/side"
             ],
             "legacyBlockID": "stone_block_3:3"
         },
@@ -20274,8 +20281,11 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pink Sandstone",
-            "textures": [
-                "stone_block_4/sandstone_pink"
+            "randomTextures": [
+               { "textures": [  "pink_sandstone/side0" ] },
+               { "textures": [  "pink_sandstone/side1" ] },
+               { "textures": [  "pink_sandstone/side2" ] },
+               { "textures": [  "pink_sandstone/side3" ] }
             ],
             "legacyBlockID": "stone_block_5:9"
         },
