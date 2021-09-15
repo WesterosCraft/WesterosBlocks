@@ -1,8 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:block/tinted/bricks",
-    "top": "westerosblocks:block/tinted/bricks",
-    "side": "westerosblocks:block/tinted/bricks"
+    "down": "westerosblocks:block/tinted/bricks",
+    "up": "westerosblocks:block/tinted/bricks",
+    "north": "westerosblocks:block/tinted/bricks",
+    "south": "westerosblocks:block/tinted/bricks",
+    "west": "westerosblocks:block/tinted/bricks",
+    "east": "westerosblocks:block/tinted/bricks",
+    "particle": "westerosblocks:block/tinted/bricks"
   }
 }
