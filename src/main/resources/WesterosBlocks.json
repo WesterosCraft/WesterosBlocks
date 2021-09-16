@@ -6842,9 +6842,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Peat",
             "textures": [
-                "ground_block_0/peat_top",
-                "ground_block_0/peat_top",
-                "ground_block_0/peat_side"
+                "peat/top_bottom",
+                "peat/top_bottom",
+                "peat/side"
             ],
             "legacyBlockID": "soulsand_like_blocks_0:2"
         },
@@ -7610,9 +7610,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Peat Slab",
             "textures": [
-                "ground_block_0/peat_top",
-                "ground_block_0/peat_top",
-                "ground_block_0/peat_side"
+                "peat/top_bottom",
+                "peat/top_bottom",
+                "peat/side"
             ],
             "legacyBlockID": "random_slab_block_1:7"
         },

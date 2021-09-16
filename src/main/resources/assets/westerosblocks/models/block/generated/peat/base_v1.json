@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/ground_block_0/peat_top",
-    "up": "westerosblocks:block/ground_block_0/peat_top",
-    "north": "westerosblocks:block/ground_block_0/peat_side",
-    "south": "westerosblocks:block/ground_block_0/peat_side",
-    "west": "westerosblocks:block/ground_block_0/peat_side",
-    "east": "westerosblocks:block/ground_block_0/peat_side",
-    "particle": "westerosblocks:block/ground_block_0/peat_side"
+    "down": "westerosblocks:block/peat/top_bottom",
+    "up": "westerosblocks:block/peat/top_bottom",
+    "north": "westerosblocks:block/peat/side",
+    "south": "westerosblocks:block/peat/side",
+    "west": "westerosblocks:block/peat/side",
+    "east": "westerosblocks:block/peat/side",
+    "particle": "westerosblocks:block/peat/side"
   }
 }
