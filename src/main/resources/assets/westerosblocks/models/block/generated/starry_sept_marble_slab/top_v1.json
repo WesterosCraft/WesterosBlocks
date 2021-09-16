@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
-    "up": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
-    "north": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
-    "south": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
-    "west": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
-    "east": "westerosblocks:block/stone_block_2/stone_marble_starry_sept",
-    "particle": "westerosblocks:block/stone_block_2/stone_marble_starry_sept"
+    "down": "westerosblocks:block/starry_sept_marble/starry_sept",
+    "up": "westerosblocks:block/starry_sept_marble/starry_sept",
+    "north": "westerosblocks:block/starry_sept_marble/starry_sept",
+    "south": "westerosblocks:block/starry_sept_marble/starry_sept",
+    "west": "westerosblocks:block/starry_sept_marble/starry_sept",
+    "east": "westerosblocks:block/starry_sept_marble/starry_sept",
+    "particle": "westerosblocks:block/starry_sept_marble/starry_sept"
   }
 }

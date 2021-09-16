@@ -24623,7 +24623,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Starry Sept Marble Fence",
             "textures": [
-                "stone_block_2/stone_marble_starry_sept"
+                "starry_sept_marble/starry_sept"
             ],
             "legacyBlockID": "fence_block_3:8"
         },
@@ -26384,7 +26384,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Starry Sept Marble Slab",
             "textures": [
-                "stone_block_2/stone_marble_starry_sept"
+                "starry_sept_marble/starry_sept"
             ],
             "legacyBlockID": "stone_slab_block_4:6"
         },
@@ -26538,7 +26538,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Starry Sept Marble",
             "textures": [
-                "stone_block_2/stone_marble_starry_sept"
+                "starry_sept_marble/starry_sept"
             ],
             "legacyBlockID": "stone_block_9:8"
         },
@@ -26936,7 +26936,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Starry Sept Marble Hopper",
             "textures": [
-                "stone_block_2/stone_marble_starry_sept"
+                "starry_sept_marble/starry_sept"
             ],
             "cuboids": [
                 {
@@ -28266,7 +28266,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Starry Sept Marble Wall",
             "textures": [
-                "stone_block_2/stone_marble_starry_sept"
+                "starry_sept_marble/starry_sept"
             ],
             "legacyBlockID": "stone_wall_block_3:3"
         },
