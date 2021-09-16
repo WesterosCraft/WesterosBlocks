@@ -16771,7 +16771,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Highgarden Pink Marble",
             "textures": [
-                "stone_block_2/stone_marble_highgarden"
+                "highgarden_pink_marble/highgarden_marble"
             ],
             "legacyBlockID": "stone_block_4:13"
         },
@@ -16785,7 +16785,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Sunspear Yellow Veined Marble",
             "textures": [
-                "sunspear_yellow_veined_marble/stone_marble_sunspear"
+                "sunspear_yellow_veined_marble/marble_sunspear"
             ],
             "legacyBlockID": "stone_block_4:14"
         },
@@ -16799,7 +16799,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Highgarden Pink Veined Marble",
             "textures": [
-                "stone_block_2/stone_marble_highgarden_veined"
+                "highgarden_pink_veined_marble/highgarden_veined"
             ],
             "legacyBlockID": "stone_block_4:15"
         },

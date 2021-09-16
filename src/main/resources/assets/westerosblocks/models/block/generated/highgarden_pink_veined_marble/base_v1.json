@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_2/stone_marble_highgarden_veined"
+    "all": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined"
   }
 }

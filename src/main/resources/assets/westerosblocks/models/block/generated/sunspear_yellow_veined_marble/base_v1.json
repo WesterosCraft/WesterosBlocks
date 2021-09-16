@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/sunspear_yellow_veined_marble/stone_marble_sunspear"
+    "all": "westerosblocks:block/sunspear_yellow_veined_marble/marble_sunspear"
   }
 }
