@@ -16785,7 +16785,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Sunspear Yellow Veined Marble",
             "textures": [
-                "stone_block_3/stone_marble_sunspear"
+                "sunspear_yellow_veined_marble/stone_marble_sunspear"
             ],
             "legacyBlockID": "stone_block_4:14"
         },
