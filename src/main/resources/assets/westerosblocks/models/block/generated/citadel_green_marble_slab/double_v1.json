@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
-    "up": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
-    "north": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
-    "south": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
-    "west": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
-    "east": "westerosblocks:block/stone_block_2/stone_marble_citadel_green",
-    "particle": "westerosblocks:block/stone_block_2/stone_marble_citadel_green"
+    "down": "westerosblocks:block/citadel_green_marble/citadel_marble",
+    "up": "westerosblocks:block/citadel_green_marble/citadel_marble",
+    "north": "westerosblocks:block/citadel_green_marble/citadel_marble",
+    "south": "westerosblocks:block/citadel_green_marble/citadel_marble",
+    "west": "westerosblocks:block/citadel_green_marble/citadel_marble",
+    "east": "westerosblocks:block/citadel_green_marble/citadel_marble",
+    "particle": "westerosblocks:block/citadel_green_marble/citadel_marble"
   }
 }

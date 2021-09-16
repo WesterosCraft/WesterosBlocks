@@ -24637,7 +24637,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Citadel Green Marble Fence",
             "textures": [
-                "stone_block_2/stone_marble_citadel_green"
+                "citadel_green_marble/citadel_marble"
             ],
             "legacyBlockID": "fence_block_3:9"
         },
@@ -26404,7 +26404,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Citadel Green Marble Slab",
             "textures": [
-                "stone_block_2/stone_marble_citadel_green"
+                "citadel_green_marble/citadel_marble"
             ],
             "legacyBlockID": "stone_slab_block_4:7"
         },
@@ -26552,7 +26552,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Citadel Green Marble",
             "textures": [
-                "stone_block_2/stone_marble_citadel_green"
+                "citadel_green_marble/citadel_marble"
             ],
             "legacyBlockID": "stone_block_9:9"
         },
@@ -27006,7 +27006,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Citadel Green Marble Hopper",
             "textures": [
-                "stone_block_2/stone_marble_citadel_green"
+                "citadel_green_marble/citadel_marble"
             ],
             "cuboids": [
                 {
@@ -28286,7 +28286,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Citadel Green Marble Wall",
             "textures": [
-                "stone_block_2/stone_marble_citadel_green"
+                "citadel_green_marble/citadel_marble"
             ],
             "legacyBlockID": "stone_wall_block_3:4"
         },

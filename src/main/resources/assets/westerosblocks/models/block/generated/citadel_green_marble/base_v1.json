@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_2/stone_marble_citadel_green"
+    "all": "westerosblocks:block/citadel_green_marble/citadel_marble"
   }
 }
