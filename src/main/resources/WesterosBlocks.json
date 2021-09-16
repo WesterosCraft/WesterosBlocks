@@ -16743,7 +16743,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Eyrie Blue Veined Marble",
             "textures": [
-                "stone_block_2/stone_marble_eyrie"
+                "eyrie_blue_veined_marble/eyrie_veined"
             ],
             "legacyBlockID": "stone_block_4:11"
         },
