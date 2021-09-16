@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/bench_block_0/table_side",
-    "txt5": "westerosblocks:block/bench_block_0/table_side",
-    "txt2": "westerosblocks:block/bench_block_0/table_side",
-    "txt3": "westerosblocks:block/bench_block_0/table_side",
-    "txt0": "westerosblocks:block/transparent",
-    "txt1": "westerosblocks:block/bench_block_0/table_top",
-    "particle": "westerosblocks:block/transparent"
+    "txt4": "westerosblocks:block/table/side",
+    "txt5": "westerosblocks:block/table/side",
+    "txt2": "westerosblocks:block/table/side",
+    "txt3": "westerosblocks:block/table/side",
+    "txt0": "westerosblocks:block/table/bottom",
+    "txt1": "westerosblocks:block/table/top",
+    "particle": "westerosblocks:block/table/bottom"
   },
   "elements": [
     {

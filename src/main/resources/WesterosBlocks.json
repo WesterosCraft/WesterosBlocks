@@ -3027,9 +3027,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Table",
             "textures": [
-                "transparent",
-                "bench_block_0/table_top",
-                "bench_block_0/table_side"
+                "table/bottom",
+                "table/top",
+                "table/side"
             ],
             "boundingBox": {
                 "xMin": 0,
