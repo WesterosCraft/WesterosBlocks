@@ -16757,7 +16757,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Baelors Brown Veined Marble",
             "textures": [
-                "stone_block_2/stone_marble_baelors"
+                "baelors_brown_veined_marble/baelors"
             ],
             "legacyBlockID": "stone_block_4:12"
         },
