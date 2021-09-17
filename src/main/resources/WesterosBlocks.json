@@ -13507,7 +13507,7 @@
         },
         {
             "blockName": "dorne_light_terracotta",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 5,
             "stepSound": "stone",
             "material": "rock",
@@ -13517,16 +13517,13 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_light_top",
                 "stone_block_0/sandstone_terracotta_light_top",
-            	"dorne_light_terracotta/side1",
-            	"dorne_light_terracotta/left1",
-            	"dorne_light_terracotta/right1",
-            	"dorne_light_terracotta/both1"
+            	"dorne_light_terracotta/side"
             ],
             "legacyBlockID": "stone_block_3:10"
         },
         {
             "blockName": "dorne_dark_sandstone",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 5,
             "stepSound": "stone",
             "material": "rock",
@@ -13536,10 +13533,7 @@
             "textures": [
                 "stone_block_0/sandstone_normal_dark_top",
                 "stone_block_0/sandstone_normal_dark_top",
-            	"dorne_dark_sandstone/side1",
-            	"dorne_dark_sandstone/left1",
-            	"dorne_dark_sandstone/right1",
-            	"dorne_dark_sandstone/both1"
+            	"dorne_dark_sandstone/side"
             ],
             "legacyBlockID": "stone_block_3:11"
         },
@@ -13723,7 +13717,7 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_light_top",
                 "stone_block_0/sandstone_terracotta_light_top",
-                "stone_block_0/sandstone_terracotta_light"
+                "dorne_light_terracotta/side"
             ],
             "legacyBlockID": "stone_slab_block_2:5"
         },
@@ -13745,7 +13739,7 @@
             "textures": [
                 "stone_block_0/sandstone_normal_dark_top",
                 "stone_block_0/sandstone_normal_dark_top",
-                "stone_block_0/sandstone_normal_dark"
+                "dorne_dark_sandstone/side"
             ],
             "legacyBlockID": "stone_slab_block_2:6"
         },
@@ -14709,7 +14703,7 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_light_top",
                 "stone_block_0/sandstone_terracotta_light_top",
-                "stone_block_0/sandstone_terracotta_light"
+                "dorne_light_terracotta/side"
             ],
             "legacyBlockID": "stone_wall_block_2:1"
         },
@@ -14731,7 +14725,7 @@
             "textures": [
                 "stone_block_0/sandstone_normal_dark_top",
                 "stone_block_0/sandstone_normal_dark_top",
-                "stone_block_0/sandstone_normal_dark"
+                "dorne_dark_sandstone/side"
             ],
             "legacyBlockID": "stone_wall_block_2:2"
         },

@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/stone_block_0/sandstone_normal_dark_top",
     "up": "westerosblocks:block/stone_block_0/sandstone_normal_dark_top",
-    "north": "westerosblocks:block/stone_block_0/sandstone_normal_dark",
-    "south": "westerosblocks:block/stone_block_0/sandstone_normal_dark",
-    "west": "westerosblocks:block/stone_block_0/sandstone_normal_dark",
-    "east": "westerosblocks:block/stone_block_0/sandstone_normal_dark",
-    "particle": "westerosblocks:block/stone_block_0/sandstone_normal_dark"
+    "north": "westerosblocks:block/dorne_dark_sandstone/side",
+    "south": "westerosblocks:block/dorne_dark_sandstone/side",
+    "west": "westerosblocks:block/dorne_dark_sandstone/side",
+    "east": "westerosblocks:block/dorne_dark_sandstone/side",
+    "particle": "westerosblocks:block/dorne_dark_sandstone/side"
   }
 }
