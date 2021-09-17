@@ -32496,8 +32496,8 @@
             "label": "Dappled Moss",
             "colorMult": "textures/colormap/moss_dappled",
             "textures": [
-                "moss_block/moss_dappled",
-                "moss_block/moss_dappled"
+                "dappled_moss/dappled",
+                "dappled_moss/dappled"
             ],
             "type": "allow-unsupported,no-climb,has-down",
             "legacyBlockID": "vine_block_1:0"
