@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "westerosblocks:block/stone_block_0/sandstone_bricks_large",
     "top": "westerosblocks:block/stone_block_0/sandstone_bricks_large",
-    "side": "westerosblocks:block/large_brick_sandstone/side1",
-    "particle": "westerosblocks:block/large_brick_sandstone/side1"
+    "side": "westerosblocks:block/large_brick_sandstone/side",
+    "particle": "westerosblocks:block/large_brick_sandstone/side"
   }
 }

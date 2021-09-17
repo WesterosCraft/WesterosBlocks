@@ -5341,7 +5341,7 @@
         },
         {
             "blockName": "large_brick_sandstone",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5351,10 +5351,7 @@
             "textures": [
                 "stone_block_0/sandstone_bricks_large",
                 "stone_block_0/sandstone_bricks_large",
-                "large_brick_sandstone/side1",
-                "large_brick_sandstone/left1",
-                "large_brick_sandstone/right1",
-                "large_brick_sandstone/both1"
+                "large_brick_sandstone/side"
             ],
             "legacyBlockID": "stone_block_0:4"
         },
