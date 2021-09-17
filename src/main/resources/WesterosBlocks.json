@@ -7043,7 +7043,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Large Brick Sandstone Slab",
             "textures": [
-                "stone_block_0/sandstone_bricks_large"
+                "stone_block_0/sandstone_bricks_large",
+                "stone_block_0/sandstone_bricks_large",
+                "large_brick_sandstone/side"
             ],
             "legacyBlockID": "stone_slab_block_0:5"
         },
@@ -13028,7 +13030,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Large Brick Sandstone Wall",
             "textures": [
-                "stone_block_0/sandstone_bricks_large"
+                "stone_block_0/sandstone_bricks_large",
+                "stone_block_0/sandstone_bricks_large",
+                "large_brick_sandstone/side"
             ],
             "legacyBlockID": "stone_wall_block_1:4"
         },
@@ -13487,7 +13491,7 @@
         },
         {
             "blockName": "dorne_dull_terracotta",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 5,
             "stepSound": "stone",
             "material": "rock",
@@ -13497,10 +13501,7 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_dull_top",
                 "stone_block_0/sandstone_terracotta_dull_top",
-            	"dorne_dull_terracotta/side1",
-            	"dorne_dull_terracotta/left1",
-            	"dorne_dull_terracotta/right1",
-            	"dorne_dull_terracotta/both1"
+            	"dorne_dull_terracotta/side"
             ],
             "legacyBlockID": "stone_block_3:9"
         },
@@ -13700,7 +13701,7 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_dull_top",
                 "stone_block_0/sandstone_terracotta_dull_top",
-                "stone_block_0/sandstone_terracotta_dull"
+                "dorne_dull_terracotta/side"
             ],
             "legacyBlockID": "stone_slab_block_2:4"
         },
@@ -14686,7 +14687,7 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_dull_top",
                 "stone_block_0/sandstone_terracotta_dull_top",
-                "stone_block_0/sandstone_terracotta_dull"
+                "dorne_dull_terracotta/side"
             ],
             "legacyBlockID": "stone_wall_block_2:0"
         },

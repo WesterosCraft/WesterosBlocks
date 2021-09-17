@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
     "up": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
-    "north": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
-    "south": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
-    "west": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
-    "east": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull",
-    "particle": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull"
+    "north": "westerosblocks:block/dorne_dull_terracotta/side",
+    "south": "westerosblocks:block/dorne_dull_terracotta/side",
+    "west": "westerosblocks:block/dorne_dull_terracotta/side",
+    "east": "westerosblocks:block/dorne_dull_terracotta/side",
+    "particle": "westerosblocks:block/dorne_dull_terracotta/side"
   }
 }

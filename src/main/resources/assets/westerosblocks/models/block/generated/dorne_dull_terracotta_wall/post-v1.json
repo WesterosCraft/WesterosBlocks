@@ -3,6 +3,6 @@
   "textures": {
     "bottom": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
     "top": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
-    "side": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull"
+    "side": "westerosblocks:block/dorne_dull_terracotta/side"
   }
 }
