@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/moss_block/moss_cushion",
-    "top": "westerosblocks:block/moss_block/moss_cushion",
-    "side": "westerosblocks:block/moss_block/moss_cushion",
-    "particle": "westerosblocks:block/moss_block/moss_cushion"
+    "bottom": "westerosblocks:block/moss_cushion/side0",
+    "top": "westerosblocks:block/moss_cushion/side0",
+    "side": "westerosblocks:block/moss_cushion/side0",
+    "particle": "westerosblocks:block/moss_cushion/side0"
   }
 }

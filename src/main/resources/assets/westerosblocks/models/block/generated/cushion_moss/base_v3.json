@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/moss_cushion/side0"
+    "all": "westerosblocks:block/moss_cushion/side2"
   }
 }

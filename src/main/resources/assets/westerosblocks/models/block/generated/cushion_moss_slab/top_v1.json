@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/moss_block/moss_cushion",
-    "up": "westerosblocks:block/moss_block/moss_cushion",
-    "north": "westerosblocks:block/moss_block/moss_cushion",
-    "south": "westerosblocks:block/moss_block/moss_cushion",
-    "west": "westerosblocks:block/moss_block/moss_cushion",
-    "east": "westerosblocks:block/moss_block/moss_cushion",
-    "particle": "westerosblocks:block/moss_block/moss_cushion"
+    "down": "westerosblocks:block/moss_cushion/side0",
+    "up": "westerosblocks:block/moss_cushion/side0",
+    "north": "westerosblocks:block/moss_cushion/side0",
+    "south": "westerosblocks:block/moss_cushion/side0",
+    "west": "westerosblocks:block/moss_cushion/side0",
+    "east": "westerosblocks:block/moss_cushion/side0",
+    "particle": "westerosblocks:block/moss_cushion/side0"
   }
 }

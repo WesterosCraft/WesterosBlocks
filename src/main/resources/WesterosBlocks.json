@@ -28153,8 +28153,11 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Cushion Moss Slab",
-            "textures": [
-                "moss_block/moss_cushion"
+            "randomTextures": [
+              { "textures": [  "moss_cushion/side0" ] },
+              { "textures": [  "moss_cushion/side1" ] },
+              { "textures": [  "moss_cushion/side2" ] },
+              { "textures": [  "moss_cushion/side3" ] }
             ],
             "legacyBlockID": "random_slab_block_4:7"
         },
@@ -32476,8 +32479,11 @@
             "resistance": 5,
             "creativeTab": "WesterosPlants",
             "label": "Cushion Moss",
-            "textures": [
-                "moss_block/moss_cushion"
+            "randomTextures": [
+              { "textures": [  "moss_cushion/side0" ] },
+              { "textures": [  "moss_cushion/side1" ] },
+              { "textures": [  "moss_cushion/side2" ] },
+              { "textures": [  "moss_cushion/side3" ] }
             ],
             "legacyBlockID": "moss_block_0:0"
         },
@@ -34602,8 +34608,11 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Cushion Moss Wall",
-            "textures": [
-                "moss_block/moss_cushion"
+            "randomTextures": [
+              { "textures": [  "moss_cushion/side0" ] },
+              { "textures": [  "moss_cushion/side1" ] },
+              { "textures": [  "moss_cushion/side2" ] },
+              { "textures": [  "moss_cushion/side3" ] }
             ],
             "legacyBlockID": "plant_wall_block_0:0"
         },
