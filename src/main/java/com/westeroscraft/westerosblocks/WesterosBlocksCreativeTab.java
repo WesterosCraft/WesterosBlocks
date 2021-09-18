@@ -14,6 +14,7 @@ public class  WesterosBlocksCreativeTab extends ItemGroup {
     public static final ItemGroup tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "Westeros Decorative", "oxidized_iron_stairs");
     public static final ItemGroup tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "Westeros Plants", "yellow_wildflowers");
     public static final ItemGroup tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "Westeros Sounds", "tavern_small");
+    public static final ItemGroup tabWesterosCTMSamples = new  WesterosBlocksCreativeTab("WesterosCTMSamples", "CTM Samples", "ctm_vertical");
     
     public static void init() {
         

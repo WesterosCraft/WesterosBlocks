@@ -34728,6 +34728,50 @@
             ],
             "type": "allow-unsupported,no-climb",
             "legacyBlockID": "vine_block_5:0"
+        },
+        {
+            "blockName": "ctm_vertical",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Vertical CTM",
+            "textures": [
+                "ctm/vertical"
+            ]
+        },
+        {
+            "blockName": "ctm_horizontal",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Horizontal CTM",
+            "textures": [
+                "ctm/horizontal"
+            ]
+        },
+        {
+            "blockName": "ctm_pattern",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Pattern CTM",
+            "textures": [
+                "ctm/pattern"
+            ]
+        },
+        {
+            "blockName": "ctm_random",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Random CTM",
+            "textures": [
+                "ctm/random"
+            ]
         }
 
     ]
