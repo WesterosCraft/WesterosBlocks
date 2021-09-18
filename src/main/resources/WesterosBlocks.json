@@ -34772,6 +34772,28 @@
             "textures": [
                 "ctm/random"
             ]
+        },
+        {
+            "blockName": "ctm_compact",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Compact CTM",
+            "textures": [
+                "ctm/compact"
+            ]
+        },
+        {
+            "blockName": "ctm_westerosctmsingle",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Westeros CTM Single",
+            "textures": [
+                "ctm/westerosctmsingle"
+            ]
         }
 
     ]
