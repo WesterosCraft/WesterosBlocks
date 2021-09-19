@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "westerosblocks:block/cabinet_full/top_bottom",
-    "up": "westerosblocks:block/cabinet_full/top_bottom",
-    "down": "westerosblocks:block/cabinet_full/top_bottom",
-    "north": "westerosblocks:block/cabinet_full/side",
-    "south": "westerosblocks:block/cabinet_full/side",
-    "east": "westerosblocks:block/cabinet_full/side",
-    "west": "westerosblocks:block/cabinet_full/side"
+    "down": "westerosblocks:block/full_cabinet/top_bottom",
+    "up": "westerosblocks:block/full_cabinet/top_bottom",
+    "north": "westerosblocks:block/full_cabinet/side",
+    "south": "westerosblocks:block/full_cabinet/side",
+    "west": "westerosblocks:block/full_cabinet/side",
+    "east": "westerosblocks:block/full_cabinet/side",
+    "particle": "westerosblocks:block/full_cabinet/side"
   }
 }

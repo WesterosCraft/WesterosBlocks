@@ -4221,7 +4221,7 @@
         },
         {
             "blockName": "full_cabinet",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -4229,18 +4229,15 @@
             "creativeTab": "WesterosDeco",
             "label": "Full Cabinet",
            "textures": [
-                "cabinet_full/top_bottom",
-                "cabinet_full/top_bottom",
-                "cabinet_full/side",
-                "cabinet_full/left",
-                "cabinet_full/right",
-                "cabinet_full/both"
+                "full_cabinet/top_bottom",
+                "full_cabinet/top_bottom",
+                "full_cabinet/side"
             ],
              "legacyBlockID": "bench_block_0:10"
         },
         {
             "blockName": "empty_cabinet",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -4248,12 +4245,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Empty Cabinet",
             "textures": [
-                "cabinet_full/top_bottom",
-                "cabinet_full/top_bottom",
-                "cabinet_empty/side",
-                "cabinet_empty/left",
-                "cabinet_empty/right",
-                "cabinet_empty/both"
+                "full_cabinet/top_bottom",
+                "full_cabinet/top_bottom",
+                "empty_cabinet/side"
             ],
             "legacyBlockID": "bench_block_0:11"
         },
@@ -4267,8 +4261,8 @@
             "creativeTab": "WesterosDeco",
             "label": "Broken Cabinet",
             "textures": [
-                "cabinet_full/top_bottom",
-                "cabinet_full/top_bottom",
+                "full_cabinet/top_bottom",
+                "full_cabinet/top_bottom",
                 "bench_block_0/cabinet_broken"
             ],
             "legacyBlockID": "bench_block_0:12"
@@ -4283,14 +4277,14 @@
             "creativeTab": "WesterosDeco",
             "label": "Cabinet Drawer",
             "randomTextures": [
-            	{ "textures": [ "cabinet_full/top_bottom", "cabinet_full/top_bottom", "cabinet_drawer/side1" ] },
-            	{ "textures": [ "cabinet_full/top_bottom", "cabinet_full/top_bottom", "cabinet_drawer/side2" ] }
+            	{ "textures": [ "full_cabinet/top_bottom", "full_cabinet/top_bottom", "cabinet_drawer/side1" ] },
+            	{ "textures": [ "full_cabinet/top_bottom", "full_cabinet/top_bottom", "cabinet_drawer/side2" ] }
         	],
             "legacyBlockID": "bench_block_0:13"
         },
         {
             "blockName": "bookshelf_library",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -4301,24 +4295,15 @@
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_cramped/side",
-        	        "bookshelf_cramped/left",
-        	        "bookshelf_cramped/right",
-        	        "bookshelf_cramped/both" ] },
+        	        "bookshelf_library/side1" ] },
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_cramped/side",
-        	        "bookshelf_cramped/left",
-        	        "bookshelf_cramped/right",
-        	        "bookshelf_cramped/both2" ] },
+        	        "bookshelf_library/side2" ] },
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_cramped/side",
-        	        "bookshelf_cramped/left",
-        	        "bookshelf_cramped/right",
-        	        "bookshelf_cramped/both3" ] }
+        	        "bookshelf_library/side3" ] }
             ],
             "legacyBlockID": "bookshelves_block_0:0"
         },
@@ -4335,51 +4320,33 @@
             	{ "textures": [
         	        "bookshelves_block_0/spruce_top",
             	    "bookshelves_block_0/spruce_top",
-        	        "bookshelf_alchemist/side",
-        	        "bookshelf_alchemist/left1",
-        	        "bookshelf_alchemist/right1",
-        	        "bookshelf_alchemist/both1" ] },
+        	        "bookshelf_maester/side1" ] },
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_alchemist/side",
-        	        "bookshelf_alchemist/left1",
-        	        "bookshelf_alchemist/right1",
-        	        "bookshelf_alchemist/both2" ] },
+        	        "bookshelf_maester/side2" ] },
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_alchemist/side",
-        	        "bookshelf_alchemist/left1",
-        	        "bookshelf_alchemist/right1",
-        	        "bookshelf_alchemist/both3" ] },
+        	        "bookshelf_maester/side3" ] },
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_alchemist/side",
-        	        "bookshelf_alchemist/left2",
-        	        "bookshelf_alchemist/right2",
-        	        "bookshelf_alchemist/both1" ] },
+        	        "bookshelf_maester/side4" ] },
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_alchemist/side",
-        	        "bookshelf_alchemist/left2",
-        	        "bookshelf_alchemist/right2",
-        	        "bookshelf_alchemist/both2" ] },
+        	        "bookshelf_maester/side5" ] },
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_alchemist/side",
-        	        "bookshelf_alchemist/left2",
-        	        "bookshelf_alchemist/right2",
-        	        "bookshelf_alchemist/both3" ] }
+        	        "bookshelf_maester/side6" ] }
             ],            
             "legacyBlockID": "bookshelves_block_0:1"
         },
         {
             "blockName": "bookshelf_abandoned",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -4390,60 +4357,13 @@
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_abandoned/side",
-        	        "bookshelf_abandoned/left",
-        	        "bookshelf_abandoned/right",
-        	        "bookshelf_abandoned/both" ] },
+        	        "bookshelf_abandoned/side1" ] },
             	{ "textures": [
 	                "bookshelves_block_0/spruce_top",
     	            "bookshelves_block_0/spruce_top",
-        	        "bookshelf_abandoned/side",
-        	        "bookshelf_abandoned/left",
-        	        "bookshelf_abandoned/right",
-        	        "bookshelf_abandoned/both2" ] }
+        	        "bookshelf_abandoned/side2" ] }
             ],
             "legacyBlockID": "bookshelves_block_0:2"
-        },
-        {
-            "blockName": "bookshelf",
-            "blockType": "solidhoriz",
-            "hardness": 2,
-            "stepSound": "wood",
-            "material": "wood",
-            "resistance": 5,
-            "creativeTab": "WesterosDeco",
-            "label": "Bookshelf",
-            "randomTextures": [
-            	{ "textures": [
-	                "bookshelf/bookshelf_top",
-	                "bookshelf/bookshelf_top",
-        	        "bookshelf/side1",
-        	        "bookshelf/left1",
-        	        "bookshelf/right1",
-        	        "bookshelf/both1" ], "weight": 80 },
-            	{ "textures": [
-	                "bookshelf/bookshelf_top",
-	                "bookshelf/bookshelf_top",
-        	        "bookshelf/side2",
-        	        "bookshelf/left2",
-        	        "bookshelf/right2",
-        	        "bookshelf/both2" ], "weight": 80 },
-            	{ "textures": [
-	                "bookshelf/bookshelf_top",
-	                "bookshelf/bookshelf_top",
-        	        "bookshelf/side3",
-        	        "bookshelf/left3",
-        	        "bookshelf/right3",
-        	        "bookshelf/both3" ], "weight": 80 },
-            	{ "textures": [
-	                "bookshelf/bookshelf_top",
-	                "bookshelf/bookshelf_top",
-        	        "bookshelf/side4",
-        	        "bookshelf/left3",
-        	        "bookshelf/right3",
-        	        "bookshelf/both3" ], "weight": 1 }
-            ],
-            "legacyBlockID": "minecraft:bookshelf:default"
         },
         {
             "blockName": "small_stone_brick_arrow_slit",

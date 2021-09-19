@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/bookshelves_block_0/spruce_top",
     "up": "westerosblocks:block/bookshelves_block_0/spruce_top",
-    "north": "westerosblocks:block/bookshelf_alchemist/side",
-    "south": "westerosblocks:block/bookshelf_alchemist/left1",
-    "west": "westerosblocks:block/bookshelf_alchemist/right1",
-    "east": "westerosblocks:block/bookshelf_alchemist/both1",
-    "particle": "westerosblocks:block/bookshelf_alchemist/side"
+    "north": "westerosblocks:block/bookshelf_maester/side1",
+    "south": "westerosblocks:block/bookshelf_maester/side1",
+    "west": "westerosblocks:block/bookshelf_maester/side1",
+    "east": "westerosblocks:block/bookshelf_maester/side1",
+    "particle": "westerosblocks:block/bookshelf_maester/side1"
   }
 }
