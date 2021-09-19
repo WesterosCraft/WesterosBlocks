@@ -1,16 +1,7 @@
 {
   "variants": {
-    "down=false,up=true": {
-      "model": "westerosblocks:block/generated/timber_oak_brown_close_studding/up_v1"
-    },
-    "down=true,up=false": {
-      "model": "westerosblocks:block/generated/timber_oak_brown_close_studding/down_v1"
-    },
-    "down=false,up=false": {
+    "": {
       "model": "westerosblocks:block/generated/timber_oak_brown_close_studding/base_v1"
-    },
-    "down=true,up=true": {
-      "model": "westerosblocks:block/generated/timber_oak_brown_close_studding/both_v1"
     }
   }
 }

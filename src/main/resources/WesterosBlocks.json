@@ -5268,7 +5268,7 @@
         },
         {
             "blockName": "vivid_mossy_sandstone",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5276,18 +5276,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Vivid Mossy Sandstone",
             "randomTextures": [
-              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both1" ] },
-              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both2" ] },
-              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both3" ] },
-              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both4" ] },
-              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both5" ] },
-              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1", "vivid_mossy_sandstone/left1", "vivid_mossy_sandstone/right1", "vivid_mossy_sandstone/both6" ] }
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side1" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side2" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side3" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side4" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side5" ] },
+              { "textures": [ "stone_block_0/sandstone_vivid_top", "stone_block_0/sandstone_vivid_top", "vivid_mossy_sandstone/side6" ] }
             ],
             "legacyBlockID": "stone_block_0:2"
         },
         {
             "blockName": "vivid_dark_sandstone",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5297,10 +5297,7 @@
             "textures": [
                 "vivid_dark_sandstone/top_bottom1",
                 "vivid_dark_sandstone/top_bottom1",
-                "vivid_dark_sandstone/side1",
-                "vivid_dark_sandstone/left1",
-                "vivid_dark_sandstone/right1",
-                "vivid_dark_sandstone/both1"
+                "vivid_dark_sandstone/side1"
             ],
             "legacyBlockID": "stone_block_0:3"
         },
@@ -5322,7 +5319,7 @@
         },
         {
             "blockName": "monochrome_sandstone",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5332,16 +5329,13 @@
             "textures": [
                 "stone_block_0/sandstone_monochrome_top",
                 "stone_block_0/sandstone_monochrome_top",
-                "monochrome_sandstone/side1",
-                "monochrome_sandstone/left1",
-                "monochrome_sandstone/right1",
-                "monochrome_sandstone/both1"
+                "monochrome_sandstone/side1"
             ],
             "legacyBlockID": "stone_block_0:5"
         },
         {
             "blockName": "monochrome_mossy_sandstone",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5349,18 +5343,18 @@
             "creativeTab": "WesterosBlocks",
             "label": "Monochrome Mossy Sandstone",
             "randomTextures": [
-               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both1" ] },
-               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both2" ] },
-               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both3" ] },
-               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both4" ] },
-               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both5" ] },
-               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1", "monochrome_mossy_sandstone/left1", "monochrome_mossy_sandstone/right1", "monochrome_mossy_sandstone/both6" ] }
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side1" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side2" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side3" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side4" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side5" ] },
+               { "textures": [ "stone_block_0/sandstone_monochrome_top", "stone_block_0/sandstone_monochrome_top", "monochrome_mossy_sandstone/side6" ] }
             ],
             "legacyBlockID": "stone_block_0:6"
         },
         {
             "blockName": "monochrome_dark_sandstone",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5370,16 +5364,13 @@
             "textures": [
                 "monochrome_dark_sandstone/top_bottom1",
                 "monochrome_dark_sandstone/top_bottom1",
-                "monochrome_dark_sandstone/side1",
-                "monochrome_dark_sandstone/left1",
-                "monochrome_dark_sandstone/right1",
-                "monochrome_dark_sandstone/both1"
+                "monochrome_dark_sandstone/side1"
             ],
             "legacyBlockID": "stone_block_0:7"
         },
         {
             "blockName": "terracotta",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5389,10 +5380,7 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_top",
                 "stone_block_0/sandstone_terracotta_top",
-                "terracotta/side1",
-                "terracotta/left1",
-                "terracotta/right1",
-                "terracotta/both1"
+                "terracotta/side1"
             ],
             "legacyBlockID": "stone_block_0:8"
         },
@@ -6225,7 +6213,7 @@
         },
         {
             "blockName": "timber_oak_brown_crosshatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6235,16 +6223,13 @@
             "textures": [
                 "daub_wattle_brown_oak/cross_side",
                 "daub_wattle_brown_oak/top",
-                "daub_wattle_brown_oak/cross_side",
-                "daub_wattle_brown_oak/cross_left",
-                "daub_wattle_brown_oak/cross_right",
-                "daub_wattle_brown_oak/cross_both"
+                "daub_wattle_brown_oak/cross_side"
             ],
             "legacyBlockID": "daub_wattle_block_0:0"
         },
         {
             "blockName": "timber_oak_brown_lefthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6254,16 +6239,13 @@
             "textures": [
                 "daub_wattle_brown_oak/cross_side",
                 "daub_wattle_brown_oak/top",
-                "daub_wattle_brown_oak/left_side",
-                "daub_wattle_brown_oak/left_left",
-                "daub_wattle_brown_oak/left_right",
-                "daub_wattle_brown_oak/left_both"
+                "daub_wattle_brown_oak/left_side"
             ],
             "legacyBlockID": "daub_wattle_block_0:1"
         },
         {
             "blockName": "timber_oak_brown_righthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6273,16 +6255,13 @@
             "textures": [
                 "daub_wattle_brown_oak/cross_side",
                 "daub_wattle_brown_oak/top",
-                "daub_wattle_brown_oak/right_side",
-                "daub_wattle_brown_oak/right_left",
-                "daub_wattle_brown_oak/right_right",
-                "daub_wattle_brown_oak/right_both"
+                "daub_wattle_brown_oak/right_side"
             ],
             "legacyBlockID": "daub_wattle_block_0:2"
         },
         {
             "blockName": "timber_oak_brown_frame",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6292,10 +6271,7 @@
             "textures": [
                 "daub_wattle_brown_oak/cross_side",
                 "daub_wattle_brown_oak/top",
-                "daub_wattle_brown_oak/open_side",
-                "daub_wattle_brown_oak/open_left",
-                "daub_wattle_brown_oak/open_right",
-                "daub_wattle_brown_oak/open_both"
+                "daub_wattle_brown_oak/open_side"
             ],
             "legacyBlockID": "daub_wattle_block_0:3"
         },
@@ -7094,7 +7070,7 @@
             "textures": [
                 "stone_block_0/sandstone_terracotta_top",
                 "stone_block_0/sandstone_terracotta_top",
-                "stone_block_0/sandstone_terracotta"
+                "terracotta/side1"
             ],
             "legacyBlockID": "stone_slab_block_1:2"
         },
@@ -33533,7 +33509,7 @@
         },
         {
             "blockName": "timber_oak_brown_vertical",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33543,10 +33519,7 @@
             "textures": [
                 "daub_wattle_brown_oak/cross_side",
                 "daub_wattle_brown_oak/top",
-                "daub_wattle_brown_oak/vert_side",
-                "daub_wattle_brown_oak/vert_down",
-                "daub_wattle_brown_oak/vert_up",
-                "daub_wattle_brown_oak/vert_both"
+                "daub_wattle_brown_oak/vert_side"
             ],
             "legacyBlockID": "daub_wattle_block_5:0"
         },
@@ -33878,7 +33851,7 @@
         },
         {
             "blockName": "timber_oak_brown_close_studding",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33888,10 +33861,7 @@
             "textures": [
                 "daub_wattle_brown_oak/cross_side",
                 "daub_wattle_brown_oak/top",
-                "daub_wattle_brown_oak/close_side",
-                "daub_wattle_brown_oak/close_down",
-                "daub_wattle_brown_oak/close_up",
-                "daub_wattle_brown_oak/close_both"
+                "daub_wattle_brown_oak/close_side"
             ],
             "legacyBlockID": "daub_wattle_block_7:0"
         },
