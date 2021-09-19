@@ -34796,14 +34796,25 @@
             ]
         },
         {
-            "blockName": "ctm_westerosctm",
+            "blockName": "ctm_edges",
             "blockType": "solid",
             "stepSound": "wood",
             "material": "cloth",
             "creativeTab": "WesterosCTMSamples",
-            "label": "Westeros CTM",
+            "label": "Edges CTM (to water)",
             "textures": [
-                "ctm/westerosctm"
+                "ctm/edges"
+            ]
+        },
+        {
+            "blockName": "ctm_edges_full",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Edges-Full CTM (to water)",
+            "textures": [
+                "ctm/edges_full"
             ]
         }
 
