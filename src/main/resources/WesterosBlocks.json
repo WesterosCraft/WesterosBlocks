@@ -34827,7 +34827,18 @@
             "textures": [
                 "ctm/pillar"
             ]
-        }
+        },
+        {
+            "blockName": "ctm_simple",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Simple CTM",
+            "textures": [
+                "ctm/simple"
+            ]
+        },
 
     ]
 }
