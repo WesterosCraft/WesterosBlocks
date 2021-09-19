@@ -34816,6 +34816,17 @@
             "textures": [
                 "ctm/edges_full"
             ]
+        },
+        {
+            "blockName": "ctm_pillar",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Pillar CTM",
+            "textures": [
+                "ctm/pillar"
+            ]
         }
 
     ]
