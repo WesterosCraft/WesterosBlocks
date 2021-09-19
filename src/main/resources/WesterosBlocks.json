@@ -5252,7 +5252,7 @@
         },
         {
             "blockName": "vivid_sandstone",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 3,
             "stepSound": "stone",
             "material": "rock",
@@ -5262,10 +5262,7 @@
             "textures": [
                 "stone_block_0/sandstone_vivid_top",
                 "stone_block_0/sandstone_vivid_top",
-                "vivid_sandstone/side1",
-                "vivid_sandstone/left1",
-                "vivid_sandstone/right1",
-                "vivid_sandstone/both1"
+                "vivid_sandstone/side1"
             ],
             "legacyBlockID": "stone_block_0:1"
         },
@@ -6905,7 +6902,7 @@
             "textures": [
                 "stone_block_0/sandstone_vivid_top",
                 "stone_block_0/sandstone_vivid_top",
-                "stone_block_0/sandstone_vivid"
+                "vivid_sandstone/side1"
             ],
             "legacyBlockID": "stone_slab_block_0:0"
         },
