@@ -151,38 +151,6 @@
             ],            	                    
             "legacyBlockID": "minecraft:dirt:snowy=false,variant=dirt"
         },
-        {
-            "blockName": "sandstone",
-            "blockType": "solidhoriz",
-            "hardness": 2,
-            "stepSound": "stone",
-            "material": "rock",
-            "resistance": 10,
-            "harvestLevel": [
-                {
-                    "tool": "pickaxe",
-                    "level": 3
-                }
-            ],
-            "creativeTab": "WesterosBlocks",
-            "label": "Sandstone",
-            "randomTextures": [
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both1" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both2" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both3" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both4" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both5" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both6" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both7" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both8" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both9" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both10" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both11" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both12" ] },
-               { "textures": [ "minecraft:block/sandstone_bottom", "minecraft:block/sandstone_top", "sandstone/side1", "sandstone/left1", "sandstone/right1", "sandstone/both13" ] }
-            ],
-            "legacyBlockID": "minecraft:sandstone:type=sandstone"
-        },        
 	    {
             "blockName": "oxidized_iron_block",
             "blockType": "solid",
@@ -34838,7 +34806,6 @@
             "textures": [
                 "ctm/simple"
             ]
-        },
-
-    ]
+        }
+   ]
 }
