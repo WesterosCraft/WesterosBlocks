@@ -1,16 +1,7 @@
 {
   "variants": {
-    "down=false,up=true": {
-      "model": "westerosblocks:block/generated/timber_northern_red_vertical/up_v1"
-    },
-    "down=true,up=false": {
-      "model": "westerosblocks:block/generated/timber_northern_red_vertical/down_v1"
-    },
-    "down=false,up=false": {
+    "": {
       "model": "westerosblocks:block/generated/timber_northern_red_vertical/base_v1"
-    },
-    "down=true,up=true": {
-      "model": "westerosblocks:block/generated/timber_northern_red_vertical/both_v1"
     }
   }
 }
