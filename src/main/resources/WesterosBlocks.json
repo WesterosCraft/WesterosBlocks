@@ -6197,7 +6197,7 @@
         },
         {
             "blockName": "timber_oak_white_crosshatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6207,16 +6207,13 @@
             "textures": [
                 "daub_wattle_white_oak/cross_side",
                 "daub_wattle_white_oak/top",
-                "daub_wattle_white_oak/cross_side",
-                "daub_wattle_white_oak/cross_left",
-                "daub_wattle_white_oak/cross_right",
-                "daub_wattle_white_oak/cross_both"
+                "daub_wattle_white_oak/cross_side"
             ],
             "legacyBlockID": "daub_wattle_block_0:4"
         },
         {
             "blockName": "timber_oak_white_righthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6226,16 +6223,13 @@
             "textures": [
                 "daub_wattle_white_oak/cross_side",
                 "daub_wattle_white_oak/top",
-                "daub_wattle_white_oak/right_side",
-                "daub_wattle_white_oak/right_left",
-                "daub_wattle_white_oak/right_right",
-                "daub_wattle_white_oak/right_both"
+                "daub_wattle_white_oak/right_side"
             ],
             "legacyBlockID": "daub_wattle_block_0:5"
         },
         {
             "blockName": "timber_oak_white_lefthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6245,16 +6239,13 @@
             "textures": [
                 "daub_wattle_white_oak/cross_side",
                 "daub_wattle_white_oak/top",
-                "daub_wattle_white_oak/left_side",
-                "daub_wattle_white_oak/left_left",
-                "daub_wattle_white_oak/left_right",
-                "daub_wattle_white_oak/left_both"
+                "daub_wattle_white_oak/left_side"
             ],
             "legacyBlockID": "daub_wattle_block_0:6"
         },
         {
             "blockName": "timber_oak_white_frame",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -6264,10 +6255,7 @@
             "textures": [
                 "daub_wattle_white_oak/cross_side",
                 "daub_wattle_white_oak/top",
-                "daub_wattle_white_oak/open_side",
-                "daub_wattle_white_oak/open_left",
-                "daub_wattle_white_oak/open_right",
-                "daub_wattle_white_oak/open_both"
+                "daub_wattle_white_oak/open_side"
             ],
             "legacyBlockID": "daub_wattle_block_0:7"
         },
@@ -33445,7 +33433,7 @@
         },
         {
             "blockName": "timber_oak_white_vertical",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33455,10 +33443,7 @@
             "textures": [
                 "daub_wattle_white_oak/cross_side",
                 "daub_wattle_white_oak/top",
-                "daub_wattle_white_oak/vert_side",
-                "daub_wattle_white_oak/vert_down",
-                "daub_wattle_white_oak/vert_up",
-                "daub_wattle_white_oak/vert_both"
+                "daub_wattle_white_oak/vert_side"
             ],
             "legacyBlockID": "daub_wattle_block_5:1"
         },
@@ -33787,7 +33772,7 @@
         },
         {
             "blockName": "timber_oak_white_close_studding",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33797,10 +33782,7 @@
             "textures": [
                 "daub_wattle_white_oak/cross_side",
                 "daub_wattle_white_oak/top",
-                "daub_wattle_white_oak/close_side",
-                "daub_wattle_white_oak/close_down",
-                "daub_wattle_white_oak/close_up",
-                "daub_wattle_white_oak/close_both"
+                "daub_wattle_white_oak/close_side"
             ],
             "legacyBlockID": "daub_wattle_block_7:1"
         },
