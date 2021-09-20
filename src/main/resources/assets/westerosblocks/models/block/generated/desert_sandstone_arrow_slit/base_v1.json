@@ -1,9 +1,12 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "westerosblocks:block/arrow_slit_embellished_sandstone_desert/side",
-    "bottom": "westerosblocks:block/transparent",
-    "top": "westerosblocks:block/transparent",
-    "side": "westerosblocks:block/arrow_slit_embellished_sandstone_desert/side"
+    "down": "westerosblocks:block/transparent",
+    "up": "westerosblocks:block/transparent",
+    "north": "westerosblocks:block/desert_sandstone_arrow_slit/side",
+    "south": "westerosblocks:block/desert_sandstone_arrow_slit/side",
+    "west": "westerosblocks:block/desert_sandstone_arrow_slit/side",
+    "east": "westerosblocks:block/desert_sandstone_arrow_slit/side",
+    "particle": "westerosblocks:block/desert_sandstone_arrow_slit/side"
   }
 }

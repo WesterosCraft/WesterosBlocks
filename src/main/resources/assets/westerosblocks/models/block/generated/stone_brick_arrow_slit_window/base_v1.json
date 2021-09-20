@@ -1,9 +1,12 @@
 {
-  "parent": "westerosblocks:block/tinted/cube_bottom_top",
+  "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "particle": "westerosblocks:block/arrow_slit_window_brick_stone/side",
-    "bottom": "westerosblocks:block/transparent",
-    "top": "westerosblocks:block/transparent",
-    "side": "westerosblocks:block/arrow_slit_window_brick_stone/side"
+    "down": "westerosblocks:block/transparent",
+    "up": "westerosblocks:block/transparent",
+    "north": "westerosblocks:block/stone_brick_arrow_slit_window/side",
+    "south": "westerosblocks:block/stone_brick_arrow_slit_window/side",
+    "west": "westerosblocks:block/stone_brick_arrow_slit_window/side",
+    "east": "westerosblocks:block/stone_brick_arrow_slit_window/side",
+    "particle": "westerosblocks:block/stone_brick_arrow_slit_window/side"
   }
 }
