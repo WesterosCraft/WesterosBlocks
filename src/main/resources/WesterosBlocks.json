@@ -19968,7 +19968,7 @@
         },
         {
             "blockName": "kl_dun_brick",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 5,
             "stepSound": "stone",
             "material": "rock",
@@ -19978,10 +19978,7 @@
             "textures": [
             	"stone_block_3/brick_dun",
             	"stone_block_3/brick_dun",
-            	"brick_dun/side",
-            	"brick_dun/left",
-            	"brick_dun/right",
-            	"brick_dun/both"
+            	"kl_dun_brick/side"
             ],
             "legacyBlockID": "stone_block_5:0"
         },
@@ -32581,7 +32578,7 @@
         },
         {
             "blockName": "timber_oak_lannisport_brick_crosshatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32591,16 +32588,13 @@
             "textures": [
                 "daub_wattle_lannisport_brick_oak/cross_side",
                 "daub_wattle_lannisport_brick_oak/top",
-                "daub_wattle_lannisport_brick_oak/cross_side",
-                "daub_wattle_lannisport_brick_oak/cross_left",
-                "daub_wattle_lannisport_brick_oak/cross_right",
-                "daub_wattle_lannisport_brick_oak/cross_both"
+                "daub_wattle_lannisport_brick_oak/cross_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:0"
         },
         {
             "blockName": "timber_oak_lannisport_brick_lefthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32610,16 +32604,13 @@
             "textures": [
                 "daub_wattle_lannisport_brick_oak/cross_side",
                 "daub_wattle_lannisport_brick_oak/top",
-                "daub_wattle_lannisport_brick_oak/left_side",
-                "daub_wattle_lannisport_brick_oak/left_left",
-                "daub_wattle_lannisport_brick_oak/left_right",
-                "daub_wattle_lannisport_brick_oak/left_both"
+                "daub_wattle_lannisport_brick_oak/left_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:1"
         },
         {
             "blockName": "timber_oak_lannisport_brick_righthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32629,16 +32620,13 @@
             "textures": [
                 "daub_wattle_lannisport_brick_oak/cross_side",
                 "daub_wattle_lannisport_brick_oak/top",
-                "daub_wattle_lannisport_brick_oak/right_side",
-                "daub_wattle_lannisport_brick_oak/right_left",
-                "daub_wattle_lannisport_brick_oak/right_right",
-                "daub_wattle_lannisport_brick_oak/right_both"
+                "daub_wattle_lannisport_brick_oak/right_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:2"
         },
         {
             "blockName": "timber_oak_lannisport_brick_frame",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32648,16 +32636,13 @@
             "textures": [
                 "daub_wattle_lannisport_brick_oak/cross_side",
                 "daub_wattle_lannisport_brick_oak/top",
-                "daub_wattle_lannisport_brick_oak/open_side",
-                "daub_wattle_lannisport_brick_oak/open_left",
-                "daub_wattle_lannisport_brick_oak/open_right",
-                "daub_wattle_lannisport_brick_oak/open_both"
+                "daub_wattle_lannisport_brick_oak/open_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:3"
         },
         {
             "blockName": "timber_whitewashed_crosshatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32667,16 +32652,13 @@
             "textures": [
                 "daub_wattle_whitewashed/cross_side",
                 "daub_wattle_whitewashed/top",
-                "daub_wattle_whitewashed/cross_side",
-                "daub_wattle_whitewashed/cross_left",
-                "daub_wattle_whitewashed/cross_right",
-                "daub_wattle_whitewashed/cross_both"
+                "daub_wattle_whitewashed/cross_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:4"
         },
         {
             "blockName": "timber_whitewashed_lefthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32686,16 +32668,13 @@
             "textures": [
                 "daub_wattle_whitewashed/cross_side",
                 "daub_wattle_whitewashed/top",
-                "daub_wattle_whitewashed/left_side",
-                "daub_wattle_whitewashed/left_left",
-                "daub_wattle_whitewashed/left_right",
-                "daub_wattle_whitewashed/left_both"
+                "daub_wattle_whitewashed/left_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:5"
         },
         {
             "blockName": "timber_whitewashed_righthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32705,16 +32684,13 @@
             "textures": [
                 "daub_wattle_whitewashed/cross_side",
                 "daub_wattle_whitewashed/top",
-                "daub_wattle_whitewashed/right_side",
-                "daub_wattle_whitewashed/right_left",
-                "daub_wattle_whitewashed/right_right",
-                "daub_wattle_whitewashed/right_both"
+                "daub_wattle_whitewashed/right_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:6"
         },
         {
             "blockName": "timber_whitewashed_frame",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32724,16 +32700,13 @@
             "textures": [
                 "daub_wattle_whitewashed/cross_side",
                 "daub_wattle_whitewashed/top",
-                "daub_wattle_whitewashed/open_side",
-                "daub_wattle_whitewashed/open_left",
-                "daub_wattle_whitewashed/open_right",
-                "daub_wattle_whitewashed/open_both"
+                "daub_wattle_whitewashed/open_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:7"
         },
         {
             "blockName": "timber_northern_brown_crosshatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32743,16 +32716,13 @@
             "textures": [
                 "daub_wattle_brown_northern/cross_side",
                 "daub_wattle_brown_northern/top",
-                "daub_wattle_brown_northern/cross_side",
-                "daub_wattle_brown_northern/cross_left",
-                "daub_wattle_brown_northern/cross_right",
-                "daub_wattle_brown_northern/cross_both"
+                "daub_wattle_brown_northern/cross_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:8"
         },
         {
             "blockName": "timber_northern_brown_lefthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32762,16 +32732,13 @@
             "textures": [
                 "daub_wattle_brown_northern/cross_side",
                 "daub_wattle_brown_northern/top",
-                "daub_wattle_brown_northern/left_side",
-                "daub_wattle_brown_northern/left_left",
-                "daub_wattle_brown_northern/left_right",
-                "daub_wattle_brown_northern/left_both"
+                "daub_wattle_brown_northern/left_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:9"
         },
         {
             "blockName": "timber_northern_brown_righthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32781,16 +32748,13 @@
             "textures": [
                 "daub_wattle_brown_northern/cross_side",
                 "daub_wattle_brown_northern/top",
-                "daub_wattle_brown_northern/right_side",
-                "daub_wattle_brown_northern/right_left",
-                "daub_wattle_brown_northern/right_right",
-                "daub_wattle_brown_northern/right_both"
+                "daub_wattle_brown_northern/right_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:10"
         },
         {
             "blockName": "timber_northern_brown_frame",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32800,16 +32764,13 @@
             "textures": [
                 "daub_wattle_brown_northern/cross_side",
                 "daub_wattle_brown_northern/top",
-                "daub_wattle_brown_northern/open_side",
-                "daub_wattle_brown_northern/open_left",
-                "daub_wattle_brown_northern/open_right",
-                "daub_wattle_brown_northern/open_both"
+                "daub_wattle_brown_northern/open_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:11"
         },
         {
             "blockName": "timber_northern_white_crosshatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32819,16 +32780,13 @@
             "textures": [
                 "daub_wattle_white_northern/cross_side",
                 "daub_wattle_white_northern/top",
-                "daub_wattle_white_northern/cross_side",
-                "daub_wattle_white_northern/cross_left",
-                "daub_wattle_white_northern/cross_right",
-                "daub_wattle_white_northern/cross_both"
+                "daub_wattle_white_northern/cross_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:12"
         },
         {
             "blockName": "timber_northern_white_lefthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32838,16 +32796,13 @@
             "textures": [
                 "daub_wattle_white_northern/cross_side",
                 "daub_wattle_white_northern/top",
-                "daub_wattle_white_northern/left_side",
-                "daub_wattle_white_northern/left_left",
-                "daub_wattle_white_northern/left_right",
-                "daub_wattle_white_northern/left_both"
+                "daub_wattle_white_northern/left_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:13"
         },
         {
             "blockName": "timber_northern_white_righthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32857,16 +32812,13 @@
             "textures": [
                 "daub_wattle_white_northern/cross_side",
                 "daub_wattle_white_northern/top",
-                "daub_wattle_white_northern/right_side",
-                "daub_wattle_white_northern/right_left",
-                "daub_wattle_white_northern/right_right",
-                "daub_wattle_white_northern/right_both"
+                "daub_wattle_white_northern/right_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:14"
         },
         {
             "blockName": "timber_northern_white_frame",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32876,16 +32828,13 @@
             "textures": [
                 "daub_wattle_white_northern/cross_side",
                 "daub_wattle_white_northern/top",
-                "daub_wattle_white_northern/open_side",
-                "daub_wattle_white_northern/open_left",
-                "daub_wattle_white_northern/open_right",
-                "daub_wattle_white_northern/open_both"
+                "daub_wattle_white_northern/open_side"
             ],
             "legacyBlockID": "daub_wattle_block_2:15"
         },
         {
             "blockName": "timber_northern_orange_brick_crosshatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32896,16 +32845,13 @@
             "textures": [
                 "daub_wattle_orange_brick_northern/cross_side",
                 "daub_wattle_orange_brick_northern/top",
-                "daub_wattle_orange_brick_northern/cross_side",
-                "daub_wattle_orange_brick_northern/cross_left",
-                "daub_wattle_orange_brick_northern/cross_right",
-                "daub_wattle_orange_brick_northern/cross_both"
+                "daub_wattle_orange_brick_northern/cross_side"
             ],
             "legacyBlockID": "daub_wattle_block_3:0"
         },
         {
             "blockName": "timber_northern_orange_brick_lefthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32916,16 +32862,13 @@
             "textures": [
                 "daub_wattle_orange_brick_northern/cross_side",
                 "daub_wattle_orange_brick_northern/top",
-                "daub_wattle_orange_brick_northern/left_side",
-                "daub_wattle_orange_brick_northern/left_left",
-                "daub_wattle_orange_brick_northern/left_right",
-                "daub_wattle_orange_brick_northern/left_both"
+                "daub_wattle_orange_brick_northern/left_side"
             ],
             "legacyBlockID": "daub_wattle_block_3:1"
         },
         {
             "blockName": "timber_northern_orange_brick_righthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32936,16 +32879,13 @@
             "textures": [
                 "daub_wattle_orange_brick_northern/cross_side",
                 "daub_wattle_orange_brick_northern/top",
-                "daub_wattle_orange_brick_northern/right_side",
-                "daub_wattle_orange_brick_northern/right_left",
-                "daub_wattle_orange_brick_northern/right_right",
-                "daub_wattle_orange_brick_northern/right_both"
+                "daub_wattle_orange_brick_northern/right_side"
             ],
             "legacyBlockID": "daub_wattle_block_3:2"
         },
         {
             "blockName": "timber_northern_orange_brick_frame",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32956,16 +32896,13 @@
             "textures": [
                 "daub_wattle_orange_brick_northern/cross_side",
                 "daub_wattle_orange_brick_northern/top",
-                "daub_wattle_orange_brick_northern/open_side",
-                "daub_wattle_orange_brick_northern/open_left",
-                "daub_wattle_orange_brick_northern/open_right",
-                "daub_wattle_orange_brick_northern/open_both"
+                "daub_wattle_orange_brick_northern/open_side"
             ],
             "legacyBlockID": "daub_wattle_block_3:3"
         },
         {
             "blockName": "timber_northern_grey_brick_crosshatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32975,16 +32912,13 @@
             "textures": [
                 "daub_wattle_grey_brick_northern/cross_side",
                 "daub_wattle_grey_brick_northern/top",
-                "daub_wattle_grey_brick_northern/cross_side",
-                "daub_wattle_grey_brick_northern/cross_left",
-                "daub_wattle_grey_brick_northern/cross_right",
-                "daub_wattle_grey_brick_northern/cross_both"
+                "daub_wattle_grey_brick_northern/cross_side"
             ],
             "legacyBlockID": "daub_wattle_block_3:4"
         },
         {
             "blockName": "timber_northern_grey_brick_lefthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -32994,16 +32928,13 @@
             "textures": [
                 "daub_wattle_grey_brick_northern/cross_side",
                 "daub_wattle_grey_brick_northern/top",
-                "daub_wattle_grey_brick_northern/left_side",
-                "daub_wattle_grey_brick_northern/left_left",
-                "daub_wattle_grey_brick_northern/left_right",
-                "daub_wattle_grey_brick_northern/left_both"
+                "daub_wattle_grey_brick_northern/left_side"
             ],
             "legacyBlockID": "daub_wattle_block_3:5"
         },
         {
             "blockName": "timber_northern_grey_brick_righthatch",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33013,16 +32944,13 @@
              "textures": [
                 "daub_wattle_grey_brick_northern/cross_side",
                 "daub_wattle_grey_brick_northern/top",
-                "daub_wattle_grey_brick_northern/right_side",
-                "daub_wattle_grey_brick_northern/right_left",
-                "daub_wattle_grey_brick_northern/right_right",
-                "daub_wattle_grey_brick_northern/right_both"
+                "daub_wattle_grey_brick_northern/right_side"
             ],
            "legacyBlockID": "daub_wattle_block_3:6"
         },
         {
             "blockName": "timber_northern_grey_brick_frame",
-            "blockType": "solidhoriz",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33032,10 +32960,7 @@
             "textures": [
                 "daub_wattle_grey_brick_northern/cross_side",
                 "daub_wattle_grey_brick_northern/top",
-                "daub_wattle_grey_brick_northern/open_side",
-                "daub_wattle_grey_brick_northern/open_left",
-                "daub_wattle_grey_brick_northern/open_right",
-                "daub_wattle_grey_brick_northern/open_both"
+                "daub_wattle_grey_brick_northern/open_side"
             ],
             "legacyBlockID": "daub_wattle_block_3:7"
         },
@@ -33426,7 +33351,7 @@
         },
         {
             "blockName": "timber_oak_lannisport_brick_vertical",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33436,16 +33361,13 @@
             "textures": [
                 "daub_wattle_lannisport_brick_oak/cross_side",
                 "daub_wattle_lannisport_brick_oak/top",
-                "daub_wattle_lannisport_brick_oak/vert_side",
-                "daub_wattle_lannisport_brick_oak/vert_down",
-                "daub_wattle_lannisport_brick_oak/vert_up",
-                "daub_wattle_lannisport_brick_oak/vert_both"
+                "daub_wattle_lannisport_brick_oak/vert_side"
             ],
             "legacyBlockID": "daub_wattle_block_5:8"
         },
         {
             "blockName": "timber_whitewashed_vertical",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33455,16 +33377,13 @@
             "textures": [
                 "daub_wattle_whitewashed/cross_side",
                 "daub_wattle_whitewashed/top",
-                "daub_wattle_whitewashed/vert_side",
-                "daub_wattle_whitewashed/vert_down",
-                "daub_wattle_whitewashed/vert_up",
-                "daub_wattle_whitewashed/vert_both"
+                "daub_wattle_whitewashed/vert_side"
             ],
             "legacyBlockID": "daub_wattle_block_5:9"
         },
         {
             "blockName": "timber_northern_brown_vertical",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33474,16 +33393,13 @@
             "textures": [
                 "daub_wattle_brown_northern/cross_side",
                 "daub_wattle_brown_northern/top",
-                "daub_wattle_brown_northern/vert_side",
-                "daub_wattle_brown_northern/vert_down",
-                "daub_wattle_brown_northern/vert_up",
-                "daub_wattle_brown_northern/vert_both"
+                "daub_wattle_brown_northern/vert_side"
             ],
             "legacyBlockID": "daub_wattle_block_5:10"
         },
         {
             "blockName": "timber_northern_white_vertical",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33493,16 +33409,13 @@
             "textures": [
                 "daub_wattle_white_northern/cross_side",
                 "daub_wattle_white_northern/top",
-                "daub_wattle_white_northern/vert_side",
-                "daub_wattle_white_northern/vert_down",
-                "daub_wattle_white_northern/vert_up",
-                "daub_wattle_white_northern/vert_both"
+                "daub_wattle_white_northern/vert_side"
             ],
             "legacyBlockID": "daub_wattle_block_5:11"
         },
         {
             "blockName": "timber_northern_orange_brick_vertical",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33513,16 +33426,13 @@
             "textures": [
                 "daub_wattle_orange_brick_northern/cross_side",
                 "daub_wattle_orange_brick_northern/top",
-                "daub_wattle_orange_brick_northern/vert_side",
-                "daub_wattle_orange_brick_northern/vert_down",
-                "daub_wattle_orange_brick_northern/vert_up",
-                "daub_wattle_orange_brick_northern/vert_both"
+                "daub_wattle_orange_brick_northern/vert_side"
             ],
             "legacyBlockID": "daub_wattle_block_5:12"
         },
         {
             "blockName": "timber_northern_grey_brick_vertical",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33532,10 +33442,7 @@
             "textures": [
                 "daub_wattle_grey_brick_northern/cross_side",
                 "daub_wattle_grey_brick_northern/top",
-                "daub_wattle_grey_brick_northern/vert_side",
-                "daub_wattle_grey_brick_northern/vert_down",
-                "daub_wattle_grey_brick_northern/vert_up",
-                "daub_wattle_grey_brick_northern/vert_both"
+                "daub_wattle_grey_brick_northern/vert_side"
             ],
             "legacyBlockID": "daub_wattle_block_5:13"
         },
@@ -33655,7 +33562,7 @@
         },
         {
             "blockName": "timber_whitewashed_close_studding",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33665,16 +33572,13 @@
             "textures": [
                 "daub_wattle_whitewashed/cross_side",
                 "daub_wattle_whitewashed/top",
-                "daub_wattle_whitewashed/close_side",
-                "daub_wattle_whitewashed/close_down",
-                "daub_wattle_whitewashed/close_up",
-                "daub_wattle_whitewashed/close_both"
+                "daub_wattle_whitewashed/close_side"
             ],
             "legacyBlockID": "daub_wattle_block_7:3"
         },
         {
             "blockName": "timber_northern_brown_close_studding",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33684,16 +33588,13 @@
             "textures": [
                 "daub_wattle_brown_northern/cross_side",
                 "daub_wattle_brown_northern/top",
-                "daub_wattle_brown_northern/close_side",
-                "daub_wattle_brown_northern/close_down",
-                "daub_wattle_brown_northern/close_up",
-                "daub_wattle_brown_northern/close_both"
+                "daub_wattle_brown_northern/close_side"
             ],
             "legacyBlockID": "daub_wattle_block_7:4"
         },
         {
             "blockName": "timber_northern_white_close_studding",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33703,16 +33604,13 @@
             "textures": [
                 "daub_wattle_white_northern/cross_side",
                 "daub_wattle_white_northern/top",
-                "daub_wattle_white_northern/close_side",
-                "daub_wattle_white_northern/close_down",
-                "daub_wattle_white_northern/close_up",
-                "daub_wattle_white_northern/close_both"
+                "daub_wattle_white_northern/close_side"
             ],
             "legacyBlockID": "daub_wattle_block_7:5"
         },
         {
             "blockName": "timber_northern_orange_brick_close_studding",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "hardness": 2,
             "stepSound": "wood",
             "material": "wood",
@@ -33723,10 +33621,7 @@
             "textures": [
                 "daub_wattle_orange_brick_northern/cross_side",
                 "daub_wattle_orange_brick_northern/top",
-                "daub_wattle_orange_brick_northern/close_side",
-                "daub_wattle_orange_brick_northern/close_down",
-                "daub_wattle_orange_brick_northern/close_up",
-                "daub_wattle_orange_brick_northern/close_both"
+                "daub_wattle_orange_brick_northern/close_side"
             ],
             "legacyBlockID": "daub_wattle_block_7:6"
         },

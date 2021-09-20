@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "westerosblocks:block/stone_block_3/brick_dun",
     "top": "westerosblocks:block/stone_block_3/brick_dun",
-    "side": "westerosblocks:block/brick_dun/side",
-    "particle": "westerosblocks:block/brick_dun/side"
+    "side": "westerosblocks:block/kl_dun_brick/side",
+    "particle": "westerosblocks:block/kl_dun_brick/side"
   }
 }
