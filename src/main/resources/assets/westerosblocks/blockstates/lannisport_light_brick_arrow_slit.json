@@ -1,16 +1,7 @@
 {
   "variants": {
-    "down=false,up=true": {
-      "model": "westerosblocks:block/generated/lannisport_light_brick_arrow_slit/up_v1"
-    },
-    "down=true,up=false": {
-      "model": "westerosblocks:block/generated/lannisport_light_brick_arrow_slit/down_v1"
-    },
-    "down=false,up=false": {
+    "": {
       "model": "westerosblocks:block/generated/lannisport_light_brick_arrow_slit/base_v1"
-    },
-    "down=true,up=true": {
-      "model": "westerosblocks:block/generated/lannisport_light_brick_arrow_slit/both_v1"
     }
   }
 }

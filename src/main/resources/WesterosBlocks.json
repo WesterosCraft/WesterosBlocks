@@ -17038,7 +17038,7 @@
         },
         {
             "blockName": "small_orange_brick_arrow_slit_window",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17052,10 +17052,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_orange_small_window/side",
-        	    "arrow_slit_brick_orange_small_window/down",
-            	"arrow_slit_brick_orange_small_window/up",
-            	"arrow_slit_brick_orange_small_window/both"                
+    	        "small_orange_brick_arrow_slit_window/side"                
             ],
             "collisionBoxes": [
                 {
@@ -17095,7 +17092,7 @@
         },
         {
             "blockName": "kl_dun_brick_arrow_slit",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17108,10 +17105,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_dun/side",
-        	    "arrow_slit_brick_dun/down",
-            	"arrow_slit_brick_dun/up",
-            	"arrow_slit_brick_dun/both"                
+    	        "kl_dun_brick_arrow_slit/side"                
             ],
             "collisionBoxes": [
                 {
@@ -17151,7 +17145,7 @@
         },
         {
             "blockName": "winterfell_granite_arrow_slit",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17164,10 +17158,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_winterfell_granite/side",
-        	    "arrow_slit_brick_winterfell_granite/down",
-            	"arrow_slit_brick_winterfell_granite/up",
-            	"arrow_slit_brick_winterfell_granite/both"                
+    	        "winterfell_granite_arrow_slit/side"        
             ],
             "collisionBoxes": [
                 {
@@ -17207,7 +17198,7 @@
         },
         {
             "blockName": "basalt_brick_arrow_slit",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17220,10 +17211,7 @@
             "textures": [
                 "transparent",
 	            "transparent",
-    	        "arrow_slit_brick_basalt/side",
-        	    "arrow_slit_brick_basalt/down",
-            	"arrow_slit_brick_basalt/up",
-            	"arrow_slit_brick_basalt/both"                
+    	        "basalt_brick_arrow_slit/side"                
             ],
             "collisionBoxes": [
                 {
@@ -17263,7 +17251,7 @@
         },
         {
             "blockName": "reach_brick_arrow_slit_window",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17276,10 +17264,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_reach_pink_window/side",
-        	    "arrow_slit_brick_reach_pink_window/down",
-            	"arrow_slit_brick_reach_pink_window/up",
-            	"arrow_slit_brick_reach_pink_window/both"                
+    	        "reach_brick_arrow_slit_window/side"                
             ],
             "collisionBoxes": [
                 {
@@ -17319,7 +17304,7 @@
         },
         {
             "blockName": "reach_light_stone_arrow_slit_ornate",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17332,10 +17317,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_reach_pink_ornate/side",
-        	    "arrow_slit_brick_reach_pink_ornate/down",
-            	"arrow_slit_brick_reach_pink_ornate/up",
-            	"arrow_slit_brick_reach_pink_ornate/both"                
+                "reach_light_stone_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
@@ -17375,7 +17357,7 @@
         },
         {
             "blockName": "stormlands_brick_arrow_slit_window",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17388,10 +17370,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_stormlands_window/side",
-        	    "arrow_slit_brick_stormlands_window/down",
-            	"arrow_slit_brick_stormlands_window/up",
-            	"arrow_slit_brick_stormlands_window/both"                
+    	        "stormlands_brick_arrow_slit_window/side"                
             ],
             "collisionBoxes": [
                 {
@@ -17431,7 +17410,7 @@
         },
         {
             "blockName": "stormlands_brick_arrow_slit_ornate",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17444,10 +17423,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_stormlands_ornate/side",
-        	    "arrow_slit_brick_stormlands_ornate/down",
-            	"arrow_slit_brick_stormlands_ornate/up",
-            	"arrow_slit_brick_stormlands_ornate/both"                
+    	        "stormlands_brick_arrow_slit_ornate/side"                
             ],
             "collisionBoxes": [
                 {
@@ -17487,7 +17463,7 @@
         },
         {
             "blockName": "lannisport_light_brick_arrow_slit",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17500,10 +17476,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_lannisport/side",
-        	    "arrow_slit_brick_lannisport/down",
-            	"arrow_slit_brick_lannisport/up",
-            	"arrow_slit_brick_lannisport/both"                
+    	        "lannisport_light_brick_arrow_slit/side"                
             ],
             "collisionBoxes": [
                 {
@@ -17543,7 +17516,7 @@
         },
         {
             "blockName": "lannisport_light_brick_arrow_slit_ornate",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17556,10 +17529,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_lannisport_ornate/side",
-        	    "arrow_slit_brick_lannisport_ornate/down",
-            	"arrow_slit_brick_lannisport_ornate/up",
-            	"arrow_slit_brick_lannisport_ornate/both"                
+    	        "lannisport_light_brick_arrow_slit_ornate/side"                
             ],
             "collisionBoxes": [
                 {
@@ -17599,7 +17569,7 @@
         },
         {
             "blockName": "small_stone_brick_arrow_slit_ornate",
-            "blockType": "solidvert",
+            "blockType": "solid",
             "creativeTab": "WesterosDeco",
             "nonOpaque": true,
             "alphaRender": false,
@@ -17613,10 +17583,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "arrow_slit_brick_small_stone_ornate/side",
-        	    "arrow_slit_brick_small_stone_ornate/down",
-            	"arrow_slit_brick_small_stone_ornate/up",
-            	"arrow_slit_brick_small_stone_ornate/both"                
+    	        "small_stone_brick_arrow_slit_ornate/side"                
             ],
             "collisionBoxes": [
                 {
