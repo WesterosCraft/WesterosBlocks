@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/ground_block_0/mud",
-    "up": "westerosblocks:block/ground_block_0/mud",
-    "north": "westerosblocks:block/ground_block_0/mud",
-    "south": "westerosblocks:block/ground_block_0/mud",
-    "west": "westerosblocks:block/ground_block_0/mud",
-    "east": "westerosblocks:block/ground_block_0/mud",
-    "particle": "westerosblocks:block/ground_block_0/mud"
+    "down": "westerosblocks:block/mud/side1",
+    "up": "westerosblocks:block/mud/side1",
+    "north": "westerosblocks:block/mud/side1",
+    "south": "westerosblocks:block/mud/side1",
+    "west": "westerosblocks:block/mud/side1",
+    "east": "westerosblocks:block/mud/side1",
+    "particle": "westerosblocks:block/mud/side1"
   }
 }

@@ -1,8 +1,8 @@
 {
-  "parent": "westerosblocks:block/untinted/upper_slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
     "down": "westerosblocks:block/mud/side1",
-    "up": "westerosblocks:block/mud/side1",
+    "up": "westerosblocks:block/mud/top1",
     "north": "westerosblocks:block/mud/side1",
     "south": "westerosblocks:block/mud/side1",
     "west": "westerosblocks:block/mud/side1",

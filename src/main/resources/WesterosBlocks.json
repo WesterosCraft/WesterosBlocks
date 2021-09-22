@@ -6428,9 +6428,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Dates",
             "textures": [
-                "miscellaneous_block_0/dates_bottom",
-                "miscellaneous_block_0/dates_top",
-                "miscellaneous_block_0/dates_side"
+                "dates/bottom",
+                "dates/top",
+                "dates/side"
             ],
             "legacyBlockID": "solid_blocks_0:2"
         },
@@ -6529,8 +6529,15 @@
             "resistance": 2,
             "creativeTab": "WesterosBlocks",
             "label": "Mud",
-            "textures": [
-                "ground_block_0/mud"
+            "randomTextures": [
+              { "textures": [ "mud/side1" ], "weight": 20 },
+              { "textures": [ "mud/side2" ], "weight": 20 },
+              { "textures": [ "mud/side3" ], "weight": 20 },
+              { "textures": [ "mud/side4" ], "weight": 20 },
+              { "textures": [ "mud/side5" ], "weight": 20 },
+              { "textures": [ "mud/side1", "mud/top1", "mud/side1" ], "weight": 1 },
+              { "textures": [ "mud/side2", "mud/top2", "mud/side2" ], "weight": 1 },
+              { "textures": [ "mud/side3", "mud/top3", "mud/side3" ], "weight": 1 }
             ],
             "legacyBlockID": "soulsand_like_blocks_0:0"
         },
@@ -7377,8 +7384,15 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Mud Slab",
-            "textures": [
-                "ground_block_0/mud"
+            "randomTextures": [
+              { "textures": [ "mud/side1" ], "weight": 20 },
+              { "textures": [ "mud/side2" ], "weight": 20 },
+              { "textures": [ "mud/side3" ], "weight": 20 },
+              { "textures": [ "mud/side4" ], "weight": 20 },
+              { "textures": [ "mud/side5" ], "weight": 20 },
+              { "textures": [ "mud/side1", "mud/top1", "mud/side1" ], "weight": 1 },
+              { "textures": [ "mud/side2", "mud/top2", "mud/side2" ], "weight": 1 },
+              { "textures": [ "mud/side3", "mud/top3", "mud/side3" ], "weight": 1 }
             ],
             "legacyBlockID": "random_slab_block_1:6"
         },

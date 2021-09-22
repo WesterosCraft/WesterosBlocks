@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/miscellaneous_block_0/dates_bottom",
-    "up": "westerosblocks:block/miscellaneous_block_0/dates_top",
-    "north": "westerosblocks:block/miscellaneous_block_0/dates_side",
-    "south": "westerosblocks:block/miscellaneous_block_0/dates_side",
-    "west": "westerosblocks:block/miscellaneous_block_0/dates_side",
-    "east": "westerosblocks:block/miscellaneous_block_0/dates_side",
-    "particle": "westerosblocks:block/miscellaneous_block_0/dates_side"
+    "down": "westerosblocks:block/dates/bottom",
+    "up": "westerosblocks:block/dates/top",
+    "north": "westerosblocks:block/dates/side",
+    "south": "westerosblocks:block/dates/side",
+    "west": "westerosblocks:block/dates/side",
+    "east": "westerosblocks:block/dates/side",
+    "particle": "westerosblocks:block/dates/side"
   }
 }
