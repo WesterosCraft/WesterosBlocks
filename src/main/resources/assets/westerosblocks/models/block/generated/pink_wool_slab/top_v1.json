@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/wool_colours/wool_colored_pink",
-    "up": "westerosblocks:block/wool_colours/wool_colored_pink",
-    "north": "westerosblocks:block/wool_colours/wool_colored_pink",
-    "south": "westerosblocks:block/wool_colours/wool_colored_pink",
-    "west": "westerosblocks:block/wool_colours/wool_colored_pink",
-    "east": "westerosblocks:block/wool_colours/wool_colored_pink",
-    "particle": "westerosblocks:block/wool_colours/wool_colored_pink"
+    "down": "minecraft:block/pink_wool",
+    "up": "minecraft:block/pink_wool",
+    "north": "minecraft:block/pink_wool",
+    "south": "minecraft:block/pink_wool",
+    "west": "minecraft:block/pink_wool",
+    "east": "minecraft:block/pink_wool",
+    "particle": "minecraft:block/pink_wool"
   }
 }

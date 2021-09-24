@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/wool_colours/wool_colored_red",
-    "up": "westerosblocks:block/wool_colours/wool_colored_red",
-    "north": "westerosblocks:block/wool_colours/wool_colored_red",
-    "south": "westerosblocks:block/wool_colours/wool_colored_red",
-    "west": "westerosblocks:block/wool_colours/wool_colored_red",
-    "east": "westerosblocks:block/wool_colours/wool_colored_red",
-    "particle": "westerosblocks:block/wool_colours/wool_colored_red"
+    "down": "minecraft:block/red_wool",
+    "up": "minecraft:block/red_wool",
+    "north": "minecraft:block/red_wool",
+    "south": "minecraft:block/red_wool",
+    "west": "minecraft:block/red_wool",
+    "east": "minecraft:block/red_wool",
+    "particle": "minecraft:block/red_wool"
   }
 }

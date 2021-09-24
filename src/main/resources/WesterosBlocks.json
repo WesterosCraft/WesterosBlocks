@@ -13931,7 +13931,7 @@
             "creativeTab": "WesterosDeco",
             "label": "White Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_white"
+                "minecraft:block/white_wool"
             ],
             "legacyBlockID": "wool_slab_block_0:0"
         },
@@ -13951,7 +13951,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Orange Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_orange"
+                "minecraft:block/orange_wool"
             ],
             "legacyBlockID": "wool_slab_block_0:1"
         },
@@ -13971,7 +13971,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Light Brown Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_light_brown"
+                "minecraft:block/light_brown_wool"
             ],
             "legacyBlockID": "wool_slab_block_0:2"
         },
@@ -13991,7 +13991,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Light Blue Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_light_blue"
+                "minecraft:block/light_blue_wool"
             ],
             "legacyBlockID": "wool_slab_block_0:3"
         },
@@ -14011,7 +14011,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Yellow Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_yellow"
+                "minecraft:block/yellow_wool"
             ],
             "legacyBlockID": "wool_slab_block_0:4"
         },
@@ -14031,7 +14031,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Dirty White Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_dirty_white"
+                "minecraft:block/lime_wool"
             ],
             "legacyBlockID": "wool_slab_block_0:5"
         },
@@ -14051,7 +14051,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Pink Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_pink"
+                "minecraft:block/pink_wool"
             ],
             "legacyBlockID": "wool_slab_block_0:6"
         },
@@ -14071,7 +14071,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Grey Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_grey"
+                "minecraft:block/gray_wool"
             ],
             "legacyBlockID": "wool_slab_block_0:7"
         },
@@ -14091,7 +14091,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Light Grey Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_light_grey"
+                "minecraft:block/light_gray_wool"
             ],
             "legacyBlockID": "wool_slab_block_1:0"
         },
@@ -14111,7 +14111,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Cyan Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_cyan"
+                "minecraft:block/cyan_wool"
             ],
             "legacyBlockID": "wool_slab_block_1:1"
         },
@@ -14131,7 +14131,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Purple Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_purple"
+                "minecraft:block/purple_wool"
             ],
             "legacyBlockID": "wool_slab_block_1:2"
         },
@@ -14151,7 +14151,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Blue Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_blue"
+                "minecraft:block/blue_wool"
             ],
             "legacyBlockID": "wool_slab_block_1:3"
         },
@@ -14171,7 +14171,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Brown Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_brown"
+                "minecraft:block/brown_wool"
             ],
             "legacyBlockID": "wool_slab_block_1:4"
         },
@@ -14191,7 +14191,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Green Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_green"
+                "minecraft:block/green_wool"
             ],
             "legacyBlockID": "wool_slab_block_1:5"
         },
@@ -14211,7 +14211,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Red Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_red"
+                "minecraft:block/red_wool"
             ],
             "legacyBlockID": "wool_slab_block_1:6"
         },
@@ -14231,7 +14231,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Black Wool Slab",
             "textures": [
-                "wool_colours/wool_colored_black"
+                "minecraft:block/black_wool"
             ],
             "legacyBlockID": "wool_slab_block_1:7"
         },
