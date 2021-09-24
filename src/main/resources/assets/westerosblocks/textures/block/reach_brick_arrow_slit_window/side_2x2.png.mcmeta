@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "ctm_horizontal",
+    "type": "ctm_vertical",
     "layer": "SOLID",
     "textures": [],
     "extra": {
