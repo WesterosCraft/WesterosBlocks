@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/flowstone/side2",
+    "up": "westerosblocks:block/flowstone/side2",
+    "north": "westerosblocks:block/flowstone/side2",
+    "south": "westerosblocks:block/flowstone/side2",
+    "west": "westerosblocks:block/flowstone/side2",
+    "east": "westerosblocks:block/flowstone/side2",
+    "particle": "westerosblocks:block/flowstone/side2"
+  }
+}

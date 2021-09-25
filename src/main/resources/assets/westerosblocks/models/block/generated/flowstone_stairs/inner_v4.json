@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/flowstone/side4",
+    "top": "westerosblocks:block/flowstone/side4",
+    "side": "westerosblocks:block/flowstone/side4",
+    "particle": "westerosblocks:block/flowstone/side4"
+  }
+}

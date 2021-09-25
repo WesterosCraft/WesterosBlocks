@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "up": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "north": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "south": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "west": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "east": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "particle": "westerosblocks:block/stone_terrainsets_0/stone_flowstone"
+    "down": "westerosblocks:block/flowstone/side1",
+    "up": "westerosblocks:block/flowstone/side1",
+    "north": "westerosblocks:block/flowstone/side1",
+    "south": "westerosblocks:block/flowstone/side1",
+    "west": "westerosblocks:block/flowstone/side1",
+    "east": "westerosblocks:block/flowstone/side1",
+    "particle": "westerosblocks:block/flowstone/side1"
   }
 }

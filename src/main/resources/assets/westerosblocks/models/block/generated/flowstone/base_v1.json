@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_terrainsets_0/stone_flowstone"
+    "all": "westerosblocks:block/flowstone/side1"
   }
 }

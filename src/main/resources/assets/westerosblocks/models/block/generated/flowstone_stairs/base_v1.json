@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "top": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "side": "westerosblocks:block/stone_terrainsets_0/stone_flowstone",
-    "particle": "westerosblocks:block/stone_terrainsets_0/stone_flowstone"
+    "bottom": "westerosblocks:block/flowstone/side1",
+    "top": "westerosblocks:block/flowstone/side1",
+    "side": "westerosblocks:block/flowstone/side1",
+    "particle": "westerosblocks:block/flowstone/side1"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/flowstone/side3",
+    "top": "westerosblocks:block/flowstone/side3",
+    "side": "westerosblocks:block/flowstone/side3",
+    "particle": "westerosblocks:block/flowstone/side3"
+  }
+}

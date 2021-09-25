@@ -32078,8 +32078,11 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Flowstone",
-            "textures": [
-                "stone_terrainsets_0/stone_flowstone"
+            "randomTextures": [ 
+            	{  "textures": [ "flowstone/side1" ] },
+            	{  "textures": [ "flowstone/side2" ] },
+            	{  "textures": [ "flowstone/side3" ] },
+            	{  "textures": [ "flowstone/side4" ] }
             ],
             "legacyBlockID": "stone_block_10:6"
         },
@@ -32250,8 +32253,11 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Flowstone Slab",
-            "textures": [
-                "stone_terrainsets_0/stone_flowstone"
+            "randomTextures": [ 
+            	{  "textures": [ "flowstone/side1" ] },
+            	{  "textures": [ "flowstone/side2" ] },
+            	{  "textures": [ "flowstone/side3" ] },
+            	{  "textures": [ "flowstone/side4" ] }
             ],
             "legacyBlockID": "terrainset_slab_block_2:1"
         },
@@ -32340,8 +32346,11 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Flowstone Wall",
-            "textures": [
-                "stone_terrainsets_0/stone_flowstone"
+            "randomTextures": [ 
+            	{  "textures": [ "flowstone/side1" ] },
+            	{  "textures": [ "flowstone/side2" ] },
+            	{  "textures": [ "flowstone/side3" ] },
+            	{  "textures": [ "flowstone/side4" ] }
             ],
             "legacyBlockID": "terrainset_wall_block_1:1"
         },
@@ -32418,8 +32427,11 @@
             "resistance": 10,
             "creativeTab": "WesterosDeco",
             "label": "Flowstone Fence",
-            "textures": [
-                "stone_terrainsets_0/stone_flowstone"
+            "randomTextures": [ 
+            	{  "textures": [ "flowstone/side1" ] },
+            	{  "textures": [ "flowstone/side2" ] },
+            	{  "textures": [ "flowstone/side3" ] },
+            	{  "textures": [ "flowstone/side4" ] }
             ],
             "legacyBlockID": "terrainset_fence_block_4:1"
         },
