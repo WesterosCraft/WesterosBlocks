@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westerosctm",
+    "type": "westeros_ctm",
     "layer": "SOLID",
     "textures": [
       "westerosblocks:block/red_wood/ctm0",

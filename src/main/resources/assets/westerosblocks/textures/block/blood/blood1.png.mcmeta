@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westerosctm",
+    "type": "westeros_ctm",
     "layer": "TRANSLUCENT",
     "textures": [
       "westerosblocks:block/blood/blooddrips1",

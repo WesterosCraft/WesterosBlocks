@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westerosctmsingle",
+    "type": "westeros_ctm_single",
     "layer": "SOLID",
     "textures": [
       "westerosblocks:block/ctm/westerosctmsingle_template"
