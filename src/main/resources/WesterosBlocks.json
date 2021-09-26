@@ -34293,6 +34293,17 @@
             "textures": [
                 "ctm/simple"
             ]
+        },
+        {
+            "blockName": "ctm_westerosctmpattern",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Westeros CTM+Pattern",
+            "textures": [
+                "ctm/westerosctmpattern"
+            ]
         }
    ]
 }
