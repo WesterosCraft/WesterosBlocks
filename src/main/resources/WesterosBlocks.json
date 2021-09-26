@@ -34304,6 +34304,28 @@
             "textures": [
                 "ctm/westerosctmpattern"
             ]
+        },
+        {
+            "blockName": "ctm_westerosctmverthoriz",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Westeros V+H",
+            "textures": [
+                "ctm/westerosverthoriz"
+            ]
+        },
+        {
+            "blockName": "ctm_westerosctmhorizvert",
+            "blockType": "solid",
+            "stepSound": "wood",
+            "material": "cloth",
+            "creativeTab": "WesterosCTMSamples",
+            "label": "Westeros H+V",
+            "textures": [
+                "ctm/westeroshorizvert"
+            ]
         }
    ]
 }
