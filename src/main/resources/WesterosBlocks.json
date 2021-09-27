@@ -5835,7 +5835,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Blue Slate",
             "textures": [
-                "stone_slate_0/slate_blue"
+                "blue_slate/side"
             ],
             "legacyBlockID": "stone_block_1:12"
         },
@@ -6861,7 +6861,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Lannisport Slate Slab",
             "textures": [
-                "stone_slate_0/slate_lannisport"
+                "lannisport_slate/side"
             ],
             "legacyBlockID": "stone_slab_block_0:6"
         },
@@ -6965,7 +6965,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Blue Slate Slab",
             "textures": [
-                "stone_slate_0/slate_blue"
+                "blue_slate/side"
             ],
             "legacyBlockID": "stone_slab_block_1:4"
         },
@@ -11392,7 +11392,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Lannisport Slate",
             "textures": [
-                "stone_slate_0/slate_lannisport"
+                "lannisport_slate/side"
             ],
             "legacyBlockID": "stone_block_2:9"
         },
@@ -13174,7 +13174,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Green Slate",
             "textures": [
-                "stone_slate_0/slate_green"
+                "green_slate/side"
             ],
             "legacyBlockID": "stone_block_3:1"
         },
@@ -13436,7 +13436,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Green Slate Slab",
             "textures": [
-                "stone_slate_0/slate_green"
+                "green_slate/side"
             ],
             "legacyBlockID": "stone_slab_block_2:1"
         },

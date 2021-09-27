@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_slate_0/slate_lannisport",
-    "up": "westerosblocks:block/stone_slate_0/slate_lannisport",
-    "north": "westerosblocks:block/stone_slate_0/slate_lannisport",
-    "south": "westerosblocks:block/stone_slate_0/slate_lannisport",
-    "west": "westerosblocks:block/stone_slate_0/slate_lannisport",
-    "east": "westerosblocks:block/stone_slate_0/slate_lannisport",
-    "particle": "westerosblocks:block/stone_slate_0/slate_lannisport"
+    "down": "westerosblocks:block/lannisport_slate/side",
+    "up": "westerosblocks:block/lannisport_slate/side",
+    "north": "westerosblocks:block/lannisport_slate/side",
+    "south": "westerosblocks:block/lannisport_slate/side",
+    "west": "westerosblocks:block/lannisport_slate/side",
+    "east": "westerosblocks:block/lannisport_slate/side",
+    "particle": "westerosblocks:block/lannisport_slate/side"
   }
 }
