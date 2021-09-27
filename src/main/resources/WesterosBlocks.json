@@ -16573,8 +16573,10 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Reach Spruce Wood Panelling",
-            "textures": [
-                "wood_block_1/wood_panelling_spruce"
+            "randomTextures": [ 
+              { "textures": [ "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/side1" ] },
+              { "textures": [ "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/side2" ] },
+              { "textures": [ "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/side3" ] }
             ],
             "legacyBlockID": "stone_block_4:10"
         },
@@ -27411,8 +27413,10 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Reach Spruce Wood Panelling Wall",
-            "textures": [
-                "wood_block_1/wood_panelling_spruce"
+            "randomTextures": [ 
+              { "textures": [ "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/side1" ] },
+              { "textures": [ "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/side2" ] },
+              { "textures": [ "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/top_bottom", "reach_spruce_wood_panelling/side3" ] }
             ],
             "legacyBlockID": "wood_wall_block_0:8"
         },
