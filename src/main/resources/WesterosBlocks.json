@@ -5848,8 +5848,16 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Red Slate",
-            "textures": [
-                "stone_slate_0/slate_red"
+            "randomTextures": [
+               { "textures": [ "red_slate/side1" ] },
+               { "textures": [ "red_slate/side2" ] },
+               { "textures": [ "red_slate/side3" ] },
+               { "textures": [ "red_slate/side4" ] },
+               { "textures": [ "red_slate/side5" ] },
+               { "textures": [ "red_slate/side6" ] },
+               { "textures": [ "red_slate/side7" ] },
+               { "textures": [ "red_slate/side8" ] },
+               { "textures": [ "red_slate/side9" ] }
             ],
             "legacyBlockID": "stone_block_1:13"
         },
@@ -6984,8 +6992,16 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Red Slate Slab",
-            "textures": [
-                "stone_slate_0/slate_red"
+            "randomTextures": [
+               { "textures": [ "red_slate/side1" ] },
+               { "textures": [ "red_slate/side2" ] },
+               { "textures": [ "red_slate/side3" ] },
+               { "textures": [ "red_slate/side4" ] },
+               { "textures": [ "red_slate/side5" ] },
+               { "textures": [ "red_slate/side6" ] },
+               { "textures": [ "red_slate/side7" ] },
+               { "textures": [ "red_slate/side8" ] },
+               { "textures": [ "red_slate/side9" ] }
             ],
             "legacyBlockID": "stone_slab_block_1:5"
         },
@@ -13159,8 +13175,16 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Brown Slate",
-            "textures": [
-                "stone_slate_0/slate_brown"
+            "randomTextures": [
+               { "textures": [ "brown_slate/side1" ] },
+               { "textures": [ "brown_slate/side2" ] },
+               { "textures": [ "brown_slate/side3" ] },
+               { "textures": [ "brown_slate/side4" ] },
+               { "textures": [ "brown_slate/side5" ] },
+               { "textures": [ "brown_slate/side6" ] },
+               { "textures": [ "brown_slate/side7" ] },
+               { "textures": [ "brown_slate/side8" ] },
+               { "textures": [ "brown_slate/side9" ] }
             ],
             "legacyBlockID": "stone_block_3:0"
         },
@@ -13415,8 +13439,16 @@
             ],
             "creativeTab": "WesterosBlocks",
             "label": "Brown Slate Slab",
-            "textures": [
-                "stone_slate_0/slate_brown"
+            "randomTextures": [
+               { "textures": [ "brown_slate/side1" ] },
+               { "textures": [ "brown_slate/side2" ] },
+               { "textures": [ "brown_slate/side3" ] },
+               { "textures": [ "brown_slate/side4" ] },
+               { "textures": [ "brown_slate/side5" ] },
+               { "textures": [ "brown_slate/side6" ] },
+               { "textures": [ "brown_slate/side7" ] },
+               { "textures": [ "brown_slate/side8" ] },
+               { "textures": [ "brown_slate/side9" ] }
             ],
             "legacyBlockID": "stone_slab_block_2:0"
         },

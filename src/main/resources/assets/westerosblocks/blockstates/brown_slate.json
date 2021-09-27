@@ -1,7 +1,33 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/brown_slate/base_v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v8"
+      },
+      {
+        "model": "westerosblocks:block/generated/brown_slate/base_v9"
+      }
+    ]
   }
 }

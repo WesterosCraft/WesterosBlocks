@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/brown_slate/side7",
+    "up": "westerosblocks:block/brown_slate/side7",
+    "north": "westerosblocks:block/brown_slate/side7",
+    "south": "westerosblocks:block/brown_slate/side7",
+    "west": "westerosblocks:block/brown_slate/side7",
+    "east": "westerosblocks:block/brown_slate/side7",
+    "particle": "westerosblocks:block/brown_slate/side7"
+  }
+}

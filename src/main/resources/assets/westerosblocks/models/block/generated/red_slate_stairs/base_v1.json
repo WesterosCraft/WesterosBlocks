@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_slate_0/slate_red",
-    "top": "westerosblocks:block/stone_slate_0/slate_red",
-    "side": "westerosblocks:block/stone_slate_0/slate_red",
-    "particle": "westerosblocks:block/stone_slate_0/slate_red"
+    "bottom": "westerosblocks:block/red_slate/side1",
+    "top": "westerosblocks:block/red_slate/side1",
+    "side": "westerosblocks:block/red_slate/side1",
+    "particle": "westerosblocks:block/red_slate/side1"
   }
 }
