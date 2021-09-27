@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/wood_block_1/wood_carving_northern"
+    "down": "westerosblocks:block/northern_carvings/top_bottom",
+    "up": "westerosblocks:block/northern_carvings/top_bottom",
+    "north": "westerosblocks:block/northern_carvings/side",
+    "south": "westerosblocks:block/northern_carvings/side",
+    "west": "westerosblocks:block/northern_carvings/side",
+    "east": "westerosblocks:block/northern_carvings/side",
+    "particle": "westerosblocks:block/northern_carvings/side"
   }
 }

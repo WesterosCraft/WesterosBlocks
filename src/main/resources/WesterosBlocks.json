@@ -6083,7 +6083,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Northern Carvings",
             "textures": [
-                "wood_block_1/wood_carving_northern"
+                "northern_carvings/top_bottom",
+                "northern_carvings/top_bottom",
+                "northern_carvings/side"
             ],
             "legacyBlockID": "wood_colours:12"
         },
