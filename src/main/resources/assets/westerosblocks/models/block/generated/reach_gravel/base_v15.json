@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/reach_gravel/side1"
+    "all": "westerosblocks:block/reach_gravel/side15"
   }
 }

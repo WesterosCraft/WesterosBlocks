@@ -7369,8 +7369,23 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Reach Gravel Slab",
-            "textures": [
-                "ground_block_0/gravel_reach"
+            "randomTextures": [
+               { "textures": [ "reach_gravel/side1" ], "weight": 10 },
+               { "textures": [ "reach_gravel/side2" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side3" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side4" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side5" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side6" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side7" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side8" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side9" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side10" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side11" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side12" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side13" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side14" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side15" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side16" ], "weight": 1 }
             ],
             "legacyBlockID": "random_slab_block_1:4"
         },
@@ -14436,8 +14451,23 @@
             "resistance": 2,
             "creativeTab": "WesterosBlocks",
             "label": "Reach Gravel",
-            "textures": [
-                "ground_block_0/gravel_reach"
+            "randomTextures": [
+               { "textures": [ "reach_gravel/side1" ], "weight": 10 },
+               { "textures": [ "reach_gravel/side2" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side3" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side4" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side5" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side6" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side7" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side8" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side9" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side10" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side11" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side12" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side13" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side14" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side15" ], "weight": 1 },
+               { "textures": [ "reach_gravel/side16" ], "weight": 1 }
             ],
             "legacyBlockID": "solid_blocks_1:0"
         },
