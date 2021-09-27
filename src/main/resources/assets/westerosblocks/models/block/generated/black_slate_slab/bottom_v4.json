@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/black_slate/side4",
+    "up": "westerosblocks:block/black_slate/side4",
+    "north": "westerosblocks:block/black_slate/side4",
+    "south": "westerosblocks:block/black_slate/side4",
+    "west": "westerosblocks:block/black_slate/side4",
+    "east": "westerosblocks:block/black_slate/side4",
+    "particle": "westerosblocks:block/black_slate/side4"
+  }
+}
