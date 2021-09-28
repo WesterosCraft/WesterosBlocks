@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/wood_block_1/wood_panelling_oak"
+    "down": "westerosblocks:block/reach_oak_wood_panelling/top_bottom",
+    "up": "westerosblocks:block/reach_oak_wood_panelling/top_bottom",
+    "north": "westerosblocks:block/reach_oak_wood_panelling/side1",
+    "south": "westerosblocks:block/reach_oak_wood_panelling/side1",
+    "west": "westerosblocks:block/reach_oak_wood_panelling/side1",
+    "east": "westerosblocks:block/reach_oak_wood_panelling/side1",
+    "particle": "westerosblocks:block/reach_oak_wood_panelling/side1"
   }
 }
