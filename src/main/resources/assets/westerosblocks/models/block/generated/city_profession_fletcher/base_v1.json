@@ -20,8 +20,8 @@
   "textures": {
     "txt4": "westerosblocks:block/transparent",
     "txt5": "westerosblocks:block/transparent",
-    "txt2": "westerosblocks:block/sign_block_0/fletcher",
-    "txt3": "westerosblocks:block/sign_block_0/sign_cut",
+    "txt2": "westerosblocks:block/profession_sign_base/fletcher",
+    "txt3": "westerosblocks:block/profession_sign_base/sign_cut1",
     "txt0": "westerosblocks:block/sign_block_0/sign_bottom",
     "txt1": "westerosblocks:block/sign_block_0/sign_top",
     "particle": "westerosblocks:block/sign_block_0/sign_bottom"

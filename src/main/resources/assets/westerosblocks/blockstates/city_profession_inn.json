@@ -1,11 +1,50 @@
 {
   "variants": {
-    "facing=east": {
-      "model": "westerosblocks:block/generated/city_profession_inn/base_v1"
-    },
-    "facing=north": {
-      "model": "westerosblocks:block/generated/city_profession_inn/base_v1",
-      "y": 90
-    }
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v6"
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v2",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v3",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v4",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v5",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_inn/base_v6",
+        "y": 90
+      }
+    ]
   }
 }

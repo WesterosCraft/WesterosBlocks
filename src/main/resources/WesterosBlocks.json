@@ -21471,12 +21471,13 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Ale Merchant",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/ale_merchant",
-                "sign_block_0/sign_cut",
-                "transparent"
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/ale_merchant", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/ale_merchant", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/ale_merchant", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/ale_merchant", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/ale_merchant", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/ale_merchant", "profession_sign_base/sign_cut6", "transparent" ]}
             ],
             "cuboids": [
                 {
@@ -21531,13 +21532,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Apothecary",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/apothecary",
-                "sign_block_0/sign_cut",
-                "transparent"
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/apothecary", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/apothecary", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/apothecary", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/apothecary", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/apothecary", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/apothecary", "profession_sign_base/sign_cut6", "transparent" ]}
             ],
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -21591,12 +21594,13 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Armorer",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/armorer",
-                "sign_block_0/sign_cut",
-                "transparent"
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/armorer", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/armorer", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/armorer", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/armorer", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/armorer", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/armorer", "profession_sign_base/sign_cut6", "transparent" ]}
             ],
             "cuboids": [
                 {
@@ -21651,12 +21655,13 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Baker",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/baker",
-                "sign_block_0/sign_cut",
-                "transparent"
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/baker", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/baker", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/baker", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/baker", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/baker", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/baker", "profession_sign_base/sign_cut6", "transparent" ]}
             ],
             "cuboids": [
                 {
@@ -21711,12 +21716,13 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Barber",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/barber",
-                "sign_block_0/sign_cut",
-                "transparent"
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/barber", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/barber", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/barber", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/barber", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/barber", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/barber", "profession_sign_base/sign_cut6", "transparent" ]}
             ],
             "cuboids": [
                 {
@@ -21771,12 +21777,13 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Blacksmith",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/blacksmith",
-                "sign_block_0/sign_cut",
-                "transparent"
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/blacksmith", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/blacksmith", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/blacksmith", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/blacksmith", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/blacksmith", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/blacksmith", "profession_sign_base/sign_cut6", "transparent" ]}
             ],
             "cuboids": [
                 {
@@ -21831,13 +21838,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Bookbinder",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/bookbinder",
-                "sign_block_0/sign_cut",
-                "transparent"
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/bookbinder", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/bookbinder", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/bookbinder", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/bookbinder", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/bookbinder", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/bookbinder", "profession_sign_base/sign_cut6", "transparent" ]}
             ],
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -21891,13 +21900,14 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Butcher",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/butcher",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/butcher", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/butcher", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/butcher", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/butcher", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/butcher", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/butcher", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -21951,13 +21961,14 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Carpenter",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/carpenter",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/carpenter", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/carpenter", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/carpenter", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/carpenter", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/carpenter", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/carpenter", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                        
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22018,6 +22029,14 @@
                 "sign_block_0/sign_cut",
                 "transparent"
             ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cartwright", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cartwright", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cartwright", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cartwright", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cartwright", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cartwright", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                    
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22071,13 +22090,14 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Cobbler",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/cobbler",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cobbler", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cobbler", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cobbler", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cobbler", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cobbler", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cobbler", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22131,13 +22151,14 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Cooper",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/cooper",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cooper", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cooper", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cooper", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cooper", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cooper", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/cooper", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22191,13 +22212,14 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Fishmongerer",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/fishmongerer",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fishmongerer", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fishmongerer", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fishmongerer", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fishmongerer", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fishmongerer", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fishmongerer", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22251,13 +22273,14 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Fletcher",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/fletcher",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fletcher", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fletcher", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fletcher", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fletcher", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fletcher", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/fletcher", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22311,13 +22334,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Furrier",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/furrier",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/furrier", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/furrier", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/furrier", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/furrier", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/furrier", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/furrier", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22371,13 +22396,14 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Inn",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_0/inn",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/inn", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/inn", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/inn", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/inn", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/inn", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/inn", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22431,13 +22457,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Chandler",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/chandler",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/chandler", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/chandler", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/chandler", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/chandler", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/chandler", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/chandler", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22491,13 +22519,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Jeweller",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/jeweller",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/jeweller", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/jeweller", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/jeweller", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/jeweller", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/jeweller", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/jeweller", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22551,13 +22581,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Mason",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/mason",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mason", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mason", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mason", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mason", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mason", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mason", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22611,13 +22643,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Mercer",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/mercer",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mercer", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mercer", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mercer", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mercer", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mercer", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/mercer", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22671,13 +22705,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Net Maker",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/net_maker",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/net_maker", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/net_maker", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/net_maker", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/net_maker", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/net_maker", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/net_maker", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22731,13 +22767,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Potter",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/potter",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potter", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potter", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potter", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potter", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potter", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potter", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22791,13 +22829,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Ropemaker",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/rope_maker",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/rope_maker", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/rope_maker", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/rope_maker", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/rope_maker", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/rope_maker", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/rope_maker", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22851,13 +22891,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Scribe",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/scribe",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/scribe", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/scribe", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/scribe", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/scribe", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/scribe", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/scribe", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22911,13 +22953,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Spicer",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/spicer",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/spicer", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/spicer", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/spicer", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/spicer", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/spicer", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/spicer", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -22971,13 +23015,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Stables",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/stables",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/stables", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/stables", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/stables", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/stables", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/stables", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/stables", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -23031,13 +23077,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Tailor",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/tailor",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tailor", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tailor", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tailor", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tailor", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tailor", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tailor", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -23091,13 +23139,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Tanner",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/tanner",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tanner", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tanner", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tanner", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tanner", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tanner", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tanner", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -23151,13 +23201,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Tavern",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/tavern",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tavern", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tavern", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tavern", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tavern", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tavern", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/tavern", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -23211,13 +23263,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Weaponsmith",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/weaponsmith",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/weaponsmith", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/weaponsmith", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/weaponsmith", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/weaponsmith", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/weaponsmith", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/weaponsmith", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -23271,13 +23325,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Wine Merchant",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/wine_merchant",
-                "sign_block_0/sign_cut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/wine_merchant", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/wine_merchant", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/wine_merchant", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/wine_merchant", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/wine_merchant", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/wine_merchant", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
@@ -23331,13 +23387,15 @@
             "creativeTab": "WesterosDeco",
             "label": "City Profession: Flea Bottom Potshop",
             "lightOpacity": 0,
-            "textures": [
-                "sign_block_0/sign_bottom",
-                "sign_block_0/sign_top",
-                "sign_block_1/potshop",
-                "sign_block_0/sign_dirtycut",
-                "transparent"
-            ],
+            "randomTextures": [ 
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potshop", "profession_sign_base/sign_cut1", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potshop", "profession_sign_base/sign_cut2", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potshop", "profession_sign_base/sign_cut3", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potshop", "profession_sign_base/sign_cut4", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potshop", "profession_sign_base/sign_cut5", "transparent" ]},
+              { "textures": [ "sign_block_0/sign_bottom", "sign_block_0/sign_top", "profession_sign_base/potshop", "profession_sign_base/sign_cut6", "transparent" ]}
+            ],                                                            
+            
             "cuboids": [
                 {
                     "xMin": 0,
