@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_2/brick_winterfell_granite_top",
-    "up": "westerosblocks:block/stone_block_2/brick_winterfell_granite_top",
-    "north": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
-    "south": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
-    "west": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
-    "east": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
-    "particle": "westerosblocks:block/stone_block_2/brick_winterfell_granite"
+    "down": "westerosblocks:block/winterfell_granite/top",
+    "up": "westerosblocks:block/winterfell_granite/top",
+    "north": "westerosblocks:block/winterfell_granite/side",
+    "south": "westerosblocks:block/winterfell_granite/side",
+    "west": "westerosblocks:block/winterfell_granite/side",
+    "east": "westerosblocks:block/winterfell_granite/side",
+    "particle": "westerosblocks:block/winterfell_granite/side"
   }
 }

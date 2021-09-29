@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_2/brick_winterfell_granite_top",
-    "top": "westerosblocks:block/stone_block_2/brick_winterfell_granite_top",
-    "side": "westerosblocks:block/stone_block_2/brick_winterfell_granite",
-    "particle": "westerosblocks:block/stone_block_2/brick_winterfell_granite"
+    "bottom": "westerosblocks:block/winterfell_granite/top",
+    "top": "westerosblocks:block/winterfell_granite/top",
+    "side": "westerosblocks:block/winterfell_granite/side",
+    "particle": "westerosblocks:block/winterfell_granite/side"
   }
 }

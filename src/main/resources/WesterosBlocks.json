@@ -14697,7 +14697,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Winterfell Granite Wall",
             "textures": [
-                "stone_block_2/brick_winterfell_granite"
+                "winterfell_granite/side"
             ],
             "legacyBlockID": "stone_wall_block_2:5"
         },
@@ -16489,9 +16489,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Winterfell Granite",
             "textures": [
-                "stone_block_2/brick_winterfell_granite_top",
-                "stone_block_2/brick_winterfell_granite_top",
-                "stone_block_2/brick_winterfell_granite"
+                "winterfell_granite/top",
+                "winterfell_granite/top",
+                "winterfell_granite/side"
             ],
             "legacyBlockID": "stone_block_4:1"
         },
@@ -18032,9 +18032,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Winterfell Granite Slab",
             "textures": [
-                "stone_block_2/brick_winterfell_granite_top",
-                "stone_block_2/brick_winterfell_granite_top",
-                "stone_block_2/brick_winterfell_granite"
+                "winterfell_granite/top",
+                "winterfell_granite/top",
+                "winterfell_granite/side"
             ],
             "legacyBlockID": "stone_slab_block_3:3"
         },
@@ -20084,10 +20084,9 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "White Harbor Granite",
-            "textures": [
-                "stone_block_2/brick_whiteharbor_granite_top",
-                "stone_block_2/brick_whiteharbor_granite_top",
-                "stone_block_2/brick_whiteharbor_granite"
+            "randomTextures": [
+               { "textures": [ "white_harbor_granite/top", "white_harbor_granite/top", "white_harbor_granite/side1" ] },
+               { "textures": [ "white_harbor_granite/top", "white_harbor_granite/top", "white_harbor_granite/side2" ] }
             ],
             "legacyBlockID": "stone_block_5:5"
         },
