@@ -6476,7 +6476,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Pine Needles",
             "textures": [
-                "ground_block_0/dirt_pine_cover"
+                "pine_needles/dirt_pine_cover"
             ],
             "legacyBlockID": "solid_blocks_0:4"
         },

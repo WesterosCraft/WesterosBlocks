@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/ground_block_0/dirt_pine_cover"
+    "all": "westerosblocks:block/pine_needles/dirt_pine_cover"
   }
 }
