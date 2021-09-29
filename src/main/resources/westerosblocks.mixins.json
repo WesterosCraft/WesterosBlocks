@@ -5,7 +5,9 @@
 	"refmap": "westerosblocks.refmap.json",
 	"mixins": [
 		"MixinSUpdateTimePacket",
-		"MixinSChangeGameStatePacket",
+		"MixinSChangeGameStatePacket"
+	],
+	"client": [ 
 		"MixinDimensionRenderInfo"
 	],
 	"minVersion": "0.8"
