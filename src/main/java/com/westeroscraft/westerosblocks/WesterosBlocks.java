@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.command.CommandSource;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.crash.ReportedException;
+import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.biome.Biome;
@@ -23,6 +24,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -205,12 +207,14 @@ public class WesterosBlocks {
 	// Event bus for receiving Registry Events)
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	public static class RegistryEvents {
-		@SubscribeEvent
-		public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
+		private static boolean didInit = false;
+		public static void initialize() {
+			if (didInit) return;
+			
 			// Initialize
 			WesterosBlockDef.initialize();
 			WesterosBlocksCreativeTab.init();
-
+			// If snow-in-taiga
 			if (Config.snowInTaiga.get()) {
 				Biome b = ForgeRegistries.BIOMES.getValue(new ResourceLocation("minecraft:taiga"));
 				if (b != null) {
@@ -219,7 +223,6 @@ public class WesterosBlocks {
 				}
 				log.info("Enabled snow in TAIGA");
 			}
-
 			// Read our block definition resource
 			InputStream in = WesterosBlocks.class.getResourceAsStream("/WesterosBlocks.json");
 			if (in == null) {
@@ -261,6 +264,14 @@ public class WesterosBlocks {
 				crash("WesterosBlocks.json failed sanity check");
 				return;
 			}
+		}
+		@SubscribeEvent
+		public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
+			log.info("onBlocksRegistryEvent");
+			IForgeRegistry<Block> registry = event.getRegistry();
+			// Do initialization, if needed
+			initialize();
+
 			// Construct custom block definitions
 			ArrayList<Block> blklist = new ArrayList<Block>();
 			customBlocksByName = new HashMap<String, Block>();
@@ -294,6 +305,10 @@ public class WesterosBlocks {
 			}
 			log.info("TOTAL: " + blockcount + " blocks");
 			colorMaps = customConfig.colorMaps;
+		}
+		@SubscribeEvent
+		public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
+			log.info("onzItemsRegistryEvent");
 		}
 	}
 
