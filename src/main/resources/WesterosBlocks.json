@@ -281,6 +281,7 @@
             "label": "Closed Barrel",
             "textures": [
                 "log_block_0/barrel_top_closed",
+                "log_block_0/barrel_top_closed",
                 "log_block_0/barrel_side"
             ],
             "legacyBlockID": "log_block_0:0"
@@ -299,6 +300,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Firewood",
             "textures": [
+                "log_block_0/firewood_top",
                 "log_block_0/firewood_top",
                 "log_block_0/firewood_side"
             ],
@@ -319,6 +321,7 @@
             "label": "Oak Log Rope",
             "textures": [
                 "log_block_0/tree_top",
+                "log_block_0/tree_top",
                 "log_block_0/bark_oak_rope"
             ],
             "legacyBlockID": "log_block_0:2"
@@ -338,6 +341,7 @@
             "label": "Oak Log Chain",
             "textures": [
                 "log_block_0/tree_top",
+                "log_block_0/tree_top",
                 "log_block_0/bark_oak_chain"
             ],
             "legacyBlockID": "log_block_0:3"
@@ -356,7 +360,8 @@
             "creativeTab": "WesterosDeco",
             "label": "Weirwood Face 0",
             "textures": [
-                "log_block_0/weirwood_face_0",
+                "weirwood_face_0/top_bottom",
+                "weirwood_face_0/top_bottom",
                 "wood_block_0/bark_birch"
             ],
             "legacyBlockID": "log_block_1:0"
@@ -375,8 +380,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Mossy Oak Log",
             "textures": [
-                "log_block_0/bark_oak_mossy_top",
-                "log_block_0/bark_oak_mossy"
+                "mossy_oak_log/bottom",
+                "mossy_oak_log/top",
+                "mossy_oak_log/side"
             ],
             "legacyBlockID": "log_block_1:1"
         },
@@ -394,6 +400,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Marble Pillar",
             "textures": [
+                "log_block_0/column_block_marble_top_bottom",
                 "log_block_0/column_block_marble_top_bottom",
                 "log_block_0/column_block_marble_side"
             ],
@@ -8175,6 +8182,7 @@
             "label": "Archery Target",
             "textures": [
                 "log_block_0/target_front",
+                "log_block_0/target_front",
                 "log_block_0/target_sides"
             ],
             "legacyBlockID": "log_block_2:0"
@@ -11608,8 +11616,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Mossy Spruce Log",
             "textures": [
-                "log_block_1/bark_spruce_mossy_top",
-                "log_block_1/bark_spruce_mossy"
+                "mossy_spruce_log/bottom",
+                "mossy_spruce_log/top",
+                "mossy_spruce_log/side"
             ],
             "legacyBlockID": "log_block_3:0"
         },
@@ -11627,8 +11636,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Mossy Birch Log",
             "textures": [
-                "log_block_1/bark_birch_mossy_top",
-                "log_block_1/bark_birch_mossy"
+                "mossy_birch_log/bottom",
+                "mossy_birch_log/top",
+                "mossy_birch_log/side"
             ],
             "legacyBlockID": "log_block_3:1"
         },
@@ -11646,8 +11656,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Mossy Jungle Log",
             "textures": [
-                "log_block_1/bark_jungle_mossy_top",
-                "log_block_1/bark_jungle_mossy"
+                "mossy_jungle_log/bottom",
+                "mossy_jungle_log/top",
+                "mossy_jungle_log/side"
             ],
             "legacyBlockID": "log_block_3:2"
         },
@@ -11868,6 +11879,7 @@
             "label": "Spruce Log Rope",
             "textures": [
                 "log_block_0/tree_top",
+                "log_block_0/tree_top",
                 "log_block_0/bark_spruce_rope"
             ],
             "legacyBlockID": "log_block_4:0"
@@ -11886,6 +11898,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Spruce Log Chain",
             "textures": [
+                "log_block_0/tree_top",
                 "log_block_0/tree_top",
                 "log_block_0/bark_spruce_chain"
             ],
@@ -11906,6 +11919,7 @@
             "label": "Jungle Log Rope",
             "textures": [
                 "log_block_0/tree_top",
+                "log_block_0/tree_top",
                 "log_block_0/bark_jungle_rope"
             ],
             "legacyBlockID": "log_block_4:2"
@@ -11924,6 +11938,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Jungle Log Chain",
             "textures": [
+                "log_block_0/tree_top",
                 "log_block_0/tree_top",
                 "log_block_0/bark_jungle_chain"
             ],
@@ -14466,6 +14481,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Palm Tree Log",
             "textures": [
+                "log_block_1/log_palm_top",
                 "log_block_1/log_palm_top",
                 "log_block_1/log_palm"
             ],
@@ -27635,6 +27651,7 @@
             "label": "Weirwood Face 1",
             "textures": [
                 "log_block_0/weirwood_face_1",
+                "log_block_0/weirwood_face_1",
                 "wood_block_0/bark_birch"
             ],
             "legacyBlockID": "log_block_6:0"
@@ -27653,6 +27670,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Weirwood Face 2",
             "textures": [
+                "log_block_0/weirwood_face_2",
                 "log_block_0/weirwood_face_2",
                 "wood_block_0/bark_birch"
             ],
@@ -27673,6 +27691,7 @@
             "label": "Weirwood Face 3",
             "textures": [
                 "log_block_0/weirwood_face_3",
+                "log_block_0/weirwood_face_3",
                 "wood_block_0/bark_birch"
             ],
             "legacyBlockID": "log_block_6:2"
@@ -27691,6 +27710,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Weirwood Face 4",
             "textures": [
+                "log_block_0/weirwood_face_4",
                 "log_block_0/weirwood_face_4",
                 "wood_block_0/bark_birch"
             ],
@@ -27711,6 +27731,7 @@
             "label": "Weirwood Face 5",
             "textures": [
                 "log_block_0/weirwood_face_5",
+                "log_block_0/weirwood_face_5",
                 "wood_block_0/bark_birch"
             ],
             "legacyBlockID": "log_block_7:0"
@@ -27729,6 +27750,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Weirwood Face 6",
             "textures": [
+                "log_block_0/weirwood_face_6",
                 "log_block_0/weirwood_face_6",
                 "wood_block_0/bark_birch"
             ],
@@ -27749,6 +27771,7 @@
             "label": "Weirwood Face 7",
             "textures": [
                 "log_block_0/weirwood_face_7",
+                "log_block_0/weirwood_face_7",
                 "wood_block_0/bark_birch"
             ],
             "legacyBlockID": "log_block_7:2"
@@ -27767,6 +27790,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Weirwood Face 8",
             "textures": [
+                "log_block_0/weirwood_face_8",
                 "log_block_0/weirwood_face_8",
                 "wood_block_0/bark_birch"
             ],

@@ -689,11 +689,12 @@ components:
                   path.
                   Index mapping for textures is:
                   
-                  - 0: end texture (bottom and top)
-                  - 1: north texture
-                  - 2: south texture
-                  - 3: west texture
-                  - 4: east texture
+                  - 0: bottom texture
+                  - 1: top texture
+                  - 2: north texture
+                  - 3: south texture
+                  - 4: west texture
+                  - 5: east texture
 
                   If the list is shorter than 5, the
                   last texture is used for all indexes

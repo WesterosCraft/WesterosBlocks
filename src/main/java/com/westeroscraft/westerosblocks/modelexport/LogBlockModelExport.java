@@ -78,12 +78,12 @@ public class LogBlockModelExport extends ModelExport {
     		WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
             ModelObjectColumn mod = new ModelObjectColumn(isTinted);
     		mod.textures.down = getTextureID(set.getTextureByIndex(0));
-    		mod.textures.up = getTextureID(set.getTextureByIndex(0));	// first is for both ends
-    		mod.textures.north = getTextureID(set.getTextureByIndex(1));
-    		mod.textures.south = getTextureID(set.getTextureByIndex(2));
-    		mod.textures.west = getTextureID(set.getTextureByIndex(3));
-    		mod.textures.east = getTextureID(set.getTextureByIndex(4));
-    		mod.textures.particle = getTextureID(set.getTextureByIndex(1));
+    		mod.textures.up = getTextureID(set.getTextureByIndex(1));
+    		mod.textures.north = getTextureID(set.getTextureByIndex(2));
+    		mod.textures.south = getTextureID(set.getTextureByIndex(3));
+    		mod.textures.west = getTextureID(set.getTextureByIndex(4));
+    		mod.textures.east = getTextureID(set.getTextureByIndex(5));
+    		mod.textures.particle = getTextureID(set.getTextureByIndex(2));
             this.writeBlockModelFile(getModelName("base", setidx), mod);
     	}
         // Build simple item model that refers to block model
