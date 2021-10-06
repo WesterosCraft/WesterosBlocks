@@ -6391,9 +6391,9 @@
             "label": "Red Lantern",
             "lightValue": 0.55,
             "textures": [
-                "light_emitting_blocks_0/lantern_red_bottom",
-                "light_emitting_blocks_0/lantern_red_top",
-                "light_emitting_blocks_0/lantern_red_side"
+                "red_lantern2/bottom",
+                "red_lantern2/top",
+                "red_lantern2/sides"
             ],
             "legacyBlockID": "light_emitting_blocks_0:0"
         },
@@ -16579,7 +16579,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Unused Brown Plaster",
             "textures": [
-                "stone_block_3/plaster_unused_brown"
+                "unused_brown_plaster/top_bottom",
+                "unused_brown_plaster/top_bottom",
+                "unused_brown_plaster/side"
             ],
             "legacyBlockID": "stone_block_4:5"
         },
@@ -16593,7 +16595,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Unused Purple Plaster",
             "textures": [
-                "stone_block_3/plaster_unused_purple"
+                "unused_purple_plaster/top_bottom",
+                "unused_purple_plaster/top_bottom",
+                "unused_purple_plaster/side"
             ],
             "legacyBlockID": "stone_block_4:6"
         },
