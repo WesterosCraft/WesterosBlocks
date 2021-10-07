@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_block_3/plaster_unused_brown"
+    "down": "westerosblocks:block/unused_brown_plaster/top_bottom",
+    "up": "westerosblocks:block/unused_brown_plaster/top_bottom",
+    "north": "westerosblocks:block/unused_brown_plaster/side",
+    "south": "westerosblocks:block/unused_brown_plaster/side",
+    "west": "westerosblocks:block/unused_brown_plaster/side",
+    "east": "westerosblocks:block/unused_brown_plaster/side",
+    "particle": "westerosblocks:block/unused_brown_plaster/side"
   }
 }

@@ -14587,7 +14587,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Muddy Sand",
             "textures": [
-                "sand_block_0/sand_wet"
+                "muddy_sand/side"
             ],
             "legacyBlockID": "solid_blocks_1:4"
         },

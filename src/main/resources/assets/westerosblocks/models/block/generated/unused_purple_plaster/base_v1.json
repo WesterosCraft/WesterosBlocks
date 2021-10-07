@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_block_3/plaster_unused_purple"
+    "down": "westerosblocks:block/unused_purple_plaster/top_bottom",
+    "up": "westerosblocks:block/unused_purple_plaster/top_bottom",
+    "north": "westerosblocks:block/unused_purple_plaster/side",
+    "south": "westerosblocks:block/unused_purple_plaster/side",
+    "west": "westerosblocks:block/unused_purple_plaster/side",
+    "east": "westerosblocks:block/unused_purple_plaster/side",
+    "particle": "westerosblocks:block/unused_purple_plaster/side"
   }
 }
