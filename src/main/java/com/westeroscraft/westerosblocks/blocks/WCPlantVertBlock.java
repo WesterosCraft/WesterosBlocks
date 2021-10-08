@@ -1,10 +1,13 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.pathfinding.PathType;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoulSandBlock;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.util.math.BlockPos;
 
 import org.dynmap.modsupport.ModTextureDefinition;
@@ -17,6 +20,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -66,15 +70,17 @@ public class WCPlantVertBlock extends Block implements WesterosBlockLifecycle, I
     public static final BooleanProperty UP = BlockStateProperties.UP;
     protected static WesterosBlockDef.CondProperty tempCOND;
     protected WesterosBlockDef.CondProperty COND;
+    // Support waterlogged on these blocks
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     protected WCPlantVertBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         if (COND != null) {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(COND, COND.defValue));
+        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(COND, COND.defValue).setValue(WATERLOGGED, Boolean.valueOf(false)));
         }
         else {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)));
         }
     }
     @Override
@@ -88,7 +94,7 @@ public class WCPlantVertBlock extends Block implements WesterosBlockLifecycle, I
     		COND = tempCOND;
     		tempCOND = null;
     	}
-    	container.add(UP, DOWN);
+    	container.add(UP, DOWN, WATERLOGGED);
     	if (COND != null) {
         	container.add(COND);    		
     	}
@@ -121,9 +127,31 @@ public class WCPlantVertBlock extends Block implements WesterosBlockLifecycle, I
     	if (bs != null) {
     		bs = updateStateVertical(this.defaultBlockState(), ctx.getLevel(), ctx.getClickedPos());
     	}
+        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
+        bs = bs.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+
     	return bs;
     }
-    
+
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+    @Override
+    public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType pathtype) {
+        switch(pathtype) {
+        case LAND: 
+           return false;
+        case WATER:
+           return reader.getFluidState(pos).is(FluidTags.WATER);
+        case AIR:
+           return false;
+        default:
+           return false;
+        }
+    }
+
+
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();

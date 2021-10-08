@@ -110,6 +110,7 @@ public class CrossBlockVertModelExport extends ModelExport {
     	if (def.condStates != null) {
     		newstate.put("cond", def.getDefaultCondID());    		
     	}
+    	newstate.put("waterlogged", "false");
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 

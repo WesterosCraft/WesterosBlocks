@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.pathfinding.PathType;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -17,6 +18,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -32,6 +34,8 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 import net.minecraft.block.WebBlock;
 import net.minecraft.entity.Entity;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
@@ -69,6 +73,7 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
     public static final BooleanProperty UP = BlockStateProperties.UP;
     protected static WesterosBlockDef.CondProperty tempCOND;
     protected WesterosBlockDef.CondProperty COND;
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     
     protected WCWebVertBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
@@ -83,10 +88,10 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
             }
         }
         if (COND != null) {
-            this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(COND, COND.defValue));
+            this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(COND, COND.defValue).setValue(WATERLOGGED, Boolean.valueOf(false)));
         }
         else {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)));
         }
     }
 
@@ -105,7 +110,7 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
     	if (COND != null) {
 	       container.add(COND);
     	}
-    	container.add(UP, DOWN);
+        container.add(WATERLOGGED, UP, DOWN);
     }
     
     private BlockState updateStateVertical(BlockState bs, IBlockReader reader, BlockPos pos) {
@@ -135,6 +140,8 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
     	if ((COND != null) && (bs != null)) {
     		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
     	}
+        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
+        bs = bs.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
     	return bs;
     }
 
@@ -142,6 +149,24 @@ public class WCWebVertBlock extends WebBlock implements WesterosBlockLifecycle, 
     public void entityInside(BlockState state, World world, BlockPos pos, Entity entity) {
     	if (!noInWeb)
     		super.entityInside(state, world, pos, entity);
+    } 
+
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+    @Override
+    public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType pathtype) {
+        switch(pathtype) {
+        case LAND:
+           return false;
+        case WATER:
+           return reader.getFluidState(pos).is(FluidTags.WATER);
+        case AIR:
+           return false;
+        default:
+           return false;
+        }
     }
 
     @Override
