@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_block_2/brick_lannisport"
+    "down": "westerosblocks:block/lannisport_keystone_yellow_plaster/top_bottom",
+    "up": "westerosblocks:block/lannisport_keystone_yellow_plaster/top_bottom",
+    "north": "westerosblocks:block/lannisport_keystone_yellow_plaster/side1",
+    "south": "westerosblocks:block/lannisport_keystone_yellow_plaster/side1",
+    "west": "westerosblocks:block/lannisport_keystone_yellow_plaster/side1",
+    "east": "westerosblocks:block/lannisport_keystone_yellow_plaster/side1",
+    "particle": "westerosblocks:block/lannisport_keystone_yellow_plaster/side1"
   }
 }
