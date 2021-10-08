@@ -5378,9 +5378,9 @@
             "label": "Small Orange Bricks Ornate Top",
             "colorMult": "textures/colormap/brick",
             "textures": [
-                "stone_block_3/brick_orange_small_top_ornate",
-                "stone_block_3/brick_orange_small_top_ornate",
-                "stone_block_3/brick_orange_small_side"
+                "small_orange_bricks_ornate_top/top_bottom",
+                "small_orange_bricks_ornate_top/top_bottom",
+                "small_orange_bricks_ornate_top/side"
             ],
             "legacyBlockID": "stone_block_0:15"
         },
