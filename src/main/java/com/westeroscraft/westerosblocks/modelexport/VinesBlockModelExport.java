@@ -116,6 +116,7 @@ public class VinesBlockModelExport extends ModelExport {
     	HashMap<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("up", "false");
     	newstate.put("up", "false");
+    	newstate.put("waterlogged", "false");
     	for (String north : BOOLEAN) {
         	oldstate.put("north", north);
         	newstate.put("north", north);

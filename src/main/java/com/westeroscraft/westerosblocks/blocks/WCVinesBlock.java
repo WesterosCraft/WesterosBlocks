@@ -19,7 +19,10 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SixWayBlock;
 import net.minecraft.block.VineBlock;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.pathfinding.PathType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
@@ -32,6 +35,8 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tags.FluidTags;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -62,6 +67,8 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
     private final Map<BlockState, VoxelShape> shapesCache;
 
     public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = SixWayBlock.PROPERTY_BY_DIRECTION.entrySet().stream().collect(Util.toMap());
+    // Support waterlogged on these blocks
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     protected WCVinesBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
@@ -82,7 +89,9 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
             }
         }
         this.shapesCache = ImmutableMap.copyOf(this.stateDefinition.getPossibleStates().stream().collect(Collectors.toMap(Function.identity(), WCVinesBlock::calculateShape)));
-        this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(NORTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false)).setValue(SOUTH, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)));
+        this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(NORTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false))
+        		.setValue(SOUTH, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false))
+        		.setValue(DOWN, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
     @Override
     public WesterosBlockDef getWBDefinition() {
@@ -237,22 +246,40 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
 
      @Nullable 
      @Override
-     public BlockState getStateForPlacement(BlockItemUseContext p_196258_1_) {
-        BlockState blockstate = p_196258_1_.getLevel().getBlockState(p_196258_1_.getClickedPos());
+     public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+        BlockState blockstate = ctx.getLevel().getBlockState(ctx.getClickedPos());
         boolean flag = blockstate.is(this);
         BlockState blockstate1 = flag ? blockstate : this.defaultBlockState();
+        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
+        blockstate1 = blockstate1.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
 
-        for(Direction direction : p_196258_1_.getNearestLookingDirections()) {
+        for(Direction direction : ctx.getNearestLookingDirections()) {
            if (has_down || (direction != Direction.DOWN)) {
               BooleanProperty booleanproperty = getPropertyForFace(direction);
               boolean flag1 = flag && blockstate.getValue(booleanproperty);
-              if (!flag1 && this.canSupportAtFace(p_196258_1_.getLevel(), p_196258_1_.getClickedPos(), direction)) {
+              if (!flag1 && this.canSupportAtFace(ctx.getLevel(), ctx.getClickedPos(), direction)) {
                  return blockstate1.setValue(booleanproperty, Boolean.valueOf(true));
               }
            }
         }
-
         return flag ? blockstate1 : null;
+     }
+     @Override 
+     public FluidState getFluidState(BlockState state) { 
+         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+     }
+     @Override
+     public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType pathtype) {
+         switch(pathtype) {
+         case LAND:
+            return false;
+         case WATER:
+            return reader.getFluidState(pos).is(FluidTags.WATER);
+         case AIR:
+            return false;
+         default:
+            return false;
+         }
      }
 
      @Override
@@ -260,7 +287,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
      }
      @Override
      protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
-    	 container.add(UP, NORTH, EAST, SOUTH, WEST, DOWN);
+    	 container.add(UP, NORTH, EAST, SOUTH, WEST, DOWN, WATERLOGGED);
      }
      
      public static BooleanProperty getPropertyForFace(Direction p_176267_0_) {
