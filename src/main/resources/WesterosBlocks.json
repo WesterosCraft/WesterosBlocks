@@ -11336,8 +11336,17 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Lannisport Keystone Orange Plaster",
-            "textures": [
-                "stone_block_2/brick_lannisport"
+            "randomTextures": [
+              { "textures": [
+                "lannisport_keystone_orange_plaster/top_bottom",
+            	"lannisport_keystone_orange_plaster/top_bottom",
+            	"lannisport_keystone_orange_plaster/side1"
+              ], "weight": 50 },
+              { "textures": [
+                "lannisport_keystone_orange_plaster/top_bottom",
+            	"lannisport_keystone_orange_plaster/top_bottom",
+            	"lannisport_keystone_orange_plaster/side2"
+              ], "weight": 1 }
             ],
             "legacyBlockID": "stone_block_2:0"
         },
