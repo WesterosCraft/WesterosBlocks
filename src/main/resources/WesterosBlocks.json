@@ -21491,6 +21491,7 @@
                 "alyssas_tears_mist/mist2_up",
                 "alyssas_tears_mist/mist2_both"
             ],
+            "connectTo": "material",
             "type": "no-in-web",
             "legacyBlockID": "translucent_web_block_1:1"
         },
@@ -21501,6 +21502,7 @@
             "nonOpaque": true,
             "alphaRender": true,
             "material": "web",
+            "connectTo": "material",
             "creativeTab": "WesterosDeco",
             "label": "Alyssas Tears Mist Three",
             "textures": [
@@ -21519,6 +21521,7 @@
             "nonOpaque": true,
             "alphaRender": true,
             "material": "web",
+            "connectTo": "material",
             "creativeTab": "WesterosDeco",
             "label": "Alyssas Tears Mist Four",
             "textures": [
