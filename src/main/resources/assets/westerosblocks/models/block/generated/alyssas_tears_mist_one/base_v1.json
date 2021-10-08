@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/translucent_block_0/alyssas_tears_mist_one"
+    "cross": "westerosblocks:block/alyssas_tears_mist/mist1"
   }
 }

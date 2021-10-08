@@ -1,6 +1,4 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/translucent_block_0/alyssas_tears_mist_two"
-  }
+  "parent": "westerosblocks:block/generated/alyssas_tears_mist_two/base_v1",
+  "textures": {}
 }

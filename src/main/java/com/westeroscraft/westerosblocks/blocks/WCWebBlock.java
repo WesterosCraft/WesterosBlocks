@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.block.WebBlock;
 import net.minecraft.entity.Entity;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
@@ -14,10 +16,14 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.pathfinding.PathType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraftforge.common.IPlantable;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tags.FluidTags;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
@@ -44,7 +50,9 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle, West
     protected static WesterosBlockDef.CondProperty tempCOND;
     protected WesterosBlockDef.CondProperty COND;
     private boolean noInWeb = false;
-    
+    // Support waterlogged on these blocks
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+ 
     protected WCWebBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
@@ -58,7 +66,10 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle, West
             }
         }
         if (COND != null) {
-            this.registerDefaultState(this.stateDefinition.any().setValue(COND, COND.defValue));
+            this.registerDefaultState(this.stateDefinition.any().setValue(COND, COND.defValue).setValue(WATERLOGGED, Boolean.valueOf(false)));
+        }
+        else {
+            this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));
         }
     }
 
@@ -80,6 +91,7 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle, West
     		COND = tempCOND;
     		tempCOND = null;
     	}
+        stateContainer.add(WATERLOGGED);
     	if (COND != null) {
 	       stateContainer.add(COND);
     	}
@@ -92,7 +104,27 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle, West
     	if ((COND != null) && (bs != null)) {
     		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
     	}
-    	return bs;
+        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
+        bs = bs.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+    	return bs;    	
+    }
+    
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+    @Override
+    public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType pathtype) {
+        switch(pathtype) {
+        case LAND:
+           return false;
+        case WATER:
+           return reader.getFluidState(pos).is(FluidTags.WATER);
+        case AIR:
+           return false;
+        default:
+           return false;
+        }
     }
 
     @Override

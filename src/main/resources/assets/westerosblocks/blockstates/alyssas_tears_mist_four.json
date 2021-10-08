@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "up=false,down=true": {
+      "model": "westerosblocks:block/generated/alyssas_tears_mist_four/down_v1"
+    },
+    "up=false,down=false": {
       "model": "westerosblocks:block/generated/alyssas_tears_mist_four/base_v1"
+    },
+    "up=true,down=true": {
+      "model": "westerosblocks:block/generated/alyssas_tears_mist_four/both_v1"
+    },
+    "up=true,down=false": {
+      "model": "westerosblocks:block/generated/alyssas_tears_mist_four/up_v1"
     }
   }
 }

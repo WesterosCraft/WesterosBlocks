@@ -21471,14 +21471,14 @@
             "creativeTab": "WesterosDeco",
             "label": "Alyssas Tears Mist One",
             "textures": [
-                "translucent_block_0/alyssas_tears_mist_one"
+                "alyssas_tears_mist/mist1"
             ],
             "type": "no-in-web",
             "legacyBlockID": "translucent_web_block_1:0"
         },
         {
             "blockName": "alyssas_tears_mist_two",
-            "blockType": "web",
+            "blockType": "webvert",
             "stepSound": "cloth",
             "nonOpaque": true,
             "alphaRender": true,
@@ -21486,14 +21486,17 @@
             "creativeTab": "WesterosDeco",
             "label": "Alyssas Tears Mist Two",
             "textures": [
-                "translucent_block_0/alyssas_tears_mist_two"
+                "alyssas_tears_mist/mist2_down",
+                "alyssas_tears_mist/mist2_down",
+                "alyssas_tears_mist/mist2_up",
+                "alyssas_tears_mist/mist2_both"
             ],
             "type": "no-in-web",
             "legacyBlockID": "translucent_web_block_1:1"
         },
         {
             "blockName": "alyssas_tears_mist_three",
-            "blockType": "web",
+            "blockType": "webvert",
             "stepSound": "cloth",
             "nonOpaque": true,
             "alphaRender": true,
@@ -21501,14 +21504,17 @@
             "creativeTab": "WesterosDeco",
             "label": "Alyssas Tears Mist Three",
             "textures": [
-                "translucent_block_0/alyssas_tears_mist_three"
+                "alyssas_tears_mist/mist3_down",
+                "alyssas_tears_mist/mist3_down",
+                "alyssas_tears_mist/mist3_up",
+                "alyssas_tears_mist/mist3_both"
             ],
             "type": "no-in-web",
             "legacyBlockID": "translucent_web_block_1:2"
         },
         {
             "blockName": "alyssas_tears_mist_four",
-            "blockType": "web",
+            "blockType": "webvert",
             "stepSound": "cloth",
             "nonOpaque": true,
             "alphaRender": true,
@@ -21516,7 +21522,10 @@
             "creativeTab": "WesterosDeco",
             "label": "Alyssas Tears Mist Four",
             "textures": [
-                "translucent_block_0/alyssas_tears_mist_four"
+                "alyssas_tears_mist/mist4",
+                "alyssas_tears_mist/mist4_down",
+                "alyssas_tears_mist/mist4",
+                "alyssas_tears_mist/mist4"
             ],
             "type": "no-in-web",
             "legacyBlockID": "translucent_web_block_1:3"
@@ -24767,8 +24776,8 @@
                 "transparent",
                 "transparent",
                 "transparent",
-                "translucent_block_0/alyssas_tears_mist_one",
-                "translucent_block_0/alyssas_tears_mist_one"
+                "alyssas_tears_mist/mist1",
+                "alyssas_tears_mist/mist1"
             ],
             "boundingBox": {
                 "xMin": 0.92,
