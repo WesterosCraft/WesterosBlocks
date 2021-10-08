@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cuboid_block_1/star_chart_2x2",
-    "txt5": "westerosblocks:block/cuboid_block_1/star_chart_2x2",
-    "txt2": "westerosblocks:block/cuboid_block_1/star_chart_2x2",
-    "txt3": "westerosblocks:block/cuboid_block_1/star_chart_2x2",
-    "txt0": "westerosblocks:block/cuboid_block_1/star_chart_2x2",
-    "txt1": "westerosblocks:block/cuboid_block_1/star_chart_2x2",
-    "particle": "westerosblocks:block/cuboid_block_1/star_chart_2x2"
+    "txt4": "westerosblocks:block/star_chart_2x2/side",
+    "txt5": "westerosblocks:block/star_chart_2x2/side",
+    "txt2": "westerosblocks:block/star_chart_2x2/side",
+    "txt3": "westerosblocks:block/star_chart_2x2/side",
+    "txt0": "westerosblocks:block/star_chart_2x2/side",
+    "txt1": "westerosblocks:block/star_chart_2x2/side",
+    "particle": "westerosblocks:block/star_chart_2x2/side"
   },
   "elements": [
     {

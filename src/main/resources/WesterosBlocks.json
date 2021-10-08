@@ -17054,7 +17054,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Star Chart 3x3",
             "textures": [
-                "cuboid_block_1/star_chart_3x3"
+                "star_chart_3x3/side"
             ],
             "boundingBox": {
                 "xMin": 0.961,
@@ -17082,7 +17082,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Star Chart 2x2",
             "textures": [
-                "cuboid_block_1/star_chart_2x2"
+                "star_chart_2x2/side"
             ],
             "boundingBox": {
                 "xMin": 0.961,
