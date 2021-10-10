@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block_1/fireweed"
+    "cross": "westerosblocks:block/fireweed/side1"
   }
 }

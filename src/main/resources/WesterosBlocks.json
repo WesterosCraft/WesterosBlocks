@@ -23761,8 +23761,9 @@
                 "zMax": 0.7
             },
             "label": "Cow Parsely",
-            "textures": [
-                "web_block_1/cow_parsely"
+            "randomTextures": [
+              { "textures": [  "cow_parsely/side1" ] },
+              { "textures": [  "cow_parsely/side2" ] }
             ],
             "legacyBlockID": "forest_block_0:0"
         },
@@ -23808,8 +23809,11 @@
                 "zMax": 0.7
             },
             "label": "Lady Fern",
-            "textures": [
-                "web_block_1/lady_fern"
+            "randomTextures": [
+              { "textures": [ "lady_fern/side1" ] },
+              { "textures": [ "lady_fern/side2" ] },
+              { "textures": [ "lady_fern/side3" ] },
+              { "textures": [ "lady_fern/side4" ] }
             ],
             "legacyBlockID": "forest_block_0:2"
         },
@@ -23883,8 +23887,11 @@
                 "zMax": 0.7
             },
             "label": "Fireweed",
-            "textures": [
-                "web_block_1/fireweed"
+            "randomTextures": [
+              { "textures": [  "fireweed/side1" ] },
+              { "textures": [  "fireweed/side2" ] },
+              { "textures": [  "fireweed/side3" ] },
+              { "textures": [  "fireweed/side4" ] }
             ],
             "legacyBlockID": "forest_block_0:5"
         },

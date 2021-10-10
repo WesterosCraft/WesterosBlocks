@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block_1/cow_parsely"
+    "cross": "westerosblocks:block/cow_parsely/side1"
   }
 }
