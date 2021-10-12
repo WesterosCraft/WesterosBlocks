@@ -1194,6 +1194,8 @@ components:
               $ref: "#/components/schemas/colorMult"
             cuboids:
               $ref: "#/components/schemas/Cuboids"
+            condStates:
+              $ref: "#/components/schemas/CondStates"
             isCustomModel:
               type: boolean
               default: false
@@ -1201,6 +1203,12 @@ components:
                 If set to true, model is not generated,
                 and is instead expected to be found at
                 models/custom/<blockid>.json.
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)                
     cuboid-ne:
       title: blockType='cuboid-ne'
       allOf:

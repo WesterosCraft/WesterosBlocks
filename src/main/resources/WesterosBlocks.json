@@ -34582,6 +34582,77 @@
             "textures": [
                 "ctm/westeroshorizvert"
             ]
+        },
+        {
+            "blockName": "lily_pad",
+            "blockType": "cuboid",
+            "hardness": 2,
+            "stepSound": "grass",
+            "material": "ground",
+            "resistance": 2,
+            "creativeTab": "WesterosDeco",
+            "label": "Lily Pad",
+            "rotateRandom": true,
+            "randomTextures": [
+              { "textures": [  "lily_pad/side1" ], "condIDs": [ "default" ]},
+              { "textures": [  "lily_pad/side2" ], "condIDs": [ "default" ]},
+              { "textures": [  "lily_pad/side3" ], "condIDs": [ "default" ]},
+              { "textures": [  "lily_pad/side4" ], "condIDs": [ "default" ]},
+              { "textures": [  "lily_pad/side5" ], "condIDs": [ "default" ]},
+              { "textures": [  "lily_pad/side6" ], "condIDs": [ "default" ]},
+              { "textures": [  "lily_pad/side7" ], "condIDs": [ "default" ]},
+              { "textures": [  "lily_pad/north1" ], "condIDs": [ "north" ]},
+              { "textures": [  "lily_pad/north2" ], "condIDs": [ "north" ]},
+              { "textures": [  "lily_pad/north3" ], "condIDs": [ "north" ]},
+              { "textures": [  "lily_pad/jungle1" ], "condIDs": [ "jungle" ]},
+              { "textures": [  "lily_pad/jungle2" ], "condIDs": [ "jungle" ]},
+              { "textures": [  "lily_pad/jungle3" ], "condIDs": [ "jungle" ]},
+              { "textures": [  "lily_pad/jungle4" ], "condIDs": [ "jungle" ]}
+            ],
+            "condStates": [ 
+            	{ "condID": "north", 
+            	  "biomes": [ 
+            	    "minecraft:mountains",
+            	    "minecraft:gravelly_mountains",
+            	    "minecraft:mountain_edge",
+            	    "minecraft:wooded_mountains",
+            	    "minecraft:modified_gravelly_mountains",
+            	    "minecraft:stone_shore",
+            	    "minecraft:taiga",
+            	    "minecraft:taiga_hills",
+            	    "minecraft:taiga_mountains",
+            	    "minecraft:snowy_taiga_hills",
+            	    "minecraft:giant_tree_taiga",
+            	    "minecraft:giant_tree_taiga_hills",
+            	    "minecraft:snowy_taiga_mountains",
+            	    "minecraft:snowy_taiga",
+            	    "minecraft:giant_spruce_taiga",
+            	    "minecraft:giant_spruce_taiga_hills",
+            	    "minecraft:snowy_tundra",
+            	    "minecraft:frozen_river",
+            	    "minecraft:snowy_mountains",
+            	    "minecraft:frozen_ocean",
+            	    "minecraft:snowy_beach",
+            	    "minecraft:snowy_taiga_hills",
+            	    "minecraft:ice_spikes" ] },
+            	{ "condID": "jungle", 
+            	  "biomes": [ 
+            		"minecraft:jungle", 
+            		"minecraft:modified_jungle", 
+            		"minecraft:jungle_hills" ] },
+            	    
+            	{ "condID": "default" }
+            ],     
+            "boundingBox": {
+                "xMin": 0,
+                "xMax": 1,
+                "yMin": 0.03,
+                "yMax": 0.031,
+                "zMin": 0,
+                "zMax": 1
+            },                                    
+            "legacyBlockID": "minecraft:water_lily:default"
         }
+        
    ]
 }

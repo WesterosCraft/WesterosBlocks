@@ -73,9 +73,15 @@ public class CuboidBlockModelExport extends ModelExport {
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-            Variant var = new Variant();
-            var.model = modelFileName("base", setidx);
-            so.addVariant("", var, set.condIDs);
+        	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
+            for (int i = 0; i < cnt; i++) {
+                Variant var = new Variant();
+                var.model = modelFileName("base", setidx);
+            	var.weight = set.weight;
+            	if (i > 0) var.y = 90*i;
+    			so.addVariant("", var, set.condIDs);	// Add our variant                	
+            }
+            
         }
     	this.writeBlockStateFile(def.blockName, so);        	
     }
@@ -295,6 +301,9 @@ public class CuboidBlockModelExport extends ModelExport {
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
     	newstate.put("waterlogged", "false");
+    	if (def.condStates != null) {
+    		newstate.put("cond", def.getDefaultCondID());    		
+    	}
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 

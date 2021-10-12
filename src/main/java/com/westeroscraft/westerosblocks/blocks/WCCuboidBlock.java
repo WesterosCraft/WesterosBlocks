@@ -40,12 +40,20 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
         	AbstractBlock.Properties props = def.makeProperties();
+        	// See if we have a cond property
+        	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
+        	if (prop != null) {
+        		tempCOND = prop;
+        	}        	
         	return def.registerRenderType(def.registerBlock(new WCCuboidBlock(props, def)), false, false);
         }
     }
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     
+    protected static WesterosBlockDef.CondProperty tempCOND;
+    protected WesterosBlockDef.CondProperty COND;
+
     protected WesterosBlockDef def;
     
     protected VoxelShape[] SHAPE_BY_INDEX;
@@ -55,8 +63,12 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         this.def = def;
         SHAPE_BY_INDEX = new VoxelShape[1];
         SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList(def.getCuboidList());
-        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));
-
+        if (COND != null) {
+            this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(COND, COND.defValue));
+        }
+        else {
+            this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));        	
+        }
     }
     @Override
     public WesterosBlockDef getWBDefinition() {
@@ -64,6 +76,13 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     }
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
+    	if (tempCOND != null) {
+    		COND = tempCOND;
+    		tempCOND = null;
+    	}
+    	if (COND != null) {
+	       stateContainer.add(COND);
+    	}
        stateContainer.add(WATERLOGGED);
     }
 
@@ -99,7 +118,11 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext ctx) {
        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
-       return this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       BlockState bs = this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       if ((COND != null) && (bs != null)) {
+    	   bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
+       }
+       return bs;
     }
     @Override
     public FluidState getFluidState(BlockState state) {

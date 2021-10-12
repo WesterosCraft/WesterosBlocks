@@ -127,7 +127,7 @@ public abstract class ModelExport {
     public abstract void doBlockStateExport() throws IOException;
     public abstract void doModelExports() throws IOException;
     public void doWorldConverterMigrate() throws IOException {
-    	WesterosBlocks.log.info("No WoeldConverter support for " + def.blockType);
+    	WesterosBlocks.log.info("No WorldConverter support for " + def.blockType);
     }
 
     private static HashMap<String, String> nls = new HashMap<String, String>();
