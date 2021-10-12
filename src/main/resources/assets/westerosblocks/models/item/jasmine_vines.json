@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/ladder_block_0/vine_jasmine"
+    "layer0": "westerosblocks:block/jasmine_vines/side1"
   }
 }
