@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/wattle_fence/side1",
-    "txt5": "westerosblocks:block/wattle_fence/side1",
+    "txt4": "westerosblocks:block/wattle_fence/ctm1",
+    "txt5": "westerosblocks:block/wattle_fence/ctm1",
     "txt2": "westerosblocks:block/transparent",
     "txt3": "westerosblocks:block/transparent",
     "txt0": "westerosblocks:block/transparent",

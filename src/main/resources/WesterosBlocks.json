@@ -17047,13 +17047,9 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Wattle Fence",
-            "textures": [
-                "transparent",
-                "transparent",
-                "cuboid_block_1/fence_wattle",
-                "cuboid_block_1/fence_wattle",
-                "transparent",
-                "transparent"
+            "randomTextures": [
+              { "textures": [ "transparent","transparent","transparent","transparent","wattle_fence/side1","wattle_fence/side1" ]},  
+              { "textures": [ "transparent","transparent","transparent","transparent","wattle_fence/side2","wattle_fence/side2" ]}  
             ],
             "boundingBox": {
                 "xMin": 0.01,
@@ -30238,13 +30234,9 @@
             ],
             "creativeTab": "WesterosDeco",
             "label": "Wattle Fence Short",
-            "textures": [
-                "transparent",
-                "transparent",
-                "transparent",
-                "transparent",
-                "cuboid_block_1/fence_wattle_short",
-                "cuboid_block_1/fence_wattle_short"
+            "randomTextures": [ 
+              { "textures": [ "transparent","transparent","transparent","transparent","wattle_fence/ctm0","wattle_fence/ctm0"] },
+              { "textures": [ "transparent","transparent","transparent","transparent","wattle_fence/ctm1","wattle_fence/ctm1"] }
             ],
             "boundingBox": {
                 "xMin": 0.01,
