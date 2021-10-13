@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/coarse_red_sandstone/jungle"
+    "all": "westerosblocks:block/coarse_red_sandstone/default"
   }
 }

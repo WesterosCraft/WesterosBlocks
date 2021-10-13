@@ -20130,9 +20130,18 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Coarse Red Sandstone",
-            "textures": [
-                "stone_block_0/sandstone_red_coarse"
+            "randomTextures": [
+              { "textures": [  "coarse_red_sandstone/jungle" ], "condIDs": [ "jungle" ]},
+              { "textures": [  "coarse_red_sandstone/default" ], "condIDs": [ "default" ]}
             ],
+            "condStates": [ 
+            	{ "condID": "jungle", 
+            	  "biomes": [ 
+            		"minecraft:jungle", 
+            		"minecraft:modified_jungle", 
+            		"minecraft:jungle_hills" ] },
+            	{ "condID": "default" }
+            ],                 
             "legacyBlockID": "stone_block_5:3"
         },
         {
@@ -20144,9 +20153,18 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Coarse Red Carved Sandstone",
-            "textures": [
-                "stone_block_0/sandstone_red_coarse_ornate"
+            "randomTextures": [
+              { "textures": [  "coarse_red_sandstone/carved_jungle" ], "condIDs": [ "jungle" ]},
+              { "textures": [  "coarse_red_sandstone/carved_default" ], "condIDs": [ "default" ]}
             ],
+            "condStates": [ 
+            	{ "condID": "jungle", 
+            	  "biomes": [ 
+            		"minecraft:jungle", 
+            		"minecraft:modified_jungle", 
+            		"minecraft:jungle_hills" ] },
+            	{ "condID": "default" }
+            ],                 
             "legacyBlockID": "stone_block_5:4"
         },
         {

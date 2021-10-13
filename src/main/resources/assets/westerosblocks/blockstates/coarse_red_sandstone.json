@@ -1,6 +1,9 @@
 {
   "variants": {
-    "": {
+    ",cond=default": {
+      "model": "westerosblocks:block/generated/coarse_red_sandstone/base_v2"
+    },
+    ",cond=jungle": {
       "model": "westerosblocks:block/generated/coarse_red_sandstone/base_v1"
     }
   }
