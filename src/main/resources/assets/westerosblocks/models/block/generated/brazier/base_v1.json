@@ -32,9 +32,9 @@
     "txt2": "westerosblocks:block/beacon_block_0/brazier_side",
     "txt3": "westerosblocks:block/beacon_block_0/brazier_side",
     "txt10": "westerosblocks:block/beacon_block_0/brazier_ash_glowing",
-    "txt0": "westerosblocks:block/beacon_block_0/brazier_side",
-    "txt1": "westerosblocks:block/beacon_block_0/brazier_side",
-    "particle": "westerosblocks:block/beacon_block_0/brazier_side",
+    "txt0": "westerosblocks:block/brazier/lit_ash_bottom",
+    "txt1": "westerosblocks:block/beacon_block_0/transparent",
+    "particle": "westerosblocks:block/brazier/lit_ash_bottom",
     "txt8": "westerosblocks:block/beacon_block_0/brazier_ash_glowing",
     "txt9": "westerosblocks:block/beacon_block_0/brazier_ash_glowing"
   },

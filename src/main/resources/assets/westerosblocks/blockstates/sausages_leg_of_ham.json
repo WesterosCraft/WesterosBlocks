@@ -1,7 +1,32 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v1"
-    }
+    ",cond=default": [
+      {
+        "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v4"
+      }
+    ],
+    ",cond=north": [
+      {
+        "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/sausages_leg_of_ham/base_v8"
+      }
+    ]
   }
 }
