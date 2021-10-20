@@ -6056,7 +6056,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Thatch Light Fur",
             "textures": [
-                "fur_block_0/thatch_light"
+                "mances_camp_mances_tent/outside"
             ],
             "legacyBlockID": "wood_colours:9"
         },
@@ -23706,12 +23706,12 @@
             "creativeTab": "WesterosDeco",
             "label": "Mance's Camp Mance's Tent",
             "textures": [
-                "fur_block_0/leather_mance_main_inside",
-                "fur_block_0/leather_mance_main_outside",
-                "fur_block_0/leather_mance_main_outside",
-                "fur_block_0/leather_mance_main_outside",
-                "fur_block_0/leather_mance_main_outside",
-                "fur_block_0/leather_mance_main_inside"
+                "mances_camp_mances_tent/inside",
+                "mances_camp_mances_tent/outside",
+                "mances_camp_mances_tent/outside",
+                "mances_camp_mances_tent/outside",
+                "mances_camp_mances_tent/outside",
+                "mances_camp_mances_tent/inside"
             ],
             "boundingBox": {
                 "xMin": 0,
@@ -27702,7 +27702,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Mance's Camp Common Tent Wall",
             "textures": [
-                "fur_block_0/leather_mance_common_outside_2"
+                "mances_camp_common_tent/outside2"
             ],
             "legacyBlockID": "wood_wall_block_0:9"
         },
@@ -27722,7 +27722,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Mance's Camp Mance's Tent Wall",
             "textures": [
-                "fur_block_0/leather_mance_main_outside"
+                "mances_camp_mances_tent/outside"
             ],
             "legacyBlockID": "wood_wall_block_0:10"
         },
@@ -28180,7 +28180,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Mance's Camp Common Tent Slab",
             "textures": [
-                "fur_block_0/leather_mance_common_outside_2"
+                "mances_camp_common_tent/outside2"
             ],
             "legacyBlockID": "random_slab_block_4:5"
         },
@@ -28200,7 +28200,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Mance's Camp Mance's Tent Slab",
             "textures": [
-                "fur_block_0/leather_mance_main_outside"
+                "mances_camp_mances_tent/outside"
             ],
             "legacyBlockID": "random_slab_block_4:6"
         },

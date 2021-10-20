@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "up": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "north": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "south": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "west": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "east": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "particle": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2"
+    "down": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "up": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "north": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "south": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "west": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "east": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "particle": "westerosblocks:block/mances_camp_common_tent/outside2"
   }
 }
