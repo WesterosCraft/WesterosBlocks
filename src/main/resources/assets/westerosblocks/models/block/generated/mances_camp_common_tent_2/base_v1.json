@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "txt5": "westerosblocks:block/fur_block_0/leather_mance_common_inside",
-    "txt2": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "txt3": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "txt0": "westerosblocks:block/fur_block_0/leather_mance_common_inside",
-    "txt1": "westerosblocks:block/fur_block_0/leather_mance_common_outside_2",
-    "particle": "westerosblocks:block/fur_block_0/leather_mance_common_inside"
+    "txt4": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "txt5": "westerosblocks:block/mances_camp_common_tent/inside",
+    "txt2": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "txt3": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "txt0": "westerosblocks:block/mances_camp_common_tent/inside",
+    "txt1": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "particle": "westerosblocks:block/mances_camp_common_tent/inside"
   },
   "elements": [
     {

@@ -23640,12 +23640,12 @@
             "creativeTab": "WesterosDeco",
             "label": "Mance's Camp Common Tent 1",
             "textures": [
-                "fur_block_0/leather_mance_common_inside",
-                "fur_block_0/leather_mance_common_outside_1",
-                "fur_block_0/leather_mance_common_outside_1",
-                "fur_block_0/leather_mance_common_outside_1",
-                "fur_block_0/leather_mance_common_outside_1",
-                "fur_block_0/leather_mance_common_inside"
+                "mances_camp_common_tent/inside",
+                "mances_camp_common_tent/outside1",
+                "mances_camp_common_tent/outside1",
+                "mances_camp_common_tent/outside1",
+                "mances_camp_common_tent/outside1",
+                "mances_camp_common_tent/inside"
             ],
             "boundingBox": {
                 "xMin": 0,
@@ -23673,12 +23673,12 @@
             "creativeTab": "WesterosDeco",
             "label": "Mance's Camp Common Tent 2",
             "textures": [
-                "fur_block_0/leather_mance_common_inside",
-                "fur_block_0/leather_mance_common_outside_2",
-                "fur_block_0/leather_mance_common_outside_2",
-                "fur_block_0/leather_mance_common_outside_2",
-                "fur_block_0/leather_mance_common_outside_2",
-                "fur_block_0/leather_mance_common_inside"
+                "mances_camp_common_tent/inside",
+                "mances_camp_common_tent/outside2",
+                "mances_camp_common_tent/outside2",
+                "mances_camp_common_tent/outside2",
+                "mances_camp_common_tent/outside2",
+                "mances_camp_common_tent/inside"
             ],
             "boundingBox": {
                 "xMin": 0,
