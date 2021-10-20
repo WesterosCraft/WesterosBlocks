@@ -16614,7 +16614,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Winterfell Carving",
             "textures": [
-                "stone_block_2/stone_winterfell_carving"
+                "winterfell_carving/side"
             ],
             "legacyBlockID": "stone_block_4:2"
         },
@@ -23739,12 +23739,12 @@
             "creativeTab": "WesterosDeco",
             "label": "Mance's Camp Mance's Tent Antlers",
             "textures": [
-                "transparent",
-                "transparent",
-                "fur_block_0/mance_antlers_elk",
-                "fur_block_0/mance_antlers_elk",
-                "transparent",
-                "transparent"
+                "mances_camp_mances_tent_antlers/edge",
+                "mances_camp_mances_tent_antlers/edge",
+                "mances_camp_mances_tent_antlers/edge",
+                "mances_camp_mances_tent_antlers/edge",
+                "mances_camp_mances_tent_antlers/side",
+                "mances_camp_mances_tent_antlers/side"
             ],
             "boundingBox": {
                 "xMin": 0.47,

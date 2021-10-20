@@ -1,0 +1,12 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "pattern",
+    "layer": "CUTOUT",
+    "textures": [],
+    "extra": {
+      "width": 5,
+      "height": 3
+    }
+  }
+}
