@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_2/stone_winterfell_carving"
+    "all": "westerosblocks:block/winterfell_carving/side"
   }
 }

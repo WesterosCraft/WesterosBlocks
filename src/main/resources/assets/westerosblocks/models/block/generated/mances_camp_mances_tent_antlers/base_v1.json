@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/transparent",
-    "txt5": "westerosblocks:block/transparent",
-    "txt2": "westerosblocks:block/fur_block_0/mance_antlers_elk",
-    "txt3": "westerosblocks:block/fur_block_0/mance_antlers_elk",
-    "txt0": "westerosblocks:block/transparent",
-    "txt1": "westerosblocks:block/transparent",
-    "particle": "westerosblocks:block/transparent"
+    "txt4": "westerosblocks:block/mances_camp_mances_tent_antlers/side",
+    "txt5": "westerosblocks:block/mances_camp_mances_tent_antlers/side",
+    "txt2": "westerosblocks:block/mances_camp_mances_tent_antlers/edge",
+    "txt3": "westerosblocks:block/mances_camp_mances_tent_antlers/edge",
+    "txt0": "westerosblocks:block/mances_camp_mances_tent_antlers/edge",
+    "txt1": "westerosblocks:block/mances_camp_mances_tent_antlers/edge",
+    "particle": "westerosblocks:block/mances_camp_mances_tent_antlers/edge"
   },
   "elements": [
     {
