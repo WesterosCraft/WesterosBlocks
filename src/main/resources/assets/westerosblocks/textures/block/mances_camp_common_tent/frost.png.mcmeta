@@ -1,0 +1,12 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_ctm_single",
+    "layer": "CUTOUT",
+    "textures": [
+      "westerosblocks:block/mances_camp_common_tent/frost_12x4"
+    ],
+    "extra": {
+    }
+  }
+}

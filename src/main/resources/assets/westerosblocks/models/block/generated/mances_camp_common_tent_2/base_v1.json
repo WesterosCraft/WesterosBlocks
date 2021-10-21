@@ -18,15 +18,83 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/mances_camp_common_tent/outside2",
-    "txt5": "westerosblocks:block/mances_camp_common_tent/inside",
-    "txt2": "westerosblocks:block/mances_camp_common_tent/outside2",
-    "txt3": "westerosblocks:block/mances_camp_common_tent/outside2",
+    "txt4": "westerosblocks:block/mances_camp_common_tent/frost",
+    "txt5": "westerosblocks:block/mances_camp_common_tent/frost",
+    "txt2": "westerosblocks:block/transparent",
+    "txt3": "westerosblocks:block/mances_camp_common_tent/frost",
     "txt0": "westerosblocks:block/mances_camp_common_tent/inside",
     "txt1": "westerosblocks:block/mances_camp_common_tent/outside2",
     "particle": "westerosblocks:block/mances_camp_common_tent/inside"
   },
   "elements": [
+    {
+      "from": [
+        0.16,
+        0.16,
+        0.16
+      ],
+      "to": [
+        15.84,
+        15.84,
+        15.84
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.15999985,
+            0.15999985,
+            15.84,
+            15.84
+          ],
+          "texture": "#txt0"
+        },
+        "south": {
+          "uv": [
+            0.16,
+            0.15999985,
+            15.84,
+            15.84
+          ],
+          "texture": "#txt1"
+        },
+        "north": {
+          "uv": [
+            0.15999985,
+            0.15999985,
+            15.84,
+            15.84
+          ],
+          "texture": "#txt1"
+        },
+        "west": {
+          "uv": [
+            0.16,
+            0.15999985,
+            15.84,
+            15.84
+          ],
+          "texture": "#txt1"
+        },
+        "up": {
+          "uv": [
+            0.16,
+            0.16,
+            15.84,
+            15.84
+          ],
+          "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            0.16,
+            0.15999985,
+            15.84,
+            15.84
+          ],
+          "texture": "#txt0"
+        }
+      }
+    },
     {
       "from": [
         0.0,
@@ -46,7 +114,7 @@
             16.0,
             16.0
           ],
-          "texture": "#txt5",
+          "texture": "#txt2",
           "cullface": "east"
         },
         "south": {
@@ -66,7 +134,7 @@
             16.0,
             16.0
           ],
-          "texture": "#txt2",
+          "texture": "#txt3",
           "cullface": "north"
         },
         "west": {
@@ -76,7 +144,7 @@
             16.0,
             16.0
           ],
-          "texture": "#txt4",
+          "texture": "#txt3",
           "cullface": "west"
         },
         "up": {
@@ -86,7 +154,7 @@
             16.0,
             16.0
           ],
-          "texture": "#txt1",
+          "texture": "#txt2",
           "cullface": "up"
         },
         "down": {
@@ -96,7 +164,7 @@
             16.0,
             16.0
           ],
-          "texture": "#txt0",
+          "texture": "#txt2",
           "cullface": "down"
         }
       }
