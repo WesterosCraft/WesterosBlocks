@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "westerosblocks:blocks/arrow_slits_0/cage_bottom",
-    "up": "westerosblocks:blocks/arrow_slits_0/cage_top",
-    "north": "westerosblocks:blocks/arrow_slits_0/cage_side",
-    "south": "westerosblocks:blocks/arrow_slits_0/cage_side",
-    "west": "westerosblocks:blocks/arrow_slits_0/cage_side",
-    "east": "westerosblocks:blocks/arrow_slits_0/cage_side",
-    "particle": "westerosblocks:blocks/arrow_slits_0/cage_side"
+    "down": "westerosblocks:blocks/translucent_block_0/cage_bottom",
+    "up": "westerosblocks:blocks/translucent_block_0/cage_top",
+    "north": "westerosblocks:blocks/translucent_block_0/cage_side",
+    "south": "westerosblocks:blocks/translucent_block_0/cage_side",
+    "west": "westerosblocks:blocks/translucent_block_0/cage_side",
+    "east": "westerosblocks:blocks/translucent_block_0/cage_side",
+    "particle": "westerosblocks:blocks/translucent_block_0/cage_side"
   }
 }

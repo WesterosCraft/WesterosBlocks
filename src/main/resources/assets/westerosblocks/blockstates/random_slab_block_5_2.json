@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:random_slab_block_5_2_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:random_slab_block_5_2_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:random_slab_block_5_2_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:random_slab_block_5_2_0"
+    }
+  }
+}

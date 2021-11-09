@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "variant=2": {
+      "model": "westerosblocks:hopper_block_6_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:hopper_block_6_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:hopper_block_6_0"
+    }
+  }
+}

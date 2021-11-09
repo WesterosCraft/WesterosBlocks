@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "half=top,variant=7": {
+      "model": "westerosblocks:stone_slab_block_7_7_top"
+    },
+    "half=top,variant=5": {
+      "model": "westerosblocks:stone_slab_block_7_5_top"
+    },
+    "half=bottom,variant=7": {
+      "model": "westerosblocks:stone_slab_block_7_7_bottom"
+    },
+    "half=top,variant=6": {
+      "model": "westerosblocks:stone_slab_block_7_6_top"
+    },
+    "half=top,variant=3": {
+      "model": "westerosblocks:stone_slab_block_7_3_top"
+    },
+    "half=top,variant=4": {
+      "model": "westerosblocks:stone_slab_block_7_4_top"
+    },
+    "half=top,variant=1": {
+      "model": "westerosblocks:stone_slab_block_7_1_top"
+    },
+    "half=top,variant=2": {
+      "model": "westerosblocks:stone_slab_block_7_2_top"
+    },
+    "half=bottom,variant=1": {
+      "model": "westerosblocks:stone_slab_block_7_1_bottom"
+    },
+    "half=top,variant=0": {
+      "model": "westerosblocks:stone_slab_block_7_0_top"
+    },
+    "half=bottom,variant=2": {
+      "model": "westerosblocks:stone_slab_block_7_2_bottom"
+    },
+    "half=bottom,variant=0": {
+      "model": "westerosblocks:stone_slab_block_7_0_bottom"
+    },
+    "half=bottom,variant=5": {
+      "model": "westerosblocks:stone_slab_block_7_5_bottom"
+    },
+    "half=bottom,variant=6": {
+      "model": "westerosblocks:stone_slab_block_7_6_bottom"
+    },
+    "half=bottom,variant=3": {
+      "model": "westerosblocks:stone_slab_block_7_3_bottom"
+    },
+    "half=bottom,variant=4": {
+      "model": "westerosblocks:stone_slab_block_7_4_bottom"
+    }
+  }
+}

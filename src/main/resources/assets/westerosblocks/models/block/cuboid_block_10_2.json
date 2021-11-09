@@ -1,0 +1,104 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt4": "westerosblocks:blocks/ground_block_0/gravel_reach",
+    "txt5": "westerosblocks:blocks/ground_block_0/gravel_reach",
+    "txt2": "westerosblocks:blocks/ground_block_0/gravel_reach",
+    "txt3": "westerosblocks:blocks/ground_block_0/gravel_reach",
+    "txt0": "westerosblocks:blocks/ground_block_0/gravel_reach",
+    "txt1": "westerosblocks:blocks/ground_block_0/gravel_reach",
+    "particle": "westerosblocks:blocks/ground_block_0/gravel_reach"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        15.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            1.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            1.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "south"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            1.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            1.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

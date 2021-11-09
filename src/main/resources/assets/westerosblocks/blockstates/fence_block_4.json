@@ -267,6 +267,140 @@
         "y": 270,
         "uvlock": true
       }
+    },
+    {
+      "when": {
+        "variant": "4"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_post_4"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "4",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_side_4",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "4",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_side_4",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "4",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_side_4",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "4",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_side_4",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "variant": "5"
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_post_5"
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "5",
+            "north": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_side_5",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "5",
+            "east": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_side_5",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "5",
+            "south": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_side_5",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          {
+            "variant": "5",
+            "west": "true"
+          }
+        ]
+      },
+      "apply": {
+        "model": "westerosblocks:fence_block_4_side_5",
+        "y": 270,
+        "uvlock": true
+      }
     }
   ]
 }

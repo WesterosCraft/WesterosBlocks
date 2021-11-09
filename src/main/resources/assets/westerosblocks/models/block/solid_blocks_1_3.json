@@ -1,12 +1,6 @@
 {
-  "parent": "block/cube",
+  "parent": "block/cube_all",
   "textures": {
-    "down": "westerosblocks:blocks/ground_block_0/dirt",
-    "up": "westerosblocks:blocks/ground_block_0/ash_top",
-    "north": "westerosblocks:blocks/ground_block_0/ash",
-    "south": "westerosblocks:blocks/ground_block_0/ash",
-    "west": "westerosblocks:blocks/ground_block_0/ash",
-    "east": "westerosblocks:blocks/ground_block_0/ash",
-    "particle": "westerosblocks:blocks/ground_block_0/ash"
+    "all": "westerosblocks:blocks/ground_block_0/ash"
   }
 }

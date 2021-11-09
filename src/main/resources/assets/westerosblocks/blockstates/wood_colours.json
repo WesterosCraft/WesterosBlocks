@@ -30,11 +30,17 @@
     "variant=9": {
       "model": "westerosblocks:wood_colours_9"
     },
+    "variant=15": {
+      "model": "westerosblocks:wood_colours_15"
+    },
     "variant=8": {
       "model": "westerosblocks:wood_colours_8"
     },
     "variant=13": {
       "model": "westerosblocks:wood_colours_13"
+    },
+    "variant=14": {
+      "model": "westerosblocks:wood_colours_14"
     },
     "variant=11": {
       "model": "westerosblocks:wood_colours_11"

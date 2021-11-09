@@ -2,7 +2,7 @@
   "parent": "westerosblocks:block/tinted/orientable",
   "textures": {
     "top": "westerosblocks:blocks/furnace_block_0/furnace_top",
-    "front": "westerosblocks:blocks/furnace_block_0/furnace_front_on_still",
+    "front": "westerosblocks:blocks/furnace_block_0/furnace_front_off",
     "side": "westerosblocks:blocks/furnace_block_0/furnace_side"
   }
 }

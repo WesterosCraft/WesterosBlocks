@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/stone_block_4/stone_cobble_pink"
+    "all": "westerosblocks:blocks/stone_block_4/stone_cobble_sandy_pink"
   }
 }

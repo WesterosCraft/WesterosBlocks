@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "variant=2": {
+      "model": "westerosblocks:arrow_slits_6_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:arrow_slits_6_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:arrow_slits_6_0"
+    }
+  }
+}

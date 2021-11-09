@@ -1,0 +1,9 @@
+{
+  "parent": "block/upper_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/bone_block_0/bone_stacked_side",
+    "top": "westerosblocks:blocks/bone_block_0/bone_stacked_side",
+    "side": "westerosblocks:blocks/bone_block_0/bone_stacked_front",
+    "particle": "westerosblocks:blocks/bone_block_0/bone_stacked_front"
+  }
+}

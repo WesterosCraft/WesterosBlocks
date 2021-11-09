@@ -1,5 +1,5 @@
 {
-  "parent": "block/stairs",
+  "parent": "westerosblocks:block/tinted/stairs",
   "textures": {
     "bottom": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
     "top": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",

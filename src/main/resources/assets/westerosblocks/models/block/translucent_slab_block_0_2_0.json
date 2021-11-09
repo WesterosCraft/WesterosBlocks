@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/translucent_block_0/ice",
+    "up": "westerosblocks:blocks/translucent_block_0/ice",
+    "north": "westerosblocks:blocks/translucent_block_0/ice",
+    "south": "westerosblocks:blocks/translucent_block_0/ice",
+    "west": "westerosblocks:blocks/translucent_block_0/ice",
+    "east": "westerosblocks:blocks/translucent_block_0/ice",
+    "particle": "westerosblocks:blocks/translucent_block_0/ice"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_post",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_4/brick_pale_pink_faint_light",
+    "top": "westerosblocks:blocks/stone_block_4/brick_pale_pink_faint_light",
+    "side": "westerosblocks:blocks/stone_block_4/brick_pale_pink_faint_light"
+  }
+}

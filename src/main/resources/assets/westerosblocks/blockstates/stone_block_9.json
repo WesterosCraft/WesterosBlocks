@@ -32,6 +32,9 @@
     },
     "variant=8": {
       "model": "westerosblocks:stone_block_9_8"
+    },
+    "variant=11": {
+      "model": "westerosblocks:stone_block_9_11"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:blocks/stone_slate_0/slate_lannisport",
-    "top": "westerosblocks:blocks/stone_slate_0/slate_lannisport",
-    "side": "westerosblocks:blocks/stone_slate_0/slate_lannisport",
-    "particle": "westerosblocks:blocks/stone_slate_0/slate_lannisport"
+    "bottom": "westerosblocks:blocks/stone_slate_0/slate_red_orange",
+    "top": "westerosblocks:blocks/stone_slate_0/slate_red_orange",
+    "side": "westerosblocks:blocks/stone_slate_0/slate_red_orange",
+    "particle": "westerosblocks:blocks/stone_slate_0/slate_red_orange"
   }
 }

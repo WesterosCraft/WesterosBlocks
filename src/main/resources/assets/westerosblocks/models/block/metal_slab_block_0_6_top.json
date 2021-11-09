@@ -1,9 +1,9 @@
 {
   "parent": "block/upper_slab",
   "textures": {
-    "bottom": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
-    "top": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
-    "side": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold",
-    "particle": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold"
+    "bottom": "westerosblocks:blocks/metal_block_0/metal_gold_brick",
+    "top": "westerosblocks:blocks/metal_block_0/metal_gold_brick",
+    "side": "westerosblocks:blocks/metal_block_0/metal_gold_brick",
+    "particle": "westerosblocks:blocks/metal_block_0/metal_gold_brick"
   }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:blocks/hemp_block_0/hemp_tall"
+  }
+}

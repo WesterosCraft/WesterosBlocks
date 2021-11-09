@@ -24,11 +24,23 @@
     "variant=4": {
       "model": "westerosblocks:utility_block_0_4"
     },
+    "variant=10": {
+      "model": "westerosblocks:utility_block_0_10"
+    },
     "variant=9": {
       "model": "westerosblocks:utility_block_0_9"
     },
     "variant=8": {
       "model": "westerosblocks:utility_block_0_8"
+    },
+    "variant=13": {
+      "model": "westerosblocks:utility_block_0_13"
+    },
+    "variant=11": {
+      "model": "westerosblocks:utility_block_0_11"
+    },
+    "variant=12": {
+      "model": "westerosblocks:utility_block_0_12"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,variant=1": {
+      "model": "westerosblocks:road_marker_block_1_1",
+      "y": 270
+    },
+    "facing=north,variant=0": {
+      "model": "westerosblocks:road_marker_block_1_0",
+      "y": 270
+    },
+    "facing=west,variant=0": {
+      "model": "westerosblocks:road_marker_block_1_0",
+      "y": 180
+    },
+    "facing=west,variant=1": {
+      "model": "westerosblocks:road_marker_block_1_1",
+      "y": 180
+    },
+    "facing=south,variant=1": {
+      "model": "westerosblocks:road_marker_block_1_1",
+      "y": 90
+    },
+    "facing=south,variant=0": {
+      "model": "westerosblocks:road_marker_block_1_0",
+      "y": 90
+    },
+    "facing=east,variant=0": {
+      "model": "westerosblocks:road_marker_block_1_0"
+    },
+    "facing=east,variant=1": {
+      "model": "westerosblocks:road_marker_block_1_1"
+    }
+  }
+}

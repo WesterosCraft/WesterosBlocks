@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "variant=3": {
+      "model": "westerosblocks:hopper_block_7_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:hopper_block_7_2"
+    },
+    "variant=10": {
+      "model": "westerosblocks:hopper_block_7_10"
+    },
+    "variant=1": {
+      "model": "westerosblocks:hopper_block_7_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:hopper_block_7_0"
+    },
+    "variant=7": {
+      "model": "westerosblocks:hopper_block_7_7"
+    },
+    "variant=6": {
+      "model": "westerosblocks:hopper_block_7_6"
+    },
+    "variant=5": {
+      "model": "westerosblocks:hopper_block_7_5"
+    },
+    "variant=4": {
+      "model": "westerosblocks:hopper_block_7_4"
+    },
+    "variant=9": {
+      "model": "westerosblocks:hopper_block_7_9"
+    },
+    "variant=8": {
+      "model": "westerosblocks:hopper_block_7_8"
+    },
+    "variant=11": {
+      "model": "westerosblocks:hopper_block_7_11"
+    }
+  }
+}

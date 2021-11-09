@@ -1,0 +1,9 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "top": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "side": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "particle": "westerosblocks:blocks/bone_block_0/bone_pile"
+  }
+}

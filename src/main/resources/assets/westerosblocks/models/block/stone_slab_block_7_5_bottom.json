@@ -1,0 +1,9 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_2/brick_white_granite_top",
+    "top": "westerosblocks:blocks/stone_block_2/brick_white_granite_top",
+    "side": "westerosblocks:blocks/stone_block_2/brick_white_granite",
+    "particle": "westerosblocks:blocks/stone_block_2/brick_white_granite"
+  }
+}

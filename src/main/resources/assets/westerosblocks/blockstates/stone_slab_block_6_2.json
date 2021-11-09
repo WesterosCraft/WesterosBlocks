@@ -1,5 +1,11 @@
 {
   "variants": {
+    "variant=2": {
+      "model": "westerosblocks:stone_slab_block_6_2_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:stone_slab_block_6_2_1"
+    },
     "variant=0": {
       "model": "westerosblocks:stone_slab_block_6_2_0"
     }

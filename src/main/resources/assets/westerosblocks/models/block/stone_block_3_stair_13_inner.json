@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_1/brick_white_small",
+    "top": "westerosblocks:blocks/stone_block_1/brick_white_small",
+    "side": "westerosblocks:blocks/stone_block_1/brick_white_small",
+    "particle": "westerosblocks:blocks/stone_block_1/brick_white_small"
+  }
+}

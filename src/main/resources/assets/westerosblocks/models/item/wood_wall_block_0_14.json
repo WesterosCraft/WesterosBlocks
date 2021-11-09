@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/wall_inventory",
+  "textures": {
+    "bottom": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_top",
+    "top": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_top",
+    "side": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_top"
+  }
+}

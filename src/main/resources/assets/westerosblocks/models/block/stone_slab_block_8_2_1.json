@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "up": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "north": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "south": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "west": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "east": "westerosblocks:blocks/bone_block_0/bone_pile",
+    "particle": "westerosblocks:blocks/bone_block_0/bone_pile"
+  }
+}

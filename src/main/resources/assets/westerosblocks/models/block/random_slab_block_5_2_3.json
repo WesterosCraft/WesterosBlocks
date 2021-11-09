@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/ground_block_0/soil_dried",
+    "up": "westerosblocks:blocks/ground_block_0/soil_dried",
+    "north": "westerosblocks:blocks/ground_block_0/soil_dried",
+    "south": "westerosblocks:blocks/ground_block_0/soil_dried",
+    "west": "westerosblocks:blocks/ground_block_0/soil_dried",
+    "east": "westerosblocks:blocks/ground_block_0/soil_dried",
+    "particle": "westerosblocks:blocks/ground_block_0/soil_dried"
+  }
+}

@@ -20,11 +20,11 @@
   "textures": {
     "txt4": "westerosblocks:blocks/transparent",
     "txt5": "westerosblocks:blocks/transparent",
-    "txt2": "westerosblocks:blocks/translucent_block_0/candle_glass_side",
+    "txt2": "westerosblocks:blocks/translucent_block_0/candle_glass_green_side",
     "txt3": "westerosblocks:blocks/transparent",
-    "txt0": "westerosblocks:blocks/translucent_block_0/candle_glass_bottom",
-    "txt1": "westerosblocks:blocks/translucent_block_0/candle_glass_top",
-    "particle": "westerosblocks:blocks/translucent_block_0/candle_glass_bottom"
+    "txt0": "westerosblocks:blocks/translucent_block_0/candle_glass_green_bottom",
+    "txt1": "westerosblocks:blocks/translucent_block_0/candle_glass_green_top",
+    "particle": "westerosblocks:blocks/translucent_block_0/candle_glass_green_bottom"
   },
   "elements": [
     {

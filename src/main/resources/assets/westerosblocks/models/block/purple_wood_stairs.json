@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:blocks/wood_block_1/wood_purple",
+    "top": "westerosblocks:blocks/wood_block_1/wood_purple",
+    "side": "westerosblocks:blocks/wood_block_1/wood_purple",
+    "particle": "westerosblocks:blocks/wood_block_1/wood_purple"
+  }
+}

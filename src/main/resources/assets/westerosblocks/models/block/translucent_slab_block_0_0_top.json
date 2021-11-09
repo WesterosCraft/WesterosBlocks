@@ -1,0 +1,9 @@
+{
+  "parent": "block/upper_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/translucent_block_0/ice",
+    "top": "westerosblocks:blocks/translucent_block_0/ice",
+    "side": "westerosblocks:blocks/translucent_block_0/ice",
+    "particle": "westerosblocks:blocks/translucent_block_0/ice"
+  }
+}

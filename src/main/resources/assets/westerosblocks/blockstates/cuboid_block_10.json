@@ -1,10 +1,19 @@
 {
   "variants": {
+    "variant=3": {
+      "model": "westerosblocks:cuboid_block_10_3"
+    },
+    "variant=2": {
+      "model": "westerosblocks:cuboid_block_10_2"
+    },
     "variant=1": {
       "model": "westerosblocks:cuboid_block_10_1"
     },
     "variant=0": {
       "model": "westerosblocks:cuboid_block_10_0"
+    },
+    "variant=4": {
+      "model": "westerosblocks:cuboid_block_10_4"
     }
   }
 }

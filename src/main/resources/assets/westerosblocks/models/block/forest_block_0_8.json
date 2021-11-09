@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "westerosblocks:blocks/web_block_1/dock_leaf"
+  }
+}

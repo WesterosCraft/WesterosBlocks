@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/wood_block_1/wood_red",
+    "up": "westerosblocks:blocks/wood_block_1/wood_red",
+    "north": "westerosblocks:blocks/wood_block_1/wood_red",
+    "south": "westerosblocks:blocks/wood_block_1/wood_red",
+    "west": "westerosblocks:blocks/wood_block_1/wood_red",
+    "east": "westerosblocks:blocks/wood_block_1/wood_red",
+    "particle": "westerosblocks:blocks/wood_block_1/wood_red"
+  }
+}

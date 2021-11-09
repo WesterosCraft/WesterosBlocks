@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "half=top,variant=1": {
+      "model": "westerosblocks:stone_slab_block_8_1_top"
+    },
+    "half=bottom,variant=1": {
+      "model": "westerosblocks:stone_slab_block_8_1_bottom"
+    },
+    "half=top,variant=0": {
+      "model": "westerosblocks:stone_slab_block_8_0_top"
+    },
+    "half=bottom,variant=0": {
+      "model": "westerosblocks:stone_slab_block_8_0_bottom"
+    }
+  }
+}

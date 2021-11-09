@@ -1,5 +1,8 @@
 {
   "variants": {
+    "variant=1": {
+      "model": "westerosblocks:leaves_block_3_1"
+    },
     "variant=0": {
       "model": "westerosblocks:leaves_block_3_0"
     }

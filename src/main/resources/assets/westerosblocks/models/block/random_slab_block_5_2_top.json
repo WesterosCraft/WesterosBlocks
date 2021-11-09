@@ -1,0 +1,9 @@
+{
+  "parent": "block/upper_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/log_block_0/firewood_side",
+    "top": "westerosblocks:blocks/log_block_0/firewood_side",
+    "side": "westerosblocks:blocks/log_block_0/firewood_top",
+    "particle": "westerosblocks:blocks/log_block_0/firewood_top"
+  }
+}

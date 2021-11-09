@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log",
+  "textures": {
+    "end": "westerosblocks:blocks/bone_block_0/bone_stacked_front",
+    "side": "westerosblocks:blocks/bone_block_0/bone_stacked_side"
+  }
+}

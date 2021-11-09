@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/stone_block_3/brick_oldtown_light",
+    "up": "westerosblocks:blocks/stone_block_3/brick_oldtown_light",
+    "north": "westerosblocks:blocks/stone_block_3/brick_oldtown_light",
+    "south": "westerosblocks:blocks/stone_block_3/brick_oldtown_light",
+    "west": "westerosblocks:blocks/stone_block_3/brick_oldtown_light",
+    "east": "westerosblocks:blocks/stone_block_3/brick_oldtown_light",
+    "particle": "westerosblocks:blocks/stone_block_3/brick_oldtown_light"
+  }
+}

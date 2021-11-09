@@ -1,0 +1,9 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_bottom",
+    "top": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_top",
+    "side": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_side_half",
+    "particle": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_side_half"
+  }
+}

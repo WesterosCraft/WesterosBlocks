@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "westerosblocks:blocks/stone_block_4/stone_light_pale_pink"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_bottom",
+    "up": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_top",
+    "north": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_side",
+    "south": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_side",
+    "west": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_side",
+    "east": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_side",
+    "particle": "westerosblocks:blocks/fur_block_0/thatch_snowy_dark_side"
+  }
+}

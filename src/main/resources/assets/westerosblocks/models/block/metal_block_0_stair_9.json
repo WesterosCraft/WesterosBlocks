@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "blocks/gold_block",
+    "top": "blocks/gold_block",
+    "side": "blocks/gold_block",
+    "particle": "blocks/gold_block"
+  }
+}

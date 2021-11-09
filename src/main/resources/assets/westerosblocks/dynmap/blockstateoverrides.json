@@ -5,6 +5,138 @@
    },
   "tinting": {
       "westerosblocks": {
+          "cobble_dark_stairs": [
+              { "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+          ]
+          ,
+          "hopper_block_6": [
+              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+          ]
+          ,
+          "hopper_block_5": [
+              { "state": "variant=2", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant=14", "colormap": [ "westerosblocks:colormap/faintlightgreystone" ] }
+          ]
+          ,
+          "hopper_block_0": [
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/cobblestone" ] }
+              ,
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/cobblestone" ] }
+              ,
+              { "state": "variant=12", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant=13", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+          ]
+          ,
+          "terrainset_wall_block_0": [
+              { "state": "variant2=0", "colormap": [ "westerosblocks:colormap/easternisland" ] }
+          ]
+          ,
+          "stone_block_1_stair_1": [
+              { "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+          ]
+          ,
+          "stone_block_1_stair_0": [
+              { "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+          ]
+          ,
+          "terrainset_stair_0": [
+              { "colormap": [ "westerosblocks:colormap/easternisland" ] }
+          ]
+          ,
+          "hopper_block_3": [
+              { "state": "variant=11", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant=12", "colormap": [ "westerosblocks:colormap/smallsmoothstonebrick" ] }
+              ,
+              { "state": "variant=13", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant=15", "colormap": [ "westerosblocks:colormap/stonebrick" ] }
+          ]
+          ,
+          "hopper_block_2": [
+              { "state": "variant=10", "colormap": [ "westerosblocks:colormap/brick" ] }
+          ]
+          ,
+          "stone_wall_block_3": [
+              { "state": "variant2=7", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant2=8", "colormap": [ "westerosblocks:colormap/smallsmoothstonebrick" ] }
+          ]
+          ,
+          "stone_wall_block_0": [
+              { "state": "variant2=1", "colormap": [ "westerosblocks:colormap/stonebrick" ] }
+              ,
+              { "state": "variant2=2", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant2=5", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant2=7", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+              ,
+              { "state": "variant2=9", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant2=10", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+          ]
+          ,
+          "stone_slab_block_7": [
+              { "state": "variant=2", "colormap": [ "westerosblocks:colormap/faintlightgreystone" ] }
+              ,
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant=2", "colormap": [ "westerosblocks:colormap/faintlightgreystone" ] }
+              ,
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+          ]
+          ,
+          "stone_slab_block_6": [
+              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/brick" ] }
+              ,
+              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/brick" ] }
+          ]
+          ,
+          "stone_slab_block_5": [
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/smallsmoothstonebrick" ] }
+              ,
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/smallsmoothstonebrick" ] }
+          ]
+          ,
+          "stone_slab_block_1": [
+              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+              ,
+              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant=7", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+              ,
+              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+              ,
+              { "state": "variant=7", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+          ]
+          ,
+          "sand_layer_15": [
+              { "colormap": [ "westerosblocks:colormap/easternisland" ] }
+          ]
+          ,
+          "stone_wall_block_5": [
+              { "state": "variant2=2", "colormap": [ "westerosblocks:colormap/faintlightgreystone" ] }
+              ,
+              { "state": "variant2=3", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant2=4", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+          ]
+          ,
           "daub_wattle_block_5": [
               { "state": "variant=3", "colormap": [ "westerosblocks:colormap/brick" ] }
               ,
@@ -55,6 +187,14 @@
               { "state": "variant=15", "colormap": [ "westerosblocks:colormap/brick" ] }
           ]
           ,
+          "fence_block_5": [
+              { "state": "variant=2", "colormap": [ "westerosblocks:colormap/faintlightgreystone" ] }
+              ,
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+          ]
+          ,
           "sand_layer_27": [
               { "colormap": [ "westerosblocks:colormap/sand" ] }
           ]
@@ -65,6 +205,8 @@
               { "state": "variant=1", "colormap": [ "westerosblocks:colormap/cobblestone" ] }
               ,
               { "state": "variant=10", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+              ,
+              { "state": "variant=11", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
               ,
               { "state": "variant=13", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
               ,
@@ -77,6 +219,8 @@
           ,
           "furnace_block_2": [
               { "state": "variant=0", "colormap": [ "westerosblocks:colormap/furnace" ] }
+              ,
+              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/furnace" ] }
           ]
           ,
           "web_block_1": [
@@ -89,68 +233,30 @@
               { "state": "variant=3", "colormap": [ "westerosblocks:colormap/reed" ] }
           ]
           ,
-          "hopper_block_0": [
-              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/cobblestone" ] }
-              ,
-              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/cobblestone" ] }
-              ,
-              { "state": "variant=12", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
-              ,
-              { "state": "variant=13", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
-          ]
-          ,
           "furnace_block_0": [
               { "state": "variant=0", "colormap": [ "westerosblocks:colormap/brick" ] }
               ,
               { "state": "variant=1", "colormap": [ "westerosblocks:colormap/brick" ] }
           ]
           ,
-          "terrainset_wall_block_0": [
-              { "state": "variant2=0", "colormap": [ "westerosblocks:colormap/easternisland" ] }
+          "stone_block_2_stair_3": [
+              { "colormap": [ "westerosblocks:colormap/darkcobble" ] }
           ]
           ,
-          "stone_block_1_stair_1": [
-              { "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+          "stone_block_2_stair_2": [
+              { "colormap": [ "westerosblocks:colormap/darkcobble" ] }
           ]
           ,
-          "stone_block_1_stair_0": [
-              { "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+          "stone_block_2_stair_1": [
+              { "colormap": [ "westerosblocks:colormap/faintlightgreystone" ] }
           ]
           ,
-          "terrainset_stair_0": [
-              { "colormap": [ "westerosblocks:colormap/easternisland" ] }
-          ]
-          ,
-          "hopper_block_2": [
-              { "state": "variant=10", "colormap": [ "westerosblocks:colormap/brick" ] }
-          ]
-          ,
-          "stone_wall_block_3": [
-              { "state": "variant2=7", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+          "arrow_slits_4": [
+              { "state": "variant=2", "colormap": [ "westerosblocks:colormap/stonebrick" ] }
               ,
-              { "state": "variant2=8", "colormap": [ "westerosblocks:colormap/smallsmoothstonebrick" ] }
-          ]
-          ,
-          "stone_wall_block_0": [
-              { "state": "variant2=1", "colormap": [ "westerosblocks:colormap/stonebrick" ] }
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/stonebrick" ] }
               ,
-              { "state": "variant2=2", "colormap": [ "westerosblocks:colormap/brick" ] }
-              ,
-              { "state": "variant2=7", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
-              ,
-              { "state": "variant2=9", "colormap": [ "westerosblocks:colormap/brick" ] }
-              ,
-              { "state": "variant2=10", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
-          ]
-          ,
-          "stone_slab_block_5": [
-              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
-              ,
-              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/smallsmoothstonebrick" ] }
-              ,
-              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
-              ,
-              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/smallsmoothstonebrick" ] }
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/stonebrick" ] }
           ]
           ,
           "terrainset_fence_block_3": [
@@ -161,16 +267,6 @@
               { "state": "variant=8", "colormap": [ "westerosblocks:colormap/brick" ] }
               ,
               { "state": "variant=9", "colormap": [ "westerosblocks:colormap/brick" ] }
-          ]
-          ,
-          "stone_slab_block_1": [
-              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
-              ,
-              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
-              ,
-              { "state": "variant=0", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
-              ,
-              { "state": "variant=1", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
           ]
           ,
           "arrow_slits_0": [
@@ -197,10 +293,6 @@
               { "state": "variant=14", "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
           ]
           ,
-          "sand_layer_15": [
-              { "colormap": [ "westerosblocks:colormap/easternisland" ] }
-          ]
-          ,
           "stone_block_7": [
               { "state": "variant=0", "colormap": [ "westerosblocks:colormap/brick" ] }
           ]
@@ -216,7 +308,11 @@
           ]
           ,
           "stone_block_4": [
-              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/mossysmallstonebrick" ] }
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+          ]
+          ,
+          "stone_block_7_stair_0": [
+              { "colormap": [ "westerosblocks:colormap/brick" ] }
           ]
           ,
           "stone_block_8": [
@@ -228,6 +324,10 @@
           ]
           ,
           "stone_block_2": [
+              { "state": "variant=3", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
+              { "state": "variant=4", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
+              ,
               { "state": "variant=5", "colormap": [ "westerosblocks:colormap/faintlightgreystone" ] }
           ]
           ,
@@ -241,6 +341,8 @@
           ,
           "stone_block_0": [
               { "state": "variant=10", "colormap": [ "westerosblocks:colormap/smallstonebrick" ] }
+              ,
+              { "state": "variant=14", "colormap": [ "westerosblocks:colormap/darkcobble" ] }
               ,
               { "state": "variant=15", "colormap": [ "westerosblocks:colormap/brick" ] }
           ]

@@ -23,6 +23,9 @@
     },
     "variant=4": {
       "model": "westerosblocks:forest_block_0_4"
+    },
+    "variant=8": {
+      "model": "westerosblocks:forest_block_0_8"
     }
   }
 }

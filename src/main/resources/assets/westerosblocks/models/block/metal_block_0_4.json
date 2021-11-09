@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "westerosblocks:blocks/metal_block_0/brick_metal_normal_gold"
+    "all": "westerosblocks:blocks/metal_block_0/metal_gold_brick"
   }
 }

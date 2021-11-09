@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "variant=1": {
+      "model": "westerosblocks:carpet_block_2_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:carpet_block_2_0"
+    }
+  }
+}

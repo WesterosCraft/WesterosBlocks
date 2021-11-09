@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube",
+  "parent": "westerosblocks:block/tinted/cube",
   "textures": {
     "down": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",
     "up": "westerosblocks:blocks/stone_block_1/stone_cobble_dark",

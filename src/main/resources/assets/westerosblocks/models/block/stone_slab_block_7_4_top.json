@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/upper_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_1/stone_cobble_northern_icy",
+    "top": "westerosblocks:blocks/stone_block_1/stone_cobble_northern_icy",
+    "side": "westerosblocks:blocks/stone_block_1/stone_cobble_northern_icy",
+    "particle": "westerosblocks:blocks/stone_block_1/stone_cobble_northern_icy"
+  }
+}

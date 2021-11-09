@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "variant=2": {
+      "model": "westerosblocks:hemp_block_0_2"
+    },
+    "variant=1": {
+      "model": "westerosblocks:hemp_block_0_1"
+    },
+    "variant=0": {
+      "model": "westerosblocks:hemp_block_0_0"
+    }
+  }
+}
