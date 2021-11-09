@@ -228,6 +228,15 @@ public class StairsBlockModelExport extends ModelExport {
                 case "minecraft:obsidian":
                     downtxt = uptxt = sidetxt = "blocks/obsidian";
                     break;
+                case "minecraft:hardened_clay":
+                    downtxt = uptxt = sidetxt = "blocks/hardened_clay";
+                    break;
+                case "minecraft:gold_block":
+                    downtxt = uptxt = sidetxt = "blocks/gold_block";                	
+                    break;
+                case "minecraft:ice":
+                    downtxt = uptxt = sidetxt = "blocks/ice";                	
+                    break;                	
                 default:
                     throw new IOException(String.format("modelBlockName '%s:%d' not found for block '%s' - no vanilla",
                             def.modelBlockName, def.modelBlockMeta, def.blockName));

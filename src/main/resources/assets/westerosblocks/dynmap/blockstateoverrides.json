@@ -213,6 +213,10 @@
               { "state": "variant=14", "colormap": [ "westerosblocks:colormap/brick" ] }
           ]
           ,
+          "river_cobble_stairs": [
+              { "colormap": [ "westerosblocks:colormap/lightgreystone" ] }
+          ]
+          ,
           "stone_block_3_stair_12": [
               { "colormap": [ "westerosblocks:colormap/smallsmoothstonebrick" ] }
           ]
