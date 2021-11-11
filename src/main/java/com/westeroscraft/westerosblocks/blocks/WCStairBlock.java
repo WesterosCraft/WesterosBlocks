@@ -20,6 +20,7 @@ import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -113,14 +114,20 @@ public class WCStairBlock extends BlockStairs implements WesterosBlockLifecycle,
     public int getLightOpacity(IBlockState state, IBlockAccess world, BlockPos pos) {
         return def.getLightOpacity(state, world, pos);
     }
-
+    
     @SideOnly(Side.CLIENT)
     @Override
     public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rnd) {
         def.randomDisplayTick(stateIn, worldIn, pos, rnd);
         super.randomDisplayTick(stateIn, worldIn, pos, rnd);
     }
-    
+
+    @Override
+    public boolean doesSideBlockRendering(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing face) {
+    	if (def.nonOpaque) return false;
+    	return super.doesSideBlockRendering(state, world, pos, face);
+    }
+
     @Override
     public void registerDynmapRenderData(ModTextureDefinition mtd) {
         ModModelDefinition md = mtd.getModelDefinition();

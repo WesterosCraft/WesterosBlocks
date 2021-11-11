@@ -29257,6 +29257,7 @@
       "modelBlockName": "minecraft:ice",
       "modelBlockMeta": 0,
       "creativeTab": "WesterosDeco",
+      "nonOpaque": true,
       "subBlocks": [
         {
           "meta": 0,
