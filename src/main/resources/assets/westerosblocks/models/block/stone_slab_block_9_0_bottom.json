@@ -1,0 +1,9 @@
+{
+  "parent": "block/half_slab",
+  "textures": {
+    "bottom": "westerosblocks:blocks/stone_block_2/brick_stormlands_large",
+    "top": "westerosblocks:blocks/stone_block_2/brick_stormlands_large",
+    "side": "westerosblocks:blocks/stone_block_2/brick_stormlands_large",
+    "particle": "westerosblocks:blocks/stone_block_2/brick_stormlands_large"
+  }
+}

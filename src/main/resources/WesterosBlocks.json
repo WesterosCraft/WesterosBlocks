@@ -25752,6 +25752,13 @@
           "textures": [
             "stone_block_3/brick_oldtown_light"
           ]
+        },
+        {
+          "meta": 8,
+          "label": "Stormlands Large Brick Wall",
+          "textures": [
+            "stone_block_2/brick_stormlands_large"
+          ]
         }
       ]
     },
@@ -25761,7 +25768,7 @@
       "blockType": "fence",
       "hardness": 5,
       "stepSound": "stone",
-      "material": "wood",
+      "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "subBlocks": [
@@ -25822,6 +25829,13 @@
           "label": "Light Oldtown Brick Fence",
           "textures": [
             "stone_block_3/brick_oldtown_light"
+          ]
+        },
+        {
+          "meta": 8,
+          "label": "Stacked Bones Fence",
+          "textures": [
+            "bone_block_0/bone_stacked_side"
           ]
         }
       ]
@@ -29233,6 +29247,63 @@
               ]
             }
           ]
+        },
+        {
+          "meta": 3,
+          "label": "Stormlands Large Brick Hopper",
+          "textures": [
+            "stone_block_2/brick_stormlands_large"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.3755,
+              "xMax": 0.6245,
+              "yMin": 0,
+              "yMax": 0.275,
+              "zMin": 0.3755,
+              "zMax": 0.6245,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0.25,
+              "xMax": 0.75,
+              "yMin": 0.275,
+              "yMax": 0.625,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "xMin": 0,
+              "xMax": 1,
+              "yMin": 0.625,
+              "yMax": 1,
+              "zMin": 0,
+              "zMax": 1,
+              "sideTextures": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
         }
       ]
     },
@@ -30665,6 +30736,48 @@
           "textures": [
             "wood_block_1/wood_purple"
           ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_slab_block_9",
+      "blockIDs": [
+        2424,
+        2425
+      ],
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Stormlands Large Brick Slab",
+          "textures": [
+            "stone_block_2/brick_stormlands_large"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "stone_block_2_stair_4",
+      "blockID": 2426,
+      "blockType": "stair",
+      "modelBlockName": "stone_block_2",
+      "modelBlockMeta": 12,
+      "creativeTab": "WesterosBlocks",
+      "subBlocks": [
+        {
+          "meta": 0,
+          "label": "Stormlands Large Brick Stairs"
         }
       ]
     }
