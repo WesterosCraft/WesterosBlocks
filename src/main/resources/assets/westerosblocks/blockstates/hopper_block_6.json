@@ -1,8 +1,5 @@
 {
   "variants": {
-    "variant=3": {
-      "model": "westerosblocks:hopper_block_6_3"
-    },
     "variant=2": {
       "model": "westerosblocks:hopper_block_6_2"
     },
