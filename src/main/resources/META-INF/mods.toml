@@ -3,7 +3,7 @@ loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft versio
 license="Apache Public License v2"
 [[mods]] #mandatory
 modId="westerosblocks" #mandatory
-version="${file.jarVersion}" #mandatory
+version="${version}" #mandatory
 displayName="WesterosBlocks" #mandatory
 displayURL="https://www.westeroscraft.com/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display

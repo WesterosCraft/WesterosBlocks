@@ -24,10 +24,9 @@ configFile.withReader {
     project.ext.config = new ConfigSlurper().parse prop
 }
 
-version = "${config.WesterosBlocks_version}${config.WesterosBlocks_extversion}"
+version = "${config.WesterosBlocks_version}${config.WesterosBlocks_extversion}-${System.getenv().BUILD_NUMBER ?: 'Dev'}"
 group= "com.westeroscraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "WesterosBlocks"
-ext.buildNumber = System.getenv().BUILD_NUMBER ?: "Dev"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
 
@@ -84,7 +83,7 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${config.minecraft_version}-${config.forge_version}"
-	annotationProcessor 'org.spongepowered:mixin:0.8.3:processor'
+	annotationProcessor 'org.spongepowered:mixin:0.8.4:processor'
 	implementation "us.dynmap:DynmapCoreAPI:${config.Dynmap_version}${config.Dynmap_extversion}:all"
 
 }
@@ -102,6 +101,13 @@ jar {
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
             "MixinConfigs": "westerosblocks.mixins.json"
         ])
+    }
+}
+
+processResources {
+    from (sourceSets.main.resources.srcDirs) {
+        include 'META-INF/mods.toml'
+        expand 'version': project.version
     }
 }
 
