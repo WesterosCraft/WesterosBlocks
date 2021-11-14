@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/yellow_wood/top_bottom",
+    "top": "westerosblocks:block/yellow_wood/top_bottom",
+    "side": "westerosblocks:block/yellow_wood/side",
+    "particle": "westerosblocks:block/yellow_wood/side"
+  }
+}

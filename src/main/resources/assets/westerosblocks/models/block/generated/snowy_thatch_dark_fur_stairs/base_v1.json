@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/fur_block_0/thatch_dark",
+    "top": "westerosblocks:block/fur_block_0/thatch_dark",
+    "side": "westerosblocks:block/fur_block_0/thatch_dark",
+    "particle": "westerosblocks:block/fur_block_0/thatch_dark"
+  }
+}

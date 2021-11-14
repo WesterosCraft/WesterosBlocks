@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/bone_block_0/bone_pile",
+    "up": "westerosblocks:block/bone_block_0/bone_pile",
+    "north": "westerosblocks:block/bone_block_0/bone_pile",
+    "south": "westerosblocks:block/bone_block_0/bone_pile",
+    "west": "westerosblocks:block/bone_block_0/bone_pile",
+    "east": "westerosblocks:block/bone_block_0/bone_pile",
+    "particle": "westerosblocks:block/bone_block_0/bone_pile"
+  }
+}

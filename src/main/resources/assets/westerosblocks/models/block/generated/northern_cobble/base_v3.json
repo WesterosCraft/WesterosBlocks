@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_cobble_northern/cobble_3"
+    "down": "westerosblocks:block/stone_cobble_northern/cobble_3",
+    "up": "westerosblocks:block/stone_cobble_northern/cobble_3",
+    "north": "westerosblocks:block/stone_cobble_northern/cobble_3",
+    "south": "westerosblocks:block/stone_cobble_northern/cobble_3",
+    "west": "westerosblocks:block/stone_cobble_northern/cobble_3",
+    "east": "westerosblocks:block/stone_cobble_northern/cobble_3",
+    "particle": "westerosblocks:block/stone_cobble_northern/cobble_3"
   }
 }

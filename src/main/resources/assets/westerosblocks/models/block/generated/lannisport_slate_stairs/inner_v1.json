@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/lannisport_slate/side",
-    "top": "westerosblocks:block/lannisport_slate/side",
-    "side": "westerosblocks:block/lannisport_slate/side",
-    "particle": "westerosblocks:block/lannisport_slate/side"
-  }
-}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log",
+  "textures": {
+    "down": "westerosblocks:block/bone_block_0/bone_stacked_front",
+    "up": "westerosblocks:block/bone_block_0/bone_stacked_side",
+    "north": "westerosblocks:block/bone_block_0/bone_stacked_side",
+    "south": "westerosblocks:block/bone_block_0/bone_stacked_side",
+    "east": "westerosblocks:block/bone_block_0/bone_stacked_side",
+    "west": "westerosblocks:block/bone_block_0/bone_stacked_side",
+    "particle": "westerosblocks:block/bone_block_0/bone_stacked_side"
+  }
+}

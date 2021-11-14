@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
-    "up": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
-    "north": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
-    "south": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
-    "west": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
-    "east": "westerosblocks:block/metal_block_0/brick_metal_normal_gold",
-    "particle": "westerosblocks:block/metal_block_0/brick_metal_normal_gold"
+    "down": "westerosblocks:block/metal_block_0/metal_gold_brick",
+    "up": "westerosblocks:block/metal_block_0/metal_gold_brick",
+    "north": "westerosblocks:block/metal_block_0/metal_gold_brick",
+    "south": "westerosblocks:block/metal_block_0/metal_gold_brick",
+    "west": "westerosblocks:block/metal_block_0/metal_gold_brick",
+    "east": "westerosblocks:block/metal_block_0/metal_gold_brick",
+    "particle": "westerosblocks:block/metal_block_0/metal_gold_brick"
   }
 }

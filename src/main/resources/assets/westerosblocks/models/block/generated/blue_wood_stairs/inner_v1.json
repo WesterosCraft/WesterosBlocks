@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/blue_wood/top_bottom",
+    "top": "westerosblocks:block/blue_wood/top_bottom",
+    "side": "westerosblocks:block/blue_wood/side",
+    "particle": "westerosblocks:block/blue_wood/side"
+  }
+}

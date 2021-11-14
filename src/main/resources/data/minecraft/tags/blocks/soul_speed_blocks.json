@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "westerosblocks:peat",
-    "westerosblocks:bog",
-    "westerosblocks:mud"
+    "westerosblocks:mud",
+    "westerosblocks:bog"
   ]
 }

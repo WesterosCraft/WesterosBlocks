@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/wood_block_1/wood_purple",
+    "up": "westerosblocks:block/wood_block_1/wood_purple",
+    "north": "westerosblocks:block/wood_block_1/wood_purple",
+    "south": "westerosblocks:block/wood_block_1/wood_purple",
+    "west": "westerosblocks:block/wood_block_1/wood_purple",
+    "east": "westerosblocks:block/wood_block_1/wood_purple",
+    "particle": "westerosblocks:block/wood_block_1/wood_purple"
+  }
+}

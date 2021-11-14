@@ -246,6 +246,12 @@ public class StairsBlockModelExport extends ModelExport {
                 	case "minecraft:terracotta":
                 		downtxt = uptxt = sidetxt = "minecraft:block/terracotta";
                 		break;
+                    case "minecraft:gold_block":
+                        downtxt = uptxt = sidetxt = "minecraft:block/gold_block";                	
+                        break;
+                    case "minecraft:ice":
+                        downtxt = uptxt = sidetxt = "minecraft:block/ice";                	
+                        break;                	
                 	default:
                 		throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no vanilla",
                             def.modelBlockName, def.blockName));

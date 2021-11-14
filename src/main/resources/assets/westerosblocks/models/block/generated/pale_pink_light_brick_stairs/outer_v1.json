@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/stone_block_4/brick_pale_pink_light",
+    "top": "westerosblocks:block/stone_block_4/brick_pale_pink_light",
+    "side": "westerosblocks:block/stone_block_4/brick_pale_pink_light",
+    "particle": "westerosblocks:block/stone_block_4/brick_pale_pink_light"
+  }
+}

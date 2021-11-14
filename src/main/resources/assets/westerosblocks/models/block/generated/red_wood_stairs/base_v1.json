@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/red_wood/top_bottom",
+    "top": "westerosblocks:block/red_wood/top_bottom",
+    "side": "westerosblocks:block/red_wood/side",
+    "particle": "westerosblocks:block/red_wood/side"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/half_slab",
+  "parent": "westerosblocks:block/tinted/half_slab",
   "textures": {
     "down": "westerosblocks:block/stone_block_1/stone_cobble_dark",
     "up": "westerosblocks:block/stone_block_1/stone_cobble_dark",

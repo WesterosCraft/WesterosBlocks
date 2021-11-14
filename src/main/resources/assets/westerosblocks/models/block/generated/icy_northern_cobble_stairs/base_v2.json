@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/icy_northern_cobble/side1",
+    "top": "westerosblocks:block/icy_northern_cobble/side1",
+    "side": "westerosblocks:block/icy_northern_cobble/side1",
+    "particle": "westerosblocks:block/icy_northern_cobble/side1"
+  }
+}

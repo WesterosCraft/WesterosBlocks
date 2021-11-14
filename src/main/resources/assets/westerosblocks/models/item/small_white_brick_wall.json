@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/wall_inventory",
+  "textures": {
+    "bottom": "westerosblocks:block/stone_block_1/brick_white_small",
+    "top": "westerosblocks:block/stone_block_1/brick_white_small",
+    "side": "westerosblocks:block/stone_block_1/brick_white_small"
+  }
+}

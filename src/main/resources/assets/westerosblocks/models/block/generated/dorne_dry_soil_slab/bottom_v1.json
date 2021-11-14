@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/ground_block_0/soil_dried",
+    "up": "westerosblocks:block/ground_block_0/soil_dried",
+    "north": "westerosblocks:block/ground_block_0/soil_dried",
+    "south": "westerosblocks:block/ground_block_0/soil_dried",
+    "west": "westerosblocks:block/ground_block_0/soil_dried",
+    "east": "westerosblocks:block/ground_block_0/soil_dried",
+    "particle": "westerosblocks:block/ground_block_0/soil_dried"
+  }
+}

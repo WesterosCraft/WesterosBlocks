@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/white_granite/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/white_granite/base_v2"
+      }
+    ]
+  }
+}

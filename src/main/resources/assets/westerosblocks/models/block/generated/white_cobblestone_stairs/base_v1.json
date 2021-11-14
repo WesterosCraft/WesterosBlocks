@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/stone_block_2/stone_cobble_white",
+    "top": "westerosblocks:block/stone_block_2/stone_cobble_white",
+    "side": "westerosblocks:block/stone_block_2/stone_cobble_white",
+    "particle": "westerosblocks:block/stone_block_2/stone_cobble_white"
+  }
+}

@@ -13,18 +13,19 @@
     "westerosblocks:weirwood_face_8",
     "westerosblocks:closed_barrel",
     "westerosblocks:oak_log_rope",
-    "westerosblocks:mossy_birch_log",
-    "westerosblocks:oak_log_chain",
     "westerosblocks:marble_pillar_vertical_ctm",
     "westerosblocks:palm_tree_log",
     "westerosblocks:jungle_log_rope",
     "westerosblocks:jungle_log_chain",
     "westerosblocks:spruce_log_rope",
     "westerosblocks:spruce_log_chain",
-    "westerosblocks:mossy_spruce_log",
     "westerosblocks:marble_pillar",
-    "westerosblocks:archery_target",
     "westerosblocks:mossy_jungle_log",
+    "westerosblocks:mossy_birch_log",
+    "westerosblocks:oak_log_chain",
+    "westerosblocks:mossy_spruce_log",
+    "westerosblocks:archery_target",
+    "westerosblocks:stacked_bones",
     "westerosblocks:firewood"
   ]
 }

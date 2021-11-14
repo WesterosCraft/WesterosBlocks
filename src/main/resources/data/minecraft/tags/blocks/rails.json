@@ -2,12 +2,12 @@
   "replace": false,
   "values": [
     "westerosblocks:jungle_cover",
+    "westerosblocks:horizontal_net",
+    "westerosblocks:oak_cover",
     "westerosblocks:northern_wood_cover",
     "westerosblocks:horizontal_rope",
-    "westerosblocks:horizontal_net",
     "westerosblocks:packed_snow",
     "westerosblocks:birch_cover",
-    "westerosblocks:oak_cover",
     "westerosblocks:spruce_cover",
     "westerosblocks:horizontal_chain"
   ]

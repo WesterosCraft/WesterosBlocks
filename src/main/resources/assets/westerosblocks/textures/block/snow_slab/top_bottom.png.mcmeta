@@ -1,6 +1,6 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "proxy": "minecraft:block/snow/top_bottom_3x3"
+    "proxy": "westerosblocks:block/snow_slab/top_bottom_3x3"
   }
 }
