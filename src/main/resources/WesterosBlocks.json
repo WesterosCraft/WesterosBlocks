@@ -169,6 +169,7 @@
       "blockID": 2005,
       "blockType": "plant",
       "material": "wood",
+      "stepSound": "grass",
       "creativeTab": "WesterosPlants",
       "boundingBox": {
         "xMin": 0.3,
