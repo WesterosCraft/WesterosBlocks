@@ -27,6 +27,7 @@ import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidHorizBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
@@ -145,6 +146,7 @@ public class WesterosBlockDef {
 	public String itemTexture = null; // Item texture, if any
 	public int itemTextureIndex = 0; // Index of texture for item icon
 	public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
+	public List<List<Cuboid>> cuboidLists = null;	// List of cuboid lists (for cuboid-ne, cuboid-nesw, cuboid-horiz)
 	public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
 	public List<String> soundList = null; // List of custom sound names or sound IDs (for 'sound' blocks)
 	public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
@@ -323,7 +325,7 @@ public class WesterosBlockDef {
 			txtidx = txt_idx;
 			txtrot = txt_rot;
 		}
-
+		public int getRotY() { return yrot; }
 	}
 
 	// Shape for normal cuboid (box)
@@ -393,14 +395,21 @@ public class WesterosBlockDef {
 		}
 	}
 
-	public BoundingBox getBoundingBox() {
-		return boundingBox;
-	}
-
-	public List<Cuboid> getCuboidList() {
-		if (this.cuboids != null)
-			return this.cuboids;
+	// Get cuboid list for given index (goes with last one, if index is too high, or cuboids if no cuboidsList)
+	public List<Cuboid> getCuboidList(int index) {
+		if (this.cuboidLists != null) {
+			if (index >= this.cuboidLists.size()) {
+				index = this.cuboidLists.size() - 1;
+			}
+			return this.cuboidLists.get(index);
+		}
 		return Collections.emptyList();
+	}
+	public List<Cuboid> getCuboidList() {
+		return getCuboidList(0);
+	}
+	public int getCuboidListCount() {
+		return (this.cuboidLists != null) ? this.cuboidLists.size() : 0;
 	}
 
 	public List<BoundingBox> getCollisionBoxList() {
@@ -709,6 +718,10 @@ public class WesterosBlockDef {
 		}
 		if (this.ambientOcclusion == null)
 			this.ambientOcclusion = true; // Default to true
+		// If cuboid list, but no cuboid, make one
+		if ((this.cuboidLists != null) && (this.cuboids == null)) {
+			this.cuboids = this.cuboidLists.get(0);
+		}
 		// If we have bounding box, but no cuboids, make trivial cuboid
 		if ((this.boundingBox != null) && (this.cuboids == null)) {
 			Cuboid c = new Cuboid();
@@ -739,6 +752,10 @@ public class WesterosBlockDef {
 				if (bb.zMax > this.boundingBox.zMax)
 					this.boundingBox.zMax = bb.zMax;
 			}
+		}
+		// If cuboids but no cuboidLists, make a singleton for it
+		if ((this.cuboids != null) && (this.cuboidLists == null)) {
+			this.cuboidLists = Collections.singletonList(this.cuboids);
 		}
 		// If stacks, process these too
 		if (this.stack != null) {
@@ -1008,6 +1025,7 @@ public class WesterosBlockDef {
 		typeTable.put("torch", new WCTorchBlock.Factory());
 		typeTable.put("ladder", new WCLadderBlock.Factory());
 		typeTable.put("cuboid", new WCCuboidBlock.Factory());
+		typeTable.put("cuboid-horiz", new WCCuboidHorizBlock.Factory());
 		typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
 		typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
 		typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());

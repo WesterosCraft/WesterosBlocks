@@ -43649,6 +43649,35 @@
                 "wood_block_1/wood_purple"
             ],
             "legacyBlockID": "wood_slab_block_1:5"
-        }                                                                        
+        },   
+        {
+            "blockName": "grey_wood_platform",
+            "blockType": "cuboid-horiz",
+            "hardness": 2,
+            "stepSound": "wood",
+            "material": "wood",
+            "resistance": 5,
+            "creativeTab": "WesterosBlocks",
+            "label": "Grey Wood Platform",
+            "textures": [
+                "grey_wood/top_bottom",
+                "grey_wood/top_bottom",
+                "grey_wood/side"
+            ],
+            "cuboidLists": [ 
+              [ { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.25, "zMin": 0, "zMax": 1, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] },
+                { "xMin": 0.25, "xMax": 0.75, "yMin": 0.25, "yMax": 0.5, "zMin": 0.25, "zMax": 0.75, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] } ],
+              [ { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.25, "zMin": 0, "zMax": 1, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] },
+                { "xMin": 0.25, "xMax": 0.75, "yMin": 0.25, "yMax": 0.5, "zMin": 0, "zMax": 0.75, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] } ],
+              [ { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.25, "zMin": 0, "zMax": 1, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] },
+                { "xMin": 0.25, "xMax": 1, "yMin": 0.25, "yMax": 0.5, "zMin": 0, "zMax": 0.75, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] } ],
+              [ { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.25, "zMin": 0, "zMax": 1, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] },
+                { "xMin": 0.25, "xMax": 0.75, "yMin": 0.25, "yMax": 0.5, "zMin": 0, "zMax": 1, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] } ],
+              [ { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.25, "zMin": 0, "zMax": 1, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] },
+                { "xMin": 0.25, "xMax": 1, "yMin": 0.25, "yMax": 0.5, "zMin": 0, "zMax": 1, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] } ],
+              [ { "xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.5, "zMin": 0, "zMax": 1, "sideTextures": [ 0, 1, 2, 2, 2, 2 ] } ]
+            ]
+        }
+                                                                             
    ]
 }

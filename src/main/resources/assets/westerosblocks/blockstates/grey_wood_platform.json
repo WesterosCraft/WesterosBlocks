@@ -1,0 +1,84 @@
+{
+  "variants": {
+    "north=true,south=false,east=true,west=false": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/angle_v1",
+      "y": 0,
+      "uvlock": true
+    },
+    "north=false,south=false,east=false,west=false": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/none_v1",
+      "y": 0,
+      "uvlock": true
+    },
+    "north=true,south=false,east=false,west=true": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/angle_v1",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=false,south=true,east=false,west=false": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/single_v1",
+      "y": 180,
+      "uvlock": true
+    },
+    "north=false,south=false,east=false,west=true": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/single_v1",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=true,south=true,east=true,west=false": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/triple_v1",
+      "y": 0,
+      "uvlock": true
+    },
+    "north=false,south=false,east=true,west=false": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/single_v1",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=true,south=true,east=false,west=true": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/triple_v1",
+      "y": 180,
+      "uvlock": true
+    },
+    "north=false,south=false,east=true,west=true": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/straight_v1",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=false,south=true,east=true,west=false": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/angle_v1",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=true,south=false,east=false,west=false": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/single_v1",
+      "y": 0,
+      "uvlock": true
+    },
+    "north=true,south=false,east=true,west=true": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/triple_v1",
+      "y": 270,
+      "uvlock": true
+    },
+    "north=true,south=true,east=true,west=true": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/all_v1",
+      "y": 0,
+      "uvlock": true
+    },
+    "north=false,south=true,east=false,west=true": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/angle_v1",
+      "y": 180,
+      "uvlock": true
+    },
+    "north=false,south=true,east=true,west=true": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/triple_v1",
+      "y": 90,
+      "uvlock": true
+    },
+    "north=true,south=true,east=false,west=false": {
+      "model": "westerosblocks:block/generated/grey_wood_platform/straight_v1",
+      "y": 0,
+      "uvlock": true
+    }
+  }
+}

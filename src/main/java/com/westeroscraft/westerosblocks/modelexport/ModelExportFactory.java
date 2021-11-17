@@ -71,6 +71,9 @@ public class ModelExportFactory {
             case "beacon":
                 me = new CuboidBlockModelExport(blk, def, dest);
                 break;
+            case "cuboid-horiz":
+                me = new CuboidHorizBlockModelExport(blk, def, dest);
+                break;
             case "cuboid-ne":
                 me = new CuboidNEBlockModelExport(blk, def, dest);
                 break;
