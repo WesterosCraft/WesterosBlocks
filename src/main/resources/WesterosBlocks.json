@@ -6058,7 +6058,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Thatch Light Fur",
             "textures": [
-                "mances_camp_mances_tent/outside"
+                "fur_block_0/thatch_light"
             ],
             "legacyBlockID": "wood_colours:9"
         },
