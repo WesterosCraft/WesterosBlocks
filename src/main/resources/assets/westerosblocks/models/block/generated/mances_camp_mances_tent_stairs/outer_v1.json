@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/fur_block_0/thatch_light",
-    "top": "westerosblocks:block/fur_block_0/thatch_light",
-    "side": "westerosblocks:block/fur_block_0/thatch_light",
-    "particle": "westerosblocks:block/fur_block_0/thatch_light"
+    "bottom": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "top": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "side": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "particle": "westerosblocks:block/mances_camp_mances_tent/outside"
   }
 }

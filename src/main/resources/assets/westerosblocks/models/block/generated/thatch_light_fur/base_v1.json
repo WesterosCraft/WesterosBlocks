@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/fur_block_0/thatch_light"
+    "all": "westerosblocks:block/mances_camp_mances_tent/outside"
   }
 }

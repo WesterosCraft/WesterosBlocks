@@ -4718,7 +4718,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "netherbrick_arrow_slit/side"                
+    	        "nether_brick_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -6058,7 +6058,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Thatch Light Fur",
             "textures": [
-                "fur_block_0/thatch_light"
+              "mances_camp_mances_tent/outside"
             ],
             "legacyBlockID": "wood_colours:9"
         },
@@ -38185,7 +38185,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_nether_arrow_slit_window"
+                "nether_brick_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -38238,7 +38238,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_nether_arrow_slit_ornate"
+                "nether_brick_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
