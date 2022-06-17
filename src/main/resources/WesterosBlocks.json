@@ -38291,7 +38291,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_reach_arrow_slit"
+                "reach_brick_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -38344,7 +38344,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_reach_arrow_slit_ornate"
+                "reach_brick_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
@@ -38397,7 +38397,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_reach_light_arrow_slit_window"
+                "reach_light_brick_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -39563,7 +39563,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/pale_pink_light_brick_arrow_slit"
+                "pale_pink_light_brick_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -39616,7 +39616,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/pale_pink_light_brick_arrow_slit_window"
+                "pale_pink_light_brick_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -39669,7 +39669,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/pale_pink_light_brick_arrow_slit_ornate"
+                "pale_pink_light_brick_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
