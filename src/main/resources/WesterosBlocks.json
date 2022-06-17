@@ -37917,7 +37917,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_basalt_arrow_slit_window"
+                "basalt_brick_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -37970,7 +37970,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_basalt_arrow_slit_ornate"
+                "basalt_brick_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
