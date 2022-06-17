@@ -4551,7 +4551,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "stone_brick_arrow_slit_window/side"                
+    	        "stone_brick_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -38024,7 +38024,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_large_stone_arrow_slit_ornate"
+                "stone_brick_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
@@ -38078,7 +38078,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_large_stone_mossy_arrow_slit_window"
+                "mossy_stone_brick_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -38132,7 +38132,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_large_stone_mossy_arrow_slit_ornate"
+                "mossy_stone_brick_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
