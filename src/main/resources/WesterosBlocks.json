@@ -27392,7 +27392,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Arbor Brick",
             "textures": [
-                "stone_block_3/brick_arbor"
+                "arbor_brick/side"
             ],
             "legacyBlockID": "stone_block_9:4"
         },
@@ -27406,7 +27406,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Arbor Brick Ornate",
             "textures": [
-                "stone_block_3/brick_arbor_ornate"
+                "arbor_brick_ornate/side"
             ],
             "legacyBlockID": "stone_block_9:5"
         },
