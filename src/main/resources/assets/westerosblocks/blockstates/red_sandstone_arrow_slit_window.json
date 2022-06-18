@@ -1,7 +1,13 @@
 {
   "variants": {
-    "": {
+    ",cond=dark": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit_window/base_v2"
+    },
+    ",cond=default": {
       "model": "westerosblocks:block/generated/red_sandstone_arrow_slit_window/base_v1"
+    },
+    ",cond=jungle": {
+      "model": "westerosblocks:block/generated/red_sandstone_arrow_slit_window/base_v3"
     }
   }
 }
