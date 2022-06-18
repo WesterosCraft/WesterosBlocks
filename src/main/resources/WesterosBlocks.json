@@ -4771,7 +4771,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "desert_sandstone_arrow_slit/side"      
+    	        "desert_sandstone_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
@@ -4877,7 +4877,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-    	        "terracotta_arrow_slit/side"           
+    	        "terracotta_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
@@ -38450,7 +38450,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_winterfell_granite_arrow_slit_window"
+                "winterfell_granite_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -38556,7 +38556,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_dorne_arrow_slit"
+                "desert_sandstone_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -38609,7 +38609,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_dorne_arrow_slit_window"
+                "desert_sandstone_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -38659,11 +38659,47 @@
             "resistance": 10,
             "lightOpacity": 0,
             "label": "Red Sandstone Arrow Slit Window",
-            "textures": [
-                "transparent",
-                "transparent",
-                "arrow_slits/sandstone_red_arrow_slit_window"
-            ],
+            "randomTextures": [
+            { "textures": [
+              "transparent",
+              "transparent",
+              "red_sandstone_arrow_slit_window/base_side"
+            ], "condIDs": [ "default" ] },
+            { "textures": [
+              "transparent",
+              "transparent",
+              "red_sandstone_arrow_slit_window/dark_side"
+            ], "condIDs": [ "dark" ] },
+            { "textures": [
+              "transparent",
+              "transparent",
+              "red_sandstone_arrow_slit_window/jungle_side"
+            ], "condIDs": [ "jungle" ] }
+          ],
+            "condStates": [
+            { "condID": "jungle",
+              "biomes": [
+                "minecraft:jungle",
+                "minecraft:modified_jungle",
+                "minecraft:jungle_hills" ] },
+            { "condID": "dark",
+              "biomes": [
+                "minecraft:frozen_ocean",
+                "minecraft:taiga_hills",
+                "minecraft:snowy_tundra",
+                "minecraft:mushroom_fields",
+                "minecraft:mushroom_field_shore",
+                "minecraft:ocean",
+                "minecraft:swamp",
+                "minecraft:wooded_hills",
+                "minecraft:desert",
+                "minecraft:desert_hills",
+                "minecraft:nether_wastes",
+                "minecraft:mountain_edge",
+                "minecraft:jungle_edge",
+                "minecraft:modified_jungle_edge" ] },
+            { "condID": "default" }
+          ],
             "collisionBoxes": [
                 {
                     "xMin": 0,
@@ -38712,11 +38748,47 @@
             "resistance": 10,
             "lightOpacity": 0,
             "label": "Red Sandstone Arrow Slit Ornate",
-            "textures": [
-                "transparent",
-                "transparent",
-                "arrow_slits/sandstone_red_arrow_slit_ornate"
-            ],
+            "randomTextures": [
+            { "textures": [
+              "transparent",
+              "transparent",
+              "red_sandstone_arrow_slit_ornate/base_side"
+            ], "condIDs": [ "default" ] },
+            { "textures": [
+              "transparent",
+              "transparent",
+              "red_sandstone_arrow_slit_ornate/dark_side"
+            ], "condIDs": [ "dark" ] },
+            { "textures": [
+              "transparent",
+              "transparent",
+              "red_sandstone_arrow_slit_ornate/jungle_side"
+            ], "condIDs": [ "jungle" ] }
+          ],
+            "condStates": [
+            { "condID": "jungle",
+              "biomes": [
+                "minecraft:jungle",
+                "minecraft:modified_jungle",
+                "minecraft:jungle_hills" ] },
+            { "condID": "dark",
+              "biomes": [
+                "minecraft:frozen_ocean",
+                "minecraft:taiga_hills",
+                "minecraft:snowy_tundra",
+                "minecraft:mushroom_fields",
+                "minecraft:mushroom_field_shore",
+                "minecraft:ocean",
+                "minecraft:swamp",
+                "minecraft:wooded_hills",
+                "minecraft:desert",
+                "minecraft:desert_hills",
+                "minecraft:nether_wastes",
+                "minecraft:mountain_edge",
+                "minecraft:jungle_edge",
+                "minecraft:modified_jungle_edge" ] },
+            { "condID": "default" }
+          ],
             "collisionBoxes": [
                 {
                     "xMin": 0,
@@ -38768,7 +38840,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_terracotta_arrow_slit"
+                "terracotta_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -38821,7 +38893,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_terracotta_arrow_slit_window"
+                "terracotta_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -38980,7 +39052,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_monochrome_arrow_slit"
+                "monochrome_sandstone_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -39033,7 +39105,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_monochrome_arrow_slit_window"
+                "monochrome_sandstone_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -39086,7 +39158,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_monochrome_arrow_slit_ornate"
+                "monochrome_sandstone_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
@@ -39139,7 +39211,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_monochrome_dark_arrow_slit"
+                "monochrome_dark_sandstone_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -39192,7 +39264,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_monochrome_dark_arrow_slit_window"
+                "monochrome_dark_sandstone_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -39245,7 +39317,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/sandstone_monochrome_dark_arrow_slit_ornate"
+                "monochrome_dark_sandstone_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
@@ -39404,7 +39476,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_white_granite_arrow_slit"
+                "white_granite_arrow_slit/side"
             ],
             "collisionBoxes": [
                 {
@@ -39457,7 +39529,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_white_granite_arrow_slit_window"
+                "white_granite_arrow_slit_window/side"
             ],
             "collisionBoxes": [
                 {
@@ -39510,7 +39582,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_white_granite_arrow_slit_ornate"
+                "white_granite_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
