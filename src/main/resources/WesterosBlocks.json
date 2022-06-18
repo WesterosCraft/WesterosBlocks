@@ -38503,7 +38503,7 @@
             "textures": [
                 "transparent",
                 "transparent",
-                "arrow_slits/brick_winterfell_granite_arrow_slit_ornate"
+                "winterfell_granite_arrow_slit_ornate/side"
             ],
             "collisionBoxes": [
                 {
