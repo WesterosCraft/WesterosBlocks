@@ -2,8 +2,8 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
     "particle": "westerosblocks:block/marble_pillar_vertical_ctm/base",
-    "bottom": "westerosblocks:block/log_block_0/column_block_marble_top_bottom",
-    "top": "westerosblocks:block/log_block_0/column_block_marble_top_bottom",
+    "bottom": "westerosblocks:block/marble_pillar/column_block_marble_top_bottom",
+    "top": "westerosblocks:block/marble_pillar/column_block_marble_top_bottom",
     "side": "westerosblocks:block/marble_pillar_vertical_ctm/base"
   }
 }

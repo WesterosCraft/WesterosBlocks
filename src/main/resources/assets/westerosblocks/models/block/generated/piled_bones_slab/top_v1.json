@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/bone_block_0/bone_pile",
-    "up": "westerosblocks:block/bone_block_0/bone_pile",
-    "north": "westerosblocks:block/bone_block_0/bone_pile",
-    "south": "westerosblocks:block/bone_block_0/bone_pile",
-    "west": "westerosblocks:block/bone_block_0/bone_pile",
-    "east": "westerosblocks:block/bone_block_0/bone_pile",
-    "particle": "westerosblocks:block/bone_block_0/bone_pile"
+    "down": "westerosblocks:block/piled_bones/0",
+    "up": "westerosblocks:block/piled_bones/0",
+    "north": "westerosblocks:block/piled_bones/0",
+    "south": "westerosblocks:block/piled_bones/0",
+    "west": "westerosblocks:block/piled_bones/0",
+    "east": "westerosblocks:block/piled_bones/0",
+    "particle": "westerosblocks:block/piled_bones/0"
   }
 }

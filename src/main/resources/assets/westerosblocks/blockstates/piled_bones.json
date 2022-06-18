@@ -1,7 +1,54 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/piled_bones/base_v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v8"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v9"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v10"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v11"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v12"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v13"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v14"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v15"
+      },
+      {
+        "model": "westerosblocks:block/generated/piled_bones/base_v16"
+      }
+    ]
   }
 }

@@ -400,9 +400,9 @@
             "creativeTab": "WesterosDeco",
             "label": "Marble Pillar",
             "textures": [
-                "log_block_0/column_block_marble_top_bottom",
-                "log_block_0/column_block_marble_top_bottom",
-                "log_block_0/column_block_marble_side"
+                "marble_pillar/column_block_marble_top_bottom",
+                "marble_pillar/column_block_marble_top_bottom",
+                "marble_pillar/column_block_marble_side"
             ],
             "legacyBlockID": "log_block_1:2"
         },
@@ -420,8 +420,8 @@
             "creativeTab": "WesterosDeco",
             "label": "Marble Pillar Vertical CTM",
             "textures": [
-                "log_block_0/column_block_marble_top_bottom",
-                "log_block_0/column_block_marble_top_bottom",
+                "marble_pillar/column_block_marble_top_bottom",
+                "marble_pillar/column_block_marble_top_bottom",
                 "marble_pillar_vertical_ctm/base",
                 "marble_pillar_vertical_ctm/down",
                 "marble_pillar_vertical_ctm/up",
@@ -42131,8 +42131,8 @@
             "creativeTab": "WesterosDeco",
             "label": "Stacked Bones",
             "textures": [
-                "bone_block_0/bone_stacked_front",
-                "bone_block_0/bone_stacked_side"
+                "stacked_bones/bone_stacked_front",
+                "stacked_bones/bone_stacked_side"
             ],
             "legacyBlockID": "log_block_8:0"
         },
@@ -42145,8 +42145,23 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Piled Bones",
-            "textures": [
-                "bone_block_0/bone_pile"
+            "randomTextures": [
+              { "textures": [ "piled_bones/0" ] },
+              { "textures": [ "piled_bones/1" ] },
+              { "textures": [ "piled_bones/2" ] },
+              { "textures": [ "piled_bones/3" ] },
+              { "textures": [ "piled_bones/4" ] },
+              { "textures": [ "piled_bones/5" ] },
+              { "textures": [ "piled_bones/6" ] },
+              { "textures": [ "piled_bones/7" ] },
+              { "textures": [ "piled_bones/8" ] },
+              { "textures": [ "piled_bones/9" ] },
+              { "textures": [ "piled_bones/10" ] },
+              { "textures": [ "piled_bones/11" ] },
+              { "textures": [ "piled_bones/12" ] },
+              { "textures": [ "piled_bones/13" ] },
+              { "textures": [ "piled_bones/14" ] },
+              { "textures": [ "piled_bones/15" ] }
             ],
             "legacyBlockID": "stone_block_12:0"
         },
@@ -42238,9 +42253,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Stacked Bones Slab",
             "textures": [
-                "bone_block_0/bone_stacked_side",
-                "bone_block_0/bone_stacked_side",
-                "bone_block_0/bone_stacked_front"
+                "stacked_bones/bone_stacked_side",
+                "stacked_bones/bone_stacked_side",
+                "stacked_bones/bone_stacked_front"
             ],
             "legacyBlockID": "stone_slab_block_8:0"
         },
@@ -42260,7 +42275,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Piled Bones Slab",
             "textures": [
-                "bone_block_0/bone_pile"
+                "piled_bones/0"
             ],
             "legacyBlockID": "stone_slab_block_8:1"
         },
@@ -42280,9 +42295,9 @@
             "creativeTab": "WesterosBlocks",
             "label": "Stacked Bones Wall",
             "textures": [
-                "bone_block_0/bone_stacked_side",
-                "bone_block_0/bone_stacked_side",
-                "bone_block_0/bone_stacked_front"
+                "stacked_bones/bone_stacked_side",
+                "stacked_bones/bone_stacked_side",
+                "stacked_bones/bone_stacked_front"
             ],
             "legacyBlockID": "stone_wall_block_6:0"
         },
@@ -42302,7 +42317,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Piled Bones Wall",
             "textures": [
-                "bone_block_0/bone_pile"
+                "piled_bones/0"
             ],
             "legacyBlockID": "stone_wall_block_6:1"
         },
