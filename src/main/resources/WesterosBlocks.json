@@ -6472,10 +6472,10 @@
             "creativeTab": "WesterosBlocks",
             "label": "Scorched Earth",
             "randomTextures": [
-              { "textures": [ "ground_block_0/dirt", "scorched_earth/top1", "scorched_earth/side1" ] },
-              { "textures": [ "ground_block_0/dirt", "scorched_earth/top2", "scorched_earth/side1" ] },
-              { "textures": [ "ground_block_0/dirt", "scorched_earth/top3", "scorched_earth/side1" ] },
-              { "textures": [ "ground_block_0/dirt", "scorched_earth/top4", "scorched_earth/side1" ] }
+              { "textures": [ "scorched_earth/top1" ] },
+              { "textures": [ "scorched_earth/top2"] },
+              { "textures": [ "scorched_earth/top3" ] },
+              { "textures": [ "scorched_earth/top4" ] }
             ],
             "legacyBlockID": "solid_blocks_0:1"
         },

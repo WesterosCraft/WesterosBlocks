@@ -1,12 +1,6 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "down": "westerosblocks:block/ground_block_0/dirt",
-    "up": "westerosblocks:block/scorched_earth/top2",
-    "north": "westerosblocks:block/scorched_earth/side1",
-    "south": "westerosblocks:block/scorched_earth/side1",
-    "west": "westerosblocks:block/scorched_earth/side1",
-    "east": "westerosblocks:block/scorched_earth/side1",
-    "particle": "westerosblocks:block/scorched_earth/side1"
+    "all": "westerosblocks:block/scorched_earth/top2"
   }
 }
