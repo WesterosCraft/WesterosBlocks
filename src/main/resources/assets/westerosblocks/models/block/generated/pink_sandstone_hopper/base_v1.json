@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "txt5": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "txt2": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "txt3": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "txt0": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "txt1": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "particle": "westerosblocks:block/stone_block_4/sandstone_pink"
+    "txt4": "westerosblocks:block/pink_sandstone/side",
+    "txt5": "westerosblocks:block/pink_sandstone/side",
+    "txt2": "westerosblocks:block/pink_sandstone/side",
+    "txt3": "westerosblocks:block/pink_sandstone/side",
+    "txt0": "westerosblocks:block/pink_sandstone/side",
+    "txt1": "westerosblocks:block/pink_sandstone/side",
+    "particle": "westerosblocks:block/pink_sandstone/side"
   },
   "elements": [
     {

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/pink_sandstone/side3"
+    "all": "westerosblocks:block/oxidized_iron_block/side3"
   }
 }

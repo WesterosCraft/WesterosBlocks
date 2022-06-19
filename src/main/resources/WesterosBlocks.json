@@ -167,8 +167,10 @@
             "creativeTab": "WesterosBlocks",
             "lightValue": 0,
             "label": "Oxidized Iron Block",
-            "textures": [
-                "metal_block_0/metal_block_ironoxidized"
+            "randomTextures": [
+              { "textures":  ["oxidized_iron_block/side1"]},
+              { "textures":  ["oxidized_iron_block/side2"]},
+              { "textures":  ["oxidized_iron_block/side3"]}
             ],
             "legacyBlockID": "metal_block_0:0"
         },
@@ -21000,11 +21002,8 @@
             "resistance": 10,
             "creativeTab": "WesterosBlocks",
             "label": "Pink Sandstone",
-            "randomTextures": [
-               { "textures": [  "pink_sandstone/side0" ] },
-               { "textures": [  "pink_sandstone/side1" ] },
-               { "textures": [  "pink_sandstone/side2" ] },
-               { "textures": [  "pink_sandstone/side3" ] }
+            "textures": [
+              "pink_sandstone/side"
             ],
             "legacyBlockID": "stone_block_5:9"
         },
@@ -24866,8 +24865,9 @@
                 "zMax": 0.7
             },
             "label": "Dock Leaf",
-            "textures": [
-                "web_block_1/dock_leaf"
+            "randomTextures": [
+              { "textures": [ "dock_leaf/side1" ] },
+              { "textures": [ "dock_leaf/side2" ] }
             ],
             "legacyBlockID": "forest_block_0:8"
         },
@@ -25603,7 +25603,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Pink Sandstone Fence",
             "textures": [
-                "stone_block_4/sandstone_pink"
+                "pink_sandstone/side"
             ],
             "legacyBlockID": "fence_block_3:14"
         },
@@ -29764,7 +29764,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Pink Sandstone Wall",
             "textures": [
-                "stone_block_4/sandstone_pink"
+                "pink_sandstone/side"
             ],
             "legacyBlockID": "stone_wall_block_3:10"
         },
@@ -30873,7 +30873,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Pink Sandstone Slab",
             "textures": [
-                "stone_block_4/sandstone_pink"
+                "pink_sandstone/side"
             ],
             "legacyBlockID": "stone_slab_block_5:5"
         },
@@ -41339,7 +41339,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Pink Sandstone Hopper",
             "textures": [
-                "stone_block_4/sandstone_pink"
+                "pink_sandstone/side"
             ],
             "cuboids": [
                 {

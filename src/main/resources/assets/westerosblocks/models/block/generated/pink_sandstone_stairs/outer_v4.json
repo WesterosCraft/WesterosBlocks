@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/pink_sandstone/side3",
-    "top": "westerosblocks:block/pink_sandstone/side3",
-    "side": "westerosblocks:block/pink_sandstone/side3",
-    "particle": "westerosblocks:block/pink_sandstone/side3"
-  }
-}
