@@ -2,7 +2,7 @@
   "ctm": {
     "ctm_version": 1,
     "type": "ctm_vertical",
-    "layer": "SOLID",
+    "layer": "CUTOUT",
     "textures": [],
     "extra": {
     }

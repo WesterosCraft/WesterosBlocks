@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_side",
   "textures": {
-    "bottom": "westerosblocks:block/bone_block_0/bone_pile",
-    "top": "westerosblocks:block/bone_block_0/bone_pile",
-    "side": "westerosblocks:block/bone_block_0/bone_pile"
+    "bottom": "westerosblocks:block/piled_bones/0",
+    "top": "westerosblocks:block/piled_bones/0",
+    "side": "westerosblocks:block/piled_bones/0"
   }
 }

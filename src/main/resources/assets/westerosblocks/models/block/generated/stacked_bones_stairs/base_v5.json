@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/piled_bones/4",
+    "top": "westerosblocks:block/piled_bones/4",
+    "side": "westerosblocks:block/piled_bones/4",
+    "particle": "westerosblocks:block/piled_bones/4"
+  }
+}
