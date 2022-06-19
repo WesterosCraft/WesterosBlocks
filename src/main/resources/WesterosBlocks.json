@@ -6971,7 +6971,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Orange Slate Slab",
             "textures": [
-                "stone_slate_0/slate_orange"
+                "orange_slate/side"
             ],
             "legacyBlockID": "stone_slab_block_0:7"
         },        
@@ -25617,7 +25617,7 @@
             "creativeTab": "WesterosDeco",
             "label": "Orange Slate Fence",
             "textures": [
-                "stone_slate_0/slate_orange"
+                "orange_slate/side"
             ],
             "legacyBlockID": "fence_block_3:15"
         },
@@ -27490,7 +27490,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Orange Slate",
             "textures": [
-                "stone_slate_0/slate_orange"
+                "orange_slate/side"
             ],
             "legacyBlockID": "stone_block_9:11"
         },
@@ -29844,7 +29844,7 @@
             "creativeTab": "WesterosBlocks",
             "label": "Orange Slate Wall",
             "textures": [
-                "stone_slate_0/slate_orange"
+                "orange_slate/side"
             ],
             "legacyBlockID": "stone_wall_block_3:14"
         },
