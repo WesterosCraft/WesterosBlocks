@@ -9100,10 +9100,28 @@
       "resistance": 5,
       "creativeTab": "WesterosBlocks",
       "label": "Snowy Thatch Dark Fur",
-      "textures": [
-        "fur_block_0/thatch_snowy_dark_bottom",
-        "fur_block_0/thatch_snowy_dark_top",
-        "fur_block_0/thatch_snowy_dark_side"
+      "randomTextures": [
+        {
+          "textures": [
+            "snowy_thatch_dark_fur/bottom",
+            "snowy_thatch_dark_fur/top",
+            "snowy_thatch_dark_fur/side1"
+          ]
+        },
+        {
+          "textures": [
+            "snowy_thatch_dark_fur/bottom",
+            "snowy_thatch_dark_fur/top",
+            "snowy_thatch_dark_fur/side2"
+          ]
+        },
+        {
+          "textures": [
+            "snowy_thatch_dark_fur/bottom",
+            "snowy_thatch_dark_fur/top",
+            "snowy_thatch_dark_fur/side3"
+          ]
+        }
       ],
       "legacyBlockID": "wood_colours:15"
     },
@@ -53818,7 +53836,7 @@
         }
       ],
       "creativeTab": "WesterosDeco",
-      "label": "Snowy Thatch Light Fur",
+      "label": "Snowy Thatch Light Fur Directional",
       "textures": [
         "fur_block_0/thatch_snowy_light_bottom",
         "fur_block_0/thatch_snowy_light_top",
@@ -53851,7 +53869,7 @@
         }
       ],
       "creativeTab": "WesterosDeco",
-      "label": "Snowy Thatch Dark Fur",
+      "label": "Snowy Thatch Dark Fur Directional",
       "textures": [
         "fur_block_0/thatch_snowy_dark_bottom",
         "fur_block_0/thatch_snowy_dark_top",
