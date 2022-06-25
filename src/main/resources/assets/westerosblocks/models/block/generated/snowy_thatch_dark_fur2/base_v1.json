@@ -18,86 +18,80 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/fur_block_0/thatch_snowy_dark_side",
-    "txt5": "westerosblocks:block/fur_block_0/thatch_snowy_dark_bottom",
-    "txt2": "westerosblocks:block/fur_block_0/thatch_snowy_dark_side",
-    "txt3": "westerosblocks:block/fur_block_0/thatch_snowy_dark_side",
-    "txt0": "westerosblocks:block/fur_block_0/thatch_snowy_dark_bottom",
-    "txt1": "westerosblocks:block/fur_block_0/thatch_snowy_dark_top",
-    "particle": "westerosblocks:block/fur_block_0/thatch_snowy_dark_bottom"
+    "txt4": "westerosblocks:block/snowy_thatch_dark_fur/side1",
+    "txt5": "westerosblocks:block/snowy_thatch_dark_fur/side1",
+    "txt2": "westerosblocks:block/snowy_thatch_dark_fur/side1",
+    "txt3": "westerosblocks:block/snowy_thatch_dark_fur/side1",
+    "txt0": "westerosblocks:block/snowy_thatch_dark_fur/bottom",
+    "txt1": "westerosblocks:block/snowy_thatch_dark_fur/top",
+    "particle": "westerosblocks:block/snowy_thatch_dark_fur/bottom"
   },
   "elements": [
     {
       "from": [
-        0.0,
-        0.0,
-        0.0
+        0.16,
+        0.16,
+        0.16
       ],
       "to": [
-        16.0,
-        16.0,
-        16.0
+        15.84,
+        15.84,
+        15.84
       ],
       "faces": {
         "east": {
           "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
+            0.15999985,
+            0.15999985,
+            15.84,
+            15.84
           ],
-          "texture": "#txt5",
-          "cullface": "east"
+          "texture": "#txt0"
         },
         "south": {
           "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
+            0.16,
+            0.15999985,
+            15.84,
+            15.84
           ],
-          "texture": "#txt3",
-          "cullface": "south"
+          "texture": "#txt1"
         },
         "north": {
           "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
+            0.15999985,
+            0.15999985,
+            15.84,
+            15.84
           ],
-          "texture": "#txt2",
-          "cullface": "north"
+          "texture": "#txt1"
         },
         "west": {
           "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
+            0.16,
+            0.15999985,
+            15.84,
+            15.84
           ],
-          "texture": "#txt4",
-          "cullface": "west"
+          "texture": "#txt1"
         },
         "up": {
           "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
+            0.16,
+            0.16,
+            15.84,
+            15.84
           ],
-          "texture": "#txt1",
-          "cullface": "up"
+          "texture": "#txt1"
         },
         "down": {
           "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
+            0.16,
+            0.15999985,
+            15.84,
+            15.84
           ],
-          "texture": "#txt0",
-          "cullface": "down"
+          "texture": "#txt0"
         }
       }
     }

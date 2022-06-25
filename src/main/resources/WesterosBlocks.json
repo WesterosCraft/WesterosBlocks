@@ -44609,21 +44609,21 @@
       "creativeTab": "WesterosDeco",
       "label": "Snowy Thatch Light Fur Directional",
       "textures": [
-        "fur_block_0/thatch_snowy_light_bottom",
-        "fur_block_0/thatch_snowy_light_top",
-        "fur_block_0/thatch_snowy_light_side",
-        "fur_block_0/thatch_snowy_light_side",
-        "fur_block_0/thatch_snowy_light_side",
-        "fur_block_0/thatch_snowy_light_bottom"
+        "snowy_thatch_light_fur/bottom",
+        "snowy_thatch_light_fur/top",
+        "snowy_thatch_light_fur/side1"
       ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      },
+      "cuboids": [
+        {
+          "xMin": 0.01,
+          "xMax": 0.99,
+          "yMin": 0.01,
+          "yMax": 0.99,
+          "zMin": 0.01,
+          "zMax": 0.99,
+          "sideTextures": [0, 1, 1, 1, 1, 0]
+        }
+      ],
       "legacyBlockID": "cuboid_block_11:0"
     },
     {
@@ -44642,21 +44642,21 @@
       "creativeTab": "WesterosDeco",
       "label": "Snowy Thatch Dark Fur Directional",
       "textures": [
-        "fur_block_0/thatch_snowy_dark_bottom",
-        "fur_block_0/thatch_snowy_dark_top",
-        "fur_block_0/thatch_snowy_dark_side",
-        "fur_block_0/thatch_snowy_dark_side",
-        "fur_block_0/thatch_snowy_dark_side",
-        "fur_block_0/thatch_snowy_dark_bottom"
+        "snowy_thatch_dark_fur/bottom",
+        "snowy_thatch_dark_fur/top",
+        "snowy_thatch_dark_fur/side1"
       ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 1,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      },
+      "cuboids": [
+        {
+          "xMin": 0.01,
+          "xMax": 0.99,
+          "yMin": 0.01,
+          "yMax": 0.99,
+          "zMin": 0.01,
+          "zMax": 0.99,
+          "sideTextures": [0, 1, 1, 1, 1, 0]
+        }
+      ],
       "legacyBlockID": "cuboid_block_11:1"
     },
     {
