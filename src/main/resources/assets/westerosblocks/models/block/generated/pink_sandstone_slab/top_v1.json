@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "up": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "north": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "south": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "west": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "east": "westerosblocks:block/stone_block_4/sandstone_pink",
-    "particle": "westerosblocks:block/stone_block_4/sandstone_pink"
+    "down": "westerosblocks:block/pink_sandstone/side",
+    "up": "westerosblocks:block/pink_sandstone/side",
+    "north": "westerosblocks:block/pink_sandstone/side",
+    "south": "westerosblocks:block/pink_sandstone/side",
+    "west": "westerosblocks:block/pink_sandstone/side",
+    "east": "westerosblocks:block/pink_sandstone/side",
+    "particle": "westerosblocks:block/pink_sandstone/side"
   }
 }
