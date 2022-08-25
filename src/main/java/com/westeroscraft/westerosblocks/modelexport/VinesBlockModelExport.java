@@ -10,7 +10,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.modelexport.FireBlockModelExport.TextureLayer0;
 import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class VinesBlockModelExport extends ModelExport {
     // Template objects for Gson export of block models

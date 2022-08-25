@@ -1,25 +1,24 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import com.westeroscraft.westerosblocks.*;
-import net.minecraft.block.*;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.StateContainer;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.world.IBlockReader;
-
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TransparencyMode;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.BlockGetter;
 
 import javax.annotation.Nullable;
 
-public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
+public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	// See if we have a cond property
         	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
         	if (prop != null) {
@@ -34,7 +33,7 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
     protected static WesterosBlockDef.CondProperty tempCOND;
     protected WesterosBlockDef.CondProperty COND;
     
-    protected WCSolidBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         collisionbox = def.makeCollisionBoxShape();
@@ -44,19 +43,19 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
     }
     
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
+    public VoxelShape getShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
         return collisionbox;
     }
     @Override
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
         return collisionbox;
     }
     @Override
-    public VoxelShape getBlockSupportShape(BlockState state, IBlockReader reader, BlockPos pos) {
+    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
         return collisionbox;
     }
     @Override
-    public VoxelShape getVisualShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
+    public VoxelShape getVisualShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
         return collisionbox;
     }
 
@@ -66,20 +65,20 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
     }
 
     @Override
-    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
-    	super.createBlockStateDefinition(stateContainer);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
+    	super.createBlockStateDefinition(StateDefinition);
     	if (tempCOND != null) {
     		COND = tempCOND;
     		tempCOND = null;
     	}
     	if (COND != null) {
-	       stateContainer.add(COND);
+	       StateDefinition.add(COND);
     	}
     }
 
     @Override
     @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
     	if ((COND != null) && (bs != null)) {
     		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
@@ -87,11 +86,6 @@ public class WCSolidBlock extends Block implements WesterosBlockDynmapSupport, W
     	return bs;
     }
 
-    @Override
-    public void registerDynmapRenderData(ModTextureDefinition mtd) {
-        def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
-    }
     private static String[] TAGS = { };
     @Override
     public String[] getBlockTags() {

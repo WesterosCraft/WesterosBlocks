@@ -3,8 +3,8 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.Arrays;
 import java.util.List;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -16,7 +16,7 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	return def.registerRenderType(def.registerBlock(new WCBeaconBlock(props, def)), false, false);
         }
     }
@@ -43,7 +43,7 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
     };
     private static List<WesterosBlockDef.Cuboid> cuboidlist = Arrays.asList(cuboids);
     
-    protected WCBeaconBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCBeaconBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props, def);
         def.cuboids = cuboidlist;
         SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList(def.getCuboidList());

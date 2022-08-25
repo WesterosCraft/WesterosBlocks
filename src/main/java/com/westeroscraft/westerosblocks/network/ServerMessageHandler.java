@@ -1,10 +1,8 @@
 package com.westeroscraft.westerosblocks.network;
 
-import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.fml.LogicalSide;
-import net.minecraftforge.fml.network.NetworkEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.minecraftforge.network.NetworkEvent;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
@@ -27,7 +25,7 @@ public class ServerMessageHandler {
 			WesterosBlocks.log.warn("PTimeMessage received on wrong side:" + ctx.getDirection().getReceptionSide());
 			return;
 		}
-	    final ServerPlayerEntity sendingPlayer = ctx.getSender();
+	    final ServerPlayer sendingPlayer = ctx.getSender();
 	    if (sendingPlayer == null) {
 	    	WesterosBlocks.log.warn("EntityPlayerMP was null when AirstrikeMessageToServer was received");
 	    }
@@ -38,7 +36,7 @@ public class ServerMessageHandler {
 	// This message is called from the Client thread.
 	// It spawns a number of Particle particles at the target location within a
 	// short range around the target location
-	private static void processMessage(ServerPlayerEntity sendingPlayer, PTimeMessage message) {
+	private static void processMessage(ServerPlayer sendingPlayer, PTimeMessage message) {
 		WesterosBlocks.log.info("Got PTimeMessage");
 		return;
 	}

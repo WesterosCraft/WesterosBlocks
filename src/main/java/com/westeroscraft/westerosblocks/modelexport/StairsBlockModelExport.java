@@ -12,7 +12,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class StairsBlockModelExport extends ModelExport {
     public static class OurVariant extends Variant {

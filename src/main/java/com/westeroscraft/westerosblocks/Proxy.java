@@ -1,8 +1,5 @@
 package com.westeroscraft.westerosblocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-
 /**
  * Server side proxy
  */

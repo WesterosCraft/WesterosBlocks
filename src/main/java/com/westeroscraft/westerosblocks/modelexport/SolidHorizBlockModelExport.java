@@ -11,7 +11,7 @@ import java.util.List;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class SolidHorizBlockModelExport extends ModelExport {
     // Template objects for Gson export of block state

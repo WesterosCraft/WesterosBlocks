@@ -1,26 +1,16 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import org.dynmap.modsupport.ModModelDefinition;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.PatchBlockModel;
-import org.dynmap.renderer.RenderPatchFactory.SideVisible;
-
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.TorchBlock;
-import net.minecraft.block.WallTorchBlock;
-import net.minecraft.particles.ParticleTypes;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.world.level.block.WallTorchBlock;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLifecycle {
     private WesterosBlockDef def;
     
-    protected WCWallTorchBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCWallTorchBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props, ParticleTypes.FLAME);
         this.def = def;
     }

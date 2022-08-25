@@ -7,35 +7,29 @@ import com.google.common.collect.ImmutableMap.Builder;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.block.WallBlock;
-import org.dynmap.modsupport.ModModelDefinition;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.WallFenceBlockModel;
+import net.minecraft.world.level.block.WallBlock;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.WallHeight;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.StateContainer;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.WallSide;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.core.BlockPos;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
-public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
+public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	// See if we have a cond property
         	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
         	if (prop != null) {
@@ -57,7 +51,7 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, We
     	SHORT	// 13/16 high wall
     };
     public final WallSize wallSize;	// "normal", or "short"
-    protected WCWallBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCWallBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         String height = def.getTypeValue("size", "normal");
@@ -68,7 +62,7 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, We
         	wallSize = WallSize.NORMAL;
         }
         if (COND != null) {
-            this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(true)).setValue(NORTH_WALL, WallHeight.NONE).setValue(EAST_WALL, WallHeight.NONE).setValue(SOUTH_WALL, WallHeight.NONE).setValue(WEST_WALL, WallHeight.NONE).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(COND, COND.defValue));
+            this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(true)).setValue(NORTH_WALL, WallSide.NONE).setValue(EAST_WALL, WallSide.NONE).setValue(SOUTH_WALL, WallSide.NONE).setValue(WEST_WALL, WallSide.NONE).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(COND, COND.defValue));
 
             // Now, need to fix the shape by index mappings
             Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
@@ -105,46 +99,37 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle, We
     }
 
     @Override
-    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
     	if (tempCOND != null) {
     		COND = tempCOND;
     		tempCOND = null;
     	}
     	if (COND != null) {
-    		stateContainer.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED, COND); 	       
+    		StateDefinition.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED, COND); 	       
      	}
     	else {
-    		stateContainer.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED); 	       
+    		StateDefinition.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED); 	       
     	}
     }
 
     @Override
-    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
+    public VoxelShape getShape(BlockState p_220053_1_, BlockGetter p_220053_2_, BlockPos p_220053_3_, CollisionContext p_220053_4_) {
         return this.ourShapeByIndex.get(p_220053_1_);
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState p_220071_1_, IBlockReader p_220071_2_, BlockPos p_220071_3_, ISelectionContext p_220071_4_) {
+    public VoxelShape getCollisionShape(BlockState p_220071_1_, BlockGetter p_220071_2_, BlockPos p_220071_3_, CollisionContext p_220071_4_) {
         return this.ourCollisionShapeByIndex.get(p_220071_1_);
     }
 
     @Override
     @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
     	if ((bs != null) && (COND != null)) {
     		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
     	}
     	return bs;
-    }
-    @Override
-    public void registerDynmapRenderData(ModTextureDefinition mtd) {
-        ModModelDefinition md = mtd.getModelDefinition();
-        String blkname = def.getBlockName();
-        def.defaultRegisterTextures(mtd);
-        def.registerPatchTextureBlock(mtd, 3);
-        // Get plant model, and set for all defined meta
-        WallFenceBlockModel pbm = md.addWallFenceModel(blkname, WallFenceBlockModel.FenceType.WALL);
     }
     private static String[] TAGS = { "walls" };
     @Override

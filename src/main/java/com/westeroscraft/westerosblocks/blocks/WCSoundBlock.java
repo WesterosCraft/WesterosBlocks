@@ -1,21 +1,21 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundSource;
 
 import java.util.Random;
 
@@ -27,7 +27,7 @@ public class WCSoundBlock extends WCSolidBlock {
 	public static class Factory extends WesterosBlockFactory {
 		@Override
 		public Block buildBlockClass(WesterosBlockDef def) {
-			AbstractBlock.Properties props = def.makeProperties().randomTicks();
+			BlockBehaviour.Properties props = def.makeProperties().randomTicks();
 			if ((def.soundList == null) || (def.soundList.size() == 0)) {
 	            WesterosBlocks.log.error(String.format("Non-empty soundList rrquired for ''%s'", def.blockName));
 	            return null;
@@ -48,7 +48,7 @@ public class WCSoundBlock extends WCSolidBlock {
 	public int startTime;
 	public int endTime;
 
-	protected WCSoundBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+	protected WCSoundBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
 		super(props, def);
 		String type = def.getType();
 		if (type != null) {
@@ -79,12 +79,12 @@ public class WCSoundBlock extends WCSolidBlock {
 	}
 
 	@Override
-	public void neighborChanged(BlockState state, World world, BlockPos pos, Block block, BlockPos pos2, boolean chgflag) {
+	public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos pos2, boolean chgflag) {
 		boolean flag = world.hasNeighborSignal(pos);
 		if (flag != state.getValue(POWERED)) {
 			if (flag) {
 				this.playNote(world, pos);
-				world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
+				world.scheduleTick(pos, this, getNextTriggerTick(world.random));
 			}
 			world.setBlock(pos, state.setValue(POWERED, Boolean.valueOf(flag)), 3);
 		}
@@ -92,15 +92,15 @@ public class WCSoundBlock extends WCSolidBlock {
 	}
 
 	// Trigger block event to cause play of sound
-	private void playNote(World world, BlockPos pos) {
+	private void playNote(Level world, BlockPos pos) {
 		world.blockEvent(pos, this, 0, 0);
 	}
 
 	@Override
-	public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand,
-			BlockRayTraceResult ctx) {
+	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
+		BlockHitResult ctx) {
 		if (world.isClientSide) {
-			return ActionResultType.SUCCESS;
+			return InteractionResult.SUCCESS;
 		} else { // Rotate state on server side, and play new note
 			if (INDEX != null) {
 				int index = state.getValue(INDEX);
@@ -110,13 +110,13 @@ public class WCSoundBlock extends WCSolidBlock {
 				//WesterosBlocks.log.info("WCSoundBlock.use(" + pos + ") - set to INDEX=" + index);
 			}
 			this.playNote(world, pos);
-			world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
-			return ActionResultType.CONSUME;
+			world.scheduleTick(pos, this, getNextTriggerTick(world.random));
+			return InteractionResult.CONSUME;
 		}
 	}
 
 	@Override
-	public boolean triggerEvent(BlockState state, World world, BlockPos ppos, int eventID, int eventArg) {
+	public boolean triggerEvent(BlockState state, Level world, BlockPos ppos, int eventID, int eventArg) {
 		//WesterosBlocks.log.info("WCSoundBlock.trigger(" + ppos + ")");
 		int i = 0;
 		int sndindex = (INDEX != null) ? state.getValue(INDEX) : 0;
@@ -124,7 +124,7 @@ public class WCSoundBlock extends WCSolidBlock {
 		SoundEvent event = WesterosBlocks.getRegisteredSound(soundid);
 		if (event != null) {
 			float f = (float) Math.pow(2.0D, (double) (i - 12) / 12.0D);
-			world.playSound((PlayerEntity) null, ppos, event, SoundCategory.RECORDS, 3.0F, f);
+			world.playSound((Player) null, ppos, event, SoundSource.RECORDS, 3.0F, f);
 			//WesterosBlocks.log.info("WCSoundBlock.trigger(" + ppos + ") - playing " + soundid);
 		}
 		return true;
@@ -135,11 +135,11 @@ public class WCSoundBlock extends WCSolidBlock {
 		return playback_period + rnd.nextInt(random_playback_addition + 1);
 	}
 	@Override
-   public void onPlace(BlockState state, World world, BlockPos pos, BlockState state2, boolean flg) {
+   public void onPlace(BlockState state, Level world, BlockPos pos, BlockState state2, boolean flg) {
       super.onPlace(state, world, pos, state2, flg);
       // Add our tick schedule, if needed
       if (playback_period > 0) {
-          world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
+          world.scheduleTick(pos, this, getNextTriggerTick(world.random));
       }
    }
 
@@ -149,20 +149,20 @@ public class WCSoundBlock extends WCSolidBlock {
    }
 
    @Override
-   public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+   public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
 	   if (playback_period >= 0) {
 			//WesterosBlocks.log.info("WCSoundBlock.randomTick(" + pos + ")");
 		   // No tick?  Add it (migration)
 		   if (!world.getBlockTicks().hasScheduledTick(pos, this)) {
 				//WesterosBlocks.log.info("WCSoundBlock.randomTick(" + pos + ") - schuled");
 				// Compute time for next trigger
-				world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
+				world.scheduleTick(pos, this, getNextTriggerTick(world.random));
 		   }
 	   }
    }
 
 	@Override
-	public void tick(BlockState state, ServerWorld world, BlockPos pos, Random rnd) {
+	public void tick(BlockState state, ServerLevel world, BlockPos pos, Random rnd) {
 		//WesterosBlocks.log.info("WCSoundBlock.tick(" + pos + ")");
 		if (playback_period <= 0) { // Not periodic, so quit
 			//WesterosBlocks.log.info("WCSoundBlock.tick(" + pos + ") - not periodic");
@@ -190,10 +190,10 @@ public class WCSoundBlock extends WCSolidBlock {
 			playNote(world, pos);
 		}
 		// Compute time for next trigger
-		world.getBlockTicks().scheduleTick(pos, this, getNextTriggerTick(world.random));
+		world.scheduleTick(pos, this, getNextTriggerTick(world.random));
 	}
 
-	protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> container) {
 		if (protoINDEX != null) {
 			INDEX = protoINDEX;
 			protoINDEX = null;

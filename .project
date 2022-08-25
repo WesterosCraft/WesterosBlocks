@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>WesterosBlocks</name>
+	<name>WesterosBlocks(Forge v1.18.2)</name>
 	<comment></comment>
 	<projects/>
 	<natures>
-		<nature>org.springsource.ide.eclipse.gradle.core.nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
 	</natures>
@@ -19,15 +18,5 @@
 		</buildCommand>
 	</buildSpec>
 	<linkedResources/>
-	<filteredResources>
-		<filter>
-			<id>1</id>
-			<type>30</type>
-			<name/>
-			<matcher>
-				<id>org.eclipse.core.resources.regexFilterMatcher</id>
-				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
-			</matcher>
-		</filter>
-	</filteredResources>
+	<filteredResources/>
 </projectDescription>

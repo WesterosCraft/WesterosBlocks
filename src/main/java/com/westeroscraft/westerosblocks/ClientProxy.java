@@ -2,21 +2,15 @@ package com.westeroscraft.westerosblocks;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
-import java.util.function.Predicate;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.resources.IReloadableResourceManager;
-import net.minecraft.resources.IResourceManager;
-import net.minecraft.resources.IFutureReloadListener;
-import net.minecraft.profiler.IProfiler;
-import net.minecraftforge.event.AddReloadListenerEvent;
-import net.minecraftforge.fml.ModWorkManager;
-import net.minecraftforge.resource.IResourceType;
-import net.minecraftforge.resource.ISelectiveResourceReloadListener;
-import net.minecraftforge.resource.VanillaResourceType;
+import net.minecraft.server.packs.resources.PreparableReloadListener;
+import net.minecraft.server.packs.resources.ReloadableResourceManager;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.util.profiling.ProfilerFiller;
 
-public class ClientProxy extends Proxy implements ISelectiveResourceReloadListener {
+public class ClientProxy extends Proxy implements PreparableReloadListener {
 	public ClientProxy() {
 	}
 	@Override	
@@ -40,17 +34,14 @@ public class ClientProxy extends Proxy implements ISelectiveResourceReloadListen
     		   }
     	   }
        }
-	   ((IReloadableResourceManager) Minecraft.getInstance().getResourceManager()).registerReloadListener(this);
+	   ((ReloadableResourceManager) Minecraft.getInstance().getResourceManager()).registerReloadListener(this);
 	}	
 	@Override
-	public void onResourceManagerReload(IResourceManager resourceManager, Predicate<IResourceType> resourcePredicate) {
-    	WesterosBlocks.log.info("Handling resource reload");
+	public CompletableFuture<Void> reload(PreparationBarrier p_10638_, ResourceManager p_10639_,
+		ProfilerFiller p_10640_, ProfilerFiller p_10641_, Executor p_10642_, Executor p_10643_) {
+		WesterosBlocks.log.info("Handling resource reload");
         WesterosBlockDef.reloadColorHandler();
     	WesterosBlocks.log.info("Handling resource reload completed");
+    	return null;
 	}
-    @Override
-	public IResourceType getResourceType()
-    {
-        return VanillaResourceType.TEXTURES;
-    }
 }

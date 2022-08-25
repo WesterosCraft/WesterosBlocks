@@ -12,7 +12,7 @@ import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class CuboidBlockModelExport extends ModelExport {
     protected WCCuboidBlock blk;

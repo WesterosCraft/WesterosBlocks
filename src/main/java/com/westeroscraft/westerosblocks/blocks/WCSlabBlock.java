@@ -4,25 +4,20 @@ import com.westeroscraft.westerosblocks.*;
 
 import javax.annotation.Nullable;
 
-import org.dynmap.modsupport.BoxBlockModel;
-import org.dynmap.modsupport.ModModelDefinition;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TransparencyMode;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.SlabType;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.SlabType;
-
-public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
+public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	// See if we have a cond property
         	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
         	if (prop != null) {
@@ -35,7 +30,7 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport
     private static WesterosBlockDef.CondProperty tempCOND;
     private WesterosBlockDef.CondProperty COND;
 
-    protected WCSlabBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCSlabBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         if (COND != null) {
@@ -48,20 +43,20 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport
     }
 
     @Override
-    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
-    	super.createBlockStateDefinition(stateContainer);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
+    	super.createBlockStateDefinition(StateDefinition);
     	if (tempCOND != null) {
     		COND = tempCOND;
     		tempCOND = null;
     	}
     	if (COND != null) {
-	       stateContainer.add(COND);
+	       StateDefinition.add(COND);
     	}
     }
 
     @Override
     @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
     	if ((bs != null) && (COND != null)) {
     		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
@@ -69,22 +64,6 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockDynmapSupport
     	return bs;
     }
 
-    @Override
-    public void registerDynmapRenderData(ModTextureDefinition mtd) {
-        ModModelDefinition md = mtd.getModelDefinition();
-        def.defaultRegisterTextures(mtd);
-        
-        /* Add models for half slabs */
-        String blkname = def.getBlockName();
-        def.defaultRegisterTextureBlock(mtd, TransparencyMode.SEMITRANSPARENT, 0, 2);
-        def.defaultRegisterTextureBlock(mtd, TransparencyMode.OPAQUE, 2, 1);
-        BoxBlockModel bottom = md.addBoxModel(blkname);
-        bottom.setYRange(0.0, 0.5);
-        BoxBlockModel top = md.addBoxModel(blkname);
-        top.setYRange(0.5, 1.0);
-        bottom.setMetaValue(0);
-        top.setMetaValue(1);
-    }
     private static String[] TAGS = { "slabs" };
     @Override
     public String[] getBlockTags() {

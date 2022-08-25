@@ -5,16 +5,16 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.StateContainer;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.core.Direction;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -26,7 +26,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	return def.registerRenderType(def.registerBlock(new WCCuboidNSEWUDBlock(props, def)), false, false);
         }
     }
@@ -36,7 +36,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
     protected List<WesterosBlockDef.Cuboid> cuboid_by_facing[] = new List[6];
     
     @SuppressWarnings("unchecked")
-    protected WCCuboidNSEWUDBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCCuboidNSEWUDBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props, def);
         
         cuboid_by_facing[0] = def.getCuboidList();	// East facing
@@ -59,8 +59,8 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.EAST));
     }
     @Override
-    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
-       stateContainer.add(FACING, WATERLOGGED);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
+       StateDefinition.add(FACING, WATERLOGGED);
     }
     @Override
     public List<WesterosBlockDef.Cuboid> getModelCuboids() {
@@ -88,7 +88,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
 
     @Override
     @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
        Direction[] adirection = ctx.getNearestLookingDirections();
        Direction dir = Direction.EAST;	// Default

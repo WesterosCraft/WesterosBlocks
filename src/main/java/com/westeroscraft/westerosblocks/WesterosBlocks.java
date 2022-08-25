@@ -1,14 +1,15 @@
 package com.westeroscraft.westerosblocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.command.CommandSource;
-import net.minecraft.crash.CrashReport;
-import net.minecraft.crash.ReportedException;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biomes;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.commands.CommandSource;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.CrashReport;
+import net.minecraft.ReportedException;
+import net.minecraft.world.item.Item;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -22,7 +23,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.network.simple.SimpleChannel;
+import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -49,13 +50,13 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Optional;
-import net.minecraftforge.fml.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkRegistry;
 
 import com.westeroscraft.westerosblocks.network.ClientMessageHandler;
 import com.westeroscraft.westerosblocks.network.PWeatherMessage;
 import com.westeroscraft.westerosblocks.network.PTimeMessage;
 import com.westeroscraft.westerosblocks.network.ServerMessageHandler;
-import net.minecraftforge.fml.network.NetworkDirection;
+import net.minecraftforge.network.NetworkDirection;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(WesterosBlocks.MOD_ID)
@@ -112,12 +113,12 @@ public class WesterosBlocks {
 
 	private void doClientStuff(final FMLClientSetupEvent event) {
 		// do something that can only be done on the client
-		log.info("Got game settings {}", event.getMinecraftSupplier().get().options);
+		log.info("Got game settings {}", event.description());
 	}
 
 	@SubscribeEvent
 	public void onRegisterCommandEvent(RegisterCommandsEvent event) {
-	    CommandDispatcher<CommandSource> commandDispatcher = event.getDispatcher();
+	    CommandDispatcher<CommandSourceStack> commandDispatcher = event.getDispatcher();
 		PTimeCommand.register(commandDispatcher);
 		PWeatherCommand.register(commandDispatcher);
 	}
@@ -219,7 +220,7 @@ public class WesterosBlocks {
 				Biome b = ForgeRegistries.BIOMES.getValue(new ResourceLocation("minecraft:taiga"));
 				if (b != null) {
 					b.climateSettings.temperature = -0.5F; 
-					b.climateSettings.precipitation = Biome.RainType.SNOW;
+					b.climateSettings.precipitation = Biome.Precipitation.SNOW;
 				}
 				log.info("Enabled snow in TAIGA");
 			}

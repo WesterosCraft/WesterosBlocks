@@ -11,7 +11,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class WallBlockModelExport extends ModelExport {
     // Template objects for Gson export of block models

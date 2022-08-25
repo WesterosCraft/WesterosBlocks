@@ -6,7 +6,7 @@ import java.io.IOException;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;

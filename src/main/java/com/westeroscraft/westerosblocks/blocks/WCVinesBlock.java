@@ -7,48 +7,42 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.google.common.collect.ImmutableMap;
-import org.dynmap.modsupport.ModModelDefinition;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.PatchBlockModel;
-import org.dynmap.renderer.RenderPatchFactory.SideVisible;
-
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SixWayBlock;
-import net.minecraft.block.VineBlock;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Util;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.PipeBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.VineBlock;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.Util;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.tags.FluidTags;
 
+import com.google.common.collect.ImmutableMap;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
-public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
+public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	AbstractBlock.Properties props = def.makeProperties().noOcclusion();
+        	BlockBehaviour.Properties props = def.makeProperties().noOcclusion();
         	return def.registerRenderType(def.registerBlock(new WCVinesBlock(props, def)), false, false);
         }
     }
@@ -57,7 +51,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
     private boolean allow_unsupported = false;
     private boolean no_climb = false;
     public boolean has_down = false;
-    public static final BooleanProperty DOWN = SixWayBlock.DOWN;
+    public static final BooleanProperty DOWN = PipeBlock.DOWN;
     private static final VoxelShape UP_AABB = Block.box(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     private static final VoxelShape DOWN_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
     private static final VoxelShape WEST_AABB = Block.box(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
@@ -66,11 +60,11 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
     private static final VoxelShape SOUTH_AABB = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
     private final Map<BlockState, VoxelShape> shapesCache;
 
-    public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = SixWayBlock.PROPERTY_BY_DIRECTION.entrySet().stream().collect(Util.toMap());
+    public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION.entrySet().stream().collect(Util.toMap());
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    protected WCVinesBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCVinesBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;        
         String t = def.getType();
@@ -98,70 +92,41 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
         return def;
     }
 
-    @Override
-    public void registerDynmapRenderData(ModTextureDefinition mtd) {
-        ModModelDefinition md = mtd.getModelDefinition();
-        String blkname = def.getBlockName();
-        def.defaultRegisterTextures(mtd);
-        def.registerPatchTextureBlock(mtd, 2);
-        /* Make base model */
-        // Build 16 models, for each combination
-        for (int meta = 0; meta < 16; meta++) {        	
-            PatchBlockModel mod = md.addPatchModel(blkname);
-            if ((meta & 1) != 0) {	// South
-                mod.addPatch(0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, SideVisible.BOTH);
-            }
-            if ((meta & 2) != 0) {	// West
-                mod.addPatch(0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, SideVisible.BOTH);
-            }
-            if ((meta & 4) != 0) {	// North
-                mod.addPatch(0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, SideVisible.BOTH);
-            }
-            if ((meta & 8) != 0) {	// East
-                mod.addPatch(1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, SideVisible.BOTH);
-            }
-            if (meta == 0) {	// Bottom
-                mod.addPatch(0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, SideVisible.BOTH);            	
-            }
-            mod.setMetaValue(meta);
-        }
-    }
-    
     private static VoxelShape calculateShape(BlockState p_242685_0_) {
-        VoxelShape voxelshape = VoxelShapes.empty();
+        VoxelShape voxelshape = Shapes.empty();
         if (p_242685_0_.getValue(UP)) {
            voxelshape = UP_AABB;
         }
         if (p_242685_0_.getValue(DOWN)) {
-            voxelshape = VoxelShapes.or(voxelshape, DOWN_AABB);
+            voxelshape = Shapes.or(voxelshape, DOWN_AABB);
          }
 
         if (p_242685_0_.getValue(NORTH)) {
-           voxelshape = VoxelShapes.or(voxelshape, NORTH_AABB);
+           voxelshape = Shapes.or(voxelshape, NORTH_AABB);
         }
 
         if (p_242685_0_.getValue(SOUTH)) {
-           voxelshape = VoxelShapes.or(voxelshape, SOUTH_AABB);
+           voxelshape = Shapes.or(voxelshape, SOUTH_AABB);
         }
 
         if (p_242685_0_.getValue(EAST)) {
-           voxelshape = VoxelShapes.or(voxelshape, EAST_AABB);
+           voxelshape = Shapes.or(voxelshape, EAST_AABB);
         }
 
         if (p_242685_0_.getValue(WEST)) {
-           voxelshape = VoxelShapes.or(voxelshape, WEST_AABB);
+           voxelshape = Shapes.or(voxelshape, WEST_AABB);
         }
         return voxelshape;
      }
 
     
     @Override
-    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
+    public VoxelShape getShape(BlockState p_220053_1_, BlockGetter p_220053_2_, BlockPos p_220053_3_, CollisionContext p_220053_4_) {
         return this.shapesCache.get(p_220053_1_);
     } 
 
     @Override
-    public boolean canSurvive(BlockState p_196260_1_, IWorldReader p_196260_2_, BlockPos p_196260_3_) {
+    public boolean canSurvive(BlockState p_196260_1_, LevelReader p_196260_2_, BlockPos p_196260_3_) {
     	
     	return allow_unsupported || this.hasFaces(this.getUpdatedState(p_196260_1_, p_196260_2_, p_196260_3_));
     }
@@ -182,7 +147,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
         return i;
      }
 
-     private boolean canSupportAtFace(IBlockReader p_196541_1_, BlockPos p_196541_2_, Direction p_196541_3_) {
+     private boolean canSupportAtFace(BlockGetter p_196541_1_, BlockPos p_196541_2_, Direction p_196541_3_) {
         if ((!has_down) && (p_196541_3_ == Direction.DOWN)) {
            return false;
         } else {
@@ -202,12 +167,12 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
         }
      }
 
-     public static boolean isAcceptableNeighbour(IBlockReader p_196542_0_, BlockPos p_196542_1_, Direction p_196542_2_) {
+     public static boolean isAcceptableNeighbour(BlockGetter p_196542_0_, BlockPos p_196542_1_, Direction p_196542_2_) {
         BlockState blockstate = p_196542_0_.getBlockState(p_196542_1_);
         return Block.isFaceFull(blockstate.getCollisionShape(p_196542_0_, p_196542_1_), p_196542_2_.getOpposite());
      }
 
-     private BlockState getUpdatedState(BlockState p_196545_1_, IBlockReader p_196545_2_, BlockPos p_196545_3_) {
+     private BlockState getUpdatedState(BlockState p_196545_1_, BlockGetter p_196545_2_, BlockPos p_196545_3_) {
         BlockPos blockpos = p_196545_3_.above();
         if (p_196545_1_.getValue(UP)) {
            p_196545_1_ = p_196545_1_.setValue(UP, Boolean.valueOf(allow_unsupported || isAcceptableNeighbour(p_196545_2_, blockpos, Direction.DOWN)));
@@ -235,7 +200,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
      }
 
      @Override
-     public BlockState updateShape(BlockState p_196271_1_, Direction p_196271_2_, BlockState p_196271_3_, IWorld p_196271_4_, BlockPos p_196271_5_, BlockPos p_196271_6_) {
+     public BlockState updateShape(BlockState p_196271_1_, Direction p_196271_2_, BlockState p_196271_3_, LevelAccessor p_196271_4_, BlockPos p_196271_5_, BlockPos p_196271_6_) {
         if ((!has_down) && (p_196271_2_ == Direction.DOWN)) {
            return super.updateShape(p_196271_1_, p_196271_2_, p_196271_3_, p_196271_4_, p_196271_5_, p_196271_6_);
         } else {
@@ -246,7 +211,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
 
      @Nullable 
      @Override
-     public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         BlockState blockstate = ctx.getLevel().getBlockState(ctx.getClickedPos());
         boolean flag = blockstate.is(this);
         BlockState blockstate1 = flag ? blockstate : this.defaultBlockState();
@@ -269,8 +234,8 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
          return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
      }
      @Override
-     public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType pathtype) {
-         switch(pathtype) {
+     public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType PathComputationType) {
+         switch(PathComputationType) {
          case LAND:
             return false;
          case WATER:
@@ -283,10 +248,10 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle, W
      }
 
      @Override
-     public void randomTick(BlockState p_225542_1_, ServerWorld p_225542_2_, BlockPos p_225542_3_, Random p_225542_4_) {
+     public void randomTick(BlockState p_225542_1_, ServerLevel p_225542_2_, BlockPos p_225542_3_, Random p_225542_4_) {
      }
      @Override
-     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
+     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> container) {
     	 container.add(UP, NORTH, EAST, SOUTH, WEST, DOWN, WATERLOGGED);
      }
      

@@ -5,41 +5,35 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.westeroscraft.westerosblocks.*;
-import org.dynmap.modsupport.CuboidBlockModel;
-import org.dynmap.modsupport.ModModelDefinition;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TransparencyMode;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.state.StateContainer;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.state.StateDefinition;
 
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
+import net.minecraft.world.phys.shapes.CollisionContext;
 
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-
-public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport, IWaterLoggable {
+public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, SimpleWaterloggedBlock {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	// See if we have a cond property
         	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
         	if (prop != null) {
@@ -58,7 +52,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     
     protected VoxelShape[] SHAPE_BY_INDEX;
 
-    protected WCCuboidBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCCuboidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         SHAPE_BY_INDEX = new VoxelShape[1];
@@ -75,15 +69,15 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         return def;
     }
     @Override
-    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
     	if (tempCOND != null) {
     		COND = tempCOND;
     		tempCOND = null;
     	}
     	if (COND != null) {
-	       stateContainer.add(COND);
+	       StateDefinition.add(COND);
     	}
-       stateContainer.add(WATERLOGGED);
+       StateDefinition.add(WATERLOGGED);
     }
 
     protected int getIndexFromState(BlockState state) {
@@ -91,32 +85,32 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     }
     
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
+    public VoxelShape getShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
         return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
     @Override
-    public VoxelShape getCollisionShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
+    public VoxelShape getCollisionShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
         return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
     @Override
-    public VoxelShape getBlockSupportShape(BlockState state, IBlockReader reader, BlockPos pos) {
+    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
         return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
     @Override
-    public VoxelShape getVisualShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext ctx) {
+    public VoxelShape getVisualShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
         return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
     @Override
-    public BlockState updateShape(BlockState state, Direction face, BlockState state2, IWorld world, BlockPos pos, BlockPos pos2) {
+    public BlockState updateShape(BlockState state, Direction face, BlockState state2, LevelAccessor world, BlockPos pos, BlockPos pos2) {
        if (state.getValue(WATERLOGGED)) {
-          world.getLiquidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+          world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
        }
        return super.updateShape(state, face, state2, world, pos, pos2);
     }
 
     @Override
     @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
        BlockState bs = this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
        if ((COND != null) && (bs != null)) {
@@ -129,8 +123,8 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
     @Override
-    public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType pathtype) {
-        switch(pathtype) {
+    public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType PathComputationType) {
+        switch(PathComputationType) {
         case LAND:
            return false;
         case WATER:
@@ -146,33 +140,13 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, West
     	return def.cuboids;
     }
     protected VoxelShape getBoundingBoxFromCuboidList(List<WesterosBlockDef.Cuboid> cl) {
-        VoxelShape vs = VoxelShapes.empty();
+        VoxelShape vs = Shapes.empty();
         if (cl != null) {
             for(WesterosBlockDef.Cuboid c : cl) {
-            	vs = VoxelShapes.or(vs, VoxelShapes.box(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax));
+            	vs = Shapes.or(vs, Shapes.box(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax));
             }
         }
         return vs;
-    }
-
-    @Override
-    public void registerDynmapRenderData(ModTextureDefinition mtd) {
-        ModModelDefinition md = mtd.getModelDefinition();
-        WesterosBlockDef def = this.getWBDefinition();
-        String blkname = def.getBlockName();
-        def.defaultRegisterTextures(mtd);
-        def.registerPatchTextureBlock(mtd, 6, TransparencyMode.TRANSPARENT, 1);
-        List<Cuboid> cl = def.getCuboidList();   
-        if (cl == null) return;
-        CuboidBlockModel mod = md.addCuboidModel(blkname);
-        for (Cuboid c : cl) {
-            if (WesterosBlockDef.SHAPE_CROSSED.equals(c.shape)) {   // Crosed
-                mod.addCrossedPatches(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax, c.sideTextures[0]);
-            }
-            else {
-                mod.addCuboid(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax, c.sideTextures);
-            }
-        }
     }
     
     private static String[] TAGS = { };

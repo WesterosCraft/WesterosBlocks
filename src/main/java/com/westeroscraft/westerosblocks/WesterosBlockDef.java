@@ -11,13 +11,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
-import java.util.function.Supplier;
-
-import org.dynmap.modsupport.BlockSide;
-import org.dynmap.modsupport.BlockTextureRecord;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TextureModifier;
-import org.dynmap.modsupport.TransparencyMode;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
@@ -63,51 +56,50 @@ import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebVertBlock;
 
-import net.minecraft.block.AbstractBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.color.BlockColors;
-import net.minecraft.client.renderer.color.ItemColors;
-import net.minecraft.client.resources.ColorMapLoader;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.WallOrFloorItem;
-import net.minecraft.particles.BasicParticleType;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.state.EnumProperty;
-import net.minecraft.state.Property;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.FoliageColors;
-import net.minecraft.world.GrassColors;
-import net.minecraft.world.IBlockDisplayReader;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeColors;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.color.block.BlockColors;
+import net.minecraft.client.color.item.ItemColors;
+import net.minecraft.client.resources.LegacyStuffWrapper;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.data.BuiltinRegistries;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.BlockEntityType.BlockEntitySupplier;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.Mth;
+import net.minecraft.world.level.FoliageColor;
+import net.minecraft.world.level.GrassColor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.BlockAndTintGetter;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.ColorResolver;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.core.Registry;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -257,7 +249,7 @@ public class WesterosBlockDef {
 
 		public VoxelShape getAABB() {
 			if (aabb == null) {
-				aabb = VoxelShapes.box(xMin, yMin, zMin, xMax, yMax, zMax);
+				aabb = Shapes.box(xMin, yMin, zMin, xMax, yMax, zMax);
 			}
 			return aabb;
 		}
@@ -440,7 +432,7 @@ public class WesterosBlockDef {
 		}
 
 		@OnlyIn(Dist.CLIENT)
-		public abstract int getColor(BlockState arg0, IBlockDisplayReader arg1, BlockPos arg2, int arg3);
+		public abstract int getColor(BlockState arg0, BlockAndTintGetter arg1, BlockPos arg2, int arg3);
 
 	}
 
@@ -454,7 +446,7 @@ public class WesterosBlockDef {
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState arg0, IBlockDisplayReader arg1, BlockPos arg2, int arg3) {
+		public int getColor(BlockState arg0, BlockAndTintGetter arg1, BlockPos arg2, int arg3) {
 			return fixedMult;
 		}
 
@@ -467,11 +459,11 @@ public class WesterosBlockDef {
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
 			if (world != null && pos != null)
 				return BiomeColors.getAverageFoliageColor(world, pos);
 			else
-				return FoliageColors.getDefaultColor();
+				return FoliageColor.getDefaultColor();
 		}
 	}
 
@@ -482,11 +474,11 @@ public class WesterosBlockDef {
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
 			if (world != null && pos != null)
 				return BiomeColors.getAverageGrassColor(world, pos);
 			else
-				return GrassColors.get(0.5D, 1.0D);
+				return GrassColor.get(0.5D, 1.0D);
 		}
 	}
 
@@ -497,7 +489,7 @@ public class WesterosBlockDef {
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
+		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
 			return BiomeColors.getAverageWaterColor(world, pos) | 0xFF000000;
 		}
 	}
@@ -505,24 +497,24 @@ public class WesterosBlockDef {
 	public static class PineColorMultHandler extends ColorMultHandler {
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
-			return FoliageColors.getEvergreenColor();
+		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
+			return FoliageColor.getEvergreenColor();
 		}
 	}
 
 	public static class BirchColorMultHandler extends ColorMultHandler {
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
-			return FoliageColors.getBirchColor();
+		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
+			return FoliageColor.getBirchColor();
 		}
 	}
 
 	public static class BasicColorMultHandler extends ColorMultHandler {
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState arg0, IBlockDisplayReader world, BlockPos pos, int arg3) {
-			return FoliageColors.getDefaultColor();
+		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
+			return FoliageColor.getDefaultColor();
 		}
 	}
 
@@ -588,9 +580,9 @@ public class WesterosBlockDef {
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState state, IBlockDisplayReader world, BlockPos pos, int txtindx) {
-			if ((world != null) && (pos != null) && (world instanceof IWorldReader)) {
-				IWorldReader rdr = (IWorldReader) world;
+		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {
+			if ((world != null) && (pos != null) && (world instanceof LevelReader)) {
+				LevelReader rdr = (LevelReader) world;
 				int red = 0;
 				int green = 0;
 				int blue = 0;
@@ -598,7 +590,7 @@ public class WesterosBlockDef {
 				for (int xx = -1; xx <= 1; ++xx) {
 					for (int zz = -1; zz <= 1; ++zz) {
 						BlockPos bp = pos.offset(xx, 0, zz);
-						Biome biome = rdr.getBiome(bp);
+						Biome biome = rdr.getBiome(bp).value();
 						int mult = getColor(biome.getTemperature(bp), biome.getDownfall());
 						red += (mult & 0xFF0000) >> 16;
 						green += (mult & 0x00FF00) >> 8;
@@ -612,8 +604,8 @@ public class WesterosBlockDef {
 		}
 
 		private int getColor(float tmp, float hum) {
-			tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
-			hum = MathHelper.clamp(hum, 0.0F, 1.0F);
+			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
+			hum = Mth.clamp(hum, 0.0F, 1.0F);
 			hum *= tmp;
 			int i = (int) ((1.0D - tmp) * 255.0D);
 			int j = (int) ((1.0D - hum) * 255.0D);
@@ -622,9 +614,9 @@ public class WesterosBlockDef {
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(net.minecraft.world.biome.Biome biome, double tmp, double hum) {
-			tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
-			hum = MathHelper.clamp(hum, 0.0F, 1.0F);
+		public int getColor(Biome biome, double tmp, double hum) {
+			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
+			hum = Mth.clamp(hum, 0.0F, 1.0F);
 			hum *= tmp;
 			int i = (int) ((1.0D - tmp) * 255.0D);
 			int j = (int) ((1.0D - hum) * 255.0D);
@@ -638,7 +630,7 @@ public class WesterosBlockDef {
 			if (rname.endsWith(".png") == false)
 				rname += ".png";
 			try {
-				colorBuffer = ColorMapLoader.getPixels(Minecraft.getInstance().getResourceManager(),
+				colorBuffer = LegacyStuffWrapper.getPixels(Minecraft.getInstance().getResourceManager(),
 						new ResourceLocation(rname));
 			} catch (Exception e) {
 				WesterosBlocks.log.error(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
@@ -673,16 +665,14 @@ public class WesterosBlockDef {
 		return getTypeValue(key, "");
 	}
 
-	private transient int lightValueInt;
-	private transient ColorMultHandler colorMultHandler;
 	private transient boolean hasCollisionBoxes = false;
 
 	private static final Map<String, Material> materialTable = new HashMap<String, Material>();
 	private static final Map<String, SoundType> stepSoundTable = new HashMap<String, SoundType>();
-	private static final Map<String, ItemGroup> tabTable = new HashMap<String, ItemGroup>();
+	private static final Map<String, CreativeModeTab> tabTable = new HashMap<String, CreativeModeTab>();
 	private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
 	private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
-	private static final Map<String, BasicParticleType> particles = new HashMap<String, BasicParticleType>();
+	private static final Map<String, ParticleType<?>> particles = new HashMap<String, ParticleType<?>>();
 
 	private transient boolean didInit = false;
 
@@ -828,8 +818,8 @@ public class WesterosBlockDef {
 	}
 
 	public void registerWallOrFloorBlock(Block floorblock, Block wallblock) {
-		BlockItem itemBlock = new WallOrFloorItem(floorblock, wallblock,
-				(new Item.Properties()).tab(ItemGroup.TAB_DECORATIONS));
+		BlockItem itemBlock = new StandingAndWallBlockItem(floorblock, wallblock,
+				(new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS));
 		floorblock.setRegistryName(this.blockName);
 		wallblock.setRegistryName("wall_" + this.blockName);
 		itemBlock.setRegistryName(this.blockName);
@@ -841,27 +831,27 @@ public class WesterosBlockDef {
 	public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
 		if (FMLEnvironment.dist == Dist.CLIENT) {
 			if (this.alphaRender) {
-				RenderTypeLookup.setRenderLayer(block, RenderType.translucent());
+				ItemBlockRenderTypes.setRenderLayer(block, RenderType.translucent());
 			} else if (!isSolid) {
-				RenderTypeLookup.setRenderLayer(block, RenderType.cutout());
+				ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
 			} else if (isTransparent) {
-				RenderTypeLookup.setRenderLayer(block, RenderType.cutoutMipped());
+				ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutoutMipped());
 			}
 		}
 		return block;
 	}
 
-	public AbstractBlock.Properties makeProperties() {
+	public BlockBehaviour.Properties makeProperties() {
 		return makeAndCopyProperties(null);
 	}
 
-	public AbstractBlock.Properties makeAndCopyProperties(Block blk) {
-		AbstractBlock.Properties props;
+	public BlockBehaviour.Properties makeAndCopyProperties(Block blk) {
+		BlockBehaviour.Properties props;
 		if (blk != null) {
-			props = AbstractBlock.Properties.copy(blk);
+			props = BlockBehaviour.Properties.copy(blk);
 		} else {
 			Material mat = getMaterial();
-			props = AbstractBlock.Properties.of(mat); // TODO - material color?
+			props = BlockBehaviour.Properties.of(mat); // TODO - material color?
 		}
 		if (hardness >= 0.0F) {
 			if (resistance >= 0.0)
@@ -913,8 +903,8 @@ public class WesterosBlockDef {
 		return ss;
 	}
 
-	public ItemGroup getCreativeTab() {
-		ItemGroup ct = tabTable.get(creativeTab);
+	public CreativeModeTab getCreativeTab() {
+		CreativeModeTab ct = tabTable.get(creativeTab);
 		if (ct == null) {
 			WesterosBlocks.log.warn(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
 			ct = WesterosBlocksCreativeTab.tabWesterosBlocks;
@@ -930,7 +920,7 @@ public class WesterosBlockDef {
 		return this.blockName;
 	}
 
-	public static void addCreativeTab(String name, ItemGroup tab) {
+	public static void addCreativeTab(String name, CreativeModeTab tab) {
 		tabTable.put(name, tab);
 	}
 
@@ -973,7 +963,7 @@ public class WesterosBlockDef {
 		materialTable.put("sand", Material.SAND);
 		materialTable.put("glass", Material.GLASS);
 		materialTable.put("tnt", Material.EXPLOSIVE);
-		materialTable.put("coral", Material.CORAL);
+		materialTable.put("coral", Material.STONE);
 		materialTable.put("ice", Material.ICE);
 		materialTable.put("snow", Material.SNOW);
 		materialTable.put("craftedSnow", Material.SNOW);
@@ -1000,16 +990,16 @@ public class WesterosBlockDef {
 		stepSoundTable.put("plant", SoundType.CROP);
 		stepSoundTable.put("slime", SoundType.FUNGUS);
 		// Tab table
-		tabTable.put("buildingBlocks", ItemGroup.TAB_BUILDING_BLOCKS);
-		tabTable.put("decorations", ItemGroup.TAB_DECORATIONS);
-		tabTable.put("redstone", ItemGroup.TAB_REDSTONE);
-		tabTable.put("transportation", ItemGroup.TAB_TRANSPORTATION);
-		tabTable.put("misc", ItemGroup.TAB_MISC);
-		tabTable.put("food", ItemGroup.TAB_FOOD);
-		tabTable.put("tools", ItemGroup.TAB_TOOLS);
-		tabTable.put("combat", ItemGroup.TAB_COMBAT);
-		tabTable.put("brewing", ItemGroup.TAB_BREWING);
-		tabTable.put("materials", ItemGroup.TAB_MATERIALS);
+		tabTable.put("buildingBlocks", CreativeModeTab.TAB_BUILDING_BLOCKS);
+		tabTable.put("decorations", CreativeModeTab.TAB_DECORATIONS);
+		tabTable.put("redstone", CreativeModeTab.TAB_REDSTONE);
+		tabTable.put("transportation", CreativeModeTab.TAB_TRANSPORTATION);
+		tabTable.put("misc", CreativeModeTab.TAB_MISC);
+		tabTable.put("food", CreativeModeTab.TAB_FOOD);
+		tabTable.put("tools", CreativeModeTab.TAB_TOOLS);
+		tabTable.put("combat", CreativeModeTab.TAB_COMBAT);
+		tabTable.put("brewing", CreativeModeTab.TAB_BREWING);
+		tabTable.put("materials", CreativeModeTab.TAB_MATERIALS);
 
 		// Standard block types
 		typeTable.put("solid", new WCSolidBlock.Factory());
@@ -1070,7 +1060,7 @@ public class WesterosBlockDef {
 		particles.put("bubble", ParticleTypes.BUBBLE);
 		particles.put("suspended", ParticleTypes.UNDERWATER);
 		particles.put("depthsuspend", ParticleTypes.UNDERWATER);
-		particles.put("townaura", ParticleTypes.BARRIER);
+		//particles.put("townaura", ParticleTypes.BARRIER);
 		particles.put("crit", ParticleTypes.CRIT);
 		particles.put("magicCrit", ParticleTypes.CRIT);
 		particles.put("smoke", ParticleTypes.SMOKE);
@@ -1143,125 +1133,6 @@ public class WesterosBlockDef {
 		return cmh;
 	}
 
-	/**
-	 * Default texture block registration for Dynmap (min patch count
-	 */
-	public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount) {
-		registerPatchTextureBlock(mtd, minPatchCount, TransparencyMode.TRANSPARENT, 16);
-	}
-
-	public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount, TransparencyMode tm) {
-		registerPatchTextureBlock(mtd, minPatchCount, tm, 16);
-	}
-
-	public void registerPatchTextureBlock(ModTextureDefinition mtd, int minPatchCount, TransparencyMode tm,
-			int meta_per_sub) {
-		TextureModifier tmod = TextureModifier.NONE;
-		if (this.nonOpaque) {
-			tmod = TextureModifier.CLEARINSIDE;
-		}
-		String blkname = this.getBlockName();
-		if (getTextureCount() > 0) {
-			BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
-			if (tm != null) {
-				mtr.setTransparencyMode(tm);
-			}
-			// Set for all associated metas
-			for (int meta = 0, cnt = 0; meta < meta_per_sub; meta++) {
-				mtr.setMetaValue(meta);
-			}
-			int cnt = getTextureCount();
-			if (cnt < minPatchCount) {
-				cnt = minPatchCount;
-			}
-			for (int patch = 0; patch < cnt; patch++) {
-				String txtid = getTextureByIndex(patch);
-				
-				mtr.setPatchTexture(txtid.replace(':', '_'), tmod, patch);
-			}
-			setBlockColorMap(mtr);
-		}
-	}
-
-	/**
-	 * Default texture block (6 face) registration for Dynmap
-	 */
-	public void defaultRegisterTextureBlock(ModTextureDefinition mtd) {
-		defaultRegisterTextureBlock(mtd, null, 0, 16);
-	}
-
-	/**
-	 * Default texture block (6 face) registration for Dynmap
-	 */
-	public void defaultRegisterTextureBlock(ModTextureDefinition mtd, TransparencyMode tm) {
-		defaultRegisterTextureBlock(mtd, tm, 0, 16);
-	}
-
-	/**
-	 * Default texture block (6 face) registration for Dynmap
-	 */
-	public void defaultRegisterTextureBlock(ModTextureDefinition mtd, TransparencyMode tm, int startidx, int statecnt) {
-		TextureModifier tmod = TextureModifier.NONE;
-		if (this.nonOpaque) {
-			tmod = TextureModifier.CLEARINSIDE;
-		}
-		String blkname = this.getBlockName();
-		if (getTextureCount() > 0) {
-			BlockTextureRecord mtr = mtd.addBlockTextureRecord(blkname);
-			if (tm != null) {
-				mtr.setTransparencyMode(tm);
-			}
-			// Set for all associated metas
-			for (int meta = startidx, cnt = 0; cnt < statecnt; meta++) {
-				mtr.setMetaValue(meta);
-			}
-			for (int face = 0; face < 6; face++) {
-				String txtid = getTextureByIndex(face);
-				mtr.setSideTexture(txtid.replace(':', '_'), tmod, BlockSide.valueOf("FACE_" + face));
-			}
-			setBlockColorMap(mtr);
-		}
-	}
-
-	public void setBlockColorMap(BlockTextureRecord mtr) {
-		String blockColor = colorMult;
-		if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
-			mtr.setBlockColorMapTexture(blockColor.replace(':', '_'));
-		}
-	}
-
-	/**
-	 * Default texture registration for Dynmap
-	 */
-	public void defaultRegisterTextures(ModTextureDefinition mtd) {
-		mtd.setTexturePath("assets/westerosblocks/textures/block/");
-		HashSet<String> txtids = new HashSet<String>(); // Build set if distinct IDs
-		HashSet<String> maptxtids = new HashSet<String>(); // Build set if distinct IDs
-		if ((colorMult != null) && (colorMult.startsWith("#") == false)) {
-			maptxtids.add(colorMult);
-		}
-		// Register the textures
-		for (String txtid : txtids) {
-			int colon = txtid.indexOf(':');
-			if (colon < 0) {
-				mtd.registerTextureFile(txtid);
-			} else {
-				mtd.registerTextureFile(txtid.replace(':', '_'), "assets/" + txtid.substring(0, colon).toLowerCase()
-						+ "/textures/block/" + txtid.substring(colon + 1) + ".png");
-			}
-		}
-		// Register the maps
-		for (String txtid : maptxtids) {
-			int colon = txtid.indexOf(':');
-			if (colon < 0) {
-				mtd.registerBiomeTextureFile(txtid, "assets/westerosblocks/" + txtid + ".png");
-			} else {
-				mtd.registerBiomeTextureFile(txtid.replace(':', '_'), "assets/"
-						+ txtid.substring(0, colon).toLowerCase() + "/" + txtid.substring(colon + 1) + ".png");
-			}
-		}
-	}
-
 	public String getBlockColorMapResource() {
 		String res = null;
 		String blockColor = colorMult;
@@ -1280,29 +1151,29 @@ public class WesterosBlockDef {
 		return res;
 	}
 
-	private static class TileEntityRec {
+	private static class BlockEntityRec {
 		ArrayList<Block> blocks = new ArrayList<Block>();
-		RegistryObject<TileEntityType<?>> regobj;
+		RegistryObject<BlockEntityType<?>> regobj;
 	}
 
-	private static HashMap<String, TileEntityRec> te_rec = new HashMap<String, TileEntityRec>();
+	private static HashMap<String, BlockEntityRec> te_rec = new HashMap<String, BlockEntityRec>();
 
-	public static final DeferredRegister<TileEntityType<?>> TILE_ENTITY_TYPES =
-			DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, WesterosBlocks.MOD_ID);
+	public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
+			DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, WesterosBlocks.MOD_ID);
 
-	public static <T extends TileEntity> void registerTileEntity(String name, Supplier<T> tileEntitySupplier, Block blk)
+	public static <T extends BlockEntity> void registerBlockEntity(String name, BlockEntitySupplier<T> BlockEntitySupplier, Block blk)
 	{
-		TileEntityRec rec = (TileEntityRec) te_rec.get(name);
+		BlockEntityRec rec = (BlockEntityRec) te_rec.get(name);
 		if (rec == null) {
-			rec = new TileEntityRec();
+			rec = new BlockEntityRec();
 			te_rec.put(name, rec);
-			final TileEntityRec frec = rec;
-			rec.regobj = TILE_ENTITY_TYPES.register(name, () -> TileEntityType.Builder.of(tileEntitySupplier, frec.blocks.toArray(new Block[frec.blocks.size()])).build(null));
+			final BlockEntityRec frec = rec;
+			rec.regobj = TILE_ENTITY_TYPES.register(name, () -> BlockEntityType.Builder.of(BlockEntitySupplier, frec.blocks.toArray(new Block[frec.blocks.size()])).build(null));
 		}
 		rec.blocks.add(blk);
 	}
-	public static RegistryObject<TileEntityType<?>> getTileEntityType(String name) {
-		TileEntityRec rec = te_rec.get(name);
+	public static RegistryObject<BlockEntityType<?>> getBlockEntityType(String name) {
+		BlockEntityRec rec = te_rec.get(name);
 		if (rec != null)
 			return rec.regobj;
 		return null;
@@ -1315,7 +1186,7 @@ public class WesterosBlockDef {
 			BlockColors blockColors = Minecraft.getInstance().getBlockColors();
 			ItemColors itemColors = Minecraft.getInstance().getItemColors();
 			ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);
-			blockColors.register((BlockState state, IBlockDisplayReader world, BlockPos pos, int txtindx) -> handler
+			blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
 					.getColor(state, world, pos, txtindx), blk);
 			itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 		}
@@ -1327,7 +1198,7 @@ public class WesterosBlockDef {
 		BlockColors blockColors = Minecraft.getInstance().getBlockColors();
 		ItemColors itemColors = Minecraft.getInstance().getItemColors();
 		ColorMultHandler handler = getColorHandler(colorMult, blockName);
-		blockColors.register((BlockState state, IBlockDisplayReader world, BlockPos pos, int txtindx) -> handler
+		blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
 				.getColor(state, world, pos, txtindx), blk);
 		itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 	}
@@ -1342,11 +1213,11 @@ public class WesterosBlockDef {
 	// Get customized collision box for default solid block
 	public VoxelShape makeCollisionBoxShape() {
 		if (collisionBoxes == null) {
-			return VoxelShapes.block();	// Default to solid block
+			return Shapes.block();	// Default to solid block
 		}
-		VoxelShape s = VoxelShapes.empty();
+		VoxelShape s = Shapes.empty();
 		for (BoundingBox b : collisionBoxes) {
-			s = VoxelShapes.or(s, b.getAABB());
+			s = Shapes.or(s, b.getAABB());
 		}
 		return s;		
 	}
@@ -1446,7 +1317,7 @@ public class WesterosBlockDef {
     		if (rec.biomes != null) {
     			for (String bn : rec.biomes) {
     				ResourceLocation rloc = new ResourceLocation(bn);
-    				Biome b = WorldGenRegistries.BIOME.get(rloc);
+    				Biome b = BuiltinRegistries.BIOME.get(rloc);
     				if (b == null) {
     					WesterosBlocks.log.warn("Invalid biome " + bn + " in condition " + rec.condID + " of block " + this.blockName);
     				}
@@ -1462,7 +1333,7 @@ public class WesterosBlockDef {
     }
     
     // Find condition match, given position
-    public String getMatchingCondition(World world, BlockPos pos) {
+    public String getMatchingCondition(Level world, BlockPos pos) {
     	int y = pos.getY();
     	String biomeid = null;
     	for (int i = 0; i < condrecs.length; i++) {
@@ -1471,7 +1342,7 @@ public class WesterosBlockDef {
     		if ((r.maxY != null) && (y > r.maxY)) continue;
     		if (r.biomes != null) {
     			if (biomeid == null) {
-    				ResourceLocation loc = world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(world.getBiome(pos));
+    				ResourceLocation loc = world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(world.getBiome(pos).value());
     				if (loc != null) {
     					biomeid = loc.toString();
     				}

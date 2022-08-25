@@ -6,48 +6,37 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.westeroscraft.westerosblocks.*;
-import org.dynmap.modsupport.CuboidBlockModel;
-import org.dynmap.modsupport.ModModelDefinition;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TransparencyMode;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
-import net.minecraft.state.StateContainer;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.state.StateDefinition;
 
-import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.EnumProperty;
-
-public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
+public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	return def.registerRenderType(def.registerBlock(new WCCuboidNSEWStackBlock(props, def)), false, false);
         }
     }
@@ -61,7 +50,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     // Index = FACING + 4*TOP
     protected List<WesterosBlockDef.Cuboid> cuboid_by_facing[] = new List[8];
 
-    protected WCCuboidNSEWStackBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCCuboidNSEWStackBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props, def);
         SHAPE_BY_INDEX = new VoxelShape[8];
         cuboid_by_facing = new List[8];
@@ -86,8 +75,8 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
         		.setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
     @Override
-    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
-    	stateContainer.add(FACING, HALF, WATERLOGGED);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
+    	StateDefinition.add(FACING, HALF, WATERLOGGED);
     }
     @Override
     protected int getIndexFromState(BlockState state) {
@@ -106,7 +95,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     }    
     @Nullable
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
        BlockPos blockpos = ctx.getClickedPos();
        if (blockpos.getY() < 255 && ctx.getLevel().getBlockState(blockpos.above()).canBeReplaced(ctx)) {
            FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
@@ -129,7 +118,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction dir, BlockState state2, IWorld world, BlockPos pos, BlockPos pos2) {
+    public BlockState updateShape(BlockState state, Direction dir, BlockState state2, LevelAccessor world, BlockPos pos, BlockPos pos2) {
         DoubleBlockHalf doubleblockhalf = state.getValue(HALF);
         if (dir.getAxis() != Direction.Axis.Y || doubleblockhalf == DoubleBlockHalf.LOWER != (dir == Direction.UP) || state2.is(this) && state2.getValue(HALF) != doubleblockhalf) {
            return doubleblockhalf == DoubleBlockHalf.LOWER && dir == Direction.DOWN && !state.canSurvive(world, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, dir, state2, world, pos, pos2);
@@ -139,7 +128,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
      }
 
     @Override
-    public void setPlacedBy(World world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack item) {
+    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack item) {
     	BlockPos above = pos.above();
         FluidState fluidstate =world.getFluidState(above);
         BlockState newstate = this.defaultBlockState()
@@ -150,7 +139,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     }
 
     @Override
-    public boolean canSurvive(BlockState state, IWorldReader reader, BlockPos pos) {
+    public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
         if (state.getValue(HALF) != DoubleBlockHalf.UPPER) {
            return super.canSurvive(state, reader, pos);
         }

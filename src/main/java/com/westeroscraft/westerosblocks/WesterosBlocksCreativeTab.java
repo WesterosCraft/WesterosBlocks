@@ -2,19 +2,17 @@ package com.westeroscraft.westerosblocks;
 
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
+public class  WesterosBlocksCreativeTab extends CreativeModeTab {
 
-public class  WesterosBlocksCreativeTab extends ItemGroup {
-
-    public static final ItemGroup tabWesterosBlocks = new  WesterosBlocksCreativeTab("WesterosBlocks", "Westeros Blocks", "oxidized_iron_block");
-    public static final ItemGroup tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "Westeros Decorative", "oxidized_iron_stairs");
-    public static final ItemGroup tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "Westeros Plants", "yellow_wildflowers");
-    public static final ItemGroup tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "Westeros Sounds", "tavern_small");
-    public static final ItemGroup tabWesterosCTMSamples = new  WesterosBlocksCreativeTab("WesterosCTMSamples", "CTM Samples", "ctm_vertical");
+    public static final CreativeModeTab tabWesterosBlocks = new  WesterosBlocksCreativeTab("WesterosBlocks", "Westeros Blocks", "oxidized_iron_block");
+    public static final CreativeModeTab tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "Westeros Decorative", "oxidized_iron_stairs");
+    public static final CreativeModeTab tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "Westeros Plants", "yellow_wildflowers");
+    public static final CreativeModeTab tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "Westeros Sounds", "tavern_small");
+    public static final CreativeModeTab tabWesterosCTMSamples = new  WesterosBlocksCreativeTab("WesterosCTMSamples", "CTM Samples", "ctm_vertical");
     
     public static void init() {
         

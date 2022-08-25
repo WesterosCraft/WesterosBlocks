@@ -9,7 +9,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class BedBlockModelExport extends ModelExport {
     // Template objects for Gson export of block models

@@ -1,14 +1,14 @@
 {
 	"required": true,
 	"package": "com.westeroscraft.westerosblocks.mixin",
-	"compatibilityLevel": "JAVA_8",
+	"compatibilityLevel": "JAVA_17",
 	"refmap": "westerosblocks.refmap.json",
 	"mixins": [
-		"MixinSUpdateTimePacket",
-		"MixinSChangeGameStatePacket"
+		"MixinClientboundGameEventPacket",
+		"MixinClientboundSetTimePacket"
 	],
 	"client": [ 
-		"MixinDimensionRenderInfo"
+		"MixinDimensionSpecialEffects"
 	],
 	"minVersion": "0.8"
 }

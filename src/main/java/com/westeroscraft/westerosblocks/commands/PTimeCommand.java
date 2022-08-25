@@ -5,15 +5,15 @@ import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.network.PTimeMessage;
 
-import net.minecraft.command.CommandSource;
-import net.minecraft.command.Commands;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraftforge.fml.network.PacketDistributor;
-import net.minecraft.command.arguments.TimeArgument;
+import net.minecraft.commands.Commands;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraftforge.network.PacketDistributor;
+import net.minecraft.commands.arguments.TimeArgument;
+import net.minecraft.commands.CommandSourceStack;
 
 public class PTimeCommand {
-	public static void register(CommandDispatcher<CommandSource> source) {
+	public static void register(CommandDispatcher<CommandSourceStack> source) {
 		source.register(Commands.literal("ptime")
 			.then(Commands.literal("reset").executes((ctx) -> {
 				return resetTime(ctx.getSource());
@@ -66,30 +66,30 @@ public class PTimeCommand {
 		));
 	}
 
-	public static int resetTime(CommandSource source) {
-		if (source.getEntity() instanceof ServerPlayerEntity) {
-			ServerPlayerEntity player = (ServerPlayerEntity) source.getEntity();
+	public static int resetTime(CommandSourceStack source) {
+		if (source.getEntity() instanceof ServerPlayer) {
+			ServerPlayer player = (ServerPlayer) source.getEntity();
 			// Send relative of zero for reset
 			WesterosBlocks.simpleChannel.send(PacketDistributor.PLAYER.with(() -> player), new PTimeMessage(true, 0));
-			source.sendSuccess(new StringTextComponent("Reset player time to server time"), true);
+			source.sendSuccess(new TextComponent("Reset player time to server time"), true);
 		} else {
-			source.sendFailure(new StringTextComponent("Cannot be used by console"));
+			source.sendFailure(new TextComponent("Cannot be used by console"));
 		}
 		
 		return 1;
 	}
 
-	public static int setTime(CommandSource source, int timeticks, boolean relative) {
-		if (source.getEntity() instanceof ServerPlayerEntity) {
-			ServerPlayerEntity player = (ServerPlayerEntity) source.getEntity();
+	public static int setTime(CommandSourceStack source, int timeticks, boolean relative) {
+		if (source.getEntity() instanceof ServerPlayer) {
+			ServerPlayer player = (ServerPlayer) source.getEntity();
 			WesterosBlocks.log.info("Set time to " + player.getName().toString() + " to relative=" + relative
 					+ ", offset=" + timeticks);
 			WesterosBlocks.simpleChannel.send(PacketDistributor.PLAYER.with(() -> player),
 					new PTimeMessage(relative, timeticks));
 			source.sendSuccess(
-					new StringTextComponent("Set player time to " + timeticks + (relative ? "(relative)" : "")), true);
+					new TextComponent("Set player time to " + timeticks + (relative ? "(relative)" : "")), true);
 		} else {
-			source.sendFailure(new StringTextComponent("Cannot be used by console"));
+			source.sendFailure(new TextComponent("Cannot be used by console"));
 		}
 		return 1;
 	}

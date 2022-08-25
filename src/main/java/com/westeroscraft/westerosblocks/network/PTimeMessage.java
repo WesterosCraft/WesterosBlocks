@@ -1,8 +1,6 @@
 package com.westeroscraft.westerosblocks.network;
 
-import net.minecraft.network.PacketBuffer;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.minecraft.network.FriendlyByteBuf;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
@@ -20,7 +18,7 @@ public class PTimeMessage {
 
 	}
 
-	public static PTimeMessage decode(PacketBuffer buf) {
+	public static PTimeMessage decode(FriendlyByteBuf buf) {
 		try {
 			return new PTimeMessage(buf.readBoolean(), buf.readInt());
 		} catch (IllegalArgumentException | IndexOutOfBoundsException e) {
@@ -29,7 +27,7 @@ public class PTimeMessage {
 		}
 	}
 
-	public void encode(PacketBuffer buf) {
+	public void encode(FriendlyByteBuf buf) {
 		buf.writeBoolean(this.relative);
 		buf.writeInt(this.time_off);
 	}

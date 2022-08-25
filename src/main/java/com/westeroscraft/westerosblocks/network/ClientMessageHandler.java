@@ -1,11 +1,12 @@
 package com.westeroscraft.westerosblocks.network;
 
-import net.minecraft.client.world.ClientWorld;
 import net.minecraftforge.fml.LogicalSide;
-import net.minecraftforge.fml.LogicalSidedProvider;
-import net.minecraftforge.fml.network.NetworkEvent;
+import net.minecraftforge.common.util.LogicalSidedProvider;
+import net.minecraftforge.network.NetworkEvent;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+
+import net.minecraft.world.level.Level;
 
 import java.util.Optional;
 import java.util.function.Supplier;
@@ -26,7 +27,7 @@ public class ClientMessageHandler {
 			WesterosBlocks.log.warn("PTimeMessage received on wrong side:" + ctx.getDirection().getReceptionSide());
 			return;
 		}
-		Optional<ClientWorld> clientWorld = LogicalSidedProvider.CLIENTWORLD.get(sideReceived);
+		Optional<Level> clientWorld = LogicalSidedProvider.CLIENTWORLD.get(sideReceived);
 		if (!clientWorld.isPresent()) {
 			WesterosBlocks.log.warn("PTimeMessage context could not provide a ClientWorld.");
 			return;
@@ -41,7 +42,7 @@ public class ClientMessageHandler {
 	// This message is called from the Client thread.
 	// It spawns a number of Particle particles at the target location within a
 	// short range around the target location
-	private static void processPTimeMessage(ClientWorld worldClient, PTimeMessage message) {
+	private static void processPTimeMessage(Level worldClient, PTimeMessage message) {
 		WesterosBlocks.log.info("Got PTimeMessage: relative=" + message.relative + ", time_off=" + message.time_off);
 		ptimeRelative = message.relative;
 		ptimeOffset = message.time_off;
@@ -61,7 +62,7 @@ public class ClientMessageHandler {
 			WesterosBlocks.log.warn("PWeatherMessage received on wrong side:" + ctx.getDirection().getReceptionSide());
 			return;
 		}
-		Optional<ClientWorld> clientWorld = LogicalSidedProvider.CLIENTWORLD.get(sideReceived);
+		Optional<Level> clientWorld = LogicalSidedProvider.CLIENTWORLD.get(sideReceived);
 		if (!clientWorld.isPresent()) {
 			WesterosBlocks.log.warn("PWeatherMessage context could not provide a ClientWorld.");
 			return;
@@ -77,7 +78,7 @@ public class ClientMessageHandler {
 	// This message is called from the Client thread.
 	// It spawns a number of Particle particles at the target location within a
 	// short range around the target location
-	private static void processPWeatherMessage(ClientWorld worldClient, PWeatherMessage message) {
+	private static void processPWeatherMessage(Level worldClient, PWeatherMessage message) {
 		WesterosBlocks.log.info("Got PWeatherMessage: " + message.weather);
 		weatherCond = message.weather;
 		switch (weatherCond) {

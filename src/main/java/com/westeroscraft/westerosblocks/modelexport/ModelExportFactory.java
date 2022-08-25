@@ -4,7 +4,7 @@ import java.io.File;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class ModelExportFactory {
     public static ModelExport   forBlock(Block blk, WesterosBlockDef def, File dest) {

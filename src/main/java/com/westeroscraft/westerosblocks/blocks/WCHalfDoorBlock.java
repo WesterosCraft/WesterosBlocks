@@ -1,63 +1,57 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import org.dynmap.modsupport.BlockTextureRecord;
-import org.dynmap.modsupport.CuboidBlockModel;
-import org.dynmap.modsupport.ModModelDefinition;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TextureModifier;
-import org.dynmap.modsupport.TransparencyMode;
-
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.PushReaction;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.DirectionProperty;
-import net.minecraft.state.EnumProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.state.properties.DoorHingeSide;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoorHingeSide;
+import net.minecraft.core.Direction;
+import net.minecraft.util.Mth;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 import javax.annotation.Nullable;
 
-public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
+public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	return def.registerRenderType(def.registerBlock(new WCHalfDoorBlock(props, def)), false, false);
         }        
     }
 
-    public static final DirectionProperty FACING = HorizontalBlock.FACING;
+    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
     public static final EnumProperty<DoorHingeSide> HINGE = BlockStateProperties.DOOR_HINGE;
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
@@ -69,7 +63,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     private WesterosBlockDef def;
     private boolean locked = false;
     
-    protected WCHalfDoorBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCHalfDoorBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         String type = def.getType();
@@ -91,7 +85,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
     }
     
     @Override
-    public VoxelShape getShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext selCtx) {
+    public VoxelShape getShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext selCtx) {
         Direction direction = state.getValue(FACING);
         boolean flag = !state.getValue(OPEN);
         boolean flag1 = state.getValue(HINGE) == DoorHingeSide.RIGHT;
@@ -109,7 +103,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
      }
 
     @Override
-     public boolean isPathfindable(BlockState state, IBlockReader reader, BlockPos pos, PathType path) {
+     public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType path) {
         switch(path) {
         case LAND:
            return state.getValue(OPEN);
@@ -132,42 +126,42 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
 
      @Nullable
      @Override
-     public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         BlockPos blockpos = ctx.getClickedPos();
         if (blockpos.getY() < 255 && ctx.getLevel().getBlockState(blockpos.above()).canBeReplaced(ctx)) {
-           World world = ctx.getLevel();
-           boolean flag = world.hasNeighborSignal(blockpos) || world.hasNeighborSignal(blockpos.above());
+           Level level = ctx.getLevel();
+           boolean flag = level.hasNeighborSignal(blockpos) || level.hasNeighborSignal(blockpos.above());
            return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection()).setValue(HINGE, this.getHinge(ctx)).setValue(POWERED, Boolean.valueOf(flag)).setValue(OPEN, Boolean.valueOf(flag));
         } else {
            return null;
         }
      }
 
-     private DoorHingeSide getHinge(BlockItemUseContext ctx) {
-        IBlockReader iblockreader = ctx.getLevel();
+     private DoorHingeSide getHinge(BlockPlaceContext ctx) {
+        BlockGetter BlockGetter = ctx.getLevel();
         BlockPos blockpos = ctx.getClickedPos();
         Direction direction = ctx.getHorizontalDirection();
         BlockPos blockpos1 = blockpos.above();
         Direction direction1 = direction.getCounterClockWise();
         BlockPos blockpos2 = blockpos.relative(direction1);
-        BlockState blockstate = iblockreader.getBlockState(blockpos2);
+        BlockState blockstate = BlockGetter.getBlockState(blockpos2);
         BlockPos blockpos3 = blockpos1.relative(direction1);
-        BlockState blockstate1 = iblockreader.getBlockState(blockpos3);
+        BlockState blockstate1 = BlockGetter.getBlockState(blockpos3);
         Direction direction2 = direction.getClockWise();
         BlockPos blockpos4 = blockpos.relative(direction2);
-        BlockState blockstate2 = iblockreader.getBlockState(blockpos4);
+        BlockState blockstate2 = BlockGetter.getBlockState(blockpos4);
         BlockPos blockpos5 = blockpos1.relative(direction2);
-        BlockState blockstate3 = iblockreader.getBlockState(blockpos5);
-        int i = (blockstate.isCollisionShapeFullBlock(iblockreader, blockpos2) ? -1 : 0) + (blockstate1.isCollisionShapeFullBlock(iblockreader, blockpos3) ? -1 : 0) + (blockstate2.isCollisionShapeFullBlock(iblockreader, blockpos4) ? 1 : 0) + (blockstate3.isCollisionShapeFullBlock(iblockreader, blockpos5) ? 1 : 0);
+        BlockState blockstate3 = BlockGetter.getBlockState(blockpos5);
+        int i = (blockstate.isCollisionShapeFullBlock(BlockGetter, blockpos2) ? -1 : 0) + (blockstate1.isCollisionShapeFullBlock(BlockGetter, blockpos3) ? -1 : 0) + (blockstate2.isCollisionShapeFullBlock(BlockGetter, blockpos4) ? 1 : 0) + (blockstate3.isCollisionShapeFullBlock(BlockGetter, blockpos5) ? 1 : 0);
         boolean flag = blockstate.is(this);
         boolean flag1 = blockstate2.is(this);
         if ((!flag || flag1) && i <= 0) {
            if ((!flag1 || flag) && i >= 0) {
               int j = direction.getStepX();
               int k = direction.getStepZ(); 
-              Vector3d vector3d = ctx.getClickLocation();
-              double d0 = vector3d.x - (double)blockpos.getX();
-              double d1 = vector3d.z - (double)blockpos.getZ();
+              Vec3 vec3 = ctx.getClickLocation();
+              double d0 = vec3.x - (double)blockpos.getX();
+              double d1 = vec3.z - (double)blockpos.getZ();
               return (j >= 0 || !(d1 < 0.5D)) && (j <= 0 || !(d1 > 0.5D)) && (k >= 0 || !(d0 > 0.5D)) && (k <= 0 || !(d0 < 0.5D)) ? DoorHingeSide.LEFT : DoorHingeSide.RIGHT;
            } else {
               return DoorHingeSide.LEFT;
@@ -178,56 +172,57 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
      }
  
      @Override
-     public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand, BlockRayTraceResult rtresult) { 
-        if (this.locked) {
-           return ActionResultType.PASS; 
-        } else {
-           state = state.cycle(OPEN);
-           world.setBlock(pos, state, 10);
-           world.levelEvent(entity, state.getValue(OPEN) ? this.getOpenSound() : this.getCloseSound(), pos, 0);
-           return ActionResultType.sidedSuccess(world.isClientSide);
-        }
-     }
+     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
+         if (this.locked) {
+            return InteractionResult.PASS;
+         } else {
+            state = state.cycle(OPEN);
+            level.setBlock(pos, state, 10);
+            level.levelEvent(player, state.getValue(OPEN) ? this.getOpenSound() : this.getCloseSound(), pos, 0);
+            level.gameEvent(player, this.isOpen(state) ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, player);
+            return InteractionResult.sidedSuccess(level.isClientSide);
+         }
+      }
 
      public boolean isOpen(BlockState state) {
         return state.getValue(OPEN);
      }
 
-     public void setOpen(World world, BlockState state, BlockPos pos, boolean open) {
+     public void setOpen(@Nullable Entity p_153166_, Level level, BlockState state, BlockPos pos, boolean open) {
         if (state.is(this) && state.getValue(OPEN) != open) {
-           world.setBlock(pos, state.setValue(OPEN, Boolean.valueOf(open)), 10);
-           this.playSound(world, pos, open);
+           level.setBlock(pos, state.setValue(OPEN, Boolean.valueOf(open)), 10);
+           this.playSound(level, pos, open);
         }
      }
 
      @Override
-     public void neighborChanged(BlockState state, World world, BlockPos ppos, Block block, BlockPos pos2, boolean chg) {
-        boolean flag = world.hasNeighborSignal(ppos);
+     public void neighborChanged(BlockState state, Level level, BlockPos ppos, Block block, BlockPos pos2, boolean chg) {
+        boolean flag = level.hasNeighborSignal(ppos);
         if (block != this && flag != state.getValue(POWERED)) {
            if (flag != state.getValue(OPEN)) {
-              this.playSound(world, ppos, flag);
+              this.playSound(level, ppos, flag);
            }
 
-           world.setBlock(ppos, state.setValue(POWERED, Boolean.valueOf(flag)).setValue(OPEN, Boolean.valueOf(flag)), 2);
+           level.setBlock(ppos, state.setValue(POWERED, Boolean.valueOf(flag)).setValue(OPEN, Boolean.valueOf(flag)), 2);
         }
 
      }
 
      @Override
-     public boolean canSurvive(BlockState state, IWorldReader reader, BlockPos pos) {
+     public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
         BlockPos blockpos = pos.below();
         BlockState blockstate = reader.getBlockState(blockpos);
         return blockstate.isFaceSturdy(reader, blockpos, Direction.UP);
      }
 
-     private void playSound(World world, BlockPos pos, boolean open) {
-        world.levelEvent((PlayerEntity)null, open ? this.getOpenSound() : this.getCloseSound(), pos, 0);
+     private void playSound(Level level, BlockPos pos, boolean open) {
+        level.levelEvent((Player)null, open ? this.getOpenSound() : this.getCloseSound(), pos, 0);
      }
 
      @Override
-     public PushReaction getPistonPushReaction(BlockState state) {
-        return PushReaction.DESTROY;
-     }
+     public PushReaction getPistonPushReaction(BlockState p_52814_) {
+         return PushReaction.DESTROY;
+      }
 
      @Override
      public BlockState rotate(BlockState state, Rotation rot) {
@@ -242,63 +237,17 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle, We
      @OnlyIn(Dist.CLIENT) 
      @Override
      public long getSeed(BlockState state, BlockPos pos) {
-        return MathHelper.getSeed(pos.getX(), pos.below(0).getY(), pos.getZ());
+        return Mth.getSeed(pos.getX(), pos.below(0).getY(), pos.getZ());
      }
      
      @Override
-     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> state) {
+     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
         state.add(FACING, OPEN, HINGE, POWERED);
      }
 
-    @Override
-    public void registerDynmapRenderData(ModTextureDefinition mtd) {
-        ModModelDefinition md = mtd.getModelDefinition();
-        String blkname = def.getBlockName();
-        def.defaultRegisterTextures(mtd);
-        // Register texture, and flip version
-        if (def.getTextureCount() == 0) return;
-        String txt = def.getTextureByIndex(0);
-        BlockTextureRecord btr = mtd.addBlockTextureRecord(blkname);
-        btr.setTransparencyMode(TransparencyMode.TRANSPARENT);
-        btr.setPatchTexture(txt, TextureModifier.NONE, 0);
-        btr.setPatchTexture(txt, TextureModifier.FLIPHORIZ, 1);
-        def.setBlockColorMap(btr);
-        // Register model for each meta
-        for (int meta = 0; meta < 16; meta++) {
-            CuboidBlockModel mod = md.addCuboidModel(blkname);
-            mod.setMetaValue(meta);
-            int[] txtids = new int[] { 0, 0, 0, 0, 0, 0 };
-            switch (meta) {
-                case 0:
-                case 7:
-                case 8:
-                case 13:
-                    mod.addCuboid(0.0, 0.0, 0.0, 0.1875, 1.0, 1.0, txtids);
-                    break;
-                case 1:
-                case 4:
-                case 9:
-                case 14:
-                    mod.addCuboid(0.0, 0.0, 0.0, 1.0, 1.0, 0.1875, txtids);
-                    break;
-                case 3:
-                case 6:
-                case 11:
-                case 12:
-                    mod.addCuboid(0.0, 0.0, 0.8125, 1.0, 1.0, 1.0, txtids);
-                    break;
-                case 5:
-                case 2:
-                case 10:
-                case 15:
-                    mod.addCuboid(0.8125, 0.0, 0.0, 1.0, 1.0, 1.0, txtids);
-                    break;
-            }
-        }
-    }
-    private static String[] TAGS = { "doors" };
-    @Override
-    public String[] getBlockTags() {
-    	return TAGS;
-    }
+     private static String[] TAGS = { "doors" };
+     @Override
+     public String[] getBlockTags() {
+    	 return TAGS;
+     }
 }

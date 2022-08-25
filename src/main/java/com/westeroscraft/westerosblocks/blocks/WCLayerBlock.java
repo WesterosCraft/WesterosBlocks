@@ -2,45 +2,39 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import javax.annotation.Nullable;
 
-import org.dynmap.modsupport.BoxBlockModel;
-import org.dynmap.modsupport.ModModelDefinition;
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TransparencyMode;
-
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.tags.FluidTags;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
-public class WCLayerBlock extends Block implements WesterosBlockLifecycle, WesterosBlockDynmapSupport, IWaterLoggable {
+public class WCLayerBlock extends Block implements WesterosBlockLifecycle, SimpleWaterloggedBlock {
 
 	public static class Factory extends WesterosBlockFactory {
 		@Override
 		public Block buildBlockClass(WesterosBlockDef def) {
-			AbstractBlock.Properties props = def.makeProperties();
+			BlockBehaviour.Properties props = def.makeProperties();
 
 			newLAYERS = IntegerProperty.create("layers", 1, getLayerCount(def));
 
@@ -75,14 +69,14 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 	public IntegerProperty LAYERS;
 	public static IntegerProperty newLAYERS;
 
-	protected WCLayerBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+	protected WCLayerBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
 		super(props);
 		this.def = def;
 		this.layerCount = getLayerCount(def);
 		this.registerDefaultState(this.stateDefinition.any().setValue(LAYERS, Integer.valueOf(1)).setValue(WATERLOGGED,
 				Boolean.valueOf(false)));
 		SHAPE_BY_LAYER = new VoxelShape[layerCount + 1];
-		SHAPE_BY_LAYER[0] = VoxelShapes.empty();
+		SHAPE_BY_LAYER[0] = Shapes.empty();
 		for (int i = 1; i <= layerCount; i++) {
 			float f = (float) i / (float) layerCount;
 			SHAPE_BY_LAYER[i] = Block.box(0, 0, 0, 16, 16 * f, 16);
@@ -90,25 +84,25 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos,
-			ISelectionContext ctx) {
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos,
+			CollisionContext ctx) {
 		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
 	}
 
 	@Override
-	public VoxelShape getCollisionShape(BlockState state_, IBlockReader world, BlockPos pos,
-			ISelectionContext ctx) {
+	public VoxelShape getCollisionShape(BlockState state_, BlockGetter world, BlockPos pos,
+			CollisionContext ctx) {
 		return SHAPE_BY_LAYER[state_.getValue(LAYERS) - 1];
 	}
 
 	@Override
-	public VoxelShape getBlockSupportShape(BlockState state, IBlockReader world, BlockPos pos) {
+	public VoxelShape getBlockSupportShape(BlockState state, BlockGetter world, BlockPos pos) {
 		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
 	}
 
 	@Override
-	public VoxelShape getVisualShape(BlockState state, IBlockReader world, BlockPos pos,
-			ISelectionContext ctx) {
+	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos,
+			CollisionContext ctx) {
 		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
 	}
 
@@ -123,7 +117,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 	}
 
 	@Override
-	public boolean canBeReplaced(BlockState state, BlockItemUseContext itemContext) {
+	public boolean canBeReplaced(BlockState state, BlockPlaceContext itemContext) {
 		int i = state.getValue(LAYERS);
 		if (itemContext.getItemInHand().getItem() == this.asItem() && i < layerCount) {
 			if (itemContext.replacingClickedOnBlock()) {
@@ -138,7 +132,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 
 	@Nullable
 	@Override
-	public BlockState getStateForPlacement(BlockItemUseContext itemContext) {
+	public BlockState getStateForPlacement(BlockPlaceContext itemContext) {
 		BlockPos blockpos = itemContext.getClickedPos();
 		BlockState blockstate = itemContext.getLevel().getBlockState(blockpos);
 		FluidState fluidstate = itemContext.getLevel().getFluidState(blockpos);
@@ -159,28 +153,28 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 	}
 
 	@Override
-	public boolean placeLiquid(IWorld world, BlockPos pos, BlockState state, FluidState fluid) {
-		return (state.getValue(LAYERS) < layerCount) ? IWaterLoggable.super.placeLiquid(world, pos, state, fluid)
+	public boolean placeLiquid(LevelAccessor world, BlockPos pos, BlockState state, FluidState fluid) {
+		return (state.getValue(LAYERS) < layerCount) ? SimpleWaterloggedBlock.super.placeLiquid(world, pos, state, fluid)
 				: false;
 	}
 
 	@Override
-	public boolean canPlaceLiquid(IBlockReader world, BlockPos pos, BlockState state, Fluid fluid) {
-		return (state.getValue(LAYERS) < layerCount) ? IWaterLoggable.super.canPlaceLiquid(world, pos, state, fluid)
+	public boolean canPlaceLiquid(BlockGetter world, BlockPos pos, BlockState state, Fluid fluid) {
+		return (state.getValue(LAYERS) < layerCount) ? SimpleWaterloggedBlock.super.canPlaceLiquid(world, pos, state, fluid)
 				: false;
 	}
 
 	@Override
-	public BlockState updateShape(BlockState state, Direction dir, BlockState state2, IWorld world, BlockPos pos,
+	public BlockState updateShape(BlockState state, Direction dir, BlockState state2, LevelAccessor level, BlockPos pos,
 			BlockPos pos2) {
 		if (state.getValue(WATERLOGGED)) {
-			world.getLiquidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+			level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
 		}
-		return super.updateShape(state, dir, state2, world, pos, pos2);
+		return super.updateShape(state, dir, state2, level, pos, pos2);
 	}
 
-	public boolean isPathfindable(BlockState state, IBlockReader world, BlockPos pos, PathType pathtype) {
-		switch (pathtype) {
+	public boolean isPathfindable(BlockState state, BlockGetter world, BlockPos pos, PathComputationType PathComputationType) {
+		switch (PathComputationType) {
 		case LAND:
 			return state.getValue(LAYERS) <= (layerCount / 2);
 		case WATER:
@@ -193,26 +187,12 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Weste
 	}
 
 	@Override
-	protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> stateContainer) {
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
 		if (newLAYERS != null) {
 			this.LAYERS = newLAYERS;
 			newLAYERS = null;
 		}
-		stateContainer.add(LAYERS, WATERLOGGED);
-	}
-
-	@Override
-	public void registerDynmapRenderData(ModTextureDefinition mtd) {
-		ModModelDefinition md = mtd.getModelDefinition();
-		String blkname = def.getBlockName();
-		def.defaultRegisterTextures(mtd);
-		def.defaultRegisterTextureBlock(mtd, TransparencyMode.TRANSPARENT, 0, layerCount);
-		/* Make models for each layer thickness */
-		for (int i = 0; i < layerCount; i++) {
-			BoxBlockModel mod = md.addBoxModel(blkname);
-			mod.setYRange(0.0, (double) (i + 1) / (double) layerCount);
-			mod.setMetaValue(i);
-		}
+		StateDefinition.add(LAYERS, WATERLOGGED);
 	}
 
 	private static String[] TAGS = {};

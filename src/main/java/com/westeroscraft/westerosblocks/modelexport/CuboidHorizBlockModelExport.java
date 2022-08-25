@@ -2,15 +2,12 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidHorizBlock;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class CuboidHorizBlockModelExport extends CuboidBlockModelExport {
     

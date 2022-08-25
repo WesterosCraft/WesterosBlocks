@@ -1,43 +1,30 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SoulSandBlock;
-import net.minecraft.util.math.BlockPos;
-
-import org.dynmap.modsupport.ModTextureDefinition;
-import org.dynmap.modsupport.TransparencyMode;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.core.BlockPos;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IWorldReader;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
 import javax.annotation.Nullable;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.util.Direction;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.core.Direction;
 
 // Solid block, with vertical CTM - adds two boolean states for ctmup and ctmdown (boolean)
-public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynmapSupport, WesterosBlockLifecycle {
+public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	AbstractBlock.Properties props = def.makeProperties();
+        	BlockBehaviour.Properties props = def.makeProperties();
         	// See if we have a cond property
         	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
         	if (prop != null) {
@@ -50,7 +37,7 @@ public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynma
     public static final BooleanProperty UP = BlockStateProperties.UP;
 
     
-    protected WCSolidVertBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+    protected WCSolidVertBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props, def);
         if (COND != null) {
         	this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(DOWN, Boolean.valueOf(false)).setValue(COND, COND.defValue));
@@ -60,13 +47,13 @@ public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynma
         }        	
     }
     @Override
-    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> container) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> container) {
     	super.createBlockStateDefinition(container);
 
     	container.add(UP, DOWN);
     }
     
-    private BlockState updateStateVertical(BlockState bs, IBlockReader reader, BlockPos pos) {
+    private BlockState updateStateVertical(BlockState bs, BlockGetter reader, BlockPos pos) {
     	BlockState bsneighbor = reader.getBlockState(pos.above());
     	Boolean up = Boolean.valueOf(def.isConnectMatch(bs, bsneighbor));
     	bsneighbor = reader.getBlockState(pos.below());
@@ -75,7 +62,7 @@ public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynma
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction dir, BlockState state2, IWorld world, BlockPos pos, BlockPos pos2) {
+    public BlockState updateShape(BlockState state, Direction dir, BlockState state2, LevelAccessor world, BlockPos pos, BlockPos pos2) {
     	state = super.updateShape(state, dir, state2, world, pos, pos2);
     	if (state != null) {
     		state = updateStateVertical(state, world, pos);
@@ -85,17 +72,11 @@ public class WCSolidVertBlock extends WCSolidBlock implements WesterosBlockDynma
 
     @Nullable 
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext ctx) {
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
     	if (bs != null) {
     		bs = updateStateVertical(bs, ctx.getLevel(), ctx.getClickedPos());
     	}
     	return bs;
-    }
-
-    @Override
-    public void registerDynmapRenderData(ModTextureDefinition mtd) {
-        def.defaultRegisterTextures(mtd);
-        def.defaultRegisterTextureBlock(mtd, (def.alphaRender ? TransparencyMode.TRANSPARENT : TransparencyMode.OPAQUE));
     }
 }

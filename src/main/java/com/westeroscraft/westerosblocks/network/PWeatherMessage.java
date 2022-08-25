@@ -1,8 +1,6 @@
 package com.westeroscraft.westerosblocks.network;
 
-import net.minecraft.network.PacketBuffer;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.minecraft.network.FriendlyByteBuf;
 
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
@@ -23,7 +21,7 @@ public class PWeatherMessage {
 
 	}
 
-	public static PWeatherMessage decode(PacketBuffer buf) {
+	public static PWeatherMessage decode(FriendlyByteBuf buf) {
 		try {
 			int idx = buf.readInt();
 			return new PWeatherMessage(weathercondlist[idx]);
@@ -33,7 +31,7 @@ public class PWeatherMessage {
 		}
 	}
 
-	public void encode(PacketBuffer buf) {
+	public void encode(FriendlyByteBuf buf) {
 		buf.writeInt(this.weather.ordinal());
 	}
 

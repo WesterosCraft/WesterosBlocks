@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 public class CrossBlockVertModelExport extends ModelExport {
     // Template objects for Gson export of block models

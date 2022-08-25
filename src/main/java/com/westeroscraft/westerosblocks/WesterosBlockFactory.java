@@ -1,6 +1,6 @@
 package com.westeroscraft.westerosblocks;
 
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 
 // Abstract factory class : each custom block type needs to have one
 public abstract class WesterosBlockFactory {

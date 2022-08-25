@@ -13,3 +13,5 @@ WesterosBlocks-*.jar
 /.project
 /Users/
 .idea
+/.apt_generated/
+/.apt_generated_tests/

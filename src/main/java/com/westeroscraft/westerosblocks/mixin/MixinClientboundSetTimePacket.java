@@ -6,24 +6,23 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.network.ClientMessageHandler;
 
-import net.minecraft.network.play.server.SUpdateTimePacket;
+import net.minecraft.network.protocol.game.ClientboundSetTimePacket;
 
-@Mixin(SUpdateTimePacket.class)
-public abstract class MixinSUpdateTimePacket
+@Mixin(ClientboundSetTimePacket.class)
+public abstract class MixinClientboundSetTimePacket
 {	
 	@Shadow private long gameTime;
 	@Shadow private long dayTime;
 	
 	// This constructor is fake and never used
-	protected MixinSUpdateTimePacket()
+	protected MixinClientboundSetTimePacket()
 	{
 	}
 	
-	@Inject(method = "read", at = @At("TAIL"))
-	private void read(CallbackInfo ci)
+	@Inject(method = "handle", at = @At("TAIL"))
+	private void handle(CallbackInfo ci)
 	{
 		if (ClientMessageHandler.ptimeRelative) {	// If we are relative mode
 			if (ClientMessageHandler.ptimeOffset != 0) {

@@ -2,46 +2,42 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
-import org.dynmap.modsupport.ModTextureDefinition;
-
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.FurnaceBlock;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.particles.ParticleTypes;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.Direction;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.FurnaceBlock;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
-import com.westeroscraft.westerosblocks.WesterosBlockDynmapSupport;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.tileentity.WCFurnaceTileEntity;
+import com.westeroscraft.westerosblocks.tileentity.WCFurnaceBlockEntity;
 
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraft.util.SoundEvents;
 
 // Custom furnace block
-public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecycle, WesterosBlockDynmapSupport {
+public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecycle {
 	public static class Factory extends WesterosBlockFactory {
 		@Override
 		public Block buildBlockClass(WesterosBlockDef def) {
 			final boolean alwaysOnVal = def.getTypeValue("always-on").equals("true");
-			AbstractBlock.Properties props = def.makeProperties().lightLevel((state) -> {
+			BlockBehaviour.Properties props = def.makeProperties().lightLevel((state) -> {
 				return (alwaysOnVal || state.getValue(BlockStateProperties.LIT)) ? (int) (16 * def.lightValue) : 0;
 			});
 			Block blk = def.registerRenderType(def.registerBlock(new WCFurnaceBlock(props, def)), true, def.nonOpaque);
 			// Register tile entity
-			WesterosBlockDef.registerTileEntity(WCFurnaceTileEntity.ENTITYTYPE, WCFurnaceTileEntity::new, blk);
+			WesterosBlockDef.registerBlockEntity(WCFurnaceBlockEntity.ENTITYTYPE, WCFurnaceBlockEntity::new, blk);
 
 			return blk;
 
@@ -51,7 +47,7 @@ public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecyc
 	private WesterosBlockDef def;
 	private boolean alwaysOn;
 
-	protected WCFurnaceBlock(AbstractBlock.Properties props, WesterosBlockDef def) {
+	protected WCFurnaceBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
 		super(props);
 		this.def = def;
 		alwaysOn = def.getTypeValue("always-on").equals("true");
@@ -64,7 +60,7 @@ public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecyc
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
+	public void animateTick(BlockState state, Level world, BlockPos pos, Random random) {
 		boolean lit = state.getValue(LIT);
 		boolean active = alwaysOn || lit;
 
@@ -73,7 +69,7 @@ public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecyc
 			double d1 = (double) pos.getY();
 			double d2 = (double) pos.getZ() + 0.5D;
 			if (random.nextDouble() < 0.1D) {
-				world.playLocalSound(d0, d1, d2, SoundEvents.FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0F, 1.0F,
+				world.playLocalSound(d0, d1, d2, SoundEvents.FURNACE_FIRE_CRACKLE, SoundSource.BLOCKS, 1.0F, 1.0F,
 						false);
 			}
 
@@ -88,25 +84,20 @@ public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecyc
 			world.addParticle(ParticleTypes.FLAME, d0 + d5, d1 + d6, d2 + d7, 0.0D, 0.0D, 0.0D);
 		}
 	}
-
+	
 	@Override
-	public TileEntity newBlockEntity(IBlockReader reader) {
-		return new WCFurnaceTileEntity();
+	public BlockEntity newBlockEntity(BlockPos pos, BlockState bs) {
+		return new WCFurnaceBlockEntity(pos, bs);
 	}
 
 	@Override
-	protected void openContainer(World world, BlockPos pos, PlayerEntity player) {
-		TileEntity tileentity = world.getBlockEntity(pos);
-		if (tileentity instanceof WCFurnaceTileEntity) {
-			player.openMenu((INamedContainerProvider) tileentity);
+	protected void openContainer(Level world, BlockPos pos, Player player) {
+		BlockEntity blockentity = world.getBlockEntity(pos);
+		if (blockentity instanceof WCFurnaceBlockEntity) {
+	         player.openMenu((MenuProvider)blockentity);
+	         player.awardStat(Stats.INTERACT_WITH_FURNACE);
 		}
 	} 
-
-	@Override
-	public void registerDynmapRenderData(ModTextureDefinition mtd) {
-		def.defaultRegisterTextures(mtd);
-		def.defaultRegisterTextureBlock(mtd);
-	}
 
 	private static String[] TAGS = {};
 
