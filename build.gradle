@@ -30,7 +30,7 @@ configFile.withReader {
     project.ext.config = new ConfigSlurper().parse prop
 }
 
-version = "v1.18.2-${config.WesterosBlocks_version}.${System.getenv().BUILD_NUMBER ?: 'Dev'}"
+version = "1.18.2-${config.WesterosBlocks_version}.${System.getenv().BUILD_NUMBER ?: 'Dev'}"
 group= "com.westeroscraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "WesterosBlocks"
 
