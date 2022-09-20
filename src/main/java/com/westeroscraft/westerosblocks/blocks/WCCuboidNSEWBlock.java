@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.dynmap.modsupport.CuboidBlockModel;
+import org.dynmap.modsupport.ModModelDefinition;
+import org.dynmap.modsupport.ModTextureDefinition;
+import org.dynmap.modsupport.TransparencyMode;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -19,6 +24,7 @@ import net.minecraft.world.World;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
 import com.westeroscraft.westerosblocks.items.MultiBlockItem;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.properties.PropertyMeta;
@@ -139,5 +145,26 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
     public int damageDropped(IBlockState state) {
         return state.getValue(variant).intValue();
     }
-
+    @Override
+    public void registerDynmapRenderData(ModTextureDefinition mtd) {
+        ModModelDefinition md = mtd.getModelDefinition();
+        WesterosBlockDef def = this.getWBDefinition();
+        String blkname = def.getBlockName(0);
+        def.defaultRegisterTextures(mtd);
+        def.registerPatchTextureBlock(mtd, 6, TransparencyMode.TRANSPARENT, meta_per_sub);
+        for (int meta = 0; meta < 15; meta++) {
+            List<Cuboid> cl = cuboids_by_meta[meta];   
+            if (cl == null) continue;
+            CuboidBlockModel mod = md.addCuboidModel(blkname);
+            for (Cuboid c : cl) {
+                if (WesterosBlockDef.SHAPE_CROSSED.equals(c.shape)) {   // Crosed
+                    mod.addCrossedPatches(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax, c.sideTextures[0]);
+                }
+                else {
+                    mod.addCuboid(c.xMin, c.yMin, c.zMin, c.xMax, c.yMax, c.zMax, c.sideTextures);
+                }
+            }
+            mod.setMetaValue(meta);
+        }
+    }
 }
