@@ -18,3 +18,5 @@ So my basic loop for doing westerosblocks.json relevant updates winds up looking
 6) Run './gradlew build' again, this time to generate the full updated mod (including the generated resources)
 7) Copy build/libs/WesterosBlocks-6.0.Dev to my test forge client's mod directory (~/westerosclient-1.18.2/mods)
 8) Fire up test client, and look at the pretty blocks! 
+
+Note that to make the server generate the needed files, go to config/westerosblocks/westerosblocks.toml and change blockDevMode to true

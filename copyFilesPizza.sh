@@ -4,7 +4,6 @@ mkdir -p src/main/resources/assets/westerosblocks/models/block/generated
 mkdir -p src/main/resources/assets/westerosblocks/models/item
 mkdir -p src/main/resources/assets/westerosblocks/blockstates
 mkdir -p src/main/resources/data/minecraft/tags/blocks
-cd /mnt/c/Users/Jacob/Desktop
 cp ../forge-1.18.2/config/westerosblocks/assets/westerosblocks/lang/*.json ../WesterosBlocks/src/main/resources/assets/westerosblocks/lang
 cp ../forge-1.18.2/config/westerosblocks/assets/westerosblocks/blockstates/*.json ../WesterosBlocks/src/main/resources/assets/westerosblocks/blockstates
 cp -R ../forge-1.18.2/config/westerosblocks/assets/westerosblocks/models/block/generated/. ../WesterosBlocks/src/main/resources/assets/westerosblocks/models/block/generated
