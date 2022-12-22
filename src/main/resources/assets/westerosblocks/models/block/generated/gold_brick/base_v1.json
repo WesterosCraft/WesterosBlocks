@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/metal_block_0/metal_gold_brick"
+    "all": "westerosblocks:block/gold_brick/side"
   }
 }
