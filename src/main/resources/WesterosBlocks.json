@@ -490,7 +490,7 @@
       "textures": [
         "weirwood/top_bottom",
         "weirwood/top_bottom",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_1:0"
     },
@@ -1642,7 +1642,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Birch Bark Fence",
-      "textures": ["wood_block_0/bark_birch"],
+      "textures": ["bark_birch/side"],
       "legacyBlockID": "fence_block_0:6"
     },
     {
@@ -2127,7 +2127,7 @@
       "textures": [
         "stone_wall_block_0/log_birch_top",
         "stone_wall_block_0/log_birch_top",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "thin_log_0:2"
     },
@@ -6660,7 +6660,7 @@
       "resistance": 5,
       "creativeTab": "WesterosBlocks",
       "label": "6-Sided Birch",
-      "textures": ["wood_block_0/bark_birch"],
+      "textures": ["bark_birch/side"],
       "legacyBlockID": "six_sided_blocks_0:3"
     },
     {
@@ -30942,7 +30942,7 @@
       "textures": [
         "log_block_0/weirwood_face_1",
         "log_block_0/weirwood_face_1",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_6:0"
     },
@@ -30962,7 +30962,7 @@
       "textures": [
         "log_block_0/weirwood_face_2",
         "log_block_0/weirwood_face_2",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_6:1"
     },
@@ -30982,7 +30982,7 @@
       "textures": [
         "log_block_0/weirwood_face_3",
         "log_block_0/weirwood_face_3",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_6:2"
     },
@@ -31002,7 +31002,7 @@
       "textures": [
         "log_block_0/weirwood_face_4",
         "log_block_0/weirwood_face_4",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_6:3"
     },
@@ -31022,7 +31022,7 @@
       "textures": [
         "log_block_0/weirwood_face_5",
         "log_block_0/weirwood_face_5",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_7:0"
     },
@@ -31042,7 +31042,7 @@
       "textures": [
         "log_block_0/weirwood_face_6",
         "log_block_0/weirwood_face_6",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_7:1"
     },
@@ -31062,7 +31062,7 @@
       "textures": [
         "log_block_0/weirwood_face_7",
         "log_block_0/weirwood_face_7",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_7:2"
     },
@@ -31082,7 +31082,7 @@
       "textures": [
         "log_block_0/weirwood_face_8",
         "log_block_0/weirwood_face_8",
-        "wood_block_0/bark_birch"
+        "bark_birch/side"
       ],
       "legacyBlockID": "log_block_7:3"
     },
