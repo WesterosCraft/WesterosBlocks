@@ -488,8 +488,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 0",
       "textures": [
-        "weirwood_face_0/top_bottom",
-        "weirwood_face_0/top_bottom",
+        "weirwood/top_bottom",
+        "weirwood/top_bottom",
         "wood_block_0/bark_birch"
       ],
       "legacyBlockID": "log_block_1:0"
