@@ -455,7 +455,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oak Log Rope",
-      "textures": ["tree/top", "tree/top", "log_block_0/bark_oak_rope"],
+      "textures": ["tree/top", "tree/top", "bark_oak/rope"],
       "legacyBlockID": "log_block_0:2"
     },
     {
