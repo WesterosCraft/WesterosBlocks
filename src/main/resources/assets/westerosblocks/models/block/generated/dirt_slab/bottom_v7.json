@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/dirt/top_bot7",
     "up": "westerosblocks:block/dirt/top_bot7",
-    "north": "westerosblocks:block/ground_block_0/dirt",
-    "south": "westerosblocks:block/ground_block_0/dirt",
-    "west": "westerosblocks:block/ground_block_0/dirt",
-    "east": "westerosblocks:block/ground_block_0/dirt",
-    "particle": "westerosblocks:block/ground_block_0/dirt"
+    "north": "westerosblocks:block/dirt/ground",
+    "south": "westerosblocks:block/dirt/ground",
+    "west": "westerosblocks:block/dirt/ground",
+    "east": "westerosblocks:block/dirt/ground",
+    "particle": "westerosblocks:block/dirt/ground"
   }
 }

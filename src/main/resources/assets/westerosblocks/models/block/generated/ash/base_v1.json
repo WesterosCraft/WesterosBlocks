@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/ground_block_0/dirt",
+    "down": "westerosblocks:block/dirt/ground",
     "up": "westerosblocks:block/ground_block_0/ash_top",
     "north": "westerosblocks:block/ground_block_0/ash",
     "south": "westerosblocks:block/ground_block_0/ash",
