@@ -439,11 +439,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Firewood",
-      "textures": [
-        "log_block_0/firewood_top",
-        "log_block_0/firewood_top",
-        "log_block_0/firewood_side"
-      ],
+      "textures": ["firewood/top", "firewood/top", "firewood/side2"],
       "legacyBlockID": "log_block_0:1"
     },
     {
@@ -44410,11 +44406,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Firewood Slab",
-      "textures": [
-        "log_block_0/firewood_side",
-        "log_block_0/firewood_side",
-        "log_block_0/firewood_top"
-      ],
+      "textures": ["firewood/side2", "firewood/side2", "firewood/top"],
       "legacyBlockID": "random_slab_block_5:2"
     },
     {
