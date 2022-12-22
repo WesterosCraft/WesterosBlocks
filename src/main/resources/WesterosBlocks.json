@@ -420,9 +420,9 @@
       "creativeTab": "WesterosDeco",
       "label": "Closed Barrel",
       "textures": [
-        "log_block_0/barrel_top_closed",
-        "log_block_0/barrel_top_closed",
-        "log_block_0/barrel_side"
+        "barrel_closed/barrel_top_closed",
+        "barrel_closed/barrel_top_closed",
+        "barrel_sides/side1"
       ],
       "legacyBlockID": "log_block_0:0"
     },
@@ -4907,14 +4907,14 @@
       "randomTextures": [
         {
           "textures": [
-            "log_block_0/barrel_top_closed",
+            "barrel_closed/barrel_top_closed",
             "crate_block_0/barrel_top_fish",
             "barrel_sides/side0"
           ]
         },
         {
           "textures": [
-            "log_block_0/barrel_top_closed",
+            "barrel_closed/barrel_top_closed",
             "crate_block_0/barrel_top_fish",
             "barrel_sides/side1"
           ]
@@ -5136,9 +5136,9 @@
       "creativeTab": "WesterosDeco",
       "label": "Water Barrel",
       "textures": [
-        "log_block_0/barrel_top_closed",
+        "barrel_closed/barrel_top_closed",
         "crate_block_0/barrel_top_water",
-        "log_block_0/barrel_side"
+        "barrel_sides/side1"
       ],
       "legacyBlockID": "crate_block_0:12"
     },
@@ -5152,9 +5152,9 @@
       "creativeTab": "WesterosDeco",
       "label": "Empty Barrel",
       "textures": [
-        "log_block_0/barrel_top_closed",
+        "barrel_closed/barrel_top_closed",
         "crate_block_0/barrel_top_empty",
-        "log_block_0/barrel_side"
+        "barrel_sides/side1"
       ],
       "legacyBlockID": "crate_block_0:13"
     },

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/log_block_0/barrel_top_closed",
+    "down": "westerosblocks:block/barrel_closed/barrel_top_closed",
     "up": "westerosblocks:block/crate_block_0/barrel_top_fish",
     "north": "westerosblocks:block/barrel_sides/side1",
     "south": "westerosblocks:block/barrel_sides/side1",
