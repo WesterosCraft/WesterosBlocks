@@ -376,7 +376,7 @@
       "creativeTab": "WesterosBlocks",
       "lightValue": 0,
       "label": "Iron Throne Blade Block",
-      "textures": ["metal_block_0/blades_molten"],
+      "textures": ["blades_molten/side1"],
       "legacyBlockID": "metal_block_0:3"
     },
     {
@@ -1570,7 +1570,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Iron Throne Blade Slab",
-      "textures": ["metal_block_0/blades_molten"],
+      "textures": ["blades_molten/side1"],
       "legacyBlockID": "metal_slab_block_0:7"
     },
     {
@@ -16244,7 +16244,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Iron Throne Blade Fence",
-      "textures": ["metal_block_0/blades_molten"],
+      "textures": ["blades_molten/side1"],
       "legacyBlockID": "fence_block_2:11"
     },
     {
@@ -17145,7 +17145,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Iron Throne Blade Wall",
-      "textures": ["metal_block_0/blades_molten"],
+      "textures": ["blades_molten/side1"],
       "legacyBlockID": "stone_wall_block_2:4"
     },
     {

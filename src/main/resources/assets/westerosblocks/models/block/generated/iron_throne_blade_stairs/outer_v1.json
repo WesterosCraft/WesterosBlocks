@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/metal_block_0/blades_molten",
-    "top": "westerosblocks:block/metal_block_0/blades_molten",
-    "side": "westerosblocks:block/metal_block_0/blades_molten",
-    "particle": "westerosblocks:block/metal_block_0/blades_molten"
+    "bottom": "westerosblocks:block/blades_molten/side1",
+    "top": "westerosblocks:block/blades_molten/side1",
+    "side": "westerosblocks:block/blades_molten/side1",
+    "particle": "westerosblocks:block/blades_molten/side1"
   }
 }
