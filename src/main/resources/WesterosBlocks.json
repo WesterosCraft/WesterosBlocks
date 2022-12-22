@@ -471,7 +471,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oak Log Chain",
-      "textures": ["tree/top", "tree/top", "log_block_0/bark_oak_chain"],
+      "textures": ["tree/top", "tree/top", "bark_oak/chain"],
       "legacyBlockID": "log_block_0:3"
     },
     {
