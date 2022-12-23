@@ -1422,7 +1422,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Iron Slab",
-      "textures": ["metal_block_0/metal_block_iron"],
+      "textures": ["iron/top"],
       "legacyBlockID": "metal_slab_block_0:0"
     },
     {
@@ -2915,7 +2915,7 @@
       "lightValue": 0.7,
       "lightOpacity": 0,
       "textures": [
-        "metal_block_0/metal_block_iron",
+        "iron/top",
         "light_emitting_blocks_0/lantern_handheld_center",
         "light_emitting_blocks_0/lantern_red_bottom"
       ],
@@ -40705,7 +40705,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Iron Wall",
-      "textures": ["metal_block_0/metal_block_iron"],
+      "textures": ["iron/top"],
       "legacyBlockID": "stone_wall_block_4:0"
     },
     {
@@ -40807,7 +40807,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Iron Fence",
-      "textures": ["metal_block_0/metal_block_iron"],
+      "textures": ["iron/top"],
       "legacyBlockID": "fence_block_4:0"
     },
     {
@@ -40885,7 +40885,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Iron Tip",
-      "textures": ["metal_block_0/metal_block_iron"],
+      "textures": ["iron/top"],
       "cuboids": [
         {
           "xMin": 0.3755,
