@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "up": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "north": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "south": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "west": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "east": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "particle": "westerosblocks:block/metal_block_0/metal_block_steeloxidized"
+    "down": "westerosblocks:block/steel/oxidized",
+    "up": "westerosblocks:block/steel/oxidized",
+    "north": "westerosblocks:block/steel/oxidized",
+    "south": "westerosblocks:block/steel/oxidized",
+    "west": "westerosblocks:block/steel/oxidized",
+    "east": "westerosblocks:block/steel/oxidized",
+    "particle": "westerosblocks:block/steel/oxidized"
   }
 }
