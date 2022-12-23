@@ -1486,7 +1486,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Bronze Slab",
-      "textures": ["metal_block_0/metal_block_bronzeoxidized"],
+      "textures": ["bronze/oxidized"],
       "legacyBlockID": "metal_slab_block_0:3"
     },
     {
@@ -16252,7 +16252,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Bronze Fence",
-      "textures": ["metal_block_0/metal_block_bronzeoxidized"],
+      "textures": ["bronze/oxidized"],
       "legacyBlockID": "fence_block_2:14"
     },
     {
@@ -17225,7 +17225,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Bronze Wall",
-      "textures": ["metal_block_0/metal_block_bronzeoxidized"],
+      "textures": ["bronze/oxidized"],
       "legacyBlockID": "stone_wall_block_2:10"
     },
     {
@@ -41026,7 +41026,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Bronze Tip",
-      "textures": ["metal_block_0/metal_block_bronzeoxidized"],
+      "textures": ["bronze/oxidized"],
       "cuboids": [
         {
           "xMin": 0.3755,
