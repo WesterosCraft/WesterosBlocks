@@ -1522,7 +1522,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Steel Slab",
-      "textures": ["metal_block_0/metal_block_steel"],
+      "textures": ["steel/side"],
       "legacyBlockID": "metal_slab_block_0:5"
     },
     {
@@ -40741,7 +40741,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Steel Wall",
-      "textures": ["metal_block_0/metal_block_steel"],
+      "textures": ["steel/side"],
       "legacyBlockID": "stone_wall_block_4:2"
     },
     {
@@ -40831,7 +40831,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Steel Fence",
-      "textures": ["metal_block_0/metal_block_steel"],
+      "textures": ["steel/side"],
       "legacyBlockID": "fence_block_4:2"
     },
     {
@@ -41073,7 +41073,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Steel Tip",
-      "textures": ["metal_block_0/metal_block_steel"],
+      "textures": ["steel/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
