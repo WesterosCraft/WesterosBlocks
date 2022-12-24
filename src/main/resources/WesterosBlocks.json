@@ -1825,8 +1825,8 @@
       "creativeTab": "WesterosBlocks",
       "label": "Desert Sandstone Brick Wall",
       "textures": [
-        "stone_wall_block_0/sandstone_light_top",
-        "stone_wall_block_0/sandstone_light_top",
+        "sandstone_light_wall/top",
+        "sandstone_light_wall/top",
         "stone_block_0/sandstone_normal"
       ],
       "legacyBlockID": "stone_wall_block_0:3"
