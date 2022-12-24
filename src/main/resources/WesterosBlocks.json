@@ -1738,7 +1738,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Birch Fence with Grapes",
-      "textures": ["wood_block_0/planks_birch_grapevines"],
+      "textures": ["planks_birch/grapevines"],
       "legacyBlockID": "fence_block_0:14"
     },
     {
