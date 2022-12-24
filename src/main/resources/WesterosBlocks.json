@@ -1654,7 +1654,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Jungle Bark Fence",
-      "textures": ["wood_block_0/bark_jungle"],
+      "textures": ["bark_jungle/side"],
       "legacyBlockID": "fence_block_0:7"
     },
     {
@@ -2149,7 +2149,7 @@
       "textures": [
         "stone_wall_block_0/log_jungle_top",
         "stone_wall_block_0/log_jungle_top",
-        "wood_block_0/bark_jungle"
+        "bark_jungle/side"
       ],
       "legacyBlockID": "thin_log_0:3"
     },
@@ -6672,7 +6672,7 @@
       "resistance": 5,
       "creativeTab": "WesterosBlocks",
       "label": "6-Sided Jungle",
-      "textures": ["wood_block_0/bark_jungle"],
+      "textures": ["bark_jungle/side"],
       "legacyBlockID": "six_sided_blocks_0:4"
     },
     {
