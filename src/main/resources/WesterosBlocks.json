@@ -395,7 +395,7 @@
       "creativeTab": "WesterosBlocks",
       "lightValue": 0,
       "label": "Gold Brick",
-      "textures": ["metal_block_0/metal_gold_brick"],
+      "textures": ["gold_brick/side"],
       "legacyBlockID": "metal_block_0:4"
     },
     {
@@ -1540,7 +1540,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Gold Brick Slab",
-      "textures": ["metal_block_0/metal_gold_brick"],
+      "textures": ["gold_brick/side"],
       "legacyBlockID": "metal_slab_block_0:6"
     },
     {
@@ -1570,7 +1570,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Oak Fence",
-      "textures": ["wood_block_0/planks_oak"],
+      "textures": ["planks_oak/side"],
       "legacyBlockID": "fence_block_0:0"
     },
     {
@@ -12945,7 +12945,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Gold Brick Tip",
-      "textures": ["metal_block_0/metal_gold_brick"],
+      "textures": ["gold_brick/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -13086,7 +13086,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oak Tip",
-      "textures": ["wood_block_0/planks_oak"],
+      "textures": ["planks_oak/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -17498,7 +17498,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oak Hopper",
-      "textures": ["wood_block_0/planks_oak"],
+      "textures": ["planks_oak/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -17545,7 +17545,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Hollow Oak Hopper",
-      "textures": ["wood_block_0/planks_oak"],
+      "textures": ["planks_oak/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -30641,7 +30641,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oak Wall",
-      "textures": ["wood_block_0/planks_oak"],
+      "textures": ["planks_oak/side"],
       "legacyBlockID": "wood_wall_block_0:2"
     },
     {
@@ -33141,7 +33141,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oak Carpet",
-      "textures": ["wood_block_0/planks_oak"],
+      "textures": ["planks_oak/side"],
       "cuboids": [
         {
           "xMin": 0,
@@ -40777,7 +40777,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Gold Brick Wall",
-      "textures": ["metal_block_0/metal_gold_brick"],
+      "textures": ["gold_brick/side"],
       "legacyBlockID": "stone_wall_block_4:4"
     },
     {
@@ -40855,7 +40855,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Gold Brick Fence",
-      "textures": ["metal_block_0/metal_gold_brick"],
+      "textures": ["gold_brick/side"],
       "legacyBlockID": "fence_block_4:4"
     },
     {
