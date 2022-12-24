@@ -1678,7 +1678,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Spruce Fence with Vines",
-      "textures": ["wood_block_0/planks_spruce_vines"],
+      "textures": ["planks_spruce/vines"],
       "legacyBlockID": "fence_block_0:9"
     },
     {
