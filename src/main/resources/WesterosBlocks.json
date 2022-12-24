@@ -1618,7 +1618,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Oak Bark Fence",
-      "textures": ["wood_block_0/bark_oak"],
+      "textures": ["bark_oak/side"],
       "legacyBlockID": "fence_block_0:4"
     },
     {
@@ -2083,7 +2083,7 @@
       "textures": [
         "stone_wall_block_0/log_oak_top",
         "stone_wall_block_0/log_oak_top",
-        "wood_block_0/bark_oak"
+        "bark_oak/side"
       ],
       "legacyBlockID": "thin_log_0:0"
     },
@@ -6636,7 +6636,7 @@
       "resistance": 5,
       "creativeTab": "WesterosBlocks",
       "label": "6-Sided Oak",
-      "textures": ["wood_block_0/bark_oak"],
+      "textures": ["bark_oak/side"],
       "legacyBlockID": "six_sided_blocks_0:1"
     },
     {

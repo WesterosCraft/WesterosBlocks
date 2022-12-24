@@ -3,6 +3,6 @@
   "textures": {
     "bottom": "westerosblocks:block/stone_wall_block_0/log_oak_top",
     "top": "westerosblocks:block/stone_wall_block_0/log_oak_top",
-    "side": "westerosblocks:block/wood_block_0/bark_oak"
+    "side": "westerosblocks:block/bark_oak/side"
   }
 }
