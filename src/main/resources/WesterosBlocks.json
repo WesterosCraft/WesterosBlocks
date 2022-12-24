@@ -1847,8 +1847,8 @@
       "creativeTab": "WesterosBlocks",
       "label": "Red Sandstone Wall",
       "textures": [
-        "stone_wall_block_0/sandstone_red_top",
-        "stone_wall_block_0/sandstone_red_top",
+        "sandstone_red_wall/top",
+        "sandstone_red_wall/top",
         "stone_block_0/sandstone_red"
       ],
       "legacyBlockID": "stone_wall_block_0:4"
@@ -1869,7 +1869,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Dark Cobblestone Wall",
       "colorMult": "textures/colormap/darkcobble",
-      "textures": ["stone_block_1/stone_cobble_dark"],
+      "textures": ["dark_cobble/stone_cobble_dark"],
       "legacyBlockID": "stone_wall_block_0:5"
     },
     {
@@ -6595,7 +6595,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Dark Cobblestone",
       "colorMult": "textures/colormap/darkcobble",
-      "textures": ["stone_block_1/stone_cobble_dark"],
+      "textures": ["dark_cobble/stone_cobble_dark"],
       "legacyBlockID": "stone_block_0:14"
     },
     {
@@ -8942,7 +8942,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Dark Cobblestone Slab",
       "colorMult": "textures/colormap/darkcobble",
-      "textures": ["stone_block_1/stone_cobble_dark"],
+      "textures": ["dark_cobble/stone_cobble_dark"],
       "legacyBlockID": "stone_slab_block_1:7"
     },
     {
@@ -9771,7 +9771,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Dark Cobblestone Fence",
       "colorMult": "textures/colormap/darkcobble",
-      "textures": ["stone_block_1/stone_cobble_dark"],
+      "textures": ["dark_cobble/stone_cobble_dark"],
       "legacyBlockID": "fence_block_1:11"
     },
     {
@@ -44656,7 +44656,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Dark Cobblestone Hopper",
       "colorMult": "textures/colormap/darkcobble",
-      "textures": ["stone_block_1/stone_cobble_dark"],
+      "textures": ["dark_cobble/stone_cobble_dark"],
       "cuboids": [
         {
           "xMin": 0.3755,
