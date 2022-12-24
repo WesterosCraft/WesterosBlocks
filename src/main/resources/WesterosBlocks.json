@@ -1726,7 +1726,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Spruce Fence with Grapes",
-      "textures": ["wood_block_0/planks_spruce_grapevines"],
+      "textures": ["planks_spruce/grapevines"],
       "legacyBlockID": "fence_block_0:13"
     },
     {
