@@ -1787,7 +1787,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Stone Brick Wall",
       "colorMult": "textures/colormap/stonebrick",
-      "textures": ["stone_block_1/brick_stone_large_unshaded"],
+      "textures": ["stone_brick/large_unshaded"],
       "legacyBlockID": "stone_wall_block_0:1"
     },
     {
@@ -30466,7 +30466,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stone Brick Hopper",
       "colorMult": "textures/colormap/stonebrick",
-      "textures": ["stone_block_1/brick_stone_large_unshaded"],
+      "textures": ["stone_brick/large_unshaded"],
       "cuboids": [
         {
           "xMin": 0.3755,
