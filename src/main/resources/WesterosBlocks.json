@@ -1606,7 +1606,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Jungle Fence",
-      "textures": ["wood_block_0/planks_jungle"],
+      "textures": ["planks_jungle/side"],
       "legacyBlockID": "fence_block_0:3"
     },
     {
@@ -3292,7 +3292,7 @@
       "lightValue": 0.55,
       "lightOpacity": 0,
       "textures": [
-        "wood_block_0/planks_jungle",
+        "planks_jungle/side",
         "light_emitting_blocks_0/lantern_handheld_red_center",
         "light_emitting_blocks_0/lantern_red_bottom"
       ],
@@ -12048,7 +12048,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Jungle Hopper",
-      "textures": ["wood_block_0/planks_jungle"],
+      "textures": ["planks_jungle/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -13227,7 +13227,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Jungle Tip",
-      "textures": ["wood_block_0/planks_jungle"],
+      "textures": ["planks_jungle/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -17794,7 +17794,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Hollow Jungle Hopper",
-      "textures": ["wood_block_0/planks_jungle"],
+      "textures": ["planks_jungle/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -30695,7 +30695,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Jungle Wall",
-      "textures": ["wood_block_0/planks_jungle"],
+      "textures": ["planks_jungle/side"],
       "legacyBlockID": "wood_wall_block_0:5"
     },
     {
@@ -33228,7 +33228,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Jungle Carpet",
-      "textures": ["wood_block_0/planks_jungle"],
+      "textures": ["planks_jungle/side"],
       "cuboids": [
         {
           "xMin": 0,
