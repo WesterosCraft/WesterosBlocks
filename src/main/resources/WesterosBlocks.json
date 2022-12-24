@@ -1594,7 +1594,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Birch Fence",
-      "textures": ["wood_block_0/planks_birch"],
+      "textures": ["planks_birch/side"],
       "legacyBlockID": "fence_block_0:2"
     },
     {
@@ -12001,7 +12001,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Birch Hopper",
-      "textures": ["wood_block_0/planks_birch"],
+      "textures": ["planks_birch/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -13180,7 +13180,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Birch Tip",
-      "textures": ["wood_block_0/planks_birch"],
+      "textures": ["planks_birch/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -17711,7 +17711,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Hollow Birch Hopper",
-      "textures": ["wood_block_0/planks_birch"],
+      "textures": ["planks_birch/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -30677,7 +30677,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Birch Wall",
-      "textures": ["wood_block_0/planks_birch"],
+      "textures": ["planks_birch/side"],
       "legacyBlockID": "wood_wall_block_0:4"
     },
     {
@@ -33199,7 +33199,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Birch Carpet",
-      "textures": ["wood_block_0/planks_birch"],
+      "textures": ["planks_birch/side"],
       "cuboids": [
         {
           "xMin": 0,
