@@ -1750,7 +1750,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Jungle Fence with Grapes",
-      "textures": ["wood_block_0/planks_jungle_grapevines"],
+      "textures": ["planks_jungle/grapevines"],
       "legacyBlockID": "fence_block_0:15"
     },
     {
