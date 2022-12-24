@@ -1806,7 +1806,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Orange Brick Wall",
       "colorMult": "textures/colormap/brick",
-      "textures": ["stone_block_3/brick_orange_large"],
+      "textures": ["orange_brick/large"],
       "legacyBlockID": "stone_wall_block_0:2"
     },
     {
@@ -9809,7 +9809,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Orange Brick Fence",
       "colorMult": "textures/colormap/brick",
-      "textures": ["stone_block_3/brick_orange_large"],
+      "textures": ["orange_brick/large"],
       "legacyBlockID": "fence_block_1:14"
     },
     {
@@ -17972,7 +17972,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Orange Brick Hopper",
       "colorMult": "textures/colormap/brick",
-      "textures": ["stone_block_3/brick_orange_large"],
+      "textures": ["orange_brick/large"],
       "cuboids": [
         {
           "xMin": 0.3755,
