@@ -1768,7 +1768,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Nether Brick Wall",
-      "textures": ["stone_block_3/brick_nether"],
+      "textures": ["nether_brick/side"],
       "legacyBlockID": "stone_wall_block_0:0"
     },
     {
@@ -12191,7 +12191,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Nether Brick Hopper",
-      "textures": ["stone_block_3/brick_nether"],
+      "textures": ["nether_brick/side"],
       "cuboids": [
         {
           "xMin": 0.3755,

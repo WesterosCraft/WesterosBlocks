@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_side",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_3/brick_nether",
-    "top": "westerosblocks:block/stone_block_3/brick_nether",
-    "side": "westerosblocks:block/stone_block_3/brick_nether"
+    "bottom": "westerosblocks:block/nether_brick/side",
+    "top": "westerosblocks:block/nether_brick/side",
+    "side": "westerosblocks:block/nether_brick/side"
   }
 }
