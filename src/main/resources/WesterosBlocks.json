@@ -1582,7 +1582,7 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Spruce Fence",
-      "textures": ["wood_block_0/planks_spruce"],
+      "textures": ["planks_spruce/side"],
       "legacyBlockID": "fence_block_0:1"
     },
     {
@@ -11954,7 +11954,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Spruce Hopper",
-      "textures": ["wood_block_0/planks_spruce"],
+      "textures": ["planks_spruce/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -13133,7 +13133,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Spruce Tip",
-      "textures": ["wood_block_0/planks_spruce"],
+      "textures": ["planks_spruce/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -17628,7 +17628,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Hollow Spruce Hopper",
-      "textures": ["wood_block_0/planks_spruce"],
+      "textures": ["planks_spruce/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -30659,7 +30659,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Spruce Wall",
-      "textures": ["wood_block_0/planks_spruce"],
+      "textures": ["planks_spruce/side"],
       "legacyBlockID": "wood_wall_block_0:3"
     },
     {
@@ -33170,7 +33170,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Spruce Carpet",
-      "textures": ["wood_block_0/planks_spruce"],
+      "textures": ["planks_spruce/side"],
       "cuboids": [
         {
           "xMin": 0,

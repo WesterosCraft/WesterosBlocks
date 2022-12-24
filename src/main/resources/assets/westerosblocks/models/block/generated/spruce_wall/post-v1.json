@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_post",
   "textures": {
-    "bottom": "westerosblocks:block/wood_block_0/planks_spruce",
-    "top": "westerosblocks:block/wood_block_0/planks_spruce",
-    "side": "westerosblocks:block/wood_block_0/planks_spruce"
+    "bottom": "westerosblocks:block/planks_spruce/side",
+    "top": "westerosblocks:block/planks_spruce/side",
+    "side": "westerosblocks:block/planks_spruce/side"
   }
 }
