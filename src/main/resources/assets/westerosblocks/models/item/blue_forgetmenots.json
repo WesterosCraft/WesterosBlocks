@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/flowers/flower_block_0/blue_forgetmenots1"
+    "layer0": "westerosblocks:block/flowers/blue_forgetmenots1"
   }
 }

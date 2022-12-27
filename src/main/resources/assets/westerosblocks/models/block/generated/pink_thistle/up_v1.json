@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/flowers/flower_block_1/pink_thistle_up_both1"
+    "cross": "westerosblocks:block/flowers/pink_thistle_up_both1"
   }
 }

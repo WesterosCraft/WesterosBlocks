@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/flowers/flower_block_3/red_sourleaf_bush1"
+    "cross": "westerosblocks:block/flowers/red_sourleaf_bush1"
   }
 }
