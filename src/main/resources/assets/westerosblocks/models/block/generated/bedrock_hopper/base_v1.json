@@ -18,7 +18,7 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_1/stone_bedrock",
+    "txt4": "westerosblocks:block/stone_bedrock/side",
     "txt5": "westerosblocks:block/stone_block_1/stone_bedrock",
     "txt2": "westerosblocks:block/stone_block_1/stone_bedrock",
     "txt3": "westerosblocks:block/stone_block_1/stone_bedrock",

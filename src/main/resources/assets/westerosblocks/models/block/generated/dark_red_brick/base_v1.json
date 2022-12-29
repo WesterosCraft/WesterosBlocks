@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_3/brick_dark_red"
+    "all": "westerosblocks:block/dark_red_brick/side"
   }
 }

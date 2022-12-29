@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_side_tall",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_1/stone_bedrock",
-    "top": "westerosblocks:block/stone_block_1/stone_bedrock",
-    "side": "westerosblocks:block/stone_block_1/stone_bedrock"
+    "bottom": "westerosblocks:block/stone_bedrock/side",
+    "top": "westerosblocks:block/stone_bedrock/side",
+    "side": "westerosblocks:block/stone_bedrock/side"
   }
 }

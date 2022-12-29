@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_1/brick_light_grey",
-    "txt5": "westerosblocks:block/stone_block_1/brick_light_grey",
-    "txt2": "westerosblocks:block/stone_block_1/brick_light_grey",
-    "txt3": "westerosblocks:block/stone_block_1/brick_light_grey",
-    "txt0": "westerosblocks:block/stone_block_1/brick_light_grey",
-    "txt1": "westerosblocks:block/stone_block_1/brick_light_grey",
-    "particle": "westerosblocks:block/stone_block_1/brick_light_grey"
+    "txt4": "westerosblocks:block/light_grey_brick/side",
+    "txt5": "westerosblocks:block/light_grey_brick/side",
+    "txt2": "westerosblocks:block/light_grey_brick/side",
+    "txt3": "westerosblocks:block/light_grey_brick/side",
+    "txt0": "westerosblocks:block/light_grey_brick/side",
+    "txt1": "westerosblocks:block/light_grey_brick/side",
+    "particle": "westerosblocks:block/light_grey_brick/side"
   },
   "elements": [
     {

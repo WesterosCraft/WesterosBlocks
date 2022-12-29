@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_3/brick_orange_small_side",
-    "top": "westerosblocks:block/stone_block_3/brick_orange_small_side",
-    "side": "westerosblocks:block/stone_block_3/brick_orange_small_side",
-    "particle": "westerosblocks:block/stone_block_3/brick_orange_small_side"
+    "bottom": "westerosblocks:block/orange_brick/small_side",
+    "top": "westerosblocks:block/orange_brick/small_side",
+    "side": "westerosblocks:block/orange_brick/small_side",
+    "particle": "westerosblocks:block/orange_brick/small_side"
   }
 }

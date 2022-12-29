@@ -1887,7 +1887,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Bedrock Wall",
-      "textures": ["stone_block_1/stone_bedrock"],
+      "textures": ["stone_bedrock/side"],
       "legacyBlockID": "stone_wall_block_0:6"
     },
     {
@@ -1906,7 +1906,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Small Stone Brick Wall",
       "colorMult": "textures/colormap/smallstonebrick",
-      "textures": ["stone_block_1/brick_stone_small"],
+      "textures": ["stone_brick/small"],
       "legacyBlockID": "stone_wall_block_0:7"
     },
     {
@@ -1924,7 +1924,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Dark Red Brick Wall",
-      "textures": ["stone_block_3/brick_dark_red"],
+      "textures": ["dark_red_brick/side"],
       "legacyBlockID": "stone_wall_block_0:8"
     },
     {
@@ -1943,7 +1943,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Small Orange Brick Wall",
       "colorMult": "textures/colormap/brick",
-      "textures": ["stone_block_3/brick_orange_small_side"],
+      "textures": ["orange_brick/small_side"],
       "legacyBlockID": "stone_wall_block_0:9"
     },
     {
@@ -1962,7 +1962,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Light Grey Brick Wall",
       "colorMult": "textures/colormap/lightgreystone",
-      "textures": ["stone_block_1/brick_light_grey"],
+      "textures": ["light_grey_brick/side"],
       "legacyBlockID": "stone_wall_block_0:10"
     },
     {
@@ -1982,9 +1982,9 @@
       "label": "Marble Wall",
       "type": "size:short",
       "textures": [
-        "stone_wall_block_0/wall_marble_top",
-        "stone_wall_block_0/wall_marble_top",
-        "stone_wall_block_0/wall_marble_side"
+        "marble/top",
+        "marble/top",
+        "marble/side"
       ],
       "legacyBlockID": "stone_wall_block_0:11"
     },
@@ -2005,9 +2005,9 @@
       "label": "Thin Marble Column",
       "type": "size:short",
       "textures": [
-        "stone_wall_block_0/wall_marble_top",
-        "stone_wall_block_0/wall_marble_top",
-        "stone_wall_block_0/wall_marble_column_side"
+        "marble/top",
+        "marble/top",
+        "marble/column_side"
       ],
       "legacyBlockID": "stone_wall_block_0:12"
     },
@@ -6570,7 +6570,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Dark Red Brick",
-      "textures": ["stone_block_3/brick_dark_red"],
+      "textures": ["dark_red_brick/side"],
       "legacyBlockID": "stone_block_0:12"
     },
     {
@@ -7465,7 +7465,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Light Grey Brick",
       "colorMult": "textures/colormap/lightgreystone",
-      "textures": ["stone_block_1/brick_light_grey"],
+      "textures": ["light_grey_brick/side"],
       "legacyBlockID": "stone_block_1:9"
     },
     {
@@ -7478,7 +7478,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Small Stone Brick",
       "colorMult": "textures/colormap/smallstonebrick",
-      "textures": ["stone_block_1/brick_stone_small"],
+      "textures": ["stone_brick/small"],
       "legacyBlockID": "stone_block_1:10"
     },
     {
@@ -8754,7 +8754,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Small Stone Brick Slab",
       "colorMult": "textures/colormap/smallstonebrick",
-      "textures": ["stone_block_1/brick_stone_small"],
+      "textures": ["stone_brick/small"],
       "legacyBlockID": "stone_slab_block_1:0"
     },
     {
@@ -8773,7 +8773,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Light Grey Brick Slab",
       "colorMult": "textures/colormap/lightgreystone",
-      "textures": ["stone_block_1/brick_light_grey"],
+      "textures": ["light_grey_brick/side"],
       "legacyBlockID": "stone_slab_block_1:1"
     },
     {
@@ -8923,7 +8923,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Bedrock Slab",
-      "textures": ["stone_block_1/stone_bedrock"],
+      "textures": ["stone_bedrock/side"],
       "legacyBlockID": "stone_slab_block_1:6"
     },
     {
@@ -9758,7 +9758,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Small Stone Brick Fence",
       "colorMult": "textures/colormap/smallstonebrick",
-      "textures": ["stone_block_1/brick_stone_small"],
+      "textures": ["stone_brick/small"],
       "legacyBlockID": "fence_block_1:10"
     },
     {
@@ -9783,7 +9783,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Bedrock Fence",
-      "textures": ["stone_block_1/stone_bedrock"],
+      "textures": ["stone_bedrock/side"],
       "legacyBlockID": "fence_block_1:12"
     },
     {
@@ -9796,7 +9796,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Light Grey Brick Fence",
       "colorMult": "textures/colormap/lightgreystone",
-      "textures": ["stone_block_1/brick_light_grey"],
+      "textures": ["light_grey_brick/side"],
       "legacyBlockID": "fence_block_1:13"
     },
     {
@@ -12521,7 +12521,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Light Grey Brick Hopper",
       "colorMult": "textures/colormap/lightgreystone",
-      "textures": ["stone_block_1/brick_light_grey"],
+      "textures": ["light_grey_brick/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -12569,7 +12569,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Small Stone Brick Hopper",
       "colorMult": "textures/colormap/smallstonebrick",
-      "textures": ["stone_block_1/brick_stone_small"],
+      "textures": ["stone_brick/small"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -20098,7 +20098,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Dark Red Brick Slab",
-      "textures": ["stone_block_3/brick_dark_red"],
+      "textures": ["dark_red_brick/side"],
       "legacyBlockID": "stone_slab_block_3:1"
     },
     {
@@ -27520,7 +27520,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Small Orange Bricks",
       "colorMult": "textures/colormap/brick",
-      "textures": ["stone_block_3/brick_orange_small_side"],
+      "textures": ["orange_brick/small_side"],
       "legacyBlockID": "stone_block_7:0"
     },
     {
@@ -30275,7 +30275,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Small Orange Brick Hopper",
       "colorMult": "textures/colormap/brick",
-      "textures": ["stone_block_3/brick_orange_small_side"],
+      "textures": ["orange_brick/small_side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -40271,7 +40271,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Small Orange Brick Slab",
       "colorMult": "textures/colormap/brick",
-      "textures": ["stone_block_3/brick_orange_small_side"],
+      "textures": ["orange_brick/small_side"],
       "legacyBlockID": "stone_slab_block_6:1"
     },
     {
@@ -44608,7 +44608,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Bedrock Hopper",
-      "textures": ["stone_block_1/stone_bedrock"],
+      "textures": ["stone_bedrock/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
