@@ -2026,7 +2026,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Reach Light Brick Wall",
-      "textures": ["stone_block_2/brick_reach_light"],
+      "textures": ["reach_brick/side_light"],
       "legacyBlockID": "stone_wall_block_0:13"
     },
     {
@@ -2062,7 +2062,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Reach Brick Wall",
-      "textures": ["stone_block_2/brick_reach"],
+      "textures": ["reach_brick/side"],
       "legacyBlockID": "stone_wall_block_0:15"
     },
     {
@@ -2081,8 +2081,8 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thin Oak Log",
       "textures": [
-        "stone_wall_block_0/log_oak_top",
-        "stone_wall_block_0/log_oak_top",
+        "bark_oak/top",
+        "bark_oak/top",
         "bark_oak/side"
       ],
       "legacyBlockID": "thin_log_0:0"
@@ -2103,8 +2103,8 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thin Spruce Log",
       "textures": [
-        "stone_wall_block_0/log_spruce_top",
-        "stone_wall_block_0/log_spruce_top",
+        "bark_spruce/top",
+        "bark_spruce/top",
         "bark_spruce/side"
       ],
       "legacyBlockID": "thin_log_0:1"
@@ -2125,8 +2125,8 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thin Birch Log",
       "textures": [
-        "stone_wall_block_0/log_birch_top",
-        "stone_wall_block_0/log_birch_top",
+        "bark_birch/top",
+        "bark_birch/top",
         "bark_birch/side"
       ],
       "legacyBlockID": "thin_log_0:2"
@@ -2147,8 +2147,8 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thin Jungle Log",
       "textures": [
-        "stone_wall_block_0/log_jungle_top",
-        "stone_wall_block_0/log_jungle_top",
+        "bark_jungle/top",
+        "bark_jungle/top",
         "bark_jungle/side"
       ],
       "legacyBlockID": "thin_log_0:3"
@@ -2169,9 +2169,9 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thin Palm Log",
       "textures": [
-        "stone_wall_block_0/log_palm_top",
-        "stone_wall_block_0/log_palm_top",
-        "log_block_1/log_palm"
+        "bark_palm/top",
+        "bark_palm/top",
+        "bark_palm/side"
       ],
       "legacyBlockID": "thin_log_0:4"
     },
@@ -7746,7 +7746,7 @@
       "resistance": 5,
       "creativeTab": "WesterosBlocks",
       "label": "Thatch Light Fur",
-      "textures": ["mances_camp_mances_tent/outside"],
+      "textures": ["fur_block_0/thatch_light"],
       "legacyBlockID": "wood_colours:9"
     },
     {
@@ -12616,7 +12616,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Reach Light Brick Hopper",
-      "textures": ["stone_block_2/brick_reach_light"],
+      "textures": ["reach_brick/side_light"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -13743,7 +13743,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Reach Light Brick",
-      "textures": ["stone_block_2/brick_reach_light"],
+      "textures": ["reach_brick/side_light"],
       "legacyBlockID": "stone_block_2:6"
     },
     {
@@ -13788,7 +13788,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Reach Brick",
-      "textures": ["stone_block_2/brick_reach"],
+      "textures": ["reach_brick/side"],
       "legacyBlockID": "stone_block_2:8"
     },
     {
@@ -15954,7 +15954,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Reach Light Brick Slab",
-      "textures": ["stone_block_2/brick_reach_light"],
+      "textures": ["reach_brick/side_light"],
       "legacyBlockID": "stone_slab_block_2:2"
     },
     {
@@ -16144,7 +16144,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Reach Light Brick Fence",
-      "textures": ["stone_block_2/brick_reach_light"],
+      "textures": ["reach_brick/side_light"],
       "legacyBlockID": "fence_block_2:5"
     },
     {
@@ -16204,7 +16204,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Palm Fence",
-      "textures": ["log_block_1/log_palm"],
+      "textures": ["bark_palm/side"],
       "legacyBlockID": "fence_block_2:10"
     },
     {
@@ -16816,7 +16816,7 @@
       "textures": [
         "log_block_1/log_palm_top",
         "log_block_1/log_palm_top",
-        "log_block_1/log_palm"
+        "bark_palm/side"
       ],
       "legacyBlockID": "log_block_5:0"
     },
@@ -18019,7 +18019,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Reach Brick Hopper",
-      "textures": ["stone_block_2/brick_reach"],
+      "textures": ["reach_brick/side"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -20192,7 +20192,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Reach Brick Slab",
-      "textures": ["stone_block_2/brick_reach"],
+      "textures": ["reach_brick/side"],
       "legacyBlockID": "stone_slab_block_3:6"
     },
     {
@@ -27600,7 +27600,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Reach Brick Fence",
-      "textures": ["stone_block_2/brick_reach"],
+      "textures": ["reach_brick/side"],
       "legacyBlockID": "fence_block_3:0"
     },
     {

@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "top": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "side": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "particle": "westerosblocks:block/stone_block_2/brick_reach_light"
+    "bottom": "westerosblocks:block/reach_brick/side_light",
+    "top": "westerosblocks:block/reach_brick/side_light",
+    "side": "westerosblocks:block/reach_brick/side_light",
+    "particle": "westerosblocks:block/reach_brick/side_light"
   }
 }

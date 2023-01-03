@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "up": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "north": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "south": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "west": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "east": "westerosblocks:block/stone_block_2/brick_reach_light",
-    "particle": "westerosblocks:block/stone_block_2/brick_reach_light"
+    "down": "westerosblocks:block/reach_brick/side_light",
+    "up": "westerosblocks:block/reach_brick/side_light",
+    "north": "westerosblocks:block/reach_brick/side_light",
+    "south": "westerosblocks:block/reach_brick/side_light",
+    "west": "westerosblocks:block/reach_brick/side_light",
+    "east": "westerosblocks:block/reach_brick/side_light",
+    "particle": "westerosblocks:block/reach_brick/side_light"
   }
 }
