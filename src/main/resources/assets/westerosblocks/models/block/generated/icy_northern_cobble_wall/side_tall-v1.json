@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/wall_side_tall",
+  "parent": "westerosblocks:block/tinted/template_wall_side_tall",
   "textures": {
     "bottom": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy",
     "top": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy",

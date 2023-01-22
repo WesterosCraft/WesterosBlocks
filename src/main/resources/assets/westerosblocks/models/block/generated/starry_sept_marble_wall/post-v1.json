@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_post",
+  "parent": "westerosblocks:block/untinted/template_wall_post",
   "textures": {
     "bottom": "westerosblocks:block/starry_sept_marble/starry_sept",
     "top": "westerosblocks:block/starry_sept_marble/starry_sept",

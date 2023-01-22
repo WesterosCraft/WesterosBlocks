@@ -15,3 +15,5 @@ WesterosBlocks-*.jar
 .idea
 /.apt_generated/
 /.apt_generated_tests/
+.factorypath
+.factorypath
