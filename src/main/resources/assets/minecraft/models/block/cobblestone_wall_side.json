@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/wall_side",
+  "parent": "westerosblocks:block/tinted/template_wall_side",
   "textures": {
     "top": "westerosblocks:block/tinted/cobblestone",
     "bottom": "westerosblocks:block/tinted/cobblestone",
