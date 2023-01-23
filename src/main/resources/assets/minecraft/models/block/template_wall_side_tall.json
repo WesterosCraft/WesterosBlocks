@@ -11,8 +11,7 @@
                 "north": { "texture": "#wall", "cullface": "north" },
                 "west":  { "texture": "#wall" },
                 "east":  { "texture": "#wall" }
-            },
-            "__comment": "wall"
+            }
         }
     ]
 }
