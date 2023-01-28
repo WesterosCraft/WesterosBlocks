@@ -262,13 +262,13 @@
       "label": "Oxidized Iron Block",
       "randomTextures": [
         {
-          "textures": ["oxidized_iron_block/side1"]
+          "textures": ["iron_block_oxidized/side1"]
         },
         {
-          "textures": ["oxidized_iron_block/side2"]
+          "textures": ["iron_block_oxidized/side2"]
         },
         {
-          "textures": ["oxidized_iron_block/side3"]
+          "textures": ["iron_block_oxidized/side3"]
         }
       ],
       "legacyBlockID": "metal_block_0:0"
@@ -1424,13 +1424,13 @@
       "label": "Iron Slab",
       "randomTextures": [
         {
-          "textures": ["iron_slab/side1"]
+          "textures": ["iron_block/side1"]
         },
         {
-          "textures": ["iron_slab/side2"]
+          "textures": ["iron_block/side2"]
         },
         {
-          "textures": ["iron_slab/side3"]
+          "textures": ["iron_block/side3"]
         }
       ],
       "legacyBlockID": "metal_slab_block_0:0"
@@ -1452,13 +1452,13 @@
       "label": "Oxidized Iron Slab",
       "randomTextures": [
         {
-          "textures": ["iron_slab_oxidized/side1"]
+          "textures": ["iron_block_oxidized/side1"]
         },
         {
-          "textures": ["iron_slab_oxidized/side2"]
+          "textures": ["iron_block_oxidized/side2"]
         },
         {
-          "textures": ["iron_slab_oxidized/side3"]
+          "textures": ["iron_block_oxidized/side3"]
         }
       ],
       "legacyBlockID": "metal_slab_block_0:1"
@@ -1506,7 +1506,17 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Bronze Slab",
-      "textures": ["bronze/oxidized"],
+      "randomTextures": [
+        {
+          "textures": ["bronze_block_oxidized/side1"]
+        },
+        {
+          "textures": ["bronze_block_oxidized/side2"]
+        },
+        {
+          "textures": ["bronze_block_oxidized/side3"]
+        }
+      ],
       "legacyBlockID": "metal_slab_block_0:3"
     },
     {
@@ -2935,7 +2945,7 @@
       "lightValue": 0.7,
       "lightOpacity": 0,
       "textures": [
-        "iron/top",
+        "iron_block/side1",
         "light_emitting_blocks_0/lantern_handheld_center",
         "light_emitting_blocks_0/lantern_red_bottom"
       ],
@@ -16272,7 +16282,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Bronze Fence",
-      "textures": ["bronze/oxidized"],
+      "textures": ["bronze_block_oxidized/side3"],
       "legacyBlockID": "fence_block_2:14"
     },
     {
@@ -17245,7 +17255,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Bronze Wall",
-      "textures": ["bronze/oxidized"],
+      "textures": ["bronze_block_oxidized/side3"],
       "legacyBlockID": "stone_wall_block_2:10"
     },
     {
@@ -40725,7 +40735,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Iron Wall",
-      "textures": ["iron/top"],
+      "textures": ["iron_block/side1"],
       "legacyBlockID": "stone_wall_block_4:0"
     },
     {
@@ -40743,7 +40753,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Iron Wall",
-      "textures": ["iron/oxidized"],
+      "textures": ["iron_block_oxidized/side3"],
       "legacyBlockID": "stone_wall_block_4:1"
     },
     {
@@ -40827,7 +40837,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Iron Fence",
-      "textures": ["iron/top"],
+      "textures": ["iron_block/side1"],
       "legacyBlockID": "fence_block_4:0"
     },
     {
@@ -40839,7 +40849,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Iron Fence",
-      "textures": ["iron/oxidized"],
+      "textures": ["iron_block_oxidized/side3"],
       "legacyBlockID": "fence_block_4:1"
     },
     {
@@ -40905,7 +40915,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Iron Tip",
-      "textures": ["iron/top"],
+      "textures": ["iron_block/side1"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -40952,7 +40962,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Iron Tip",
-      "textures": ["iron/oxidized"],
+      "textures": ["iron_block_oxidized/side3"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -41046,7 +41056,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Bronze Tip",
-      "textures": ["bronze/oxidized"],
+      "textures": ["bronze_block_oxidized/side3"],
       "cuboids": [
         {
           "xMin": 0.3755,
