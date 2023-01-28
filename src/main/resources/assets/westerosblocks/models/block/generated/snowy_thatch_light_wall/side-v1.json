@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side",
+  "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
     "bottom": "westerosblocks:block/fur_block_0/thatch_snowy_light_top",
     "top": "westerosblocks:block/fur_block_0/thatch_snowy_light_top",

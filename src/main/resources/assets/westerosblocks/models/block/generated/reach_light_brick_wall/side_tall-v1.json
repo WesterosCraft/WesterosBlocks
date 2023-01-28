@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side_tall",
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
   "textures": {
     "bottom": "westerosblocks:block/reach_brick/side_light",
     "top": "westerosblocks:block/reach_brick/side_light",

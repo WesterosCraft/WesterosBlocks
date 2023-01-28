@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side",
+  "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
     "bottom": "westerosblocks:block/translucent_block_0/ice",
     "top": "westerosblocks:block/translucent_block_0/ice",

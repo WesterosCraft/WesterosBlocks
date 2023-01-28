@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side",
+  "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
     "bottom": "westerosblocks:block/reach_spruce_wood_panelling/top_bottom",
     "top": "westerosblocks:block/reach_spruce_wood_panelling/top_bottom",

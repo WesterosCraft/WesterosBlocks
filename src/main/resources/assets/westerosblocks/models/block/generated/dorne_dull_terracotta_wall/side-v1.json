@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side",
+  "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
     "bottom": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",
     "top": "westerosblocks:block/stone_block_0/sandstone_terracotta_dull_top",

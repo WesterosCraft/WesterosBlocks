@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side_tall",
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
   "textures": {
     "bottom": "westerosblocks:block/stone_block_0/sandstone_bricks_large",
     "top": "westerosblocks:block/stone_block_0/sandstone_bricks_large",

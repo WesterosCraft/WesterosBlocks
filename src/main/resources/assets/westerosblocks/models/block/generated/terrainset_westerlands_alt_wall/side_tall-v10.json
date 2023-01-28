@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/wall_side_tall",
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_westerlandhills_alt/10",
     "top": "westerosblocks:block/terrainset_westerlandhills_alt/10",

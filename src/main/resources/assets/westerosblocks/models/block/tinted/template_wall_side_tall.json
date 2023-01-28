@@ -4,15 +4,14 @@
     },
     "elements": [
         {   "from": [ 4, 0, 0 ],
-            "to": [ 12, 14, 8 ],
+            "to": [ 12, 16, 8 ],
             "faces": {
                 "down":  { "texture": "#bottom", "cullface": "down", "tintindex": 0 },
-                "up":    { "texture": "#top", "tintindex": 0 },
+                "up":    { "texture": "#top", "cullface": "up", "tintindex": 0 },
                 "north": { "texture": "#side", "cullface": "north", "tintindex": 0 },
                 "west":  { "texture": "#side", "tintindex": 0 },
                 "east":  { "texture": "#side", "tintindex": 0 }
-            },
-            "__comment": "wall"
+            }
         }
     ]
 }

@@ -10,8 +10,9 @@ WesterosBlocks-*.jar
 .DS_Store
 /*_Client.launch
 /*_Server.launch
-/.project
 /Users/
 .idea
 /.apt_generated/
 /.apt_generated_tests/
+/.project
+/.factorypath
