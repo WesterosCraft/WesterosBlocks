@@ -488,8 +488,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 0",
       "textures": [
-        "weirwood/top_bottom",
-        "weirwood/top_bottom",
+        "weirwood/weirwood_face_0",
+        "weirwood/weirwood_face_0",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_1:0"
@@ -30940,8 +30940,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 1",
       "textures": [
-        "log_block_0/weirwood_face_1",
-        "log_block_0/weirwood_face_1",
+        "weirwood/weirwood_face_1",
+        "weirwood/weirwood_face_1",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_6:0"
@@ -30960,8 +30960,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 2",
       "textures": [
-        "log_block_0/weirwood_face_2",
-        "log_block_0/weirwood_face_2",
+        "weirwood/weirwood_face_2",
+        "weirwood/weirwood_face_2",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_6:1"
@@ -30980,8 +30980,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 3",
       "textures": [
-        "log_block_0/weirwood_face_3",
-        "log_block_0/weirwood_face_3",
+        "weirwood/weirwood_face_3",
+        "weirwood/weirwood_face_3",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_6:2"
@@ -31000,8 +31000,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 4",
       "textures": [
-        "log_block_0/weirwood_face_4",
-        "log_block_0/weirwood_face_4",
+        "weirwood/weirwood_face_4",
+        "weirwood/weirwood_face_4",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_6:3"
@@ -31020,8 +31020,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 5",
       "textures": [
-        "log_block_0/weirwood_face_5",
-        "log_block_0/weirwood_face_5",
+        "weirwood/weirwood_face_5",
+        "weirwood/weirwood_face_5",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_7:0"
@@ -31040,8 +31040,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 6",
       "textures": [
-        "log_block_0/weirwood_face_6",
-        "log_block_0/weirwood_face_6",
+        "weirwood/weirwood_face_6",
+        "weirwood/weirwood_face_6",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_7:1"
@@ -31060,8 +31060,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 7",
       "textures": [
-        "log_block_0/weirwood_face_7",
-        "log_block_0/weirwood_face_7",
+        "weirwood/weirwood_face_7",
+        "weirwood/weirwood_face_7",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_7:2"
@@ -31080,8 +31080,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Weirwood Face 8",
       "textures": [
-        "log_block_0/weirwood_face_8",
-        "log_block_0/weirwood_face_8",
+        "weirwood/weirwood_face_8",
+        "weirwood/weirwood_face_8",
         "bark_birch/side"
       ],
       "legacyBlockID": "log_block_7:3"
