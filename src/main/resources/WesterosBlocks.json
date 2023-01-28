@@ -1422,7 +1422,17 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Iron Slab",
-      "textures": ["iron/top"],
+      "randomTextures": [
+        {
+          "textures": ["iron_slab/side1"]
+        },
+        {
+          "textures": ["iron_slab/side2"]
+        },
+        {
+          "textures": ["iron_slab/side3"]
+        }
+      ],
       "legacyBlockID": "metal_slab_block_0:0"
     },
     {
@@ -1440,7 +1450,17 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Iron Slab",
-      "textures": ["iron/oxidized"],
+      "randomTextures": [
+        {
+          "textures": ["iron_slab_oxidized/side1"]
+        },
+        {
+          "textures": ["iron_slab_oxidized/side2"]
+        },
+        {
+          "textures": ["iron_slab_oxidized/side3"]
+        }
+      ],
       "legacyBlockID": "metal_slab_block_0:1"
     },
     {
