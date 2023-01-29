@@ -349,13 +349,13 @@
       "label": "Oxidized Steel Block",
       "randomTextures": [
         {
-          "textures": ["oxidized_steel_block/side1"]
+          "textures": ["steel_block_ozidized/side1"]
         },
         {
-          "textures": ["oxidized_steel_block/side2"]
+          "textures": ["steel_block_ozidized/side2"]
         },
         {
-          "textures": ["oxidized_steel_block/side3"]
+          "textures": ["steel_block_ozidized/side3"]
         }
       ],
       "legacyBlockID": "metal_block_0:2"
@@ -1534,7 +1534,17 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Steel Slab",
-      "textures": ["steel/oxidized"],
+      "randomTextures": [
+        {
+          "textures": ["steel_block_ozidized/side1"]
+        },
+        {
+          "textures": ["steel_block_ozidized/side2"]
+        },
+        {
+          "textures": ["steel_block_ozidized/side3"]
+        }
+      ],
       "legacyBlockID": "metal_slab_block_0:4"
     },
     {
@@ -1552,7 +1562,17 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Steel Slab",
-      "textures": ["steel/side"],
+      "randomTextures": [
+        {
+          "textures": ["steel_block/side1"]
+        },
+        {
+          "textures": ["steel_block/side2"]
+        },
+        {
+          "textures": ["steel_block/side3"]
+        }
+      ],
       "legacyBlockID": "metal_slab_block_0:5"
     },
     {
@@ -2011,11 +2031,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Marble Wall",
       "type": "size:short",
-      "textures": [
-        "marble/top",
-        "marble/top",
-        "marble/side"
-      ],
+      "textures": ["marble/top", "marble/top", "marble/side"],
       "legacyBlockID": "stone_wall_block_0:11"
     },
     {
@@ -2034,11 +2050,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thin Marble Column",
       "type": "size:short",
-      "textures": [
-        "marble/top",
-        "marble/top",
-        "marble/column_side"
-      ],
+      "textures": ["marble/top", "marble/top", "marble/column_side"],
       "legacyBlockID": "stone_wall_block_0:12"
     },
     {
@@ -2110,11 +2122,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Thin Oak Log",
-      "textures": [
-        "bark_oak/top",
-        "bark_oak/top",
-        "bark_oak/side"
-      ],
+      "textures": ["bark_oak/top", "bark_oak/top", "bark_oak/side"],
       "legacyBlockID": "thin_log_0:0"
     },
     {
@@ -2132,11 +2140,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Thin Spruce Log",
-      "textures": [
-        "bark_spruce/top",
-        "bark_spruce/top",
-        "bark_spruce/side"
-      ],
+      "textures": ["bark_spruce/top", "bark_spruce/top", "bark_spruce/side"],
       "legacyBlockID": "thin_log_0:1"
     },
     {
@@ -2154,11 +2158,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Thin Birch Log",
-      "textures": [
-        "bark_birch/top",
-        "bark_birch/top",
-        "bark_birch/side"
-      ],
+      "textures": ["bark_birch/top", "bark_birch/top", "bark_birch/side"],
       "legacyBlockID": "thin_log_0:2"
     },
     {
@@ -2176,11 +2176,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Thin Jungle Log",
-      "textures": [
-        "bark_jungle/top",
-        "bark_jungle/top",
-        "bark_jungle/side"
-      ],
+      "textures": ["bark_jungle/top", "bark_jungle/top", "bark_jungle/side"],
       "legacyBlockID": "thin_log_0:3"
     },
     {
@@ -2198,11 +2194,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Thin Palm Log",
-      "textures": [
-        "bark_palm/top",
-        "bark_palm/top",
-        "bark_palm/side"
-      ],
+      "textures": ["bark_palm/top", "bark_palm/top", "bark_palm/side"],
       "legacyBlockID": "thin_log_0:4"
     },
     {
@@ -40770,7 +40762,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Steel Wall",
-      "textures": ["steel/side"],
+      "textures": ["steel_block/side1"],
       "legacyBlockID": "stone_wall_block_4:2"
     },
     {
@@ -40788,7 +40780,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Steel Wall",
-      "textures": ["steel/oxidized"],
+      "textures": ["steel_block_oxidized/side1"],
       "legacyBlockID": "stone_wall_block_4:3"
     },
     {
@@ -40860,7 +40852,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Steel Fence",
-      "textures": ["steel/side"],
+      "textures": ["steel_block/side1"],
       "legacyBlockID": "fence_block_4:2"
     },
     {
@@ -40872,7 +40864,7 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Steel Fence",
-      "textures": ["steel/oxidized"],
+      "textures": ["steel_block_oxidized/side1"],
       "legacyBlockID": "fence_block_4:3"
     },
     {
@@ -41102,7 +41094,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Steel Tip",
-      "textures": ["steel/side"],
+      "textures": ["steel_block/side1"],
       "cuboids": [
         {
           "xMin": 0.3755,
@@ -41149,7 +41141,7 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Steel Tip",
-      "textures": ["steel/oxidized"],
+      "textures": ["steel_block_oxidized/side1"],
       "cuboids": [
         {
           "xMin": 0.3755,
