@@ -517,8 +517,8 @@
     {
       "blockName": "marble_pillar",
       "blockType": "log",
-      "stepSound": "wood",
-      "material": "wood",
+      "stepSound": "stone",
+      "material": "stone",
       "harvestLevel": [
         {
           "tool": "axe",
@@ -537,8 +537,8 @@
     {
       "blockName": "marble_pillar_vertical_ctm",
       "blockType": "logvert",
-      "stepSound": "wood",
-      "material": "wood",
+      "stepSound": "stone",
+      "material": "stone",
       "harvestLevel": [
         {
           "tool": "axe",
@@ -5159,10 +5159,21 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Water Barrel",
-      "textures": [
-        "barrel_closed/barrel_top_closed",
-        "crate_block_0/barrel_top_water",
-        "barrel_sides/side1"
+      "randomTextures": [
+        {
+          "textures": [
+            "barrel_closed/barrel_top_closed",
+            "crate_block_0/barrel_top_water",
+            "barrel_sides/side0"
+          ]
+        },
+        {
+          "textures": [
+            "barrel_closed/barrel_top_closed",
+            "crate_block_0/barrel_top_water",
+            "barrel_sides/side1"
+          ]
+        }
       ],
       "legacyBlockID": "crate_block_0:12"
     },
@@ -5175,10 +5186,21 @@
       "resistance": 5,
       "creativeTab": "WesterosDeco",
       "label": "Empty Barrel",
-      "textures": [
-        "barrel_closed/barrel_top_closed",
-        "crate_block_0/barrel_top_empty",
-        "barrel_sides/side1"
+      "randomTextures": [
+        {
+          "textures": [
+            "barrel_closed/barrel_top_closed",
+            "crate_block_0/barrel_top_empty",
+            "barrel_sides/side0"
+          ]
+        },
+        {
+          "textures": [
+            "barrel_closed/barrel_top_closed",
+            "crate_block_0/barrel_top_empty",
+            "barrel_sides/side1"
+          ]
+        }
       ],
       "legacyBlockID": "crate_block_0:13"
     },
