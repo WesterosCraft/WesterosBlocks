@@ -5,6 +5,7 @@
     "layer": "SOLID",
     "textures": [],
     "extra": {
+      "connect_to": [{ "block": "westerosblocks:mossy_oak_log" }]
     }
   }
 }

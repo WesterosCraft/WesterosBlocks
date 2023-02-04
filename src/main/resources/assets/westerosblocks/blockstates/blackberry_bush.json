@@ -7,40 +7,7 @@
       },
       {
         "model": "westerosblocks:block/generated/blackberry_bush/base-v1",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v1",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v1",
-        "y": 270,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v1",
         "x": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v1",
-        "x": 180,
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v1",
-        "x": 180,
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v1",
-        "x": 180,
-        "y": 270,
         "weight": 10
       },
       {
@@ -49,40 +16,7 @@
       },
       {
         "model": "westerosblocks:block/generated/blackberry_bush/base-v2",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v2",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v2",
-        "y": 270,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v2",
         "x": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v2",
-        "x": 180,
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v2",
-        "x": 180,
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v2",
-        "x": 180,
-        "y": 270,
         "weight": 10
       },
       {
@@ -91,40 +25,7 @@
       },
       {
         "model": "westerosblocks:block/generated/blackberry_bush/base-v3",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v3",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v3",
-        "y": 270,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v3",
         "x": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v3",
-        "x": 180,
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v3",
-        "x": 180,
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v3",
-        "x": 180,
-        "y": 270,
         "weight": 10
       },
       {
@@ -133,40 +34,7 @@
       },
       {
         "model": "westerosblocks:block/generated/blackberry_bush/base-v4",
-        "y": 90,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v4",
-        "y": 180,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v4",
-        "y": 270,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v4",
         "x": 180,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v4",
-        "x": 180,
-        "y": 90,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v4",
-        "x": 180,
-        "y": 180,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/blackberry_bush/base-v4",
-        "x": 180,
-        "y": 270,
         "weight": 2
       }
     ]

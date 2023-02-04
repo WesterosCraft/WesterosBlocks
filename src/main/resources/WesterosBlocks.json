@@ -3577,6 +3577,7 @@
       "type": "no-decay,better-foliage,overlay",
       "label": "Apple Fruit Leaves",
       "colorMult": "textures/colormap/birch",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -3619,7 +3620,6 @@
           "weight": 2
         }
       ],
-
       "legacyBlockID": "leaves_block_0:0"
     },
     {
@@ -3631,6 +3631,7 @@
       "type": "no-decay,better-foliage,overlay",
       "label": "Apricot Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -3673,7 +3674,6 @@
           "weight": 2
         }
       ],
-
       "legacyBlockID": "leaves_block_0:1"
     },
     {
@@ -3685,6 +3685,7 @@
       "type": "no-decay,better-foliage,overlay",
       "label": "Cherry Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -3727,7 +3728,6 @@
           "weight": 2
         }
       ],
-
       "legacyBlockID": "leaves_block_0:2"
     },
     {
@@ -3736,9 +3736,10 @@
       "stepSound": "grass",
       "material": "leaves",
       "creativeTab": "WesterosPlants",
-      "type": "no-decay,better-foliage",
+      "type": "no-decay,better-foliage,overlay",
       "label": "Purple Grape Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -3781,7 +3782,6 @@
           "weight": 2
         }
       ],
-
       "legacyBlockID": "leaves_block_0:3"
     },
     {
@@ -3793,6 +3793,7 @@
       "type": "no-decay,better-foliage,overlay",
       "label": "Lemon Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -3835,7 +3836,6 @@
           "weight": 2
         }
       ],
-
       "legacyBlockID": "leaves_block_0:4"
     },
     {
@@ -3847,6 +3847,7 @@
       "type": "no-decay,better-foliage,overlay",
       "label": "Lime Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -3900,6 +3901,7 @@
       "type": "no-decay,better-foliage,overlay",
       "label": "Orange Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -3954,6 +3956,7 @@
       "type": "no-decay,better-foliage,overlay",
       "label": "Peach Fruit Leaves",
       "colorMult": "textures/colormap/birch",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4008,6 +4011,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Plum Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4062,6 +4066,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Pomegranate Fruit Leaves",
       "colorMult": "textures/colormap/birch",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4112,7 +4117,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "type": "no-decay,better-foliage,overlay",
+      "type": "no-decay,better-foliage",
       "creativeTab": "WesterosPlants",
       "label": "Weirwood Leaves",
       "textures": [
@@ -4132,6 +4137,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Blackberry Bush",
       "colorMult": "textures/colormap/birch",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4186,6 +4192,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Blueberry Bush",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4240,6 +4247,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Raspberry Bush",
       "colorMult": "textures/colormap/foliagejungle",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4294,6 +4302,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Juniper Bush",
       "colorMult": "textures/colormap/pine",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4348,6 +4357,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Red Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4402,6 +4412,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Pink Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4456,6 +4467,7 @@
       "creativeTab": "WesterosPlants",
       "label": "White Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4510,6 +4522,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Yellow Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4564,6 +4577,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Hop Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -4618,6 +4632,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Olive Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
+      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [

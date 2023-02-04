@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/oxidized_iron_block/side2",
-    "top": "westerosblocks:block/oxidized_iron_block/side2",
-    "side": "westerosblocks:block/oxidized_iron_block/side2",
-    "particle": "westerosblocks:block/oxidized_iron_block/side2"
+    "bottom": "westerosblocks:block/iron_block_oxidized/side2",
+    "top": "westerosblocks:block/iron_block_oxidized/side2",
+    "side": "westerosblocks:block/iron_block_oxidized/side2",
+    "particle": "westerosblocks:block/iron_block_oxidized/side2"
   }
 }

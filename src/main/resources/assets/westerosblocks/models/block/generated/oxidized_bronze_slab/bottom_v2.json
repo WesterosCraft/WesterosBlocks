@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/bronze_block_oxidized/side2",
+    "up": "westerosblocks:block/bronze_block_oxidized/side2",
+    "north": "westerosblocks:block/bronze_block_oxidized/side2",
+    "south": "westerosblocks:block/bronze_block_oxidized/side2",
+    "west": "westerosblocks:block/bronze_block_oxidized/side2",
+    "east": "westerosblocks:block/bronze_block_oxidized/side2",
+    "particle": "westerosblocks:block/bronze_block_oxidized/side2"
+  }
+}

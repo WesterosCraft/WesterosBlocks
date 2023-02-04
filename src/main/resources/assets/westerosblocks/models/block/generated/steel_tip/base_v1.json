@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/steel/side",
-    "txt5": "westerosblocks:block/steel/side",
-    "txt2": "westerosblocks:block/steel/side",
-    "txt3": "westerosblocks:block/steel/side",
-    "txt0": "westerosblocks:block/steel/side",
-    "txt1": "westerosblocks:block/steel/side",
-    "particle": "westerosblocks:block/steel/side"
+    "txt4": "westerosblocks:block/steel_block/side1",
+    "txt5": "westerosblocks:block/steel_block/side1",
+    "txt2": "westerosblocks:block/steel_block/side1",
+    "txt3": "westerosblocks:block/steel_block/side1",
+    "txt0": "westerosblocks:block/steel_block/side1",
+    "txt1": "westerosblocks:block/steel_block/side1",
+    "particle": "westerosblocks:block/steel_block/side1"
   },
   "elements": [
     {

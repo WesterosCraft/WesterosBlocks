@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/bronze/oxidized",
-    "top": "westerosblocks:block/bronze/oxidized",
-    "side": "westerosblocks:block/bronze/oxidized"
+    "bottom": "westerosblocks:block/bronze_block_oxidized/side3",
+    "top": "westerosblocks:block/bronze_block_oxidized/side3",
+    "side": "westerosblocks:block/bronze_block_oxidized/side3"
   }
 }
