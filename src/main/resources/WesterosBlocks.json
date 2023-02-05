@@ -7548,35 +7548,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Black Slate",
-      "randomTextures": [
-        {
-          "textures": ["black_slate/side1"]
-        },
-        {
-          "textures": ["black_slate/side2"]
-        },
-        {
-          "textures": ["black_slate/side3"]
-        },
-        {
-          "textures": ["black_slate/side4"]
-        },
-        {
-          "textures": ["black_slate/side5"]
-        },
-        {
-          "textures": ["black_slate/side6"]
-        },
-        {
-          "textures": ["black_slate/side7"]
-        },
-        {
-          "textures": ["black_slate/side8"]
-        },
-        {
-          "textures": ["black_slate/side9"]
-        }
-      ],
+      "textures": ["black_slate/side0"],
       "legacyBlockID": "stone_block_1:11"
     },
     {
@@ -7588,7 +7560,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Blue Slate",
-      "textures": ["blue_slate/side"],
+      "textures": ["blue_slate/side1"],
       "legacyBlockID": "stone_block_1:12"
     },
     {
@@ -7600,35 +7572,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Red Slate",
-      "randomTextures": [
-        {
-          "textures": ["red_slate/side1"]
-        },
-        {
-          "textures": ["red_slate/side2"]
-        },
-        {
-          "textures": ["red_slate/side3"]
-        },
-        {
-          "textures": ["red_slate/side4"]
-        },
-        {
-          "textures": ["red_slate/side5"]
-        },
-        {
-          "textures": ["red_slate/side6"]
-        },
-        {
-          "textures": ["red_slate/side7"]
-        },
-        {
-          "textures": ["red_slate/side8"]
-        },
-        {
-          "textures": ["red_slate/side9"]
-        }
-      ],
+      "textures": ["red_slate/side0"],
       "legacyBlockID": "stone_block_1:13"
     },
     {
