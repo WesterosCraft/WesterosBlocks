@@ -1,0 +1,77 @@
+{
+  "parent": "block/block",
+  "elements": [
+    { 
+      "name": "Base",
+      "from": [ 0, 0, 0 ], "to": [ 16, 16, 16 ],
+      "faces": {
+        "east": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "east", "tintindex": 0 },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "south", "tintindex": 0 },
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "north", "tintindex": 0 },
+        "west": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "west", "tintindex": 0 },
+        "up": { "uv": [ 0, 0, 16, 16 ], "texture": "#end", "cullface": "up", "tintindex": 0 },
+        "down": { "uv": [ 0, 0, 16, 16 ], "texture": "#end", "cullface": "down", "tintindex": 0 }
+      }
+    },
+    {
+		"name": "Cross1",
+		"from": [-10, -10, 5],
+		"to": [28, 28, 5],		
+		"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
+		"shade": false,
+		"faces": {
+			"north": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"east": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"south": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"west": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"up": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"down": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 }
+		}
+	},
+	{
+		"name": "Cross2",
+        "from": [-10, -10, 7],
+		"to": [28, 28, 7],		
+		"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
+		"shade": false,
+		"faces": {
+			"north": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"east": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"south": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"west": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"up": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"down": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 }
+		}
+	},
+	{
+		"name": "Cross3",
+		"from": [10, -10, -10],
+		"to": [10, 28, 28],		
+		"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
+		"shade": false,
+		"faces": {
+			"north": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"east": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"south": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"west": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"up": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"down": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 }
+		}
+	},
+	{
+		"name": "Cross4",
+		"from": [12, -10, -10],
+		"to": [12, 28, 28],
+		"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
+		"shade": false,
+		"faces": {
+			"north": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"east": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"south": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"west": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"up": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 },
+			"down": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 0 }
+		}
+	}
+  ]
+}
