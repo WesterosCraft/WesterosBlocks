@@ -15,25 +15,6 @@
       {
         "model": "westerosblocks:block/generated/palm_leaves/base-v1",
         "y": 270
-      },
-      {
-        "model": "westerosblocks:block/generated/palm_leaves/base-v1",
-        "x": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/palm_leaves/base-v1",
-        "x": 180,
-        "y": 90
-      },
-      {
-        "model": "westerosblocks:block/generated/palm_leaves/base-v1",
-        "x": 180,
-        "y": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/palm_leaves/base-v1",
-        "x": 180,
-        "y": 270
       }
     ]
   }
