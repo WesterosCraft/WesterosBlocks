@@ -64,16 +64,6 @@ public class LeavesBlockModelExport extends ModelExport {
             	if (i > 0) var.y = 90*i;
             	vars.add(var);
             }
-            if (blk.betterfoliage) {
-                for (int i = 0; i < cnt; i++) {
-                	Variant var = new Variant();
-                	var.model = model;
-                	var.weight = set.weight;
-                	var.x = 180;
-                	if (i > 0) var.y = 90*i;
-                	vars.add(var);
-                }            	
-            }
         }
         if (vars.size() == 1) {
             StateObject1 so = new StateObject1();
