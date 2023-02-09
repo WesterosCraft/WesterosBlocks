@@ -13803,7 +13803,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Red-Orange Slate",
-      "textures": ["redorange_slate/side"],
+      "textures": ["redorange_slate/side1"],
       "legacyBlockID": "stone_block_2:9"
     },
     {
@@ -15585,7 +15585,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Green Slate",
-      "textures": ["green_slate/side"],
+      "textures": ["green_slate/side1"],
       "legacyBlockID": "stone_block_3:1"
     },
     {
@@ -15895,31 +15895,31 @@
       "label": "Brown Slate Slab",
       "randomTextures": [
         {
-          "textures": ["brown_slate/side1"]
+          "textures": ["brown_slate/side0","brown_slate/side1","brown_slate/side0"]
         },
         {
-          "textures": ["brown_slate/side2"]
+          "textures": ["brown_slate/side0","brown_slate/side2","brown_slate/side0"]
         },
         {
-          "textures": ["brown_slate/side3"]
+          "textures": ["brown_slate/side0","brown_slate/side3","brown_slate/side0"]
         },
         {
-          "textures": ["brown_slate/side4"]
+          "textures": ["brown_slate/side0","brown_slate/side4","brown_slate/side0"]
         },
         {
-          "textures": ["brown_slate/side5"]
+          "textures": ["brown_slate/side0","brown_slate/side5","brown_slate/side0"]
         },
         {
-          "textures": ["brown_slate/side6"]
+          "textures": ["brown_slate/side0","brown_slate/side6","brown_slate/side0"]
         },
         {
-          "textures": ["brown_slate/side7"]
+          "textures": ["brown_slate/side0","brown_slate/side7","brown_slate/side0"]
         },
         {
-          "textures": ["brown_slate/side8"]
+          "textures": ["brown_slate/side0","brown_slate/side8","brown_slate/side0"]
         },
         {
-          "textures": ["brown_slate/side9"]
+          "textures": ["brown_slate/side0","brown_slate/side9","brown_slate/side0"]
         }
       ],
       "legacyBlockID": "stone_slab_block_2:0"
@@ -15939,7 +15939,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Green Slate Slab",
-      "textures": ["green_slate/side"],
+      "textures": ["green_slate/side1","green_slate/side","green_slate/side1"],
       "legacyBlockID": "stone_slab_block_2:1"
     },
     {
@@ -29742,7 +29742,7 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Orange Slate",
-      "textures": ["orange_slate/side"],
+      "textures": ["orange_slate/side1"],
       "legacyBlockID": "stone_block_9:11"
     },
     {
