@@ -8718,7 +8718,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Red-Orange Slate Slab",
-      "textures": ["redorange_slate/side"],
+      "textures": ["redorange_slate/ctm0","redorange_slate/side", "redorange_slate/ctm0"],
       "legacyBlockID": "stone_slab_block_0:6"
     },
     {
@@ -8736,7 +8736,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Orange Slate Slab",
-      "textures": ["orange_slate/side"],
+      "textures": ["orange_slate/ctm0", "orange_slate/side", "orange_slate/ctm0"],
       "legacyBlockID": "stone_slab_block_0:7"
     },
     {
@@ -8816,31 +8816,31 @@
       "label": "Black Slate Slab",
       "randomTextures": [
         {
-          "textures": ["black_slate/side1"]
+          "textures": ["black_slate/side0","black_slate/side1","black_slate/side0"]
         },
         {
-          "textures": ["black_slate/side2"]
+          "textures": ["black_slate/side0","black_slate/side2","black_slate/side0"]
         },
         {
-          "textures": ["black_slate/side3"]
+          "textures": ["black_slate/side0","black_slate/side3","black_slate/side0"]
         },
         {
-          "textures": ["black_slate/side4"]
+          "textures": ["black_slate/side0","black_slate/side4","black_slate/side0"]
         },
         {
-          "textures": ["black_slate/side5"]
+          "textures": ["black_slate/side0","black_slate/side5","black_slate/side0"]
         },
         {
-          "textures": ["black_slate/side6"]
+          "textures": ["black_slate/side0","black_slate/side6","black_slate/side0"]
         },
         {
-          "textures": ["black_slate/side7"]
+          "textures": ["black_slate/side0","black_slate/side7","black_slate/side0"]
         },
         {
-          "textures": ["black_slate/side8"]
+          "textures": ["black_slate/side0","black_slate/side8","black_slate/side0"]
         },
         {
-          "textures": ["black_slate/side9"]
+          "textures": ["black_slate/side0","black_slate/side9","black_slate/side0"]
         }
       ],
       "legacyBlockID": "stone_slab_block_1:3"
@@ -8860,7 +8860,7 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Blue Slate Slab",
-      "textures": ["blue_slate/side"],
+      "textures": ["blue_slate/side1","blue_slate/side","blue_slate/side1"],
       "legacyBlockID": "stone_slab_block_1:4"
     },
     {
@@ -8880,31 +8880,31 @@
       "label": "Red Slate Slab",
       "randomTextures": [
         {
-          "textures": ["red_slate/side1"]
+          "textures": ["red_slate/side0","red_slate/side1","red_slate/side0"]
         },
         {
-          "textures": ["red_slate/side2"]
+          "textures": ["red_slate/side0","red_slate/side2","red_slate/side0"]
         },
         {
-          "textures": ["red_slate/side3"]
+          "textures": ["red_slate/side0","red_slate/side3","red_slate/side0"]
         },
         {
-          "textures": ["red_slate/side4"]
+          "textures": ["red_slate/side0","red_slate/side4","red_slate/side0"]
         },
         {
-          "textures": ["red_slate/side5"]
+          "textures": ["red_slate/side0","red_slate/side5","red_slate/side0"]
         },
         {
-          "textures": ["red_slate/side6"]
+          "textures": ["red_slate/side0","red_slate/side6","red_slate/side0"]
         },
         {
-          "textures": ["red_slate/side7"]
+          "textures": ["red_slate/side0","red_slate/side7","red_slate/side0"]
         },
         {
-          "textures": ["red_slate/side8"]
+          "textures": ["red_slate/side0","red_slate/side8","red_slate/side0"]
         },
         {
-          "textures": ["red_slate/side9"]
+          "textures": ["red_slate/side0","red_slate/side9","red_slate/side0"]
         }
       ],
       "legacyBlockID": "stone_slab_block_1:5"
