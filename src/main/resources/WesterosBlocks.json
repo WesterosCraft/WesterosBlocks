@@ -518,7 +518,7 @@
       "blockName": "marble_pillar",
       "blockType": "log",
       "stepSound": "stone",
-      "material": "stone",
+      "material": "wood",
       "harvestLevel": [
         {
           "tool": "axe",
@@ -538,7 +538,7 @@
       "blockName": "marble_pillar_vertical_ctm",
       "blockType": "logvert",
       "stepSound": "stone",
-      "material": "stone",
+      "material": "wood",
       "harvestLevel": [
         {
           "tool": "axe",
@@ -3577,7 +3577,6 @@
       "type": "no-decay,better-foliage,overlay",
       "label": "Apple Fruit Leaves",
       "colorMult": "textures/colormap/birch",
-      "rotateRandom": true,
       "randomTextures": [
         {
           "textures": [
@@ -9263,6 +9262,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stool",
       "lightOpacity": 0,
+      "nonOpaque": true,
       "textures": [
         "random_slab_block_0/seat_bottom",
         "random_slab_block_0/seat_top",
@@ -9286,6 +9286,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stool Cushion",
       "lightOpacity": 0,
+      "nonOpaque": true,
       "textures": [
         "random_slab_block_0/seat_bottom",
         "random_slab_block_0/seat_top_cushion",

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/barrel_closed/barrel_top_closed",
+    "up": "westerosblocks:block/crate_block_0/barrel_top_water",
+    "north": "westerosblocks:block/barrel_sides/side1",
+    "south": "westerosblocks:block/barrel_sides/side1",
+    "west": "westerosblocks:block/barrel_sides/side1",
+    "east": "westerosblocks:block/barrel_sides/side1",
+    "particle": "westerosblocks:block/barrel_sides/side1"
+  }
+}
