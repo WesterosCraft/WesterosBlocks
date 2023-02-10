@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "up": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "north": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "south": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "west": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "east": "westerosblocks:block/metal_block_0/metal_block_steeloxidized",
-    "particle": "westerosblocks:block/metal_block_0/metal_block_steeloxidized"
+    "down": "westerosblocks:block/steel_block_ozidized/side1",
+    "up": "westerosblocks:block/steel_block_ozidized/side1",
+    "north": "westerosblocks:block/steel_block_ozidized/side1",
+    "south": "westerosblocks:block/steel_block_ozidized/side1",
+    "west": "westerosblocks:block/steel_block_ozidized/side1",
+    "east": "westerosblocks:block/steel_block_ozidized/side1",
+    "particle": "westerosblocks:block/steel_block_ozidized/side1"
   }
 }

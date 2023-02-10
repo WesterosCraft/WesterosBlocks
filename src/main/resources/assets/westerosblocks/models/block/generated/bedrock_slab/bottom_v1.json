@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_1/stone_bedrock",
-    "up": "westerosblocks:block/stone_block_1/stone_bedrock",
-    "north": "westerosblocks:block/stone_block_1/stone_bedrock",
-    "south": "westerosblocks:block/stone_block_1/stone_bedrock",
-    "west": "westerosblocks:block/stone_block_1/stone_bedrock",
-    "east": "westerosblocks:block/stone_block_1/stone_bedrock",
-    "particle": "westerosblocks:block/stone_block_1/stone_bedrock"
+    "down": "westerosblocks:block/stone_bedrock/side",
+    "up": "westerosblocks:block/stone_bedrock/side",
+    "north": "westerosblocks:block/stone_bedrock/side",
+    "south": "westerosblocks:block/stone_bedrock/side",
+    "west": "westerosblocks:block/stone_bedrock/side",
+    "east": "westerosblocks:block/stone_bedrock/side",
+    "particle": "westerosblocks:block/stone_bedrock/side"
   }
 }

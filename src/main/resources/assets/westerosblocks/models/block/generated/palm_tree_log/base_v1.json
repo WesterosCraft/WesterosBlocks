@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/log_block_1/log_palm_top",
     "up": "westerosblocks:block/log_block_1/log_palm_top",
-    "north": "westerosblocks:block/log_block_1/log_palm",
-    "south": "westerosblocks:block/log_block_1/log_palm",
-    "east": "westerosblocks:block/log_block_1/log_palm",
-    "west": "westerosblocks:block/log_block_1/log_palm",
-    "particle": "westerosblocks:block/log_block_1/log_palm"
+    "north": "westerosblocks:block/bark_palm/side",
+    "south": "westerosblocks:block/bark_palm/side",
+    "east": "westerosblocks:block/bark_palm/side",
+    "west": "westerosblocks:block/bark_palm/side",
+    "particle": "westerosblocks:block/bark_palm/side"
   }
 }

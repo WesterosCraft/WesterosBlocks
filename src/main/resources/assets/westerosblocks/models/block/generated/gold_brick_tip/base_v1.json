@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/metal_block_0/metal_gold_brick",
-    "txt5": "westerosblocks:block/metal_block_0/metal_gold_brick",
-    "txt2": "westerosblocks:block/metal_block_0/metal_gold_brick",
-    "txt3": "westerosblocks:block/metal_block_0/metal_gold_brick",
-    "txt0": "westerosblocks:block/metal_block_0/metal_gold_brick",
-    "txt1": "westerosblocks:block/metal_block_0/metal_gold_brick",
-    "particle": "westerosblocks:block/metal_block_0/metal_gold_brick"
+    "txt4": "westerosblocks:block/gold_brick/side",
+    "txt5": "westerosblocks:block/gold_brick/side",
+    "txt2": "westerosblocks:block/gold_brick/side",
+    "txt3": "westerosblocks:block/gold_brick/side",
+    "txt0": "westerosblocks:block/gold_brick/side",
+    "txt1": "westerosblocks:block/gold_brick/side",
+    "particle": "westerosblocks:block/gold_brick/side"
   },
   "elements": [
     {

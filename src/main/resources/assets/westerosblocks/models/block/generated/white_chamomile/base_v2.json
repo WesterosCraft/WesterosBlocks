@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/flowers/flower_block_2/white_chamomile2"
+    "cross": "westerosblocks:block/flowers/white_chamomile2"
   }
 }

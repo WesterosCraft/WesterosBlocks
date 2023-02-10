@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/black_slate/side7",
-    "top": "westerosblocks:block/black_slate/side7",
-    "side": "westerosblocks:block/black_slate/side7",
-    "particle": "westerosblocks:block/black_slate/side7"
-  }
-}

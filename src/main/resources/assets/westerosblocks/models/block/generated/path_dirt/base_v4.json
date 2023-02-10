@@ -18,10 +18,10 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ground_block_0/dirt",
-    "txt5": "westerosblocks:block/ground_block_0/dirt",
-    "txt2": "westerosblocks:block/ground_block_0/dirt",
-    "txt3": "westerosblocks:block/ground_block_0/dirt",
+    "txt4": "westerosblocks:block/dirt/ground",
+    "txt5": "westerosblocks:block/dirt/ground",
+    "txt2": "westerosblocks:block/dirt/ground",
+    "txt3": "westerosblocks:block/dirt/ground",
     "txt0": "westerosblocks:block/dirt/top_bot4",
     "txt1": "westerosblocks:block/dirt/top_bot4",
     "particle": "westerosblocks:block/dirt/top_bot4"

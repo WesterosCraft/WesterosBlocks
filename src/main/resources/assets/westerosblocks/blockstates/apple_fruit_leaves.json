@@ -6,37 +6,7 @@
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v1",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v1",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v1",
-        "y": 270,
-        "weight": 10
-      },
-      {
         "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v1",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v1",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v1",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v1",
-        "y": 270,
         "weight": 10
       },
       {
@@ -44,37 +14,7 @@
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v2",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v2",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v2",
-        "y": 270,
-        "weight": 10
-      },
-      {
         "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v2",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v2",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v2",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v2",
-        "y": 270,
         "weight": 10
       },
       {
@@ -82,37 +22,7 @@
         "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v3",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v3",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v3",
-        "y": 270,
-        "weight": 10
-      },
-      {
         "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v3",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v3",
-        "y": 90,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v3",
-        "y": 180,
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v3",
-        "y": 270,
         "weight": 10
       },
       {
@@ -120,37 +30,7 @@
         "weight": 2
       },
       {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v4",
-        "y": 90,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v4",
-        "y": 180,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base-v4",
-        "y": 270,
-        "weight": 2
-      },
-      {
         "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v4",
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v4",
-        "y": 90,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v4",
-        "y": 180,
-        "weight": 2
-      },
-      {
-        "model": "westerosblocks:block/generated/apple_fruit_leaves/base2-v4",
-        "y": 270,
         "weight": 2
       }
     ]

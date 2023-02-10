@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/orange_slate/side",
+    "down": "westerosblocks:block/orange_slate/ctm0",
     "up": "westerosblocks:block/orange_slate/side",
-    "north": "westerosblocks:block/orange_slate/side",
-    "south": "westerosblocks:block/orange_slate/side",
-    "west": "westerosblocks:block/orange_slate/side",
-    "east": "westerosblocks:block/orange_slate/side",
-    "particle": "westerosblocks:block/orange_slate/side"
+    "north": "westerosblocks:block/orange_slate/ctm0",
+    "south": "westerosblocks:block/orange_slate/ctm0",
+    "west": "westerosblocks:block/orange_slate/ctm0",
+    "east": "westerosblocks:block/orange_slate/ctm0",
+    "particle": "westerosblocks:block/orange_slate/ctm0"
   }
 }

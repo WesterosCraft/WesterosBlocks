@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_2/brick_reach_light"
+    "all": "westerosblocks:block/reach_brick/side_light"
   }
 }

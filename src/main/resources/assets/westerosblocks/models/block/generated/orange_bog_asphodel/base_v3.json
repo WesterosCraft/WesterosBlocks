@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/flowers/flower_block_1/orange_bog_asphodel3"
+    "cross": "westerosblocks:block/flowers/orange_bog_asphodel3"
   }
 }

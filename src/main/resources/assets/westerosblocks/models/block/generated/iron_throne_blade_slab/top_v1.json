@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/metal_block_0/blades_molten",
-    "up": "westerosblocks:block/metal_block_0/blades_molten",
-    "north": "westerosblocks:block/metal_block_0/blades_molten",
-    "south": "westerosblocks:block/metal_block_0/blades_molten",
-    "west": "westerosblocks:block/metal_block_0/blades_molten",
-    "east": "westerosblocks:block/metal_block_0/blades_molten",
-    "particle": "westerosblocks:block/metal_block_0/blades_molten"
+    "down": "westerosblocks:block/blades_molten/side1",
+    "up": "westerosblocks:block/blades_molten/side1",
+    "north": "westerosblocks:block/blades_molten/side1",
+    "south": "westerosblocks:block/blades_molten/side1",
+    "west": "westerosblocks:block/blades_molten/side1",
+    "east": "westerosblocks:block/blades_molten/side1",
+    "particle": "westerosblocks:block/blades_molten/side1"
   }
 }

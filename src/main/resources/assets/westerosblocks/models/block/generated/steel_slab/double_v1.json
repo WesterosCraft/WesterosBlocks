@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/metal_block_0/metal_block_steel",
-    "up": "westerosblocks:block/metal_block_0/metal_block_steel",
-    "north": "westerosblocks:block/metal_block_0/metal_block_steel",
-    "south": "westerosblocks:block/metal_block_0/metal_block_steel",
-    "west": "westerosblocks:block/metal_block_0/metal_block_steel",
-    "east": "westerosblocks:block/metal_block_0/metal_block_steel",
-    "particle": "westerosblocks:block/metal_block_0/metal_block_steel"
+    "down": "westerosblocks:block/steel_block/side1",
+    "up": "westerosblocks:block/steel_block/side1",
+    "north": "westerosblocks:block/steel_block/side1",
+    "south": "westerosblocks:block/steel_block/side1",
+    "west": "westerosblocks:block/steel_block/side1",
+    "east": "westerosblocks:block/steel_block/side1",
+    "particle": "westerosblocks:block/steel_block/side1"
   }
 }

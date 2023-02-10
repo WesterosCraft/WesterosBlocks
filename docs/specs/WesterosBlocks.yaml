@@ -1072,7 +1072,7 @@ components:
                 style extensions
                 - "overlay": If value is defined, block
                 models will have a transparent overlay just
-                outside the normal leaf block layer
+                outside the normal leaf block layer.  Typically used for leaves with fruit textures.
 
     web:
       title: blockType='web'
