@@ -1783,17 +1783,17 @@
       "randomTextures": [
         {
           "textures": [
-            "bronze_slab/side1"
+            "bronze_block/side1"
           ]
         },
         {
           "textures": [
-            "bronze_slab/side2"
+            "bronze_block/side2"
           ]
         },
         {
           "textures": [
-            "bronze_slab/side3"
+            "bronze_block/side3"
           ]
         }
       ],
@@ -20524,17 +20524,17 @@
       "randomTextures": [
         {
           "textures": [
-            "bronze_slab/side1"
+            "bronze_block/side1"
           ]
         },
         {
           "textures": [
-            "bronze_slab/side2"
+            "bronze_block/side2"
           ]
         },
         {
           "textures": [
-            "bronze_slab/side3"
+            "bronze_block/side3"
           ]
         }
       ],
