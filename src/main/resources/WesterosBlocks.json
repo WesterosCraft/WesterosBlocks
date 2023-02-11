@@ -456,17 +456,17 @@
       "randomTextures": [
         {
           "textures": [
-            "steel_block_ozidized/side1"
+            "steel_block_oxidized/side1"
           ]
         },
         {
           "textures": [
-            "steel_block_ozidized/side2"
+            "steel_block_oxidized/side2"
           ]
         },
         {
           "textures": [
-            "steel_block_ozidized/side3"
+            "steel_block_oxidized/side3"
           ]
         }
       ],
@@ -1851,17 +1851,17 @@
       "randomTextures": [
         {
           "textures": [
-            "steel_block_ozidized/side1"
+            "steel_block_oxidized/side1"
           ]
         },
         {
           "textures": [
-            "steel_block_ozidized/side2"
+            "steel_block_oxidized/side2"
           ]
         },
         {
           "textures": [
-            "steel_block_ozidized/side3"
+            "steel_block_oxidized/side3"
           ]
         }
       ],
@@ -27364,7 +27364,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Red",
       "textures": [
-        "translucent_block_0/glass_red"
+        "glass_red/glass_red"
       ],
       "legacyBlockID": "stained_glass_0:0"
     },
@@ -27381,7 +27381,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Orange",
       "textures": [
-        "translucent_block_0/glass_orange"
+        "glass_orange/glass_orange"
       ],
       "legacyBlockID": "stained_glass_0:1"
     },
@@ -27507,7 +27507,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Red",
       "textures": [
-        "translucent_block_0/glass_pane_red"
+        "glass_red/glass_pane_red"
       ],
       "legacyBlockID": "stained_glass_pane_0:0"
     },
