@@ -26508,8 +26508,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Crone Yellow",
       "textures": [
-        "translucent_block_0/baelors_sphere_yellow_topbottom",
-        "translucent_block_0/baelors_sphere_yellow_side"
+        "baelors_sphere/baelors_sphere_yellow_topbottom",
+        "baelors_sphere/baelors_sphere_yellow_side"
       ],
       "cuboids": [
         {
@@ -26614,8 +26614,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Father Green",
       "textures": [
-        "translucent_block_0/baelors_sphere_green_topbottom",
-        "translucent_block_0/baelors_sphere_green_side"
+        "baelors_sphere/baelors_sphere_green_topbottom",
+        "baelors_sphere/baelors_sphere_green_side"
       ],
       "cuboids": [
         {
@@ -26720,8 +26720,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Maiden Pink",
       "textures": [
-        "translucent_block_0/baelors_sphere_pink_topbottom",
-        "translucent_block_0/baelors_sphere_pink_side"
+        "baelors_sphere/baelors_sphere_pink_topbottom",
+        "baelors_sphere/baelors_sphere_pink_side"
       ],
       "cuboids": [
         {
@@ -26826,8 +26826,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Mother Blue",
       "textures": [
-        "translucent_block_0/baelors_sphere_blue_topbottom",
-        "translucent_block_0/baelors_sphere_blue_side"
+        "baelors_sphere/baelors_sphere_blue_topbottom",
+        "baelors_sphere/baelors_sphere_blue_side"
       ],
       "cuboids": [
         {
@@ -26932,8 +26932,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Smith Orange",
       "textures": [
-        "translucent_block_0/baelors_sphere_orange_topbottom",
-        "translucent_block_0/baelors_sphere_orange_side"
+        "baelors_sphere/baelors_sphere_orange_topbottom",
+        "baelors_sphere/baelors_sphere_orange_side"
       ],
       "cuboids": [
         {
@@ -27037,19 +27037,9 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Stranger Grey",
-      "randomTextures": [
-        {
-          "textures": [
-            "bugs_bees/bugs_bees1",
-            "bugs_bees/bugs_bees1"
-          ]
-        },
-        {
-          "textures": [
-            "bugs_bees/bugs_bees2",
-            "bugs_bees/bugs_bees2"
-          ]
-        }
+      "textures": [
+        "baelors_sphere/baelors_sphere_grey_topbottom",
+        "baelors_sphere/baelors_sphere_grey_side"
       ],
       "cuboids": [
         {
@@ -27153,19 +27143,9 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Warrior Red",
-      "randomTextures": [
-        {
-          "textures": [
-            "bugs_flies/bugs_flies1",
-            "bugs_flies/bugs_flies1"
-          ]
-        },
-        {
-          "textures": [
-            "bugs_flies/bugs_flies2",
-            "bugs_flies/bugs_flies2"
-          ]
-        }
+      "textures": [
+        "baelors_sphere/baelors_sphere_red_topbottom",
+        "baelors_sphere/baelors_sphere_red_side"
       ],
       "cuboids": [
         {
