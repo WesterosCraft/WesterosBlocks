@@ -27398,7 +27398,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Yellow",
       "textures": [
-        "translucent_block_0/glass_yellow"
+        "glass_yellow/glass_yellow"
       ],
       "legacyBlockID": "stained_glass_0:2"
     },
@@ -27415,7 +27415,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Green",
       "textures": [
-        "translucent_block_0/glass_green"
+        "glass_green/glass_green"
       ],
       "legacyBlockID": "stained_glass_0:3"
     },
@@ -27432,7 +27432,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Blue",
       "textures": [
-        "translucent_block_0/glass_blue"
+        "glass_blue/glass_blue"
       ],
       "legacyBlockID": "stained_glass_0:4"
     },
@@ -27449,7 +27449,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Purple",
       "textures": [
-        "translucent_block_0/glass_purple"
+        "glass_purple/glass_purple"
       ],
       "legacyBlockID": "stained_glass_0:5"
     },
@@ -27466,7 +27466,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Pink",
       "textures": [
-        "translucent_block_0/glass_pink"
+        "glass_pink/glass_pink"
       ],
       "legacyBlockID": "stained_glass_0:6"
     },
@@ -27483,7 +27483,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Black",
       "textures": [
-        "translucent_block_0/glass_black"
+        "glass_black/glass_black"
       ],
       "legacyBlockID": "stained_glass_0:7"
     },
@@ -27531,7 +27531,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Orange",
       "textures": [
-        "translucent_block_0/glass_pane_orange"
+        "glass_orange/glass_pane_orange"
       ],
       "legacyBlockID": "stained_glass_pane_0:1"
     },
@@ -27555,7 +27555,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Yellow",
       "textures": [
-        "translucent_block_0/glass_pane_yellow"
+        "glass_yellow/glass_pane_yellow"
       ],
       "legacyBlockID": "stained_glass_pane_0:2"
     },
@@ -27579,7 +27579,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Green",
       "textures": [
-        "translucent_block_0/glass_pane_green"
+        "glass_green/glass_pane_green"
       ],
       "legacyBlockID": "stained_glass_pane_0:3"
     },
@@ -27603,7 +27603,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Blue",
       "textures": [
-        "translucent_block_0/glass_pane_blue"
+        "glass_blue/glass_pane_blue"
       ],
       "legacyBlockID": "stained_glass_pane_0:4"
     },
@@ -27627,7 +27627,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Purple",
       "textures": [
-        "translucent_block_0/glass_pane_purple"
+        "glass_purple/glass_pane_purple"
       ],
       "legacyBlockID": "stained_glass_pane_0:5"
     },
@@ -27651,7 +27651,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Pink",
       "textures": [
-        "translucent_block_0/glass_pane_pink"
+        "glass_pink/glass_pane_pink"
       ],
       "legacyBlockID": "stained_glass_pane_0:6"
     },
@@ -27675,7 +27675,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Black",
       "textures": [
-        "translucent_block_0/glass_pane_black"
+        "glass_black/glass_pane_black"
       ],
       "legacyBlockID": "stained_glass_pane_0:7"
     },

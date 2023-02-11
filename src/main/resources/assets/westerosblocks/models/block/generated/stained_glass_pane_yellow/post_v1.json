@@ -1,7 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/ctm_pane_post",
   "textures": {
-    "cap": "westerosblocks:block/translucent_block_0/glass_pane_yellow",
-    "side": "westerosblocks:block/translucent_block_0/glass_pane_yellow"
+    "cap": "westerosblocks:block/glass_yellow/glass_pane_yellow",
+    "side": "westerosblocks:block/glass_yellow/glass_pane_yellow"
   }
 }

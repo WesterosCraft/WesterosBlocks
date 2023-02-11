@@ -2,7 +2,7 @@
   "ctm": {
     "ctm_version": 1,
     "type": "westeros_ctm",
-    "layer": "SOLID",
+    "layer": "TRANSLUCENT",
     "textures": [
       "westerosblocks:block/glass_red/ctm0",
       "westerosblocks:block/glass_red/ctm1",

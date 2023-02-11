@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/translucent_block_0/glass_pane_blue"
+    "layer0": "westerosblocks:block/glass_blue/glass_pane_blue"
   }
 }
