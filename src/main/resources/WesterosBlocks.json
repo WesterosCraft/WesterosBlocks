@@ -2267,7 +2267,7 @@
       "textures": [
         "sandstone_red_wall/top",
         "sandstone_red_wall/top",
-        "stone_block_0/sandstone_red"
+        "sandstone_red/side"
       ],
       "legacyBlockID": "stone_wall_block_0:4"
     },
@@ -18099,7 +18099,7 @@
     {
       "blockName": "iron_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:iron_block",
+      "modelBlockName": "iron_slab",
       "creativeTab": "WesterosBlocks",
       "label": "Iron Stairs",
       "legacyBlockID": "metal_block_0_stair_6:0"
@@ -18107,7 +18107,7 @@
     {
       "blockName": "steel_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:emerald_block",
+      "modelBlockName": "steel_block",
       "creativeTab": "WesterosBlocks",
       "label": "Steel Stairs",
       "legacyBlockID": "metal_block_0_stair_7:0"
@@ -18115,7 +18115,7 @@
     {
       "blockName": "snow_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:snow",
+      "modelBlockName": "snow_slab",
       "creativeTab": "WesterosDeco",
       "ambientOcclusion": false,
       "label": "Snow Stairs",
@@ -24059,9 +24059,9 @@
       "creativeTab": "WesterosBlocks",
       "label": "Red Sandstone Slab",
       "textures": [
-        "stone_block_0/sandstone_red_top",
-        "stone_block_0/sandstone_red_top",
-        "stone_block_0/sandstone_red"
+        "sandstone_red/top",
+        "sandstone_red/top",
+        "sandstone_red/side"
       ],
       "legacyBlockID": "stone_slab_block_3:0"
     },
@@ -24210,7 +24210,7 @@
     {
       "blockName": "red_sandstone_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:sandstone",
+      "modelBlockName": "red_sandstone_slab",
       "creativeTab": "WesterosBlocks",
       "label": "Red Sandstone Stairs",
       "legacyBlockID": "stone_block_4_stair_1:0"
@@ -27718,8 +27718,8 @@
       "type": "locked:true",
       "label": "Red Keep Secret Door",
       "textures": [
-        "stone_block_0/sandstone_red_coarse",
-        "stone_block_0/sandstone_red_coarse"
+        "sandstone_red/coarse",
+        "sandstone_red/coarse"
       ],
       "legacyBlockID": "door_secret_sandstone_red:0"
     },
@@ -54129,7 +54129,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Red Sandstone Hopper",
       "textures": [
-        "stone_block_0/sandstone_red"
+        "sandstone_red/side"
       ],
       "cuboids": [
         {

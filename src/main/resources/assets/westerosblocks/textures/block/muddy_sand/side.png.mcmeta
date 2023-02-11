@@ -9,7 +9,8 @@
     ],
     "extra": {
       "width": 3,
-      "height": 3
+      "height": 3,
+      "connect_to": [{ "block": "westerosblocks:wet_sand" }]
     }
   }
 }
