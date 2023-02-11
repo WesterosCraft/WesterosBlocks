@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/bronze_slab/side3",
-    "up": "westerosblocks:block/bronze_slab/side3",
-    "north": "westerosblocks:block/bronze_slab/side3",
-    "south": "westerosblocks:block/bronze_slab/side3",
-    "west": "westerosblocks:block/bronze_slab/side3",
-    "east": "westerosblocks:block/bronze_slab/side3",
-    "particle": "westerosblocks:block/bronze_slab/side3"
+    "down": "westerosblocks:block/bronze_block/side3",
+    "up": "westerosblocks:block/bronze_block/side3",
+    "north": "westerosblocks:block/bronze_block/side3",
+    "south": "westerosblocks:block/bronze_block/side3",
+    "west": "westerosblocks:block/bronze_block/side3",
+    "east": "westerosblocks:block/bronze_block/side3",
+    "particle": "westerosblocks:block/bronze_block/side3"
   }
 }

@@ -18091,7 +18091,7 @@
     {
       "blockName": "bronze_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:lapis_block",
+      "modelBlockName": "bronze_slab",
       "creativeTab": "WesterosBlocks",
       "label": "Bronze Stairs",
       "legacyBlockID": "metal_block_0_stair_5:0"
