@@ -4,6 +4,12 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/iron_fence/post_v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/post_v2"
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/post_v3"
         }
       ]
     },
@@ -11,6 +17,14 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/iron_fence/side_v1",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/side_v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/side_v3",
           "uvlock": true
         }
       ],
@@ -22,6 +36,16 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/iron_fence/side_v1",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/side_v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/side_v3",
           "y": 90,
           "uvlock": true
         }
@@ -36,6 +60,16 @@
           "model": "westerosblocks:block/generated/iron_fence/side_v1",
           "y": 180,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/side_v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/side_v3",
+          "y": 180,
+          "uvlock": true
         }
       ],
       "when": {
@@ -46,6 +80,16 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/iron_fence/side_v1",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/side_v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/iron_fence/side_v3",
           "y": 270,
           "uvlock": true
         }

@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cuboid_block_1/fence_wattle_light_short",
-    "txt5": "westerosblocks:block/cuboid_block_1/fence_wattle_light_short",
+    "txt4": "westerosblocks:block/wattle_fence_light/fence_wattle_light_short",
+    "txt5": "westerosblocks:block/wattle_fence_light/fence_wattle_light_short",
     "txt2": "westerosblocks:block/transparent",
     "txt3": "westerosblocks:block/transparent",
     "txt0": "westerosblocks:block/transparent",

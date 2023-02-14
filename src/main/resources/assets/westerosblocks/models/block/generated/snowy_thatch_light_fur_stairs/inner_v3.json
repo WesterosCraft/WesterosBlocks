@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/snowy_thatch_light_fur/bottom",
+    "top": "westerosblocks:block/snowy_thatch_light_fur/top",
+    "side": "westerosblocks:block/snowy_thatch_light_fur/side3",
+    "particle": "westerosblocks:block/snowy_thatch_light_fur/side3"
+  }
+}

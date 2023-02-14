@@ -4,6 +4,12 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/steel_wall/post-v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/post-v2"
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/post-v3"
         }
       ],
       "when": {
@@ -14,6 +20,14 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/steel_wall/side-v1",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side-v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side-v3",
           "uvlock": true
         }
       ],
@@ -26,6 +40,14 @@
         {
           "model": "westerosblocks:block/generated/steel_wall/side_tall-v1",
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side_tall-v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side_tall-v3",
+          "uvlock": true
         }
       ],
       "when": {
@@ -36,6 +58,16 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/steel_wall/side-v1",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side-v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side-v3",
           "y": 90,
           "uvlock": true
         }
@@ -50,6 +82,16 @@
           "model": "westerosblocks:block/generated/steel_wall/side_tall-v1",
           "y": 90,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side_tall-v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side_tall-v3",
+          "y": 90,
+          "uvlock": true
         }
       ],
       "when": {
@@ -60,6 +102,16 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/steel_wall/side-v1",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side-v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side-v3",
           "y": 180,
           "uvlock": true
         }
@@ -74,6 +126,16 @@
           "model": "westerosblocks:block/generated/steel_wall/side_tall-v1",
           "y": 180,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side_tall-v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side_tall-v3",
+          "y": 180,
+          "uvlock": true
         }
       ],
       "when": {
@@ -86,6 +148,16 @@
           "model": "westerosblocks:block/generated/steel_wall/side-v1",
           "y": 270,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side-v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side-v3",
+          "y": 270,
+          "uvlock": true
         }
       ],
       "when": {
@@ -96,6 +168,16 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/steel_wall/side_tall-v1",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side_tall-v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/steel_wall/side_tall-v3",
           "y": 270,
           "uvlock": true
         }
