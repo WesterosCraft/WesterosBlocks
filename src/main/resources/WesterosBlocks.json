@@ -56946,7 +56946,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Black Wood Slab",
       "textures": [
-        "wood_block_1/wood_black"
+        "black_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:0"
     },
@@ -56966,7 +56966,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Blue Wood Slab",
       "textures": [
-        "wood_block_1/wood_blue"
+        "blue_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:1"
     },
@@ -56986,7 +56986,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Green Wood Slab",
       "textures": [
-        "wood_block_1/wood_green"
+        "green_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:2"
     },
@@ -57006,7 +57006,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Red Wood Slab",
       "textures": [
-        "wood_block_1/wood_red"
+        "red_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:3"
     },
@@ -57026,7 +57026,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Yellow Wood Slab",
       "textures": [
-        "wood_block_1/wood_yellow"
+        "yellow_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:4"
     },
@@ -57046,7 +57046,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Purple Wood Slab",
       "textures": [
-        "wood_block_1/wood_purple"
+        "purple_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:5"
     },
