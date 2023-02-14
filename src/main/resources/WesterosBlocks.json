@@ -31296,7 +31296,7 @@
     },
     {
       "blockName": "mances_camp_common_tent_1",
-      "blockType": "cuboid-nsew",
+      "blockType": "solid",
       "hardness": 5,
       "stepSound": "cloth",
       "material": "wood",
@@ -31313,47 +31313,12 @@
         "mances_camp_common_tent/inside",
         "mances_camp_common_tent/outside1",
         "transparent",
-        "mances_camp_common_tent/frost"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            2,
-            2,
-            3,
-            3,
-            3,
-            2
-          ]
-        }
       ],
       "legacyBlockID": "cuboid_block_7:0"
     },
     {
       "blockName": "mances_camp_common_tent_2",
-      "blockType": "cuboid-nsew",
+      "blockType": "solid",
       "hardness": 5,
       "stepSound": "cloth",
       "material": "wood",
@@ -31370,41 +31335,6 @@
         "mances_camp_common_tent/inside",
         "mances_camp_common_tent/outside2",
         "transparent",
-        "mances_camp_common_tent/frost"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            2,
-            2,
-            3,
-            3,
-            3,
-            2
-          ]
-        }
       ],
       "legacyBlockID": "cuboid_block_7:1"
     },
@@ -31427,41 +31357,7 @@
         "mances_camp_mances_tent/inside",
         "mances_camp_mances_tent/outside",
         "transparent",
-        "mances_camp_common_tent/frost"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            2,
-            2,
-            3,
-            3,
-            3,
-            2
-          ]
-        }
+        "thatch_dark/thatch_dark"
       ],
       "legacyBlockID": "cuboid_block_7:2"
     },
