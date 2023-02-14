@@ -39223,7 +39223,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Dark Northern Wood Carpet",
       "textures": [
-        "dark_northern_wood/side"
+        "dark_northern_wood/side1"
       ],
       "cuboids": [
         {
@@ -39261,7 +39261,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Grey Wood Carpet",
       "textures": [
-        "grey_wood/side"
+        "grey_wood/side1"
       ],
       "cuboids": [
         {
@@ -39299,7 +39299,7 @@
       "creativeTab": "WesterosDeco",
       "label": "White Wood Carpet",
       "textures": [
-        "white_wood/side"
+        "white_wood/side1"
       ],
       "cuboids": [
         {
@@ -39552,7 +39552,7 @@
     {
       "blockName": "mances_camp_common_tent_stairs",
       "blockType": "stair",
-      "modelBlockName": "thatch_dark_fur",
+      "modelBlockName": "mances_camp_mances_tent",
       "creativeTab": "WesterosBlocks",
       "label": "Mance's Camp Common Tent Stairs",
       "legacyBlockID": "cuboid_block_7_stairs_0:0"
@@ -48563,8 +48563,103 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Path Reach Gravel",
-      "textures": [
-        "ground_block_0/gravel_reach"
+      "randomTextures": [
+        {
+          "textures": [
+            "reach_gravel/side1"
+          ],
+          "weight": 100
+        },
+        {
+          "textures": [
+            "reach_gravel/side2"
+          ],
+          "weight": 33
+        },
+        {
+          "textures": [
+            "reach_gravel/side3"
+          ],
+          "weight": 45
+        },
+        {
+          "textures": [
+            "reach_gravel/side4"
+          ],
+          "weight": 140
+        },
+        {
+          "textures": [
+            "reach_gravel/side5"
+          ],
+          "weight": 193
+        },
+        {
+          "textures": [
+            "reach_gravel/side6"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side7"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side8"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side9"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side10"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side11"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side12"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side13"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side14"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side15"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side16"
+          ],
+          "weight": 77
+        }
       ],
       "cuboids": [
         {
@@ -48595,8 +48690,57 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Path Dorne Dusty Dirt",
-      "textures": [
-        "ground_block_0/dirt_dusty"
+      "randomTextures": [
+        {
+          "textures": [
+            "dorne_dusty_dirt/side1"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side2"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side3"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side4"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side5"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side6"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side7"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side8"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side9"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side10"
+          ]
+        }
       ],
       "cuboids": [
         {
@@ -48627,8 +48771,52 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Path Dorne Dry Soil",
-      "textures": [
-        "ground_block_0/soil_dried"
+      "randomTextures": [
+        {
+          "textures": [
+            "dorne_dry_soil/side1"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side2"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side3"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side4"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side5"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side6"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side7"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side8"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side9"
+          ]
+        }
       ],
       "cuboids": [
         {
@@ -55394,87 +55582,8 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Piled Bones",
-      "randomTextures": [
-        {
-          "textures": [
-            "piled_bones/0"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/1"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/2"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/3"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/4"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/5"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/6"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/7"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/8"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/9"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/10"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/11"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/12"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/13"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/14"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/15"
-          ]
-        }
+      "textures": [
+        "piled_bones/side"
       ],
       "legacyBlockID": "stone_block_12:0"
     },
@@ -55537,7 +55646,7 @@
     {
       "blockName": "stacked_bones_stairs",
       "blockType": "stair",
-      "modelBlockName": "piled_bones",
+      "modelBlockName": "stacked_bones",
       "creativeTab": "WesterosBlocks",
       "label": "Stacked Bones Stairs",
       "legacyBlockID": "stone_block_12_stair_0:0"
@@ -55588,7 +55697,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Piled Bones Slab",
       "textures": [
-        "piled_bones/0"
+        "piled_bones/side"
       ],
       "legacyBlockID": "stone_slab_block_8:1"
     },
@@ -55630,7 +55739,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Piled Bones Wall",
       "textures": [
-        "piled_bones/0"
+        "piled_bones/side"
       ],
       "legacyBlockID": "stone_wall_block_6:1"
     },
