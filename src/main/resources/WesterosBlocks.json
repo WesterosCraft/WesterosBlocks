@@ -19483,13 +19483,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Orange Brick Furnace",
       "colorMult": "textures/colormap/brick",
-      "textures": [
-        "furnace_block_0/brick_furnace_bottom",
-        "furnace_block_0/brick_furnace_top",
-        "furnace_block_0/brick_furnace_side",
-        "furnace_block_0/brick_furnace_front_on",
-        "furnace_block_0/brick_furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_0:0"
     },
     {

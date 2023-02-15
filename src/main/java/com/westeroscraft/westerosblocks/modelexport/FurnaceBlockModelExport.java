@@ -50,13 +50,21 @@ public class FurnaceBlockModelExport extends ModelExport {
         new ModelRec("facing=west,lit=false", "base", 270),
         new ModelRec("facing=east,lit=false", "base", 90)
     };
+    
+    public String modelFileName(String ext, int setidx) {
+    	if (def.isCustomModel())
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx);
+    	else
+    		return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx);
+    }
+
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         // Add records for our models
         for (ModelRec rec : MODELS) {
         	Variant var = new Variant();
-        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(rec.ext, 0);
+        	var.model = modelFileName(rec.ext, 0);
         	if (rec.y != 0) var.y = rec.y;
         	so.addVariant(rec.cond, var, null);
         }
@@ -66,22 +74,26 @@ public class FurnaceBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
-        ModelObjectCubeAll mod = new ModelObjectCubeAll();
-        mod.textures.top = getTextureID(def.getTextureByIndex(1)); 
-        mod.textures.side = getTextureID(def.getTextureByIndex(2)); 
-        mod.textures.front = getTextureID(def.getTextureByIndex(3)); // ON
-        if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/orientable";
-        this.writeBlockModelFile(getModelName("lit", 0), mod);
-            
-        mod = new ModelObjectCubeAll();
-        mod.textures.top = getTextureID(def.getTextureByIndex(1)); 
-        mod.textures.side = getTextureID(def.getTextureByIndex(2)); 
-        mod.textures.front = getTextureID(def.getTextureByIndex(4)); // Off
-        if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/orientable";
-        this.writeBlockModelFile(getModelName("base", 0), mod);
+        // Export if not set to custom model
+        if (!def.isCustomModel()) {
+	
+	        ModelObjectCubeAll mod = new ModelObjectCubeAll();
+	        mod.textures.top = getTextureID(def.getTextureByIndex(1)); 
+	        mod.textures.side = getTextureID(def.getTextureByIndex(2)); 
+	        mod.textures.front = getTextureID(def.getTextureByIndex(3)); // ON
+	        if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/orientable";
+	        this.writeBlockModelFile(getModelName("lit", 0), mod);
+	            
+	        mod = new ModelObjectCubeAll();
+	        mod.textures.top = getTextureID(def.getTextureByIndex(1)); 
+	        mod.textures.side = getTextureID(def.getTextureByIndex(2)); 
+	        mod.textures.front = getTextureID(def.getTextureByIndex(4)); // Off
+	        if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/orientable";
+	        this.writeBlockModelFile(getModelName("base", 0), mod);
+        }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
+        mo.parent = modelFileName("base", 0);
         this.writeItemModelFile(def.blockName, mo);
         // Handle tint resources
         if (isTinted) {
