@@ -36573,7 +36573,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Grey Wood Wall",
       "textures": [
-        "grey_wood/side"
+        "grey_wood/side1"
       ],
       "legacyBlockID": "wood_wall_block_0:11"
     },
@@ -36593,7 +36593,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "White Wood Wall",
       "textures": [
-        "white_wood/side"
+        "white_wood/side1"
       ],
       "legacyBlockID": "wood_wall_block_0:12"
     },
@@ -36633,7 +36633,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Snowy Thatch Dark Wall",
       "textures": [
-        "fur_block_0/thatch_snowy_dark_top"
+        "thatch_snowy_dark_fur/top"
       ],
       "legacyBlockID": "wood_wall_block_0:14"
     },
