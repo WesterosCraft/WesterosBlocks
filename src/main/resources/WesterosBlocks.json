@@ -31290,7 +31290,7 @@
     },
     {
       "blockName": "mances_camp_common_tent_1",
-      "blockType": "solid",
+      "blockType": "cuboid-nsew",
       "hardness": 5,
       "stepSound": "cloth",
       "material": "wood",
@@ -31306,13 +31306,47 @@
       "textures": [
         "mances_camp_common_tent/inside",
         "mances_camp_common_tent/outside1",
-        "transparent",
+        "transparent"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.01,
+          "xMax": 0.99,
+          "yMin": 0.01,
+          "yMax": 0.99,
+          "zMin": 0.01,
+          "zMax": 0.99,
+          "sideTextures": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            2,
+            2,
+            3,
+            3,
+            3,
+            2
+          ]
+        }
       ],
       "legacyBlockID": "cuboid_block_7:0"
     },
     {
       "blockName": "mances_camp_common_tent_2",
-      "blockType": "solid",
+      "blockType": "cuboid-nsew",
       "hardness": 5,
       "stepSound": "cloth",
       "material": "wood",
@@ -31328,7 +31362,41 @@
       "textures": [
         "mances_camp_common_tent/inside",
         "mances_camp_common_tent/outside2",
-        "transparent",
+        "transparent"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.01,
+          "xMax": 0.99,
+          "yMin": 0.01,
+          "yMax": 0.99,
+          "zMin": 0.01,
+          "zMax": 0.99,
+          "sideTextures": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            2,
+            2,
+            3,
+            3,
+            3,
+            2
+          ]
+        }
       ],
       "legacyBlockID": "cuboid_block_7:1"
     },
@@ -31352,6 +31420,40 @@
         "mances_camp_mances_tent/outside",
         "transparent",
         "thatch_dark/thatch_dark"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.01,
+          "xMax": 0.99,
+          "yMin": 0.01,
+          "yMax": 0.99,
+          "zMin": 0.01,
+          "zMax": 0.99,
+          "sideTextures": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            2,
+            2,
+            3,
+            3,
+            3,
+            2
+          ]
+        }
       ],
       "legacyBlockID": "cuboid_block_7:2"
     },
@@ -39442,7 +39544,7 @@
     {
       "blockName": "mances_camp_common_tent_stairs",
       "blockType": "stair",
-      "modelBlockName": "mances_camp_mances_tent",
+      "modelBlockName": "mances_camp_common_tent_1",
       "creativeTab": "WesterosBlocks",
       "label": "Mance's Camp Common Tent Stairs",
       "legacyBlockID": "cuboid_block_7_stairs_0:0"
@@ -39450,7 +39552,7 @@
     {
       "blockName": "mances_camp_mances_tent_stairs",
       "blockType": "stair",
-      "modelBlockName": "thatch_light_fur",
+      "modelBlockName": "mances_camp_mances_tent",
       "creativeTab": "WesterosBlocks",
       "label": "Mance's Camp Mance's Tent Stairs",
       "legacyBlockID": "cuboid_block_7_stairs_1:0"

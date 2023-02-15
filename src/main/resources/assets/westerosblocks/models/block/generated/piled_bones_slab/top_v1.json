@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/piled_bones/0",
-    "up": "westerosblocks:block/piled_bones/0",
-    "north": "westerosblocks:block/piled_bones/0",
-    "south": "westerosblocks:block/piled_bones/0",
-    "west": "westerosblocks:block/piled_bones/0",
-    "east": "westerosblocks:block/piled_bones/0",
-    "particle": "westerosblocks:block/piled_bones/0"
+    "down": "westerosblocks:block/piled_bones/side",
+    "up": "westerosblocks:block/piled_bones/side",
+    "north": "westerosblocks:block/piled_bones/side",
+    "south": "westerosblocks:block/piled_bones/side",
+    "west": "westerosblocks:block/piled_bones/side",
+    "east": "westerosblocks:block/piled_bones/side",
+    "particle": "westerosblocks:block/piled_bones/side"
   }
 }

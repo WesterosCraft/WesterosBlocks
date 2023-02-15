@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/thatch_light/thatch_light",
-    "top": "westerosblocks:block/thatch_light/thatch_light",
-    "side": "westerosblocks:block/thatch_light/thatch_light",
-    "particle": "westerosblocks:block/thatch_light/thatch_light"
+    "bottom": "westerosblocks:block/mances_camp_mances_tent/inside",
+    "top": "westerosblocks:block/mances_camp_mances_tent/outside",
+    "side": "westerosblocks:block/transparent",
+    "particle": "westerosblocks:block/transparent"
   }
 }

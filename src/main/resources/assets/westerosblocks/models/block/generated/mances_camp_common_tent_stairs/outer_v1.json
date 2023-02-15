@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/thatch_dark/thatch_dark",
-    "top": "westerosblocks:block/thatch_dark/thatch_dark",
-    "side": "westerosblocks:block/thatch_dark/thatch_dark",
-    "particle": "westerosblocks:block/thatch_dark/thatch_dark"
+    "bottom": "westerosblocks:block/mances_camp_common_tent/inside",
+    "top": "westerosblocks:block/mances_camp_common_tent/outside1",
+    "side": "westerosblocks:block/transparent",
+    "particle": "westerosblocks:block/transparent"
   }
 }

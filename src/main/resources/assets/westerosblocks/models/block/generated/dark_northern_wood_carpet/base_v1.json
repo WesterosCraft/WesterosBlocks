@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/dark_northern_wood/side",
-    "txt5": "westerosblocks:block/dark_northern_wood/side",
-    "txt2": "westerosblocks:block/dark_northern_wood/side",
-    "txt3": "westerosblocks:block/dark_northern_wood/side",
-    "txt0": "westerosblocks:block/dark_northern_wood/side",
-    "txt1": "westerosblocks:block/dark_northern_wood/side",
-    "particle": "westerosblocks:block/dark_northern_wood/side"
+    "txt4": "westerosblocks:block/dark_northern_wood/side1",
+    "txt5": "westerosblocks:block/dark_northern_wood/side1",
+    "txt2": "westerosblocks:block/dark_northern_wood/side1",
+    "txt3": "westerosblocks:block/dark_northern_wood/side1",
+    "txt0": "westerosblocks:block/dark_northern_wood/side1",
+    "txt1": "westerosblocks:block/dark_northern_wood/side1",
+    "particle": "westerosblocks:block/dark_northern_wood/side1"
   },
   "elements": [
     {

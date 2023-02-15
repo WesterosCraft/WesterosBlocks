@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "txt5": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "txt2": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "txt3": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "txt0": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "txt1": "westerosblocks:block/ground_block_0/dirt_dusty",
-    "particle": "westerosblocks:block/ground_block_0/dirt_dusty"
+    "txt4": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "txt5": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "txt2": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "txt3": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "txt0": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "txt1": "westerosblocks:block/dorne_dusty_dirt/side1",
+    "particle": "westerosblocks:block/dorne_dusty_dirt/side1"
   },
   "elements": [
     {

@@ -18,10 +18,10 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/mances_camp_common_tent/frost",
-    "txt5": "westerosblocks:block/mances_camp_common_tent/frost",
+    "txt4": "westerosblocks:block/transparent",
+    "txt5": "westerosblocks:block/transparent",
     "txt2": "westerosblocks:block/transparent",
-    "txt3": "westerosblocks:block/mances_camp_common_tent/frost",
+    "txt3": "westerosblocks:block/transparent",
     "txt0": "westerosblocks:block/mances_camp_common_tent/inside",
     "txt1": "westerosblocks:block/mances_camp_common_tent/outside1",
     "particle": "westerosblocks:block/mances_camp_common_tent/inside"
