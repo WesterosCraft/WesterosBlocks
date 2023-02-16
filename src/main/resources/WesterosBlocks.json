@@ -19499,13 +19499,7 @@
       "label": "Always Active Brick Furnace",
       "colorMult": "textures/colormap/brick",
       "type": "always-on:true",
-      "textures": [
-        "furnace_block_0/brick_furnace_bottom",
-        "furnace_block_0/brick_furnace_top",
-        "furnace_block_0/brick_furnace_side",
-        "furnace_block_0/brick_furnace_front_on",
-        "furnace_block_0/brick_furnace_front_on"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_0:1"
     },
     {
@@ -19519,13 +19513,7 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosDeco",
       "label": "Sandstone Furnace",
-      "textures": [
-        "furnace_block_0/sandstone_mono_furnace_bottom",
-        "furnace_block_0/sandstone_mono_furnace_top",
-        "furnace_block_0/sandstone_mono_furnace_side",
-        "furnace_block_0/sandstone_mono_furnace_front_on",
-        "furnace_block_0/sandstone_mono_furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_1:0"
     },
     {
@@ -19540,13 +19528,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Always Active Sandstone Furnace",
       "type": "always-on:true",
-      "textures": [
-        "furnace_block_0/sandstone_mono_furnace_bottom",
-        "furnace_block_0/sandstone_mono_furnace_top",
-        "furnace_block_0/sandstone_mono_furnace_side",
-        "furnace_block_0/sandstone_mono_furnace_front_on",
-        "furnace_block_0/sandstone_mono_furnace_front_on"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_1:1"
     },
     {
@@ -19562,13 +19544,7 @@
       "label": "Always Active Stone Furnace",
       "type": "always-on:true",
       "colorMult": "textures/colormap/furnace",
-      "textures": [
-        "furnace_block_0/furnace_bottom",
-        "furnace_block_0/furnace_top",
-        "furnace_block_0/furnace_side",
-        "furnace_block_0/furnace_front_on",
-        "furnace_block_0/furnace_front_on"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_2:0"
     },
     {
@@ -19584,13 +19560,7 @@
       "label": "Stone Furnace",
       "type": "always-on:false",
       "colorMult": "textures/colormap/furnace",
-      "textures": [
-        "furnace_block_0/furnace_bottom",
-        "furnace_block_0/furnace_top",
-        "furnace_block_0/furnace_side",
-        "furnace_block_0/furnace_front_on_still",
-        "furnace_block_0/furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_2:1"
     },
     {
