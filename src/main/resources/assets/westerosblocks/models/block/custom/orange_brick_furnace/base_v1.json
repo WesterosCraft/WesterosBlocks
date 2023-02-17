@@ -3,9 +3,9 @@
 	"textures": {
 		"3": "westerosblocks:block/furnace_block_hollow/mud_furnace_inside_bottom",
 		"4": "westerosblocks:block/furnace_block_hollow/mud_furnace_inside_walls",
-		"7": "westerosblocks:block/furnace_block_hollow/brick_furnace_front_off",
-		"8": "westerosblocks:block/furnace_block_hollow/brick_furnace_side",
-		"9": "westerosblocks:block/furnace_block_hollow/brick_furnace_top",
+		"7": "westerosblocks:block/furnace_orange_brick/orange_brick_furnace_front_off",
+		"8": "westerosblocks:block/furnace_orange_brick/orange_brick_furnace_side",
+		"9": "westerosblocks:block/furnace_orange_brick/orange_brick_furnace_top",
 		"particle": "westerosblocks:block/furnace_block_hollow/mud_furnace_side"
 	},
 	"elements": [

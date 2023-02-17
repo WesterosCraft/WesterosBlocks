@@ -24256,13 +24256,7 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosDeco",
       "label": "Dornish Mud Furnace",
-      "textures": [
-        "furnace_block_0/mud_furnace_top",
-        "furnace_block_0/mud_furnace_top",
-        "furnace_block_0/mud_furnace_side",
-        "furnace_block_0/mud_furnace_front_on",
-        "furnace_block_0/mud_furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_3:0"
     },
     {
@@ -24277,13 +24271,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Always Active Dornish Mud Furnace",
       "type": "always-on:true",
-      "textures": [
-        "furnace_block_0/mud_furnace_top",
-        "furnace_block_0/mud_furnace_top",
-        "furnace_block_0/mud_furnace_side",
-        "furnace_block_0/mud_furnace_front_on",
-        "furnace_block_0/mud_furnace_front_on"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_3:1"
     },
     {
@@ -54044,13 +54032,7 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosDeco",
       "label": "Arbor Brick Furnace",
-      "textures": [
-        "furnace_block_0/arbor_brick_furnace_bottom",
-        "furnace_block_0/arbor_brick_furnace_top",
-        "furnace_block_0/arbor_brick_furnace_side",
-        "furnace_block_0/arbor_brick_furnace_front_on_still",
-        "furnace_block_0/arbor_brick_furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_4:0"
     },
     {
@@ -54065,13 +54047,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Always Active Arbor Brick Furnace",
       "type": "always-on:true",
-      "textures": [
-        "furnace_block_0/arbor_brick_furnace_bottom",
-        "furnace_block_0/arbor_brick_furnace_top",
-        "furnace_block_0/arbor_brick_furnace_side",
-        "furnace_block_0/arbor_brick_furnace_front_on_still",
-        "furnace_block_0/arbor_brick_furnace_front_on_still"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_4:1"
     },
     {
