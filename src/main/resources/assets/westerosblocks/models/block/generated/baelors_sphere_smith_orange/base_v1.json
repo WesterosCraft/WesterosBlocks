@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/translucent_block_0/baelors_sphere_orange_side",
-    "txt5": "westerosblocks:block/translucent_block_0/baelors_sphere_orange_side",
-    "txt2": "westerosblocks:block/translucent_block_0/baelors_sphere_orange_side",
-    "txt3": "westerosblocks:block/translucent_block_0/baelors_sphere_orange_side",
-    "txt0": "westerosblocks:block/translucent_block_0/baelors_sphere_orange_topbottom",
-    "txt1": "westerosblocks:block/translucent_block_0/baelors_sphere_orange_side",
-    "particle": "westerosblocks:block/translucent_block_0/baelors_sphere_orange_topbottom"
+    "txt4": "westerosblocks:block/baelors_sphere/baelors_sphere_orange_side",
+    "txt5": "westerosblocks:block/baelors_sphere/baelors_sphere_orange_side",
+    "txt2": "westerosblocks:block/baelors_sphere/baelors_sphere_orange_side",
+    "txt3": "westerosblocks:block/baelors_sphere/baelors_sphere_orange_side",
+    "txt0": "westerosblocks:block/baelors_sphere/baelors_sphere_orange_topbottom",
+    "txt1": "westerosblocks:block/baelors_sphere/baelors_sphere_orange_side",
+    "particle": "westerosblocks:block/baelors_sphere/baelors_sphere_orange_topbottom"
   },
   "elements": [
     {

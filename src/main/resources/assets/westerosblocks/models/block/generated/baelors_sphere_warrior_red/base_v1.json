@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/bugs_flies/bugs_flies1",
-    "txt5": "westerosblocks:block/bugs_flies/bugs_flies1",
-    "txt2": "westerosblocks:block/bugs_flies/bugs_flies1",
-    "txt3": "westerosblocks:block/bugs_flies/bugs_flies1",
-    "txt0": "westerosblocks:block/bugs_flies/bugs_flies1",
-    "txt1": "westerosblocks:block/bugs_flies/bugs_flies1",
-    "particle": "westerosblocks:block/bugs_flies/bugs_flies1"
+    "txt4": "westerosblocks:block/baelors_sphere/baelors_sphere_red_side",
+    "txt5": "westerosblocks:block/baelors_sphere/baelors_sphere_red_side",
+    "txt2": "westerosblocks:block/baelors_sphere/baelors_sphere_red_side",
+    "txt3": "westerosblocks:block/baelors_sphere/baelors_sphere_red_side",
+    "txt0": "westerosblocks:block/baelors_sphere/baelors_sphere_red_topbottom",
+    "txt1": "westerosblocks:block/baelors_sphere/baelors_sphere_red_side",
+    "particle": "westerosblocks:block/baelors_sphere/baelors_sphere_red_topbottom"
   },
   "elements": [
     {

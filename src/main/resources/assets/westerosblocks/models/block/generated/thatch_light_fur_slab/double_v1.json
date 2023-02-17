@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/fur_block_0/thatch_light",
-    "up": "westerosblocks:block/fur_block_0/thatch_light",
-    "north": "westerosblocks:block/fur_block_0/thatch_light",
-    "south": "westerosblocks:block/fur_block_0/thatch_light",
-    "west": "westerosblocks:block/fur_block_0/thatch_light",
-    "east": "westerosblocks:block/fur_block_0/thatch_light",
-    "particle": "westerosblocks:block/fur_block_0/thatch_light"
+    "down": "westerosblocks:block/thatch_light/thatch_light",
+    "up": "westerosblocks:block/thatch_light/thatch_light",
+    "north": "westerosblocks:block/thatch_light/thatch_light",
+    "south": "westerosblocks:block/thatch_light/thatch_light",
+    "west": "westerosblocks:block/thatch_light/thatch_light",
+    "east": "westerosblocks:block/thatch_light/thatch_light",
+    "particle": "westerosblocks:block/thatch_light/thatch_light"
   }
 }

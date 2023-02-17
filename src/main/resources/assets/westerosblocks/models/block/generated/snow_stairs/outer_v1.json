@@ -1,9 +1,9 @@
 {
-  "parent": "minecraft:block/outer_stairs",
+  "parent": "westerosblocks:block/noocclusion/outer_stairs",
   "textures": {
-    "bottom": "minecraft:block/snow",
-    "top": "minecraft:block/snow",
-    "side": "minecraft:block/snow",
-    "particle": "minecraft:block/snow"
+    "bottom": "westerosblocks:block/snow_slab/top_bottom",
+    "top": "westerosblocks:block/snow_slab/top_bottom",
+    "side": "westerosblocks:block/snow_slab/north_south",
+    "particle": "westerosblocks:block/snow_slab/north_south"
   }
 }

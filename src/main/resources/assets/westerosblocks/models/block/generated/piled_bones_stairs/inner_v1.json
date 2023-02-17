@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/piled_bones/0",
-    "top": "westerosblocks:block/piled_bones/0",
-    "side": "westerosblocks:block/piled_bones/0",
-    "particle": "westerosblocks:block/piled_bones/0"
+    "bottom": "westerosblocks:block/piled_bones/side",
+    "top": "westerosblocks:block/piled_bones/side",
+    "side": "westerosblocks:block/piled_bones/side",
+    "particle": "westerosblocks:block/piled_bones/side"
   }
 }

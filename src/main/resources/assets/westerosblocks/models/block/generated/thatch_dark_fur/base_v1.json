@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/fur_block_0/thatch_dark"
+    "all": "westerosblocks:block/thatch_dark/thatch_dark"
   }
 }

@@ -456,17 +456,17 @@
       "randomTextures": [
         {
           "textures": [
-            "steel_block_ozidized/side1"
+            "steel_block_oxidized/side1"
           ]
         },
         {
           "textures": [
-            "steel_block_ozidized/side2"
+            "steel_block_oxidized/side2"
           ]
         },
         {
           "textures": [
-            "steel_block_ozidized/side3"
+            "steel_block_oxidized/side3"
           ]
         }
       ],
@@ -1783,17 +1783,17 @@
       "randomTextures": [
         {
           "textures": [
-            "bronze_slab/side1"
+            "bronze_block/side1"
           ]
         },
         {
           "textures": [
-            "bronze_slab/side2"
+            "bronze_block/side2"
           ]
         },
         {
           "textures": [
-            "bronze_slab/side3"
+            "bronze_block/side3"
           ]
         }
       ],
@@ -1851,17 +1851,17 @@
       "randomTextures": [
         {
           "textures": [
-            "steel_block_ozidized/side1"
+            "steel_block_oxidized/side1"
           ]
         },
         {
           "textures": [
-            "steel_block_ozidized/side2"
+            "steel_block_oxidized/side2"
           ]
         },
         {
           "textures": [
-            "steel_block_ozidized/side3"
+            "steel_block_oxidized/side3"
           ]
         }
       ],
@@ -2267,7 +2267,7 @@
       "textures": [
         "sandstone_red_wall/top",
         "sandstone_red_wall/top",
-        "stone_block_0/sandstone_red"
+        "sandstone_red/side"
       ],
       "legacyBlockID": "stone_wall_block_0:4"
     },
@@ -7493,7 +7493,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "6-Sided Stone Slab",
       "textures": [
-        "stone_block_1/stone_slab_top"
+        "stone_slab/stone_slab_top"
       ],
       "legacyBlockID": "six_sided_blocks_0:5"
     },
@@ -9009,7 +9009,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thatch Light Fur",
       "textures": [
-        "fur_block_0/thatch_light"
+        "thatch_light/thatch_light"
       ],
       "legacyBlockID": "wood_colours:9"
     },
@@ -9023,7 +9023,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thatch Dark Fur",
       "textures": [
-        "fur_block_0/thatch_dark"
+        "thatch_dark/thatch_dark"
       ],
       "legacyBlockID": "wood_colours:10"
     },
@@ -10727,7 +10727,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Thatch Light Fur Slab",
       "textures": [
-        "fur_block_0/thatch_light"
+        "thatch_light/thatch_light"
       ],
       "legacyBlockID": "random_slab_block_0:2"
     },
@@ -16976,7 +16976,7 @@
     {
       "blockName": "stone_slab_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:stone_slab",
+      "modelBlockName": "6sided_stone_slab",
       "creativeTab": "WesterosBlocks",
       "label": "Stone Slab Stairs",
       "legacyBlockID": "stone_slab_stair_0:0"
@@ -18091,7 +18091,7 @@
     {
       "blockName": "bronze_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:lapis_block",
+      "modelBlockName": "bronze_slab",
       "creativeTab": "WesterosBlocks",
       "label": "Bronze Stairs",
       "legacyBlockID": "metal_block_0_stair_5:0"
@@ -18099,7 +18099,7 @@
     {
       "blockName": "iron_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:iron_block",
+      "modelBlockName": "iron_slab",
       "creativeTab": "WesterosBlocks",
       "label": "Iron Stairs",
       "legacyBlockID": "metal_block_0_stair_6:0"
@@ -18107,7 +18107,7 @@
     {
       "blockName": "steel_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:emerald_block",
+      "modelBlockName": "steel_block",
       "creativeTab": "WesterosBlocks",
       "label": "Steel Stairs",
       "legacyBlockID": "metal_block_0_stair_7:0"
@@ -18115,7 +18115,7 @@
     {
       "blockName": "snow_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:snow",
+      "modelBlockName": "snow_slab",
       "creativeTab": "WesterosDeco",
       "ambientOcclusion": false,
       "label": "Snow Stairs",
@@ -19467,7 +19467,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stone Slab Fence",
       "textures": [
-        "stone_block_1/stone_slab_side"
+        "stone_slab/stone_slab_side"
       ],
       "legacyBlockID": "fence_block_2:15"
     },
@@ -19499,13 +19499,7 @@
       "label": "Always Active Brick Furnace",
       "colorMult": "textures/colormap/brick",
       "type": "always-on:true",
-      "textures": [
-        "furnace_block_0/brick_furnace_bottom",
-        "furnace_block_0/brick_furnace_top",
-        "furnace_block_0/brick_furnace_side",
-        "furnace_block_0/brick_furnace_front_on",
-        "furnace_block_0/brick_furnace_front_on"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_0:1"
     },
     {
@@ -19519,13 +19513,7 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosDeco",
       "label": "Sandstone Furnace",
-      "textures": [
-        "furnace_block_0/sandstone_mono_furnace_bottom",
-        "furnace_block_0/sandstone_mono_furnace_top",
-        "furnace_block_0/sandstone_mono_furnace_side",
-        "furnace_block_0/sandstone_mono_furnace_front_on",
-        "furnace_block_0/sandstone_mono_furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_1:0"
     },
     {
@@ -19540,13 +19528,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Always Active Sandstone Furnace",
       "type": "always-on:true",
-      "textures": [
-        "furnace_block_0/sandstone_mono_furnace_bottom",
-        "furnace_block_0/sandstone_mono_furnace_top",
-        "furnace_block_0/sandstone_mono_furnace_side",
-        "furnace_block_0/sandstone_mono_furnace_front_on",
-        "furnace_block_0/sandstone_mono_furnace_front_on"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_1:1"
     },
     {
@@ -19562,13 +19544,7 @@
       "label": "Always Active Stone Furnace",
       "type": "always-on:true",
       "colorMult": "textures/colormap/furnace",
-      "textures": [
-        "furnace_block_0/furnace_bottom",
-        "furnace_block_0/furnace_top",
-        "furnace_block_0/furnace_side",
-        "furnace_block_0/furnace_front_on",
-        "furnace_block_0/furnace_front_on"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_2:0"
     },
     {
@@ -19584,13 +19560,7 @@
       "label": "Stone Furnace",
       "type": "always-on:false",
       "colorMult": "textures/colormap/furnace",
-      "textures": [
-        "furnace_block_0/furnace_bottom",
-        "furnace_block_0/furnace_top",
-        "furnace_block_0/furnace_side",
-        "furnace_block_0/furnace_front_on_still",
-        "furnace_block_0/furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_2:1"
     },
     {
@@ -20518,17 +20488,17 @@
       "randomTextures": [
         {
           "textures": [
-            "bronze_slab/side1"
+            "bronze_block/side1"
           ]
         },
         {
           "textures": [
-            "bronze_slab/side2"
+            "bronze_block/side2"
           ]
         },
         {
           "textures": [
-            "bronze_slab/side3"
+            "bronze_block/side3"
           ]
         }
       ],
@@ -20604,7 +20574,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Stone Slab Wall",
       "textures": [
-        "stone_block_1/stone_slab_side"
+        "stone_slab/stone_slab_side"
       ],
       "legacyBlockID": "stone_wall_block_2:11"
     },
@@ -24053,9 +24023,9 @@
       "creativeTab": "WesterosBlocks",
       "label": "Red Sandstone Slab",
       "textures": [
-        "stone_block_0/sandstone_red_top",
-        "stone_block_0/sandstone_red_top",
-        "stone_block_0/sandstone_red"
+        "sandstone_red/top",
+        "sandstone_red/top",
+        "sandstone_red/side"
       ],
       "legacyBlockID": "stone_slab_block_3:0"
     },
@@ -24204,7 +24174,7 @@
     {
       "blockName": "red_sandstone_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:sandstone",
+      "modelBlockName": "red_sandstone_slab",
       "creativeTab": "WesterosBlocks",
       "label": "Red Sandstone Stairs",
       "legacyBlockID": "stone_block_4_stair_1:0"
@@ -24286,13 +24256,7 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosDeco",
       "label": "Dornish Mud Furnace",
-      "textures": [
-        "furnace_block_0/mud_furnace_top",
-        "furnace_block_0/mud_furnace_top",
-        "furnace_block_0/mud_furnace_side",
-        "furnace_block_0/mud_furnace_front_on",
-        "furnace_block_0/mud_furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_3:0"
     },
     {
@@ -24307,13 +24271,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Always Active Dornish Mud Furnace",
       "type": "always-on:true",
-      "textures": [
-        "furnace_block_0/mud_furnace_top",
-        "furnace_block_0/mud_furnace_top",
-        "furnace_block_0/mud_furnace_side",
-        "furnace_block_0/mud_furnace_front_on",
-        "furnace_block_0/mud_furnace_front_on"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_3:1"
     },
     {
@@ -26502,8 +26460,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Crone Yellow",
       "textures": [
-        "translucent_block_0/baelors_sphere_yellow_topbottom",
-        "translucent_block_0/baelors_sphere_yellow_side"
+        "baelors_sphere/baelors_sphere_yellow_topbottom",
+        "baelors_sphere/baelors_sphere_yellow_side"
       ],
       "cuboids": [
         {
@@ -26608,8 +26566,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Father Green",
       "textures": [
-        "translucent_block_0/baelors_sphere_green_topbottom",
-        "translucent_block_0/baelors_sphere_green_side"
+        "baelors_sphere/baelors_sphere_green_topbottom",
+        "baelors_sphere/baelors_sphere_green_side"
       ],
       "cuboids": [
         {
@@ -26714,8 +26672,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Maiden Pink",
       "textures": [
-        "translucent_block_0/baelors_sphere_pink_topbottom",
-        "translucent_block_0/baelors_sphere_pink_side"
+        "baelors_sphere/baelors_sphere_pink_topbottom",
+        "baelors_sphere/baelors_sphere_pink_side"
       ],
       "cuboids": [
         {
@@ -26820,8 +26778,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Mother Blue",
       "textures": [
-        "translucent_block_0/baelors_sphere_blue_topbottom",
-        "translucent_block_0/baelors_sphere_blue_side"
+        "baelors_sphere/baelors_sphere_blue_topbottom",
+        "baelors_sphere/baelors_sphere_blue_side"
       ],
       "cuboids": [
         {
@@ -26926,8 +26884,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Smith Orange",
       "textures": [
-        "translucent_block_0/baelors_sphere_orange_topbottom",
-        "translucent_block_0/baelors_sphere_orange_side"
+        "baelors_sphere/baelors_sphere_orange_topbottom",
+        "baelors_sphere/baelors_sphere_orange_side"
       ],
       "cuboids": [
         {
@@ -27031,19 +26989,9 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Stranger Grey",
-      "randomTextures": [
-        {
-          "textures": [
-            "bugs_bees/bugs_bees1",
-            "bugs_bees/bugs_bees1"
-          ]
-        },
-        {
-          "textures": [
-            "bugs_bees/bugs_bees2",
-            "bugs_bees/bugs_bees2"
-          ]
-        }
+      "textures": [
+        "baelors_sphere/baelors_sphere_grey_topbottom",
+        "baelors_sphere/baelors_sphere_grey_side"
       ],
       "cuboids": [
         {
@@ -27147,19 +27095,9 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Baelors Sphere Warrior Red",
-      "randomTextures": [
-        {
-          "textures": [
-            "bugs_flies/bugs_flies1",
-            "bugs_flies/bugs_flies1"
-          ]
-        },
-        {
-          "textures": [
-            "bugs_flies/bugs_flies2",
-            "bugs_flies/bugs_flies2"
-          ]
-        }
+      "textures": [
+        "baelors_sphere/baelors_sphere_red_topbottom",
+        "baelors_sphere/baelors_sphere_red_side"
       ],
       "cuboids": [
         {
@@ -27378,7 +27316,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Red",
       "textures": [
-        "translucent_block_0/glass_red"
+        "glass_red/glass_red"
       ],
       "legacyBlockID": "stained_glass_0:0"
     },
@@ -27395,7 +27333,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Orange",
       "textures": [
-        "translucent_block_0/glass_orange"
+        "glass_orange/glass_orange"
       ],
       "legacyBlockID": "stained_glass_0:1"
     },
@@ -27412,7 +27350,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Yellow",
       "textures": [
-        "translucent_block_0/glass_yellow"
+        "glass_yellow/glass_yellow"
       ],
       "legacyBlockID": "stained_glass_0:2"
     },
@@ -27429,7 +27367,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Green",
       "textures": [
-        "translucent_block_0/glass_green"
+        "glass_green/glass_green"
       ],
       "legacyBlockID": "stained_glass_0:3"
     },
@@ -27446,7 +27384,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Blue",
       "textures": [
-        "translucent_block_0/glass_blue"
+        "glass_blue/glass_blue"
       ],
       "legacyBlockID": "stained_glass_0:4"
     },
@@ -27463,7 +27401,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Purple",
       "textures": [
-        "translucent_block_0/glass_purple"
+        "glass_purple/glass_purple"
       ],
       "legacyBlockID": "stained_glass_0:5"
     },
@@ -27480,7 +27418,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Pink",
       "textures": [
-        "translucent_block_0/glass_pink"
+        "glass_pink/glass_pink"
       ],
       "legacyBlockID": "stained_glass_0:6"
     },
@@ -27497,7 +27435,7 @@
       "lightOpacity": 0,
       "label": "Stained Glass Black",
       "textures": [
-        "translucent_block_0/glass_black"
+        "glass_black/glass_black"
       ],
       "legacyBlockID": "stained_glass_0:7"
     },
@@ -27521,7 +27459,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Red",
       "textures": [
-        "translucent_block_0/glass_pane_red"
+        "glass_red/glass_pane_red"
       ],
       "legacyBlockID": "stained_glass_pane_0:0"
     },
@@ -27545,7 +27483,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Orange",
       "textures": [
-        "translucent_block_0/glass_pane_orange"
+        "glass_orange/glass_pane_orange"
       ],
       "legacyBlockID": "stained_glass_pane_0:1"
     },
@@ -27569,7 +27507,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Yellow",
       "textures": [
-        "translucent_block_0/glass_pane_yellow"
+        "glass_yellow/glass_pane_yellow"
       ],
       "legacyBlockID": "stained_glass_pane_0:2"
     },
@@ -27593,7 +27531,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Green",
       "textures": [
-        "translucent_block_0/glass_pane_green"
+        "glass_green/glass_pane_green"
       ],
       "legacyBlockID": "stained_glass_pane_0:3"
     },
@@ -27617,7 +27555,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Blue",
       "textures": [
-        "translucent_block_0/glass_pane_blue"
+        "glass_blue/glass_pane_blue"
       ],
       "legacyBlockID": "stained_glass_pane_0:4"
     },
@@ -27641,7 +27579,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Purple",
       "textures": [
-        "translucent_block_0/glass_pane_purple"
+        "glass_purple/glass_pane_purple"
       ],
       "legacyBlockID": "stained_glass_pane_0:5"
     },
@@ -27665,7 +27603,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Pink",
       "textures": [
-        "translucent_block_0/glass_pane_pink"
+        "glass_pink/glass_pane_pink"
       ],
       "legacyBlockID": "stained_glass_pane_0:6"
     },
@@ -27689,7 +27627,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Stained Glass Pane Black",
       "textures": [
-        "translucent_block_0/glass_pane_black"
+        "glass_black/glass_pane_black"
       ],
       "legacyBlockID": "stained_glass_pane_0:7"
     },
@@ -27712,8 +27650,8 @@
       "type": "locked:true",
       "label": "Red Keep Secret Door",
       "textures": [
-        "stone_block_0/sandstone_red_coarse",
-        "stone_block_0/sandstone_red_coarse"
+        "sandstone_red/coarse",
+        "sandstone_red/coarse"
       ],
       "legacyBlockID": "door_secret_sandstone_red:0"
     },
@@ -31326,8 +31264,7 @@
       "textures": [
         "mances_camp_common_tent/inside",
         "mances_camp_common_tent/outside1",
-        "transparent",
-        "mances_camp_common_tent/frost"
+        "transparent"
       ],
       "cuboids": [
         {
@@ -31383,8 +31320,7 @@
       "textures": [
         "mances_camp_common_tent/inside",
         "mances_camp_common_tent/outside2",
-        "transparent",
-        "mances_camp_common_tent/frost"
+        "transparent"
       ],
       "cuboids": [
         {
@@ -31441,7 +31377,7 @@
         "mances_camp_mances_tent/inside",
         "mances_camp_mances_tent/outside",
         "transparent",
-        "mances_camp_common_tent/frost"
+        "thatch_dark/thatch_dark"
       ],
       "cuboids": [
         {
@@ -31775,24 +31711,6 @@
             "nettle/up_both1"
           ],
           "weight": 15
-        },
-        {
-          "textures": [
-            "nettle/side3",
-            "nettle/down2",
-            "nettle/up_both2",
-            "nettle/up_both2"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "nettle/side4",
-            "nettle/down2",
-            "nettle/up_both2",
-            "nettle/up_both2"
-          ],
-          "weight": 5
         },
         {
           "textures": [
@@ -35847,7 +35765,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Grey Wood Hopper",
       "textures": [
-        "grey_wood/side"
+        "grey_wood/top_bottom"
       ],
       "cuboids": [
         {
@@ -35917,7 +35835,7 @@
       "creativeTab": "WesterosDeco",
       "label": "White Wood Hopper",
       "textures": [
-        "white_wood/side"
+        "white_wood/top_bottom"
       ],
       "cuboids": [
         {
@@ -36447,7 +36365,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Thatch Light Wall",
       "textures": [
-        "fur_block_0/thatch_light"
+        "thatch_light/thatch_light"
       ],
       "legacyBlockID": "wood_wall_block_0:0"
     },
@@ -36569,7 +36487,7 @@
       "textures": [
         "dark_northern_wood/top_bottom",
         "dark_northern_wood/top_bottom",
-        "dark_northern_wood/side"
+        "dark_northern_wood/top_bottom"
       ],
       "legacyBlockID": "wood_wall_block_0:6"
     },
@@ -36709,7 +36627,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Grey Wood Wall",
       "textures": [
-        "grey_wood/side"
+        "grey_wood/side1"
       ],
       "legacyBlockID": "wood_wall_block_0:11"
     },
@@ -36729,7 +36647,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "White Wood Wall",
       "textures": [
-        "white_wood/side"
+        "white_wood/side1"
       ],
       "legacyBlockID": "wood_wall_block_0:12"
     },
@@ -36749,7 +36667,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Snowy Thatch Light Wall",
       "textures": [
-        "fur_block_0/thatch_snowy_light_top"
+        "snowy_thatch_light_fur/top"
       ],
       "legacyBlockID": "wood_wall_block_0:13"
     },
@@ -36769,7 +36687,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Snowy Thatch Dark Wall",
       "textures": [
-        "fur_block_0/thatch_snowy_dark_top"
+        "snowy_thatch_dark_fur/top"
       ],
       "legacyBlockID": "wood_wall_block_0:14"
     },
@@ -39255,7 +39173,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Dark Northern Wood Carpet",
       "textures": [
-        "dark_northern_wood/side"
+        "dark_northern_wood/side1"
       ],
       "cuboids": [
         {
@@ -39293,7 +39211,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Grey Wood Carpet",
       "textures": [
-        "grey_wood/side"
+        "grey_wood/side1"
       ],
       "cuboids": [
         {
@@ -39331,7 +39249,7 @@
       "creativeTab": "WesterosDeco",
       "label": "White Wood Carpet",
       "textures": [
-        "white_wood/side"
+        "white_wood/side1"
       ],
       "cuboids": [
         {
@@ -39584,7 +39502,7 @@
     {
       "blockName": "mances_camp_common_tent_stairs",
       "blockType": "stair",
-      "modelBlockName": "thatch_dark_fur",
+      "modelBlockName": "mances_camp_common_tent_1",
       "creativeTab": "WesterosBlocks",
       "label": "Mance's Camp Common Tent Stairs",
       "legacyBlockID": "cuboid_block_7_stairs_0:0"
@@ -39592,7 +39510,7 @@
     {
       "blockName": "mances_camp_mances_tent_stairs",
       "blockType": "stair",
-      "modelBlockName": "thatch_light_fur",
+      "modelBlockName": "mances_camp_mances_tent",
       "creativeTab": "WesterosBlocks",
       "label": "Mance's Camp Mance's Tent Stairs",
       "legacyBlockID": "cuboid_block_7_stairs_1:0"
@@ -48595,8 +48513,103 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Path Reach Gravel",
-      "textures": [
-        "ground_block_0/gravel_reach"
+      "randomTextures": [
+        {
+          "textures": [
+            "reach_gravel/side1"
+          ],
+          "weight": 100
+        },
+        {
+          "textures": [
+            "reach_gravel/side2"
+          ],
+          "weight": 33
+        },
+        {
+          "textures": [
+            "reach_gravel/side3"
+          ],
+          "weight": 45
+        },
+        {
+          "textures": [
+            "reach_gravel/side4"
+          ],
+          "weight": 140
+        },
+        {
+          "textures": [
+            "reach_gravel/side5"
+          ],
+          "weight": 193
+        },
+        {
+          "textures": [
+            "reach_gravel/side6"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side7"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side8"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side9"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side10"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side11"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side12"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side13"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side14"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side15"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "reach_gravel/side16"
+          ],
+          "weight": 77
+        }
       ],
       "cuboids": [
         {
@@ -48627,8 +48640,57 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Path Dorne Dusty Dirt",
-      "textures": [
-        "ground_block_0/dirt_dusty"
+      "randomTextures": [
+        {
+          "textures": [
+            "dorne_dusty_dirt/side1"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side2"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side3"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side4"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side5"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side6"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side7"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side8"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side9"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dusty_dirt/side10"
+          ]
+        }
       ],
       "cuboids": [
         {
@@ -48659,8 +48721,52 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Path Dorne Dry Soil",
-      "textures": [
-        "ground_block_0/soil_dried"
+      "randomTextures": [
+        {
+          "textures": [
+            "dorne_dry_soil/side1"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side2"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side3"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side4"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side5"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side6"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side7"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side8"
+          ]
+        },
+        {
+          "textures": [
+            "dorne_dry_soil/side9"
+          ]
+        }
       ],
       "cuboids": [
         {
@@ -49606,8 +49712,22 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Iron Wall",
-      "textures": [
-        "iron_block/side1"
+      "randomTextures": [
+        {
+          "textures": [
+            "iron_block/side1"
+          ]
+        },
+        {
+          "textures": [
+            "iron_block/side2"
+          ]
+        },
+        {
+          "textures": [
+            "iron_block/side3"
+          ]
+        }
       ],
       "legacyBlockID": "stone_wall_block_4:0"
     },
@@ -49626,8 +49746,22 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Iron Wall",
-      "textures": [
-        "iron_block_oxidized/side3"
+      "randomTextures": [
+        {
+          "textures": [
+            "iron_block_oxidized/side1"
+          ]
+        },
+        {
+          "textures": [
+            "iron_block_oxidized/side2"
+          ]
+        },
+        {
+          "textures": [
+            "iron_block_oxidized/side3"
+          ]
+        }
       ],
       "legacyBlockID": "stone_wall_block_4:1"
     },
@@ -49646,8 +49780,22 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Steel Wall",
-      "textures": [
-        "steel_block/side1"
+      "randomTextures": [
+        {
+          "textures": [
+            "steel_block/side1"
+          ]
+        },
+        {
+          "textures": [
+            "steel_block/side2"
+          ]
+        },
+        {
+          "textures": [
+            "steel_block/side3"
+          ]
+        }
       ],
       "legacyBlockID": "stone_wall_block_4:2"
     },
@@ -49666,8 +49814,22 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Oxidized Steel Wall",
-      "textures": [
-        "steel_block_oxidized/side1"
+      "randomTextures": [
+        {
+          "textures": [
+            "steel_block_oxidized/side1"
+          ]
+        },
+        {
+          "textures": [
+            "steel_block_oxidized/side2"
+          ]
+        },
+        {
+          "textures": [
+            "steel_block_oxidized/side3"
+          ]
+        }
       ],
       "legacyBlockID": "stone_wall_block_4:3"
     },
@@ -49720,8 +49882,22 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Iron Fence",
-      "textures": [
-        "iron_block/side1"
+      "randomTextures": [
+        {
+          "textures": [
+            "iron_block/side1"
+          ]
+        },
+        {
+          "textures": [
+            "iron_block/side2"
+          ]
+        },
+        {
+          "textures": [
+            "iron_block/side3"
+          ]
+        }
       ],
       "legacyBlockID": "fence_block_4:0"
     },
@@ -49734,8 +49910,22 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Iron Fence",
-      "textures": [
-        "iron_block_oxidized/side3"
+      "randomTextures": [
+        {
+          "textures": [
+            "iron_block_oxidized/side1"
+          ]
+        },
+        {
+          "textures": [
+            "iron_block_oxidized/side2"
+          ]
+        },
+        {
+          "textures": [
+            "iron_block_oxidized/side3"
+          ]
+        }
       ],
       "legacyBlockID": "fence_block_4:1"
     },
@@ -49748,8 +49938,22 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Steel Fence",
-      "textures": [
-        "steel_block/side1"
+      "randomTextures": [
+        {
+          "textures": [
+            "steel_block/side1"
+          ]
+        },
+        {
+          "textures": [
+            "steel_block/side2"
+          ]
+        },
+        {
+          "textures": [
+            "steel_block/side3"
+          ]
+        }
       ],
       "legacyBlockID": "fence_block_4:2"
     },
@@ -49762,8 +49966,22 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Oxidized Steel Fence",
-      "textures": [
-        "steel_block_oxidized/side1"
+      "randomTextures": [
+        {
+          "textures": [
+            "steel_block_oxidized/side1"
+          ]
+        },
+        {
+          "textures": [
+            "steel_block_oxidized/side2"
+          ]
+        },
+        {
+          "textures": [
+            "steel_block_oxidized/side3"
+          ]
+        }
       ],
       "legacyBlockID": "fence_block_4:3"
     },
@@ -53593,7 +53811,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Thatch Light Fur Carpet",
       "textures": [
-        "fur_block_0/thatch_light"
+        "thatch_light/thatch_light"
       ],
       "cuboids": [
         {
@@ -53669,9 +53887,9 @@
       "creativeTab": "WesterosDeco",
       "label": "Snowy Thatch Light Fur Slab",
       "textures": [
-        "fur_block_0/thatch_snowy_light_bottom",
-        "fur_block_0/thatch_snowy_light_top",
-        "fur_block_0/thatch_snowy_light_side_half"
+        "snowy_thatch_light_fur/bottom",
+        "snowy_thatch_light_fur/top",
+        "snowy_thatch_light_fur/side_half"
       ],
       "legacyBlockID": "random_slab_block_5:0"
     },
@@ -53691,9 +53909,9 @@
       "creativeTab": "WesterosDeco",
       "label": "Snowy Thatch Dark Fur Slab",
       "textures": [
-        "fur_block_0/thatch_snowy_dark_bottom",
-        "fur_block_0/thatch_snowy_dark_top",
-        "fur_block_0/thatch_snowy_dark_side_half"
+        "snowy_thatch_dark_fur/bottom",
+        "snowy_thatch_dark_fur/top",
+        "snowy_thatch_dark_fur/side_half"
       ],
       "legacyBlockID": "random_slab_block_5:1"
     },
@@ -53744,7 +53962,7 @@
       "blockType": "stair",
       "stepSound": "plant",
       "material": "cloth",
-      "modelBlockName": "thatch_light_fur",
+      "modelBlockName": "snowy_thatch_light_fur",
       "creativeTab": "WesterosBlocks",
       "label": "Snowy Thatch Light Fur Stairs",
       "legacyBlockID": "thatch_stair_2:0"
@@ -53754,14 +53972,14 @@
       "blockType": "stair",
       "stepSound": "plant",
       "material": "cloth",
-      "modelBlockName": "thatch_dark_fur",
+      "modelBlockName": "snowy_thatch_dark_fur",
       "creativeTab": "WesterosBlocks",
       "label": "Snowy Thatch Dark Fur Stairs",
       "legacyBlockID": "thatch_stair_3:0"
     },
     {
       "blockName": "snowy_thatch_light_fur2",
-      "blockType": "cuboid-nsew",
+      "blockType": "solid",
       "hardness": 5,
       "stepSound": "plant",
       "material": "cloth",
@@ -53779,29 +53997,11 @@
         "snowy_thatch_light_fur/top",
         "snowy_thatch_light_fur/side1"
       ],
-      "cuboids": [
-        {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            0
-          ]
-        }
-      ],
       "legacyBlockID": "cuboid_block_11:0"
     },
     {
       "blockName": "snowy_thatch_dark_fur2",
-      "blockType": "cuboid-nsew",
+      "blockType": "solid",
       "hardness": 5,
       "stepSound": "plant",
       "material": "cloth",
@@ -53819,24 +54019,6 @@
         "snowy_thatch_dark_fur/top",
         "snowy_thatch_dark_fur/side1"
       ],
-      "cuboids": [
-        {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            0
-          ]
-        }
-      ],
       "legacyBlockID": "cuboid_block_11:1"
     },
     {
@@ -53850,13 +54032,7 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosDeco",
       "label": "Arbor Brick Furnace",
-      "textures": [
-        "furnace_block_0/arbor_brick_furnace_bottom",
-        "furnace_block_0/arbor_brick_furnace_top",
-        "furnace_block_0/arbor_brick_furnace_side",
-        "furnace_block_0/arbor_brick_furnace_front_on_still",
-        "furnace_block_0/arbor_brick_furnace_front_off"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_4:0"
     },
     {
@@ -53871,13 +54047,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Always Active Arbor Brick Furnace",
       "type": "always-on:true",
-      "textures": [
-        "furnace_block_0/arbor_brick_furnace_bottom",
-        "furnace_block_0/arbor_brick_furnace_top",
-        "furnace_block_0/arbor_brick_furnace_side",
-        "furnace_block_0/arbor_brick_furnace_front_on_still",
-        "furnace_block_0/arbor_brick_furnace_front_on_still"
-      ],
+      "isCustomModel": true,
       "legacyBlockID": "furnace_block_4:1"
     },
     {
@@ -54123,7 +54293,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Red Sandstone Hopper",
       "textures": [
-        "stone_block_0/sandstone_red"
+        "sandstone_red/side"
       ],
       "cuboids": [
         {
@@ -55336,6 +55506,7 @@
       "label": "Stacked Bones",
       "textures": [
         "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_front",
         "stacked_bones/bone_stacked_side"
       ],
       "legacyBlockID": "log_block_8:0"
@@ -55349,87 +55520,8 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Piled Bones",
-      "randomTextures": [
-        {
-          "textures": [
-            "piled_bones/0"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/1"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/2"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/3"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/4"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/5"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/6"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/7"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/8"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/9"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/10"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/11"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/12"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/13"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/14"
-          ]
-        },
-        {
-          "textures": [
-            "piled_bones/15"
-          ]
-        }
+      "textures": [
+        "piled_bones/side"
       ],
       "legacyBlockID": "stone_block_12:0"
     },
@@ -55492,7 +55584,7 @@
     {
       "blockName": "stacked_bones_stairs",
       "blockType": "stair",
-      "modelBlockName": "piled_bones",
+      "modelBlockName": "stacked_bones",
       "creativeTab": "WesterosBlocks",
       "label": "Stacked Bones Stairs",
       "legacyBlockID": "stone_block_12_stair_0:0"
@@ -55543,7 +55635,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Piled Bones Slab",
       "textures": [
-        "piled_bones/0"
+        "piled_bones/side"
       ],
       "legacyBlockID": "stone_slab_block_8:1"
     },
@@ -55585,7 +55677,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Piled Bones Wall",
       "textures": [
-        "piled_bones/0"
+        "piled_bones/side"
       ],
       "legacyBlockID": "stone_wall_block_6:1"
     },
@@ -55681,8 +55773,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "cuboid_block_1/fence_wattle_light",
-        "cuboid_block_1/fence_wattle_light"
+        "wattle_fence_light/fence_wattle_light",
+        "wattle_fence_light/fence_wattle_light"
       ],
       "boundingBox": {
         "xMin": 0.01,
@@ -55714,8 +55806,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "cuboid_block_1/fence_wattle_light_short",
-        "cuboid_block_1/fence_wattle_light_short"
+        "wattle_fence_light/fence_wattle_light_short",
+        "wattle_fence_light/fence_wattle_light_short"
       ],
       "boundingBox": {
         "xMin": 0.01,
@@ -55747,8 +55839,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "cuboid_block_1/fence_wattle_dark",
-        "cuboid_block_1/fence_wattle_dark"
+        "wattle_fence_dark/fence_wattle_dark",
+        "wattle_fence_dark/fence_wattle_dark"
       ],
       "boundingBox": {
         "xMin": 0.01,
@@ -55780,8 +55872,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "cuboid_block_1/fence_wattle_dark_short",
-        "cuboid_block_1/fence_wattle_dark_short"
+        "wattle_fence_dark/fence_wattle_dark_short",
+        "wattle_fence_dark/fence_wattle_dark_short"
       ],
       "boundingBox": {
         "xMin": 0.01,
@@ -56901,7 +56993,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Black Wood Slab",
       "textures": [
-        "wood_block_1/wood_black"
+        "black_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:0"
     },
@@ -56921,7 +57013,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Blue Wood Slab",
       "textures": [
-        "wood_block_1/wood_blue"
+        "blue_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:1"
     },
@@ -56941,7 +57033,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Green Wood Slab",
       "textures": [
-        "wood_block_1/wood_green"
+        "green_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:2"
     },
@@ -56961,7 +57053,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Red Wood Slab",
       "textures": [
-        "wood_block_1/wood_red"
+        "red_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:3"
     },
@@ -56981,7 +57073,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Yellow Wood Slab",
       "textures": [
-        "wood_block_1/wood_yellow"
+        "yellow_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:4"
     },
@@ -57001,7 +57093,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Purple Wood Slab",
       "textures": [
-        "wood_block_1/wood_purple"
+        "purple_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:5"
     },

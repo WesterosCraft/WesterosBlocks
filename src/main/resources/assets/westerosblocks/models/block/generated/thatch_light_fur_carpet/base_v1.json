@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/fur_block_0/thatch_light",
-    "txt5": "westerosblocks:block/fur_block_0/thatch_light",
-    "txt2": "westerosblocks:block/fur_block_0/thatch_light",
-    "txt3": "westerosblocks:block/fur_block_0/thatch_light",
-    "txt0": "westerosblocks:block/fur_block_0/thatch_light",
-    "txt1": "westerosblocks:block/fur_block_0/thatch_light",
-    "particle": "westerosblocks:block/fur_block_0/thatch_light"
+    "txt4": "westerosblocks:block/thatch_light/thatch_light",
+    "txt5": "westerosblocks:block/thatch_light/thatch_light",
+    "txt2": "westerosblocks:block/thatch_light/thatch_light",
+    "txt3": "westerosblocks:block/thatch_light/thatch_light",
+    "txt0": "westerosblocks:block/thatch_light/thatch_light",
+    "txt1": "westerosblocks:block/thatch_light/thatch_light",
+    "particle": "westerosblocks:block/thatch_light/thatch_light"
   },
   "elements": [
     {

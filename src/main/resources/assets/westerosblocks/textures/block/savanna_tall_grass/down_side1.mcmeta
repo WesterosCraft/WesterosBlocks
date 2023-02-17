@@ -2,8 +2,6 @@
   "animation": {
     "interpolate": true,
     "frames": [
-
-
       {
         "index": 0,
         "time": 4
@@ -64,7 +62,6 @@
         "index": 14,
         "time": 6
       }
-     
     ]
   }
 }

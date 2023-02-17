@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ground_block_0/gravel_reach",
-    "txt5": "westerosblocks:block/ground_block_0/gravel_reach",
-    "txt2": "westerosblocks:block/ground_block_0/gravel_reach",
-    "txt3": "westerosblocks:block/ground_block_0/gravel_reach",
-    "txt0": "westerosblocks:block/ground_block_0/gravel_reach",
-    "txt1": "westerosblocks:block/ground_block_0/gravel_reach",
-    "particle": "westerosblocks:block/ground_block_0/gravel_reach"
+    "txt4": "westerosblocks:block/reach_gravel/side1",
+    "txt5": "westerosblocks:block/reach_gravel/side1",
+    "txt2": "westerosblocks:block/reach_gravel/side1",
+    "txt3": "westerosblocks:block/reach_gravel/side1",
+    "txt0": "westerosblocks:block/reach_gravel/side1",
+    "txt1": "westerosblocks:block/reach_gravel/side1",
+    "particle": "westerosblocks:block/reach_gravel/side1"
   },
   "elements": [
     {

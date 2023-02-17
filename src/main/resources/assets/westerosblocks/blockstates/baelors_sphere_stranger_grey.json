@@ -1,12 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/baelors_sphere_stranger_grey/base_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/baelors_sphere_stranger_grey/base_v2"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/baelors_sphere_stranger_grey/base_v1"
+    }
   }
 }
