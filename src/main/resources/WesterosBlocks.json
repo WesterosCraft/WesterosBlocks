@@ -36679,7 +36679,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Snowy Thatch Light Wall",
       "textures": [
-        "thatch_snowy_light_fur/top"
+        "snowy_thatch_light_fur/top"
       ],
       "legacyBlockID": "wood_wall_block_0:13"
     },
@@ -36699,7 +36699,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Snowy Thatch Dark Wall",
       "textures": [
-        "thatch_snowy_dark_fur/top"
+        "snowy_thatch_dark_fur/top"
       ],
       "legacyBlockID": "wood_wall_block_0:14"
     },
@@ -53899,9 +53899,9 @@
       "creativeTab": "WesterosDeco",
       "label": "Snowy Thatch Light Fur Slab",
       "textures": [
-        "thatch_snowy_light_fur/bottom",
-        "thatch_snowy_light_fur/top",
-        "thatch_snowy_light_fur/side_half"
+        "snowy_thatch_light_fur/bottom",
+        "snowy_thatch_light_fur/top",
+        "snowy_thatch_light_fur/side_half"
       ],
       "legacyBlockID": "random_slab_block_5:0"
     },
