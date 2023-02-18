@@ -20152,52 +20152,8 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Dorne Dry Soil",
-      "randomTextures": [
-        {
-          "textures": [
-            "dorne_dry_soil/side1"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side2"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side3"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side4"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side5"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side6"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side7"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side8"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side9"
-          ]
-        }
+      "textures": [
+        "dorne_dry_soil/side"
       ],
       "legacyBlockID": "solid_blocks_1:1"
     },
@@ -22169,10 +22125,7 @@
       "creativeTab": "WesterosPlants",
       "label": "Jungle Tall Grass",
       "textures": [
-        "jungle_tall_grass/down_side1",
-        "jungle_tall_grass/down_side1",
-        "jungle_tall_grass/up_both1",
-        "jungle_tall_grass/up_both1"
+        "jungle_tall_grass/down_side1"
       ],
       "colorMult": "textures/colormap/grass",
       "type": "no-in-web",
@@ -48721,52 +48674,8 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Path Dorne Dry Soil",
-      "randomTextures": [
-        {
-          "textures": [
-            "dorne_dry_soil/side1"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side2"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side3"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side4"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side5"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side6"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side7"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side8"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dry_soil/side9"
-          ]
-        }
+      "textures": [
+        "dorne_dry_soil/side"
       ],
       "cuboids": [
         {
@@ -53953,7 +53862,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Dorne Dry Soil Slab",
       "textures": [
-        "ground_block_0/soil_dried"
+        "dorne_dry_soil/side"
       ],
       "legacyBlockID": "random_slab_block_5:3"
     },
