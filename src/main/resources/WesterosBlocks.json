@@ -18825,7 +18825,7 @@
       "label": "Small Smooth Stone Brick",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": [
-        "stone_block_1/brick_stone_small_smooth"
+        "small_smooth_stone_brick/side"
       ],
       "legacyBlockID": "stone_block_3:8"
     },
@@ -32108,8 +32108,22 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Pebbles Wet The North",
-      "textures": [
-        "pebble_block_0/pebble_north_wet"
+      "randomTextures": [
+        {
+          "textures": [
+            "pebble_north/wet1"
+          ]
+        },
+        {
+          "textures": [
+            "pebble_north/wet2"
+          ]
+        },
+        {
+          "textures": [
+            "pebble_north/wet3"
+          ]
+        }
       ],
       "legacyBlockID": "stone_block_6:3"
     },
@@ -33080,8 +33094,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "translucent_block_0/alyssas_tears_mist_two",
-        "translucent_block_0/alyssas_tears_mist_two"
+        "alyssas_tears_mist/alyssas_tears_mist_two",
+        "alyssas_tears_mist/alyssas_tears_mist_two"
       ],
       "boundingBox": {
         "xMin": 0.92,
@@ -35930,7 +35944,7 @@
       "label": "Small Smooth Stone Brick Hopper",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": [
-        "stone_block_1/brick_stone_small_smooth"
+        "small_smooth_stone_brick/side"
       ],
       "cuboids": [
         {
@@ -37374,7 +37388,7 @@
       "label": "Small Smooth Stone Brick Wall",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": [
-        "stone_block_1/brick_stone_small_smooth"
+        "small_smooth_stone_brick/side"
       ],
       "legacyBlockID": "stone_wall_block_3:8"
     },
@@ -38531,31 +38545,8 @@
       "creativeTab": "WesterosBlocks",
       "label": "Small Smooth Stone Brick Slab",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
-      "randomTextures": [
-        {
-          "textures": [
-            "cobblestone_river/all1"
-          ],
-          "weight": 30
-        },
-        {
-          "textures": [
-            "cobblestone_river/all2"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "cobblestone_river/all3"
-          ],
-          "weight": 30
-        },
-        {
-          "textures": [
-            "cobblestone_river/all4"
-          ],
-          "weight": 30
-        }
+      "textures": [
+        "small_smooth_stone_brick/side"
       ],
       "legacyBlockID": "stone_slab_block_5:4"
     },
@@ -39628,7 +39619,7 @@
     {
       "blockName": "river_cobble_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:terracotta",
+      "modelBlockName": "river_cobble_wall",
       "creativeTab": "WesterosBlocks",
       "label": "River Cobble Stairs",
       "colorMult": "textures/colormap/lightgreystone",
@@ -53904,7 +53895,8 @@
       "textures": [
         "snowy_thatch_light_fur/bottom",
         "snowy_thatch_light_fur/top",
-        "snowy_thatch_light_fur/side1"
+        "snowy_thatch_light_fur/side1",
+        "thatch_light/thatch_light"
       ],
       "legacyBlockID": "cuboid_block_11:0"
     },
@@ -53926,7 +53918,8 @@
       "textures": [
         "snowy_thatch_dark_fur/bottom",
         "snowy_thatch_dark_fur/top",
-        "snowy_thatch_dark_fur/side1"
+        "snowy_thatch_dark_fur/side1",
+        "thatch_dark/thatch_dark"
       ],
       "legacyBlockID": "cuboid_block_11:1"
     },
