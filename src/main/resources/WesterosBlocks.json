@@ -49768,8 +49768,22 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Gold Wall",
-      "textures": [
-        "metal_block_0/metal_gold"
+      "randomTextures": [
+        {
+          "textures": [
+            "gold/side1"
+          ]
+        },
+        {
+          "textures": [
+            "gold/side2"
+          ]
+        },
+        {
+          "textures": [
+            "gold/side3"
+          ]
+        }
       ],
       "legacyBlockID": "stone_wall_block_4:5"
     },
@@ -49908,8 +49922,22 @@
       "resistance": 10,
       "creativeTab": "WesterosDeco",
       "label": "Gold Fence",
-      "textures": [
-        "metal_block_0/metal_gold"
+      "randomTextures": [
+        {
+          "textures": [
+            "gold/side1"
+          ]
+        },
+        {
+          "textures": [
+            "gold/side2"
+          ]
+        },
+        {
+          "textures": [
+            "gold/side3"
+          ]
+        }
       ],
       "legacyBlockID": "fence_block_4:5"
     },
@@ -50423,7 +50451,7 @@
     {
       "blockName": "gold_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:gold_block",
+      "modelBlockName": "gold_slab",
       "creativeTab": "WesterosBlocks",
       "label": "Gold Stairs",
       "legacyBlockID": "metal_block_0_stair_9:0"
@@ -50443,8 +50471,22 @@
       ],
       "creativeTab": "WesterosBlocks",
       "label": "Gold Slab",
-      "textures": [
-        "metal_block_0/metal_gold"
+      "randomTextures": [
+        {
+          "textures": [
+            "gold/side1"
+          ]
+        },
+        {
+          "textures": [
+            "gold/side2"
+          ]
+        },
+        {
+          "textures": [
+            "gold/side3"
+          ]
+        }
       ],
       "legacyBlockID": "metal_slab_block_1:0"
     },
