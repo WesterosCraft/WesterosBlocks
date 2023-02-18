@@ -37461,7 +37461,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Pink Sandstone Wall",
       "textures": [
-        "pink_sandstone/side"
+        "pink_sandstone/side1"
       ],
       "legacyBlockID": "stone_wall_block_3:10"
     },
