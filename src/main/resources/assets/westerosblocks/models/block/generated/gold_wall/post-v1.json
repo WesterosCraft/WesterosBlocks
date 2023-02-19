@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_post",
   "textures": {
-    "bottom": "westerosblocks:block/metal_block_0/metal_gold",
-    "top": "westerosblocks:block/metal_block_0/metal_gold",
-    "side": "westerosblocks:block/metal_block_0/metal_gold"
+    "bottom": "westerosblocks:block/gold/side1",
+    "top": "westerosblocks:block/gold/side1",
+    "side": "westerosblocks:block/gold/side1"
   }
 }

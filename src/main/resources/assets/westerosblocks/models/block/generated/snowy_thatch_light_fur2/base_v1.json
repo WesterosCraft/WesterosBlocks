@@ -4,9 +4,9 @@
     "down": "westerosblocks:block/snowy_thatch_light_fur/bottom",
     "up": "westerosblocks:block/snowy_thatch_light_fur/top",
     "north": "westerosblocks:block/snowy_thatch_light_fur/side1",
-    "south": "westerosblocks:block/snowy_thatch_light_fur/side1",
-    "west": "westerosblocks:block/snowy_thatch_light_fur/side1",
-    "east": "westerosblocks:block/snowy_thatch_light_fur/side1",
+    "south": "westerosblocks:block/thatch_light/thatch_light",
+    "west": "westerosblocks:block/thatch_light/thatch_light",
+    "east": "westerosblocks:block/thatch_light/thatch_light",
     "particle": "westerosblocks:block/snowy_thatch_light_fur/side1"
   }
 }

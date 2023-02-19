@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "up": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "north": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "south": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "west": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "east": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "particle": "westerosblocks:block/stone_block_1/brick_stone_small_smooth"
+    "down": "westerosblocks:block/small_smooth_stone_brick/side",
+    "up": "westerosblocks:block/small_smooth_stone_brick/side",
+    "north": "westerosblocks:block/small_smooth_stone_brick/side",
+    "south": "westerosblocks:block/small_smooth_stone_brick/side",
+    "west": "westerosblocks:block/small_smooth_stone_brick/side",
+    "east": "westerosblocks:block/small_smooth_stone_brick/side",
+    "particle": "westerosblocks:block/small_smooth_stone_brick/side"
   }
 }

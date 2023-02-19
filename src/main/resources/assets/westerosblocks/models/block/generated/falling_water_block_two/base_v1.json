@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/vines/vine_1",
   "textures": {
-    "vines": "westerosblocks:block/translucent_block_0/alyssas_tears_mist_two"
+    "vines": "westerosblocks:block/alyssas_tears_mist/mist2_both"
   }
 }

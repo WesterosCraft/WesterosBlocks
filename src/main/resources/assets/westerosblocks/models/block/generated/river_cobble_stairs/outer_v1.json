@@ -1,9 +1,9 @@
 {
-  "parent": "minecraft:block/outer_stairs",
+  "parent": "westerosblocks:block/tinted/outer_stairs",
   "textures": {
-    "bottom": "minecraft:block/terracotta",
-    "top": "minecraft:block/terracotta",
-    "side": "minecraft:block/terracotta",
-    "particle": "minecraft:block/terracotta"
+    "bottom": "westerosblocks:block/cobblestone_river/all1",
+    "top": "westerosblocks:block/cobblestone_river/all1",
+    "side": "westerosblocks:block/cobblestone_river/all1",
+    "particle": "westerosblocks:block/cobblestone_river/all1"
   }
 }

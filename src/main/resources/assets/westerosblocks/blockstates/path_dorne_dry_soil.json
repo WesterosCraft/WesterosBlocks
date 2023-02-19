@@ -1,33 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v8"
-      },
-      {
-        "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v9"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/path_dorne_dry_soil/base_v1"
+    }
   }
 }

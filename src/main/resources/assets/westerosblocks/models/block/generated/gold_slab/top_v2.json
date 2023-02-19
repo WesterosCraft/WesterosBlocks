@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/gold/side2",
+    "up": "westerosblocks:block/gold/side2",
+    "north": "westerosblocks:block/gold/side2",
+    "south": "westerosblocks:block/gold/side2",
+    "west": "westerosblocks:block/gold/side2",
+    "east": "westerosblocks:block/gold/side2",
+    "particle": "westerosblocks:block/gold/side2"
+  }
+}

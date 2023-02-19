@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "txt5": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "txt2": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "txt3": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "txt0": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "txt1": "westerosblocks:block/stone_block_1/brick_stone_small_smooth",
-    "particle": "westerosblocks:block/stone_block_1/brick_stone_small_smooth"
+    "txt4": "westerosblocks:block/small_smooth_stone_brick/side",
+    "txt5": "westerosblocks:block/small_smooth_stone_brick/side",
+    "txt2": "westerosblocks:block/small_smooth_stone_brick/side",
+    "txt3": "westerosblocks:block/small_smooth_stone_brick/side",
+    "txt0": "westerosblocks:block/small_smooth_stone_brick/side",
+    "txt1": "westerosblocks:block/small_smooth_stone_brick/side",
+    "particle": "westerosblocks:block/small_smooth_stone_brick/side"
   },
   "elements": [
     {
