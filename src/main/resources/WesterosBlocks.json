@@ -31221,22 +31221,6 @@
       ],
       "cuboids": [
         {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            0
-          ]
-        },
-        {
           "xMin": 0,
           "xMax": 1,
           "yMin": 0,
@@ -31244,12 +31228,12 @@
           "zMin": 0,
           "zMax": 1,
           "sideTextures": [
-            2,
-            2,
-            3,
-            3,
-            3,
-            2
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
           ]
         }
       ],
@@ -31277,22 +31261,6 @@
       ],
       "cuboids": [
         {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            0
-          ]
-        },
-        {
           "xMin": 0,
           "xMax": 1,
           "yMin": 0,
@@ -31300,12 +31268,12 @@
           "zMin": 0,
           "zMax": 1,
           "sideTextures": [
-            2,
-            2,
-            3,
-            3,
-            3,
-            2
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
           ]
         }
       ],
@@ -31329,26 +31297,9 @@
       "textures": [
         "mances_camp_mances_tent/inside",
         "mances_camp_mances_tent/outside",
-        "transparent",
-        "thatch_dark/thatch_dark"
+        "transparent"
       ],
       "cuboids": [
-        {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [
-            0,
-            1,
-            1,
-            1,
-            1,
-            0
-          ]
-        },
         {
           "xMin": 0,
           "xMax": 1,
@@ -31357,12 +31308,12 @@
           "zMin": 0,
           "zMax": 1,
           "sideTextures": [
-            2,
-            2,
-            3,
-            3,
-            3,
-            2
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
           ]
         }
       ],
@@ -39446,7 +39397,7 @@
     {
       "blockName": "mances_camp_common_tent_stairs",
       "blockType": "stair",
-      "modelBlockName": "mances_camp_common_tent_1",
+      "modelBlockName": "mances_camp_common_tent_2",
       "creativeTab": "WesterosBlocks",
       "label": "Mance's Camp Common Tent Stairs",
       "legacyBlockID": "cuboid_block_7_stairs_0:0"
@@ -49229,8 +49180,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Falling Water Block One",
       "textures": [
-        "translucent_block_0/alyssas_tears_mist_one",
-        "translucent_block_0/alyssas_tears_mist_one"
+        "alyssas_tears_mist/mist1",
+        "alyssas_tears_mist/mist1"
       ],
       "type": "allow-unsupported,no-climb",
       "legacyBlockID": "vine_block_2:0"
@@ -49245,8 +49196,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Falling Water Block Two",
       "textures": [
-        "translucent_block_0/alyssas_tears_mist_two",
-        "translucent_block_0/alyssas_tears_mist_two"
+        "alyssas_tears_mist/mist2_both",
+        "alyssas_tears_mist/mist2_both"
       ],
       "type": "allow-unsupported,no-climb",
       "legacyBlockID": "vine_block_3:0"
@@ -49261,8 +49212,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Falling Water Block Three",
       "textures": [
-        "translucent_block_0/alyssas_tears_mist_three",
-        "translucent_block_0/alyssas_tears_mist_three"
+        "alyssas_tears_mist/mist3_both",
+        "alyssas_tears_mist/mist3_both"
       ],
       "type": "allow-unsupported,no-climb",
       "legacyBlockID": "vine_block_4:0"
@@ -49277,8 +49228,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Falling Water Block Four",
       "textures": [
-        "translucent_block_0/alyssas_tears_mist_four",
-        "translucent_block_0/alyssas_tears_mist_four"
+        "alyssas_tears_mist/mist4",
+        "alyssas_tears_mist/mist4"
       ],
       "type": "allow-unsupported,no-climb",
       "legacyBlockID": "vine_block_5:0"
@@ -55355,7 +55306,7 @@
     {
       "blockName": "ice_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:ice",
+      "modelBlockName": "ice_slab",
       "creativeTab": "WesterosDeco",
       "label": "Ice Stairs",
       "legacyBlockID": "ice_stairs:0"
@@ -55717,8 +55668,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "wattle_fence_light/fence_wattle_light",
-        "wattle_fence_light/fence_wattle_light"
+        "wattle_fence_light/side1",
+        "wattle_fence_light/side2"
       ],
       "boundingBox": {
         "xMin": 0.01,
@@ -55783,8 +55734,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "wattle_fence_dark/fence_wattle_dark",
-        "wattle_fence_dark/fence_wattle_dark"
+        "wattle_fence_dark/side1",
+        "wattle_fence_dark/side2"
       ],
       "boundingBox": {
         "xMin": 0.01,
