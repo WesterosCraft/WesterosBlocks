@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -56,7 +57,13 @@ public class WCTrapDoorBlock extends TrapDoorBlock implements WesterosBlockLifec
            return InteractionResult.PASS;
         }
         else {
-        	return super.use(state, world, pos, player, hand, ctx);
+            state = state.cycle(OPEN);
+            world.setBlock(pos, state, 2);
+            if (state.getValue(WATERLOGGED)) {
+               world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+            }
+            this.playSound(player, world, pos, state.getValue(OPEN));
+            return InteractionResult.sidedSuccess(world.isClientSide);
         }
     }
 
