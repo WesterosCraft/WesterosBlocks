@@ -29,18 +29,12 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
                 WesterosBlocks.log.error(String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
                 return null;
             }
-            WesterosBlockDef mbdef = null;
-            // If a WB, look up def
-            if (blk instanceof WesterosBlockLifecycle) {
-            	mbdef = ((WesterosBlockLifecycle) blk). getWBDefinition();
-            	// See if we have a cond property
-            	WesterosBlockDef.CondProperty prop = mbdef.buildCondProperty();
-            	if (prop != null) {
-            		tempCOND = prop;
-            	}        	
+            if (blk.defaultBlockState().isAir()) {
+                WesterosBlocks.log.error(String.format("modelBlockName '%s' not yet defined for block '%s' - must be defined before block", def.modelBlockName, def.blockName));            	
+                return null;
             }
         	BlockBehaviour.Properties props = def.makeAndCopyProperties(blk);
-        	return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def, mbdef)), false, false);
+        	return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def)), false, false);
         }
     }
     
@@ -48,7 +42,7 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
     private static WesterosBlockDef.CondProperty tempCOND;
     private WesterosBlockDef.CondProperty COND;
     
-    protected WCStairBlock(BlockState modelstate, BlockBehaviour.Properties props, WesterosBlockDef def, WesterosBlockDef moddef) {
+    protected WCStairBlock(BlockState modelstate, BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(() -> modelstate, props);
         this.def = def;
         if (COND != null) {

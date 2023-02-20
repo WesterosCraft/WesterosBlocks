@@ -50400,14 +50400,6 @@
       "legacyBlockID": "stone_block_9_stair_7:0"
     },
     {
-      "blockName": "gold_stairs",
-      "blockType": "stair",
-      "modelBlockName": "gold_slab",
-      "creativeTab": "WesterosBlocks",
-      "label": "Gold Stairs",
-      "legacyBlockID": "metal_block_0_stair_9:0"
-    },
-    {
       "blockName": "gold_slab",
       "blockType": "slab",
       "hardness": 5,
@@ -50440,6 +50432,14 @@
         }
       ],
       "legacyBlockID": "metal_slab_block_1:0"
+    },
+    {
+      "blockName": "gold_stairs",
+      "blockType": "stair",
+      "modelBlockName": "gold_slab",
+      "creativeTab": "WesterosBlocks",
+      "label": "Gold Stairs",
+      "legacyBlockID": "metal_block_0_stair_9:0"
     },
     {
       "blockName": "gold_road_marker",
@@ -55304,14 +55304,6 @@
       "legacyBlockID": "stone_block_9_stair_8:0"
     },
     {
-      "blockName": "ice_stairs",
-      "blockType": "stair",
-      "modelBlockName": "ice_slab",
-      "creativeTab": "WesterosDeco",
-      "label": "Ice Stairs",
-      "legacyBlockID": "ice_stairs:0"
-    },
-    {
       "blockName": "ice_slab",
       "blockType": "slab",
       "hardness": 2,
@@ -55332,6 +55324,14 @@
         "translucent_block_0/ice"
       ],
       "legacyBlockID": "translucent_slab_block_0:0"
+    },
+    {
+      "blockName": "ice_stairs",
+      "blockType": "stair",
+      "modelBlockName": "ice_slab",
+      "creativeTab": "WesterosDeco",
+      "label": "Ice Stairs",
+      "legacyBlockID": "ice_stairs:0"
     },
     {
       "blockName": "ice_wall",
