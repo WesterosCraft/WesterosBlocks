@@ -41,9 +41,9 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
             if (blk instanceof WesterosBlockLifecycle) {
                 mbdef = ((WesterosBlockLifecycle) blk).getWBDefinition();
                 // See if we have a cond property
-                WesterosBlockDef.CondProperty prop = mbdef.buildCondProperty();
-                if (prop != null) {
-                    tempCOND = prop;
+                if (mbdef.condStates != null) {
+                    def.condStates = mbdef.condStates;
+                    tempCOND = def.buildCondProperty();
                 }
             }
             BlockBehaviour.Properties props = def.makeAndCopyProperties(blk);
