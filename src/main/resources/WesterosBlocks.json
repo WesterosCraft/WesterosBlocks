@@ -33143,8 +33143,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "translucent_block_0/alyssas_tears_mist_two",
-        "translucent_block_0/alyssas_tears_mist_two"
+        "alyssas_tears_mist/mist2_both",
+        "alyssas_tears_mist/mist2_both"
       ],
       "boundingBox": {
         "xMin": 0.92,
@@ -33178,8 +33178,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "translucent_block_0/alyssas_tears_mist_three",
-        "translucent_block_0/alyssas_tears_mist_three"
+        "alyssas_tears_mist/mist3_both",
+        "alyssas_tears_mist/mist3_both"
       ],
       "boundingBox": {
         "xMin": 0.92,
@@ -33213,8 +33213,8 @@
         "transparent",
         "transparent",
         "transparent",
-        "translucent_block_0/alyssas_tears_mist_four",
-        "translucent_block_0/alyssas_tears_mist_four"
+        "alyssas_tears_mist/mist4",
+        "alyssas_tears_mist/mist4"
       ],
       "boundingBox": {
         "xMin": 0.92,

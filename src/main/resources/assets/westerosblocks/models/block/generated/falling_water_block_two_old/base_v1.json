@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/translucent_block_0/alyssas_tears_mist_two",
-    "txt5": "westerosblocks:block/translucent_block_0/alyssas_tears_mist_two",
+    "txt4": "westerosblocks:block/alyssas_tears_mist/mist2_both",
+    "txt5": "westerosblocks:block/alyssas_tears_mist/mist2_both",
     "txt2": "westerosblocks:block/transparent",
     "txt3": "westerosblocks:block/transparent",
     "txt0": "westerosblocks:block/transparent",
