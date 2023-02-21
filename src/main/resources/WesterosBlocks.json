@@ -39640,7 +39640,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "type": "no-decay,better-foliage",
+      "type": "no-decay,better-foliage,overlay",
       "creativeTab": "WesterosPlants",
       "label": "Snowy Spruce Leaves",
       "textures": [
@@ -39654,7 +39654,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "type": "no-decay,better-foliage",
+      "type": "no-decay,better-foliage,overlay",
       "creativeTab": "WesterosPlants",
       "label": "Snowy Weirwood Leaves",
       "textures": [

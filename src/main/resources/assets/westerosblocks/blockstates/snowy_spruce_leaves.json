@@ -1,7 +1,12 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/snowy_spruce_leaves/base-v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/snowy_spruce_leaves/base-v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/snowy_spruce_leaves/base2-v1"
+      }
+    ]
   }
 }

@@ -6,7 +6,9 @@
     "textures": [
     "westerosblocks:block/mossy_oak_log/side_2x2"],
     "extra": {
-
+       "connect_to": [{
+        "block": "westerosblocks:mossy_oak_log"
+       }]
     }
   }
 }

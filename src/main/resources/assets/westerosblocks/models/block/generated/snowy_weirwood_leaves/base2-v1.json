@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/leaves_bf",
+  "parent": "westerosblocks:block/untinted/leaves_bf2",
   "textures": {
     "end": "westerosblocks:block/leaves_block_0/leaves_weirwood_snowy_opaque",
     "side": "westerosblocks:block/leaves_block_0/leaves_weirwood_snowy_opaque",

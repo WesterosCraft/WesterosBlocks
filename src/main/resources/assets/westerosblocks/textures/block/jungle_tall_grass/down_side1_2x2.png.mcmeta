@@ -5,6 +5,9 @@
     "layer": "CUTOUT",
     "textures": [],
     "extra": {
+    "connect_to": [{
+        "block": "westerosblocks:jungle_tall_grass"
+      }]
     }
   }
 }
