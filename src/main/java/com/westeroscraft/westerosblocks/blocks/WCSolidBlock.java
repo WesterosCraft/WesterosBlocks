@@ -7,7 +7,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
 
@@ -56,8 +58,27 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     }
     @Override
     public VoxelShape getVisualShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
-        return collisionbox;
+    	if (def.nonOpaque)
+    		return Shapes.empty();
+    	else
+    		return collisionbox;
     }
+    
+    public boolean skipRendering(BlockState p_53972_, BlockState p_53973_, Direction p_53974_) {
+    	if (def.nonOpaque)
+    		return p_53973_.is(this) ? true : super.skipRendering(p_53972_, p_53973_, p_53974_);
+    	else
+    		return false;
+    }
+
+
+     public float getShadeBrightness(BlockState p_48731_, BlockGetter p_48732_, BlockPos p_48733_) {
+        return (def.lightOpacity == 0) ? 1.0F : 0.2F;
+     }
+
+     public boolean propagatesSkylightDown(BlockState p_48740_, BlockGetter p_48741_, BlockPos p_48742_) {
+    	 return (def.lightOpacity == 0);
+     }
 
     @Override
     public WesterosBlockDef getWBDefinition() {

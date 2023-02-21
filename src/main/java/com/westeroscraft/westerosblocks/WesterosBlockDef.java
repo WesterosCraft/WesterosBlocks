@@ -59,6 +59,7 @@ import com.westeroscraft.westerosblocks.blocks.WCWebVertBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
@@ -89,6 +90,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.BlockAndTintGetter;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.ColorResolver;
 import net.minecraftforge.api.distmarker.Dist;
@@ -844,6 +846,10 @@ public class WesterosBlockDef {
 	public BlockBehaviour.Properties makeProperties() {
 		return makeAndCopyProperties(null);
 	}
+	
+    private static boolean never(BlockState p_50806_, BlockGetter p_50807_, BlockPos p_50808_) {
+        return false;
+    }
 
 	public BlockBehaviour.Properties makeAndCopyProperties(Block blk) {
 		BlockBehaviour.Properties props;
@@ -867,6 +873,7 @@ public class WesterosBlockDef {
 		}
 		if ((!ambientOcclusion) || (nonOpaque)) { // If no ambient occlusion
 			props = props.noOcclusion();
+			props = props.isViewBlocking(WesterosBlockDef::never);
 		}
 		return props;
 	}
