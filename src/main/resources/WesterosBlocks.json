@@ -4830,9 +4830,9 @@
       "creativeTab": "WesterosPlants",
       "label": "Weirwood Leaves",
       "textures": [
-        "leaves_block_0/leaves_weirwood",
-        "leaves_block_0/leaves_weirwood",
-        "leaves_block_bf/leaves_bf_weirwood"
+        "leaves_weirwood/leaves_weirwood",
+        "leaves_weirwood/leaves_weirwood",
+        "leaves_weirwood/leaves_bf_weirwood"
       ],
       "rotateRandom": true,
       "legacyBlockID": "leaves_block_1:2"
@@ -5012,9 +5012,9 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_bf/leaves_bf_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_bf_spruce",
             "transparent",
             "leaves/juniper0"
           ],
@@ -5022,9 +5022,9 @@
         },
         {
           "textures": [
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_bf/leaves_bf_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_bf_spruce",
             "transparent",
             "leaves/juniper1"
           ],
@@ -5032,9 +5032,9 @@
         },
         {
           "textures": [
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_bf/leaves_bf_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_bf_spruce",
             "transparent",
             "leaves/juniper2"
           ],
@@ -5042,9 +5042,9 @@
         },
         {
           "textures": [
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_bf/leaves_bf_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_bf_spruce",
             "transparent",
             "leaves/juniper3"
           ],
@@ -39643,9 +39643,11 @@
       "type": "no-decay,better-foliage,overlay",
       "creativeTab": "WesterosPlants",
       "label": "Snowy Spruce Leaves",
+      "rotateRandom": true,
       "textures": [
-        "leaves_block_0/leaves_spruce_snowy",
-        "leaves_block_0/leaves_spruce_snowy"
+        "leaves_spruce/leaves_spruce_snowy_top",
+        "leaves_spruce/leaves_spruce_snowy",
+        "leaves_spruce/leaves_bf_spruce_snowy"
       ],
       "legacyBlockID": "leaves_block_3:0"
     },
@@ -39654,14 +39656,14 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "type": "no-decay,better-foliage,overlay",
+      "type": "no-decay,better-foliage",
       "creativeTab": "WesterosPlants",
       "label": "Snowy Weirwood Leaves",
+      "rotateRandom": true,
       "textures": [
-        "leaves_block_0/leaves_weirwood_snowy_opaque",
-        "leaves_block_0/leaves_weirwood_snowy_opaque",
-        "leaves_block_0/leaves_weirwood_snowy",
-        "leaves_block_0/leaves_weirwood_snowy"
+        "leaves_weirwood/leaves_weirwood_snowy_top",
+        "leaves_weirwood/leaves_weirwood_snowy",
+        "leaves_weirwood/leaves_bf_weirwood_snowy"
       ],
       "legacyBlockID": "leaves_block_3:1"
     },

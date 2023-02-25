@@ -1,9 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/leaves_bf2",
+  "parent": "westerosblocks:block/untinted/leaves_overlay_bf2",
   "textures": {
-    "end": "westerosblocks:block/leaves_block_0/leaves_spruce_snowy",
-    "side": "westerosblocks:block/leaves_block_0/leaves_spruce_snowy",
-    "bf": "westerosblocks:block/leaves_block_0/leaves_spruce_snowy",
-    "particle": "westerosblocks:block/leaves_block_0/leaves_spruce_snowy"
+    "end": "westerosblocks:block/leaves_spruce/leaves_spruce_snowy_top",
+    "side": "westerosblocks:block/leaves_spruce/leaves_spruce_snowy",
+    "bf": "westerosblocks:block/leaves_spruce/leaves_bf_spruce_snowy",
+    "overlayend": "westerosblocks:block/leaves_spruce/leaves_bf_spruce_snowy",
+    "overlayside": "westerosblocks:block/leaves_spruce/leaves_bf_spruce_snowy",
+    "particle": "westerosblocks:block/leaves_spruce/leaves_spruce_snowy"
   }
 }

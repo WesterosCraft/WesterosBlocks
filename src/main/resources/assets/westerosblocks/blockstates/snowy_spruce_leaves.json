@@ -5,7 +5,31 @@
         "model": "westerosblocks:block/generated/snowy_spruce_leaves/base-v1"
       },
       {
+        "model": "westerosblocks:block/generated/snowy_spruce_leaves/base-v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/snowy_spruce_leaves/base-v1",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/generated/snowy_spruce_leaves/base-v1",
+        "y": 270
+      },
+      {
         "model": "westerosblocks:block/generated/snowy_spruce_leaves/base2-v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/snowy_spruce_leaves/base2-v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/snowy_spruce_leaves/base2-v1",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/generated/snowy_spruce_leaves/base2-v1",
+        "y": 270
       }
     ]
   }
