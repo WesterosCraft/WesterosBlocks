@@ -31310,8 +31310,7 @@
       "label": "Mance's Camp Common Tent 1",
       "textures": [
         "mances_camp_common_tent/inside",
-        "mances_camp_common_tent/outside1",
-        "transparent"
+        "mances_camp_common_tent/outside1"
       ],
       "cuboids": [
         {
@@ -31350,8 +31349,7 @@
       "label": "Mance's Camp Common Tent 2",
       "textures": [
         "mances_camp_common_tent/inside",
-        "mances_camp_common_tent/outside2",
-        "transparent"
+        "mances_camp_common_tent/outside2"
       ],
       "cuboids": [
         {
@@ -31389,9 +31387,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Mance's Camp Mance's Tent",
       "textures": [
-        "mances_camp_mances_tent/inside",
-        "mances_camp_mances_tent/outside",
-        "transparent"
+        "mances_camp_common_tent/inside",
+        "mances_camp_mances_tent/outside"
       ],
       "cuboids": [
         {
@@ -36529,23 +36526,23 @@
       "randomTextures": [
         {
           "textures": [
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/side1"
+            "reach_oak_wood_panelling_wall/top_bottom",
+            "reach_oak_wood_panelling_wall/top_bottom",
+            "reach_oak_wood_panelling_wall/side1"
           ]
         },
         {
           "textures": [
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/side2"
+            "reach_oak_wood_panelling_wall/top_bottom",
+            "reach_oak_wood_panelling_wall/top_bottom",
+            "reach_oak_wood_panelling_wall/side2"
           ]
         },
         {
           "textures": [
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/side3"
+            "reach_oak_wood_panelling_wall/top_bottom",
+            "reach_oak_wood_panelling_wall/top_bottom",
+            "reach_oak_wood_panelling_wall/side3"
           ]
         }
       ],
@@ -36569,23 +36566,23 @@
       "randomTextures": [
         {
           "textures": [
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/side1"
+            "reach_spruce_wood_panelling_wall/top_bottom",
+            "reach_spruce_wood_panelling_wall/top_bottom",
+            "reach_spruce_wood_panelling_wall/side1"
           ]
         },
         {
           "textures": [
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/side2"
+            "reach_spruce_wood_panelling_wall/top_bottom",
+            "reach_spruce_wood_panelling_wall/top_bottom",
+            "reach_spruce_wood_panelling_wall/side2"
           ]
         },
         {
           "textures": [
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/side3"
+            "reach_spruce_wood_panelling_wall/top_bottom",
+            "reach_spruce_wood_panelling_wall/top_bottom",
+            "reach_spruce_wood_panelling_wall/side3"
           ]
         }
       ],
@@ -39644,7 +39641,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "type": "no-decay,better-foliage,overlay",
+      "type": "no-decay,better-foliage",
       "creativeTab": "WesterosPlants",
       "label": "Snowy Spruce Leaves",
       "rotateRandom": true,
@@ -46887,22 +46884,22 @@
       "randomTextures": [
         {
           "textures": [
-            "flowstone/side1"
+            "flowstone_wall/side1"
           ]
         },
         {
           "textures": [
-            "flowstone/side2"
+            "flowstone_wall/side2"
           ]
         },
         {
           "textures": [
-            "flowstone/side3"
+            "flowstone_wall/side3"
           ]
         },
         {
           "textures": [
-            "flowstone/side4"
+            "flowstone_wall/side4"
           ]
         }
       ],
@@ -55437,6 +55434,8 @@
     {
       "blockName": "ice_stairs",
       "blockType": "stair",
+      "nonOpaque": true,
+      "alphaRender": true,
       "modelBlockName": "ice_slab",
       "creativeTab": "WesterosDeco",
       "label": "Ice Stairs",

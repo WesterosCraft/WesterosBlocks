@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_post",
   "textures": {
-    "bottom": "westerosblocks:block/flowstone/side4",
-    "top": "westerosblocks:block/flowstone/side4",
-    "side": "westerosblocks:block/flowstone/side4"
+    "bottom": "westerosblocks:block/flowstone_wall/side4",
+    "top": "westerosblocks:block/flowstone_wall/side4",
+    "side": "westerosblocks:block/flowstone_wall/side4"
   }
 }

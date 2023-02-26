@@ -4,7 +4,6 @@
     "type": "ctm_vertical",
     "layer": "SOLID",
     "textures": [],
-    "extra": {
-    }
+    "extra": {}
   }
 }
