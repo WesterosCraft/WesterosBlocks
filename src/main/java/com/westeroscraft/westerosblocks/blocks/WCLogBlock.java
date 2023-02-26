@@ -17,10 +17,21 @@ public class WCLogBlock extends RotatedPillarBlock implements WesterosBlockLifec
         }
     }
     protected WesterosBlockDef def;
+    public boolean sideCTMHack = false;
     
     protected WCLogBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
+        String t = def.getType();
+        if (t != null) {
+            String[] toks = t.split(",");
+            for (String tok : toks) {
+            	// Record if side CTM hack needed (workaround for pillar CTM problem with rotations)
+                if (tok.equals("side-ctm-hack")) {
+                	sideCTMHack = true;
+                }
+            }
+        }
     }
     @Override
     public WesterosBlockDef getWBDefinition() {

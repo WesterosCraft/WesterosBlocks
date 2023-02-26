@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log_ctmfix_z",
+  "textures": {
+    "down": "westerosblocks:block/mossy_oak_log/bottom",
+    "up": "westerosblocks:block/mossy_oak_log/top",
+    "north": "westerosblocks:block/mossy_oak_log/side",
+    "south": "westerosblocks:block/mossy_oak_log/side",
+    "east": "westerosblocks:block/mossy_oak_log/side",
+    "west": "westerosblocks:block/mossy_oak_log/side",
+    "particle": "westerosblocks:block/mossy_oak_log/side"
+  }
+}

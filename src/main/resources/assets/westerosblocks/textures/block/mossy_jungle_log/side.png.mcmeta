@@ -1,6 +1,12 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "proxy": "westerosblocks:block/mossy_jungle_log/side_2x2"
+    "type": "pillar",
+    "layer": "SOLID",
+    "textures": [
+    	"westerosblocks:block/mossy_jungle_log/side_2x2"
+    ],
+    "extra": {
+    }
   }
 }
