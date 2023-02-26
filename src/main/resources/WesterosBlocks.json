@@ -4831,9 +4831,9 @@
       "creativeTab": "WesterosPlants",
       "label": "Weirwood Leaves",
       "textures": [
-        "leaves_block_0/leaves_weirwood",
-        "leaves_block_0/leaves_weirwood",
-        "leaves_block_bf/leaves_bf_weirwood"
+        "leaves_weirwood/leaves_weirwood",
+        "leaves_weirwood/leaves_weirwood",
+        "leaves_weirwood/leaves_bf_weirwood"
       ],
       "rotateRandom": true,
       "legacyBlockID": "leaves_block_1:2"
@@ -5013,9 +5013,9 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_bf/leaves_bf_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_bf_spruce",
             "transparent",
             "leaves/juniper0"
           ],
@@ -5023,9 +5023,9 @@
         },
         {
           "textures": [
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_bf/leaves_bf_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_bf_spruce",
             "transparent",
             "leaves/juniper1"
           ],
@@ -5033,9 +5033,9 @@
         },
         {
           "textures": [
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_bf/leaves_bf_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_bf_spruce",
             "transparent",
             "leaves/juniper2"
           ],
@@ -5043,9 +5043,9 @@
         },
         {
           "textures": [
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_0/leaves_spruce",
-            "leaves_block_bf/leaves_bf_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_spruce",
+            "leaves_spruce/leaves_bf_spruce",
             "transparent",
             "leaves/juniper3"
           ],
@@ -16879,7 +16879,7 @@
       "creativeTab": "WesterosBlocks",
       "label": "Stormlands Large Brick",
       "textures": [
-        "stone_block_2/brick_stormlands_large"
+        "stormlands_brick_large/side"
       ],
       "legacyBlockID": "stone_block_2:12"
     },
@@ -22018,6 +22018,76 @@
       "legacyBlockID": "hopper_block_2:14"
     },
     {
+      "blockName": "stormlands_large_brick_hopper",
+      "blockType": "cuboid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 4,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "label": "Stormlands Large Brick Hopper",
+      "textures": [
+        "stormlands_brick_large/side"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.3755,
+          "xMax": 0.6245,
+          "yMin": 0,
+          "yMax": 0.275,
+          "zMin": 0.3755,
+          "zMax": 0.6245,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0.25,
+          "xMax": 0.75,
+          "yMin": 0.275,
+          "yMax": 0.625,
+          "zMin": 0.25,
+          "zMax": 0.75,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0.625,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "legacyBlockID": "hopper_block_6:3"
+    },
+    {
       "blockName": "stormlands_cobblestone_hopper",
       "blockType": "cuboid",
       "hardness": 5,
@@ -24127,6 +24197,26 @@
         "stone_block_2/brick_stormlands_small"
       ],
       "legacyBlockID": "stone_slab_block_3:7"
+    },
+    {
+      "blockName": "stormlands_large_brick_slab",
+      "blockType": "slab",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 2
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "label": "Stormlands Large Brick Slab",
+      "textures": [
+        "stormlands_brick_large/side"
+      ],
+      "legacyBlockID": "stone_slab_block_9:0"
     },
     {
       "blockName": "red_sandstone_stairs",
@@ -32993,6 +33083,14 @@
       "legacyBlockID": "stone_block_3_stair_8:0"
     },
     {
+      "blockName": "stormlands_large_brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "stormlands_large_brick",
+      "creativeTab": "WesterosBlocks",
+      "label": "Stormlands Large Brick Stairs",
+      "legacyBlockID": "stone_block_2_stair_4:0"
+    },
+    {
       "blockName": "falling_water_block_one_old",
       "blockType": "cuboid-nsew",
       "hardness": 5,
@@ -39516,8 +39614,8 @@
             "transparent",
             "transparent",
             "transparent",
-            "wattle_fence/ctm0",
-            "wattle_fence/ctm0"
+            "wattle_fence/ctm1",
+            "wattle_fence/ctm1"
           ]
         },
         {
@@ -39526,8 +39624,8 @@
             "transparent",
             "transparent",
             "transparent",
-            "wattle_fence/ctm1",
-            "wattle_fence/ctm1"
+            "wattle_fence/ctm2",
+            "wattle_fence/ctm2"
           ]
         }
       ],
@@ -39546,12 +39644,14 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "type": "no-decay",
+      "type": "no-decay,better-foliage,overlay",
       "creativeTab": "WesterosPlants",
       "label": "Snowy Spruce Leaves",
+      "rotateRandom": true,
       "textures": [
-        "leaves_block_0/leaves_spruce_snowy",
-        "leaves_block_0/leaves_spruce_snowy"
+        "leaves_spruce/leaves_spruce_snowy_top",
+        "leaves_spruce/leaves_spruce_snowy",
+        "leaves_spruce/leaves_bf_spruce_snowy"
       ],
       "legacyBlockID": "leaves_block_3:0"
     },
@@ -39560,14 +39660,14 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "type": "no-decay",
+      "type": "no-decay,better-foliage",
       "creativeTab": "WesterosPlants",
       "label": "Snowy Weirwood Leaves",
+      "rotateRandom": true,
       "textures": [
-        "leaves_block_0/leaves_weirwood_snowy_opaque",
-        "leaves_block_0/leaves_weirwood_snowy_opaque",
-        "leaves_block_0/leaves_weirwood_snowy",
-        "leaves_block_0/leaves_weirwood_snowy"
+        "leaves_weirwood/leaves_weirwood_snowy_top",
+        "leaves_weirwood/leaves_weirwood_snowy",
+        "leaves_weirwood/leaves_bf_weirwood_snowy"
       ],
       "legacyBlockID": "leaves_block_3:1"
     },
@@ -47000,6 +47100,7 @@
       ],
       "legacyBlockID": "terrainset_fence_block_4:0"
     },
+
     {
       "blockName": "flowstone_fence",
       "blockType": "fence",
@@ -49745,6 +49846,7 @@
       ],
       "legacyBlockID": "stone_wall_block_4:5"
     },
+
     {
       "blockName": "iron_fence",
       "blockType": "fence",
@@ -53896,7 +53998,7 @@
         "snowy_thatch_light_fur/bottom",
         "snowy_thatch_light_fur/top",
         "snowy_thatch_light_fur/side1",
-        "thatch_light/thatch_light"
+        "snowy_thatch_light_fur/side1"
       ],
       "legacyBlockID": "cuboid_block_11:0"
     },
@@ -53919,7 +54021,7 @@
         "snowy_thatch_dark_fur/bottom",
         "snowy_thatch_dark_fur/top",
         "snowy_thatch_dark_fur/side1",
-        "thatch_dark/thatch_dark"
+        "snowy_thatch_dark_fur/side1"
       ],
       "legacyBlockID": "cuboid_block_11:1"
     },
@@ -55412,6 +55514,26 @@
         "stacked_bones/bone_stacked_side"
       ],
       "legacyBlockID": "log_block_8:0"
+    },
+    {
+      "blockName": "stacked_bones_fence",
+      "blockType": "fence",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "label": "Stacked Bones Fence",
+      "textures": [
+        "stacked_bones/bone_stacked_side"
+      ],
+      "legacyBlockID": "fence_block_5:8"
     },
     {
       "blockName": "piled_bones",
