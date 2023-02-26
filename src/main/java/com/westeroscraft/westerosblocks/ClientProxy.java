@@ -37,11 +37,15 @@ public class ClientProxy extends Proxy implements PreparableReloadListener {
 	   ((ReloadableResourceManager) Minecraft.getInstance().getResourceManager()).registerReloadListener(this);
 	}	
 	@Override
-	public CompletableFuture<Void> reload(PreparationBarrier p_10638_, ResourceManager p_10639_,
-		ProfilerFiller p_10640_, ProfilerFiller p_10641_, Executor p_10642_, Executor p_10643_) {
-		WesterosBlocks.log.info("Handling resource reload");
-        WesterosBlockDef.reloadColorHandler();
-    	WesterosBlocks.log.info("Handling resource reload completed");
-    	return null;
+	public CompletableFuture<Void> reload(PreparableReloadListener.PreparationBarrier pStage, ResourceManager pResourceManager, ProfilerFiller pPreparationsProfiler, ProfilerFiller pReloadProfiler, 
+		Executor pBackgroundExecutor, Executor pGameExecutor) {
+		
+		return CompletableFuture.supplyAsync(() -> {
+			WesterosBlocks.log.info("Handling resource reload");
+			return null;
+		}, pBackgroundExecutor).thenCompose(pStage::wait).thenAcceptAsync((p_10792_) -> {
+			WesterosBlockDef.reloadColorHandler();
+	    	WesterosBlocks.log.info("Handling resource reload completed");
+		}, pGameExecutor);
 	}
 }
