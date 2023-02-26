@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "ctm_vertical",
+    "type": "pillar",
     "layer": "SOLID",
     "textures": [
 	    "westerosblocks:block/mossy_oak_log/side_2x2"],
