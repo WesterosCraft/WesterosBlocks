@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log_horizontal",
+  "textures": {
+    "down": "westerosblocks:block/log_block_0/target_front",
+    "up": "westerosblocks:block/log_block_0/target_front",
+    "north": "westerosblocks:block/log_block_0/target_sides",
+    "south": "westerosblocks:block/log_block_0/target_sides",
+    "east": "westerosblocks:block/log_block_0/target_sides",
+    "west": "westerosblocks:block/log_block_0/target_sides",
+    "particle": "westerosblocks:block/log_block_0/target_sides"
+  }
+}

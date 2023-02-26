@@ -1,16 +1,16 @@
 {
   "variants": {
     "axis=z": {
-      "model": "westerosblocks:block/generated/firewood/base_v1",
+      "model": "westerosblocks:block/generated/firewood/z_v1",
       "x": 90
     },
     "axis=x": {
-      "model": "westerosblocks:block/generated/firewood/base_v1",
+      "model": "westerosblocks:block/generated/firewood/x_v1",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "westerosblocks:block/generated/firewood/base_v1"
+      "model": "westerosblocks:block/generated/firewood/y_v1"
     }
   }
 }

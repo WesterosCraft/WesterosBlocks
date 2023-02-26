@@ -3,21 +3,14 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
-import java.util.ArrayList;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
 
 import net.minecraft.world.level.block.Block;
 
 public class LogBlockModelExport extends ModelExport {
-    // Template objects for Gson export of block models
-    public static class ModelObjectCubeAll {
-        public String parent = "minecraft:block/cube_all";    // Use 'cube_all' model for single texture
-        public TextureAll textures = new TextureAll();
-    }
     public static class TextureAll {
         public String all;
     }
@@ -25,12 +18,12 @@ public class LogBlockModelExport extends ModelExport {
     public static class ModelObjectColumn {
         public String parent;    // Use hacked 'cube_column' model (weirwood behaviors...)
         public Texture textures = new Texture();
-        public ModelObjectColumn(boolean isTinted) {
+        public ModelObjectColumn(boolean isTinted, String basemodel) {
         	if (isTinted) {
-        		this.parent = "westerosblocks:block/tinted/cube_log";
+        		this.parent = "westerosblocks:block/tinted/" + basemodel;
         	}
         	else {
-        		this.parent = "westerosblocks:block/untinted/cube_log";;
+        		this.parent = "westerosblocks:block/untinted/" + basemodel;
         	}
         }
     }
@@ -41,25 +34,27 @@ public class LogBlockModelExport extends ModelExport {
     	public String parent;
     }
     
+    boolean sideCTMHack;
     public LogBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
+        sideCTMHack = ((WCLogBlock)blk).sideCTMHack;
     }
     
     private static final String[] states = { "axis=x", "axis=y", "axis=z" };
     private static final int[] xrot = { 90, 0, 90 };
     private static final int[] yrot = { 90, 0, 0 };
+    private static final String[] models = { "x", "y", "z" };
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         
         for (int i = 0; i < states.length; i++) {
-        	List<Variant> vars = new ArrayList<Variant>();
         	// Loop over the random sets we've got
         	for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         		WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         		Variant var = new Variant();
-        		var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
+        		var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(models[i], setidx);
         		if (xrot[i] > 0) var.x = xrot[i];
         		if (yrot[i] > 0) var.y = yrot[i];
         		var.weight = set.weight;
@@ -76,7 +71,8 @@ public class LogBlockModelExport extends ModelExport {
     	// Loop over the random sets we've got
     	for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
     		WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-            ModelObjectColumn mod = new ModelObjectColumn(isTinted);
+    		// Base vertical model
+            ModelObjectColumn mod = new ModelObjectColumn(isTinted, "cube_log");
     		mod.textures.down = getTextureID(set.getTextureByIndex(0));
     		mod.textures.up = getTextureID(set.getTextureByIndex(1));
     		mod.textures.north = getTextureID(set.getTextureByIndex(2));
@@ -84,11 +80,31 @@ public class LogBlockModelExport extends ModelExport {
     		mod.textures.west = getTextureID(set.getTextureByIndex(4));
     		mod.textures.east = getTextureID(set.getTextureByIndex(5));
     		mod.textures.particle = getTextureID(set.getTextureByIndex(2));
-            this.writeBlockModelFile(getModelName("base", setidx), mod);
+            this.writeBlockModelFile(getModelName(models[1], setidx), mod);
+    		// side=x model
+            mod = new ModelObjectColumn(isTinted, sideCTMHack ? "cube_log_ctmfix_x" : "cube_log_horizontal");
+    		mod.textures.down = getTextureID(set.getTextureByIndex(0));
+    		mod.textures.up = getTextureID(set.getTextureByIndex(1));
+    		mod.textures.north = getTextureID(set.getTextureByIndex(2));
+    		mod.textures.south = getTextureID(set.getTextureByIndex(3));
+    		mod.textures.west = getTextureID(set.getTextureByIndex(4));
+    		mod.textures.east = getTextureID(set.getTextureByIndex(5));
+    		mod.textures.particle = getTextureID(set.getTextureByIndex(2));
+            this.writeBlockModelFile(getModelName(models[0], setidx), mod);
+    		// side=z model
+            mod = new ModelObjectColumn(isTinted, sideCTMHack ? "cube_log_ctmfix_z" : "cube_log_horizontal");
+    		mod.textures.down = getTextureID(set.getTextureByIndex(0));
+    		mod.textures.up = getTextureID(set.getTextureByIndex(1));
+    		mod.textures.north = getTextureID(set.getTextureByIndex(2));
+    		mod.textures.south = getTextureID(set.getTextureByIndex(3));
+    		mod.textures.west = getTextureID(set.getTextureByIndex(4));
+    		mod.textures.east = getTextureID(set.getTextureByIndex(5));
+    		mod.textures.particle = getTextureID(set.getTextureByIndex(2));
+            this.writeBlockModelFile(getModelName(models[2], setidx), mod);
     	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
+        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(models[1], 0);
         this.writeItemModelFile(def.blockName, mo);
     }
     @Override

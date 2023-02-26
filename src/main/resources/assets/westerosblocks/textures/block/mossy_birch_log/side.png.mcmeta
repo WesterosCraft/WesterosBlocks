@@ -1,6 +1,11 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "proxy": "westerosblocks:block/mossy_birch_log/side_2x2"
+    "type": "ctm_vertical",
+    "layer": "SOLID",
+    "textures": [
+	    "westerosblocks:block/mossy_birch_log/side_2x2"],
+    "extra": {
+    }
   }
 }
