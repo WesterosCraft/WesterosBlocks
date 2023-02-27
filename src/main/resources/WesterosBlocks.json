@@ -49298,8 +49298,8 @@
       "creativeTab": "WesterosDeco",
       "label": "Falling Water Block Two",
       "textures": [
-        "alyssas_tears_mist/mist2_both",
-        "alyssas_tears_mist/mist2_both"
+        "alyssas_tears_mist/mist2",
+        "alyssas_tears_mist/mist2"
       ],
       "type": "allow-unsupported,no-climb",
       "legacyBlockID": "vine_block_3:0"
