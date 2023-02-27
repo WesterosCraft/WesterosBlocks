@@ -635,7 +635,6 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Mossy Oak Log",
-      "type": "side-ctm-hack",
       "textures": [
         "mossy_oak_log/bottom",
         "mossy_oak_log/top",
@@ -16995,7 +16994,6 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Mossy Spruce Log",
-      "type": "side-ctm-hack",
       "textures": [
         "mossy_spruce_log/bottom",
         "mossy_spruce_log/top",
@@ -17016,7 +17014,6 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Mossy Birch Log",
-      "type": "side-ctm-hack",
       "textures": [
         "mossy_birch_log/bottom",
         "mossy_birch_log/top",
@@ -17037,7 +17034,6 @@
       ],
       "creativeTab": "WesterosDeco",
       "label": "Mossy Jungle Log",
-      "type": "side-ctm-hack",
       "textures": [
         "mossy_jungle_log/bottom",
         "mossy_jungle_log/top",
@@ -49431,7 +49427,6 @@
       "material": "cloth",
       "creativeTab": "WesterosCTMSamples",
       "label": "Pillar CTM",
-      "type": "side-ctm-hack",
       "textures": [
         "ctm/pillar_end",
         "ctm/pillar_end",

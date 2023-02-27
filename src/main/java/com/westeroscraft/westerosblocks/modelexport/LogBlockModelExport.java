@@ -34,11 +34,9 @@ public class LogBlockModelExport extends ModelExport {
     	public String parent;
     }
     
-    boolean sideCTMHack;
     public LogBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
-        sideCTMHack = ((WCLogBlock)blk).sideCTMHack;
     }
     
     private static final String[] states = { "axis=x", "axis=y", "axis=z" };
@@ -82,7 +80,7 @@ public class LogBlockModelExport extends ModelExport {
     		mod.textures.particle = getTextureID(set.getTextureByIndex(2));
             this.writeBlockModelFile(getModelName(models[1], setidx), mod);
     		// side=x model
-            mod = new ModelObjectColumn(isTinted, sideCTMHack ? "cube_log_ctmfix_x" : "cube_log_horizontal");
+            mod = new ModelObjectColumn(isTinted, "cube_log_horizontal");
     		mod.textures.down = getTextureID(set.getTextureByIndex(0));
     		mod.textures.up = getTextureID(set.getTextureByIndex(1));
     		mod.textures.north = getTextureID(set.getTextureByIndex(2));
@@ -92,7 +90,7 @@ public class LogBlockModelExport extends ModelExport {
     		mod.textures.particle = getTextureID(set.getTextureByIndex(2));
             this.writeBlockModelFile(getModelName(models[0], setidx), mod);
     		// side=z model
-            mod = new ModelObjectColumn(isTinted, sideCTMHack ? "cube_log_ctmfix_z" : "cube_log_horizontal");
+            mod = new ModelObjectColumn(isTinted, "cube_log_horizontal");
     		mod.textures.down = getTextureID(set.getTextureByIndex(0));
     		mod.textures.up = getTextureID(set.getTextureByIndex(1));
     		mod.textures.north = getTextureID(set.getTextureByIndex(2));

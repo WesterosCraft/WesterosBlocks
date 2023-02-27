@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/cube_log_ctmfix_x",
+  "parent": "westerosblocks:block/untinted/cube_log_horizontal",
   "textures": {
     "down": "westerosblocks:block/mossy_oak_log/bottom",
     "up": "westerosblocks:block/mossy_oak_log/top",
