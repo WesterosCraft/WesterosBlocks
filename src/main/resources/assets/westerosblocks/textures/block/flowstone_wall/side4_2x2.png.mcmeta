@@ -1,0 +1,9 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "ctm_vertical",
+    "layer": "SOLID",
+    "textures": [],
+    "extra": { "connect_to": [ { "block": "westerosblocks:flowstone_wall" } ] }
+  }
+}
