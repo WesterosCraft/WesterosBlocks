@@ -22155,16 +22155,13 @@
     },
     {
       "blockName": "savanna_tall_grass",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosPlants",
       "label": "Savanna Tall Grass",
       "textures": [
-        "savanna_tall_grass/down_side1",
-        "savanna_tall_grass/down_side1",
-        "savanna_tall_grass/up1",
-        "savanna_tall_grass/both1"
+        "savanna_tall_grass/savanna_tall_grass"
       ],
       "colorMult": "textures/colormap/grass",
       "type": "no-in-web",
