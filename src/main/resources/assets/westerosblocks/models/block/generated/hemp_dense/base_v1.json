@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "westerosblocks:block/hemp_block_0/hemp_dense"
-  }
-}
