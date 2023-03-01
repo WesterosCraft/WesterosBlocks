@@ -1,4 +1,6 @@
 {
-  "parent": "westerosblocks:block/generated/savanna_tall_grass/base_v1",
-  "textures": {}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/savanna_tall_grass/savanna_tall_grass"
+  }
 }

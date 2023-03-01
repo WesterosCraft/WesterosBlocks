@@ -1,8 +1,9 @@
 {
+  "animation": { },
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_vertical",
-    "layer": "CUTOUT",
+    "type": "ctm_vertical",
+    "layer": "TRANSLUCENT",
     "textures": [],
     "extra": {
     }

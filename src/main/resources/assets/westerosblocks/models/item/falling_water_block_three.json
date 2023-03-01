@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/alyssas_tears_mist/mist3_both"
+    "layer0": "westerosblocks:block/alyssas_tears_mist/mist3"
   }
 }
