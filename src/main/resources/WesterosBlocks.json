@@ -55698,41 +55698,53 @@
     },
     {
       "blockName": "hemp_short",
-      "blockType": "web",
+      "blockType": "cuboid",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosDeco",
       "label": "Hemp Short",
-      "textures": [
-        "hemp_block_0/hemp_short"
+      "isCustomModel": true,
+      "rotateRandom": true,
+      "randomTextures": [
+        { },
+        { },
+        { },
+        { }
       ],
-      "type": "no-in-web",
       "legacyBlockID": "hemp_block_0:0"
     },
     {
       "blockName": "hemp_tall",
-      "blockType": "web",
+      "blockType": "cuboid",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosDeco",
       "label": "Hemp Tall",
-      "textures": [
-        "hemp_block_0/hemp_tall"
+      "isCustomModel": true,
+      "rotateRandom": true,
+      "randomTextures": [
+        { },
+        { },
+        { },
+        { },
+        { },
+        { },
+        { }
       ],
-      "type": "no-in-web",
       "legacyBlockID": "hemp_block_0:1"
     },
     {
       "blockName": "hemp_dense",
-      "blockType": "web",
+      "blockType": "cuboid",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosDeco",
       "label": "Hemp Dense",
+      "isCustomModel": true,
+      "rotateRandom": true,
       "textures": [
         "hemp_block_0/hemp_dense"
       ],
-      "type": "no-in-web",
       "legacyBlockID": "hemp_block_0:2"
     },
     {
@@ -55749,15 +55761,16 @@
         }
       ],
       "creativeTab": "WesterosDeco",
+      "isCustomModel": true,
       "label": "Ghostskin",
-      "textures": [
-        "transparent",
-        "transparent",
-        "transparent",
-        "transparent",
-        "ghostskin/ghostskin_single",
-        "ghostskin/ghostskin_single"
-      ],
+      "randomTextures": [
+        { },
+        { },
+        { },
+        { },
+        { },
+        { }
+	  ],
       "boundingBox": {
         "xMin": 0.961,
         "xMax": 0.97,

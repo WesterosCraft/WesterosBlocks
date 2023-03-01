@@ -1,6 +1,3 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "westerosblocks:block/hemp_block_0/hemp_dense"
-  }
+  "parent": "westerosblocks:block/custom/hemp_dense/base_v1"
 }

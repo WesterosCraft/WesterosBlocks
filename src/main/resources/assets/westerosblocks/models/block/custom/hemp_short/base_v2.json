@@ -1,0 +1,57 @@
+{
+	"credit": "Made with Blockbench by Thamus_Knoward",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "westerosblocks:block/hemp_block_0/hemp",
+		"particle": "westerosblocks:block/hemp_block_0/hemp"
+	},
+	"elements": [
+		{
+			"name": "Top",
+			"from": [5.77911, 0, 0.01892],
+			"to": [5.77911, 16, 16.01892],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [7.49074, 24, 8.2414]},
+			"faces": {
+				"north": {"uv": [8.0625, 12, 12.0625, 16], "texture": "#0"},
+				"east": {"uv": [0, 8, 4, 12], "texture": "#0"},
+				"south": {"uv": [8.125, 12, 12.125, 16], "texture": "#0"},
+				"west": {"uv": [4, 8, 0, 12], "texture": "#0"},
+				"down": {"uv": [8, 12, 12, 16], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "Top",
+			"from": [-2.11149, 0, 8.06984],
+			"to": [13.88851, 16, 8.06984],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [7.49074, 24, 8.2414]},
+			"faces": {
+				"north": {"uv": [0, 8, 4, 12], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 4], "texture": "#0"},
+				"south": {"uv": [4, 8, 0, 12], "texture": "#0"},
+				"west": {"uv": [1.5, 0, 1.5, 4], "texture": "#0"},
+				"down": {"uv": [4, 0, 0, 0], "rotation": 180, "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "Plant1",
+			"origin": [5.96223, 0.25, 6.11013],
+			"color": 0,
+			"children": [
+				{
+					"name": "group",
+					"origin": [5.58164, 8.75, 4.52098],
+					"color": 0,
+					"children": [0, 1]
+				},
+				{
+					"name": "group",
+					"origin": [5.58164, 8.75, 4.52098],
+					"color": 0,
+					"children": []
+				}
+			]
+		}
+	]
+}
