@@ -1,4 +1,5 @@
 {
+    "parent": "minecraft:block/block",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"3": "westerosblocks:block/furnace_block_hollow/mud_furnace_inside_bottom_on",
