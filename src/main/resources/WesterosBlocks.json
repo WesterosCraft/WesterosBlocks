@@ -123,20 +123,13 @@
             "dirt/top_bot1",
             "dirt/ground"
           ],
-          "weight": 100,
-          "condIDs": [
-            "default"
-          ]
+          "weight": 100
         },
         {
           "textures": [
             "dirt/top_bot2",
             "dirt/top_bot2",
             "dirt/ground"
-          ],
-          "weight": 33,
-          "condIDs": [
-            "default"
           ]
         },
         {
@@ -145,10 +138,7 @@
             "dirt/top_bot3",
             "dirt/ground"
           ],
-          "weight": 45,
-          "condIDs": [
-            "default"
-          ]
+          "weight": 45
         },
         {
           "textures": [
@@ -156,10 +146,7 @@
             "dirt/top_bot4",
             "dirt/ground"
           ],
-          "weight": 140,
-          "condIDs": [
-            "default"
-          ]
+          "weight": 140
         },
         {
           "textures": [
@@ -167,10 +154,7 @@
             "dirt/top_bot5",
             "dirt/ground"
           ],
-          "weight": 193,
-          "condIDs": [
-            "default"
-          ]
+          "weight": 193
         },
         {
           "textures": [
@@ -178,10 +162,7 @@
             "dirt/top_bot6",
             "dirt/ground"
           ],
-          "weight": 77,
-          "condIDs": [
-            "default"
-          ]
+          "weight": 77
         },
         {
           "textures": [
@@ -189,10 +170,7 @@
             "dirt/top_bot7",
             "dirt/ground"
           ],
-          "weight": 77,
-          "condIDs": [
-            "default"
-          ]
+          "weight": 77
         },
         {
           "textures": [
@@ -200,134 +178,7 @@
             "dirt/top_bot8",
             "dirt/ground"
           ],
-          "weight": 77,
-          "condIDs": [
-            "default"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot1",
-            "dirt_forest/top_bot1",
-            "dirt/ground"
-          ],
-          "weight": 100,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot2",
-            "dirt_forest/top_bot2",
-            "dirt/ground"
-          ],
-          "weight": 33,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot3",
-            "dirt_forest/top_bot3",
-            "dirt/ground"
-          ],
-          "weight": 20,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot4",
-            "dirt_forest/top_bot4",
-            "dirt/ground"
-          ],
-          "weight": 45,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot5",
-            "dirt_forest/top_bot5",
-            "dirt/ground"
-          ],
-          "weight": 140,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot6",
-            "dirt_forest/top_bot6",
-            "dirt/ground"
-          ],
-          "weight": 193,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot7",
-            "dirt_forest/top_bot7",
-            "dirt/ground"
-          ],
-          "weight": 77,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot8",
-            "dirt_forest/top_bot8",
-            "dirt/ground"
-          ],
-          "weight": 20,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot9",
-            "dirt_forest/top_bot9",
-            "dirt/ground"
-          ],
-          "weight": 77,
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "dirt_forest/top_bot10",
-            "dirt_forest/top_bot10",
-            "dirt/ground"
-          ],
-          "weight": 77,
-          "condIDs": [
-            "forest"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "forest",
-          "biomes": [
-            "minecraft:forest",
-            "minecraft:flower_forest",
-            "minecraft:dark_forest",
-            "minecraft:jungle"
-          ]
-        },
-        {
-          "condID": "default"
+          "weight": 77
         }
       ],
       "legacyBlockID": "minecraft:dirt:snowy=false,variant=dirt"

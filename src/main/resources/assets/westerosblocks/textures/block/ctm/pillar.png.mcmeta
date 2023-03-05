@@ -1,12 +1,6 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_pillar",
-    "layer": "SOLID",
-    "textures": [
-    	"westerosblocks:block/ctm/pillar_ctm_2x2"	
-	],
-    "extra": {
-    }
+    "proxy": "westerosblocks:block/ctm/pillar_ctm_2x2"
   }
 }
