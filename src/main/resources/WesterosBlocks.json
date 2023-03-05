@@ -11707,9 +11707,6 @@
             "flowers/meadow_fescue_down1",
             "flowers/meadow_fescue_up_both1",
             "flowers/meadow_fescue_up_both1"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
@@ -11718,55 +11715,7 @@
             "flowers/meadow_fescue_down2",
             "flowers/meadow_fescue_up_both2",
             "flowers/meadow_fescue_up_both2"
-          ],
-          "condIDs": [
-            "default"
           ]
-        },
-        {
-          "textures": [
-            "flowers/meadow_fescue_north_side1",
-            "flowers/meadow_fescue_north_down1",
-            "flowers/meadow_fescue_north_up_both1",
-            "flowers/meadow_fescue_north_up_both1"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/meadow_fescue_north_side2",
-            "flowers/meadow_fescue_north_down2",
-            "flowers/meadow_fescue_north_up_both2",
-            "flowers/meadow_fescue_north_up_both2"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_ocean",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "red_flower_block_0:2"
