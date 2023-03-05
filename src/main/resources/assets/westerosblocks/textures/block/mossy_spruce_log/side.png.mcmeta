@@ -1,11 +1,6 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_pillar",
-    "layer": "SOLID",
-    "textures": [
-	    "westerosblocks:block/mossy_spruce_log/side_2x2"],
-    "extra": {
-    }
+    "proxy": "westerosblocks:block/mossy_spruce_log/side_2x2"
   }
 }
