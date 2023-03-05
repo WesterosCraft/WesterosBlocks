@@ -11262,64 +11262,17 @@
         {
           "textures": [
             "dead_hare/rabbit_dead1"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "dead_hare/rabbit_dead2"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
-            "dead_hare/snowrabbit_dead1"
-          ],
-          "condIDs": [
-            "north"
+            "dead_hare/rabbit_dead3"
           ]
-        },
-        {
-          "textures": [
-            "dead_hare/snowrabbit_dead2"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "dead_hare/snowrabbit_dead3"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "type": "no-in-web",
