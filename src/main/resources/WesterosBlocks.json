@@ -11289,75 +11289,25 @@
         {
           "textures": [
             "dead_fowl/fowl"
-          ],
-          "condIDs": [
-            "default"
+          ]
+        },
+        {
+          "textures": [
+            "dead_fowl/fowl2"
           ]
         },
         {
           "textures": [
             "dead_fowl/gooseplains"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
-            "dead_fowl/goosetaiga"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/snowshrikes"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/snowshrikesbrokenwing"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/snowshrikesfeather"
-          ],
-          "condIDs": [
-            "north"
+            "dead_fowl/gooseplains2"
           ]
         }
       ],
       "type": "no-in-web",
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
-        }
-      ],
       "legacyBlockID": "web_block_0:10"
     },
     {
