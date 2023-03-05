@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/terrainset_ocean/21",
-    "up": "westerosblocks:block/terrainset_ocean/21",
-    "north": "westerosblocks:block/terrainset_ocean/21",
-    "south": "westerosblocks:block/terrainset_ocean/21",
-    "west": "westerosblocks:block/terrainset_ocean/21",
-    "east": "westerosblocks:block/terrainset_ocean/21",
-    "particle": "westerosblocks:block/terrainset_ocean/21"
+    "down": "westerosblocks:block/terrainset_ocean/base_21",
+    "up": "westerosblocks:block/terrainset_ocean/base_21",
+    "north": "westerosblocks:block/terrainset_ocean/base_21",
+    "south": "westerosblocks:block/terrainset_ocean/base_21",
+    "west": "westerosblocks:block/terrainset_ocean/base_21",
+    "east": "westerosblocks:block/terrainset_ocean/base_21",
+    "particle": "westerosblocks:block/terrainset_ocean/base_21"
   }
 }

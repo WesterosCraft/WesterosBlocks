@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
-    "bottom": "westerosblocks:block/terrainset_ocean/20",
-    "top": "westerosblocks:block/terrainset_ocean/20",
-    "side": "westerosblocks:block/terrainset_ocean/20"
+    "bottom": "westerosblocks:block/terrainset_ocean/base_20",
+    "top": "westerosblocks:block/terrainset_ocean/base_20",
+    "side": "westerosblocks:block/terrainset_ocean/base_20"
   }
 }

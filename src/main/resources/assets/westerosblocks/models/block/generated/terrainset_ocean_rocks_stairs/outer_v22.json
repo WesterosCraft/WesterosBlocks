@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/terrainset_ocean/22",
-    "top": "westerosblocks:block/terrainset_ocean/22",
-    "side": "westerosblocks:block/terrainset_ocean/22",
-    "particle": "westerosblocks:block/terrainset_ocean/22"
+    "bottom": "westerosblocks:block/terrainset_ocean/base_22",
+    "top": "westerosblocks:block/terrainset_ocean/base_22",
+    "side": "westerosblocks:block/terrainset_ocean/base_22",
+    "particle": "westerosblocks:block/terrainset_ocean/base_22"
   }
 }
