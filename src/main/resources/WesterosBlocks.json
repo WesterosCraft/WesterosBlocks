@@ -7813,425 +7813,123 @@
       "randomTextures": [
         {
           "textures": [
-            "terrainset_ocean/1"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_1"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/2"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_2"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/3"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_3"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/4"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_4"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/5"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_5"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/6"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_6"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/7"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_7"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/8"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_8"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/9"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_9"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/10"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_10"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/11"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_11"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/12"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_12"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/13"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_13"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/14"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_14"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/15"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_15"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/16"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_16"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/17"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_17"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/18"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_18"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/19"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_19"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/20"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_20"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/21"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_21"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/22"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_22"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/23"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_23"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/24"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_24"
           ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/32"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/33"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/34"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/35"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/36"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/37"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/38"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/39"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/40"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/41"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/42"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/43"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/44"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/45"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/46"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/47"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/64"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/65"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/66"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/67"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/68"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/69"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/70"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/71"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/72"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/73"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/74"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "dry",
-          "minY": 45
-        },
-        {
-          "condID": "wet",
-          "minY": 36,
-          "maxY": 44
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "stone_block_1:4"
@@ -11564,64 +11262,17 @@
         {
           "textures": [
             "dead_hare/rabbit_dead1"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "dead_hare/rabbit_dead2"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
-            "dead_hare/snowrabbit_dead1"
-          ],
-          "condIDs": [
-            "north"
+            "dead_hare/rabbit_dead3"
           ]
-        },
-        {
-          "textures": [
-            "dead_hare/snowrabbit_dead2"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "dead_hare/snowrabbit_dead3"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "type": "no-in-web",
@@ -11638,75 +11289,25 @@
         {
           "textures": [
             "dead_fowl/fowl"
-          ],
-          "condIDs": [
-            "default"
+          ]
+        },
+        {
+          "textures": [
+            "dead_fowl/fowl2"
           ]
         },
         {
           "textures": [
             "dead_fowl/gooseplains"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
-            "dead_fowl/goosetaiga"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/snowshrikes"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/snowshrikesbrokenwing"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/snowshrikesfeather"
-          ],
-          "condIDs": [
-            "north"
+            "dead_fowl/gooseplains2"
           ]
         }
       ],
       "type": "no-in-web",
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
-        }
-      ],
       "legacyBlockID": "web_block_0:10"
     },
     {
@@ -12106,9 +11707,6 @@
             "flowers/meadow_fescue_down1",
             "flowers/meadow_fescue_up_both1",
             "flowers/meadow_fescue_up_both1"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
@@ -12117,55 +11715,7 @@
             "flowers/meadow_fescue_down2",
             "flowers/meadow_fescue_up_both2",
             "flowers/meadow_fescue_up_both2"
-          ],
-          "condIDs": [
-            "default"
           ]
-        },
-        {
-          "textures": [
-            "flowers/meadow_fescue_north_side1",
-            "flowers/meadow_fescue_north_down1",
-            "flowers/meadow_fescue_north_up_both1",
-            "flowers/meadow_fescue_north_up_both1"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/meadow_fescue_north_side2",
-            "flowers/meadow_fescue_north_down2",
-            "flowers/meadow_fescue_north_up_both2",
-            "flowers/meadow_fescue_north_up_both2"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_ocean",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "red_flower_block_0:2"
@@ -12950,56 +12500,12 @@
         {
           "textures": [
             "cranberry/base1"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "cranberry/base2"
-          ],
-          "condIDs": [
-            "default"
           ]
-        },
-        {
-          "textures": [
-            "cranberry/north1"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "cranberry/north2"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:snowy_beach",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "red_flower_block_1:9"
@@ -40114,425 +39620,123 @@
       "randomTextures": [
         {
           "textures": [
-            "terrainset_ocean/1"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_1"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/2"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_2"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/3"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_3"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/4"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_4"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/5"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_5"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/6"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_6"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/7"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_7"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/8"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_8"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/9"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_9"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/10"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_10"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/11"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_11"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/12"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_12"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/13"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_13"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/14"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_14"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/15"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_15"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/16"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_16"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/17"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_17"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/18"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_18"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/19"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_19"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/20"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_20"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/21"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_21"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/22"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_22"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/23"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_23"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/24"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_24"
           ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/32"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/33"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/34"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/35"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/36"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/37"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/38"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/39"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/40"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/41"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/42"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/43"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/44"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/45"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/46"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/47"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/64"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/65"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/66"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/67"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/68"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/69"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/70"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/71"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/72"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/73"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/74"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "dry",
-          "minY": 45
-        },
-        {
-          "condID": "wet",
-          "minY": 36,
-          "maxY": 44
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "terrainset_slab_block_0:4"
@@ -42121,425 +41325,123 @@
       "randomTextures": [
         {
           "textures": [
-            "terrainset_ocean/1"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_1"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/2"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_2"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/3"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_3"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/4"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_4"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/5"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_5"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/6"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_6"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/7"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_7"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/8"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_8"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/9"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_9"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/10"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_10"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/11"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_11"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/12"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_12"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/13"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_13"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/14"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_14"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/15"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_15"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/16"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_16"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/17"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_17"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/18"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_18"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/19"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_19"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/20"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_20"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/21"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_21"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/22"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_22"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/23"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_23"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/24"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_24"
           ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/32"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/33"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/34"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/35"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/36"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/37"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/38"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/39"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/40"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/41"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/42"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/43"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/44"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/45"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/46"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/47"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/64"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/65"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/66"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/67"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/68"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/69"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/70"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/71"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/72"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/73"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/74"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "dry",
-          "minY": 45
-        },
-        {
-          "condID": "wet",
-          "minY": 36,
-          "maxY": 44
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "terrainset_wall_block_0:4"
@@ -44098,425 +43000,123 @@
       "randomTextures": [
         {
           "textures": [
-            "terrainset_ocean/1"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_1"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/2"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_2"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/3"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_3"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/4"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_4"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/5"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_5"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/6"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_6"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/7"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_7"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/8"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_8"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/9"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_9"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/10"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_10"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/11"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_11"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/12"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_12"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/13"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_13"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/14"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_14"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/15"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_15"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/16"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_16"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/17"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_17"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/18"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_18"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/19"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_19"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/20"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_20"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/21"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_21"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/22"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_22"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/23"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_23"
           ]
         },
         {
           "textures": [
-            "terrainset_ocean/24"
-          ],
-          "condIDs": [
-            "default"
+            "terrainset_ocean/base_24"
           ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/32"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/33"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/34"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/35"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/36"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/37"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/38"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/39"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/40"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/41"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/42"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/43"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/44"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/45"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/46"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/47"
-          ],
-          "condIDs": [
-            "wet"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/64"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/65"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/66"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/67"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/68"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/69"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/70"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/71"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/72"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/73"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/74"
-          ],
-          "condIDs": [
-            "dry"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "dry",
-          "minY": 45
-        },
-        {
-          "condID": "wet",
-          "minY": 36,
-          "maxY": 44
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "terrainset_fence_block_3:4"

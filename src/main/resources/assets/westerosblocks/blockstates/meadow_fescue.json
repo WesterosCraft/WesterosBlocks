@@ -1,22 +1,6 @@
 {
   "variants": {
-    "up=true,down=false,cond=north": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/up_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/up_v4"
-      }
-    ],
-    "up=true,down=true,cond=default": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/both_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/both_v2"
-      }
-    ],
-    "up=false,down=true,cond=default": [
+    "up=false,down=true": [
       {
         "model": "westerosblocks:block/generated/meadow_fescue/down_v1"
       },
@@ -24,31 +8,7 @@
         "model": "westerosblocks:block/generated/meadow_fescue/down_v2"
       }
     ],
-    "up=true,down=false,cond=default": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/up_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/up_v2"
-      }
-    ],
-    "up=true,down=true,cond=north": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/both_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/both_v4"
-      }
-    ],
-    "up=false,down=true,cond=north": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/down_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/down_v4"
-      }
-    ],
-    "up=false,down=false,cond=default": [
+    "up=false,down=false": [
       {
         "model": "westerosblocks:block/generated/meadow_fescue/base_v1"
       },
@@ -56,12 +16,20 @@
         "model": "westerosblocks:block/generated/meadow_fescue/base_v2"
       }
     ],
-    "up=false,down=false,cond=north": [
+    "up=true,down=true": [
       {
-        "model": "westerosblocks:block/generated/meadow_fescue/base_v3"
+        "model": "westerosblocks:block/generated/meadow_fescue/both_v1"
       },
       {
-        "model": "westerosblocks:block/generated/meadow_fescue/base_v4"
+        "model": "westerosblocks:block/generated/meadow_fescue/both_v2"
+      }
+    ],
+    "up=true,down=false": [
+      {
+        "model": "westerosblocks:block/generated/meadow_fescue/up_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/meadow_fescue/up_v2"
       }
     ]
   }

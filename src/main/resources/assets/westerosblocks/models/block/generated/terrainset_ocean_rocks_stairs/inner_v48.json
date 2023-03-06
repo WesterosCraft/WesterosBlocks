@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset_ocean/71",
-    "top": "westerosblocks:block/terrainset_ocean/71",
-    "side": "westerosblocks:block/terrainset_ocean/71",
-    "particle": "westerosblocks:block/terrainset_ocean/71"
-  }
-}

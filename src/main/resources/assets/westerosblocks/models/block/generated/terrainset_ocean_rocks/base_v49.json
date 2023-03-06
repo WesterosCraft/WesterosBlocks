@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "westerosblocks:block/terrainset_ocean/72"
-  }
-}
