@@ -12500,56 +12500,12 @@
         {
           "textures": [
             "cranberry/base1"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "cranberry/base2"
-          ],
-          "condIDs": [
-            "default"
           ]
-        },
-        {
-          "textures": [
-            "cranberry/north1"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "cranberry/north2"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:snowy_beach",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "red_flower_block_1:9"
