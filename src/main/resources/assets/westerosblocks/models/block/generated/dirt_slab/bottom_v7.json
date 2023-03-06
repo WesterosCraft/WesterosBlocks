@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/dirt/top_bot7",
-    "up": "westerosblocks:block/dirt/top_bot7",
-    "north": "westerosblocks:block/dirt/ground",
-    "south": "westerosblocks:block/dirt/ground",
-    "west": "westerosblocks:block/dirt/ground",
-    "east": "westerosblocks:block/dirt/ground",
-    "particle": "westerosblocks:block/dirt/ground"
+    "down": "minecraft:block/dirt/top_bot7",
+    "up": "minecraft:block/dirt/top_bot7",
+    "north": "minecraft:block/dirt",
+    "south": "minecraft:block/dirt",
+    "west": "minecraft:block/dirt",
+    "east": "minecraft:block/dirt",
+    "particle": "minecraft:block/dirt"
   }
 }
