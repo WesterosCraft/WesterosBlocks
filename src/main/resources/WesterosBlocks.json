@@ -53787,9 +53787,9 @@
         "xMin": 0.3,
         "xMax": 0.7,
         "yMin": 0,
-        "yMax": 0.6,
-        "zMin": 0.3,
-        "zMax": 0.7
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
       },
       "legacyBlockID": "hemp_block_0:0"
     },
@@ -53815,9 +53815,9 @@
         "xMin": 0.3,
         "xMax": 0.7,
         "yMin": 0,
-        "yMax": 0.6,
-        "zMin": 0.3,
-        "zMax": 0.7
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
       },
       "legacyBlockID": "hemp_block_0:1"
     },
@@ -53837,9 +53837,9 @@
         "xMin": 0.3,
         "xMax": 0.7,
         "yMin": 0,
-        "yMax": 0.6,
-        "zMin": 0.3,
-        "zMax": 0.7
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
       },
       "legacyBlockID": "hemp_block_0:2"
     },
@@ -53871,9 +53871,9 @@
         "xMin": 0.3,
         "xMax": 0.7,
         "yMin": 0,
-        "yMax": 0.6,
-        "zMin": 0.3,
-        "zMax": 0.7
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
       },
       "legacyBlockID": "ghostskin:0"
     },
