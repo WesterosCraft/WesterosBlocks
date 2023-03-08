@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_vertical",
+    "type": "westeros_vertical_cond",
     "layer": "CUTOUT",
     "textures": [
     	"westerosblocks:block/sausages_leg_of_ham/north1_2x2"
