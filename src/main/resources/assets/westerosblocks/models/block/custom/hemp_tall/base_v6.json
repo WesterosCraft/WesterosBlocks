@@ -1,10 +1,15 @@
 {
     "parent": "minecraft:block/block",
 	"credit": "Made with Blockbench by Thamus_Knoward",
+	"display": {
+		"gui": {
+			"scale":[ 0.15, 0.15, 0.15 ]
+		}
+	},
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "westerosblocks:block/hemp_block_0/hemp",
-		"particle": "westerosblocks:block/hemp_block_0/hemp"
+		"0": "westerosblocks:block/hemp/hemp",
+		"particle": "westerosblocks:block/hemp/hemp"
 	},
 	"elements": [
 		{

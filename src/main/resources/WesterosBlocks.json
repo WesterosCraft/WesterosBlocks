@@ -53843,6 +53843,14 @@
         { },
         { }
       ],
+      "boundingBox": {
+        "xMin": 0.961,
+        "xMax": 0.97,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      },
       "legacyBlockID": "hemp_block_0:0"
     },
     {
@@ -53863,6 +53871,14 @@
         { },
         { }
       ],
+      "boundingBox": {
+        "xMin": 0.961,
+        "xMax": 0.97,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      },
       "legacyBlockID": "hemp_block_0:1"
     },
     {
@@ -53875,8 +53891,16 @@
       "isCustomModel": true,
       "rotateRandom": true,
       "textures": [
-        "hemp_block_0/hemp_dense"
+        "hemp/hemp_dense"
       ],
+      "boundingBox": {
+        "xMin": 0.961,
+        "xMax": 0.97,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      },
       "legacyBlockID": "hemp_block_0:2"
     },
     {

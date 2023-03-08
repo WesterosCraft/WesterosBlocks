@@ -1,6 +1,11 @@
 {
-    "parent": "minecraft:block/block",
+	"parent": "minecraft:block/block",
 	"credit": "Made with Blockbench by Thamus_Knoward",
+  "display": {
+    "gui": {
+      "scale":[ 0.25, 0.25, 0.25 ]
+    }
+  },
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "westerosblocks:block/ghostskin/ghostskin",
