@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench by Thamus_Knoward",
 	"display": {
 		"gui": {
-			"scale":[ 0.25, 0.25, 0.25 ]
+			"scale":[ 0.10, 0.10, 0.10 ]
 		}
 	},
 	"texture_size": [64, 64],

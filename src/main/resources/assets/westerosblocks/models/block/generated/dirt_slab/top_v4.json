@@ -3,10 +3,10 @@
   "textures": {
     "down": "minecraft:block/dirt/top_bot4",
     "up": "minecraft:block/dirt/top_bot4",
-    "north": "minecraft:block/dirt",
-    "south": "minecraft:block/dirt",
-    "west": "minecraft:block/dirt",
-    "east": "minecraft:block/dirt",
-    "particle": "minecraft:block/dirt"
+    "north": "westerosblocks:block/dirt/ground",
+    "south": "westerosblocks:block/dirt/ground",
+    "west": "westerosblocks:block/dirt/ground",
+    "east": "westerosblocks:block/dirt/ground",
+    "particle": "westerosblocks:block/dirt/ground"
   }
 }
