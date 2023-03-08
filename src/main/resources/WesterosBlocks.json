@@ -53784,12 +53784,12 @@
         { }
       ],
       "boundingBox": {
-        "xMin": 0.961,
-        "xMax": 0.97,
+        "xMin": 0.3,
+        "xMax": 0.7,
         "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
       },
       "legacyBlockID": "hemp_block_0:0"
     },
@@ -53812,12 +53812,12 @@
         { }
       ],
       "boundingBox": {
-        "xMin": 0.961,
-        "xMax": 0.97,
+        "xMin": 0.3,
+        "xMax": 0.7,
         "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
       },
       "legacyBlockID": "hemp_block_0:1"
     },
@@ -53834,12 +53834,12 @@
         "hemp/hemp_dense"
       ],
       "boundingBox": {
-        "xMin": 0.961,
-        "xMax": 0.97,
+        "xMin": 0.3,
+        "xMax": 0.7,
         "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
       },
       "legacyBlockID": "hemp_block_0:2"
     },
@@ -53868,12 +53868,12 @@
         { }
 	  ],
       "boundingBox": {
-        "xMin": 0.961,
-        "xMax": 0.97,
+        "xMin": 0.3,
+        "xMax": 0.7,
         "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
+        "yMax": 0.6,
+        "zMin": 0.3,
+        "zMax": 0.7
       },
       "legacyBlockID": "ghostskin:0"
     },
