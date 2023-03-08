@@ -28,12 +28,18 @@
     ],
     "type=double": [
       {
+<<<<<<< HEAD
         "model": "westerosblocks:block/generated/dirt_slab/double_v1"
+=======
+        "model": "westerosblocks:block/generated/dirt_slab/double_v1",
+        "weight": 100
+>>>>>>> ce38bd3198c75e56bf8a2ecf967d3d339f0ed042
       },
       {
         "model": "westerosblocks:block/generated/dirt_slab/double_v2"
       },
       {
+<<<<<<< HEAD
         "model": "westerosblocks:block/generated/dirt_slab/double_v3"
       },
       {
@@ -77,6 +83,64 @@
       {
         "model": "westerosblocks:block/generated/dirt_slab/top_v8"
       }
+=======
+        "model": "westerosblocks:block/generated/dirt_slab/double_v3",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v4",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v5",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v6",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v7",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/double_v8",
+        "weight": 77
+      }
+    ],
+    "type=top": [
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v1",
+        "weight": 100
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v3",
+        "weight": 45
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v4",
+        "weight": 140
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v5",
+        "weight": 193
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v6",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v7",
+        "weight": 77
+      },
+      {
+        "model": "westerosblocks:block/generated/dirt_slab/top_v8",
+        "weight": 77
+      }
+>>>>>>> ce38bd3198c75e56bf8a2ecf967d3d339f0ed042
     ]
   }
 }

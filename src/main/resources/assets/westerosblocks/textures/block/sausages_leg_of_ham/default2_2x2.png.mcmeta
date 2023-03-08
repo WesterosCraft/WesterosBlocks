@@ -3,8 +3,29 @@
     "ctm_version": 1,
     "type": "westeros_vertical",
     "layer": "CUTOUT",
-    "textures": [],
+    "textures": [
+    	"westerosblocks:block/sausages_leg_of_ham/north2_2x2"
+    ],
     "extra": {
+       "condWidth": 2,
+       "condHeight": 2,
+       "conds": [
+       		{ "biomeNames": [
+	            "minecraft:windswept_hills",
+    	        "minecraft:windswept_forest",
+        	    "minecraft:windswept_gravelly_hills",
+            	"minecraft:snowy_beach",
+            	"minecraft:taiga",
+	            "minecraft:snowy_taiga",
+    	        "minecraft:old_growth_pine_taiga",
+        	    "minecraft:old_growth_spruce_taiga",
+            	"minecraft:snowy_plains",
+	            "minecraft:frozen_river",
+    	        "minecraft:frozen_ocean",
+        	    "minecraft:snowy_beach",
+            	"minecraft:ice_spikes"
+       		 ] }
+       ]        
     }
   }
 }

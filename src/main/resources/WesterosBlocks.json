@@ -9852,57 +9852,64 @@
           "textures": [
             "minecraft:block/dirt/top_bot1",
             "minecraft:block/dirt/top_bot1",
-            "minecraft:block/dirt"
-          ]
+            "dirt/ground"
+          ],
+          "weight": 100
         },
         {
           "textures": [
             "minecraft:block/dirt/top_bot2",
             "minecraft:block/dirt/top_bot2",
-            "minecraft:block/dirt"
+            "dirt/ground"
           ]
         },
         {
           "textures": [
             "minecraft:block/dirt/top_bot3",
             "minecraft:block/dirt/top_bot3",
-            "minecraft:block/dirt"
-          ]
+            "dirt/ground"
+          ],
+          "weight": 45
         },
         {
           "textures": [
             "minecraft:block/dirt/top_bot4",
             "minecraft:block/dirt/top_bot4",
-            "minecraft:block/dirt"
-          ]
+            "dirt/ground"
+          ],
+          "weight": 140
         },
         {
           "textures": [
             "minecraft:block/dirt/top_bot5",
             "minecraft:block/dirt/top_bot5",
-            "minecraft:block/dirt"
-          ]
+            "dirt/ground"
+          ],
+          "weight": 193
         },
         {
           "textures": [
             "minecraft:block/dirt/top_bot6",
             "minecraft:block/dirt/top_bot6",
-            "minecraft:block/dirt"
-          ]
+            "dirt/ground"
+          ],
+          "weight": 77
         },
         {
           "textures": [
             "minecraft:block/dirt/top_bot7",
             "minecraft:block/dirt/top_bot7",
-            "minecraft:block/dirt"
-          ]
+            "dirt/ground"
+          ],
+          "weight": 77
         },
         {
           "textures": [
             "minecraft:block/dirt/top_bot8",
             "minecraft:block/dirt/top_bot8",
-            "minecraft:block/dirt"
-          ]
+            "dirt/ground"
+          ],
+          "weight": 77
         }
       ],
       "legacyBlockID": "random_slab_block_0:0"
@@ -10925,89 +10932,22 @@
         {
           "textures": [
             "sausages_leg_of_ham/default1"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "sausages_leg_of_ham/default2"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "sausages_leg_of_ham/default3"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "sausages_leg_of_ham/default4"
-          ],
-          "condIDs": [
-            "default"
           ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/north1"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/north2"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/north3"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/north4"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:snowy_beach",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "type": "no-in-web",
