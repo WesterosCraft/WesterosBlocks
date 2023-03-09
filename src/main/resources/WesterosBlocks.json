@@ -102,88 +102,6 @@
   ],
   "blocks": [
     {
-      "blockName": "dirt",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "harvestLevel": [
-        {
-          "tool": "shovel",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBlocks",
-      "label": "Dirt",
-      "randomTextures": [
-        {
-          "textures": [
-            "dirt/top_bot1",
-            "dirt/top_bot1",
-            "dirt/ground"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dirt/top_bot2",
-            "dirt/top_bot2",
-            "dirt/ground"
-          ]
-        },
-        {
-          "textures": [
-            "dirt/top_bot3",
-            "dirt/top_bot3",
-            "dirt/ground"
-          ],
-          "weight": 45
-        },
-        {
-          "textures": [
-            "dirt/top_bot4",
-            "dirt/top_bot4",
-            "dirt/ground"
-          ],
-          "weight": 140
-        },
-        {
-          "textures": [
-            "dirt/top_bot5",
-            "dirt/top_bot5",
-            "dirt/ground"
-          ],
-          "weight": 193
-        },
-        {
-          "textures": [
-            "dirt/top_bot6",
-            "dirt/top_bot6",
-            "dirt/ground"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dirt/top_bot7",
-            "dirt/top_bot7",
-            "dirt/ground"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dirt/top_bot8",
-            "dirt/top_bot8",
-            "dirt/ground"
-          ],
-          "weight": 77
-        }
-      ],
-      "legacyBlockID": "minecraft:dirt:snowy=false,variant=dirt"
-    },
-    {
       "blockName": "oxidized_iron_block",
       "blockType": "solid",
       "hardness": 5,
@@ -9932,63 +9850,63 @@
       "randomTextures": [
         {
           "textures": [
-            "dirt/top_bot1",
-            "dirt/top_bot1",
+            "minecraft:block/dirt/top_bot1",
+            "minecraft:block/dirt/top_bot1",
             "dirt/ground"
           ],
           "weight": 100
         },
         {
           "textures": [
-            "dirt/top_bot2",
-            "dirt/top_bot2",
+            "minecraft:block/dirt/top_bot2",
+            "minecraft:block/dirt/top_bot2",
             "dirt/ground"
           ]
         },
         {
           "textures": [
-            "dirt/top_bot3",
-            "dirt/top_bot3",
+            "minecraft:block/dirt/top_bot3",
+            "minecraft:block/dirt/top_bot3",
             "dirt/ground"
           ],
           "weight": 45
         },
         {
           "textures": [
-            "dirt/top_bot4",
-            "dirt/top_bot4",
+            "minecraft:block/dirt/top_bot4",
+            "minecraft:block/dirt/top_bot4",
             "dirt/ground"
           ],
           "weight": 140
         },
         {
           "textures": [
-            "dirt/top_bot5",
-            "dirt/top_bot5",
+            "minecraft:block/dirt/top_bot5",
+            "minecraft:block/dirt/top_bot5",
             "dirt/ground"
           ],
           "weight": 193
         },
         {
           "textures": [
-            "dirt/top_bot6",
-            "dirt/top_bot6",
+            "minecraft:block/dirt/top_bot6",
+            "minecraft:block/dirt/top_bot6",
             "dirt/ground"
           ],
           "weight": 77
         },
         {
           "textures": [
-            "dirt/top_bot7",
-            "dirt/top_bot7",
+            "minecraft:block/dirt/top_bot7",
+            "minecraft:block/dirt/top_bot7",
             "dirt/ground"
           ],
           "weight": 77
         },
         {
           "textures": [
-            "dirt/top_bot8",
-            "dirt/top_bot8",
+            "minecraft:block/dirt/top_bot8",
+            "minecraft:block/dirt/top_bot8",
             "dirt/ground"
           ],
           "weight": 77
@@ -46570,101 +46488,6 @@
       "legacyBlockID": "rope_block_7:0"
     },
     {
-      "blockName": "path_dirt",
-      "blockType": "cuboid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosBlocks",
-      "label": "Path Dirt",
-      "randomTextures": [
-        {
-          "textures": [
-            "dirt/top_bot1",
-            "dirt/top_bot1",
-            "dirt/ground"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dirt/top_bot2",
-            "dirt/top_bot2",
-            "dirt/ground"
-          ],
-          "weight": 33
-        },
-        {
-          "textures": [
-            "dirt/top_bot3",
-            "dirt/top_bot3",
-            "dirt/ground"
-          ],
-          "weight": 45
-        },
-        {
-          "textures": [
-            "dirt/top_bot4",
-            "dirt/top_bot4",
-            "dirt/ground"
-          ],
-          "weight": 140
-        },
-        {
-          "textures": [
-            "dirt/top_bot5",
-            "dirt/top_bot5",
-            "dirt/ground"
-          ],
-          "weight": 193
-        },
-        {
-          "textures": [
-            "dirt/top_bot6",
-            "dirt/top_bot6",
-            "dirt/ground"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dirt/top_bot7",
-            "dirt/top_bot7",
-            "dirt/ground"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dirt/top_bot8",
-            "dirt/top_bot8",
-            "dirt/ground"
-          ],
-          "weight": 77
-        }
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.9375,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ],
-      "legacyBlockID": "cuboid_block_10:0"
-    },
-    {
       "blockName": "path_gravel",
       "blockType": "cuboid",
       "hardness": 2,
@@ -53971,6 +53794,14 @@
         { },
         { }
       ],
+      "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      },
       "legacyBlockID": "hemp_block_0:0"
     },
     {
@@ -53991,6 +53822,14 @@
         { },
         { }
       ],
+      "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      },
       "legacyBlockID": "hemp_block_0:1"
     },
     {
@@ -54003,8 +53842,16 @@
       "isCustomModel": true,
       "rotateRandom": true,
       "textures": [
-        "hemp_block_0/hemp_dense"
+        "hemp/hemp_dense"
       ],
+      "boundingBox": {
+        "xMin": 0.3,
+        "xMax": 0.7,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      },
       "legacyBlockID": "hemp_block_0:2"
     },
     {
@@ -54032,8 +53879,8 @@
         { }
 	  ],
       "boundingBox": {
-        "xMin": 0.961,
-        "xMax": 0.97,
+        "xMin": 0.3,
+        "xMax": 0.7,
         "yMin": 0,
         "yMax": 1,
         "zMin": 0,

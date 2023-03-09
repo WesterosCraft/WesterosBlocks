@@ -8,11 +8,11 @@ import net.minecraft.world.item.ItemStack;
 
 public class  WesterosBlocksCreativeTab extends CreativeModeTab {
 
-    public static final CreativeModeTab tabWesterosBlocks = new  WesterosBlocksCreativeTab("WesterosBlocks", "Westeros Blocks", "timber_red_white_vertical");
-    public static final CreativeModeTab tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "Westeros Decorative", "apple_basket");
-    public static final CreativeModeTab tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "Westeros Plants", "yellow_wildflowers");
-    public static final CreativeModeTab tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "Westeros Sounds", "tavern_small");
-    public static final CreativeModeTab tabWesterosCTMSamples = new  WesterosBlocksCreativeTab("WesterosCTMSamples", "CTM Samples", "ctm_vertical");
+    public static final CreativeModeTab tabWesterosBlocks = new  WesterosBlocksCreativeTab("WesterosBlocks", "§fWesteros Blocks", "timber_red_white_vertical");
+    public static final CreativeModeTab tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "§fWesteros Decorative", "apple_basket");
+    public static final CreativeModeTab tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "§fWesteros Plants", "yellow_wildflowers");
+    public static final CreativeModeTab tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "§fWesteros Sounds", "tavern_small");
+    public static final CreativeModeTab tabWesterosCTMSamples = new  WesterosBlocksCreativeTab("WesterosCTMSamples", "§fCTM Samples", "ctm_vertical");
     
     public static void init() {
         
