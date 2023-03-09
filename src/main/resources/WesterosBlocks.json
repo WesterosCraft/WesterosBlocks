@@ -21242,16 +21242,13 @@
     },
     {
       "blockName": "jungle_tall_fern",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosPlants",
       "label": "Jungle Tall Fern",
       "textures": [
-        "jungle_tall_fern/down_side1",
-        "jungle_tall_fern/down_side1",
-        "jungle_tall_fern/up1",
-        "jungle_tall_fern/both1"
+        "jungle_tall_fern/side"
       ],
       "colorMult": "textures/colormap/grass",
       "type": "no-in-web",
