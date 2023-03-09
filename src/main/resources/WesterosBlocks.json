@@ -47601,6 +47601,17 @@
       ]
     },
     {
+      "blockName": "westeros_horizontal",
+      "blockType": "solid",
+      "stepSound": "wood",
+      "material": "cloth",
+      "creativeTab": "WesterosCTMSamples",
+      "label": "Westeros Horizontal CTM",
+      "textures": [
+        "ctm/westeroshorizontal"
+      ]
+    },
+    {
       "blockName": "ctm_pattern",
       "blockType": "solid",
       "stepSound": "wood",
