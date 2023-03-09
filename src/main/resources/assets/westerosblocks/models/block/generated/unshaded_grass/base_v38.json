@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "westerosblocks:block/deadbush/taiga_grass_thicktall_dark"
-  }
-}

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/deadbush/cactus_tall"
+    "cross": "westerosblocks:block/deadbush/side3"
   }
 }

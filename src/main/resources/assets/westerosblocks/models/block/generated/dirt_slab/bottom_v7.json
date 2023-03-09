@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "minecraft:block/dirt/top_bot7",
-    "up": "minecraft:block/dirt/top_bot7",
+    "down": "westerosblocks:block/dirt/top_bot7",
+    "up": "westerosblocks:block/dirt/top_bot7",
     "north": "westerosblocks:block/dirt/ground",
     "south": "westerosblocks:block/dirt/ground",
     "west": "westerosblocks:block/dirt/ground",

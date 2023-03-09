@@ -1,6 +1,9 @@
 {
   "variants": {
-    ",cond=desert": [
+    "": [
+      {
+        "model": "westerosblocks:block/generated/unshaded_grass/base_v1"
+      },
       {
         "model": "westerosblocks:block/generated/unshaded_grass/base_v2"
       },
@@ -21,119 +24,6 @@
       },
       {
         "model": "westerosblocks:block/generated/unshaded_grass/base_v8"
-      }
-    ],
-    ",cond=plains": [
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v17"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v18"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v19"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v20"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v21"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v22"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v23"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v24"
-      }
-    ],
-    ",cond=swamp": [
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v25"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v26"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v27"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v28"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v29"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v30"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v31"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v32"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v33"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v34"
-      }
-    ],
-    ",cond=default": {
-      "model": "westerosblocks:block/generated/unshaded_grass/base_v1"
-    },
-    ",cond=forest": [
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v9"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v10"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v11"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v12"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v13"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v14"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v15"
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v16"
-      }
-    ],
-    ",cond=taiga": [
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v35",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v36",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v37",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v38",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v39",
-        "weight": 10
-      },
-      {
-        "model": "westerosblocks:block/generated/unshaded_grass/base_v40",
-        "weight": 20
       }
     ]
   }

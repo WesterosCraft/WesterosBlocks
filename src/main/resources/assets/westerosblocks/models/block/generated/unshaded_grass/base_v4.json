@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/deadbush/dead_shrub"
+    "cross": "westerosblocks:block/deadbush/side4"
   }
 }
