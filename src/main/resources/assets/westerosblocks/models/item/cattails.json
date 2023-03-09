@@ -1,4 +1,6 @@
 {
-  "parent": "westerosblocks:block/generated/cattails/base_v1",
-  "textures": {}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/cattails/side1"
+  }
 }
