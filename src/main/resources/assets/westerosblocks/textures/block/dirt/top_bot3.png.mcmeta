@@ -1,0 +1,22 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+    "layer": "SOLID",
+    "textures": ["westerosblocks:block/dirt_forest/top_bot3"],
+    "extra": {
+      "conds": [
+        {
+          "biomeNames": [
+            "minecraft:forest",
+            "minecraft:flower_forest",
+            "minecraft:dark_forest",
+            "minecraft:jungle"
+          ],
+          "rowOut": 0,
+          "colOut": 0
+        }
+      ]
+    }
+  }
+}

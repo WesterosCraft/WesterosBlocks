@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "westerosblocks:block/deadbush/swamp_grass_thinmedium_light"
-  }
-}

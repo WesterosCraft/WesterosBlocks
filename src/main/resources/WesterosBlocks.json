@@ -9850,63 +9850,63 @@
       "randomTextures": [
         {
           "textures": [
-            "minecraft:block/dirt/top_bot1",
-            "minecraft:block/dirt/top_bot1",
+            "dirt/top_bot1",
+            "dirt/top_bot1",
             "dirt/ground"
           ],
           "weight": 100
         },
         {
           "textures": [
-            "minecraft:block/dirt/top_bot2",
-            "minecraft:block/dirt/top_bot2",
+            "dirt/top_bot2",
+            "dirt/top_bot2",
             "dirt/ground"
           ]
         },
         {
           "textures": [
-            "minecraft:block/dirt/top_bot3",
-            "minecraft:block/dirt/top_bot3",
+            "dirt/top_bot3",
+            "dirt/top_bot3",
             "dirt/ground"
           ],
           "weight": 45
         },
         {
           "textures": [
-            "minecraft:block/dirt/top_bot4",
-            "minecraft:block/dirt/top_bot4",
+            "dirt/top_bot4",
+            "dirt/top_bot4",
             "dirt/ground"
           ],
           "weight": 140
         },
         {
           "textures": [
-            "minecraft:block/dirt/top_bot5",
-            "minecraft:block/dirt/top_bot5",
+            "dirt/top_bot5",
+            "dirt/top_bot5",
             "dirt/ground"
           ],
           "weight": 193
         },
         {
           "textures": [
-            "minecraft:block/dirt/top_bot6",
-            "minecraft:block/dirt/top_bot6",
+            "dirt/top_bot6",
+            "dirt/top_bot6",
             "dirt/ground"
           ],
           "weight": 77
         },
         {
           "textures": [
-            "minecraft:block/dirt/top_bot7",
-            "minecraft:block/dirt/top_bot7",
+            "dirt/top_bot7",
+            "dirt/top_bot7",
             "dirt/ground"
           ],
           "weight": 77
         },
         {
           "textures": [
-            "minecraft:block/dirt/top_bot8",
-            "minecraft:block/dirt/top_bot8",
+            "dirt/top_bot8",
+            "dirt/top_bot8",
             "dirt/ground"
           ],
           "weight": 77
@@ -12812,376 +12812,43 @@
       "randomTextures": [
         {
           "textures": [
-            "tallgrass_block_0/grass_unshaded_icon"
-          ],
-          "condIDs": [
-            "default"
+            "deadbush/side1"
           ]
         },
         {
           "textures": [
-            "deadbush/cactus_short"
-          ],
-          "condIDs": [
-            "desert"
+            "deadbush/side2"
           ]
         },
         {
           "textures": [
-            "deadbush/cactus_tall"
-          ],
-          "condIDs": [
-            "desert"
+            "deadbush/side3"
           ]
         },
         {
           "textures": [
-            "deadbush/dead_shrub"
-          ],
-          "condIDs": [
-            "desert"
+            "deadbush/side4"
           ]
         },
         {
           "textures": [
-            "deadbush/desert_grass_medium_dark"
-          ],
-          "condIDs": [
-            "desert"
+            "deadbush/side5"
           ]
         },
         {
           "textures": [
-            "deadbush/desert_grass_short_light"
-          ],
-          "condIDs": [
-            "desert"
+            "deadbush/side6"
           ]
         },
         {
           "textures": [
-            "deadbush/desert_grass_tall_dark"
-          ],
-          "condIDs": [
-            "desert"
+            "deadbush/side7"
           ]
         },
         {
           "textures": [
-            "deadbush/desert_grass_tall_light"
-          ],
-          "condIDs": [
-            "desert"
+            "deadbush/side8"
           ]
-        },
-        {
-          "textures": [
-            "deadbush/forest_fern_cluster_dark"
-          ],
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/forest_grass_thickshort_dark"
-          ],
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/forest_grass_thicktall_dark"
-          ],
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/forest_grass_thicktuft_dark"
-          ],
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/forest_grass_thicktuft_light"
-          ],
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/forest_grass_thicktuft_normal"
-          ],
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/forest_grass_thinmedium_dark"
-          ],
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/forest_grass_thinmedium_light"
-          ],
-          "condIDs": [
-            "forest"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/plains_fern_cluster_dark"
-          ],
-          "condIDs": [
-            "plains"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/plains_grass_thickshort_dark"
-          ],
-          "condIDs": [
-            "plains"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/plains_grass_thicktall_dark"
-          ],
-          "condIDs": [
-            "plains"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/plains_grass_thicktuft_dark"
-          ],
-          "condIDs": [
-            "plains"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/plains_grass_thicktuft_light"
-          ],
-          "condIDs": [
-            "plains"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/plains_grass_thicktuft_normal"
-          ],
-          "condIDs": [
-            "plains"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/plains_grass_thinmedium_dark"
-          ],
-          "condIDs": [
-            "plains"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/plains_grass_thinmedium_light"
-          ],
-          "condIDs": [
-            "plains"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_brushclump_flower_dark"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_brushclump_naked_dark"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_fern_cluster_dark"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_grass_thickshort_dark"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_grass_thicktall_dark"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_grass_thicktuft_dark"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_grass_thicktuft_light"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_grass_thicktuft_normal"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_grass_thinmedium_dark"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/swamp_grass_thinmedium_light"
-          ],
-          "condIDs": [
-            "swamp"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/taiga_brushclump_naked_dark"
-          ],
-          "condIDs": [
-            "taiga"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "deadbush/taiga_fern_cluster_dark"
-          ],
-          "condIDs": [
-            "taiga"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "deadbush/taiga_grass_thickshort_dark"
-          ],
-          "condIDs": [
-            "taiga"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "deadbush/taiga_grass_thicktall_dark"
-          ],
-          "condIDs": [
-            "taiga"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "deadbush/taiga_grass_thinmedium_light"
-          ],
-          "condIDs": [
-            "taiga"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "deadbush/taiga_grass_tuftmedium_dark"
-          ],
-          "condIDs": [
-            "taiga"
-          ],
-          "weight": 20
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "desert",
-          "biomes": [
-            "minecraft:desert"
-          ]
-        },
-        {
-          "condID": "forest",
-          "biomes": [
-            "minecraft:forest"
-          ]
-        },
-        {
-          "condID": "plains",
-          "biomes": [
-            "minecraft:plains",
-            "minecraft:mushroom_fields",
-            "minecraft:beach",
-            "minecraft:birch_forest",
-            "minecraft:old_growth_birch_forest"
-          ]
-        },
-        {
-          "condID": "swamp",
-          "biomes": [
-            "minecraft:swamp",
-            "minecraft:jungle"
-          ]
-        },
-        {
-          "condID": "taiga",
-          "biomes": [
-            "minecraft:taiga",
-            "minecraft:windswept_hills",
-            "minecraft:ocean",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:river",
-            "minecraft:sparse_jungle"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "legacyBlockID": "unshaded_grass_block_0:0"

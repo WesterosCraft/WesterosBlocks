@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "westerosblocks:block/deadbush/plains_fern_cluster_dark"
-  }
-}
