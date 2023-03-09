@@ -1,6 +1,6 @@
 {
   "variants": {
-    ",cond=default": [
+    "": [
       {
         "model": "westerosblocks:block/generated/lily_pad/base_v1"
       },
@@ -104,115 +104,6 @@
       },
       {
         "model": "westerosblocks:block/generated/lily_pad/base_v7",
-        "y": 270
-      }
-    ],
-    ",cond=jungle": [
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v11"
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v11",
-        "y": 90
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v11",
-        "y": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v11",
-        "y": 270
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v12"
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v12",
-        "y": 90
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v12",
-        "y": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v12",
-        "y": 270
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v13"
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v13",
-        "y": 90
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v13",
-        "y": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v13",
-        "y": 270
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v14"
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v14",
-        "y": 90
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v14",
-        "y": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v14",
-        "y": 270
-      }
-    ],
-    ",cond=north": [
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v8"
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v8",
-        "y": 90
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v8",
-        "y": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v8",
-        "y": 270
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v9"
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v9",
-        "y": 90
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v9",
-        "y": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v9",
-        "y": 270
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v10"
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v10",
-        "y": 90
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v10",
-        "y": 180
-      },
-      {
-        "model": "westerosblocks:block/generated/lily_pad/base_v10",
         "y": 270
       }
     ]

@@ -47571,143 +47571,37 @@
         {
           "textures": [
             "lily_pad/side1"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "lily_pad/side2"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "lily_pad/side3"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "lily_pad/side4"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "lily_pad/side5"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "lily_pad/side6"
-          ],
-          "condIDs": [
-            "default"
           ]
         },
         {
           "textures": [
             "lily_pad/side7"
-          ],
-          "condIDs": [
-            "default"
           ]
-        },
-        {
-          "textures": [
-            "lily_pad/north1"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "lily_pad/north2"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "lily_pad/north3"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "lily_pad/jungle1"
-          ],
-          "condIDs": [
-            "jungle"
-          ]
-        },
-        {
-          "textures": [
-            "lily_pad/jungle2"
-          ],
-          "condIDs": [
-            "jungle"
-          ]
-        },
-        {
-          "textures": [
-            "lily_pad/jungle3"
-          ],
-          "condIDs": [
-            "jungle"
-          ]
-        },
-        {
-          "textures": [
-            "lily_pad/jungle4"
-          ],
-          "condIDs": [
-            "jungle"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_forest",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_ocean",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "jungle",
-          "biomes": [
-            "minecraft:jungle"
-          ]
-        },
-        {
-          "condID": "default"
         }
       ],
       "boundingBox": {
