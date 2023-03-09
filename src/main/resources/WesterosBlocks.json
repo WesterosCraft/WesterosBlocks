@@ -10907,16 +10907,13 @@
     },
     {
       "blockName": "icicle",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosDeco",
       "label": "Icicle",
       "textures": [
-        "icicle/side",
-        "icicle/down",
-        "icicle/up",
-        "icicle/both"
+        "icicle/side"
       ],
       "type": "no-in-web",
       "legacyBlockID": "web_block_0:7"
