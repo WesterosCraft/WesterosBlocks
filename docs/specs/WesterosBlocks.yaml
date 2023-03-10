@@ -37,20 +37,20 @@ components:
                 nullable: true
                 description: Which creative tab the block item should be placed in (or null to remove from all tabs)
                 enum: 
-			        - "buildingBlocks"
-			        - "decorations"
-			        - "redstone"
-			        - "transportation"
-			        - "misc"
-			        - "food"
-			        - "tools"
-			        - "combat"
-			        - "brewing"
-			        - "materials"
-			        - "WesterosBlocks"
-			        - "WesterosDeco"
-			        - "WesterosPlants"
-			        - "WesterosSounds"
+                - "buildingBlocks"
+                - "decorations"
+                - "redstone"
+                - "transportation"
+                - "misc"
+                - "food"
+                - "tools"
+                - "combat"
+                - "brewing"
+                - "materials"
+                - "WesterosBlocks"
+                - "WesterosDeco"
+                - "WesterosPlants"
+                - "WesterosSounds"
                   
         blocks:
           type: array
