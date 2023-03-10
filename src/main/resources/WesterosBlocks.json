@@ -30799,6 +30799,39 @@
       "legacyBlockID": "test_block:2"
     },
     {
+      "blockName": "cabbage",
+      "blockType": "cuboid-16way",
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosPlants",
+      "label": "Cabbage",
+      "textures": [
+        "cabbage/down",
+        "cabbage/up",
+        "cabbage/west",
+        "cabbage/east",
+        "cabbage/south",
+        "cabbage/north"
+      ],
+      "boundingBox": {
+        "xMin": 0.0625,
+        "xMax": 0.9375,
+        "yMin": 0.0625,
+        "yMax": 0.9375,
+        "zMin": 0.0625,
+        "zMax": 0.9375
+      },
+      "legacyBlockID": "minecraft:skull:397:4"
+    },
+    {
       "blockName": "pebbles_wet_eastern_islands",
       "blockType": "solid",
       "hardness": 5,
