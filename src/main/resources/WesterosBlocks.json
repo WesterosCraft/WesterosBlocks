@@ -100,6 +100,12 @@
       "colorMult": "#FFFFFF"
     }
   ],
+  "menuOverrides": [ 
+     { 
+     	"blockNames": [ "minecraft:dispenser", "minecraft:dropper", "minecraft:infested_stone" ],
+ 	    "creativeTab": null
+     }
+  ],
   "blocks": [
     {
       "blockName": "oxidized_iron_block",

@@ -920,6 +920,10 @@ public class WesterosBlockDef {
 		return ct;
 	}
 
+	public static CreativeModeTab getCreativeTab(String tabName) {
+		return tabTable.get(tabName);
+	}
+
 	public boolean hasCollisionBoxes() {
 		return hasCollisionBoxes;
 	}
