@@ -1,4 +1,6 @@
 {
-  "parent": "westerosblocks:block/generated/icicle/base_v1",
-  "textures": {}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/icicle/side"
+  }
 }
