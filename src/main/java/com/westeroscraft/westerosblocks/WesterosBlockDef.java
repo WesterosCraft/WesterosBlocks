@@ -19,6 +19,7 @@ import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboid16WayBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidHorizBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
@@ -1024,6 +1025,7 @@ public class WesterosBlockDef {
 		typeTable.put("cuboid", new WCCuboidBlock.Factory());
 		typeTable.put("cuboid-horiz", new WCCuboidHorizBlock.Factory());
 		typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
+		typeTable.put("cuboid-16way", new WCCuboid16WayBlock.Factory());
 		typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
 		typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
 		typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());

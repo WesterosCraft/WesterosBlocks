@@ -42,6 +42,11 @@ public class CuboidBlockModelExport extends ModelExport {
         public String axis = "y";
         public float angle = 45;
         public Boolean rescale = true;
+        public Rotation() { }
+        public Rotation(float angle) {
+        	this.angle = angle;
+        	rescale = false;
+        }
     }
     public static class Face {
         public float[] uv = { 0, 0, 16, 16 };
@@ -107,7 +112,7 @@ public class CuboidBlockModelExport extends ModelExport {
     	}
     }
 
-    protected void doCuboidModel(String name, boolean isTinted, int setidx) throws IOException {
+    protected void doCuboidModel(String name, boolean isTinted, int setidx, Float modelRotation) throws IOException {
         ModelObjectCuboid mod = new ModelObjectCuboid();
     	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         String txt0 = set.getTextureByIndex(0);
@@ -117,10 +122,11 @@ public class CuboidBlockModelExport extends ModelExport {
         for (int i = 0; i < cnt; i++) {
         	textures[i] = set.getTextureByIndex(i);
         }
-        doCuboidModel(name, isTinted, txt0, textures, blk.getModelCuboids());
+        doCuboidModel(name, isTinted, txt0, textures, blk.getModelCuboids(), modelRotation);
     }
     
-    protected void doCuboidModel(String name, boolean isTinted, String txt0, String[] textures, List<Cuboid> cubs) throws IOException {
+    protected void doCuboidModel(String name, boolean isTinted, String txt0, String[] textures, List<Cuboid> cubs,
+    	Float modelRotate) throws IOException {
         ModelObjectCuboid mod = new ModelObjectCuboid();
         mod.textures.put("particle", getTextureID(txt0));
         for (int i = 0; i < textures.length; i++) {
@@ -171,7 +177,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 elem.from[0] = 8;
                 elem.from[1] = ymax;
                 elem.from[2] = zmax;
-                elem.rotation = new Rotation();
+                elem.rotation = (modelRotate == null) ? new Rotation() : new Rotation(modelRotate);
                 elem.shade = false;
                 f = new Face();
                 f.uv = new float[] { 0, 0, 16, 16 };
@@ -190,6 +196,9 @@ public class CuboidBlockModelExport extends ModelExport {
                 elem.to[0] = xmax;
                 elem.to[1] = ymax;
                 elem.to[2] = zmax;
+                if (modelRotate != null) {
+                	elem.rotation = new Rotation(modelRotate);
+                }
                 // Add down face
                 f = new Face();
                 f.uv[0] = xmin;
@@ -275,7 +284,7 @@ public class CuboidBlockModelExport extends ModelExport {
         if (!def.isCustomModel()) {
             // Loop over the random sets we've got
             for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-            	doCuboidModel(getModelName("base", setidx), isTinted, setidx);
+            	doCuboidModel(getModelName("base", setidx), isTinted, setidx, null);
             }
         }
         // Build simple item model that refers to block model
