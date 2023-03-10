@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "minecraft:block/donotuse/orientable",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "minecraft:block/donotuse/orientable",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "minecraft:block/donotuse/orientable"
+    },
+    "facing=south": {
+      "model": "minecraft:block/donotuse/orientable",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "minecraft:block/donotuse/orientable"
+    },
+    "facing=west": {
+      "model": "minecraft:block/donotuse/orientable",
+      "y": 270
+    }
+  }
+}

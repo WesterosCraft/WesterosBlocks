@@ -1,0 +1,24 @@
+{
+    "multipart": [
+        {   "when": { "OR": [ 
+             { "north": true },
+             { "north": false, "south": false, "east": false, "west": false } ] },
+            "apply": { "model": "minecraft:block/iron_bars_side" }
+        },
+        {   "when": { "OR": [ 
+             { "east": true },
+             { "north": false, "south": false, "east": false, "west": false } ] },
+            "apply": { "model": "minecraft:block/iron_bars_side", "y": 90 }
+        },
+        {   "when": { "OR": [ 
+             { "south": true },
+             { "north": false, "south": false, "east": false, "west": false } ] },
+            "apply": { "model": "minecraft:block/iron_bars_side_alt" }
+        },
+        {   "when": { "OR": [ 
+             { "west": true },
+             { "north": false, "south": false, "east": false, "west": false } ] },
+            "apply": { "model": "minecraft:block/iron_bars_side_alt", "y": 90 }
+        }
+    ]
+}

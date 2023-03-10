@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "minecraft:block/cyan_terracotta/top_bottom",
+    "bottom": "minecraft:block/cyan_terracotta/top_bottom",
+    "side": "minecraft:block/cyan_terracotta/side"
+  }
+}

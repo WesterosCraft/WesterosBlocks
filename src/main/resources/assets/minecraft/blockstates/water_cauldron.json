@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "level=1": [
+      { "model": "minecraft:block/water_cauldron/level1_v1" },
+      { "model": "minecraft:block/water_cauldron/level1_v2" }
+    ],
+    "level=2": [
+      { "model": "minecraft:block/water_cauldron/level2_v1" },
+      { "model": "minecraft:block/water_cauldron/level2_v2" }
+    ],
+    "level=3": [
+      { "model": "minecraft:block/water_cauldron/full_v1" },
+      { "model": "minecraft:block/water_cauldron/full_v2" }
+    ]
+  }
+}

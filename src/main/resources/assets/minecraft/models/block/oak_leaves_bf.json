@@ -1,0 +1,85 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": true,
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "minecraft:block/oak_leaves",
+		"1": "minecraft:block/leaves_bf_oak",
+		"particle": "minecraft:block/oak_leaves"
+	},
+	"elements": [
+		{
+			"name": "Base",
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 }
+			}
+		},
+		{
+			"name": "Cross1",
+			"from": [-11, -11, 5],
+			"to": [27, 27, 5],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
+			"shade": false,
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"down": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 }
+			}
+		},
+		{
+			"name": "Cross2",
+			"from": [-11, -11, 7],
+			"to": [27, 27, 7],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
+			"shade": false,
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"down": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 }
+			}
+		},
+		{
+			"name": "Cross3",
+			"from": [10, -11, -11],
+			"to": [10, 27, 27],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
+			"shade": false,
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"down": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 }
+			}
+		},
+		{
+			"name": "Cross4",
+			"from": [12, -11, -11],
+			"to": [12, 27, 27],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
+			"shade": false,
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 },
+				"down": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0 }
+			}
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+    	{ "model": "minecraft:block/red_mushroom/base_v1" },
+    	{ "model": "minecraft:block/red_mushroom/base_v2" },
+    	{ "model": "minecraft:block/red_mushroom/base_v3" },
+    	{ "model": "minecraft:block/red_mushroom/base_v4" },
+    	{ "model": "minecraft:block/red_mushroom/base_v5" },
+    	{ "model": "minecraft:block/red_mushroom/base_v6" },
+    	{ "model": "minecraft:block/red_mushroom/base_v7" },
+    	{ "model": "minecraft:block/red_mushroom/base_v8" },
+    	{ "model": "minecraft:block/red_mushroom/base_v9" }
+    ]
+  }
+}
