@@ -7,6 +7,8 @@ import javax.annotation.Nullable;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -58,6 +60,20 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     @Override
     protected int getIndexFromState(BlockState state) {
     	return (state.getValue(FACING) == Direction.EAST) ? 0 : 1;
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, Rotation rot) {
+        switch(rot) {
+        	case CLOCKWISE_180:
+            default:
+                return state;
+            case COUNTERCLOCKWISE_90:
+            case CLOCKWISE_90:
+            	return (state.getValue(FACING) == Direction.EAST) ?
+            			state.setValue(FACING, Direction.NORTH) :
+        				state.setValue(FACING, Direction.EAST);
+        }
     }
 
     @Override
