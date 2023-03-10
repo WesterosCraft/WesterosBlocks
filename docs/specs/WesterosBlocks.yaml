@@ -32,7 +32,7 @@ components:
                 items:
                   type: string
                 description: List of "modid:blockname" values for block items to be moved or removed from creative item menu
-			  creativeTab:
+              creativeTab:
                 type: string
                 nullable: true
                 description: Which creative tab the block item should be placed in (or null to remove from all tabs)
