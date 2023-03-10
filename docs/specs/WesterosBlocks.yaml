@@ -51,7 +51,6 @@ components:
                 - "WesterosDeco"
                 - "WesterosPlants"
                 - "WesterosSounds"
-                  
         blocks:
           type: array
           description: List of block definitions
