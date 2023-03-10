@@ -10913,16 +10913,13 @@
     },
     {
       "blockName": "icicle",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosDeco",
       "label": "Icicle",
       "textures": [
-        "icicle/side",
-        "icicle/down",
-        "icicle/up",
-        "icicle/both"
+        "icicle/side"
       ],
       "type": "no-in-web",
       "legacyBlockID": "web_block_0:7"
@@ -20915,16 +20912,13 @@
     },
     {
       "blockName": "jungle_tall_fern",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosPlants",
       "label": "Jungle Tall Fern",
       "textures": [
-        "jungle_tall_fern/down_side1",
-        "jungle_tall_fern/down_side1",
-        "jungle_tall_fern/up1",
-        "jungle_tall_fern/both1"
+        "jungle_tall_fern/side"
       ],
       "colorMult": "textures/colormap/grass",
       "type": "no-in-web",
@@ -20946,7 +20940,7 @@
     },
     {
       "blockName": "cattails",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosPlants",
@@ -20954,66 +20948,42 @@
       "randomTextures": [
         {
           "textures": [
-            "cattails_reeds/side",
-            "cattails_reeds/down1",
-            "cattails_reeds/up",
-            "cattails_reeds/both1"
+            "cattails/side1"
           ]
         },
         {
           "textures": [
-            "cattails_reeds/side",
-            "cattails_reeds/down2",
-            "cattails_reeds/up",
-            "cattails_reeds/both1"
+            "cattails/side2"
           ]
         },
         {
           "textures": [
-            "cattails_reeds/side",
-            "cattails_reeds/down3",
-            "cattails_reeds/up",
-            "cattails_reeds/both2"
+            "cattails/side3"
           ]
         },
         {
           "textures": [
-            "cattails_reeds/side",
-            "cattails_reeds/down4",
-            "cattails_reeds/up",
-            "cattails_reeds/both2"
+            "cattails/side4"
           ]
         },
         {
           "textures": [
-            "cattails_reeds/side",
-            "cattails_reeds/down5",
-            "cattails_reeds/up",
-            "cattails_reeds/both3"
+            "cattails/side5"
           ]
         },
         {
           "textures": [
-            "cattails_reeds/side",
-            "cattails_reeds/down6",
-            "cattails_reeds/up",
-            "cattails_reeds/both3"
+            "cattails/side6"
           ]
         },
         {
           "textures": [
-            "cattails_reeds/side",
-            "cattails_reeds/down7",
-            "cattails_reeds/up",
-            "cattails_reeds/both4"
+            "cattails/side7"
           ]
         },
         {
           "textures": [
-            "cattails_reeds/side",
-            "cattails_reeds/down8",
-            "cattails_reeds/up",
-            "cattails_reeds/both4"
+            "cattails/side8"
           ]
         }
       ],

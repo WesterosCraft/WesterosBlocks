@@ -1,0 +1,11 @@
+{
+  "variants" : {
+    "" : [ {
+      "model" : "minecraft:block/black_terracotta/var1",
+      "weight" : 50
+    }, {
+      "model" : "minecraft:block/black_terracotta/var2",
+      "weight" : 1
+    } ]
+  }
+}

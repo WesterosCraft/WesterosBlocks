@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/carpet",
+    "textures": {
+        "particle": "minecraft:block/white_carpet",
+        "wool": "minecraft:block/white_carpet"
+    }
+}

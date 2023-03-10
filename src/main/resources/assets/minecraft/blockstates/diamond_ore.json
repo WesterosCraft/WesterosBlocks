@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+     { "model": "minecraft:block/diamond_ore/diamond_ore1" },
+     { "model": "minecraft:block/diamond_ore/diamond_ore2" },
+     { "model": "minecraft:block/diamond_ore/diamond_ore3" },
+     { "model": "minecraft:block/diamond_ore/diamond_ore4" }
+    ]
+  }
+}

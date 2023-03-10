@@ -1,0 +1,129 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "minecraft:block/vine/base_v1"
+        },
+        {
+          "model": "minecraft:block/vine/base_v2"
+        },
+        {
+          "model": "minecraft:block/vine/base_v3"
+        },
+        {
+          "model": "minecraft:block/vine/base_v4"
+        },
+        {
+          "model": "minecraft:block/vine/base_v5"
+        }
+      ],
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "minecraft:block/vine/base_v1",
+          "y": 90
+        },
+        {
+          "model": "minecraft:block/vine/base_v2",
+          "y": 90
+        },
+        {
+          "model": "minecraft:block/vine/base_v3",
+          "y": 90
+        },
+        {
+          "model": "minecraft:block/vine/base_v4",
+          "y": 90
+        },
+        {
+          "model": "minecraft:block/vine/base_v5",
+          "y": 90
+        }
+      ],
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "minecraft:block/vine/base_v1",
+          "y": 180
+        },
+        {
+          "model": "minecraft:block/vine/base_v2",
+          "y": 180
+        },
+        {
+          "model": "minecraft:block/vine/base_v3",
+          "y": 180
+        },
+        {
+          "model": "minecraft:block/vine/base_v4",
+          "y": 180
+        },
+        {
+          "model": "minecraft:block/vine/base_v5",
+          "y": 180
+        }
+      ],
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "minecraft:block/vine/base_v1",
+          "y": 270
+        },
+        {
+          "model": "minecraft:block/vine/base_v2",
+          "y": 270
+        },
+        {
+          "model": "minecraft:block/vine/base_v3",
+          "y": 270
+        },
+        {
+          "model": "minecraft:block/vine/base_v4",
+          "y": 270
+        },
+        {
+          "model": "minecraft:block/vine/base_v5",
+          "y": 270
+        }
+      ],
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "minecraft:block/vine/top_v1"
+        },
+        {
+          "model": "minecraft:block/vine/top_v2"
+        },
+        {
+          "model": "minecraft:block/vine/top_v3"
+        },
+        {
+          "model": "minecraft:block/vine/top_v4"
+        },
+        {
+          "model": "minecraft:block/vine/top_v5"
+        }
+      ],
+      "when": {
+        "up": "true"
+      }
+    }
+  ]
+}

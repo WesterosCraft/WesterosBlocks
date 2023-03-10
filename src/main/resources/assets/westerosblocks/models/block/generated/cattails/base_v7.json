@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/tinted_cross",
   "textures": {
-    "cross": "westerosblocks:block/cattails_reeds/side"
+    "cross": "westerosblocks:block/cattails/side7"
   }
 }

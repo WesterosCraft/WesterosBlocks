@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+     { "model": "minecraft:block/coal_block/coal_block1" },
+     { "model": "minecraft:block/coal_block/coal_block2" },
+     { "model": "minecraft:block/coal_block/coal_block3" }
+    ]
+  }
+}

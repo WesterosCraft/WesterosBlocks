@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "minecraft:block/glowstone/top",
+    "bottom": "minecraft:block/glowstone/bottom",
+    "side": "minecraft:block/glowstone"
+  }
+}
