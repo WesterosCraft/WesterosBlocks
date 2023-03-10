@@ -33,7 +33,8 @@ public class CuboidHorizBlockModelExport extends CuboidBlockModelExport {
                 	for (int i = 0; i < cnt; i++) {
                 		textures[i] = set.getTextureByIndex(i);
                 	}
-                	doCuboidModel(getModelName(modelBaseIDs[modidx], setidx), isTinted, txt0, textures, def.getCuboidList(modidx));
+                	doCuboidModel(getModelName(modelBaseIDs[modidx], setidx), isTinted, txt0, textures,
+                			def.getCuboidList(modidx), null);
         		}
         	}
         }

@@ -5,6 +5,7 @@ import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.CrashReport;
 import net.minecraft.ReportedException;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
@@ -80,6 +81,8 @@ public class WesterosBlocks {
 	public static Path modConfigPath;
 	
 	public static WesterosBlockColorMap[] colorMaps;
+	
+	public static WesterosItemMenuOverrides[] menuOverrides;
 
 	public WesterosBlocks() {
 		// Register the doClientStuff method for modloading
@@ -306,10 +309,31 @@ public class WesterosBlocks {
 			}
 			log.info("TOTAL: " + blockcount + " blocks");
 			colorMaps = customConfig.colorMaps;
+			menuOverrides = customConfig.menuOverrides;
 		}
 		@SubscribeEvent
 		public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
 			log.info("onzItemsRegistryEvent");
+			if (menuOverrides != null) {
+				for (WesterosItemMenuOverrides mo : menuOverrides) {
+					if (mo.blockNames != null) {
+						for (String bn : mo.blockNames) {
+							Item itm = ForgeRegistries.ITEMS.getValue(new ResourceLocation(bn));
+							if (itm == null) {
+								log.warn("Item for " + bn + " not found - cannot override");
+							}
+							else {
+								CreativeModeTab tab = null;
+								if (mo.creativeTab != null) {
+									tab = WesterosBlockDef.getCreativeTab(mo.creativeTab);
+								}
+								itm.category = tab;
+								log.info("Item for " + bn + " set to tab " + mo.creativeTab);
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 

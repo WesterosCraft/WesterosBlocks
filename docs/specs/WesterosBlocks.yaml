@@ -21,6 +21,36 @@ components:
             use of the textureindex.
           items:
             $ref: "#/components/schemas/ColorMap"
+        menuOverrides:
+          type: array
+          description: List of creative menu item overrides
+          items:
+            type: object
+            properties:
+              blockNames:
+                type: array
+                items:
+                  type: string
+                description: List of "modid:blockname" values for block items to be moved or removed from creative item menu
+              creativeTab:
+                type: string
+                nullable: true
+                description: Which creative tab the block item should be placed in (or null to remove from all tabs)
+                enum: 
+                - "buildingBlocks"
+                - "decorations"
+                - "redstone"
+                - "transportation"
+                - "misc"
+                - "food"
+                - "tools"
+                - "combat"
+                - "brewing"
+                - "materials"
+                - "WesterosBlocks"
+                - "WesterosDeco"
+                - "WesterosPlants"
+                - "WesterosSounds"
         blocks:
           type: array
           description: List of block definitions
@@ -35,6 +65,7 @@ components:
               - $ref: "#/components/schemas/cuboid-nsew"
               - $ref: "#/components/schemas/cuboid-nsewud"
               - $ref: "#/components/schemas/cuboid-nsew-stack"
+              - $ref: "#/components/schemas/cuboid-16way"
               - $ref: "#/components/schemas/door"
               - $ref: "#/components/schemas/fence"
               - $ref: "#/components/schemas/fire"
@@ -1281,6 +1312,42 @@ components:
                 If set to true, model is not generated,
                 and is instead expected to be found at
                 models/custom/<blockid>.json.
+    cuboid-16way:
+      title: blockType='cuboid-16way'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'cuboid-16way' blocks
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of texures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is based on values
+                  used in the cuboids list (the sideTextures values).
+
+                  If an index beyond the length of the list is
+                  referenced, the last element in the list is used.
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            cuboids:
+              $ref: "#/components/schemas/Cuboids"
+            isCustomModel:
+              type: boolean
+              default: false
+              description: |-
+                If set to true, model is not generated,
+                and is instead expected to be found at
+                models/custom/<blockid>.json.                
     cuboid-nsewud:
       title: blockType='cuboid-nsewud'
       allOf:

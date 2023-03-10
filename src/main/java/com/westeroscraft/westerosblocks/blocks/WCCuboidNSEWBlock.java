@@ -7,6 +7,9 @@ import javax.annotation.Nullable;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -31,8 +34,9 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
         }
     }
     
-    public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH);
-
+    //public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH);
+    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    
     protected List<WesterosBlockDef.Cuboid> cuboid_by_facing[] = new List[4];
     
     @SuppressWarnings("unchecked")
@@ -59,6 +63,16 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
        StateDefinition.add(FACING, WATERLOGGED);
     }
     
+    @Override
+    public BlockState rotate(BlockState state, Rotation rot) {
+        return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, Mirror mir) {
+    	return state.rotate(mir.getRotation(state.getValue(FACING)));
+    }
+
     @Override
     protected int getIndexFromState(BlockState state) {
     	switch (state.getValue(FACING)) {

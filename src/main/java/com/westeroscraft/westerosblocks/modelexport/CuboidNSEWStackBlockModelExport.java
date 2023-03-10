@@ -32,7 +32,8 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
             	for (int i = 0; i < cnt; i++) {
             		textures[i] = set.getTextureByIndex(i);
             	}
-            	doCuboidModel(getModelName("base", setidx), isTinted, txt0, textures, se.cuboids);
+            	doCuboidModel(getModelName("base", setidx), isTinted, txt0, textures, se.cuboids,
+            			null);
             }
         	// Top model
         	WesterosBlockDef.StackElement se2 = def.getStackElementByIndex(1);
@@ -47,7 +48,8 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
             	for (int i = 0; i < cnt2; i++) {
             		textures2[i] = set.getTextureByIndex(i);
             	}
-            	doCuboidModel(getModelName("top", setidx), isTinted, txt02, textures2, se2.cuboids);
+            	doCuboidModel(getModelName("top", setidx), isTinted, txt02, textures2, se2.cuboids,
+            			null);
             }
         }
         // Build simple item model that refers to block model
