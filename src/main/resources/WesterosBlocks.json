@@ -46253,6 +46253,101 @@
       "legacyBlockID": "rope_block_7:0"
     },
     {
+      "blockName": "path_dirt",
+      "blockType": "cuboid",
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "creativeTab": "WesterosBlocks",
+      "label": "Path Dirt",
+      "randomTextures": [
+        {
+          "textures": [
+            "dirt/top_bot1",
+            "dirt/top_bot1",
+            "dirt/ground"
+          ],
+          "weight": 100
+        },
+        {
+          "textures": [
+            "dirt/top_bot2",
+            "dirt/top_bot2",
+            "dirt/ground"
+          ],
+          "weight": 33
+        },
+        {
+          "textures": [
+            "dirt/top_bot3",
+            "dirt/top_bot3",
+            "dirt/ground"
+          ],
+          "weight": 45
+        },
+        {
+          "textures": [
+            "dirt/top_bot4",
+            "dirt/top_bot4",
+            "dirt/ground"
+          ],
+          "weight": 140
+        },
+        {
+          "textures": [
+            "dirt/top_bot5",
+            "dirt/top_bot5",
+            "dirt/ground"
+          ],
+          "weight": 193
+        },
+        {
+          "textures": [
+            "dirt/top_bot6",
+            "dirt/top_bot6",
+            "dirt/ground"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "dirt/top_bot7",
+            "dirt/top_bot7",
+            "dirt/ground"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "dirt/top_bot8",
+            "dirt/top_bot8",
+            "dirt/ground"
+          ],
+          "weight": 77
+        }
+      ],
+      "cuboids": [
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 0.9375,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "legacyBlockID": "cuboid_block_10:0"
+    },
+    {
       "blockName": "path_gravel",
       "blockType": "cuboid",
       "hardness": 2,
