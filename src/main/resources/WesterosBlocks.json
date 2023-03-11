@@ -19004,6 +19004,20 @@
       "legacyBlockID": "solid_blocks_1:4"
     },
     {
+      "blockName": "grassy_sand",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "creativeTab": "WesterosBlocks",
+      "label": "Grassy Sand",
+      "textures": [
+        "grassy_sand/side"
+      ],
+      "legacyBlockID": "minecraft:sand:12:1"
+    },
+    {
       "blockName": "dorne_dull_terracotta_wall",
       "blockType": "wall",
       "hardness": 1.5,

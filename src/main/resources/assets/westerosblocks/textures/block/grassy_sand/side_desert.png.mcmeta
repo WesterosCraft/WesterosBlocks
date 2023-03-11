@@ -1,0 +1,16 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_ctm+pattern",
+    "layer": "SOLID",
+    "textures": [
+      "westerosblocks:block/grassy_sand/side_desert_ctmtemplate",
+      "westerosblocks:block/grassy_sand/side_desert_pattern_3x3"
+    ],
+    "extra": {
+      "width": 3,
+      "height": 3,
+      "connect_to": [{ "block": "westerosblocks:grassy_sand" }]
+    }
+  }
+}
