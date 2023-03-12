@@ -11294,7 +11294,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11333,7 +11333,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11391,7 +11391,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11420,7 +11420,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11459,7 +11459,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11498,7 +11498,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11537,7 +11537,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11566,7 +11566,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11595,7 +11595,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11631,10 +11631,10 @@
     },
     {
       "blockName": "blue_chicory",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11647,34 +11647,22 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/blue_chicory_side1",
-            "flowers/blue_chicory_down1",
-            "flowers/blue_chicory_up_both1",
-            "flowers/blue_chicory_up_both1"
+            "flowers/blue_chicory/side1"
           ]
         },
         {
           "textures": [
-            "flowers/blue_chicory_side2",
-            "flowers/blue_chicory_down2",
-            "flowers/blue_chicory_up_both2",
-            "flowers/blue_chicory_up_both2"
+            "flowers/blue_chicory/side2"
           ]
         },
         {
           "textures": [
-            "flowers/blue_chicory_side3",
-            "flowers/blue_chicory_down2",
-            "flowers/blue_chicory_up_both3",
-            "flowers/blue_chicory_up_both3"
+            "flowers/blue_chicory/side3"
           ]
         },
         {
           "textures": [
-            "flowers/blue_chicory_side4",
-            "flowers/blue_chicory_down3",
-            "flowers/blue_chicory_up_both4",
-            "flowers/blue_chicory_up_both4"
+            "flowers/blue_chicory/side4"
           ]
         }
       ],
@@ -11685,7 +11673,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11705,7 +11693,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11744,7 +11732,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11783,7 +11771,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11817,7 +11805,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11851,7 +11839,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11890,7 +11878,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11910,7 +11898,7 @@
       "blockType": "plantvert",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11961,7 +11949,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12000,7 +11988,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12039,7 +12027,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12059,7 +12047,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12093,7 +12081,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12113,7 +12101,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12181,7 +12169,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12284,7 +12272,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
