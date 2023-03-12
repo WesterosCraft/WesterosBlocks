@@ -908,7 +908,7 @@
       "blockName": "yellow_bedstraw",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11380,10 +11380,10 @@
     },
     {
       "blockName": "meadow_fescue",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11396,18 +11396,12 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/meadow_fescue_side1",
-            "flowers/meadow_fescue_down1",
-            "flowers/meadow_fescue_up_both1",
-            "flowers/meadow_fescue_up_both1"
+            "flowers/meadow_fescue/side1"
           ]
         },
         {
           "textures": [
-            "flowers/meadow_fescue_side2",
-            "flowers/meadow_fescue_down2",
-            "flowers/meadow_fescue_up_both2",
-            "flowers/meadow_fescue_up_both2"
+            "flowers/meadow_fescue/side2"
           ]
         }
       ],

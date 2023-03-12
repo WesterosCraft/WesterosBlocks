@@ -1,10 +1,10 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_cond",
+    "type": "westeros_vertical_cond",
     "layer": "CUTOUT",
     "textures": [
-      "westerosblocks:block/flowers/meadow_fescue_north_side1"
+      "westerosblocks:block/flowers/meadow_fescue/side1_north_2x2"
     ],
     "extra": {
         "conds": [

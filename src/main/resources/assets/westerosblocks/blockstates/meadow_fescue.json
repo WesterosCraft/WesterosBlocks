@@ -1,35 +1,11 @@
 {
   "variants": {
-    "up=false,down=true": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/down_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/down_v2"
-      }
-    ],
-    "up=false,down=false": [
+    "": [
       {
         "model": "westerosblocks:block/generated/meadow_fescue/base_v1"
       },
       {
         "model": "westerosblocks:block/generated/meadow_fescue/base_v2"
-      }
-    ],
-    "up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/both_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/both_v2"
-      }
-    ],
-    "up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/up_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/meadow_fescue/up_v2"
       }
     ]
   }
