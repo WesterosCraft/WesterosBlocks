@@ -461,7 +461,7 @@
       "blockName": "yellow_wildflowers",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -542,7 +542,7 @@
       "blockName": "orange_marigolds",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -580,7 +580,7 @@
       "blockName": "orange_trollius",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -608,7 +608,7 @@
       "blockName": "blue_forgetmenots",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -646,7 +646,7 @@
       "blockName": "pink_wildflowers",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -665,7 +665,7 @@
       "blockName": "yellow_tansy",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -684,7 +684,7 @@
       "blockName": "blue_flax",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -722,7 +722,7 @@
       "blockName": "white_daisies",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -760,7 +760,7 @@
       "blockName": "yellow_daisies",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -960,7 +960,7 @@
       "blockName": "blue_bells",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -980,7 +980,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1000,7 +1000,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1039,7 +1039,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1078,7 +1078,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1117,7 +1117,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1153,10 +1153,10 @@
     },
     {
       "blockName": "pink_thistle",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1169,37 +1169,25 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/pink_thistle_side1",
-            "flowers/pink_thistle_down2",
-            "flowers/pink_thistle_up_both1",
-            "flowers/pink_thistle_up_both1"
+            "flowers/pink_thistle/side1"
           ],
           "weight": 40
         },
         {
           "textures": [
-            "flowers/pink_thistle_side2",
-            "flowers/pink_thistle_down1",
-            "flowers/pink_thistle_up_both2",
-            "flowers/pink_thistle_up_both2"
+            "flowers/pink_thistle/side2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "flowers/pink_thistle_side3",
-            "flowers/pink_thistle_down3",
-            "flowers/pink_thistle_up_both3",
-            "flowers/pink_thistle_up_both3"
+            "flowers/pink_thistle/side3"
           ],
           "weight": 40
         },
         {
           "textures": [
-            "flowers/pink_thistle_side4",
-            "flowers/pink_thistle_down1",
-            "flowers/pink_thistle_up_both4",
-            "flowers/pink_thistle_up_both4"
+            "flowers/pink_thistle/side4"
           ],
           "weight": 10
         }
@@ -1211,7 +1199,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1245,7 +1233,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1284,7 +1272,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1343,7 +1331,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1363,7 +1351,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1380,10 +1368,10 @@
     },
     {
       "blockName": "yellow_sunflower",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1396,26 +1384,17 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/yellow_sunflower_side1",
-            "flowers/yellow_sunflower_down1",
-            "flowers/yellow_sunflower_up_both1",
-            "flowers/yellow_sunflower_up_both1"
+            "flowers/yellow_sunflower/side1"
           ]
         },
         {
           "textures": [
-            "flowers/yellow_sunflower_side2",
-            "flowers/yellow_sunflower_down2",
-            "flowers/yellow_sunflower_up_both2",
-            "flowers/yellow_sunflower_up_both1"
+            "flowers/yellow_sunflower/side2"
           ]
         },
         {
           "textures": [
-            "flowers/yellow_sunflower_side3",
-            "flowers/yellow_sunflower_down3",
-            "flowers/yellow_sunflower_up_both2",
-            "flowers/yellow_sunflower_up_both2"
+            "flowers/yellow_sunflower/side3"
           ]
         }
       ],
@@ -1426,7 +1405,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
