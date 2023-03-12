@@ -439,7 +439,7 @@
     },
     {
       "blockName": "marble_pillar_vertical_ctm",
-      "blockType": "logvert",
+      "blockType": "log",
       "stepSound": "stone",
       "material": "wood",
       "harvestLevel": [
@@ -449,14 +449,11 @@
         }
       ],
       "creativeTab": "WesterosDeco",
-      "label": "Marble Pillar Vertical CTM",
+      "label": "Marble Pillar Vertical",
       "textures": [
         "marble_pillar/column_block_marble_top_bottom",
         "marble_pillar/column_block_marble_top_bottom",
-        "marble_pillar_vertical_ctm/base",
-        "marble_pillar_vertical_ctm/down",
-        "marble_pillar_vertical_ctm/up",
-        "marble_pillar_vertical_ctm/both"
+        "marble_pillar_vertical_ctm/side"
       ],
       "legacyBlockID": "log_block_1:3"
     },
