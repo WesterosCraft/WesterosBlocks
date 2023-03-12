@@ -30390,7 +30390,7 @@
     },
     {
       "blockName": "dead_bracken",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosPlants",
@@ -30406,98 +30406,62 @@
       "randomTextures": [
         {
           "textures": [
-            "dead_bracken/side1",
-            "dead_bracken/top1",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side1"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side2",
-            "dead_bracken/top2",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side2"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side3",
-            "dead_bracken/top3",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side3"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side4",
-            "dead_bracken/top4",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side4"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side5",
-            "dead_bracken/top1",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side5"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side6",
-            "dead_bracken/top2",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side6"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side1",
-            "dead_bracken/top3",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side7"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side2",
-            "dead_bracken/top4",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side8"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side3",
-            "dead_bracken/top1",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side9"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side4",
-            "dead_bracken/top2",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side10"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side5",
-            "dead_bracken/top3",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side11"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side6",
-            "dead_bracken/top4",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side12"
           ]
         }
       ],
