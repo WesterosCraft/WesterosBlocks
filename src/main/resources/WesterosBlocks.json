@@ -11895,7 +11895,7 @@
     },
     {
       "blockName": "purple_alpine_sowthistle",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -11911,34 +11911,22 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/purple_alpine_sowthistle_side1",
-            "flowers/purple_alpine_sowthistle_down1",
-            "flowers/purple_alpine_sowthistle_up_both1",
-            "flowers/purple_alpine_sowthistle_up_both1"
+            "flowers/purple_alpine_sowthistle/side1"
           ]
         },
         {
           "textures": [
-            "flowers/purple_alpine_sowthistle_side2",
-            "flowers/purple_alpine_sowthistle_down2",
-            "flowers/purple_alpine_sowthistle_up_both2",
-            "flowers/purple_alpine_sowthistle_up_both2"
+            "flowers/purple_alpine_sowthistle/side2"
           ]
         },
         {
           "textures": [
-            "flowers/purple_alpine_sowthistle_side1",
-            "flowers/purple_alpine_sowthistle_down3",
-            "flowers/purple_alpine_sowthistle_up_both3",
-            "flowers/purple_alpine_sowthistle_up_both3"
+            "flowers/purple_alpine_sowthistle/side3"
           ]
         },
         {
           "textures": [
-            "flowers/purple_alpine_sowthistle_side2",
-            "flowers/purple_alpine_sowthistle_down1",
-            "flowers/purple_alpine_sowthistle_up_both4",
-            "flowers/purple_alpine_sowthistle_up_both4"
+            "flowers/purple_alpine_sowthistle_/side4"
           ]
         }
       ],
