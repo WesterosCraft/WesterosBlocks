@@ -21811,64 +21811,10 @@
       "resistance": 10,
       "lightOpacity": 0,
       "label": "Red Sandstone Arrow Slit",
-      "randomTextures": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit/base_side"
-          ],
-          "condIDs": [
-            "default"
-          ]
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit/dark_side"
-          ],
-          "condIDs": [
-            "dark"
-          ]
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit/jungle_side"
-          ],
-          "condIDs": [
-            "jungle"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "jungle",
-          "biomes": [
-            "minecraft:jungle"
-          ]
-        },
-        {
-          "condID": "dark",
-          "biomes": [
-            "minecraft:frozen_ocean",
-            "minecraft:taiga",
-            "minecraft:snowy_plains",
-            "minecraft:mushroom_fields",
-            "minecraft:ocean",
-            "minecraft:swamp",
-            "minecraft:forest",
-            "minecraft:desert",
-            "minecraft:nether_wastes",
-            "minecraft:windswept_hills",
-            "minecraft:sparse_jungle"
-          ]
-        },
-        {
-          "condID": "default"
-        }
+      "textures": [
+	    "transparent",
+        "transparent",
+        "red_sandstone_arrow_slit/base_side"
       ],
       "collisionBoxes": [
         {
