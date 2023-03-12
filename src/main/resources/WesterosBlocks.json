@@ -1322,7 +1322,7 @@
       },
       "label": "Strawberry Bush",
       "textures": [
-        "flower_block_1/strawberry"
+        "flowers/strawberry"
       ],
       "legacyBlockID": "yellow_flower_block_1:9"
     },
