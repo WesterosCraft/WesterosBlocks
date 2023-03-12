@@ -1,9 +1,6 @@
 {
   "variants": {
-    ",cond=default": {
-      "model": "westerosblocks:block/generated/fallen_leaves/base_v2"
-    },
-    ",cond=north": {
+    "": {
       "model": "westerosblocks:block/generated/fallen_leaves/base_v1"
     }
   }

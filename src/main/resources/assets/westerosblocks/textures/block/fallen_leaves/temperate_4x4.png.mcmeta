@@ -1,12 +1,37 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "pattern",
+    "type": "westeros_pattern_cond",
     "layer": "SOLID",
-    "textures": [],
+    "textures": [
+       "westerosblocks:block/fallen_leaves/autumn_3x3"
+    ],
     "extra": {
       "width": 4,
-      "height": 4
+      "height": 4,
+      "condWidth": 3,
+      "condHeight": 3,
+      "conds": [
+         { "biomeNames": [ 
+            "minecraft:windswept_hills",
+            "minecraft:windswept_gravelly_hills",
+            "minecraft:windswept_forest",
+            "minecraft:snowy_beach",
+            "minecraft:taiga",
+            "minecraft:old_growth_pine_taiga",
+            "minecraft:snowy_taiga",
+            "minecraft:old_growth_spruce_taiga",
+            "minecraft:snowy_plains",
+            "minecraft:snowy_slopes",
+            "minecraft:frozen_river",
+            "minecraft:frozen_ocean",
+            "minecraft:ice_spikes" ],
+            "rowOut": 0,
+            "colOut": 0,
+            "patternWidth": 3,
+            "patternHeight": 3
+        }
+      ]
     }
   }
 }

@@ -8978,45 +8978,8 @@
       "resistance": 2,
       "creativeTab": "WesterosBlocks",
       "label": "Fallen Leaves",
-      "randomTextures": [
-        {
-          "textures": [
-            "fallen_leaves/autumn"
-          ],
-          "condIDs": [
-            "north"
-          ]
-        },
-        {
-          "textures": [
-            "fallen_leaves/temperate"
-          ],
-          "condIDs": [
-            "default"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "north",
-          "biomes": [
-            "minecraft:windswept_hills",
-            "minecraft:windswept_gravelly_hills",
-            "minecraft:windswept_forest",
-            "minecraft:snowy_beach",
-            "minecraft:taiga",
-            "minecraft:old_growth_pine_taiga",
-            "minecraft:snowy_taiga",
-            "minecraft:old_growth_spruce_taiga",
-            "minecraft:snowy_plains",
-            "minecraft:frozen_river",
-            "minecraft:frozen_ocean",
-            "minecraft:ice_spikes"
-          ]
-        },
-        {
-          "condID": "default"
-        }
+      "textures": [
+        "fallen_leaves/temperate"
       ],
       "legacyBlockID": "solid_blocks_0:3"
     },
