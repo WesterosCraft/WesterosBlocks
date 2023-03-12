@@ -1,59 +1,21 @@
 {
   "variants": {
-    "up=false,down=true": [
+    "": [
       {
-        "model": "westerosblocks:block/generated/pink_thistle/down_v1"
+        "model": "westerosblocks:block/generated/pink_thistle/base_v1",
+        "weight": 40
       },
       {
-        "model": "westerosblocks:block/generated/pink_thistle/down_v2"
+        "model": "westerosblocks:block/generated/pink_thistle/base_v2",
+        "weight": 10
       },
       {
-        "model": "westerosblocks:block/generated/pink_thistle/down_v3"
+        "model": "westerosblocks:block/generated/pink_thistle/base_v3",
+        "weight": 40
       },
       {
-        "model": "westerosblocks:block/generated/pink_thistle/down_v4"
-      }
-    ],
-    "up=false,down=false": [
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/base_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/base_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/base_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/base_v4"
-      }
-    ],
-    "up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/both_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/both_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/both_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/both_v4"
-      }
-    ],
-    "up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/up_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/up_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/up_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/pink_thistle/up_v4"
+        "model": "westerosblocks:block/generated/pink_thistle/base_v4",
+        "weight": 10
       }
     ]
   }

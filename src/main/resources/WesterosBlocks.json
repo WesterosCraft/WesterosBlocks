@@ -30255,7 +30255,7 @@
     },
     {
       "blockName": "bracken",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosPlants",
@@ -30271,66 +30271,42 @@
       "randomTextures": [
         {
           "textures": [
-            "bracken/side1",
-            "bracken/top1",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side1"
           ]
         },
         {
           "textures": [
-            "bracken/side2",
-            "bracken/top2",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side2"
           ]
         },
         {
           "textures": [
-            "bracken/side3",
-            "bracken/top3",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side3"
           ]
         },
         {
           "textures": [
-            "bracken/side4",
-            "bracken/top4",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side4"
           ]
         },
         {
           "textures": [
-            "bracken/side5",
-            "bracken/top1",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side5"
           ]
         },
         {
           "textures": [
-            "bracken/side6",
-            "bracken/top2",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side6"
           ]
         },
         {
           "textures": [
-            "bracken/side7",
-            "bracken/top3",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side7"
           ]
         },
         {
           "textures": [
-            "bracken/side1",
-            "bracken/top4",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side8"
           ]
         }
       ],
