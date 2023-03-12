@@ -30353,7 +30353,7 @@
     },
     {
       "blockName": "nettle",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosPlants",
@@ -30369,28 +30369,19 @@
       "randomTextures": [
         {
           "textures": [
-            "nettle/side1",
-            "nettle/down1",
-            "nettle/up_both1",
-            "nettle/up_both1"
+            "nettle/side1"
           ],
           "weight": 15
         },
         {
           "textures": [
-            "nettle/side2",
-            "nettle/down1",
-            "nettle/up_both1",
-            "nettle/up_both1"
+            "nettle/side2"
           ],
           "weight": 15
         },
         {
           "textures": [
-            "nettle/side5",
-            "nettle/down2",
-            "nettle/up_both2",
-            "nettle/up_both2"
+            "nettle/side3"
           ],
           "weight": 20
         }
