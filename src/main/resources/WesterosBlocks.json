@@ -906,7 +906,7 @@
     },
     {
       "blockName": "yellow_bedstraw",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "material": "wood",
       "creativeTab": "WesterosPlants",
       "boundingBox": {
@@ -921,26 +921,17 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/yellow_bedstraw_side1",
-            "flowers/yellow_bedstraw_down",
-            "flowers/yellow_bedstraw_up_both",
-            "flowers/yellow_bedstraw_up_both"
+            "flowers/yellow_bedstraw/side1"
           ]
         },
         {
           "textures": [
-            "flowers/yellow_bedstraw_side2",
-            "flowers/yellow_bedstraw_down",
-            "flowers/yellow_bedstraw_up_both",
-            "flowers/yellow_bedstraw_up_both"
+            "flowers/yellow_bedstraw/side2"
           ]
         },
         {
           "textures": [
-            "flowers/yellow_bedstraw_side3",
-            "flowers/yellow_bedstraw_down",
-            "flowers/yellow_bedstraw_up_both",
-            "flowers/yellow_bedstraw_up_both"
+            "flowers/yellow_bedstraw/side3"
           ]
         }
       ],
