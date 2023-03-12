@@ -1,44 +1,6 @@
 {
   "variants": {
-    "up=false,down=true": [
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v8"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v9"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v10"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v11"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/down_v12"
-      }
-    ],
-    "up=false,down=false": [
+    "": [
       {
         "model": "westerosblocks:block/generated/dead_bracken/base_v1"
       },
@@ -74,82 +36,6 @@
       },
       {
         "model": "westerosblocks:block/generated/dead_bracken/base_v12"
-      }
-    ],
-    "up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v8"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v9"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v10"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v11"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/both_v12"
-      }
-    ],
-    "up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v8"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v9"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v10"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v11"
-      },
-      {
-        "model": "westerosblocks:block/generated/dead_bracken/up_v12"
       }
     ]
   }
