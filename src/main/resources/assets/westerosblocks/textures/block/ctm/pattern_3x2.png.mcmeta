@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "pattern",
+    "type": "westeros_pattern",
     "layer": "SOLID",
     "textures": [],
     "extra": {
