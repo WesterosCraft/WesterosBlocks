@@ -11083,16 +11083,13 @@
     },
     {
       "blockName": "rope_ladder",
-      "blockType": "laddervert",
+      "blockType": "ladder",
       "stepSound": "ladder",
       "material": "iron",
       "creativeTab": "WesterosDeco",
       "label": "Rope Ladder",
       "textures": [
-        "rope_ladder/side",
-        "rope_ladder/down",
-        "rope_ladder/up",
-        "rope_ladder/both"
+        "rope_ladder/side"
       ],
       "type": "allow-unsupported",
       "legacyBlockID": "ladder_block_0:1"
@@ -11136,16 +11133,13 @@
     },
     {
       "blockName": "wood_ladder",
-      "blockType": "laddervert",
+      "blockType": "ladder",
       "stepSound": "ladder",
       "material": "iron",
       "creativeTab": "WesterosDeco",
       "label": "Wood Ladder",
       "textures": [
-        "wood_ladder/side",
-        "wood_ladder/down",
-        "wood_ladder/up",
-        "wood_ladder/both"
+        "wood_ladder/side"
       ],
       "type": "allow-unsupported",
       "isCustomModel": true,
