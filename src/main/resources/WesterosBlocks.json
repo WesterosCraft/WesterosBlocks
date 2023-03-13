@@ -21309,7 +21309,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Approval' Utility Block",
       "textures": [
@@ -21330,7 +21330,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'High Class' Utility Block",
       "textures": [
@@ -21351,7 +21351,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Middle Class' Utility Block",
       "textures": [
@@ -21372,7 +21372,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Low Class' Utility Block",
       "textures": [
@@ -21393,7 +21393,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Special' Utility Block",
       "textures": [
@@ -21414,7 +21414,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Note' Utility Block",
       "textures": [
@@ -21435,7 +21435,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'House Count' Utility Block",
       "textures": [
@@ -21456,7 +21456,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Done' Utility Block",
       "textures": [
@@ -21477,7 +21477,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'WIP' Utility Block",
       "textures": [
@@ -21498,7 +21498,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Industry' Utility Block",
       "textures": [
@@ -21519,7 +21519,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Domestic' Utility Block",
       "textures": [
@@ -21540,7 +21540,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Workshop' Utility Block",
       "textures": [
@@ -21561,7 +21561,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Shop' Utility Block",
       "textures": [
@@ -21582,7 +21582,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosUtility",
       "lightValue": 0,
       "label": "'Yard' Utility Block",
       "textures": [
@@ -46955,7 +46955,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Vertical CTM",
       "textures": [
         "ctm/vertical"
@@ -46966,7 +46966,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Horizontal CTM",
       "textures": [
         "ctm/horizontal"
@@ -46977,7 +46977,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Westeros Horizontal CTM",
       "textures": [
         "ctm/westeroshorizontal"
@@ -46988,7 +46988,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Pattern CTM",
       "textures": [
         "ctm/pattern"
@@ -46999,7 +46999,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Random CTM",
       "textures": [
         "ctm/random"
@@ -47010,7 +47010,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Compact CTM",
       "textures": [
         "ctm/compact"
@@ -47021,7 +47021,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Westeros CTM Single",
       "textures": [
         "ctm/westerosctmsingle"
@@ -47032,7 +47032,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Edges CTM (to water)",
       "textures": [
         "ctm/edges"
@@ -47043,7 +47043,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Edges-Full CTM (to water)",
       "textures": [
         "ctm/edges_full"
@@ -47054,7 +47054,7 @@
       "blockType": "log",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Pillar CTM",
       "textures": [
         "ctm/pillar_end",
@@ -47067,7 +47067,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Simple CTM",
       "textures": [
         "ctm/simple"
@@ -47078,7 +47078,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Westeros CTM+Pattern",
       "textures": [
         "ctm/westerosctmpattern"
@@ -47089,7 +47089,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Westeros V+H",
       "textures": [
         "ctm/westerosverthoriz"
@@ -47100,7 +47100,7 @@
       "blockType": "solid",
       "stepSound": "wood",
       "material": "cloth",
-      "creativeTab": "WesterosCTMSamples",
+      "creativeTab": "WesterosUtility",
       "label": "Westeros H+V",
       "textures": [
         "ctm/westeroshorizvert"

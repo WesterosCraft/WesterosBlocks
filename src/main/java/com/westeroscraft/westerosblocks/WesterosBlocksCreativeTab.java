@@ -13,8 +13,8 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     public static final CreativeModeTab tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "§fWesteros Plants", "yellow_wildflowers");
     public static final CreativeModeTab tabWesterosFlowers = new  WesterosBlocksCreativeTab("WesterosFlowers", "§fWesteros Flowers", "blue_bells");
     public static final CreativeModeTab tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "§fWesteros Sounds", "tavern_small");
-    public static final CreativeModeTab tabWesterosCTMSamples = new  WesterosBlocksCreativeTab("WesterosCTMSamples", "§fCTM Samples", "ctm_vertical");
-    
+    public static final CreativeModeTab tabWesterosUtility = new  WesterosBlocksCreativeTab("WesterosUtility", "§fUtility", "approval_utility_block");
+
     public static void init() {
         
     }
