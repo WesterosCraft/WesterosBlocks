@@ -1,4 +1,6 @@
 {
-  "parent": "westerosblocks:block/generated/purple_alpine_sowthistle/base_v1",
-  "textures": {}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/flowers/purple_alpine_sowthistle/side1"
+  }
 }

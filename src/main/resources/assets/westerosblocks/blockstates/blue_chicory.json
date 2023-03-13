@@ -1,20 +1,6 @@
 {
   "variants": {
-    "up=false,down=true": [
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/down_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/down_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/down_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/down_v4"
-      }
-    ],
-    "up=false,down=false": [
+    "": [
       {
         "model": "westerosblocks:block/generated/blue_chicory/base_v1"
       },
@@ -26,34 +12,6 @@
       },
       {
         "model": "westerosblocks:block/generated/blue_chicory/base_v4"
-      }
-    ],
-    "up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/both_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/both_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/both_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/both_v4"
-      }
-    ],
-    "up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/up_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/up_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/up_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/blue_chicory/up_v4"
       }
     ]
   }

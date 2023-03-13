@@ -439,7 +439,7 @@
     },
     {
       "blockName": "marble_pillar_vertical_ctm",
-      "blockType": "logvert",
+      "blockType": "log",
       "stepSound": "stone",
       "material": "wood",
       "harvestLevel": [
@@ -449,14 +449,11 @@
         }
       ],
       "creativeTab": "WesterosDeco",
-      "label": "Marble Pillar Vertical CTM",
+      "label": "Marble Pillar Vertical",
       "textures": [
         "marble_pillar/column_block_marble_top_bottom",
         "marble_pillar/column_block_marble_top_bottom",
-        "marble_pillar_vertical_ctm/base",
-        "marble_pillar_vertical_ctm/down",
-        "marble_pillar_vertical_ctm/up",
-        "marble_pillar_vertical_ctm/both"
+        "marble_pillar_vertical_ctm/side"
       ],
       "legacyBlockID": "log_block_1:3"
     },
@@ -464,7 +461,7 @@
       "blockName": "yellow_wildflowers",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -545,7 +542,7 @@
       "blockName": "orange_marigolds",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -583,7 +580,7 @@
       "blockName": "orange_trollius",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -611,7 +608,7 @@
       "blockName": "blue_forgetmenots",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -649,7 +646,7 @@
       "blockName": "pink_wildflowers",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -668,7 +665,7 @@
       "blockName": "yellow_tansy",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -687,7 +684,7 @@
       "blockName": "blue_flax",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -725,7 +722,7 @@
       "blockName": "white_daisies",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -763,7 +760,7 @@
       "blockName": "yellow_daisies",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -909,9 +906,9 @@
     },
     {
       "blockName": "yellow_bedstraw",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -924,26 +921,17 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/yellow_bedstraw_side1",
-            "flowers/yellow_bedstraw_down",
-            "flowers/yellow_bedstraw_up_both",
-            "flowers/yellow_bedstraw_up_both"
+            "flowers/yellow_bedstraw/side1"
           ]
         },
         {
           "textures": [
-            "flowers/yellow_bedstraw_side2",
-            "flowers/yellow_bedstraw_down",
-            "flowers/yellow_bedstraw_up_both",
-            "flowers/yellow_bedstraw_up_both"
+            "flowers/yellow_bedstraw/side2"
           ]
         },
         {
           "textures": [
-            "flowers/yellow_bedstraw_side3",
-            "flowers/yellow_bedstraw_down",
-            "flowers/yellow_bedstraw_up_both",
-            "flowers/yellow_bedstraw_up_both"
+            "flowers/yellow_bedstraw/side3"
           ]
         }
       ],
@@ -972,7 +960,7 @@
       "blockName": "blue_bells",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -992,7 +980,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1012,7 +1000,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1051,7 +1039,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1090,7 +1078,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1129,7 +1117,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1165,10 +1153,10 @@
     },
     {
       "blockName": "pink_thistle",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1181,37 +1169,25 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/pink_thistle_side1",
-            "flowers/pink_thistle_down2",
-            "flowers/pink_thistle_up_both1",
-            "flowers/pink_thistle_up_both1"
+            "flowers/pink_thistle/side1"
           ],
           "weight": 40
         },
         {
           "textures": [
-            "flowers/pink_thistle_side2",
-            "flowers/pink_thistle_down1",
-            "flowers/pink_thistle_up_both2",
-            "flowers/pink_thistle_up_both2"
+            "flowers/pink_thistle/side2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "flowers/pink_thistle_side3",
-            "flowers/pink_thistle_down3",
-            "flowers/pink_thistle_up_both3",
-            "flowers/pink_thistle_up_both3"
+            "flowers/pink_thistle/side3"
           ],
           "weight": 40
         },
         {
           "textures": [
-            "flowers/pink_thistle_side4",
-            "flowers/pink_thistle_down1",
-            "flowers/pink_thistle_up_both4",
-            "flowers/pink_thistle_up_both4"
+            "flowers/pink_thistle/side4"
           ],
           "weight": 10
         }
@@ -1223,7 +1199,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1257,7 +1233,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1296,7 +1272,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1346,7 +1322,7 @@
       },
       "label": "Strawberry Bush",
       "textures": [
-        "flower_block_1/strawberry"
+        "flowers/strawberry"
       ],
       "legacyBlockID": "yellow_flower_block_1:9"
     },
@@ -1355,7 +1331,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1375,7 +1351,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1392,10 +1368,10 @@
     },
     {
       "blockName": "yellow_sunflower",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1408,26 +1384,17 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/yellow_sunflower_side1",
-            "flowers/yellow_sunflower_down1",
-            "flowers/yellow_sunflower_up_both1",
-            "flowers/yellow_sunflower_up_both1"
+            "flowers/yellow_sunflower/side1"
           ]
         },
         {
           "textures": [
-            "flowers/yellow_sunflower_side2",
-            "flowers/yellow_sunflower_down2",
-            "flowers/yellow_sunflower_up_both2",
-            "flowers/yellow_sunflower_up_both1"
+            "flowers/yellow_sunflower/side2"
           ]
         },
         {
           "textures": [
-            "flowers/yellow_sunflower_side3",
-            "flowers/yellow_sunflower_down3",
-            "flowers/yellow_sunflower_up_both2",
-            "flowers/yellow_sunflower_up_both2"
+            "flowers/yellow_sunflower/side3"
           ]
         }
       ],
@@ -1438,7 +1405,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11290,7 +11257,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11329,7 +11296,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11355,10 +11322,10 @@
     },
     {
       "blockName": "meadow_fescue",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11371,18 +11338,12 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/meadow_fescue_side1",
-            "flowers/meadow_fescue_down1",
-            "flowers/meadow_fescue_up_both1",
-            "flowers/meadow_fescue_up_both1"
+            "flowers/meadow_fescue/side1"
           ]
         },
         {
           "textures": [
-            "flowers/meadow_fescue_side2",
-            "flowers/meadow_fescue_down2",
-            "flowers/meadow_fescue_up_both2",
-            "flowers/meadow_fescue_up_both2"
+            "flowers/meadow_fescue/side2"
           ]
         }
       ],
@@ -11393,7 +11354,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11422,7 +11383,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11461,7 +11422,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11500,7 +11461,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11539,7 +11500,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11568,7 +11529,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11597,7 +11558,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11633,10 +11594,10 @@
     },
     {
       "blockName": "blue_chicory",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11649,34 +11610,22 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/blue_chicory_side1",
-            "flowers/blue_chicory_down1",
-            "flowers/blue_chicory_up_both1",
-            "flowers/blue_chicory_up_both1"
+            "flowers/blue_chicory/side1"
           ]
         },
         {
           "textures": [
-            "flowers/blue_chicory_side2",
-            "flowers/blue_chicory_down2",
-            "flowers/blue_chicory_up_both2",
-            "flowers/blue_chicory_up_both2"
+            "flowers/blue_chicory/side2"
           ]
         },
         {
           "textures": [
-            "flowers/blue_chicory_side3",
-            "flowers/blue_chicory_down2",
-            "flowers/blue_chicory_up_both3",
-            "flowers/blue_chicory_up_both3"
+            "flowers/blue_chicory/side3"
           ]
         },
         {
           "textures": [
-            "flowers/blue_chicory_side4",
-            "flowers/blue_chicory_down3",
-            "flowers/blue_chicory_up_both4",
-            "flowers/blue_chicory_up_both4"
+            "flowers/blue_chicory/side4"
           ]
         }
       ],
@@ -11687,7 +11636,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11707,7 +11656,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11746,7 +11695,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11785,7 +11734,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11819,7 +11768,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11853,7 +11802,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11892,7 +11841,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11909,10 +11858,10 @@
     },
     {
       "blockName": "purple_alpine_sowthistle",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -11925,34 +11874,22 @@
       "randomTextures": [
         {
           "textures": [
-            "flowers/purple_alpine_sowthistle_side1",
-            "flowers/purple_alpine_sowthistle_down1",
-            "flowers/purple_alpine_sowthistle_up_both1",
-            "flowers/purple_alpine_sowthistle_up_both1"
+            "flowers/purple_alpine_sowthistle/side1"
           ]
         },
         {
           "textures": [
-            "flowers/purple_alpine_sowthistle_side2",
-            "flowers/purple_alpine_sowthistle_down2",
-            "flowers/purple_alpine_sowthistle_up_both2",
-            "flowers/purple_alpine_sowthistle_up_both2"
+            "flowers/purple_alpine_sowthistle/side2"
           ]
         },
         {
           "textures": [
-            "flowers/purple_alpine_sowthistle_side1",
-            "flowers/purple_alpine_sowthistle_down3",
-            "flowers/purple_alpine_sowthistle_up_both3",
-            "flowers/purple_alpine_sowthistle_up_both3"
+            "flowers/purple_alpine_sowthistle/side3"
           ]
         },
         {
           "textures": [
-            "flowers/purple_alpine_sowthistle_side2",
-            "flowers/purple_alpine_sowthistle_down1",
-            "flowers/purple_alpine_sowthistle_up_both4",
-            "flowers/purple_alpine_sowthistle_up_both4"
+            "flowers/purple_alpine_sowthistle_/side4"
           ]
         }
       ],
@@ -11963,7 +11900,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12002,7 +11939,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12041,7 +11978,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12061,7 +11998,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12095,7 +12032,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12115,7 +12052,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12183,7 +12120,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12286,7 +12223,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -18965,6 +18902,62 @@
         "muddy_sand/side"
       ],
       "legacyBlockID": "solid_blocks_1:4"
+    },
+    {
+      "blockName": "grassy_sand",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "creativeTab": "WesterosBlocks",
+      "label": "Grassy Sand",
+      "textures": [
+        "grassy_sand/side"
+      ],
+      "legacyBlockID": "minecraft:sand:12:1"
+    },
+    {
+      "blockName": "classic_grass_block",
+      "blockType": "cuboid-nsew",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 5,
+      "harvestLevel": [
+        {
+          "tool": "shovel",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "label": "Classic Grass Block",
+      "textures": [
+        "classic_grass_block/top1",
+        "dirt/ground",
+        "transparent",
+        "classic_grass_block/grass_block_side_overlay"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0.01,
+          "xMax": 0.99,
+          "yMin": 0.01,
+          "yMax": 0.99,
+          "zMin": 0.01,
+          "zMax": 0.99,
+          "sideTextures": [0, 1, 1, 1, 1, 0]
+        },
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [2, 2, 3, 3, 3, 2]
+        }
+      ]
     },
     {
       "blockName": "dorne_dull_terracotta_wall",
@@ -30171,7 +30164,7 @@
     },
     {
       "blockName": "bracken",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosPlants",
@@ -30187,66 +30180,42 @@
       "randomTextures": [
         {
           "textures": [
-            "bracken/side1",
-            "bracken/top1",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side1"
           ]
         },
         {
           "textures": [
-            "bracken/side2",
-            "bracken/top2",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side2"
           ]
         },
         {
           "textures": [
-            "bracken/side3",
-            "bracken/top3",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side3"
           ]
         },
         {
           "textures": [
-            "bracken/side4",
-            "bracken/top4",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side4"
           ]
         },
         {
           "textures": [
-            "bracken/side5",
-            "bracken/top1",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side5"
           ]
         },
         {
           "textures": [
-            "bracken/side6",
-            "bracken/top2",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side6"
           ]
         },
         {
           "textures": [
-            "bracken/side7",
-            "bracken/top3",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side7"
           ]
         },
         {
           "textures": [
-            "bracken/side1",
-            "bracken/top4",
-            "bracken/up_both",
-            "bracken/up_both"
+            "bracken/side8"
           ]
         }
       ],
@@ -30293,7 +30262,7 @@
     },
     {
       "blockName": "nettle",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosPlants",
@@ -30309,28 +30278,19 @@
       "randomTextures": [
         {
           "textures": [
-            "nettle/side1",
-            "nettle/down1",
-            "nettle/up_both1",
-            "nettle/up_both1"
+            "nettle/side1"
           ],
           "weight": 15
         },
         {
           "textures": [
-            "nettle/side2",
-            "nettle/down1",
-            "nettle/up_both1",
-            "nettle/up_both1"
+            "nettle/side2"
           ],
           "weight": 15
         },
         {
           "textures": [
-            "nettle/side5",
-            "nettle/down2",
-            "nettle/up_both2",
-            "nettle/up_both2"
+            "nettle/side3"
           ],
           "weight": 20
         }
@@ -30339,7 +30299,7 @@
     },
     {
       "blockName": "dead_bracken",
-      "blockType": "plantvert",
+      "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosPlants",
@@ -30355,98 +30315,62 @@
       "randomTextures": [
         {
           "textures": [
-            "dead_bracken/side1",
-            "dead_bracken/top1",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side1"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side2",
-            "dead_bracken/top2",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side2"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side3",
-            "dead_bracken/top3",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side3"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side4",
-            "dead_bracken/top4",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side4"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side5",
-            "dead_bracken/top1",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side5"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side6",
-            "dead_bracken/top2",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side6"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side1",
-            "dead_bracken/top3",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side7"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side2",
-            "dead_bracken/top4",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side8"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side3",
-            "dead_bracken/top1",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side9"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side4",
-            "dead_bracken/top2",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side10"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side5",
-            "dead_bracken/top3",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side11"
           ]
         },
         {
           "textures": [
-            "dead_bracken/side6",
-            "dead_bracken/top4",
-            "dead_bracken/up_both",
-            "dead_bracken/up_both"
+            "dead_bracken/side12"
           ]
         }
       ],
@@ -30706,6 +30630,39 @@
         "zMax": 0.9375
       },
       "legacyBlockID": "test_block:2"
+    },
+    {
+      "blockName": "cabbage",
+      "blockType": "cuboid-16way",
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosPlants",
+      "label": "Cabbage",
+      "textures": [
+        "cabbage/down",
+        "cabbage/up",
+        "cabbage/west",
+        "cabbage/east",
+        "cabbage/south",
+        "cabbage/north"
+      ],
+      "boundingBox": {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0,
+        "yMax": 0.5,
+        "zMin": 0.25,
+        "zMax": 0.75
+      },
+      "legacyBlockID": "minecraft:skull:397:4"
     },
     {
       "blockName": "pebbles_wet_eastern_islands",
@@ -46073,6 +46030,101 @@
       "legacyBlockID": "rope_block_7:0"
     },
     {
+      "blockName": "path_dirt",
+      "blockType": "cuboid",
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "creativeTab": "WesterosBlocks",
+      "label": "Path Dirt",
+      "randomTextures": [
+        {
+          "textures": [
+            "dirt/top_bot1",
+            "dirt/top_bot1",
+            "dirt/ground"
+          ],
+          "weight": 100
+        },
+        {
+          "textures": [
+            "dirt/top_bot2",
+            "dirt/top_bot2",
+            "dirt/ground"
+          ],
+          "weight": 33
+        },
+        {
+          "textures": [
+            "dirt/top_bot3",
+            "dirt/top_bot3",
+            "dirt/ground"
+          ],
+          "weight": 45
+        },
+        {
+          "textures": [
+            "dirt/top_bot4",
+            "dirt/top_bot4",
+            "dirt/ground"
+          ],
+          "weight": 140
+        },
+        {
+          "textures": [
+            "dirt/top_bot5",
+            "dirt/top_bot5",
+            "dirt/ground"
+          ],
+          "weight": 193
+        },
+        {
+          "textures": [
+            "dirt/top_bot6",
+            "dirt/top_bot6",
+            "dirt/ground"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "dirt/top_bot7",
+            "dirt/top_bot7",
+            "dirt/ground"
+          ],
+          "weight": 77
+        },
+        {
+          "textures": [
+            "dirt/top_bot8",
+            "dirt/top_bot8",
+            "dirt/ground"
+          ],
+          "weight": 77
+        }
+      ],
+      "cuboids": [
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 0.9375,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "legacyBlockID": "cuboid_block_10:0"
+    },
+    {
       "blockName": "path_gravel",
       "blockType": "cuboid",
       "hardness": 2,
@@ -54710,211 +54762,6 @@
         "purple_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:5"
-    },
-    {
-      "blockName": "grey_wood_platform",
-      "blockType": "cuboid-horiz",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosBlocks",
-      "label": "Grey Wood Platform",
-      "textures": [
-        "grey_wood/top_bottom",
-        "grey_wood/top_bottom",
-        "grey_wood/side"
-      ],
-      "cuboidLists": [
-        [
-          {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 0.25,
-            "zMin": 0,
-            "zMax": 1,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          },
-          {
-            "xMin": 0.25,
-            "xMax": 0.75,
-            "yMin": 0.25,
-            "yMax": 0.5,
-            "zMin": 0.25,
-            "zMax": 0.75,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          }
-        ],
-        [
-          {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 0.25,
-            "zMin": 0,
-            "zMax": 1,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          },
-          {
-            "xMin": 0.25,
-            "xMax": 0.75,
-            "yMin": 0.25,
-            "yMax": 0.5,
-            "zMin": 0,
-            "zMax": 0.75,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          }
-        ],
-        [
-          {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 0.25,
-            "zMin": 0,
-            "zMax": 1,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          },
-          {
-            "xMin": 0.25,
-            "xMax": 1,
-            "yMin": 0.25,
-            "yMax": 0.5,
-            "zMin": 0,
-            "zMax": 0.75,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          }
-        ],
-        [
-          {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 0.25,
-            "zMin": 0,
-            "zMax": 1,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          },
-          {
-            "xMin": 0.25,
-            "xMax": 0.75,
-            "yMin": 0.25,
-            "yMax": 0.5,
-            "zMin": 0,
-            "zMax": 1,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          }
-        ],
-        [
-          {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 0.25,
-            "zMin": 0,
-            "zMax": 1,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          },
-          {
-            "xMin": 0.25,
-            "xMax": 1,
-            "yMin": 0.25,
-            "yMax": 0.5,
-            "zMin": 0,
-            "zMax": 1,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          }
-        ],
-        [
-          {
-            "xMin": 0,
-            "xMax": 1,
-            "yMin": 0,
-            "yMax": 0.5,
-            "zMin": 0,
-            "zMax": 1,
-            "sideTextures": [
-              0,
-              1,
-              2,
-              2,
-              2,
-              2
-            ]
-          }
-        ]
-      ]
     }
   ]
 }

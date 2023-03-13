@@ -1,4 +1,6 @@
 {
-  "parent": "westerosblocks:block/generated/pink_thistle/base_v1",
-  "textures": {}
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/flowers/pink_thistle/side1"
+  }
 }

@@ -51,6 +51,7 @@ components:
                 - "WesterosDeco"
                 - "WesterosPlants"
                 - "WesterosSounds"
+                - "WesterosFlowers"
         blocks:
           type: array
           description: List of block definitions
@@ -205,6 +206,7 @@ components:
             - "WesterosDeco"
             - "WesterosPlants"
             - "WesterosSounds"
+            - "WesterosFlowers"
         lightValue:
           type: number
           minimum: 0

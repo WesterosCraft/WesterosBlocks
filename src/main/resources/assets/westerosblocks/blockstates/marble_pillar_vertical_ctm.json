@@ -1,52 +1,16 @@
 {
   "variants": {
-    "axis=x,up=false,down=false": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/base_v1",
+    "axis=z": {
+      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/z_v1",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/x_v1",
       "x": 90,
       "y": 90
     },
-    "axis=y,up=true,down=true": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/both_v1"
-    },
-    "axis=x,up=false,down=true": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/down_v1",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,up=false,down=true": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/down_v1"
-    },
-    "axis=z,up=false,down=false": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/base_v1",
-      "x": 90
-    },
-    "axis=z,up=false,down=true": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/down_v1",
-      "x": 90
-    },
-    "axis=y,up=true,down=false": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/up_v1"
-    },
-    "axis=z,up=true,down=true": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/both_v1",
-      "x": 90
-    },
-    "axis=x,up=true,down=false": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/up_v1",
-      "x": 90,
-      "y": 90
-    },
-    "axis=x,up=true,down=true": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/both_v1",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y,up=false,down=false": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/base_v1"
-    },
-    "axis=z,up=true,down=false": {
-      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/up_v1",
-      "x": 90
+    "axis=y": {
+      "model": "westerosblocks:block/generated/marble_pillar_vertical_ctm/y_v1"
     }
   }
 }

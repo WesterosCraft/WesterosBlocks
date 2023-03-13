@@ -1,47 +1,17 @@
 {
   "variants": {
-    "up=false,down=true": [
+    "": [
       {
-        "model": "westerosblocks:block/generated/nettle/down_v1"
+        "model": "westerosblocks:block/generated/nettle/base_v1",
+        "weight": 15
       },
       {
-        "model": "westerosblocks:block/generated/nettle/down_v2"
+        "model": "westerosblocks:block/generated/nettle/base_v2",
+        "weight": 15
       },
       {
-        "model": "westerosblocks:block/generated/nettle/down_v3"
-      }
-    ],
-    "up=false,down=false": [
-      {
-        "model": "westerosblocks:block/generated/nettle/base_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/nettle/base_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/nettle/base_v3"
-      }
-    ],
-    "up=true,down=true": [
-      {
-        "model": "westerosblocks:block/generated/nettle/both_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/nettle/both_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/nettle/both_v3"
-      }
-    ],
-    "up=true,down=false": [
-      {
-        "model": "westerosblocks:block/generated/nettle/up_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/nettle/up_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/nettle/up_v3"
+        "model": "westerosblocks:block/generated/nettle/base_v3",
+        "weight": 20
       }
     ]
   }
