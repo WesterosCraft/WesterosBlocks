@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/flowers/purple_alpine_sowthistle_/side4"
+    "cross": "westerosblocks:block/flowers/purple_alpine_sowthistle/side4"
   }
 }
