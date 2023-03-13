@@ -1,10 +1,30 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "ctm_vertical",
+    "type": "westeros_vertical_cond",
     "layer": "CUTOUT",
-    "textures": [],
+    "textures": [
+    	"westerosblocks:block/red_sandstone_arrow_slit_window/darkjungle_side_4x2"
+    ],
     "extra": {
+      "condWidth": 2,
+      "condHeight": 4,
+      "conds": [
+        { "biomeNames": [ "minecraft:jungle" ], "rowOut": 2, "colOut": 0, "type": "vertical" },
+        { "biomeNames": [ 
+            "minecraft:frozen_ocean",
+            "minecraft:taiga",
+            "minecraft:snowy_plains",
+            "minecraft:mushroom_fields",
+            "minecraft:ocean",
+            "minecraft:swamp",
+            "minecraft:forest",
+            "minecraft:desert",
+            "minecraft:nether_wastes",
+            "minecraft:windswept_hills",
+            "minecraft:sparse_jungle" ],
+            "rowOut": 0, "colOut": 0, "type": "vertical" }
+      ]
     }
   }
 }

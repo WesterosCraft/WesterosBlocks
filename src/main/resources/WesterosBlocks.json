@@ -49584,64 +49584,10 @@
       "resistance": 10,
       "lightOpacity": 0,
       "label": "Red Sandstone Arrow Slit Window",
-      "randomTextures": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit_window/base_side"
-          ],
-          "condIDs": [
-            "default"
-          ]
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit_window/dark_side"
-          ],
-          "condIDs": [
-            "dark"
-          ]
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit_window/jungle_side"
-          ],
-          "condIDs": [
-            "jungle"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "jungle",
-          "biomes": [
-            "minecraft:jungle"
-          ]
-        },
-        {
-          "condID": "dark",
-          "biomes": [
-            "minecraft:frozen_ocean",
-            "minecraft:taiga",
-            "minecraft:snowy_plains",
-            "minecraft:mushroom_fields",
-            "minecraft:ocean",
-            "minecraft:swamp",
-            "minecraft:forest",
-            "minecraft:desert",
-            "minecraft:nether_wastes",
-            "minecraft:windswept_hills",
-            "minecraft:sparse_jungle"
-          ]
-        },
-        {
-          "condID": "default"
-        }
+      "textures": [
+        "transparent",
+        "transparent",
+        "red_sandstone_arrow_slit_window/base_side"
       ],
       "collisionBoxes": [
         {
@@ -49691,64 +49637,10 @@
       "resistance": 10,
       "lightOpacity": 0,
       "label": "Red Sandstone Arrow Slit Ornate",
-      "randomTextures": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit_ornate/base_side"
-          ],
-          "condIDs": [
-            "default"
-          ]
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit_ornate/dark_side"
-          ],
-          "condIDs": [
-            "dark"
-          ]
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "red_sandstone_arrow_slit_ornate/jungle_side"
-          ],
-          "condIDs": [
-            "jungle"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "jungle",
-          "biomes": [
-            "minecraft:jungle"
-          ]
-        },
-        {
-          "condID": "dark",
-          "biomes": [
-            "minecraft:frozen_ocean",
-            "minecraft:taiga",
-            "minecraft:snowy_plains",
-            "minecraft:mushroom_fields",
-            "minecraft:ocean",
-            "minecraft:swamp",
-            "minecraft:forest",
-            "minecraft:desert",
-            "minecraft:nether_wastes",
-            "minecraft:windswept_hills",
-            "minecraft:sparse_jungle"
-          ]
-        },
-        {
-          "condID": "default"
-        }
+      "textures": [
+        "transparent",
+        "transparent",
+        "red_sandstone_arrow_slit_ornate/base_side"
       ],
       "collisionBoxes": [
         {

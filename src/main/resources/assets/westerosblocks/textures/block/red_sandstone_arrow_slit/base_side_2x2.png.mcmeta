@@ -3,7 +3,9 @@
     "ctm_version": 1,
     "type": "westeros_vertical_cond",
     "layer": "CUTOUT",
-    "textures": [],
+    "textures": [
+    	"westerosblocks:block/red_sandstone_arrow_slit/darkjungle_side_4x2"
+    ],
     "extra": {
       "condWidth": 2,
       "condHeight": 4,
