@@ -9091,7 +9091,7 @@
     },
     {
       "blockName": "bog",
-      "blockType": "soulsandvert",
+      "blockType": "soulsand",
       "hardness": 2,
       "stepSound": "grass",
       "material": "ground",
@@ -9104,10 +9104,7 @@
           "textures": [
             "bog/mud",
             "bog/bog",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 6
         },
@@ -9115,10 +9112,7 @@
           "textures": [
             "bog/mud",
             "bog/bog2",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 3
         },
@@ -9126,10 +9120,7 @@
           "textures": [
             "bog/mud",
             "bog/bog3",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 3
         },
@@ -9137,10 +9128,7 @@
           "textures": [
             "bog/mud",
             "bog/bog4",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 3
         },
@@ -9148,10 +9136,7 @@
           "textures": [
             "bog/mud",
             "bog/bog5",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 3
         },
@@ -9159,10 +9144,7 @@
           "textures": [
             "bog/mud",
             "bog/bog6",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 3
         },
@@ -9170,10 +9152,7 @@
           "textures": [
             "bog/mud",
             "bog/bog7",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 1
         },
@@ -9181,10 +9160,7 @@
           "textures": [
             "bog/mud",
             "bog/bog8",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 1
         },
@@ -9192,10 +9168,7 @@
           "textures": [
             "bog/mud",
             "bog/bog9",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 2
         },
@@ -9203,10 +9176,7 @@
           "textures": [
             "bog/mud",
             "bog/bog10",
-            "bog/bog_side",
-            "bog/bog_side",
-            "bog/mud",
-            "bog/mud"
+            "bog/bog_side"
           ],
           "weight": 2
         }
