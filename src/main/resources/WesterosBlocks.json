@@ -480,7 +480,7 @@
       "blockName": "green_spiny_herb",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -523,7 +523,7 @@
       "blockName": "green_leafy_herb",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -788,7 +788,7 @@
       "blockName": "green_scrub_grass",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -836,7 +836,7 @@
       "blockName": "dead_scrub_grass",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -941,7 +941,7 @@
       "blockName": "orange_bells",
       "blockType": "plant",
       "material": "wood",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -1311,7 +1311,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosCrops",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -4029,7 +4029,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "type": "no-decay,better-foliage,overlay",
       "label": "Apple Fruit Leaves",
       "colorMult": "textures/colormap/birch",
@@ -4082,7 +4082,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "type": "no-decay,better-foliage,overlay",
       "label": "Apricot Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
@@ -4136,7 +4136,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "type": "no-decay,better-foliage,overlay",
       "label": "Cherry Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
@@ -4190,7 +4190,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "type": "no-decay,better-foliage,overlay",
       "label": "Purple Grape Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
@@ -4244,7 +4244,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "type": "no-decay,better-foliage,overlay",
       "label": "Lemon Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
@@ -4298,7 +4298,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "type": "no-decay,better-foliage,overlay",
       "label": "Lime Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
@@ -4352,7 +4352,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "type": "no-decay,better-foliage,overlay",
       "label": "Orange Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
@@ -4406,7 +4406,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "type": "no-decay,better-foliage,overlay",
       "label": "Peach Fruit Leaves",
       "colorMult": "textures/colormap/birch",
@@ -4461,7 +4461,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Plum Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -4515,7 +4515,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Pomegranate Fruit Leaves",
       "colorMult": "textures/colormap/birch",
       "rotateRandom": true,
@@ -4569,7 +4569,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Weirwood Leaves",
       "textures": [
         "leaves_weirwood/leaves_weirwood",
@@ -4585,7 +4585,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Blackberry Bush",
       "colorMult": "textures/colormap/birch",
       "rotateRandom": true,
@@ -4639,7 +4639,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Blueberry Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -4693,7 +4693,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Raspberry Bush",
       "colorMult": "textures/colormap/foliagejungle",
       "rotateRandom": true,
@@ -4747,7 +4747,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Juniper Bush",
       "colorMult": "textures/colormap/pine",
       "rotateRandom": true,
@@ -4801,7 +4801,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Red Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -4855,7 +4855,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Pink Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -4909,7 +4909,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "White Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -4963,7 +4963,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Yellow Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -5017,7 +5017,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Hop Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
       "rotateRandom": true,
@@ -5071,7 +5071,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Olive Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -5125,7 +5125,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Palm Leaves",
       "colorMult": "textures/colormap/foliagepalm",
       "textures": [
@@ -5142,7 +5142,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "White Grape Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
       "randomTextures": [
@@ -12055,7 +12055,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosCrops",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12118,7 +12118,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosCrops",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12147,7 +12147,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12167,7 +12167,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12226,7 +12226,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12246,7 +12246,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12266,7 +12266,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12286,7 +12286,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12306,7 +12306,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12326,7 +12326,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12346,7 +12346,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12366,7 +12366,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12386,7 +12386,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12406,7 +12406,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12426,7 +12426,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12446,7 +12446,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12466,7 +12466,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12486,7 +12486,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12506,7 +12506,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12526,7 +12526,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12546,7 +12546,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12566,7 +12566,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12586,7 +12586,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12606,7 +12606,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12626,7 +12626,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12646,7 +12646,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -12666,7 +12666,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -20821,7 +20821,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "label": "Savanna Tall Grass",
       "textures": [
         "savanna_tall_grass/savanna_tall_grass"
@@ -20835,7 +20835,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "label": "Jungle Tall Fern",
       "textures": [
         "jungle_tall_fern/side"
@@ -20849,7 +20849,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "label": "Jungle Tall Grass",
       "textures": [
         "jungle_tall_grass/down_side1"
@@ -20863,7 +20863,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "label": "Cattails",
       "randomTextures": [
         {
@@ -20916,7 +20916,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30050,7 +30050,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30079,7 +30079,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30138,7 +30138,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30177,7 +30177,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30214,7 +30214,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30293,7 +30293,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30332,7 +30332,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30371,7 +30371,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosGrass",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30405,7 +30405,7 @@
       "blockType": "plant",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosCrops",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -30556,7 +30556,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosCrops",
       "label": "Cabbage",
       "textures": [
         "cabbage/down",
@@ -38162,7 +38162,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Snowy Spruce Leaves",
       "rotateRandom": true,
       "textures": [
@@ -38178,7 +38178,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosLeaves",
       "label": "Snowy Weirwood Leaves",
       "rotateRandom": true,
       "textures": [
@@ -43319,7 +43319,7 @@
       "blockType": "vines",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosDeco",
       "label": "Jasmine Vines",
       "randomTextures": [
         {
@@ -44047,7 +44047,7 @@
       "stepSound": "grass",
       "material": "plants",
       "resistance": 5,
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosDeco",
       "label": "Cushion Moss",
       "randomTextures": [
         {
@@ -44078,7 +44078,7 @@
       "blockType": "vines",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosPlants",
+      "creativeTab": "WesterosDeco",
       "label": "Dappled Moss",
       "colorMult": "textures/colormap/moss_dappled",
       "textures": [

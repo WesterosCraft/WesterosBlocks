@@ -49,10 +49,12 @@ components:
                 - "materials"
                 - "WesterosBlocks"
                 - "WesterosDeco"
-                - "WesterosPlants"
                 - "WesterosSounds"
                 - "WesterosFlowers"
                 - "WesterosUtility"
+                - "WesterosCrops"
+                - "WesterosLeaves"
+                - "WesterosGrass"
         blocks:
           type: array
           description: List of block definitions
@@ -205,10 +207,12 @@ components:
             - "materials"
             - "WesterosBlocks"
             - "WesterosDeco"
-            - "WesterosPlants"
             - "WesterosSounds"
             - "WesterosFlowers"
             - "WesterosUtility"
+            - "WesterosCrops"
+            - "WesterosLeaves"
+            - "WesterosGrass"
         lightValue:
           type: number
           minimum: 0

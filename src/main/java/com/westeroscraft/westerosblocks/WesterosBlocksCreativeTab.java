@@ -10,9 +10,11 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
 
     public static final CreativeModeTab tabWesterosBlocks = new  WesterosBlocksCreativeTab("WesterosBlocks", "§fWesteros Blocks", "timber_red_white_vertical");
     public static final CreativeModeTab tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "§fWesteros Decorative", "apple_basket");
-    public static final CreativeModeTab tabWesterosPlants = new  WesterosBlocksCreativeTab("WesterosPlants", "§fWesteros Plants", "yellow_wildflowers");
-    public static final CreativeModeTab tabWesterosFlowers = new  WesterosBlocksCreativeTab("WesterosFlowers", "§fWesteros Flowers", "blue_bells");
-    public static final CreativeModeTab tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "§fWesteros Sounds", "tavern_small");
+    public static final CreativeModeTab tabWesterosGrass = new  WesterosBlocksCreativeTab("WesterosGrass", "§fGrass and Mushrooms", "dead_scrub_grass");
+    public static final CreativeModeTab tabWesterosCrops = new  WesterosBlocksCreativeTab("WesterosCrops", "§fCrops", "strawberry_bush");
+    public static final CreativeModeTab tabWesterosLeaves = new  WesterosBlocksCreativeTab("WesterosLeaves", "§fShrubs and Leaves", "yellow_rose_bush");
+    public static final CreativeModeTab tabWesterosFlowers = new  WesterosBlocksCreativeTab("WesterosFlowers", "§fFlowers", "blue_bells");
+    public static final CreativeModeTab tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "§fSounds", "tavern_small");
     public static final CreativeModeTab tabWesterosUtility = new  WesterosBlocksCreativeTab("WesterosUtility", "§fUtility", "approval_utility_block");
 
     public static void init() {
