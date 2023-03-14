@@ -1,64 +1,19 @@
 {
   "variants": {
-    "facing=south,up=true,down=true": {
-      "model": "westerosblocks:block/custom/wood_ladder/both_v1",
-      "y": 180
-    },
-    "facing=east,up=true,down=false": {
-      "model": "westerosblocks:block/custom/wood_ladder/up_v1",
-      "y": 90
-    },
-    "facing=south,up=true,down=false": {
-      "model": "westerosblocks:block/custom/wood_ladder/up_v1",
-      "y": 180
-    },
-    "facing=north,up=true,down=true": {
-      "model": "westerosblocks:block/custom/wood_ladder/both_v1"
-    },
-    "facing=south,up=false,down=true": {
-      "model": "westerosblocks:block/custom/wood_ladder/down_v1",
-      "y": 180
-    },
-    "facing=west,up=true,down=true": {
-      "model": "westerosblocks:block/custom/wood_ladder/both_v1",
-      "y": 270
-    },
-    "facing=south,up=false,down=false": {
+    "facing=south": {
       "model": "westerosblocks:block/custom/wood_ladder/base_v1",
       "y": 180
     },
-    "facing=east,up=false,down=false": {
+    "facing=east": {
       "model": "westerosblocks:block/custom/wood_ladder/base_v1",
       "y": 90
     },
-    "facing=north,up=false,down=false": {
+    "facing=north": {
       "model": "westerosblocks:block/custom/wood_ladder/base_v1"
     },
-    "facing=east,up=true,down=true": {
-      "model": "westerosblocks:block/custom/wood_ladder/both_v1",
-      "y": 90
-    },
-    "facing=west,up=false,down=false": {
+    "facing=west": {
       "model": "westerosblocks:block/custom/wood_ladder/base_v1",
       "y": 270
-    },
-    "facing=west,up=false,down=true": {
-      "model": "westerosblocks:block/custom/wood_ladder/down_v1",
-      "y": 270
-    },
-    "facing=west,up=true,down=false": {
-      "model": "westerosblocks:block/custom/wood_ladder/up_v1",
-      "y": 270
-    },
-    "facing=north,up=true,down=false": {
-      "model": "westerosblocks:block/custom/wood_ladder/up_v1"
-    },
-    "facing=north,up=false,down=true": {
-      "model": "westerosblocks:block/custom/wood_ladder/down_v1"
-    },
-    "facing=east,up=false,down=true": {
-      "model": "westerosblocks:block/custom/wood_ladder/down_v1",
-      "y": 90
     }
   }
 }
