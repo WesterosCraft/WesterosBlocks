@@ -17529,40 +17529,8 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Dorne Mud Plaster",
-      "randomTextures": [
-        {
-          "textures": [
-            "dorne_mud_plaster/default"
-          ],
-          "condIDs": [
-            "default"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_mud_plaster/desert"
-          ],
-          "condIDs": [
-            "desert"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "desert",
-          "biomes": [
-            "minecraft:desert",
-            "minecraft:savanna",
-            "minecraft:savanna_plateau",
-            "minecraft:windswept_savanna",
-            "minecraft:badlands",
-            "minecraft:wooded_badlands",
-            "minecraft:mushroom_fields"
-          ]
-        },
-        {
-          "condID": "default"
-        }
+      "textures": [
+        "dorne_mud_plaster/default"
       ],
       "legacyBlockID": "stone_block_3:12"
     },
@@ -17575,40 +17543,8 @@
       "resistance": 10,
       "creativeTab": "WesterosBlocks",
       "label": "Dorne Dark Mud Plaster",
-      "randomTextures": [
-        {
-          "textures": [
-            "dorne_dark_mud_plaster/default"
-          ],
-          "condIDs": [
-            "default"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dark_mud_plaster/desert"
-          ],
-          "condIDs": [
-            "desert"
-          ]
-        }
-      ],
-      "condStates": [
-        {
-          "condID": "desert",
-          "biomes": [
-            "minecraft:desert",
-            "minecraft:savanna",
-            "minecraft:savanna_plateau",
-            "minecraft:windswept_savanna",
-            "minecraft:badlands",
-            "minecraft:wooded_badlands",
-            "minecraft:mushroom_fields"
-          ]
-        },
-        {
-          "condID": "default"
-        }
+      "textures": [
+        "dorne_dark_mud_plaster/default"
       ],
       "legacyBlockID": "stone_block_3:13"
     },

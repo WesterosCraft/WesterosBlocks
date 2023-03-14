@@ -1,12 +1,26 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_ctm_single",
+    "type": "westeros_ctm_single_cond",
     "layer": "SOLID",
     "textures": [
-      "westerosblocks:block/dorne_mud_plaster/default_ctmtemplate"
+      "westerosblocks:block/dorne_mud_plaster/default_ctmtemplate",
+      "westerosblocks:block/dorne_mud_plaster/desert_ctmtemplate"
     ],
     "extra": {
+       "condWidth": 12,
+       "condHeight": 4,
+       "conds": [
+          { "biomeNames": [             
+	            "minecraft:desert",
+	            "minecraft:savanna",
+	            "minecraft:savanna_plateau",
+	            "minecraft:windswept_savanna",
+	            "minecraft:badlands",
+	            "minecraft:wooded_badlands",
+	            "minecraft:mushroom_fields"
+          	], "rowOut": 0, "colOut": 0, "type": "ctm" }
+       ]
     }
   }
 }
