@@ -18883,7 +18883,8 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1,
-          "sideTextures": [1, 0, 1, 1, 1, 1]
+          "sideTextures": [1, 0, 1, 1, 1, 1],
+          "noTint": [true, false, true, true, true, true]
         },
         {
           "xMin": 0,
@@ -18892,7 +18893,8 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1,
-          "sideTextures": [2, 2, 3, 3, 3, 3]
+          "sideTextures": [2, 2, 3, 3, 3, 3],
+          "noTint": [true, true, false, false, false, false]
         }
       ]
     },
