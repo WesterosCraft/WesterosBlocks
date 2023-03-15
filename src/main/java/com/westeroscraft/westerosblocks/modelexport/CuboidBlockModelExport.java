@@ -139,6 +139,10 @@ public class CuboidBlockModelExport extends ModelExport {
             if (sidetxt == null) {  // If not mapped, use index=side
                 sidetxt = STDTXTIDX;
             }
+            boolean[] noTint = c.noTint;
+            if (noTint == null) {
+            	noTint = NOTINTALL;
+            }
             int[] siderot = c.sideRotations;
             if (siderot == null) {
             	siderot = new int[] { 0, 0, 0, 0, 0, 0 };
@@ -165,7 +169,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f = new Face();
                 f.uv = new float[] { 0, 0, 16, 16 };
                 f.texture = "#txt0";
-                if (isTinted && (!c.noTint)) f.tintindex = 0;
+                if (isTinted && (!noTint[0])) f.tintindex = 0;
                 elem.faces.put("north", f);
                 elem.faces.put("south", f);
                 mod.elements.add(elem);
@@ -182,7 +186,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f = new Face();
                 f.uv = new float[] { 0, 0, 16, 16 };
                 f.texture = "#txt0";
-                if (isTinted && (!c.noTint)) f.tintindex = 0;
+                if (isTinted && (!noTint[0])) f.tintindex = 0;
                 elem.faces.put("west", f);
                 elem.faces.put("east", f);
                 mod.elements.add(elem);
@@ -208,7 +212,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.texture = "#txt" + sidetxt[0];
                 f.rotation = (siderot[0] != 0) ? siderot[0] : null;
                 processRotation(f);
-                if (isTinted && (!c.noTint)) f.tintindex = 0;
+                if (isTinted && (!noTint[0])) f.tintindex = 0;
                 if (elem.from[1] <= 0) f.cullface = "down";
                 elem.faces.put("down", f);
                 // Add up face
@@ -220,7 +224,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.texture = "#txt" + sidetxt[1];
                 f.rotation = (siderot[1] != 0) ? siderot[1] : null;
                 processRotation(f);
-                if (isTinted && (!c.noTint)) f.tintindex = 0;
+                if (isTinted && (!noTint[1])) f.tintindex = 0;
                 if (elem.to[1] >= 16) f.cullface = "up";
                 elem.faces.put("up", f);
                 // Add north face
@@ -232,7 +236,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.texture = "#txt" + sidetxt[2];
                 f.rotation = (siderot[2] != 0) ? siderot[2] : null;
                 processRotation(f);
-                if (isTinted && (!c.noTint)) f.tintindex = 0;
+                if (isTinted && (!noTint[2])) f.tintindex = 0;
                 if (elem.from[2] <= 0) f.cullface = "north";
                 elem.faces.put("north", f);
                 // Add south face
@@ -244,7 +248,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.texture = "#txt" + sidetxt[3];
                 f.rotation = (siderot[3] != 0) ? siderot[3] : null;
                 processRotation(f);
-                if (isTinted && (!c.noTint)) f.tintindex = 0;
+                if (isTinted && (!noTint[3])) f.tintindex = 0;
                 if (elem.to[2] >= 16) f.cullface = "south";
                 elem.faces.put("south", f);
                 // Add west face
@@ -256,7 +260,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.texture = "#txt" + sidetxt[4];
                 f.rotation = (siderot[4] != 0) ? siderot[4] : null;
                 processRotation(f);
-                if (isTinted && (!c.noTint)) f.tintindex = 0;
+                if (isTinted && (!noTint[4])) f.tintindex = 0;
                 if (elem.from[0] <= 0) f.cullface = "west";
                 elem.faces.put("west", f);
                 // Add eath face
@@ -268,7 +272,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 f.texture = "#txt" + sidetxt[5];
                 f.rotation = (siderot[5] != 0) ? siderot[5] : null;
                 processRotation(f);
-                if (isTinted && (!c.noTint)) f.tintindex = 0;
+                if (isTinted && (!noTint[5])) f.tintindex = 0;
                 if (elem.to[0] >= 16) f.cullface = "east";
                 elem.faces.put("east", f);
                 mod.elements.add(elem);
@@ -277,6 +281,7 @@ public class CuboidBlockModelExport extends ModelExport {
         this.writeBlockModelFile(name, mod);
     }
     private static final int[] STDTXTIDX = { 0, 1, 2, 3, 4, 5 };
+    private static final boolean[] NOTINTALL = { false, false, false, false, false, false };
     @Override
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();

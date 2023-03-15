@@ -1864,9 +1864,13 @@ components:
               - "box"
               - "crossed"
           noTint:
-            type: boolean
+            type: array
+            items:
+	            type: boolean
             default: false
-            description: if true, cuboid will not set tintindex even if model is tinted (colorMult is defined)
+            description: |-
+            	if true, cuboid will not set tintindex even if model is tinted (colorMult is defined).
+            	Array must be same length as sideTextures, and corresponds to the same indexes
              
     CollisionBoxes:
       type: array

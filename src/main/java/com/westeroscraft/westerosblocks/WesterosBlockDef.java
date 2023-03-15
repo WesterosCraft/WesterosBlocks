@@ -331,7 +331,7 @@ public class WesterosBlockDef {
 		public int[] sideTextures = null;
 		public int[] sideRotations = { 0, 0, 0, 0, 0, 0 };
 		public String shape = SHAPE_BOX; // "box" = normal cuboid, "crossed" = plant-style crossed (texture 0)
-		public boolean noTint = false;
+		public boolean[] noTint;
 
 		public Cuboid rotateCuboid(CuboidRotation rot) {
 			Cuboid c = new Cuboid();
@@ -376,10 +376,13 @@ public class WesterosBlockDef {
 		}
 
 		public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1) {
-			this(x0, y0, z0, x1, y1, z1, null, false);
+			this(x0, y0, z0, x1, y1, z1, null, null);
+		}
+		public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1, int[] sidetextures) {
+			this(x0, y0, z0, x1, y1, z1, sidetextures, null);
 		}
 
-		public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1, int[] sidetextures, boolean noTint) {
+		public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1, int[] sidetextures, boolean noTint[]) {
 			this.xMin = x0;
 			this.xMax = x1;
 			this.yMin = y0;
