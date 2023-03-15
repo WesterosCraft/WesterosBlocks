@@ -18819,7 +18819,7 @@
     },
     {
       "blockName": "classic_grass_block",
-      "blockType": "cuboid-nsew",
+      "blockType": "cuboid",
       "hardness": 5,
       "stepSound": "grass",
       "material": "plants",
@@ -18830,23 +18830,60 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "colorMult": "textures/colormap/grass",
+      "creativeTab": "WesterosBlocks",
       "label": "Classic Grass Block",
-      "textures": [
-        "classic_grass_block/top1",
-        "dirt/ground",
-        "transparent",
-        "classic_grass_block/grass_block_side_overlay"
+      "randomTextures": [
+        {
+          "textures": [
+            "classic_grass_block/top1",
+            "dirt/ground",
+            "transparent",
+            "classic_grass_block/grass_block_side_overlay"
+          ]
+        },
+        {
+          "textures": [
+            "classic_grass_block/top2",
+            "dirt/ground",
+            "transparent",
+            "classic_grass_block/grass_block_side_overlay"
+          ]
+        },
+        {
+          "textures": [
+            "classic_grass_block/top3",
+            "dirt/ground",
+            "transparent",
+            "classic_grass_block/grass_block_side_overlay"
+          ]
+        },
+        {
+          "textures": [
+            "classic_grass_block/top4",
+            "dirt/ground",
+            "transparent",
+            "classic_grass_block/grass_block_side_overlay"
+          ]
+        },
+        {
+          "textures": [
+            "classic_grass_block/top5",
+            "dirt/ground",
+            "transparent",
+            "classic_grass_block/grass_block_side_overlay"
+          ]
+        }
       ],
       "cuboids": [
         {
-          "xMin": 0.01,
-          "xMax": 0.99,
-          "yMin": 0.01,
-          "yMax": 0.99,
-          "zMin": 0.01,
-          "zMax": 0.99,
-          "sideTextures": [0, 1, 1, 1, 1, 0]
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [1, 0, 1, 1, 1, 1]
         },
         {
           "xMin": 0,
@@ -18855,7 +18892,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1,
-          "sideTextures": [2, 2, 3, 3, 3, 2]
+          "sideTextures": [2, 2, 3, 3, 3, 3]
         }
       ]
     },
@@ -26178,7 +26215,7 @@
     },
     {
       "blockName": "alyssas_tears_mist_two",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "nonOpaque": true,
       "alphaRender": true,
@@ -26186,10 +26223,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Alyssas Tears Mist Two",
       "textures": [
-        "alyssas_tears_mist/mist2_down",
-        "alyssas_tears_mist/mist2_down",
-        "alyssas_tears_mist/mist2_up",
-        "alyssas_tears_mist/mist2_both"
+        "alyssas_tears_mist/mist2"
       ],
       "connectTo": "material",
       "type": "no-in-web",
@@ -26197,7 +26231,7 @@
     },
     {
       "blockName": "alyssas_tears_mist_three",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "nonOpaque": true,
       "alphaRender": true,
@@ -26206,17 +26240,14 @@
       "creativeTab": "WesterosDeco",
       "label": "Alyssas Tears Mist Three",
       "textures": [
-        "alyssas_tears_mist/mist3_down",
-        "alyssas_tears_mist/mist3_down",
-        "alyssas_tears_mist/mist3_up",
-        "alyssas_tears_mist/mist3_both"
+        "alyssas_tears_mist/mist3"
       ],
       "type": "no-in-web",
       "legacyBlockID": "translucent_web_block_1:2"
     },
     {
       "blockName": "alyssas_tears_mist_four",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "nonOpaque": true,
       "alphaRender": true,
@@ -26225,9 +26256,6 @@
       "creativeTab": "WesterosDeco",
       "label": "Alyssas Tears Mist Four",
       "textures": [
-        "alyssas_tears_mist/mist4",
-        "alyssas_tears_mist/mist4_down",
-        "alyssas_tears_mist/mist4",
         "alyssas_tears_mist/mist4"
       ],
       "type": "no-in-web",
@@ -52861,6 +52889,25 @@
       "legacyBlockID": "log_block_8:0"
     },
     {
+      "blockName": "stacked_bones_solid",
+      "blockType": "solid",
+      "stepSound": "stone",
+      "material": "rock",
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "label": "Stacked Bones Solid",
+      "textures": [
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_side"
+      ]
+    },
+    {
       "blockName": "stacked_bones_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -52953,7 +53000,7 @@
     {
       "blockName": "stacked_bones_stairs",
       "blockType": "stair",
-      "modelBlockName": "stacked_bones",
+      "modelBlockName": "stacked_bones_solid",
       "creativeTab": "WesterosBlocks",
       "label": "Stacked Bones Stairs",
       "legacyBlockID": "stone_block_12_stair_0:0"
