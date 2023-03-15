@@ -2,7 +2,7 @@
   "animation": { },
   "ctm": {
     "ctm_version": 1,
-    "type": "ctm_vertical",
+    "type": "westeros_vertical",
     "layer": "TRANSLUCENT",
     "textures": [],
     "extra": {

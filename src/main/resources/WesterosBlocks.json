@@ -26215,7 +26215,7 @@
     },
     {
       "blockName": "alyssas_tears_mist_two",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "nonOpaque": true,
       "alphaRender": true,
@@ -26223,10 +26223,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Alyssas Tears Mist Two",
       "textures": [
-        "alyssas_tears_mist/mist2_down",
-        "alyssas_tears_mist/mist2_down",
-        "alyssas_tears_mist/mist2_up",
-        "alyssas_tears_mist/mist2_both"
+        "alyssas_tears_mist/mist2"
       ],
       "connectTo": "material",
       "type": "no-in-web",
@@ -26234,7 +26231,7 @@
     },
     {
       "blockName": "alyssas_tears_mist_three",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "nonOpaque": true,
       "alphaRender": true,
@@ -26243,17 +26240,14 @@
       "creativeTab": "WesterosDeco",
       "label": "Alyssas Tears Mist Three",
       "textures": [
-        "alyssas_tears_mist/mist3_down",
-        "alyssas_tears_mist/mist3_down",
-        "alyssas_tears_mist/mist3_up",
-        "alyssas_tears_mist/mist3_both"
+        "alyssas_tears_mist/mist3"
       ],
       "type": "no-in-web",
       "legacyBlockID": "translucent_web_block_1:2"
     },
     {
       "blockName": "alyssas_tears_mist_four",
-      "blockType": "webvert",
+      "blockType": "web",
       "stepSound": "cloth",
       "nonOpaque": true,
       "alphaRender": true,
@@ -26262,9 +26256,6 @@
       "creativeTab": "WesterosDeco",
       "label": "Alyssas Tears Mist Four",
       "textures": [
-        "alyssas_tears_mist/mist4",
-        "alyssas_tears_mist/mist4_down",
-        "alyssas_tears_mist/mist4",
         "alyssas_tears_mist/mist4"
       ],
       "type": "no-in-web",
@@ -52914,8 +52905,7 @@
         "stacked_bones/bone_stacked_front",
         "stacked_bones/bone_stacked_front",
         "stacked_bones/bone_stacked_side"
-      ],
-      "legacyBlockID": "log_block_8:0"
+      ]
     },
     {
       "blockName": "stacked_bones_fence",
