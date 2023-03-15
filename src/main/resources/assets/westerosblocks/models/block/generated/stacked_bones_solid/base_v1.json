@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/stacked_bones/bone_stacked_front",
     "up": "westerosblocks:block/stacked_bones/bone_stacked_front",
-    "north": "westerosblocks:block/stacked_bones/bone_stacked_side",
-    "south": "westerosblocks:block/stacked_bones/bone_stacked_side",
-    "west": "westerosblocks:block/stacked_bones/bone_stacked_side",
-    "east": "westerosblocks:block/stacked_bones/bone_stacked_side",
-    "particle": "westerosblocks:block/stacked_bones/bone_stacked_side"
+    "north": "westerosblocks:block/stacked_bones/bone_stacked_rotated",
+    "south": "westerosblocks:block/stacked_bones/bone_stacked_rotated",
+    "west": "westerosblocks:block/stacked_bones/bone_stacked_rotated",
+    "east": "westerosblocks:block/stacked_bones/bone_stacked_rotated",
+    "particle": "westerosblocks:block/stacked_bones/bone_stacked_rotated"
   }
 }
