@@ -60,7 +60,6 @@ import com.westeroscraft.westerosblocks.blocks.WCWebVertBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
@@ -332,6 +331,7 @@ public class WesterosBlockDef {
 		public int[] sideTextures = null;
 		public int[] sideRotations = { 0, 0, 0, 0, 0, 0 };
 		public String shape = SHAPE_BOX; // "box" = normal cuboid, "crossed" = plant-style crossed (texture 0)
+		public boolean noTint = false;
 
 		public Cuboid rotateCuboid(CuboidRotation rot) {
 			Cuboid c = new Cuboid();
@@ -376,10 +376,10 @@ public class WesterosBlockDef {
 		}
 
 		public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1) {
-			this(x0, y0, z0, x1, y1, z1, null);
+			this(x0, y0, z0, x1, y1, z1, null, false);
 		}
 
-		public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1, int[] sidetextures) {
+		public Cuboid(float x0, float y0, float z0, float x1, float y1, float z1, int[] sidetextures, boolean noTint) {
 			this.xMin = x0;
 			this.xMax = x1;
 			this.yMin = y0;
@@ -387,6 +387,7 @@ public class WesterosBlockDef {
 			this.zMin = z0;
 			this.zMax = z1;
 			this.sideTextures = sidetextures;
+			this.noTint = noTint;
 		}
 	}
 

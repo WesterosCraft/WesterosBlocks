@@ -1863,6 +1863,11 @@ components:
             enum:
               - "box"
               - "crossed"
+          noTint:
+            type: boolean
+            default: false
+            description: if true, cuboid will not set tintindex even if model is set to isTinted=true
+             
     CollisionBoxes:
       type: array
       description: List of collision boxes
