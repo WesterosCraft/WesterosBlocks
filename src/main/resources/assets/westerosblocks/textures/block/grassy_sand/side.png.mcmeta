@@ -1,16 +1,33 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_ctm+pattern",
+    "type": "westeros_ctm+pattern_cond",
     "layer": "SOLID",
     "textures": [
       "westerosblocks:block/grassy_sand/side_ctmtemplate",
-      "westerosblocks:block/grassy_sand/side_pattern_3x3"
+      "westerosblocks:block/grassy_sand/side_pattern_3x3",
+      "westerosblocks:block/grassy_sand/side_desert_ctmpattern"
     ],
     "extra": {
       "width": 3,
       "height": 3,
-      "connect_to": [{ "block": "westerosblocks:grassy_sand" }]
+      "condWidth": 15,
+      "condHeight": 4,
+      "conds": [
+          { "biomeNames": [             
+	            "minecraft:desert",
+	            "minecraft:savanna",
+	            "minecraft:savanna_plateau",
+	            "minecraft:windswept_savanna",
+	            "minecraft:badlands",
+	            "minecraft:wooded_badlands",
+	            "minecraft:mushroom_fields"
+          	], 
+          	"rowOut": 0, "colOut": 0, 
+          	"patternRow": 0, "patternCol": 12, 
+          	"patternWidth": 3, "patternHeight": 3,
+          	"type": "ctm+pattern" }
+       ]
     }
   }
 }
