@@ -4,7 +4,6 @@ import java.io.File;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -17,7 +16,7 @@ import net.minecraft.world.level.block.Block;
 public class StairsBlockModelExport extends ModelExport {
     public static class OurVariant extends Variant {
         public OurVariant(final String modname, final int xrot, final int yrot, Integer weight) {
-            model = WesterosBlocks.MOD_ID + ":block/generated/" + modname;
+            model = modname;
             if (xrot != 0)
                 x = xrot;
             if (yrot != 0)
@@ -118,7 +117,7 @@ public class StairsBlockModelExport extends ModelExport {
     	List<Variant> vars = new ArrayList<Variant>();
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < setcnt; setidx++) {
-    		String modname = getModelName(ext, setidx);
+    		String modname = modelFileName(ext, setidx);
     		Variant var;
         	if (bbdef != null) {
         		WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);
@@ -143,6 +142,13 @@ public class StairsBlockModelExport extends ModelExport {
         return bblk;
     }
     
+    public String modelFileName(String ext, int setidx) {
+    	if (def.isCustomModel())
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx);
+    	else
+    		return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx);
+    }
+
     private void doInit() throws IOException {
         Block bblk = getModelBlock();
         // Find base block for stairs - textures come from there
@@ -203,82 +209,86 @@ public class StairsBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         doInit();
-        // Loop over the random sets we've got
-        for (int setidx = 0; setidx < setcnt; setidx++) {
-        	String downtxt = null;
-        	String uptxt = null;
-        	String sidetxt = null;
-        	if (bbdef != null) {
-            	WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);        		
-         		downtxt = getTextureID(set.getTextureByIndex(0));
-         		uptxt = getTextureID(set.getTextureByIndex(1));
-         		sidetxt = getTextureID(set.getTextureByIndex(2));
-        	}
-        	else {
-        		switch (def.modelBlockName) {
-                	case "minecraft:bedrock":
-                		downtxt = uptxt = sidetxt = "minecraft:block/bedrock";
-                		break;
-                	case "minecraft:lapis_block":
-                		downtxt = uptxt = sidetxt = "minecraft:block/lapis_block";
-                		break;
-                	case "minecraft:sandstone":
-                		downtxt = "minecraft:block/sandstone_bottom"; 
-                		uptxt = "minecraft:block/sandstone_top";
-                		sidetxt = "minecraft:block/sandstone";
-                		break;
-                	case "minecraft:iron_block":
-                		downtxt = uptxt = sidetxt = "minecraft:block/iron_block";
-                		break;
-                	case "minecraft:stone_slab":
-                		downtxt = uptxt = "minecraft:block/stone";
-                		sidetxt = "minecraft:block/stone";
-                		break;
-                	case "minecraft:snow":
-                		downtxt = uptxt = sidetxt = "minecraft:block/snow";
-                		break;
-                	case "minecraft:emerald_block":
-                		downtxt = uptxt = sidetxt = "minecraft:block/emerald_block";
-                		break;
-                	case "minecraft:obsidian":
-                		downtxt = uptxt = sidetxt = "minecraft:block/obsidian";
-                		break;
-                	case "minecraft:terracotta":
-                		downtxt = uptxt = sidetxt = "minecraft:block/terracotta";
-                		break;
-                    case "minecraft:gold_block":
-                        downtxt = uptxt = sidetxt = "minecraft:block/gold_block";                	
-                        break;
-                    case "minecraft:ice":
-                        downtxt = uptxt = sidetxt = "minecraft:block/ice";                	
-                        break;                	
-                	default:
-                		throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no vanilla",
-                            def.modelBlockName, def.blockName));
-        		}
-        	}
-        	// Base model
-        	final ModelObjectStair base = new ModelObjectStair(ambientOcclusion, isTinted);
-        	base.textures.bottom = downtxt;
-        	base.textures.top = uptxt;
-        	base.textures.side = base.textures.particle = sidetxt;
-        	this.writeBlockModelFile(getModelName("base", setidx), base);
-        	// Outer model
-        	final ModelObjectOuterStair outer = new ModelObjectOuterStair(ambientOcclusion, isTinted);
-        	outer.textures.bottom = downtxt;
-        	outer.textures.top = uptxt;
-        	outer.textures.side = outer.textures.particle = sidetxt;
-        	this.writeBlockModelFile(getModelName("outer", setidx), outer);
-        	// Inner model
-        	final ModelObjectInnerStair inner = new ModelObjectInnerStair(ambientOcclusion, isTinted);
-        	inner.textures.bottom = downtxt;
-        	inner.textures.top = uptxt;
-        	inner.textures.side = inner.textures.particle = sidetxt;
-        	this.writeBlockModelFile(getModelName("inner", setidx), inner);
+        // Export if not set to custom model
+        if (!def.isCustomModel()) {
+	
+	        // Loop over the random sets we've got
+	        for (int setidx = 0; setidx < setcnt; setidx++) {
+	        	String downtxt = null;
+	        	String uptxt = null;
+	        	String sidetxt = null;
+	        	if (bbdef != null) {
+	            	WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);        		
+	         		downtxt = getTextureID(set.getTextureByIndex(0));
+	         		uptxt = getTextureID(set.getTextureByIndex(1));
+	         		sidetxt = getTextureID(set.getTextureByIndex(2));
+	        	}
+	        	else {
+	        		switch (def.modelBlockName) {
+	                	case "minecraft:bedrock":
+	                		downtxt = uptxt = sidetxt = "minecraft:block/bedrock";
+	                		break;
+	                	case "minecraft:lapis_block":
+	                		downtxt = uptxt = sidetxt = "minecraft:block/lapis_block";
+	                		break;
+	                	case "minecraft:sandstone":
+	                		downtxt = "minecraft:block/sandstone_bottom"; 
+	                		uptxt = "minecraft:block/sandstone_top";
+	                		sidetxt = "minecraft:block/sandstone";
+	                		break;
+	                	case "minecraft:iron_block":
+	                		downtxt = uptxt = sidetxt = "minecraft:block/iron_block";
+	                		break;
+	                	case "minecraft:stone_slab":
+	                		downtxt = uptxt = "minecraft:block/stone";
+	                		sidetxt = "minecraft:block/stone";
+	                		break;
+	                	case "minecraft:snow":
+	                		downtxt = uptxt = sidetxt = "minecraft:block/snow";
+	                		break;
+	                	case "minecraft:emerald_block":
+	                		downtxt = uptxt = sidetxt = "minecraft:block/emerald_block";
+	                		break;
+	                	case "minecraft:obsidian":
+	                		downtxt = uptxt = sidetxt = "minecraft:block/obsidian";
+	                		break;
+	                	case "minecraft:terracotta":
+	                		downtxt = uptxt = sidetxt = "minecraft:block/terracotta";
+	                		break;
+	                    case "minecraft:gold_block":
+	                        downtxt = uptxt = sidetxt = "minecraft:block/gold_block";                	
+	                        break;
+	                    case "minecraft:ice":
+	                        downtxt = uptxt = sidetxt = "minecraft:block/ice";                	
+	                        break;                	
+	                	default:
+	                		throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no vanilla",
+	                            def.modelBlockName, def.blockName));
+	        		}
+	        	}
+	        	// Base model
+	        	final ModelObjectStair base = new ModelObjectStair(ambientOcclusion, isTinted);
+	        	base.textures.bottom = downtxt;
+	        	base.textures.top = uptxt;
+	        	base.textures.side = base.textures.particle = sidetxt;
+	        	this.writeBlockModelFile(getModelName("base", setidx), base);
+	        	// Outer model
+	        	final ModelObjectOuterStair outer = new ModelObjectOuterStair(ambientOcclusion, isTinted);
+	        	outer.textures.bottom = downtxt;
+	        	outer.textures.top = uptxt;
+	        	outer.textures.side = outer.textures.particle = sidetxt;
+	        	this.writeBlockModelFile(getModelName("outer", setidx), outer);
+	        	// Inner model
+	        	final ModelObjectInnerStair inner = new ModelObjectInnerStair(ambientOcclusion, isTinted);
+	        	inner.textures.bottom = downtxt;
+	        	inner.textures.top = uptxt;
+	        	inner.textures.side = inner.textures.particle = sidetxt;
+	        	this.writeBlockModelFile(getModelName("inner", setidx), inner);
+	        }
         }
     	// Build simple item model that refers to base block model
         final ModelObject mo = new ModelObject();
-        mo.parent = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
+        mo.parent = modelFileName("base", 0);
         this.writeItemModelFile(def.getBlockName(), mo);
 
         // Handle tint resources

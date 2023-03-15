@@ -794,6 +794,13 @@ components:
                 source block.
                 If the model block support randomTextures,
                 they will be used for the stairs block, as well.
+            isCustomModel:
+              type: boolean
+              default: false
+              description: |-
+                If set to true, model is not generated,
+                and is instead expected to be found at
+                models/custom/<blockid>/<model>.json.
             ambientOcclusion:
               $ref: "#/components/schemas/ambientOcclusion"
             colorMult:
@@ -1241,7 +1248,7 @@ components:
               description: |-
                 If set to true, model is not generated,
                 and is instead expected to be found at
-                models/custom/<blockid>.json.
+                models/custom/<blockid>/<model>.json.
             rotateRandom:
               type: boolean
               description: |-
@@ -1283,7 +1290,7 @@ components:
               description: |-
                 If set to true, model is not generated,
                 and is instead expected to be found at
-                models/custom/<blockid>.json.
+                models/custom/<blockid>/<model>.json.
     cuboid-nsew:
       title: blockType='cuboid-nsew'
       allOf:
@@ -1319,7 +1326,7 @@ components:
               description: |-
                 If set to true, model is not generated,
                 and is instead expected to be found at
-                models/custom/<blockid>.json.
+                models/custom/<blockid>/<model>.json.
     cuboid-16way:
       title: blockType='cuboid-16way'
       allOf:
@@ -1355,7 +1362,7 @@ components:
               description: |-
                 If set to true, model is not generated,
                 and is instead expected to be found at
-                models/custom/<blockid>.json.                
+                models/custom/<blockid>/<model>.json.
     cuboid-nsewud:
       title: blockType='cuboid-nsewud'
       allOf:
@@ -1391,7 +1398,7 @@ components:
               description: |-
                 If set to true, model is not generated,
                 and is instead expected to be found at
-                models/custom/<blockid>.json.
+                models/custom/<blockid>/<model>.json.
     cuboid-nsew-stack:
       title: blockType='cuboid-nsew-stack'
       allOf:
@@ -1561,6 +1568,13 @@ components:
                   If the list is shorter than 5, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            isCustomModel:
+              type: boolean
+              default: false
+              description: |-
+                If set to true, model is not generated,
+                and is instead expected to be found at
+                models/custom/<blockid>/<model>.json.
                   
     torch:
       title: blockType='torch'
@@ -1736,7 +1750,7 @@ components:
               description: |-
                 If set to true, model is not generated,
                 and is instead expected to be found at
-                models/custom/<blockid>.json.                  
+                models/custom/<blockid>/<model>.json.
     colorMult:
       type: string
       description: |-

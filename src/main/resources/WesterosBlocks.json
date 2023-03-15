@@ -53003,6 +53003,7 @@
       "modelBlockName": "stacked_bones_solid",
       "creativeTab": "WesterosBlocks",
       "label": "Stacked Bones Stairs",
+      "isCustomModel": true,
       "legacyBlockID": "stone_block_12_stair_0:0"
     },
     {
