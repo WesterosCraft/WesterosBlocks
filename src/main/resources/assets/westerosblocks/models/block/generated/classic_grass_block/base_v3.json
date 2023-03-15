@@ -22,9 +22,9 @@
     "txt5": "westerosblocks:block/classic_grass_block/grass_block_side_overlay",
     "txt2": "westerosblocks:block/transparent",
     "txt3": "westerosblocks:block/classic_grass_block/grass_block_side_overlay",
-    "txt0": "westerosblocks:block/classic_grass_block/top1",
+    "txt0": "westerosblocks:block/classic_grass_block/top3",
     "txt1": "westerosblocks:block/dirt/ground",
-    "particle": "westerosblocks:block/classic_grass_block/top1"
+    "particle": "westerosblocks:block/classic_grass_block/top3"
   },
   "elements": [
     {
