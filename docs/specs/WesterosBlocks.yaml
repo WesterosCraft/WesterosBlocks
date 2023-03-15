@@ -1866,7 +1866,7 @@ components:
           noTint:
             type: boolean
             default: false
-            description: if true, cuboid will not set tintindex even if model is set to isTinted=true
+            description: if true, cuboid will not set tintindex even if model is tinted (colorMult is defined)
              
     CollisionBoxes:
       type: array
