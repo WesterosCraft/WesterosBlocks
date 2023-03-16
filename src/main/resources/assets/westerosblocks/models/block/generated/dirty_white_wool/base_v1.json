@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "westerosblocks:block/dirty_white_wool/side"
+  }
+}

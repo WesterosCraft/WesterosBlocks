@@ -1,9 +1,0 @@
-{
-  "variants": {
-    "": [
-       { "model": "minecraft:block/lapis_block/base_v1" },
-       { "model": "minecraft:block/lapis_block/base_v2" },
-       { "model": "minecraft:block/lapis_block/base_v3" }
-    ]
-  }
-}

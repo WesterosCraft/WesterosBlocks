@@ -55,6 +55,9 @@ components:
                 - "WesterosCrops"
                 - "WesterosLeaves"
                 - "WesterosGrass"
+                - "WesterosFlooring"
+                - "WesterosWood"
+                - "WesterosMetal"
         blocks:
           type: array
           description: List of block definitions
@@ -213,6 +216,9 @@ components:
             - "WesterosCrops"
             - "WesterosLeaves"
             - "WesterosGrass"
+            - "WesterosFlooring"
+            - "WesterosMetal"
+            - "WesterosWood"
         lightValue:
           type: number
           minimum: 0
