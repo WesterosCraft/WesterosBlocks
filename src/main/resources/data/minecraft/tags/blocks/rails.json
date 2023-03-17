@@ -5,10 +5,12 @@
     "westerosblocks:horizontal_net",
     "westerosblocks:oak_cover",
     "westerosblocks:northern_wood_cover",
+    "westerosblocks:fancy_red_carpet",
     "westerosblocks:horizontal_rope",
     "westerosblocks:packed_snow",
     "westerosblocks:birch_cover",
     "westerosblocks:spruce_cover",
-    "westerosblocks:horizontal_chain"
+    "westerosblocks:horizontal_chain",
+    "westerosblocks:fancy_blue_carpet"
   ]
 }

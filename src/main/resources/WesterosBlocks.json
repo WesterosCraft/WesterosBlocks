@@ -100,11 +100,20 @@
       "colorMult": "#FFFFFF"
     }
   ],
-  "menuOverrides": [ 
-     { 
-     	"blockNames": [ "minecraft:dispenser", "minecraft:dropper", "minecraft:infested_stone" ],
- 	    "creativeTab": null
-     }
+  "menuOverrides": [
+    {
+      "blockNames": [
+        "minecraft:dispenser",
+        "minecraft:dropper",
+        "minecraft:infested_stone",
+        "minecraft:sponge",
+        "minecraft:lapis_block",
+        "minecraft:lapis_ore",
+        "minecraft:powered_rail",
+        "minecraft:smooth_sandstone"
+      ],
+      "creativeTab": "WesterosDoNotUse"
+    }
   ],
   "blocks": [
     {
@@ -143,7 +152,7 @@
       "legacyBlockID": "metal_block_0:0"
     },
     {
-      "blockName": "oxidized_bronze_block",
+      "blockName": "bronze_block",
       "blockType": "solid",
       "hardness": 5,
       "stepSound": "metal",
@@ -156,6 +165,46 @@
         }
       ],
       "creativeTab": "WesterosBlocks",
+      "lightValue": 0,
+      "label": "Bronze Block",
+      "randomTextures": [
+        {
+          "textures": [
+            "bronze_block/side1"
+          ]
+        },
+        {
+          "textures": [
+            "bronze_block/side2"
+          ]
+        },
+        {
+          "textures": [
+            "bronze_block/side3"
+          ]
+        },
+        {
+          "textures": [
+            "bronze_block/side4"
+          ]
+        }
+      ],
+      "legacyBlockID": "minecraft:lapis_block"
+    },
+    {
+      "blockName": "oxidized_bronze_block",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosMetal",
       "lightValue": 0,
       "label": "Oxidized Bronze Block",
       "randomTextures": [
@@ -190,7 +239,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "lightValue": 0,
       "label": "Steel Block",
       "randomTextures": [
@@ -225,7 +274,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "lightValue": 0,
       "label": "Oxidized Steel Block",
       "randomTextures": [
@@ -1554,7 +1603,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Bronze Slab",
       "randomTextures": [
         {
@@ -1588,7 +1637,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Steel Slab",
       "randomTextures": [
         {
@@ -1622,7 +1671,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Steel Slab",
       "randomTextures": [
         {
@@ -1656,7 +1705,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Gold Brick Slab",
       "textures": [
         "gold_brick/side"
@@ -5909,6 +5958,22 @@
         }
       ],
       "legacyBlockID": "bench_block_0:13"
+    },
+    {
+      "blockName": "closed_cabinet",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosDeco",
+      "label": "Closed Cabinet",
+      "textures": [
+        "cabinet_closed/top_bottom",
+        "cabinet_closed/top_bottom",
+        "cabinet_closed/side"
+      ],
+      "legacyBlockID": "minecraft:sponge"
     },
     {
       "blockName": "bookshelf_library",
@@ -16675,7 +16740,7 @@
       "blockName": "oxidized_bronze_stairs",
       "blockType": "stair",
       "modelBlockName": "oxidized_bronze_block",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Bronze Stairs",
       "legacyBlockID": "metal_block_0_stair_2:0"
     },
@@ -16683,7 +16748,7 @@
       "blockName": "oxidized_steel_stairs",
       "blockType": "stair",
       "modelBlockName": "oxidized_steel_block",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Steel Stairs",
       "legacyBlockID": "metal_block_0_stair_3:0"
     },
@@ -16691,7 +16756,7 @@
       "blockName": "gold_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "gold_brick",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Gold Brick Stairs",
       "legacyBlockID": "metal_block_0_stair_4:0"
     },
@@ -16699,7 +16764,7 @@
       "blockName": "bronze_stairs",
       "blockType": "stair",
       "modelBlockName": "bronze_slab",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Bronze Stairs",
       "legacyBlockID": "metal_block_0_stair_5:0"
     },
@@ -16707,7 +16772,7 @@
       "blockName": "iron_stairs",
       "blockType": "stair",
       "modelBlockName": "iron_slab",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Iron Stairs",
       "legacyBlockID": "metal_block_0_stair_6:0"
     },
@@ -16715,7 +16780,7 @@
       "blockName": "steel_stairs",
       "blockType": "stair",
       "modelBlockName": "steel_block",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Steel Stairs",
       "legacyBlockID": "metal_block_0_stair_7:0"
     },
@@ -17993,7 +18058,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Bronze Fence",
       "textures": [
         "bronze_block_oxidized/side3"
@@ -18170,7 +18235,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Light Brown Wool Slab",
       "textures": [
-        "minecraft:block/magenta_wool"
+        "wool_colours/wool_colored_light_brown"
       ],
       "legacyBlockID": "wool_slab_block_0:2"
     },
@@ -18230,7 +18295,7 @@
       "creativeTab": "WesterosDeco",
       "label": "Dirty White Wool Slab",
       "textures": [
-        "minecraft:block/lime_wool"
+        "dirty_white_wool/side"
       ],
       "legacyBlockID": "wool_slab_block_0:5"
     },
@@ -19077,7 +19142,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Bronze Wall",
       "randomTextures": [
         {
@@ -19131,7 +19196,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Bronze Wall",
       "randomTextures": [
         {
@@ -35225,7 +35290,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWood",
       "label": "Weirwood Face 1",
       "textures": [
         "weirwood/weirwood_face_1",
@@ -35245,7 +35310,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWood",
       "label": "Weirwood Face 2",
       "textures": [
         "weirwood/weirwood_face_2",
@@ -35265,7 +35330,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWood",
       "label": "Weirwood Face 3",
       "textures": [
         "weirwood/weirwood_face_3",
@@ -35285,7 +35350,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWood",
       "label": "Weirwood Face 4",
       "textures": [
         "weirwood/weirwood_face_4",
@@ -35305,7 +35370,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWood",
       "label": "Weirwood Face 5",
       "textures": [
         "weirwood/weirwood_face_5",
@@ -35325,7 +35390,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWood",
       "label": "Weirwood Face 6",
       "textures": [
         "weirwood/weirwood_face_6",
@@ -35345,7 +35410,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWood",
       "label": "Weirwood Face 7",
       "textures": [
         "weirwood/weirwood_face_7",
@@ -35365,7 +35430,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWood",
       "label": "Weirwood Face 8",
       "textures": [
         "weirwood/weirwood_face_8",
@@ -37478,14 +37543,6 @@
       "legacyBlockID": "cuboid_block_8:1"
     },
     {
-      "blockName": "oldtown_cobblestone_stairs",
-      "blockType": "stair",
-      "modelBlockName": "oldtown_cobblestone",
-      "creativeTab": "WesterosBlocks",
-      "label": "Oldtown Cobblestone Stairs",
-      "legacyBlockID": "stone_block_9_stair_5:0"
-    },
-    {
       "blockName": "oak_carpet",
       "blockType": "cuboid",
       "hardness": 5,
@@ -37498,7 +37555,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Oak Carpet",
       "textures": [
         "planks_oak/side"
@@ -37536,7 +37593,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Spruce Carpet",
       "textures": [
         "planks_spruce/side"
@@ -37574,7 +37631,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Birch Carpet",
       "textures": [
         "planks_birch/side"
@@ -37612,7 +37669,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Jungle Carpet",
       "textures": [
         "planks_jungle/side"
@@ -37650,7 +37707,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Dark Northern Wood Carpet",
       "textures": [
         "dark_northern_wood/side1"
@@ -37688,7 +37745,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Grey Wood Carpet",
       "textures": [
         "grey_wood/side1"
@@ -37726,7 +37783,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "White Wood Carpet",
       "textures": [
         "white_wood/side1"
@@ -37764,7 +37821,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Black Wood Carpet",
       "textures": [
         "wood_block_1/wood_black"
@@ -37802,7 +37859,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Blue Wood Carpet",
       "textures": [
         "wood_block_1/wood_blue"
@@ -37840,7 +37897,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Green Wood Carpet",
       "textures": [
         "wood_block_1/wood_green"
@@ -37878,7 +37935,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Red Wood Carpet",
       "textures": [
         "wood_block_1/wood_red"
@@ -37916,7 +37973,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Yellow Wood Carpet",
       "textures": [
         "wood_block_1/wood_yellow"
@@ -37954,7 +38011,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Purple Wood Carpet",
       "textures": [
         "wood_block_1/wood_purple"
@@ -37978,6 +38035,38 @@
         }
       ],
       "legacyBlockID": "carpet_block_0:12"
+    },
+    {
+      "blockName": "fancy_red_carpet",
+      "blockType": "rail",
+      "stepSound": "cloth",
+      "material": "cloth",
+      "creativeTab": "WesterosFlooring",
+      "label": "Fancy Red Carpet",
+      "textures": [
+        "carpet/fancy_red_carpet"
+      ],
+      "legacyBlockID": "minecraft:golden_rail"
+    },
+    {
+      "blockName": "fancy_blue_carpet",
+      "blockType": "rail",
+      "stepSound": "cloth",
+      "material": "cloth",
+      "creativeTab": "WesterosFlooring",
+      "label": "Fancy Blue Carpet",
+      "textures": [
+        "carpet/fancy_blue_carpet"
+      ],
+      "legacyBlockID": "minecraft:golden_rail[powered=true]"
+    },
+    {
+      "blockName": "oldtown_cobblestone_stairs",
+      "blockType": "stair",
+      "modelBlockName": "oldtown_cobblestone",
+      "creativeTab": "WesterosBlocks",
+      "label": "Oldtown Cobblestone Stairs",
+      "legacyBlockID": "stone_block_9_stair_5:0"
     },
     {
       "blockName": "mances_camp_common_tent_stairs",
@@ -45855,7 +45944,7 @@
     {
       "blockName": "oak_cover",
       "blockType": "rail",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "material": "wood",
       "label": "Oak Cover",
       "textures": [
@@ -45866,7 +45955,7 @@
     {
       "blockName": "spruce_cover",
       "blockType": "rail",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "material": "wood",
       "label": "Spruce Cover",
       "textures": [
@@ -45877,7 +45966,7 @@
     {
       "blockName": "birch_cover",
       "blockType": "rail",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "material": "wood",
       "label": "Birch Cover",
       "textures": [
@@ -45889,7 +45978,7 @@
       "blockName": "jungle_cover",
       "blockType": "rail",
       "material": "wood",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Jungle Cover",
       "textures": [
         "rail_block_0/cover_jungle"
@@ -45899,7 +45988,7 @@
     {
       "blockName": "northern_wood_cover",
       "blockType": "rail",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "material": "wood",
       "label": "Northern Wood Cover",
       "textures": [
@@ -47218,7 +47307,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Steel Wall",
       "randomTextures": [
         {
@@ -47252,7 +47341,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Steel Wall",
       "randomTextures": [
         {
@@ -47391,7 +47480,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMetal",
       "label": "Steel Fence",
       "randomTextures": [
         {
@@ -47419,7 +47508,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Steel Fence",
       "randomTextures": [
         {
@@ -47705,7 +47794,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Bronze Tip",
       "textures": [
         "bronze_block_oxidized/side3"
@@ -47775,7 +47864,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMetal",
       "label": "Steel Tip",
       "textures": [
         "steel_block/side1"
@@ -47845,7 +47934,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMetal",
       "label": "Oxidized Steel Tip",
       "textures": [
         "steel_block_oxidized/side1"
@@ -50575,7 +50664,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "White Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_white"
@@ -50613,7 +50702,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Orange Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_orange"
@@ -50651,7 +50740,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Light Brown Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_light_brown"
@@ -50689,7 +50778,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Light Blue Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_light_blue"
@@ -50727,7 +50816,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Yellow Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_yellow"
@@ -50765,7 +50854,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Dirty White Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_dirty_white"
@@ -50803,7 +50892,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Pink Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_pink"
@@ -50841,7 +50930,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Grey Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_grey"
@@ -50879,7 +50968,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Light Grey Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_light_grey"
@@ -50917,7 +51006,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Cyan Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_cyan"
@@ -50955,7 +51044,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Purple Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_purple"
@@ -50993,7 +51082,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Blue Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_blue"
@@ -51031,7 +51120,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Brown Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_brown"
@@ -51069,7 +51158,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Green Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_green"
@@ -51107,7 +51196,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Red Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_red"
@@ -51145,7 +51234,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Black Wool Carpet",
       "textures": [
         "wool_colours/wool_colored_black"
@@ -51183,7 +51272,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Thatch Light Fur Carpet",
       "textures": [
         "thatch_light/thatch_light"
@@ -51221,7 +51310,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFlooring",
       "label": "Thatch Dark Fur Carpet",
       "textures": [
         "fur_block_0/thatch_dark"
@@ -54552,6 +54641,46 @@
         "purple_wood/side"
       ],
       "legacyBlockID": "wood_slab_block_1:5"
+    },
+    {
+      "blockName": "light_brown_wool",
+      "blockType": "solid",
+      "hardness": 1,
+      "resistance": 1,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "stepSound": "cloth",
+      "material": "cloth",
+      "creativeTab": "WesterosBlocks",
+      "label": "Light Brown Wool",
+      "textures": [
+        "light_brown_wool/side"
+      ],
+      "legacyBlockID": "minecraft:wool[color=magenta]"
+    },
+    {
+      "blockName": "dirty_white_wool",
+      "blockType": "solid",
+      "hardness": 1,
+      "resistance": 1,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "stepSound": "cloth",
+      "material": "cloth",
+      "creativeTab": "WesterosBlocks",
+      "label": "Dirty White Wool",
+      "textures": [
+        "dirty_white_wool/side"
+      ],
+      "legacyBlockID": "minecraft:wool[color=lime]"
     }
   ]
 }
