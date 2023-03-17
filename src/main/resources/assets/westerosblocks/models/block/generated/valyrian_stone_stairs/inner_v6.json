@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/stone_valyrian/5",
+    "top": "westerosblocks:block/stone_valyrian/5",
+    "side": "westerosblocks:block/stone_valyrian/5",
+    "particle": "westerosblocks:block/stone_valyrian/5"
+  }
+}

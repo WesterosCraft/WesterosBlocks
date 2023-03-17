@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log",
+  "textures": {
+    "down": "westerosblocks:block/sandstone_pillar/top",
+    "up": "westerosblocks:block/sandstone_pillar/top",
+    "north": "westerosblocks:block/sandstone_pillar/side",
+    "south": "westerosblocks:block/sandstone_pillar/side",
+    "east": "westerosblocks:block/sandstone_pillar/side",
+    "west": "westerosblocks:block/sandstone_pillar/side",
+    "particle": "westerosblocks:block/sandstone_pillar/side"
+  }
+}

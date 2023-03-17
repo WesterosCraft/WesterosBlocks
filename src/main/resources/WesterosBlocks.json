@@ -110,7 +110,12 @@
         "minecraft:lapis_block",
         "minecraft:lapis_ore",
         "minecraft:powered_rail",
-        "minecraft:smooth_sandstone"
+        "minecraft:smooth_sandstone",
+        "minecraft:obsidian",
+        "minecraft:diamond_block",
+        "minecraft:diamond_ore",
+        "minecraft:redstone_block",
+        "minecraft:soul_sand"
       ],
       "creativeTab": "WesterosDoNotUse"
     }
@@ -465,6 +470,26 @@
         "mossy_oak_log/side"
       ],
       "legacyBlockID": "log_block_1:1"
+    },
+    {
+      "blockName": "sandstone_pillar",
+      "blockType": "log",
+      "stepSound": "stone",
+      "material": "wood",
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "label": "Sandstone Pillar",
+      "textures": [
+        "sandstone_pillar/top",
+        "sandstone_pillar/top",
+        "sandstone_pillar/side"
+      ],
+      "legacyBlockID": "minecraft:quartz_pillar"
     },
     {
       "blockName": "marble_pillar",
@@ -8953,6 +8978,20 @@
       "legacyBlockID": "solid_blocks_0:0"
     },
     {
+      "blockName": "plowed_soil",
+      "blockType": "soulsand",
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "creativeTab": "WesterosBlocks",
+      "label": "Plowed Soil",
+      "textures": [
+        "plowed_soil"
+      ],
+      "legacyBlockID": "minecraft:soul_sand"
+    },
+    {
       "blockName": "scorched_earth",
       "blockType": "solid",
       "hardness": 2,
@@ -15484,6 +15523,88 @@
       "legacyBlockID": "minecraft:redstone_ore"
     },
     {
+      "blockName": "silver_ore",
+      "blockType": "solid",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosBlocks",
+      "label": "Silver Ore",
+      "randomTextures": [
+        {
+          "textures": [
+            "silver_ore/silver_ore1"
+          ]
+        },
+        {
+          "textures": [
+            "silver_ore/silver_ore2"
+          ]
+        },
+        {
+          "textures": [
+            "silver_ore/silver_ore3"
+          ]
+        },
+        {
+          "textures": [
+            "silver_ore/silver_ore4"
+          ]
+        }
+      ],
+      "legacyBlockID": "minecraft:diamond_ore"
+    },
+    {
+      "blockName": "tin_ore",
+      "blockType": "solid",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosBlocks",
+      "label": "Tin Ore",
+      "randomTextures": [
+        {
+          "textures": [
+            "tin_ore/tin_ore1"
+          ]
+        },
+        {
+          "textures": [
+            "tin_ore/tin_ore2"
+          ]
+        },
+        {
+          "textures": [
+            "tin_ore/tin_ore3"
+          ]
+        },
+        {
+          "textures": [
+            "tin_ore/tin_ore4"
+          ]
+        }
+      ],
+      "legacyBlockID": "minecraft:emerald_ore"
+    },
+    {
+      "blockName": "mirror_block",
+      "blockType": "solid",
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "glass",
+      "resistance": 10,
+      "creativeTab": "WesterosDeco",
+      "label": "Mirror Block",
+      "textures": [
+        "mirror/top_bottom",
+        "mirror/top_bottom",
+        "mirror/side"
+      ],
+      "legacyBlockID": "minecraft:diamond_block"
+    },
+    {
       "blockName": "stormlands_cobblestone",
       "blockType": "solid",
       "hardness": 5,
@@ -18855,6 +18976,20 @@
       "legacyBlockID": "solid_blocks_1:3"
     },
     {
+      "blockName": "flagstone",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "stone",
+      "material": "ground",
+      "resistance": 2,
+      "creativeTab": "WesterosBlocks",
+      "label": "Flagstone",
+      "textures": [
+        "flagstone"
+      ],
+      "legacyBlockID": "minecraft:quartz_ore"
+    },
+    {
       "blockName": "muddy_sand",
       "blockType": "solid",
       "hardness": 2,
@@ -20985,6 +21120,21 @@
         }
       ],
       "legacyBlockID": "dead_bush_block_0:0"
+    },
+    {
+      "blockName": "red_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Red Plaster",
+      "colorMult": "textures/colormap/clay",
+      "textures": [
+        "clay"
+      ],
+      "legacyBlockID": "minecraft:clay"
     },
     {
       "blockName": "casterly_rock_crimson_plaster",
@@ -35994,6 +36144,49 @@
       "legacyBlockID": "stone_wall_block_3:8"
     },
     {
+      "blockName": "valyrian_stone",
+      "blockType": "solid",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "label": "Valyrian Stone",
+      "randomTextures": [
+        {
+          "textures": ["stone_valyrian/0"]
+        },
+        {
+          "textures": ["stone_valyrian/1"]
+        },
+        {
+          "textures": ["stone_valyrian/2"]
+        },
+        {
+          "textures": ["stone_valyrian/3"]
+        },
+        {
+          "textures": ["stone_valyrian/4"]
+        },
+        {
+          "textures": ["stone_valyrian/5"]
+        },
+        {
+          "textures": ["stone_valyrian/6"]
+        },
+        {
+          "textures": ["stone_valyrian/7"]
+        }
+      ],
+      "legacyBlockID": "minecraft:obsidian"
+    },
+    {
       "blockName": "valyrian_stone_wall",
       "blockType": "wall",
       "hardness": 1.5,
@@ -37002,7 +37195,7 @@
     {
       "blockName": "valyrian_stone_stairs",
       "blockType": "stair",
-      "modelBlockName": "minecraft:obsidian",
+      "modelBlockName": "valyrian_stone",
       "creativeTab": "WesterosBlocks",
       "label": "Valyrian Stone Stairs",
       "legacyBlockID": "stone_valyrian_stairs:0"
@@ -54681,6 +54874,121 @@
         "dirty_white_wool/side"
       ],
       "legacyBlockID": "minecraft:wool[color=lime]"
+    },
+    {
+      "blockName": "large_clay_pot_solid",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "label": "Large Clay Pot Solid",
+      "textures": [
+        "clay_pot/solid"
+      ],
+      "legacyBlockID": "minecraft:end_stone"
+    },
+    {
+      "blockName": "large_clay_pot",
+      "blockType": "cuboid",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "label": "Large Clay Pot",
+      "textures": [
+        "clay_pot/side",
+        "clay_pot/top",
+        "clay_pot/cork"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 0.8125,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xMin": 0.25,
+          "xMax": 0.75,
+          "yMin": 0.8125,
+          "yMax": 1,
+          "zMin": 0.25,
+          "zMax": 0.75,
+          "sideTextures": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "legacyBlockID": "minecraft:end_portal_frame[eye=true]"
+    },
+    {
+      "blockName": "large_clay_pot_empty",
+      "blockType": "cuboid",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosDeco",
+      "label": "Large Clay Pot (Empty)",
+      "textures": [
+        "clay_pot/side",
+        "clay_pot/top"
+      ],
+      "cuboids": [
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 0.8125,
+          "zMin": 0,
+          "zMax": 1,
+          "sideTextures": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "legacyBlockID": "minecraft:end_portal_frame[eye=false]"
     }
   ]
 }

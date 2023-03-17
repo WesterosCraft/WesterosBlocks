@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/inner_stairs",
   "textures": {
-    "bottom": "minecraft:block/obsidian",
-    "top": "minecraft:block/obsidian",
-    "side": "minecraft:block/obsidian",
-    "particle": "minecraft:block/obsidian"
+    "bottom": "westerosblocks:block/stone_valyrian/0",
+    "top": "westerosblocks:block/stone_valyrian/0",
+    "side": "westerosblocks:block/stone_valyrian/0",
+    "particle": "westerosblocks:block/stone_valyrian/0"
   }
 }
