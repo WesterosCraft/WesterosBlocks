@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "westerosblocks:block/generated/sandstone_pillar/z_v1",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "westerosblocks:block/generated/sandstone_pillar/x_v1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "westerosblocks:block/generated/sandstone_pillar/y_v1"
+    }
+  }
+}

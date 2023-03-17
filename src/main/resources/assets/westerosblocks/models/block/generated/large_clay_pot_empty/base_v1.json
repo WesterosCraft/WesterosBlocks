@@ -1,0 +1,104 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt4": "westerosblocks:block/clay_pot/top",
+    "txt5": "westerosblocks:block/clay_pot/top",
+    "txt2": "westerosblocks:block/clay_pot/top",
+    "txt3": "westerosblocks:block/clay_pot/top",
+    "txt0": "westerosblocks:block/clay_pot/side",
+    "txt1": "westerosblocks:block/clay_pot/top",
+    "particle": "westerosblocks:block/clay_pot/side"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "to": [
+        16.0,
+        13.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            3.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            3.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "south"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            3.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            3.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

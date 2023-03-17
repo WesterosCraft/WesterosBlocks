@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/cube",
+  "textures": {
+    "down": "westerosblocks:block/clay",
+    "up": "westerosblocks:block/clay",
+    "north": "westerosblocks:block/clay",
+    "south": "westerosblocks:block/clay",
+    "west": "westerosblocks:block/clay",
+    "east": "westerosblocks:block/clay",
+    "particle": "westerosblocks:block/clay"
+  }
+}
