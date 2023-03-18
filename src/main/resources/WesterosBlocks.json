@@ -8616,6 +8616,34 @@
       "legacyBlockID": "wood_colours:11"
     },
     {
+      "blockName": "dragon_carving",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "stone",
+      "material": "stone",
+      "resistance": 5,
+      "creativeTab": "WesterosDeco",
+      "label": "Dragon Carving",
+      "randomTextures": [
+        {
+          "textures": [
+            "dragon_carving/side1"
+          ]
+        },
+        {
+          "textures": [
+            "dragon_carving/side2"
+          ]
+        },
+        {
+          "textures": [
+            "dragon_carving/side3"
+          ]
+        }
+      ],
+      "legacyBlockID": "minecraft:coal_block"
+    },
+    {
       "blockName": "northern_carvings",
       "blockType": "solid",
       "hardness": 2,
