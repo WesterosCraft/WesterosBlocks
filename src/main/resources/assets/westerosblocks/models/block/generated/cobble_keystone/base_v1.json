@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/cobble_keystone/top_bottom",
+    "up": "westerosblocks:block/cobble_keystone/top_bottom",
+    "north": "westerosblocks:block/cobble_keystone/side",
+    "south": "westerosblocks:block/cobble_keystone/side",
+    "west": "westerosblocks:block/cobble_keystone/side",
+    "east": "westerosblocks:block/cobble_keystone/side",
+    "particle": "westerosblocks:block/cobble_keystone/side"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/plaster/small_smooth_stone_brick_blue_plaster/top_bottom",
+    "up": "westerosblocks:block/plaster/small_smooth_stone_brick_blue_plaster/top_bottom",
+    "north": "westerosblocks:block/plaster/small_smooth_stone_brick_blue_plaster/side",
+    "south": "westerosblocks:block/plaster/small_smooth_stone_brick_blue_plaster/side",
+    "west": "westerosblocks:block/plaster/small_smooth_stone_brick_blue_plaster/side",
+    "east": "westerosblocks:block/plaster/small_smooth_stone_brick_blue_plaster/side",
+    "particle": "westerosblocks:block/plaster/small_smooth_stone_brick_blue_plaster/side"
+  }
+}

@@ -7214,6 +7214,50 @@
       "legacyBlockID": "stone_block_0:13"
     },
     {
+      "blockName": "river_cobble",
+      "blockType": "solid",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBlocks",
+      "label": "River Cobble",
+      "colorMult": "textures/colormap/lightgreystone",
+      "randomTextures": [
+        {
+          "textures": [
+            "cobblestone_river/all1"
+          ],
+          "weight": 30
+        },
+        {
+          "textures": [
+            "cobblestone_river/all2"
+          ],
+          "weight": 10
+        },
+        {
+          "textures": [
+            "cobblestone_river/all3"
+          ],
+          "weight": 30
+        },
+        {
+          "textures": [
+            "cobblestone_river/all4"
+          ],
+          "weight": 30
+        }
+      ],
+      "legacyBlockID": "minecraft:hardened_clay"
+    },
+    {
       "blockName": "dark_cobblestone",
       "blockType": "solid",
       "hardness": 3,
@@ -19083,8 +19127,22 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1,
-          "sideTextures": [1, 0, 1, 1, 1, 1],
-          "noTint": [true, false, true, true, true, true]
+          "sideTextures": [
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "noTint": [
+            true,
+            false,
+            true,
+            true,
+            true,
+            true
+          ]
         },
         {
           "xMin": 0,
@@ -19093,8 +19151,22 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1,
-          "sideTextures": [2, 2, 3, 3, 3, 3],
-          "noTint": [true, true, false, false, false, false]
+          "sideTextures": [
+            2,
+            2,
+            3,
+            3,
+            3,
+            3
+          ],
+          "noTint": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
         }
       ]
     },
@@ -21122,6 +21194,222 @@
       "legacyBlockID": "dead_bush_block_0:0"
     },
     {
+      "blockName": "white_stained_clay",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "clay",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "White Stained Clay",
+      "textures": [
+        "clay/white_stained_clay"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:0"
+    },
+    {
+      "blockName": "yellow_stained_clay",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "clay",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Yellow Stained Clay",
+      "textures": [
+        "clay/yellow_stained_clay"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:4"
+    },
+    {
+      "blockName": "white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "White Plaster",
+      "textures": [
+        "plaster/white_plaster"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:1"
+    },
+    {
+      "blockName": "brownish_white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Brownish White Plaster",
+      "textures": [
+        "plaster/brownish_white_plaster"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:2"
+    },
+    {
+      "blockName": "greyish_white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Greyish White Plaster",
+      "textures": [
+        "plaster/greyish_white_plaster"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:3"
+    },
+    {
+      "blockName": "small_smooth_stone_brick_blue_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Small Smooth Stone Brick Blue Plaster",
+      "textures": [
+        "plaster/small_smooth_stone_brick_blue_plaster/top_bottom",
+        "plaster/small_smooth_stone_brick_blue_plaster/top_bottom",
+        "plaster/small_smooth_stone_brick_blue_plaster/side"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:7"
+    },
+    {
+      "blockName": "small_white_brick_brownish_white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Small White Brick Brownish White Plaster",
+      "textures": [
+        "plaster/small_white_brick_brownish_white_plaster/top_bottom",
+        "plaster/small_white_brick_brownish_white_plaster/top_bottom",
+        "plaster/small_white_brick_brownish_white_plaster/side"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:9"
+    },
+    {
+      "blockName": "small_smooth_stone_brick_white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Small Smooth Stone Brick White Plaster",
+      "textures": [
+        "plaster/small_smooth_stone_brick_white_plaster/top_bottom",
+        "plaster/small_smooth_stone_brick_white_plaster/top_bottom",
+        "plaster/small_smooth_stone_brick_white_plaster/side"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:11"
+    },
+    {
+      "blockName": "small_stone_brick_white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Small Stone Brick White Plaster",
+      "randomTextures": [
+        {
+          "textures": [
+            "plaster/small_stone_brick_white_plaster/top_bottom",
+            "plaster/small_stone_brick_white_plaster/top_bottom",
+            "plaster/small_stone_brick_white_plaster/side1"
+          ]
+        },
+        {
+          "textures": [
+            "plaster/small_stone_brick_white_plaster/top_bottom",
+            "plaster/small_stone_brick_white_plaster/top_bottom",
+            "plaster/small_stone_brick_white_plaster/side2"
+          ]
+        }
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:13"
+    },
+    {
+      "blockName": "small_white_brick_white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Small White Brick White Plaster",
+      "textures": [
+        "plaster/small_white_brick_white_plaster/top_bottom",
+        "plaster/small_white_brick_white_plaster/top_bottom",
+        "plaster/small_white_brick_white_plaster/side"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:14"
+    },
+    {
+      "blockName": "light_grey_stone_white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Light Grey Stone White Plaster",
+      "randomTextures": [
+        {
+          "textures": [
+            "plaster/light_grey_stone_white_plaster/top_bottom",
+            "plaster/light_grey_stone_white_plaster/top_bottom",
+            "plaster/light_grey_stone_white_plaster/side1"
+          ]
+        },
+        {
+          "textures": [
+            "plaster/light_grey_stone_white_plaster/top_bottom",
+            "plaster/light_grey_stone_white_plaster/top_bottom",
+            "plaster/light_grey_stone_white_plaster/side2"
+          ]
+        }
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:15"
+    },
+    {
+      "blockName": "faith_carved_stone_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Faith Carved Stone Brick",
+      "textures": [
+        "faith/faith_carved_stone_brick"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:5"
+    },
+    {
+      "blockName": "faith_carved_small_stone_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Faith Carved Small Stone Brick",
+      "textures": [
+        "faith/faith_carved_small_stone_brick"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:6"
+    },
+    {
       "blockName": "red_plaster",
       "blockType": "solid",
       "hardness": 5,
@@ -21132,9 +21420,23 @@
       "label": "Red Plaster",
       "colorMult": "textures/colormap/clay",
       "textures": [
-        "clay"
+        "plaster/red_plaster"
       ],
       "legacyBlockID": "minecraft:clay"
+    },
+    {
+      "blockName": "blue_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosBlocks",
+      "label": "Blue Plaster",
+      "textures": [
+        "plaster/blue_plaster"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:10"
     },
     {
       "blockName": "casterly_rock_crimson_plaster",
@@ -21959,7 +22261,7 @@
       "lightOpacity": 0,
       "label": "Red Sandstone Arrow Slit",
       "textures": [
-	    "transparent",
+        "transparent",
         "transparent",
         "red_sandstone_arrow_slit/base_side"
       ],
@@ -24941,6 +25243,22 @@
         "kl_dun_brick/side"
       ],
       "legacyBlockID": "stone_block_5:0"
+    },
+    {
+      "blockName": "cobble_keystone",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosBlocks",
+      "label": "Cobble Keystone",
+      "textures": [
+        "cobble_keystone/top_bottom",
+        "cobble_keystone/top_bottom",
+        "cobble_keystone/side"
+      ],
+      "legacyBlockID": "minecraft:stained_hardened_clay:159:8"
     },
     {
       "blockName": "kl_dun_cobble",
@@ -30691,7 +31009,7 @@
       },
       "legacyBlockID": "test_block:1"
     },
-        {
+    {
       "blockName": "test_block_3",
       "blockType": "cuboid-16way",
       "hardness": 3,
@@ -36160,28 +36478,44 @@
       "label": "Valyrian Stone",
       "randomTextures": [
         {
-          "textures": ["stone_valyrian/0"]
+          "textures": [
+            "stone_valyrian/0"
+          ]
         },
         {
-          "textures": ["stone_valyrian/1"]
+          "textures": [
+            "stone_valyrian/1"
+          ]
         },
         {
-          "textures": ["stone_valyrian/2"]
+          "textures": [
+            "stone_valyrian/2"
+          ]
         },
         {
-          "textures": ["stone_valyrian/3"]
+          "textures": [
+            "stone_valyrian/3"
+          ]
         },
         {
-          "textures": ["stone_valyrian/4"]
+          "textures": [
+            "stone_valyrian/4"
+          ]
         },
         {
-          "textures": ["stone_valyrian/5"]
+          "textures": [
+            "stone_valyrian/5"
+          ]
         },
         {
-          "textures": ["stone_valyrian/6"]
+          "textures": [
+            "stone_valyrian/6"
+          ]
         },
         {
-          "textures": ["stone_valyrian/7"]
+          "textures": [
+            "stone_valyrian/7"
+          ]
         }
       ],
       "legacyBlockID": "minecraft:obsidian"
@@ -44959,7 +45293,6 @@
       ],
       "legacyBlockID": "terrainset_fence_block_4:0"
     },
-
     {
       "blockName": "flowstone_fence",
       "blockType": "fence",
@@ -47609,7 +47942,6 @@
       ],
       "legacyBlockID": "stone_wall_block_4:5"
     },
-
     {
       "blockName": "iron_fence",
       "blockType": "fence",
@@ -53392,10 +53724,10 @@
       "isCustomModel": true,
       "rotateRandom": true,
       "randomTextures": [
-        { },
-        { },
-        { },
-        { }
+        {},
+        {},
+        {},
+        {}
       ],
       "boundingBox": {
         "xMin": 0.3,
@@ -53417,13 +53749,13 @@
       "isCustomModel": true,
       "rotateRandom": true,
       "randomTextures": [
-        { },
-        { },
-        { },
-        { },
-        { },
-        { },
-        { }
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
       ],
       "boundingBox": {
         "xMin": 0.3,
@@ -53474,13 +53806,13 @@
       "isCustomModel": true,
       "label": "Ghostskin",
       "randomTextures": [
-        { },
-        { },
-        { },
-        { },
-        { },
-        { }
-	  ],
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,

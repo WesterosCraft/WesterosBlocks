@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/plaster/light_grey_stone_white_plaster/top_bottom",
+    "up": "westerosblocks:block/plaster/light_grey_stone_white_plaster/top_bottom",
+    "north": "westerosblocks:block/plaster/light_grey_stone_white_plaster/side1",
+    "south": "westerosblocks:block/plaster/light_grey_stone_white_plaster/side1",
+    "west": "westerosblocks:block/plaster/light_grey_stone_white_plaster/side1",
+    "east": "westerosblocks:block/plaster/light_grey_stone_white_plaster/side1",
+    "particle": "westerosblocks:block/plaster/light_grey_stone_white_plaster/side1"
+  }
+}
