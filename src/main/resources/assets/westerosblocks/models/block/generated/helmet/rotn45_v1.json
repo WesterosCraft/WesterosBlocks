@@ -1,0 +1,110 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt4": "westerosblocks:block/helmet/south",
+    "txt5": "westerosblocks:block/helmet/north",
+    "txt2": "westerosblocks:block/helmet/west",
+    "txt3": "westerosblocks:block/helmet/east",
+    "txt0": "westerosblocks:block/helmet/down",
+    "txt1": "westerosblocks:block/helmet/up",
+    "particle": "westerosblocks:block/helmet/down"
+  },
+  "elements": [
+    {
+      "from": [
+        4.0,
+        0.0,
+        4.0
+      ],
+      "to": [
+        12.0,
+        8.0,
+        12.0
+      ],
+      "rotation": {
+        "origin": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "axis": "y",
+        "angle": -45.0,
+        "rescale": false
+      },
+      "faces": {
+        "east": {
+          "uv": [
+            4.0,
+            8.0,
+            12.0,
+            16.0
+          ],
+          "texture": "#txt5"
+        },
+        "south": {
+          "uv": [
+            4.0,
+            8.0,
+            12.0,
+            16.0
+          ],
+          "texture": "#txt3"
+        },
+        "north": {
+          "uv": [
+            4.0,
+            8.0,
+            12.0,
+            16.0
+          ],
+          "texture": "#txt2"
+        },
+        "west": {
+          "uv": [
+            4.0,
+            8.0,
+            12.0,
+            16.0
+          ],
+          "texture": "#txt4"
+        },
+        "up": {
+          "uv": [
+            4.0,
+            4.0,
+            12.0,
+            12.0
+          ],
+          "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            4.0,
+            4.0,
+            12.0,
+            12.0
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}
