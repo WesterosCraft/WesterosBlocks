@@ -47333,6 +47333,17 @@
       ]
     },
     {
+      "blockName": "ctm_westerosnestedcond",
+      "blockType": "solid",
+      "stepSound": "wood",
+      "material": "cloth",
+      "creativeTab": "WesterosUtility",
+      "label": "Westeros Nested Cond",
+      "textures": [
+        "ctm/westerosnestedcond"
+      ]
+    },    
+    {
       "blockName": "ctm_westerosctmverthoriz",
       "blockType": "solid",
       "stepSound": "wood",

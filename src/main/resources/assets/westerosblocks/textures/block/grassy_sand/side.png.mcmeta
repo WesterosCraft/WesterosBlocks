@@ -23,10 +23,10 @@
 	            "minecraft:wooded_badlands",
 	            "minecraft:mushroom_fields"
           	], 
-          	"rowOut": 0, "colOut": 0, 
-          	"patternRow": 0, "patternCol": 12, 
-          	"patternWidth": 3, "patternHeight": 3,
-          	"type": "ctm+pattern" }
+          	"type": "ctm+pattern",
+          	"ctmRow": 0, "ctmCol": 0, 
+          	"patRow": 0, "patCol": 12, 
+          	"patWidth": 3, "patHeight": 3 }
        ]
     }
   }
