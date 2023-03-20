@@ -27,7 +27,8 @@
           	"ctmRow": 0, "ctmCol": 0, 
           	"patRow": 0, "patCol": 12, 
           	"patWidth": 3, "patHeight": 3 }
-       ]
+       ],
+       "connect_to": [{ "block": "minecraft:sand" }]
     }
   }
 }

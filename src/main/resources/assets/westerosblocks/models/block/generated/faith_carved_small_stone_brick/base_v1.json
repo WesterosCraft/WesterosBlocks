@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "westerosblocks:block/faith/faith_carved_small_stone_brick"
+  }
+}

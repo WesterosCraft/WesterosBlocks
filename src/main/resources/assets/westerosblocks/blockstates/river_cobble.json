@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/river_cobble/base_v1",
+        "weight": 30
+      },
+      {
+        "model": "westerosblocks:block/generated/river_cobble/base_v2",
+        "weight": 10
+      },
+      {
+        "model": "westerosblocks:block/generated/river_cobble/base_v3",
+        "weight": 30
+      },
+      {
+        "model": "westerosblocks:block/generated/river_cobble/base_v4",
+        "weight": 30
+      }
+    ]
+  }
+}
