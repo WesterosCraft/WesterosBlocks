@@ -1,10 +1,9 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_vertical",
+    "type": "westeros_pillar",
     "layer": "SOLID",
     "textures": [],
-    "extra": {
-    }
+    "extra": {}
   }
 }

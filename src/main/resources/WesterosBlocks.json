@@ -46595,65 +46595,65 @@
       "randomTextures": [
         {
           "textures": [
-            "dirt/top_bot1",
-            "dirt/top_bot1",
-            "dirt/ground"
+            "dirt_path/top_bot1",
+            "dirt_path/top_bot1",
+            "dirt_path/ground"
           ],
           "weight": 100
         },
         {
           "textures": [
-            "dirt/top_bot2",
-            "dirt/top_bot2",
-            "dirt/ground"
+            "dirt_path/top_bot2",
+            "dirt_path/top_bot2",
+            "dirt_path/ground"
           ],
           "weight": 33
         },
         {
           "textures": [
-            "dirt/top_bot3",
-            "dirt/top_bot3",
-            "dirt/ground"
+            "dirt_path/top_bot3",
+            "dirt_path/top_bot3",
+            "dirt_path/ground"
           ],
           "weight": 45
         },
         {
           "textures": [
-            "dirt/top_bot4",
-            "dirt/top_bot4",
-            "dirt/ground"
+            "dirt_path/top_bot4",
+            "dirt_path/top_bot4",
+            "dirt_path/ground"
           ],
           "weight": 140
         },
         {
           "textures": [
-            "dirt/top_bot5",
-            "dirt/top_bot5",
-            "dirt/ground"
+            "dirt_path/top_bot5",
+            "dirt_path/top_bot5",
+            "dirt_path/ground"
           ],
           "weight": 193
         },
         {
           "textures": [
-            "dirt/top_bot6",
-            "dirt/top_bot6",
-            "dirt/ground"
+            "dirt_path/top_bot6",
+            "dirt_path/top_bot6",
+            "dirt_path/ground"
           ],
           "weight": 77
         },
         {
           "textures": [
-            "dirt/top_bot7",
-            "dirt/top_bot7",
-            "dirt/ground"
+            "dirt_path/top_bot7",
+            "dirt_path/top_bot7",
+            "dirt_path/ground"
           ],
           "weight": 77
         },
         {
           "textures": [
-            "dirt/top_bot8",
-            "dirt/top_bot8",
-            "dirt/ground"
+            "dirt_path/top_bot8",
+            "dirt_path/top_bot8",
+            "dirt_path/ground"
           ],
           "weight": 77
         }
