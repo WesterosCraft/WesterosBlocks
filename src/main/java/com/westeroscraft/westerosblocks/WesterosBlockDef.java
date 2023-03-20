@@ -21,7 +21,6 @@ import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboid16WayBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidHorizBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
@@ -32,22 +31,16 @@ import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLadderVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLogVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
 import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPlantVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidVertBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidHorizBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSoulSandVertBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
@@ -55,7 +48,6 @@ import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
-import com.westeroscraft.westerosblocks.blocks.WCWebVertBlock;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -1021,7 +1013,7 @@ public class WesterosBlockDef {
 		typeTable.put("solid", new WCSolidBlock.Factory());
 		typeTable.put("stair", new WCStairBlock.Factory());
 		typeTable.put("log", new WCLogBlock.Factory());
-		typeTable.put("logvert", new WCLogVertBlock.Factory());
+		//typeTable.put("logvert", new WCLogVertBlock.Factory());
 		typeTable.put("plant", new WCPlantBlock.Factory());
 		typeTable.put("crop", new WCCropBlock.Factory());
 		typeTable.put("slab", new WCSlabBlock.Factory());
@@ -1031,7 +1023,7 @@ public class WesterosBlockDef {
 		typeTable.put("torch", new WCTorchBlock.Factory());
 		typeTable.put("ladder", new WCLadderBlock.Factory());
 		typeTable.put("cuboid", new WCCuboidBlock.Factory());
-		typeTable.put("cuboid-horiz", new WCCuboidHorizBlock.Factory());
+		//typeTable.put("cuboid-horiz", new WCCuboidHorizBlock.Factory());
 		typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
 		typeTable.put("cuboid-16way", new WCCuboid16WayBlock.Factory());
 		typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
@@ -1053,12 +1045,12 @@ public class WesterosBlockDef {
 		typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
 		typeTable.put("beacon", new WCBeaconBlock.Factory());
 		typeTable.put("vines", new WCVinesBlock.Factory());
-		typeTable.put("solidvert", new WCSolidVertBlock.Factory());
-		typeTable.put("soulsandvert", new WCSoulSandVertBlock.Factory());
-		typeTable.put("laddervert", new WCLadderVertBlock.Factory());
-		typeTable.put("solidhoriz", new WCSolidHorizBlock.Factory());
-		typeTable.put("webvert", new WCWebVertBlock.Factory());
-		typeTable.put("plantvert", new WCPlantVertBlock.Factory());
+		//typeTable.put("solidvert", new WCSolidVertBlock.Factory());
+		//typeTable.put("soulsandvert", new WCSoulSandVertBlock.Factory());
+		//typeTable.put("laddervert", new WCLadderVertBlock.Factory());
+		//typeTable.put("solidhoriz", new WCSolidHorizBlock.Factory());
+		//typeTable.put("webvert", new WCWebVertBlock.Factory());
+		//typeTable.put("plantvert", new WCPlantVertBlock.Factory());
 
 		// Standard color multipliers
 		colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));

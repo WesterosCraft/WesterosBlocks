@@ -27,9 +27,6 @@ public class ModelExportFactory {
             case "log":
                 me = new LogBlockModelExport(blk, def, dest);
                 break;
-            case "logvert":
-                me = new LogVertBlockModelExport(blk, def, dest);
-                break;
             case "plant":
             case "web":
                 me = new CrossBlockModelExport(blk, def, dest);
@@ -71,9 +68,6 @@ public class ModelExportFactory {
             case "beacon":
                 me = new CuboidBlockModelExport(blk, def, dest);
                 break;
-            case "cuboid-horiz":
-                me = new CuboidHorizBlockModelExport(blk, def, dest);
-                break;
             case "cuboid-ne":
                 me = new CuboidNEBlockModelExport(blk, def, dest);
                 break;
@@ -106,20 +100,6 @@ public class ModelExportFactory {
                 break;
             case "vines":
                 me = new VinesBlockModelExport(blk, def, dest);
-                break;
-            case "solidvert":
-            case "soulsandvert":
-                me = new SolidVertBlockModelExport(blk, def, dest);
-                break;
-            case "laddervert":
-                me = new LadderVertBlockModelExport(blk, def, dest);
-                break;
-            case "solidhoriz":
-                me = new SolidHorizBlockModelExport(blk, def, dest);
-                break;
-            case "plantvert":
-            case "webvert":
-                me = new CrossBlockVertModelExport(blk, def, dest);
                 break;
         }
         return me;

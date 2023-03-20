@@ -98,22 +98,16 @@ components:
               - $ref: "#/components/schemas/furnace"
               - $ref: "#/components/schemas/halfdoor"
               - $ref: "#/components/schemas/ladder"
-              - $ref: "#/components/schemas/laddervert"
               - $ref: "#/components/schemas/layer"
               - $ref: "#/components/schemas/leaves"
               - $ref: "#/components/schemas/log"
-              - $ref: "#/components/schemas/logvert"
               - $ref: "#/components/schemas/pane"
               - $ref: "#/components/schemas/plant"
-              - $ref: "#/components/schemas/plantvert"
               - $ref: "#/components/schemas/rail"
               - $ref: "#/components/schemas/sand"
               - $ref: "#/components/schemas/slab"
               - $ref: "#/components/schemas/solid"
-              - $ref: "#/components/schemas/solidhoriz"
-              - $ref: "#/components/schemas/solidvert"
               - $ref: "#/components/schemas/soulsand"
-              - $ref: "#/components/schemas/soulsandvert"
               - $ref: "#/components/schemas/sound"
               - $ref: "#/components/schemas/stair"
               - $ref: "#/components/schemas/torch"
@@ -121,7 +115,6 @@ components:
               - $ref: "#/components/schemas/vines"
               - $ref: "#/components/schemas/wall"
               - $ref: "#/components/schemas/web"
-              - $ref: "#/components/schemas/webvert"
     Block:
       type: object
       required: [ blockName, blockType, label, creativeTab, material ]
@@ -295,7 +288,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -327,94 +320,6 @@ components:
                 around Y axis (0, 90, 180, 270 degrees)
             condStates:
               $ref: "#/components/schemas/CondStates"
-    solidhoriz:
-      title: blockType='solidhoriz'
-      allOf:
-        - $ref: "#/components/schemas/Block"
-        - type: object
-          description: Block type for 'solidhoris' blocks (solid with horizontal CTM)
-          properties:
-            textures:
-              type: array
-              items:
-                type: string
-                description: |-
-                  List of texures paths, relative to 
-                  assets/westerosblocks/textures/blocks, unless
-                  the module ID is included (e.g. minecraft:xxx or
-                  westerosblocks:xxx), in which case the
-                  value is relative to the assets/<module>/textures
-                  path.
-                  Index mapping for textures is:
-                  
-                  - 0: bottom texture
-                  - 1: top texture
-                  - 2: side texture (with no match left or right)
-                  - 3: side texture (with match to left)
-                  - 4: side texture (with match to right)
-                  - 5: side texture (with match to right and left)
-                  
-                  If the list is shorter than 6, the
-                  last texture is used for all indexes
-                  beyond the length of the list.
-            connectTo:
-              $ref: "#/components/schemas/ConnectTo"
-            randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"
-            colorMult:
-              $ref: "#/components/schemas/colorMult"
-            collisionBoxes:
-              $ref: "#/components/schemas/CollisionBoxes"
-            rotateRandom:
-              type: boolean
-              description: |-
-                If true, causes block to have its model
-                randomly rotated with 4 different angles
-                around Y axis (0, 90, 180, 270 degrees)
-    solidvert:
-      title: blockType='solidvert'
-      allOf:
-        - $ref: "#/components/schemas/Block"
-        - type: object
-          description: Block type for 'solidvert' blocks (solid with vertical CTM)
-          properties:
-            textures:
-              type: array
-              items:
-                type: string
-                description: |-
-                  List of texures paths, relative to 
-                  assets/westerosblocks/textures/blocks, unless
-                  the module ID is included (e.g. minecraft:xxx or
-                  westerosblocks:xxx), in which case the
-                  value is relative to the assets/<module>/textures
-                  path.
-                  Index mapping for textures is:
-                  
-                  - 0: bottom texture
-                  - 1: top texture
-                  - 2: side texture (with no match above nor below)
-                  - 3: side texture (with match below)
-                  - 4: side texture (with match above)
-                  - 5: side texture (with match above and below)
-                  
-                  If the list is shorter than 6, the
-                  last texture is used for all indexes
-                  beyond the length of the list.
-            connectTo:
-              $ref: "#/components/schemas/ConnectTo"
-            randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"
-            colorMult:
-              $ref: "#/components/schemas/colorMult"
-            collisionBoxes:
-              $ref: "#/components/schemas/CollisionBoxes"
-            rotateRandom:
-              type: boolean
-              description: |-
-                If true, causes block to have its model
-                randomly rotated with 4 different angles
-                around Y axis (0, 90, 180, 270 degrees)                
     sound:
       title: blockType='sound'
       allOf:
@@ -427,7 +332,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -454,7 +359,7 @@ components:
               description: |-
                 List of sound sets available to be
                 chosen for the sound block.  If only
-                one is provied, no settings are available,
+                one is provided, no settings are available,
                 while 2 or more sets can be toggled through
                 by 'using' the block.
                 Sounds sets are lists of files in
@@ -466,7 +371,7 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "period": periodic time, in seconds, for
                   playing the sound.  If zero, no automatic
@@ -502,7 +407,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -542,7 +447,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -570,48 +475,6 @@ components:
                 If true, causes block to have its model
                 randomly rotated with 4 different angles
                 around Y axis (0, 90, 180, 270 degrees)
-    soulsandvert:
-      title: blockType='soulsandvert'
-      allOf:
-        - $ref: "#/components/schemas/Block"
-        - type: object
-          description: Block type for 'soulsandvert' blocks (soulsand with vertical CTM)
-          properties:
-            textures:
-              type: array
-              items:
-                type: string
-                description: |-
-                  List of texures paths, relative to 
-                  assets/westerosblocks/textures/blocks, unless
-                  the module ID is included (e.g. minecraft:xxx or
-                  westerosblocks:xxx), in which case the
-                  value is relative to the assets/<module>/textures
-                  path.
-                  Index mapping for textures is:
-                  
-                  - 0: bottom texture
-                  - 1: top texture
-                  - 2: side texture (with no match above nor below)
-                  - 3: side texture (with match below)
-                  - 4: side texture (with match above)
-                  - 5: side texture (with match above and below)
-                  
-                  If the list is shorter than 6, the
-                  last texture is used for all indexes
-                  beyond the length of the list.
-            connectTo:
-              $ref: "#/components/schemas/ConnectTo"
-            randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"
-            colorMult:
-              $ref: "#/components/schemas/colorMult"
-            rotateRandom:
-              type: boolean
-              description: |-
-                If true, causes block to have its model
-                randomly rotated with 4 different angles
-                around Y axis (0, 90, 180, 270 degrees)
     layer:
       title: blockType='layer'
       allOf:
@@ -624,7 +487,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -658,7 +521,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -673,58 +536,13 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "no-climb": If value is defined and
                 "true", climbing is not allowed
                 - "allow-unsupported": If value is
                 defined and "true", block does not break
                 when unsupported.
-    laddervert:
-      title: blockType='laddervert'
-      allOf:
-        - $ref: "#/components/schemas/Block"
-        - type: object
-          description: Block type for 'laddervert' blocks (ladder with vertical CTM
-          properties:
-            textures:
-              type: array
-              items:
-                type: string
-                description: |-
-                  List of texures paths, relative to 
-                  assets/westerosblocks/textures/blocks, unless
-                  the module ID is included (e.g. minecraft:xxx or
-                  westerosblocks:xxx), in which case the
-                  value is relative to the assets/<module>/textures
-                  path.
-                  Index mapping for textures is:
-                  
-                  - 0: texture (with no match above nor below)
-                  - 1: texture (with match below)
-                  - 2: texture (with match above)
-                  - 3: texture (with match above and below)
-                  
-                  If the list is shorter than 4, the
-                  last texture is used for all indexes
-                  beyond the length of the list.
-            connectTo:
-              $ref: "#/components/schemas/ConnectTo"
-            randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"
-            type:
-              type: string
-              description: |-
-                Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
-                
-                - "no-climb": If value is defined and
-                "true", climbing is not allowed
-                - "allow-unsupported": If value is
-                defined and "true", block does not break
-                when unsupported.
-                
-
     fire:
       title: blockType='fire'
       allOf:
@@ -737,7 +555,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -763,7 +581,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -783,41 +601,6 @@ components:
                   beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
-
-    logvert:
-      title: blockType='logvert'
-      allOf:
-        - $ref: "#/components/schemas/Block"
-        - type: object
-          description: Block type for 'log' blocks with vertical CTM
-          properties:
-            textures:
-              type: array
-              items:
-                type: string
-                description: |-
-                  List of texures paths, relative to 
-                  assets/westerosblocks/textures/blocks, unless
-                  the module ID is included (e.g. minecraft:xxx or
-                  westerosblocks:xxx), in which case the
-                  value is relative to the assets/<module>/textures
-                  path.
-                  Index mapping for textures is:
-                  
-                  - 0: bottom texture
-                  - 1: top texture
-                  - 2: side texture (with no match above nor below)
-                  - 3: side texture (with match below)
-                  - 4: side texture (with match above)
-                  - 5: side texture (with match above and below)
-
-                  If the list is shorter than 6, the
-                  last texture is used for all indexes
-                  beyond the length of the list.
-            randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"
-              
-              
     stair:
       title: blockType='stair'
       allOf:
@@ -861,7 +644,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -897,7 +680,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -924,7 +707,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -942,7 +725,7 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "legacy-model": If value is defined and
                 "true", use old model for panes
@@ -962,7 +745,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -993,7 +776,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1022,7 +805,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1046,7 +829,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1055,47 +838,6 @@ components:
                   Index mapping for textures is:
                   
                   - 0: single texture
-            randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"
-            rotateRandom:
-              type: boolean
-              description: |-
-                If true, causes block to have its model
-                randomly rotated with 4 different angles
-                around Y axis (0, 90, 180, 270 degrees)
-            colorMult:
-              $ref: "#/components/schemas/colorMult"
-            condStates:
-              $ref: "#/components/schemas/CondStates"
-    plantvert:
-      title: blockType='plantvert'
-      allOf:
-        - $ref: "#/components/schemas/Block"
-        - type: object
-          description: Block type for 'plantvert' blocks (plant block with vertical CTM)
-          required: [ textures ]
-          properties:
-            textures:
-              type: array
-              items:
-                type: string
-                description: |-
-                  List of texures paths, relative to 
-                  assets/westerosblocks/textures/blocks, unless
-                  the module ID is included (e.g. minecraft:xxx or
-                  westerosblocks:xxx), in which case the
-                  value is relative to the assets/<module>/textures
-                  path.
-                  Index mapping for textures is:
-                  
-                  - 0: texture (with no match above nor below)
-                  - 1: texture (with match below)
-                  - 2: texture (with match above)
-                  - 3: texture (with match above and below)
-                  
-                  If the list is shorter than 4, the
-                  last texture is used for all indexes
-                  beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
             rotateRandom:
@@ -1121,7 +863,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1152,7 +894,7 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "no-decay": If value is defined,
                 blocks never decay
@@ -1176,7 +918,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1201,58 +943,10 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "no-in-web": If value is defined and
                 "true", web block does not slow movement
-    webvert:
-      title: blockType='webvert'
-      allOf:
-        - $ref: "#/components/schemas/Block"
-        - type: object
-          description: Block type for 'webvert' blocks (web blocks with vertical CTM)
-          required: [ textures ]
-          properties:
-            textures:
-              type: array
-              items:
-                type: string
-                description: |-
-                  List of texures paths, relative to 
-                  assets/westerosblocks/textures/blocks, unless
-                  the module ID is included (e.g. minecraft:xxx or
-                  westerosblocks:xxx), in which case the
-                  value is relative to the assets/<module>/textures
-                  path.
-                  Index mapping for textures is:
-                  
-                  - 0: texture (with no match above nor below)
-                  - 1: texture (with match below)
-                  - 2: texture (with match above)
-                  - 3: texture (with match above and below)
-                  
-                  If the list is shorter than 4, the
-                  last texture is used for all indexes
-                  beyond the length of the list.
-            randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"
-            rotateRandom:
-              type: boolean
-              description: |-
-                If true, causes block to have its model
-                randomly rotated with 4 different angles
-                around Y axis (0, 90, 180, 270 degrees)
-            colorMult:
-              $ref: "#/components/schemas/colorMult"
-            type:
-              type: string
-              description: |-
-                Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
-                
-                - "no-in-web": If value is defined and
-                "true", web block does not slow movement
-              
     cuboid:
       title: blockType='cuboid'
       allOf:
@@ -1266,7 +960,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1310,7 +1004,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1346,7 +1040,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1382,7 +1076,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1418,7 +1112,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1466,7 +1160,7 @@ components:
                     items:
                       type: string
                       description: |-
-                        List of texures paths, relative to 
+                        List of textures paths, relative to 
                         assets/westerosblocks/textures/blocks, unless
                         the module ID is included (e.g. minecraft:xxx or
                         westerosblocks:xxx), in which case the
@@ -1496,7 +1190,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1514,7 +1208,7 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "locked": If value is defined and
                 "true", door is locked (not opened by hand)
@@ -1532,7 +1226,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1545,7 +1239,7 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "locked": If value is defined and
                 "true", door is locked (not opened by hand)
@@ -1563,7 +1257,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1576,7 +1270,7 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "locked": If value is defined and
                 "true", door is locked (not opened by hand)
@@ -1594,7 +1288,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1632,7 +1326,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1654,7 +1348,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1668,7 +1362,7 @@ components:
               type: string
               description: |-
                 Comma separated list of 'token:value" and
-                "token" fields.  Defined toknes include:
+                "token" fields.  Defined tokens include:
                 
                 - "no-climb": If value is defined and
                 "true", climbing is not allowed
@@ -1691,7 +1385,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1723,7 +1417,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1755,7 +1449,7 @@ components:
               items:
                 type: string
                 description: |-
-                  List of texures paths, relative to 
+                  List of textures paths, relative to 
                   assets/westerosblocks/textures/blocks, unless
                   the module ID is included (e.g. minecraft:xxx or
                   westerosblocks:xxx), in which case the
@@ -1829,7 +1523,7 @@ components:
             items:
               type: string
               description: |-
-                List of texures paths, relative to 
+                List of textures paths, relative to 
                 assets/westerosblocks/textures/blocks, unless
                 the module ID is included (e.g. minecraft:xxx or
                 westerosblocks:xxx), in which case the
