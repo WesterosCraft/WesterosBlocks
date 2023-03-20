@@ -14,26 +14,21 @@
       "condWidth": 15,
       "condHeight": 4,
       "conds": [
-        {
-          "biomeNames": [
-            "minecraft:desert",
-            "minecraft:savanna",
-            "minecraft:savanna_plateau",
-            "minecraft:windswept_savanna",
-            "minecraft:badlands",
-            "minecraft:wooded_badlands",
-            "minecraft:mushroom_fields"
-          ],
-          "rowOut": 0,
-          "colOut": 0,
-          "patternRow": 0,
-          "patternCol": 12,
-          "patternWidth": 3,
-          "patternHeight": 3,
-          "type": "ctm+pattern"
-        }
-      ],
-      "connect_to": [{ "block": "minecraft:sand" }]
+          { "biomeNames": [             
+	            "minecraft:desert",
+	            "minecraft:savanna",
+	            "minecraft:savanna_plateau",
+	            "minecraft:windswept_savanna",
+	            "minecraft:badlands",
+	            "minecraft:wooded_badlands",
+	            "minecraft:mushroom_fields"
+          	], 
+          	"type": "ctm+pattern",
+          	"ctmRow": 0, "ctmCol": 0, 
+          	"patRow": 0, "patCol": 12, 
+          	"patWidth": 3, "patHeight": 3 }
+       ],
+       "connect_to": [{ "block": "minecraft:sand" }]
     }
   }
 }

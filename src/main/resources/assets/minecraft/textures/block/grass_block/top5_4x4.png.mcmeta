@@ -16,10 +16,11 @@
           "biomeNames": [
             "minecraft:forest"
           ],
-          "rowOut": 0,
-          "colOut": 0,
-          "patternWidth": 3,
-          "patternHeight": 3
+          "type": "pattern",
+          "patRow": 0,
+          "patCol": 0,
+          "patWidth": 3,
+          "patHeight": 3
         }
       ]
     }

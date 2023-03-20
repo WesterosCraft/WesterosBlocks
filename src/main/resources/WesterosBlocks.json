@@ -11007,27 +11007,8 @@
       "material": "web",
       "creativeTab": "WesterosDeco",
       "label": "Sausages Leg of Ham",
-      "randomTextures": [
-        {
-          "textures": [
-            "sausages_leg_of_ham/default1"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/default2"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/default3"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/default4"
-          ]
-        }
+      "textures": [
+        "sausages_leg_of_ham/default"
       ],
       "type": "no-in-web",
       "legacyBlockID": "web_block_0:8"
@@ -47726,6 +47707,17 @@
         "ctm/westerosctmpattern"
       ]
     },
+    {
+      "blockName": "ctm_westerosnestedcond",
+      "blockType": "solid",
+      "stepSound": "wood",
+      "material": "cloth",
+      "creativeTab": "WesterosUtility",
+      "label": "Westeros Nested Cond",
+      "textures": [
+        "ctm/westerosnestedcond"
+      ]
+    },    
     {
       "blockName": "ctm_westerosctmverthoriz",
       "blockType": "solid",
