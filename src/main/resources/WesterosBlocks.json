@@ -47710,7 +47710,7 @@
       "textures": [
         "ctm/westerosnestedcond"
       ]
-    },    
+    },
     {
       "blockName": "ctm_westerosctmverthoriz",
       "blockType": "solid",
@@ -51843,7 +51843,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosClothFibers",
       "label": "Thatch Light Fur Carpet",
       "textures": [
         "thatch_light/thatch_light"
@@ -51881,7 +51881,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Thatch Dark Fur Carpet",
       "textures": [
         "fur_block_0/thatch_dark"
@@ -51919,7 +51919,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Snowy Thatch Light Fur Slab",
       "textures": [
         "snowy_thatch_light_fur/bottom",
@@ -51941,7 +51941,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Snowy Thatch Dark Fur Slab",
       "textures": [
         "snowy_thatch_dark_fur/bottom",
@@ -51963,7 +51963,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "Firewood Slab",
       "textures": [
         "firewood/side2",
@@ -51985,7 +51985,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Dorne Dry Soil Slab",
       "textures": [
         "dorne_dry_soil/side"
@@ -51998,7 +51998,7 @@
       "stepSound": "plant",
       "material": "cloth",
       "modelBlockName": "snowy_thatch_light_fur",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Snowy Thatch Light Fur Stairs",
       "legacyBlockID": "thatch_stair_2:0"
     },
@@ -52008,7 +52008,7 @@
       "stepSound": "plant",
       "material": "cloth",
       "modelBlockName": "snowy_thatch_dark_fur",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Snowy Thatch Dark Fur Stairs",
       "legacyBlockID": "thatch_stair_3:0"
     },
@@ -52025,7 +52025,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Snowy Thatch Light Fur Directional",
       "textures": [
         "snowy_thatch_light_fur/bottom",
@@ -52048,7 +52048,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Snowy Thatch Dark Fur Directional",
       "textures": [
         "snowy_thatch_dark_fur/bottom",
@@ -52067,7 +52067,7 @@
       "material": "iron",
       "resistance": 10,
       "lightValue": 0.875,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleBrick",
       "label": "Arbor Brick Furnace",
       "isCustomModel": true,
       "legacyBlockID": "furnace_block_4:0"
@@ -52081,7 +52081,7 @@
       "material": "iron",
       "resistance": 10,
       "lightValue": 0.875,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleBrick",
       "label": "Always Active Arbor Brick Furnace",
       "type": "always-on:true",
       "isCustomModel": true,
@@ -52091,7 +52091,7 @@
       "blockName": "white_granite_stairs",
       "blockType": "stair",
       "modelBlockName": "white_granite",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosCobbleBrick",
       "label": "White Granite Stairs",
       "legacyBlockID": "stone_block_5_stair_7:0"
     },
@@ -52099,7 +52099,7 @@
       "blockName": "small_white_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "small_white_brick",
-      "creativeTab": "WesterosBlocks",
+      "creativeTab": "WesterosCobbleBrick",
       "label": "Small White Brick Stairs",
       "legacyBlockID": "stone_block_3_stair_13:0"
     },
@@ -52116,7 +52116,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMarblePlaster",
       "label": "Quartz Hopper",
       "textures": [
         "stone_block_1/quartz_block"
@@ -52186,7 +52186,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleBrick",
       "label": "Bedrock Hopper",
       "textures": [
         "stone_bedrock/side"
@@ -52397,7 +52397,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleBrick",
       "label": "Winterfell Granite Hopper",
       "textures": [
         "stone_block_2/brick_winterfell_granite"
