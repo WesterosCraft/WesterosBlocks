@@ -10935,27 +10935,8 @@
       "material": "web",
       "creativeTab": "WesterosDeco",
       "label": "Sausages Leg of Ham",
-      "randomTextures": [
-        {
-          "textures": [
-            "sausages_leg_of_ham/default1"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/default2"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/default3"
-          ]
-        },
-        {
-          "textures": [
-            "sausages_leg_of_ham/default4"
-          ]
-        }
+      "textures": [
+        "sausages_leg_of_ham/default"
       ],
       "type": "no-in-web",
       "legacyBlockID": "web_block_0:8"

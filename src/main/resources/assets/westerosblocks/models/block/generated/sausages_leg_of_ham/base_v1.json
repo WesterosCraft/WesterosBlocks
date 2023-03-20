@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "westerosblocks:block/sausages_leg_of_ham/default1"
+    "cross": "westerosblocks:block/sausages_leg_of_ham/default"
   }
 }
