@@ -1244,26 +1244,22 @@
         {
           "textures": [
             "flowers/pink_thistle/side1"
-          ],
-          "weight": 40
+          ]
         },
         {
           "textures": [
             "flowers/pink_thistle/side2"
-          ],
-          "weight": 10
+          ]
         },
         {
           "textures": [
             "flowers/pink_thistle/side3"
-          ],
-          "weight": 40
+          ]
         },
         {
           "textures": [
             "flowers/pink_thistle/side4"
-          ],
-          "weight": 10
+          ]
         }
       ],
       "legacyBlockID": "yellow_flower_block_1:5"
@@ -30699,20 +30695,17 @@
         {
           "textures": [
             "nettle/side1"
-          ],
-          "weight": 15
+          ]
         },
         {
           "textures": [
             "nettle/side2"
-          ],
-          "weight": 15
+          ]
         },
         {
           "textures": [
             "nettle/side3"
-          ],
-          "weight": 20
+          ]
         }
       ],
       "legacyBlockID": "forest_block_0:3"

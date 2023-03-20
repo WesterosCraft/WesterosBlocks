@@ -2,16 +2,13 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/nettle/base_v1",
-        "weight": 15
+        "model": "westerosblocks:block/generated/nettle/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/nettle/base_v2",
-        "weight": 15
+        "model": "westerosblocks:block/generated/nettle/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/nettle/base_v3",
-        "weight": 20
+        "model": "westerosblocks:block/generated/nettle/base_v3"
       }
     ]
   }
