@@ -132,13 +132,20 @@ public class WesterosBlockDef {
 	public String itemTexture = null; // Item texture, if any
 	public int itemTextureIndex = 0; // Index of texture for item icon
 	public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
-	public List<List<Cuboid>> cuboidLists = null;	// List of cuboid lists (for cuboid-ne, cuboid-nesw, cuboid-horiz)
 	public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
 	public List<String> soundList = null; // List of custom sound names or sound IDs (for 'sound' blocks)
 	public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
 	public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
 	public List<StackElement> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
 	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
+
+	// List of states (corresponds to blocks state beyond those of base cuboid block, via state=<index in list>
+	public static class StateRecord {
+		public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
+		public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
+		public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
+		public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
+	};
 	
 	public String connectBy = "block";	// Connection logic - by block, material - only for CTM-like blocks
 	
@@ -386,21 +393,8 @@ public class WesterosBlockDef {
 		}
 	}
 
-	// Get cuboid list for given index (goes with last one, if index is too high, or cuboids if no cuboidsList)
-	public List<Cuboid> getCuboidList(int index) {
-		if (this.cuboidLists != null) {
-			if (index >= this.cuboidLists.size()) {
-				index = this.cuboidLists.size() - 1;
-			}
-			return this.cuboidLists.get(index);
-		}
-		return Collections.emptyList();
-	}
 	public List<Cuboid> getCuboidList() {
-		return getCuboidList(0);
-	}
-	public int getCuboidListCount() {
-		return (this.cuboidLists != null) ? this.cuboidLists.size() : 0;
+		return cuboids;
 	}
 
 	public List<BoundingBox> getCollisionBoxList() {
@@ -707,10 +701,6 @@ public class WesterosBlockDef {
 		}
 		if (this.ambientOcclusion == null)
 			this.ambientOcclusion = true; // Default to true
-		// If cuboid list, but no cuboid, make one
-		if ((this.cuboidLists != null) && (this.cuboids == null)) {
-			this.cuboids = this.cuboidLists.get(0);
-		}
 		// If we have bounding box, but no cuboids, make trivial cuboid
 		if ((this.boundingBox != null) && (this.cuboids == null)) {
 			Cuboid c = new Cuboid();
@@ -741,10 +731,6 @@ public class WesterosBlockDef {
 				if (bb.zMax > this.boundingBox.zMax)
 					this.boundingBox.zMax = bb.zMax;
 			}
-		}
-		// If cuboids but no cuboidLists, make a singleton for it
-		if ((this.cuboids != null) && (this.cuboidLists == null)) {
-			this.cuboidLists = Collections.singletonList(this.cuboids);
 		}
 		// If stacks, process these too
 		if (this.stack != null) {
@@ -934,7 +920,6 @@ public class WesterosBlockDef {
 
 	public static boolean sanityCheck(WesterosBlockDef[] defs) {
 		HashSet<String> names = new HashSet<String>();
-		BitSet ids = new BitSet();
 		// Make sure block IDs and names are unique
 		for (WesterosBlockDef def : defs) {
 			if (def == null)
