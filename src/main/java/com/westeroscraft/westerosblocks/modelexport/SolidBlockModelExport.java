@@ -56,7 +56,7 @@ public class SolidBlockModelExport extends ModelExport {
             	var.model = model;
             	var.weight = set.weight;
             	if (i > 0) var.y = 90*i;
-    			so.addVariant("", var, set.condIDs);	// Add our variant                	
+    			so.addVariant("", var, null);	// Add our variant                	
             }
         }
     	this.writeBlockStateFile(def.blockName, so);
@@ -113,10 +113,6 @@ public class SolidBlockModelExport extends ModelExport {
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = null;
-    	if (def.condStates != null) {
-    		newstate = new HashMap<String, String>();
-    		newstate.put("cond", def.getDefaultCondID());    		
-    	}
     	if (oldmap != null) {
     		for (String k : oldmap.keySet()) {
         		oldstate.put(k, oldmap.get(k));    			

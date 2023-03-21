@@ -2,7 +2,6 @@ package com.westeroscraft.westerosblocks;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.BitSet;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -138,9 +137,11 @@ public class WesterosBlockDef {
 	public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
 	public List<StackElement> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
 	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
-
+	public List<StateRecord> states = null;
+	
 	// List of states (corresponds to blocks state beyond those of base cuboid block, via state=<index in list>
 	public static class StateRecord {
+		public String stateID = null;	// If not defined, value is "stateN"
 		public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
 		public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
 		public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
@@ -150,16 +151,7 @@ public class WesterosBlockDef {
 	public String connectBy = "block";	// Connection logic - by block, material - only for CTM-like blocks
 	
     public String legacyBlockID = null;
-	
-    public List<ConditionRec> condStates;	// List of condition states (drives 'cond' blockstate variable, and associated values
-    											// Condition matches are first match is the value: last record should be the default state (and have no conditions)
-    
-    public static class ConditionRec {
-    	public String condID;	// Condition ID (required) - value for enum state attribute
-    	public Set<String> biomes;	// If defined, list of biomes that must match for condition to apply
-    	public Integer minY, maxY;	// If defined minimunm and/or maximum Y coordinate for condition to match
-    };
-    
+	       
 	public boolean isConnectMatch(BlockState bs1, BlockState bs2) {
 		if (this.connectBy.equals("material")) {
 			return bs1.getMaterial() == bs2.getMaterial();
@@ -172,7 +164,6 @@ public class WesterosBlockDef {
 	public static class RandomTextureSet {
 		public List<String> textures = null; // List of textures (for single texture set)
 		public Integer weight = null;		// Weight for texture set (default = 1)
-		public Set<String> condIDs;	// List of matching condition IDs (if condStates defined) - if undefined, all will match
 		// Get number of base textures
 		public int getTextureCount() {
 			if (textures != null) {
@@ -672,32 +663,12 @@ public class WesterosBlockDef {
 	public void doInit() {
 		if (didInit)
 			return;
-		// Handle condStates
-		Set<String> allCondIDs = null;
-		if (condStates != null) {
-			allCondIDs = new HashSet<String>();
-			for (ConditionRec rec : condStates) {
-				allCondIDs.add(rec.condID);
-			}
-		}
 		// If just base textures, generate equivalent random textures (simpler logic for blocks that support them
 		if ((textures != null) && (randomTextures == null)) {
 			randomTextures = new ArrayList<RandomTextureSet>();
 			RandomTextureSet set = new RandomTextureSet();
 			set.textures = textures;
 			randomTextures.add(set);
-		}
-		if (randomTextures != null) {
-			for (RandomTextureSet set : randomTextures) {
-				// If no conditions, no condIDs
-				if (allCondIDs == null) {
-					set.condIDs = null;
-				}
-				// If no condIDs, default to matching all
-				else if (set.condIDs == null) {
-					set.condIDs = allCondIDs;
-				}
-			}
 		}
 		if (this.ambientOcclusion == null)
 			this.ambientOcclusion = true; // Default to true
@@ -1254,19 +1225,19 @@ public class WesterosBlockDef {
     	return null;
     }
 
-    public static class CondProperty extends Property<String> {
+    public static class StateProperty extends Property<String> {
     	public ImmutableSet<String> values;
     	public ImmutableMap<String, String> valMap; 
     	public String defValue;
-    	public CondProperty(List<String> condIDs) {
-    		super("cond", String.class);
+    	public StateProperty(List<String> stateIDs) {
+    		super("state", String.class);
     		Map<String, String> map = Maps.newHashMap();
-    		for (String s : condIDs) {
+    		for (String s : stateIDs) {
     			map.put(s, s);
     		}
             this.values = ImmutableSet.copyOf(map.values());
             this.valMap = ImmutableMap.copyOf(map);
-    		this.defValue = condIDs.get(condIDs.size()-1);
+    		this.defValue = stateIDs.get(0);
     	}
     	@Override
     	public Collection<String> getPossibleValues() {
@@ -1276,9 +1247,9 @@ public class WesterosBlockDef {
     	public boolean equals(Object obj) {
     		if (this == obj) {
 				return true;
-    		} else if (obj instanceof CondProperty && super.equals(obj)) {
-		         CondProperty condproperty = (CondProperty)obj;
-		         return this.values.equals(condproperty.values);
+    		} else if (obj instanceof StateProperty && super.equals(obj)) {
+		         StateProperty stateproperty = (StateProperty)obj;
+		         return this.values.equals(stateproperty.values);
     		} else {
     		     return false;
     		}
@@ -1297,62 +1268,23 @@ public class WesterosBlockDef {
     		return val;
     	}
     }
-    
-    private transient ConditionRec[] condrecs;
-    
-    // Build 'cond' property for the 
-    public CondProperty buildCondProperty() {
-    	if ((condStates == null) || (condStates.size() < 2)) return null;
-    	condrecs = condStates.toArray(new ConditionRec[0]);	// Make flat array
-
+        
+    // Build 'state' property for the 
+    public StateProperty buildCondProperty() {
+    	if ((this.states == null) || (this.states.size() < 2)) return null;
+    	
     	ArrayList<String> ids = new ArrayList<String>();    	
-    	for (ConditionRec rec : condStates) {
-    		ids.add(rec.condID);
-    		if (rec.biomes != null) {
-    			for (String bn : rec.biomes) {
-    				ResourceLocation rloc = new ResourceLocation(bn);
-    				Biome b = BuiltinRegistries.BIOME.get(rloc);
-    				if (b == null) {
-    					WesterosBlocks.log.warn("Invalid biome " + bn + " in condition " + rec.condID + " of block " + this.blockName);
-    				}
-    			}
-    		}
+		for (int i = 0; i < states.size(); i++) {
+			StateRecord rec = states.get(i);
+			if (rec.stateID == null) rec.stateID = String.format("state%d", i);
+    		ids.add(rec.stateID);
     	}
-    	// Check that the last condition is good default (no conditions)
-    	ConditionRec def = condStates.get(condStates.size()-1);
-    	if ((def != null) && ((def.minY != null) || (def.maxY != null) || (def.biomes != null))) {
-    		WesterosBlocks.log.warn("Block " + this.blockName + ": last condState record is not pure default (it has constraints)");
-    	}
-    	return new CondProperty(ids);
+    	return new StateProperty(ids);
     }
     
-    // Find condition match, given position
-    public String getMatchingCondition(Level world, BlockPos pos) {
-    	int y = pos.getY();
-    	String biomeid = null;
-    	for (int i = 0; i < condrecs.length; i++) {
-    		ConditionRec r = condrecs[i];
-    		if ((r.minY != null) && (y < r.minY)) continue;
-    		if ((r.maxY != null) && (y > r.maxY)) continue;
-    		if (r.biomes != null) {
-    			if (biomeid == null) {
-    				ResourceLocation loc = world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getKey(world.getBiome(pos).value());
-    				if (loc != null) {
-    					biomeid = loc.toString();
-    				}
-    			}
-    			if (!r.biomes.contains(biomeid)) continue;
-    		}
-    		return r.condID;
-    	}
-    	// Last is always default, even if condition is there
-    	return condrecs[condrecs.length-1].condID;
-    }
-    // Get default condition ID
-    public String getDefaultCondID() {
-    	if (this.condStates != null) {
-    		return this.condStates.get(this.condStates.size() - 1).condID;
-    	}
-    	return null;
+    // Get default state ID
+    public String getDefaultStateID() {
+    	if (this.states == null) return null;
+    	return this.states.get(0).stateID;
     }
 }

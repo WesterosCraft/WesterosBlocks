@@ -27,7 +27,7 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
         	// East is base model
         	Variant var = new Variant();
         	var.model = modelFileName("base", setidx);
-        	so.addVariant("facing=east", var, set.condIDs);
+        	so.addVariant("facing=east", var, null);
         }
         
         // North is 90 degree rotate
@@ -36,7 +36,7 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
         	Variant var = new Variant();
         	var.model = modelFileName("base", setidx);
         	var.y = 90;
-        	so.addVariant("facing=north", var, set.condIDs);
+        	so.addVariant("facing=north", var, null);
         }
         
         this.writeBlockStateFile(def.blockName, so);

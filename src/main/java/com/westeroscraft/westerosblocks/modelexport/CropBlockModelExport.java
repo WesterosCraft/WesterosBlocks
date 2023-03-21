@@ -40,7 +40,7 @@ public class CropBlockModelExport extends ModelExport {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
-        	so.addVariant("", var, set.condIDs);
+        	so.addVariant("", var, null);
         }
         this.writeBlockStateFile(def.blockName, so);
     }

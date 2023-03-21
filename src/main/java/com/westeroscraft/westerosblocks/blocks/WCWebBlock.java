@@ -31,17 +31,10 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	BlockBehaviour.Properties props = def.makeProperties().noCollission();
-        	// See if we have a cond property
-        	WesterosBlockDef.CondProperty prop = def.buildCondProperty();
-        	if (prop != null) {
-        		tempCOND = prop;
-        	}        	
         	return def.registerRenderType(def.registerBlock(new WCWebBlock(props, def)), false, false);
         }
     }
     private WesterosBlockDef def;
-    protected static WesterosBlockDef.CondProperty tempCOND;
-    protected WesterosBlockDef.CondProperty COND;
     private boolean noInWeb = false;
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -58,12 +51,7 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
                 }
             }
         }
-        if (COND != null) {
-            this.registerDefaultState(this.stateDefinition.any().setValue(COND, COND.defValue).setValue(WATERLOGGED, Boolean.valueOf(false)));
-        }
-        else {
-            this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));
-        }
+        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override
@@ -80,23 +68,13 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
     	super.createBlockStateDefinition(StateDefinition);
-    	if (tempCOND != null) {
-    		COND = tempCOND;
-    		tempCOND = null;
-    	}
         StateDefinition.add(WATERLOGGED);
-    	if (COND != null) {
-	       StateDefinition.add(COND);
-    	}
     }
 
     @Override
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
-    	if ((COND != null) && (bs != null)) {
-    		bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos())); 
-    	}
         FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
         bs = bs.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
     	return bs;    	

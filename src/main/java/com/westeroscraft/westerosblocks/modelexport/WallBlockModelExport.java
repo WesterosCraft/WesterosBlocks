@@ -111,7 +111,7 @@ public class WallBlockModelExport extends ModelExport {
 				if (mp.y != null)
 					a.y = mp.y;
 
-				so.addStates(mp.when, a, set.condIDs);
+				so.addStates(mp.when, a, null);
 			}
 		}
 
@@ -201,9 +201,6 @@ public class WallBlockModelExport extends ModelExport {
 		oldstate.put("up", "false");
 		newstate.put("up", "false");
 		newstate.put("waterlogged", "false");
-		if (def.condStates != null) {
-			newstate.put("cond", def.getDefaultCondID());
-		}
 		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
 	}
 }

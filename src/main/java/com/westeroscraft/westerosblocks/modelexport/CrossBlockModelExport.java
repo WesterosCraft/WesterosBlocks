@@ -50,7 +50,7 @@ public class CrossBlockModelExport extends ModelExport {
         		if (def.isCustomModel())
         			var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("base", setidx);
         		if (rot > 0) var.y = (90 * rot);
-        		so.addVariant("", var, set.condIDs);
+        		so.addVariant("", var, null);
         	}
         }
         this.writeBlockStateFile(def.blockName, so);
@@ -93,9 +93,6 @@ public class CrossBlockModelExport extends ModelExport {
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
-    	if (def.condStates != null) {
-    		newstate.put("cond", def.getDefaultCondID());    		
-    	}
     	newstate.put("waterlogged", "false");
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }

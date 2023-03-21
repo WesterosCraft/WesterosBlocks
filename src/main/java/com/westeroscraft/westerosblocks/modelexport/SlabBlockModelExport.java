@@ -108,7 +108,7 @@ public class SlabBlockModelExport extends ModelExport {
         	Variant var = new Variant();
         	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("top", setidx);
         	var.weight = set.weight;
-        	so.addVariant("type=top", var, set.condIDs);
+        	so.addVariant("type=top", var, null);
         }
     	// Do bottom half slab
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
@@ -116,7 +116,7 @@ public class SlabBlockModelExport extends ModelExport {
         	Variant var = new Variant();
         	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("bottom", setidx);
         	var.weight = set.weight;
-        	so.addVariant("type=bottom", var, set.condIDs);
+        	so.addVariant("type=bottom", var, null);
         }
         // Do full slab
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
@@ -124,7 +124,7 @@ public class SlabBlockModelExport extends ModelExport {
         	Variant var = new Variant();
         	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("double", setidx);
         	var.weight = set.weight;
-        	so.addVariant("type=double", var, set.condIDs);
+        	so.addVariant("type=double", var, null);
         }
         this.writeBlockStateFile(def.getBlockName(), so);
     }
@@ -189,9 +189,6 @@ public class SlabBlockModelExport extends ModelExport {
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
     	newstate.put("waterlogged", "false");
-    	if (def.condStates != null) {
-    		newstate.put("cond", def.getDefaultCondID());    		
-    	}
     	// Bottom half
     	oldstate.put("half", "bottom");
     	newstate.put("type", "bottom");

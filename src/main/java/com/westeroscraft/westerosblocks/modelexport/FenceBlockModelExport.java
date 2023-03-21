@@ -75,7 +75,7 @@ public class FenceBlockModelExport extends ModelExport {
             	if (mp.uvlock != null) a.uvlock = mp.uvlock;
             	if (mp.y != null) a.y = mp.y;
 
-            	so.addStates(mp.when, a, set.condIDs);
+            	so.addStates(mp.when, a, null);
             }
         }
         this.writeBlockStateFile(def.blockName, so);
@@ -129,9 +129,6 @@ public class FenceBlockModelExport extends ModelExport {
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
-    	if (def.condStates != null) {
-        	newstate.put("cond", def.getDefaultCondID());    		
-    	}
     	// No metadata other than variant - need filter for all of this - just pass one combination
     	oldstate.put("north", "false");
     	newstate.put("north", "false");
