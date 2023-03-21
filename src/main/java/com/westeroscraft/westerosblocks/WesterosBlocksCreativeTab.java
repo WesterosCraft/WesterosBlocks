@@ -9,9 +9,8 @@ import net.minecraft.world.item.ItemStack;
 
 public class  WesterosBlocksCreativeTab extends CreativeModeTab {
 
-    public static final CreativeModeTab tabWesterosBlocks = new  WesterosBlocksCreativeTab("WesterosBlocks", "§fWesteros Blocks", "timber_red_white_vertical");
     public static final CreativeModeTab tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "§fWesteros Decorative", "apple_basket");
-    public static final CreativeModeTab tabWesterosCobbleBrick = new  WesterosBlocksCreativeTab("WesterosCobbleBrick", "§fCobble and Brick", "sandy_pink_large_brick");
+    public static final CreativeModeTab tabWesterosCobbleStone = new  WesterosBlocksCreativeTab("WesterosCobbleBrick", "§fCobble and Brick", "sandy_pink_large_brick");
     public static final CreativeModeTab tabWesterosMarblePlaster = new  WesterosBlocksCreativeTab("WesterosMarblePlaster", "§fMarble and Plaster", "marble_pillar");
     public static final CreativeModeTab tabWesterosTimberFrame = new  WesterosBlocksCreativeTab("WesterosTimberFrame", "§fTimber Frame", "timber_oak_reach_brick_crosshatch");
     public static final CreativeModeTab tabWesterosSandstone = new  WesterosBlocksCreativeTab("WesterosSandstone", "§fSandstone", "vivid_sandstone");
