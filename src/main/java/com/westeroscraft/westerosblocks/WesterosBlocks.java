@@ -339,10 +339,15 @@ public class WesterosBlocks {
 
 	public static Block findBlockByName(String blkname) {
 		Block blk = customBlocksByName.get(blkname);
+		if (blk != null) return blk;
+		ResourceLocation rl = new ResourceLocation(blkname);
+		if (rl.getNamespace().equals(WesterosBlocks.MOD_ID)) {
+			blk = customBlocksByName.get(rl.getPath());
+		}			
 		if (blk != null) {
 			return blk;
 		}
-		blk = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(blkname));
+		blk = ForgeRegistries.BLOCKS.getValue(rl);
 		return blk;
 	}
 

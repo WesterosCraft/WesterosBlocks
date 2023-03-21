@@ -1,7 +1,9 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import com.westeroscraft.westerosblocks.*;
+import java.util.function.Supplier;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -28,33 +30,42 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         			}
         		}
         	}
-        	FlowerPotBlock emptyPotBlk = null;
-            Block plantBlk = null;
+        	//WesterosBlocks.log.info(String.format("pot-id=%s, plant-id=%s", emptyPotID, plantBlockID));
+        	
+        	Supplier<FlowerPotBlock> emptyPot = null;
+        	Supplier<Block> plant = null;
             if (emptyPotID != null) {
-            	emptyPotBlk = (FlowerPotBlock) WesterosBlocks.findBlockByName(emptyPotID);
+            	FlowerPotBlock emptyPotBlk = (FlowerPotBlock) WesterosBlocks.findBlockByName(emptyPotID);
             	if (emptyPotBlk == null) {
                     WesterosBlocks.log.error(String.format("emptyPotID '%s' not found for block '%s'",
                             emptyPotID, def.blockName));
                     return null;            		
             	}
+            	//WesterosBlocks.log.info(String.format("emptyPotBlk=%s", emptyPotBlk.getRegistryName()));
+            	emptyPot = () -> (FlowerPotBlock) emptyPotBlk.delegate.get();
             	if (plantBlockID != null) {
-            		plantBlk = WesterosBlocks.findBlockByName(plantBlockID);
+            		Block plantBlk = WesterosBlocks.findBlockByName(plantBlockID);
             		if (plantBlk == null) {
                         WesterosBlocks.log.error(String.format("plantBlockID '%s' not found for block '%s'",
                         		plantBlockID, def.blockName));
                         return null;            		            			
             		}
+                	//WesterosBlocks.log.info(String.format("plantBlk=%s", plantBlk.getRegistryName()));
+            		plant = () -> plantBlk.delegate.get();
             	}
-            }            
-        	return def.registerRenderType(def.registerBlock(new WCFlowerPotBlock(emptyPotBlk, plantBlk, props, def)), false, def.nonOpaque);
+            }                        
+        	return def.registerRenderType(def.registerBlock(new WCFlowerPotBlock(emptyPot, plant, props, def)), false, def.nonOpaque);
         }
     }    
     protected WesterosBlockDef def;
     
-    protected WCFlowerPotBlock(FlowerPotBlock emptyPotBlock, Block plantBlock, BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super((emptyPotBlock == null) ? null : () -> (FlowerPotBlock) emptyPotBlock.delegate.get(), 
-        		(plantBlock == null) ? null : () -> plantBlock.delegate.get(), props);
+    protected WCFlowerPotBlock(Supplier<FlowerPotBlock> emptyPot, Supplier<Block> plant, BlockBehaviour.Properties props, WesterosBlockDef def) {
+        super(emptyPot, plant, props);
         this.def = def;
+        Block pl = plant.get();
+        if ((pl != null) && (emptyPot.get() != null)) {
+        	emptyPot.get().addPlant(pl.getRegistryName(), () -> this);
+        }
     }
     
     @Override
