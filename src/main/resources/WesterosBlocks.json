@@ -1726,7 +1726,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Gold Brick Slab",
       "textures": [
         "gold_brick/side"
@@ -1990,7 +1990,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Nether Brick Wall",
       "textures": [
         "nether_brick/side"
@@ -2010,7 +2010,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Stone Brick Wall",
       "colorMult": "textures/colormap/stonebrick",
       "textures": [
@@ -2031,7 +2031,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Orange Brick Wall",
       "colorMult": "textures/colormap/brick",
       "textures": [
@@ -2137,7 +2137,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Stone Brick Wall",
       "colorMult": "textures/colormap/smallstonebrick",
       "textures": [
@@ -2158,7 +2158,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Dark Red Brick Wall",
       "textures": [
         "dark_red_brick/side"
@@ -2178,7 +2178,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Orange Brick Wall",
       "colorMult": "textures/colormap/brick",
       "textures": [
@@ -2266,7 +2266,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Reach Light Brick Wall",
       "textures": [
         "reach_brick/side_light"
@@ -6115,7 +6115,7 @@
     {
       "blockName": "small_stone_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": true,
       "hardness": 2,
@@ -6169,7 +6169,7 @@
     {
       "blockName": "stone_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": true,
       "hardness": 2,
@@ -6223,7 +6223,7 @@
     {
       "blockName": "mossy_stone_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": true,
       "hardness": 2,
@@ -6277,7 +6277,7 @@
     {
       "blockName": "stone_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": true,
       "hardness": 2,
@@ -6465,7 +6465,7 @@
     {
       "blockName": "nether_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": true,
       "hardness": 2,
@@ -6730,7 +6730,7 @@
     {
       "blockName": "stormlands_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": true,
       "hardness": 2,
@@ -6783,7 +6783,7 @@
     {
       "blockName": "reach_light_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": true,
       "hardness": 2,
@@ -6836,7 +6836,7 @@
     {
       "blockName": "light_grey_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": true,
       "hardness": 2,
@@ -7202,7 +7202,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Nether Brick Keystone",
       "textures": [
         "stone_block_3/keystone_netherbrick"
@@ -7275,7 +7275,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Orange Bricks Ornate Top",
       "colorMult": "textures/colormap/brick",
       "textures": [
@@ -9632,7 +9632,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Stone Brick Slab",
       "colorMult": "textures/colormap/smallstonebrick",
       "textures": [
@@ -9653,7 +9653,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Light Grey Brick Slab",
       "colorMult": "textures/colormap/lightgreystone",
       "textures": [
@@ -36263,7 +36263,7 @@
       "blockName": "lannisport_light_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "lannisport_light_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Lannisport Light Brick Stairs",
       "legacyBlockID": "stone_block_2_stair_0:0"
     },
@@ -36271,7 +36271,7 @@
       "blockName": "oldtown_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "oldtown_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Oldtown Brick Stairs",
       "legacyBlockID": "stone_block_9_stair_0:0"
     },
@@ -36279,7 +36279,7 @@
       "blockName": "arbor_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "arbor_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Brick Stairs",
       "legacyBlockID": "stone_block_9_stair_1:0"
     },
@@ -36304,7 +36304,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Oldtown Brick Wall",
       "textures": [
         "stone_block_3/brick_oldtown"
@@ -36324,7 +36324,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Brick Wall",
       "textures": [
         "stone_block_3/brick_arbor"
@@ -36488,7 +36488,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Smooth Stone Brick Wall",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": [
@@ -36608,7 +36608,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Large Brick Wall",
       "textures": [
         "stone_block_4/brick_sandy_pink_large"
@@ -36648,7 +36648,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Light Brick Wall",
       "textures": [
         "stone_block_4/brick_sandy_pink_light"
@@ -36688,7 +36688,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Small Brick Wall",
       "textures": [
         "stone_block_3/brick_arbor_small"
@@ -37705,7 +37705,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Smooth Stone Brick Slab",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": [
@@ -37746,7 +37746,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Large Brick Slab",
       "textures": [
         "stone_block_4/brick_sandy_pink_large"
@@ -38818,7 +38818,7 @@
       "blockName": "small_smooth_stone_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "small_smooth_stone_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Smooth Stone Brick Stairs",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "legacyBlockID": "stone_block_3_stair_12:0"
@@ -47309,7 +47309,7 @@
       "blockName": "sandy_pink_large_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "sandy_pink_large_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Large Brick Stairs",
       "legacyBlockID": "stone_block_5_stair_4:0"
     },
@@ -47325,7 +47325,7 @@
       "blockName": "sandy_pink_light_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "sandy_pink_light_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Light Brick Stairs",
       "legacyBlockID": "stone_block_5_stair_6:0"
     },
@@ -47342,7 +47342,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Light Brick Slab",
       "textures": [
         "stone_block_4/brick_sandy_pink_light"
@@ -47362,7 +47362,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Orange Brick Slab",
       "colorMult": "textures/colormap/brick",
       "textures": [
@@ -47383,7 +47383,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Small Brick Slab",
       "textures": [
         "stone_block_3/brick_arbor_small"
@@ -47947,7 +47947,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Gold Brick Wall",
       "textures": [
         "gold_brick/side"
@@ -48107,7 +48107,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Gold Brick Fence",
       "textures": [
         "gold_brick/side"
@@ -48636,7 +48636,7 @@
       "blockName": "small_orange_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "small_orange_bricks",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "colorMult": "textures/colormap/brick",
       "label": "Small Orange Brick Stairs",
       "legacyBlockID": "stone_block_7_stair_0:0"
@@ -48645,7 +48645,7 @@
       "blockName": "arbor_small_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "arbor_small_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Small Brick Stairs",
       "legacyBlockID": "stone_block_9_stair_7:0"
     },
@@ -48944,7 +48944,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Light Brick Slab",
       "textures": [
         "stone_block_4/brick_pale_pink_light"
@@ -48984,7 +48984,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faint Light Grey Brick Slab",
       "colorMult": "textures/colormap/faintlightgreystone",
       "textures": [
@@ -49069,7 +49069,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small White Brick Slab",
       "textures": [
         "stone_block_1/brick_white_small"
@@ -49089,7 +49089,7 @@
           "level": 2
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Light Oldtown Brick Slab",
       "textures": [
         "stone_block_3/brick_oldtown_light"
@@ -49109,7 +49109,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Light Brick Wall",
       "textures": [
         "stone_block_4/brick_pale_pink_light"
@@ -49129,7 +49129,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Faint Light Brick Wall",
       "textures": [
         "stone_block_4/brick_pale_pink_faint_light"
@@ -49149,7 +49149,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faint Light Grey Brick Wall",
       "colorMult": "textures/colormap/faintlightgreystone",
       "textures": [
@@ -49232,7 +49232,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small White Brick Wall",
       "textures": [
         "stone_block_1/brick_white_small"
@@ -49252,7 +49252,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Light Oldtown Brick Wall",
       "textures": [
         "stone_block_3/brick_oldtown_light"
@@ -49266,7 +49266,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Light Brick Fence",
       "textures": [
         "stone_block_4/brick_pale_pink_light"
@@ -49280,7 +49280,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Faint Light Brick Fence",
       "textures": [
         "stone_block_4/brick_pale_pink_faint_light"
@@ -49294,7 +49294,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faint Light Grey Brick Fence",
       "colorMult": "textures/colormap/faintlightgreystone",
       "textures": [
@@ -49367,7 +49367,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Light Oldtown Brick Fence",
       "textures": [
         "stone_block_3/brick_oldtown_light"
@@ -49378,7 +49378,7 @@
       "blockName": "pale_pink_light_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "pale_pink_light_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Light Brick Stairs",
       "legacyBlockID": "stone_block_11_stair_0:0"
     },
@@ -49386,7 +49386,7 @@
       "blockName": "pale_pink_faint_light_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "pale_pink_faint_light_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Faint Light Brick Stairs",
       "legacyBlockID": "stone_block_11_stair_1:0"
     },
@@ -49394,7 +49394,7 @@
       "blockName": "faint_light_grey_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "faint_light_grey_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "colorMult": "textures/colormap/faintlightgreystone",
       "label": "Faint Light Grey Brick Stairs",
       "legacyBlockID": "stone_block_2_stair_1:0"
@@ -49420,7 +49420,7 @@
     {
       "blockName": "basalt_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49473,7 +49473,7 @@
     {
       "blockName": "basalt_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49526,7 +49526,7 @@
     {
       "blockName": "stone_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49580,7 +49580,7 @@
     {
       "blockName": "mossy_stone_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49634,7 +49634,7 @@
     {
       "blockName": "mossy_stone_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49688,7 +49688,7 @@
     {
       "blockName": "nether_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49741,7 +49741,7 @@
     {
       "blockName": "nether_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49794,7 +49794,7 @@
     {
       "blockName": "reach_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49847,7 +49847,7 @@
     {
       "blockName": "reach_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -49900,7 +49900,7 @@
     {
       "blockName": "reach_light_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -51066,7 +51066,7 @@
     {
       "blockName": "pale_pink_light_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -51119,7 +51119,7 @@
     {
       "blockName": "pale_pink_light_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -51172,7 +51172,7 @@
     {
       "blockName": "pale_pink_light_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -52067,7 +52067,7 @@
       "material": "iron",
       "resistance": 10,
       "lightValue": 0.875,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Brick Furnace",
       "isCustomModel": true,
       "legacyBlockID": "furnace_block_4:0"
@@ -52081,7 +52081,7 @@
       "material": "iron",
       "resistance": 10,
       "lightValue": 0.875,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Always Active Arbor Brick Furnace",
       "type": "always-on:true",
       "isCustomModel": true,
@@ -52099,7 +52099,7 @@
       "blockName": "small_white_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "small_white_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small White Brick Stairs",
       "legacyBlockID": "stone_block_3_stair_13:0"
     },
@@ -52607,7 +52607,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Basalt Brick Hopper",
       "textures": [
         "stone_block_1/brick_basalt"
@@ -52817,7 +52817,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Brick Hopper",
       "textures": [
         "stone_block_4/brick_sandy_pink"
@@ -52887,7 +52887,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Large Brick Hopper",
       "textures": [
         "stone_block_4/brick_sandy_pink_large"
@@ -53027,7 +53027,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Light Brick Hopper",
       "textures": [
         "stone_block_4/brick_sandy_pink_light"
@@ -53097,7 +53097,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faint Light Grey Brick Hopper",
       "colorMult": "textures/colormap/faintlightgreystone",
       "textures": [
@@ -53168,7 +53168,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Light Brick Hopper",
       "textures": [
         "stone_block_4/brick_pale_pink_light"
@@ -53380,7 +53380,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Light Oldtown Brick Hopper",
       "textures": [
         "stone_block_3/brick_oldtown_light"
@@ -53441,7 +53441,7 @@
       "blockName": "light_oldtown_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "light_oldtown_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Light Oldtown Brick Stairs",
       "legacyBlockID": "stone_block_9_stair_8:0"
     },
@@ -53610,7 +53610,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faith Carved Stormlands Brick",
       "textures": [
         "stone_block_2/faith_star_brick_stormlands"
@@ -53624,7 +53624,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faith Carved Dun Brick",
       "textures": [
         "stone_block_3/faith_star_brick_dun"
@@ -53638,7 +53638,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faith Carved Arbor Brick",
       "textures": [
         "stone_block_3/faith_star_brick_arbor"
