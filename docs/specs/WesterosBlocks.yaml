@@ -318,8 +318,6 @@ components:
                 If true, causes block to have its model
                 randomly rotated with 4 different angles
                 around Y axis (0, 90, 180, 270 degrees)
-            condStates:
-              $ref: "#/components/schemas/CondStates"
     sound:
       title: blockType='sound'
       allOf:
@@ -665,8 +663,6 @@ components:
               $ref: "#/components/schemas/ambientOcclusion"
             colorMult:
               $ref: "#/components/schemas/colorMult"
-            condStates:
-              $ref: "#/components/schemas/CondStates"
     rail:
       title: blockType='rail'
       allOf:
@@ -848,8 +844,6 @@ components:
                 around Y axis (0, 90, 180, 270 degrees)
             colorMult:
               $ref: "#/components/schemas/colorMult"
-            condStates:
-              $ref: "#/components/schemas/CondStates"
     leaves:
       title: blockType='leaves'
       allOf:
@@ -935,8 +929,6 @@ components:
                 If true, causes block to have its model
                 randomly rotated with 4 different angles
                 around Y axis (0, 90, 180, 270 degrees)
-            condStates:
-              $ref: "#/components/schemas/CondStates"
             colorMult:
               $ref: "#/components/schemas/colorMult"
             type:
@@ -977,8 +969,6 @@ components:
               $ref: "#/components/schemas/colorMult"
             cuboids:
               $ref: "#/components/schemas/Cuboids"
-            condStates:
-              $ref: "#/components/schemas/CondStates"
             isCustomModel:
               type: boolean
               default: false
@@ -1402,8 +1392,6 @@ components:
                   beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
-            condStates:
-              $ref: "#/components/schemas/CondStates"
     wall:
       title: blockType='wall'
       allOf:
@@ -1434,8 +1422,6 @@ components:
                   beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
-            condStates:
-              $ref: "#/components/schemas/CondStates"
     beacon:
       title: blockType='beacon'
       allOf:
@@ -1538,15 +1524,6 @@ components:
               receive when being randomly selected from among the
               other sets in the list (where the set will be selected
               based on 'weight / sum(all weight across sets)'.
-          condIDs:
-            type: array
-            items:
-              type: string
-            description: |-
-              If condStates are set, this field determines which of
-              those states will incorporate a model based on this set
-              of textures.  If not defined, the model is assumed to
-              apply to all condState values.
     Cuboids:
       type: array
       description: List of cuboid components
@@ -1659,38 +1636,5 @@ components:
             to use the given color map
         colorMult:
           $ref: "#/components/schemas/colorMult"
-    CondStates:
-      type: array
-      description: |-
-        List of conditional states for blocks - causes a generated
-        state field, 'cond', with a value set corresponding to the
-        condID fields in this list.  The last records is always the
-        default state - and it should be unconditionally matching.
-      items:
-        type: object
-        description: A single condition record
-        required: [ condID ]
-        properties:
-          condID:
-            type: string
-            description: ID of state value - state attribute will be 'cond=<condID>'
-          minY:
-            type: integer
-            description: |-
-              If defined, condition only matches if Y coordinate of block
-              is greater than or equals to this value.
-          maxY:
-            type: integer
-            description: |-
-              If defined, condition only matches if Y coordinate of block
-              is less than or equal to this value.
-          biomes:
-            type: array
-            items:
-              type: string
-            description: |-
-              If defined, biome of the location of the block must match
-              one of the provided values.  Values in the list are resource
-              locator values (e.g. minecraft:taiga)
 
             
