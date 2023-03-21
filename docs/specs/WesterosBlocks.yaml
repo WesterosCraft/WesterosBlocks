@@ -95,6 +95,7 @@ components:
               - $ref: "#/components/schemas/door"
               - $ref: "#/components/schemas/fence"
               - $ref: "#/components/schemas/fire"
+              - $ref: "#/components/schemas/flowerpot"
               - $ref: "#/components/schemas/furnace"
               - $ref: "#/components/schemas/halfdoor"
               - $ref: "#/components/schemas/ladder"
@@ -939,6 +940,49 @@ components:
                 
                 - "no-in-web": If value is defined and
                 "true", web block does not slow movement
+    flowerpot:
+      title: blockType='flowerpot'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'flowerpot' blocks (both for new full pots and new empty ones)
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of textures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: dirt texture for flower pot
+                  - 1: side texture for flower pot
+                  - 2: plant texture for cross model in pot (normally texture of plant)
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            rotateRandom:
+              type: boolean
+              description: |-
+                If true, causes block to have its model
+                randomly rotated with 4 different angles
+                around Y axis (0, 90, 180, 270 degrees)
+            colorMult:
+              $ref: "#/components/schemas/colorMult"
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "empty-pot": If value is defined, block is new empty pot
+                - "pot-id:<value>": If value is defined, modID:blockID of empty flower pot (default is minecraft:flower_pot)
+                - "plant-id:<value>": If value is defined, modID:blockID of plant placed in empty pot to make this full pot block
     cuboid:
       title: blockType='cuboid'
       allOf:

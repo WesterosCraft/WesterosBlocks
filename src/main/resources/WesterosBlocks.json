@@ -556,7 +556,7 @@
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "label": "Potted Yellow Wildflowers",
-      "type": "plant-id=westeroscraft:yellow_wildflowers",
+      "type": "plant-id:westeroscraft:yellow_wildflowers",
       "textures": [
         "minecraft:block/dirt",
         "minecraft:block/flower_pot",

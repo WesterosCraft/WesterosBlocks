@@ -17,13 +17,13 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         	if (def.type != null) {
         		String[] toks = def.type.split(",");
         		for (String tok : toks) {
-        			if (tok.startsWith("pot-id=")) {
+        			if (tok.startsWith("pot-id:")) {
         				emptyPotID = tok.substring(tok.indexOf('=')+1).trim();
         			}
         			if (tok.equals("empty-pot")) {
         				emptyPotID = null;
         			}
-        			if (tok.startsWith("plant-id=")) {
+        			if (tok.startsWith("plant-id:")) {
         				plantBlockID = tok.substring(tok.indexOf('=')+1).trim();
         			}
         		}
