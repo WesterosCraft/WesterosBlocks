@@ -47,7 +47,6 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
     protected WCBeaconBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props, def);
         def.cuboids = cuboidlist;
-        def.cuboidLists = Collections.singletonList(def.cuboids);
         SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList(def.getCuboidList());
     }
 }

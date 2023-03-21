@@ -551,6 +551,19 @@
       "legacyBlockID": "yellow_flower_block_0:0"
     },
     {
+      "blockName": "potted_yellow_wildflowers",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Wildflowers",
+      "type": "plant-id:yellow_wildflowers",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/yellow_wildflowers"
+      ]
+    },
+    {
       "blockName": "green_spiny_herb",
       "blockType": "plant",
       "material": "wood",

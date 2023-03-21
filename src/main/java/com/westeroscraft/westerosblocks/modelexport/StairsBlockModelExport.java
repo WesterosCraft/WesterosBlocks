@@ -122,7 +122,7 @@ public class StairsBlockModelExport extends ModelExport {
         	if (bbdef != null) {
         		WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);
         		var = new OurVariant(modname, xrot, yrot, set.weight);
-        		so.addVariant(cond, var, set.condIDs);
+        		so.addVariant(cond, var, null);
         	}
         	else {
         		var = new OurVariant(modname, xrot, yrot, null);
@@ -309,9 +309,6 @@ public class StairsBlockModelExport extends ModelExport {
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
     	newstate.put("waterlogged", "false");
-    	if ((bbdef != null) && (bbdef.condStates != null)) {
-        	newstate.put("cond", bbdef.getDefaultCondID());    		
-    	}
     	for (String facing : FACING) {
         	oldstate.put("facing", facing);
         	newstate.put("facing", facing);

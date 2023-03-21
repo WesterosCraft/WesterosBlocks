@@ -26,7 +26,7 @@ public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(modRot[rotation % 4], setidx);
 	        	var.y = 90 * (((rotation + 1) % 16) / 4);
-	        	so.addVariant("rotation=" + rotation, var, set.condIDs);
+	        	so.addVariant("rotation=" + rotation, var, null);
 	        }
         }
         this.writeBlockStateFile(def.blockName, so);

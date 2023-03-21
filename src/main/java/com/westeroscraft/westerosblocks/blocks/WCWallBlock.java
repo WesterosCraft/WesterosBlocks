@@ -31,19 +31,11 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
             BlockBehaviour.Properties props = def.makeProperties();
-            // See if we have a cond property
-            WesterosBlockDef.CondProperty prop = def.buildCondProperty();
-            if (prop != null) {
-                tempCOND = prop;
-            }
             return def.registerRenderType(def.registerBlock(new WCWallBlock(props, def)), false, false);
         }
     }
 
     private WesterosBlockDef def;
-
-    private static WesterosBlockDef.CondProperty tempCOND;
-    private WesterosBlockDef.CondProperty COND;
 
     public final Map<BlockState, VoxelShape> ourShapeByIndex;
     public final Map<BlockState, VoxelShape> ourCollisionShapeByIndex;
@@ -69,38 +61,8 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
         }
         Map<BlockState, VoxelShape> shapeByIndex = this.makeShapes(4.0F, 3.0F, 16.0F, 0.0F, wheight, 16.0F);
 
-        if (COND != null) {
-            this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(true))
-                    .setValue(NORTH_WALL, WallSide.NONE).setValue(EAST_WALL, WallSide.NONE)
-                    .setValue(SOUTH_WALL, WallSide.NONE).setValue(WEST_WALL, WallSide.NONE)
-                    .setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(COND, COND.defValue));
-
-            // Now, need to fix the shape by index mappings
-            Builder<BlockState, VoxelShape> builder = ImmutableMap.builder();
-            for (BlockState bs : shapeByIndex.keySet()) {
-                VoxelShape shape = shapeByIndex.get(bs);
-                // Add our combinations with COND to new map
-                for (String val : COND.getPossibleValues()) {
-                    BlockState bsnew = bs.setValue(COND, val);
-                    builder.put(bsnew, shape);
-                }
-            }
-            this.ourShapeByIndex = builder.build();
-            // Now, need to fix the collision by index mappings
-            builder = builder = ImmutableMap.builder();
-            for (BlockState bs : this.collisionShapeByIndex.keySet()) {
-                VoxelShape shape = this.collisionShapeByIndex.get(bs);
-                // See if the other cond values are in place
-                for (String val : COND.getPossibleValues()) {
-                    BlockState bsnew = bs.setValue(COND, val);
-                    builder.put(bsnew, shape);
-                }
-            }
-            this.ourCollisionShapeByIndex = builder.build();
-        } else { // Just use parent's one
-            this.ourCollisionShapeByIndex = this.collisionShapeByIndex;
-            this.ourShapeByIndex = shapeByIndex;
-        }
+        this.ourCollisionShapeByIndex = this.collisionShapeByIndex;
+        this.ourShapeByIndex = shapeByIndex;
     }
 
     @Override
@@ -110,15 +72,7 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-        if (tempCOND != null) {
-            COND = tempCOND;
-            tempCOND = null;
-        }
-        if (COND != null) {
-            StateDefinition.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED, COND);
-        } else {
-            StateDefinition.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED);
-        }
+        StateDefinition.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED);
     }
 
     @Override
@@ -137,9 +91,6 @@ public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         BlockState bs = super.getStateForPlacement(ctx);
-        if ((bs != null) && (COND != null)) {
-            bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos()));
-        }
         return bs;
     }
 

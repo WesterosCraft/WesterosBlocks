@@ -46,7 +46,7 @@ public class LadderBlockModelExport extends ModelExport {
 	            if (def.isCustomModel())
 	            	var.model = WesterosBlocks.MOD_ID + ":block/custom/" + getModelName("base", setidx);
             	if (y[faceidx] > 0) var.y = y[faceidx];
-    	        so.addVariant("facing=" + faces[faceidx], var, set.condIDs);
+    	        so.addVariant("facing=" + faces[faceidx], var, null);
 	        }
     	}
         this.writeBlockStateFile(def.blockName, so);

@@ -64,7 +64,7 @@ public class LayerBlockModelExport extends ModelExport {
             	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
             	Variant var = new Variant();
             	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("layer" + (i+1), setidx);
-            	so.addVariant(String.format("layers=%d", i+1), var, set.condIDs);
+            	so.addVariant(String.format("layers=%d", i+1), var, null);
             }
         }
         this.writeBlockStateFile(def.blockName, so);

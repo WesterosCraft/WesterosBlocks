@@ -40,11 +40,6 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
             // If a WB, look up def
             if (blk instanceof WesterosBlockLifecycle) {
                 mbdef = ((WesterosBlockLifecycle) blk).getWBDefinition();
-                // See if we have a cond property
-                if (mbdef.condStates != null) {
-                    def.condStates = mbdef.condStates;
-                    tempCOND = def.buildCondProperty();
-                }
             }
             BlockBehaviour.Properties props = def.makeAndCopyProperties(blk);
             return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def)),
@@ -53,17 +48,10 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
     }
 
     private WesterosBlockDef def;
-    private static WesterosBlockDef.CondProperty tempCOND;
-    private WesterosBlockDef.CondProperty COND;
 
     protected WCStairBlock(BlockState modelstate, BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(() -> modelstate, props);
         this.def = def;
-        if (COND != null) {
-            this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH)
-                    .setValue(HALF, Half.BOTTOM).setValue(SHAPE, StairsShape.STRAIGHT)
-                    .setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(COND, COND.defValue));
-        }
     }
 
     @Override
@@ -74,22 +62,12 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
         super.createBlockStateDefinition(StateDefinition);
-        if (tempCOND != null) {
-            COND = tempCOND;
-            tempCOND = null;
-        }
-        if (COND != null) {
-            StateDefinition.add(COND);
-        }
     }
 
     @Override
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         BlockState bs = super.getStateForPlacement(ctx);
-        if ((bs != null) && (COND != null)) {
-            bs = bs.setValue(COND, def.getMatchingCondition(ctx.getLevel(), ctx.getClickedPos()));
-        }
         return bs;
     }
 

@@ -84,7 +84,7 @@ public class CuboidBlockModelExport extends ModelExport {
                 var.model = modelFileName("base", setidx);
             	var.weight = set.weight;
             	if (i > 0) var.y = 90*i;
-    			so.addVariant("", var, set.condIDs);	// Add our variant                	
+    			so.addVariant("", var, null);	// Add our variant                	
             }
             
         }
@@ -315,9 +315,6 @@ public class CuboidBlockModelExport extends ModelExport {
     	Map<String, String> newstate = new HashMap<String, String>();
     	oldstate.put("variant", oldVariant);
     	newstate.put("waterlogged", "false");
-    	if (def.condStates != null) {
-    		newstate.put("cond", def.getDefaultCondID());    		
-    	}
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 

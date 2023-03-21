@@ -56,7 +56,7 @@ public class LogBlockModelExport extends ModelExport {
         		if (xrot[i] > 0) var.x = xrot[i];
         		if (yrot[i] > 0) var.y = yrot[i];
         		var.weight = set.weight;
-        		so.addVariant(states[i], var, set.condIDs);
+        		so.addVariant(states[i], var, null);
         	}
         }
         this.writeBlockStateFile(def.blockName, so);
