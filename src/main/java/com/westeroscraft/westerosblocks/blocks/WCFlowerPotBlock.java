@@ -18,13 +18,13 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         		String[] toks = def.type.split(",");
         		for (String tok : toks) {
         			if (tok.startsWith("pot-id:")) {
-        				emptyPotID = tok.substring(tok.indexOf('=')+1).trim();
+        				emptyPotID = tok.substring(tok.indexOf(':')+1).trim();
         			}
         			if (tok.equals("empty-pot")) {
         				emptyPotID = null;
         			}
         			if (tok.startsWith("plant-id:")) {
-        				plantBlockID = tok.substring(tok.indexOf('=')+1).trim();
+        				plantBlockID = tok.substring(tok.indexOf(':')+1).trim();
         			}
         		}
         	}
@@ -52,7 +52,8 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
     protected WesterosBlockDef def;
     
     protected WCFlowerPotBlock(FlowerPotBlock emptyPotBlock, Block plantBlock, BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(() -> emptyPotBlock, () -> plantBlock, props);
+        super((emptyPotBlock == null) ? null : () -> (FlowerPotBlock) emptyPotBlock.delegate.get(), 
+        		(plantBlock == null) ? null : () -> plantBlock.delegate.get(), props);
         this.def = def;
     }
     
