@@ -27,6 +27,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFlowerPotBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
@@ -969,7 +970,6 @@ public class WesterosBlockDef {
 		typeTable.put("solid", new WCSolidBlock.Factory());
 		typeTable.put("stair", new WCStairBlock.Factory());
 		typeTable.put("log", new WCLogBlock.Factory());
-		//typeTable.put("logvert", new WCLogVertBlock.Factory());
 		typeTable.put("plant", new WCPlantBlock.Factory());
 		typeTable.put("crop", new WCCropBlock.Factory());
 		typeTable.put("slab", new WCSlabBlock.Factory());
@@ -979,7 +979,6 @@ public class WesterosBlockDef {
 		typeTable.put("torch", new WCTorchBlock.Factory());
 		typeTable.put("ladder", new WCLadderBlock.Factory());
 		typeTable.put("cuboid", new WCCuboidBlock.Factory());
-		//typeTable.put("cuboid-horiz", new WCCuboidHorizBlock.Factory());
 		typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
 		typeTable.put("cuboid-16way", new WCCuboid16WayBlock.Factory());
 		typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
@@ -1001,12 +1000,7 @@ public class WesterosBlockDef {
 		typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
 		typeTable.put("beacon", new WCBeaconBlock.Factory());
 		typeTable.put("vines", new WCVinesBlock.Factory());
-		//typeTable.put("solidvert", new WCSolidVertBlock.Factory());
-		//typeTable.put("soulsandvert", new WCSoulSandVertBlock.Factory());
-		//typeTable.put("laddervert", new WCLadderVertBlock.Factory());
-		//typeTable.put("solidhoriz", new WCSolidHorizBlock.Factory());
-		//typeTable.put("webvert", new WCWebVertBlock.Factory());
-		//typeTable.put("plantvert", new WCPlantVertBlock.Factory());
+		typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
 
 		// Standard color multipliers
 		colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
