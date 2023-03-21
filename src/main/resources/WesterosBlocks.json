@@ -22469,7 +22469,7 @@
     {
       "blockName": "basalt_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22522,7 +22522,7 @@
     {
       "blockName": "reach_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22575,7 +22575,7 @@
     {
       "blockName": "reach_light_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22628,7 +22628,7 @@
     {
       "blockName": "stormlands_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22681,7 +22681,7 @@
     {
       "blockName": "stormlands_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22734,7 +22734,7 @@
     {
       "blockName": "lannisport_light_brick_arrow_slit",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22787,7 +22787,7 @@
     {
       "blockName": "lannisport_light_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22840,7 +22840,7 @@
     {
       "blockName": "small_stone_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22894,7 +22894,7 @@
     {
       "blockName": "light_grey_brick_arrow_slit_ornate",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -22948,7 +22948,7 @@
     {
       "blockName": "small_stone_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -23002,7 +23002,7 @@
     {
       "blockName": "light_grey_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -23056,7 +23056,7 @@
     {
       "blockName": "lannisport_light_brick_arrow_slit_window",
       "blockType": "solid",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "nonOpaque": true,
       "alphaRender": false,
       "hardness": 2,
@@ -23311,7 +23311,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMisc",
       "label": "Rope Pulley",
       "textures": [
         "log_block_1/pulley_rope_topbottom",
@@ -23344,7 +23344,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMisc",
       "label": "Chain Pulley",
       "textures": [
         "log_block_1/pulley_chain_topbottom",
@@ -23373,7 +23373,7 @@
       "material": "rock",
       "resistance": 10,
       "lightValue": 0.875,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Dornish Mud Furnace",
       "isCustomModel": true,
       "legacyBlockID": "furnace_block_3:0"
@@ -23387,7 +23387,7 @@
       "material": "rock",
       "resistance": 10,
       "lightValue": 0.875,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Always Active Dornish Mud Furnace",
       "type": "always-on:true",
       "isCustomModel": true,
@@ -23400,7 +23400,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosClothFibers",
       "label": "Closed Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23416,7 +23416,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosClothFibers",
       "label": "Open Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23432,7 +23432,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Apricot Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23448,7 +23448,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Date Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23464,7 +23464,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Lemon Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23480,7 +23480,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Lime Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23496,7 +23496,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Olive Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23512,7 +23512,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Orange Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23528,7 +23528,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Pomegranate Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23544,7 +23544,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Hop Crate",
       "textures": [
         "crate_block_0/crate_side_crossbar_right",
@@ -23560,7 +23560,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Lavender Crate",
       "textures": [
         "crate_block_0/crate_side_crossbar_right",
@@ -23576,7 +23576,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Sourleaf Crate",
       "textures": [
         "crate_block_0/crate_side_crossbar_right",
@@ -23592,7 +23592,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "White Grape Crate",
       "textures": [
         "crate_block_0/crate_side_crossbar_right",
@@ -23608,7 +23608,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Turnip Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23624,7 +23624,7 @@
       "stepSound": "cloth",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Grain Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23640,7 +23640,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Apple Basket",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -23653,7 +23653,7 @@
       "blockName": "dark_red_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "dark_red_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Dark Red Brick Stairs",
       "legacyBlockID": "stone_block_4_stair_2:0"
     },
@@ -24597,7 +24597,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCropsHerbs",
       "label": "Bushel of Sourleaf",
       "textures": [
         "web_block_1/food_sourleaf"
@@ -24657,7 +24657,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "Dead Rat",
       "randomTextures": [
         {
@@ -24712,7 +24712,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosClothFibers",
       "label": "Closed Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24734,7 +24734,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosClothFibers",
       "label": "Open Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24756,7 +24756,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Apricot Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24778,7 +24778,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Date Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24800,7 +24800,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Lemon Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24822,7 +24822,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Lime Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24844,7 +24844,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Olive Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24866,7 +24866,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Orange Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24888,7 +24888,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Pomegranate Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24910,7 +24910,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Turnip Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24932,7 +24932,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Grain Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24954,7 +24954,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Apple Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24976,7 +24976,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Carrot Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -24998,7 +24998,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Berry Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -25020,7 +25020,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Fish Basket Slab",
       "textures": [
         "crate_block_1/basket_bottom",
@@ -25042,7 +25042,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "Oak Half Door",
       "textures": [
         "cuboid_block_1/door_iron_lower_oak"
@@ -25070,7 +25070,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "Birch Half Door",
       "textures": [
         "cuboid_block_1/door_iron_lower_birch"
@@ -25098,7 +25098,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "Jungle Half Door",
       "textures": [
         "cuboid_block_1/door_iron_lower_jungle"
@@ -25126,7 +25126,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "Dark Northern Wood Half Door",
       "textures": [
         "cuboid_block_1/door_iron_lower_northern"
@@ -26282,7 +26282,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosLighting",
       "label": "Citadel Glass Candle Green",
       "textures": [
         "translucent_block_0/candle_glass_green_bottom",
@@ -26342,7 +26342,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosLighting",
       "label": "Citadel Glass Candle Black",
       "textures": [
         "translucent_block_0/candle_glass_black_bottom",
@@ -26729,7 +26729,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 7,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "type": "locked:true",
       "label": "Red Keep Secret Door",
       "textures": [
@@ -26814,7 +26814,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Ale Merchant",
       "lightOpacity": 0,
       "randomTextures": [
@@ -26923,7 +26923,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Apothecary",
       "lightOpacity": 0,
       "randomTextures": [
@@ -27032,7 +27032,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosMisc",
       "label": "City Profession: Armorer",
       "lightOpacity": 0,
       "randomTextures": [
@@ -27141,7 +27141,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Baker",
       "lightOpacity": 0,
       "randomTextures": [
@@ -27250,7 +27250,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Barber",
       "lightOpacity": 0,
       "randomTextures": [
@@ -27359,7 +27359,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Blacksmith",
       "lightOpacity": 0,
       "randomTextures": [
@@ -27468,7 +27468,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Bookbinder",
       "lightOpacity": 0,
       "randomTextures": [
@@ -27577,7 +27577,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Butcher",
       "lightOpacity": 0,
       "randomTextures": [
@@ -27686,7 +27686,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Carpenter",
       "lightOpacity": 0,
       "randomTextures": [
@@ -27795,7 +27795,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Cartwright",
       "lightOpacity": 0,
       "textures": [
@@ -27911,7 +27911,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Cobbler",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28020,7 +28020,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Cooper",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28129,7 +28129,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Fishmongerer",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28238,7 +28238,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Fletcher",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28347,7 +28347,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Furrier",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28456,7 +28456,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Inn",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28565,7 +28565,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Chandler",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28674,7 +28674,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Jeweller",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28783,7 +28783,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Mason",
       "lightOpacity": 0,
       "randomTextures": [
@@ -28892,7 +28892,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Mercer",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29001,7 +29001,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Net Maker",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29110,7 +29110,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Potter",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29219,7 +29219,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Ropemaker",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29328,7 +29328,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Scribe",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29437,7 +29437,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Spicer",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29546,7 +29546,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Stables",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29655,7 +29655,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Tailor",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29764,7 +29764,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Tanner",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29873,7 +29873,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Tavern",
       "lightOpacity": 0,
       "randomTextures": [
@@ -29982,7 +29982,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Weaponsmith",
       "lightOpacity": 0,
       "randomTextures": [
@@ -30091,7 +30091,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Wine Merchant",
       "lightOpacity": 0,
       "randomTextures": [
@@ -30200,7 +30200,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Flea Bottom Potshop",
       "lightOpacity": 0,
       "randomTextures": [
@@ -30316,7 +30316,7 @@
       "blockName": "basalt_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "basalt_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Basalt Brick Stairs",
       "legacyBlockID": "stone_block_5_stair_2:0"
     },
@@ -30333,7 +30333,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosClothFibers",
       "label": "Mance's Camp Common Tent 1",
       "textures": [
         "mances_camp_common_tent/inside",
@@ -30372,7 +30372,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosClothFibers",
       "label": "Mance's Camp Common Tent 2",
       "textures": [
         "mances_camp_common_tent/inside",
@@ -30411,7 +30411,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosClothFibers",
       "label": "Mance's Camp Mance's Tent",
       "textures": [
         "mances_camp_common_tent/inside",
@@ -30450,7 +30450,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "label": "Mance's Camp Mance's Tent Antlers",
       "textures": [
         "mances_camp_mances_tent_antlers/edge",
@@ -30477,7 +30477,7 @@
       "stepSound": "metal",
       "material": "iron",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "type": "locked:false",
       "label": "King's Landing Sewer Manhole",
       "textures": [
@@ -30937,7 +30937,7 @@
       "stepSound": "metal",
       "material": "iron",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosDecor",
       "type": "locked:false",
       "label": "White Harbor Sewer Manhole",
       "textures": [
@@ -31968,7 +31968,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleStone",
       "label": "Oldtown Cobblestone Fence",
       "textures": [
         "stone_block_3/stone_cobble_oldtown"
@@ -31982,7 +31982,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleStone",
       "label": "Reach Cobblestone Fence",
       "textures": [
         "stone_block_2/stone_cobble_reach"
@@ -31996,7 +31996,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "Grey Wood Fence",
       "textures": [
         "grey_wood/side"
@@ -32010,7 +32010,7 @@
       "stepSound": "stone",
       "material": "wood",
       "resistance": 10,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "White Wood Fence",
       "textures": [
         "white_wood/side"
@@ -32052,7 +32052,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "type": "locked:true",
       "label": "Locked Oak Door",
       "textures": [
@@ -32068,7 +32068,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "type": "locked:true",
       "label": "Locked Spruce Door",
       "textures": [
@@ -32084,7 +32084,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "type": "locked:true",
       "label": "Locked Birch Door",
       "textures": [
@@ -32100,7 +32100,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "type": "locked:true",
       "label": "Locked Jungle Door",
       "textures": [
@@ -32116,7 +32116,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "type": "locked:true",
       "label": "Locked Dark Northern Wood Door",
       "textures": [
@@ -34203,7 +34203,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleStone",
       "label": "Basalt Cobblestone Hopper",
       "textures": [
         "stone_block_1/stone_cobble_basalt"
@@ -34273,7 +34273,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "label": "Lannisport Light Brick Hopper",
       "textures": [
         "stone_block_2/brick_lannisport"
@@ -34343,7 +34343,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "label": "Oldtown Brick Hopper",
       "textures": [
         "stone_block_3/brick_oldtown"
@@ -34413,7 +34413,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Brick Hopper",
       "textures": [
         "stone_block_3/brick_arbor"
@@ -34483,7 +34483,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleStone",
       "label": "Arbor Cobblestone Hopper",
       "textures": [
         "stone_block_3/stone_cobble_arbor"
@@ -34693,7 +34693,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleStone",
       "label": "Oldtown Cobblestone Hopper",
       "textures": [
         "stone_block_3/stone_cobble_oldtown"
@@ -34763,7 +34763,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleStone",
       "label": "Reach Cobblestone Hopper",
       "textures": [
         "stone_block_2/stone_cobble_reach"
@@ -34833,7 +34833,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "Grey Wood Hopper",
       "textures": [
         "grey_wood/top_bottom"
@@ -34903,7 +34903,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosWoodPlanks",
       "label": "White Wood Hopper",
       "textures": [
         "white_wood/top_bottom"
@@ -34973,7 +34973,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "label": "Small Orange Brick Hopper",
       "colorMult": "textures/colormap/brick",
       "textures": [
@@ -35044,7 +35044,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "label": "Small Smooth Stone Brick Hopper",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": [
@@ -35115,7 +35115,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosCobbleStone",
       "label": "River Cobble Hopper",
       "colorMult": "textures/colormap/lightgreystone",
       "textures": [
@@ -35186,7 +35186,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Small Brick Hopper",
       "textures": [
         "stone_block_3/brick_arbor_small"
@@ -35256,7 +35256,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDeco",
+      "creativeTab": "WesterosBrick",
       "label": "Stone Brick Hopper",
       "colorMult": "textures/colormap/stonebrick",
       "textures": [
