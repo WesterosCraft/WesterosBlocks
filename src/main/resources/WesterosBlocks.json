@@ -335,7 +335,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "lightValue": 0,
       "label": "Gold Brick",
       "textures": [
@@ -692,6 +692,30 @@
       "legacyBlockID": "yellow_flower_block_0:4"
     },
     {
+      "blockName": "potted_orange_trollius",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Orange Trollius",
+      "type": "plant-id:orange_trollius",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_trollius1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_trollius2"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "blue_forgetmenots",
       "blockType": "plant",
       "material": "wood",
@@ -728,6 +752,44 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_0:5"
+    },
+    {
+      "blockName": "potted_blue_forgetmenots",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Blue Forget-me-nots",
+      "type": "plant-id:blue_forgetmenots",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_forgetmenots1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_forgetmenots2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_forgetmenots3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_forgetmenots4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "pink_wildflowers",
@@ -844,6 +906,44 @@
       "legacyBlockID": "yellow_flower_block_0:9"
     },
     {
+      "blockName": "potted_white_daisies",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted White Daisies",
+      "type": "plant-id:white_daisies",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/white_daisies1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/white_daisies2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/white_daisies3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/white_daisies4"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "yellow_daisies",
       "blockType": "plant",
       "material": "wood",
@@ -870,6 +970,30 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_0:10"
+    },
+    {
+      "blockName": "potted_yellow_daisies",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Daisies",
+      "type": "plant-id:yellow_daisies",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_daisies1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_daisies2"
+          ]
+        }
+      ]
     },
     {
       "blockName": "green_scrub_grass",
@@ -1198,6 +1322,44 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_1:3"
+    },
+    {
+      "blockName": "potted_yellow_lupine",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Lupine",
+      "type": "plant-id:yellow_lupine",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_lupine1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_lupine2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_lupine3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_lupine4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "blue_hyacinth",
@@ -7201,7 +7363,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Dark Red Brick",
       "textures": [
         "dark_red_brick/side"
@@ -8347,7 +8509,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Light Grey Brick",
       "colorMult": "textures/colormap/lightgreystone",
       "textures": [
@@ -8362,7 +8524,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Small Stone Brick",
       "colorMult": "textures/colormap/smallstonebrick",
       "textures": [
@@ -9444,7 +9606,7 @@
       "blockName": "small_stone_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "small_stone_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "colorMult": "textures/colormap/smallstonebrick",
       "label": "Small Stone Brick Stairs",
       "legacyBlockID": "stone_block_1_stair_0:0"
@@ -9453,7 +9615,7 @@
       "blockName": "light_grey_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "light_grey_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "colorMult": "textures/colormap/lightgreystone",
       "label": "Light Grey Brick Stairs",
       "legacyBlockID": "stone_block_1_stair_1:0"
@@ -11548,6 +11710,44 @@
       "legacyBlockID": "red_flower_block_0:4"
     },
     {
+      "blockName": "potted_red_roses",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Red Roses",
+      "type": "plant-id:red_roses",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_roses1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_roses2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_roses3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_roses4"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "purple_pansies",
       "blockType": "plant",
       "stepSound": "grass",
@@ -11585,6 +11785,44 @@
         }
       ],
       "legacyBlockID": "red_flower_block_0:5"
+    },
+    {
+      "blockName": "potted_purple_pansies",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Purple Pansies",
+      "type": "plant-id:purple_pansies",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/purple_pansies1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/purple_pansies2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/purple_pansies3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/purple_pansies4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "purple_roses",
@@ -11653,6 +11891,30 @@
         }
       ],
       "legacyBlockID": "red_flower_block_0:7"
+    },
+    {
+      "blockName": "potted_orange_sun_star",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Orange Sun Star",
+      "type": "plant-id:orange_sun_star",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_sun_star1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_sun_star2"
+          ]
+        }
+      ]
     },
     {
       "blockName": "pink_primrose",
@@ -12158,6 +12420,37 @@
       "legacyBlockID": "red_flower_block_1:6"
     },
     {
+      "blockName": "potted_blue_orchid",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Blue Orchid",
+      "type": "plant-id:blue_orchid",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_orchid1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_orchid2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_orchid3"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "yellow_rudbeckia",
       "blockType": "plant",
       "stepSound": "grass",
@@ -12215,6 +12508,44 @@
         }
       ],
       "legacyBlockID": "red_flower_block_1:8"
+    },
+    {
+      "blockName": "potted_pink_tulips",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Pink Tulips",
+      "type": "plant-id:pink_tulips",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_tulips1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_tulips2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_tulips3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_tulips4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "cranberry_bush",
@@ -15375,7 +15706,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Lannisport Light Brick",
       "textures": [
         "stone_block_2/brick_lannisport"
@@ -15477,7 +15808,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faint Light Grey Brick",
       "colorMult": "textures/colormap/faintlightgreystone",
       "textures": [
@@ -15492,7 +15823,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Reach Light Brick",
       "textures": [
         "reach_brick/side_light"
@@ -15549,7 +15880,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Reach Brick",
       "textures": [
         "reach_brick/side"
@@ -15716,7 +16047,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Stormlands Brick",
       "textures": [
         "stone_block_2/brick_stormlands_small"
@@ -15730,7 +16061,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Stormlands Large Brick",
       "textures": [
         "stormlands_brick_large/side"
@@ -16939,7 +17270,7 @@
       "blockName": "gold_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "gold_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Gold Brick Stairs",
       "legacyBlockID": "metal_block_0_stair_4:0"
     },
@@ -31103,7 +31434,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosToolBlocks",
+      "creativeTab": "WesterosDecor",
       "label": "Helmet",
       "textures": [
         "helmet/down",
@@ -31830,7 +32161,7 @@
       "blockName": "reach_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "reach_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Reach Brick Stairs",
       "legacyBlockID": "stone_block_3_stair_7:0"
     },
@@ -32142,7 +32473,7 @@
       "blockName": "stormlands_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "stormlands_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Stormlands Brick Stairs",
       "legacyBlockID": "stone_block_3_stair_8:0"
     },
@@ -32150,7 +32481,7 @@
       "blockName": "stormlands_large_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "stormlands_large_brick",
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Stormlands Large Brick Stairs",
       "legacyBlockID": "stone_block_2_stair_4:0"
     },
@@ -34056,7 +34387,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Light Oldtown Brick",
       "textures": [
         "stone_block_3/brick_oldtown_light"
@@ -34070,7 +34401,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Oldtown Brick",
       "textures": [
         "stone_block_3/brick_oldtown"
@@ -34098,7 +34429,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Brick",
       "textures": [
         "arbor_brick/side"
@@ -34112,7 +34443,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Brick Ornate",
       "textures": [
         "arbor_brick_ornate/side"
@@ -34182,7 +34513,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Arbor Small Brick",
       "textures": [
         "stone_block_3/brick_arbor_small"
@@ -43949,7 +44280,7 @@
       "blockType": "vines",
       "stepSound": "grass",
       "material": "plants",
-      "creativeTab": "WesterosTerrainSets",
+      "creativeTab": "WesterosDecor",
       "label": "Jasmine Vines",
       "randomTextures": [
         {
@@ -48923,7 +49254,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Light Brick",
       "textures": [
         "stone_block_4/brick_pale_pink_light"
@@ -48937,7 +49268,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Pale Pink Faint Light Brick",
       "textures": [
         "stone_block_4/brick_pale_pink_faint_light"
@@ -53861,7 +54192,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosMisc",
       "isCustomModel": true,
       "label": "Ghostskin",
       "randomTextures": [

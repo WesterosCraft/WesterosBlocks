@@ -869,7 +869,7 @@ public class WesterosBlockDef {
 		CreativeModeTab ct = tabTable.get(creativeTab);
 		if (ct == null) {
 			WesterosBlocks.log.warn(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
-			ct = WesterosBlocksCreativeTab.tabWesterosBlocks;
+			ct = WesterosBlocksCreativeTab.tabWesterosMisc;
 		}
 		return ct;
 	}
