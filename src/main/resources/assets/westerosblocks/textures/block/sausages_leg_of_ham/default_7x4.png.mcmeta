@@ -1,56 +1,129 @@
 {
-  "ctm": {
-    "ctm_version": 1,
-    "type": "westeros_single_cond",
-    "layer": "CUTOUT",
-    "textures": [
-    ],
-    "extra": {
-       "condWidth": 7,
-       "condHeight": 4,
-       "conds": [
-       		{ "biomeNames": [
-	            "minecraft:windswept_hills",
-    	        "minecraft:windswept_forest",
-        	    "minecraft:windswept_gravelly_hills",
-            	"minecraft:snowy_beach",
-            	"minecraft:taiga",
-	            "minecraft:snowy_taiga",
-    	        "minecraft:old_growth_pine_taiga",
-        	    "minecraft:old_growth_spruce_taiga",
-            	"minecraft:snowy_plains",
-	            "minecraft:frozen_river",
-    	        "minecraft:frozen_ocean",
-        	    "minecraft:snowy_beach",
-            	"minecraft:ice_spikes"
-       		   ], "type": "vertical", "ctmRow": 2, "ctmCol": 0,
-       		   "conds": [
-       		     { "sources": [ { "row": 2, "col": 0 } ],
-       		       "type": "random", "rndRow": 2, "rndCol": 5, "rndWidth": 2, "rndHeight": 2, "rndSameAllSides": true
-       		     },
-       		     { "sources": [ { "row": 2, "col": 1 } ],
-       		       "type": "random", "rndRow": 2, "rndCol": 1, "rndWidth": 4, "rndHeight": 1, "rndOffY": -1, "rndSameAllSides": true
-       		     },
-       		     { "sources": [ { "row": 3, "col": 1 } ],
-       		       "type": "random", "rndRow": 3, "rndCol": 1, "rndWidth": 4, "rndHeight": 1, "rndSameAllSides": true
-       		     }
-       		   ]
-       	   },
-       	   { 
-       		  "type": "vertical", "ctmRow": 0, "ctmCol": 0,
-       		  "conds": [
-       		     { "sources": [ { "row": 0, "col": 0 } ],
-       		       "type": "random", "rndRow": 0, "rndCol": 5, "rndWidth": 2, "rndHeight": 2, "rndSameAllSides": true
-       		     },
-       		     { "sources": [ { "row": 0, "col": 1 } ],
-       		       "type": "random", "rndRow": 0, "rndCol": 1, "rndWidth": 4, "rndHeight": 1, "rndOffY": -1, "rndSameAllSides": true
-       		     },
-       		     { "sources": [ { "row": 1, "col": 1 } ],
-       		       "type": "random", "rndRow": 1, "rndCol": 1, "rndWidth": 4, "rndHeight": 1, "rndSameAllSides": true
-       		     }
-       		   ]
-       	   }
-       ]        
-    }
-  }
+	"ctm": {
+		"ctm_version": 1,
+		"type": "westeros_single_cond",
+		"layer": "CUTOUT",
+		"textures": [],
+		"extra": {
+			"condWidth": 7,
+			"condHeight": 4,
+			"conds": [
+				{
+					"biomeNames": [
+						"minecraft:windswept_hills",
+						"minecraft:windswept_forest",
+						"minecraft:windswept_gravelly_hills",
+						"minecraft:snowy_beach",
+						"minecraft:taiga",
+						"minecraft:snowy_taiga",
+						"minecraft:old_growth_pine_taiga",
+						"minecraft:old_growth_spruce_taiga",
+						"minecraft:snowy_plains",
+						"minecraft:frozen_river",
+						"minecraft:frozen_ocean",
+						"minecraft:snowy_beach",
+						"minecraft:ice_spikes"
+					],
+					"type": "vertical",
+					"ctmRow": 2,
+					"ctmCol": 0,
+					"conds": [
+						{
+							"sources": [
+								{
+									"row": 2,
+									"col": 0
+								}
+							],
+							"type": "random",
+							"rndRow": 2,
+							"rndCol": 5,
+							"rndWidth": 2,
+							"rndHeight": 2,
+							"rndSameAllSides": true
+						},
+						{
+							"sources": [
+								{
+									"row": 2,
+									"col": 1
+								}
+							],
+							"type": "random",
+							"rndRow": 2,
+							"rndCol": 1,
+							"rndWidth": 4,
+							"rndHeight": 1,
+							"rndOffY": -1,
+							"rndSameAllSides": true
+						},
+						{
+							"sources": [
+								{
+									"row": 3,
+									"col": 1
+								}
+							],
+							"type": "random",
+							"rndRow": 3,
+							"rndCol": 1,
+							"rndWidth": 4,
+							"rndHeight": 1,
+							"rndSameAllSides": true
+						}
+					]
+				},
+				{
+					"type": "vertical",
+					"ctmRow": 0,
+					"ctmCol": 0,
+					"conds": [
+						{
+							"sources": [
+								{
+									"row": 0,
+									"col": 0
+								}
+							],
+							"type": "random",
+							"rndRow": 0,
+							"rndCol": 5,
+							"rndWidth": 2,
+							"rndHeight": 2,
+							"rndSameAllSides": true
+						},
+						{
+							"sources": [
+								{
+									"row": 0,
+									"col": 1
+								}
+							],
+							"type": "random",
+							"rndRow": 0,
+							"rndCol": 1,
+							"rndWidth": 4,
+							"rndHeight": 1,
+							"rndOffY": -1,
+							"rndSameAllSides": true
+						},
+						{
+							"sources": [
+								{
+									"row": 1,
+									"col": 1
+								}
+							],
+							"type": "random",
+							"rndRow": 1,
+							"rndCol": 1,
+							"rndWidth": 4,
+							"rndHeight": 1,
+							"rndSameAllSides": true
+						}
+					]
+				}
+			]
+		}
+	}
 }

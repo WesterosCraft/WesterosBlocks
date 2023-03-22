@@ -9,9 +9,8 @@ import net.minecraft.world.item.ItemStack;
 
 public class  WesterosBlocksCreativeTab extends CreativeModeTab {
 
-    public static final CreativeModeTab tabWesterosBlocks = new  WesterosBlocksCreativeTab("WesterosBlocks", "§fWesteros Blocks", "timber_red_white_vertical");
-    public static final CreativeModeTab tabWesterosDecorative = new  WesterosBlocksCreativeTab("WesterosDeco", "§fWesteros Decorative", "apple_basket");
-    public static final CreativeModeTab tabWesterosCobbleBrick = new  WesterosBlocksCreativeTab("WesterosCobbleBrick", "§fCobble and Brick", "sandy_pink_large_brick");
+    public static final CreativeModeTab tabWesterosCobbleStone = new  WesterosBlocksCreativeTab("WesterosCobbleStone", "§fCobble and Stone", "river_cobble");
+    public static final CreativeModeTab tabWesterosBrick = new  WesterosBlocksCreativeTab("WesterosBrick", "§fBrick", "sandy_pink_large_brick");
     public static final CreativeModeTab tabWesterosMarblePlaster = new  WesterosBlocksCreativeTab("WesterosMarblePlaster", "§fMarble and Plaster", "marble_pillar");
     public static final CreativeModeTab tabWesterosTimberFrame = new  WesterosBlocksCreativeTab("WesterosTimberFrame", "§fTimber Frame", "timber_oak_reach_brick_crosshatch");
     public static final CreativeModeTab tabWesterosSandstone = new  WesterosBlocksCreativeTab("WesterosSandstone", "§fSandstone", "vivid_sandstone");
@@ -23,9 +22,9 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     public static final CreativeModeTab tabWesterosClothFibers = new  WesterosBlocksCreativeTab("WesterosClothFibers", "§fCloth and Fibers", "fancy_blue_carpet");
     public static final CreativeModeTab tabWesterosFurniture = new  WesterosBlocksCreativeTab("WesterosFurniture", "§fFurniture", "table");
     public static final CreativeModeTab tabWesterosLighting = new  WesterosBlocksCreativeTab("WesterosLighting", "§fLighting", "red_lantern2");
-    public static final CreativeModeTab tabWesterosToolBlocks = new  WesterosBlocksCreativeTab("WesterosToolBlocks", "§fTool Blocks", "axe_block");
+    public static final CreativeModeTab tabWesterosToolBlocks = new  WesterosBlocksCreativeTab("WesterosToolBlocks", "§fTool Blocks", "piston_extension");
     public static final CreativeModeTab tabWesterosFoodBlocks = new  WesterosBlocksCreativeTab("WesterosFoodBlocks", "§fFood Blocks", "squash");
-    public static final CreativeModeTab tabWesterosDecor = new  WesterosBlocksCreativeTab("WesterosDecor", "§fDecor", "cheese_block");
+    public static final CreativeModeTab tabWesterosDecor = new  WesterosBlocksCreativeTab("WesterosDecor", "§fDecor", "dead_hare");
     public static final CreativeModeTab tabWesterosTerrainSets = new  WesterosBlocksCreativeTab("WesterosTerrainSets", "§fTerrain Sets", "terrainset_eastern_islands");
     public static final CreativeModeTab tabWesterosGrassDirt = new  WesterosBlocksCreativeTab("WesterosGrassDirt", "§fGrass and Dirt", "classic_grass_block");
     public static final CreativeModeTab tabWesterosSandGravel = new  WesterosBlocksCreativeTab("WesterosSandGravel", "§fSand and Gravel", "sand_skeleton");

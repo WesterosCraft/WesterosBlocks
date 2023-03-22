@@ -2,20 +2,16 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/pink_thistle/base_v1",
-        "weight": 40
+        "model": "westerosblocks:block/generated/pink_thistle/base_v1"
       },
       {
-        "model": "westerosblocks:block/generated/pink_thistle/base_v2",
-        "weight": 10
+        "model": "westerosblocks:block/generated/pink_thistle/base_v2"
       },
       {
-        "model": "westerosblocks:block/generated/pink_thistle/base_v3",
-        "weight": 40
+        "model": "westerosblocks:block/generated/pink_thistle/base_v3"
       },
       {
-        "model": "westerosblocks:block/generated/pink_thistle/base_v4",
-        "weight": 10
+        "model": "westerosblocks:block/generated/pink_thistle/base_v4"
       }
     ]
   }
