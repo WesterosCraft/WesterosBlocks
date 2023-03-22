@@ -33,10 +33,10 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         	//WesterosBlocks.log.info(String.format("pot-id=%s, plant-id=%s", emptyPotID, plantBlockID));
         	
         	Supplier<FlowerPotBlock> emptyPot = null;
-        	Supplier<Block> plant = null;
+        	Supplier<Block> plant = () -> null;
             if (emptyPotID != null) {
             	FlowerPotBlock emptyPotBlk = (FlowerPotBlock) WesterosBlocks.findBlockByName(emptyPotID);
-            	if (emptyPotBlk == null) {
+            	if ((emptyPotBlk == null) || (emptyPotBlk == Blocks.AIR)) {
                     WesterosBlocks.log.error(String.format("emptyPotID '%s' not found for block '%s'",
                             emptyPotID, def.blockName));
                     return null;            		
@@ -45,7 +45,7 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
             	emptyPot = () -> (FlowerPotBlock) emptyPotBlk.delegate.get();
             	if (plantBlockID != null) {
             		Block plantBlk = WesterosBlocks.findBlockByName(plantBlockID);
-            		if (plantBlk == null) {
+            		if ((plantBlk == null) || (plantBlk == Blocks.AIR)) {
                         WesterosBlocks.log.error(String.format("plantBlockID '%s' not found for block '%s'",
                         		plantBlockID, def.blockName));
                         return null;            		            			
@@ -63,7 +63,8 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         super(emptyPot, plant, props);
         this.def = def;
         Block pl = plant.get();
-        if ((pl != null) && (emptyPot.get() != null)) {
+        if ((pl != null) && (emptyPot != null) && (emptyPot.get() != null)) {
+        	//WesterosBlocks.log.info(String.format("addPlant=%s to %s", pl.getRegistryName(), emptyPot.get().getRegistryName()));
         	emptyPot.get().addPlant(pl.getRegistryName(), () -> this);
         }
     }
@@ -73,7 +74,7 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         return def;
     }
 
-    private static String[] TAGS = { };
+    private static String[] TAGS = { "flower_pots" };
     @Override
     public String[] getBlockTags() {
     	return TAGS;
