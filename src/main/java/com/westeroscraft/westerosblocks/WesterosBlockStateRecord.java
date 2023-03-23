@@ -19,7 +19,9 @@ public class WesterosBlockStateRecord {
 										// defines sets of textures used for additional random models
 										// If randomTextures is used, textures is ignored
 	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
-	
+	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
+	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
+
 	public void doStareRecordInit() {
 		// If just base textures, generate equivalent random textures (simpler logic for blocks that support them
 		if ((this.textures != null) && (this.randomTextures == null)) {
@@ -62,14 +64,13 @@ public class WesterosBlockStateRecord {
 	}
 	
 	public String getTextureByIndex(int idx) {
-		if ((textures != null) && (textures.size() > 0)) {
-			if (idx >= textures.size()) {
-				idx = textures.size() - 1;
-			}
-			return textures.get(idx);
+		RandomTextureSet set = getRandomTextureSet(0);
+		if (set != null) {
+			return set.getTextureByIndex(idx);
 		}
 		return null;
 	}
+
 	// Get number of random texture sets
 	public int getRandomTextureSetCount() {
 		if ((randomTextures != null) && (randomTextures.size() > 0)) {
@@ -77,7 +78,7 @@ public class WesterosBlockStateRecord {
 		}
 		return 0;
 	}
-	
+		
 	// Get given random texture set
 	public RandomTextureSet getRandomTextureSet(int setnum) {
 		if ((randomTextures != null) && (randomTextures.size() > 0)) {
@@ -88,4 +89,27 @@ public class WesterosBlockStateRecord {
 		}
 		return null;
 	}
+	
+	public List<Cuboid> getCuboidList() {
+		return cuboids;
+	}
+
+	public List<BoundingBox> getCollisionBoxList() {
+		if (this.collisionBoxes != null)
+			return this.collisionBoxes;
+		return Collections.emptyList();
+	}
+	// Get number of base textures
+	public int getTextureCount() {
+		RandomTextureSet set = getRandomTextureSet(0);
+		if (set != null) {
+			return set.getTextureCount();
+		}
+		return 0;
+	}
+	
+	public boolean isTinted() {
+		return ((colorMult != null) && (colorMult.equals("#FFFFFF") == false));
+	}
+
 }

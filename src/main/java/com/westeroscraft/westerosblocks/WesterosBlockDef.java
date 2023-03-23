@@ -113,8 +113,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public int fireSpreadSpeed = 0; // Fire spread speed
 	public int flamability = 0; // Flamability
 	public String creativeTab = null; // Creative tab for items
-	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
-	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
 
 	public String type = ""; // Type field (used for plant types or other block type specific values)
 	
@@ -131,6 +129,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public List<WesterosBlockStateRecord> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
 
 	public List<WesterosBlockStateRecord> states = null;
+	
+	private StateProperty stateProp = null;
 		
 	public String connectBy = "block";	// Connection logic - by block, material - only for CTM-like blocks
 	
@@ -368,16 +368,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}
 	}
 
-	public List<Cuboid> getCuboidList() {
-		return cuboids;
-	}
-
-	public List<BoundingBox> getCollisionBoxList() {
-		if (this.collisionBoxes != null)
-			return this.collisionBoxes;
-		return Collections.emptyList();
-	}
-
 	public static class Particle {
 		public float x = 0.5F, y = 0.5F, z = 0.5F; // Default position of effect
 		public float vx = 0.0F, vy = 0.0F, vz = 0.0F; // Default velocity of effect
@@ -486,45 +476,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}
 	}
 
-	public boolean isTinted() {
-		return ((colorMult != null) && (colorMult.equals("#FFFFFF") == false));
-	}
-
-	// Get number of base textures
-	public int getTextureCount() {
-		RandomTextureSet set = getRandomTextureSet(0);
-		if (set != null) {
-			return set.getTextureCount();
-		}
-		return 0;
-	}
- 
-	public String getTextureByIndex(int idx) {
-		RandomTextureSet set = getRandomTextureSet(0);
-		if (set != null) {
-			return set.getTextureByIndex(idx);
-		}
-		return null;
-	}
-	
-	// Get number of random texture sets
-	public int getRandomTextureSetCount() {
-		if ((randomTextures != null) && (randomTextures.size() > 0)) {
-			return randomTextures.size();
-		}
-		return 0;
-	}
-	
-	// Get given random texture set
-	public RandomTextureSet getRandomTextureSet(int setnum) {
-		if ((randomTextures != null) && (randomTextures.size() > 0)) {
-			if (setnum >= randomTextures.size()) {
-				setnum = randomTextures.size() - 1;
-			}
-			return randomTextures.get(setnum);
-		}
-		return null;
-	}
 
 	public WesterosBlockStateRecord getStackElementByIndex(int idx) {
 		if ((stack != null) && (stack.size() > 0)) {
@@ -663,6 +614,16 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				se.doStareRecordInit();
 			}
 		}
+		if (this.states.size() > 1) {
+	    	ArrayList<String> ids = new ArrayList<String>();    	
+			for (int i = 0; i < states.size(); i++) {
+				WesterosBlockStateRecord rec = states.get(i);
+				if (rec.stateID == null) rec.stateID = String.format("state%d", i);
+	    		ids.add(rec.stateID);
+	    	}
+			stateProp = new StateProperty(ids);
+		}
+
 		didInit = true;
 	}
 
@@ -738,6 +699,28 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}
 		if (stepSound != null) {
 			props = props.sound(getSoundType());
+		}
+		// See if any nonzero light levels
+		if (this.stateProp != null) {
+			Map<String, Integer> llmap = null;		
+			for (int i = 0; i < this.states.size(); i++) {
+				WesterosBlockStateRecord sr = this.states.get(i);
+				if (sr.lightValue > 0.0F) {
+					if (llmap == null) llmap = new HashMap<String, Integer>();
+					llmap.put(sr.stateID, (int) (16.0 * sr.lightValue));
+				}
+				if (llmap != null) {
+					final Map<String, Integer> final_llmap = llmap;	
+					props = props.lightLevel((state) -> 
+						final_llmap.getOrDefault(state.getValue(this.stateProp), 0));
+				}
+			}
+		}
+		else {
+			float ll = this.states.get(0).lightValue;
+			if (ll > 0.0F) {
+				props = props.lightLevel((state) -> (int) (16.0 * ll));	
+			}
 		}
 		if (lightValue > 0.0F) {
 			props = props.lightLevel((state) -> (int) (16.0 * lightValue));
@@ -1060,10 +1043,24 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		if (this.isTinted()) {
 			BlockColors blockColors = Minecraft.getInstance().getBlockColors();
 			ItemColors itemColors = Minecraft.getInstance().getItemColors();
-			ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);
-			blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
-					.getColor(state, world, pos, txtindx), blk);
-			itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
+			if (this.stateProp != null) {
+				final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
+				for (WesterosBlockStateRecord rec : this.states) {
+					ColorMultHandler handler = getColorHandler(rec.colorMult, this.blockName);
+					cmmap.put(rec.stateID, handler);
+				}
+				blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> 
+					cmmap.get(state.getValue(this.stateProp)).getColor(state, world, pos, txtindx), blk);
+				final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
+				itemColors.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
+			}
+			else {
+				ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);
+				
+				blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
+						.getColor(state, world, pos, txtindx), blk);
+				itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
+			}
 		}
 	}
 
@@ -1181,15 +1178,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         
     // Build 'state' property for the 
     public StateProperty buildStateProperty() {
-    	if ((this.states == null) || (this.states.size() < 2)) return null;
-    	
-    	ArrayList<String> ids = new ArrayList<String>();    	
-		for (int i = 0; i < states.size(); i++) {
-			WesterosBlockStateRecord rec = states.get(i);
-			if (rec.stateID == null) rec.stateID = String.format("state%d", i);
-    		ids.add(rec.stateID);
-    	}
-    	return new StateProperty(ids);
+    	return stateProp;
     }
     
     // Get default state ID
