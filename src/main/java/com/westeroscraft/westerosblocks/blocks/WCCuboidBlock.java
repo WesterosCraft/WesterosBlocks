@@ -35,7 +35,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
         	def.nonOpaque = true;
         	BlockBehaviour.Properties props = def.makeProperties();
         	// See if we have a state property
-        	WesterosBlockDef.StateProperty state = def.buildCondProperty();
+        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
         	}        	

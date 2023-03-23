@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 
 import net.minecraft.world.level.block.Block;
 
@@ -20,7 +21,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         // Export if not set to custom model
         if (!def.isCustomModel()) {
         	// Bottom model
-        	WesterosBlockDef.StackElement se = def.getStackElementByIndex(0);
+        	WesterosBlockStateRecord se = def.getStackElementByIndex(0);
             // Loop over the random sets we've got
             for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
             	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
@@ -36,7 +37,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
             			null);
             }
         	// Top model
-        	WesterosBlockDef.StackElement se2 = def.getStackElementByIndex(1);
+            WesterosBlockStateRecord se2 = def.getStackElementByIndex(1);
             // Loop over the random sets we've got
             for (int setidx = 0; setidx < se2.getRandomTextureSetCount(); setidx++) {
             	WesterosBlockDef.RandomTextureSet set = se2.getRandomTextureSet(setidx);        	
@@ -69,7 +70,7 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
         // Bottom states
-    	WesterosBlockDef.StackElement se = def.getStackElementByIndex(0);
+        WesterosBlockStateRecord se = def.getStackElementByIndex(0);
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);

@@ -58,7 +58,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     		cuboid_by_facing[j] = new ArrayList<WesterosBlockDef.Cuboid>();
     	}
         for (int i = 0; i < 2; i++) {
-        	WesterosBlockDef.StackElement se = def.getStackElementByIndex(i);
+        	WesterosBlockStateRecord se = def.getStackElementByIndex(i);
             for (WesterosBlockDef.Cuboid c : se.cuboids) {
                 cuboid_by_facing[4*i].add(c);
                 cuboid_by_facing[4*i + 1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));

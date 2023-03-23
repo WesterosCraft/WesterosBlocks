@@ -68,7 +68,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -78,7 +77,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.BlockAndTintGetter;
@@ -93,12 +91,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.core.Registry;
 
 //
 // Template for block configuration data (populated using GSON)
 //
-public class WesterosBlockDef {
+public class WesterosBlockDef extends WesterosBlockStateRecord {
 	private static final float DEF_FLOAT = -999.0F;
 	public static final int DEF_INT = -999;
 
@@ -117,38 +114,24 @@ public class WesterosBlockDef {
 	public int flamability = 0; // Flamability
 	public String creativeTab = null; // Creative tab for items
 	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
-	public BoundingBox boundingBox = null; // Bounding box
 	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
+
 	public String type = ""; // Type field (used for plant types or other block type specific values)
+	
 	public boolean alphaRender = false; // If true, do render on pass 2 (for alpha blending)
+	public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
 	public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't
 										// allow torches
 										// ('solid', 'sound', 'sand', 'soulsand' blocks)
 	public String label; // Label for item associated with block
-	public List<String> textures = null; // List of textures (for single texture set)
-	public List<RandomTextureSet> randomTextures = null;	// On supported blocks (solid, leaves, slabs, stairs), 
-										// defines sets of textures used for additional random models
-										// If randomTextures is used, textures is ignored
 	public String itemTexture = null; // Item texture, if any
 	public int itemTextureIndex = 0; // Index of texture for item icon
-	public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
-	public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
 	public List<String> soundList = null; // List of custom sound names or sound IDs (for 'sound' blocks)
-	public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
-	public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
-	public List<StackElement> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
-	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
-	public List<StateRecord> states = null;
-	
-	// List of states (corresponds to blocks state beyond those of base cuboid block, via state=<index in list>
-	public static class StateRecord {
-		public String stateID = null;	// If not defined, value is "stateN"
-		public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
-		public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
-		public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
-		public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
-	};
-	
+
+	public List<WesterosBlockStateRecord> stack = null; // List of elements for a stack, first is bottom-most (for *-stack)
+
+	public List<WesterosBlockStateRecord> states = null;
+		
 	public String connectBy = "block";	// Connection logic - by block, material - only for CTM-like blocks
 	
     public String legacyBlockID = null;
@@ -543,7 +526,7 @@ public class WesterosBlockDef {
 		return null;
 	}
 
-	public StackElement getStackElementByIndex(int idx) {
+	public WesterosBlockStateRecord getStackElementByIndex(int idx) {
 		if ((stack != null) && (stack.size() > 0)) {
 			if (idx >= stack.size()) {
 				idx = stack.size() - 1;
@@ -664,87 +647,20 @@ public class WesterosBlockDef {
 	public void doInit() {
 		if (didInit)
 			return;
-		// If just base textures, generate equivalent random textures (simpler logic for blocks that support them
-		if ((textures != null) && (randomTextures == null)) {
-			randomTextures = new ArrayList<RandomTextureSet>();
-			RandomTextureSet set = new RandomTextureSet();
-			set.textures = textures;
-			randomTextures.add(set);
+		// If no states, just use base as the one state
+		if (this.states == null) {
+			this.states = Collections.singletonList(this);
 		}
-		if (this.ambientOcclusion == null)
+		if (this.ambientOcclusion == null) {
 			this.ambientOcclusion = true; // Default to true
-		// If we have bounding box, but no cuboids, make trivial cuboid
-		if ((this.boundingBox != null) && (this.cuboids == null)) {
-			Cuboid c = new Cuboid();
-			c.xMin = this.boundingBox.xMin;
-			c.xMax = this.boundingBox.xMax;
-			c.yMin = this.boundingBox.yMin;
-			c.yMax = this.boundingBox.yMax;
-			c.zMin = this.boundingBox.zMin;
-			c.zMax = this.boundingBox.zMax;
-			this.cuboids = Collections.singletonList(c);
 		}
-		// If cuboids but no bounding box, compute bounding box
-		if ((this.cuboids != null) && (this.boundingBox == null)) {
-			this.boundingBox = new BoundingBox();
-			this.boundingBox.xMin = this.boundingBox.yMin = this.boundingBox.zMin = 1.0F;
-			this.boundingBox.xMax = this.boundingBox.yMax = this.boundingBox.zMax = 0.0F;
-			for (BoundingBox bb : this.cuboids) {
-				if (bb.xMin < this.boundingBox.xMin)
-					this.boundingBox.xMin = bb.xMin;
-				if (bb.yMin < this.boundingBox.yMin)
-					this.boundingBox.yMin = bb.yMin;
-				if (bb.zMin < this.boundingBox.zMin)
-					this.boundingBox.zMin = bb.zMin;
-				if (bb.xMax > this.boundingBox.xMax)
-					this.boundingBox.xMax = bb.xMax;
-				if (bb.yMax > this.boundingBox.yMax)
-					this.boundingBox.yMax = bb.yMax;
-				if (bb.zMax > this.boundingBox.zMax)
-					this.boundingBox.zMax = bb.zMax;
-			}
+		for (WesterosBlockStateRecord rec : this.states) { 
+			rec.doStareRecordInit();
 		}
 		// If stacks, process these too
 		if (this.stack != null) {
-			for (StackElement se : this.stack) {
-				// If just base texrures, generate equivalent random textures (simpler logic for blocks that support them
-				if ((se.textures != null) && (se.randomTextures == null)) {
-					se.randomTextures = new ArrayList<RandomTextureSet>();
-					RandomTextureSet set = new RandomTextureSet();
-					set.textures = se.textures;
-					se.randomTextures.add(set);
-				}
-				// If we have bounding box, but no cuboids, make trivial cuboid
-				if ((se.boundingBox != null) && (se.cuboids == null)) {
-					Cuboid c = new Cuboid();
-					c.xMin = se.boundingBox.xMin;
-					c.xMax = se.boundingBox.xMax;
-					c.yMin = se.boundingBox.yMin;
-					c.yMax = se.boundingBox.yMax;
-					c.zMin = se.boundingBox.zMin;
-					c.zMax = se.boundingBox.zMax;
-					se.cuboids = Collections.singletonList(c);
-				}
-				// If cuboids but no bounding box, compute bounding box
-				if ((se.cuboids != null) && (se.boundingBox == null)) {
-					se.boundingBox = new BoundingBox();
-					se.boundingBox.xMin = se.boundingBox.yMin = se.boundingBox.zMin = 1.0F;
-					se.boundingBox.xMax = se.boundingBox.yMax = se.boundingBox.zMax = 0.0F;
-					for (BoundingBox bb : se.cuboids) {
-						if (bb.xMin < se.boundingBox.xMin)
-							se.boundingBox.xMin = bb.xMin;
-						if (bb.yMin < se.boundingBox.yMin)
-							se.boundingBox.yMin = bb.yMin;
-						if (bb.zMin < se.boundingBox.zMin)
-							se.boundingBox.zMin = bb.zMin;
-						if (bb.xMax > se.boundingBox.xMax)
-							se.boundingBox.xMax = bb.xMax;
-						if (bb.yMax > se.boundingBox.yMax)
-							se.boundingBox.yMax = bb.yMax;
-						if (bb.zMax > se.boundingBox.zMax)
-							se.boundingBox.zMax = bb.zMax;
-					}
-				}
+			for (WesterosBlockStateRecord se : this.stack) {
+				se.doStareRecordInit();
 			}
 		}
 		didInit = true;
@@ -1264,12 +1180,12 @@ public class WesterosBlockDef {
     }
         
     // Build 'state' property for the 
-    public StateProperty buildCondProperty() {
+    public StateProperty buildStateProperty() {
     	if ((this.states == null) || (this.states.size() < 2)) return null;
     	
     	ArrayList<String> ids = new ArrayList<String>();    	
 		for (int i = 0; i < states.size(); i++) {
-			StateRecord rec = states.get(i);
+			WesterosBlockStateRecord rec = states.get(i);
 			if (rec.stateID == null) rec.stateID = String.format("state%d", i);
     		ids.add(rec.stateID);
     	}
