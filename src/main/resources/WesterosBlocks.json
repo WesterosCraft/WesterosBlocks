@@ -54009,6 +54009,7 @@
       "modelBlockName": "stacked_bones_solid",
       "creativeTab": "WesterosMisc",
       "label": "Stacked Bones Stairs",
+      "type": "no-uvlock",
       "isCustomModel": true,
       "legacyBlockID": "stone_block_12_stair_0:0"
     },

@@ -9,20 +9,22 @@ import java.util.ArrayList;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.world.level.block.Block;
 
 public class StairsBlockModelExport extends ModelExport {
     public static class OurVariant extends Variant {
-        public OurVariant(final String modname, final int xrot, final int yrot, Integer weight) {
+        public OurVariant(final String modname, final int xrot, final int yrot, Integer weight, boolean no_uvlock) {
             model = modname;
             if (xrot != 0)
-                x = xrot;
+                this.x = xrot;
             if (yrot != 0)
-                y = yrot;
-            if ((xrot != 0) || (yrot != 0))
-                uvlock = true;
+                this.y = yrot;
+            if ((!no_uvlock) && ((xrot != 0) || (yrot != 0))) {
+                this.uvlock = true;
+            }
             this.weight = weight;
         }
     }
@@ -107,10 +109,12 @@ public class StairsBlockModelExport extends ModelExport {
     private int setcnt = 1;
     private boolean isTinted = false;
 	private boolean ambientOcclusion = true;
+	private WCStairBlock sblk;
 
     public StairsBlockModelExport(final Block blk, final WesterosBlockDef def, final File dest) {
         super(blk, def, dest);
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
+        this.sblk = (WCStairBlock) blk;
     }
 
     private List<Variant> buildVariantList(StateObject so, String cond, String ext, int xrot, int yrot) {
@@ -121,11 +125,11 @@ public class StairsBlockModelExport extends ModelExport {
     		Variant var;
         	if (bbdef != null) {
         		WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);
-        		var = new OurVariant(modname, xrot, yrot, set.weight);
+        		var = new OurVariant(modname, xrot, yrot, set.weight, sblk.no_uvlock);
         		so.addVariant(cond, var, null);
         	}
         	else {
-        		var = new OurVariant(modname, xrot, yrot, null);
+        		var = new OurVariant(modname, xrot, yrot, null, sblk.no_uvlock);
         		so.addVariant(cond, var, null);
         	}
         }

@@ -624,6 +624,13 @@ components:
                 If set to true, model is not generated,
                 and is instead expected to be found at
                 models/custom/<blockid>/<model>.json.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "no-uvlock": If defined, uvlock is not set for rotated models
             ambientOcclusion:
               $ref: "#/components/schemas/ambientOcclusion"
             colorMult:
