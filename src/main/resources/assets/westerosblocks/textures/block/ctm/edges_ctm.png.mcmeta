@@ -8,10 +8,14 @@
       "westerosblocks:block/ctm/edges_ctm_ob"
     ],
     "extra": {
-        "connect_to": [
-            { "block": "minecraft:water" },
-            { "block": "minecraft:flowing_water" }
-        ]    
+      "connect_to": [
+        {
+          "block": "minecraft:water"
+        },
+        {
+          "block": "minecraft:flowing_water"
+        }
+      ]
     }
   }
 }
