@@ -18,6 +18,7 @@ public class WesterosBlockStateRecord {
 	public List<RandomTextureSet> randomTextures = null;	// On supported blocks (solid, leaves, slabs, stairs), 
 										// defines sets of textures used for additional random models
 										// If randomTextures is used, textures is ignored
+	public List<String> overlayTextures = null; // List of overlay textures (for types supporting overlays)
 	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
 	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
 	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
@@ -67,6 +68,13 @@ public class WesterosBlockStateRecord {
 		RandomTextureSet set = getRandomTextureSet(0);
 		if (set != null) {
 			return set.getTextureByIndex(idx);
+		}
+		return null;
+	}
+
+	public String getOverlayTextureByIndex(int idx) {
+		if (this.overlayTextures != null) {
+			return this.overlayTextures.get(Math.min(idx,this.overlayTextures.size()-1));
 		}
 		return null;
 	}

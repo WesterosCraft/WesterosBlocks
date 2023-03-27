@@ -47930,6 +47930,34 @@
       ]
     },
     {
+      "blockName": "ctm_vertical_overlay",
+      "blockType": "solid",
+      "stepSound": "wood",
+      "material": "cloth",
+      "creativeTab": "WesterosUtility",
+      "label": "Vertical Overlay CTM",
+      "textures": [
+        "piled_bones/side"
+      ],
+      "overlayTextures": [
+        "ctm/vertical_overlay"
+      ]
+    },
+    {
+      "blockName": "ctm_edges_full_overlay",
+      "blockType": "solid",
+      "stepSound": "wood",
+      "material": "cloth",
+      "creativeTab": "WesterosUtility",
+      "label": "CTM Edges Full Overlay",
+      "textures": [
+        "piled_bones/side"
+      ],
+      "overlayTextures": [
+        "ctm/edges_full_overlay"
+      ]
+    },
+    {
       "blockName": "ctm_horizontal",
       "blockType": "solid",
       "stepSound": "wood",

@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down_ov": "westerosblocks:block/ctm/vertical_overlay",
+    "up_ov": "westerosblocks:block/ctm/vertical_overlay",
+    "north_ov": "westerosblocks:block/ctm/vertical_overlay",
+    "south_ov": "westerosblocks:block/ctm/vertical_overlay",
+    "west_ov": "westerosblocks:block/ctm/vertical_overlay",
+    "east_ov": "westerosblocks:block/ctm/vertical_overlay",
+    "down": "westerosblocks:block/piled_bones/side",
+    "up": "westerosblocks:block/piled_bones/side",
+    "north": "westerosblocks:block/piled_bones/side",
+    "south": "westerosblocks:block/piled_bones/side",
+    "west": "westerosblocks:block/piled_bones/side",
+    "east": "westerosblocks:block/piled_bones/side",
+    "particle": "westerosblocks:block/piled_bones/side"
+  }
+}
