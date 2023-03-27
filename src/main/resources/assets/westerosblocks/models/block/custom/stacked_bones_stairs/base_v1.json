@@ -2,7 +2,7 @@
   "parent": "minecraft:block/cube",
   "ambientocclusion": false,
   "textures": {
-    "front": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "front": "westerosblocks:block/stacked_bones/bone_stacked_front_noctm",
     "rotated": "westerosblocks:block/stacked_bones/bone_stacked_rotated",
     "particle": "westerosblocks:block/stacked_bones/bone_stacked_side"
   },
