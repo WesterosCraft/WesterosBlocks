@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_overlay_cond",
+    "type": "westeros_cond",
 	"layer": "CUTOUT",
     "textures": [ "westerosblocks:block/ctm/vertical_overlay_2x2" ],
     "extra": {

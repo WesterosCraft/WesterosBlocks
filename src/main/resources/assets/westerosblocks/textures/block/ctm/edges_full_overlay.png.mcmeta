@@ -1,7 +1,7 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_overlay_cond",
+    "type": "westeros_cond",
 	"layer": "CUTOUT",
     "textures": [ "westerosblocks:block/ctm/edges_full_overlay_4x4" ],
     "extra": {
@@ -12,6 +12,9 @@
             "type": "edges-full",
             "ctmRow": 0,
             "ctmCol": 0
+          },
+          {
+            "type": "null"
           }
        ],
         "connect_to": [
