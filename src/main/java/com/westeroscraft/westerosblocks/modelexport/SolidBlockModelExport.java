@@ -30,6 +30,10 @@ public class SolidBlockModelExport extends ModelExport {
     public static class Texture {
         public String down, up, north, south, west, east, particle;
     }
+    public static class OverlayTexture extends Texture {
+        public String down_ov, up_ov, north_ov, south_ov, west_ov, east_ov;
+    }
+    
     public static class ModelObject {
     	public String parent;
     }
@@ -66,10 +70,33 @@ public class SolidBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         Object model;
         boolean isTinted = def.isTinted();
+        boolean isOverlay = def.getOverlayTextureByIndex(0) != null;
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	if ((set.getTextureCount() > 1) || isTinted) { // More than one texture, or tinted?
+        	if (isOverlay) {
+        		ModelObjectCube mod = new ModelObjectCube();
+        		OverlayTexture ot = new OverlayTexture();
+        		ot.down = getTextureID(set.getTextureByIndex(0));
+        		ot.up = getTextureID(set.getTextureByIndex(1));
+        		ot.north = getTextureID(set.getTextureByIndex(2));
+        		ot.south = getTextureID(set.getTextureByIndex(3));
+        		ot.west = getTextureID(set.getTextureByIndex(4));
+        		ot.east = getTextureID(set.getTextureByIndex(5));
+        		ot.particle = getTextureID(set.getTextureByIndex(2));
+        		ot.down_ov = getTextureID(def.getOverlayTextureByIndex(0));
+        		ot.up_ov = getTextureID(def.getOverlayTextureByIndex(1));
+        		ot.north_ov = getTextureID(def.getOverlayTextureByIndex(2));
+        		ot.south_ov = getTextureID(def.getOverlayTextureByIndex(3));
+        		ot.west_ov = getTextureID(def.getOverlayTextureByIndex(4));
+        		ot.east_ov = getTextureID(def.getOverlayTextureByIndex(5));
+        		mod.textures = ot;
+        		mod.parent = isTinted ? 
+    				WesterosBlocks.MOD_ID + ":block/tinted/cube_overlay" : 
+        			WesterosBlocks.MOD_ID + ":block/untinted/cube_overlay";
+        		model = mod;
+        	}
+        	else if ((set.getTextureCount() > 1) || isTinted) { // More than one texture, or tinted?
         		ModelObjectCube mod = new ModelObjectCube();
         		mod.textures.down = getTextureID(set.getTextureByIndex(0));
         		mod.textures.up = getTextureID(set.getTextureByIndex(1));

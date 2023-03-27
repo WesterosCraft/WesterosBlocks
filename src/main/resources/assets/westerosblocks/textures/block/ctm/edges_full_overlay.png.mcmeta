@@ -1,0 +1,23 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_overlay_cond",
+	"layer": "CUTOUT",
+    "textures": [ "westerosblocks:block/ctm/edges_full_overlay_4x4" ],
+    "extra": {
+       "condWidth": 4,
+       "condHeight": 4,
+       "conds": [
+          {
+            "type": "edges-full",
+            "ctmRow": 0,
+            "ctmCol": 0
+          }
+       ],
+        "connect_to": [
+            { "block": "minecraft:water" },
+            { "block": "minecraft:flowing_water" }
+        ]    
+    }
+  }
+}
