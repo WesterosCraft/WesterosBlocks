@@ -115,7 +115,15 @@
         "minecraft:diamond_block",
         "minecraft:diamond_ore",
         "minecraft:redstone_block",
-        "minecraft:soul_sand"
+        "minecraft:soul_sand",
+        "minecraft:podzol",
+        "minecraft:granite",
+        "minecraft:podzol",
+        "minecraft:polished_granite",
+        "minecraft:diorite",
+        "minecraft:polished_diorite",
+        "minecraft:andesite",
+        "minecraft:polished_andesite"
       ],
       "creativeTab": "WesterosDoNotUse"
     }
@@ -314,7 +322,7 @@
           "level": 3
         }
       ],
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosMisc",
       "lightValue": 0,
       "label": "Iron Throne Blade Block",
       "textures": [
@@ -19359,7 +19367,7 @@
       "stepSound": "gravel",
       "material": "ground",
       "resistance": 2,
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosMisc",
       "label": "Ash",
       "textures": [
         "dirt/ground",
@@ -24954,7 +24962,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosMisc",
       "label": "Iron Throne Random Blades",
       "randomTextures": [
         {
@@ -27062,7 +27070,7 @@
       "blockName": "iron_throne_blade_stairs",
       "blockType": "stair",
       "modelBlockName": "iron_throne_blade_block",
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosMisc",
       "label": "Iron Throne Blade Stairs",
       "legacyBlockID": "metal_block_0_stair_8:0"
     },
@@ -53913,7 +53921,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosMisc",
       "label": "Stacked Bones",
       "textures": [
         "stacked_bones/bone_stacked_front",
@@ -53933,7 +53941,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosMisc",
       "label": "Stacked Bones Solid",
       "textures": [
         "stacked_bones/bone_stacked_front",
@@ -53954,7 +53962,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosMisc",
       "label": "Stacked Bones Fence",
       "textures": [
         "stacked_bones/bone_stacked_side"
@@ -53968,7 +53976,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosMisc",
       "label": "Piled Bones",
       "textures": [
         "piled_bones/side"
