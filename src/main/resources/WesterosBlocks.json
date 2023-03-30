@@ -41708,6 +41708,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet River Rocks Wall",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_river_rocks_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [

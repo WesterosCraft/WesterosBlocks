@@ -37,6 +37,7 @@ public class WallBlockModelExport extends ModelExport {
 
 	public static class Texture {
 		public String bottom, top, side;
+		public String bottom_ov, top_ov, side_ov;
 	}
 
 	public static class ModelObject {
@@ -122,6 +123,7 @@ public class WallBlockModelExport extends ModelExport {
 	public void doModelExports() throws IOException {
 		boolean isTinted = def.isTinted();
 		WesterosBlockDef.RandomTextureSet set;
+        boolean isOverlay = def.getOverlayTextureByIndex(0) != null;
 
 		for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
 			set = def.getRandomTextureSet(setidx);
@@ -132,6 +134,12 @@ public class WallBlockModelExport extends ModelExport {
 			mod.textures.side = getTextureID(set.getTextureByIndex(2));
 			if (isTinted)
 				mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/template_wall_post";
+			if (isOverlay) {
+				mod.parent += "_overlay";
+     			mod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
+     			mod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
+     			mod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));
+			}
 			this.writeBlockModelFile(getModelName("post", setidx), mod);
 			// Side model
 			ModelObjectSide smod = new ModelObjectSide();
@@ -145,6 +153,12 @@ public class WallBlockModelExport extends ModelExport {
 				smod.parent = WesterosBlocks.MOD_ID + ":block/untinted/template_wall_side" +
 						((wblk.wallSize == WCWallBlock.WallSize.SHORT) ? "_2" : "");
 			}
+			if (isOverlay) {
+				smod.parent += "_overlay";
+     			smod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
+     			smod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
+     			smod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));
+			}
 			this.writeBlockModelFile(getModelName("side", setidx), smod);
 			// Tall side model
 			ModelObjectSide tsmod = new ModelObjectSide();
@@ -155,6 +169,12 @@ public class WallBlockModelExport extends ModelExport {
 				tsmod.parent = WesterosBlocks.MOD_ID + ":block/tinted/template_wall_side_tall";
 			else
 				tsmod.parent = WesterosBlocks.MOD_ID + ":block/untinted/template_wall_side_tall";
+			if (isOverlay) {
+				tsmod.parent += "_overlay";
+     			tsmod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
+     			tsmod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
+     			tsmod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));
+			}
 			this.writeBlockModelFile(getModelName("side_tall", setidx), tsmod);
 		}
 		// Build simple item model that refers to fence inventory model
