@@ -49,6 +49,78 @@
             ]
           },
           {
+            "type": "overlay",
+            "ctmRow": 15,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_iron_islands" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 18,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_eastern_islands" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 21,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_arbor_dorne_alt" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 24,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_arbor_dorne" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 27,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_westerlands_alt" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 30,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_westerlands" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 33,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_stormlands_alt" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 36,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_grey_sandstone" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 36,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_stormlands" }
+            ]
+          },
+          {
             "type": "null"
           }
        ]
