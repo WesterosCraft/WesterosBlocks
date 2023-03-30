@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/stairs",
+  "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
     "bottom": "westerosblocks:block/stone_block_3/plaster_casterly_crimson",
     "top": "westerosblocks:block/stone_block_3/plaster_casterly_crimson",

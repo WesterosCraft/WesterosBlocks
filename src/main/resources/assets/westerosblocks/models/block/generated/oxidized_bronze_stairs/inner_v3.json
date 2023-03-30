@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/inner_stairs",
+  "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
     "bottom": "westerosblocks:block/bronze_block_oxidized/side3",
     "top": "westerosblocks:block/bronze_block_oxidized/side3",

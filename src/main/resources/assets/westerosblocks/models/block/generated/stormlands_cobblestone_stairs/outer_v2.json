@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/outer_stairs",
+  "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
     "bottom": "westerosblocks:block/cobblestone_texture_variants/stormlands2",
     "top": "westerosblocks:block/cobblestone_texture_variants/stormlands2",

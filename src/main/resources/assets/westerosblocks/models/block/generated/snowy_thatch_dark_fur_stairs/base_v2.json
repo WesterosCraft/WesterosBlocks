@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/stairs",
+  "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
     "bottom": "westerosblocks:block/snowy_thatch_dark_fur/bottom",
     "top": "westerosblocks:block/snowy_thatch_dark_fur/top",

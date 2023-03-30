@@ -37,18 +37,18 @@ public class StairsBlockModelExport extends ModelExport {
         public String parent;
         public Texture textures = new Texture();
 
-        public ModelObjectStair(final boolean ambientocclusion, final boolean tinted) {
+        public ModelObjectStair(final boolean ambientocclusion, final boolean tinted, boolean overlay) {
             if (ambientocclusion) {
                 if (tinted) {
-                    parent = "westerosblocks:block/tinted/stairs";
+                    parent = overlay ? "westerosblocks:block/tinted/stairs_overlay" : "westerosblocks:block/tinted/stairs";
                 } else {
-                    parent = "minecraft:block/stairs"; // Vanilla block is
+                    parent = overlay ? "westerosblocks:block/untinted/stairs_overlay" : "westerosblocks:block/untinted/stairs";
                 }
             } else {
                 if (tinted) {
-                    parent = "westerosblocks:block/tintednoocclusion/stairs";
+                    parent = overlay ? "westerosblocks:block/tintednoocclusion/stairs_overlay" : "westerosblocks:block/tintednoocclusion/stairs";
                 } else {
-                    parent = "westerosblocks:block/noocclusion/stairs";
+                    parent = overlay ? "westerosblocks:block/noocclusion/stairs_overlay" : "westerosblocks:block/noocclusion/stairs";
                 }
             }
         }
@@ -58,18 +58,18 @@ public class StairsBlockModelExport extends ModelExport {
         public String parent;
         public Texture textures = new Texture();
 
-        public ModelObjectInnerStair(final boolean ambientocclusion, final boolean tinted) {
+        public ModelObjectInnerStair(final boolean ambientocclusion, final boolean tinted, boolean overlay) {
             if (ambientocclusion) {
                 if (tinted) {
-                    parent = "westerosblocks:block/tinted/inner_stairs";
+                    parent = overlay ? "westerosblocks:block/tinted/inner_stairs_overlay" : "westerosblocks:block/tinted/inner_stairs";
                 } else {
-                    parent = "minecraft:block/inner_stairs"; // Vanilla block is
+                    parent = overlay ? "westerosblocks:block/untinted/inner_stairs_overlay" : "westerosblocks:block/untinted/inner_stairs";
                 }
             } else {
                 if (tinted) {
-                    parent = "westerosblocks:block/tintednoocclusion/inner_stairs";
+                    parent = overlay ? "westerosblocks:block/tintednoocclusion/inner_stairs_overlay" : "westerosblocks:block/tintednoocclusion/inner_stairs";
                 } else {
-                    parent = "westerosblocks:block/noocclusion/inner_stairs";
+                    parent = overlay ? "westerosblocks:block/noocclusion/inner_stairs_overlay" : "westerosblocks:block/noocclusion/inner_stairs";
                 }
             }
         }
@@ -79,18 +79,18 @@ public class StairsBlockModelExport extends ModelExport {
         public String parent;
         public Texture textures = new Texture();
 
-        public ModelObjectOuterStair(final boolean ambientocclusion, final boolean tinted) {
+        public ModelObjectOuterStair(final boolean ambientocclusion, final boolean tinted, boolean overlay) {
             if (ambientocclusion) {
                 if (tinted) {
-                    parent = "westerosblocks:block/tinted/outer_stairs";
+                    parent = overlay ? "westerosblocks:block/tinted/outer_stairs_overlay" : "westerosblocks:block/tinted/outer_stairs";
                 } else {
-                    parent = "minecraft:block/outer_stairs"; // Vanilla block is
+                    parent = overlay ? "westerosblocks:block/untinted/outer_stairs_overlay" : "westerosblocks:block/untinted/outer_stairs";
                 }
             } else {
                 if (tinted) {
-                    parent = "westerosblocks:block/tintednoocclusion/outer_stairs";
+                    parent = overlay ? "westerosblocks:block/tintednoocclusion/outer_stairs_overlay" : "westerosblocks:block/tintednoocclusion/outer_stairs";
                 } else {
-                    parent = "westerosblocks:block/noocclusion/outer_stairs";
+                    parent = overlay ? "westerosblocks:block/noocclusion/outer_stairs_overlay" : "westerosblocks:block/noocclusion/outer_stairs";
                 }
             }
         }
@@ -98,6 +98,7 @@ public class StairsBlockModelExport extends ModelExport {
 
     public static class Texture {
         public String bottom, top, side;
+        public String bottom_ov, top_ov, side_ov;
         public String particle;
     }
 
@@ -215,17 +216,25 @@ public class StairsBlockModelExport extends ModelExport {
         doInit();
         // Export if not set to custom model
         if (!def.isCustomModel()) {
-	
+            boolean isOverlay = def.getOverlayTextureByIndex(0) != null;	
 	        // Loop over the random sets we've got
 	        for (int setidx = 0; setidx < setcnt; setidx++) {
 	        	String downtxt = null;
 	        	String uptxt = null;
 	        	String sidetxt = null;
+	        	String downtxt_ov = null;
+	        	String uptxt_ov = null;
+	        	String sidetxt_ov = null;
 	        	if (bbdef != null) {
 	            	WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);        		
 	         		downtxt = getTextureID(set.getTextureByIndex(0));
 	         		uptxt = getTextureID(set.getTextureByIndex(1));
 	         		sidetxt = getTextureID(set.getTextureByIndex(2));
+	         		if (isOverlay) {
+	         			downtxt_ov = getTextureID(def.getOverlayTextureByIndex(0));
+	         			uptxt_ov = getTextureID(def.getOverlayTextureByIndex(1));
+	         			sidetxt_ov = getTextureID(def.getOverlayTextureByIndex(2));
+	         		}
 	        	}
 	        	else {
 	        		switch (def.modelBlockName) {
@@ -271,22 +280,37 @@ public class StairsBlockModelExport extends ModelExport {
 	        		}
 	        	}
 	        	// Base model
-	        	final ModelObjectStair base = new ModelObjectStair(ambientOcclusion, isTinted);
+	        	final ModelObjectStair base = new ModelObjectStair(ambientOcclusion, isTinted, isOverlay);
 	        	base.textures.bottom = downtxt;
 	        	base.textures.top = uptxt;
 	        	base.textures.side = base.textures.particle = sidetxt;
+	        	if (isOverlay) {
+	        		base.textures.bottom_ov = downtxt_ov;
+	        		base.textures.top_ov = uptxt_ov;
+	        		base.textures.side_ov = sidetxt_ov;
+	        	}
 	        	this.writeBlockModelFile(getModelName("base", setidx), base);
 	        	// Outer model
-	        	final ModelObjectOuterStair outer = new ModelObjectOuterStair(ambientOcclusion, isTinted);
+	        	final ModelObjectOuterStair outer = new ModelObjectOuterStair(ambientOcclusion, isTinted, isOverlay);
 	        	outer.textures.bottom = downtxt;
 	        	outer.textures.top = uptxt;
 	        	outer.textures.side = outer.textures.particle = sidetxt;
+	        	if (isOverlay) {
+	        		outer.textures.bottom_ov = downtxt_ov;
+	        		outer.textures.top_ov = uptxt_ov;
+	        		outer.textures.side_ov = sidetxt_ov;
+	        	}
 	        	this.writeBlockModelFile(getModelName("outer", setidx), outer);
 	        	// Inner model
-	        	final ModelObjectInnerStair inner = new ModelObjectInnerStair(ambientOcclusion, isTinted);
+	        	final ModelObjectInnerStair inner = new ModelObjectInnerStair(ambientOcclusion, isTinted, isOverlay);
 	        	inner.textures.bottom = downtxt;
 	        	inner.textures.top = uptxt;
 	        	inner.textures.side = inner.textures.particle = sidetxt;
+	        	if (isOverlay) {
+	        		inner.textures.bottom_ov = downtxt_ov;
+	        		inner.textures.top_ov = uptxt_ov;
+	        		inner.textures.side_ov = sidetxt_ov;
+	        	}
 	        	this.writeBlockModelFile(getModelName("inner", setidx), inner);
 	        }
         }

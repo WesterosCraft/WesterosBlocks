@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/stairs",
+  "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
     "bottom": "westerosblocks:block/stormlands_brick_large/side",
     "top": "westerosblocks:block/stormlands_brick_large/side",

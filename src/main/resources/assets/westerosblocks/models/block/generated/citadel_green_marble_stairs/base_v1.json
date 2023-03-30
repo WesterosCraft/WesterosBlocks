@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/stairs",
+  "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
     "bottom": "westerosblocks:block/citadel_green_marble/citadel_marble",
     "top": "westerosblocks:block/citadel_green_marble/citadel_marble",

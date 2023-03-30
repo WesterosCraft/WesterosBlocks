@@ -8240,6 +8240,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet River Rocks",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_river_rocks_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -39230,7 +39233,10 @@
       "modelBlockName": "terrainset_river_rocks",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet River Rocks Stairs",
-      "legacyBlockID": "terrainset_stair_6:0"
+      "legacyBlockID": "terrainset_stair_6:0",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_river_rocks_overlay"
+      ]
     },
     {
       "blockName": "terrainset_westerlands_stairs",
@@ -39994,6 +40000,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet River Rocks Slab",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_river_rocks_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [

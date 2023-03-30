@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/stairs",
+  "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
     "bottom": "westerosblocks:block/vivid_dark_sandstone/top_bottom1",
     "top": "westerosblocks:block/vivid_dark_sandstone/top_bottom1",
