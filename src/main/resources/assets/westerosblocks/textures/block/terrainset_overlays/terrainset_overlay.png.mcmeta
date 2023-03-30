@@ -114,10 +114,42 @@
           },
           {
             "type": "overlay",
-            "ctmRow": 36,
+            "ctmRow": 39,
             "ctmCol": 0,
             "connect_to": [
                { "block": "westerosblocks:terrainset_stormlands" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 42,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_river_rocks" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 45,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_red_mountains_alt" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 48,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_red_mountains" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 51,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_mountains_of_the_moon" }
             ]
           },
           {
