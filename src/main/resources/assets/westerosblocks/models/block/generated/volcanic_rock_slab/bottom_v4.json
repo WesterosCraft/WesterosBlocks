@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/half_slab",
+  "parent": "westerosblocks:block/untinted/half_slab_overlay",
   "textures": {
     "down": "westerosblocks:block/terrainset_volcanic/4",
     "up": "westerosblocks:block/terrainset_volcanic/4",
@@ -7,6 +7,12 @@
     "south": "westerosblocks:block/terrainset_volcanic/4",
     "west": "westerosblocks:block/terrainset_volcanic/4",
     "east": "westerosblocks:block/terrainset_volcanic/4",
-    "particle": "westerosblocks:block/terrainset_volcanic/4"
+    "particle": "westerosblocks:block/terrainset_volcanic/4",
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_rock_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_rock_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_rock_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_rock_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_rock_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_rock_overlay"
   }
 }

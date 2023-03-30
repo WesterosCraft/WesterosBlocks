@@ -44940,6 +44940,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "Volcanic Rock",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_volcanic_rock_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45281,6 +45284,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "Volcanic Rock Slab",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_volcanic_rock_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45518,6 +45524,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "Volcanic Rock Wall",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_volcanic_rock_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45737,6 +45746,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "Volcanic Rock Fence",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_volcanic_rock_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -47763,7 +47775,10 @@
       "modelBlockName": "volcanic_rock",
       "creativeTab": "WesterosCobbleStone",
       "label": "Volcanic Rock Stairs",
-      "legacyBlockID": "terrainset_stair_18:0"
+      "legacyBlockID": "terrainset_stair_18:0",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_volcanic_rock_overlay"
+      ]
     },
     {
       "blockName": "cushion_moss_stairs",
