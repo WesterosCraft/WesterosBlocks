@@ -22,6 +22,7 @@ public class FenceBlockModelExport extends ModelExport {
     }
     public static class Texture {
         public String bottom, top, side;
+        public String bottom_ov, top_ov, side_ov;
     }
     public static class ModelObject {
     	public String parent = WesterosBlocks.MOD_ID + ":block/untinted/fence_inventory";
@@ -84,6 +85,7 @@ public class FenceBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
+        boolean isOverlay = def.getOverlayTextureByIndex(0) != null;
     	WesterosBlockDef.RandomTextureSet set;
 
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
@@ -94,6 +96,12 @@ public class FenceBlockModelExport extends ModelExport {
         	mod.textures.top = getTextureID(set.getTextureByIndex(1)); 
         	mod.textures.side = getTextureID(set.getTextureByIndex(2)); 
         	if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_post";
+        	if (isOverlay) {
+        		mod.parent += "_overlay";
+     			mod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
+     			mod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
+     			mod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));        		
+        	}
         	this.writeBlockModelFile(getModelName("post", setidx), mod);
         	// Side model
         	ModelObjectSide smod = new ModelObjectSide();
@@ -101,6 +109,12 @@ public class FenceBlockModelExport extends ModelExport {
         	smod.textures.top = getTextureID(set.getTextureByIndex(1)); 
         	smod.textures.side = getTextureID(set.getTextureByIndex(2)); 
         	if (isTinted) smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_side";
+        	if (isOverlay) {
+        		smod.parent += "_overlay";
+     			smod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
+     			smod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
+     			smod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));        		
+        	}
         	this.writeBlockModelFile(getModelName("side", setidx), smod);
         }
     	// Build simple item model that refers to fence inventory model

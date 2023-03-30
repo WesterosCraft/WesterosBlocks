@@ -43374,6 +43374,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet River Rocks Fence",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_river_rocks_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
