@@ -1,8 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_westerlandhills_alt/4",
     "top": "westerosblocks:block/terrainset_westerlandhills_alt/4",
-    "side": "westerosblocks:block/terrainset_westerlandhills_alt/4"
+    "side": "westerosblocks:block/terrainset_westerlandhills_alt/4",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay"
   }
 }

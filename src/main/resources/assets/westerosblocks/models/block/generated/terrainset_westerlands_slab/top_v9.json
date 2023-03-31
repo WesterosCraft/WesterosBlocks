@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/upper_slab",
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
   "textures": {
     "down": "westerosblocks:block/terrainset_westerlandhills/9",
     "up": "westerosblocks:block/terrainset_westerlandhills/9",
@@ -7,6 +7,12 @@
     "south": "westerosblocks:block/terrainset_westerlandhills/9",
     "west": "westerosblocks:block/terrainset_westerlandhills/9",
     "east": "westerosblocks:block/terrainset_westerlandhills/9",
-    "particle": "westerosblocks:block/terrainset_westerlandhills/9"
+    "particle": "westerosblocks:block/terrainset_westerlandhills/9",
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay"
   }
 }

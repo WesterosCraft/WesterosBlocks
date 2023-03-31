@@ -1,9 +1,12 @@
 {
-  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "parent": "westerosblocks:block/untinted/inner_stairs_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_westerlandhills/13",
     "top": "westerosblocks:block/terrainset_westerlandhills/13",
     "side": "westerosblocks:block/terrainset_westerlandhills/13",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
     "particle": "westerosblocks:block/terrainset_westerlandhills/13"
   }
 }

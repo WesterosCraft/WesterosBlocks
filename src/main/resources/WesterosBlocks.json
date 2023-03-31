@@ -8342,6 +8342,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -39274,7 +39277,10 @@
       "modelBlockName": "terrainset_westerlands",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Stairs",
-      "legacyBlockID": "terrainset_stair_7:0"
+      "legacyBlockID": "terrainset_stair_7:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ]
     },
     {
       "blockName": "terrainset_arbor_dorne_stairs",
@@ -40141,6 +40147,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Slab",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -40642,6 +40651,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Alt Slab",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -41861,6 +41873,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -42362,6 +42377,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Alt Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -43533,6 +43551,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Fence",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -44514,6 +44535,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Alt",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45170,7 +45194,10 @@
       "modelBlockName": "terrainset_westerlands_alt",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Alt Stairs",
-      "legacyBlockID": "terrainset_stair_12:0"
+      "legacyBlockID": "terrainset_stair_12:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_westerlands_overlay"
+      ]
     },
     {
       "blockName": "terrainset_arbor_dorne_alt_stairs",

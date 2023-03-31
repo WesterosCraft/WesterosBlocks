@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/terrainset_westerlandhills/4"
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
+    "down": "westerosblocks:block/terrainset_westerlandhills/4",
+    "up": "westerosblocks:block/terrainset_westerlandhills/4",
+    "north": "westerosblocks:block/terrainset_westerlandhills/4",
+    "south": "westerosblocks:block/terrainset_westerlandhills/4",
+    "west": "westerosblocks:block/terrainset_westerlandhills/4",
+    "east": "westerosblocks:block/terrainset_westerlandhills/4",
+    "particle": "westerosblocks:block/terrainset_westerlandhills/4"
   }
 }
