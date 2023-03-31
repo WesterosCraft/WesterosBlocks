@@ -8150,6 +8150,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -17894,6 +17897,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Stormlands",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_stormlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -39246,7 +39252,10 @@
       "modelBlockName": "terrainset_red_mountains",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Stairs",
-      "legacyBlockID": "terrainset_stair_5:0"
+      "legacyBlockID": "terrainset_stair_5:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_overlay"
+      ]
     },
     {
       "blockName": "terrainset_river_rocks_stairs",
@@ -39281,7 +39290,10 @@
       "modelBlockName": "terrainset_stormlands",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Stormlands Stairs",
-      "legacyBlockID": "terrainset_stair_9:0"
+      "legacyBlockID": "terrainset_stair_9:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_stormlands_overlay"
+      ]
     },
     {
       "blockName": "terrainset_reach_stairs",
@@ -39925,6 +39937,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Slab",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -40324,6 +40339,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Stormlands Slab",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_stormlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -40522,6 +40540,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Alt Slab",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_alt_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -41636,6 +41657,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -42035,6 +42059,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Stormlands Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_stormlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -42233,6 +42260,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Alt Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_alt_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -43311,6 +43341,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Fence",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -43686,6 +43719,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Stormlands Fence",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_stormlands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -43872,6 +43908,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Alt Fence",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_alt_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -44379,6 +44418,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Alt",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_alt_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45117,7 +45159,10 @@
       "modelBlockName": "terrainset_red_mountains_alt",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Alt Stairs",
-      "legacyBlockID": "terrainset_stair_11:0"
+      "legacyBlockID": "terrainset_stair_11:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_red_mountains_alt_overlay"
+      ]
     },
     {
       "blockName": "terrainset_westerlands_alt_stairs",

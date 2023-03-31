@@ -1,0 +1,58 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+	"layer": "TRANSLUCENT",
+    "textures": [ "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay_7x54" ],
+    "extra": {
+       "condWidth": 7,
+       "condHeight": 54,
+       "conds": [
+
+          {
+            "type": "overlay",
+            "ctmRow": 12,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_the_north" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 15,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_iron_islands" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 18,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_eastern_islands" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 45,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_red_mountains_alt" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 48,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_red_mountains" }
+            ]
+          },
+          {
+            "type": "null"
+          }
+       ]
+    }
+  }
+}

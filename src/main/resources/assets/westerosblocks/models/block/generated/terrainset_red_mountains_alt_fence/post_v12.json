@@ -1,8 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/fence_post",
+  "parent": "westerosblocks:block/untinted/fence_post_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_red_mountains_alt/12",
     "top": "westerosblocks:block/terrainset_red_mountains_alt/12",
-    "side": "westerosblocks:block/terrainset_red_mountains_alt/12"
+    "side": "westerosblocks:block/terrainset_red_mountains_alt/12",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_alt_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_alt_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_alt_overlay"
   }
 }

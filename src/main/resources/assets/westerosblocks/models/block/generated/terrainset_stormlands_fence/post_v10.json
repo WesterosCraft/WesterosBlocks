@@ -1,8 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/fence_post",
+  "parent": "westerosblocks:block/untinted/fence_post_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_stormlands/10",
     "top": "westerosblocks:block/terrainset_stormlands/10",
-    "side": "westerosblocks:block/terrainset_stormlands/10"
+    "side": "westerosblocks:block/terrainset_stormlands/10",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay"
   }
 }

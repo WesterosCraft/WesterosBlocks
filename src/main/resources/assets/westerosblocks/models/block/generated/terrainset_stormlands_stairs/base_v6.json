@@ -1,9 +1,12 @@
 {
-  "parent": "westerosblocks:block/untinted/stairs",
+  "parent": "westerosblocks:block/untinted/stairs_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_stormlands/6",
     "top": "westerosblocks:block/terrainset_stormlands/6",
     "side": "westerosblocks:block/terrainset_stormlands/6",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
     "particle": "westerosblocks:block/terrainset_stormlands/6"
   }
 }

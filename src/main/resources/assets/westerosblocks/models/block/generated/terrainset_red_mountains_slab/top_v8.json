@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/upper_slab",
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
   "textures": {
     "down": "westerosblocks:block/terrainset_red_mountains/8",
     "up": "westerosblocks:block/terrainset_red_mountains/8",
@@ -7,6 +7,12 @@
     "south": "westerosblocks:block/terrainset_red_mountains/8",
     "west": "westerosblocks:block/terrainset_red_mountains/8",
     "east": "westerosblocks:block/terrainset_red_mountains/8",
-    "particle": "westerosblocks:block/terrainset_red_mountains/8"
+    "particle": "westerosblocks:block/terrainset_red_mountains/8",
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay"
   }
 }

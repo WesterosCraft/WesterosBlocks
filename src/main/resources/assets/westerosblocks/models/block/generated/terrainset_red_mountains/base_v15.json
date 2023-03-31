@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/terrainset_red_mountains/15"
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_mountains_overlay",
+    "down": "westerosblocks:block/terrainset_red_mountains/15",
+    "up": "westerosblocks:block/terrainset_red_mountains/15",
+    "north": "westerosblocks:block/terrainset_red_mountains/15",
+    "south": "westerosblocks:block/terrainset_red_mountains/15",
+    "west": "westerosblocks:block/terrainset_red_mountains/15",
+    "east": "westerosblocks:block/terrainset_red_mountains/15",
+    "particle": "westerosblocks:block/terrainset_red_mountains/15"
   }
 }

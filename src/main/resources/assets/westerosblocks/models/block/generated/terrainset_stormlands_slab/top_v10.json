@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/upper_slab",
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
   "textures": {
     "down": "westerosblocks:block/terrainset_stormlands/10",
     "up": "westerosblocks:block/terrainset_stormlands/10",
@@ -7,6 +7,12 @@
     "south": "westerosblocks:block/terrainset_stormlands/10",
     "west": "westerosblocks:block/terrainset_stormlands/10",
     "east": "westerosblocks:block/terrainset_stormlands/10",
-    "particle": "westerosblocks:block/terrainset_stormlands/10"
+    "particle": "westerosblocks:block/terrainset_stormlands/10",
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_stormlands_overlay"
   }
 }
