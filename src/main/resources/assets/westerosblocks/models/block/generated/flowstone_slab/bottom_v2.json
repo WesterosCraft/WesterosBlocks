@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/half_slab",
+  "parent": "westerosblocks:block/untinted/half_slab_overlay",
   "textures": {
     "down": "westerosblocks:block/flowstone/side2",
     "up": "westerosblocks:block/flowstone/side2",
@@ -7,6 +7,12 @@
     "south": "westerosblocks:block/flowstone/side2",
     "west": "westerosblocks:block/flowstone/side2",
     "east": "westerosblocks:block/flowstone/side2",
-    "particle": "westerosblocks:block/flowstone/side2"
+    "particle": "westerosblocks:block/flowstone/side2",
+    "down_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay"
   }
 }

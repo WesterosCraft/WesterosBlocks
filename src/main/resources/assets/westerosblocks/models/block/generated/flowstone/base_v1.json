@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/flowstone/side1"
+    "down_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "down": "westerosblocks:block/flowstone/side1",
+    "up": "westerosblocks:block/flowstone/side1",
+    "north": "westerosblocks:block/flowstone/side1",
+    "south": "westerosblocks:block/flowstone/side1",
+    "west": "westerosblocks:block/flowstone/side1",
+    "east": "westerosblocks:block/flowstone/side1",
+    "particle": "westerosblocks:block/flowstone/side1"
   }
 }

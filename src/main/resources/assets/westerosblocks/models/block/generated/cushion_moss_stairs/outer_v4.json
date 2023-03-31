@@ -1,9 +1,12 @@
 {
-  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "parent": "westerosblocks:block/untinted/outer_stairs_overlay",
   "textures": {
     "bottom": "westerosblocks:block/moss_cushion/side3",
     "top": "westerosblocks:block/moss_cushion/side3",
     "side": "westerosblocks:block/moss_cushion/side3",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
     "particle": "westerosblocks:block/moss_cushion/side3"
   }
 }

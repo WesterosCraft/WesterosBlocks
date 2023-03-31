@@ -1,8 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/fence_side",
+  "parent": "westerosblocks:block/untinted/fence_side_overlay",
   "textures": {
     "bottom": "westerosblocks:block/flowstone/side1",
     "top": "westerosblocks:block/flowstone/side1",
-    "side": "westerosblocks:block/flowstone/side1"
+    "side": "westerosblocks:block/flowstone/side1",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay"
   }
 }

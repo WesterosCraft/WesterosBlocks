@@ -9306,6 +9306,9 @@
       "textures": [
         "fallen_leaves/temperate"
       ],
+      "overlayTextures": [ 
+        "terrainset_overlays/fallen_leaves_overlay"
+      ],
       "legacyBlockID": "solid_blocks_0:3"
     },
     {
@@ -9319,6 +9322,9 @@
       "label": "Pine Needles",
       "textures": [
         "pine_needles/dirt_pine_cover"
+      ],
+      "overlayTextures": [ 
+        "terrainset_overlays/fallen_leaves_overlay"
       ],
       "legacyBlockID": "solid_blocks_0:4"
     },
@@ -36590,6 +36596,9 @@
       ],
       "creativeTab": "WesterosMisc",
       "label": "Cushion Moss Slab",
+      "overlayTextures": [ 
+         "terrainset_overlays/cushion_moss_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -44907,6 +44916,9 @@
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
       "label": "Flowstone",
+      "overlayTextures": [ 
+      	"terrainset_overlays/flowstone_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45036,6 +45048,9 @@
       "resistance": 5,
       "creativeTab": "WesterosMisc",
       "label": "Cushion Moss",
+      "overlayTextures": [ 
+         "terrainset_overlays/cushion_moss_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45129,7 +45144,10 @@
       "modelBlockName": "flowstone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Flowstone Stairs",
-      "legacyBlockID": "terrainset_stair_17:0"
+      "legacyBlockID": "terrainset_stair_17:0",
+      "overlayTextures": [ 
+      	"terrainset_overlays/flowstone_overlay"
+      ]
     },
     {
       "blockName": "terrainset_grey_sandstone_slab",
@@ -45245,6 +45263,9 @@
       ],
       "creativeTab": "WesterosCobbleStone",
       "label": "Flowstone Slab",
+      "overlayTextures": [ 
+      	"terrainset_overlays/flowstone_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45485,6 +45506,9 @@
       ],
       "creativeTab": "WesterosCobbleStone",
       "label": "Flowstone Wall",
+      "overlayTextures": [ 
+      	"terrainset_overlays/flowstone_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45713,6 +45737,9 @@
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
       "label": "Flowstone Fence",
+      "overlayTextures": [ 
+      	"terrainset_overlays/flowstone_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -47786,7 +47813,10 @@
       "modelBlockName": "cushion_moss",
       "creativeTab": "WesterosMisc",
       "label": "Cushion Moss Stairs",
-      "legacyBlockID": "moss_block_0_stair_0:0"
+      "legacyBlockID": "moss_block_0_stair_0:0",
+      "overlayTextures": [ 
+         "terrainset_overlays/cushion_moss_overlay"
+      ]
     },
     {
       "blockName": "cushion_moss_wall",
@@ -47803,6 +47833,9 @@
       ],
       "creativeTab": "WesterosMisc",
       "label": "Cushion Moss Wall",
+      "overlayTextures": [ 
+         "terrainset_overlays/cushion_moss_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [

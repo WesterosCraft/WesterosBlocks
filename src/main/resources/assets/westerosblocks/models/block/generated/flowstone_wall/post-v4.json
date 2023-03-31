@@ -1,8 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
   "textures": {
     "bottom": "westerosblocks:block/flowstone_wall/side4",
     "top": "westerosblocks:block/flowstone_wall/side4",
-    "side": "westerosblocks:block/flowstone_wall/side4"
+    "side": "westerosblocks:block/flowstone_wall/side4",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay"
   }
 }

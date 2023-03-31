@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/half_slab",
+  "parent": "westerosblocks:block/untinted/half_slab_overlay",
   "textures": {
     "down": "westerosblocks:block/moss_cushion/side0",
     "up": "westerosblocks:block/moss_cushion/side0",
@@ -7,6 +7,12 @@
     "south": "westerosblocks:block/moss_cushion/side0",
     "west": "westerosblocks:block/moss_cushion/side0",
     "east": "westerosblocks:block/moss_cushion/side0",
-    "particle": "westerosblocks:block/moss_cushion/side0"
+    "particle": "westerosblocks:block/moss_cushion/side0",
+    "down_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay"
   }
 }
