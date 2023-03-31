@@ -1,8 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/fence_post",
+  "parent": "westerosblocks:block/untinted/fence_post_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_ocean/base_8",
     "top": "westerosblocks:block/terrainset_ocean/base_8",
-    "side": "westerosblocks:block/terrainset_ocean/base_8"
+    "side": "westerosblocks:block/terrainset_ocean/base_8",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay"
   }
 }

@@ -8014,6 +8014,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Ocean Rocks",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_ocean_rocks_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -22093,6 +22096,9 @@
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
       "label": "Eyrie Blue Veined Marble",
+      "overlayTextures": [ 
+        "terrainset_overlays/eyrie_veined_overlay"
+      ],
       "textures": [
         "eyrie_blue_veined_marble/eyrie_veined"
       ],
@@ -22107,6 +22113,9 @@
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
       "label": "Baelors Brown Veined Marble",
+      "textures": [
+        "eyrie_blue_veined_marble/eyrie_veined"
+      ],
       "textures": [
         "baelors_brown_veined_marble/baelors"
       ],
@@ -39226,7 +39235,10 @@
       "modelBlockName": "terrainset_ocean_rocks",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Ocean Rocks Stairs",
-      "legacyBlockID": "terrainset_stair_4:0"
+      "legacyBlockID": "terrainset_stair_4:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_ocean_rocks_overlay"
+      ]
     },
     {
       "blockName": "terrainset_red_mountains_stairs",
@@ -39771,6 +39783,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Ocean Rocks Slab",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_ocean_rocks_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -41479,6 +41494,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Ocean Rocks Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_ocean_rocks_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -43157,6 +43175,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Ocean Rocks Fence",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_ocean_rocks_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
