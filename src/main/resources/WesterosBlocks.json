@@ -21869,6 +21869,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -39307,7 +39310,10 @@
       "modelBlockName": "terrainset_reach",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Stairs",
-      "legacyBlockID": "terrainset_stair_10:0"
+      "legacyBlockID": "terrainset_stair_10:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_overlay"
+      ]
     },
     {
       "blockName": "terrainset_eastern_islands_slab",
@@ -40450,6 +40456,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Slab",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -40951,6 +40960,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Alt Slab",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_alt_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -42176,6 +42188,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -42677,6 +42692,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Alt Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_alt_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -43836,6 +43854,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Fence",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -44304,6 +44325,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Alt Fence",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_alt_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -44817,6 +44841,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Alt",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_alt_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -45221,7 +45248,10 @@
       "modelBlockName": "terrainset_reach_alt",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Alt Stairs",
-      "legacyBlockID": "terrainset_stair_15:0"
+      "legacyBlockID": "terrainset_stair_15:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_reach_alt_overlay"
+      ]
     },
     {
       "blockName": "terrainset_grey_sandstone_stairs",

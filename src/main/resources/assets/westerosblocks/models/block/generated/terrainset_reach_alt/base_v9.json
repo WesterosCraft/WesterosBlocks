@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/terrainset_reach_alt/9"
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_alt_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_alt_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_alt_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_alt_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_alt_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_alt_overlay",
+    "down": "westerosblocks:block/terrainset_reach_alt/9",
+    "up": "westerosblocks:block/terrainset_reach_alt/9",
+    "north": "westerosblocks:block/terrainset_reach_alt/9",
+    "south": "westerosblocks:block/terrainset_reach_alt/9",
+    "west": "westerosblocks:block/terrainset_reach_alt/9",
+    "east": "westerosblocks:block/terrainset_reach_alt/9",
+    "particle": "westerosblocks:block/terrainset_reach_alt/9"
   }
 }

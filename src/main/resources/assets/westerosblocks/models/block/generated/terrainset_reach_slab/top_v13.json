@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/upper_slab",
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
   "textures": {
     "down": "westerosblocks:block/terrainset_reach/13",
     "up": "westerosblocks:block/terrainset_reach/13",
@@ -7,6 +7,12 @@
     "south": "westerosblocks:block/terrainset_reach/13",
     "west": "westerosblocks:block/terrainset_reach/13",
     "east": "westerosblocks:block/terrainset_reach/13",
-    "particle": "westerosblocks:block/terrainset_reach/13"
+    "particle": "westerosblocks:block/terrainset_reach/13",
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_reach_overlay"
   }
 }
