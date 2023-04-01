@@ -1,9 +1,12 @@
 {
-  "parent": "westerosblocks:block/tinted/stairs",
+  "parent": "westerosblocks:block/tinted/stairs_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_east/11",
     "top": "westerosblocks:block/terrainset_east/11",
     "side": "westerosblocks:block/terrainset_east/11",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_eastern_island_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_eastern_island_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_eastern_island_overlay",
     "particle": "westerosblocks:block/terrainset_east/11"
   }
 }

@@ -7562,6 +7562,9 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Eastern Islands",
       "colorMult": "textures/colormap/easternisland",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_eastern_island_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -39215,7 +39218,10 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Eastern Islands Stairs",
       "colorMult": "textures/colormap/easternisland",
-      "legacyBlockID": "terrainset_stair_0:0"
+      "legacyBlockID": "terrainset_stair_0:0",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_eastern_island_overlay"
+      ]
     },
     {
       "blockName": "terrainset_iron_islands_stairs",
@@ -39331,6 +39337,9 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Eastern Islands Slab",
       "colorMult": "textures/colormap/easternisland",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_eastern_island_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -41063,6 +41072,9 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Eastern Islands Wall",
       "colorMult": "textures/colormap/easternisland",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_eastern_island_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -42789,6 +42801,9 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Eastern Islands Fence",
       "colorMult": "textures/colormap/easternisland",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_eastern_island_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
