@@ -7658,6 +7658,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Iron Islands",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_iron_islands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -39229,7 +39232,10 @@
       "modelBlockName": "terrainset_iron_islands",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Iron Islands Stairs",
-      "legacyBlockID": "terrainset_stair_1:0"
+      "legacyBlockID": "terrainset_stair_1:0",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_iron_islands_overlay"
+      ]
     },
     {
       "blockName": "terrainset_mountains_of_the_moon_stairs",
@@ -39439,6 +39445,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Iron Islands Slab",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_iron_islands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -41174,6 +41183,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Iron Islands Wall",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_iron_islands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -42897,6 +42909,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Iron Islands Fence",
+      "overlayTextures": [ 
+      	"terrainset_overlays/terrainset_iron_islands_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [

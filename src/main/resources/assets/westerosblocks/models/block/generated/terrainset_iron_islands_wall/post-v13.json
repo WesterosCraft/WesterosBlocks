@@ -1,8 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_iron/13",
     "top": "westerosblocks:block/terrainset_iron/13",
-    "side": "westerosblocks:block/terrainset_iron/13"
+    "side": "westerosblocks:block/terrainset_iron/13",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_iron_islands_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_iron_islands_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_iron_islands_overlay"
   }
 }

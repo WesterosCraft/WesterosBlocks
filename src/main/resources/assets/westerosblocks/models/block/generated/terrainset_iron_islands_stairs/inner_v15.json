@@ -1,9 +1,12 @@
 {
-  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "parent": "westerosblocks:block/untinted/inner_stairs_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_iron/15",
     "top": "westerosblocks:block/terrainset_iron/15",
     "side": "westerosblocks:block/terrainset_iron/15",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_iron_islands_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_iron_islands_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_iron_islands_overlay",
     "particle": "westerosblocks:block/terrainset_iron/15"
   }
 }
