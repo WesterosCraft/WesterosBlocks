@@ -1,0 +1,72 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+	"layer": "TRANSLUCENT",
+    "textures": [ "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay_7x54" ],
+    "extra": {
+       "condWidth": 7,
+       "condHeight": 54,
+       "conds": [
+          {
+            "type": "overlay",
+            "ctmRow": 6,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_reach_alt" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 9,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_reach" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 12,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_the_north" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 15,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_iron_islands" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 18,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_eastern_islands" }
+            ]
+          {
+            "type": "overlay",
+            "ctmRow": 27,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_westerlands_alt" }
+            ]
+          },
+          {
+            "type": "overlay",
+            "ctmRow": 30,
+            "ctmCol": 0,
+            "connect_to": [
+               { "block": "westerosblocks:terrainset_westerlands" }
+            ]
+          },
+          {
+            "type": "null"
+          }
+       ]
+    }
+  }
+}

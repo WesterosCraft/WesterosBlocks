@@ -7754,6 +7754,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Mountains of the Moon",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_eyrie_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -39243,7 +39246,10 @@
       "modelBlockName": "terrainset_mountains_of_the_moon",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Mountains of the Moon Stairs",
-      "legacyBlockID": "terrainset_stair_2:0"
+      "legacyBlockID": "terrainset_stair_2:0",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_eyrie_overlay"
+      ]
     },
     {
       "blockName": "terrainset_the_north_stairs",
@@ -39547,6 +39553,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Mountains of the Moon Slab",
+	  "overlayTextures": [ 
+        "terrainset_overlays/terrainset_eyrie_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -41285,6 +41294,9 @@
       ],
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Mountains of the Moon Wall",
+      "overlayTextures": [ 
+        "terrainset_overlays/terrainset_eyrie_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [

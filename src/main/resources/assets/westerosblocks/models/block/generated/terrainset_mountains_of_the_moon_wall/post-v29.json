@@ -1,8 +1,11 @@
 {
-  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
   "textures": {
     "bottom": "westerosblocks:block/terrainset_eyrie/33",
     "top": "westerosblocks:block/terrainset_eyrie/33",
-    "side": "westerosblocks:block/terrainset_eyrie/33"
+    "side": "westerosblocks:block/terrainset_eyrie/33",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay"
   }
 }

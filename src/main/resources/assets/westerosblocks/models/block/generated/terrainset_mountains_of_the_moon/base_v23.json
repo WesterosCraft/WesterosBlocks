@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/terrainset_eyrie/27"
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
+    "down": "westerosblocks:block/terrainset_eyrie/27",
+    "up": "westerosblocks:block/terrainset_eyrie/27",
+    "north": "westerosblocks:block/terrainset_eyrie/27",
+    "south": "westerosblocks:block/terrainset_eyrie/27",
+    "west": "westerosblocks:block/terrainset_eyrie/27",
+    "east": "westerosblocks:block/terrainset_eyrie/27",
+    "particle": "westerosblocks:block/terrainset_eyrie/27"
   }
 }
