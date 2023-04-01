@@ -304,17 +304,17 @@ public abstract class ModelExport {
         public Map<String, VarOrVarList> variants;
     	public List<States> multipart;
         
-        public void addVariant(String cond, Variant v, Set<String> condIDs) {
+        public void addVariant(String cond, Variant v, Set<String> stateIDs) {
         	if (variants == null) {
         		 variants = new HashMap<String, VarOrVarList>();
         	}
         	ArrayList<String> conds = new ArrayList<String>();
-        	if (condIDs == null) {
+        	if (stateIDs == null) {
         		conds.add(cond);
         	}
         	else {
-        		for (String cval : condIDs) {
-        			conds.add(cond + ",cond=" + cval);
+        		for (String cval : stateIDs) {
+        			conds.add(cond + ((cond.length() > 0) ? "," : "") + "state=" + cval);
         		}
         	}
         	// Add to all the matching condIDs

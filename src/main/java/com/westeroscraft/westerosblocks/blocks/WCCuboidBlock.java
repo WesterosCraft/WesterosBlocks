@@ -14,17 +14,22 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.StateDefinition;
-
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 
 public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, SimpleWaterloggedBlock {
@@ -47,6 +52,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     
     protected static WesterosBlockDef.StateProperty tempSTATE;
     protected WesterosBlockDef.StateProperty STATE;
+    protected boolean toggleOnUse = false;
 
     protected WesterosBlockDef def;
     
@@ -55,8 +61,21 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     protected WCCuboidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
-        SHAPE_BY_INDEX = new VoxelShape[1];
-        SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList(def.getCuboidList());
+        
+        String t = def.getType();
+        if (t != null) {
+            String[] toks = t.split(",");
+            for (String tok : toks) {
+                if (tok.equals("toggleOnUse")) {
+                    toggleOnUse = true;
+                }
+            }
+        }
+        int cnt = def.states.size();
+    	SHAPE_BY_INDEX = new VoxelShape[cnt];
+    	for (int i = 0; i < cnt; i++) {
+            SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(def.states.get(i).getCuboidList());
+    	}
         if (STATE != null) {
             this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
         }
@@ -81,7 +100,10 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     }
 
     protected int getIndexFromState(BlockState state) {
-    	return 0;
+    	if (STATE != null)
+    		return STATE.getIndex(state.getValue(STATE));
+    	else
+    		return 0;
     }
     
     @Override
@@ -136,9 +158,22 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
         }
     }
     
-    public List<WesterosBlockDef.Cuboid> getModelCuboids() {
-    	return def.cuboids;
-    }
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
+    	WesterosBlocks.log.info("usee=" + def.blockName);
+        if (this.toggleOnUse && (this.STATE != null)) {
+        	WesterosBlocks.log.info("toggleState=" + state.getValue(this.STATE));
+            state = state.cycle(this.STATE);
+        	WesterosBlocks.log.info("toggleState(after)=" + state.getValue(this.STATE));
+            level.setBlock(pos, state, 10);
+            level.levelEvent(player, 1006, pos, 0);
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
+        else {
+			return InteractionResult.PASS;
+        }
+	}
+
     protected VoxelShape getBoundingBoxFromCuboidList(List<WesterosBlockDef.Cuboid> cl) {
         VoxelShape vs = Shapes.empty();
         if (cl != null) {
@@ -148,7 +183,10 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
         }
         return vs;
     }
-    
+    public List<WesterosBlockDef.Cuboid> getModelCuboids(int stateIdx) {
+    	return def.states.get(stateIdx).cuboids;
+    }
+
     private static String[] TAGS = { };
     @Override
     public String[] getBlockTags() {

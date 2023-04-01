@@ -1134,16 +1134,22 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     public static class StateProperty extends Property<String> {
     	public ImmutableSet<String> values;
-    	public ImmutableMap<String, String> valMap; 
+    	public final ImmutableMap<String, String> valMap; 
+    	public final ImmutableMap<String, Integer> indexMap; 
     	public String defValue;
     	public StateProperty(List<String> stateIDs) {
     		super("state", String.class);
     		Map<String, String> map = Maps.newHashMap();
-    		for (String s : stateIDs) {
+    		Map<String, Integer> imap = Maps.newHashMap();
+    		int len = stateIDs.size();
+    		for (int i = 0; i < len; i++) {
+    			String s = stateIDs.get(i);
     			map.put(s, s);
+    			imap.put(s, i);
     		}
             this.values = ImmutableSet.copyOf(map.values());
             this.valMap = ImmutableMap.copyOf(map);
+            this.indexMap = ImmutableMap.copyOf(imap);
     		this.defValue = stateIDs.get(0);
     	}
     	@Override
@@ -1173,6 +1179,10 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     	@Override
     	public String getName(String val) {
     		return val;
+    	}
+    	public int getIndex(String val) {
+    		Integer v = this.indexMap.get(val);
+    		return (v != null) ? v.intValue() : 0;
     	}
     }
         

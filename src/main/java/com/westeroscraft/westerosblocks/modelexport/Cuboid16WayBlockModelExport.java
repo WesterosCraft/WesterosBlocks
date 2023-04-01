@@ -38,10 +38,10 @@ public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
         if (!def.isCustomModel()) {
             // Loop over the random sets we've got for base model (and for each 22 degree model
             for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-            	doCuboidModel(getModelName("base", setidx), isTinted, setidx, null);
-            	doCuboidModel(getModelName("rotn22", setidx), isTinted, setidx, -22.5F);
-            	doCuboidModel(getModelName("rotn45", setidx), isTinted, setidx, -45F);
-            	doCuboidModel(getModelName("rot22", setidx), isTinted, setidx, 22.5F);
+            	doCuboidModel(getModelName("base", setidx), isTinted, setidx, null, def, 0);
+            	doCuboidModel(getModelName("rotn22", setidx), isTinted, setidx, -22.5F, def, 0);
+            	doCuboidModel(getModelName("rotn45", setidx), isTinted, setidx, -45F, def, 0);
+            	doCuboidModel(getModelName("rot22", setidx), isTinted, setidx, 22.5F, def, 0);
             }
         }
         // Build simple item model that refers to block model

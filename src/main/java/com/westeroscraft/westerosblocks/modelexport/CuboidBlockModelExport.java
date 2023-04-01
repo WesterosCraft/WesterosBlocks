@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
+import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 
 import net.minecraft.world.level.block.Block;
 
@@ -75,19 +77,22 @@ public class CuboidBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
     	StateObject so = new StateObject();
-        // Loop over the random sets we've got
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
-            for (int i = 0; i < cnt; i++) {
-                Variant var = new Variant();
-                var.model = modelFileName("base", setidx);
-            	var.weight = set.weight;
-            	if (i > 0) var.y = 90*i;
-    			so.addVariant("", var, null);	// Add our variant                	
-            }
-            
-        }
+    	
+    	for (WesterosBlockStateRecord sr : def.states) {
+    		boolean justBase = sr.stateID == null;
+	        // Loop over the random sets we've got
+	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
+	        	WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
+	        	int cnt = sr.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
+	            for (int i = 0; i < cnt; i++) {
+	                Variant var = new Variant();
+	                var.model = modelFileName(justBase ? "base": sr.stateID, setidx);
+	            	var.weight = set.weight;
+	            	if (i > 0) var.y = 90*i;
+	    			so.addVariant("", var, justBase ? null : Collections.singleton(sr.stateID));	// Add our variant                	
+	            }
+	        }
+    	}
     	this.writeBlockStateFile(def.blockName, so);        	
     }
 
@@ -112,9 +117,9 @@ public class CuboidBlockModelExport extends ModelExport {
     	}
     }
 
-    protected void doCuboidModel(String name, boolean isTinted, int setidx, Float modelRotation) throws IOException {
+    protected void doCuboidModel(String name, boolean isTinted, int setidx, Float modelRotation, WesterosBlockStateRecord sr, int sridx) throws IOException {
         ModelObjectCuboid mod = new ModelObjectCuboid();
-    	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+    	WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
         String txt0 = set.getTextureByIndex(0);
         mod.textures.put("particle", getTextureID(set.getTextureByIndex(0)));
         int cnt = Math.max(6, set.getTextureCount());
@@ -122,7 +127,7 @@ public class CuboidBlockModelExport extends ModelExport {
         for (int i = 0; i < cnt; i++) {
         	textures[i] = set.getTextureByIndex(i);
         }
-        doCuboidModel(name, isTinted, txt0, textures, blk.getModelCuboids(), modelRotation);
+        doCuboidModel(name, isTinted, txt0, textures, blk.getModelCuboids(sridx), modelRotation);
     }
     
     protected void doCuboidModel(String name, boolean isTinted, String txt0, String[] textures, List<Cuboid> cubs,
@@ -284,17 +289,24 @@ public class CuboidBlockModelExport extends ModelExport {
     private static final boolean[] NOTINTALL = { false, false, false, false, false, false };
     @Override
     public void doModelExports() throws IOException {
-        boolean isTinted = def.isTinted();
         // Export if not set to custom model
         if (!def.isCustomModel()) {
-            // Loop over the random sets we've got
-            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-            	doCuboidModel(getModelName("base", setidx), isTinted, setidx, null);
-            }
+        	WesterosBlocks.log.info(String.format("%s: size=%d", def.blockName, def.states.size()));
+        	for (int idx = 0; idx < def.states.size(); idx++) {
+        		WesterosBlockStateRecord rec = def.states.get(idx);
+	            // Loop over the random sets we've got
+	            for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {
+	            	String id = (rec.stateID == null) ? "base" : rec.stateID;
+	            	doCuboidModel(getModelName(id, setidx), rec.isTinted(), setidx, null, rec, idx);
+	            }
+        	}
         }
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.parent = modelFileName("base", 0);
+        WesterosBlockStateRecord sr0 = def.states.get(0);
+        boolean isTinted = sr0.isTinted();
+    	String id = (sr0.stateID == null) ? "base" : sr0.stateID;
+        mo.parent = modelFileName(id, 0);
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {

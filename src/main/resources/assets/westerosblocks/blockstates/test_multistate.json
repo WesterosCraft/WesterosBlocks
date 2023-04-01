@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "state=flipped2": {
+      "model": "westerosblocks:block/generated/test_multistate/flipped2_v1"
+    },
+    "state=flipped": {
+      "model": "westerosblocks:block/generated/test_multistate/flipped_v1"
+    },
+    "state=normal": {
+      "model": "westerosblocks:block/generated/test_multistate/normal_v1"
+    },
+    "state=normal2": {
+      "model": "westerosblocks:block/generated/test_multistate/normal2_v1"
+    }
+  }
+}

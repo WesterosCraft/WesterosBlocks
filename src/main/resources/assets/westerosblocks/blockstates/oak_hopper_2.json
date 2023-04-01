@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "state=flipped": {
+      "model": "westerosblocks:block/generated/oak_hopper_2/flipped_v1"
+    },
+    "state=normal": {
+      "model": "westerosblocks:block/generated/oak_hopper_2/normal_v1"
+    }
+  }
+}
