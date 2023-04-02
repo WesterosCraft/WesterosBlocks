@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.world.level.block.Block;
@@ -21,24 +22,23 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        // Loop over the random sets we've got
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	// East is base model
-        	Variant var = new Variant();
-        	var.model = modelFileName("base", setidx);
-        	so.addVariant("facing=east", var, null);
-        }
-        
-        // North is 90 degree rotate
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	Variant var = new Variant();
-        	var.model = modelFileName("base", setidx);
-        	var.y = 90;
-        	so.addVariant("facing=north", var, null);
-        }
-        
+    	for (WesterosBlockStateRecord sr : def.states) {
+    		boolean justBase = sr.stateID == null;
+	        // Loop over the random sets we've got
+	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
+	        	// East is base model
+	        	Variant var = new Variant();
+	        	var.model = modelFileName(justBase ? "base" : sr.stateID, setidx);
+	        	so.addVariant("facing=east", var, null);
+	        }
+	        // North is 90 degree rotate
+	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
+	        	Variant var = new Variant();
+	        	var.model = modelFileName(justBase ? "base" : sr.stateID, setidx);
+	        	var.y = 90;
+	        	so.addVariant("facing=north", var, null);
+	        }
+    	}
         this.writeBlockStateFile(def.blockName, so);
     }
     @Override

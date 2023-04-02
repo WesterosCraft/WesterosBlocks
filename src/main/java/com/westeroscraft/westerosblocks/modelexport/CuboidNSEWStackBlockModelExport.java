@@ -73,7 +73,6 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         WesterosBlockStateRecord se = def.getStackElementByIndex(0);
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = modelFileName("base", setidx);
         	var.y = 270;
@@ -81,14 +80,12 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = modelFileName("base", setidx);        
         	so.addVariant("facing=east,half=lower", var, null);
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = modelFileName("base", setidx);        
         	var.y = 90;
@@ -96,7 +93,6 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = modelFileName("base", setidx);        
         	var.y = 180;
@@ -106,7 +102,6 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         // Top states
         se = def.getStackElementByIndex(1);
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = modelFileName("top", setidx);        
         	var.y = 270;
@@ -114,14 +109,12 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = modelFileName("top", setidx);        
         	so.addVariant("facing=east,half=upper", var, null);
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = modelFileName("top", setidx);        
         	var.y = 90;
@@ -129,7 +122,6 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = se.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = modelFileName("top", setidx);        
         	var.y = 180;

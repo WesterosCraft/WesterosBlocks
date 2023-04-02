@@ -29,39 +29,49 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
         	BlockBehaviour.Properties props = def.makeProperties();
+        	// See if we have a state property
+        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
+        	if (state != null) {
+        		tempSTATE = state;
+        	}        	        	
         	return def.registerRenderType(def.registerBlock(new WCCuboidNEBlock(props, def)), false, false);
         }
     }
     
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.NORTH);
-
-    protected List<WesterosBlockDef.Cuboid> cuboid_by_facing[] = new List[2];
     
-    @SuppressWarnings("unchecked")
     protected WCCuboidNEBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(props, def);
+        super(props, def, 2);
         
-        cuboid_by_facing[0] = def.getCuboidList();	// East facing
-        cuboid_by_facing[1] = new ArrayList<WesterosBlockDef.Cuboid>();
-        for (WesterosBlockDef.Cuboid c : cuboid_by_facing[0]) {
-            cuboid_by_facing[1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
+        int stcnt = def.states.size();
+        for (int stidx = 0; stidx < stcnt; stidx++) {
+        	for (WesterosBlockDef.Cuboid c : cuboid_by_facing[2*stidx]) {
+        		cuboid_by_facing[2*stidx + 1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
+        	}
         }
-        this.SHAPE_BY_INDEX = new VoxelShape[cuboid_by_facing.length];
         for (int i = 0; i < cuboid_by_facing.length; i++) {
-            SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
+        	if (SHAPE_BY_INDEX[i] == null) {
+        		SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
+        	}
         }
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.EAST));
+        if (STATE != null) {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.EAST).setValue(STATE, STATE.defValue));
+        }
+        else {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.EAST));
+        }
     }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-       StateDefinition.add(FACING, WATERLOGGED);
+        super.createBlockStateDefinition(StateDefinition);
+        StateDefinition.add(FACING);
     }
     
     @Override
     protected int getIndexFromState(BlockState state) {
-    	return (state.getValue(FACING) == Direction.EAST) ? 0 : 1;
+    	return super.getIndexFromState(state) + ((state.getValue(FACING) == Direction.EAST) ? 0 : 1);
     }
-
+    
     @Override
     public BlockState rotate(BlockState state, Rotation rot) {
         switch(rot) {
@@ -92,6 +102,10 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     		   break;
     	   }
        }
-       return this.defaultBlockState().setValue(FACING, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       BlockState bs = this.defaultBlockState().setValue(FACING, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       if (STATE != null) {
+    	   bs = bs.setValue(STATE, STATE.defValue); 
+       }
+       return bs;
     }
 }

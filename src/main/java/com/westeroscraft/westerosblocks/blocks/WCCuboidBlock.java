@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
         	if (state != null) {
         		tempSTATE = state;
         	}        	
-        	return def.registerRenderType(def.registerBlock(new WCCuboidBlock(props, def)), false, false);
+        	return def.registerRenderType(def.registerBlock(new WCCuboidBlock(props, def, 1)), false, false);
         }
     }
     // Support waterlogged on these blocks
@@ -53,14 +54,17 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     protected static WesterosBlockDef.StateProperty tempSTATE;
     protected WesterosBlockDef.StateProperty STATE;
     protected boolean toggleOnUse = false;
+    protected int modelsPerState;
 
     protected WesterosBlockDef def;
     
     protected VoxelShape[] SHAPE_BY_INDEX;
+    protected List<WesterosBlockDef.Cuboid> cuboid_by_facing[];
 
-    protected WCCuboidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
+    protected WCCuboidBlock(BlockBehaviour.Properties props, WesterosBlockDef def, int modelsPerState) {
         super(props);
         this.def = def;
+        this.modelsPerState = modelsPerState;
         
         String t = def.getType();
         if (t != null) {
@@ -72,9 +76,14 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
             }
         }
         int cnt = def.states.size();
-    	SHAPE_BY_INDEX = new VoxelShape[cnt];
+        this.cuboid_by_facing = new List[cnt * modelsPerState];
+    	SHAPE_BY_INDEX = new VoxelShape[cnt * modelsPerState];
     	for (int i = 0; i < cnt; i++) {
-            SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(def.states.get(i).getCuboidList());
+    		cuboid_by_facing[i * modelsPerState] = def.states.get(i).getCuboidList();
+    		for (int j = 1; j < modelsPerState; j++) {
+    			cuboid_by_facing[i * modelsPerState + j] = new ArrayList<WesterosBlockDef.Cuboid>();
+    		}
+            SHAPE_BY_INDEX[i * modelsPerState] = getBoundingBoxFromCuboidList(cuboid_by_facing[i * modelsPerState]);
     	}
         if (STATE != null) {
             this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
@@ -101,7 +110,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
 
     protected int getIndexFromState(BlockState state) {
     	if (STATE != null)
-    		return STATE.getIndex(state.getValue(STATE));
+    		return modelsPerState * STATE.getIndex(state.getValue(STATE));
     	else
     		return 0;
     }
@@ -180,8 +189,9 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
         }
         return vs;
     }
+    
     public List<WesterosBlockDef.Cuboid> getModelCuboids(int stateIdx) {
-    	return def.states.get(stateIdx).cuboids;
+    	return cuboid_by_facing[modelsPerState * stateIdx];
     }
 
     private static String[] TAGS = { };

@@ -26,7 +26,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.StateDefinition;
 
-import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 
@@ -45,21 +44,14 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH);
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     
-    protected WesterosBlockDef def;
-    
     // Index = FACING + 4*TOP
-    protected List<WesterosBlockDef.Cuboid> cuboid_by_facing[] = new List[8];
 
     protected WCCuboidNSEWStackBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(props, def);
-        SHAPE_BY_INDEX = new VoxelShape[8];
-        cuboid_by_facing = new List[8];
-    	for (int j = 0; j < cuboid_by_facing.length; j++) {
-    		cuboid_by_facing[j] = new ArrayList<WesterosBlockDef.Cuboid>();
-    	}
+        super(props, def, 8);
         for (int i = 0; i < 2; i++) {
         	WesterosBlockStateRecord se = def.getStackElementByIndex(i);
             for (WesterosBlockDef.Cuboid c : se.cuboids) {
+    			cuboid_by_facing[4*i] = new ArrayList<WesterosBlockDef.Cuboid>();	// Use clean, since parent uses cuboid not stack
                 cuboid_by_facing[4*i].add(c);
                 cuboid_by_facing[4*i + 1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
                 cuboid_by_facing[4*i + 2].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY180));
@@ -76,21 +68,22 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-    	StateDefinition.add(FACING, HALF, WATERLOGGED);
+        super.createBlockStateDefinition(StateDefinition);
+    	StateDefinition.add(FACING, HALF);
     }
     @Override
     protected int getIndexFromState(BlockState state) {
     	int topoff = (state.getValue(HALF) == DoubleBlockHalf.LOWER) ? 0 : 4;
     	switch (state.getValue(FACING)) {
-    	case EAST:
-    	default:
-    		return topoff;
-    	case SOUTH:
-    		return topoff+1;
-    	case WEST:
-    		return topoff+2;
-    	case NORTH:
-    		return topoff+3;
+	    	case EAST:
+	    	default:
+	    		return topoff;
+	    	case SOUTH:
+	    		return topoff+1;
+	    	case WEST:
+	    		return topoff+2;
+	    	case NORTH:
+	    		return topoff+3;
     	}
     }    
     @Nullable
@@ -128,7 +121,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
      }
 
     @Override
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack item) {
+    public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity entity, ItemStack item) {
     	BlockPos above = pos.above();
         FluidState fluidstate =world.getFluidState(above);
         BlockState newstate = this.defaultBlockState()
@@ -151,5 +144,4 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
         }
      }
-
 }

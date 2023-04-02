@@ -45,8 +45,9 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
     private static List<WesterosBlockDef.Cuboid> cuboidlist = Arrays.asList(cuboids);
     
     protected WCBeaconBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(props, def);
+        super(props, def, 1);
         def.cuboids = cuboidlist;
-        SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList(def.getCuboidList());
+        this.cuboid_by_facing[0] = cuboidlist;
+        SHAPE_BY_INDEX[0] = getBoundingBoxFromCuboidList(this.cuboid_by_facing[0]);
     }
 }

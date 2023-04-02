@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList; 
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -14,7 +13,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.core.Direction;
-import net.minecraft.world.phys.shapes.VoxelShape;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -27,63 +25,72 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
         	BlockBehaviour.Properties props = def.makeProperties();
+        	// See if we have a state property
+        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
+        	if (state != null) {
+        		tempSTATE = state;
+        	}        	        	
         	return def.registerRenderType(def.registerBlock(new WCCuboidNSEWUDBlock(props, def)), false, false);
         }
     }
     
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH, Direction.DOWN, Direction.UP);
 
-    protected List<WesterosBlockDef.Cuboid> cuboid_by_facing[] = new List[6];
-    
-    @SuppressWarnings("unchecked")
     protected WCCuboidNSEWUDBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(props, def);
+        super(props, def, 6);
         
-        cuboid_by_facing[0] = def.getCuboidList();	// East facing
-        cuboid_by_facing[1] = new ArrayList<WesterosBlockDef.Cuboid>();
-        cuboid_by_facing[2] = new ArrayList<WesterosBlockDef.Cuboid>();
-        cuboid_by_facing[3] = new ArrayList<WesterosBlockDef.Cuboid>();
-        cuboid_by_facing[4] = new ArrayList<WesterosBlockDef.Cuboid>();
-        cuboid_by_facing[5] = new ArrayList<WesterosBlockDef.Cuboid>();
-        for (WesterosBlockDef.Cuboid c : cuboid_by_facing[0]) {
-            cuboid_by_facing[1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
-            cuboid_by_facing[2].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY180));
-            cuboid_by_facing[3].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY270));
-            cuboid_by_facing[4].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTZ90));
-            cuboid_by_facing[5].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTZ270));
+        int stcnt = def.states.size();
+        for (int stidx = 0; stidx < stcnt; stidx++) {
+        	int off = stidx * this.modelsPerState;
+	        for (WesterosBlockDef.Cuboid c : cuboid_by_facing[off]) {
+	            cuboid_by_facing[off + 1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
+	            cuboid_by_facing[off + 2].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY180));
+	            cuboid_by_facing[off + 3].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY270));
+	            cuboid_by_facing[off + 4].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTZ90));
+	            cuboid_by_facing[off + 5].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTZ270));
+	        }
         }
-        this.SHAPE_BY_INDEX = new VoxelShape[cuboid_by_facing.length];
         for (int i = 0; i < cuboid_by_facing.length; i++) {
-            SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
+        	if (SHAPE_BY_INDEX[i] == null) {
+        		SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
+        	}
         }
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.EAST));
+        if (STATE != null) {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.EAST).setValue(STATE, STATE.defValue));
+        }
+        else {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.EAST));
+        }
     }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-       StateDefinition.add(FACING, WATERLOGGED);
+    	super.createBlockStateDefinition(StateDefinition);
+    	StateDefinition.add(FACING);
     }
+    
     @Override
     public List<WesterosBlockDef.Cuboid> getModelCuboids(int stateIdx) {
-    	return this.cuboid_by_facing[3];
+    	return cuboid_by_facing[modelsPerState * stateIdx + 3];
     }
 
     @Override
     protected int getIndexFromState(BlockState state) {
+    	int off = super.getIndexFromState(state);
     	switch (state.getValue(FACING)) {
-    	case EAST:
-    		return 0;
-    	case SOUTH:
-    		return 1;
-    	case WEST:
-    		return 2;
-    	case NORTH:
-    		return 3;
-    	case DOWN:
-    		return 4;
-    	case UP:
-    		return 5;
+	    	case EAST:
+	    		return off;
+	    	case SOUTH:
+	    		return off+1;
+	    	case WEST:
+	    		return off+2;
+	    	case NORTH:
+	    		return off+3;
+	    	case DOWN:
+	    		return off+4;
+	    	case UP:
+	    		return off+5;
     	}
-    	return 0;
+    	return off;
     }
 
     @Override
@@ -96,6 +103,10 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
 		   dir = d;
 		   break;
        }
-       return this.defaultBlockState().setValue(FACING, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       BlockState bs = this.defaultBlockState().setValue(FACING, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       if (STATE != null) {
+    	   bs = bs.setValue(STATE, STATE.defValue); 
+       }
+       return bs;
     }
 }
