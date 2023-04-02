@@ -19446,7 +19446,7 @@
       "textures": [
         "grassy_sand/side"
       ],
-      "legacyBlockID": "minecraft:sand:12:1"
+      "legacyBlockID": "minecraft:sand[variant=red_sand]"
     },
     {
       "blockName": "classic_grass_block",
@@ -21592,7 +21592,7 @@
       "textures": [
         "clay/white_stained_clay"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:0"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=white]"
     },
     {
       "blockName": "yellow_stained_clay",
@@ -21606,7 +21606,7 @@
       "textures": [
         "clay/yellow_stained_clay"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:4"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=yellow]"
     },
     {
       "blockName": "white_plaster",
@@ -21620,7 +21620,7 @@
       "textures": [
         "plaster/white_plaster"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:1"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=orange]"
     },
     {
       "blockName": "brownish_white_plaster",
@@ -21634,7 +21634,7 @@
       "textures": [
         "plaster/brownish_white_plaster"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:2"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=magenta]"
     },
     {
       "blockName": "greyish_white_plaster",
@@ -21648,7 +21648,7 @@
       "textures": [
         "plaster/greyish_white_plaster"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:3"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=lightblue]"
     },
     {
       "blockName": "small_smooth_stone_brick_blue_plaster",
@@ -21664,7 +21664,7 @@
         "plaster/small_smooth_stone_brick_blue_plaster/top_bottom",
         "plaster/small_smooth_stone_brick_blue_plaster/side"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:7"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=gray]"
     },
     {
       "blockName": "small_white_brick_brownish_white_plaster",
@@ -21680,7 +21680,7 @@
         "plaster/small_white_brick_brownish_white_plaster/top_bottom",
         "plaster/small_white_brick_brownish_white_plaster/side"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:9"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=cyan]"
     },
     {
       "blockName": "small_smooth_stone_brick_white_plaster",
@@ -21696,7 +21696,7 @@
         "plaster/small_smooth_stone_brick_white_plaster/top_bottom",
         "plaster/small_smooth_stone_brick_white_plaster/side"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:11"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=blue]"
     },
     {
       "blockName": "small_stone_brick_white_plaster",
@@ -21723,7 +21723,7 @@
           ]
         }
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:13"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=green]"
     },
     {
       "blockName": "small_white_brick_white_plaster",
@@ -21739,7 +21739,7 @@
         "plaster/small_white_brick_white_plaster/top_bottom",
         "plaster/small_white_brick_white_plaster/side"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:14"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=red]"
     },
     {
       "blockName": "light_grey_stone_white_plaster",
@@ -21766,7 +21766,7 @@
           ]
         }
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:15"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=black]"
     },
     {
       "blockName": "faith_carved_stone_brick",
@@ -21780,7 +21780,7 @@
       "textures": [
         "faith/faith_carved_stone_brick"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:5"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=lime]"
     },
     {
       "blockName": "faith_carved_small_stone_brick",
@@ -21794,7 +21794,7 @@
       "textures": [
         "faith/faith_carved_small_stone_brick"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:6"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=pink]"
     },
     {
       "blockName": "red_plaster",
@@ -21823,7 +21823,7 @@
       "textures": [
         "plaster/blue_plaster"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:10"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=purple]"
     },
     {
       "blockName": "casterly_rock_crimson_plaster",
@@ -25654,7 +25654,7 @@
         "cobble_keystone/top_bottom",
         "cobble_keystone/side"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay:159:8"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=silver]"
     },
     {
       "blockName": "kl_dun_cobble",
@@ -31465,8 +31465,7 @@
         "yMax": 0.5,
         "zMin": 0.25,
         "zMax": 0.75
-      },
-      "legacyBlockID": "minecraft:skull:397:4"
+      }
     },
     {
       "blockName": "helmet",
@@ -31498,8 +31497,7 @@
         "yMax": 0.5,
         "zMin": 0.25,
         "zMax": 0.75
-      },
-      "legacyBlockID": "minecraft:skull:397:1"
+      }
     },
     {
       "blockName": "pebbles_wet_eastern_islands",
@@ -48671,7 +48669,7 @@
         "zMin": 0,
         "zMax": 1
       },
-      "legacyBlockID": "minecraft:water_lily:default"
+      "legacyBlockID": "minecraft:waterlily"
     },
     {
       "blockName": "orange_slate_stairs",
