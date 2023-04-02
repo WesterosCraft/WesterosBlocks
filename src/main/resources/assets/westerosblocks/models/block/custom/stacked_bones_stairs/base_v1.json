@@ -3,7 +3,8 @@
   "ambientocclusion": false,
   "textures": {
     "front": "westerosblocks:block/stacked_bones/bone_stacked_front_noctm",
-    "rotated": "westerosblocks:block/stacked_bones/bone_stacked_side",
+    "side": "westerosblocks:block/stacked_bones/bone_stacked_side",
+    "rotated": "westerosblocks:block/stacked_bones/bone_stacked_rotated",
     "particle": "westerosblocks:block/stacked_bones/bone_stacked_side"
   },
   "display": {
@@ -28,8 +29,8 @@
       "from": [ 0, 0, 0 ],
       "to": [ 16, 8, 16 ],
       "faces": {
-        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#rotated", "cullface": "down" },
-        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#rotated", "rotation": 90 },
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "down" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "rotation": 90 },
         "north": { "uv": [ 0, 8, 16, 16 ], "texture": "#rotated", "cullface": "north" },
         "south": { "uv": [ 0, 8, 16, 16 ], "texture": "#rotated", "cullface": "south" },
         "west":  { "uv": [ 0, 8, 16, 16 ], "texture": "#front", "cullface": "west" },
@@ -40,8 +41,8 @@
       "from": [ 8, 8, 0 ],
       "to": [ 16, 16, 16 ],
       "faces": {
-        "down":  { "uv": [ 8, 0, 16, 16 ], "texture": "#rotated", "cullface": "down" },
-        "up":    { "uv": [ 0, 8, 16, 16 ], "texture": "#rotated", "rotation": 90, "cullface": "up" },
+        "down":  { "uv": [ 8, 0, 16, 16 ], "texture": "#side", "cullface": "down" },
+        "up":    { "uv": [ 0, 8, 16, 16 ], "texture": "#side", "rotation": 90, "cullface": "up" },
         "north": { "uv": [ 0, 0,  8,  8 ], "texture": "#rotated", "cullface": "north" },
         "south": { "uv": [ 8, 0, 16,  8 ], "texture": "#rotated", "cullface": "south" },
         "west":  { "uv": [ 0, 0, 16,  8 ], "texture": "#front" },
