@@ -1097,21 +1097,37 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	
     public String getLegacyBlockName() {
     	if (legacyBlockID == null) return null;
-    	String[] tok = legacyBlockID.split(":");
-    	if (tok.length > 2) return tok[0] + ":" + tok[1];
-    	return (tok.length >= 1) ? tok[0] : null;
-    }
-    public String getLegacyBlockVariant() {
-    	if (legacyBlockID == null) return null;
-    	String[] tok = legacyBlockID.split(":");
-    	if (tok.length >= 2) {
-    		return tok[tok.length - 1];
+    	String v = legacyBlockID;
+    	int sqoff = v.indexOf('[');
+    	if (sqoff >= 0) {
+    		v = v.substring(0, sqoff);
     	}
-    	return null;
-    }    
+    	String[] tok = v.split(":");
+    	if ((tok.length > 2) || (tok[0].equals("minecraft"))) {
+    		return tok[0] + ":" + tok[1];
+    	}
+    	return "westerosblocks:" + tok[0];
+    }
     public Map<String, String> getLegacyBlockMap() {
     	if (legacyBlockID == null) return null;
     	Map<String, String> mval = new HashMap<String, String>();
+    	if (legacyBlockID.indexOf('[') >= 0) {
+    		String p = legacyBlockID;
+    		int st = p.indexOf('[');
+    		int en = p.indexOf(']');
+    		p = p.substring(st+1, en);
+    		String[] ptoks = p.split(",");	// Split at commas, if any
+    		for (String pair : ptoks) {
+    			String[] av = pair.split("=");
+    			if (av.length > 1) {
+    				mval.put(av[0], av[1]);
+    			}
+    			else {
+    				mval.put("variant", av[0]);
+    			}
+    		}
+    		return mval;
+    	}
     	String[] tok = legacyBlockID.split(":");
     	if (tok.length >= 2) {
     		String v = tok[tok.length - 1];
@@ -1126,23 +1142,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     				String[] vtok = sv.split("=");
     				if (vtok.length > 1)
     					mval.put(vtok[0], vtok[1]);
-    			}
-    		}
-    		return mval;
-    	}
-    	else if (tok[tok.length-1].indexOf('[') >= 0) {
-    		String p = tok[tok.length-1];
-    		int st = p.indexOf('[');
-    		int en = p.indexOf(']');
-    		p = p.substring(st+1, en);
-    		String[] ptoks = p.split(",");	// Split at commas, if any
-    		for (String pair : ptoks) {
-    			String[] av = pair.split("=");
-    			if (av.length > 1) {
-    				mval.put(av[0], av[1]);
-    			}
-    			else {
-    				mval.put("variant", av[0]);
     			}
     		}
     		return mval;

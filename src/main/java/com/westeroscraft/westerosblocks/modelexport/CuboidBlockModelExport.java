@@ -291,7 +291,7 @@ public class CuboidBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         // Export if not set to custom model
         if (!def.isCustomModel()) {
-        	WesterosBlocks.log.info(String.format("%s: size=%d", def.blockName, def.states.size()));
+        	//WesterosBlocks.log.info(String.format("%s: size=%d", def.blockName, def.states.size()));
         	for (int idx = 0; idx < def.states.size(); idx++) {
         		WesterosBlockStateRecord rec = def.states.get(idx);
 	            // Loop over the random sets we've got
