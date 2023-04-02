@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
@@ -1133,23 +1134,22 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     public static class StateProperty extends Property<String> {
-    	public ImmutableSet<String> values;
+    	public final ImmutableList<String> values;
     	public final ImmutableMap<String, String> valMap; 
-    	public final ImmutableMap<String, Integer> indexMap; 
-    	public String defValue;
+    	public final String defValue;
+    	
     	public StateProperty(List<String> stateIDs) {
     		super("state", String.class);
     		Map<String, String> map = Maps.newHashMap();
-    		Map<String, Integer> imap = Maps.newHashMap();
+    		List<String> vals = new ArrayList<String>();
     		int len = stateIDs.size();
     		for (int i = 0; i < len; i++) {
     			String s = stateIDs.get(i);
     			map.put(s, s);
-    			imap.put(s, i);
+    			vals.add(s);
     		}
-            this.values = ImmutableSet.copyOf(map.values());
+            this.values = ImmutableList.copyOf(vals);
             this.valMap = ImmutableMap.copyOf(map);
-            this.indexMap = ImmutableMap.copyOf(imap);
     		this.defValue = stateIDs.get(0);
     	}
     	@Override
@@ -1181,8 +1181,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     		return val;
     	}
     	public int getIndex(String val) {
-    		Integer v = this.indexMap.get(val);
-    		return (v != null) ? v.intValue() : 0;
+    		int v = this.values.indexOf(val);
+    		return (v >= 0) ? v : 0;
     	}
     }
         

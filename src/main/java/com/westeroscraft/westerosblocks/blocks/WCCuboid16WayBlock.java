@@ -29,6 +29,11 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
         	BlockBehaviour.Properties props = def.makeProperties();
+        	// See if we have a state property
+        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
+        	if (state != null) {
+        		tempSTATE = state;
+        	}        	
         	return def.registerRenderType(def.registerBlock(new WCCuboid16WayBlock(props, def)), false, false);
         }
     }
@@ -47,27 +52,44 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
     protected WCCuboid16WayBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props, def);
         
-        cuboid_by_facing[0] = def.getCuboidList();	// East facing
-        for (int i = 1; i < ROTATIONS; i++) {
-        	cuboid_by_facing[i] = new ArrayList<WesterosBlockDef.Cuboid>();
-	        for (WesterosBlockDef.Cuboid c : cuboid_by_facing[0]) {
-	        	cuboid_by_facing[i].add(c.rotateCuboid(shape_rotations[i / 4]));
+        // Build rotations - one set for each state, if needed
+        int stcnt = def.states.size();
+        cuboid_by_facing = new List[ROTATIONS * stcnt];
+        for (int stidx = 0; stidx < def.states.size(); stidx++) {
+        	int idx = ROTATIONS * stidx;
+        	cuboid_by_facing[idx] = def.states.get(stidx).getCuboidList();	// East facing
+	        for (int i = 1; i < ROTATIONS; i++) {
+	        	cuboid_by_facing[idx+i] = new ArrayList<WesterosBlockDef.Cuboid>();
+		        for (WesterosBlockDef.Cuboid c : cuboid_by_facing[idx]) {
+		        	cuboid_by_facing[idx+i].add(c.rotateCuboid(shape_rotations[i / 4]));
+		        }
 	        }
         }
         this.SHAPE_BY_INDEX = new VoxelShape[cuboid_by_facing.length];
         for (int i = 0; i < cuboid_by_facing.length; i++) {
             SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
         }
-        this.registerDefaultState(this.stateDefinition.any().setValue(ROTATION, 0).setValue(WATERLOGGED, Boolean.valueOf(false)));
+        if (STATE != null) {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(ROTATION, 0).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
+        }
+        else {
+        	this.registerDefaultState(this.stateDefinition.any().setValue(ROTATION, 0).setValue(WATERLOGGED, Boolean.valueOf(false)));        	
+        }
     }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-       StateDefinition.add(ROTATION, WATERLOGGED);
+        super.createBlockStateDefinition(StateDefinition);
+        StateDefinition.add(ROTATION);
     }
     
     @Override
     protected int getIndexFromState(BlockState state) {
-    	return state.getValue(ROTATION);
+    	if (STATE != null) {
+    		return (STATE.getIndex(state.getValue(STATE)) * ROTATIONS) + state.getValue(ROTATION);
+    	}
+    	else {
+    		return state.getValue(ROTATION);
+    	}
     }
 
     @Override
@@ -85,6 +107,10 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
        Integer dir = Integer.valueOf(Mth.floor((double)(ctx.getRotation() * 16.0F / 360.0F) + 0.5D) & 15);
-       return this.defaultBlockState().setValue(ROTATION, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       BlockState bs = this.defaultBlockState().setValue(ROTATION, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       if (STATE != null) {
+    	   bs = bs.setValue(STATE, STATE.defValue); 
+       }
+       return bs;
     }
 }

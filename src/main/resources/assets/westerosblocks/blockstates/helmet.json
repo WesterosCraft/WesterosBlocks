@@ -1,11 +1,11 @@
 {
   "variants": {
     "rotation=2": {
-      "model": "westerosblocks:block/generated/helmet/rotn45_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rotn45_v1",
       "y": 0
     },
     "rotation=1": {
-      "model": "westerosblocks:block/generated/helmet/rotn22_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rotn22_v1",
       "y": 0
     },
     "rotation=0": {
@@ -13,11 +13,11 @@
       "y": 0
     },
     "rotation=6": {
-      "model": "westerosblocks:block/generated/helmet/rotn45_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rotn45_v1",
       "y": 90
     },
     "rotation=5": {
-      "model": "westerosblocks:block/generated/helmet/rotn22_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rotn22_v1",
       "y": 90
     },
     "rotation=4": {
@@ -25,11 +25,11 @@
       "y": 90
     },
     "rotation=3": {
-      "model": "westerosblocks:block/generated/helmet/rot22_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rot22_v1",
       "y": 90
     },
     "rotation=9": {
-      "model": "westerosblocks:block/generated/helmet/rotn22_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rotn22_v1",
       "y": 180
     },
     "rotation=8": {
@@ -37,23 +37,23 @@
       "y": 180
     },
     "rotation=7": {
-      "model": "westerosblocks:block/generated/helmet/rot22_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rot22_v1",
       "y": 180
     },
     "rotation=10": {
-      "model": "westerosblocks:block/generated/helmet/rotn45_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rotn45_v1",
       "y": 180
     },
     "rotation=11": {
-      "model": "westerosblocks:block/generated/helmet/rot22_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rot22_v1",
       "y": 270
     },
     "rotation=14": {
-      "model": "westerosblocks:block/generated/helmet/rotn45_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rotn45_v1",
       "y": 270
     },
     "rotation=15": {
-      "model": "westerosblocks:block/generated/helmet/rot22_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rot22_v1",
       "y": 0
     },
     "rotation=12": {
@@ -61,7 +61,7 @@
       "y": 270
     },
     "rotation=13": {
-      "model": "westerosblocks:block/generated/helmet/rotn22_v1",
+      "model": "westerosblocks:block/generated/helmet/base_rotn22_v1",
       "y": 270
     }
   }

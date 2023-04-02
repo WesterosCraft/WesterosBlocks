@@ -160,11 +160,8 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
-    	WesterosBlocks.log.info("usee=" + def.blockName);
         if (this.toggleOnUse && (this.STATE != null)) {
-        	WesterosBlocks.log.info("toggleState=" + state.getValue(this.STATE));
             state = state.cycle(this.STATE);
-        	WesterosBlocks.log.info("toggleState(after)=" + state.getValue(this.STATE));
             level.setBlock(pos, state, 10);
             level.levelEvent(player, 1006, pos, 0);
             return InteractionResult.sidedSuccess(level.isClientSide);
