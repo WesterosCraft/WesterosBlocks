@@ -307,6 +307,14 @@ components:
                   beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
+            overlayTextures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  If defined, adds an overlay layer over the
+                  blocks.  The indexes in the array correspond
+                  to the same indexes for 'textures'
             colorMult:
               $ref: "#/components/schemas/colorMult"
             collisionBoxes:
@@ -635,6 +643,14 @@ components:
               $ref: "#/components/schemas/ambientOcclusion"
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            overlayTextures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  If defined, adds an overlay layer over the
+                  blocks.  The indexes in the array correspond
+                  to the same indexes for 'textures'
     slab:
       title: blockType='slab'
       allOf:
@@ -665,6 +681,14 @@ components:
                   beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
+            overlayTextures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  If defined, adds an overlay layer over the
+                  blocks.  The indexes in the array correspond
+                  to the same indexes for 'textures'
             ambientOcclusion:
               $ref: "#/components/schemas/ambientOcclusion"
             colorMult:
@@ -1736,6 +1760,14 @@ components:
                   beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
+            overlayTextures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  If defined, adds an overlay layer over the
+                  blocks.  The indexes in the array correspond
+                  to the same indexes for 'textures'
     wall:
       title: blockType='wall'
       allOf:
@@ -1766,6 +1798,14 @@ components:
                   beyond the length of the list.
             randomTextures:
               $ref: "#/components/schemas/RandomTextureSets"
+            overlayTextures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  If defined, adds an overlay layer over the
+                  blocks.  The indexes in the array correspond
+                  to the same indexes for 'textures'
     beacon:
       title: blockType='beacon'
       allOf:
