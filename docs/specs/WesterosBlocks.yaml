@@ -1058,62 +1058,61 @@ components:
             states:
               type: array
               description: |-
-              	If defined, causes block to be a multi-state block,
-              	with a 'state=<stateID>' property to control which
-              	state model is used.  If defined, all corresponding
-              	fields from the base object (e.g. cuboids, isCustom, etc)
-              	are ignored.
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. cuboids, isCustom, etc)
+                are ignored.
               items:
                 type: object
                 properties:
-	                stateID:
-	                  type: string
-	                  description: |-
-	                	State property value for this state.  Must be unique
-	                	relative to the other states for the block.
-			        lightValue:
-			          type: number
-			          minimum: 0
-			          maximum: 1
-			          default: 0
-			          description: |-
-			            Emitted light level of block- 0=none, 1=max (light level 16)
-		            textures:
-		              type: array
-		              items:
-		                type: string
-		                description: |-
-		                  List of textures paths, relative to 
-		                  assets/westerosblocks/textures/blocks, unless
-		                  the module ID is included (e.g. minecraft:xxx or
-		                  westerosblocks:xxx), in which case the
-		                  value is relative to the assets/<module>/textures
-		                  path.
-		                  Index mapping for textures is based on values
-		                  used in the cuboids list (the sideTextures values).
-		
-		                  If an index beyond the length of the list is
-		                  referenced, the last element in the list is used.
-		            randomTextures:
-		              $ref: "#/components/schemas/RandomTextureSets"
-		            colorMult:
-		              $ref: "#/components/schemas/colorMult"
-		            cuboids:
-		              $ref: "#/components/schemas/Cuboids"
-		            isCustomModel:
-		              type: boolean
-		              default: false
-		              description: |-
-		                If set to true, model is not generated,
-		                and is instead expected to be found at
-		                models/custom/<blockid>/<model>.json.
-		            rotateRandom:
-		              type: boolean
-		              description: |-
-		                If true, causes block to have its model
-		                randomly rotated with 4 different angles
-		                around Y axis (0, 90, 180, 270 degrees)                         	
-		                                               
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  lightValue:
+                    type: number
+                    minimum: 0
+                    maximum: 1
+                    default: 0
+                    description: |-
+                      Emitted light level of block- 0=none, 1=max (light level 16)
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"
+                  cuboids:
+                    $ref: "#/components/schemas/Cuboids"
+                  isCustomModel:
+                    type: boolean
+                    default: false
+                    description: |-
+                      If set to true, model is not generated,
+                      and is instead expected to be found at
+                      models/custom/<blockid>/<model>.json.
+                  rotateRandom:
+                    type: boolean
+                    description: |-
+                      If true, causes block to have its model
+                      randomly rotated with 4 different angles
+                      around Y axis (0, 90, 180, 270 degrees)                         	
     cuboid-ne:
       title: blockType='cuboid-ne'
       allOf:
@@ -1153,62 +1152,61 @@ components:
             states:
               type: array
               description: |-
-              	If defined, causes block to be a multi-state block,
-              	with a 'state=<stateID>' property to control which
-              	state model is used.  If defined, all corresponding
-              	fields from the base object (e.g. cuboids, isCustom, etc)
-              	are ignored.
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. cuboids, isCustom, etc)
+                are ignored.
               items:
                 type: object
                 properties:
-	                stateID:
-	                  type: string
-	                  description: |-
-	                	State property value for this state.  Must be unique
-	                	relative to the other states for the block.
-			        lightValue:
-			          type: number
-			          minimum: 0
-			          maximum: 1
-			          default: 0
-			          description: |-
-			            Emitted light level of block- 0=none, 1=max (light level 16)	                	
-		            textures:
-		              type: array
-		              items:
-		                type: string
-		                description: |-
-		                  List of textures paths, relative to 
-		                  assets/westerosblocks/textures/blocks, unless
-		                  the module ID is included (e.g. minecraft:xxx or
-		                  westerosblocks:xxx), in which case the
-		                  value is relative to the assets/<module>/textures
-		                  path.
-		                  Index mapping for textures is based on values
-		                  used in the cuboids list (the sideTextures values).
-		
-		                  If an index beyond the length of the list is
-		                  referenced, the last element in the list is used.
-		            randomTextures:
-		              $ref: "#/components/schemas/RandomTextureSets"
-		            colorMult:
-		              $ref: "#/components/schemas/colorMult"
-		            cuboids:
-		              $ref: "#/components/schemas/Cuboids"
-		            isCustomModel:
-		              type: boolean
-		              default: false
-		              description: |-
-		                If set to true, model is not generated,
-		                and is instead expected to be found at
-		                models/custom/<blockid>/<model>.json.
-		            rotateRandom:
-		              type: boolean
-		              description: |-
-		                If true, causes block to have its model
-		                randomly rotated with 4 different angles
-		                around Y axis (0, 90, 180, 270 degrees)                         	
-                
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  lightValue:
+                    type: number
+                    minimum: 0
+                    maximum: 1
+                    default: 0
+                    description: |-
+                      Emitted light level of block- 0=none, 1=max (light level 16)	                	
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"
+                  cuboids:
+                    $ref: "#/components/schemas/Cuboids"
+                  isCustomModel:
+                    type: boolean
+                    default: false
+                    description: |-
+                      If set to true, model is not generated,
+                      and is instead expected to be found at
+                      models/custom/<blockid>/<model>.json.
+                  rotateRandom:
+                    type: boolean
+                    description: |-
+                      If true, causes block to have its model
+                      randomly rotated with 4 different angles
+                      around Y axis (0, 90, 180, 270 degrees)                         	
     cuboid-nsew:
       title: blockType='cuboid-nsew'
       allOf:
@@ -1248,62 +1246,61 @@ components:
             states:
               type: array
               description: |-
-              	If defined, causes block to be a multi-state block,
-              	with a 'state=<stateID>' property to control which
-              	state model is used.  If defined, all corresponding
-              	fields from the base object (e.g. cuboids, isCustom, etc)
-              	are ignored.
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. cuboids, isCustom, etc)
+                are ignored.
               items:
                 type: object
                 properties:
-	                stateID:
-	                  type: string
-	                  description: |-
-	                	State property value for this state.  Must be unique
-	                	relative to the other states for the block.
-			        lightValue:
-			          type: number
-			          minimum: 0
-			          maximum: 1
-			          default: 0
-			          description: |-
-			            Emitted light level of block- 0=none, 1=max (light level 16)
-		            textures:
-		              type: array
-		              items:
-		                type: string
-		                description: |-
-		                  List of textures paths, relative to 
-		                  assets/westerosblocks/textures/blocks, unless
-		                  the module ID is included (e.g. minecraft:xxx or
-		                  westerosblocks:xxx), in which case the
-		                  value is relative to the assets/<module>/textures
-		                  path.
-		                  Index mapping for textures is based on values
-		                  used in the cuboids list (the sideTextures values).
-		
-		                  If an index beyond the length of the list is
-		                  referenced, the last element in the list is used.
-		            randomTextures:
-		              $ref: "#/components/schemas/RandomTextureSets"
-		            colorMult:
-		              $ref: "#/components/schemas/colorMult"
-		            cuboids:
-		              $ref: "#/components/schemas/Cuboids"
-		            isCustomModel:
-		              type: boolean
-		              default: false
-		              description: |-
-		                If set to true, model is not generated,
-		                and is instead expected to be found at
-		                models/custom/<blockid>/<model>.json.
-		            rotateRandom:
-		              type: boolean
-		              description: |-
-		                If true, causes block to have its model
-		                randomly rotated with 4 different angles
-		                around Y axis (0, 90, 180, 270 degrees)                         	
-                
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  lightValue:
+                    type: number
+                    minimum: 0
+                    maximum: 1
+                    default: 0
+                    description: |-
+                      Emitted light level of block- 0=none, 1=max (light level 16)
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"
+                  cuboids:
+                    $ref: "#/components/schemas/Cuboids"
+                  isCustomModel:
+                    type: boolean
+                    default: false
+                    description: |-
+                      If set to true, model is not generated,
+                      and is instead expected to be found at
+                      models/custom/<blockid>/<model>.json.
+                  rotateRandom:
+                    type: boolean
+                    description: |-
+                      If true, causes block to have its model
+                      randomly rotated with 4 different angles
+                      around Y axis (0, 90, 180, 270 degrees)                
     cuboid-16way:
       title: blockType='cuboid-16way'
       allOf:
@@ -1343,62 +1340,61 @@ components:
             states:
               type: array
               description: |-
-              	If defined, causes block to be a multi-state block,
-              	with a 'state=<stateID>' property to control which
-              	state model is used.  If defined, all corresponding
-              	fields from the base object (e.g. cuboids, isCustom, etc)
-              	are ignored.
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. cuboids, isCustom, etc)
+                are ignored.
               items:
                 type: object
                 properties:
-	                stateID:
-	                  type: string
-	                  description: |-
-	                	State property value for this state.  Must be unique
-	                	relative to the other states for the block.
-			        lightValue:
-			          type: number
-			          minimum: 0
-			          maximum: 1
-			          default: 0
-			          description: |-
-			            Emitted light level of block- 0=none, 1=max (light level 16)
-		            textures:
-		              type: array
-		              items:
-		                type: string
-		                description: |-
-		                  List of textures paths, relative to 
-		                  assets/westerosblocks/textures/blocks, unless
-		                  the module ID is included (e.g. minecraft:xxx or
-		                  westerosblocks:xxx), in which case the
-		                  value is relative to the assets/<module>/textures
-		                  path.
-		                  Index mapping for textures is based on values
-		                  used in the cuboids list (the sideTextures values).
-		
-		                  If an index beyond the length of the list is
-		                  referenced, the last element in the list is used.
-		            randomTextures:
-		              $ref: "#/components/schemas/RandomTextureSets"
-		            colorMult:
-		              $ref: "#/components/schemas/colorMult"
-		            cuboids:
-		              $ref: "#/components/schemas/Cuboids"
-		            isCustomModel:
-		              type: boolean
-		              default: false
-		              description: |-
-		                If set to true, model is not generated,
-		                and is instead expected to be found at
-		                models/custom/<blockid>/<model>.json.
-		            rotateRandom:
-		              type: boolean
-		              description: |-
-		                If true, causes block to have its model
-		                randomly rotated with 4 different angles
-		                around Y axis (0, 90, 180, 270 degrees)                         	
-                
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  lightValue:
+                    type: number
+                    minimum: 0
+                    maximum: 1
+                    default: 0
+                    description: |-
+                      Emitted light level of block- 0=none, 1=max (light level 16)
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"
+                  cuboids:
+                    $ref: "#/components/schemas/Cuboids"
+                  isCustomModel:
+                    type: boolean
+                    default: false
+                    description: |-
+                      If set to true, model is not generated,
+                      and is instead expected to be found at
+                      models/custom/<blockid>/<model>.json.
+                  rotateRandom:
+                    type: boolean
+                    description: |-
+                      If true, causes block to have its model
+                      randomly rotated with 4 different angles
+                      around Y axis (0, 90, 180, 270 degrees)                         	
     cuboid-nsewud:
       title: blockType='cuboid-nsewud'
       allOf:
@@ -1438,61 +1434,61 @@ components:
             states:
               type: array
               description: |-
-              	If defined, causes block to be a multi-state block,
-              	with a 'state=<stateID>' property to control which
-              	state model is used.  If defined, all corresponding
-              	fields from the base object (e.g. cuboids, isCustom, etc)
-              	are ignored.
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. cuboids, isCustom, etc)
+                are ignored.
               items:
                 type: object
                 properties:
-	                stateID:
-	                  type: string
-	                  description: |-
-	                	State property value for this state.  Must be unique
-	                	relative to the other states for the block.
-			        lightValue:
-			          type: number
-			          minimum: 0
-			          maximum: 1
-			          default: 0
-			          description: |-
-			            Emitted light level of block- 0=none, 1=max (light level 16)
-		            textures:
-		              type: array
-		              items:
-		                type: string
-		                description: |-
-		                  List of textures paths, relative to 
-		                  assets/westerosblocks/textures/blocks, unless
-		                  the module ID is included (e.g. minecraft:xxx or
-		                  westerosblocks:xxx), in which case the
-		                  value is relative to the assets/<module>/textures
-		                  path.
-		                  Index mapping for textures is based on values
-		                  used in the cuboids list (the sideTextures values).
-		
-		                  If an index beyond the length of the list is
-		                  referenced, the last element in the list is used.
-		            randomTextures:
-		              $ref: "#/components/schemas/RandomTextureSets"
-		            colorMult:
-		              $ref: "#/components/schemas/colorMult"
-		            cuboids:
-		              $ref: "#/components/schemas/Cuboids"
-		            isCustomModel:
-		              type: boolean
-		              default: false
-		              description: |-
-		                If set to true, model is not generated,
-		                and is instead expected to be found at
-		                models/custom/<blockid>/<model>.json.
-		            rotateRandom:
-		              type: boolean
-		              description: |-
-		                If true, causes block to have its model
-		                randomly rotated with 4 different angles
-		                around Y axis (0, 90, 180, 270 degrees)                         	
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  lightValue:
+                    type: number
+                    minimum: 0
+                    maximum: 1
+                    default: 0
+                    description: |-
+                      Emitted light level of block- 0=none, 1=max (light level 16)
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"
+                  cuboids:
+                    $ref: "#/components/schemas/Cuboids"
+                  isCustomModel:
+                    type: boolean
+                    default: false
+                    description: |-
+                      If set to true, model is not generated,
+                      and is instead expected to be found at
+                      models/custom/<blockid>/<model>.json.
+                  rotateRandom:
+                    type: boolean
+                    description: |-
+                      If true, causes block to have its model
+                      randomly rotated with 4 different angles
+                      around Y axis (0, 90, 180, 270 degrees)                         	
                 
     cuboid-nsew-stack:
       title: blockType='cuboid-nsew-stack'
