@@ -615,6 +615,51 @@
       "legacyBlockID": "yellow_flower_block_0:1"
     },
     {
+      "blockName": "potted_green_spiny_herb",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosGrassesShrubs",
+      "label": "Potted Green Spiny Herb",
+      "type": "plant-id:green_spiny_herb",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_spiny_herb1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_spiny_herb2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_spiny_herb3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_spiny_herb4"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_spiny_herb5"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "green_leafy_herb",
       "blockType": "plant",
       "material": "wood",
@@ -632,6 +677,19 @@
         "flowers/green_leafy_herb"
       ],
       "legacyBlockID": "yellow_flower_block_0:2"
+    },
+    {
+      "blockName": "potted_green_leafy_herb",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosGrassesShrubs",
+      "label": "Potted Green Leafy Herb",
+      "type": "plant-id:green_leafy_herb",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/green_leafy_herb"
+      ]
     },
     {
       "blockName": "orange_marigolds",
@@ -670,6 +728,44 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_0:3"
+    },
+    {
+      "blockName": "potted_orange_marigolds",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Orange Marigolds",
+      "type": "plant-id:orange_marigolds",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_marigolds1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_marigolds2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_marigolds3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_marigolds4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "orange_trollius",
@@ -819,6 +915,19 @@
       "legacyBlockID": "yellow_flower_block_0:6"
     },
     {
+      "blockName": "potted_pink_wildflowers",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Pink Wildflowers",
+      "type": "plant-id:pink_wildflowers",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/pink_wildflowers"
+      ]
+    },
+    {
       "blockName": "yellow_tansy",
       "blockType": "plant",
       "material": "wood",
@@ -836,6 +945,19 @@
         "flowers/yellow_tansy"
       ],
       "legacyBlockID": "yellow_flower_block_0:7"
+    },
+    {
+      "blockName": "potted_yellow_tansy",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Tansy",
+      "type": "plant-id:yellow_tansy",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/yellow_tansy"
+      ]
     },
     {
       "blockName": "blue_flax",
@@ -874,6 +996,44 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_0:8"
+    },
+    {
+      "blockName": "potted_blue_flax",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Blue Flax",
+      "type": "plant-id:blue_flax",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_flax1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_flax2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_flax3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_flax4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "white_daisies",
@@ -1052,6 +1212,58 @@
       "legacyBlockID": "yellow_flower_block_0:11"
     },
     {
+      "blockName": "potted_green_scrub_grass",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosGrassesShrubs",
+      "label": "Potted Green Scrub Grass",
+      "type": "plant-id:green_scrub_grass",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_scrub_grass1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_scrub_grass2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_scrub_grass3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_scrub_grass4"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_scrub_grass5"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/green_scrub_grass6"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "dead_scrub_grass",
       "blockType": "plant",
       "material": "wood",
@@ -1124,6 +1336,79 @@
       "legacyBlockID": "yellow_flower_block_0:12"
     },
     {
+      "blockName": "potted_dead_scrub_grass",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosGrassesShrubs",
+      "label": "Potted Dead Scrub Grass",
+      "type": "plant-id:dead_scrub_grass",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass4"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass5"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass6"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass7"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass8"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/dead_scrub_grass9"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "yellow_bedstraw",
       "blockType": "plant",
       "material": "wood",
@@ -1157,6 +1442,37 @@
       "legacyBlockID": "yellow_flower_block_0:13"
     },
     {
+      "blockName": "potted_yellow_bedstraw",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Bedstraw",
+      "type": "plant-id:yellow_bedstraw",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_bedstraw/side1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_bedstraw/side2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_bedstraw/side3"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "orange_bells",
       "blockType": "plant",
       "material": "wood",
@@ -1174,6 +1490,19 @@
         "flowers/orange_bells1"
       ],
       "legacyBlockID": "yellow_flower_block_0:14"
+    },
+    {
+      "blockName": "potted_orange_bells",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Orange Bells",
+      "type": "plant-id:orange_bells",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/orange_bells1"
+      ]
     },
     {
       "blockName": "blue_bells",
@@ -1195,6 +1524,19 @@
       "legacyBlockID": "yellow_flower_block_0:15"
     },
     {
+      "blockName": "potted_blue_bells",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Blue Bells",
+      "type": "plant-id:blue_bells",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/blue_bells"
+      ]
+    },
+    {
       "blockName": "blue_swamp_bells",
       "blockType": "plant",
       "stepSound": "grass",
@@ -1213,6 +1555,19 @@
         "flowers/blue_swamp_bells1"
       ],
       "legacyBlockID": "yellow_flower_block_1:0"
+    },
+    {
+      "blockName": "potted_blue_swamp_bells",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Blue Swamp Bells",
+      "type": "plant-id:blue_swamp_bells",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/blue_swamp_bells1"
+      ]
     },
     {
       "blockName": "yellow_buttercups",
@@ -1254,6 +1609,44 @@
       "legacyBlockID": "yellow_flower_block_1:1"
     },
     {
+      "blockName": "potted_yellow_buttercups",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Buttercups",
+      "type": "plant-id:yellow_buttercups",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_buttercups1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_buttercups2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_buttercups3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_buttercups4"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "orange_bog_asphodel",
       "blockType": "plant",
       "stepSound": "grass",
@@ -1291,6 +1684,44 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_1:2"
+    },
+    {
+      "blockName": "potted_orange_bog_asphodel",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Orange Bog Asphodel",
+      "type": "plant-id:orange_bog_asphodel",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_bog_asphodel1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_bog_asphodel2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_bog_asphodel3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/orange_bog_asphodel4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "yellow_lupine",
@@ -1409,6 +1840,44 @@
       "legacyBlockID": "yellow_flower_block_1:4"
     },
     {
+      "blockName": "potted_blue_hyacinth",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Blue Hyacinth",
+      "type": "plant-id:blue_hyacinth",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_hyacinth1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_hyacinth2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_hyacinth3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/blue_hyacinth4"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "pink_thistle",
       "blockType": "plant",
       "stepSound": "grass",
@@ -1448,6 +1917,44 @@
       "legacyBlockID": "yellow_flower_block_1:5"
     },
     {
+      "blockName": "potted_pink_thistle",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Pink Thistle",
+      "type": "plant-id:pink_thistle",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_thistle/side1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_thistle/side2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_thistle/side3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_thistle/side4"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "yellow_dandelions",
       "blockType": "plant",
       "stepSound": "grass",
@@ -1480,6 +1987,37 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_1:6"
+    },
+    {
+      "blockName": "potted_yellow_dandelions",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Dandelions",
+      "type": "plant-id:yellow_dandelions",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_dandelions1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_dandelions2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_dandelions3"
+          ]
+        }
+      ]
     },
     {
       "blockName": "yellow_daffodils",
@@ -1521,6 +2059,44 @@
       "legacyBlockID": "yellow_flower_block_1:7"
     },
     {
+      "blockName": "potted_yellow_daffodils",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Daffodils",
+      "type": "plant-id:yellow_daffodils",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_daffodils1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_daffodils2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_daffodils3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_daffodils4"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "yellow_roses",
       "blockType": "plant",
       "stepSound": "grass",
@@ -1558,6 +2134,44 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_1:8"
+    },
+    {
+      "blockName": "potted_yellow_roses",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Roses",
+      "type": "plant-id:yellow_roses",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_roses1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_roses2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_roses3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_roses4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "strawberry_bush",
@@ -1600,6 +2214,19 @@
       "legacyBlockID": "yellow_flower_block_1:10"
     },
     {
+      "blockName": "potted_white_lilyofthevalley",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted White Lily-of-the-valley",
+      "type": "plant-id:white_lilyofthevalley",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/white_lily_valley1"
+      ]
+    },
+    {
       "blockName": "yellow_bells",
       "blockType": "plant",
       "stepSound": "grass",
@@ -1618,6 +2245,19 @@
         "flowers/yellow_bells1"
       ],
       "legacyBlockID": "yellow_flower_block_1:11"
+    },
+    {
+      "blockName": "potted_yellow_bells",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Bells",
+      "type": "plant-id:yellow_bells",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/flower_pot",
+        "flowers/yellow_bells1"
+      ]
     },
     {
       "blockName": "yellow_sunflower",
@@ -1652,6 +2292,37 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_1:12"
+    },
+    {
+      "blockName": "potted_yellow_sunflower",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Sunflower",
+      "type": "plant-id:yellow_sunflower",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_sunflower/side1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_sunflower/side2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_sunflower/side3"
+          ]
+        }
+      ]
     },
     {
       "blockName": "white_roses",
@@ -1691,6 +2362,44 @@
         }
       ],
       "legacyBlockID": "yellow_flower_block_1:13"
+    },
+    {
+      "blockName": "potted_white_roses",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted White Roses",
+      "type": "plant-id:white_roses",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/white_roses1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/white_roses2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/white_roses3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/white_roses4"
+          ]
+        }
+      ]
     },
     {
       "blockName": "iron_slab",
@@ -11619,6 +12328,44 @@
       "legacyBlockID": "red_flower_block_0:0"
     },
     {
+      "blockName": "potted_red_dark_roses",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Red Dark Roses",
+      "type": "plant-id:red_dark_roses",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_dark_roses1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_dark_roses2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_dark_roses3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_dark_roses4"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "yellow_hellebore",
       "blockType": "plant",
       "stepSound": "grass",
@@ -11646,6 +12393,30 @@
         }
       ],
       "legacyBlockID": "red_flower_block_0:1"
+    },
+    {
+      "blockName": "potted_yellow_hellebore",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Yellow Hellebore",
+      "type": "plant-id:yellow_hellebore",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_hellebore1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/yellow_hellebore2"
+          ]
+        }
+      ]
     },
     {
       "blockName": "meadow_fescue",
@@ -11677,6 +12448,30 @@
       "legacyBlockID": "red_flower_block_0:2"
     },
     {
+      "blockName": "potted_meadow_fescue",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Meadow Fescue",
+      "type": "plant-id:meadow_fescue",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/meadow_fescue/side1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/meadow_fescue/side2"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "red_poppies",
       "blockType": "plant",
       "stepSound": "grass",
@@ -11704,6 +12499,30 @@
         }
       ],
       "legacyBlockID": "red_flower_block_0:3"
+    },
+    {
+      "blockName": "potted_red_poppies",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Red Poppies",
+      "type": "plant-id:red_poppies",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_poppies1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/red_poppies2"
+          ]
+        }
+      ]
     },
     {
       "blockName": "red_roses",
@@ -11899,6 +12718,44 @@
       "legacyBlockID": "red_flower_block_0:6"
     },
     {
+      "blockName": "potted_purple_roses",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Purple Roses",
+      "type": "plant-id:purple_roses",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/purple_roses1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/purple_roses2"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/purple_roses3"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/purple_roses4"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "orange_sun_star",
       "blockType": "plant",
       "stepSound": "grass",
@@ -11979,6 +12836,30 @@
         }
       ],
       "legacyBlockID": "red_flower_block_0:8"
+    },
+    {
+      "blockName": "potted_pink_primrose",
+      "blockType": "flowerpot",
+      "material": "wood",
+      "creativeTab": "WesterosFlowers",
+      "label": "Potted Pink Primrose",
+      "type": "plant-id:pink_primrose",
+      "randomTextures": [
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_primrose1"
+          ]
+        },
+        {
+          "textures": [
+            "minecraft:block/dirt",
+            "minecraft:block/flower_pot",
+            "flowers/pink_primrose2"
+          ]
+        }
+      ]
     },
     {
       "blockName": "red_aster",
