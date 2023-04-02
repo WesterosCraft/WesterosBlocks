@@ -137,12 +137,16 @@ public class FenceBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") - need fence connection mapping");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	// No metadata other than variant - need filter for all of this - just pass one combination
     	oldstate.put("north", "false");
     	newstate.put("north", "false");

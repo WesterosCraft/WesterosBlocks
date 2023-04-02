@@ -99,10 +99,16 @@ public class TrapDoorBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	newstate.put("powered", "false");
     	newstate.put("waterlogged", "false");
     	for (String facing : FACING) {

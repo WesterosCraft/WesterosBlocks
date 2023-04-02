@@ -2,8 +2,6 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,7 +37,6 @@ public class CrossBlockModelExport extends ModelExport {
     	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
         StateObject so = new StateObject();
         
-        List<Variant> varn = new ArrayList<Variant>();
     	// Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
@@ -87,12 +84,16 @@ public class CrossBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	newstate.put("waterlogged", "false");
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }

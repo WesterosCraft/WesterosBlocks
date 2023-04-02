@@ -291,7 +291,7 @@ public class CuboidBlockModelExport extends ModelExport {
     public void doModelExports() throws IOException {
         // Export if not set to custom model
         if (!def.isCustomModel()) {
-        	WesterosBlocks.log.info(String.format("%s: size=%d", def.blockName, def.states.size()));
+        	//WesterosBlocks.log.info(String.format("%s: size=%d", def.blockName, def.states.size()));
         	for (int idx = 0; idx < def.states.size(); idx++) {
         		WesterosBlockStateRecord rec = def.states.get(idx);
 	            // Loop over the random sets we've got
@@ -320,12 +320,16 @@ public class CuboidBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	newstate.put("waterlogged", "false");
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }

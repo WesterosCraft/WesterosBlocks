@@ -2,10 +2,8 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
@@ -201,13 +199,20 @@ public class WallBlockModelExport extends ModelExport {
 		String oldID = def.getLegacyBlockName();
 		if (oldID == null)
 			return;
-		String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
 		addWorldConverterComment(def.legacyBlockID + "(" + def.label + ") - need wall connection mapping");
 		// BUild old variant map
 		HashMap<String, String> oldstate = new HashMap<String, String>();
 		HashMap<String, String> newstate = new HashMap<String, String>();
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
+    	if (oldstate.get("variant") != null) {
+    		oldstate.put("variant2", oldstate.get("variant"));
+    	}
 		oldstate.put("variant", "cobblestone");
-		oldstate.put("variant2", oldVariant);
 		// No metadata other than variant - need filter for all of this - just pass one
 		// combination
 		oldstate.put("north", "false");

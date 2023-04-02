@@ -58,10 +58,8 @@ public class LayerBlockModelExport extends ModelExport {
         StateObject so = new StateObject();
         
         for (int i = 0; i < this.blk.layerCount; i++) {
-        	List<Variant> vars = new ArrayList<Variant>();
             // Loop over the random sets we've got
             for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-            	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
             	Variant var = new Variant();
             	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("layer" + (i+1), setidx);
             	so.addVariant(String.format("layers=%d", i+1), var, null);
@@ -172,11 +170,16 @@ public class LayerBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	newstate.put("waterlogged", "false");
         for (int i = 1; i <= blk.layerCount; i++) {
         	oldstate.put("layers", Integer.toString(i));

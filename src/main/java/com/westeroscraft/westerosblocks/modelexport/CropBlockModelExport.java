@@ -37,7 +37,6 @@ public class CropBlockModelExport extends ModelExport {
         StateObject so = new StateObject();
     	// Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
         	Variant var = new Variant();
         	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
         	so.addVariant("", var, null);
@@ -63,12 +62,16 @@ public class CropBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	newstate.put("waterlogged", "false");
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
