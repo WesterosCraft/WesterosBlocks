@@ -5,11 +5,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.world.level.block.Block;
 
@@ -23,12 +20,16 @@ public class SoundBlockModelExport extends SolidBlockModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	Map<String, String> oldstate = new HashMap<String, String>();
     	Map<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	newstate.put("powered", "false");
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }

@@ -1108,7 +1108,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     		return tok[tok.length - 1];
     	}
     	return null;
-    }
+    }    
     public Map<String, String> getLegacyBlockMap() {
     	if (legacyBlockID == null) return null;
     	Map<String, String> mval = new HashMap<String, String>();
@@ -1126,6 +1126,23 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     				String[] vtok = sv.split("=");
     				if (vtok.length > 1)
     					mval.put(vtok[0], vtok[1]);
+    			}
+    		}
+    		return mval;
+    	}
+    	else if (tok[tok.length-1].indexOf('[') >= 0) {
+    		String p = tok[tok.length-1];
+    		int st = p.indexOf('[');
+    		int en = p.indexOf(']');
+    		p = p.substring(st+1, en);
+    		String[] ptoks = p.split(",");	// Split at commas, if any
+    		for (String pair : ptoks) {
+    			String[] av = pair.split("=");
+    			if (av.length > 1) {
+    				mval.put(av[0], av[1]);
+    			}
+    			else {
+    				mval.put("variant", av[0]);
     			}
     		}
     		return mval;

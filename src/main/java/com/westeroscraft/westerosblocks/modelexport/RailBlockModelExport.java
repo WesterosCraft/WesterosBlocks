@@ -107,11 +107,16 @@ public class RailBlockModelExport extends ModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	for (String railshape : RAILSHAPE) {
     		oldstate.put("shape", railshape);
     		newstate.put("shape", railshape);

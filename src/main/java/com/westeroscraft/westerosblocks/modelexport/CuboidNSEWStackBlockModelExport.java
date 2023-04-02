@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
@@ -134,12 +135,16 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
     	if (oldID == null) return;
-    	String oldVariant = def.getLegacyBlockVariant();
+    	Map<String, String> oldmap = def.getLegacyBlockMap();
     	addWorldConverterComment(def.legacyBlockID + "(" + def.label + ")");
     	// BUild old variant map
     	HashMap<String, String> oldstate = new HashMap<String, String>();
     	HashMap<String, String> newstate = new HashMap<String, String>();
-    	oldstate.put("variant", oldVariant);
+    	if (oldmap != null) {
+    		for (String k : oldmap.keySet()) {
+        		oldstate.put(k, oldmap.get(k));    			
+    		}
+    	}
     	newstate.put("waterlogged", "false");
     	for (String facing : FACING) {
     		oldstate.put("facing", facing);
