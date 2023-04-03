@@ -10,7 +10,12 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 public class WCCropBlock extends WCPlantBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def) {        	
+        	// See if we have a state property
+        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
+        	if (state != null) {
+        		tempSTATE = state;
+        	}        	
         	BlockBehaviour.Properties props = def.makeProperties().noCollission().instabreak();
         	return def.registerRenderType(def.registerBlock(new WCCropBlock(props, def)), false, false);
         }

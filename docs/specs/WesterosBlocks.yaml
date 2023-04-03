@@ -841,7 +841,53 @@ components:
                   
                   - 0: single texture
             randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"                  
+              $ref: "#/components/schemas/RandomTextureSets"     
+            colorMult:
+              $ref: "#/components/schemas/colorMult"   
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "toggleOnUse": If defined, and multi-state,
+                then each right click rotates state value                                      
+            states:
+              type: array
+              description: |-
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. textures, etc)
+                are ignored.
+              items:
+                type: object
+                properties:
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"                           
     plant:
       title: blockType='plant'
       allOf:
@@ -874,6 +920,50 @@ components:
                 around Y axis (0, 90, 180, 270 degrees)
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "toggleOnUse": If defined, and multi-state,
+                then each right click rotates state value              
+            states:
+              type: array
+              description: |-
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. textures, etc)
+                are ignored.
+              items:
+                type: object
+                properties:
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"
     leaves:
       title: blockType='leaves'
       allOf:
@@ -969,6 +1059,44 @@ components:
                 
                 - "no-in-web": If value is defined and
                 "true", web block does not slow movement
+                - "toggleOnUse": If defined, and multi-state,
+                then each right click rotates state value
+            states:
+              type: array
+              description: |-
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. textures, etc)
+                are ignored.
+              items:
+                type: object
+                properties:
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"                
     flowerpot:
       title: blockType='flowerpot'
       allOf:
@@ -1054,7 +1182,15 @@ components:
               description: |-
                 If true, causes block to have its model
                 randomly rotated with 4 different angles
-                around Y axis (0, 90, 180, 270 degrees)     
+                around Y axis (0, 90, 180, 270 degrees)    
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "toggleOnUse": If defined, and multi-state,
+                then each right click rotates state value                 
             states:
               type: array
               description: |-
@@ -1149,6 +1285,14 @@ components:
                 If set to true, model is not generated,
                 and is instead expected to be found at
                 models/custom/<blockid>/<model>.json.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "toggleOnUse": If defined, and multi-state,
+                then each right click rotates state value
             states:
               type: array
               description: |-
@@ -1243,6 +1387,14 @@ components:
                 If set to true, model is not generated,
                 and is instead expected to be found at
                 models/custom/<blockid>/<model>.json.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "toggleOnUse": If defined, and multi-state,
+                then each right click rotates state value
             states:
               type: array
               description: |-
@@ -1337,6 +1489,14 @@ components:
                 If set to true, model is not generated,
                 and is instead expected to be found at
                 models/custom/<blockid>/<model>.json.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "toggleOnUse": If defined, and multi-state,
+                then each right click rotates state value                
             states:
               type: array
               description: |-
@@ -1431,6 +1591,14 @@ components:
                 If set to true, model is not generated,
                 and is instead expected to be found at
                 models/custom/<blockid>/<model>.json.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "toggleOnUse": If defined, and multi-state,
+                then each right click rotates state valu                
             states:
               type: array
               description: |-
