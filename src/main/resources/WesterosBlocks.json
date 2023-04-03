@@ -50696,6 +50696,100 @@
 	  ]	    
     },
     {
+      "blockName": "crop_peas",
+      "blockType": "cuboid",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 4,
+      "type": "toggleOnUse",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosCropsHerbs",
+      "label": "Peas",
+      "states": [
+        {
+          "stateID": "age0",
+          "textures": [
+            "peas/peas_stage_0",
+            "transparent"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.0625,
+              "xMax": 0.9375,
+              "yMin": 0,
+              "yMax": 0.25,
+              "zMin": 0.0625,
+              "zMax": 0.875,
+              "sideTextures": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "age1",
+          "textures": [
+            "peas/peas_stage_1",
+            "transparent"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.0625,
+              "xMax": 0.9375,
+              "yMin": 0,
+              "yMax": 0.375,
+              "zMin": 0.0625,
+              "zMax": 0.9375,
+              "sideTextures": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "age2",
+          "textures": [
+            "peas/peas_stage_2",
+            "transparent"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.0625,
+              "xMax": 0.9375,
+              "yMin": 0,
+              "yMax": 0.9375,
+              "zMin": 0.0625,
+              "zMax": 0.9375,
+              "sideTextures": [
+                1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "lily_pad",
       "blockType": "cuboid",
       "hardness": 2,
