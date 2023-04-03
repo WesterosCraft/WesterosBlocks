@@ -50829,6 +50829,49 @@
       ]
     },
     {
+      "blockName": "crop_turnips",
+      "blockType": "crop",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 4,
+      "type": "toggleOnUse",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosCropsHerbs",
+      "label": "Turnips",
+      "states": [
+        {
+          "stateID": "age0",
+          "textures": [
+            "turnips/turnips_stage_0"
+          ]
+        },
+        {
+          "stateID": "age1",
+          "textures": [
+            "turnips/turnips_stage_1"
+          ]
+        },
+        {
+          "stateID": "age2",
+          "textures": [
+            "turnips/turnips_stage_2"
+          ]
+        },
+        {
+          "stateID": "age3",
+          "textures": [
+            "turnips/turnips_stage_3"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "lily_pad",
       "blockType": "cuboid",
       "hardness": 2,

@@ -1,3 +1,6 @@
 {
-  "parent": "westerosblocks:block/generated/crop_peas/age0_v1"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/peas/peas_stage_0"
+  }
 }
