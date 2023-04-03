@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "westerosblocks:candle_altar"
+    "westerosblocks:crop_peas",
+    "westerosblocks:candle_altar",
+    "westerosblocks:crop_turnips"
   ]
 }

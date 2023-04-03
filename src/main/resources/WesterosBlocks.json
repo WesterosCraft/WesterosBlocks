@@ -33582,6 +33582,102 @@
       }
     },
     {
+      "blockName": "skull",
+      "blockType": "cuboid-16way",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDecor",
+      "label": "Skull",
+      "textures": [
+        "skull/down",
+        "skull/up",
+        "skull/west",
+        "skull/east",
+        "skull/south",
+        "skull/north"
+      ],
+      "boundingBox": {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0,
+        "yMax": 0.5,
+        "zMin": 0.25,
+        "zMax": 0.75
+      }
+    },
+    {
+      "blockName": "generic_head",
+      "blockType": "cuboid-16way",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDecor",
+      "label": "Generic Head",
+      "textures": [
+        "generic_head/down",
+        "generic_head/up",
+        "generic_head/west",
+        "generic_head/east",
+        "generic_head/south",
+        "generic_head/north"
+      ],
+      "boundingBox": {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0,
+        "yMax": 0.5,
+        "zMin": 0.25,
+        "zMax": 0.75
+      }
+    },
+    {
+      "blockName": "wight_head",
+      "blockType": "cuboid-16way",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosDecor",
+      "label": "Wight Head",
+      "textures": [
+        "wight_head/down",
+        "wight_head/up",
+        "wight_head/west",
+        "wight_head/east",
+        "wight_head/south",
+        "wight_head/north"
+      ],
+      "boundingBox": {
+        "xMin": 0.25,
+        "xMax": 0.75,
+        "yMin": 0,
+        "yMax": 0.5,
+        "zMin": 0.25,
+        "zMax": 0.75
+      }
+    },
+    {
       "blockName": "pebbles_wet_eastern_islands",
       "blockType": "solid",
       "hardness": 5,
@@ -50694,6 +50790,86 @@
 	      ]
 	    }
 	  ]	    
+    },
+    {
+      "blockName": "crop_peas",
+      "blockType": "crop",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 4,
+      "type": "toggleOnUse",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosCropsHerbs",
+      "label": "Peas",
+      "states": [
+        {
+          "stateID": "age0",
+          "textures": [
+            "peas/peas_stage_0"
+          ]
+        },
+        {
+          "stateID": "age1",
+          "textures": [
+            "peas/peas_stage_1"
+          ]
+        },
+        {
+          "stateID": "age2",
+          "textures": [
+            "peas/peas_stage_2"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "crop_turnips",
+      "blockType": "crop",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 4,
+      "type": "toggleOnUse",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosCropsHerbs",
+      "label": "Turnips",
+      "states": [
+        {
+          "stateID": "age0",
+          "textures": [
+            "turnips/turnips_stage_0"
+          ]
+        },
+        {
+          "stateID": "age1",
+          "textures": [
+            "turnips/turnips_stage_1"
+          ]
+        },
+        {
+          "stateID": "age2",
+          "textures": [
+            "turnips/turnips_stage_2"
+          ]
+        },
+        {
+          "stateID": "age3",
+          "textures": [
+            "turnips/turnips_stage_3"
+          ]
+        }
+      ]
     },
     {
       "blockName": "lily_pad",
