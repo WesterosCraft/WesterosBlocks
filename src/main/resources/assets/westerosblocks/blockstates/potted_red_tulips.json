@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/potted_red_tulips/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_red_tulips/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_red_tulips/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_red_tulips/base_v4"
+      }
+    ]
+  }
+}

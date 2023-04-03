@@ -40,13 +40,16 @@
                { "block": "westerosblocks:terrainset_iron_islands" }
             ]
           },
-          {
-            "type": "overlay",
-            "ctmRow": 18,
-            "ctmCol": 0,
-            "connect_to": [
-               { "block": "westerosblocks:terrainset_eastern_islands" }
-            ]
+         {
+           "type": "overlay",
+           "ctmRow": 18,
+           "ctmCol": 0,
+           "connect_to": [
+             {
+               "block": "westerosblocks:terrainset_eastern_islands"
+             }
+           ]
+         },
           {
             "type": "overlay",
             "ctmRow": 27,

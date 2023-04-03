@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/potted_yellow_bedstraw/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_yellow_bedstraw/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_yellow_bedstraw/base_v3"
+      }
+    ]
+  }
+}
