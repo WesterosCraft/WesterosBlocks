@@ -841,7 +841,45 @@ components:
                   
                   - 0: single texture
             randomTextures:
-              $ref: "#/components/schemas/RandomTextureSets"                  
+              $ref: "#/components/schemas/RandomTextureSets"     
+            colorMult:
+              $ref: "#/components/schemas/colorMult"                           
+            states:
+              type: array
+              description: |-
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. textures, etc)
+                are ignored.
+              items:
+                type: object
+                properties:
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"                           
     plant:
       title: blockType='plant'
       allOf:
@@ -874,6 +912,42 @@ components:
                 around Y axis (0, 90, 180, 270 degrees)
             colorMult:
               $ref: "#/components/schemas/colorMult"
+            states:
+              type: array
+              description: |-
+                If defined, causes block to be a multi-state block,
+                with a 'state=<stateID>' property to control which
+                state model is used.  If defined, all corresponding
+                fields from the base object (e.g. textures, etc)
+                are ignored.
+              items:
+                type: object
+                properties:
+                  stateID:
+                    type: string
+                    description: |-
+                      State property value for this state.  Must be unique
+                      relative to the other states for the block.
+                  textures:
+                    type: array
+                    items:
+                      type: string
+                      description: |-
+                        List of textures paths, relative to 
+                        assets/westerosblocks/textures/blocks, unless
+                        the module ID is included (e.g. minecraft:xxx or
+                        westerosblocks:xxx), in which case the
+                        value is relative to the assets/<module>/textures
+                        path.
+                        Index mapping for textures is based on values
+                        used in the cuboids list (the sideTextures values).
+      
+                        If an index beyond the length of the list is
+                        referenced, the last element in the list is used.
+                  randomTextures:
+                    $ref: "#/components/schemas/RandomTextureSets"
+                  colorMult:
+                    $ref: "#/components/schemas/colorMult"
     leaves:
       title: blockType='leaves'
       allOf:

@@ -13,7 +13,7 @@ public class WesterosBlockStateRecord {
 	public BoundingBox boundingBox = null; // Bounding box
 	public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
 	public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
-	public Boolean isCustomModel = null; // If set and true, don't generate new custom model (hand crafted)
+	public Boolean isCustomModel = false; // If set and true, don't generate new custom model (hand crafted)
 	public List<String> textures = null; // List of textures (for single texture set)
 	public List<RandomTextureSet> randomTextures = null;	// On supported blocks (solid, leaves, slabs, stairs), 
 										// defines sets of textures used for additional random models
@@ -118,6 +118,9 @@ public class WesterosBlockStateRecord {
 	
 	public boolean isTinted() {
 		return ((colorMult != null) && (colorMult.equals("#FFFFFF") == false));
+	}
+	public boolean isCustomModel() {
+		return isCustomModel.booleanValue();
 	}
 
 }

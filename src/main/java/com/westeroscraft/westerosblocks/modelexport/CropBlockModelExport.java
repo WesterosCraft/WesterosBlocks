@@ -2,10 +2,12 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.world.level.block.Block;
@@ -35,27 +37,35 @@ public class CropBlockModelExport extends ModelExport {
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-    	// Loop over the random sets we've got
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	Variant var = new Variant();
-        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
-        	so.addVariant("", var, null);
-        }
+    	for (int idx = 0; idx < def.states.size(); idx++) {
+    		WesterosBlockStateRecord rec = def.states.get(idx);
+			String id = (rec.stateID == null) ? "base" : rec.stateID;
+	    	// Loop over the random sets we've got
+	        for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {
+	        	Variant var = new Variant();
+	        	var.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(id, setidx);
+        		so.addVariant("", var, (rec.stateID == null) ? null : Collections.singleton(rec.stateID));
+	        }
+    	}
         this.writeBlockStateFile(def.blockName, so);
     }
 
     @Override
     public void doModelExports() throws IOException {
-    	// Loop over the random sets we've got
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	ModelObjectCrop mod = new ModelObjectCrop();
-        	mod.textures.crop = getTextureID(set.getTextureByIndex(0)); 
-        	this.writeBlockModelFile(getModelName("base", setidx), mod);
-        }
+    	for (int idx = 0; idx < def.states.size(); idx++) {
+    		WesterosBlockStateRecord rec = def.states.get(idx);
+			String id = (rec.stateID == null) ? "base" : rec.stateID;
+	    	// Loop over the random sets we've got
+	        for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {
+	        	WesterosBlockDef.RandomTextureSet set = rec.getRandomTextureSet(setidx);
+	        	ModelObjectCrop mod = new ModelObjectCrop();
+	        	mod.textures.crop = getTextureID(set.getTextureByIndex(0)); 
+	        	this.writeBlockModelFile(getModelName(id, setidx), mod);
+	        }
+    	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-        mo.textures.layer0 = getTextureID(def.getRandomTextureSet(0).getTextureByIndex(0)); 
+        mo.textures.layer0 = getTextureID(def.states.get(0).getTextureByIndex(0)); 
         this.writeItemModelFile(def.blockName, mo);
     }
     @Override

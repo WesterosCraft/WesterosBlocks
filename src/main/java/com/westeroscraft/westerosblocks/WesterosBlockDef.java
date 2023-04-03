@@ -733,10 +733,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		return props;
 	}
 
-	public boolean isCustomModel() {
-		return (isCustomModel != null) && (isCustomModel.booleanValue() == true);
-	}
-
 	/**
 	 * Returns this WesterosBlockDef's default Material
 	 * 
