@@ -1,0 +1,57 @@
+{
+  "variants": {
+    "facing=east": [
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age0_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age1_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age2_v1"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age0_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age1_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age2_v1",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age0_v1",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age1_v1",
+        "y": 270
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age2_v1",
+        "y": 270
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age0_v1",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age1_v1",
+        "y": 180
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_cocoa/age2_v1",
+        "y": 180
+      }
+    ]
+  }
+}

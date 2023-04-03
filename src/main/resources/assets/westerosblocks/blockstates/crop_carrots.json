@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "state=age3": {
+      "model": "westerosblocks:block/generated/crop_carrots/age3_v1"
+    },
+    "state=age2": {
+      "model": "westerosblocks:block/generated/crop_carrots/age2_v1"
+    },
+    "state=age1": {
+      "model": "westerosblocks:block/generated/crop_carrots/age1_v1"
+    },
+    "state=age0": {
+      "model": "westerosblocks:block/generated/crop_carrots/age0_v1"
+    }
+  }
+}
