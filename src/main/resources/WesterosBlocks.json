@@ -51035,14 +51035,6 @@
       "material": "plants",
       "resistance": 4,
       "type": "toggleOnUse",
-      "randomTextures": [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-      ],
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -51056,14 +51048,6 @@
         {
           "stateID": "age0",
           "isCustomModel": true,
-          "randomTextures": [
-            {},
-            {},
-            {},
-            {},
-            {},
-            {}
-          ],
           "boundingBox": {
             "xMin": 0.6875,
             "xMax": 0.9375,
@@ -51076,14 +51060,6 @@
         {
           "stateID": "age1",
           "isCustomModel": true,
-          "randomTextures": [
-            {},
-            {},
-            {},
-            {},
-            {},
-            {}
-          ],
           "boundingBox": {
             "xMin": 0.5625,
             "xMax": 0.9375,
@@ -51096,14 +51072,6 @@
         {
           "stateID": "age2",
           "isCustomModel": true,
-          "randomTextures": [
-            {},
-            {},
-            {},
-            {},
-            {},
-            {}
-          ],
           "boundingBox": {
             "xMin": 0.4375,
             "xMax": 0.9375,
