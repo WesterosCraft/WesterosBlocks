@@ -22,7 +22,7 @@ public class WesterosBlockStateRecord {
 	public boolean rotateRandom = false;	// Set random rotation for supporting blocks (solid, leaves)
 	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
 	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
-
+	public int rotYOffset = 0;		// Additional rotation around Y axis (only for cuboid blocks with rotation) - done in blockstate 0, 90, 180, 270
 	public void doStareRecordInit() {
 		// If just base textures, generate equivalent random textures (simpler logic for blocks that support them
 		if (this.randomTextures == null) {

@@ -31,27 +31,32 @@ public class CuboidNSEWUDBlockModelExport extends CuboidBlockModelExport {
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
+            	int rot = sr.rotYOffset;
+            	if (rot > 0) var.y = rot;
 	        	so.addVariant("facing=north", var, stateIDs);
 	        }
 	        
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
-	            var.y = 90;
+            	int rot = (90 + sr.rotYOffset) % 360;
+            	if (rot > 0) var.y = rot;
 	        	so.addVariant("facing=east", var, stateIDs);
 	        }
 	        
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
-	        	var.y = 180;
+            	int rot = (180 + sr.rotYOffset) % 360;
+            	if (rot > 0) var.y = rot;
 	        	so.addVariant("facing=south", var, stateIDs);
 	        }
 	        
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
-	        	var.y = 270;
+            	int rot = (270 + sr.rotYOffset) % 360;
+            	if (rot > 0) var.y = rot;
 	        	so.addVariant("facing=west", var, stateIDs);
 	        }
 	        
@@ -59,6 +64,8 @@ public class CuboidNSEWUDBlockModelExport extends CuboidBlockModelExport {
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	        	var.x = 270;
+            	int rot = sr.rotYOffset;
+            	if (rot > 0) var.y = rot;
 	        	so.addVariant("facing=up", var, stateIDs);
 	        }
 	        
@@ -66,6 +73,8 @@ public class CuboidNSEWUDBlockModelExport extends CuboidBlockModelExport {
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	        	var.x = 90;
+            	int rot = sr.rotYOffset;
+            	if (rot > 0) var.y = rot;
 	        	so.addVariant("facing=down", var, stateIDs);
 	        }
     	}
