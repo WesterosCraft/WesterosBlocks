@@ -2,7 +2,9 @@
   "replace": false,
   "values": [
     "westerosblocks:crop_peas",
+    "westerosblocks:crop_carrots",
     "westerosblocks:candle_altar",
+    "westerosblocks:crop_wheat",
     "westerosblocks:crop_turnips"
   ]
 }

@@ -1,0 +1,99 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt4": "westerosblocks:block/cocoa/cocoa_stage_1_west",
+    "txt5": "westerosblocks:block/cocoa/cocoa_stage_1_west",
+    "txt2": "westerosblocks:block/cocoa/cocoa_stage_1_south",
+    "txt3": "westerosblocks:block/cocoa/cocoa_stage_1_west",
+    "txt0": "westerosblocks:block/cocoa/cocoa_stage_1_top",
+    "txt1": "westerosblocks:block/cocoa/cocoa_stage_1_north",
+    "particle": "westerosblocks:block/cocoa/cocoa_stage_1_top"
+  },
+  "elements": [
+    {
+      "from": [
+        9.0,
+        5.0,
+        5.0
+      ],
+      "to": [
+        15.0,
+        12.0,
+        11.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            5.0,
+            4.0,
+            11.0,
+            11.0
+          ],
+          "texture": "#txt3"
+        },
+        "south": {
+          "uv": [
+            9.0,
+            4.0,
+            15.0,
+            11.0
+          ],
+          "texture": "#txt2"
+        },
+        "north": {
+          "uv": [
+            1.0,
+            4.0,
+            7.0,
+            11.0
+          ],
+          "texture": "#txt1"
+        },
+        "west": {
+          "uv": [
+            5.0,
+            4.0,
+            11.0,
+            11.0
+          ],
+          "texture": "#txt3"
+        },
+        "up": {
+          "uv": [
+            9.0,
+            5.0,
+            15.0,
+            11.0
+          ],
+          "texture": "#txt0"
+        },
+        "down": {
+          "uv": [
+            9.0,
+            5.0,
+            15.0,
+            11.0
+          ],
+          "texture": "#txt0"
+        }
+      }
+    }
+  ]
+}

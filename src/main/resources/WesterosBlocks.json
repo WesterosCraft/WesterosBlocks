@@ -50872,6 +50872,262 @@
       ]
     },
     {
+      "blockName": "crop_carrots",
+      "blockType": "crop",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 4,
+      "type": "toggleOnUse",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosCropsHerbs",
+      "label": "Carrots",
+      "states": [
+        {
+          "stateID": "age0",
+          "textures": [
+            "carrots/carrots_stage_0"
+          ]
+        },
+        {
+          "stateID": "age1",
+          "textures": [
+            "carrots/carrots_stage_1"
+          ]
+        },
+        {
+          "stateID": "age2",
+          "textures": [
+            "carrots/carrots_stage_2"
+          ]
+        },
+        {
+          "stateID": "age3",
+          "textures": [
+            "carrots/carrots_stage_3"
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "crop_wheat",
+      "blockType": "crop",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 4,
+      "type": "toggleOnUse",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosCropsHerbs",
+      "label": "Wheat",
+      "states": [
+        {
+          "stateID": "age0",
+          "textures": [
+            "wheat/wheat_stage_0"
+          ]
+        },
+        {
+          "stateID": "age1",
+          "textures": [
+            "wheat/wheat_stage_1"
+          ]
+        },
+        {
+          "stateID": "age2",
+          "textures": [
+            "wheat/wheat_stage_2"
+          ]
+        },
+        {
+          "stateID": "age3",
+          "textures": [
+            "wheat/wheat_stage_3"
+          ]
+        },
+        {
+          "stateID": "age4",
+          "randomTextures": [
+            {
+              "textures": [
+                "wheat/stage4_1"
+              ]
+            },
+            {
+              "textures": [
+                "wheat/stage4_2"
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "age5",
+          "randomTextures": [
+            {
+              "textures": [
+                "wheat/stage5_1"
+              ]
+            },
+            {
+              "textures": [
+                "wheat/stage5_2"
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "age6",
+          "randomTextures": [
+            {
+              "textures": [
+                "wheat/stage6_1"
+              ]
+            },
+            {
+              "textures": [
+                "wheat/stage6_2"
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "age7",
+          "randomTextures": [
+            {
+              "textures": [
+                "wheat/stage7_1"
+              ]
+            },
+            {
+              "textures": [
+                "wheat/stage7_2"
+              ]
+            },
+            {
+              "textures": [
+                "wheat/stage7_3"
+              ]
+            },
+            {
+              "textures": [
+                "wheat/stage7_4"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockName": "crop_cocoa",
+      "blockType": "cuboid-nsew",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 4,
+      "type": "toggleOnUse",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosCropsHerbs",
+      "label": "Cocoa",
+      "states": [
+        {
+          "stateID": "age0",
+          "textures": [
+            "cocoa/cocoa_stage_0_top",
+            "cocoa/cocoa_stage_0_north",
+            "cocoa/cocoa_stage_0_south",
+            "cocoa/cocoa_stage_0_west"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.6875,
+              "xMax": 0.9375,
+              "yMin": 0.4375,
+              "yMax": 0.75,
+              "zMin": 0.375,
+              "zMax": 0.625,
+              "sideTextures": [
+                0,
+                0,
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "age1",
+          "textures": [
+            "cocoa/cocoa_stage_1_top",
+            "cocoa/cocoa_stage_1_north",
+            "cocoa/cocoa_stage_1_south",
+            "cocoa/cocoa_stage_1_west"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.5625,
+              "xMax": 0.9375,
+              "yMin": 0.3125,
+              "yMax": 0.75,
+              "zMin": 0.3125,
+              "zMax": 0.6875,
+              "sideTextures": [
+                0,
+                0,
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "stateID": "age2",
+          "textures": [
+            "cocoa/cocoa_stage_2_top",
+            "cocoa/cocoa_stage_2_north",
+            "cocoa/cocoa_stage_2_south",
+            "cocoa/cocoa_stage_2_west"
+          ],
+          "cuboids": [
+            {
+              "xMin": 0.4375,
+              "xMax": 0.9375,
+              "yMin": 0.1875,
+              "yMax": 0.75,
+              "zMin": 0.25,
+              "zMax": 0.75,
+              "sideTextures": [
+                0,
+                0,
+                1,
+                2,
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "lily_pad",
       "blockType": "cuboid",
       "hardness": 2,

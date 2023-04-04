@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "westerosblocks:block/wheat/stage6_1"
+  }
+}
