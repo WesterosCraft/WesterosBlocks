@@ -25,7 +25,8 @@ public class WesterosBlockStateRecord {
 
 	public void doStareRecordInit() {
 		// If just base textures, generate equivalent random textures (simpler logic for blocks that support them
-		if ((this.textures != null) && (this.randomTextures == null)) {
+		if (this.randomTextures == null) {
+			if (this.textures == null) this.textures = new ArrayList<String>();	// Always have at least array;
 			this.randomTextures = new ArrayList<RandomTextureSet>();
 			RandomTextureSet set = new RandomTextureSet();
 			set.textures = textures;
