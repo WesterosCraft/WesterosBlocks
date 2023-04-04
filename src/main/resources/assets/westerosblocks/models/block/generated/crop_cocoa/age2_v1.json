@@ -18,80 +18,80 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cocoa/cocoa_stage_0_top",
-    "txt5": "westerosblocks:block/cocoa/cocoa_stage_0_top",
-    "txt2": "westerosblocks:block/cocoa/cocoa_stage_0_top",
-    "txt3": "westerosblocks:block/cocoa/cocoa_stage_0_top",
-    "txt0": "westerosblocks:block/cocoa/cocoa_stage_0_side",
-    "txt1": "westerosblocks:block/cocoa/cocoa_stage_0_top",
-    "particle": "westerosblocks:block/cocoa/cocoa_stage_0_side"
+    "txt4": "westerosblocks:block/cocoa/cocoa_stage_2_west",
+    "txt5": "westerosblocks:block/cocoa/cocoa_stage_2_west",
+    "txt2": "westerosblocks:block/cocoa/cocoa_stage_2_south",
+    "txt3": "westerosblocks:block/cocoa/cocoa_stage_2_west",
+    "txt0": "westerosblocks:block/cocoa/cocoa_stage_2_top",
+    "txt1": "westerosblocks:block/cocoa/cocoa_stage_2_north",
+    "particle": "westerosblocks:block/cocoa/cocoa_stage_2_top"
   },
   "elements": [
     {
       "from": [
-        9.0,
+        7.0,
         3.0,
-        11.0
+        4.0
       ],
       "to": [
         15.0,
         12.0,
-        15.0
+        12.0
       ],
       "faces": {
         "east": {
           "uv": [
-            1.0,
             4.0,
-            5.0,
+            4.0,
+            12.0,
             13.0
           ],
-          "texture": "#txt0"
+          "texture": "#txt3"
         },
         "south": {
           "uv": [
-            9.0,
+            7.0,
             4.0,
             15.0,
             13.0
           ],
-          "texture": "#txt0"
+          "texture": "#txt2"
         },
         "north": {
           "uv": [
             1.0,
             4.0,
-            7.0,
+            9.0,
             13.0
           ],
-          "texture": "#txt0"
+          "texture": "#txt1"
         },
         "west": {
           "uv": [
-            11.0,
             4.0,
-            15.0,
+            4.0,
+            12.0,
             13.0
           ],
-          "texture": "#txt0"
+          "texture": "#txt3"
         },
         "up": {
           "uv": [
-            9.0,
-            11.0,
+            7.0,
+            4.0,
             15.0,
-            15.0
+            12.0
           ],
-          "texture": "#txt1"
+          "texture": "#txt0"
         },
         "down": {
           "uv": [
-            9.0,
-            1.0,
+            7.0,
+            4.0,
             15.0,
-            5.0
+            12.0
           ],
-          "texture": "#txt1"
+          "texture": "#txt0"
         }
       }
     }
