@@ -68,8 +68,8 @@ public class CuboidBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 
-    public String modelFileName(String ext, int setidx) {
-    	if (def.isCustomModel())
+    public String modelFileName(String ext, int setidx, boolean isCustom) {
+    	if (isCustom)
     		return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx);
     	else
     		return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx);
@@ -89,7 +89,7 @@ public class CuboidBlockModelExport extends ModelExport {
 	        	int cnt = sr.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
 	            for (int i = 0; i < cnt; i++) {
 	                Variant var = new Variant();
-	                var.model = modelFileName(fname, setidx);
+	                var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	            	var.weight = set.weight;
 	            	if (i > 0) var.y = 90*i;
 	    			so.addVariant("", var, stateIDs);	// Add our variant                	
@@ -308,7 +308,7 @@ public class CuboidBlockModelExport extends ModelExport {
         WesterosBlockStateRecord sr0 = def.states.get(0);
         boolean isTinted = sr0.isTinted();
     	String id = (sr0.stateID == null) ? "base" : sr0.stateID;
-        mo.parent = modelFileName(id, 0);
+        mo.parent = modelFileName(id, 0, sr0.isCustomModel());
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {
