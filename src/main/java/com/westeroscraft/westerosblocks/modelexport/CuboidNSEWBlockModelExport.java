@@ -29,27 +29,27 @@ public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
 	        // Loop over the random sets we've got
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(fname, setidx);
+	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	        	var.y = 270;
 	        	so.addVariant("facing=north", var, stateIDs);
 	        }
 	        //
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(fname, setidx);
+	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	        	so.addVariant("facing=east", var, stateIDs);
 	        }
 	        //
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(fname, setidx);
+	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	        	var.y = 90;
 	        	so.addVariant("facing=south", var, stateIDs);
 	        }
 	        //
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(fname, setidx);
+	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	        	var.y = 180;
 	        	so.addVariant("facing=west", var, stateIDs);
 	        }

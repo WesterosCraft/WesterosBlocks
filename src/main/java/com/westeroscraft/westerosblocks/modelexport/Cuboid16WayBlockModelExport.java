@@ -35,7 +35,7 @@ public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
 		        // Loop over the random sets we've got
 		        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 		        	Variant var = new Variant();
-		        	var.model = modelFileName(fname + modRot[rotation % 4], setidx);
+		        	var.model = modelFileName(fname + modRot[rotation % 4], setidx, sr.isCustomModel());
 		        	var.y = 90 * (((rotation + 1) % 16) / 4);
 		        	so.addVariant("rotation=" + rotation, var, stateIDs);
 		        }
@@ -47,8 +47,9 @@ public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
     	int stcnt = def.states.size();
+    	WesterosBlockStateRecord sr;
     	for (int stidx = 0; stidx < stcnt; stidx++) {
-    		WesterosBlockStateRecord sr = def.states.get(stidx);
+    		sr = def.states.get(stidx);
             // Export if not set to custom model
     		if (sr.isCustomModel()) continue;
     		boolean justBase = sr.stateID == null;
@@ -63,8 +64,9 @@ public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
     	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
-    	String n = (def.states.get(0).stateID == null) ? "base" : def.states.get(0).stateID;
-        mo.parent = modelFileName(n, 0);
+        sr = def.states.get(0);
+    	String n = (sr.stateID == null) ? "base" : sr.stateID;
+        mo.parent = modelFileName(n, 0, sr.isCustomModel());
         this.writeItemModelFile(def.blockName, mo);
         // Add tint overrides
         if (isTinted) {
