@@ -1,7 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "cocoa": "westerosblocks:block/cocoa/cocoa_stage0"
+    "cocoa": "westerosblocks:block/cocoa/cocoa_stage0",
+    "particle": "westerosblocks:block/cocoa/cocoa_stage0"
   },
   "elements": [
     {

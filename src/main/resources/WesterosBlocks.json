@@ -51048,6 +51048,7 @@
         {
           "stateID": "age0",
           "isCustomModel": true,
+          "rotYOffset": 270,
           "boundingBox": {
             "xMin": 0.6875,
             "xMax": 0.9375,
@@ -51060,6 +51061,7 @@
         {
           "stateID": "age1",
           "isCustomModel": true,
+          "rotYOffset": 270,
           "boundingBox": {
             "xMin": 0.5625,
             "xMax": 0.9375,
@@ -51072,6 +51074,7 @@
         {
           "stateID": "age2",
           "isCustomModel": true,
+          "rotYOffset": 270,
           "boundingBox": {
             "xMin": 0.4375,
             "xMax": 0.9375,
