@@ -29,13 +29,13 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	// East is base model
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(fname, setidx);
+	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	        	so.addVariant("facing=east", var, stateIDs);
 	        }
 	        // North is 90 degree rotate
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(fname, setidx);
+	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	        	var.y = 90;
 	        	so.addVariant("facing=north", var, stateIDs);
 	        }
