@@ -1,0 +1,7 @@
+{
+  "ambientocclusion": false,
+  "parent": "minecraft:block/cocoa_stage2",
+  "textures": {
+    "cocoa": "westerosblocks:block/cocoa/cocoa_stage2"
+  }
+}
