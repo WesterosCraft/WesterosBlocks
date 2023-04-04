@@ -7,8 +7,11 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 
 import net.minecraft.world.level.block.Block;
+
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
     
@@ -23,16 +26,18 @@ public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
     	int stcnt = def.states.size();
     	// For each state
     	for (int stidx = 0; stidx < stcnt; stidx++) {
-    		WesterosBlockStateRecord st = def.states.get(stidx);
-        	String n = (st.stateID == null) ? "base" : st.stateID;
+    		WesterosBlockStateRecord sr = def.states.get(stidx);
+    		boolean justBase = sr.stateID == null;
+    		Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+    		String fname = justBase ? "base" : sr.stateID;
 	        // For each direction
 	        for (int rotation = 0; rotation < 16; rotation++) {
 		        // Loop over the random sets we've got
-		        for (int setidx = 0; setidx < st.getRandomTextureSetCount(); setidx++) {
+		        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 		        	Variant var = new Variant();
-		        	var.model = modelFileName(n + modRot[rotation % 4], setidx);
+		        	var.model = modelFileName(fname + modRot[rotation % 4], setidx);
 		        	var.y = 90 * (((rotation + 1) % 16) / 4);
-		        	so.addVariant("rotation=" + rotation, var, null);
+		        	so.addVariant("rotation=" + rotation, var, stateIDs);
 		        }
 	        }
     	}
@@ -41,21 +46,21 @@ public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
     @Override
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
-        // Export if not set to custom model
-        if (!def.isCustomModel()) {
-        	int stcnt = def.states.size();
-        	for (int stidx = 0; stidx < stcnt; stidx++) {
-        		WesterosBlockStateRecord st = def.states.get(stidx);
-	            // Loop over the random sets we've got for base model (and for each 22 degree model
-	            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-	            	String n = (st.stateID == null) ? "base" : st.stateID;
-	            	doCuboidModel(getModelName(n + modRot[0], setidx), st.isTinted(), setidx, null, st, stidx);
-	            	doCuboidModel(getModelName(n + modRot[1], setidx), st.isTinted(), setidx, -22.5F, st, stidx);
-	            	doCuboidModel(getModelName(n + modRot[2], setidx), st.isTinted(), setidx, -45F, st, stidx);
-	            	doCuboidModel(getModelName(n + modRot[3], setidx), st.isTinted(), setidx, 22.5F, st, stidx);
-	            }
-        	}
-        }
+    	int stcnt = def.states.size();
+    	for (int stidx = 0; stidx < stcnt; stidx++) {
+    		WesterosBlockStateRecord sr = def.states.get(stidx);
+            // Export if not set to custom model
+    		if (sr.isCustomModel()) continue;
+    		boolean justBase = sr.stateID == null;
+    		String fname = justBase ? "base" : sr.stateID;
+            // Loop over the random sets we've got for base model (and for each 22 degree model
+            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+            	doCuboidModel(getModelName(fname + modRot[0], setidx), sr.isTinted(), setidx, null, sr, stidx);
+            	doCuboidModel(getModelName(fname + modRot[1], setidx), sr.isTinted(), setidx, -22.5F, sr, stidx);
+            	doCuboidModel(getModelName(fname + modRot[2], setidx), sr.isTinted(), setidx, -45F, sr, stidx);
+            	doCuboidModel(getModelName(fname + modRot[3], setidx), sr.isTinted(), setidx, 22.5F, sr, stidx);
+            }
+    	}
         // Build simple item model that refers to block model
         ModelObject mo = new ModelObject();
     	String n = (def.states.get(0).stateID == null) ? "base" : def.states.get(0).stateID;

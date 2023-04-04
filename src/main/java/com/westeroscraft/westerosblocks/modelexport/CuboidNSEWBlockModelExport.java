@@ -7,8 +7,11 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 
 import net.minecraft.world.level.block.Block;
+
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
     
@@ -21,32 +24,34 @@ public class CuboidNSEWBlockModelExport extends CuboidBlockModelExport {
         StateObject so = new StateObject();        
     	for (WesterosBlockStateRecord sr : def.states) {
     		boolean justBase = sr.stateID == null;
+    		Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+    		String fname = justBase ? "base" : sr.stateID;
 	        // Loop over the random sets we've got
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(justBase ? "base" : sr.stateID, setidx);
+	        	var.model = modelFileName(fname, setidx);
 	        	var.y = 270;
-	        	so.addVariant("facing=north", var, null);
+	        	so.addVariant("facing=north", var, stateIDs);
 	        }
 	        //
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(justBase ? "base" : sr.stateID, setidx);
-	        	so.addVariant("facing=east", var, null);
+	        	var.model = modelFileName(fname, setidx);
+	        	so.addVariant("facing=east", var, stateIDs);
 	        }
 	        //
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(justBase ? "base" : sr.stateID, setidx);
+	        	var.model = modelFileName(fname, setidx);
 	        	var.y = 90;
-	        	so.addVariant("facing=south", var, null);
+	        	so.addVariant("facing=south", var, stateIDs);
 	        }
 	        //
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(justBase ? "base" : sr.stateID, setidx);
+	        	var.model = modelFileName(fname, setidx);
 	        	var.y = 180;
-	        	so.addVariant("facing=west", var, null);
+	        	so.addVariant("facing=west", var, stateIDs);
 	        }
     	}
         this.writeBlockStateFile(def.blockName, so);

@@ -2,8 +2,10 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
@@ -21,19 +23,21 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
         StateObject so = new StateObject();
     	for (WesterosBlockStateRecord sr : def.states) {
     		boolean justBase = sr.stateID == null;
+    		Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+    		String fname = justBase ? "base" : sr.stateID;
 	        // Loop over the random sets we've got
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	// East is base model
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(justBase ? "base" : sr.stateID, setidx);
-	        	so.addVariant("facing=east", var, null);
+	        	var.model = modelFileName(fname, setidx);
+	        	so.addVariant("facing=east", var, stateIDs);
 	        }
 	        // North is 90 degree rotate
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
-	        	var.model = modelFileName(justBase ? "base" : sr.stateID, setidx);
+	        	var.model = modelFileName(fname, setidx);
 	        	var.y = 90;
-	        	so.addVariant("facing=north", var, null);
+	        	so.addVariant("facing=north", var, stateIDs);
 	        }
     	}
         this.writeBlockStateFile(def.blockName, so);
