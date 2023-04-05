@@ -105,27 +105,32 @@ public class CuboidNSEWStackBlockModelExport extends CuboidBlockModelExport {
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
         	var.model = modelFileName("top", setidx, se.isCustomModel());        
-        	var.y = 270;
+        	int rot = (270 + se.rotYOffset) % 360;
+        	if (rot > 0) var.y = rot;
         	so.addVariant("facing=north,half=upper", var, null);
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
         	var.model = modelFileName("top", setidx, se.isCustomModel());        
+        	int rot = se.rotYOffset;
+        	if (rot > 0) var.y = rot;
         	so.addVariant("facing=east,half=upper", var, null);
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
         	var.model = modelFileName("top", setidx, se.isCustomModel());        
-        	var.y = 90;
+        	int rot = (90 + se.rotYOffset) % 360;
+        	if (rot > 0) var.y = rot;
         	so.addVariant("facing=south,half=upper", var, null);
         }
         //
         for (int setidx = 0; setidx < se.getRandomTextureSetCount(); setidx++) {
         	Variant var = new Variant();
         	var.model = modelFileName("top", setidx, se.isCustomModel());        
-        	var.y = 180;
+        	int rot = (180 + se.rotYOffset) % 360;
+        	if (rot > 0) var.y = rot;
         	so.addVariant("facing=west,half=upper", var, null);
         }
         

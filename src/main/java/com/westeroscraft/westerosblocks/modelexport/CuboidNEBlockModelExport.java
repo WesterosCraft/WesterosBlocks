@@ -30,13 +30,16 @@ public class CuboidNEBlockModelExport extends CuboidBlockModelExport {
 	        	// East is base model
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
+            	int rot = sr.rotYOffset;
+            	if (rot > 0) var.y = rot;
 	        	so.addVariant("facing=east", var, stateIDs);
 	        }
 	        // North is 90 degree rotate
 	        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 	        	Variant var = new Variant();
 	        	var.model = modelFileName(fname, setidx, sr.isCustomModel());
-	        	var.y = 90;
+            	int rot = (90 + sr.rotYOffset) % 360;
+            	if (rot > 0) var.y = rot;
 	        	so.addVariant("facing=north", var, stateIDs);
 	        }
     	}

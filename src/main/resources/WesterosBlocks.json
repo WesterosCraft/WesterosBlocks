@@ -51043,87 +51043,46 @@
       ],
       "creativeTab": "WesterosCropsHerbs",
       "label": "Cocoa",
+      "isCustomModel": true,
       "states": [
         {
           "stateID": "age0",
-          "textures": [
-            "cocoa/cocoa_stage_0_top",
-            "cocoa/cocoa_stage_0_north",
-            "cocoa/cocoa_stage_0_south",
-            "cocoa/cocoa_stage_0_west"
-          ],
-          "cuboids": [
-            {
-              "xMin": 0.6875,
-              "xMax": 0.9375,
-              "yMin": 0.4375,
-              "yMax": 0.75,
-              "zMin": 0.375,
-              "zMax": 0.625,
-              "sideTextures": [
-                0,
-                0,
-                1,
-                2,
-                3,
-                3
-              ]
-            }
-          ]
+          "isCustomModel": true,
+          "rotYOffset": 270,
+          "boundingBox": {
+            "xMin": 0.6875,
+            "xMax": 0.9375,
+            "yMin": 0.4375,
+            "yMax": 0.75,
+            "zMin": 0.375,
+            "zMax": 0.625
+          }
         },
         {
           "stateID": "age1",
-          "textures": [
-            "cocoa/cocoa_stage_1_top",
-            "cocoa/cocoa_stage_1_north",
-            "cocoa/cocoa_stage_1_south",
-            "cocoa/cocoa_stage_1_west"
-          ],
-          "cuboids": [
-            {
-              "xMin": 0.5625,
-              "xMax": 0.9375,
-              "yMin": 0.3125,
-              "yMax": 0.75,
-              "zMin": 0.3125,
-              "zMax": 0.6875,
-              "sideTextures": [
-                0,
-                0,
-                1,
-                2,
-                3,
-                3
-              ]
-            }
-          ]
+          "isCustomModel": true,
+          "rotYOffset": 270,
+          "boundingBox": {
+            "xMin": 0.5625,
+            "xMax": 0.9375,
+            "yMin": 0.3125,
+            "yMax": 0.75,
+            "zMin": 0.3125,
+            "zMax": 0.6875
+          }
         },
         {
           "stateID": "age2",
-          "textures": [
-            "cocoa/cocoa_stage_2_top",
-            "cocoa/cocoa_stage_2_north",
-            "cocoa/cocoa_stage_2_south",
-            "cocoa/cocoa_stage_2_west"
-          ],
-          "cuboids": [
-            {
-              "xMin": 0.4375,
-              "xMax": 0.9375,
-              "yMin": 0.1875,
-              "yMax": 0.75,
-              "zMin": 0.25,
-              "zMax": 0.75,
-              "sideTextures": [
-                0,
-                0,
-                1,
-                2,
-                3,
-                3
-              ]
-            }
-          ]
+          "isCustomModel": true,
+          "rotYOffset": 270,
+          "boundingBox": {
+            "xMin": 0.4375,
+            "xMax": 0.9375,
+            "yMin": 0.1875,
+            "yMax": 0.75,
+            "zMin": 0.25,
+            "zMax": 0.75
+          }
         }
       ]
     },

@@ -91,7 +91,8 @@ public class CuboidBlockModelExport extends ModelExport {
 	                Variant var = new Variant();
 	                var.model = modelFileName(fname, setidx, sr.isCustomModel());
 	            	var.weight = set.weight;
-	            	if (i > 0) var.y = 90*i;
+	            	int rot = (90*i + sr.rotYOffset) % 360;
+	            	if (rot > 0) var.y = rot;
 	    			so.addVariant("", var, stateIDs);	// Add our variant                	
 	            }
 	        }

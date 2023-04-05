@@ -36,7 +36,8 @@ public class Cuboid16WayBlockModelExport extends CuboidBlockModelExport {
 		        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
 		        	Variant var = new Variant();
 		        	var.model = modelFileName(fname + modRot[rotation % 4], setidx, sr.isCustomModel());
-		        	var.y = 90 * (((rotation + 1) % 16) / 4);
+	            	int rot = (90 * (((rotation + 1) % 16) / 4) + sr.rotYOffset) % 360;
+	            	if (rot > 0) var.y = rot;
 		        	so.addVariant("rotation=" + rotation, var, stateIDs);
 		        }
 	        }
