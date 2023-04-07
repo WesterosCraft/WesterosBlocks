@@ -41177,8 +41177,7 @@
       "label": "Fancy Red Carpet",
       "textures": [
         "carpet/fancy_red_carpet"
-      ],
-      "legacyBlockID": "minecraft:golden_rail"
+      ]
     },
     {
       "blockName": "fancy_blue_carpet",
@@ -41189,8 +41188,7 @@
       "label": "Fancy Blue Carpet",
       "textures": [
         "carpet/fancy_blue_carpet"
-      ],
-      "legacyBlockID": "minecraft:golden_rail[powered=true]"
+      ]
     },
     {
       "blockName": "oldtown_cobblestone_stairs",
@@ -51140,8 +51138,7 @@
         "yMax": 0.031,
         "zMin": 0,
         "zMax": 1
-      },
-      "legacyBlockID": "minecraft:waterlily"
+      }
     },
     {
       "blockName": "orange_slate_stairs",
