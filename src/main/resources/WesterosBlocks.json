@@ -12199,7 +12199,7 @@
       "textures": [
         "halfdoor_block_0/shutters_spruce"
       ],
-      "legacyBlockID": "halfdoor_block_0:0"
+      "legacyBlockID": "halfdoor_block_0"
     },
     {
       "blockName": "oak_window_shutters",
@@ -12213,7 +12213,7 @@
       "textures": [
         "halfdoor_block_0/garden_door"
       ],
-      "legacyBlockID": "halfdoor_block_1:0"
+      "legacyBlockID": "halfdoor_block_1"
     },
     {
       "blockName": "green_lannisport_window_shutters",
@@ -12227,7 +12227,7 @@
       "textures": [
         "halfdoor_block_0/shutters_lannisport"
       ],
-      "legacyBlockID": "halfdoor_block_2:0"
+      "legacyBlockID": "halfdoor_block_2"
     },
     {
       "blockName": "vertical_net",
@@ -20612,7 +20612,7 @@
         "door_block_0/door_spruce_top",
         "door_block_0/door_spruce_bottom"
       ],
-      "legacyBlockID": "door_spruce:0"
+      "legacyBlockID": "door_spruce"
     },
     {
       "blockName": "terracotta_sand_layer",
@@ -20698,7 +20698,7 @@
       "textures": [
         "halfdoor_block_0/shutters_dorne"
       ],
-      "legacyBlockID": "halfdoor_block_3:0"
+      "legacyBlockID": "halfdoor_block_3"
     },
     {
       "blockName": "reach_blue_window_shutters",
@@ -20712,7 +20712,7 @@
       "textures": [
         "halfdoor_block_0/shutters_reach"
       ],
-      "legacyBlockID": "halfdoor_block_4:0"
+      "legacyBlockID": "halfdoor_block_4"
     },
     {
       "blockName": "stormlands_dark_cobblestone_stairs",
@@ -25706,7 +25706,7 @@
         "door_block_0/door_weirwood_top",
         "door_block_0/door_weirwood_bottom"
       ],
-      "legacyBlockID": "door_weirwood:0"
+      "legacyBlockID": "door_weirwood"
     },
     {
       "blockName": "tavern_small",
@@ -28772,7 +28772,7 @@
         "sandstone_red/coarse",
         "sandstone_red/coarse"
       ],
-      "legacyBlockID": "door_secret_sandstone_red:0"
+      "legacyBlockID": "door_secret_sandstone_red"
     },
     {
       "blockName": "alyssas_tears_mist_one",
@@ -34626,7 +34626,7 @@
         "door_block_0/door_locked_oak_top",
         "door_block_0/door_locked_oak_bottom"
       ],
-      "legacyBlockID": "door_locked_oak:0"
+      "legacyBlockID": "door_locked_oak"
     },
     {
       "blockName": "locked_spruce_door",
@@ -34642,7 +34642,7 @@
         "door_block_0/door_locked_spruce_top",
         "door_block_0/door_locked_spruce_bottom"
       ],
-      "legacyBlockID": "door_locked_spruce:0"
+      "legacyBlockID": "door_locked_spruce"
     },
     {
       "blockName": "locked_birch_door",
@@ -34658,7 +34658,7 @@
         "door_block_0/door_locked_birch_top",
         "door_block_0/door_locked_birch_bottom"
       ],
-      "legacyBlockID": "door_locked_birch:0"
+      "legacyBlockID": "door_locked_birch"
     },
     {
       "blockName": "locked_jungle_door",
@@ -34674,7 +34674,7 @@
         "door_block_0/door_locked_jungle_top",
         "door_block_0/door_locked_jungle_bottom"
       ],
-      "legacyBlockID": "door_locked_jungle:0"
+      "legacyBlockID": "door_locked_jungle"
     },
     {
       "blockName": "locked_dark_northern_wood_door",
@@ -34690,7 +34690,7 @@
         "door_block_0/door_locked_northern_top",
         "door_block_0/door_locked_northern_bottom"
       ],
-      "legacyBlockID": "door_locked_northern_wood:0"
+      "legacyBlockID": "door_locked_northern_wood"
     },
     {
       "blockName": "stormlands_brick_stairs",
