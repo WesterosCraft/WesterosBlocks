@@ -117,6 +117,7 @@ public class RailBlockModelExport extends ModelExport {
         		oldstate.put(k, oldmap.get(k));    			
     		}
     	}
+    	newstate.put("waterlogged", "false");
     	for (String railshape : RAILSHAPE) {
     		oldstate.put("shape", railshape);
     		newstate.put("shape", railshape);
