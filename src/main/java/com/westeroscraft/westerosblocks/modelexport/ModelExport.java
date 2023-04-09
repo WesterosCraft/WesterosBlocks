@@ -184,7 +184,7 @@ public abstract class ModelExport {
     public static void writeWorldConverterFile(Path dest) throws IOException {
         FileWriter fos = null;
         try {
-            fos = new FileWriter(new File(dest.toFile(), "blocks_1.12-1.16__westerosblocks.txt"));
+            fos = new FileWriter(new File(dest.toFile(), "blocks_1.12-1.18__westerosblocks.txt"));
             for (String line : wcList) {
             	fos.write(line + "\r\n");
             }
