@@ -1125,6 +1125,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     		return mval;
     	}
     	String[] tok = legacyBlockID.split(":");
+    	if ((tok.length == 2) && tok[0].equals("minecraft")) return null;
     	if (tok.length >= 2) {
     		String v = tok[tok.length - 1];
     		if (v.indexOf('=') < 0) {
