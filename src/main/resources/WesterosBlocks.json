@@ -357,7 +357,7 @@
       "modelBlockName": "oxidized_iron_block",
       "creativeTab": "WesterosMetal",
       "label": "Oxidized Iron Stairs",
-      "legacyBlockID": "metal_block_0_stair_1:0"
+      "legacyBlockID": "metal_block_0_stair_1"
     },
     {
       "blockName": "closed_barrel",
@@ -10296,7 +10296,7 @@
       "modelBlockName": "vivid_sandstone",
       "creativeTab": "WesterosSandstone",
       "label": "Vivid Sandstone Stairs",
-      "legacyBlockID": "sandstone_block_0_stair_0:0"
+      "legacyBlockID": "sandstone_block_0_stair_0"
     },
     {
       "blockName": "monochrome_sandstone_stairs",
@@ -10304,7 +10304,7 @@
       "modelBlockName": "monochrome_sandstone",
       "creativeTab": "WesterosSandstone",
       "label": "Monochrome Sandstone Stairs",
-      "legacyBlockID": "sandstone_block_0_stair_1:0"
+      "legacyBlockID": "sandstone_block_0_stair_1"
     },
     {
       "blockName": "terracotta_stairs",
@@ -10312,7 +10312,7 @@
       "modelBlockName": "terracotta",
       "creativeTab": "WesterosSandstone",
       "label": "Terracotta Stairs",
-      "legacyBlockID": "sandstone_block_0_stair_2:0"
+      "legacyBlockID": "sandstone_block_0_stair_2"
     },
     {
       "blockName": "vivid_dark_sandstone_stairs",
@@ -10320,7 +10320,7 @@
       "modelBlockName": "vivid_dark_sandstone",
       "creativeTab": "WesterosSandstone",
       "label": "Vivid Dark Sandstone Stairs",
-      "legacyBlockID": "sandstone_block_0_stair_3:0"
+      "legacyBlockID": "sandstone_block_0_stair_3"
     },
     {
       "blockName": "monochrome_dark_sandstone_stairs",
@@ -10328,7 +10328,7 @@
       "modelBlockName": "monochrome_dark_sandstone",
       "creativeTab": "WesterosSandstone",
       "label": "Monochrome Dark Sandstone Stairs",
-      "legacyBlockID": "sandstone_block_0_stair_4:0"
+      "legacyBlockID": "sandstone_block_0_stair_4"
     },
     {
       "blockName": "large_brick_sandstone_stairs",
@@ -10336,7 +10336,7 @@
       "modelBlockName": "large_brick_sandstone",
       "creativeTab": "WesterosSandstone",
       "label": "Large Brick Sandstone Stairs",
-      "legacyBlockID": "sandstone_block_0_stair_5:0"
+      "legacyBlockID": "sandstone_block_0_stair_5"
     },
     {
       "blockName": "dark_brown_sandstone_stairs",
@@ -10344,7 +10344,7 @@
       "modelBlockName": "dark_brown_sandstone",
       "creativeTab": "WesterosSandstone",
       "label": "Dark Brown Sandstone Stairs",
-      "legacyBlockID": "sandstone_block_0_stair_8:0"
+      "legacyBlockID": "sandstone_block_0_stair_8"
     },
     {
       "blockName": "small_stone_brick_stairs",
@@ -10353,7 +10353,7 @@
       "creativeTab": "WesterosBrick",
       "colorMult": "textures/colormap/smallstonebrick",
       "label": "Small Stone Brick Stairs",
-      "legacyBlockID": "stone_block_1_stair_0:0"
+      "legacyBlockID": "stone_block_1_stair_0"
     },
     {
       "blockName": "light_grey_brick_stairs",
@@ -10362,7 +10362,7 @@
       "creativeTab": "WesterosBrick",
       "colorMult": "textures/colormap/lightgreystone",
       "label": "Light Grey Brick Stairs",
-      "legacyBlockID": "stone_block_1_stair_1:0"
+      "legacyBlockID": "stone_block_1_stair_1"
     },
     {
       "blockName": "vivid_sandstone_slab",
@@ -11529,7 +11529,7 @@
       "modelBlockName": "black_slate",
       "creativeTab": "WesterosRoofing",
       "label": "Black Slate Stairs",
-      "legacyBlockID": "stone_block_1_stair_2:0"
+      "legacyBlockID": "stone_block_1_stair_2"
     },
     {
       "blockName": "blue_slate_stairs",
@@ -11537,7 +11537,7 @@
       "modelBlockName": "blue_slate",
       "creativeTab": "WesterosRoofing",
       "label": "Blue Slate Stairs",
-      "legacyBlockID": "stone_block_1_stair_3:0"
+      "legacyBlockID": "stone_block_1_stair_3"
     },
     {
       "blockName": "red_slate_stairs",
@@ -11545,7 +11545,7 @@
       "modelBlockName": "red_slate",
       "creativeTab": "WesterosRoofing",
       "label": "Red Slate Stairs",
-      "legacyBlockID": "stone_block_1_stair_4:0"
+      "legacyBlockID": "stone_block_1_stair_4"
     },
     {
       "blockName": "cobblestone_fence",
@@ -17730,7 +17730,7 @@
       "modelBlockName": "thatch_light_fur",
       "creativeTab": "WesterosMisc",
       "label": "Thatch Light Fur Stairs",
-      "legacyBlockID": "thatch_stair_0:0"
+      "legacyBlockID": "thatch_stair_0"
     },
     {
       "blockName": "thatch_dark_fur_stairs",
@@ -17740,7 +17740,7 @@
       "modelBlockName": "thatch_dark_fur",
       "creativeTab": "WesterosMisc",
       "label": "Thatch Dark Fur Stairs",
-      "legacyBlockID": "thatch_stair_1:0"
+      "legacyBlockID": "thatch_stair_1"
     },
     {
       "blockName": "stone_slab_stairs",
@@ -17748,7 +17748,7 @@
       "modelBlockName": "6sided_stone_slab",
       "creativeTab": "WesterosCobbleStone",
       "label": "Stone Slab Stairs",
-      "legacyBlockID": "stone_slab_stair_0:0"
+      "legacyBlockID": "stone_slab_stair_0"
     },
     {
       "blockName": "mossy_spruce_log",
@@ -18010,7 +18010,7 @@
       "modelBlockName": "redorange_slate",
       "creativeTab": "WesterosRoofing",
       "label": "Red-Orange Slate Stairs",
-      "legacyBlockID": "orange_brick_stair_0:0"
+      "legacyBlockID": "orange_brick_stair_0"
     },
     {
       "blockName": "spruce_log_rope",
@@ -18839,7 +18839,7 @@
       "modelBlockName": "oxidized_bronze_block",
       "creativeTab": "WesterosMetal",
       "label": "Oxidized Bronze Stairs",
-      "legacyBlockID": "metal_block_0_stair_2:0"
+      "legacyBlockID": "metal_block_0_stair_2"
     },
     {
       "blockName": "oxidized_steel_stairs",
@@ -18847,7 +18847,7 @@
       "modelBlockName": "oxidized_steel_block",
       "creativeTab": "WesterosMetal",
       "label": "Oxidized Steel Stairs",
-      "legacyBlockID": "metal_block_0_stair_3:0"
+      "legacyBlockID": "metal_block_0_stair_3"
     },
     {
       "blockName": "gold_brick_stairs",
@@ -18855,7 +18855,7 @@
       "modelBlockName": "gold_brick",
       "creativeTab": "WesterosBrick",
       "label": "Gold Brick Stairs",
-      "legacyBlockID": "metal_block_0_stair_4:0"
+      "legacyBlockID": "metal_block_0_stair_4"
     },
     {
       "blockName": "bronze_stairs",
@@ -18863,7 +18863,7 @@
       "modelBlockName": "bronze_slab",
       "creativeTab": "WesterosMetal",
       "label": "Bronze Stairs",
-      "legacyBlockID": "metal_block_0_stair_5:0"
+      "legacyBlockID": "metal_block_0_stair_5"
     },
     {
       "blockName": "iron_stairs",
@@ -18871,7 +18871,7 @@
       "modelBlockName": "iron_slab",
       "creativeTab": "WesterosMetal",
       "label": "Iron Stairs",
-      "legacyBlockID": "metal_block_0_stair_6:0"
+      "legacyBlockID": "metal_block_0_stair_6"
     },
     {
       "blockName": "steel_stairs",
@@ -18879,7 +18879,7 @@
       "modelBlockName": "steel_block",
       "creativeTab": "WesterosMetal",
       "label": "Steel Stairs",
-      "legacyBlockID": "metal_block_0_stair_7:0"
+      "legacyBlockID": "metal_block_0_stair_7"
     },
     {
       "blockName": "snow_stairs",
@@ -18888,7 +18888,7 @@
       "creativeTab": "WesterosWaterAir",
       "ambientOcclusion": false,
       "label": "Snow Stairs",
-      "legacyBlockID": "snow_stairs:0"
+      "legacyBlockID": "snow_stairs"
     },
     {
       "blockName": "dark_northern_wood_stairs",
@@ -18896,7 +18896,7 @@
       "modelBlockName": "dark_northern_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "Dark Northern Wood Stairs",
-      "legacyBlockID": "northern_wood_stairs:0"
+      "legacyBlockID": "northern_wood_stairs"
     },
     {
       "blockName": "dark_northern_wood_slab",
@@ -18970,7 +18970,7 @@
       "modelBlockName": "minecraft:bedrock",
       "creativeTab": "WesterosCobbleStone",
       "label": "Bedrock Stairs",
-      "legacyBlockID": "bedrock_stairs:0"
+      "legacyBlockID": "bedrock_stairs"
     },
     {
       "blockName": "dark_cobblestone_stairs",
@@ -18979,7 +18979,7 @@
       "creativeTab": "WesterosCobbleStone",
       "label": "Dark Cobblestone Stairs",
       "colorMult": "textures/colormap/darkcobble",
-      "legacyBlockID": "cobble_dark_stairs:0"
+      "legacyBlockID": "cobble_dark_stairs"
     },
     {
       "blockName": "packed_snow",
@@ -19945,7 +19945,7 @@
       "modelBlockName": "brown_slate",
       "creativeTab": "WesterosRoofing",
       "label": "Brown Slate Stairs",
-      "legacyBlockID": "stone_block_3_stair_0:0"
+      "legacyBlockID": "stone_block_3_stair_0"
     },
     {
       "blockName": "green_slate_stairs",
@@ -19953,7 +19953,7 @@
       "modelBlockName": "green_slate",
       "creativeTab": "WesterosRoofing",
       "label": "Green Slate Stairs",
-      "legacyBlockID": "stone_block_3_stair_1:0"
+      "legacyBlockID": "stone_block_3_stair_1"
     },
     {
       "blockName": "black_slate_fence",
@@ -20277,7 +20277,7 @@
       "modelBlockName": "reach_light_brick",
       "creativeTab": "WesterosBrick",
       "label": "Reach Light Brick Stairs",
-      "legacyBlockID": "stone_block_3_stair_2:0"
+      "legacyBlockID": "stone_block_3_stair_2"
     },
     {
       "blockName": "white_wool_slab",
@@ -20720,7 +20720,7 @@
       "modelBlockName": "stormlands_dark_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Stormlands Dark Cobblestone Stairs",
-      "legacyBlockID": "stone_block_3_stair_3:0"
+      "legacyBlockID": "stone_block_3_stair_3"
     },
     {
       "blockName": "palm_tree_log",
@@ -21465,7 +21465,7 @@
       "modelBlockName": "dorne_dull_terracotta",
       "creativeTab": "WesterosSandstone",
       "label": "Dorne Dull Terracotta Stairs",
-      "legacyBlockID": "stone_block_3_stair_4:0"
+      "legacyBlockID": "stone_block_3_stair_4"
     },
     {
       "blockName": "dorne_light_terracotta_stairs",
@@ -21473,7 +21473,7 @@
       "modelBlockName": "dorne_light_terracotta",
       "creativeTab": "WesterosSandstone",
       "label": "Dorne Light Terracotta Stairs",
-      "legacyBlockID": "stone_block_3_stair_5:0"
+      "legacyBlockID": "stone_block_3_stair_5"
     },
     {
       "blockName": "dorne_dark_sandstone_stairs",
@@ -21481,7 +21481,7 @@
       "modelBlockName": "dorne_dark_sandstone",
       "creativeTab": "WesterosSandstone",
       "label": "Dorne Dark Sandstone Stairs",
-      "legacyBlockID": "stone_block_3_stair_6:0"
+      "legacyBlockID": "stone_block_3_stair_6"
     },
     {
       "blockName": "dorne_dull_terracotta_hopper",
@@ -24129,7 +24129,7 @@
       "modelBlockName": "casterly_rock_crimson_plaster",
       "creativeTab": "WesterosMarblePlaster",
       "label": "Casterly Rock Crimson Plaster Stairs",
-      "legacyBlockID": "stone_block_4_stair_0:0"
+      "legacyBlockID": "stone_block_4_stair_0"
     },
     {
       "blockName": "winterfell_stone_ladder",
@@ -25332,7 +25332,7 @@
       "modelBlockName": "red_sandstone_slab",
       "creativeTab": "WesterosSandstone",
       "label": "Red Sandstone Stairs",
-      "legacyBlockID": "stone_block_4_stair_1:0"
+      "legacyBlockID": "stone_block_4_stair_1"
     },
     {
       "blockName": "rope_pulley",
@@ -25691,7 +25691,7 @@
       "modelBlockName": "dark_red_brick",
       "creativeTab": "WesterosBrick",
       "label": "Dark Red Brick Stairs",
-      "legacyBlockID": "stone_block_4_stair_2:0"
+      "legacyBlockID": "stone_block_4_stair_2"
     },
     {
       "blockName": "eyrie_weirwood_door",
@@ -27516,7 +27516,7 @@
       "modelBlockName": "kl_dun_brick",
       "creativeTab": "WesterosCobbleStone",
       "label": "KL Dun Brick Stairs",
-      "legacyBlockID": "stone_block_5_stair_0:0"
+      "legacyBlockID": "stone_block_5_stair_0"
     },
     {
       "blockName": "sept_crystal_medium",
@@ -28756,7 +28756,7 @@
       "modelBlockName": "iron_throne_blade_block",
       "creativeTab": "WesterosMisc",
       "label": "Iron Throne Blade Stairs",
-      "legacyBlockID": "metal_block_0_stair_8:0"
+      "legacyBlockID": "metal_block_0_stair_8"
     },
     {
       "blockName": "red_keep_secret_door",
@@ -32338,7 +32338,7 @@
       "modelBlockName": "winterfell_granite",
       "creativeTab": "WesterosCobbleStone",
       "label": "Winterfell Granite Stairs",
-      "legacyBlockID": "stone_block_4_stair_3:0"
+      "legacyBlockID": "stone_block_4_stair_3"
     },
     {
       "blockName": "white_cobblestone_stairs",
@@ -32346,7 +32346,7 @@
       "modelBlockName": "white_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "label": "White Cobblestone Stairs",
-      "legacyBlockID": "stone_block_5_stair_1:0"
+      "legacyBlockID": "stone_block_5_stair_1"
     },
     {
       "blockName": "basalt_brick_stairs",
@@ -32354,7 +32354,7 @@
       "modelBlockName": "basalt_brick",
       "creativeTab": "WesterosBrick",
       "label": "Basalt Brick Stairs",
-      "legacyBlockID": "stone_block_5_stair_2:0"
+      "legacyBlockID": "stone_block_5_stair_2"
     },
     {
       "blockName": "mances_camp_common_tent_1",
@@ -34386,7 +34386,7 @@
       "modelBlockName": "reach_brick",
       "creativeTab": "WesterosBrick",
       "label": "Reach Brick Stairs",
-      "legacyBlockID": "stone_block_3_stair_7:0"
+      "legacyBlockID": "stone_block_3_stair_7"
     },
     {
       "blockName": "reach_brick_fence",
@@ -34698,7 +34698,7 @@
       "modelBlockName": "stormlands_brick",
       "creativeTab": "WesterosBrick",
       "label": "Stormlands Brick Stairs",
-      "legacyBlockID": "stone_block_3_stair_8:0"
+      "legacyBlockID": "stone_block_3_stair_8"
     },
     {
       "blockName": "stormlands_large_brick_stairs",
@@ -34706,7 +34706,7 @@
       "modelBlockName": "stormlands_large_brick",
       "creativeTab": "WesterosBrick",
       "label": "Stormlands Large Brick Stairs",
-      "legacyBlockID": "stone_block_2_stair_4:0"
+      "legacyBlockID": "stone_block_2_stair_4"
     },
     {
       "blockName": "falling_water_block_one_old",
@@ -36587,7 +36587,7 @@
       "modelBlockName": "stormlands_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Stormlands Cobblestone Stairs",
-      "legacyBlockID": "stone_block_3_stair_9:0"
+      "legacyBlockID": "stone_block_3_stair_9"
     },
     {
       "blockName": "basalt_cobblestone",
@@ -37887,7 +37887,7 @@
       "modelBlockName": "basalt_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Basalt Cobblestone Stairs",
-      "legacyBlockID": "stone_block_3_stair_10:0"
+      "legacyBlockID": "stone_block_3_stair_10"
     },
     {
       "blockName": "oak_vertical_planks",
@@ -38835,7 +38835,7 @@
       "modelBlockName": "lannisport_light_brick",
       "creativeTab": "WesterosBrick",
       "label": "Lannisport Light Brick Stairs",
-      "legacyBlockID": "stone_block_2_stair_0:0"
+      "legacyBlockID": "stone_block_2_stair_0"
     },
     {
       "blockName": "oldtown_brick_stairs",
@@ -38843,7 +38843,7 @@
       "modelBlockName": "oldtown_brick",
       "creativeTab": "WesterosBrick",
       "label": "Oldtown Brick Stairs",
-      "legacyBlockID": "stone_block_9_stair_0:0"
+      "legacyBlockID": "stone_block_9_stair_0"
     },
     {
       "blockName": "arbor_brick_stairs",
@@ -38851,7 +38851,7 @@
       "modelBlockName": "arbor_brick",
       "creativeTab": "WesterosBrick",
       "label": "Arbor Brick Stairs",
-      "legacyBlockID": "stone_block_9_stair_1:0"
+      "legacyBlockID": "stone_block_9_stair_1"
     },
     {
       "blockName": "arbor_cobblestone_stairs",
@@ -38859,7 +38859,7 @@
       "modelBlockName": "arbor_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Arbor Cobblestone Stairs",
-      "legacyBlockID": "stone_block_9_stair_2:0"
+      "legacyBlockID": "stone_block_9_stair_2"
     },
     {
       "blockName": "oldtown_brick_wall",
@@ -40121,7 +40121,7 @@
       "modelBlockName": "starry_sept_marble",
       "creativeTab": "WesterosMarblePlaster",
       "label": "Starry Sept Marble Stairs",
-      "legacyBlockID": "stone_block_9_stair_3:0"
+      "legacyBlockID": "stone_block_9_stair_3"
     },
     {
       "blockName": "citadel_green_marble_stairs",
@@ -40129,7 +40129,7 @@
       "modelBlockName": "citadel_green_marble",
       "creativeTab": "WesterosMarblePlaster",
       "label": "Citadel Green Marble Stairs",
-      "legacyBlockID": "stone_block_9_stair_4:0"
+      "legacyBlockID": "stone_block_9_stair_4"
     },
     {
       "blockName": "valyrian_stone_stairs",
@@ -40137,7 +40137,7 @@
       "modelBlockName": "valyrian_stone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Valyrian Stone Stairs",
-      "legacyBlockID": "stone_valyrian_stairs:0"
+      "legacyBlockID": "stone_valyrian_stairs"
     },
     {
       "blockName": "valyrian_stone_slab",
@@ -41196,7 +41196,7 @@
       "modelBlockName": "oldtown_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Oldtown Cobblestone Stairs",
-      "legacyBlockID": "stone_block_9_stair_5:0"
+      "legacyBlockID": "stone_block_9_stair_5"
     },
     {
       "blockName": "mances_camp_common_tent_stairs",
@@ -41204,7 +41204,7 @@
       "modelBlockName": "mances_camp_common_tent_2",
       "creativeTab": "WesterosClothFibers",
       "label": "Mance's Camp Common Tent Stairs",
-      "legacyBlockID": "cuboid_block_7_stairs_0:0"
+      "legacyBlockID": "cuboid_block_7_stairs_0"
     },
     {
       "blockName": "mances_camp_mances_tent_stairs",
@@ -41212,7 +41212,7 @@
       "modelBlockName": "mances_camp_mances_tent",
       "creativeTab": "WesterosClothFibers",
       "label": "Mance's Camp Mance's Tent Stairs",
-      "legacyBlockID": "cuboid_block_7_stairs_1:0"
+      "legacyBlockID": "cuboid_block_7_stairs_1"
     },
     {
       "blockName": "reach_cobblestone_stairs",
@@ -41220,7 +41220,7 @@
       "modelBlockName": "reach_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Reach Cobblestone Stairs",
-      "legacyBlockID": "stone_block_3_stair_11:0"
+      "legacyBlockID": "stone_block_3_stair_11"
     },
     {
       "blockName": "grey_wood_stairs",
@@ -41228,7 +41228,7 @@
       "modelBlockName": "grey_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "Grey Wood Stairs",
-      "legacyBlockID": "grey_wood_stairs:0"
+      "legacyBlockID": "grey_wood_stairs"
     },
     {
       "blockName": "white_wood_stairs",
@@ -41236,7 +41236,7 @@
       "modelBlockName": "white_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "White Wood Stairs",
-      "legacyBlockID": "white_wood_stairs:0"
+      "legacyBlockID": "white_wood_stairs"
     },
     {
       "blockName": "grey_wood_half_door",
@@ -41380,7 +41380,7 @@
       "creativeTab": "WesterosCobbleStone",
       "label": "River Cobble Stairs",
       "colorMult": "textures/colormap/lightgreystone",
-      "legacyBlockID": "river_cobble_stairs:0"
+      "legacyBlockID": "river_cobble_stairs"
     },
     {
       "blockName": "small_smooth_stone_brick_stairs",
@@ -41389,7 +41389,7 @@
       "creativeTab": "WesterosBrick",
       "label": "Small Smooth Stone Brick Stairs",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
-      "legacyBlockID": "stone_block_3_stair_12:0"
+      "legacyBlockID": "stone_block_3_stair_12"
     },
     {
       "blockName": "terrainset_eastern_islands_stairs",
@@ -41398,7 +41398,7 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Eastern Islands Stairs",
       "colorMult": "textures/colormap/easternisland",
-      "legacyBlockID": "terrainset_stair_0:0",
+      "legacyBlockID": "terrainset_stair_0",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_eastern_island_overlay"
       ]
@@ -41409,7 +41409,7 @@
       "modelBlockName": "terrainset_iron_islands",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Iron Islands Stairs",
-      "legacyBlockID": "terrainset_stair_1:0",
+      "legacyBlockID": "terrainset_stair_1",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_iron_islands_overlay"
       ]
@@ -41420,7 +41420,7 @@
       "modelBlockName": "terrainset_mountains_of_the_moon",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Mountains of the Moon Stairs",
-      "legacyBlockID": "terrainset_stair_2:0",
+      "legacyBlockID": "terrainset_stair_2",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_eyrie_overlay"
       ]
@@ -41431,7 +41431,7 @@
       "modelBlockName": "terrainset_the_north",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet The North Stairs",
-      "legacyBlockID": "terrainset_stair_3:0"
+      "legacyBlockID": "terrainset_stair_3"
     },
     {
       "blockName": "terrainset_ocean_rocks_stairs",
@@ -41439,7 +41439,7 @@
       "modelBlockName": "terrainset_ocean_rocks",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Ocean Rocks Stairs",
-      "legacyBlockID": "terrainset_stair_4:0",
+      "legacyBlockID": "terrainset_stair_4",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
       ]
@@ -41450,7 +41450,7 @@
       "modelBlockName": "terrainset_red_mountains",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Stairs",
-      "legacyBlockID": "terrainset_stair_5:0",
+      "legacyBlockID": "terrainset_stair_5",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_red_mountains_overlay"
       ]
@@ -41461,7 +41461,7 @@
       "modelBlockName": "terrainset_river_rocks",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet River Rocks Stairs",
-      "legacyBlockID": "terrainset_stair_6:0",
+      "legacyBlockID": "terrainset_stair_6",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_river_rocks_overlay"
       ]
@@ -41472,7 +41472,7 @@
       "modelBlockName": "terrainset_westerlands",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Stairs",
-      "legacyBlockID": "terrainset_stair_7:0",
+      "legacyBlockID": "terrainset_stair_7",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_westerlands_overlay"
       ]
@@ -41483,7 +41483,7 @@
       "modelBlockName": "terrainset_arbor_dorne",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Arbor Dorne Stairs",
-      "legacyBlockID": "terrainset_stair_8:0"
+      "legacyBlockID": "terrainset_stair_8"
     },
     {
       "blockName": "terrainset_stormlands_stairs",
@@ -41491,7 +41491,7 @@
       "modelBlockName": "terrainset_stormlands",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Stormlands Stairs",
-      "legacyBlockID": "terrainset_stair_9:0",
+      "legacyBlockID": "terrainset_stair_9",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_stormlands_overlay"
       ]
@@ -41502,7 +41502,7 @@
       "modelBlockName": "terrainset_reach",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Stairs",
-      "legacyBlockID": "terrainset_stair_10:0",
+      "legacyBlockID": "terrainset_stair_10",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_reach_overlay"
       ]
@@ -47426,7 +47426,7 @@
       "modelBlockName": "terrainset_red_mountains_alt",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains Alt Stairs",
-      "legacyBlockID": "terrainset_stair_11:0",
+      "legacyBlockID": "terrainset_stair_11",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_red_mountains_alt_overlay"
       ]
@@ -47437,7 +47437,7 @@
       "modelBlockName": "terrainset_westerlands_alt",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Alt Stairs",
-      "legacyBlockID": "terrainset_stair_12:0",
+      "legacyBlockID": "terrainset_stair_12",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_westerlands_overlay"
       ]
@@ -47448,7 +47448,7 @@
       "modelBlockName": "terrainset_arbor_dorne_alt",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Arbor Dorne Alt Stairs",
-      "legacyBlockID": "terrainset_stair_13:0"
+      "legacyBlockID": "terrainset_stair_13"
     },
     {
       "blockName": "terrainset_stormlands_alt_stairs",
@@ -47456,7 +47456,7 @@
       "modelBlockName": "terrainset_stormlands_alt",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Stormlands Alt Stairs",
-      "legacyBlockID": "terrainset_stair_14:0"
+      "legacyBlockID": "terrainset_stair_14"
     },
     {
       "blockName": "terrainset_reach_alt_stairs",
@@ -47464,7 +47464,7 @@
       "modelBlockName": "terrainset_reach_alt",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Alt Stairs",
-      "legacyBlockID": "terrainset_stair_15:0",
+      "legacyBlockID": "terrainset_stair_15",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_reach_alt_overlay"
       ]
@@ -47475,7 +47475,7 @@
       "modelBlockName": "terrainset_grey_sandstone",
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Grey Sandstone Stairs",
-      "legacyBlockID": "terrainset_stair_16:0"
+      "legacyBlockID": "terrainset_stair_16"
     },
     {
       "blockName": "flowstone_stairs",
@@ -47483,7 +47483,7 @@
       "modelBlockName": "flowstone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Flowstone Stairs",
-      "legacyBlockID": "terrainset_stair_17:0",
+      "legacyBlockID": "terrainset_stair_17",
       "overlayTextures": [ 
       	"terrainset_overlays/flowstone_overlay"
       ]
@@ -50048,7 +50048,7 @@
       "modelBlockName": "pink_sandstone",
       "creativeTab": "WesterosSandstone",
       "label": "Pink Sandstone Stairs",
-      "legacyBlockID": "stone_block_5_stair_3:0"
+      "legacyBlockID": "stone_block_5_stair_3"
     },
     {
       "blockName": "sandy_pink_large_brick_stairs",
@@ -50056,7 +50056,7 @@
       "modelBlockName": "sandy_pink_large_brick",
       "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Large Brick Stairs",
-      "legacyBlockID": "stone_block_5_stair_4:0"
+      "legacyBlockID": "stone_block_5_stair_4"
     },
     {
       "blockName": "sandy_pink_cobble_stairs",
@@ -50064,7 +50064,7 @@
       "modelBlockName": "sandy_pink_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "label": "Sandy Pink Cobble Stairs",
-      "legacyBlockID": "stone_block_5_stair_5:0"
+      "legacyBlockID": "stone_block_5_stair_5"
     },
     {
       "blockName": "sandy_pink_light_brick_stairs",
@@ -50072,7 +50072,7 @@
       "modelBlockName": "sandy_pink_light_brick",
       "creativeTab": "WesterosBrick",
       "label": "Sandy Pink Light Brick Stairs",
-      "legacyBlockID": "stone_block_5_stair_6:0"
+      "legacyBlockID": "stone_block_5_stair_6"
     },
     {
       "blockName": "sandy_pink_light_brick_slab",
@@ -50141,7 +50141,7 @@
       "modelBlockName": "volcanic_rock",
       "creativeTab": "WesterosCobbleStone",
       "label": "Volcanic Rock Stairs",
-      "legacyBlockID": "terrainset_stair_18:0",
+      "legacyBlockID": "terrainset_stair_18",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_volcanic_rock_overlay"
       ]
@@ -50152,7 +50152,7 @@
       "modelBlockName": "cushion_moss",
       "creativeTab": "WesterosMisc",
       "label": "Cushion Moss Stairs",
-      "legacyBlockID": "moss_block_0_stair_0:0",
+      "legacyBlockID": "moss_block_0_stair_0",
       "overlayTextures": [ 
          "terrainset_overlays/cushion_moss_overlay"
       ]
@@ -51146,7 +51146,7 @@
       "modelBlockName": "orange_slate",
       "creativeTab": "WesterosRoofing",
       "label": "Orange Slate Stairs",
-      "legacyBlockID": "stone_block_9_stair_6:0"
+      "legacyBlockID": "stone_block_9_stair_6"
     },
     {
       "blockName": "iron_wall",
@@ -51989,7 +51989,7 @@
       "creativeTab": "WesterosBrick",
       "colorMult": "textures/colormap/brick",
       "label": "Small Orange Brick Stairs",
-      "legacyBlockID": "stone_block_7_stair_0:0"
+      "legacyBlockID": "stone_block_7_stair_0"
     },
     {
       "blockName": "arbor_small_brick_stairs",
@@ -51997,7 +51997,7 @@
       "modelBlockName": "arbor_small_brick",
       "creativeTab": "WesterosBrick",
       "label": "Arbor Small Brick Stairs",
-      "legacyBlockID": "stone_block_9_stair_7:0"
+      "legacyBlockID": "stone_block_9_stair_7"
     },
     {
       "blockName": "gold_slab",
@@ -52039,7 +52039,7 @@
       "modelBlockName": "gold_slab",
       "creativeTab": "WesterosMetal",
       "label": "Gold Stairs",
-      "legacyBlockID": "metal_block_0_stair_9:0"
+      "legacyBlockID": "metal_block_0_stair_9"
     },
     {
       "blockName": "gold_road_marker",
@@ -52730,7 +52730,7 @@
       "modelBlockName": "pale_pink_light_brick",
       "creativeTab": "WesterosBrick",
       "label": "Pale Pink Light Brick Stairs",
-      "legacyBlockID": "stone_block_11_stair_0:0"
+      "legacyBlockID": "stone_block_11_stair_0"
     },
     {
       "blockName": "pale_pink_faint_light_brick_stairs",
@@ -52738,7 +52738,7 @@
       "modelBlockName": "pale_pink_faint_light_brick",
       "creativeTab": "WesterosBrick",
       "label": "Pale Pink Faint Light Brick Stairs",
-      "legacyBlockID": "stone_block_11_stair_1:0"
+      "legacyBlockID": "stone_block_11_stair_1"
     },
     {
       "blockName": "faint_light_grey_brick_stairs",
@@ -52747,7 +52747,7 @@
       "creativeTab": "WesterosBrick",
       "colorMult": "textures/colormap/faintlightgreystone",
       "label": "Faint Light Grey Brick Stairs",
-      "legacyBlockID": "stone_block_2_stair_1:0"
+      "legacyBlockID": "stone_block_2_stair_1"
     },
     {
       "blockName": "northern_cobble_stairs",
@@ -52756,7 +52756,7 @@
       "creativeTab": "WesterosCobbleStone",
       "colorMult": "textures/colormap/darkcobble",
       "label": "Northern Cobble Stairs",
-      "legacyBlockID": "stone_block_2_stair_2:0"
+      "legacyBlockID": "stone_block_2_stair_2"
     },
     {
       "blockName": "icy_northern_cobble_stairs",
@@ -52765,7 +52765,7 @@
       "creativeTab": "WesterosCobbleStone",
       "colorMult": "textures/colormap/darkcobble",
       "label": "Icy Northern Cobble Stairs",
-      "legacyBlockID": "stone_block_2_stair_3:0"
+      "legacyBlockID": "stone_block_2_stair_3"
     },
     {
       "blockName": "basalt_brick_arrow_slit_window",
@@ -55350,7 +55350,7 @@
       "modelBlockName": "snowy_thatch_light_fur",
       "creativeTab": "WesterosGrassDirt",
       "label": "Snowy Thatch Light Fur Stairs",
-      "legacyBlockID": "thatch_stair_2:0"
+      "legacyBlockID": "thatch_stair_2"
     },
     {
       "blockName": "snowy_thatch_dark_fur_stairs",
@@ -55360,7 +55360,7 @@
       "modelBlockName": "snowy_thatch_dark_fur",
       "creativeTab": "WesterosGrassDirt",
       "label": "Snowy Thatch Dark Fur Stairs",
-      "legacyBlockID": "thatch_stair_3:0"
+      "legacyBlockID": "thatch_stair_3"
     },
     {
       "blockName": "snowy_thatch_light_fur2",
@@ -55443,7 +55443,7 @@
       "modelBlockName": "white_granite",
       "creativeTab": "WesterosCobbleStone",
       "label": "White Granite Stairs",
-      "legacyBlockID": "stone_block_5_stair_7:0"
+      "legacyBlockID": "stone_block_5_stair_7"
     },
     {
       "blockName": "small_white_brick_stairs",
@@ -55451,7 +55451,7 @@
       "modelBlockName": "small_white_brick",
       "creativeTab": "WesterosBrick",
       "label": "Small White Brick Stairs",
-      "legacyBlockID": "stone_block_3_stair_13:0"
+      "legacyBlockID": "stone_block_3_stair_13"
     },
     {
       "blockName": "quartz_hopper",
@@ -56793,7 +56793,7 @@
       "modelBlockName": "light_oldtown_brick",
       "creativeTab": "WesterosBrick",
       "label": "Light Oldtown Brick Stairs",
-      "legacyBlockID": "stone_block_9_stair_8:0"
+      "legacyBlockID": "stone_block_9_stair_8"
     },
     {
       "blockName": "ice_slab",
@@ -56825,7 +56825,7 @@
       "modelBlockName": "ice_slab",
       "creativeTab": "WesterosWaterAir",
       "label": "Ice Stairs",
-      "legacyBlockID": "ice_stairs:0"
+      "legacyBlockID": "ice_stairs"
     },
     {
       "blockName": "ice_wall",
@@ -57017,7 +57017,7 @@
       "label": "Stacked Bones Stairs",
       "type": "no-uvlock",
       "isCustomModel": true,
-      "legacyBlockID": "stone_block_12_stair_0:0"
+      "legacyBlockID": "stone_block_12_stair_0"
     },
     {
       "blockName": "piled_bones_stairs",
@@ -57025,7 +57025,7 @@
       "modelBlockName": "piled_bones",
       "creativeTab": "WesterosMisc",
       "label": "Piled Bones Stairs",
-      "legacyBlockID": "stone_block_12_stair_1:0"
+      "legacyBlockID": "stone_block_12_stair_1"
     },
     {
       "blockName": "stacked_bones_slab",
@@ -58198,7 +58198,7 @@
       "modelBlockName": "black_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "Black Wood Stairs",
-      "legacyBlockID": "black_wood_stairs:0"
+      "legacyBlockID": "black_wood_stairs"
     },
     {
       "blockName": "blue_wood_stairs",
@@ -58206,7 +58206,7 @@
       "modelBlockName": "blue_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "Blue Wood Stairs",
-      "legacyBlockID": "blue_wood_stairs:0"
+      "legacyBlockID": "blue_wood_stairs"
     },
     {
       "blockName": "green_wood_stairs",
@@ -58214,7 +58214,7 @@
       "modelBlockName": "green_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "Green Wood Stairs",
-      "legacyBlockID": "green_wood_stairs:0"
+      "legacyBlockID": "green_wood_stairs"
     },
     {
       "blockName": "red_wood_stairs",
@@ -58222,7 +58222,7 @@
       "modelBlockName": "red_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "Red Wood Stairs",
-      "legacyBlockID": "red_wood_stairs:0"
+      "legacyBlockID": "red_wood_stairs"
     },
     {
       "blockName": "yellow_wood_stairs",
@@ -58230,7 +58230,7 @@
       "modelBlockName": "yellow_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "Yellow Wood Stairs",
-      "legacyBlockID": "yellow_wood_stairs:0"
+      "legacyBlockID": "yellow_wood_stairs"
     },
     {
       "blockName": "purple_wood_stairs",
@@ -58238,7 +58238,7 @@
       "modelBlockName": "purple_wood",
       "creativeTab": "WesterosWoodPlanks",
       "label": "Purple Wood Stairs",
-      "legacyBlockID": "purple_wood_stairs:0"
+      "legacyBlockID": "purple_wood_stairs"
     },
     {
       "blockName": "black_wood_wall",
