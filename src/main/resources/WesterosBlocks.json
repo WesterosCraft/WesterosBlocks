@@ -55363,7 +55363,7 @@
     },
     {
       "blockName": "snowy_thatch_light_fur2",
-      "blockType": "solid",
+      "blockType": "cuboid-nsew",
       "hardness": 5,
       "stepSound": "plant",
       "material": "cloth",
@@ -55386,7 +55386,7 @@
     },
     {
       "blockName": "snowy_thatch_dark_fur2",
-      "blockType": "solid",
+      "blockType": "cuboid-nsew",
       "hardness": 5,
       "stepSound": "plant",
       "material": "cloth",
