@@ -4983,7 +4983,7 @@
       "textures": [
         "torch_block_0/candle_on"
       ],
-      "legacyBlockID": "torch_block_0:0"
+      "legacyBlockID": "torch_block_0"
     },
     {
       "blockName": "apple_fruit_leaves",
@@ -6650,7 +6650,7 @@
       "textures": [
         "sand_block_0/sand_desert"
       ],
-      "legacyBlockID": "sand_layer_0:0"
+      "legacyBlockID": "sand_layer_0"
     },
     {
       "blockName": "bench_butcher_knives",
@@ -17819,7 +17819,7 @@
         "rail_block_0/rope",
         "rail_block_0/rope_turned"
       ],
-      "legacyBlockID": "rail_block_0:0"
+      "legacyBlockID": "rail_block_0"
     },
     {
       "blockName": "horizontal_net",
@@ -17831,7 +17831,7 @@
         "rail_block_0/net_large",
         "rail_block_0/net_large_turned"
       ],
-      "legacyBlockID": "rope_block_1:0"
+      "legacyBlockID": "rope_block_1"
     },
     {
       "blockName": "nights_watch_bed",
@@ -18990,7 +18990,7 @@
         "rail_block_0/packed_snow",
         "rail_block_0/packed_snow_turned"
       ],
-      "legacyBlockID": "rope_block_2:0"
+      "legacyBlockID": "rope_block_2"
     },
     {
       "blockName": "vivid_sandstone_wall",
@@ -19389,7 +19389,7 @@
         "rail_block_0/chain",
         "rail_block_0/chain_turned"
       ],
-      "legacyBlockID": "rail_block_1:0"
+      "legacyBlockID": "rail_block_1"
     },
     {
       "blockName": "brown_slate",
@@ -20625,7 +20625,7 @@
       "textures": [
         "sand_block_0/sand_terracotta"
       ],
-      "legacyBlockID": "sand_layer_1:0"
+      "legacyBlockID": "sand_layer_1"
     },
     {
       "blockName": "pinkorange_sand_layer",
@@ -20639,7 +20639,7 @@
       "textures": [
         "sand_block_0/sand_pinkorange"
       ],
-      "legacyBlockID": "sand_layer_2:0"
+      "legacyBlockID": "sand_layer_2"
     },
     {
       "blockName": "red_sand_layer",
@@ -20653,7 +20653,7 @@
       "textures": [
         "sand_block_0/sand_red"
       ],
-      "legacyBlockID": "sand_layer_3:0"
+      "legacyBlockID": "sand_layer_3"
     },
     {
       "blockName": "dorne_carved_stone_window",
@@ -34012,7 +34012,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_4:0"
+      "legacyBlockID": "sand_layer_4"
     },
     {
       "blockName": "pebbles_wet_iron_islands_layer",
@@ -34040,7 +34040,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_5:0"
+      "legacyBlockID": "sand_layer_5"
     },
     {
       "blockName": "pebbles_wet_mountains_of_the_moon_layer",
@@ -34068,7 +34068,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_6:0"
+      "legacyBlockID": "sand_layer_6"
     },
     {
       "blockName": "pebbles_wet_north_layer",
@@ -34096,7 +34096,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_7:0"
+      "legacyBlockID": "sand_layer_7"
     },
     {
       "blockName": "pebbles_wet_ocean_layer",
@@ -34124,7 +34124,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_8:0"
+      "legacyBlockID": "sand_layer_8"
     },
     {
       "blockName": "pebbles_wet_red_mountains_layer",
@@ -34152,7 +34152,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_9:0"
+      "legacyBlockID": "sand_layer_9"
     },
     {
       "blockName": "pebbles_wet_river_layer",
@@ -34180,7 +34180,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_10:0"
+      "legacyBlockID": "sand_layer_10"
     },
     {
       "blockName": "pebbles_wet_westerlands_layer",
@@ -34208,7 +34208,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_11:0"
+      "legacyBlockID": "sand_layer_11"
     },
     {
       "blockName": "pebbles_wet_arbor_dorne_layer",
@@ -34236,7 +34236,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_12:0"
+      "legacyBlockID": "sand_layer_12"
     },
     {
       "blockName": "pebbles_wet_stormlands_layer",
@@ -34264,7 +34264,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_13:0"
+      "legacyBlockID": "sand_layer_13"
     },
     {
       "blockName": "pebbles_wet_reach_layer",
@@ -34292,7 +34292,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_14:0"
+      "legacyBlockID": "sand_layer_14"
     },
     {
       "blockName": "small_orange_bricks",
@@ -36095,7 +36095,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_15:0"
+      "legacyBlockID": "sand_layer_15"
     },
     {
       "blockName": "pebbles_dry_iron_islands_layer",
@@ -36123,7 +36123,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_16:0"
+      "legacyBlockID": "sand_layer_16"
     },
     {
       "blockName": "pebbles_dry_mountains_of_the_moon_layer",
@@ -36151,7 +36151,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_17:0"
+      "legacyBlockID": "sand_layer_17"
     },
     {
       "blockName": "pebbles_dry_north_layer",
@@ -36179,7 +36179,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_18:0"
+      "legacyBlockID": "sand_layer_18"
     },
     {
       "blockName": "pebbles_dry_ocean_layer",
@@ -36207,7 +36207,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_19:0"
+      "legacyBlockID": "sand_layer_19"
     },
     {
       "blockName": "pebbles_dry_red_mountains_layer",
@@ -36235,7 +36235,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_20:0"
+      "legacyBlockID": "sand_layer_20"
     },
     {
       "blockName": "pebbles_dry_river_layer",
@@ -36263,7 +36263,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_21:0"
+      "legacyBlockID": "sand_layer_21"
     },
     {
       "blockName": "pebbles_dry_westerlands_layer",
@@ -36291,7 +36291,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_22:0"
+      "legacyBlockID": "sand_layer_22"
     },
     {
       "blockName": "pebbles_dry_arbor_dorne_layer",
@@ -36319,7 +36319,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_23:0"
+      "legacyBlockID": "sand_layer_23"
     },
     {
       "blockName": "pebbles_dry_stormlands_layer",
@@ -36347,7 +36347,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_24:0"
+      "legacyBlockID": "sand_layer_24"
     },
     {
       "blockName": "pebbles_dry_reach_layer",
@@ -36375,7 +36375,7 @@
           ]
         }
       ],
-      "legacyBlockID": "sand_layer_25:0"
+      "legacyBlockID": "sand_layer_25"
     },
     {
       "blockName": "wet_sand_layer",
@@ -36389,7 +36389,7 @@
       "textures": [
         "sand_block_0/sand_wet"
       ],
-      "legacyBlockID": "sand_layer_26:0"
+      "legacyBlockID": "sand_layer_26"
     },
     {
       "blockName": "sand_stones_layer",
@@ -36404,7 +36404,7 @@
       "textures": [
         "sand_block_0/sand_stones"
       ],
-      "legacyBlockID": "sand_layer_27:0"
+      "legacyBlockID": "sand_layer_27"
     },
     {
       "blockName": "wet_sand_stones_layer",
@@ -36418,7 +36418,7 @@
       "textures": [
         "sand_block_0/sand_wet_stones"
       ],
-      "legacyBlockID": "sand_layer_28:0"
+      "legacyBlockID": "sand_layer_28"
     },
     {
       "blockName": "stormlands_cobblestone_slab",
@@ -49255,7 +49255,7 @@
       "textures": [
         "rail_block_0/cover_oak"
       ],
-      "legacyBlockID": "rope_block_3:0"
+      "legacyBlockID": "rope_block_3"
     },
     {
       "blockName": "spruce_cover",
@@ -49266,7 +49266,7 @@
       "textures": [
         "rail_block_0/cover_spruce"
       ],
-      "legacyBlockID": "rope_block_4:0"
+      "legacyBlockID": "rope_block_4"
     },
     {
       "blockName": "birch_cover",
@@ -49277,7 +49277,7 @@
       "textures": [
         "rail_block_0/cover_birch"
       ],
-      "legacyBlockID": "rope_block_5:0"
+      "legacyBlockID": "rope_block_5"
     },
     {
       "blockName": "jungle_cover",
@@ -49288,7 +49288,7 @@
       "textures": [
         "rail_block_0/cover_jungle"
       ],
-      "legacyBlockID": "rope_block_6:0"
+      "legacyBlockID": "rope_block_6"
     },
     {
       "blockName": "northern_wood_cover",
@@ -49299,7 +49299,7 @@
       "textures": [
         "rail_block_0/cover_northern"
       ],
-      "legacyBlockID": "rope_block_7:0"
+      "legacyBlockID": "rope_block_7"
     },
     {
       "blockName": "path_dirt",
