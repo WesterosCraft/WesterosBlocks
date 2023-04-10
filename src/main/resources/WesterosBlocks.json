@@ -23292,7 +23292,7 @@
       "textures": [
         "plaster/greyish_white_plaster"
       ],
-      "legacyBlockID": "minecraft:stained_hardened_clay[color=lightblue]"
+      "legacyBlockID": "minecraft:stained_hardened_clay[color=light_blue]"
     },
     {
       "blockName": "small_smooth_stone_brick_blue_plaster",
@@ -33513,8 +33513,7 @@
         "yMax": 0.9375,
         "zMin": 0.0625,
         "zMax": 0.9375
-      },
-      "legacyBlockID": "test_block:2"
+      }
     },
     {
       "blockName": "cabbage",
