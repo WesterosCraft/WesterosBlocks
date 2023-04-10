@@ -496,8 +496,7 @@
         "sandstone_pillar/top",
         "sandstone_pillar/top",
         "sandstone_pillar/side"
-      ],
-      "legacyBlockID": "minecraft:quartz_pillar"
+      ]
     },
     {
       "blockName": "marble_pillar",
