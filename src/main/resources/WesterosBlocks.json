@@ -58676,8 +58676,7 @@
             2
           ]
         }
-      ],
-      "legacyBlockID": "minecraft:end_portal_frame[eye=true]"
+      ]
     },
     {
       "blockName": "large_clay_pot_empty",
@@ -58715,8 +58714,7 @@
             0
           ]
         }
-      ],
-      "legacyBlockID": "minecraft:end_portal_frame[eye=false]"
+      ]
     }
   ]
 }
