@@ -32518,7 +32518,7 @@
       "textures": [
         "trapdoor_block_0/kings_landing_manhole"
       ],
-      "legacyBlockID": "trapdoor_block_0:0"
+      "legacyBlockID": "trapdoor_block_0"
     },
     {
       "blockName": "brazier",
@@ -33415,7 +33415,7 @@
       "textures": [
         "trapdoor_block_0/white_harbor_manhole"
       ],
-      "legacyBlockID": "trapdoor_block_1:0"
+      "legacyBlockID": "trapdoor_block_1"
     },
     {
       "blockName": "test_block",
@@ -40611,7 +40611,7 @@
       "textures": [
         "trapdoor_block_0/oldtown_manhole"
       ],
-      "legacyBlockID": "trapdoor_block_2:0"
+      "legacyBlockID": "trapdoor_block_2"
     },
     {
       "blockName": "dreadfort_skeleton_sconce_left",
@@ -55382,6 +55382,14 @@
         "snowy_thatch_light_fur/side1",
         "snowy_thatch_light_fur/side1"
       ],
+      "cuboids": [ {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      } ],
       "legacyBlockID": "cuboid_block_11:0"
     },
     {
@@ -55405,6 +55413,14 @@
         "snowy_thatch_dark_fur/side1",
         "snowy_thatch_dark_fur/side1"
       ],
+      "cuboids": [ {
+        "xMin": 0,
+        "xMax": 1,
+        "yMin": 0,
+        "yMax": 1,
+        "zMin": 0,
+        "zMax": 1
+      } ],
       "legacyBlockID": "cuboid_block_11:1"
     },
     {
