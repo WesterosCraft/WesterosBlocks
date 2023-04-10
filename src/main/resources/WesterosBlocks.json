@@ -46667,7 +46667,7 @@
         }
       ],
       "type": "allow-unsupported,no-climb,has-down",
-      "legacyBlockID": "vine_block_0:0"
+      "legacyBlockID": "vine_block_0"
     },
     {
       "blockName": "terrainset_red_mountains_alt",
@@ -47417,7 +47417,7 @@
         "dappled_moss/dappled"
       ],
       "type": "allow-unsupported,no-climb,has-down",
-      "legacyBlockID": "vine_block_1:0"
+      "legacyBlockID": "vine_block_1"
     },
     {
       "blockName": "terrainset_red_mountains_alt_stairs",
@@ -50269,7 +50269,7 @@
         "alyssas_tears_mist/mist1"
       ],
       "type": "allow-unsupported,no-climb",
-      "legacyBlockID": "vine_block_2:0"
+      "legacyBlockID": "vine_block_2"
     },
     {
       "blockName": "falling_water_block_two",
@@ -50285,7 +50285,7 @@
         "alyssas_tears_mist/mist2"
       ],
       "type": "allow-unsupported,no-climb",
-      "legacyBlockID": "vine_block_3:0"
+      "legacyBlockID": "vine_block_3"
     },
     {
       "blockName": "falling_water_block_three",
@@ -50301,7 +50301,7 @@
         "alyssas_tears_mist/mist3"
       ],
       "type": "allow-unsupported,no-climb",
-      "legacyBlockID": "vine_block_4:0"
+      "legacyBlockID": "vine_block_4"
     },
     {
       "blockName": "falling_water_block_four",
@@ -50317,7 +50317,7 @@
         "alyssas_tears_mist/mist4"
       ],
       "type": "allow-unsupported,no-climb",
-      "legacyBlockID": "vine_block_5:0"
+      "legacyBlockID": "vine_block_5"
     },
     {
       "blockName": "ctm_vertical",
