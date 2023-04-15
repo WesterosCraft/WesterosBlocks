@@ -58,6 +58,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.RenderChunkRegion;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColors;
@@ -78,6 +79,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.BlockAndTintGetter;
@@ -500,18 +502,19 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {
-			if ((world != null) && (pos != null) && (world instanceof LevelReader)) {
-				LevelReader rdr = (LevelReader) world;
+		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {				
+			if ((world != null) && (pos != null) && (world instanceof RenderChunkRegion)) {
+				RenderChunkRegion rcr = (RenderChunkRegion) world;
+				LevelReader rdr = rcr.level;
 				int red = 0;
 				int green = 0;
 				int blue = 0;
-
+								
 				for (int xx = -1; xx <= 1; ++xx) {
 					for (int zz = -1; zz <= 1; ++zz) {
 						BlockPos bp = pos.offset(xx, 0, zz);
 						Biome biome = rdr.getBiome(bp).value();
-						int mult = getColor(biome.getTemperature(bp), biome.getDownfall());
+						int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall());
 						red += (mult & 0xFF0000) >> 16;
 						green += (mult & 0x00FF00) >> 8;
 						blue += (mult & 0x0000FF);
