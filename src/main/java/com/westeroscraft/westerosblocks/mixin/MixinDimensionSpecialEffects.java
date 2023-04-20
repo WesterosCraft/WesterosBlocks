@@ -19,8 +19,8 @@ public abstract class MixinDimensionSpecialEffects
 
 	@Inject(method = "getCloudHeight()F", at = @At("TAIL"), cancellable=true)	
 	private void doGetCloudHeight(CallbackInfoReturnable<Float> ci) {
-		if (cloudLevel == 128.0F) {
-			ci.setReturnValue(255.0F);
+		if (cloudLevel < 639.0F) {
+			ci.setReturnValue(639.0F);
 		}
 	}
 
