@@ -20,7 +20,7 @@ Object.keys(warps).forEach(warp => {
     let warpdef = warps[warp];
     let world = worldmap[warpdef.world];
     if (!world) return;
-    console.log(`\t\t${JSON.stringify(warp.toLowerCase())}: { dim: "${world}", x: ${Math.round(warpdef.x)}, y: ${Math.round(warpdef.y)}, z: ${Math.round(warpdef.z)}, time: ${Date.now()}L, xRot: ${warpdef.rotx}f, yRot: ${warpdef.roty}f }`);
+    console.log(`\t\t${JSON.stringify(warp)}: { dim: "${world}", x: ${Math.round(warpdef.x)}, y: ${Math.round(warpdef.y)}, z: ${Math.round(warpdef.z)}, time: ${Date.now()}L, xRot: ${warpdef.rotx}f, yRot: ${warpdef.roty}f }`);
 });
 console.log("\t}");
 console.log("}");
