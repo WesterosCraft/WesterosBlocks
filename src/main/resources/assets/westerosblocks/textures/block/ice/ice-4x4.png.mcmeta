@@ -3,7 +3,9 @@
     "ctm_version": 1,
     "type": "westeros_pattern_cond",
     "layer": "TRANSLUCENT",
-    "textures": ["minecraft:block/ice-4x4"],
+    "textures": [
+      "westerosblocks:block/ice/ice-4x4"
+    ],
     "extra": {
       "width": 4,
       "height": 4,

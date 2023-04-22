@@ -56827,7 +56827,7 @@
       "creativeTab": "WesterosWaterAir",
       "label": "Ice Slab",
       "textures": [
-        "translucent_block_0/ice"
+        "ice/ice"
       ],
       "legacyBlockID": "translucent_slab_block_0:0"
     },
@@ -56859,7 +56859,7 @@
       "creativeTab": "WesterosWaterAir",
       "label": "Ice Wall",
       "textures": [
-        "translucent_block_0/ice"
+        "ice/ice"
       ],
       "legacyBlockID": "translucent_wall_block_1:0"
     },
@@ -56890,7 +56890,7 @@
       "creativeTab": "WesterosWaterAir",
       "label": "Ice Fence",
       "textures": [
-        "translucent_block_0/ice"
+        "ice/ice"
       ],
       "legacyBlockID": "translucent_fence_block_1:0"
     },

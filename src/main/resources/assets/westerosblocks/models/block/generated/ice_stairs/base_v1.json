@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/translucent_block_0/ice",
-    "top": "westerosblocks:block/translucent_block_0/ice",
-    "side": "westerosblocks:block/translucent_block_0/ice",
-    "particle": "westerosblocks:block/translucent_block_0/ice"
+    "bottom": "westerosblocks:block/ice/ice",
+    "top": "westerosblocks:block/ice/ice",
+    "side": "westerosblocks:block/ice/ice",
+    "particle": "westerosblocks:block/ice/ice"
   }
 }
