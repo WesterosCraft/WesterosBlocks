@@ -1,18 +1,16 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_horizontal_cond",
+    "type": "westeros_cond",
     "layer": "SOLID",
     "textures": [
-      "minecraft:block/red_sandstone/dark_jungle_2x2"
+      "minecraft:block/red_sandstone/dark_jungle_top"
     ],
     "extra": {
-      "condWidth": 2,
-      "condHeight": 4,
+      "condWidth": 1,
+      "condHeight": 2,
       "conds": [
         {
-          "rowOut": 0,
-          "colOut": 0,
           "biomeNames": [
             "minecraft:frozen_ocean",
             "minecraft:taiga_hills",
@@ -25,15 +23,17 @@
             "minecraft:desert",
             "minecraft:desert_hills",
             "minecraft:jungle_edge"
-          ]
+          ],
+          "rowOut": 0,
+          "colOut": 0
         },
         {
-          "rowOut": 2,
-          "colOut": 0,
           "biomeNames": [
             "minecraft:jungle",
             "minecraft:jungle_hills"
-          ]
+          ],
+          "rowOut": 1,
+          "colOut": 0
         }
       ]
     }
