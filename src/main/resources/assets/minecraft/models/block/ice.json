@@ -1,6 +1,0 @@
-{
-    "parent": "westerosblocks:block/tinted/cube_all",
-    "textures": {
-        "all": "westerosblocks:block/tinted/ice"
-    }
-}
