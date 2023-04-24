@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class  WesterosBlocksCreativeTab extends CreativeModeTab {
 
-    public static final CreativeModeTab tabWesterosCobbleStone = new  WesterosBlocksCreativeTab("WesterosCobbleStone", "§fCobble and Stone", "river_cobble");
+    public static final CreativeModeTab tabWesterosCobbleStone = new  WesterosBlocksCreativeTab("WesterosCobbleStone", "§fCobble and Stone", "river_cobble"/*, CreativeModeTab.TAB_BUILDING_BLOCKS*/);
     public static final CreativeModeTab tabWesterosBrick = new  WesterosBlocksCreativeTab("WesterosBrick", "§fBrick", "sandy_pink_large_brick");
     public static final CreativeModeTab tabWesterosMarblePlaster = new  WesterosBlocksCreativeTab("WesterosMarblePlaster", "§fMarble and Plaster", "marble_pillar");
     public static final CreativeModeTab tabWesterosTimberFrame = new  WesterosBlocksCreativeTab("WesterosTimberFrame", "§fTimber Frame", "timber_oak_reach_brick_crosshatch");
@@ -47,9 +47,26 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     private String type;
     private Block itm = null;
     public  WesterosBlocksCreativeTab(String id, String label, String type) {
+    	this(id, label, type, null);
+    }
+    public  WesterosBlocksCreativeTab(String id, String label, String type, CreativeModeTab insertBefore) {
         super(id);
         this.type = type;
         WesterosBlockDef.addCreativeTab(id,  this);
+        if (insertBefore != null) {	// Tab to be inserted before?
+        	for (int i = 0; i < CreativeModeTab.TABS.length; i++) {
+        		if (CreativeModeTab.TABS[i] == insertBefore) {
+                	// We were inserted last, so shift everyone forward from index
+        			for (int j = CreativeModeTab.TABS.length - 2; j >= i; j--) {
+        				CreativeModeTab.TABS[j+1] = CreativeModeTab.TABS[j];
+        				CreativeModeTab.TABS[j+1].id = j+1;
+        			}
+        			CreativeModeTab.TABS[i] = this;
+        			CreativeModeTab.TABS[i].id = i;
+        			break;
+        		}
+        	}
+        }
         // Add to our NLS export
         ModelExport.addNLSString("itemGroup." + id, label);
     }
