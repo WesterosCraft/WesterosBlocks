@@ -38,7 +38,9 @@
         "minecraft:stone_stairs",
         "minecraft:cobblestone_slab",
         "minecraft:cobblestone_wall",
+        "minecraft:cobblestone_stairs",
         "minecraft:mossy_cobblestone",
+        "minecraft:mossy_cobblestone_wall",
         "minecraft:lever"
       ],
       "colorMult": "textures/colormap/cobblestone"
@@ -98,32 +100,24 @@
         "minecraft:lily_pad"
       ],
       "colorMult": "#FFFFFF"
+    },
+    {
+      "blockNames": [
+        "minecraft:birch_leaves"
+      ],
+      "colorMult": "textures/colormap/birch"
+    },
+    {
+      "blockNames": [
+        "minecraft:spruce_leaves"
+      ],
+      "colorMult": "textures/colormap/pine"
     }
   ],
   "menuOverrides": [
     {
       "blockNames": [
-        "minecraft:dispenser",
-        "minecraft:dropper",
-        "minecraft:infested_stone",
-        "minecraft:sponge",
-        "minecraft:lapis_block",
-        "minecraft:lapis_ore",
-        "minecraft:powered_rail",
-        "minecraft:smooth_sandstone",
-        "minecraft:obsidian",
-        "minecraft:diamond_block",
-        "minecraft:diamond_ore",
-        "minecraft:redstone_block",
-        "minecraft:soul_sand",
-        "minecraft:podzol",
-        "minecraft:granite",
-        "minecraft:podzol",
-        "minecraft:polished_granite",
-        "minecraft:diorite",
-        "minecraft:polished_diorite",
-        "minecraft:andesite",
-        "minecraft:polished_andesite"
+        "minecraft:red_sandstone_wall"
       ],
       "creativeTab": "WesterosDoNotUse"
     }
@@ -56827,7 +56821,7 @@
       "creativeTab": "WesterosWaterAir",
       "label": "Ice Slab",
       "textures": [
-        "translucent_block_0/ice"
+        "ice/ice"
       ],
       "legacyBlockID": "translucent_slab_block_0:0"
     },
@@ -56859,7 +56853,7 @@
       "creativeTab": "WesterosWaterAir",
       "label": "Ice Wall",
       "textures": [
-        "translucent_block_0/ice"
+        "ice/ice"
       ],
       "legacyBlockID": "translucent_wall_block_1:0"
     },
@@ -56890,7 +56884,7 @@
       "creativeTab": "WesterosWaterAir",
       "label": "Ice Fence",
       "textures": [
-        "translucent_block_0/ice"
+        "ice/ice"
       ],
       "legacyBlockID": "translucent_fence_block_1:0"
     },

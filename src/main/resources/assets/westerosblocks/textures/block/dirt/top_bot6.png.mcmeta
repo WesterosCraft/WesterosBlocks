@@ -10,8 +10,7 @@
           "biomeNames": [
             "minecraft:forest",
             "minecraft:flower_forest",
-            "minecraft:dark_forest",
-            "minecraft:jungle"
+            "minecraft:dark_forest"
           ],
           "rowOut": 0,
           "colOut": 0

@@ -4,7 +4,7 @@
     "type": "westeros_horizontal_cond",
     "layer": "SOLID",
     "textures": [
-      "minecraft:block/red_sandstone/dark_jungle_2x2"
+      "westerosblocks:block/sandstone_red/dark_jungle_2x2"
     ],
     "extra": {
       "condWidth": 2,
