@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/flower_pot_cross",
+  "parent": "westerosblocks:block/tinted/flower_pot_cross",
   "textures": {
     "dirt": "minecraft:block/dirt",
     "flowerpot": "minecraft:block/flower_pot",

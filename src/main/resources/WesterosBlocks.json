@@ -83,6 +83,14 @@
     },
     {
       "blockNames": [
+        "minecraft:water",
+        "minecraft:bubble_column",
+        "minecraft:water_cauldron"
+      ],
+      "colorMult": "textures/colormap/water"
+    },
+    {
+      "blockNames": [
         "minecraft:bricks",
         "minecraft:brick_slab",
         "minecraft:brick_stairs"
@@ -23087,6 +23095,7 @@
       "creativeTab": "WesterosFlowers",
       "label": "Potted Cattails",
       "type": "plant-id:cattails",
+      "colorMult": "textures/colormap/reed",
       "randomTextures": [
         {
           "textures": [
@@ -33344,7 +33353,7 @@
       "creativeTab": "WesterosGrassesShrubs",
       "label": "Potted Grass",
       "type": "plant-id:fern",
-      "colorMult": "textures/colormap/brick",
+      "colorMult": "textures/colormap/grass",
       "randomTextures": [
         {
           "textures": [
