@@ -13,7 +13,6 @@ import java.util.Set;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
 import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
@@ -79,7 +78,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.BlockAndTintGetter;
@@ -394,7 +392,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 		@OnlyIn(Dist.CLIENT)
 		public abstract int getColor(BlockState arg0, BlockAndTintGetter arg1, BlockPos arg2, int arg3);
-
+		
+		public abstract int getColor(Biome biome, double tmp, double hum);
 	}
 
 	// Fixed color multiplier (fixed)
@@ -410,6 +409,11 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		public int getColor(BlockState arg0, BlockAndTintGetter arg1, BlockPos arg2, int arg3) {
 			return fixedMult;
 		}
+		@Override
+		public int getColor(Biome biome, double tmp, double hum) {
+			return fixedMult;
+		}
+
 
 	}
 
@@ -426,6 +430,11 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			else
 				return FoliageColor.getDefaultColor();
 		}
+		@Override
+		public int getColor(Biome biome, double tmp, double hum) {
+			return biome.getFoliageColor();
+		}
+
 	}
 
 	// Grass color multiplier
@@ -441,6 +450,11 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			else
 				return GrassColor.get(0.5D, 1.0D);
 		}
+		@Override
+		public int getColor(Biome biome, double tmp, double hum) {
+			return biome.getGrassColor(tmp, hum);
+		}
+
 	}
 
 	// Water color multiplier
@@ -453,12 +467,20 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
 			return BiomeColors.getAverageWaterColor(world, pos) | 0xFF000000;
 		}
+		@Override
+		public int getColor(Biome biome, double tmp, double hum) {
+			return biome.getWaterColor();
+		}
 	}
 
 	public static class PineColorMultHandler extends ColorMultHandler {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
+			return FoliageColor.getEvergreenColor();
+		}
+		@Override
+		public int getColor(Biome biome, double tmp, double hum) {
 			return FoliageColor.getEvergreenColor();
 		}
 	}
@@ -469,12 +491,20 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
 			return FoliageColor.getBirchColor();
 		}
+		@Override
+		public int getColor(Biome biome, double tmp, double hum) {
+			return FoliageColor.getBirchColor();
+		}
 	}
 
 	public static class BasicColorMultHandler extends ColorMultHandler {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public int getColor(BlockState arg0, BlockAndTintGetter world, BlockPos pos, int arg3) {
+			return FoliageColor.getDefaultColor();
+		}
+		@Override
+		public int getColor(Biome biome, double tmp, double hum) {
 			return FoliageColor.getDefaultColor();
 		}
 	}
@@ -525,8 +555,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				return getColor(null, 0.5D, 1.0D);
 			}
 		}
-
-		private int getColor(float tmp, float hum) {
+		private int getColor(double tmp, double hum) {
 			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
 			hum = Mth.clamp(hum, 0.0F, 1.0F);
 			hum *= tmp;
@@ -536,7 +565,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}
 
 		@Override
-		@OnlyIn(Dist.CLIENT)
 		public int getColor(Biome biome, double tmp, double hum) {
 			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
 			hum = Mth.clamp(hum, 0.0F, 1.0F);
@@ -1073,6 +1101,11 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
 				.getColor(state, world, pos, txtindx), blk);
 		itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
+		// If water shader, override global one too
+		if (blockName.equals("minecraft:water") && (handler instanceof CustomColorMultHandler)) {
+			final CustomColorMultHandler cchandler = (CustomColorMultHandler) handler;	// crappy java lambda limitation workaround
+			BiomeColors.WATER_COLOR_RESOLVER = (Biome b, double tmp, double hum) -> cchandler.getColor(b, tmp, hum);
+		}
 	}
 
 	public void registerSoundEvents() {
