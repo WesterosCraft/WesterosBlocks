@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/tinted/cube_all",
   "textures": {
-    "all": "minecraft:block/iron_ore/iron_ore4"
+    "all": "westerosblocks:block/tinted/iron_ore/iron_ore4"
   }
 }

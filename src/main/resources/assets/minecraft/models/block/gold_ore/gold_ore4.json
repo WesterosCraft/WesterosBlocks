@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/tinted/cube_all",
   "textures": {
-    "all": "minecraft:block/gold_ore/gold_ore4"
+    "all": "westerosblocks:block/tinted/gold_ore/gold_ore4"
   }
 }

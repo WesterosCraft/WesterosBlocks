@@ -91,12 +91,6 @@
     },
     {
       "blockNames": [
-        "minecraft:ice"
-      ],
-      "colorMult": "textures/colormap/ice"
-    },
-    {
-      "blockNames": [
         "minecraft:lily_pad"
       ],
       "colorMult": "#FFFFFF"
