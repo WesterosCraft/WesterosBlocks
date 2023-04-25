@@ -393,7 +393,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		@OnlyIn(Dist.CLIENT)
 		public abstract int getColor(BlockState arg0, BlockAndTintGetter arg1, BlockPos arg2, int arg3);
 		
-		public abstract int getColor(Biome biome, double tmp, double hum);
+		public abstract int getColor(Biome biome, double x, double z);
 	}
 
 	// Fixed color multiplier (fixed)
@@ -410,7 +410,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			return fixedMult;
 		}
 		@Override
-		public int getColor(Biome biome, double tmp, double hum) {
+		public int getColor(Biome biome, double x, double z) {
 			return fixedMult;
 		}
 
@@ -431,7 +431,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				return FoliageColor.getDefaultColor();
 		}
 		@Override
-		public int getColor(Biome biome, double tmp, double hum) {
+		public int getColor(Biome biome, double x, double z) {
 			return biome.getFoliageColor();
 		}
 
@@ -451,8 +451,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				return GrassColor.get(0.5D, 1.0D);
 		}
 		@Override
-		public int getColor(Biome biome, double tmp, double hum) {
-			return biome.getGrassColor(tmp, hum);
+		public int getColor(Biome biome, double x, double z) {
+			return biome.getGrassColor(x, z);
 		}
 
 	}
@@ -468,7 +468,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			return BiomeColors.getAverageWaterColor(world, pos) | 0xFF000000;
 		}
 		@Override
-		public int getColor(Biome biome, double tmp, double hum) {
+		public int getColor(Biome biome, double x, double z) {
 			return biome.getWaterColor();
 		}
 	}
@@ -480,7 +480,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			return FoliageColor.getEvergreenColor();
 		}
 		@Override
-		public int getColor(Biome biome, double tmp, double hum) {
+		public int getColor(Biome biome, double x, double z) {
 			return FoliageColor.getEvergreenColor();
 		}
 	}
@@ -492,7 +492,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			return FoliageColor.getBirchColor();
 		}
 		@Override
-		public int getColor(Biome biome, double tmp, double hum) {
+		public int getColor(Biome biome, double x, double z) {
 			return FoliageColor.getBirchColor();
 		}
 	}
@@ -504,7 +504,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			return FoliageColor.getDefaultColor();
 		}
 		@Override
-		public int getColor(Biome biome, double tmp, double hum) {
+		public int getColor(Biome biome, double x, double z) {
 			return FoliageColor.getDefaultColor();
 		}
 	}
@@ -565,7 +565,9 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}
 
 		@Override
-		public int getColor(Biome biome, double tmp, double hum) {
+		public int getColor(Biome biome, double x, double z) {
+			float hum = biome.climateSettings.downfall;
+			float tmp = biome.climateSettings.temperature;
 			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
 			hum = Mth.clamp(hum, 0.0F, 1.0F);
 			hum *= tmp;
