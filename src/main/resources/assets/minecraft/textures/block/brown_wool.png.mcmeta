@@ -1,9 +1,9 @@
 {
-    "ctm":{
-        "ctm_version": 1,
-        "type":"westeros_ctm",
-        "layer":"SOLID",
-        "textures":[
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_ctm",
+    "layer": "SOLID",
+    "textures": [
       "minecraft:block/brown_wool/ctm0",
       "minecraft:block/brown_wool/ctm1",
       "minecraft:block/brown_wool/ctm2",
@@ -50,7 +50,10 @@
       "minecraft:block/brown_wool/ctm43",
       "minecraft:block/brown_wool/ctm44",
       "minecraft:block/brown_wool/ctm45",
-      "minecraft:block/brown_wool/ctm46"        ]
+      "minecraft:block/brown_wool/ctm46"
+    ],
+    "extra": {
+      "ignoreStates": true
     }
+  }
 }
-

@@ -51,6 +51,9 @@
       "minecraft:block/glass/ctm44",
       "minecraft:block/glass/ctm45",
       "minecraft:block/glass/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

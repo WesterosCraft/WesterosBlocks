@@ -51,6 +51,9 @@
       "westerosblocks:block/ornate_sandstone/ctm44",
       "westerosblocks:block/ornate_sandstone/ctm45",
       "westerosblocks:block/ornate_sandstone/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

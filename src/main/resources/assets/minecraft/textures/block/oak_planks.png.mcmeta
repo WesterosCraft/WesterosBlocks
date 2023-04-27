@@ -51,6 +51,9 @@
       "minecraft:block/oak_planks/ctm44",
       "minecraft:block/oak_planks/ctm45",
       "minecraft:block/oak_planks/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

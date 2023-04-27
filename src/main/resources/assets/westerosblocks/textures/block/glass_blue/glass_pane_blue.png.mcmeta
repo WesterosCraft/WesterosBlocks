@@ -53,6 +53,7 @@
       "westerosblocks:block/glass_blue/ctm6"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

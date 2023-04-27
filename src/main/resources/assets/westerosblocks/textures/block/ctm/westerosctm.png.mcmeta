@@ -53,6 +53,7 @@
       "westerosblocks:block/ctm/westerosctm/ctm46"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

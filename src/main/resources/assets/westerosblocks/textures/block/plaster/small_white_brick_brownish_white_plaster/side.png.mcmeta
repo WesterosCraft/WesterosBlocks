@@ -51,7 +51,9 @@
       "westerosblocks:block/plaster/small_white_brick_brownish_white_plaster/ctm26",
       "westerosblocks:block/plaster/small_white_brick_brownish_white_plaster/ctm26",
       "westerosblocks:block/plaster/small_white_brick_brownish_white_plaster/ctm2"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }
-

@@ -22,7 +22,8 @@
           "patWidth": 3,
           "patHeight": 3
         }
-      ]
+      ],
+      "ignoreStates": true
     }
   }
 }

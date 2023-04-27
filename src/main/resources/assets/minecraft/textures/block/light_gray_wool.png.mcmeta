@@ -51,6 +51,9 @@
       "minecraft:block/light_gray_wool/ctm44",
       "minecraft:block/light_gray_wool/ctm45",
       "minecraft:block/light_gray_wool/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

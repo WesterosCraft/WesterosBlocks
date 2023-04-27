@@ -12,7 +12,6 @@
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
-      
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
@@ -21,7 +20,6 @@
       "westerosblocks:block/star_chart_3x3/ctm13",
       "westerosblocks:block/star_chart_3x3/ctm14",
       "westerosblocks:block/star_chart_3x3/ctm15",
-
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
@@ -30,7 +28,6 @@
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
-      
       "westerosblocks:block/star_chart_3x3/ctm24",
       "westerosblocks:block/star_chart_3x3/ctm25",
       "westerosblocks:block/star_chart_3x3/ctm26",
@@ -39,7 +36,6 @@
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
-      
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
@@ -48,7 +44,6 @@
       "westerosblocks:block/star_chart_3x3/ctm37",
       "westerosblocks:block/star_chart_3x3/ctm38",
       "westerosblocks:block/star_chart_3x3/ctm39",
-      
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
       "westerosblocks:block/star_chart_3x3/ctm0",
@@ -58,6 +53,7 @@
       "westerosblocks:block/star_chart_3x3/ctm0"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

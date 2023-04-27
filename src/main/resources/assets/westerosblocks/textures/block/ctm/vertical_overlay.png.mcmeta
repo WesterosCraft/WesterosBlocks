@@ -2,18 +2,21 @@
   "ctm": {
     "ctm_version": 1,
     "type": "westeros_cond",
-	"layer": "CUTOUT",
-    "textures": [ "westerosblocks:block/ctm/vertical_overlay_2x2" ],
+    "layer": "CUTOUT",
+    "textures": [
+      "westerosblocks:block/ctm/vertical_overlay_2x2"
+    ],
     "extra": {
-       "condWidth": 2,
-       "condHeight": 2,
-       "conds": [
-          {
-            "type": "vertical",
-            "ctmRow": 0,
-            "ctmCol": 0
-          }
-       ]       
+      "condWidth": 2,
+      "condHeight": 2,
+      "conds": [
+        {
+          "type": "vertical",
+          "ctmRow": 0,
+          "ctmCol": 0
+        }
+      ],
+      "ignoreStates": true
     }
   }
 }

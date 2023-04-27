@@ -3,7 +3,9 @@
     "ctm_version": 1,
     "type": "westeros_cond",
     "layer": "SOLID",
-    "textures": ["minecraft:block/dirt_forest/top_bot6"],
+    "textures": [
+      "minecraft:block/dirt_forest/top_bot6"
+    ],
     "extra": {
       "conds": [
         {
@@ -15,7 +17,8 @@
           "rowOut": 0,
           "colOut": 0
         }
-      ]
+      ],
+      "ignoreStates": true
     }
   }
 }

@@ -53,6 +53,7 @@
       "westerosblocks:block/redorange_slate/ctm26"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

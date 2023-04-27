@@ -5,7 +5,8 @@
     "layer": "SOLID",
     "textures": [],
     "extra": {
-      "size": 3
+      "size": 3,
+      "ignoreStates": true
     }
   }
 }

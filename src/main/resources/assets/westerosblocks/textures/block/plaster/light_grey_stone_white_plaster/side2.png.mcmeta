@@ -1,9 +1,9 @@
 {
-    "ctm":{
-        "ctm_version": 1,
-        "type":"westeros_ctm",
-        "layer":"SOLID",
-        "textures":[        
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_ctm",
+    "layer": "SOLID",
+    "textures": [
       "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm0",
       "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm1",
       "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm2",
@@ -50,7 +50,10 @@
       "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm5",
       "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm26_2",
       "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm26_2",
-      "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm2"        ]
+      "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm2"
+    ],
+    "extra": {
+      "ignoreStates": true
     }
+  }
 }
-

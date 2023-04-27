@@ -2,9 +2,10 @@
   "ctm": {
     "ctm_version": 1,
     "type": "westeros_single_cond",
-	"layer": "CUTOUT_MIPPED",
-	"extra": {
-	   "conds": []
-	}
+    "layer": "CUTOUT_MIPPED",
+    "extra": {
+      "conds": [],
+      "ignoreStates": true
+    }
   }
 }

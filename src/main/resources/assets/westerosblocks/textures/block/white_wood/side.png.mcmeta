@@ -51,6 +51,9 @@
       "westerosblocks:block/white_wood/ctm44",
       "westerosblocks:block/white_wood/ctm45",
       "westerosblocks:block/white_wood/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

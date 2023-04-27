@@ -4,14 +4,21 @@
     "type": "westeros_cond",
     "layer": "SOLID",
     "textures": [
-    	"westerosblocks:block/coarse_red_sandstone/carved_jungle"
+      "westerosblocks:block/coarse_red_sandstone/carved_jungle"
     ],
     "extra": {
-    	"condWidth": 1,
-    	"condHeight": 1,
-    	"conds": [
-    		{ "biomeNames": [ "minecraft:jungle" ], "rowOut": 0, "colOut": 0 }
-    	]
+      "condWidth": 1,
+      "condHeight": 1,
+      "conds": [
+        {
+          "biomeNames": [
+            "minecraft:jungle"
+          ],
+          "rowOut": 0,
+          "colOut": 0
+        }
+      ],
+      "ignoreStates": true
     }
   }
 }

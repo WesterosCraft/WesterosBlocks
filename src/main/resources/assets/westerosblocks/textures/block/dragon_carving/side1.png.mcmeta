@@ -51,6 +51,9 @@
       "westerosblocks:block/dragon_carving/ctm44",
       "westerosblocks:block/dragon_carving/ctm45",
       "westerosblocks:block/dragon_carving/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

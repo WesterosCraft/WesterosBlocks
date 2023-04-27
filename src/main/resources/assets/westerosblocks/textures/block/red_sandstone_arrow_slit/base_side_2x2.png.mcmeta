@@ -4,28 +4,40 @@
     "type": "westeros_vertical_cond",
     "layer": "CUTOUT",
     "textures": [
-    	"westerosblocks:block/red_sandstone_arrow_slit/darkjungle_side_4x2"
+      "westerosblocks:block/red_sandstone_arrow_slit/darkjungle_side_4x2"
     ],
     "extra": {
       "condWidth": 2,
       "condHeight": 4,
       "conds": [
-        { "biomeNames": [ "minecraft:jungle" ], "rowOut": 2, "colOut": 0, "type": "vertical" },
-        { "biomeNames": [
-          "minecraft:frozen_ocean",
-          "minecraft:taiga_hills",
-          "minecraft:ice_spikes",
-          "minecraft:mushroom_fields",
-          "minecraft:mushroom_field_shore",
-          "minecraft:ocean",
-          "minecraft:swamp",
-          "minecraft:forest",
-          "minecraft:desert",
-          "minecraft:desert_hills",
-          "minecraft:jungle_edge"
-        ],
-            "rowOut": 0, "colOut": 0, "type": "vertical" }
-      ]
+        {
+          "biomeNames": [
+            "minecraft:jungle"
+          ],
+          "rowOut": 2,
+          "colOut": 0,
+          "type": "vertical"
+        },
+        {
+          "biomeNames": [
+            "minecraft:frozen_ocean",
+            "minecraft:taiga_hills",
+            "minecraft:ice_spikes",
+            "minecraft:mushroom_fields",
+            "minecraft:mushroom_field_shore",
+            "minecraft:ocean",
+            "minecraft:swamp",
+            "minecraft:forest",
+            "minecraft:desert",
+            "minecraft:desert_hills",
+            "minecraft:jungle_edge"
+          ],
+          "rowOut": 0,
+          "colOut": 0,
+          "type": "vertical"
+        }
+      ],
+      "ignoreStates": true
     }
   }
 }

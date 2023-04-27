@@ -51,6 +51,9 @@
       "westerosblocks:block/blood/blooddrips4",
       "westerosblocks:block/blood/blooddrips4",
       "westerosblocks:block/blood/blooddrips4"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

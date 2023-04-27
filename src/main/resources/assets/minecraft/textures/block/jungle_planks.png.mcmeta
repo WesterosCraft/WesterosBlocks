@@ -51,6 +51,9 @@
       "minecraft:block/jungle_planks/ctm44",
       "minecraft:block/jungle_planks/ctm45",
       "minecraft:block/jungle_planks/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

@@ -2,24 +2,29 @@
   "ctm": {
     "ctm_version": 1,
     "type": "westeros_cond",
-	"layer": "TRANSLUCENT",
-    "textures": [ "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay_7x54" ],
+    "layer": "TRANSLUCENT",
+    "textures": [
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay_7x54"
+    ],
     "extra": {
-       "condWidth": 7,
-       "condHeight": 54,
-       "conds": [
-          {
-            "type": "overlay",
-            "ctmRow": 12,
-            "ctmCol": 0,
-            "connect_to": [
-               { "block": "westerosblocks:terrainset_the_north" }
-            ]
-          },
-          {
-            "type": "null"
-          }
-       ]
+      "condWidth": 7,
+      "condHeight": 54,
+      "conds": [
+        {
+          "type": "overlay",
+          "ctmRow": 12,
+          "ctmCol": 0,
+          "connect_to": [
+            {
+              "block": "westerosblocks:terrainset_the_north"
+            }
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "ignoreStates": true
     }
   }
 }

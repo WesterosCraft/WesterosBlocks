@@ -51,6 +51,9 @@
       "westerosblocks:block/duckweed/ctm44",
       "westerosblocks:block/duckweed/ctm45",
       "westerosblocks:block/duckweed/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }
