@@ -41,7 +41,7 @@ function traverseDirectories(dir) {
             // Ignore proxy files and files that already contain connect_to logic
             if (!contents["animation"] && !contents?.ctm?.proxy && !contents?.ctm?.extra?.connect_to) {
 
-              contents.ctm.extra.ignoreStates = true
+              contents.ctm.extra.ignore_states = true
 
               const updatedContents = JSON.stringify(contents, null, 2);
               fs.writeFile(filePath, updatedContents, function(err) {

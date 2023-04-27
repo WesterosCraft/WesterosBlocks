@@ -566,8 +566,12 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 		@Override
 		public int getColor(Biome biome, double x, double z) {
-			float hum = biome.climateSettings.downfall;
-			float tmp = biome.climateSettings.temperature;
+			float hum = 1.0F;
+			float tmp = 0.5F;
+			if (biome != null) {
+				hum = biome.climateSettings.downfall;
+				tmp = biome.climateSettings.temperature;
+			}
 			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
 			hum = Mth.clamp(hum, 0.0F, 1.0F);
 			hum *= tmp;
