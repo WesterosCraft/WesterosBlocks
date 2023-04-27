@@ -6,6 +6,7 @@
     "layer": "TRANSLUCENT",
     "textures": [],
     "extra": {
+      "ignore_states": true
     }
   }
 }
