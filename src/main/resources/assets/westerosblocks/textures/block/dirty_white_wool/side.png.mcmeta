@@ -51,7 +51,9 @@
       "westerosblocks:block/dirty_white_wool/ctm44",
       "westerosblocks:block/dirty_white_wool/ctm45",
       "westerosblocks:block/dirty_white_wool/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }
-

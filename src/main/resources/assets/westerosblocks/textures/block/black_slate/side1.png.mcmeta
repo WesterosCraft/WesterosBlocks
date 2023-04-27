@@ -53,6 +53,7 @@
       "westerosblocks:block/black_slate/ctm26"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

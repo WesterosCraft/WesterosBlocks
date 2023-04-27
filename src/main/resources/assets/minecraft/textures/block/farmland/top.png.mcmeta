@@ -51,6 +51,9 @@
       "minecraft:block/farmland/ctm44",
       "minecraft:block/farmland/ctm45",
       "minecraft:block/farmland/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

@@ -51,6 +51,9 @@
       "westerosblocks:block/bluegreen_carved_sandstone/ctm0",
       "westerosblocks:block/bluegreen_carved_sandstone/ctm0",
       "westerosblocks:block/bluegreen_carved_sandstone/ctm0"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

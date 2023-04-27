@@ -51,6 +51,9 @@
       "minecraft:block/birch_planks/ctm44",
       "minecraft:block/birch_planks/ctm45",
       "minecraft:block/birch_planks/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

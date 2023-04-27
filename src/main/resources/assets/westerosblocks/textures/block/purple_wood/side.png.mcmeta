@@ -51,6 +51,9 @@
       "westerosblocks:block/purple_wood/ctm44",
       "westerosblocks:block/purple_wood/ctm45",
       "westerosblocks:block/purple_wood/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

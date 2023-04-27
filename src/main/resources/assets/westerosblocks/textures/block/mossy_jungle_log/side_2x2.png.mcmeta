@@ -3,9 +3,9 @@
     "ctm_version": 1,
     "type": "westeros_pillar",
     "layer": "SOLID",
-    "textures": [
-    ],
+    "textures": [],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

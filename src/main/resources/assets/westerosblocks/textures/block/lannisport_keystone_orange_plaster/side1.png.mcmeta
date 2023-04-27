@@ -3,7 +3,6 @@
     "ctm_version": 1,
     "type": "westeros_ctm",
     "layer": "SOLID",
-    
     "textures": [
       "westerosblocks:block/lannisport_keystone_orange_plaster/ctm0",
       "westerosblocks:block/lannisport_keystone_orange_plaster/ctm1",
@@ -54,6 +53,7 @@
       "westerosblocks:block/lannisport_keystone_orange_plaster/ctm2"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

@@ -51,6 +51,9 @@
       "minecraft:block/spruce_planks/ctm44",
       "minecraft:block/spruce_planks/ctm45",
       "minecraft:block/spruce_planks/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }

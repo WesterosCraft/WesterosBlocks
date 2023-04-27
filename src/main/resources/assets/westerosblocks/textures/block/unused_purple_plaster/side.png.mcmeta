@@ -53,6 +53,7 @@
       "westerosblocks:block/unused_purple_plaster/ctm2"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

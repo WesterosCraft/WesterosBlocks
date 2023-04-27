@@ -7,6 +7,7 @@
       "westerosblocks:block/mances_camp_common_tent/frost_12x4"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

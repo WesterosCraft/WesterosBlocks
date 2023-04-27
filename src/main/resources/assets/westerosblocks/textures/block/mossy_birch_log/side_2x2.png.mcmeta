@@ -4,8 +4,10 @@
     "type": "westeros_pillar",
     "layer": "SOLID",
     "textures": [
-	    "westerosblocks:block/mossy_birch_log/side_2x2"],
+      "westerosblocks:block/mossy_birch_log/side_2x2"
+    ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

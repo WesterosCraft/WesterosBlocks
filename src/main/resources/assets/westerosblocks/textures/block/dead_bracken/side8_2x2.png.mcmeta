@@ -5,6 +5,7 @@
     "layer": "CUTOUT",
     "textures": [],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

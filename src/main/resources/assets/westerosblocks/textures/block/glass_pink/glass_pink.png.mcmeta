@@ -53,6 +53,7 @@
       "westerosblocks:block/glass_pink/ctm6"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

@@ -7,23 +7,27 @@
       "westerosblocks:block/flowers/meadow_fescue/side2_north_2x2"
     ],
     "extra": {
-        "conds": [
-           { "biomeNames": [
-               "minecraft:windswept_hills",
-	            "minecraft:windswept_forest",
-	            "minecraft:windswept_gravelly_hills",
-	            "minecraft:snowy_beach",
-	            "minecraft:taiga",
-	            "minecraft:snowy_taiga",
-	            "minecraft:old_growth_pine_taiga",
-	            "minecraft:old_growth_spruce_taiga",
-	            "minecraft:snowy_plains",
-	            "minecraft:frozen_river",
-	            "minecraft:frozen_ocean",
-	            "minecraft:ice_spikes" ],
-	         "rowOut": 0, "colOut": 0 }
-	     ]
-	  }
-   }
+      "conds": [
+        {
+          "biomeNames": [
+            "minecraft:windswept_hills",
+            "minecraft:windswept_forest",
+            "minecraft:windswept_gravelly_hills",
+            "minecraft:snowy_beach",
+            "minecraft:taiga",
+            "minecraft:snowy_taiga",
+            "minecraft:old_growth_pine_taiga",
+            "minecraft:old_growth_spruce_taiga",
+            "minecraft:snowy_plains",
+            "minecraft:frozen_river",
+            "minecraft:frozen_ocean",
+            "minecraft:ice_spikes"
+          ],
+          "rowOut": 0,
+          "colOut": 0
+        }
+      ],
+      "ignoreStates": true
+    }
+  }
 }
-           

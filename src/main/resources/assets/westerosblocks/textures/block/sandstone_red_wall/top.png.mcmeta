@@ -35,7 +35,8 @@
           "rowOut": 0,
           "colOut": 0
         }
-      ]
+      ],
+      "ignoreStates": true
     }
   }
 }

@@ -51,7 +51,9 @@
       "westerosblocks:block/light_brown_wool/ctm44",
       "westerosblocks:block/light_brown_wool/ctm45",
       "westerosblocks:block/light_brown_wool/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }
-

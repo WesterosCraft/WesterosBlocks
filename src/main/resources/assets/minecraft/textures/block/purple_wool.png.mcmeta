@@ -1,9 +1,9 @@
 {
-    "ctm":{
-        "ctm_version": 1,
-        "type":"westeros_ctm",
-        "layer":"SOLID",
-        "textures":[
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_ctm",
+    "layer": "SOLID",
+    "textures": [
       "minecraft:block/purple_wool/ctm0",
       "minecraft:block/purple_wool/ctm1",
       "minecraft:block/purple_wool/ctm2",
@@ -50,7 +50,10 @@
       "minecraft:block/purple_wool/ctm43",
       "minecraft:block/purple_wool/ctm44",
       "minecraft:block/purple_wool/ctm45",
-      "minecraft:block/purple_wool/ctm46"        ]
+      "minecraft:block/purple_wool/ctm46"
+    ],
+    "extra": {
+      "ignoreStates": true
     }
+  }
 }
-

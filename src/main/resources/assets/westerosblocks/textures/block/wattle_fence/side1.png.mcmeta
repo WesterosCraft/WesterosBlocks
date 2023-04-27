@@ -53,6 +53,7 @@
       "westerosblocks:block/wattle_fence/ctm3"
     ],
     "extra": {
+      "ignoreStates": true
     }
   }
 }

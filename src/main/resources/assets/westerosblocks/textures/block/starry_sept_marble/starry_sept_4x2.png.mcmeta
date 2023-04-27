@@ -6,7 +6,8 @@
     "textures": [],
     "extra": {
       "width": 4,
-      "height": 2
+      "height": 2,
+      "ignoreStates": true
     }
   }
 }

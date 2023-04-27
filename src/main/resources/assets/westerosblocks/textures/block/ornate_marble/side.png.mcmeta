@@ -51,6 +51,9 @@
       "westerosblocks:block/ornate_marble/ctm44",
       "westerosblocks:block/ornate_marble/ctm45",
       "westerosblocks:block/ornate_marble/ctm46"
-    ]
+    ],
+    "extra": {
+      "ignoreStates": true
+    }
   }
 }
