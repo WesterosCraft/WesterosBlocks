@@ -19,7 +19,7 @@
           "type": "horizontal"
         }
       ],
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

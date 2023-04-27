@@ -53,7 +53,7 @@
       "westerosblocks:block/ornate_sandstone/ctm46"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

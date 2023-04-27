@@ -54,7 +54,7 @@
           "type": "null"
         }
       ],
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

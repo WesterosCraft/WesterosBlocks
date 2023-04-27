@@ -53,7 +53,7 @@
       "westerosblocks:block/plaster/small_smooth_stone_brick_blue_plaster/ctm2"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

@@ -7,7 +7,7 @@
     "extra": {
       "width": 5,
       "height": 3,
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

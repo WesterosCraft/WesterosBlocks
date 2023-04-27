@@ -53,7 +53,7 @@
       "westerosblocks:block/orange_slate/ctm26"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

@@ -53,7 +53,7 @@
       "westerosblocks:block/star_chart_3x3/ctm0"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

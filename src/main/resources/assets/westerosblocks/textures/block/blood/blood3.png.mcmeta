@@ -53,7 +53,7 @@
       "westerosblocks:block/blood/blooddrips3"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

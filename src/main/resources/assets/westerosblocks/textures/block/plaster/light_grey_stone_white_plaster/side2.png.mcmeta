@@ -53,7 +53,7 @@
       "westerosblocks:block/plaster/light_grey_stone_white_plaster/ctm2"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

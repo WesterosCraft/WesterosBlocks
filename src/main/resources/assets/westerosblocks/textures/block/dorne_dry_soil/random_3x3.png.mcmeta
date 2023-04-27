@@ -6,7 +6,7 @@
     "textures": [],
     "extra": {
       "size": 3,
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

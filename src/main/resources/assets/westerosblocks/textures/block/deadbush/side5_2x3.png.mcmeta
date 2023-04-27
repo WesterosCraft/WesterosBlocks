@@ -56,7 +56,7 @@
           "colOut": 2
         }
       ],
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

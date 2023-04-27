@@ -53,7 +53,7 @@
       "minecraft:block/glass/ctm46"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

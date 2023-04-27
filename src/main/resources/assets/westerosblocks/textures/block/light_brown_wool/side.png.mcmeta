@@ -53,7 +53,7 @@
       "westerosblocks:block/light_brown_wool/ctm46"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

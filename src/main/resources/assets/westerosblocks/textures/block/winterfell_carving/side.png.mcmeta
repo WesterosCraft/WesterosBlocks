@@ -53,7 +53,7 @@
       "westerosblocks:block/winterfell_carving/ctm7"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

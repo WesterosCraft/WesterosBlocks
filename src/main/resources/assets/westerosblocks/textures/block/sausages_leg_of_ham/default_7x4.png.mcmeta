@@ -124,7 +124,7 @@
           ]
         }
       ],
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

@@ -5,7 +5,7 @@
     "layer": "CUTOUT_MIPPED",
     "extra": {
       "conds": [],
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

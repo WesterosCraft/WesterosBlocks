@@ -53,7 +53,7 @@
       "westerosblocks:block/dark_northern_wood/ctm46"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

@@ -16,7 +16,7 @@
           "ctmCol": 0
         }
       ],
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

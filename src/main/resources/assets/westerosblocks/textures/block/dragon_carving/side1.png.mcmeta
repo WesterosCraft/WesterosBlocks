@@ -53,7 +53,7 @@
       "westerosblocks:block/dragon_carving/ctm46"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

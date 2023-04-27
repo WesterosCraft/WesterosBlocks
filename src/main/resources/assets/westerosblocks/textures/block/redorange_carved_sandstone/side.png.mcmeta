@@ -53,7 +53,7 @@
       "westerosblocks:block/redorange_carved_sandstone/ctm0"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

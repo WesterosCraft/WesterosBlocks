@@ -53,7 +53,7 @@
       "minecraft:block/orange_wool/ctm46"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

@@ -53,7 +53,7 @@
       "westerosblocks:block/wattle_fence_light/ctm1"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }

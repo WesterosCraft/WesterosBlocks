@@ -53,7 +53,7 @@
       "westerosblocks:block/purple_wood/ctm46"
     ],
     "extra": {
-      "ignoreStates": true
+      "ignore_states": true
     }
   }
 }
