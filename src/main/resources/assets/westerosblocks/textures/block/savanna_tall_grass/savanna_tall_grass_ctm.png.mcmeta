@@ -4,7 +4,9 @@
     "type": "westeros_vertical",
     "layer": "CUTOUT",
     "textures": [],
-    "extra": {}
+    "extra": {
+      "ignore_states": true
+    }
   },
   "animation": {
     "frames": [
