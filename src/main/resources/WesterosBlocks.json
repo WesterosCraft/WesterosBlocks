@@ -52605,6 +52605,26 @@
       "legacyBlockID": "stone_wall_block_5:7"
     },
     {
+      "blockName": "stormlands_large_brick_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBrick",
+      "label": "Stormlands Large Brick Wall",
+      "textures": [
+        "stormlands_brick_large/side"
+      ],
+      "legacyBlockID": "stone_wall_block_5:8"
+    },
+    {
       "blockName": "pale_pink_light_brick_fence",
       "blockType": "fence",
       "hardness": 5,

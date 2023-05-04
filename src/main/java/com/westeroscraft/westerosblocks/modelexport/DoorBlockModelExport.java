@@ -155,7 +155,15 @@ public class DoorBlockModelExport extends ModelExport {
         	for (String powered : BOOLEAN) {
             	oldstate.put("powered", powered);
             	newstate.put("powered", powered);
-                addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);                    		
+            	for (String facing : FACING) {
+            		oldstate.put("#facing", facing); 
+                	newstate.put("facing", facing);
+                	for (String open : BOOLEAN) {
+                    	oldstate.put("#open", open);
+                    	newstate.put("open", open);
+                        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);                    		
+                	}
+            	}
         	}
     	}
     	// lower has FACING and OPEN
