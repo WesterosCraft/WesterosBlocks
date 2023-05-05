@@ -166,6 +166,8 @@ public class DoorBlockModelExport extends ModelExport {
             	}
         	}
     	}
+    	oldstate.remove("#open");
+    	oldstate.remove("#facing");
     	// lower has FACING and OPEN
     	oldstate.put("half", "lower");
     	newstate.put("half", "lower");
