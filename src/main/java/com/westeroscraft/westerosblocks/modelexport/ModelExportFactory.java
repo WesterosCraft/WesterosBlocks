@@ -104,6 +104,9 @@ public class ModelExportFactory {
             case "flowerpot":
             	me = new FlowerPotBlockModelExport(blk, def, dest);
             	break;
+            case "fencegate":
+            	me = new FenceGateBlockModelExport(blk, def, dest);
+            	break;
         }
         return me;
     }

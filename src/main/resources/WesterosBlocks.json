@@ -45082,6 +45082,99 @@
       "legacyBlockID": "terrainset_fence_block_3:0"
     },
     {
+      "blockName": "terrainset_eastern_islands_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Eastern Islands Fence Gate",
+      "colorMult": "textures/colormap/easternisland",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_east/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_east/16"
+          ]
+        }
+      ]
+    },
+    {
       "blockName": "terrainset_iron_islands_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -45177,6 +45270,99 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:1"
     },
+    {
+      "blockName": "terrainset_iron_islands_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Iron Islands Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_iron/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_iron/16"
+          ]
+        }
+  	  ]	    
+  	},
+    
     {
       "blockName": "terrainset_mountains_of_the_moon_fence",
       "blockType": "fence",
@@ -45351,6 +45537,179 @@
       "legacyBlockID": "terrainset_fence_block_3:2"
     },
     {
+      "blockName": "terrainset_mountains_of_the_moon_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Mountains of the Moon Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_eyrie/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/16"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/21"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/22"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/23"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/24"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/25"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/26"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/27"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/28"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/29"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/30"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/31"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/32"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/33"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/34"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/35"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_eyrie/36"
+          ]
+        }
+      ]
+    },
+    
+    {
       "blockName": "terrainset_the_north_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -45443,6 +45802,99 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:3"
     },
+    {
+      "blockName": "terrainset_the_north_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet The North Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_north/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_north/16"
+          ]
+        }
+      ]
+    },
+    
     {
       "blockName": "terrainset_ocean_rocks_fence",
       "blockType": "fence",
@@ -45580,6 +46032,139 @@
       "legacyBlockID": "terrainset_fence_block_3:4"
     },
     {
+      "blockName": "terrainset_ocean_rocks_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Ocean Rocks Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_ocean/base_1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_16"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_17"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_18"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_19"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_20"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_21"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_22"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_23"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_ocean/base_24"
+          ]
+        }
+      ]
+    },
+    
+    {
       "blockName": "terrainset_red_mountains_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -45675,6 +46260,99 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:5"
     },
+    {
+      "blockName": "terrainset_red_mountains_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Red Mountains Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_red_mountains/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains/16"
+          ]
+        }
+      ]
+    },
+ 
     {
       "blockName": "terrainset_river_rocks_fence",
       "blockType": "fence",
@@ -45772,6 +46450,99 @@
       "legacyBlockID": "terrainset_fence_block_3:6"
     },
     {
+      "blockName": "terrainset_river_rocks_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet River Rocks Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_river/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_river/16"
+          ]
+        }
+      ]
+    },
+    
+    {
       "blockName": "terrainset_westerlands_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -45867,6 +46638,99 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:7"
     },
+        {
+      "blockName": "terrainset_westerlands_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Westerlands Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_westerlandhills/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills/16"
+          ]
+        }
+      ]
+    },
+    
     {
       "blockName": "terrainset_arbor_dorne_fence",
       "blockType": "fence",
@@ -45961,17 +46825,14 @@
       "legacyBlockID": "terrainset_fence_block_3:8"
     },
     {
-      "blockName": "terrainset_stormlands_fence",
-      "blockType": "fence",
+      "blockName": "terrainset_stormlands_fence_gate",
+      "blockType": "fencegate",
       "hardness": 5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-      "label": "TerrainSet Stormlands Fence",
-      "overlayTextures": [ 
-        "terrainset_overlays/terrainset_stormlands_overlay"
-      ],
+      "label": "TerrainSet Stormlands Fence Gate",
       "randomTextures": [
         {
           "textures": [
@@ -46152,6 +47013,99 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:10"
     },
+        {
+      "blockName": "terrainset_reach_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Reach Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_reach/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach/16"
+          ]
+        }
+      ]
+    },
+    
     {
       "blockName": "terrainset_red_mountains_alt_fence",
       "blockType": "fence",
@@ -46248,6 +47202,99 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:11"
     },
+        {
+      "blockName": "terrainset_red_mountains_alt_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Red Mountains Alt Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_red_mountains_alt/16"
+          ]
+        }
+      ]
+    },
+    
     {
       "blockName": "terrainset_westerlands_alt_fence",
       "blockType": "fence",
@@ -46342,6 +47389,99 @@
       "legacyBlockID": "terrainset_fence_block_3:12"
     },
     {
+      "blockName": "terrainset_westerlands_alt_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Westerlands Alt Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_westerlandhills_alt/16"
+          ]
+        }
+      ]
+    },
+    
+    {
       "blockName": "terrainset_arbor_dorne_alt_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -46435,6 +47575,99 @@
       "legacyBlockID": "terrainset_fence_block_3:13"
     },
     {
+      "blockName": "terrainset_arbor_dorne_alt_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Arbor Dorne Alt Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_dorne_alt/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_dorne_alt/16"
+          ]
+        }
+      ]
+    },
+    
+    {
       "blockName": "terrainset_stormlands_alt_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -46527,6 +47760,99 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:14"
     },
+        {
+      "blockName": "terrainset_stormlands_alt_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Stormlands Alt Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_stormlands_alt/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_stormlands_alt/16"
+          ]
+        }
+      ]
+    },
+    
     {
       "blockName": "terrainset_reach_alt_fence",
       "blockType": "fence",
@@ -46623,6 +47949,99 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:15"
     },
+    {
+      "blockName": "terrainset_reach_alt_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Reach Alt Fence Gate",
+      "randomTextures": [
+        {
+          "textures": [
+            "terrainset_reach_alt/1"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/2"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/3"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/4"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/5"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/6"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/7"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/8"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/9"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/10"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/11"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/12"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/13"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/14"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/15"
+          ]
+        },
+        {
+          "textures": [
+            "terrainset_reach_alt/16"
+          ]
+        }
+      ]
+    },
+    
     {
       "blockName": "jasmine_vines",
       "blockType": "vines",

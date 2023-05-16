@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "westerosblocks:terrainset_ocean_rocks_fence_gate",
+    "westerosblocks:terrainset_westerlands_fence_gate",
+    "westerosblocks:terrainset_red_mountains_alt_fence_gate",
+    "westerosblocks:terrainset_the_north_fence_gate",
+    "westerosblocks:terrainset_river_rocks_fence_gate",
+    "westerosblocks:terrainset_westerlands_alt_fence_gate",
+    "westerosblocks:terrainset_stormlands_alt_fence_gate",
+    "westerosblocks:terrainset_reach_fence_gate",
+    "westerosblocks:terrainset_mountains_of_the_moon_fence_gate",
+    "westerosblocks:terrainset_iron_islands_fence_gate",
+    "westerosblocks:terrainset_reach_alt_fence_gate",
+    "westerosblocks:terrainset_arbor_dorne_alt_fence_gate",
+    "westerosblocks:terrainset_eastern_islands_fence_gate",
+    "westerosblocks:terrainset_stormlands_fence_gate",
+    "westerosblocks:terrainset_red_mountains_fence_gate"
+  ]
+}

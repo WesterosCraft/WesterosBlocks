@@ -26,6 +26,7 @@ import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
 import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
 import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFenceGateBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFlowerPotBlock;
 import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
@@ -934,6 +935,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		typeTable.put("beacon", new WCBeaconBlock.Factory());
 		typeTable.put("vines", new WCVinesBlock.Factory());
 		typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
+		typeTable.put("fencegate", new WCFenceGateBlock.Factory());
 
 		// Standard color multipliers
 		colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));

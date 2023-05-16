@@ -93,6 +93,7 @@ components:
               - $ref: "#/components/schemas/cuboid-16way"
               - $ref: "#/components/schemas/door"
               - $ref: "#/components/schemas/fence"
+              - $ref: "#/components/schemas/fencegate"
               - $ref: "#/components/schemas/fire"
               - $ref: "#/components/schemas/flowerpot"
               - $ref: "#/components/schemas/furnace"
@@ -1990,6 +1991,39 @@ components:
                   If defined, adds an overlay layer over the
                   blocks.  The indexes in the array correspond
                   to the same indexes for 'textures'
+    fencegate:
+      title: blockType='fencegate'
+      allOf:
+        - $ref: "#/components/schemas/Block"
+        - type: object
+          description: Block type for 'fencegate' blocks
+          required: [ textures ]
+          properties:
+            textures:
+              type: array
+              items:
+                type: string
+                description: |-
+                  List of textures paths, relative to 
+                  assets/westerosblocks/textures/blocks, unless
+                  the module ID is included (e.g. minecraft:xxx or
+                  westerosblocks:xxx), in which case the
+                  value is relative to the assets/<module>/textures
+                  path.
+                  Index mapping for textures is:
+                  
+                  - 0: all sides texture
+            randomTextures:
+              $ref: "#/components/schemas/RandomTextureSets"
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "locked": If value is defined and
+                "true", gate is locked (not opened by hand)
+                  
     wall:
       title: blockType='wall'
       allOf:
