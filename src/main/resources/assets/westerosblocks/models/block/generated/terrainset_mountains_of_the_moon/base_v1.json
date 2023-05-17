@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
     "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
     "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
-    "down": "westerosblocks:block/terrainset_eyrie/1",
-    "up": "westerosblocks:block/terrainset_eyrie/1",
-    "north": "westerosblocks:block/terrainset_eyrie/1",
-    "south": "westerosblocks:block/terrainset_eyrie/1",
-    "west": "westerosblocks:block/terrainset_eyrie/1",
-    "east": "westerosblocks:block/terrainset_eyrie/1",
-    "particle": "westerosblocks:block/terrainset_eyrie/1"
+    "down": "westerosblocks:block/terrainset_eyrie/random_6x6",
+    "up": "westerosblocks:block/terrainset_eyrie/random_6x6",
+    "north": "westerosblocks:block/terrainset_eyrie/random_6x6",
+    "south": "westerosblocks:block/terrainset_eyrie/random_6x6",
+    "west": "westerosblocks:block/terrainset_eyrie/random_6x6",
+    "east": "westerosblocks:block/terrainset_eyrie/random_6x6",
+    "particle": "westerosblocks:block/terrainset_eyrie/random_6x6"
   }
 }

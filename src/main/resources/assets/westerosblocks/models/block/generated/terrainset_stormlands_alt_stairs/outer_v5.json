@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset_stormlands_alt/5",
-    "top": "westerosblocks:block/terrainset_stormlands_alt/5",
-    "side": "westerosblocks:block/terrainset_stormlands_alt/5",
-    "particle": "westerosblocks:block/terrainset_stormlands_alt/5"
-  }
-}

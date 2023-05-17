@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset_stormlands_alt/13",
-    "top": "westerosblocks:block/terrainset_stormlands_alt/13",
-    "side": "westerosblocks:block/terrainset_stormlands_alt/13"
-  }
-}
