@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/tinted/template_fence_gate_open",
   "textures": {
-    "texture": "westerosblocks:block/terrainset_east/1"
+    "texture": "westerosblocks:block/terrainset_east/random_4x4"
   }
 }

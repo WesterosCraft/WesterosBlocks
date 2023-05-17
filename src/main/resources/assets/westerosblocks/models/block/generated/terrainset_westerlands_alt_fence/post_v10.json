@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/fence_post",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset_westerlandhills_alt/10",
-    "top": "westerosblocks:block/terrainset_westerlandhills_alt/10",
-    "side": "westerosblocks:block/terrainset_westerlandhills_alt/10"
-  }
-}

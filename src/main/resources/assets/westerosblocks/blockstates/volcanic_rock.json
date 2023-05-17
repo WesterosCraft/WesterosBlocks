@@ -1,54 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v2"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v3"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v8"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v9"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v10"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v11"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v12"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v13"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v14"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v15"
-      },
-      {
-        "model": "westerosblocks:block/generated/volcanic_rock/base_v16"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/volcanic_rock/base_v1"
+    }
   }
 }

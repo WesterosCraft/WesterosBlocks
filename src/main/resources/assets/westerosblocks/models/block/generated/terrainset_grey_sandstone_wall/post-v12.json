@@ -1,8 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_wall_post",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset_grey_sandstone/12",
-    "top": "westerosblocks:block/terrainset_grey_sandstone/12",
-    "side": "westerosblocks:block/terrainset_grey_sandstone/12"
-  }
-}

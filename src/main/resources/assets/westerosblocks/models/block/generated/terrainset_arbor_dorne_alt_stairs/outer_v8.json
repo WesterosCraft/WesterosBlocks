@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/outer_stairs",
-  "textures": {
-    "bottom": "westerosblocks:block/terrainset_dorne_alt/8",
-    "top": "westerosblocks:block/terrainset_dorne_alt/8",
-    "side": "westerosblocks:block/terrainset_dorne_alt/8",
-    "particle": "westerosblocks:block/terrainset_dorne_alt/8"
-  }
-}

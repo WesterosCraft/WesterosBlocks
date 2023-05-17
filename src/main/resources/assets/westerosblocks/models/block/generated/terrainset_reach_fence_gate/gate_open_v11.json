@@ -1,6 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/template_fence_gate_open",
-  "textures": {
-    "texture": "westerosblocks:block/terrainset_reach/11"
-  }
-}
