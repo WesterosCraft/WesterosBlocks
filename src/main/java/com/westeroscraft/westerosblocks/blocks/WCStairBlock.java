@@ -10,9 +10,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.StairsShape;
-import net.minecraft.core.Direction;
 
 public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
 

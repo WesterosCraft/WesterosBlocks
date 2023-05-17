@@ -188,10 +188,11 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
         return state.getValue(OPEN);
      }
 
-     public void setOpen(@Nullable Entity p_153166_, Level level, BlockState state, BlockPos pos, boolean open) {
+     public void setOpen(@Nullable Entity entity, Level level, BlockState state, BlockPos pos, boolean open) {
         if (state.is(this) && state.getValue(OPEN) != open) {
            level.setBlock(pos, state.setValue(OPEN, Boolean.valueOf(open)), 10);
            this.playSound(level, pos, open);
+           level.gameEvent(entity, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
         }
      }
 
@@ -201,7 +202,8 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
         if (block != this && flag != state.getValue(POWERED)) {
            if (flag != state.getValue(OPEN)) {
               this.playSound(level, ppos, flag);
-           }
+              level.gameEvent(flag ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, ppos);
+           }           
 
            level.setBlock(ppos, state.setValue(POWERED, Boolean.valueOf(flag)).setValue(OPEN, Boolean.valueOf(flag)), 2);
         }

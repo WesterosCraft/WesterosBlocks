@@ -1,13 +1,9 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.ArrayList; 
-import java.util.List;
-
 import javax.annotation.Nullable;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
@@ -16,7 +12,6 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.core.Direction;
-import net.minecraft.world.phys.shapes.VoxelShape;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;

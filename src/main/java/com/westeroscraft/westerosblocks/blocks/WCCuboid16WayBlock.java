@@ -1,7 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import java.util.List;
-
 import javax.annotation.Nullable;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;

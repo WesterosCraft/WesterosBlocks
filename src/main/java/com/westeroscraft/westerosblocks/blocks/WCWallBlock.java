@@ -2,9 +2,6 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Map;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableMap.Builder;
-
 import javax.annotation.Nullable;
 
 import net.minecraft.world.level.block.WallBlock;
@@ -14,7 +11,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.WallSide;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.BlockGetter;
@@ -22,7 +18,6 @@ import net.minecraft.core.BlockPos;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 public class WCWallBlock extends WallBlock implements WesterosBlockLifecycle {
