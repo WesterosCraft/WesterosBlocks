@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
@@ -36,6 +37,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 
 import javax.annotation.Nullable;
@@ -180,6 +182,11 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
             level.setBlock(pos, state, 10);
             level.levelEvent(player, state.getValue(OPEN) ? this.getOpenSound() : this.getCloseSound(), pos, 0);
             level.gameEvent(player, this.isOpen(state) ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, player);
+    		// Is this a door we should be planning to close
+    		if (WesterosBlocks.isAutoRestoreHalfDoor(state.getBlock())) {
+    			boolean isCreative = (player != null) ? player.isCreative() : false;
+    			WesterosBlocks.setPendingHalfDoorRestore(level, pos, !state.getValue(OPEN), isCreative);
+    		}
             return InteractionResult.sidedSuccess(level.isClientSide);
          }
       }

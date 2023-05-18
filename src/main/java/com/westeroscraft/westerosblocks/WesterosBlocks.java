@@ -1,20 +1,26 @@
 package com.westeroscraft.westerosblocks;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.core.BlockPos;
 import net.minecraft.CrashReport;
 import net.minecraft.ReportedException;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.TickEvent.ServerTickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -35,6 +41,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.mojang.brigadier.CommandDispatcher;
+import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.commands.PTimeCommand;
 import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
@@ -49,14 +56,21 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
+import java.util.Map.Entry;
+
 import net.minecraftforge.network.NetworkRegistry;
 
 import com.westeroscraft.westerosblocks.network.ClientMessageHandler;
 import com.westeroscraft.westerosblocks.network.PWeatherMessage;
 import com.westeroscraft.westerosblocks.network.PTimeMessage;
 import com.westeroscraft.westerosblocks.network.ServerMessageHandler;
+
 import net.minecraftforge.network.NetworkDirection;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -195,12 +209,18 @@ public class WesterosBlocks {
 		public static final ForgeConfigSpec.BooleanValue snowInTaiga;
 		public static final ForgeConfigSpec.BooleanValue blockDevMode;
 		public static final ForgeConfigSpec.BooleanValue publishToDynmap;
+		public static final ForgeConfigSpec.IntValue autoRestoreTime;
+		public static final ForgeConfigSpec.BooleanValue autoRestoreAllHalfDoors;
 
 		static {
 			BUILDER.comment("Module options");
 			snowInTaiga = BUILDER.comment("Enable snow in taiga").define("snowInTaiga", true);
 			blockDevMode = BUILDER.comment("Block development mode").define("blockDevMode", false);
 			publishToDynmap = BUILDER.comment("Publish blocks to dynmap").define("publishToDynmap", true);
+			BUILDER.push("autoRestore");
+            autoRestoreTime = BUILDER.comment("Number of seconds before auto-restore").defineInRange("autoRestoreTime", 30, 5, 300);
+            autoRestoreAllHalfDoors = BUILDER.comment("Auto restore all half-door blocks").define("autoRestoreAllHalfDoors", true);
+            BUILDER.pop();
 
 			SPEC = BUILDER.build();
 		}
@@ -401,4 +421,92 @@ public class WesterosBlocks {
         }
         return directoryToBeDeleted.delete();
     }
+    
+	private static class PendingRestore {
+		BlockPos pos;
+		Level world;
+		PendingRestore(Level lvl, BlockPos p) {
+			this.world = lvl;
+			this.pos = p;
+		}
+		@Override
+		public int hashCode() {
+			return pos.hashCode() ^ world.hashCode();
+		}
+		@Override
+		public boolean equals(Object o) {
+			if (o instanceof PendingRestore) {
+				PendingRestore pdo = (PendingRestore) o;
+				return (pdo.world == this.world) && (pdo.pos.asLong() == this.pos.asLong()); 
+			}
+			return false;
+		}
+	};
+	private static class RestoreInfo {
+		long secCount;
+		Boolean open;
+	};
+	private static Map<PendingRestore, RestoreInfo> pendingHalfDoorRestore = new HashMap<PendingRestore, RestoreInfo>();
+	private static int ticks = 0;
+	private static long secCount = 0;
+
+    public static boolean isAutoRestoreHalfDoor(Block blk) {
+    	if (Config.autoRestoreAllHalfDoors.get()) return true;
+    	return false;
+    }
+    public static void setPendingHalfDoorRestore(Level world, BlockPos pos, boolean isOpen, boolean isCreative) {
+    	PendingRestore pdc = new PendingRestore(world, pos);
+    	RestoreInfo ri = pendingHalfDoorRestore.get(pdc);
+    	if ((ri == null) && (!isCreative)) {	// New one, and not creative mode, add record
+    		ri = new RestoreInfo();
+    		ri.open = isOpen; ri.secCount = secCount + Config.autoRestoreTime.get();
+    		pendingHalfDoorRestore.put(pdc, ri);
+    	}
+    	// Else, if restore record pending, but creative change, drop it
+    	else if (ri != null) {
+    		if (isCreative) {
+    			pendingHalfDoorRestore.remove(pdc);
+    		}
+    		else {	// Else, reset restore time
+    			ri.secCount = secCount + Config.autoRestoreTime.get();
+    		}
+    	}
+    }
+    public static void handlePendingHalfDoorRestores(boolean now) {
+    	// Handle pending door close checks
+    	Set<Entry<PendingRestore, RestoreInfo>> kvset = pendingHalfDoorRestore.entrySet();
+    	Iterator<Entry<PendingRestore, RestoreInfo>> iter = kvset.iterator();	// So that we can remove during iteration
+    	while (iter.hasNext()) {
+    		Entry<PendingRestore, RestoreInfo> kv = iter.next();
+			PendingRestore pdc = kv.getKey();
+    		RestoreInfo ri = kv.getValue();
+    		if (now || (ri.secCount <= secCount)) {
+    			BlockState bs = pdc.world.getBlockState(pdc.pos);	// Get the block state
+    			if (bs != null) {
+    				Block blk = bs.getBlock();
+    				if ((blk instanceof WCHalfDoorBlock) && isAutoRestoreHalfDoor(blk)) {	// Still right type of door
+    					if (bs.getValue(DoorBlock.OPEN) != ri.open) {	// And still wrong state?
+    						WCHalfDoorBlock dblk = (WCHalfDoorBlock)blk;
+    						dblk.setOpen(null, pdc.world, bs, pdc.pos, ri.open);
+    					}
+    				}
+    			}
+    			iter.remove();	// And remove it from the set
+    		}	
+    	}
+    }
+
+	@SubscribeEvent
+    public void countTicks(ServerTickEvent event){
+        if (event.phase != TickEvent.Phase.END) return;
+        ticks++;
+        if (ticks >= 20) {
+        	secCount++;
+        	// Handle any pending door restores
+        	handlePendingHalfDoorRestores(false);
+        	
+        	ticks = 0;
+        }
+    }
+
 }
