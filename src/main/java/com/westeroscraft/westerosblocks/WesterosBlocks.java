@@ -21,6 +21,7 @@ import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.TickEvent.ServerTickEvent;
+import net.minecraftforge.event.server.ServerStoppingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -508,5 +509,10 @@ public class WesterosBlocks {
         	ticks = 0;
         }
     }
+	@SubscribeEvent
+	public void serverStopping(ServerStoppingEvent event) {
+    	// Handle any pending door restores (force immediate)
+    	handlePendingHalfDoorRestores(true);
+	}
 
 }
