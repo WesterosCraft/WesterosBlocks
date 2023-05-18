@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay",
     "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay",
     "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay",
-    "down": "westerosblocks:block/terrainset_ocean/base_1",
-    "up": "westerosblocks:block/terrainset_ocean/base_1",
-    "north": "westerosblocks:block/terrainset_ocean/base_1",
-    "south": "westerosblocks:block/terrainset_ocean/base_1",
-    "west": "westerosblocks:block/terrainset_ocean/base_1",
-    "east": "westerosblocks:block/terrainset_ocean/base_1",
-    "particle": "westerosblocks:block/terrainset_ocean/base_1"
+    "down": "westerosblocks:block/terrainset_ocean/default",
+    "up": "westerosblocks:block/terrainset_ocean/default",
+    "north": "westerosblocks:block/terrainset_ocean/default",
+    "south": "westerosblocks:block/terrainset_ocean/default",
+    "west": "westerosblocks:block/terrainset_ocean/default",
+    "east": "westerosblocks:block/terrainset_ocean/default",
+    "particle": "westerosblocks:block/terrainset_ocean/default"
   }
 }
