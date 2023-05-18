@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs_overlay",
   "textures": {
-    "bottom": "westerosblocks:block/terrainset_ocean/base_1",
-    "top": "westerosblocks:block/terrainset_ocean/base_1",
-    "side": "westerosblocks:block/terrainset_ocean/base_1",
+    "bottom": "westerosblocks:block/terrainset_ocean/default",
+    "top": "westerosblocks:block/terrainset_ocean/default",
+    "side": "westerosblocks:block/terrainset_ocean/default",
     "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay",
     "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay",
     "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_rocks_overlay",
-    "particle": "westerosblocks:block/terrainset_ocean/base_1"
+    "particle": "westerosblocks:block/terrainset_ocean/default"
   }
 }

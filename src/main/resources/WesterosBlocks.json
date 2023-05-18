@@ -2655,6 +2655,20 @@
       "legacyBlockID": "fence_block_0:0"
     },
     {
+      "blockName": "locked_oak_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Locked Oak Fence Gate",
+      "textures": [
+        "planks_oak/side"
+      ]
+    },
+    {
       "blockName": "spruce_fence",
       "blockType": "fence",
       "hardness": 2,
@@ -2667,6 +2681,20 @@
         "planks_spruce/side"
       ],
       "legacyBlockID": "fence_block_0:1"
+    },
+    {
+      "blockName": "locked_spruce_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Locked Spruce Fence Gate",
+      "textures": [
+        "planks_spruce/side"
+      ]
     },
     {
       "blockName": "birch_fence",
@@ -2683,6 +2711,20 @@
       "legacyBlockID": "fence_block_0:2"
     },
     {
+      "blockName": "locked_birch_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Locked Birch Fence Gate",
+      "textures": [
+        "planks_birch/side"
+      ]
+    },
+    {
       "blockName": "jungle_fence",
       "blockType": "fence",
       "hardness": 2,
@@ -2695,6 +2737,20 @@
         "planks_jungle/side"
       ],
       "legacyBlockID": "fence_block_0:3"
+    },
+    {
+      "blockName": "locked_jungle_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Locked Jungle Fence Gate",
+      "textures": [
+        "planks_jungle/side"
+      ]
     },
     {
       "blockName": "oak_bark_fence",
@@ -2711,6 +2767,20 @@
       "legacyBlockID": "fence_block_0:4"
     },
     {
+      "blockName": "locked_oak_bark_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosLogs",
+      "label": "Locked Oak Bark Fence Gate",
+      "textures": [
+        "bark_oak/side"
+      ]
+    },
+    {
       "blockName": "spruce_bark_fence",
       "blockType": "fence",
       "hardness": 2,
@@ -2723,6 +2793,20 @@
         "bark_spruce/side"
       ],
       "legacyBlockID": "fence_block_0:5"
+    },
+    {
+      "blockName": "locked_spruce_bark_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosLogs",
+      "label": "Locked Spruce Bark Fence Gate",
+      "textures": [
+        "bark_spruce/side"
+      ]
     },
     {
       "blockName": "birch_bark_fence",
@@ -2739,6 +2823,20 @@
       "legacyBlockID": "fence_block_0:6"
     },
     {
+      "blockName": "locked_birch_bark_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosLogs",
+      "label": "Locked Birch Bark Fence Gate",
+      "textures": [
+        "bark_birch/side"
+      ]
+    },
+    {
       "blockName": "jungle_bark_fence",
       "blockType": "fence",
       "hardness": 2,
@@ -2751,6 +2849,20 @@
         "bark_jungle/side"
       ],
       "legacyBlockID": "fence_block_0:7"
+    },
+    {
+      "blockName": "locked_jungle_bark_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Locked Jungle Bark Fence Gate",
+      "textures": [
+        "bark_jungle/side"
+      ]
     },
     {
       "blockName": "oak_fence_with_vines",
@@ -8334,127 +8446,8 @@
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
       ],
-      "randomTextures": [
-        {
-          "textures": [
-            "terrainset_ocean/base_1"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_2"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_3"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_4"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_5"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_6"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_7"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_8"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_9"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_10"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_11"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_12"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_13"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_14"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_15"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_16"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_17"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_18"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_19"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_20"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_21"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_22"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_23"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_24"
-          ]
-        }
+      "textures": [
+        "terrainset_ocean/default"
       ],
       "legacyBlockID": "stone_block_1:4"
     },
@@ -40740,127 +40733,8 @@
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
       ],
-      "randomTextures": [
-        {
-          "textures": [
-            "terrainset_ocean/base_1"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_2"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_3"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_4"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_5"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_6"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_7"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_8"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_9"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_10"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_11"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_12"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_13"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_14"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_15"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_16"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_17"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_18"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_19"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_20"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_21"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_22"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_23"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_24"
-          ]
-        }
+      "textures": [
+        "terrainset_ocean/default"
       ],
       "legacyBlockID": "terrainset_slab_block_0:4"
     },
@@ -41216,127 +41090,8 @@
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
       ],
-      "randomTextures": [
-        {
-          "textures": [
-            "terrainset_ocean/base_1"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_2"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_3"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_4"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_5"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_6"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_7"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_8"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_9"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_10"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_11"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_12"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_13"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_14"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_15"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_16"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_17"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_18"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_19"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_20"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_21"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_22"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_23"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_24"
-          ]
-        }
+      "textures": [
+        "terrainset_ocean/default"
       ],
       "legacyBlockID": "terrainset_wall_block_0:4"
     },
@@ -41715,127 +41470,8 @@
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
       ],
-      "randomTextures": [
-        {
-          "textures": [
-            "terrainset_ocean/base_1"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_2"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_3"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_4"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_5"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_6"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_7"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_8"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_9"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_10"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_11"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_12"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_13"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_14"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_15"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_16"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_17"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_18"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_19"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_20"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_21"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_22"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_23"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_24"
-          ]
-        }
+      "textures": [
+        "terrainset_ocean/default"
       ],
       "legacyBlockID": "terrainset_fence_block_3:4"
     },
@@ -41848,130 +41484,10 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Ocean Rocks Fence Gate",
-      "randomTextures": [
-        {
-          "textures": [
-            "terrainset_ocean/base_1"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_2"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_3"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_4"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_5"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_6"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_7"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_8"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_9"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_10"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_11"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_12"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_13"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_14"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_15"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_16"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_17"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_18"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_19"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_20"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_21"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_22"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_23"
-          ]
-        },
-        {
-          "textures": [
-            "terrainset_ocean/base_24"
-          ]
-        }
+      "textures": [
+        "terrainset_ocean/default"
       ]
     },
-    
     {
       "blockName": "terrainset_red_mountains_fence",
       "blockType": "fence",
