@@ -2666,7 +2666,8 @@
       "label": "Locked Oak Fence Gate",
       "textures": [
         "planks_oak/side"
-      ]
+      ],
+      "legacyBlockID": "minecraft:fence_gate"
     },
     {
       "blockName": "spruce_fence",
@@ -2694,7 +2695,8 @@
       "label": "Locked Spruce Fence Gate",
       "textures": [
         "planks_spruce/side"
-      ]
+      ],
+      "legacyBlockID": "minecraft:spruce_fence_gate"
     },
     {
       "blockName": "birch_fence",
@@ -2722,7 +2724,8 @@
       "label": "Locked Birch Fence Gate",
       "textures": [
         "planks_birch/side"
-      ]
+      ],
+      "legacyBlockID": "minecraft:birch_fence_gate"
     },
     {
       "blockName": "jungle_fence",
@@ -2750,7 +2753,8 @@
       "label": "Locked Jungle Fence Gate",
       "textures": [
         "planks_jungle/side"
-      ]
+      ],
+      "legacyBlockID": "minecraft:jungle_fence_gate"
     },
     {
       "blockName": "oak_bark_fence",
@@ -10964,6 +10968,21 @@
         "dark_northern_wood/side"
       ],
       "legacyBlockID": "fence_block_1:9"
+    },
+    {
+      "blockName": "locked_dark_northern_wood_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "type": "locked:true",
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Locked Dark Northern Wood Fence Gate",
+      "textures": [
+        "dark_northern_wood/side"
+      ],
+      "legacyBlockID": "minecraft:dark_oak_fence_gate"
     },
     {
       "blockName": "small_stone_brick_fence",
