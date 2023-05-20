@@ -116,7 +116,6 @@ public class VinesBlockModelExport extends ModelExport {
     		}
     	}
     	oldstate.put("up", "false");
-    	newstate.put("up", "false");
     	newstate.put("waterlogged", "false");
     	for (String north : BOOLEAN) {
         	oldstate.put("north", north);
@@ -130,15 +129,11 @@ public class VinesBlockModelExport extends ModelExport {
     				for (String west : BOOLEAN) {
     			    	oldstate.put("west", west);
     			    	newstate.put("west", west);
-    			    	if (north.equals("false") && south.equals("false") && east.equals("false") && west.equals("false") && vblk.has_down) {
-    			        	oldstate.put("down", "false");	// We want to include default state, which maps this way for 1.12.2
-    			        	newstate.put("down", "true");
+    			    	for (String up : BOOLEAN) {
+        			    	oldstate.put("#up", up);
+        			    	newstate.put("up", up);
+        			    	addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     			    	}
-    			    	else {
-    			        	oldstate.put("down", "false");
-    			        	newstate.put("down", "false");    			    		
-    			    	}
-			    		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     				}
     			}
     		}
