@@ -164,7 +164,17 @@ public class WesterosBlocks {
 						try {
 							exp.doBlockStateExport();
 							exp.doModelExports();
-							exp.doWorldConverterMigrate();
+							// If list, roll through choices as legacyBlockID
+							if (customBlockDefs[i].legacyBlockIDList != null) {
+								for (String legacyid : customBlockDefs[i].legacyBlockIDList) {
+									customBlockDefs[i].legacyBlockID = legacyid;
+									exp.doWorldConverterMigrate();									
+								}
+								customBlockDefs[i].legacyBlockID = null;
+							}
+							else {
+								exp.doWorldConverterMigrate();
+							}
 						} catch (IOException iox) {
 							log.warn(String.format("Error exporting block %s - %s", blk.getRegistryName(), iox));
 						}

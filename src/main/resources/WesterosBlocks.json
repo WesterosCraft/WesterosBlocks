@@ -2652,7 +2652,7 @@
       "textures": [
         "planks_oak/side"
       ],
-      "legacyBlockID": "fence_block_0:0"
+      "legacyBlockIDList": [ "fence_block_0:0", "minecraft:fence" ]
     },
     {
       "blockName": "locked_oak_fence_gate",
@@ -2681,7 +2681,7 @@
       "textures": [
         "planks_spruce/side"
       ],
-      "legacyBlockID": "fence_block_0:1"
+      "legacyBlockIDList": [ "fence_block_0:1", "minecraft:spruce_fence" ]
     },
     {
       "blockName": "locked_spruce_fence_gate",
@@ -2710,7 +2710,7 @@
       "textures": [
         "planks_birch/side"
       ],
-      "legacyBlockID": "fence_block_0:2"
+      "legacyBlockIDList": [ "fence_block_0:2", "minecraft:birch_fence" ]
     },
     {
       "blockName": "locked_birch_fence_gate",
@@ -2739,7 +2739,7 @@
       "textures": [
         "planks_jungle/side"
       ],
-      "legacyBlockID": "fence_block_0:3"
+      "legacyBlockIDList": [ "fence_block_0:3", "minecraft:jungle_fence" ]
     },
     {
       "blockName": "locked_jungle_fence_gate",
@@ -9222,7 +9222,7 @@
       "textures": [
         "light_emitting_blocks_0/coals_glowing"
       ],
-      "legacyBlockID": "light_emitting_blocks_0:1"
+      "legacyBlockIDList": [ "light_emitting_blocks_0:1", "minecraft:netherrack" ]
     },
     {
       "blockName": "bone_dirt",
@@ -17115,7 +17115,7 @@
         "rail_block_0/rope",
         "rail_block_0/rope_turned"
       ],
-      "legacyBlockID": "rail_block_0"
+      "legacyBlockIDList": [ "rail_block_0", "minecraft:rail" ]
     },
     {
       "blockName": "horizontal_net",
@@ -18685,7 +18685,7 @@
         "rail_block_0/chain",
         "rail_block_0/chain_turned"
       ],
-      "legacyBlockID": "rail_block_1"
+      "legacyBlockIDList": [ "rail_block_1", "minecraft:activator_rail:powered=true", "minecraft:activator_rail:powered=false" ]
     },
     {
       "blockName": "brown_slate",
@@ -19485,7 +19485,7 @@
       "type": "always-on:false",
       "colorMult": "textures/colormap/furnace",
       "isCustomModel": true,
-      "legacyBlockID": "furnace_block_2:1"
+      "legacyBlockIDList": [ "furnace_block_2:1", "minecraft:furnace", "minecraft:lit_furnace" ]
     },
     {
       "blockName": "reach_light_brick_stairs",
@@ -20168,7 +20168,7 @@
         "ground_block_0/ash_top",
         "ground_block_0/ash"
       ],
-      "legacyBlockID": "solid_blocks_1:3"
+      "legacyBlockIDList": [ "solid_blocks_1:3", "minecraft:mycelium:snowy=false", "minecraft:mycelium:snowy=true" ]
     },
     {
       "blockName": "flagstone",
@@ -22409,7 +22409,7 @@
           ]
         }
       ],
-      "legacyBlockID": "dead_bush_block_0:0"
+      "legacyBlockIDList": [ "dead_bush_block_0:0", "minecraft:deadbush" ]
     },
     {
       "blockName": "potted_dead_bush",
@@ -39847,7 +39847,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_0:0"
+      "legacyBlockIDList": [ "carpet_block_0:0", "minecraft:carpet:color=magenta" ]
     },
     {
       "blockName": "spruce_carpet",
@@ -39885,7 +39885,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_0:1"
+      "legacyBlockIDList": [ "carpet_block_0:1", "minecraft:carpet:color=pink" ]
     },
     {
       "blockName": "birch_carpet",
@@ -41585,7 +41585,7 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:7"
     },
-        {
+    {
       "blockName": "terrainset_westerlands_fence_gate",
       "blockType": "fencegate",
       "hardness": 5,
@@ -41597,7 +41597,7 @@
           "textures": [
             "terrainset_westerlandhills/random_4x4"
           ]
-        },
+    },
     {
       "blockName": "terrainset_arbor_dorne_fence",
       "blockType": "fence",
@@ -41613,6 +41613,33 @@
       "legacyBlockID": "terrainset_fence_block_3:8"
     },
     {
+      "blockName": "terrainset_arbor_dorne_fence_gate",
+      "blockType": "fencegate",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Arbor Dorne Fence Gate",
+      "textures": [
+        "terrainset_dorne/random_4x4"
+      ]
+    },
+    {
+      "blockName": "terrainset_stormlands_fence",
+      "blockType": "fence",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosTerrainSets",
+      "label": "TerrainSet Stormlands Fence",
+      "textures": [
+        "terrainset_stormlands/random_4x4"
+      ],
+      "legacyBlockID": "terrainset_fence_block_3:9"
+    },
+    {
       "blockName": "terrainset_stormlands_fence_gate",
       "blockType": "fencegate",
       "hardness": 5,
@@ -41623,8 +41650,7 @@
       "label": "TerrainSet Stormlands Fence Gate",
       "textures": [
         "terrainset_stormlands/random_4x4"
-      ],
-      "legacyBlockID": "terrainset_fence_block_3:9"
+      ]
     },
     {
       "blockName": "terrainset_reach_fence",
@@ -41652,11 +41678,10 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Reach Fence Gate",
-          "textures": [
-            "terrainset_reach/random_4x4"
-          ]
-        },
-
+      "textures": [
+          "terrainset_reach/random_4x4"
+      ]
+    },
     {
       "blockName": "terrainset_red_mountains_alt_fence",
       "blockType": "fence",
@@ -41674,7 +41699,7 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:11"
     },
-        {
+    {
       "blockName": "terrainset_red_mountains_alt_fence_gate",
       "blockType": "fencegate",
       "hardness": 5,
@@ -41686,7 +41711,7 @@
           "textures": [
             "terrainset_red_mountains_alt/random_4x4"
           ]
-        },
+    },
     {
       "blockName": "terrainset_westerlands_alt_fence",
       "blockType": "fence",
@@ -41714,7 +41739,6 @@
         "terrainset_westerlandhills_alt/random_4x4"
       ]
     },
-    
     {
       "blockName": "terrainset_arbor_dorne_alt_fence",
       "blockType": "fence",
@@ -41742,7 +41766,6 @@
         "terrainset_dorne_alt/random_4x4"
       ]
     },
-    
     {
       "blockName": "terrainset_stormlands_alt_fence",
       "blockType": "fence",
@@ -41757,7 +41780,7 @@
       ],
       "legacyBlockID": "terrainset_fence_block_3:14"
     },
-        {
+    {
       "blockName": "terrainset_stormlands_alt_fence_gate",
       "blockType": "fencegate",
       "hardness": 5,
@@ -41769,8 +41792,7 @@
           "textures": [
             "terrainset_stormlands_alt/random_4x4"
           ]
-        },
-    
+    },
     {
       "blockName": "terrainset_reach_alt_fence",
       "blockType": "fence",
@@ -41801,7 +41823,6 @@
         "terrainset_reach_alt/random_4x4"
       ]
     },
-    
     {
       "blockName": "jasmine_vines",
       "blockType": "vines",
@@ -43403,7 +43424,7 @@
       "textures": [
         "rail_block_0/cover_oak"
       ],
-      "legacyBlockID": "rope_block_3"
+      "legacyBlockIDList": [ "rope_block_3", "minecraft:detector_rail:powered=true", "minecraft:detector_rail:powered=false" ]
     },
     {
       "blockName": "spruce_cover",
@@ -48775,7 +48796,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:0"
+      "legacyBlockIDList": [ "carpet_block_1:0", "minecraft:carpet:color=white" ]
     },
     {
       "blockName": "orange_wool_carpet",
@@ -48813,7 +48834,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:1"
+      "legacyBlockIDList": [ "carpet_block_1:1", "minecraft:carpet:color=orange" ]
     },
     {
       "blockName": "light_brown_wool_carpet",
@@ -48889,7 +48910,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:3"
+      "legacyBlockIDList": [ "carpet_block_1:3", "minecraft:carpet:color=light_blue" ]
     },
     {
       "blockName": "yellow_wool_carpet",
@@ -48927,7 +48948,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:4"
+      "legacyBlockIDList": [ "carpet_block_1:4", "minecraft:carpet:color=yellow" ]
     },
     {
       "blockName": "dirty_white_wool_carpet",
@@ -49041,7 +49062,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:7"
+      "legacyBlockIDList": [ "carpet_block_1:7", "minecraft:carpet:color=gray" ]
     },
     {
       "blockName": "light_grey_wool_carpet",
@@ -49079,7 +49100,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:8"
+      "legacyBlockIDList": [ "carpet_block_1:8", "minecraft:carpet:color=silver" ]
     },
     {
       "blockName": "cyan_wool_carpet",
@@ -49117,7 +49138,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:9"
+      "legacyBlockIDList": [ "carpet_block_1:9", "minecraft:carpet:color=cyan" ]
     },
     {
       "blockName": "purple_wool_carpet",
@@ -49155,7 +49176,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:10"
+      "legacyBlockIDList": [ "carpet_block_1:10", "minecraft:carpet:color=purple" ]
     },
     {
       "blockName": "blue_wool_carpet",
@@ -49193,7 +49214,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:11"
+      "legacyBlockIDList": [ "carpet_block_1:11", "minecraft:carpet:color=blue" ]
     },
     {
       "blockName": "brown_wool_carpet",
@@ -49269,7 +49290,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:13"
+      "legacyBlockIDList": [ "carpet_block_1:13", "minecraft:carpet:color=green" ]
     },
     {
       "blockName": "red_wool_carpet",
@@ -49307,7 +49328,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:14"
+      "legacyBlockIDList": [ "carpet_block_1:14", "minecraft:carpet:color=red" ]
     },
     {
       "blockName": "black_wool_carpet",
@@ -49345,7 +49366,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_1:15"
+      "legacyBlockIDList": [ "carpet_block_1:15", "minecraft:carpet:color=black" ]
     },
     {
       "blockName": "thatch_light_fur_carpet",
@@ -49383,7 +49404,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_2:0"
+      "legacyBlockIDList": [ "carpet_block_2:0", "minecraft:carpet:color=brown" ]
     },
     {
       "blockName": "thatch_dark_fur_carpet",
@@ -49421,7 +49442,7 @@
           ]
         }
       ],
-      "legacyBlockID": "carpet_block_2:1"
+      "legacyBlockIDList": [ "carpet_block_2:1", "minecraft:carpet:color=lime" ]
     },
     {
       "blockName": "snowy_thatch_light_fur_slab",

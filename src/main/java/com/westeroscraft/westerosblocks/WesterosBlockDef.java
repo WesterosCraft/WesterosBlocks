@@ -137,6 +137,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public String connectBy = "block";	// Connection logic - by block, material - only for CTM-like blocks
 	
     public String legacyBlockID = null;
+    public List<String> legacyBlockIDList = null;
 	       
 	public boolean isConnectMatch(BlockState bs1, BlockState bs2) {
 		if (this.connectBy.equals("material")) {

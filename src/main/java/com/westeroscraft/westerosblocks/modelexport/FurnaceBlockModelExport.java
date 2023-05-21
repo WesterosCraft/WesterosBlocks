@@ -120,11 +120,21 @@ public class FurnaceBlockModelExport extends ModelExport {
     	for (String facing : FACING) {
         	oldstate.put("facing", facing);
         	newstate.put("facing", facing);
-    		for (String lit : BOOLEAN) {
-    	    	oldstate.put("lit", lit);
-    	    	newstate.put("lit", lit);
-    	        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);    			
-    		}
+        	if (oldID.equals("minecraft:furnace")) {
+    	    	newstate.put("lit", "false");
+    	        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);    			        		
+        	}
+        	else if (oldID.equals("minecraft:lit_furnace")) {
+    	    	newstate.put("lit", "true");
+    	        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);    			        		
+        	}
+        	else {
+	    		for (String lit : BOOLEAN) {
+	    	    	oldstate.put("lit", lit);
+	    	    	newstate.put("lit", lit);
+	    	        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);    			
+	    		}
+        	}
     	}
     }
 
