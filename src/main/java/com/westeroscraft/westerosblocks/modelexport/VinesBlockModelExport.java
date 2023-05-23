@@ -132,7 +132,11 @@ public class VinesBlockModelExport extends ModelExport {
     			    	for (String up : BOOLEAN) {
         			    	oldstate.put("#up", up);
         			    	newstate.put("up", up);
-        			    	addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+        			    	for (String down : BOOLEAN) {
+            			    	oldstate.put("down", down);
+            			    	newstate.put("down", down);
+            			    	addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+        			    	}
     			    	}
     				}
     			}
