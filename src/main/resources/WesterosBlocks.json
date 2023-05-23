@@ -33877,8 +33877,7 @@
         "yMax": 1,
         "zMin": 0,
         "zMax": 1
-      },
-      "legacyBlockID": "cuboid_block_6:0"
+      }
     },
     {
       "blockName": "falling_water_block_two_old",
@@ -33912,8 +33911,7 @@
         "yMax": 1,
         "zMin": 0,
         "zMax": 1
-      },
-      "legacyBlockID": "cuboid_block_6:1"
+      }
     },
     {
       "blockName": "falling_water_block_three_old",
@@ -33947,8 +33945,7 @@
         "yMax": 1,
         "zMin": 0,
         "zMax": 1
-      },
-      "legacyBlockID": "cuboid_block_6:2"
+      }
     },
     {
       "blockName": "falling_water_block_four_old",
@@ -33982,8 +33979,7 @@
         "yMax": 1,
         "zMin": 0,
         "zMax": 1
-      },
-      "legacyBlockID": "cuboid_block_6:3"
+      }
     },
     {
       "blockName": "arryn_banner",
