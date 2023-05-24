@@ -198,7 +198,8 @@ public abstract class ModelExport {
     	else if (tokens.length == 3) {
     		src = tokens[0] + ":" + tokens[1] + ":" + tokens[2];
     	}
-    	itmMapList.add(String.format("%s -> %s:%s", src, WesterosBlocks.MOD_ID, dest));
+//    	itmMapList.add(String.format("%s -> %s:%s", src, WesterosBlocks.MOD_ID, dest));
+    	itmMapList.add(String.format("itemIDMapping.put(\"%s\", \"%s:%s\");", src, WesterosBlocks.MOD_ID, dest));
     }
     public static void writeWorldConverterFile(Path dest) throws IOException {
         FileWriter fos = null;
