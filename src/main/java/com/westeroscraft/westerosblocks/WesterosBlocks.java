@@ -169,11 +169,13 @@ public class WesterosBlocks {
 								for (String legacyid : customBlockDefs[i].legacyBlockIDList) {
 									customBlockDefs[i].legacyBlockID = legacyid;
 									exp.doWorldConverterMigrate();									
+									ModelExport.addWorldConverterItemMap(legacyid, customBlockDefs[i].blockName);
 								}
 								customBlockDefs[i].legacyBlockID = null;
 							}
-							else {
+							else if (customBlockDefs[i].legacyBlockID != null) {
 								exp.doWorldConverterMigrate();
+								ModelExport.addWorldConverterItemMap(customBlockDefs[i].legacyBlockID, customBlockDefs[i].blockName);
 							}
 						} catch (IOException iox) {
 							log.warn(String.format("Error exporting block %s - %s", blk.getRegistryName(), iox));
@@ -200,6 +202,11 @@ public class WesterosBlocks {
 				ModelExport.writeDynmapOverridesFile(modConfigPath);
 			} catch (IOException iox) {
 				log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
+			}
+			try {
+				ModelExport.writeWorldConverterItemMapFile(modConfigPath);
+			} catch (IOException iox) {
+				log.warn(String.format("Error writing WorldConfig item mapping - %s", iox));
 			}
 		}
 		proxy.initRenderRegistry();

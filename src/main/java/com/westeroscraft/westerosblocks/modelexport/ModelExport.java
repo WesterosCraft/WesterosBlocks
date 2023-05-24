@@ -147,6 +147,7 @@ public abstract class ModelExport {
     }
     
     private static LinkedList<String> wcList = new LinkedList<String>();
+    private static LinkedList<String> itmMapList = new LinkedList<String>();
     
     public static void addWorldConverterRecord(String oldBlockName, Map<String, String> oldBlockState, String newBlockName, Map<String, String> newBlockState) {
     	if (oldBlockName.indexOf(':') < 0) oldBlockName = WesterosBlocks.MOD_ID + ":" + oldBlockName;
@@ -181,11 +182,42 @@ public abstract class ModelExport {
     public static void addWorldConverterComment(String txt) {
     	//wcList.add("# " + txt);
     }
+    public static void addWorldConverterItemMap(String src, String dest) {
+    	String [] tokens = src.split(":");
+    	if (tokens.length == 1) {
+    		src = WesterosBlocks.MOD_ID + ":" + tokens[0] + ":0";
+    	}
+    	else if (tokens.length == 2) {
+    		if (tokens[0].equals("minecraft")) {
+    			src = "minecraft:" + tokens[1] + ":0";
+    		}
+    		else {
+    			src = WesterosBlocks.MOD_ID + ":" + tokens[0] + ":" + tokens[1];
+    		}
+    	}
+    	else if (tokens.length == 3) {
+    		src = tokens[0] + ":" + tokens[1] + ":" + tokens[2];
+    	}
+    	itmMapList.add(String.format("%s -> %s:%s", src, WesterosBlocks.MOD_ID, dest));
+    }
     public static void writeWorldConverterFile(Path dest) throws IOException {
         FileWriter fos = null;
         try {
             fos = new FileWriter(new File(dest.toFile(), "blocks_1.12-1.18__westerosblocks.txt"));
             for (String line : wcList) {
+            	fos.write(line + "\r\n");
+            }
+        } finally {
+            if (fos != null) {
+                fos.close();
+            }
+        }
+    }
+    public static void writeWorldConverterItemMapFile(Path dest) throws IOException {
+        FileWriter fos = null;
+        try {
+            fos = new FileWriter(new File(dest.toFile(), "items_1.12-1.18__westerosblocks.txt"));
+            for (String line : itmMapList) {
             	fos.write(line + "\r\n");
             }
         } finally {
