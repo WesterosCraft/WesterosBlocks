@@ -134,7 +134,7 @@ public class VinesBlockModelExport extends ModelExport {
         			    	newstate.put("up", up);
         			    	for (String down : BOOLEAN) {
             			    	oldstate.put("down", down);
-            			    	newstate.put("down", down);
+            			    	newstate.put("down", (north.equals("false")) && (south.equals("false")) && (east.equals("false")) && (west.equals("false")) ? "true" : "false");
             			    	addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
         			    	}
     			    	}
