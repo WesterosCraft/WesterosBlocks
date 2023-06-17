@@ -6756,7 +6756,6 @@
       "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Desert Sand Layer",
       "colorMult": "textures/colormap/sand",
       "textures": [
@@ -19837,7 +19836,6 @@
       "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Terracotta Sand Layer",
       "textures": [
         "sand_block_0/sand_terracotta"
@@ -19851,7 +19849,6 @@
       "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pink/Orange Sand Layer",
       "textures": [
         "sand_block_0/sand_pinkorange"
@@ -19865,7 +19862,6 @@
       "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Red Sand Layer",
       "textures": [
         "sand_block_0/sand_red"
@@ -33130,7 +33126,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Eastern Islands Layer",
       "colorMult": "textures/colormap/easternisland",
       "randomTextures": [
@@ -33159,7 +33154,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Iron Islands Layer",
       "randomTextures": [
         {
@@ -33187,7 +33181,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Mountains of the Moon Layer",
       "randomTextures": [
         {
@@ -33215,7 +33208,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet North Layer",
       "randomTextures": [
         {
@@ -33243,7 +33235,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Ocean Layer",
       "randomTextures": [
         {
@@ -33271,7 +33262,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Red Mountains Layer",
       "randomTextures": [
         {
@@ -33299,7 +33289,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet River Layer",
       "randomTextures": [
         {
@@ -33327,7 +33316,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Westerlands Layer",
       "randomTextures": [
         {
@@ -33355,7 +33343,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Arbor Dorne Layer",
       "randomTextures": [
         {
@@ -33383,7 +33370,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Stormlands Layer",
       "randomTextures": [
         {
@@ -33411,7 +33397,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Wet Reach Layer",
       "randomTextures": [
         {
@@ -35209,7 +35194,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Eastern Islands Layer",
       "colorMult": "textures/colormap/easternisland",
       "randomTextures": [
@@ -35238,7 +35222,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Iron Islands Layer",
       "randomTextures": [
         {
@@ -35266,7 +35249,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Mountains of the Moon Layer",
       "randomTextures": [
         {
@@ -35294,7 +35276,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry North Layer",
       "randomTextures": [
         {
@@ -35322,7 +35303,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Ocean Layer",
       "randomTextures": [
         {
@@ -35350,7 +35330,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Red Mountains Layer",
       "randomTextures": [
         {
@@ -35378,7 +35357,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry River Layer",
       "randomTextures": [
         {
@@ -35406,7 +35384,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Westerlands Layer",
       "randomTextures": [
         {
@@ -35434,7 +35411,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Arbor Dorne Layer",
       "randomTextures": [
         {
@@ -35462,7 +35438,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Stormlands Layer",
       "randomTextures": [
         {
@@ -35490,7 +35465,6 @@
       "stepSound": "gravel",
       "material": "ground",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Pebbles Dry Reach Layer",
       "randomTextures": [
         {
@@ -35518,7 +35492,6 @@
       "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Wet Sand Layer",
       "textures": [
         "sand_block_0/sand_wet"
@@ -35532,7 +35505,6 @@
       "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Sand Stones Layer",
       "colorMult": "textures/colormap/sand",
       "textures": [
@@ -35547,7 +35519,6 @@
       "stepSound": "sand",
       "material": "sand",
       "creativeTab": "WesterosSandGravel",
-      "type": "cnt:8",
       "label": "Wet Sand Stones Layer",
       "textures": [
         "sand_block_0/sand_wet_stones"

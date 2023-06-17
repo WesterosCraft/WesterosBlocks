@@ -12,6 +12,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -36,79 +37,44 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Simpl
 		public Block buildBlockClass(WesterosBlockDef def) {
 			BlockBehaviour.Properties props = def.makeProperties();
 
-			newLAYERS = IntegerProperty.create("layers", 1, getLayerCount(def));
-
 			return def.registerRenderType(def.registerBlock(new WCLayerBlock(props, def)), false, false);
 		}
 	}
 
 	// Support waterlogged on these blocks
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-
-	private static int getLayerCount(WesterosBlockDef def) {
-		int layerCount = 8;
-		int off = def.type.indexOf("cnt:");
-		if (off >= 0) {
-			try {
-				layerCount = Integer.parseInt(def.type.substring(off + 4));
-			} catch (NumberFormatException nfx) {
-				WesterosBlocks.log.info("Error parsing 'cnt:' in " + def.blockName);
-			}
-		}
-		if (layerCount < 2)
-			layerCount = 2;
-		if (layerCount > 16)
-			layerCount = 16;
-		return layerCount;
-	}
-
-	protected VoxelShape[] SHAPE_BY_LAYER;
+	public static final IntegerProperty LAYERS = BlockStateProperties.LAYERS;
+	public static final int layerCount = 8;
+	
+   protected static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[]{Shapes.empty(), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
 	private WesterosBlockDef def;
-	public int layerCount;
-	public IntegerProperty LAYERS;
-	public static IntegerProperty newLAYERS;
 
 	protected WCLayerBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
 		super(props);
 		this.def = def;
-		this.layerCount = getLayerCount(def);
 		this.registerDefaultState(this.stateDefinition.any().setValue(LAYERS, Integer.valueOf(1)).setValue(WATERLOGGED,
 				Boolean.valueOf(false)));
-		SHAPE_BY_LAYER = new VoxelShape[layerCount + 1];
-		SHAPE_BY_LAYER[0] = Shapes.empty();
-		for (int i = 1; i <= layerCount; i++) {
-			float f = (float) i / (float) layerCount;
-			SHAPE_BY_LAYER[i] = Block.box(0, 0, 0, 16, 16 * f, 16);
-		}
 	}
 
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos,
-			CollisionContext ctx) {
-		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
+	public VoxelShape getShape(BlockState p_56620_, BlockGetter p_56621_, BlockPos p_56622_, CollisionContext p_56623_) {
+		return SHAPE_BY_LAYER[p_56620_.getValue(LAYERS)];
 	}
 
-	@Override
-	public VoxelShape getCollisionShape(BlockState state_, BlockGetter world, BlockPos pos,
-			CollisionContext ctx) {
-		return SHAPE_BY_LAYER[state_.getValue(LAYERS) - 1];
+	public VoxelShape getCollisionShape(BlockState p_56625_, BlockGetter p_56626_, BlockPos p_56627_, CollisionContext p_56628_) {
+		return SHAPE_BY_LAYER[p_56625_.getValue(LAYERS) - 1];
 	}
 
-	@Override
-	public VoxelShape getBlockSupportShape(BlockState state, BlockGetter world, BlockPos pos) {
-		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
+	public VoxelShape getBlockSupportShape(BlockState p_56632_, BlockGetter p_56633_, BlockPos p_56634_) {
+		return SHAPE_BY_LAYER[p_56632_.getValue(LAYERS)];
 	}
 
-	@Override
-	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos,
-			CollisionContext ctx) {
-		return SHAPE_BY_LAYER[state.getValue(LAYERS)];
+	public VoxelShape getVisualShape(BlockState p_56597_, BlockGetter p_56598_, BlockPos p_56599_, CollisionContext p_56600_) {
+		return SHAPE_BY_LAYER[p_56597_.getValue(LAYERS)];
 	}
 
-	@Override
-	public boolean useShapeForLightOcclusion(BlockState state) {
-		return (state.getValue(LAYERS) < layerCount);
+	public boolean useShapeForLightOcclusion(BlockState p_56630_) {
+		return true;
 	}
 
 	@Override
@@ -188,10 +154,6 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Simpl
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-		if (newLAYERS != null) {
-			this.LAYERS = newLAYERS;
-			newLAYERS = null;
-		}
 		StateDefinition.add(LAYERS, WATERLOGGED);
 	}
 

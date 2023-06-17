@@ -486,7 +486,7 @@ components:
       allOf:
         - $ref: "#/components/schemas/Block"
         - type: object
-          description: Block type for simple 'layer' blocks
+          description: Block type for simple 'layer' blocks (8 layers, 1-8, same as snow layer vanilla block)
           properties:
             textures:
               type: array
