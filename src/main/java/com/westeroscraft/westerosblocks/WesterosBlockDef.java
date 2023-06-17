@@ -101,6 +101,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	private static final float DEF_FLOAT = -999.0F;
 	public static final int DEF_INT = -999;
 
+	public static final String LAYER_SENSITIVE = "layerSensitive";
+	
 	public String blockName; // Locally unique block name
 	public String blockType = "solid"; // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
 	public String modelBlockName; // Model block name (stairs use this)

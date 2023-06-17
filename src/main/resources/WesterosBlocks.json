@@ -538,6 +538,7 @@
       "blockName": "yellow_wildflowers",
       "blockType": "plant",
       "material": "wood",
+      "type": "layerSensitive",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,

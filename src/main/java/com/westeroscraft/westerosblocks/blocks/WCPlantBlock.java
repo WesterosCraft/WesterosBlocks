@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -11,11 +12,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.IPlantable;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.tags.FluidTags;
@@ -37,6 +43,10 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
         	if (state != null) {
         		tempSTATE = state;
         	}        	
+            String t = def.getType();
+            if ((t != null) && (t.indexOf(WesterosBlockDef.LAYER_SENSITIVE) >= 0)) {
+            	tempLAYERS = BlockStateProperties.LAYERS;
+            }
         	return def.registerRenderType(def.registerBlock(new WCPlantBlock(props, def)), false, false);
         }
     }    
@@ -45,8 +55,13 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
 
     private WesterosBlockDef def;
     protected static WesterosBlockDef.StateProperty tempSTATE;
+    protected static IntegerProperty tempLAYERS;
     protected WesterosBlockDef.StateProperty STATE;
+    protected IntegerProperty LAYERS;
     protected boolean toggleOnUse = false;
+    public boolean layerSensitive = false;
+
+    public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[]{Shapes.empty(), Block.box(0.0D, -14.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.box(0.0D, -12.0D, 0.0D, 16.0D, 4.0D, 16.0D), Block.box(0.0D, -10.0D, 0.0D, 16.0D, 6.0D, 16.0D), Block.box(0.0D, -8.0D, 0.0D, 16.0D, 8.0D, 16.0D), Block.box(0.0D, -6.0D, 0.0D, 16.0D, 10.0D, 16.0D), Block.box(0.0D, -4.0D, 0.0D, 16.0D, 12.0D, 16.0D), Block.box(0.0D, -2.0D, 0.0D, 16.0D, 14.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
     protected WCPlantBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
@@ -61,10 +76,20 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
             }
         }
         if (STATE != null) {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
+        	if (LAYERS != null) {        		
+        		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue).setValue(LAYERS, 8));
+        	}
+        	else {
+        		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
+        	}
         }
         else {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));
+        	if (LAYERS != null) {        		
+        		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(LAYERS, 8));
+        	}
+        	else {
+        		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));        		
+        	}
         }
     }
     @Override
@@ -75,10 +100,23 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
+    	if (bs == null) return null;
         FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
         bs = bs.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
         if (STATE != null) {
         	bs = bs.setValue(STATE, STATE.defValue);
+        }
+        if (LAYERS != null) {
+        	BlockState below = ctx.getLevel().getBlockState(ctx.getClickedPos().relative(Direction.DOWN));
+        	if ((below != null) && (below.hasProperty(BlockStateProperties.LAYERS))) {
+        		Block blk = below.getBlock();
+        		Integer layer = below.getValue(BlockStateProperties.LAYERS);
+        		// See if soft layer
+        		if ((blk instanceof SnowLayerBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock)blk).softLayer)) {
+        			layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
+        		}
+        		bs = bs.setValue(LAYERS, layer);
+        	}
         }
     	return bs;
     }
@@ -101,15 +139,22 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
         }
     }
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateDefinition) {
     	if (tempSTATE != null) {
     		STATE = tempSTATE;
     		tempSTATE = null;
     	}
-    	if (STATE != null) {
-	       StateDefinition.add(STATE);
+    	if (tempLAYERS != null) {
+    		LAYERS = tempLAYERS;
+    		tempLAYERS = null;
     	}
-       StateDefinition.add(WATERLOGGED);
+    	if (STATE != null) {
+	       stateDefinition.add(STATE);
+    	}
+    	if (LAYERS != null) {
+    		stateDefinition.add(LAYERS);
+    	}
+    	stateDefinition.add(WATERLOGGED);
     }
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
@@ -134,6 +179,17 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
 	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
 		return state.getFluidState().isEmpty();
     }
+	
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
+		if (LAYERS != null) {
+			return SHAPE_BY_LAYER[state.getValue(LAYERS)];
+		}
+		else {
+			return Shapes.block();
+		}
+	}
+
     private static String[] TAGS = { "flowers" };
     @Override
     public String[] getBlockTags() {
