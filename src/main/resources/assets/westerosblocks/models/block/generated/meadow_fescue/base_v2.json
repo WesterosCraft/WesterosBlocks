@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "westerosblocks:block/untinted/cross",
   "textures": {
     "cross": "westerosblocks:block/flowers/meadow_fescue/side2"
   }

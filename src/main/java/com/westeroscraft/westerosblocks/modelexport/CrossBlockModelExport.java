@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.Block;
 public class CrossBlockModelExport extends ModelExport {
     // Template objects for Gson export of block models
     public static class ModelObjectCross {
-        public String parent = "minecraft:block/cross";    // Use 'cross' model for single texture
+        public String parent = "westerosblocks:block/untinted/cross";
         public TextureCross textures = new TextureCross();
     }
     public static class TextureCross {
@@ -75,7 +75,7 @@ public class CrossBlockModelExport extends ModelExport {
 	        	mod.textures.cross = getTextureID(set.getTextureByIndex(0)); 
 	        	// Use tinted cross if 
 	        	if (isTinted) {
-	        		mod.parent = "minecraft:block/tinted_cross";
+	        		mod.parent = "westerosblocks:block/tinted/cross";
 	        	}
 	        	this.writeBlockModelFile(getModelName(id, setidx), mod);
 	        }

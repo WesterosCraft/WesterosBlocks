@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "westerosblocks:block/untinted/cross",
   "textures": {
     "cross": "westerosblocks:block/brown_mushroom_block_0/mushroom_brown_12"
   }
