@@ -52888,6 +52888,21 @@
           ]
         }
       ]
-    }
+    },
+    {
+      "blockName": "grass_layer",
+      "blockType": "layer",
+      "hardness": 0.5,
+      "stepSound": "grass",
+      "material": "grass",
+      "creativeTab": "WesterosSandGravel",
+      "label": "Grass Layer",
+      "colorMult": "grass",
+      "textures": [
+        "minecraft:block/dirt",
+        "minecraft:block/grass_block_top",
+        "minecraft:block/grass_block_top"
+      ]
+    }    
   ]
 }
