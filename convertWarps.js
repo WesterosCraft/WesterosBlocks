@@ -3,9 +3,9 @@
 const fs = require('fs');
 
 const worldmap = {
-    "2da99365-09e1-4c4c-8234-e0cc408de7e1": "westeroscraft:westerosnew",
-    "529971ea-d2be-4409-a3d0-43b09890e844": "westeroscraft:newtest",
-    "0040c34c-8b08-4a1c-a131-0344083fcd4f": "westeroscraft:blocktestworld",
+    "2da99365-09e1-4c4c-8234-e0cc408de7e1": "wc:westeros",
+    "529971ea-d2be-4409-a3d0-43b09890e844": "wc:playground",
+    "0040c34c-8b08-4a1c-a131-0344083fcd4f": "wc:repository",
 };
 
 function escape(s) {
