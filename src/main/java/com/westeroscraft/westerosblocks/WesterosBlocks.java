@@ -3,7 +3,6 @@ package com.westeroscraft.westerosblocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.CrashReport;
@@ -14,7 +13,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -58,7 +56,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -228,7 +225,6 @@ public class WesterosBlocks {
 		public static final ForgeConfigSpec SPEC;
 		public static final ForgeConfigSpec.BooleanValue snowInTaiga;
 		public static final ForgeConfigSpec.BooleanValue blockDevMode;
-		public static final ForgeConfigSpec.BooleanValue publishToDynmap;
 		public static final ForgeConfigSpec.IntValue autoRestoreTime;
 		public static final ForgeConfigSpec.BooleanValue autoRestoreAllHalfDoors;
 
@@ -236,7 +232,6 @@ public class WesterosBlocks {
 			BUILDER.comment("Module options");
 			snowInTaiga = BUILDER.comment("Enable snow in taiga").define("snowInTaiga", true);
 			blockDevMode = BUILDER.comment("Block development mode").define("blockDevMode", false);
-			publishToDynmap = BUILDER.comment("Publish blocks to dynmap").define("publishToDynmap", true);
 			BUILDER.push("autoRestore");
             autoRestoreTime = BUILDER.comment("Number of seconds before auto-restore").defineInRange("autoRestoreTime", 30, 5, 300);
             autoRestoreAllHalfDoors = BUILDER.comment("Auto restore all half-door blocks").define("autoRestoreAllHalfDoors", true);
@@ -353,7 +348,7 @@ public class WesterosBlocks {
 		}
 		@SubscribeEvent
 		public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-			log.info("onzItemsRegistryEvent");
+			log.info("onItemsRegistryEvent");
 			if (menuOverrides != null) {
 				for (WesterosItemMenuOverrides mo : menuOverrides) {
 					if (mo.blockNames != null) {
@@ -368,7 +363,7 @@ public class WesterosBlocks {
 									tab = WesterosBlockDef.getCreativeTab(mo.creativeTab);
 								}
 								itm.category = tab;
-								log.info("Item for " + bn + " set to tab " + mo.creativeTab);
+								//log.info("Item for " + bn + " set to tab " + mo.creativeTab);
 							}
 						}
 					}
