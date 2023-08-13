@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.westeroscraft.westerosblocks.network.ClientMessageHandler;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundSetTimePacket;
 
 @Mixin(ClientboundSetTimePacket.class)
@@ -21,8 +22,8 @@ public abstract class MixinClientboundSetTimePacket
 	{
 	}
 	
-	@Inject(method = "handle", at = @At("TAIL"))
-	private void handle(CallbackInfo ci)
+	@Inject(method = "handle(Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V", at = @At("HEAD"))
+	private void handle(ClientGamePacketListener listener, CallbackInfo ci)
 	{
 		if (ClientMessageHandler.ptimeRelative) {	// If we are relative mode
 			if (ClientMessageHandler.ptimeOffset != 0) {
