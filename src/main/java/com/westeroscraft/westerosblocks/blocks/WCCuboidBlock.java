@@ -58,6 +58,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     protected WesterosBlockDef def;
     
     protected VoxelShape[] SHAPE_BY_INDEX;
+    protected VoxelShape[] SUPPORT_BY_INDEX;
     protected List<WesterosBlockDef.Cuboid> cuboid_by_facing[];
 
     protected WCCuboidBlock(BlockBehaviour.Properties props, WesterosBlockDef def, int modelsPerState) {
@@ -83,6 +84,10 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     			cuboid_by_facing[i * modelsPerState + j] = new ArrayList<WesterosBlockDef.Cuboid>();
     		}
             SHAPE_BY_INDEX[i * modelsPerState] = getBoundingBoxFromCuboidList(cuboid_by_facing[i * modelsPerState]);
+    	}
+    	SUPPORT_BY_INDEX = new VoxelShape[cnt];
+    	for (int i = 0; i < cnt; i++) {
+            SUPPORT_BY_INDEX[i] = def.states.get(i).makeSupportBoxShape(null);
     	}
         if (STATE != null) {
             this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
@@ -124,7 +129,10 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     }
     @Override
     public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
-        return SHAPE_BY_INDEX[getIndexFromState(state)];
+    	int idx = 0;
+    	if (STATE != null)
+    		idx = STATE.getIndex(state.getValue(STATE)); 
+        return SUPPORT_BY_INDEX[idx];
     }
     @Override
     public VoxelShape getVisualShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {

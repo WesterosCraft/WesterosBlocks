@@ -28,6 +28,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -103,6 +104,10 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
            return flag ? NORTH_AABB : (flag1 ? WEST_AABB : EAST_AABB);
         }
      }
+    @Override
+    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
+        return Shapes.empty();
+    }
 
     @Override
      public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType path) {

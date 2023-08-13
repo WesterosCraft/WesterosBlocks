@@ -8,6 +8,9 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef.BoundingBox;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.Cuboid;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.RandomTextureSet;
 
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
 public class WesterosBlockStateRecord {
 	public String stateID = null;	// If not defined, value is "stateN"
 	public BoundingBox boundingBox = null; // Bounding box
@@ -118,6 +121,18 @@ public class WesterosBlockStateRecord {
 		return 0;
 	}
 	
+	// Get customized support box
+	public VoxelShape makeSupportBoxShape(List<BoundingBox> def) {
+		VoxelShape s = Shapes.empty();
+		if (supportBoxes != null) { def = supportBoxes; }
+		if (def != null) {
+			for (BoundingBox b : def) {
+				s = Shapes.or(s, b.getAABB());
+			}
+		}
+		return s;		
+	}
+
 	public boolean isTinted() {
 		return ((colorMult != null) && (colorMult.equals("#FFFFFF") == false));
 	}

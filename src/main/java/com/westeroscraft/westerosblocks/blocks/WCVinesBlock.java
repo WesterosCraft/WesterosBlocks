@@ -124,6 +124,10 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
     public VoxelShape getShape(BlockState p_220053_1_, BlockGetter p_220053_2_, BlockPos p_220053_3_, CollisionContext p_220053_4_) {
         return this.shapesCache.get(p_220053_1_);
     } 
+    @Override
+    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
+        return Shapes.empty();
+    }
 
     @Override
     public boolean canSurvive(BlockState p_196260_1_, LevelReader p_196260_2_, BlockPos p_196260_3_) {

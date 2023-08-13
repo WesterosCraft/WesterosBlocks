@@ -32,7 +32,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         super(props);
         this.def = def;
         collisionbox = def.makeCollisionBoxShape();
-        supportbox = def.makeSupportBoxShape();
+        supportbox = def.makeSupportBoxShape(def.collisionBoxes);
     }
     
     @Override
