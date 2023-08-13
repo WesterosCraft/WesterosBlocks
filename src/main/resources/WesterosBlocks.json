@@ -7787,6 +7787,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_0:0"
     },
     {
@@ -7840,6 +7850,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_0:1"
     },
@@ -7895,6 +7915,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_0:2"
     },
     {
@@ -7948,6 +7978,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_0:3"
     },
@@ -8136,6 +8176,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_0:8"
     },
     {
@@ -8188,6 +8238,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_0:9"
     },
@@ -8242,6 +8302,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_0:10"
     },
     {
@@ -8294,6 +8364,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_0:11"
     },
@@ -8348,6 +8428,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_0:12"
     },
     {
@@ -8400,6 +8490,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_0:13"
     },
@@ -8454,6 +8554,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_0:14"
     },
     {
@@ -8507,6 +8617,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_0:15"
     },
@@ -24095,6 +24215,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:0"
     },
     {
@@ -24149,6 +24279,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:1"
     },
     {
@@ -24201,6 +24341,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_1:2"
     },
@@ -24255,6 +24405,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:3"
     },
     {
@@ -24307,6 +24467,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_1:4"
     },
@@ -24361,6 +24531,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:5"
     },
     {
@@ -24413,6 +24593,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_1:6"
     },
@@ -24467,6 +24657,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:7"
     },
     {
@@ -24519,6 +24719,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_1:8"
     },
@@ -24573,6 +24783,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:9"
     },
     {
@@ -24625,6 +24845,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_1:10"
     },
@@ -24680,6 +24910,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:11"
     },
     {
@@ -24733,6 +24973,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_1:12"
     },
@@ -24788,6 +25038,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:13"
     },
     {
@@ -24842,6 +25102,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_1:14"
     },
     {
@@ -24894,6 +25164,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_1:15"
     },
@@ -39041,6 +39321,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:0"
     },
     {
@@ -39093,6 +39383,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_2:1"
     },
@@ -39147,6 +39447,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:2"
     },
     {
@@ -39199,6 +39509,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_2:3"
     },
@@ -39253,6 +39573,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:4"
     },
     {
@@ -39305,6 +39635,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_2:5"
     },
@@ -39359,6 +39699,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:6"
     },
     {
@@ -39411,6 +39761,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_2:7"
     },
@@ -39466,6 +39826,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:8"
     },
     {
@@ -39520,6 +39890,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:9"
     },
     {
@@ -39572,6 +39952,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_2:10"
     },
@@ -39626,6 +40016,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:11"
     },
     {
@@ -39678,6 +40078,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_2:12"
     },
@@ -39732,6 +40142,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:13"
     },
     {
@@ -39785,6 +40205,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_2:14"
     },
     {
@@ -39837,6 +40267,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_2:15"
     },
@@ -44637,6 +45077,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_3:0"
     },
     {
@@ -44689,6 +45139,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_3:1"
     },
@@ -44743,6 +45203,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_3:2"
     },
     {
@@ -44795,6 +45265,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_3:3"
     },
@@ -47594,6 +48074,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_4:0"
     },
     {
@@ -47646,6 +48136,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_4:1"
     },
@@ -47701,6 +48201,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_4:2"
     },
     {
@@ -47754,6 +48264,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_4:3"
     },
@@ -47809,6 +48329,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_4:4"
     },
     {
@@ -47861,6 +48391,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_4:5"
     },
@@ -47915,6 +48455,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_4:6"
     },
     {
@@ -47967,6 +48517,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_4:7"
     },
@@ -48021,6 +48581,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_4:8"
     },
     {
@@ -48073,6 +48643,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_4:9"
     },
@@ -48127,6 +48707,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_4:10"
     },
     {
@@ -48179,6 +48769,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_4:11"
     },
@@ -48233,6 +48833,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_4:12"
     },
     {
@@ -48285,6 +48895,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_4:13"
     },
@@ -48339,6 +48959,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_4:14"
     },
     {
@@ -48391,6 +49021,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_4:15"
     },
@@ -48445,6 +49085,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_5:0"
     },
     {
@@ -48497,6 +49147,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_5:1"
     },
@@ -48551,6 +49211,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_5:2"
     },
     {
@@ -48603,6 +49273,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_5:3"
     },
@@ -48657,6 +49337,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_5:4"
     },
     {
@@ -48709,6 +49399,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_5:5"
     },
@@ -48763,6 +49463,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_5:6"
     },
     {
@@ -48815,6 +49525,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_5:7"
     },
@@ -48869,6 +49589,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],    
       "legacyBlockID": "arrow_slits_5:8"
     },
     {
@@ -48921,6 +49651,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_5:9"
     },
@@ -48975,6 +49715,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_5:10"
     },
     {
@@ -49027,6 +49777,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_5:11"
     },
@@ -49081,6 +49841,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_5:12"
     },
     {
@@ -49133,6 +49903,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_5:13"
     },
@@ -49187,6 +49967,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],
       "legacyBlockID": "arrow_slits_5:14"
     },
     {
@@ -49239,6 +50029,16 @@
           "zMin": 0.8,
           "zMax": 1
         }
+      ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
       ],
       "legacyBlockID": "arrow_slits_6:0"
     },
@@ -49293,6 +50093,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],   
       "legacyBlockID": "arrow_slits_6:1"
     },
     {
@@ -49346,6 +50156,16 @@
           "zMax": 1
         }
       ],
+      "supportBoxes": [ 
+        {
+          "xMin": 0,
+          "xMax": 1,
+          "yMin": 0,
+          "yMax": 1,
+          "zMin": 0,
+          "zMax": 1
+        }      
+      ],    
       "legacyBlockID": "arrow_slits_6:2"
     },
     {

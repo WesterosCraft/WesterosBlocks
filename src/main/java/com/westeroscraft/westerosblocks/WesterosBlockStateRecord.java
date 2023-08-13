@@ -13,6 +13,7 @@ public class WesterosBlockStateRecord {
 	public BoundingBox boundingBox = null; // Bounding box
 	public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
 	public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
+	public List<BoundingBox> supportBoxes = null; // For 'solid', used for support/connection (fences, walls, torches)
 	public Boolean isCustomModel = false; // If set and true, don't generate new custom model (hand crafted)
 	public List<String> textures = null; // List of textures (for single texture set)
 	public List<RandomTextureSet> randomTextures = null;	// On supported blocks (solid, leaves, slabs, stairs), 

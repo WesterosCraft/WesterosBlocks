@@ -179,6 +179,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		public BoundingBox boundingBox = null; // Bounding box
 		public List<Cuboid> cuboids = null; // List of cuboids composing block (for 'cuboid', and others)
 		public List<BoundingBox> collisionBoxes = null; // For 'solid', used for raytrace (arrow shots)
+		public List<BoundingBox> supportBoxes = null; // For 'solid', used for connection/support (fences, walls, torches)
 		public List<RandomTextureSet> randomTextures = null;	// On supported blocks (solid, leaves, slabs, stairs), 
 		// defines sets of textures used for additional random models
 		// If randomTextures is used, textures is ignored
@@ -1133,6 +1134,17 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}
 		VoxelShape s = Shapes.empty();
 		for (BoundingBox b : collisionBoxes) {
+			s = Shapes.or(s, b.getAABB());
+		}
+		return s;		
+	}
+	// Get customized support box for default solid block
+	public VoxelShape makeSupportBoxShape() {
+		if (supportBoxes == null) {
+			return makeCollisionBoxShape();
+		}
+		VoxelShape s = Shapes.empty();
+		for (BoundingBox b : supportBoxes) {
 			s = Shapes.or(s, b.getAABB());
 		}
 		return s;		

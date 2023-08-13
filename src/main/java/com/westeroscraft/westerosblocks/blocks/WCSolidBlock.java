@@ -26,11 +26,13 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     }    
     protected WesterosBlockDef def;
     protected VoxelShape collisionbox;
+    protected VoxelShape supportbox;
     
     protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         collisionbox = def.makeCollisionBoxShape();
+        supportbox = def.makeSupportBoxShape();
     }
     
     @Override
@@ -43,7 +45,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     }
     @Override
     public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
-        return collisionbox;
+        return supportbox;
     }
     @Override
     public VoxelShape getVisualShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {

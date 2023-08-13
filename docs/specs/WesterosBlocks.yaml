@@ -320,6 +320,8 @@ components:
               $ref: "#/components/schemas/colorMult"
             collisionBoxes:
               $ref: "#/components/schemas/CollisionBoxes"
+            supportBoxes:
+              $ref: "#/components/schemas/SupportBoxes"
             rotateRandom:
               type: boolean
               description: |-
@@ -2228,6 +2230,30 @@ components:
     CollisionBoxes:
       type: array
       description: List of collision boxes
+      items:
+        type: object
+        properties:
+          xMin:
+            type: number
+            description: Minimum X value
+          xMax:
+            type: number
+            description: Maximum X value
+          yMin:
+            type: number
+            description: Minimum Y value
+          yMax:
+            type: number
+            description: Maximum Y value
+          zMin:
+            type: number
+            description: Minimum Z value
+          zMax:
+            type: number
+            description: Maximum Z value
+    SupportBoxes:
+      type: array
+      description: List of support boxes
       items:
         type: object
         properties:
