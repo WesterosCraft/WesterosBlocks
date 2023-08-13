@@ -43,6 +43,7 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.mojang.brigadier.CommandDispatcher;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
+import com.westeroscraft.westerosblocks.commands.NVCommand;
 import com.westeroscraft.westerosblocks.commands.PTimeCommand;
 import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
@@ -139,6 +140,7 @@ public class WesterosBlocks {
 	    CommandDispatcher<CommandSourceStack> commandDispatcher = event.getDispatcher();
 		PTimeCommand.register(commandDispatcher);
 		PWeatherCommand.register(commandDispatcher);
+		NVCommand.register(commandDispatcher);
 	}
 	
 	private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
