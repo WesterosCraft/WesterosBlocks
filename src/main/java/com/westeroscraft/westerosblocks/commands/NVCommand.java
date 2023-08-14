@@ -26,7 +26,7 @@ public class NVCommand {
 			ServerPlayer player = (ServerPlayer) source.getEntity();
 			MobEffectInstance nv = player.getEffect(MobEffects.NIGHT_VISION);
 			if (nv == null) {
-				player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE));
+				player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, Integer.MAX_VALUE, 0, false, false, false));
 				source.sendSuccess(new TextComponent("Enable night vision"), true);
 			}
 			else {
