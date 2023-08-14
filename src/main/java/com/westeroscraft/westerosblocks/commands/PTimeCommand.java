@@ -82,8 +82,8 @@ public class PTimeCommand {
 	public static int setTime(CommandSourceStack source, int timeticks, boolean relative) {
 		if (source.getEntity() instanceof ServerPlayer) {
 			ServerPlayer player = (ServerPlayer) source.getEntity();
-			WesterosBlocks.log.info("Set time to " + player.getName().toString() + " to relative=" + relative
-					+ ", offset=" + timeticks);
+			//WesterosBlocks.log.info("Set time to " + player.getName().toString() + " to relative=" + relative
+			//		+ ", offset=" + timeticks);
 			WesterosBlocks.simpleChannel.send(PacketDistributor.PLAYER.with(() -> player),
 					new PTimeMessage(relative, timeticks));
 			source.sendSuccess(
