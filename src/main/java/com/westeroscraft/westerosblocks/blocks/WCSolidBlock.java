@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import com.google.common.collect.Lists;
 import com.westeroscraft.westerosblocks.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -27,12 +28,18 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     protected WesterosBlockDef def;
     protected VoxelShape collisionbox;
     protected VoxelShape supportbox;
+
     
     protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
         collisionbox = def.makeCollisionBoxShape();
-        supportbox = def.makeSupportBoxShape(def.collisionBoxes);
+        if (def.supportBoxes == null) {
+        	supportbox = collisionbox;
+        }
+        else {
+        	supportbox = def.makeSupportBoxShape(null);
+        }
     }
     
     @Override
