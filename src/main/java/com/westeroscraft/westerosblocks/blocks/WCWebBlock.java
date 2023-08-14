@@ -129,7 +129,7 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
 
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
-        if (this.toggleOnUse && (this.STATE != null)) {
+        if (this.toggleOnUse && (this.STATE != null) && player.isCreative()) {
             state = state.cycle(this.STATE);
             level.setBlock(pos, state, 10);
             level.levelEvent(player, 1006, pos, 0);
