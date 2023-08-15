@@ -66,7 +66,7 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
     }
     @Override
     public boolean canSurvive(BlockState p_52783_, LevelReader p_52784_, BlockPos p_52785_) {
-    	if (allow_unsupported) return true;
+    	if (allow_unsupported && (p_52783_.getValue(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) return true;
     	return super.canSurvive(p_52783_, p_52784_, p_52785_);
      }
 
