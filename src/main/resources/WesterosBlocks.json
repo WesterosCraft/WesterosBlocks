@@ -20568,6 +20568,7 @@
         "door_block_0/door_spruce_top",
         "door_block_0/door_spruce_bottom"
       ],
+      "type": "allow-unsupported",
       "legacyBlockID": "door_spruce"
     },
     {
@@ -25741,6 +25742,7 @@
         "door_block_0/door_weirwood_top",
         "door_block_0/door_weirwood_bottom"
       ],
+      "type": "allow-unsupported",
       "legacyBlockID": "door_weirwood"
     },
     {
@@ -28801,7 +28803,7 @@
       "material": "rock",
       "resistance": 7,
       "creativeTab": "WesterosWoodPlanks",
-      "type": "locked:true",
+      "type": "locked:true,allow-unsupported",
       "label": "Red Keep Secret Door",
       "textures": [
         "sandstone_red/coarse",
@@ -34643,7 +34645,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
-      "type": "locked:true",
+      "type": "locked:true,allow-unsupported",
       "label": "Locked Oak Door",
       "textures": [
         "door_block_0/door_locked_oak_top",
@@ -34659,7 +34661,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
-      "type": "locked:true",
+      "type": "locked:true,allow-unsupported",
       "label": "Locked Spruce Door",
       "textures": [
         "door_block_0/door_locked_spruce_top",
@@ -34675,7 +34677,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
-      "type": "locked:true",
+      "type": "locked:true,allow-unsupported",
       "label": "Locked Birch Door",
       "textures": [
         "door_block_0/door_locked_birch_top",
@@ -34691,7 +34693,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
-      "type": "locked:true",
+      "type": "locked:true,allow-unsupported",
       "label": "Locked Jungle Door",
       "textures": [
         "door_block_0/door_locked_jungle_top",
@@ -34707,7 +34709,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
-      "type": "locked:true",
+      "type": "locked:true,allow-unsupported",
       "label": "Locked Dark Northern Wood Door",
       "textures": [
         "door_block_0/door_locked_northern_top",
