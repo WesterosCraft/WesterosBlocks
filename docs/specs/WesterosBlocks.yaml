@@ -1795,6 +1795,8 @@ components:
                 
                 - "locked": If value is defined and
                 "true", door is locked (not opened by hand)
+                - "allowed_unsupported": If defined, door
+                doesn't break when unsupported
                   
     halfdoor:
       title: blockType='halfdoor'
