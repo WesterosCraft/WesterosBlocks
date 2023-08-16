@@ -723,6 +723,15 @@ components:
                   If the list is shorter than 2, the
                   last texture is used for all indexes
                   beyond the length of the list.
+            type:
+              type: string
+              description: |-
+                Comma separated list of 'token:value" and
+                "token" fields.  Defined tokens include:
+                
+                - "allow-unsupported": If value is
+                defined, block does not break
+                when unsupported.
     pane:
       title: blockType='pane'
       allOf:

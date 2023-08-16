@@ -17855,6 +17855,7 @@
         "rail_block_0/rope",
         "rail_block_0/rope_turned"
       ],
+      "type": "allow-unsupported",
       "legacyBlockIDList": [ "rail_block_0", "minecraft:rail" ]
     },
     {
@@ -17867,6 +17868,7 @@
         "rail_block_0/net_large",
         "rail_block_0/net_large_turned"
       ],
+      "type": "allow-unsupported",
       "legacyBlockID": "rope_block_1"
     },
     {
@@ -19026,6 +19028,7 @@
         "rail_block_0/packed_snow",
         "rail_block_0/packed_snow_turned"
       ],
+      "type": "allow-unsupported",
       "legacyBlockID": "rope_block_2"
     },
     {
@@ -19425,6 +19428,7 @@
         "rail_block_0/chain",
         "rail_block_0/chain_turned"
       ],
+      "type": "allow-unsupported",
       "legacyBlockIDList": [ "rail_block_1", "minecraft:activator_rail:powered=true", "minecraft:activator_rail:powered=false" ]
     },
     {
@@ -41342,6 +41346,7 @@
       "material": "cloth",
       "creativeTab": "WesterosClothFibers",
       "label": "Fancy Red Carpet",
+      "type": "allow-unsupported",
       "textures": [
         "carpet/fancy_red_carpet"
       ]
@@ -41353,6 +41358,7 @@
       "material": "cloth",
       "creativeTab": "WesterosClothFibers",
       "label": "Fancy Blue Carpet",
+      "type": "allow-unsupported",
       "textures": [
         "carpet/fancy_blue_carpet"
       ]
@@ -44454,6 +44460,7 @@
       "textures": [
         "rail_block_0/cover_oak"
       ],
+      "type": "allow-unsupported",
       "legacyBlockIDList": [ "rope_block_3", "minecraft:detector_rail:powered=true", "minecraft:detector_rail:powered=false" ]
     },
     {
@@ -44465,6 +44472,7 @@
       "textures": [
         "rail_block_0/cover_spruce"
       ],
+      "type": "allow-unsupported",
       "legacyBlockID": "rope_block_4"
     },
     {
@@ -44476,6 +44484,7 @@
       "textures": [
         "rail_block_0/cover_birch"
       ],
+      "type": "allow-unsupported",
       "legacyBlockID": "rope_block_5"
     },
     {
@@ -44487,6 +44496,7 @@
       "textures": [
         "rail_block_0/cover_jungle"
       ],
+      "type": "allow-unsupported",
       "legacyBlockID": "rope_block_6"
     },
     {
@@ -44498,6 +44508,7 @@
       "textures": [
         "rail_block_0/cover_northern"
       ],
+      "type": "allow-unsupported",
       "legacyBlockID": "rope_block_7"
     },
     {
