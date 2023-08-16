@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockDef.RandomTextureSet;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.modelexport.FireBlockModelExport.TextureLayer0;
 import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
@@ -38,64 +39,87 @@ public class VinesBlockModelExport extends ModelExport {
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
+    public String modelFileName(String ext, int setidx, boolean isCustom) {
+    	if (isCustom)
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx);
+    	else
+    		return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx);
+    }
+
     @Override
     public void doBlockStateExport() throws IOException {
         StateObject so = new StateObject();
-        // South
-        WhenRec when = new WhenRec();
-        when.south = "true"; 
-        Apply apply = new Apply();
-        apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
-        so.addStates(when, apply, null);
-        // West
-        when = new WhenRec();
-        when.west = "true"; 
-        apply = new Apply();
-        apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
-        apply.y = 90;
-        so.addStates(when, apply, null);
-        // North
-        when = new WhenRec();
-        when.north = "true";
-        apply = new Apply();
-        apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
-        apply.y = 180;
-        so.addStates(when, apply, null);
-        // East
-        when = new WhenRec();
-        when.east = "true";
-        apply = new Apply();
-        apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", 0);
-        apply.y = 270;
-        so.addStates(when, apply, null);
-        // Up
-        when = new WhenRec();
-        when.up = "true";
-        apply = new Apply();
-        apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("top", 0);
-        so.addStates(when, apply, null);
-        // Down
-        when = new WhenRec();
-        when.down = "true";
-        apply = new Apply();
-        apply.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("top", 0);
-        apply.x = 180;
-        so.addStates(when, apply, null);
         
+        // Loop over the random sets we've got
+        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+        	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
+        	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
+            for (int i = 0; i < cnt; i++) {
+    	        // South
+    	        WhenRec when = new WhenRec();
+    	        when.south = "true"; 
+    	        Apply apply = new Apply();
+    	        apply.model = modelFileName("base", setidx, def.isCustomModel());
+    	        apply.weight = set.weight;
+    	        so.addStates(when, apply, null);
+    	        // West
+    	        when = new WhenRec();
+    	        when.west = "true"; 
+    	        apply = new Apply();
+    	        apply.model = modelFileName("base", setidx, def.isCustomModel());
+    	        apply.weight = set.weight;
+    	        apply.y = 90;
+    	        so.addStates(when, apply, null);
+    	        // North
+    	        when = new WhenRec();
+    	        when.north = "true";
+    	        apply = new Apply();
+    	        apply.model = modelFileName("base", setidx, def.isCustomModel());
+    	        apply.weight = set.weight;
+    	        apply.y = 180;
+    	        so.addStates(when, apply, null);
+    	        // East
+    	        when = new WhenRec();
+    	        when.east = "true";
+    	        apply = new Apply();
+    	        apply.model = modelFileName("base", setidx, def.isCustomModel());
+    	        apply.weight = set.weight;
+    	        apply.y = 270;
+    	        so.addStates(when, apply, null);
+    	        // Up
+    	        when = new WhenRec();
+    	        when.up = "true";
+    	        apply = new Apply();
+    	        apply.model = modelFileName("top", setidx, def.isCustomModel());
+    	        apply.weight = set.weight;
+    	        so.addStates(when, apply, null);
+    	        // Down
+    	        when = new WhenRec();
+    	        when.down = "true";
+    	        apply = new Apply();
+    	        apply.model = modelFileName("top", setidx, def.isCustomModel());;
+    	        apply.weight = set.weight;
+    	        apply.x = 180;
+    	        so.addStates(when, apply, null);
+            }
+        }
         this.writeBlockStateFile(def.blockName, so);
     }
 
     @Override
     public void doModelExports() throws IOException {
     	String txt = getTextureID(def.getTextureByIndex(0));
-    	String txt2 = getTextureID(def.getTextureByIndex(1));
     	// Build models
         if (!def.isCustomModel()) {
-        	ModelObject mo1 = new ModelObject("1", txt);
-            this.writeBlockModelFile(getModelName("base", 0), mo1);
-        	ModelObject mou = new ModelObject("u", txt2);
-            this.writeBlockModelFile(getModelName("top", 0), mou);
-        }
+        	// Loop over the random sets we've got
+            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
+            	RandomTextureSet set = def.getRandomTextureSet(setidx);
+            	ModelObject mo1 = new ModelObject("1", getTextureID(set.getTextureByIndex(0)));
+                this.writeBlockModelFile(getModelName("base", setidx), mo1);
+            	ModelObject mou = new ModelObject("u", getTextureID(set.getTextureByIndex(1)));
+                this.writeBlockModelFile(getModelName("top", setidx), mou);
+            }
+    	}
         // Build simple item model that refers to block model
         ItemModelObject mo = new ItemModelObject();
         mo.textures.layer0 = txt;
