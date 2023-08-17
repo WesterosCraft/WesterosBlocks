@@ -739,7 +739,13 @@
         "minecraft:ocelot_spawn_egg",
         "minecraft:parrot_spawn_egg",
         "minecraft:phantom_spawn_egg",
-        "minecraft:pig_spawn_egg"
+        "minecraft:pig_spawn_egg",
+        "minecraft:jack_o_lantern",
+        "minecraft:ladder",
+        "minecraft:observer",
+        "minecraft:dispenser",
+        "minecraft:dropper",
+        "minecraft:daylight_detector"
       ],
       "creativeTab": "WesterosDoNotUse"
     }
