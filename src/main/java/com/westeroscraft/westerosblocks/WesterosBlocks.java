@@ -227,6 +227,8 @@ public class WesterosBlocks {
 		public static final ForgeConfigSpec.BooleanValue blockDevMode;
 		public static final ForgeConfigSpec.IntValue autoRestoreTime;
 		public static final ForgeConfigSpec.BooleanValue autoRestoreAllHalfDoors;
+		public static final ForgeConfigSpec.BooleanValue doorSurviveAny;
+		public static final ForgeConfigSpec.BooleanValue doorNoConnect;
 
 		static {
 			BUILDER.comment("Module options");
@@ -235,6 +237,10 @@ public class WesterosBlocks {
 			BUILDER.push("autoRestore");
             autoRestoreTime = BUILDER.comment("Number of seconds before auto-restore").defineInRange("autoRestoreTime", 30, 5, 300);
             autoRestoreAllHalfDoors = BUILDER.comment("Auto restore all half-door blocks").define("autoRestoreAllHalfDoors", true);
+            BUILDER.pop();
+			BUILDER.push("blockMod");
+			doorSurviveAny = BUILDER.comment("Allow door to survive on any surface").define("doorSurviveAny", true);
+			doorNoConnect = BUILDER.comment("Avoid doors connecting to walls/panes/etc").define("doorNoConnect", true);
             BUILDER.pop();
 
 			SPEC = BUILDER.build();
