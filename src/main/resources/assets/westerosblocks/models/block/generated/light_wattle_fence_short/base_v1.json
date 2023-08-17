@@ -20,8 +20,8 @@
   "textures": {
     "txt4": "westerosblocks:block/wattle_fence_light/fence_wattle_light_short",
     "txt5": "westerosblocks:block/wattle_fence_light/fence_wattle_light_short",
-    "txt2": "westerosblocks:block/transparent",
-    "txt3": "westerosblocks:block/transparent",
+    "txt2": "westerosblocks:block/wattle_fence_light/fence_wattle_light_short",
+    "txt3": "westerosblocks:block/wattle_fence_light/fence_wattle_light_short",
     "txt0": "westerosblocks:block/transparent",
     "txt1": "westerosblocks:block/transparent",
     "particle": "westerosblocks:block/transparent"
@@ -35,14 +35,14 @@
       ],
       "to": [
         1.12,
-        16.0,
+        8.0,
         16.0
       ],
       "faces": {
         "east": {
           "uv": [
             0.0,
-            0.0,
+            8.0,
             16.0,
             16.0
           ],
@@ -51,7 +51,7 @@
         "south": {
           "uv": [
             0.16,
-            0.0,
+            8.0,
             1.12,
             16.0
           ],
@@ -61,7 +61,7 @@
         "north": {
           "uv": [
             14.88,
-            0.0,
+            8.0,
             15.84,
             16.0
           ],
@@ -71,7 +71,7 @@
         "west": {
           "uv": [
             0.0,
-            0.0,
+            8.0,
             16.0,
             16.0
           ],
@@ -84,8 +84,7 @@
             1.12,
             16.0
           ],
-          "texture": "#txt1",
-          "cullface": "up"
+          "texture": "#txt1"
         },
         "down": {
           "uv": [

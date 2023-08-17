@@ -24086,8 +24086,8 @@
           "textures": [
             "transparent",
             "transparent",
-            "transparent",
-            "transparent",
+            "wattle_fence/side1",
+            "wattle_fence/side1",
             "wattle_fence/side1",
             "wattle_fence/side1"
           ]
@@ -24096,8 +24096,8 @@
           "textures": [
             "transparent",
             "transparent",
-            "transparent",
-            "transparent",
+            "wattle_fence/side2",
+            "wattle_fence/side2",
             "wattle_fence/side2",
             "wattle_fence/side2"
           ]
@@ -41487,8 +41487,8 @@
           "textures": [
             "transparent",
             "transparent",
-            "transparent",
-            "transparent",
+            "wattle_fence/ctm1",
+            "wattle_fence/ctm1",
             "wattle_fence/ctm1",
             "wattle_fence/ctm1"
           ]
@@ -41497,8 +41497,8 @@
           "textures": [
             "transparent",
             "transparent",
-            "transparent",
-            "transparent",
+            "wattle_fence/ctm2",
+            "wattle_fence/ctm2",
             "wattle_fence/ctm2",
             "wattle_fence/ctm2"
           ]
@@ -41508,7 +41508,7 @@
         "xMin": 0.01,
         "xMax": 0.07,
         "yMin": 0,
-        "yMax": 1,
+        "yMax": 0.5,
         "zMin": 0,
         "zMax": 1
       },
@@ -52863,8 +52863,8 @@
       "textures": [
         "transparent",
         "transparent",
-        "transparent",
-        "transparent",
+        "wattle_fence_light/side1",
+        "wattle_fence_light/side1",
         "wattle_fence_light/side1",
         "wattle_fence_light/side2"
       ],
@@ -52896,8 +52896,8 @@
       "textures": [
         "transparent",
         "transparent",
-        "transparent",
-        "transparent",
+        "wattle_fence_light/fence_wattle_light_short",
+        "wattle_fence_light/fence_wattle_light_short",
         "wattle_fence_light/fence_wattle_light_short",
         "wattle_fence_light/fence_wattle_light_short"
       ],
@@ -52905,7 +52905,7 @@
         "xMin": 0.01,
         "xMax": 0.07,
         "yMin": 0,
-        "yMax": 1,
+        "yMax": 0.5,
         "zMin": 0,
         "zMax": 1
       },
@@ -52929,8 +52929,8 @@
       "textures": [
         "transparent",
         "transparent",
-        "transparent",
-        "transparent",
+        "wattle_fence_dark/side1",
+        "wattle_fence_dark/side1",
         "wattle_fence_dark/side1",
         "wattle_fence_dark/side2"
       ],
@@ -52962,8 +52962,8 @@
       "textures": [
         "transparent",
         "transparent",
-        "transparent",
-        "transparent",
+        "wattle_fence_dark/fence_wattle_dark_short",
+        "wattle_fence_dark/fence_wattle_dark_short",
         "wattle_fence_dark/fence_wattle_dark_short",
         "wattle_fence_dark/fence_wattle_dark_short"
       ],
@@ -52971,7 +52971,7 @@
         "xMin": 0.01,
         "xMax": 0.07,
         "yMin": 0,
-        "yMax": 1,
+        "yMax": 0.5,
         "zMin": 0,
         "zMax": 1
       },
