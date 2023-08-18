@@ -6,7 +6,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -36,7 +35,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Simpl
 		public Block buildBlockClass(WesterosBlockDef def) {
 			BlockBehaviour.Properties props = def.makeProperties();
 			props = props.isViewBlocking((state, level, pos) -> {
-			      return state.getValue(SnowLayerBlock.LAYERS) >= 8;
+			      return state.getValue(LAYERS) >= 8;
 			   });
 			return def.registerRenderType(def.registerBlock(new WCLayerBlock(props, def)), false, false);
 		}
