@@ -51,9 +51,6 @@
       "westerosblocks:block/black_slate/ctm26",
       "westerosblocks:block/black_slate/ctm26",
       "westerosblocks:block/black_slate/ctm26"
-    ],
-    "extra": {
-      "ignore_states": true
-    }
+    ]
   }
 }
