@@ -18,7 +18,7 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	BlockBehaviour.Properties props = def.makeProperties().noOcclusion();
+        	BlockBehaviour.Properties props = def.makeProperties().noOcclusion().noCollission();
         	return def.registerRenderType(def.registerBlock(new WCRailBlock(props, def)), false, false);
         }
     }
