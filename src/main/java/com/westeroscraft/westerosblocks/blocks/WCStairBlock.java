@@ -33,11 +33,6 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
                         def.modelBlockName, def.blockName));
                 return null;
             }
-            WesterosBlockDef mbdef = null;
-            // If a WB, look up def
-            if (blk instanceof WesterosBlockLifecycle) {
-                mbdef = ((WesterosBlockLifecycle) blk).getWBDefinition();
-            }
             BlockBehaviour.Properties props = def.makeAndCopyProperties(blk);
             return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def)),
                     false, false);

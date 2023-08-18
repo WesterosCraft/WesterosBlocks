@@ -1,6 +1,5 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import com.google.common.collect.Lists;
 import com.westeroscraft.westerosblocks.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -62,7 +61,8 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     		return collisionbox;
     }
     
-    public boolean skipRendering(BlockState state, BlockState other_state, Direction direction) {
+    @SuppressWarnings("deprecation")
+	public boolean skipRendering(BlockState state, BlockState other_state, Direction direction) {
     	if (def.nonOpaque)
     		return other_state.is(this) ? true : super.skipRendering(state, other_state, direction);
     	else

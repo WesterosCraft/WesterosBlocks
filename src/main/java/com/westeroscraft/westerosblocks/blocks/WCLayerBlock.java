@@ -6,13 +6,13 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -28,7 +28,6 @@ import net.minecraft.world.level.LevelAccessor;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 public class WCLayerBlock extends Block implements WesterosBlockLifecycle, SimpleWaterloggedBlock {
 
@@ -36,7 +35,9 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Simpl
 		@Override
 		public Block buildBlockClass(WesterosBlockDef def) {
 			BlockBehaviour.Properties props = def.makeProperties();
-
+			props = props.isViewBlocking((state, level, pos) -> {
+			      return state.getValue(SnowLayerBlock.LAYERS) >= 8;
+			   });
 			return def.registerRenderType(def.registerBlock(new WCLayerBlock(props, def)), false, false);
 		}
 	}
@@ -118,6 +119,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Simpl
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public FluidState getFluidState(BlockState state) {
 		return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
@@ -135,6 +137,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Simpl
 				: false;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public BlockState updateShape(BlockState state, Direction dir, BlockState state2, LevelAccessor level, BlockPos pos,
 			BlockPos pos2) {

@@ -76,6 +76,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 		return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public BlockState mirror(BlockState state, Mirror mir) {
 		return state.rotate(mir.getRotation(state.getValue(FACING)));
