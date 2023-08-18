@@ -78,9 +78,9 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Simpl
 		return SHAPE_BY_LAYER[p_56597_.getValue(LAYERS)];
 	}
 
-	public boolean useShapeForLightOcclusion(BlockState p_56630_) {
-		return true;
-	}
+	//public boolean useShapeForLightOcclusion(BlockState p_56630_) {
+	//	return true;
+	//}
 
 	@Override
 	public WesterosBlockDef getWBDefinition() {
