@@ -742,7 +742,8 @@
         "minecraft:pig_spawn_egg",
         "minecraft:jack_o_lantern",
         "minecraft:ladder",
-        "minecraft:daylight_detector"
+        "minecraft:daylight_detector",
+        "minecraft:dried_kelp_block"
       ],
       "creativeTab": "WesterosDoNotUse"
     }
