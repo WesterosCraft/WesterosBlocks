@@ -12234,6 +12234,7 @@
       "resistance": 5,
       "creativeTab": "WesterosWindowsGlass",
       "label": "Spruce Window Shutters",
+      "type": "allow-unsupported",
       "textures": [
         "halfdoor_block_0/shutters_spruce"
       ],
@@ -12248,6 +12249,7 @@
       "resistance": 5,
       "creativeTab": "WesterosWindowsGlass",
       "label": "Oak Window Shutters",
+      "type": "allow-unsupported",
       "textures": [
         "halfdoor_block_0/garden_door"
       ],
@@ -12262,6 +12264,7 @@
       "resistance": 5,
       "creativeTab": "WesterosWindowsGlass",
       "label": "Green Lannisport Window Shutters",
+      "type": "allow-unsupported",
       "textures": [
         "halfdoor_block_0/shutters_lannisport"
       ],
@@ -20656,6 +20659,7 @@
       "resistance": 5,
       "creativeTab": "WesterosWindowsGlass",
       "label": "Dorne Red Window Shutters",
+      "type": "allow-unsupported",
       "textures": [
         "halfdoor_block_0/shutters_dorne"
       ],
@@ -20670,6 +20674,7 @@
       "resistance": 5,
       "creativeTab": "WesterosWindowsGlass",
       "label": "Reach Blue Window Shutters",
+      "type": "allow-unsupported",
       "textures": [
         "halfdoor_block_0/shutters_reach"
       ],

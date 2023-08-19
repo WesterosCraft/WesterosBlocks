@@ -64,7 +64,8 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
 
     private WesterosBlockDef def;
     private boolean locked = false;
-    
+    private boolean allow_unsupported = false;
+
     protected WCHalfDoorBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
@@ -72,6 +73,9 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
         if (type != null) {
             String[] toks = type.split(",");
             for (String tok : toks) {
+            	if (tok.equals("allow-unsupported")) {
+                    allow_unsupported = true;
+                }
                 String [] flds = tok.split(":");
                 if (flds.length < 2) continue;
                 if (flds[0].equals("locked")) {
@@ -223,6 +227,7 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
 
      @Override
      public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
+    	if (allow_unsupported) return true;
         BlockPos blockpos = pos.below();
         BlockState blockstate = reader.getBlockState(blockpos);
         return blockstate.isFaceSturdy(reader, blockpos, Direction.UP);
