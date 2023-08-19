@@ -2,7 +2,6 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
@@ -243,7 +242,8 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
         return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
      }
 
-     @Override
+     @SuppressWarnings("deprecation")
+	@Override
      public BlockState mirror(BlockState state, Mirror mirror) {
         return mirror == Mirror.NONE ? state : state.rotate(mirror.getRotation(state.getValue(FACING))).cycle(HINGE);
      }

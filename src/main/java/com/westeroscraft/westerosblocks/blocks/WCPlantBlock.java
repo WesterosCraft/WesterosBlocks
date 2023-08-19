@@ -121,7 +121,8 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
     	return bs;
     }
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }

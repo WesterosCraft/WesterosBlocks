@@ -16,7 +16,8 @@ public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
         public Block buildBlockClass(WesterosBlockDef def) {
         	BlockBehaviour.Properties floorprops = def.makeProperties().noCollission().instabreak();
         	Block floorblock = new WCTorchBlock(floorprops, def);
-        	BlockBehaviour.Properties wallprops = def.makeProperties().noCollission().instabreak().dropsLike(floorblock);
+        	@SuppressWarnings("deprecation")
+			BlockBehaviour.Properties wallprops = def.makeProperties().noCollission().instabreak().dropsLike(floorblock);
         	Block wallblock = new WCWallTorchBlock(wallprops, def);
         	def.registerWallOrFloorBlock(floorblock, wallblock);
         	

@@ -138,7 +138,8 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     public VoxelShape getVisualShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext ctx) {
         return SHAPE_BY_INDEX[getIndexFromState(state)];
     }
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public BlockState updateShape(BlockState state, Direction face, BlockState state2, LevelAccessor world, BlockPos pos, BlockPos pos2) {
        if (state.getValue(WATERLOGGED)) {
           world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
@@ -156,7 +157,8 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
        }
        return bs;
     }
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }

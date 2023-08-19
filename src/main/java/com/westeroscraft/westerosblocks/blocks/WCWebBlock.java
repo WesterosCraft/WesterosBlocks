@@ -109,7 +109,8 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
     	return bs;    	
     }
     
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }

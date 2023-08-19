@@ -5,7 +5,8 @@
 	"refmap": "westerosblocks.refmap.json",
 	"mixins": [
 		"MixinClientboundGameEventPacket",
-		"MixinClientboundSetTimePacket"
+		"MixinClientboundSetTimePacket",
+		"MixinDoorBlock"
 	],
 	"client": [ 
 		"MixinDimensionSpecialEffects"

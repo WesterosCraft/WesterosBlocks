@@ -2,7 +2,6 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.RailShape;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
@@ -18,7 +17,7 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	BlockBehaviour.Properties props = def.makeProperties().noOcclusion();
+        	BlockBehaviour.Properties props = def.makeProperties().noOcclusion().noCollission();
         	return def.registerRenderType(def.registerBlock(new WCRailBlock(props, def)), false, false);
         }
     }

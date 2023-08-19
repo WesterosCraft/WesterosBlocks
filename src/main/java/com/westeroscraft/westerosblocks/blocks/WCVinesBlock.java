@@ -233,7 +233,8 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
         }
         return flag ? blockstate1 : null;
      }
-     @Override 
+     @SuppressWarnings("deprecation")
+	@Override 
      public FluidState getFluidState(BlockState state) { 
          return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
      }

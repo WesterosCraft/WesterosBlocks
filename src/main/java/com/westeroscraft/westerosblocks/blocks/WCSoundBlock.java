@@ -134,6 +134,7 @@ public class WCSoundBlock extends WCSolidBlock {
 	private int getNextTriggerTick(Random rnd) {
 		return playback_period + rnd.nextInt(random_playback_addition + 1);
 	}
+	@SuppressWarnings("deprecation")
 	@Override
    public void onPlace(BlockState state, Level world, BlockPos pos, BlockState state2, boolean flg) {
       super.onPlace(state, world, pos, state2, flg);

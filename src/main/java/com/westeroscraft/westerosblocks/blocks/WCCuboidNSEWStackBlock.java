@@ -130,7 +130,8 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
         world.setBlock(pos.above(), newstate, 3);
     }
 
-    @Override
+    @SuppressWarnings("deprecation")
+	@Override
     public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
         if (state.getValue(HALF) != DoubleBlockHalf.UPPER) {
            return super.canSurvive(state, reader, pos);
