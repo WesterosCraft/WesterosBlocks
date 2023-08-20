@@ -578,7 +578,6 @@
         "minecraft:cobbled_deepslate_wall",
         "minecraft:copper_block",
         "minecraft:copper_ingot",
-        "minecraft:copper_ore",
         "minecraft:cracked_deepslate_bricks",
         "minecraft:cracked_deepslate_tiles",
         "minecraft:crossbow_arrow",
@@ -17549,6 +17548,9 @@
       "resistance": 10,
       "creativeTab": "WesterosMisc",
       "label": "Silver Ore",
+      "overlayTextures": [
+        "terrainset_overlays/silver_ore_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
@@ -17582,6 +17584,9 @@
       "resistance": 10,
       "creativeTab": "WesterosMisc",
       "label": "Tin Ore",
+      "overlayTextures": [
+        "terrainset_overlays/tin_ore_overlay"
+      ],
       "randomTextures": [
         {
           "textures": [
