@@ -1,6 +1,19 @@
 {
-  "parent": "westerosblocks:block/tinted/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/tinted/gold_ore/gold_ore3"
+    "down_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "down": "minecraft:block/gold_ore/gold_ore3",
+    "up": "minecraft:block/gold_ore/gold_ore3",
+    "north": "minecraft:block/gold_ore/gold_ore3",
+    "south": "minecraft:block/gold_ore/gold_ore3",
+    "west": "minecraft:block/gold_ore/gold_ore3",
+    "east": "minecraft:block/gold_ore/gold_ore3",
+    "particle": "minecraft:block/gold_ore/gold_ore3"
   }
 }
+
