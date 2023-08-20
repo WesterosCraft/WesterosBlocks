@@ -123,16 +123,19 @@ public class BedBlockModelExport extends ModelExport {
         		oldstate.put(k, oldmap.get(k));    			
     		}
     	}
-    	oldstate.put("occupied","false");
-    	newstate.put("occupied","false");
-    	for (String facing : FACING) {
-	    	oldstate.put("facing",facing);
-	    	newstate.put("facing",facing);
-	    	for (String part : HEADFOOT) {
-		    	oldstate.put("part",part);
-		    	newstate.put("part",part);
-		        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
-    		}
+    	String OCCUPIED[] = new String[] { "true", "false" };
+    	for (String occupied : OCCUPIED) {
+	    	oldstate.put("occupied",occupied);
+	    	newstate.put("occupied",occupied);
+	    	for (String facing : FACING) {
+		    	oldstate.put("facing",facing);
+		    	newstate.put("facing",facing);
+		    	for (String part : HEADFOOT) {
+			    	oldstate.put("part",part);
+			    	newstate.put("part",part);
+			        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+	    		}
+	    	}
     	}
     }
 }
