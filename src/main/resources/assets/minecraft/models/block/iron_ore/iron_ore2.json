@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/cube_overlay",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
     "down_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
     "up_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
@@ -7,13 +7,13 @@
     "south_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
     "west_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
     "east_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
-    "down": "westerosblocks:block/tinted/iron_ore/iron_ore2",
-    "up": "westerosblocks:block/tinted/iron_ore/iron_ore2",
-    "north": "westerosblocks:block/tinted/iron_ore/iron_ore2",
-    "south": "westerosblocks:block/tinted/iron_ore/iron_ore2",
-    "west": "westerosblocks:block/tinted/iron_ore/iron_ore2",
-    "east": "westerosblocks:block/tinted/iron_ore/iron_ore2",
-    "particle": "westerosblocks:block/tinted/iron_ore/iron_ore2"
+    "down": "minecraft:block/iron_ore/iron_ore2",
+    "up": "minecraft:block/iron_ore/iron_ore2",
+    "north": "minecraft:block/iron_ore/iron_ore2",
+    "south": "minecraft:block/iron_ore/iron_ore2",
+    "west": "minecraft:block/iron_ore/iron_ore2",
+    "east": "minecraft:block/iron_ore/iron_ore2",
+    "particle": "minecraft:block/iron_ore/iron_ore2"
   }
 }
 
