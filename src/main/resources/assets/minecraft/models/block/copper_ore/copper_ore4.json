@@ -1,6 +1,19 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "minecraft:block/copper_ore/copper_ore4"
+    "down_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "down": "minecraft:block/copper_ore/copper_ore4",
+    "up": "minecraft:block/copper_ore/copper_ore4",
+    "north": "minecraft:block/copper_ore/copper_ore4",
+    "south": "minecraft:block/copper_ore/copper_ore4",
+    "west": "minecraft:block/copper_ore/copper_ore4",
+    "east": "minecraft:block/copper_ore/copper_ore4",
+    "particle": "minecraft:block/copper_ore/copper_ore4"
   }
 }
+

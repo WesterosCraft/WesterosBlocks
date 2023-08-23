@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/tin_ore/tin_ore1"
+    "down_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay",
+    "down": "westerosblocks:block/tin_ore/tin_ore1",
+    "up": "westerosblocks:block/tin_ore/tin_ore1",
+    "north": "westerosblocks:block/tin_ore/tin_ore1",
+    "south": "westerosblocks:block/tin_ore/tin_ore1",
+    "west": "westerosblocks:block/tin_ore/tin_ore1",
+    "east": "westerosblocks:block/tin_ore/tin_ore1",
+    "particle": "westerosblocks:block/tin_ore/tin_ore1"
   }
 }
