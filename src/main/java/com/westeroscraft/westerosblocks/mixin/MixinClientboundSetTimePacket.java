@@ -33,7 +33,8 @@ public abstract class MixinClientboundSetTimePacket
 		}
 		else {	// Else, absolute
 			gameTime = ClientMessageHandler.ptimeOffset;
-			dayTime = (ClientMessageHandler.ptimeOffset % 24000);			
+			dayTime = -(ClientMessageHandler.ptimeOffset % 24000);		
+			if (dayTime == 0) dayTime = -1;
 		}
 	}
 }
