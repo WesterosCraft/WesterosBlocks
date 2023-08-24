@@ -26,13 +26,13 @@ public class PTimeCommand {
 				return resetTime(ctx.getSource());
 			}))
 			.then(Commands.literal("sunrise").executes((ctx) -> {
-				return setTime(ctx.getSource(), 23000, false);
-			}))
-			.then(Commands.literal("day").executes((ctx) -> {
 				return setTime(ctx.getSource(), 0, false);
 			}))
-			.then(Commands.literal("morning").executes((ctx) -> {
+			.then(Commands.literal("day").executes((ctx) -> {
 				return setTime(ctx.getSource(), 1000, false);
+			}))
+			.then(Commands.literal("morning").executes((ctx) -> {
+				return setTime(ctx.getSource(), 2000, false);
 			}))
 			.then(Commands.literal("noon").executes((ctx) -> {
 				return setTime(ctx.getSource(), 6000, false);
@@ -44,7 +44,7 @@ public class PTimeCommand {
 				return setTime(ctx.getSource(), 12000, false);
 			}))
 			.then(Commands.literal("night").executes((ctx) -> {
-				return setTime(ctx.getSource(), 14000, false);
+				return setTime(ctx.getSource(), 13000, false);
 			}))
 			.then(Commands.literal("midnight").executes((ctx) -> {
 				return setTime(ctx.getSource(), 18000, false);
