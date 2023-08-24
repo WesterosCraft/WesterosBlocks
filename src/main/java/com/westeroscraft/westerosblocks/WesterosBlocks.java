@@ -229,6 +229,7 @@ public class WesterosBlocks {
 		public static final ForgeConfigSpec.BooleanValue autoRestoreAllHalfDoors;
 		public static final ForgeConfigSpec.BooleanValue doorSurviveAny;
 		public static final ForgeConfigSpec.BooleanValue doorNoConnect;
+		public static final ForgeConfigSpec.IntValue seaLevelOverride;
 
 		static {
 			BUILDER.comment("Module options");
@@ -241,6 +242,9 @@ public class WesterosBlocks {
 			BUILDER.push("blockMod");
 			doorSurviveAny = BUILDER.comment("Allow door to survive on any surface").define("doorSurviveAny", true);
 			doorNoConnect = BUILDER.comment("Avoid doors connecting to walls/panes/etc").define("doorNoConnect", true);
+            BUILDER.pop();
+            BUILDER.push("worldMod");
+            seaLevelOverride = BUILDER.comment("Override sea level (default for Westeros=33, 0=disable override)").defineInRange("seaLevelOverride", 33, 0, 639);
             BUILDER.pop();
 
 			SPEC = BUILDER.build();

@@ -6,7 +6,8 @@
 	"mixins": [
 		"MixinClientboundGameEventPacket",
 		"MixinClientboundSetTimePacket",
-		"MixinDoorBlock"
+		"MixinDoorBlock",
+		"MixinLevel"
 	],
 	"client": [ 
 		"MixinDimensionSpecialEffects"
