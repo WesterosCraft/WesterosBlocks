@@ -15,26 +15,9 @@ public class ClientProxy extends Proxy implements PreparableReloadListener {
 	}
 	@Override	
 	public void initRenderRegistry() {
-       for (Block blk : WesterosBlocks.customBlocks) {
-    	   if (blk instanceof WesterosBlockLifecycle) {
-    		   WesterosBlockDef def = ((WesterosBlockLifecycle)blk).getWBDefinition();
-    		   if (def != null) {
-    			   def.registerRender(blk);
-    		   }
-    	   }
-       }
-       if (WesterosBlocks.colorMaps != null) {
-    	   WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
-    	   for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
-    		   for (String bn : map.blockNames) {
-    			   Block blk = WesterosBlocks.findBlockByName(bn);
-    			   if (blk != null) {
-    				   WesterosBlockDef.registerVanillaColorMap(bn, blk, map.colorMult);
-    			   }
-    		   }
-    	   }
-       }
-	   ((ReloadableResourceManager) Minecraft.getInstance().getResourceManager()).registerReloadListener(this);
+		ReloadableResourceManager rrm = (ReloadableResourceManager) Minecraft.getInstance().getResourceManager();
+		WesterosBlockDef.reloadColorHandler(rrm);
+		rrm.registerReloadListener(this);	   
 	}	
 	@Override
 	public CompletableFuture<Void> reload(PreparableReloadListener.PreparationBarrier pStage, ResourceManager pResourceManager, ProfilerFiller pPreparationsProfiler, ProfilerFiller pReloadProfiler, 
@@ -44,7 +27,7 @@ public class ClientProxy extends Proxy implements PreparableReloadListener {
 			WesterosBlocks.log.info("Handling resource reload");
 			return null;
 		}, pBackgroundExecutor).thenCompose(pStage::wait).thenAcceptAsync((p_10792_) -> {
-			WesterosBlockDef.reloadColorHandler();
+			WesterosBlockDef.reloadColorHandler(pResourceManager);
 	    	WesterosBlocks.log.info("Handling resource reload completed");
 		}, pGameExecutor);
 	}

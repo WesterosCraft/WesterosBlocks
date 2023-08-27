@@ -75,6 +75,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.BlockEntityType.BlockEntitySupplier;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.FoliageColor;
@@ -527,47 +528,22 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	// Custom color multiplier
 	public static class CustomColorMultHandler extends ColorMultHandler implements ColorResolver {
 		private int[] colorBuffer = new int[65536];
+		private final String rname;
 
 		CustomColorMultHandler(String rname, String blockName) {
 			super();
-
-			loadColorMap(rname, blockName);
+			this.rname = rname;
 		}
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {				
-			if ((world != null) && (pos != null) && (world instanceof RenderChunkRegion)) {
-				RenderChunkRegion rcr = (RenderChunkRegion) world;
-				LevelReader rdr = rcr.level;
-				int red = 0;
-				int green = 0;
-				int blue = 0;
-								
-				for (int xx = -1; xx <= 1; ++xx) {
-					for (int zz = -1; zz <= 1; ++zz) {
-						BlockPos bp = pos.offset(xx, 0, zz);
-						Biome biome = rdr.getBiome(bp).value();
-						int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall());
-						red += (mult & 0xFF0000) >> 16;
-						green += (mult & 0x00FF00) >> 8;
-						blue += (mult & 0x0000FF);
-					}
-				}
-				return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {
+			if ((world != null) && (pos != null)) {
+				return world.getBlockTint(pos, this);
 			} else {
 				return getColor(null, 0.5D, 1.0D);
 			}
 		}
-		private int getColor(double tmp, double hum) {
-			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
-			hum = Mth.clamp(hum, 0.0F, 1.0F);
-			hum *= tmp;
-			int i = (int) ((1.0D - tmp) * 255.0D);
-			int j = (int) ((1.0D - hum) * 255.0D);
-			return colorBuffer[j << 8 | i];
-		}
-
 		@Override
 		public int getColor(Biome biome, double x, double z) {
 			float hum = 1.0F;
@@ -585,16 +561,17 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}
 
 		@OnlyIn(Dist.CLIENT)
-		private void loadColorMap(String rname, String blkname) {
-			if (rname.indexOf(':') < 0)
-				rname = WesterosBlocks.MOD_ID + ":" + rname;
-			if (rname.endsWith(".png") == false)
-				rname += ".png";
+		public void loadColorMap(ResourceManager resMgr) {
+			String resName = rname;
+			if (resName.indexOf(':') < 0)
+				resName = WesterosBlocks.MOD_ID + ":" + resName;
+			if (resName.endsWith(".png") == false)
+				resName += ".png";
 			try {
-				colorBuffer = LegacyStuffWrapper.getPixels(Minecraft.getInstance().getResourceManager(),
-						new ResourceLocation(rname));
+				colorBuffer = LegacyStuffWrapper.getPixels(resMgr, new ResourceLocation(resName));
+				WesterosBlocks.log.info(String.format("Loaded color resource '%s'", rname));
 			} catch (Exception e) {
-				WesterosBlocks.log.error(String.format("Invalid color resource '%s' in block '%s'", rname, blkname));
+				WesterosBlocks.log.error(String.format("Invalid color resource '%s'", rname), e);
 				Arrays.fill(colorBuffer, 0xFFFFFF);
 			}
 		}
@@ -986,16 +963,13 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	}
 
 	// Force reload of color handlers
-	public static void reloadColorHandler() {
+	public static void reloadColorHandler(ResourceManager pResourceManager) {
 		Set<String> hndids = new HashSet<String>(colorMultTable.keySet());
 		for (String hndid : hndids) {
 			ColorMultHandler prev = colorMultTable.get(hndid);
 			// Only reload those from resources
 			if (prev instanceof CustomColorMultHandler) {
-				colorMultTable.remove(hndid);
-				if (getColorHandler(hndid, "<reload>") == null) {
-					colorMultTable.put(hndid, prev);
-				}
+				((CustomColorMultHandler)prev).loadColorMap(pResourceManager);
 			}
 		}		
 	}
@@ -1078,10 +1052,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	
 	// Handle registration of tint handling and other client rendering
 	@OnlyIn(Dist.CLIENT)
-	public void registerRender(Block blk) {
+	public void registerBlockColorHandler(Block blk, BlockColors blockColors) {
 		if (this.isTinted()) {
-			BlockColors blockColors = Minecraft.getInstance().getBlockColors();
-			ItemColors itemColors = Minecraft.getInstance().getItemColors();
 			if (this.stateProp != null) {
 				final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
 				for (WesterosBlockStateRecord rec : this.states) {
@@ -1091,13 +1063,31 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> 
 					cmmap.get(state.getValue(this.stateProp)).getColor(state, world, pos, txtindx), blk);
 				final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
-				itemColors.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
 			}
 			else {
 				ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);
 				
 				blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
 						.getColor(state, world, pos, txtindx), blk);
+			}
+		}
+	}
+
+	// Handle registration of tint handling and other client rendering
+	@OnlyIn(Dist.CLIENT)
+	public void registerItemColorHandler(Block blk, ItemColors itemColors) {
+		if (this.isTinted()) {
+			if (this.stateProp != null) {
+				final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
+				for (WesterosBlockStateRecord rec : this.states) {
+					ColorMultHandler handler = getColorHandler(rec.colorMult, this.blockName);
+					cmmap.put(rec.stateID, handler);
+				}
+				final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
+				itemColors.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
+			}
+			else {
+				ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);				
 				itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 			}
 		}
@@ -1105,18 +1095,22 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	// Handle registration of tint handling and other client rendering
 	@OnlyIn(Dist.CLIENT)
-	public static void registerVanillaColorMap(String blockName, Block blk, String colorMult) {
-		BlockColors blockColors = Minecraft.getInstance().getBlockColors();
-		ItemColors itemColors = Minecraft.getInstance().getItemColors();
+	public static void registerVanillaBlockColorHandler(String blockName, Block blk, String colorMult, BlockColors blockColors) {
 		ColorMultHandler handler = getColorHandler(colorMult, blockName);
 		blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
 				.getColor(state, world, pos, txtindx), blk);
-		itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 		// If water shader, override global one too
 		if (blockName.equals("minecraft:water") && (handler instanceof CustomColorMultHandler)) {
 			final CustomColorMultHandler cchandler = (CustomColorMultHandler) handler;	// crappy java lambda limitation workaround
 			BiomeColors.WATER_COLOR_RESOLVER = (Biome b, double tmp, double hum) -> cchandler.getColor(b, tmp, hum);
 		}
+	}
+
+	// Handle registration of tint handling and other client rendering
+	@OnlyIn(Dist.CLIENT)
+	public static void registerVanillaItemColorHandler(String blockName, Block blk, String colorMult, ItemColors itemColors) {
+		ColorMultHandler handler = getColorHandler(colorMult, blockName);
+		itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 	}
 
 	public void registerSoundEvents() {

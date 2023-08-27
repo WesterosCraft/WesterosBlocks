@@ -13,6 +13,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -31,7 +33,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -251,6 +252,53 @@ public class WesterosBlocks {
 		}
 	}
 
+	@Mod.EventBusSubscriber(modid = WesterosBlocks.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+	public class ColorHandler {
+	    @SubscribeEvent
+	    public static void registerItemColors(ColorHandlerEvent.Item event) {
+	        for (Block blk : WesterosBlocks.customBlocks) {
+	     	   if (blk instanceof WesterosBlockLifecycle) {
+	     		   WesterosBlockDef def = ((WesterosBlockLifecycle)blk).getWBDefinition();
+	     		   if (def != null) {
+	     			   def.registerItemColorHandler(blk, event.getItemColors());
+	     		   }
+	     	   }
+	        }
+	        if (WesterosBlocks.colorMaps != null) {
+	     	   WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
+	     	   for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
+	     		   for (String bn : map.blockNames) {
+	     			   Block blk = WesterosBlocks.findBlockByName(bn);
+	     			   if (blk != null) {
+	     				   WesterosBlockDef.registerVanillaItemColorHandler(bn, blk, map.colorMult, event.getItemColors());
+	     			   }
+	     		   }
+	     	   }
+	        }	    	
+	    }
+	    @SubscribeEvent
+	    public static void registerBlockColors(ColorHandlerEvent.Block event) {
+	        for (Block blk : WesterosBlocks.customBlocks) {
+	     	   if (blk instanceof WesterosBlockLifecycle) {
+	     		   WesterosBlockDef def = ((WesterosBlockLifecycle)blk).getWBDefinition();
+	     		   if (def != null) {
+	     			   def.registerBlockColorHandler(blk, event.getBlockColors());
+	     		   }
+	     	   }
+	        }
+	        if (WesterosBlocks.colorMaps != null) {
+	     	   WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
+	     	   for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
+	     		   for (String bn : map.blockNames) {
+	     			   Block blk = WesterosBlocks.findBlockByName(bn);
+	     			   if (blk != null) {
+	     				   WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event.getBlockColors());
+	     			   }
+	     		   }
+	     	   }
+	        }
+	    }
+	}
 	// You can use EventBusSubscriber to automatically subscribe events on the
 	// contained class (this is subscribing to the MOD
 	// Event bus for receiving Registry Events)
@@ -317,7 +365,6 @@ public class WesterosBlocks {
 		@SubscribeEvent
 		public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
 			log.info("onBlocksRegistryEvent");
-			IForgeRegistry<Block> registry = event.getRegistry();
 			// Do initialization, if needed
 			initialize();
 
