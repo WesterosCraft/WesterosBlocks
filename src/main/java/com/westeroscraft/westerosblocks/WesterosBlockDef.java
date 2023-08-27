@@ -537,13 +537,49 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {
+		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {				
 			if ((world != null) && (pos != null)) {
-				return world.getBlockTint(pos, this);
+				LevelReader rdr = null;
+				
+				if (world instanceof RenderChunkRegion) {
+					rdr = ((RenderChunkRegion)world).level;
+				}
+				else if (world instanceof LevelReader) {
+					rdr = (LevelReader) world;
+				}
+				if (rdr != null) {
+					int red = 0;
+					int green = 0;
+					int blue = 0;
+									
+					for (int xx = -1; xx <= 1; ++xx) {
+						for (int zz = -1; zz <= 1; ++zz) {
+							BlockPos bp = pos.offset(xx, 0, zz);
+							Biome biome = rdr.getBiome(bp).value();
+							int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall());
+							red += (mult & 0xFF0000) >> 16;
+							green += (mult & 0x00FF00) >> 8;
+							blue += (mult & 0x0000FF);
+						}
+					}
+					return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+				}
+				else {
+					return world.getBlockTint(pos, this);					
+				}
 			} else {
 				return getColor(null, 0.5D, 1.0D);
 			}
 		}
+		private int getColor(double tmp, double hum) {
+			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
+			hum = Mth.clamp(hum, 0.0F, 1.0F);
+			hum *= tmp;
+			int i = (int) ((1.0D - tmp) * 255.0D);
+			int j = (int) ((1.0D - hum) * 255.0D);
+			return colorBuffer[j << 8 | i];
+		}
+
 		@Override
 		public int getColor(Biome biome, double x, double z) {
 			float hum = 1.0F;
