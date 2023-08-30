@@ -189,9 +189,14 @@ public class WesterosBlocks {
 				log.warn(String.format("Error writing NLS - %s", iox));
 			}
 			try {
-				ModelExport.writeTagDataFiles(modConfigPath, customConfig);
+				ModelExport.writeTagDataFiles(modConfigPath);
 			} catch (IOException iox) {
 				log.warn(String.format("Error writing tag data files - %s", iox));
+			}
+			try {
+				ModelExport.writeCustomTagDataFiles(modConfigPath, customConfig);
+			} catch (IOException iox) {
+				log.warn(String.format("Error writing custom tag data files - %s", iox));
 			}
 			try {
 				ModelExport.writeWorldConverterFile(modConfigPath);
@@ -361,6 +366,8 @@ public class WesterosBlocks {
 				crash("WesterosBlocks.json failed sanity check");
 				return;
 			}
+			// Register custom tags
+			ModelExport.declareCustomTags(customConfig);
 		}
 		@SubscribeEvent
 		public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {

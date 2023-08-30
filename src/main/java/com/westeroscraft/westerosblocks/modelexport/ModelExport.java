@@ -22,6 +22,10 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockTags;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
 public abstract class ModelExport {
@@ -235,7 +239,7 @@ public abstract class ModelExport {
     	String[] values = {};
     };
     
-    public static void writeTagDataFiles(Path dest, WesterosBlockConfig cfg) throws IOException {
+    public static void writeTagDataFiles(Path dest) throws IOException {
         File tgt = new File(dest.toFile(), "data/minecraft/tags/blocks");
         tgt.mkdirs();
         HashMap<String, ArrayList<String>> blksByTag = new HashMap<String, ArrayList<String>>();
@@ -253,30 +257,6 @@ public abstract class ModelExport {
         			}
         			lst.add(WesterosBlocks.MOD_ID + ":" + blockName);
         		}
-        		if (wb.getWBDefinition().customTags != null) {
-            		for (String tag : wb.getWBDefinition().customTags) {
-            			ArrayList<String> lst = blksByTag.get(tag.toLowerCase());
-            			if (lst == null) {
-            				lst = new ArrayList<String>();
-            				blksByTag.put(tag.toLowerCase(), lst);
-            			}
-            			lst.add(WesterosBlocks.MOD_ID + ":" + blockName);
-            		}        			
-        		}
-
-        	}
-        }
-        if (cfg.blockTags != null) {
-        	for (WesterosBlockTags tag : cfg.blockTags) {
-        		String tagid = tag.customTag.toLowerCase();
-    			ArrayList<String> lst = blksByTag.get(tagid);
-    			if (lst == null) {
-    				lst = new ArrayList<String>();
-    				blksByTag.put(tagid, lst);
-    			}
-    			for (String id : tag.blockNames) {
-    				lst.add(id.toLowerCase());
-    			}
         	}
         }
         // And write the files for each
@@ -297,6 +277,71 @@ public abstract class ModelExport {
         }
     }
     
+    public static void writeCustomTagDataFiles(Path dest, WesterosBlockConfig cfg) throws IOException {
+        File tgt = new File(dest.toFile(), "data/" + WesterosBlocks.MOD_ID + "/tags/blocks");
+        tgt.mkdirs();
+        HashMap<String, ArrayList<String>> blksByTag = new HashMap<String, ArrayList<String>>();
+        // Declare custom tags - must be record for each
+        if (cfg.blockTags != null) {
+        	for (WesterosBlockTags tag : cfg.blockTags) {
+        		String tagid = tag.customTag.toLowerCase();
+    			ArrayList<String> lst = blksByTag.get(tagid);
+    			if (lst == null) {
+    				lst = new ArrayList<String>();
+    				blksByTag.put(tagid, lst);
+    			}
+    			for (String id : tag.blockNames) {
+    				lst.add(id.toLowerCase());
+    			}
+        	}
+        }
+        // Load all the custom tags from blocks
+        for (String blockName : WesterosBlocks.customBlocksByName.keySet()) {
+        	Block blk = WesterosBlocks.customBlocksByName.get(blockName);
+        	if (blk instanceof WesterosBlockLifecycle) {
+        		WesterosBlockLifecycle wb = (WesterosBlockLifecycle) blk;
+        		WesterosBlockDef def = wb.getWBDefinition();
+        		if (def.customTags != null) {
+            		for (String tag : def.customTags) {
+            			ArrayList<String> lst = blksByTag.get(tag.toLowerCase());
+            			if (lst == null) {
+            				WesterosBlocks.log.error("Invalid customTag " + tag + " on block " + blockName);
+            				continue;
+            			}
+            			lst.add(WesterosBlocks.MOD_ID + ":" + blockName);
+            		}        			
+        		}
+        	}
+        }
+        // And write the files for each
+        for (String tagID : blksByTag.keySet()) {
+			ArrayList<String> lst = blksByTag.get(tagID);
+	        FileWriter fos = null;
+	        try {
+	        	TagFile tf = new TagFile();
+	        	tf.values = lst.toArray(new String[lst.size()]);
+	            fos = new FileWriter(new File(tgt, tagID + ".json"));
+	            Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();                
+	            gson.toJson(tf, fos);
+	        } finally {
+	            if (fos != null) {
+	                fos.close();
+	            }
+	        }			
+        }
+    }
+    public static List<TagKey<Block>> customTags;
+    
+    public static void declareCustomTags(WesterosBlockConfig cfg) {
+        // Declare custom tags - must be record for each
+        if (cfg.blockTags != null) {
+        	customTags = new ArrayList<TagKey<Block>>();
+        	for (WesterosBlockTags tag : cfg.blockTags) {
+        		String tagid = tag.customTag.toLowerCase();
+        		customTags.add(BlockTags.create(new ResourceLocation(WesterosBlocks.MOD_ID, tagid)));
+        	}
+        }	
+    }
     private static class TintOver {
         String cond;
         String txt;
