@@ -159,9 +159,6 @@
               "block": "westerosblocks:terrainset_mountains_of_the_moon"
             }
           ]
-        },
-        {
-          "type": "null"
         }
       ],
       "ignore_states": true

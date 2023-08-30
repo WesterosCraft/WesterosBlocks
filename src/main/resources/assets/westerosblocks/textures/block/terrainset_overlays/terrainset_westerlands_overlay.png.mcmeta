@@ -81,7 +81,14 @@
           ]
         },
         {
-          "type": "null"
+          "type": "overlay",
+          "ctmRow": 27,
+          "ctmCol": 0,
+          "connect_to": [
+            {
+              "block": "westerosblocks:terrainset_westerlands_alt"
+            }
+          ]
         }
       ],
       "ignore_states": true

@@ -41981,7 +41981,7 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Alt Slab",
       "overlayTextures": [ 
-        "terrainset_overlays/terrainset_westerlands_overlay"
+        "terrainset_overlays/terrainset_westerlands_alt_overlay"
       ],
       "textures": [
         "terrainset_westerlandhills_alt/random_4x4"
@@ -42338,7 +42338,7 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Alt Wall",
       "overlayTextures": [ 
-        "terrainset_overlays/terrainset_westerlands_overlay"
+        "terrainset_overlays/terrainset_westerlands_alt_overlay"
       ],
       "textures": [
         "terrainset_westerlandhills_alt/random_4x4"
@@ -42942,7 +42942,7 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands Alt",
       "overlayTextures": [ 
-        "terrainset_overlays/terrainset_westerlands_overlay"
+        "terrainset_overlays/terrainset_westerlands_alt_overlay"
       ],
       "textures": [
         "terrainset_westerlandhills_alt/random_4x4"
