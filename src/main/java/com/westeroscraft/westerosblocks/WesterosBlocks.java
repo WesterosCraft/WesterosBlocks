@@ -189,7 +189,7 @@ public class WesterosBlocks {
 				log.warn(String.format("Error writing NLS - %s", iox));
 			}
 			try {
-				ModelExport.writeTagDataFiles(modConfigPath);
+				ModelExport.writeTagDataFiles(modConfigPath, customConfig);
 			} catch (IOException iox) {
 				log.warn(String.format("Error writing tag data files - %s", iox));
 			}

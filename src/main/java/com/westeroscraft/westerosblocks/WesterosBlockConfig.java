@@ -5,4 +5,5 @@ public class WesterosBlockConfig {
     public WesterosBlockDef[] blocks;
     public WesterosBlockColorMap[] colorMaps;
     public WesterosItemMenuOverrides[] menuOverrides;
+    public WesterosBlockTags[] blockTags;
 }

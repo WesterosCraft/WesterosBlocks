@@ -16,8 +16,10 @@ import java.util.LinkedList;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.westeroscraft.westerosblocks.WesterosBlockConfig;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import com.westeroscraft.westerosblocks.WesterosBlockTags;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.world.level.block.Block;
@@ -233,7 +235,7 @@ public abstract class ModelExport {
     	String[] values = {};
     };
     
-    public static void writeTagDataFiles(Path dest) throws IOException {
+    public static void writeTagDataFiles(Path dest, WesterosBlockConfig cfg) throws IOException {
         File tgt = new File(dest.toFile(), "data/minecraft/tags/blocks");
         tgt.mkdirs();
         HashMap<String, ArrayList<String>> blksByTag = new HashMap<String, ArrayList<String>>();
@@ -251,6 +253,30 @@ public abstract class ModelExport {
         			}
         			lst.add(WesterosBlocks.MOD_ID + ":" + blockName);
         		}
+        		if (wb.getWBDefinition().customTags != null) {
+            		for (String tag : wb.getWBDefinition().customTags) {
+            			ArrayList<String> lst = blksByTag.get(tag.toLowerCase());
+            			if (lst == null) {
+            				lst = new ArrayList<String>();
+            				blksByTag.put(tag.toLowerCase(), lst);
+            			}
+            			lst.add(WesterosBlocks.MOD_ID + ":" + blockName);
+            		}        			
+        		}
+
+        	}
+        }
+        if (cfg.blockTags != null) {
+        	for (WesterosBlockTags tag : cfg.blockTags) {
+        		String tagid = tag.customTag.toLowerCase();
+    			ArrayList<String> lst = blksByTag.get(tagid);
+    			if (lst == null) {
+    				lst = new ArrayList<String>();
+    				blksByTag.put(tagid, lst);
+    			}
+    			for (String id : tag.blockNames) {
+    				lst.add(id.toLowerCase());
+    			}
         	}
         }
         // And write the files for each

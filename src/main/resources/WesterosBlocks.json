@@ -116,6 +116,25 @@
       "colorMult": "textures/colormap/pine"
     }
   ],
+  "blockTags": [ 
+  	{ 
+  		"customTag": "plank-ctm",
+  		"blockNames": [ 
+  			"minecraft:oak_planks",
+  			"minecraft:oak_stairs",
+			"minecraft:oak_slab",
+			"minecraft:birch_planks",
+			"minecraft:birch_stairs",
+			"minecraft:birch_slab",
+			"minecraft:spruce_planks",
+			"minecraft:spruce_stairs",
+			"minecraft:spruce_slab",
+			"minecraft:jungle_planks",
+			"minecraft:jungle_stairs",
+			"minecraft:jungle_slab"
+  		]
+  	}
+  ],
   "menuOverrides": [
     {
       "blockNames": [
@@ -9371,6 +9390,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Purple Wood",
       "textures": [
         "purple_wood/top_bottom",
@@ -9387,6 +9407,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "White Wood",
       "textures": [
         "white_wood/top_bottom",
@@ -9403,6 +9424,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Green Wood",
       "textures": [
         "green_wood/top_bottom",
@@ -9419,6 +9441,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Grey Wood",
       "textures": [
         "grey_wood/top_bottom",
@@ -9435,6 +9458,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Red Wood",
       "textures": [
         "red_wood/top_bottom",
@@ -9451,6 +9475,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Black Wood",
       "textures": [
         "black_wood/top_bottom",
@@ -9467,6 +9492,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Blue Wood",
       "textures": [
         "blue_wood/top_bottom",
@@ -9483,6 +9509,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood",
       "textures": [
         "yellow_wood/top_bottom",
@@ -9599,6 +9626,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood",
       "textures": [
         "dark_northern_wood/top_bottom",
@@ -14855,6 +14883,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Spruce Hopper",
       "textures": [
         "planks_spruce/side"
@@ -14925,6 +14954,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Birch Hopper",
       "textures": [
         "planks_birch/side"
@@ -14995,6 +15025,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Jungle Hopper",
       "textures": [
         "planks_jungle/side"
@@ -16539,6 +16570,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Oak Tip",
       "textures": [
         "planks_oak/side"
@@ -16609,6 +16641,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Spruce Tip",
       "textures": [
         "planks_spruce/side"
@@ -16679,6 +16712,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Birch Tip",
       "textures": [
         "planks_birch/side"
@@ -16749,6 +16783,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Jungle Tip",
       "textures": [
         "planks_jungle/side"
@@ -16819,6 +16854,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood Tip",
       "textures": [
         "wood_block_1/wood_northern"
@@ -16889,6 +16925,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Grey Wood Tip",
       "textures": [
         "wood_block_1/wood_grey"
@@ -16959,6 +16996,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "White Wood Tip",
       "textures": [
         "wood_block_1/wood_white"
@@ -18944,6 +18982,7 @@
       "blockType": "stair",
       "modelBlockName": "dark_northern_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood Stairs",
       "legacyBlockID": "northern_wood_stairs"
     },
@@ -18961,6 +19000,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood Slab",
       "textures": [
         "dark_northern_wood/top_bottom",
@@ -18983,6 +19023,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Grey Wood Slab",
       "textures": [
         "grey_wood/top_bottom",
@@ -19005,6 +19046,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "White Wood Slab",
       "textures": [
         "white_wood/top_bottom",
@@ -21679,6 +21721,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Oak Hopper",
       "textures": [
         "planks_oak/side"
@@ -22566,6 +22609,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood Hopper",
       "textures": [
         "dark_northern_wood/top_bottom",
@@ -37426,6 +37470,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Grey Wood Hopper",
       "textures": [
         "grey_wood/top_bottom"
@@ -37496,6 +37541,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "White Wood Hopper",
       "textures": [
         "white_wood/top_bottom"
@@ -38066,6 +38112,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Oak Wall",
       "textures": [
         "planks_oak/side"
@@ -38086,6 +38133,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Spruce Wall",
       "textures": [
         "planks_spruce/side"
@@ -38106,6 +38154,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Birch Wall",
       "textures": [
         "planks_birch/side"
@@ -38126,6 +38175,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Jungle Wall",
       "textures": [
         "planks_jungle/side"
@@ -38146,6 +38196,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood Wall",
       "textures": [
         "dark_northern_wood/top_bottom",
@@ -38288,6 +38339,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Grey Wood Wall",
       "textures": [
         "grey_wood/side1"
@@ -38308,6 +38360,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "White Wood Wall",
       "textures": [
         "white_wood/side1"
@@ -41253,6 +41306,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Red Wood Carpet",
       "textures": [
         "wood_block_1/wood_red"
@@ -41329,6 +41383,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Carpet",
       "textures": [
         "wood_block_1/wood_purple"
@@ -41414,6 +41469,7 @@
       "blockType": "stair",
       "modelBlockName": "grey_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Grey Wood Stairs",
       "legacyBlockID": "grey_wood_stairs"
     },
@@ -41422,6 +41478,7 @@
       "blockType": "stair",
       "modelBlockName": "white_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "White Wood Stairs",
       "legacyBlockID": "white_wood_stairs"
     },
@@ -53017,6 +53074,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Black Wood Tip",
       "textures": [
         "wood_block_1/wood_black"
@@ -53087,6 +53145,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Blue Wood Tip",
       "textures": [
         "wood_block_1/wood_blue"
@@ -53157,6 +53216,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Green Wood Tip",
       "textures": [
         "wood_block_1/wood_green"
@@ -53227,6 +53287,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Red Wood Tip",
       "textures": [
         "wood_block_1/wood_red"
@@ -53297,6 +53358,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood Tip",
       "textures": [
         "wood_block_1/wood_yellow"
@@ -53367,6 +53429,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Tip",
       "textures": [
         "wood_block_1/wood_purple"
@@ -53437,6 +53500,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],      
       "label": "Black Wood Hopper",
       "textures": [
         "wood_block_1/wood_black"
@@ -53507,6 +53571,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Blue Wood Hopper",
       "textures": [
         "wood_block_1/wood_blue"
@@ -53577,6 +53642,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Green Wood Hopper",
       "textures": [
         "wood_block_1/wood_green"
@@ -53647,6 +53713,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Red Wood Hopper",
       "textures": [
         "wood_block_1/wood_red"
@@ -53717,6 +53784,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood Hopper",
       "textures": [
         "wood_block_1/wood_yellow"
@@ -53787,6 +53855,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Hopper",
       "textures": [
         "wood_block_1/wood_purple"
@@ -53848,6 +53917,7 @@
       "blockType": "stair",
       "modelBlockName": "black_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Black Wood Stairs",
       "legacyBlockID": "black_wood_stairs"
     },
@@ -53856,6 +53926,7 @@
       "blockType": "stair",
       "modelBlockName": "blue_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Blue Wood Stairs",
       "legacyBlockID": "blue_wood_stairs"
     },
@@ -53864,6 +53935,7 @@
       "blockType": "stair",
       "modelBlockName": "green_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Green Wood Stairs",
       "legacyBlockID": "green_wood_stairs"
     },
@@ -53872,6 +53944,7 @@
       "blockType": "stair",
       "modelBlockName": "red_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Red Wood Stairs",
       "legacyBlockID": "red_wood_stairs"
     },
@@ -53880,6 +53953,7 @@
       "blockType": "stair",
       "modelBlockName": "yellow_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood Stairs",
       "legacyBlockID": "yellow_wood_stairs"
     },
@@ -53888,6 +53962,7 @@
       "blockType": "stair",
       "modelBlockName": "purple_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Stairs",
       "legacyBlockID": "purple_wood_stairs"
     },
@@ -53905,6 +53980,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Black Wood Wall",
       "textures": [
         "wood_block_1/wood_black"
@@ -53925,6 +54001,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Blue Wood Wall",
       "textures": [
         "wood_block_1/wood_blue"
@@ -53945,6 +54022,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Green Wood Wall",
       "textures": [
         "wood_block_1/wood_green"
@@ -53965,6 +54043,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Red Wood Wall",
       "textures": [
         "wood_block_1/wood_red"
@@ -53985,6 +54064,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood Wall",
       "textures": [
         "wood_block_1/wood_yellow"
@@ -54005,6 +54085,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Wall",
       "textures": [
         "wood_block_1/wood_purple"
@@ -54109,6 +54190,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Black Wood Slab",
       "textures": [
         "black_wood/side"
@@ -54129,6 +54211,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Blue Wood Slab",
       "textures": [
         "blue_wood/side"
@@ -54149,6 +54232,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Green Wood Slab",
       "textures": [
         "green_wood/side"
@@ -54169,6 +54253,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Red Wood Slab",
       "textures": [
         "red_wood/side"
@@ -54189,6 +54274,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood Slab",
       "textures": [
         "yellow_wood/side"
@@ -54209,6 +54295,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Slab",
       "textures": [
         "purple_wood/side"

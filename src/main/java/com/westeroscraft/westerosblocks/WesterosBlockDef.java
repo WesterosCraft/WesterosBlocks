@@ -118,6 +118,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public int fireSpreadSpeed = 0; // Fire spread speed
 	public int flamability = 0; // Flamability
 	public String creativeTab = null; // Creative tab for items
+	public List<String> customTags = null;	// If block should add any custom tags
 
 	public String type = ""; // Type field (used for plant types or other block type specific values)
 	
