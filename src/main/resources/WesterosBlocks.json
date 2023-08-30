@@ -47307,6 +47307,8 @@
     {
       "blockName": "gold_road_marker",
       "blockType": "cuboid-nsew",
+      "nonOpaque": true,
+      "alphaRender": true,
       "hardness": 5,
       "stepSound": "wood",
       "material": "wood",
@@ -47340,6 +47342,8 @@
     {
       "blockName": "kings_road_marker",
       "blockType": "cuboid-nsew",
+      "nonOpaque": true,
+      "alphaRender": true,
       "hardness": 5,
       "stepSound": "wood",
       "material": "wood",
@@ -47373,6 +47377,8 @@
     {
       "blockName": "mountain_road_marker",
       "blockType": "cuboid-nsew",
+      "nonOpaque": true,
+      "alphaRender": true,
       "hardness": 5,
       "stepSound": "wood",
       "material": "wood",
@@ -47406,6 +47412,8 @@
     {
       "blockName": "ocean_road_marker",
       "blockType": "cuboid-nsew",
+      "nonOpaque": true,
+      "alphaRender": true,
       "hardness": 5,
       "stepSound": "wood",
       "material": "wood",
@@ -47439,6 +47447,8 @@
     {
       "blockName": "river_road_marker",
       "blockType": "cuboid-nsew",
+      "nonOpaque": true,
+      "alphaRender": true,
       "hardness": 5,
       "stepSound": "wood",
       "material": "wood",
@@ -47472,6 +47482,8 @@
     {
       "blockName": "rose_road_marker",
       "blockType": "cuboid-nsew",
+      "nonOpaque": true,
+      "alphaRender": true,
       "hardness": 5,
       "stepSound": "wood",
       "material": "wood",
