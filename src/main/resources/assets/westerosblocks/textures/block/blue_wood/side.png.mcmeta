@@ -53,7 +53,7 @@
       "westerosblocks:block/blue_wood/ctm46"
     ],
     "extra": {
-      "ignore_states": true
+      "connect_to_tag": "westerosblocks:plank-ctm"
     }
   }
 }

@@ -53,7 +53,7 @@
       "minecraft:block/oak_planks/ctm46"
     ],
     "extra": {
-      "ignore_states": true
+      "connect_to_tag": "westerosblocks:plank-ctm"
     }
   }
 }
