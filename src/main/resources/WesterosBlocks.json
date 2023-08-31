@@ -18989,6 +18989,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood Stairs",
+      "textures": [
+        "dark_northern_wood/top_bottom",
+        "dark_northern_wood/top_bottom",
+        "dark_northern_wood/side"
+      ],
       "legacyBlockID": "northern_wood_stairs"
     },
     {
@@ -41476,6 +41481,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "Grey Wood Stairs",
+      "textures": [
+        "grey_wood/top_bottom",
+        "grey_wood/top_bottom",
+        "grey_wood/side"
+      ],
       "legacyBlockID": "grey_wood_stairs"
     },
     {
@@ -41485,6 +41495,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "White Wood Stairs",
+      "textures": [
+        "white_wood/top_bottom",
+        "white_wood/top_bottom",
+        "white_wood/side"
+      ],
       "legacyBlockID": "white_wood_stairs"
     },
     {
@@ -53924,6 +53939,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "Black Wood Stairs",
+      "textures": [
+        "black_wood/top_bottom",
+        "black_wood/top_bottom",
+        "black_wood/side"
+      ],
       "legacyBlockID": "black_wood_stairs"
     },
     {
@@ -53933,6 +53953,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "Blue Wood Stairs",
+      "textures": [
+        "blue_wood/top_bottom",
+        "blue_wood/top_bottom",
+        "blue_wood/side"
+      ],
       "legacyBlockID": "blue_wood_stairs"
     },
     {
@@ -53942,6 +53967,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "Green Wood Stairs",
+      "textures": [
+        "green_wood/top_bottom",
+        "green_wood/top_bottom",
+        "green_wood/side"
+      ],
       "legacyBlockID": "green_wood_stairs"
     },
     {
@@ -53951,6 +53981,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "Red Wood Stairs",
+      "textures": [
+        "red_wood/top_bottom",
+        "red_wood/top_bottom",
+        "red_wood/side"
+      ],
       "legacyBlockID": "red_wood_stairs"
     },
     {
@@ -53960,6 +53995,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood Stairs",
+      "textures": [
+        "yellow_wood/top_bottom",
+        "yellow_wood/top_bottom",
+        "yellow_wood/side"
+      ],
       "legacyBlockID": "yellow_wood_stairs"
     },
     {
@@ -53969,6 +54009,11 @@
       "creativeTab": "WesterosWoodPlanks",
       "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Stairs",
+      "textures": [
+        "purple_wood/top_bottom",
+        "purple_wood/top_bottom",
+        "purple_wood/side"
+      ],
       "legacyBlockID": "purple_wood_stairs"
     },
     {

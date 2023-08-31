@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "westerosblocks:block/dark_northern_wood/top_bottom",
     "top": "westerosblocks:block/dark_northern_wood/top_bottom",
-    "side": "westerosblocks:block/dark_northern_wood/side-woodctm",
-    "particle": "westerosblocks:block/dark_northern_wood/side-woodctm"
+    "side": "westerosblocks:block/dark_northern_wood/side",
+    "particle": "westerosblocks:block/dark_northern_wood/side"
   }
 }

@@ -226,7 +226,18 @@ public class StairsBlockModelExport extends ModelExport {
 	        	String downtxt_ov = null;
 	        	String uptxt_ov = null;
 	        	String sidetxt_ov = null;
-	        	if (bbdef != null) {
+	        	if (def.getTextureCount() > 0) {
+	            	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);        		
+	         		downtxt = getTextureID(set.getTextureByIndex(0));
+	         		uptxt = getTextureID(set.getTextureByIndex(1));
+	         		sidetxt = getTextureID(set.getTextureByIndex(2));
+	         		if (isOverlay) {
+	         			downtxt_ov = getTextureID(def.getOverlayTextureByIndex(0));
+	         			uptxt_ov = getTextureID(def.getOverlayTextureByIndex(1));
+	         			sidetxt_ov = getTextureID(def.getOverlayTextureByIndex(2));
+	         		}	        		
+	        	}
+	        	else if (bbdef != null) {
 	            	WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);        		
 	         		downtxt = getTextureID(set.getTextureByIndex(0));
 	         		uptxt = getTextureID(set.getTextureByIndex(1));
