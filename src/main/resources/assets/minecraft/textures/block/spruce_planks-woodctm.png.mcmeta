@@ -53,7 +53,7 @@
       "minecraft:block/spruce_planks/ctm46"
     ],
     "extra": {
-      "ignore_states": true
+      "connect_to_tag": "westerosblocks:wood-ctm"
     }
   }
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
     "top": "minecraft:block/birch_planks/ctm26",
-    "side": "minecraft:block/birch_planks-selfctm",
+    "side": "minecraft:block/birch_planks-woodctm",
     "bottom": "minecraft:block/birch_planks/ctm26"
   }
 }

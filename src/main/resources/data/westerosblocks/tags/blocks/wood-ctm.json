@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:oak_planks",
+    "minecraft:birch_planks",
+    "minecraft:spruce_planks",
+    "minecraft:jungle_planks",
+    "westerosblocks:green_wood",
+    "westerosblocks:yellow_wood",
+    "westerosblocks:blue_wood",
+    "westerosblocks:grey_wood",
+    "westerosblocks:black_wood",
+    "westerosblocks:red_wood",
+    "westerosblocks:purple_wood",
+    "westerosblocks:white_wood",
+    "westerosblocks:dark_northern_wood"
+  ]
+}

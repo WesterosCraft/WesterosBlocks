@@ -129,6 +129,15 @@
 			"minecraft:jungle_stairs",
 			"minecraft:jungle_slab"
   		]
+  	},
+  	{ 
+  		"customTag": "wood-ctm",
+  		"blockNames": [ 
+  			"minecraft:oak_planks",
+			"minecraft:birch_planks",
+			"minecraft:spruce_planks",
+			"minecraft:jungle_planks"
+  		]
   	}
   ],
   "menuOverrides": [
@@ -9386,11 +9395,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "Purple Wood",
       "textures": [
         "purple_wood/top_bottom",
         "purple_wood/top_bottom",
-        "purple_wood/side-selfctm"
+        "purple_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:0"
     },
@@ -9402,11 +9412,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "White Wood",
       "textures": [
         "white_wood/top_bottom",
         "white_wood/top_bottom",
-        "white_wood/side-selfctm"
+        "white_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:1"
     },
@@ -9418,11 +9429,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "Green Wood",
       "textures": [
         "green_wood/top_bottom",
         "green_wood/top_bottom",
-        "green_wood/side-selfctm"
+        "green_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:2"
     },
@@ -9434,11 +9446,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "Grey Wood",
       "textures": [
         "grey_wood/top_bottom",
         "grey_wood/top_bottom",
-        "grey_wood/side-selfctm"
+        "grey_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:3"
     },
@@ -9450,11 +9463,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "Red Wood",
       "textures": [
         "red_wood/top_bottom",
         "red_wood/top_bottom",
-        "red_wood/side-selfctm"
+        "red_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:4"
     },
@@ -9466,11 +9480,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "Black Wood",
       "textures": [
         "black_wood/top_bottom",
         "black_wood/top_bottom",
-        "black_wood/side-selfctm"
+        "black_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:5"
     },
@@ -9482,11 +9497,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "Blue Wood",
       "textures": [
         "blue_wood/top_bottom",
         "blue_wood/top_bottom",
-        "blue_wood/side-selfctm"
+        "blue_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:6"
     },
@@ -9498,11 +9514,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "Yellow Wood",
       "textures": [
         "yellow_wood/top_bottom",
         "yellow_wood/top_bottom",
-        "yellow_wood/side-selfctm"
+        "yellow_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:7"
     },
@@ -9614,11 +9631,12 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "customTags": [ "wood-ctm" ],
       "label": "Dark Northern Wood",
       "textures": [
         "dark_northern_wood/top_bottom",
         "dark_northern_wood/top_bottom",
-        "dark_northern_wood/side-selfctm"
+        "dark_northern_wood/side-woodctm"
       ],
       "legacyBlockID": "wood_colours:13"
     },

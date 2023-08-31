@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "westerosblocks:block/black_wood/top_bottom",
     "top": "westerosblocks:block/black_wood/top_bottom",
-    "side": "westerosblocks:block/black_wood/side-selfctm",
-    "particle": "westerosblocks:block/black_wood/side-selfctm"
+    "side": "westerosblocks:block/black_wood/side-woodctm",
+    "particle": "westerosblocks:block/black_wood/side-woodctm"
   }
 }

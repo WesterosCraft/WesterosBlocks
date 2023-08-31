@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/yellow_wood/top_bottom",
     "up": "westerosblocks:block/yellow_wood/top_bottom",
-    "north": "westerosblocks:block/yellow_wood/side-selfctm",
-    "south": "westerosblocks:block/yellow_wood/side-selfctm",
-    "west": "westerosblocks:block/yellow_wood/side-selfctm",
-    "east": "westerosblocks:block/yellow_wood/side-selfctm",
-    "particle": "westerosblocks:block/yellow_wood/side-selfctm"
+    "north": "westerosblocks:block/yellow_wood/side-woodctm",
+    "south": "westerosblocks:block/yellow_wood/side-woodctm",
+    "west": "westerosblocks:block/yellow_wood/side-woodctm",
+    "east": "westerosblocks:block/yellow_wood/side-woodctm",
+    "particle": "westerosblocks:block/yellow_wood/side-woodctm"
   }
 }
