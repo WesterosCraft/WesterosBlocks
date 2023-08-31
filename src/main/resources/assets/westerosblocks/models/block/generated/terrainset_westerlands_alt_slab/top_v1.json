@@ -8,11 +8,11 @@
     "west": "westerosblocks:block/terrainset_westerlandhills_alt/random_4x4",
     "east": "westerosblocks:block/terrainset_westerlandhills_alt/random_4x4",
     "particle": "westerosblocks:block/terrainset_westerlandhills_alt/random_4x4",
-    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
-    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
-    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
-    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
-    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay",
-    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_overlay"
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_alt_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_alt_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_alt_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_alt_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_alt_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_westerlands_alt_overlay"
   }
 }
