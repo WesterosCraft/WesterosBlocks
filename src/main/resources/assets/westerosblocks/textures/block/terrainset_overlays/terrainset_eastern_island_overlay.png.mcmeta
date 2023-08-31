@@ -31,26 +31,6 @@
           ]
         },
         {
-          "type": "overlay",
-          "ctmRow": 27,
-          "ctmCol": 0,
-          "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_westerlands_alt"
-            }
-          ]
-        },
-        {
-          "type": "overlay",
-          "ctmRow": 30,
-          "ctmCol": 0,
-          "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_westerlands"
-            }
-          ]
-        },
-        {
           "type": "null"
         }
       ],
