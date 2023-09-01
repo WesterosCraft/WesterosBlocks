@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined"
+    "down_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
+    "down": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
+    "up": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
+    "north": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
+    "south": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
+    "west": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
+    "east": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
+    "particle": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined"
   }
 }

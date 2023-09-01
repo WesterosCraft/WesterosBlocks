@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/stone_volcanic/side"
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_stone_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_stone_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_stone_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_stone_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_stone_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_volcanic_stone_overlay",
+    "down": "westerosblocks:block/stone_volcanic/side",
+    "up": "westerosblocks:block/stone_volcanic/side",
+    "north": "westerosblocks:block/stone_volcanic/side",
+    "south": "westerosblocks:block/stone_volcanic/side",
+    "west": "westerosblocks:block/stone_volcanic/side",
+    "east": "westerosblocks:block/stone_volcanic/side",
+    "particle": "westerosblocks:block/stone_volcanic/side"
   }
 }

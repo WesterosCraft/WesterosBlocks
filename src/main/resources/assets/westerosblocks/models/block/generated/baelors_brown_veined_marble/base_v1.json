@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/baelors_brown_veined_marble/baelors"
+    "down_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "down": "westerosblocks:block/baelors_brown_veined_marble/baelors",
+    "up": "westerosblocks:block/baelors_brown_veined_marble/baelors",
+    "north": "westerosblocks:block/baelors_brown_veined_marble/baelors",
+    "south": "westerosblocks:block/baelors_brown_veined_marble/baelors",
+    "west": "westerosblocks:block/baelors_brown_veined_marble/baelors",
+    "east": "westerosblocks:block/baelors_brown_veined_marble/baelors",
+    "particle": "westerosblocks:block/baelors_brown_veined_marble/baelors"
   }
 }

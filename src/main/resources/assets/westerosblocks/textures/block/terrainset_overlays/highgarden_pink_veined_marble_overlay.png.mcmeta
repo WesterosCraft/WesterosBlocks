@@ -12,11 +12,21 @@
       "conds": [
         {
           "type": "overlay",
-          "ctmRow": 12,
+          "ctmRow": 6,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_the_north"
+              "block": "westerosblocks:terrainset_reach_alt"
+            }
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 9,
+          "ctmCol": 0,
+          "connect_to": [
+            {
+              "block": "westerosblocks:terrainset_reach"
             }
           ]
         }

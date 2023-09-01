@@ -17534,6 +17534,9 @@
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
       "label": "Volcanic Stone",
+      "overlayTextures": [
+        "terrainset_overlays/terrainset_volcanic_stone_overlay"
+      ],
       "textures": [
         "stone_volcanic/side"
       ],
@@ -23207,6 +23210,9 @@
       "resistance": 5,
       "creativeTab": "WesterosSandGravel",
       "label": "White Stained Clay",
+      "overlayTextures": [
+        "terrainset_overlays/white_stained_clay_overlay"
+      ],
       "textures": [
         "clay/white_stained_clay"
       ],
@@ -23673,8 +23679,8 @@
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
       "label": "Baelors Brown Veined Marble",
-      "textures": [
-        "eyrie_blue_veined_marble/eyrie_veined"
+      "overlayTextures": [
+        "terrainset_overlays/baelors_brown_veined_overlay"
       ],
       "textures": [
         "baelors_brown_veined_marble/baelors"
@@ -23690,6 +23696,9 @@
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
       "label": "Highgarden Pink Marble",
+      "overlayTextures": [
+        "terrainset_overlays/highgarden_pink_marble_overlay"
+      ],
       "textures": [
         "highgarden_pink_marble/highgarden_marble"
       ],
@@ -23704,6 +23713,9 @@
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
       "label": "Sunspear Yellow Veined Marble",
+      "overlayTextures": [
+        "terrainset_overlays/sunspear_yellow_veined_marble_overlay"
+      ],
       "textures": [
         "sunspear_yellow_veined_marble/marble_sunspear"
       ],
@@ -23718,6 +23730,9 @@
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
       "label": "Highgarden Pink Veined Marble",
+      "overlayTextures": [
+        "terrainset_overlays/highgarden_pink_veined_marble_overlay"
+      ],
       "textures": [
         "highgarden_pink_veined_marble/highgarden_veined"
       ],
@@ -42972,6 +42987,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Stormlands Alt",
+      "overlayTextures": [
+        "terrainset_overlays/terrainset_stormlands_alt_overlay"
+      ],
       "textures": [
         "terrainset_stormlands_alt/random_4x4"
       ],
@@ -43003,6 +43021,9 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Grey Sandstone",
+      "overlayTextures": [
+        "terrainset_overlays/terrainset_grey_sandstone_overlay"
+      ],
       "textures": [
         "terrainset_grey_sandstone/random_4x4"
       ],

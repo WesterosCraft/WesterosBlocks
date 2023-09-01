@@ -12,41 +12,21 @@
       "conds": [
         {
           "type": "overlay",
-          "ctmRow": 9,
+          "ctmRow": 45,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_reach"
+              "block": "westerosblocks:terrainset_red_mountains_alt"
             }
           ]
         },
         {
           "type": "overlay",
-          "ctmRow": 6,
+          "ctmRow": 39,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_reach_alt"
-            }
-          ]
-        },
-        {
-          "type": "overlay",
-          "ctmRow": 12,
-          "ctmCol": 0,
-          "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_the_north"
-            }
-          ]
-        },
-        {
-          "type": "overlay",
-          "ctmRow": 15,
-          "ctmCol": 0,
-          "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_iron_islands"
+              "block": "westerosblocks:terrainset_stormlands"
             }
           ]
         },
@@ -62,26 +42,33 @@
         },
         {
           "type": "overlay",
-          "ctmRow": 21,
+          "ctmRow": 51,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_arbor_dorne_alt"
+              "block": "westerosblocks:terrainset_mountains_of_the_moon"
             }
           ]
         },
         {
           "type": "overlay",
-          "ctmRow": 24,
+          "ctmRow": 15,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_arbor_dorne"
+              "block": "westerosblocks:terrainset_iron_islands"
             }
           ]
         },
         {
-          "type": "null"
+          "type": "overlay",
+          "ctmRow": 12,
+          "ctmCol": 0,
+          "connect_to": [
+            {
+              "block": "westerosblocks:terrainset_the_north"
+            }
+          ]
         }
       ],
       "ignore_states": true
