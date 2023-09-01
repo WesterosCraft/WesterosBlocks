@@ -12,51 +12,41 @@
       "conds": [
         {
           "type": "overlay",
-          "ctmRow": 12,
+          "ctmRow": 30,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_the_north"
+              "block": "westerosblocks:terrainset_westerlands"
             }
           ]
         },
         {
           "type": "overlay",
-          "ctmRow": 15,
+          "ctmRow": 27,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_iron_islands"
+              "block": "westerosblocks:terrainset_westerlands_alt"
             }
           ]
         },
         {
           "type": "overlay",
-          "ctmRow": 18,
+          "ctmRow": 24,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_eastern_islands"
+              "block": "westerosblocks:terrainset_arbor_dorne"
             }
           ]
         },
         {
           "type": "overlay",
-          "ctmRow": 45,
+          "ctmRow": 21,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_red_mountains_alt"
-            }
-          ]
-        },
-        {
-          "type": "overlay",
-          "ctmRow": 48,
-          "ctmCol": 0,
-          "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_red_mountains"
+              "block": "westerosblocks:terrainset_arbor_dorne_alt"
             }
           ]
         }

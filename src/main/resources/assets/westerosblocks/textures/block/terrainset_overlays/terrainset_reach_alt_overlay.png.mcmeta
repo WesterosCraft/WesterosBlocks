@@ -79,9 +79,6 @@
               "block": "westerosblocks:terrainset_stormlands"
             }
           ]
-        },
-        {
-          "type": "null"
         }
       ],
       "ignore_states": true

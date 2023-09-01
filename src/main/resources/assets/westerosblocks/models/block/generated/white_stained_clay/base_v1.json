@@ -1,6 +1,18 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "all": "westerosblocks:block/clay/white_stained_clay"
+    "down_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "down": "westerosblocks:block/clay/white_stained_clay",
+    "up": "westerosblocks:block/clay/white_stained_clay",
+    "north": "westerosblocks:block/clay/white_stained_clay",
+    "south": "westerosblocks:block/clay/white_stained_clay",
+    "west": "westerosblocks:block/clay/white_stained_clay",
+    "east": "westerosblocks:block/clay/white_stained_clay",
+    "particle": "westerosblocks:block/clay/white_stained_clay"
   }
 }

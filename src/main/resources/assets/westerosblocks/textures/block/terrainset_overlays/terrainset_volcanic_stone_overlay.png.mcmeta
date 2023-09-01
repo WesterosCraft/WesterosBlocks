@@ -12,21 +12,31 @@
       "conds": [
         {
           "type": "overlay",
-          "ctmRow": 9,
+          "ctmRow": 15,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_reach"
+              "block": "westerosblocks:terrainset_iron_islands"
             }
           ]
         },
         {
           "type": "overlay",
-          "ctmRow": 6,
+          "ctmRow": 39,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_reach_alt"
+              "block": "westerosblocks:terrainset_stormlands"
+            }
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 33,
+          "ctmCol": 0,
+          "connect_to": [
+            {
+              "block": "westerosblocks:terrainset_stormlands_alt"
             }
           ]
         },
@@ -42,46 +52,13 @@
         },
         {
           "type": "overlay",
-          "ctmRow": 15,
+          "ctmRow": 3,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_iron_islands"
+              "block": "westerosblocks:volcanic_rock"
             }
           ]
-        },
-        {
-          "type": "overlay",
-          "ctmRow": 18,
-          "ctmCol": 0,
-          "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_eastern_islands"
-            }
-          ]
-        },
-        {
-          "type": "overlay",
-          "ctmRow": 21,
-          "ctmCol": 0,
-          "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_arbor_dorne_alt"
-            }
-          ]
-        },
-        {
-          "type": "overlay",
-          "ctmRow": 24,
-          "ctmCol": 0,
-          "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_arbor_dorne"
-            }
-          ]
-        },
-        {
-          "type": "null"
         }
       ],
       "ignore_states": true

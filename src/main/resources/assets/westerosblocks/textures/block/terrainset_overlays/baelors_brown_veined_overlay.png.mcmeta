@@ -12,11 +12,11 @@
       "conds": [
         {
           "type": "overlay",
-          "ctmRow": 12,
+          "ctmRow": 51,
           "ctmCol": 0,
           "connect_to": [
             {
-              "block": "westerosblocks:terrainset_the_north"
+              "block": "westerosblocks:terrainset_mountains_of_the_moon"
             }
           ]
         }
