@@ -5,10 +5,16 @@ import javax.annotation.Nullable;
 import com.westeroscraft.westerosblocks.*;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.StateDefinition;
-
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.Half;
+import net.minecraft.world.level.block.state.properties.StairsShape;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 
 public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
@@ -16,6 +22,18 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
+            String t = def.getType();
+            boolean doUnconnect = false;
+            if (t != null) {
+                String[] toks = t.split(",");
+                for (String tok : toks) {
+                	String[] parts = tok.split(":");
+                    if (parts[0].equals("unconnect")) {
+                    	doUnconnect = true;
+                    	tempUNCONNECT = UNCONNECT;
+                    }
+                }
+            }
             if (def.modelBlockName == null) {
                 WesterosBlocks.log.error("Type 'stair' requires modelBlockName settings");
                 return null;
@@ -34,15 +52,19 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
                 return null;
             }
             BlockBehaviour.Properties props = def.makeAndCopyProperties(blk);
-            return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def)),
+            return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def, doUnconnect)),
                     false, false);
         }
     }
 
     private WesterosBlockDef def;
+    public static final BooleanProperty UNCONNECT = BooleanProperty.create("unconnect");
+    protected static BooleanProperty tempUNCONNECT;
+
+    public final boolean unconnect;
     public final boolean no_uvlock;
 
-    protected WCStairBlock(BlockState modelstate, BlockBehaviour.Properties props, WesterosBlockDef def) {
+    protected WCStairBlock(BlockState modelstate, BlockBehaviour.Properties props, WesterosBlockDef def, boolean doUnconnect) {
         super(() -> modelstate, props);
         this.def = def;
         String t = def.getType();
@@ -56,6 +78,15 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
             }
         }
         this.no_uvlock = no_uvlock;
+        this.unconnect = doUnconnect;
+        if (doUnconnect) {
+            this.registerDefaultState(this.stateDefinition.any().
+        		setValue(FACING, Direction.NORTH).
+        		setValue(HALF, Half.BOTTOM).
+        		setValue(SHAPE, StairsShape.STRAIGHT).
+        		setValue(WATERLOGGED, Boolean.valueOf(false)).
+        		setValue(UNCONNECT, Boolean.valueOf(false)));
+        }
     }
 
     @Override
@@ -65,6 +96,10 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
+    	if (tempUNCONNECT != null) {
+    		StateDefinition.add(tempUNCONNECT);
+    		tempUNCONNECT = null;
+    	}
         super.createBlockStateDefinition(StateDefinition);
     }
 
@@ -74,6 +109,17 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
         BlockState bs = super.getStateForPlacement(ctx);
         return bs;
     }
+
+    @Override
+    public BlockState updateShape(BlockState state, Direction p_56926_, BlockState p_56927_, LevelAccessor world, BlockPos pos, BlockPos p_56930_) {
+    	if (unconnect && state.getValue(UNCONNECT)) {
+            if (state.getValue(WATERLOGGED)) {
+                world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+            }
+            return state;
+    	}
+    	return super.updateShape(state, p_56926_, p_56927_, world, pos, p_56930_);
+     }
 
     private static String[] TAGS = { "stairs" };
 

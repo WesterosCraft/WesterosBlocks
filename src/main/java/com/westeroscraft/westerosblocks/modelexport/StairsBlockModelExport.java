@@ -354,6 +354,9 @@ public class StairsBlockModelExport extends ModelExport {
     		}
     	}
     	newstate.put("waterlogged", "false");
+    	if (sblk.unconnect) {
+        	newstate.put("unconnect", "false");    		
+    	}
     	for (String facing : FACING) {
         	oldstate.put("facing", facing);
         	newstate.put("facing", facing);

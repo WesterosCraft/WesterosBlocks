@@ -33677,6 +33677,19 @@
       ]
     },
     {
+      "blockName": "test_block_6",
+      "blockType": "stair",
+      "modelBlockName": "reach_brick",
+      "creativeTab": "WesterosUtility",
+      "label": "Test Stair (unconnect)",
+      "type": "unconnect:false",
+      "textures": [
+        "test_block/d_texture",
+        "test_block/u_texture",
+        "test_block/w_texture"
+      ]
+    },    
+    {
       "blockName": "cabbage",
       "blockType": "cuboid-16way",
       "hardness": 3,
