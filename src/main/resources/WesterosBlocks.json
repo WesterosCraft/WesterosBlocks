@@ -999,6 +999,7 @@
       "blockType": "stair",
       "modelBlockName": "oxidized_iron_block",
       "creativeTab": "WesterosMetal",
+      "type": "unconnect:false",
       "label": "Oxidized Iron Stairs",
       "legacyBlockID": "metal_block_0_stair_1"
     },
@@ -3296,6 +3297,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "label": "Oak Fence",
       "textures": [
         "planks_oak/side"
@@ -3325,6 +3327,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "label": "Spruce Fence",
       "textures": [
         "planks_spruce/side"
@@ -3354,6 +3357,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "label": "Birch Fence",
       "textures": [
         "planks_birch/side"
@@ -3383,6 +3387,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "label": "Jungle Fence",
       "textures": [
         "planks_jungle/side"
@@ -3412,6 +3417,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosLogs",
+      "type": "unconnect:false",
       "label": "Oak Bark Fence",
       "textures": [
         "bark_oak/side"
@@ -3440,6 +3446,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosLogs",
+      "type": "unconnect:false",
       "label": "Spruce Bark Fence",
       "textures": [
         "bark_spruce/side"
@@ -3468,6 +3475,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosLogs",
+      "type": "unconnect:false",
       "label": "Birch Bark Fence",
       "textures": [
         "bark_birch/side"
@@ -3496,6 +3504,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "label": "Jungle Bark Fence",
       "textures": [
         "bark_jungle/side"
@@ -3524,6 +3533,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "label": "Oak Fence with Vines",
       "textures": [
         "planks_oak/vines"
@@ -3538,6 +3548,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "label": "Spruce Fence with Vines",
       "textures": [
         "planks_spruce/vines"
@@ -3552,6 +3563,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Birch Fence with Vines",
       "textures": [
         "planks_birch/vines"
@@ -3566,6 +3578,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Jungle Fence with Vines",
       "textures": [
         "planks_jungle/vines"
@@ -3580,6 +3593,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Oak Fence with Grapes",
       "textures": [
         "planks_oak/grapevines"
@@ -3594,6 +3608,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Spruce Fence with Grapes",
       "textures": [
         "planks_spruce/grapevines"
@@ -3608,6 +3623,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Birch Fence with Grapes",
       "textures": [
         "planks_birch/grapevines"
@@ -3622,6 +3638,7 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Jungle Fence with Grapes",
       "textures": [
         "planks_jungle/grapevines"
@@ -3642,6 +3659,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Nether Brick Wall",
       "textures": [
         "nether_brick/side"
@@ -3662,6 +3680,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Stone Brick Wall",
       "colorMult": "textures/colormap/stonebrick",
       "textures": [
@@ -3683,6 +3702,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Orange Brick Wall",
       "colorMult": "textures/colormap/brick",
       "textures": [
@@ -3704,6 +3724,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Desert Sandstone Brick Wall",
       "textures": [
         "sandstone_light_wall/top",
@@ -3726,6 +3747,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Red Sandstone Wall",
       "textures": [
         "sandstone_red_wall/top",
@@ -3748,6 +3770,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Dark Cobblestone Wall",
       "colorMult": "textures/colormap/darkcobble",
       "textures": [
@@ -3769,6 +3792,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Bedrock Wall",
       "textures": [
         "stone_bedrock/side"
@@ -3789,6 +3813,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Small Stone Brick Wall",
       "colorMult": "textures/colormap/smallstonebrick",
       "textures": [
@@ -3810,6 +3835,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Dark Red Brick Wall",
       "textures": [
         "dark_red_brick/side"
@@ -3830,6 +3856,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Small Orange Brick Wall",
       "colorMult": "textures/colormap/brick",
       "textures": [
@@ -3851,6 +3878,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Light Grey Brick Wall",
       "colorMult": "textures/colormap/lightgreystone",
       "textures": [
@@ -3872,6 +3900,7 @@
         }
       ],
       "creativeTab": "WesterosMarblePlaster",
+	  "type": "unconnect:false",
       "label": "Marble Wall",
       "type": "size:short",
       "textures": [
@@ -3895,6 +3924,7 @@
         }
       ],
       "creativeTab": "WesterosMarblePlaster",
+	  "type": "unconnect:false",
       "label": "Thin Marble Column",
       "type": "size:short",
       "textures": [
@@ -3918,6 +3948,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Reach Light Brick Wall",
       "textures": [
         "reach_brick/side_light"
@@ -3938,6 +3969,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Stormlands Dark Cobblestone Wall",
       "textures": [
         "stone_block_2/stone_cobble_stormlands_dark"
@@ -3958,6 +3990,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Reach Brick Wall",
       "textures": [
         "reach_brick/side"
@@ -3978,6 +4011,7 @@
         }
       ],
       "creativeTab": "WesterosLogs",
+	  "type": "unconnect:false",
       "label": "Thin Oak Log",
       "textures": [
         "bark_oak/top",
@@ -4000,6 +4034,7 @@
         }
       ],
       "creativeTab": "WesterosLogs",
+	  "type": "unconnect:false",
       "label": "Thin Spruce Log",
       "textures": [
         "bark_spruce/top",
@@ -4022,6 +4057,7 @@
         }
       ],
       "creativeTab": "WesterosLogs",
+	  "type": "unconnect:false",
       "label": "Thin Birch Log",
       "textures": [
         "bark_birch/top",
@@ -4044,6 +4080,7 @@
         }
       ],
       "creativeTab": "WesterosLogs",
+	  "type": "unconnect:false",
       "label": "Thin Jungle Log",
       "textures": [
         "bark_jungle/top",
@@ -4066,6 +4103,7 @@
         }
       ],
       "creativeTab": "WesterosLogs",
+	  "type": "unconnect:false",
       "label": "Thin Palm Log",
       "textures": [
         "bark_palm/top",
@@ -10351,6 +10389,7 @@
       "blockType": "stair",
       "modelBlockName": "vivid_sandstone",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Vivid Sandstone Stairs",
       "legacyBlockID": "sandstone_block_0_stair_0"
     },
@@ -10359,6 +10398,7 @@
       "blockType": "stair",
       "modelBlockName": "monochrome_sandstone",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Monochrome Sandstone Stairs",
       "legacyBlockID": "sandstone_block_0_stair_1"
     },
@@ -10367,6 +10407,7 @@
       "blockType": "stair",
       "modelBlockName": "terracotta",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Terracotta Stairs",
       "legacyBlockID": "sandstone_block_0_stair_2"
     },
@@ -10375,6 +10416,7 @@
       "blockType": "stair",
       "modelBlockName": "vivid_dark_sandstone",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Vivid Dark Sandstone Stairs",
       "legacyBlockID": "sandstone_block_0_stair_3"
     },
@@ -10383,6 +10425,7 @@
       "blockType": "stair",
       "modelBlockName": "monochrome_dark_sandstone",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Monochrome Dark Sandstone Stairs",
       "legacyBlockID": "sandstone_block_0_stair_4"
     },
@@ -10391,6 +10434,7 @@
       "blockType": "stair",
       "modelBlockName": "large_brick_sandstone",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Large Brick Sandstone Stairs",
       "legacyBlockID": "sandstone_block_0_stair_5"
     },
@@ -10399,6 +10443,7 @@
       "blockType": "stair",
       "modelBlockName": "dark_brown_sandstone",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Dark Brown Sandstone Stairs",
       "legacyBlockID": "sandstone_block_0_stair_8"
     },
@@ -10407,6 +10452,7 @@
       "blockType": "stair",
       "modelBlockName": "small_stone_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "colorMult": "textures/colormap/smallstonebrick",
       "label": "Small Stone Brick Stairs",
       "legacyBlockID": "stone_block_1_stair_0"
@@ -10416,6 +10462,7 @@
       "blockType": "stair",
       "modelBlockName": "light_grey_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "colorMult": "textures/colormap/lightgreystone",
       "label": "Light Grey Brick Stairs",
       "legacyBlockID": "stone_block_1_stair_1"
@@ -11584,6 +11631,7 @@
       "blockType": "stair",
       "modelBlockName": "black_slate",
       "creativeTab": "WesterosRoofing",
+      "type": "unconnect:false",
       "label": "Black Slate Stairs",
       "legacyBlockID": "stone_block_1_stair_2"
     },
@@ -11592,6 +11640,7 @@
       "blockType": "stair",
       "modelBlockName": "blue_slate",
       "creativeTab": "WesterosRoofing",
+      "type": "unconnect:false",
       "label": "Blue Slate Stairs",
       "legacyBlockID": "stone_block_1_stair_3"
     },
@@ -11600,6 +11649,7 @@
       "blockType": "stair",
       "modelBlockName": "red_slate",
       "creativeTab": "WesterosRoofing",
+      "type": "unconnect:false",
       "label": "Red Slate Stairs",
       "legacyBlockID": "stone_block_1_stair_4"
     },
@@ -11611,6 +11661,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Cobblestone Fence",
       "colorMult": "textures/colormap/cobblestone",
       "textures": [
@@ -11626,6 +11677,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Mossy Cobblestone Fence",
       "colorMult": "textures/colormap/cobblestone",
       "textures": [
@@ -11641,6 +11693,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Reinforced Oak Fence",
       "textures": [
         "wood_block_0/planks_reinforced_oak"
@@ -11655,6 +11708,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Desert Sandstone Fence",
       "textures": [
         "stone_block_0/sandstone_normal"
@@ -11669,6 +11723,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Vivid Sandstone Fence",
       "textures": [
         "stone_block_0/sandstone_vivid"
@@ -11683,6 +11738,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Vivid Dark Sandstone Fence",
       "textures": [
         "stone_block_0/sandstone_vivid_dark"
@@ -11697,6 +11753,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Monochrome Sandstone Fence",
       "textures": [
         "stone_block_0/sandstone_monochrome"
@@ -11711,6 +11768,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Monochrome Dark Sandstone Fence",
       "textures": [
         "stone_block_0/sandstone_monochrome_dark"
@@ -11725,6 +11783,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Terracotta Fence",
       "textures": [
         "stone_block_0/sandstone_terracotta"
@@ -11739,6 +11798,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Dark Northern Wood Fence",
       "textures": [
         "dark_northern_wood/side"
@@ -11768,6 +11828,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Small Stone Brick Fence",
       "colorMult": "textures/colormap/smallstonebrick",
       "textures": [
@@ -11783,6 +11844,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Dark Cobblestone Fence",
       "colorMult": "textures/colormap/darkcobble",
       "textures": [
@@ -11798,6 +11860,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Bedrock Fence",
       "textures": [
         "stone_bedrock/side"
@@ -11812,6 +11875,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Light Grey Brick Fence",
       "colorMult": "textures/colormap/lightgreystone",
       "textures": [
@@ -11827,6 +11891,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Orange Brick Fence",
       "colorMult": "textures/colormap/brick",
       "textures": [
@@ -11842,6 +11907,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
+	  "type": "unconnect:false",
       "label": "Marble Column Fence",
       "textures": [
         "log_block_0/column_block_marble_side"
@@ -17822,6 +17888,7 @@
       "material": "cloth",
       "modelBlockName": "thatch_light_fur",
       "creativeTab": "WesterosMisc",
+      "type": "unconnect:false",
       "label": "Thatch Light Fur Stairs",
       "legacyBlockID": "thatch_stair_0"
     },
@@ -17832,6 +17899,7 @@
       "material": "cloth",
       "modelBlockName": "thatch_dark_fur",
       "creativeTab": "WesterosMisc",
+      "type": "unconnect:false",
       "label": "Thatch Dark Fur Stairs",
       "legacyBlockID": "thatch_stair_1"
     },
@@ -17840,6 +17908,7 @@
       "blockType": "stair",
       "modelBlockName": "6sided_stone_slab",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Stone Slab Stairs",
       "legacyBlockID": "stone_slab_stair_0"
     },
@@ -18104,6 +18173,7 @@
       "blockType": "stair",
       "modelBlockName": "redorange_slate",
       "creativeTab": "WesterosRoofing",
+      "type": "unconnect:false",
       "label": "Red-Orange Slate Stairs",
       "legacyBlockID": "orange_brick_stair_0"
     },
@@ -18933,6 +19003,7 @@
       "blockType": "stair",
       "modelBlockName": "oxidized_bronze_block",
       "creativeTab": "WesterosMetal",
+      "type": "unconnect:false",
       "label": "Oxidized Bronze Stairs",
       "legacyBlockID": "metal_block_0_stair_2"
     },
@@ -18941,6 +19012,7 @@
       "blockType": "stair",
       "modelBlockName": "oxidized_steel_block",
       "creativeTab": "WesterosMetal",
+      "type": "unconnect:false",
       "label": "Oxidized Steel Stairs",
       "legacyBlockID": "metal_block_0_stair_3"
     },
@@ -18949,6 +19021,7 @@
       "blockType": "stair",
       "modelBlockName": "gold_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Gold Brick Stairs",
       "legacyBlockID": "metal_block_0_stair_4"
     },
@@ -18957,6 +19030,7 @@
       "blockType": "stair",
       "modelBlockName": "bronze_slab",
       "creativeTab": "WesterosMetal",
+      "type": "unconnect:false",
       "label": "Bronze Stairs",
       "legacyBlockID": "metal_block_0_stair_5"
     },
@@ -18965,6 +19039,7 @@
       "blockType": "stair",
       "modelBlockName": "iron_slab",
       "creativeTab": "WesterosMetal",
+      "type": "unconnect:false",
       "label": "Iron Stairs",
       "legacyBlockID": "metal_block_0_stair_6"
     },
@@ -18973,6 +19048,7 @@
       "blockType": "stair",
       "modelBlockName": "steel_block",
       "creativeTab": "WesterosMetal",
+      "type": "unconnect:false",
       "label": "Steel Stairs",
       "legacyBlockID": "metal_block_0_stair_7"
     },
@@ -18981,6 +19057,7 @@
       "blockType": "stair",
       "modelBlockName": "snow_slab",
       "creativeTab": "WesterosWaterAir",
+      "type": "unconnect:false",
       "ambientOcclusion": false,
       "label": "Snow Stairs",
       "legacyBlockID": "snow_stairs"
@@ -18990,6 +19067,7 @@
       "blockType": "stair",
       "modelBlockName": "dark_northern_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood Stairs",
       "textures": [
@@ -19073,6 +19151,7 @@
       "blockType": "stair",
       "modelBlockName": "minecraft:bedrock",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Bedrock Stairs",
       "legacyBlockID": "bedrock_stairs"
     },
@@ -19081,6 +19160,7 @@
       "blockType": "stair",
       "modelBlockName": "dark_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Dark Cobblestone Stairs",
       "colorMult": "textures/colormap/darkcobble",
       "legacyBlockID": "cobble_dark_stairs"
@@ -19112,6 +19192,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Vivid Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_vivid_top",
@@ -19134,6 +19215,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Vivid Mossy Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_vivid_top",
@@ -19156,6 +19238,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Vivid Dark Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_vivid_dark_top",
@@ -19178,6 +19261,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Large Brick Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_bricks_large",
@@ -19200,6 +19284,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Monochrome Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_monochrome_top",
@@ -19222,6 +19307,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Monochrome Mossy Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_monochrome_top",
@@ -19244,6 +19330,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Monochrome Dark Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_monochrome_dark_top",
@@ -19266,6 +19353,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Terracotta Wall",
       "textures": [
         "stone_block_0/sandstone_terracotta_top",
@@ -19288,6 +19376,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Terracotta Engraved Wall",
       "textures": [
         "stone_block_0/sandstone_terracotta_top",
@@ -19310,6 +19399,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Dark Brown Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_brown_dark"
@@ -19330,6 +19420,7 @@
         }
       ],
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Black Slate Wall",
       "textures": [
         "stone_slate_0/slate_black"
@@ -19350,6 +19441,7 @@
         }
       ],
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Blue Slate Wall",
       "textures": [
         "stone_slate_0/slate_blue"
@@ -19370,6 +19462,7 @@
         }
       ],
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Red Slate Wall",
       "textures": [
         "stone_slate_0/slate_red"
@@ -19390,6 +19483,7 @@
         }
       ],
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Brown Slate Wall",
       "textures": [
         "stone_slate_0/slate_brown"
@@ -19410,6 +19504,7 @@
         }
       ],
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Green Slate Wall",
       "textures": [
         "stone_slate_0/slate_green"
@@ -19971,6 +20066,7 @@
       "blockType": "stair",
       "modelBlockName": "brown_slate",
       "creativeTab": "WesterosRoofing",
+      "type": "unconnect:false",
       "label": "Brown Slate Stairs",
       "legacyBlockID": "stone_block_3_stair_0"
     },
@@ -19979,6 +20075,7 @@
       "blockType": "stair",
       "modelBlockName": "green_slate",
       "creativeTab": "WesterosRoofing",
+      "type": "unconnect:false",
       "label": "Green Slate Stairs",
       "legacyBlockID": "stone_block_3_stair_1"
     },
@@ -19990,6 +20087,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Black Slate Fence",
       "textures": [
         "stone_slate_0/slate_black"
@@ -20004,6 +20102,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Blue Slate Fence",
       "textures": [
         "stone_slate_0/slate_blue"
@@ -20018,6 +20117,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Red Slate Fence",
       "textures": [
         "stone_slate_0/slate_red"
@@ -20032,6 +20132,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Brown Slate Fence",
       "textures": [
         "stone_slate_0/slate_brown"
@@ -20046,6 +20147,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Green Slate Fence",
       "textures": [
         "stone_slate_0/slate_green"
@@ -20060,6 +20162,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Reach Light Brick Fence",
       "textures": [
         "reach_brick/side_light"
@@ -20074,6 +20177,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Stormlands Dark Cobblestone Fence",
       "textures": [
         "stone_block_2/stone_cobble_stormlands_dark"
@@ -20088,6 +20192,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Dorne Dull Terracotta Fence",
       "textures": [
         "stone_block_0/sandstone_terracotta_dull"
@@ -20102,6 +20207,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Dorne Light Terracotta Fence",
       "textures": [
         "stone_block_0/sandstone_terracotta_light"
@@ -20116,6 +20222,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Dorne Dark Sandstone Fence",
       "textures": [
         "stone_block_0/sandstone_normal_dark"
@@ -20130,6 +20237,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosLogs",
+	  "type": "unconnect:false",
       "label": "Palm Fence",
       "textures": [
         "bark_palm/side"
@@ -20144,6 +20252,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosDecor",
+	  "type": "unconnect:false",
       "label": "Iron Throne Blade Fence",
       "textures": [
         "blades_molten/side1"
@@ -20158,6 +20267,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Bronze Fence",
       "textures": [
         "metal_block_0/metal_block_bronze"
@@ -20172,6 +20282,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Red-Orange Slate Fence",
       "textures": [
         "stone_slate_0/slate_red_orange"
@@ -20186,6 +20297,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Oxidized Bronze Fence",
       "textures": [
         "bronze_block_oxidized/side3"
@@ -20200,6 +20312,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Stone Slab Fence",
       "textures": [
         "stone_slab/stone_slab_side"
@@ -20303,6 +20416,7 @@
       "blockType": "stair",
       "modelBlockName": "reach_light_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Reach Light Brick Stairs",
       "legacyBlockID": "stone_block_3_stair_2"
     },
@@ -20746,6 +20860,7 @@
       "blockType": "stair",
       "modelBlockName": "stormlands_dark_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Stormlands Dark Cobblestone Stairs",
       "legacyBlockID": "stone_block_3_stair_3"
     },
@@ -21146,6 +21261,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Dorne Dull Terracotta Wall",
       "textures": [
         "stone_block_0/sandstone_terracotta_dull_top",
@@ -21168,6 +21284,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Dorne Light Terracotta Wall",
       "textures": [
         "stone_block_0/sandstone_terracotta_light_top",
@@ -21190,6 +21307,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Dorne Dark Sandstone Wall",
       "textures": [
         "stone_block_0/sandstone_normal_dark_top",
@@ -21212,6 +21330,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "KL Dun Brick Wall",
       "textures": [
         "stone_block_3/brick_dun"
@@ -21232,6 +21351,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Iron Throne Blade Wall",
       "textures": [
         "blades_molten/side1"
@@ -21252,6 +21372,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Winterfell Granite Wall",
       "textures": [
         "winterfell_granite/side"
@@ -21272,6 +21393,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "White Cobblestone Wall",
       "textures": [
         "stone_block_2/stone_cobble_white"
@@ -21292,6 +21414,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Basalt Brick Wall",
       "textures": [
         "stone_block_1/brick_basalt"
@@ -21312,6 +21435,7 @@
         }
       ],
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Bronze Wall",
       "randomTextures": [
         {
@@ -21346,6 +21470,7 @@
         }
       ],
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Red-Orange Slate Wall",
       "textures": [
         "stone_slate_0/slate_red_orange"
@@ -21366,6 +21491,7 @@
         }
       ],
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Oxidized Bronze Wall",
       "randomTextures": [
         {
@@ -21400,6 +21526,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Stone Slab Wall",
       "textures": [
         "stone_slab/stone_slab_side"
@@ -21420,6 +21547,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Stormlands Brick Wall",
       "textures": [
         "stone_block_2/brick_stormlands_small"
@@ -21440,6 +21568,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Stormlands Cobblestone Wall",
       "textures": [
         "stone_block_2/stone_cobble_stormlands"
@@ -21460,6 +21589,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Basalt Cobblestone Wall",
       "textures": [
         "stone_block_1/stone_cobble_basalt"
@@ -21480,6 +21610,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Lannisport Light Brick Wall",
       "textures": [
         "stone_block_2/brick_lannisport"
@@ -21491,6 +21622,7 @@
       "blockType": "stair",
       "modelBlockName": "dorne_dull_terracotta",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Dorne Dull Terracotta Stairs",
       "legacyBlockID": "stone_block_3_stair_4"
     },
@@ -21499,6 +21631,7 @@
       "blockType": "stair",
       "modelBlockName": "dorne_light_terracotta",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Dorne Light Terracotta Stairs",
       "legacyBlockID": "stone_block_3_stair_5"
     },
@@ -21507,6 +21640,7 @@
       "blockType": "stair",
       "modelBlockName": "dorne_dark_sandstone",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Dorne Dark Sandstone Stairs",
       "legacyBlockID": "stone_block_3_stair_6"
     },
@@ -24091,6 +24225,7 @@
       "blockType": "stair",
       "modelBlockName": "casterly_rock_crimson_plaster",
       "creativeTab": "WesterosMarblePlaster",
+      "type": "unconnect:false",
       "label": "Casterly Rock Crimson Plaster Stairs",
       "legacyBlockID": "stone_block_4_stair_0"
     },
@@ -25454,6 +25589,7 @@
       "blockType": "stair",
       "modelBlockName": "red_sandstone_slab",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Red Sandstone Stairs",
       "legacyBlockID": "stone_block_4_stair_1"
     },
@@ -25813,6 +25949,7 @@
       "blockType": "stair",
       "modelBlockName": "dark_red_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Dark Red Brick Stairs",
       "legacyBlockID": "stone_block_4_stair_2"
     },
@@ -27639,6 +27776,7 @@
       "blockType": "stair",
       "modelBlockName": "kl_dun_brick",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "KL Dun Brick Stairs",
       "legacyBlockID": "stone_block_5_stair_0"
     },
@@ -27658,6 +27796,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
+	  "type": "unconnect:false",
       "label": "Sept Crystal Medium",
       "textures": [
         "translucent_block_0/crystal_block_wall_top",
@@ -27676,6 +27815,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosDecor",
+	  "type": "unconnect:false",
       "label": "Sept Crystal Small",
       "textures": [
         "translucent_block_0/crystal_block_fence_top",
@@ -28879,6 +29019,7 @@
       "blockType": "stair",
       "modelBlockName": "iron_throne_blade_block",
       "creativeTab": "WesterosMisc",
+      "type": "unconnect:false",
       "label": "Iron Throne Blade Stairs",
       "legacyBlockID": "metal_block_0_stair_8"
     },
@@ -32461,6 +32602,7 @@
       "blockType": "stair",
       "modelBlockName": "winterfell_granite",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Winterfell Granite Stairs",
       "legacyBlockID": "stone_block_4_stair_3"
     },
@@ -32469,6 +32611,7 @@
       "blockType": "stair",
       "modelBlockName": "white_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "White Cobblestone Stairs",
       "legacyBlockID": "stone_block_5_stair_1"
     },
@@ -32477,6 +32620,7 @@
       "blockType": "stair",
       "modelBlockName": "basalt_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Basalt Brick Stairs",
       "legacyBlockID": "stone_block_5_stair_2"
     },
@@ -34546,6 +34690,7 @@
       "blockType": "stair",
       "modelBlockName": "reach_brick",
       "creativeTab": "WesterosBrick",
+       "type": "unconnect:false",
       "label": "Reach Brick Stairs",
       "legacyBlockID": "stone_block_3_stair_7"
     },
@@ -34557,6 +34702,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Reach Brick Fence",
       "textures": [
         "reach_brick/side"
@@ -34571,6 +34717,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Stormlands Brick Fence",
       "textures": [
         "stone_block_2/brick_stormlands_small"
@@ -34585,6 +34732,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Stormlands Cobblestone Fence",
       "textures": [
         "stone_block_2/stone_cobble_stormlands"
@@ -34599,6 +34747,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Basalt Cobblestone Fence",
       "textures": [
         "stone_block_1/stone_cobble_basalt"
@@ -34613,6 +34762,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Lannisport Light Brick Fence",
       "textures": [
         "stone_block_2/brick_lannisport"
@@ -34627,6 +34777,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Oldtown Brick Fence",
       "textures": [
         "stone_block_3/brick_oldtown"
@@ -34641,6 +34792,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Arbor Brick Fence",
       "textures": [
         "stone_block_3/brick_arbor"
@@ -34655,6 +34807,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Arbor Cobblestone Fence",
       "textures": [
         "stone_block_3/stone_cobble_arbor"
@@ -34669,6 +34822,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
+	  "type": "unconnect:false",
       "label": "Starry Sept Marble Fence",
       "textures": [
         "starry_sept_marble/starry_sept"
@@ -34683,6 +34837,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
+	  "type": "unconnect:false",
       "label": "Citadel Green Marble Fence",
       "textures": [
         "citadel_green_marble/citadel_marble"
@@ -34697,6 +34852,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Oldtown Cobblestone Fence",
       "textures": [
         "stone_block_3/stone_cobble_oldtown"
@@ -34711,6 +34867,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Reach Cobblestone Fence",
       "textures": [
         "stone_block_2/stone_cobble_reach"
@@ -34725,6 +34882,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Grey Wood Fence",
       "textures": [
         "grey_wood/side"
@@ -34739,6 +34897,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "White Wood Fence",
       "textures": [
         "white_wood/side"
@@ -34753,6 +34912,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Pink Sandstone Fence",
       "textures": [
         "pink_sandstone/side"
@@ -34767,6 +34927,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Orange Slate Fence",
       "textures": [
         "orange_slate/side"
@@ -34858,6 +35019,7 @@
       "blockType": "stair",
       "modelBlockName": "stormlands_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Stormlands Brick Stairs",
       "legacyBlockID": "stone_block_3_stair_8"
     },
@@ -34866,6 +35028,7 @@
       "blockType": "stair",
       "modelBlockName": "stormlands_large_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Stormlands Large Brick Stairs",
       "legacyBlockID": "stone_block_2_stair_4"
     },
@@ -36729,6 +36892,7 @@
       "blockType": "stair",
       "modelBlockName": "stormlands_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Stormlands Cobblestone Stairs",
       "legacyBlockID": "stone_block_3_stair_9"
     },
@@ -38031,6 +38195,7 @@
       "blockType": "stair",
       "modelBlockName": "basalt_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Basalt Cobblestone Stairs",
       "legacyBlockID": "stone_block_3_stair_10"
     },
@@ -38146,6 +38311,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Thatch Light Wall",
       "textures": [
         "thatch_light/thatch_light"
@@ -38166,6 +38332,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Thatch Dark Wall",
       "textures": [
         "fur_block_0/thatch_dark"
@@ -38186,6 +38353,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Oak Wall",
       "textures": [
@@ -38207,6 +38375,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Spruce Wall",
       "textures": [
@@ -38228,6 +38397,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Birch Wall",
       "textures": [
@@ -38249,6 +38419,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Jungle Wall",
       "textures": [
@@ -38270,6 +38441,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Dark Northern Wood Wall",
       "textures": [
@@ -38293,6 +38465,7 @@
         }
       ],
       "creativeTab": "WesterosPanellingCarvings",
+	  "type": "unconnect:false",
       "label": "Reach Oak Wood Panelling Wall",
       "randomTextures": [
         {
@@ -38333,6 +38506,7 @@
         }
       ],
       "creativeTab": "WesterosPanellingCarvings",
+	  "type": "unconnect:false",
       "label": "Reach Spruce Wood Panelling Wall",
       "randomTextures": [
         {
@@ -38373,6 +38547,7 @@
         }
       ],
       "creativeTab": "WesterosClothFibers",
+	  "type": "unconnect:false",
       "label": "Mance's Camp Common Tent Wall",
       "textures": [
         "mances_camp_common_tent/outside2"
@@ -38393,6 +38568,7 @@
         }
       ],
       "creativeTab": "WesterosClothFibers",
+	  "type": "unconnect:false",
       "label": "Mance's Camp Mance's Tent Wall",
       "textures": [
         "mances_camp_mances_tent/outside"
@@ -38413,6 +38589,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Grey Wood Wall",
       "textures": [
@@ -38434,6 +38611,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "White Wood Wall",
       "textures": [
@@ -38455,6 +38633,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Snowy Thatch Light Wall",
       "textures": [
         "snowy_thatch_light_fur/top"
@@ -38475,6 +38654,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Snowy Thatch Dark Wall",
       "textures": [
         "snowy_thatch_dark_fur/top"
@@ -38495,6 +38675,7 @@
         }
       ],
       "creativeTab": "WesterosWaterAir",
+	  "type": "unconnect:false",
       "label": "Snow Wall",
       "textures": [
         "ground_block_0/snow"
@@ -38986,6 +39167,7 @@
       "blockType": "stair",
       "modelBlockName": "lannisport_light_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Lannisport Light Brick Stairs",
       "legacyBlockID": "stone_block_2_stair_0"
     },
@@ -38994,6 +39176,7 @@
       "blockType": "stair",
       "modelBlockName": "oldtown_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Oldtown Brick Stairs",
       "legacyBlockID": "stone_block_9_stair_0"
     },
@@ -39002,6 +39185,7 @@
       "blockType": "stair",
       "modelBlockName": "arbor_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Arbor Brick Stairs",
       "legacyBlockID": "stone_block_9_stair_1"
     },
@@ -39010,6 +39194,7 @@
       "blockType": "stair",
       "modelBlockName": "arbor_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Arbor Cobblestone Stairs",
       "legacyBlockID": "stone_block_9_stair_2"
     },
@@ -39027,6 +39212,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Oldtown Brick Wall",
       "textures": [
         "stone_block_3/brick_oldtown"
@@ -39047,6 +39233,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Arbor Brick Wall",
       "textures": [
         "stone_block_3/brick_arbor"
@@ -39067,6 +39254,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Arbor Cobblestone Wall",
       "textures": [
         "stone_block_3/stone_cobble_arbor"
@@ -39087,6 +39275,7 @@
         }
       ],
       "creativeTab": "WesterosMarblePlaster",
+	  "type": "unconnect:false",
       "label": "Starry Sept Marble Wall",
       "textures": [
         "starry_sept_marble/starry_sept"
@@ -39107,6 +39296,7 @@
         }
       ],
       "creativeTab": "WesterosMarblePlaster",
+	  "type": "unconnect:false",
       "label": "Citadel Green Marble Wall",
       "textures": [
         "citadel_green_marble/citadel_marble"
@@ -39127,6 +39317,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Oldtown Cobblestone Wall",
       "textures": [
         "stone_block_3/stone_cobble_oldtown"
@@ -39147,6 +39338,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Reach Cobblestone Wall",
       "textures": [
         "stone_block_2/stone_cobble_reach"
@@ -39167,6 +39359,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "River Cobble Wall",
       "colorMult": "textures/colormap/lightgreystone",
       "randomTextures": [
@@ -39211,6 +39404,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Small Smooth Stone Brick Wall",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": [
@@ -39291,6 +39485,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Valyrian Stone Wall",
       "textures": [
         "stone_block_1/stone_valyrian"
@@ -39311,6 +39506,7 @@
         }
       ],
       "creativeTab": "WesterosSandstone",
+	  "type": "unconnect:false",
       "label": "Pink Sandstone Wall",
       "textures": [
         "pink_sandstone/side1"
@@ -39331,6 +39527,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Sandy Pink Large Brick Wall",
       "textures": [
         "stone_block_4/brick_sandy_pink_large"
@@ -39351,6 +39548,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Sandy Pink Cobble Wall",
       "textures": [
         "stone_block_4/stone_cobble_sandy_pink"
@@ -39371,6 +39569,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Sandy Pink Light Brick Wall",
       "textures": [
         "stone_block_4/brick_sandy_pink_light"
@@ -39391,6 +39590,7 @@
         }
       ],
       "creativeTab": "WesterosRoofing",
+	  "type": "unconnect:false",
       "label": "Orange Slate Wall",
       "textures": [
         "orange_slate/side"
@@ -39411,6 +39611,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Arbor Small Brick Wall",
       "textures": [
         "stone_block_3/brick_arbor_small"
@@ -40432,6 +40633,7 @@
       "blockType": "stair",
       "modelBlockName": "starry_sept_marble",
       "creativeTab": "WesterosMarblePlaster",
+      "type": "unconnect:false",
       "label": "Starry Sept Marble Stairs",
       "legacyBlockID": "stone_block_9_stair_3"
     },
@@ -40440,6 +40642,7 @@
       "blockType": "stair",
       "modelBlockName": "citadel_green_marble",
       "creativeTab": "WesterosMarblePlaster",
+      "type": "unconnect:false",
       "label": "Citadel Green Marble Stairs",
       "legacyBlockID": "stone_block_9_stair_4"
     },
@@ -40448,6 +40651,7 @@
       "blockType": "stair",
       "modelBlockName": "valyrian_stone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Valyrian Stone Stairs",
       "legacyBlockID": "stone_valyrian_stairs"
     },
@@ -41511,6 +41715,7 @@
       "blockType": "stair",
       "modelBlockName": "oldtown_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Oldtown Cobblestone Stairs",
       "legacyBlockID": "stone_block_9_stair_5"
     },
@@ -41519,6 +41724,7 @@
       "blockType": "stair",
       "modelBlockName": "mances_camp_common_tent_2",
       "creativeTab": "WesterosClothFibers",
+      "type": "unconnect:false",
       "label": "Mance's Camp Common Tent Stairs",
       "legacyBlockID": "cuboid_block_7_stairs_0"
     },
@@ -41527,6 +41733,7 @@
       "blockType": "stair",
       "modelBlockName": "mances_camp_mances_tent",
       "creativeTab": "WesterosClothFibers",
+      "type": "unconnect:false",
       "label": "Mance's Camp Mance's Tent Stairs",
       "legacyBlockID": "cuboid_block_7_stairs_1"
     },
@@ -41535,6 +41742,7 @@
       "blockType": "stair",
       "modelBlockName": "reach_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Reach Cobblestone Stairs",
       "legacyBlockID": "stone_block_3_stair_11"
     },
@@ -41543,6 +41751,7 @@
       "blockType": "stair",
       "modelBlockName": "grey_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Grey Wood Stairs",
       "textures": [
@@ -41557,6 +41766,7 @@
       "blockType": "stair",
       "modelBlockName": "white_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "White Wood Stairs",
       "textures": [
@@ -41706,6 +41916,7 @@
       "blockType": "stair",
       "modelBlockName": "river_cobble_wall",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "River Cobble Stairs",
       "colorMult": "textures/colormap/lightgreystone",
       "legacyBlockID": "river_cobble_stairs"
@@ -41715,6 +41926,7 @@
       "blockType": "stair",
       "modelBlockName": "small_smooth_stone_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Small Smooth Stone Brick Stairs",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "legacyBlockID": "stone_block_3_stair_12"
@@ -41724,6 +41936,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_eastern_islands",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Eastern Islands Stairs",
       "colorMult": "textures/colormap/easternisland",
       "legacyBlockID": "terrainset_stair_0",
@@ -41736,6 +41949,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_iron_islands",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Iron Islands Stairs",
       "legacyBlockID": "terrainset_stair_1",
       "overlayTextures": [ 
@@ -41747,6 +41961,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_mountains_of_the_moon",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Mountains of the Moon Stairs",
       "legacyBlockID": "terrainset_stair_2",
       "overlayTextures": [ 
@@ -41758,6 +41973,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_the_north",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet The North Stairs",
       "legacyBlockID": "terrainset_stair_3"
     },
@@ -41766,6 +41982,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_ocean_rocks",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Ocean Rocks Stairs",
       "legacyBlockID": "terrainset_stair_4",
       "overlayTextures": [ 
@@ -41777,6 +41994,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_red_mountains",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Red Mountains Stairs",
       "legacyBlockID": "terrainset_stair_5",
       "overlayTextures": [ 
@@ -41788,6 +42006,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_river_rocks",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet River Rocks Stairs",
       "legacyBlockID": "terrainset_stair_6",
       "overlayTextures": [ 
@@ -41799,6 +42018,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_westerlands",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Westerlands Stairs",
       "legacyBlockID": "terrainset_stair_7",
       "overlayTextures": [ 
@@ -41810,6 +42030,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_arbor_dorne",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Arbor Dorne Stairs",
       "legacyBlockID": "terrainset_stair_8"
     },
@@ -41818,6 +42039,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_stormlands",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Stormlands Stairs",
       "legacyBlockID": "terrainset_stair_9",
       "overlayTextures": [ 
@@ -41829,6 +42051,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_reach",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Reach Stairs",
       "legacyBlockID": "terrainset_stair_10",
       "overlayTextures": [ 
@@ -42206,6 +42429,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Eastern Islands Wall",
       "colorMult": "textures/colormap/easternisland",
       "overlayTextures": [ 
@@ -42230,6 +42454,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Iron Islands Wall",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_iron_islands_overlay"
@@ -42253,6 +42478,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+ 	  "type": "unconnect:false",
       "label": "TerrainSet Mountains of the Moon Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_eyrie_overlay"
@@ -42276,6 +42502,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet The North Wall",
       "textures": [
         "terrainset_north/random_4x4"
@@ -42296,6 +42523,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Ocean Rocks Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
@@ -42319,6 +42547,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Red Mountains Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_red_mountains_overlay"
@@ -42342,6 +42571,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet River Rocks Wall",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_river_rocks_overlay"
@@ -42365,6 +42595,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Westerlands Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_westerlands_overlay"
@@ -42388,6 +42619,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Arbor Dorne Wall",
       "textures": [
         "terrainset_dorne/random_4x4"
@@ -42408,6 +42640,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Stormlands Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_stormlands_overlay"
@@ -42431,6 +42664,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Reach Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_reach_overlay"
@@ -42454,6 +42688,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Red Mountains Alt Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_red_mountains_alt_overlay"
@@ -42477,6 +42712,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Westerlands Alt Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_westerlands_alt_overlay"
@@ -42500,6 +42736,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Arbor Dorne Alt Wall",
       "textures": [
         "terrainset_dorne_alt/random_4x4"
@@ -42520,6 +42757,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Stormlands Alt Wall",
       "textures": [
         "terrainset_stormlands_alt/random_4x4"
@@ -42540,6 +42778,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Reach Alt Wall",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_reach_alt_overlay"
@@ -42557,6 +42796,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Eastern Islands Fence",
       "colorMult": "textures/colormap/easternisland",
       "overlayTextures": [ 
@@ -42589,6 +42829,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Iron Islands Fence",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_iron_islands_overlay"
@@ -42620,6 +42861,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Mountains of the Moon Fence",
       "textures": [
         "terrainset_eyrie/random_6x6"
@@ -42648,6 +42890,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet The North Fence",
       "textures": [
         "terrainset_north/random_4x4"
@@ -42676,6 +42919,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Ocean Rocks Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
@@ -42706,6 +42950,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Red Mountains Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_red_mountains_overlay"
@@ -42737,6 +42982,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet River Rocks Fence",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_river_rocks_overlay"
@@ -42767,6 +43013,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Westerlands Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_westerlands_overlay"
@@ -42797,6 +43044,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Arbor Dorne Fence",
       "textures": [
         "terrainset_dorne/random_4x4"
@@ -42824,6 +43072,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Stormlands Fence",
       "textures": [
         "terrainset_stormlands/random_4x4"
@@ -42851,6 +43100,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Reach Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_reach_overlay"
@@ -42881,6 +43131,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Red Mountains Alt Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_red_mountains_alt_overlay"
@@ -42911,6 +43162,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Westerlands Alt Fence",
       "textures": [
         "terrainset_westerlandhills_alt/random_4x4"
@@ -42938,6 +43190,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Arbor Dorne Alt Fence",
       "textures": [
         "terrainset_dorne_alt/random_4x4"
@@ -42965,6 +43218,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Stormlands Alt Fence",
       "textures": [
         "terrainset_stormlands_alt/random_4x4"
@@ -42992,6 +43246,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Reach Alt Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_reach_alt_overlay"
@@ -43264,6 +43519,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_red_mountains_alt",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Red Mountains Alt Stairs",
       "legacyBlockID": "terrainset_stair_11",
       "overlayTextures": [ 
@@ -43275,6 +43531,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_westerlands_alt",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Westerlands Alt Stairs",
       "legacyBlockID": "terrainset_stair_12",
       "overlayTextures": [ 
@@ -43286,6 +43543,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_arbor_dorne_alt",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Arbor Dorne Alt Stairs",
       "legacyBlockID": "terrainset_stair_13"
     },
@@ -43294,6 +43552,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_stormlands_alt",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Stormlands Alt Stairs",
       "legacyBlockID": "terrainset_stair_14"
     },
@@ -43302,6 +43561,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_reach_alt",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Reach Alt Stairs",
       "legacyBlockID": "terrainset_stair_15",
       "overlayTextures": [ 
@@ -43313,6 +43573,7 @@
       "blockType": "stair",
       "modelBlockName": "terrainset_grey_sandstone",
       "creativeTab": "WesterosTerrainSets",
+      "type": "unconnect:false",
       "label": "TerrainSet Grey Sandstone Stairs",
       "legacyBlockID": "terrainset_stair_16"
     },
@@ -43321,6 +43582,7 @@
       "blockType": "stair",
       "modelBlockName": "flowstone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Flowstone Stairs",
       "legacyBlockID": "terrainset_stair_17",
       "overlayTextures": [ 
@@ -43426,6 +43688,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Grey Sandstone Wall",
       "textures": [
         "terrainset_grey_sandstone/random_4x4"
@@ -43446,6 +43709,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Flowstone Wall",
       "overlayTextures": [ 
       	"terrainset_overlays/flowstone_overlay"
@@ -43488,6 +43752,7 @@
         }
       ],
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "Volcanic Rock Wall",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_volcanic_rock_overlay"
@@ -43505,6 +43770,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "TerrainSet Grey Sandstone Fence",
       "textures": [
         "terrainset_grey_sandstone/random_4x4"
@@ -43519,6 +43785,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Flowstone Fence",
       "overlayTextures": [ 
       	"terrainset_overlays/flowstone_overlay"
@@ -43555,6 +43822,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
+	  "type": "unconnect:false",
       "label": "Volcanic Rock Fence",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_volcanic_rock_overlay"
@@ -45457,6 +45725,7 @@
       "blockType": "stair",
       "modelBlockName": "pink_sandstone",
       "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
       "label": "Pink Sandstone Stairs",
       "legacyBlockID": "stone_block_5_stair_3"
     },
@@ -45465,6 +45734,7 @@
       "blockType": "stair",
       "modelBlockName": "sandy_pink_large_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Sandy Pink Large Brick Stairs",
       "legacyBlockID": "stone_block_5_stair_4"
     },
@@ -45473,6 +45743,7 @@
       "blockType": "stair",
       "modelBlockName": "sandy_pink_cobblestone",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Sandy Pink Cobble Stairs",
       "legacyBlockID": "stone_block_5_stair_5"
     },
@@ -45481,6 +45752,7 @@
       "blockType": "stair",
       "modelBlockName": "sandy_pink_light_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Sandy Pink Light Brick Stairs",
       "legacyBlockID": "stone_block_5_stair_6"
     },
@@ -45550,6 +45822,7 @@
       "blockType": "stair",
       "modelBlockName": "volcanic_rock",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "Volcanic Rock Stairs",
       "legacyBlockID": "terrainset_stair_18",
       "overlayTextures": [ 
@@ -45561,6 +45834,7 @@
       "blockType": "stair",
       "modelBlockName": "cushion_moss",
       "creativeTab": "WesterosMisc",
+      "type": "unconnect:false",
       "label": "Cushion Moss Stairs",
       "legacyBlockID": "moss_block_0_stair_0",
       "overlayTextures": [ 
@@ -45581,6 +45855,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Cushion Moss Wall",
       "overlayTextures": [ 
          "terrainset_overlays/cushion_moss_overlay"
@@ -46555,6 +46830,7 @@
       "blockType": "stair",
       "modelBlockName": "orange_slate",
       "creativeTab": "WesterosRoofing",
+      "type": "unconnect:false",
       "label": "Orange Slate Stairs",
       "legacyBlockID": "stone_block_9_stair_6"
     },
@@ -46572,6 +46848,7 @@
         }
       ],
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Iron Wall",
       "randomTextures": [
         {
@@ -46606,6 +46883,7 @@
         }
       ],
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Oxidized Iron Wall",
       "randomTextures": [
         {
@@ -46640,6 +46918,7 @@
         }
       ],
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Steel Wall",
       "randomTextures": [
         {
@@ -46674,6 +46953,7 @@
         }
       ],
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Oxidized Steel Wall",
       "randomTextures": [
         {
@@ -46708,6 +46988,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Gold Brick Wall",
       "textures": [
         "gold_brick/side"
@@ -46728,6 +47009,7 @@
         }
       ],
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Gold Wall",
       "randomTextures": [
         {
@@ -46756,6 +47038,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Iron Fence",
       "randomTextures": [
         {
@@ -46784,6 +47067,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Oxidized Iron Fence",
       "randomTextures": [
         {
@@ -46812,6 +47096,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Steel Fence",
       "randomTextures": [
         {
@@ -46840,6 +47125,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Oxidized Steel Fence",
       "randomTextures": [
         {
@@ -46868,6 +47154,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Gold Brick Fence",
       "textures": [
         "gold_brick/side"
@@ -46882,6 +47169,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosMetal",
+	  "type": "unconnect:false",
       "label": "Gold Fence",
       "randomTextures": [
         {
@@ -47397,6 +47685,7 @@
       "blockType": "stair",
       "modelBlockName": "small_orange_bricks",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "colorMult": "textures/colormap/brick",
       "label": "Small Orange Brick Stairs",
       "legacyBlockID": "stone_block_7_stair_0"
@@ -47406,6 +47695,7 @@
       "blockType": "stair",
       "modelBlockName": "arbor_small_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Arbor Small Brick Stairs",
       "legacyBlockID": "stone_block_9_stair_7"
     },
@@ -47448,6 +47738,7 @@
       "blockType": "stair",
       "modelBlockName": "gold_slab",
       "creativeTab": "WesterosMetal",
+      "type": "unconnect:false",
       "label": "Gold Stairs",
       "legacyBlockID": "metal_block_0_stair_9"
     },
@@ -47882,6 +48173,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Pale Pink Light Brick Wall",
       "textures": [
         "stone_block_4/brick_pale_pink_light"
@@ -47902,6 +48194,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Pale Pink Faint Light Brick Wall",
       "textures": [
         "stone_block_4/brick_pale_pink_faint_light"
@@ -47922,6 +48215,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Faint Light Grey Brick Wall",
       "colorMult": "textures/colormap/faintlightgreystone",
       "textures": [
@@ -47943,6 +48237,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Northern Cobble Wall",
       "colorMult": "textures/colormap/darkcobble",
       "textures": [
@@ -47964,6 +48259,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Icy Northern Cobble Wall",
       "colorMult": "textures/colormap/darkcobble",
       "textures": [
@@ -47985,6 +48281,7 @@
         }
       ],
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "White Granite Wall",
       "textures": [
         "stone_block_2/brick_white_granite"
@@ -48005,6 +48302,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Small White Brick Wall",
       "textures": [
         "stone_block_1/brick_white_small"
@@ -48025,6 +48323,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Light Oldtown Brick Wall",
       "textures": [
         "stone_block_3/brick_oldtown_light"
@@ -48045,6 +48344,7 @@
         }
       ],
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Stormlands Large Brick Wall",
       "textures": [
         "stormlands_brick_large/side"
@@ -48059,6 +48359,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Pale Pink Light Brick Fence",
       "textures": [
         "stone_block_4/brick_pale_pink_light"
@@ -48073,6 +48374,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Pale Pink Faint Light Brick Fence",
       "textures": [
         "stone_block_4/brick_pale_pink_faint_light"
@@ -48087,6 +48389,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Faint Light Grey Brick Fence",
       "colorMult": "textures/colormap/faintlightgreystone",
       "textures": [
@@ -48102,6 +48405,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Northern Cobble Fence",
       "colorMult": "textures/colormap/darkcobble",
       "textures": [
@@ -48117,6 +48421,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "Icy Northern Cobble Fence",
       "colorMult": "textures/colormap/darkcobble",
       "textures": [
@@ -48132,6 +48437,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "White Granite Fence",
       "textures": [
         "stone_block_2/brick_white_granite"
@@ -48146,6 +48452,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
+	  "type": "unconnect:false",
       "label": "White Cobblestone Fence",
       "textures": [
         "stone_block_2/stone_cobble_white"
@@ -48160,6 +48467,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
+	  "type": "unconnect:false",
       "label": "Light Oldtown Brick Fence",
       "textures": [
         "stone_block_3/brick_oldtown_light"
@@ -48171,6 +48479,7 @@
       "blockType": "stair",
       "modelBlockName": "pale_pink_light_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Pale Pink Light Brick Stairs",
       "legacyBlockID": "stone_block_11_stair_0"
     },
@@ -48179,6 +48488,7 @@
       "blockType": "stair",
       "modelBlockName": "pale_pink_faint_light_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Pale Pink Faint Light Brick Stairs",
       "legacyBlockID": "stone_block_11_stair_1"
     },
@@ -48187,6 +48497,7 @@
       "blockType": "stair",
       "modelBlockName": "faint_light_grey_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "colorMult": "textures/colormap/faintlightgreystone",
       "label": "Faint Light Grey Brick Stairs",
       "legacyBlockID": "stone_block_2_stair_1"
@@ -48196,6 +48507,7 @@
       "blockType": "stair",
       "modelBlockName": "northern_cobble",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "colorMult": "textures/colormap/darkcobble",
       "label": "Northern Cobble Stairs",
       "legacyBlockID": "stone_block_2_stair_2"
@@ -48205,6 +48517,7 @@
       "blockType": "stair",
       "modelBlockName": "icy_northern_cobble",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "colorMult": "textures/colormap/darkcobble",
       "label": "Icy Northern Cobble Stairs",
       "legacyBlockID": "stone_block_2_stair_3"
@@ -51131,6 +51444,7 @@
       "material": "cloth",
       "modelBlockName": "snowy_thatch_light_fur",
       "creativeTab": "WesterosGrassDirt",
+      "type": "unconnect:false",
       "label": "Snowy Thatch Light Fur Stairs",
       "legacyBlockID": "thatch_stair_2"
     },
@@ -51141,6 +51455,7 @@
       "material": "cloth",
       "modelBlockName": "snowy_thatch_dark_fur",
       "creativeTab": "WesterosGrassDirt",
+      "type": "unconnect:false",
       "label": "Snowy Thatch Dark Fur Stairs",
       "legacyBlockID": "thatch_stair_3"
     },
@@ -51240,6 +51555,7 @@
       "blockType": "stair",
       "modelBlockName": "white_granite",
       "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
       "label": "White Granite Stairs",
       "legacyBlockID": "stone_block_5_stair_7"
     },
@@ -51248,6 +51564,7 @@
       "blockType": "stair",
       "modelBlockName": "small_white_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Small White Brick Stairs",
       "legacyBlockID": "stone_block_3_stair_13"
     },
@@ -52590,6 +52907,7 @@
       "blockType": "stair",
       "modelBlockName": "light_oldtown_brick",
       "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
       "label": "Light Oldtown Brick Stairs",
       "legacyBlockID": "stone_block_9_stair_8"
     },
@@ -52622,6 +52940,7 @@
       "alphaRender": true,
       "modelBlockName": "ice_slab",
       "creativeTab": "WesterosWaterAir",
+      "type": "unconnect:false",
       "label": "Ice Stairs",
       "legacyBlockID": "ice_stairs"
     },
@@ -52641,6 +52960,7 @@
         }
       ],
       "creativeTab": "WesterosWaterAir",
+	  "type": "unconnect:false",
       "label": "Ice Wall",
       "textures": [
         "ice/ice"
@@ -52655,6 +52975,7 @@
       "material": "craftedSnow",
       "resistance": 10,
       "creativeTab": "WesterosWaterAir",
+	  "type": "unconnect:false",
       "label": "Snow Fence",
       "ambientOcclusion": false,
       "textures": [
@@ -52672,6 +52993,7 @@
       "material": "glass",
       "resistance": 10,
       "creativeTab": "WesterosWaterAir",
+	  "type": "unconnect:false",
       "label": "Ice Fence",
       "textures": [
         "ice/ice"
@@ -52731,6 +53053,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Stacked Bones Fence",
       "textures": [
         "stacked_bones/bone_stacked_side"
@@ -52812,6 +53135,7 @@
       "blockType": "stair",
       "modelBlockName": "stacked_bones_solid",
       "creativeTab": "WesterosMisc",
+      "type": "unconnect:false",
       "label": "Stacked Bones Stairs",
       "type": "no-uvlock",
       "isCustomModel": true,
@@ -52822,6 +53146,7 @@
       "blockType": "stair",
       "modelBlockName": "piled_bones",
       "creativeTab": "WesterosMisc",
+      "type": "unconnect:false",
       "label": "Piled Bones Stairs",
       "legacyBlockID": "stone_block_12_stair_1"
     },
@@ -52881,6 +53206,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Stacked Bones Wall",
       "textures": [
         "stacked_bones/bone_stacked_side",
@@ -52903,6 +53229,7 @@
         }
       ],
       "creativeTab": "WesterosMisc",
+	  "type": "unconnect:false",
       "label": "Piled Bones Wall",
       "textures": [
         "piled_bones/side"
@@ -54007,6 +54334,7 @@
       "blockType": "stair",
       "modelBlockName": "black_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Black Wood Stairs",
       "textures": [
@@ -54021,6 +54349,7 @@
       "blockType": "stair",
       "modelBlockName": "blue_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Blue Wood Stairs",
       "textures": [
@@ -54035,6 +54364,7 @@
       "blockType": "stair",
       "modelBlockName": "green_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Green Wood Stairs",
       "textures": [
@@ -54049,6 +54379,7 @@
       "blockType": "stair",
       "modelBlockName": "red_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Red Wood Stairs",
       "textures": [
@@ -54063,6 +54394,7 @@
       "blockType": "stair",
       "modelBlockName": "yellow_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood Stairs",
       "textures": [
@@ -54077,6 +54409,7 @@
       "blockType": "stair",
       "modelBlockName": "purple_wood",
       "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Stairs",
       "textures": [
@@ -54100,6 +54433,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Black Wood Wall",
       "textures": [
@@ -54121,6 +54455,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Blue Wood Wall",
       "textures": [
@@ -54142,6 +54477,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Green Wood Wall",
       "textures": [
@@ -54163,6 +54499,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Red Wood Wall",
       "textures": [
@@ -54184,6 +54521,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Yellow Wood Wall",
       "textures": [
@@ -54205,6 +54543,7 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
       "label": "Purple Wood Wall",
       "textures": [
@@ -54220,6 +54559,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Black Wood Fence",
       "textures": [
         "wood_block_1/wood_black"
@@ -54234,6 +54574,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Blue Wood Fence",
       "textures": [
         "wood_block_1/wood_blue"
@@ -54248,6 +54589,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Green Wood Fence",
       "textures": [
         "wood_block_1/wood_green"
@@ -54262,6 +54604,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Red Wood Fence",
       "textures": [
         "wood_block_1/wood_red"
@@ -54276,6 +54619,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Yellow Wood Fence",
       "textures": [
         "wood_block_1/wood_yellow"
@@ -54290,6 +54634,7 @@
       "material": "wood",
       "resistance": 10,
       "creativeTab": "WesterosWoodPlanks",
+	  "type": "unconnect:false",
       "label": "Purple Wood Fence",
       "textures": [
         "wood_block_1/wood_purple"
