@@ -226,6 +226,9 @@ public class WallBlockModelExport extends ModelExport {
 		oldstate.put("up", "false");
 		newstate.put("up", "false");
 		newstate.put("waterlogged", "false");
+		if (wblk.unconnect) {
+			newstate.put("unconnect", "false");			
+		}
 		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
 	}
 }

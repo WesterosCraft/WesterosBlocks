@@ -1341,6 +1341,8 @@
   "block.westerosblocks.test_block_2": "Test Block 2",
   "block.westerosblocks.crate": "Crate One",
   "block.westerosblocks.cut_grain_flour_sack": "Cut Grain Flour Sack",
+  "block.westerosblocks.test_block_5": "Test Fence (unconnect)",
+  "block.westerosblocks.test_block_4": "Test Wall (unconnect)",
   "block.westerosblocks.pebbles_wet_iron_islands_layer": "Pebbles Wet Iron Islands Layer",
   "block.westerosblocks.dorne_light_terracotta_fence": "Dorne Light Terracotta Fence",
   "block.westerosblocks.gold_stairs": "Gold Stairs",

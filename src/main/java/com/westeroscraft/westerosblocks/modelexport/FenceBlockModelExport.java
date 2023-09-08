@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 
 import net.minecraft.world.level.block.Block;
 
@@ -29,8 +30,10 @@ public class FenceBlockModelExport extends ModelExport {
         public Texture textures = new Texture();
     }
 
+    WCFenceBlock fblk;
     public FenceBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
+        fblk = (WCFenceBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
 
@@ -157,6 +160,9 @@ public class FenceBlockModelExport extends ModelExport {
     	oldstate.put("west", "false");
     	newstate.put("west", "false");
     	newstate.put("waterlogged", "false");
+    	if (fblk.unconnect) {
+        	newstate.put("unconnect", "false");
+    	}
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 

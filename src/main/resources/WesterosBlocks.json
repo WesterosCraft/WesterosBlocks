@@ -33641,6 +33641,42 @@
       }
     },
     {
+      "blockName": "test_block_4",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosUtility",
+      "type": "unconnect:false",
+      "label": "Test Wall (unconnect)",
+      "textures": [
+        "test_block/d_texture",
+        "test_block/u_texture",
+        "test_block/w_texture"
+      ]
+    },
+    {
+      "blockName": "test_block_5",
+      "blockType": "fence",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "wood",
+      "resistance": 10,
+      "type": "unconnect:false",
+      "creativeTab": "WesterosUtility",
+      "label": "Test Fence (unconnect)",
+      "textures": [
+        "test_block/w_texture"
+      ]
+    },
+    {
       "blockName": "cabbage",
       "blockType": "cuboid-16way",
       "hardness": 3,
