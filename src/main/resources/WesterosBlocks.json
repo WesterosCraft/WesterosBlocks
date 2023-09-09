@@ -4119,7 +4119,7 @@
       "stepSound": "metal",
       "material": "iron",
       "resistance": 10,
-      "type": "bars-model",
+      "type": "bars-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -4141,7 +4141,7 @@
       "stepSound": "metal",
       "material": "iron",
       "resistance": 10,
-      "type": "bars-model",
+      "type": "bars-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -4163,7 +4163,7 @@
       "stepSound": "metal",
       "material": "iron",
       "resistance": 10,
-      "type": "bars-model",
+      "type": "bars-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -12377,7 +12377,7 @@
       "material": "glass",
       "resistance": 3,
       "creativeTab": "WesterosClothFibers",
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "label": "Vertical Net",
       "randomTextures": [
         {
@@ -20803,7 +20803,7 @@
       "material": "rock",
       "resistance": 3,
       "creativeTab": "WesterosWindowsGlass",
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "label": "Dorne Carved Stone Window",
       "textures": [
         "glass_pane_block_0/moorish_stone_window_pane"
@@ -20818,7 +20818,7 @@
       "material": "rock",
       "resistance": 3,
       "creativeTab": "WesterosWindowsGlass",
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "label": "Dorne Carved Wooden Window",
       "textures": [
         "glass_pane_block_0/moorish_wood_window_pane"
@@ -28832,7 +28832,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -28856,7 +28856,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -28880,7 +28880,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -28904,7 +28904,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -28928,7 +28928,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -28952,7 +28952,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -28976,7 +28976,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -29000,7 +29000,7 @@
       "lightOpacity": 0,
       "material": "glass",
       "resistance": 10,
-      "type": "legacy-model",
+      "type": "legacy-model,unconnect:false",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -33833,6 +33833,28 @@
         "test_block/w_texture"
       ]
     },    
+    {
+      "blockName": "test_block_7",
+      "blockType": "pane",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosUtility",
+      "type": "unconnect:false,bars-model",
+      "label": "Test Pane (unconnect)",
+      "textures": [
+        "bars_iron_block_0/bars_iron_crossbars",
+        "bars_iron_block_0/bars_iron_crossbars_top"
+      ]
+    },
+    
     {
       "blockName": "cabbage",
       "blockType": "cuboid-16way",

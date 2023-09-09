@@ -46,8 +46,11 @@ public class PaneBlockModelExport extends ModelExport {
         public TextureLayer0 textures = new TextureLayer0();
     }
 
+    private WCPaneBlock pblk;
+    
     public PaneBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
+        pblk = (WCPaneBlock) blk;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
         legacy_model = ((WCPaneBlock) blk).isLegacyModel();
         bars_model = ((WCPaneBlock) blk).isBarsModel();
@@ -203,6 +206,9 @@ public class PaneBlockModelExport extends ModelExport {
     	oldstate.put("west", "false");
     	newstate.put("west", "false");
     	newstate.put("waterlogged", "false");
+    	if (pblk.unconnect) {
+        	newstate.put("unconnect", "false");    		
+    	}
     	addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
