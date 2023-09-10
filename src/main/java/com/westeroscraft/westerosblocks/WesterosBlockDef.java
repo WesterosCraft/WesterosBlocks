@@ -683,6 +683,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		didInit = true;
 	}
 
+	private static Map<String, long[]> perfCounts = new HashMap<String, long[]>();
+	
 	public Block createBlock() {
 		try {
 			doInit(); // Prime the block model
@@ -690,12 +692,26 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			WesterosBlocks.log.error("Exception during doInit: blockName=" + this.blockName);
 			throw x;
 		}
+		long[] pc = perfCounts.get(blockType);
+		if (pc == null) { pc = new long[2]; perfCounts.put(blockType,  pc); }
 		WesterosBlockFactory bf = typeTable.get(blockType);
 		if (bf == null) {
 			WesterosBlocks.log.error(String.format("Invalid blockType '%s' in block '%s'", blockType, blockName));
 			return null;
 		}
-		return bf.buildBlockClass(this);
+		long start = System.currentTimeMillis();
+		Block blk = bf.buildBlockClass(this);
+		long end = System.currentTimeMillis();
+		pc[0]++; pc[1] += (end - start);
+		
+		return blk;
+	}
+	public static void dumpBlockPerf() {
+		WesterosBlocks.log.info("Block create perf");
+		for (String blktype : perfCounts.keySet()) {
+			long[] pc = perfCounts.get(blktype);
+			WesterosBlocks.log.info(String.format("type %s: %d count, %d total ms, %d ms/call", blktype, pc[0], pc[1], pc[1]/pc[0] ));
+		}		
 	}
 
 	public Block registerBlock(Block block) {

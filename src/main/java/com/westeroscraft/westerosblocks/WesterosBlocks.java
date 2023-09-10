@@ -60,6 +60,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -315,6 +317,7 @@ public class WesterosBlocks {
 			if (didInit) return;
 			
 			// Initialize
+			log.info("initialize start");
 			WesterosBlockDef.initialize();
 			WesterosBlocksCreativeTab.init();
 			// If snow-in-taiga
@@ -369,15 +372,16 @@ public class WesterosBlocks {
 			}
 			// Register custom tags
 			ModelExport.declareCustomTags(customConfig);
+			log.info("initialize done");
 		}
 		@SubscribeEvent
 		public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-			log.info("onBlocksRegistryEvent");
+			log.info("block register start");
 			// Do initialization, if needed
 			initialize();
 
 			// Construct custom block definitions
-			ArrayList<Block> blklist = new ArrayList<Block>();
+			List<Block> blklist = new LinkedList<Block>();
 			customBlocksByName = new HashMap<String, Block>();
 			HashMap<String, Integer> countsByType = new HashMap<String, Integer>();
 			int blockcount = 0;
@@ -402,6 +406,7 @@ public class WesterosBlocks {
 				}
 			}
 			customBlocks = blklist.toArray(new Block[blklist.size()]);
+			WesterosBlockDef.dumpBlockPerf();
 			// Brag on block type counts
 			log.info("Count of custom blocks by type:");
 			for (String type : countsByType.keySet()) {
@@ -410,10 +415,11 @@ public class WesterosBlocks {
 			log.info("TOTAL: " + blockcount + " blocks");
 			colorMaps = customConfig.colorMaps;
 			menuOverrides = customConfig.menuOverrides;
+			log.info("block register done");
 		}
 		@SubscribeEvent
 		public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-			log.info("onItemsRegistryEvent");
+			log.info("item register start");
 			if (menuOverrides != null) {
 				for (WesterosItemMenuOverrides mo : menuOverrides) {
 					if (mo.blockNames != null) {
@@ -434,6 +440,7 @@ public class WesterosBlocks {
 					}
 				}
 			}
+			log.info("item register done");
 		}
 	}
 
