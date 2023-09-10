@@ -52,6 +52,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.BufferedReader;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -331,7 +332,7 @@ public class WesterosBlocks {
 				crash("WesterosBlocks couldn't find its block definition resource");
 				return;
 			}
-			InputStreamReader rdr = new InputStreamReader(in);
+			BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
 			Gson gson = new Gson();
 			try {
 				customConfig = gson.fromJson(rdr, WesterosBlockConfig.class);

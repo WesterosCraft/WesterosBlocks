@@ -606,7 +606,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				resName += ".png";
 			try {
 				colorBuffer = LegacyStuffWrapper.getPixels(resMgr, new ResourceLocation(resName));
-				WesterosBlocks.log.info(String.format("Loaded color resource '%s'", rname));
+				WesterosBlocks.log.debug(String.format("Loaded color resource '%s'", rname));
 			} catch (Exception e) {
 				WesterosBlocks.log.error(String.format("Invalid color resource '%s'", rname), e);
 				Arrays.fill(colorBuffer, 0xFFFFFF);
