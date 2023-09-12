@@ -479,7 +479,7 @@ public class WesterosBlocks {
 	// Network setup
 	public static SimpleChannel simpleChannel;    // used to transmit your network messages
     public static final String CHANNEL = "wbchannel";
-    public static final String MESSAGE_PROTOCOL_VERSION = "5.1";
+    public static final String MESSAGE_PROTOCOL_VERSION = "5.2";
     public static final ResourceLocation simpleChannelRL = new ResourceLocation("westerosblocks", CHANNEL);
 
     @SubscribeEvent
