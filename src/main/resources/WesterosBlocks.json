@@ -42818,7 +42818,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Eastern Islands Fence",
       "colorMult": "textures/colormap/easternisland",
       "overlayTextures": [ 
@@ -42851,7 +42851,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Iron Islands Fence",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_iron_islands_overlay"
@@ -42883,7 +42883,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Mountains of the Moon Fence",
       "textures": [
         "terrainset_eyrie/random_6x6"
@@ -42912,7 +42912,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet The North Fence",
       "textures": [
         "terrainset_north/random_4x4"
@@ -42941,7 +42941,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Ocean Rocks Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
@@ -42972,7 +42972,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Red Mountains Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_red_mountains_overlay"
@@ -43004,7 +43004,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet River Rocks Fence",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_river_rocks_overlay"
@@ -43035,7 +43035,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Westerlands Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_westerlands_overlay"
@@ -43066,7 +43066,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Arbor Dorne Fence",
       "textures": [
         "terrainset_dorne/random_4x4"
@@ -43094,7 +43094,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Stormlands Fence",
       "textures": [
         "terrainset_stormlands/random_4x4"
@@ -43122,7 +43122,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Reach Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_reach_overlay"
@@ -43153,7 +43153,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Red Mountains Alt Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_red_mountains_alt_overlay"
@@ -43184,7 +43184,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Westerlands Alt Fence",
       "textures": [
         "terrainset_westerlandhills_alt/random_4x4"
@@ -43212,7 +43212,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Arbor Dorne Alt Fence",
       "textures": [
         "terrainset_dorne_alt/random_4x4"
@@ -43240,7 +43240,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Stormlands Alt Fence",
       "textures": [
         "terrainset_stormlands_alt/random_4x4"
@@ -43268,7 +43268,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Reach Alt Fence",
       "overlayTextures": [ 
         "terrainset_overlays/terrainset_reach_alt_overlay"
@@ -43792,7 +43792,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "TerrainSet Grey Sandstone Fence",
       "textures": [
         "terrainset_grey_sandstone/random_4x4"
@@ -43807,7 +43807,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosCobbleStone",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "Flowstone Fence",
       "overlayTextures": [ 
       	"terrainset_overlays/flowstone_overlay"
@@ -43844,7 +43844,7 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
-	  "type": "unconnect:false",
+	  "type": "unconnect:true",
       "label": "Volcanic Rock Fence",
       "overlayTextures": [ 
       	"terrainset_overlays/terrainset_volcanic_rock_overlay"

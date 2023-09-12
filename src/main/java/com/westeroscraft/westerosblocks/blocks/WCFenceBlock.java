@@ -25,13 +25,13 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
         public Block buildBlockClass(WesterosBlockDef def) {
         	BlockBehaviour.Properties props = def.makeProperties();
             String t = def.getType();
-            boolean doUnconnect = false;
+            Boolean doUnconnect = null;
             if (t != null) {
                 String[] toks = t.split(",");
                 for (String tok : toks) {
                 	String[] parts = tok.split(":");
                     if (parts[0].equals("unconnect")) {
-                    	doUnconnect = true;
+                    	doUnconnect = "true".equals(parts[1]);
                     	tempUNCONNECT = UNCONNECT;
                     }
                 }
@@ -44,15 +44,17 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     protected static BooleanProperty tempUNCONNECT;
 
     public final boolean unconnect;
+    public final Boolean unconnectDef;
     
     private WesterosBlockDef def;
 
-    protected WCFenceBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doUnconnect) {
+    protected WCFenceBlock(BlockBehaviour.Properties props, WesterosBlockDef def, Boolean doUnconnect) {
         super(props);
         this.def = def;
-        unconnect = doUnconnect;
+        unconnect = (doUnconnect != null);
+        unconnectDef = doUnconnect;
         if (unconnect) {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false)).setValue(SOUTH, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(UNCONNECT, Boolean.valueOf(false)));
+        	this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false)).setValue(SOUTH, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(UNCONNECT, unconnectDef));
         }
     }
 
@@ -73,8 +75,10 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     @Override  
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-    	BlockState bs = super.getStateForPlacement(ctx);
-    	return bs;
+    	if (unconnect && unconnectDef) {
+    		return this.defaultBlockState();
+    	}
+    	return super.getStateForPlacement(ctx);
     }
     
 

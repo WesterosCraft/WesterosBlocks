@@ -161,7 +161,7 @@ public class FenceBlockModelExport extends ModelExport {
     	newstate.put("west", "false");
     	newstate.put("waterlogged", "false");
     	if (fblk.unconnect) {
-        	newstate.put("unconnect", "false");
+        	newstate.put("unconnect", fblk.unconnectDef.toString());
     	}
         addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
