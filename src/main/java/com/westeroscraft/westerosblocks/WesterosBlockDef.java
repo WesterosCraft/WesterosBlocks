@@ -565,12 +565,12 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 					}
 					return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
 				}
-				else {
-					return world.getBlockTint(pos, this);					
-				}
-			} else {
-				return getColor(null, 0.5D, 1.0D);
+				// Workaround to keep Optifine from exploding, but it does break custom biome tinting....
+				//else {
+				//	return world.getBlockTint(pos, this);					
+				//}
 			}
+			return getColor(null, 0.5D, 1.0D);
 		}
 		private int getColor(double tmp, double hum) {
 			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
