@@ -14,6 +14,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.Material;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
@@ -108,8 +109,9 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
      }
 
     private static String[] TAGS = { "fences" };
+    private static String[] TAGS2 = { "fences", "wooden_fences" };
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
+    	return def.getMaterial() == Material.WOOD ? TAGS2 : TAGS;
     }    
 }
