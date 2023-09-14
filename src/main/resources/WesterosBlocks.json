@@ -54965,7 +54965,7 @@
       "creativeTab": "WesterosWoodPlanks",
       "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
-      "label": "Vanilla Oak Stairs",
+      "label": "Oak Stairs",
       "textures": [
         "minecraft:block/oak_planks"
       ],
@@ -54978,7 +54978,7 @@
       "creativeTab": "WesterosWoodPlanks",
       "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
-      "label": "Vanilla Birch Stairs",
+      "label": "Birch Stairs",
       "textures": [
         "minecraft:block/birch_planks"
       ],
@@ -54990,7 +54990,7 @@
       "modelBlockName": "minecraft:cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "type": "unconnect:false",
-      "label": "Vanilla Cobblestone Stairs",
+      "label": "Cobblestone Stairs",
       "colorMult": "textures/colormap/cobblestone",
       "legacyBlockID": "minecraft:cobblestone_stairs"
     },
@@ -55000,7 +55000,7 @@
       "modelBlockName": "minecraft:quartz_block",
       "creativeTab": "WesterosMarblePlaster",
       "type": "unconnect:false",
-      "label": "Vanilla Quartz Stairs",
+      "label": "Quartz Stairs",
       "legacyBlockID": "minecraft:quartz_stairs"
     },
     {
@@ -55010,7 +55010,7 @@
       "creativeTab": "WesterosWoodPlanks",
       "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
-      "label": "Vanilla Jungle Stairs",
+      "label": "Jungle Stairs",
       "textures": [
         "minecraft:block/jungle_planks"
       ],
@@ -55023,7 +55023,7 @@
       "creativeTab": "WesterosWoodPlanks",
       "type": "unconnect:false",
       "customTags": [ "plank-ctm" ],
-      "label": "Vanilla Spruce Stairs",
+      "label": "Spruce Stairs",
       "textures": [
         "minecraft:block/spruce_planks"
       ],
@@ -55035,7 +55035,7 @@
       "modelBlockName": "minecraft:sandstone",
       "creativeTab": "WesterosSandstone",
       "type": "unconnect:false",
-      "label": "Vanilla Sandstone Stairs",
+      "label": "Sandstone Stairs",
       "textures": [
         "minecraft:block/sandstone"
       ],
@@ -55047,7 +55047,7 @@
       "modelBlockName": "minecraft:nether_bricks",
       "creativeTab": "WesterosBrick",
       "type": "unconnect:false",
-      "label": "Vanilla Nether Brick Stairs",
+      "label": "Nether Brick Stairs",
       "textures": [
         "minecraft:block/nether_bricks"
       ],
@@ -55059,7 +55059,7 @@
       "modelBlockName": "minecraft:bricks",
       "creativeTab": "WesterosBrick",
       "type": "unconnect:false",
-      "label": "Vanilla Brick Stairs",
+      "label": "Brick Stairs",
       "colorMult": "textures/colormap/brick",
       "legacyBlockID": "minecraft:brick_stairs"
     },
@@ -55069,7 +55069,7 @@
       "modelBlockName": "minecraft:stone_bricks",
       "creativeTab": "WesterosBrick",
       "type": "unconnect:false",
-      "label": "Vanilla Stone Brick Stairs",
+      "label": "Stone Brick Stairs",
       "colorMult": "textures/colormap/stonebrick",
       "legacyBlockID": "minecraft:stone_brick_stairs"
     },
@@ -55079,7 +55079,7 @@
       "modelBlockName": "minecraft:mossy_stone_bricks",
       "creativeTab": "WesterosBrick",
       "type": "unconnect:false",
-      "label": "Vanilla Mossy Stone Brick Stairs",
+      "label": "Mossy Stone Brick Stairs",
       "colorMult": "textures/colormap/stonebrick",
       "legacyBlockID": "minecraft:mossy_stone_brick_stairs"
     },
@@ -55089,9 +55089,24 @@
       "modelBlockName": "minecraft:mossy_cobblestone",
       "creativeTab": "WesterosCobbleStone",
       "type": "unconnect:false",
-      "label": "Vanilla Mossy Cobblestone Stairs",
+      "label": "Mossy Cobblestone Stairs",
       "colorMult": "textures/colormap/cobblestone",
       "legacyBlockID": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "blockName": "nether_brick_fence",
+      "blockType": "fence",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
+      "label": "Nether Brick Fence",
+      "textures": [
+        "minecraft:block/nether_bricks"
+      ],
+      "legacyBlockID": "minecraft:nether_brick_fence"
     }
   ]
 }
