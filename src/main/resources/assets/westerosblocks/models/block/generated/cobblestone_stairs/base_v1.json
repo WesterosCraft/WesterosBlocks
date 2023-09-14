@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/stairs",
+  "parent": "westerosblocks:block/tinted/stairs",
   "textures": {
     "bottom": "minecraft:block/cobblestone",
     "top": "minecraft:block/cobblestone",

@@ -24,6 +24,7 @@
     "westerosblocks:dark_red_brick_stairs",
     "westerosblocks:white_wood_stairs",
     "westerosblocks:sandy_pink_light_brick_stairs",
+    "westerosblocks:mossy_cobblestone_stairs",
     "westerosblocks:stormlands_brick_stairs",
     "westerosblocks:spruce_stairs",
     "westerosblocks:oxidized_iron_stairs",
@@ -99,6 +100,7 @@
     "westerosblocks:steel_stairs",
     "westerosblocks:terracotta_stairs",
     "westerosblocks:terrainset_ocean_rocks_stairs",
+    "westerosblocks:mossy_stone_brick_stairs",
     "westerosblocks:vivid_sandstone_stairs",
     "westerosblocks:arbor_small_brick_stairs",
     "westerosblocks:valyrian_stone_stairs",
@@ -109,6 +111,7 @@
     "westerosblocks:piled_bones_stairs",
     "westerosblocks:bronze_stairs",
     "westerosblocks:dorne_light_terracotta_stairs",
+    "westerosblocks:stone_brick_stairs",
     "westerosblocks:dark_cobblestone_stairs",
     "westerosblocks:iron_stairs",
     "westerosblocks:brown_slate_stairs",
@@ -118,6 +121,7 @@
     "westerosblocks:sandy_pink_large_brick_stairs",
     "westerosblocks:lannisport_light_brick_stairs",
     "westerosblocks:icy_northern_cobble_stairs",
+    "westerosblocks:brick_stairs",
     "westerosblocks:pink_sandstone_stairs"
   ]
 }

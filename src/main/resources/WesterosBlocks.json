@@ -55052,6 +55052,46 @@
         "minecraft:block/nether_bricks"
       ],
       "legacyBlockID": "minecraft:nether_bricks"
+    },
+    {
+      "blockName": "brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:bricks",
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Vanilla Brick Stairs",
+      "colorMult": "textures/colormap/brick",
+      "legacyBlockID": "minecraft:brick_stairs"
+    },
+    {
+      "blockName": "stone_brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:stone_bricks",
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Vanilla Stone Brick Stairs",
+      "colorMult": "textures/colormap/stonebrick",
+      "legacyBlockID": "minecraft:stone_brick_stairs"
+    },
+    {
+      "blockName": "mossy_stone_brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:mossy_stone_bricks",
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Vanilla Mossy Stone Brick Stairs",
+      "colorMult": "textures/colormap/stonebrick",
+      "legacyBlockID": "minecraft:mossy_stone_brick_stairs"
+    },
+    {
+      "blockName": "mossy_cobblestone_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:mossy_cobblestone",
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Vanilla Mossy Cobblestone Stairs",
+      "colorMult": "textures/colormap/cobblestone",
+      "legacyBlockID": "minecraft:mossy_cobblestone_stairs"
     }
   ]
 }

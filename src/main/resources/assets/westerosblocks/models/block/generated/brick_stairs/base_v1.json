@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/stairs",
+  "textures": {
+    "bottom": "minecraft:block/bricks",
+    "top": "minecraft:block/bricks",
+    "side": "minecraft:block/bricks",
+    "particle": "minecraft:block/bricks"
+  }
+}
