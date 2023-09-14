@@ -55100,13 +55100,137 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
+      "creativeTab": "WesterosBrick",
       "type": "unconnect:false",
       "label": "Nether Brick Fence",
       "textures": [
         "minecraft:block/nether_bricks"
       ],
       "legacyBlockID": "minecraft:nether_brick_fence"
+    },
+    {
+      "blockName": "cobblestone_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Cobblestone Wall",
+      "colorMult": "textures/colormap/cobblestone",
+      "randomTextures": [
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone1"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone2"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone3"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone4"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone5"
+          ],
+          "weight": 20
+        }
+      ],
+      "legacyBlockID": "minecraft:cobblestone_wall"
+    },
+    {
+      "blockName": "mossy_cobblestone_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Mossy Cobblestone Wall",
+      "colorMult": "textures/colormap/cobblestone",
+      "randomTextures": [
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy1"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy2"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy3"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy4"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy5"
+          ],
+          "weight": 20
+        }
+      ],
+      "legacyBlockID": "minecraft:mossy_cobblestone_wall"
+    },
+    {
+      "blockName": "mossy_stone_brick_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Mossy Stone Brick Wall",
+      "colorMult": "textures/colormap/stonebrick",
+      "textures": [
+        "stone_brick/mossy_stone_bricks"
+      ],
+      "legacyBlockID": "minecraft:mossy_stone_brick_wall"
     }
   ]
 }
