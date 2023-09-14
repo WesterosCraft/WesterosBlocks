@@ -164,6 +164,7 @@ public class StairsBlockModelExport extends ModelExport {
     		isTinted = bbdef.isTinted();
     		ambientOcclusion = (def.ambientOcclusion != null) ? def.ambientOcclusion : true;
     	}    	
+    	isTinted |= def.isTinted();
     }
     @Override
     public void doBlockStateExport() throws IOException {
