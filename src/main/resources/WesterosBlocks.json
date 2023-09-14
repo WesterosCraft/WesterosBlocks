@@ -41,7 +41,8 @@
         "minecraft:cobblestone_stairs",
         "minecraft:mossy_cobblestone",
         "minecraft:mossy_cobblestone_wall",
-        "minecraft:lever"
+        "minecraft:lever",
+        "westerosblocks:cobblestone_stairs"
       ],
       "colorMult": "textures/colormap/cobblestone"
     },
@@ -54969,6 +54970,88 @@
         "minecraft:block/oak_planks"
       ],
       "legacyBlockID": "minecraft:oak_stairs"
+    },
+    {
+      "blockName": "birch_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:birch_planks",
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
+      "customTags": [ "plank-ctm" ],
+      "label": "Vanilla Birch Stairs",
+      "textures": [
+        "minecraft:block/birch_planks"
+      ],
+      "legacyBlockID": "minecraft:birch_stairs"
+    },
+    {
+      "blockName": "cobblestone_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:cobblestone",
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Vanilla Cobblestone Stairs",
+      "colorMult": "textures/colormap/cobblestone",
+      "legacyBlockID": "minecraft:cobblestone_stairs"
+    },
+    {
+      "blockName": "quartz_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:quartz_block",
+      "creativeTab": "WesterosMarblePlaster",
+      "type": "unconnect:false",
+      "label": "Vanilla Quartz Stairs",
+      "legacyBlockID": "minecraft:quartz_stairs"
+    },
+    {
+      "blockName": "jungle_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:jungle_planks",
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
+      "customTags": [ "plank-ctm" ],
+      "label": "Vanilla Jungle Stairs",
+      "textures": [
+        "minecraft:block/jungle_planks"
+      ],
+      "legacyBlockID": "minecraft:jungle_stairs"
+    },
+    {
+      "blockName": "spruce_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:spruce_planks",
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
+      "customTags": [ "plank-ctm" ],
+      "label": "Vanilla Spruce Stairs",
+      "textures": [
+        "minecraft:block/spruce_planks"
+      ],
+      "legacyBlockID": "minecraft:spruce_stairs"
+    },
+    {
+      "blockName": "sandstone_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:sandstone",
+      "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
+      "label": "Vanilla Sandstone Stairs",
+      "textures": [
+        "minecraft:block/sandstone"
+      ],
+      "legacyBlockID": "minecraft:sandstone_stairs"
+    },
+    {
+      "blockName": "nether_brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:nether_bricks",
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Vanilla Nether Brick Stairs",
+      "textures": [
+        "minecraft:block/nether_bricks"
+      ],
+      "legacyBlockID": "minecraft:nether_bricks"
     }
   ]
 }
