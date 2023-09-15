@@ -55301,6 +55301,52 @@
         }
       ],
       "legacyBlockID": "minecraft:mossy_cobblestone_slab"
+    },
+    {
+      "blockName": "iron_bars",
+      "blockType": "pane",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "type": "bars-model,unconnect:false",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosMetal",
+      "label": "Iron Bars",
+      "textures": [
+        "bars_iron_block_0/iron_bars"
+      ],
+      "legacyBlockID": "minecraft:iron_bars"
+    },
+    {
+      "blockName": "glass_pane",
+      "blockType": "pane",
+      "hardness": 2,
+      "stepSound": "glass",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "material": "glass",
+      "resistance": 10,
+      "type": "legacy-model,unconnect:false",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosWindowsGlass",
+      "label": "Glass Pane",
+      "textures": [
+        "glass/glass",
+        "glass/glass_pane_top"
+      ],
+      "legacyBlockID": "minecraft:glass_pane"
     }
   ]
 }
