@@ -41,7 +41,8 @@
         "minecraft:cobblestone_stairs",
         "minecraft:mossy_cobblestone",
         "minecraft:mossy_cobblestone_wall",
-        "minecraft:lever"
+        "minecraft:lever",
+        "westerosblocks:cobblestone_stairs"
       ],
       "colorMult": "textures/colormap/cobblestone"
     },
@@ -766,7 +767,27 @@
         "minecraft:jack_o_lantern",
         "minecraft:ladder",
         "minecraft:daylight_detector",
-        "minecraft:dried_kelp_block"
+        "minecraft:dried_kelp_block",
+        "minecraft:oak_stairs",
+        "minecraft:cobblestone_stairs",
+        "minecraft:iron_bars",
+        "minecraft:glass_pane",
+        "minecraft:brick_stairs",
+        "minecraft:stone_brick_stairs",
+        "minecraft:nether_brick_fence",
+        "minecraft:nether_brick_stairs",
+        "minecraft:sandstone_stairs",
+        "minecraft:spruce_stairs",
+        "minecraft:birch_stairs",
+        "minecraft:jungle_stairs",
+        "minecraft:cobblestone_wall",
+        "minecraft:mossy_cobblestone_wall",
+        "minecraft:quartz_stairs",
+        "minecraft:mossy_stone_brick_stairs",
+        "minecraft:mossy_stone_brick_wall",
+        "minecraft:mossy_stone_brick_slab",
+        "minecraft:mossy_cobblestone_stairs",
+        "minecraft:mossy_cobblestone_slab"
       ],
       "creativeTab": "WesterosDoNotUse"
     }
@@ -54948,7 +54969,7 @@
       "hardness": 0.5,
       "stepSound": "grass",
       "material": "grass",
-      "creativeTab": "WesterosSandGravel",
+      "creativeTab": "WesterosGrassDirt",
       "label": "Grass Layer",
       "colorMult": "grass",
       "textures": [
@@ -54956,6 +54977,396 @@
         "minecraft:block/grass_block_top",
         "minecraft:block/grass_block_top"
       ]
-    }    
+    },
+    {
+      "blockName": "oak_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:oak_planks",
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
+      "customTags": [ "plank-ctm" ],
+      "label": "Oak Stairs",
+      "textures": [
+        "minecraft:block/oak_planks"
+      ],
+      "legacyBlockID": "minecraft:oak_stairs"
+    },
+    {
+      "blockName": "birch_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:birch_planks",
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
+      "customTags": [ "plank-ctm" ],
+      "label": "Birch Stairs",
+      "textures": [
+        "minecraft:block/birch_planks"
+      ],
+      "legacyBlockID": "minecraft:birch_stairs"
+    },
+    {
+      "blockName": "cobblestone_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:cobblestone",
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Cobblestone Stairs",
+      "colorMult": "textures/colormap/cobblestone",
+      "legacyBlockID": "minecraft:cobblestone_stairs"
+    },
+    {
+      "blockName": "quartz_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:quartz_block",
+      "creativeTab": "WesterosMarblePlaster",
+      "type": "unconnect:false",
+      "label": "Quartz Stairs",
+      "legacyBlockID": "minecraft:quartz_stairs"
+    },
+    {
+      "blockName": "jungle_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:jungle_planks",
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
+      "customTags": [ "plank-ctm" ],
+      "label": "Jungle Stairs",
+      "textures": [
+        "minecraft:block/jungle_planks"
+      ],
+      "legacyBlockID": "minecraft:jungle_stairs"
+    },
+    {
+      "blockName": "spruce_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:spruce_planks",
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "unconnect:false",
+      "customTags": [ "plank-ctm" ],
+      "label": "Spruce Stairs",
+      "textures": [
+        "minecraft:block/spruce_planks"
+      ],
+      "legacyBlockID": "minecraft:spruce_stairs"
+    },
+    {
+      "blockName": "sandstone_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:sandstone",
+      "creativeTab": "WesterosSandstone",
+      "type": "unconnect:false",
+      "label": "Sandstone Stairs",
+      "textures": [
+        "minecraft:block/sandstone"
+      ],
+      "legacyBlockID": "minecraft:sandstone_stairs"
+    },
+    {
+      "blockName": "nether_brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:nether_bricks",
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Nether Brick Stairs",
+      "textures": [
+        "minecraft:block/nether_bricks"
+      ],
+      "legacyBlockID": "minecraft:nether_bricks"
+    },
+    {
+      "blockName": "brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:bricks",
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Brick Stairs",
+      "colorMult": "textures/colormap/brick",
+      "legacyBlockID": "minecraft:brick_stairs"
+    },
+    {
+      "blockName": "stone_brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:stone_bricks",
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Stone Brick Stairs",
+      "colorMult": "textures/colormap/stonebrick",
+      "legacyBlockID": "minecraft:stone_brick_stairs"
+    },
+    {
+      "blockName": "mossy_stone_brick_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:mossy_stone_bricks",
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Mossy Stone Brick Stairs",
+      "colorMult": "textures/colormap/stonebrick",
+      "legacyBlockID": "minecraft:mossy_stone_brick_stairs"
+    },
+    {
+      "blockName": "mossy_cobblestone_stairs",
+      "blockType": "stair",
+      "modelBlockName": "minecraft:mossy_cobblestone",
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Mossy Cobblestone Stairs",
+      "colorMult": "textures/colormap/cobblestone",
+      "legacyBlockID": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "blockName": "nether_brick_fence",
+      "blockType": "fence",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Nether Brick Fence",
+      "textures": [
+        "minecraft:block/nether_bricks"
+      ],
+      "legacyBlockID": "minecraft:nether_brick_fence"
+    },
+    {
+      "blockName": "cobblestone_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Cobblestone Wall",
+      "colorMult": "textures/colormap/cobblestone",
+      "randomTextures": [
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone1"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone2"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone3"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone4"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone5"
+          ],
+          "weight": 20
+        }
+      ],
+      "legacyBlockID": "minecraft:cobblestone_wall"
+    },
+    {
+      "blockName": "mossy_cobblestone_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosCobbleStone",
+      "type": "unconnect:false",
+      "label": "Mossy Cobblestone Wall",
+      "colorMult": "textures/colormap/cobblestone",
+      "randomTextures": [
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy1"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy2"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy3"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy4"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy5"
+          ],
+          "weight": 20
+        }
+      ],
+      "legacyBlockID": "minecraft:mossy_cobblestone_wall"
+    },
+    {
+      "blockName": "mossy_stone_brick_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBrick",
+      "type": "unconnect:false",
+      "label": "Mossy Stone Brick Wall",
+      "colorMult": "textures/colormap/stonebrick",
+      "textures": [
+        "stone_brick/mossy_stone_bricks"
+      ],
+      "legacyBlockID": "minecraft:mossy_stone_brick_wall"
+    },
+    {
+      "blockName": "mossy_stone_brick_slab",
+      "blockType": "slab",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBrick",
+      "label": "Mossy Stone Brick Slab",
+      "textures": [
+        "stone_brick/mossy_stone_bricks"
+      ],
+      "legacyBlockID": "minecraft:mossy_stone_brick_slab"
+    },
+    {
+      "blockName": "mossy_cobblestone_slab",
+      "blockType": "slab",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosCobbleStone",
+      "label": "Mossy Cobblestone Slab",
+      "colorMult": "textures/colormap/cobblestone",
+      "randomTextures": [
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy1"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy2"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy3"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy4"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy5"
+          ],
+          "weight": 20
+        }
+      ],
+      "legacyBlockID": "minecraft:mossy_cobblestone_slab"
+    },
+    {
+      "blockName": "iron_bars",
+      "blockType": "pane",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "type": "bars-model,unconnect:false",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 3
+        }
+      ],
+      "creativeTab": "WesterosMetal",
+      "label": "Iron Bars",
+      "textures": [
+        "bars_iron_block_0/iron_bars"
+      ],
+      "legacyBlockID": "minecraft:iron_bars"
+    },
+    {
+      "blockName": "glass_pane",
+      "blockType": "pane",
+      "hardness": 2,
+      "stepSound": "glass",
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "material": "glass",
+      "resistance": 10,
+      "type": "legacy-model,unconnect:false",
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosWindowsGlass",
+      "label": "Glass Pane",
+      "textures": [
+        "glass/glass",
+        "glass/glass_pane_top"
+      ],
+      "legacyBlockID": "minecraft:glass_pane"
+    }
   ]
 }

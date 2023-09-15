@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "minecraft:block/sandstone",
+    "top": "minecraft:block/sandstone",
+    "side": "minecraft:block/sandstone",
+    "particle": "minecraft:block/sandstone"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/cube",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy3",
+    "up": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy3",
+    "north": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy3",
+    "south": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy3",
+    "west": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy3",
+    "east": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy3",
+    "particle": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy3"
+  }
+}

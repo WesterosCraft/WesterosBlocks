@@ -72,6 +72,7 @@
     "westerosblocks:stormlands_cobblestone_wall",
     "westerosblocks:jungle_wall",
     "westerosblocks:test_block_4",
+    "westerosblocks:cobblestone_wall",
     "westerosblocks:redorange_slate_wall",
     "westerosblocks:terrainset_eastern_islands_wall",
     "westerosblocks:vivid_dark_sandstone_wall",
@@ -107,6 +108,7 @@
     "westerosblocks:oak_wall",
     "westerosblocks:mances_camp_mances_tent_wall",
     "westerosblocks:white_wood_wall",
+    "westerosblocks:mossy_cobblestone_wall",
     "westerosblocks:arbor_cobblestone_wall",
     "westerosblocks:river_cobble_wall",
     "westerosblocks:terrainset_arbor_dorne_alt_wall",
@@ -130,6 +132,7 @@
     "westerosblocks:terrainset_red_mountains_alt_wall",
     "westerosblocks:piled_bones_wall",
     "westerosblocks:thin_oak_log",
-    "westerosblocks:grey_wood_wall"
+    "westerosblocks:grey_wood_wall",
+    "westerosblocks:mossy_stone_brick_wall"
   ]
 }
