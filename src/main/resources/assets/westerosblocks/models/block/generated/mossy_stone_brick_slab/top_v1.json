@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/stone_brick/mossy_stone_bricks",
+    "up": "westerosblocks:block/stone_brick/mossy_stone_bricks",
+    "north": "westerosblocks:block/stone_brick/mossy_stone_bricks",
+    "south": "westerosblocks:block/stone_brick/mossy_stone_bricks",
+    "west": "westerosblocks:block/stone_brick/mossy_stone_bricks",
+    "east": "westerosblocks:block/stone_brick/mossy_stone_bricks",
+    "particle": "westerosblocks:block/stone_brick/mossy_stone_bricks"
+  }
+}

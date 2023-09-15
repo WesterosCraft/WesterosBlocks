@@ -55223,7 +55223,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "type": "unconnect:false",
       "label": "Mossy Stone Brick Wall",
       "colorMult": "textures/colormap/stonebrick",
@@ -55231,6 +55231,76 @@
         "stone_brick/mossy_stone_bricks"
       ],
       "legacyBlockID": "minecraft:mossy_stone_brick_wall"
+    },
+    {
+      "blockName": "mossy_stone_brick_slab",
+      "blockType": "slab",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosBrick",
+      "label": "Mossy Stone Brick Slab",
+      "textures": [
+        "stone_brick/mossy_stone_bricks"
+      ],
+      "legacyBlockID": "minecraft:mossy_stone_brick_slab"
+    },
+    {
+      "blockName": "mossy_cobblestone_slab",
+      "blockType": "slab",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [
+        {
+          "tool": "pickaxe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosCobbleStone",
+      "label": "Mossy Cobblestone Slab",
+      "colorMult": "textures/colormap/cobblestone",
+      "randomTextures": [
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy1"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy2"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy3"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy4"
+          ],
+          "weight": 5
+        },
+        {
+          "textures": [
+            "cobblestone_texture_variants/cobblestone_mossy5"
+          ],
+          "weight": 20
+        }
+      ],
+      "legacyBlockID": "minecraft:mossy_cobblestone_slab"
     }
   ]
 }
