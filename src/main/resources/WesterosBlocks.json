@@ -55057,6 +55057,8 @@
       "type": "unconnect:false",
       "label": "Sandstone Stairs",
       "textures": [
+        "minecraft:block/sandstone_bottom",
+        "minecraft:block/sandstone_top",
         "minecraft:block/sandstone"
       ],
       "legacyBlockID": "minecraft:sandstone_stairs"
@@ -55267,6 +55269,7 @@
       ],
       "creativeTab": "WesterosBrick",
       "label": "Mossy Stone Brick Slab",
+      "colorMult": "textures/colormap/stonebrick",
       "textures": [
         "stone_brick/mossy_stone_bricks"
       ],
@@ -55339,7 +55342,8 @@
       "creativeTab": "WesterosMetal",
       "label": "Iron Bars",
       "textures": [
-        "bars_iron_block_0/iron_bars"
+        "bars_iron_block_0/iron_bars",
+        "transparent"
       ],
       "legacyBlockID": "minecraft:iron_bars"
     },
