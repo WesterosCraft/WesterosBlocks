@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
@@ -21,7 +22,9 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.IPlantable;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.tags.FluidTags;
@@ -116,6 +119,10 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
         			layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
         		}
         		bs = bs.setValue(LAYERS, layer);
+        	}
+        	else if ((below != null) && (below.getBlock() instanceof SlabBlock)) {
+        		SlabType slabtype = below.getValue(BlockStateProperties.SLAB_TYPE);
+        		if (slabtype == SlabType.BOTTOM) bs = bs.setValue(LAYERS, 4);
         	}
         }
     	return bs;
