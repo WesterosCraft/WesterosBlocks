@@ -17670,7 +17670,7 @@
       "textures": [
         "stone_volcanic/side"
       ],
-      "legacyBlockID": "minecraft:redstone_ore"
+      "legacyBlockIDList": [ "minecraft:redstone_ore", "minecraft:lit_redstone_ore" ]
     },
     {
       "blockName": "silver_ore",
