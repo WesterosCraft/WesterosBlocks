@@ -54964,21 +54964,6 @@
       ]
     },
     {
-      "blockName": "grass_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "grass",
-      "material": "grass",
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Grass Layer",
-      "colorMult": "grass",
-      "textures": [
-        "minecraft:block/dirt",
-        "minecraft:block/grass_block_top",
-        "minecraft:block/grass_block_top"
-      ]
-    },
-    {
       "blockName": "oak_stairs",
       "blockType": "stair",
       "modelBlockName": "minecraft:oak_planks",
