@@ -530,6 +530,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public static class CustomColorMultHandler extends ColorMultHandler implements ColorResolver {
 		private int[] colorBuffer = new int[65536];
 		private final String rname;
+		private boolean brokenOptifine = false;
 
 		CustomColorMultHandler(String rname, String blockName) {
 			super();
@@ -566,9 +567,15 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 					return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
 				}
 				// Workaround to keep Optifine from exploding, but it does break custom biome tinting....
-				//else {
-				//	return world.getBlockTint(pos, this);					
-				//}
+				else {
+					if (!brokenOptifine) {
+						try {
+							return world.getBlockTint(pos, this);		
+						} catch (Exception x) {
+							brokenOptifine = true;
+						}
+					}
+				}
 			}
 			return getColor(null, 0.5D, 1.0D);
 		}
