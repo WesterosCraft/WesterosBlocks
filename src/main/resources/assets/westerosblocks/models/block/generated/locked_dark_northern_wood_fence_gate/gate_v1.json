@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/template_fence_gate",
   "textures": {
-    "texture": "westerosblocks:block/dark_northern_wood/side"
+    "texture": "westerosblocks:block/dark_northern_wood/side1"
   }
 }
