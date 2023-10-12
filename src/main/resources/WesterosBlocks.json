@@ -1206,8 +1206,9 @@
     {
       "blockName": "yellow_wildflowers",
       "blockType": "plant",
-      "material": "wood",
       "type": "layerSensitive",
+      "material": "wood",
+      
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -1239,6 +1240,8 @@
     {
       "blockName": "green_spiny_herb",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosGrassesShrubs",
       "boundingBox": {
@@ -1327,6 +1330,8 @@
     {
       "blockName": "green_leafy_herb",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosGrassesShrubs",
       "boundingBox": {
@@ -1359,6 +1364,8 @@
     {
       "blockName": "orange_marigolds",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -1435,6 +1442,8 @@
     {
       "blockName": "orange_trollius",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -1487,6 +1496,8 @@
     {
       "blockName": "blue_forgetmenots",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -1563,6 +1574,8 @@
     {
       "blockName": "pink_wildflowers",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -1595,6 +1608,8 @@
     {
       "blockName": "yellow_tansy",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -1627,6 +1642,8 @@
     {
       "blockName": "blue_flax",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -1703,6 +1720,8 @@
     {
       "blockName": "white_daisies",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -1779,6 +1798,8 @@
     {
       "blockName": "yellow_daisies",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -1831,6 +1852,8 @@
     {
       "blockName": "green_scrub_grass",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosGrassesShrubs",
       "boundingBox": {
@@ -1931,6 +1954,8 @@
     {
       "blockName": "dead_scrub_grass",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosGrassesShrubs",
       "boundingBox": {
@@ -2076,6 +2101,8 @@
     {
       "blockName": "yellow_bedstraw",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -2140,7 +2167,9 @@
     {
       "blockName": "orange_bells",
       "blockType": "plant",
+      "type": "layerSensitive",
       "material": "wood",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -2172,6 +2201,8 @@
     {
       "blockName": "blue_bells",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "material": "wood",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -2204,6 +2235,8 @@
     {
       "blockName": "blue_swamp_bells",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -2237,6 +2270,8 @@
     {
       "blockName": "yellow_buttercups",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -2314,6 +2349,8 @@
     {
       "blockName": "orange_bog_asphodel",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -2391,7 +2428,9 @@
     {
       "blockName": "yellow_lupine",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -2468,7 +2507,9 @@
     {
       "blockName": "blue_hyacinth",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -2545,8 +2586,10 @@
     {
       "blockName": "pink_thistle",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -2622,8 +2665,10 @@
     {
       "blockName": "yellow_dandelions",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -2687,8 +2732,10 @@
     {
       "blockName": "yellow_daffodils",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -2764,8 +2811,10 @@
     {
       "blockName": "yellow_roses",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -2841,8 +2890,10 @@
     {
       "blockName": "strawberry_bush",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosCropsHerbs",
       "boundingBox": {
         "xMin": 0.3,
@@ -2861,8 +2912,10 @@
     {
       "blockName": "white_lilyofthevalley",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -2894,8 +2947,10 @@
     {
       "blockName": "yellow_bells",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -2927,7 +2982,9 @@
     {
       "blockName": "yellow_sunflower",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -2992,7 +3049,9 @@
     {
       "blockName": "white_roses",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -7871,7 +7930,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -7879,7 +7938,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:0"
     },
@@ -7935,7 +7994,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -7943,7 +8002,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:1"
     },
@@ -7999,7 +8058,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8007,7 +8066,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:2"
     },
@@ -8063,7 +8122,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8071,7 +8130,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:3"
     },
@@ -8260,7 +8319,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8268,7 +8327,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:8"
     },
@@ -8323,7 +8382,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8331,7 +8390,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:9"
     },
@@ -8386,7 +8445,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8394,7 +8453,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:10"
     },
@@ -8449,7 +8508,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8457,7 +8516,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:11"
     },
@@ -8512,7 +8571,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8520,7 +8579,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:12"
     },
@@ -8575,7 +8634,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8583,7 +8642,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:13"
     },
@@ -8638,7 +8697,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8646,7 +8705,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:14"
     },
@@ -8702,7 +8761,7 @@
           "zMax": 1
         }
       ],
-      "supportBoxes": [ 
+      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -8710,7 +8769,7 @@
           "yMax": 1,
           "zMin": 0,
           "zMax": 1
-        }      
+        }
       ],
       "legacyBlockID": "arrow_slits_0:15"
     },
@@ -9206,7 +9265,7 @@
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Eastern Islands",
       "colorMult": "textures/colormap/easternisland",
-      "overlayTextures": [ 
+      "overlayTextures": [
       	"terrainset_overlays/terrainset_eastern_island_overlay"
       ],
       "textures": [
@@ -9223,7 +9282,7 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Iron Islands",
-      "overlayTextures": [ 
+      "overlayTextures": [
       	"terrainset_overlays/terrainset_iron_islands_overlay"
       ],
       "textures": [
@@ -9240,7 +9299,7 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Mountains of the Moon",
-      "overlayTextures": [ 
+      "overlayTextures": [
         "terrainset_overlays/terrainset_eyrie_overlay"
       ],
       "textures": [
@@ -9271,7 +9330,7 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Ocean Rocks",
-      "overlayTextures": [ 
+      "overlayTextures": [
         "terrainset_overlays/terrainset_ocean_rocks_overlay"
       ],
       "textures": [
@@ -9288,7 +9347,7 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Red Mountains",
-      "overlayTextures": [ 
+      "overlayTextures": [
         "terrainset_overlays/terrainset_red_mountains_overlay"
       ],
       "textures": [
@@ -9305,7 +9364,7 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet River Rocks",
-      "overlayTextures": [ 
+      "overlayTextures": [
       	"terrainset_overlays/terrainset_river_rocks_overlay"
       ],
       "textures": [
@@ -9322,7 +9381,7 @@
       "resistance": 10,
       "creativeTab": "WesterosTerrainSets",
       "label": "TerrainSet Westerlands",
-      "overlayTextures": [ 
+      "overlayTextures": [
         "terrainset_overlays/terrainset_westerlands_overlay"
       ],
       "textures": [
@@ -10146,7 +10205,7 @@
       "textures": [
         "fallen_leaves/temperate"
       ],
-      "overlayTextures": [ 
+      "overlayTextures": [
         "terrainset_overlays/fallen_leaves_overlay"
       ],
       "legacyBlockID": "solid_blocks_0:3"
@@ -10163,7 +10222,7 @@
       "textures": [
         "pine_needles/dirt_pine_cover"
       ],
-      "overlayTextures": [ 
+      "overlayTextures": [
         "terrainset_overlays/fallen_leaves_overlay"
       ],
       "legacyBlockID": "solid_blocks_0:4"
@@ -11835,7 +11894,7 @@
       "creativeTab": "WesterosWoodPlanks",
       "label": "Locked Dark Northern Wood Fence Gate",
       "textures": [
-        "dark_northern_wood/side"
+        "dark_northern_wood/side1"
       ],
       "legacyBlockID": "minecraft:dark_oak_fence_gate"
     },
@@ -12450,6 +12509,8 @@
     {
       "blockName": "red_dark_roses",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -12527,7 +12588,9 @@
     {
       "blockName": "yellow_hellebore",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -12580,7 +12643,9 @@
     {
       "blockName": "meadow_fescue",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -12633,7 +12698,9 @@
     {
       "blockName": "red_poppies",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -12686,7 +12753,9 @@
     {
       "blockName": "red_roses",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -12763,7 +12832,9 @@
     {
       "blockName": "purple_pansies",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -12840,7 +12911,9 @@
     {
       "blockName": "purple_roses",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -12917,7 +12990,9 @@
     {
       "blockName": "orange_sun_star",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -12970,7 +13045,9 @@
     {
       "blockName": "pink_primrose",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -13023,8 +13100,10 @@
     {
       "blockName": "red_aster",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -13100,8 +13179,10 @@
     {
       "blockName": "blue_chicory",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -13177,8 +13258,10 @@
     {
       "blockName": "red_flowering_spiny_herb",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
+
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
         "xMin": 0.3,
@@ -13210,7 +13293,9 @@
     {
       "blockName": "purple_foxglove",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -13287,6 +13372,8 @@
     {
       "blockName": "pink_allium",
       "blockType": "plant",
+      "type": "layerSensitive",
+
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13364,7 +13451,9 @@
     {
       "blockName": "purple_violets",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -13429,7 +13518,9 @@
     {
       "blockName": "white_chamomile",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
+
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {
@@ -13494,6 +13585,7 @@
     {
       "blockName": "red_tulips",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13571,6 +13663,7 @@
     {
       "blockName": "white_peony",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13604,6 +13697,7 @@
     {
       "blockName": "purple_alpine_sowthistle",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13681,6 +13775,7 @@
     {
       "blockName": "red_carnations",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13758,6 +13853,7 @@
     {
       "blockName": "magenta_roses",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13835,6 +13931,7 @@
     {
       "blockName": "red_chrysanthemum",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13868,6 +13965,7 @@
     {
       "blockName": "blue_orchid",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13933,6 +14031,7 @@
     {
       "blockName": "yellow_rudbeckia",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -13966,6 +14065,7 @@
     {
       "blockName": "pink_tulips",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -14043,6 +14143,7 @@
     {
       "blockName": "cranberry_bush",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosCropsHerbs",
@@ -14072,6 +14173,7 @@
     {
       "blockName": "purple_lavender",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -14137,6 +14239,7 @@
     {
       "blockName": "red_sourleaf_bush",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosCropsHerbs",
@@ -14190,6 +14293,7 @@
     {
       "blockName": "pink_sweet_peas",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -14223,6 +14327,7 @@
     {
       "blockName": "red_sorrel",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -14256,6 +14361,7 @@
     {
       "blockName": "pink_roses",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
@@ -14333,6 +14439,7 @@
     {
       "blockName": "brown_mushroom_1",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14366,6 +14473,7 @@
     {
       "blockName": "brown_mushroom_2",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14386,6 +14494,7 @@
     {
       "blockName": "brown_mushroom_3",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14419,6 +14528,7 @@
     {
       "blockName": "brown_mushroom_4",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14439,6 +14549,7 @@
     {
       "blockName": "brown_mushroom_5",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14459,6 +14570,7 @@
     {
       "blockName": "brown_mushroom_6",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14492,6 +14604,7 @@
     {
       "blockName": "brown_mushroom_7",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14512,6 +14625,7 @@
     {
       "blockName": "brown_mushroom_8",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14532,6 +14646,7 @@
     {
       "blockName": "brown_mushroom_9",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14552,6 +14667,7 @@
     {
       "blockName": "brown_mushroom_10",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14572,6 +14688,7 @@
     {
       "blockName": "brown_mushroom_11",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14592,6 +14709,7 @@
     {
       "blockName": "brown_mushroom_12",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14612,6 +14730,7 @@
     {
       "blockName": "brown_mushroom_13",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14645,6 +14764,7 @@
     {
       "blockName": "red_mushroom_1",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14678,6 +14798,7 @@
     {
       "blockName": "red_mushroom_2",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14711,6 +14832,7 @@
     {
       "blockName": "red_mushroom_3",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14744,6 +14866,7 @@
     {
       "blockName": "red_mushroom_4",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14764,6 +14887,7 @@
     {
       "blockName": "red_mushroom_5",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14784,6 +14908,7 @@
     {
       "blockName": "red_mushroom_6",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14804,6 +14929,7 @@
     {
       "blockName": "red_mushroom_7",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14837,6 +14963,7 @@
     {
       "blockName": "red_mushroom_8",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14870,6 +14997,7 @@
     {
       "blockName": "red_mushroom_9",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -14903,6 +15031,7 @@
     {
       "blockName": "unshaded_grass",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -23345,6 +23474,7 @@
     {
       "blockName": "dead_bush",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -32875,6 +33005,7 @@
     {
       "blockName": "cow_parsely",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -32928,6 +33059,7 @@
     {
       "blockName": "bracken",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -33053,6 +33185,7 @@
     {
       "blockName": "lady_fern",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -33130,6 +33263,7 @@
     {
       "blockName": "nettle",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -33195,6 +33329,7 @@
     {
       "blockName": "dead_bracken",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -33368,6 +33503,7 @@
     {
       "blockName": "fireweed",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -33445,6 +33581,7 @@
     {
       "blockName": "heather",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -33522,6 +33659,7 @@
     {
       "blockName": "red_fern",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosGrassesShrubs",
@@ -33587,6 +33725,7 @@
     {
       "blockName": "dock_leaf",
       "blockType": "plant",
+      "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosCropsHerbs",
@@ -46522,7 +46661,7 @@
       "stepSound": "grass",
       "material": "plants",
       "resistance": 4,
-      "type": "toggleOnUse",
+      "type": "toggleOnUse,layerSensitive",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -46559,7 +46698,7 @@
       "stepSound": "grass",
       "material": "plants",
       "resistance": 4,
-      "type": "toggleOnUse",
+      "type": "toggleOnUse,layerSensitive",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -46602,7 +46741,7 @@
       "stepSound": "grass",
       "material": "plants",
       "resistance": 4,
-      "type": "toggleOnUse",
+      "type": "toggleOnUse,layerSensitive",
       "harvestLevel": [
         {
           "tool": "pickaxe",
@@ -46645,7 +46784,7 @@
       "stepSound": "grass",
       "material": "plants",
       "resistance": 4,
-      "type": "toggleOnUse",
+      "type": "toggleOnUse,layerSensitive",
       "harvestLevel": [
         {
           "tool": "pickaxe",
