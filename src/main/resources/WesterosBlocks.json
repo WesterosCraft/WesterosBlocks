@@ -3921,9 +3921,8 @@
         }
       ],
       "creativeTab": "WesterosMarblePlaster",
-	  "type": "unconnect:false",
+	  "type": "unconnect:false,size:short",
       "label": "Marble Wall",
-      "type": "size:short",
       "textures": [
         "marble/top",
         "marble/top",
@@ -3945,9 +3944,8 @@
         }
       ],
       "creativeTab": "WesterosMarblePlaster",
-	  "type": "unconnect:false",
+	  "type": "unconnect:false,size:short",
       "label": "Thin Marble Column",
-      "type": "size:short",
       "textures": [
         "marble/top",
         "marble/top",
@@ -53178,9 +53176,8 @@
       "blockType": "stair",
       "modelBlockName": "stacked_bones_solid",
       "creativeTab": "WesterosMisc",
-      "type": "unconnect:false",
+      "type": "unconnect:false,no-uvlock",
       "label": "Stacked Bones Stairs",
-      "type": "no-uvlock",
       "isCustomModel": true,
       "legacyBlockID": "stone_block_12_stair_0"
     },
