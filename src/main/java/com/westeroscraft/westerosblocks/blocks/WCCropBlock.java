@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.Block;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
@@ -16,6 +17,10 @@ public class WCCropBlock extends WCPlantBlock implements WesterosBlockLifecycle 
         	if (state != null) {
         		tempSTATE = state;
         	}        	
+            String t = def.getType();
+            if ((t != null) && (t.indexOf(WesterosBlockDef.LAYER_SENSITIVE) >= 0)) {
+            	tempLAYERS = BlockStateProperties.LAYERS;
+            }
         	BlockBehaviour.Properties props = def.makeProperties().noCollission().instabreak();
         	return def.registerRenderType(def.registerBlock(new WCCropBlock(props, def)), false, false);
         }

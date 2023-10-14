@@ -1,5 +1,5 @@
 {
-  "parent": "block/crop",
+  "parent": "westerosblocks:block/untinted/crop",
   "textures": {
     "crop": "westerosblocks:block/carrots/carrots_stage_1"
   }
