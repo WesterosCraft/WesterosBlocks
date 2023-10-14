@@ -20468,7 +20468,7 @@
     {
       "blockName": "orange_brick_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -20483,7 +20483,7 @@
     {
       "blockName": "always_active_brick_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -20499,7 +20499,7 @@
     {
       "blockName": "sandstone_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -20513,7 +20513,7 @@
     {
       "blockName": "always_active_sandstone_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -20528,7 +20528,7 @@
     {
       "blockName": "always_active_stone_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -20544,7 +20544,7 @@
     {
       "blockName": "stone_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -25809,7 +25809,7 @@
     {
       "blockName": "dornish_mud_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "stone",
       "material": "rock",
@@ -25823,7 +25823,7 @@
     {
       "blockName": "always_active_dornish_mud_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "stone",
       "material": "rock",
@@ -51702,7 +51702,7 @@
     {
       "blockName": "arbor_brick_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -51716,7 +51716,7 @@
     {
       "blockName": "always_active_arbor_brick_furnace",
       "blockType": "furnace",
-      "alphaRender": true,
+      "nonOpaque": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
