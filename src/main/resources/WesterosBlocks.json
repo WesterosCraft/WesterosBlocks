@@ -8659,7 +8659,7 @@
       "textures": [
         "transparent",
         "transparent",
-        "reach_light_stone_arrow_slit/side"
+        "reach_light_brick_arrow_slit/side"
       ],
       "collisionBoxes": [
         {
@@ -49285,7 +49285,7 @@
       "textures": [
         "transparent",
         "transparent",
-        "reach_light_brick_arrow_slit/side"
+        "reach_light_brick_arrow_slit_window/side"
       ],
       "collisionBoxes": [
         {
