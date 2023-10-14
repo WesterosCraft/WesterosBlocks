@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/transparent",
     "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/reach_light_stone_arrow_slit/side",
-    "south": "westerosblocks:block/reach_light_stone_arrow_slit/side",
-    "west": "westerosblocks:block/reach_light_stone_arrow_slit/side",
-    "east": "westerosblocks:block/reach_light_stone_arrow_slit/side",
-    "particle": "westerosblocks:block/reach_light_stone_arrow_slit/side"
+    "north": "westerosblocks:block/reach_light_brick_arrow_slit/side",
+    "south": "westerosblocks:block/reach_light_brick_arrow_slit/side",
+    "west": "westerosblocks:block/reach_light_brick_arrow_slit/side",
+    "east": "westerosblocks:block/reach_light_brick_arrow_slit/side",
+    "particle": "westerosblocks:block/reach_light_brick_arrow_slit/side"
   }
 }
