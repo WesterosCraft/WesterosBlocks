@@ -18,8 +18,6 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/transparent",
-    "txt5": "westerosblocks:block/transparent",
     "txt2": "westerosblocks:block/profession_sign_base/baker",
     "txt3": "westerosblocks:block/profession_sign_base/sign_cut2",
     "txt0": "westerosblocks:block/sign_block_0/sign_bottom",
@@ -39,16 +37,6 @@
         8.8
       ],
       "faces": {
-        "east": {
-          "uv": [
-            7.2,
-            0.0,
-            8.8,
-            16.0
-          ],
-          "texture": "#txt4",
-          "cullface": "east"
-        },
         "south": {
           "uv": [
             0.0,
@@ -66,36 +54,6 @@
             16.0
           ],
           "texture": "#txt2"
-        },
-        "west": {
-          "uv": [
-            7.2,
-            0.0,
-            8.8,
-            16.0
-          ],
-          "texture": "#txt4",
-          "cullface": "west"
-        },
-        "up": {
-          "uv": [
-            0.0,
-            7.2,
-            16.0,
-            8.8
-          ],
-          "texture": "#txt4",
-          "cullface": "up"
-        },
-        "down": {
-          "uv": [
-            0.0,
-            7.2,
-            16.0,
-            8.8
-          ],
-          "texture": "#txt4",
-          "cullface": "down"
         }
       }
     },

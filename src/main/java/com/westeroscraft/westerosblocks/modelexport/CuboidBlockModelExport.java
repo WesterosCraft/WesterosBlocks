@@ -139,6 +139,7 @@ public class CuboidBlockModelExport extends ModelExport {
         ModelObjectCuboid mod = new ModelObjectCuboid();
         mod.textures.put("particle", getTextureID(txt0));
         for (int i = 0; i < textures.length; i++) {
+        	if (isTransparentTexture(textures[i])) continue;
             mod.textures.put("txt" + i, getTextureID(textures[i]));
         }
         for (Cuboid c : cubs) { 
@@ -175,13 +176,15 @@ public class CuboidBlockModelExport extends ModelExport {
                 elem.from[2] = 8;
                 elem.rotation = new Rotation();
                 elem.shade = false;
-                f = new Face();
-                f.uv = new float[] { 0, 0, 16, 16 };
-                f.texture = "#txt0";
-                if (isTinted && (!noTint[0])) f.tintindex = 0;
-                elem.faces.put("north", f);
-                elem.faces.put("south", f);
-                mod.elements.add(elem);
+                if (mod.textures.containsKey("txt0")) {
+	                f = new Face();
+	                f.uv = new float[] { 0, 0, 16, 16 };
+	                f.texture = "#txt0";
+	                if (isTinted && (!noTint[0])) f.tintindex = 0;
+	                elem.faces.put("north", f);
+	                elem.faces.put("south", f);
+	                mod.elements.add(elem);
+                }
                 // Second stroke of X
                 elem = new Element();
                 elem.from[0] = 8;
@@ -192,13 +195,15 @@ public class CuboidBlockModelExport extends ModelExport {
                 elem.from[2] = zmax;
                 elem.rotation = (modelRotate == null) ? new Rotation() : new Rotation(modelRotate);
                 elem.shade = false;
-                f = new Face();
-                f.uv = new float[] { 0, 0, 16, 16 };
-                f.texture = "#txt0";
-                if (isTinted && (!noTint[0])) f.tintindex = 0;
-                elem.faces.put("west", f);
-                elem.faces.put("east", f);
-                mod.elements.add(elem);
+                if (mod.textures.containsKey("txt0")) {
+	                f = new Face();
+	                f.uv = new float[] { 0, 0, 16, 16 };
+	                f.texture = "#txt0";
+	                if (isTinted && (!noTint[0])) f.tintindex = 0;
+	                elem.faces.put("west", f);
+	                elem.faces.put("east", f);
+	                mod.elements.add(elem);
+                }
             }
             else {
                 // Handle normal cuboid
@@ -213,77 +218,96 @@ public class CuboidBlockModelExport extends ModelExport {
                 	elem.rotation = new Rotation(modelRotate);
                 }
                 // Add down face
-                f = new Face();
-                f.uv[0] = xmin;
-                f.uv[2] = xmax;
-                f.uv[1] = 16-zmax;
-                f.uv[3] = 16-zmin;
-                f.texture = "#txt" + sidetxt[0];
-                f.rotation = (siderot[0] != 0) ? siderot[0] : null;
-                processRotation(f);
-                if (isTinted && (!noTint[0])) f.tintindex = 0;
-                if (elem.from[1] <= 0) f.cullface = "down";
-                elem.faces.put("down", f);
+                String txtid;
+                txtid = "txt" + sidetxt[0];
+                if (mod.textures.containsKey(txtid)) {
+	                f = new Face();
+	                f.uv[0] = xmin;
+	                f.uv[2] = xmax;
+	                f.uv[1] = 16-zmax;
+	                f.uv[3] = 16-zmin;
+	                f.texture = "#" + txtid;
+	                f.rotation = (siderot[0] != 0) ? siderot[0] : null;
+	                processRotation(f);
+	                if (isTinted && (!noTint[0])) f.tintindex = 0;
+	                if (elem.from[1] <= 0) f.cullface = "down";
+	                elem.faces.put("down", f);
+                }
                 // Add up face
-                f = new Face();
-                f.uv[0] = xmin;
-                f.uv[2] = xmax;
-                f.uv[1] = zmin;
-                f.uv[3] = zmax;
-                f.texture = "#txt" + sidetxt[1];
-                f.rotation = (siderot[1] != 0) ? siderot[1] : null;
-                processRotation(f);
-                if (isTinted && (!noTint[1])) f.tintindex = 0;
-                if (elem.to[1] >= 16) f.cullface = "up";
-                elem.faces.put("up", f);
+                txtid = "txt" + sidetxt[1];
+                if (mod.textures.containsKey(txtid)) {
+	                f = new Face();
+	                f.uv[0] = xmin;
+	                f.uv[2] = xmax;
+	                f.uv[1] = zmin;
+	                f.uv[3] = zmax;
+	                f.texture = "#" + txtid;
+	                f.rotation = (siderot[1] != 0) ? siderot[1] : null;
+	                processRotation(f);
+	                if (isTinted && (!noTint[1])) f.tintindex = 0;
+	                if (elem.to[1] >= 16) f.cullface = "up";
+	                elem.faces.put("up", f);
+                }
                 // Add north face
-                f = new Face();
-                f.uv[0] = 16-xmax;
-                f.uv[2] = 16-xmin;
-                f.uv[1] = 16-ymax;
-                f.uv[3] = 16-ymin;
-                f.texture = "#txt" + sidetxt[2];
-                f.rotation = (siderot[2] != 0) ? siderot[2] : null;
-                processRotation(f);
-                if (isTinted && (!noTint[2])) f.tintindex = 0;
-                if (elem.from[2] <= 0) f.cullface = "north";
-                elem.faces.put("north", f);
+                txtid = "txt" + sidetxt[2];
+                if (mod.textures.containsKey(txtid)) {
+	                f = new Face();
+	                f.uv[0] = 16-xmax;
+	                f.uv[2] = 16-xmin;
+	                f.uv[1] = 16-ymax;
+	                f.uv[3] = 16-ymin;
+	                f.texture = "#" + txtid;
+	                f.rotation = (siderot[2] != 0) ? siderot[2] : null;
+	                processRotation(f);
+	                if (isTinted && (!noTint[2])) f.tintindex = 0;
+	                if (elem.from[2] <= 0) f.cullface = "north";
+	                elem.faces.put("north", f);
+                }
                 // Add south face
-                f = new Face();
-                f.uv[0] = xmin;
-                f.uv[2] = xmax;
-                f.uv[1] = 16-ymax;
-                f.uv[3] = 16-ymin;
-                f.texture = "#txt" + sidetxt[3];
-                f.rotation = (siderot[3] != 0) ? siderot[3] : null;
-                processRotation(f);
-                if (isTinted && (!noTint[3])) f.tintindex = 0;
-                if (elem.to[2] >= 16) f.cullface = "south";
-                elem.faces.put("south", f);
+                txtid = "txt" + sidetxt[3];
+                if (mod.textures.containsKey(txtid)) {
+	                f = new Face();
+	                f.uv[0] = xmin;
+	                f.uv[2] = xmax;
+	                f.uv[1] = 16-ymax;
+	                f.uv[3] = 16-ymin;
+	                f.texture = "#" + txtid;
+	                f.rotation = (siderot[3] != 0) ? siderot[3] : null;
+	                processRotation(f);
+	                if (isTinted && (!noTint[3])) f.tintindex = 0;
+	                if (elem.to[2] >= 16) f.cullface = "south";
+	                elem.faces.put("south", f);
+                }
                 // Add west face
-                f = new Face();
-                f.uv[0] = zmin;
-                f.uv[2] = zmax;
-                f.uv[1] = 16-ymax;
-                f.uv[3] = 16-ymin;
-                f.texture = "#txt" + sidetxt[4];
-                f.rotation = (siderot[4] != 0) ? siderot[4] : null;
-                processRotation(f);
-                if (isTinted && (!noTint[4])) f.tintindex = 0;
-                if (elem.from[0] <= 0) f.cullface = "west";
-                elem.faces.put("west", f);
-                // Add eath face
-                f = new Face();
-                f.uv[0] = 16-zmax;
-                f.uv[2] = 16-zmin;
-                f.uv[1] = 16-ymax;
-                f.uv[3] = 16-ymin;
-                f.texture = "#txt" + sidetxt[5];
-                f.rotation = (siderot[5] != 0) ? siderot[5] : null;
-                processRotation(f);
-                if (isTinted && (!noTint[5])) f.tintindex = 0;
-                if (elem.to[0] >= 16) f.cullface = "east";
-                elem.faces.put("east", f);
+                txtid = "txt" + sidetxt[4];
+                if (mod.textures.containsKey(txtid)) {
+	                f = new Face();
+	                f.uv[0] = zmin;
+	                f.uv[2] = zmax;
+	                f.uv[1] = 16-ymax;
+	                f.uv[3] = 16-ymin;
+	                f.texture = "#" + txtid;
+	                f.rotation = (siderot[4] != 0) ? siderot[4] : null;
+	                processRotation(f);
+	                if (isTinted && (!noTint[4])) f.tintindex = 0;
+	                if (elem.from[0] <= 0) f.cullface = "west";
+	                elem.faces.put("west", f);
+                }
+                // Add east face
+                txtid = "txt" + sidetxt[5];
+                if (mod.textures.containsKey(txtid)) {
+	                f = new Face();
+	                f.uv[0] = 16-zmax;
+	                f.uv[2] = 16-zmin;
+	                f.uv[1] = 16-ymax;
+	                f.uv[3] = 16-ymin;
+	                f.texture = "#" + txtid;
+	                f.rotation = (siderot[5] != 0) ? siderot[5] : null;
+	                processRotation(f);
+	                if (isTinted && (!noTint[5])) f.tintindex = 0;
+	                if (elem.to[0] >= 16) f.cullface = "east";
+	                elem.faces.put("east", f);
+                }
                 mod.elements.add(elem);
             }
         }

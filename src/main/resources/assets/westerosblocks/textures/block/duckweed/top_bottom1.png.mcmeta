@@ -2,7 +2,6 @@
   "ctm": {
     "ctm_version": 1,
     "type": "westeros_ctm",
-    "layer": "TRANSLUCENT",
     "textures": [
       "westerosblocks:block/duckweed/ctm0",
       "westerosblocks:block/duckweed/ctm1",

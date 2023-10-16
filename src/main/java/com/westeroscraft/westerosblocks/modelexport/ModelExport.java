@@ -52,6 +52,11 @@ public abstract class ModelExport {
     public static final String[] FACINGNE = {  "north", "east" };
     public static final String[] RAILSHAPE = { "north_south", "east_west", "ascending_east", "ascending_west", "ascending_north", "ascending_south","south_east", "south_west", "north_west", "north_east" };
 
+    // Test for WB standard 'all clear' texture
+    public boolean isTransparentTexture(String txt) {
+    	return txt.equals("transparent");
+    }
+    
     public static void doInit(File dest) {
     	if (!didInit) {
             destdir = dest;

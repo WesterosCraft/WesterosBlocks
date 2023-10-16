@@ -23,7 +23,6 @@
     "txt2": "westerosblocks:block/torch_block_0/candle_off",
     "txt3": "westerosblocks:block/torch_block_0/candle_off",
     "txt0": "westerosblocks:block/torch_block_0/candle_off",
-    "txt1": "westerosblocks:block/transparent",
     "particle": "westerosblocks:block/torch_block_0/candle_off"
   },
   "elements": [
@@ -74,15 +73,6 @@
             16.0
           ],
           "texture": "#txt4"
-        },
-        "up": {
-          "uv": [
-            7.2,
-            7.2,
-            9.6,
-            9.6
-          ],
-          "texture": "#txt1"
         },
         "down": {
           "uv": [

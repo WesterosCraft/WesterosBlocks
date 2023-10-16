@@ -20,7 +20,6 @@
   "textures": {
     "txt4": "westerosblocks:block/classic_grass_block/grass_block_side_overlay",
     "txt5": "westerosblocks:block/classic_grass_block/grass_block_side_overlay",
-    "txt2": "westerosblocks:block/transparent",
     "txt3": "westerosblocks:block/classic_grass_block/grass_block_side_overlay",
     "txt0": "westerosblocks:block/classic_grass_block/top2",
     "txt1": "westerosblocks:block/dirt/ground",
@@ -157,26 +156,6 @@
           "texture": "#txt3",
           "cullface": "west",
           "tintindex": 0
-        },
-        "up": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "texture": "#txt2",
-          "cullface": "up"
-        },
-        "down": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "texture": "#txt2",
-          "cullface": "down"
         }
       }
     }

@@ -22,7 +22,6 @@
     "txt5": "westerosblocks:block/coins/top2",
     "txt2": "westerosblocks:block/coins/top2",
     "txt3": "westerosblocks:block/coins/top2",
-    "txt0": "westerosblocks:block/transparent",
     "txt1": "westerosblocks:block/coins/top2",
     "particle": "westerosblocks:block/transparent"
   },
@@ -87,15 +86,6 @@
             16.0
           ],
           "texture": "#txt1"
-        },
-        "down": {
-          "uv": [
-            0.0,
-            0.0,
-            16.0,
-            16.0
-          ],
-          "texture": "#txt0"
         }
       }
     }

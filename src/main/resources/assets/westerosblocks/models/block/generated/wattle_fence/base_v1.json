@@ -22,8 +22,6 @@
     "txt5": "westerosblocks:block/wattle_fence/side1",
     "txt2": "westerosblocks:block/wattle_fence/side1",
     "txt3": "westerosblocks:block/wattle_fence/side1",
-    "txt0": "westerosblocks:block/transparent",
-    "txt1": "westerosblocks:block/transparent",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [
@@ -76,26 +74,6 @@
             16.0
           ],
           "texture": "#txt4"
-        },
-        "up": {
-          "uv": [
-            0.16,
-            0.0,
-            1.12,
-            16.0
-          ],
-          "texture": "#txt1",
-          "cullface": "up"
-        },
-        "down": {
-          "uv": [
-            0.16,
-            0.0,
-            1.12,
-            16.0
-          ],
-          "texture": "#txt0",
-          "cullface": "down"
         }
       }
     }

@@ -18,12 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/transparent",
-    "txt5": "westerosblocks:block/transparent",
     "txt2": "westerosblocks:block/cuboid_block_0/cleaver_left",
     "txt3": "westerosblocks:block/cuboid_block_0/cleaver_right",
-    "txt0": "westerosblocks:block/transparent",
-    "txt1": "westerosblocks:block/transparent",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [
@@ -39,16 +35,6 @@
         8.0
       ],
       "faces": {
-        "east": {
-          "uv": [
-            8.0,
-            0.0,
-            8.016,
-            16.0
-          ],
-          "texture": "#txt5",
-          "cullface": "east"
-        },
         "south": {
           "uv": [
             0.0,
@@ -66,36 +52,6 @@
             16.0
           ],
           "texture": "#txt2"
-        },
-        "west": {
-          "uv": [
-            7.984,
-            0.0,
-            8.0,
-            16.0
-          ],
-          "texture": "#txt4",
-          "cullface": "west"
-        },
-        "up": {
-          "uv": [
-            0.0,
-            7.984,
-            16.0,
-            8.0
-          ],
-          "texture": "#txt1",
-          "cullface": "up"
-        },
-        "down": {
-          "uv": [
-            0.0,
-            8.0,
-            16.0,
-            8.016
-          ],
-          "texture": "#txt0",
-          "cullface": "down"
         }
       }
     }
