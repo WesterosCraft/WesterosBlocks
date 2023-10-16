@@ -4908,7 +4908,6 @@
       "blockName": "pewter_plate",
       "blockType": "cuboid",
       "nonOpaque": true,
-      "alphaRender": true,
       "hardness": 5,
       "stepSound": "metal",
       "material": "iron",
@@ -4950,7 +4949,6 @@
       "blockName": "wooden_plate",
       "blockType": "cuboid",
       "nonOpaque": true,
-      "alphaRender": true,
       "hardness": 5,
       "stepSound": "wood",
       "material": "wood",
@@ -12173,7 +12171,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Dead Fowl",
       "randomTextures": [
         {
@@ -12205,7 +12203,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Dead Fish",
       "randomTextures": [
         {
@@ -12281,7 +12279,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Dead Frog",
       "randomTextures": [
         {
@@ -12643,9 +12641,8 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
-      "creativeTab": "WesterosFlowers",
+      "creativeTab": "WesterosGrassesShrubs",
       "boundingBox": {
         "xMin": 0.3,
         "xMax": 0.7,
@@ -27101,7 +27098,7 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Dead Rat",
       "randomTextures": [
         {
@@ -51586,7 +51583,7 @@
           "level": 1
         }
       ],
-      "creativeTab": "WesterosWoodPlanks",
+      "creativeTab": "WesterosDecor",
       "label": "Firewood Slab",
       "textures": [
         "firewood/side2",
