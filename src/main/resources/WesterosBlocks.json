@@ -787,7 +787,11 @@
         "minecraft:mossy_stone_brick_wall",
         "minecraft:mossy_stone_brick_slab",
         "minecraft:mossy_cobblestone_stairs",
-        "minecraft:mossy_cobblestone_slab"
+        "minecraft:mossy_cobblestone_slab",
+        "minecraft:pufferfish_bucket",
+        "minecraft:cod_bucket",
+        "minecraft:salmon_bucket",
+        "minecraft:tropical_fish_bucket"
       ],
       "creativeTab": "WesterosDoNotUse"
     }
