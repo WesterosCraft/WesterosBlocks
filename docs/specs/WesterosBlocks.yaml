@@ -1768,6 +1768,13 @@ components:
                     enum: [ 0, 90, 180, 270 ]
                     description: |-
                       Optional offset to rotation of model around Y axis (applied to blockstate)              
+	              type:
+	                type: string
+	                description: |-
+	                  Comma separated list of 'token:value" and
+	                  "token" fields.  Defined tokens include:
+	                
+	                  - "allowHalfBreak": If defined, breaking part of the block doesn't break other part.
                     
     door:
       title: blockType='door'

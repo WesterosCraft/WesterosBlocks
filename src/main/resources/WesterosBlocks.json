@@ -17474,7 +17474,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Grey Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18414,7 +18414,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Red Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18471,7 +18471,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Black Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18528,7 +18528,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "The Faith of the Seven Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18585,7 +18585,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Cream Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18642,7 +18642,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Blue Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18699,7 +18699,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Brown Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18756,7 +18756,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Cyan Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18813,7 +18813,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Green Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18870,7 +18870,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Orange Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18927,7 +18927,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Pink Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -18984,7 +18984,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Purple Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -19041,7 +19041,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Lord of Light R'hllor Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -19098,7 +19098,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Yellow Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -27631,7 +27631,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Red Keep Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35357,7 +35357,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Arryn Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35414,7 +35414,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Baratheon Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35471,7 +35471,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Bolton Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35528,7 +35528,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Dayne Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35585,7 +35585,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Frey Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35642,7 +35642,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Greyjoy Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35699,7 +35699,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Hightower Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35756,7 +35756,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Lannister Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35813,7 +35813,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Manderly Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35870,7 +35870,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Martell Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35927,7 +35927,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Stannis Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -35984,7 +35984,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Stark Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -36041,7 +36041,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Targaryen Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -36098,7 +36098,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Tarly Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -36155,7 +36155,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Tully Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -36212,7 +36212,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Tyrell Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -45543,7 +45543,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Redwyne Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -45600,7 +45600,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Grafton Banner",
       "itemTextureIndex": 2,
       "stack": [
@@ -46073,7 +46073,7 @@
         }
       ],
       "creativeTab": "WesterosDecor",
-      "type": "no-break-under",
+      "type": "no-break-under,allowHalfBreak",
       "label": "Renly Banner",
       "itemTextureIndex": 2,
       "stack": [

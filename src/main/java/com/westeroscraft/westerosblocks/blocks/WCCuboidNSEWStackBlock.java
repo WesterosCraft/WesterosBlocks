@@ -43,10 +43,23 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH);
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
     
+    public final boolean allowHalfBreak;
     // Index = FACING + 4*TOP
 
     protected WCCuboidNSEWStackBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props, def, 8);
+        String t = def.getType();
+        boolean brk = false;
+        if (t != null) {
+            String[] toks = t.split(",");
+            for (String tok : toks) {
+                if (tok.equals("allowHalfBreak")) {
+                	brk = true;
+                }
+            }
+        }
+        this.allowHalfBreak = brk;
+        
         for (int i = 0; i < 2; i++) {
         	WesterosBlockStateRecord se = def.getStackElementByIndex(i);
             for (WesterosBlockDef.Cuboid c : se.cuboids) {
@@ -89,7 +102,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
        BlockPos blockpos = ctx.getClickedPos();
-       if (blockpos.getY() < 255 && ctx.getLevel().getBlockState(blockpos.above()).canBeReplaced(ctx)) {
+       if (blockpos.getY() < ctx.getLevel().getMaxBuildHeight() && ctx.getLevel().getBlockState(blockpos.above()).canBeReplaced(ctx)) {
            FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
            Direction[] adirection = ctx.getNearestLookingDirections();
            Direction dir = Direction.EAST;	// Default
@@ -111,6 +124,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
 
     @Override
     public BlockState updateShape(BlockState state, Direction dir, BlockState state2, LevelAccessor world, BlockPos pos, BlockPos pos2) {
+    	if (allowHalfBreak) { return super.updateShape(state, dir, state2, world, pos, pos2); }
         DoubleBlockHalf doubleblockhalf = state.getValue(HALF);
         if (dir.getAxis() != Direction.Axis.Y || doubleblockhalf == DoubleBlockHalf.LOWER != (dir == Direction.UP) || state2.is(this) && state2.getValue(HALF) != doubleblockhalf) {
            return doubleblockhalf == DoubleBlockHalf.LOWER && dir == Direction.DOWN && !state.canSurvive(world, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, dir, state2, world, pos, pos2);
@@ -133,7 +147,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     @SuppressWarnings("deprecation")
 	@Override
     public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
-        if (state.getValue(HALF) != DoubleBlockHalf.UPPER) {
+        if (this.allowHalfBreak || (state.getValue(HALF) != DoubleBlockHalf.UPPER)) {
            return super.canSurvive(state, reader, pos);
         }
         else {
