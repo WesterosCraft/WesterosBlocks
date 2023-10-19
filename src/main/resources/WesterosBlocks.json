@@ -791,7 +791,8 @@
         "minecraft:pufferfish_bucket",
         "minecraft:cod_bucket",
         "minecraft:salmon_bucket",
-        "minecraft:tropical_fish_bucket"
+        "minecraft:tropical_fish_bucket",
+        "minecraft:splash_potion"
       ],
       "creativeTab": "WesterosDoNotUse"
     }
@@ -4927,13 +4928,13 @@
       "randomTextures": [
         {
           "textures": [
-            "transparent",
+            "pewter_plate/side1",
             "pewter_plate/side1"
           ]
         },
         {
           "textures": [
-            "transparent",
+            "pewter_plate/side2",
             "pewter_plate/side2"
           ]
         }
@@ -4968,13 +4969,13 @@
       "randomTextures": [
         {
           "textures": [
-            "transparent",
+            "wooden_plate/side1",
             "wooden_plate/side1"
           ]
         },
         {
           "textures": [
-            "transparent",
+            "wooden_plate/side2",
             "wooden_plate/side2"
           ]
         }
