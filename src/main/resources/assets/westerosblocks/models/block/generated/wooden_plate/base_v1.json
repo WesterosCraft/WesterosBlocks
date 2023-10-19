@@ -22,8 +22,9 @@
     "txt5": "westerosblocks:block/wooden_plate/side1",
     "txt2": "westerosblocks:block/wooden_plate/side1",
     "txt3": "westerosblocks:block/wooden_plate/side1",
+    "txt0": "westerosblocks:block/wooden_plate/side1",
     "txt1": "westerosblocks:block/wooden_plate/side1",
-    "particle": "westerosblocks:block/transparent"
+    "particle": "westerosblocks:block/wooden_plate/side1"
   },
   "elements": [
     {
@@ -86,6 +87,15 @@
             16.0
           ],
           "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0"
         }
       }
     }
