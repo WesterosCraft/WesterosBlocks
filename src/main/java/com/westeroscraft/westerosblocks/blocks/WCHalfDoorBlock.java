@@ -138,13 +138,9 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
      @Override
      public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         BlockPos blockpos = ctx.getClickedPos();
-        if (blockpos.getY() < 255 && ctx.getLevel().getBlockState(blockpos.above()).canBeReplaced(ctx)) {
-           Level level = ctx.getLevel();
-           boolean flag = level.hasNeighborSignal(blockpos) || level.hasNeighborSignal(blockpos.above());
-           return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection()).setValue(HINGE, this.getHinge(ctx)).setValue(POWERED, Boolean.valueOf(flag)).setValue(OPEN, Boolean.valueOf(flag));
-        } else {
-           return null;
-        }
+       Level level = ctx.getLevel();
+       boolean flag = level.hasNeighborSignal(blockpos);
+       return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection()).setValue(HINGE, this.getHinge(ctx)).setValue(POWERED, Boolean.valueOf(flag)).setValue(OPEN, Boolean.valueOf(flag));
      }
 
      private DoorHingeSide getHinge(BlockPlaceContext ctx) {
