@@ -89,12 +89,11 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     	for (int i = 0; i < cnt; i++) {
             SUPPORT_BY_INDEX[i] = def.states.get(i).makeSupportBoxShape(null);
     	}
+    	BlockState defbs = this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false));
         if (STATE != null) {
-            this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
+        	defbs = defbs.setValue(STATE, STATE.defValue);
         }
-        else {
-            this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));        	
-        }
+        this.registerDefaultState(defbs);        	
     }
     @Override
     public WesterosBlockDef getWBDefinition() {

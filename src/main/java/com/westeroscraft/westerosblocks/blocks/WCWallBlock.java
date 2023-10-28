@@ -103,17 +103,14 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 			wheight = 16;
 		}
 		unconnect = doUnconnect;
+		BlockState defbs = this.stateDefinition.any().setValue(UP, Boolean.valueOf(true)).setValue(NORTH_WALL, WallSide.NONE)
+				.setValue(EAST_WALL, WallSide.NONE).setValue(SOUTH_WALL, WallSide.NONE)
+				.setValue(WEST_WALL, WallSide.NONE).setValue(WATERLOGGED, Boolean.valueOf(false));
 		if (unconnect) {
-			this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(true))
-					.setValue(NORTH_WALL, WallSide.NONE).setValue(EAST_WALL, WallSide.NONE)
-					.setValue(SOUTH_WALL, WallSide.NONE).setValue(WEST_WALL, WallSide.NONE)
-					.setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(UNCONNECT, Boolean.valueOf(false)));
-		} else {
-			this.registerDefaultState(
-					this.stateDefinition.any().setValue(UP, Boolean.valueOf(true)).setValue(NORTH_WALL, WallSide.NONE)
-							.setValue(EAST_WALL, WallSide.NONE).setValue(SOUTH_WALL, WallSide.NONE)
-							.setValue(WEST_WALL, WallSide.NONE).setValue(WATERLOGGED, Boolean.valueOf(false)));
+			defbs = defbs.setValue(UNCONNECT, Boolean.valueOf(false));
 		}
+		this.registerDefaultState(defbs);
+		
 		if (ourCollisionShapeByIndexShared == null) {
 			ourCollisionShapeByIndexShared = makeShapes(4.0F, 3.0F, 24.0F, 0.0F, 24.0F, 24.0F);
 		}

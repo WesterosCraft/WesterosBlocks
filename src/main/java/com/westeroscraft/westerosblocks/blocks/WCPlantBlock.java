@@ -78,22 +78,14 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle, IPlan
                 }
             }
         }
+        BlockState defbs = this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false));
         if (STATE != null) {
-        	if (LAYERS != null) {        		
-        		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue).setValue(LAYERS, 8));
-        	}
-        	else {
-        		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
-        	}
+        	defbs = defbs.setValue(STATE, STATE.defValue);
         }
-        else {
-        	if (LAYERS != null) {        		
-        		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(LAYERS, 8));
-        	}
-        	else {
-        		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));        		
-        	}
-        }
+    	if (LAYERS != null) {        		
+    		defbs = defbs.setValue(LAYERS, 8);
+    	}
+		this.registerDefaultState(defbs);
     }
     @Override
     public WesterosBlockDef getWBDefinition() {

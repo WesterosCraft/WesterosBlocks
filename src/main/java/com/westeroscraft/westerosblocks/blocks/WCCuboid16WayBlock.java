@@ -60,12 +60,11 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
         		SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
         	}
         }
+        BlockState defbs = this.stateDefinition.any().setValue(ROTATION, 0).setValue(WATERLOGGED, Boolean.valueOf(false));
         if (STATE != null) {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(ROTATION, 0).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
+        	defbs = defbs.setValue(STATE, STATE.defValue);
         }
-        else {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(ROTATION, 0).setValue(WATERLOGGED, Boolean.valueOf(false)));        	
-        }
+    	this.registerDefaultState(defbs);        	
     }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {

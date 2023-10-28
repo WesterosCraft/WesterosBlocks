@@ -57,12 +57,11 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 				SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
 			}
 		}
+		BlockState defbs = this.stateDefinition.any().setValue(FACING, Direction.EAST).setValue(WATERLOGGED, Boolean.valueOf(false));
 		if (STATE != null) {
-			this.registerDefaultState(
-					this.stateDefinition.any().setValue(FACING, Direction.EAST).setValue(STATE, STATE.defValue));
-		} else {
-			this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.EAST));
+			defbs = defbs.setValue(STATE, STATE.defValue);
 		}
+		this.registerDefaultState(defbs);
 	}
 
 	@Override
