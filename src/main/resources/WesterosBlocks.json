@@ -23296,7 +23296,7 @@
         "savanna_tall_grass/savanna_tall_grass"
       ],
       "colorMult": "textures/colormap/grass",
-      "type": "no-in-web",
+      "type": "no-in-web,layerSensitive",
       "legacyBlockID": "web_block_1:0"
     },
     {
@@ -23310,7 +23310,7 @@
         "jungle_tall_fern/side"
       ],
       "colorMult": "textures/colormap/grass",
-      "type": "no-in-web",
+      "type": "no-in-web,layerSensitive",
       "legacyBlockID": "web_block_1:1"
     },
     {
@@ -23324,7 +23324,7 @@
         "jungle_tall_grass/down_side1"
       ],
       "colorMult": "textures/colormap/grass",
-      "type": "no-in-web",
+      "type": "no-in-web,layerSensitive",
       "legacyBlockID": "web_block_1:2"
     },
     {
@@ -23377,7 +23377,7 @@
         }
       ],
       "colorMult": "textures/colormap/reed",
-      "type": "no-in-web",
+      "type": "no-in-web,layerSensitive",
       "legacyBlockID": "web_block_1:3"
     },
     {

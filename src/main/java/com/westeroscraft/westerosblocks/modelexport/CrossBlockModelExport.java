@@ -11,7 +11,6 @@ import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class CrossBlockModelExport extends ModelExport {
     // Template objects for Gson export of block models

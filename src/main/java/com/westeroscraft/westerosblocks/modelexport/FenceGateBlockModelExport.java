@@ -77,7 +77,7 @@ public class FenceGateBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         boolean isTinted = def.isTinted();
-        boolean isOverlay = def.getOverlayTextureByIndex(0) != null;
+        //boolean isOverlay = def.getOverlayTextureByIndex(0) != null;
     	WesterosBlockDef.RandomTextureSet set;
 
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {

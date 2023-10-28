@@ -8,9 +8,11 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.core.BlockPos;
-
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.pathfinder.PathComputationType;
@@ -18,6 +20,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.tags.FluidTags;
@@ -38,15 +42,22 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
         	if (state != null) {
         		tempSTATE = state;
         	}        	
+            String t = def.getType();
+            if ((t != null) && (t.indexOf(WesterosBlockDef.LAYER_SENSITIVE) >= 0)) {
+            	tempLAYERS = BlockStateProperties.LAYERS;
+            }
         	BlockBehaviour.Properties props = def.makeProperties().noCollission();
         	return def.registerRenderType(def.registerBlock(new WCWebBlock(props, def)), false, false);
         }
     }
     private WesterosBlockDef def;
     protected static WesterosBlockDef.StateProperty tempSTATE;
+    protected static IntegerProperty tempLAYERS;
     protected WesterosBlockDef.StateProperty STATE;
+    protected IntegerProperty LAYERS;
     protected boolean toggleOnUse = false;
     private boolean noInWeb = false;
+    public boolean layerSensitive = false;
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
  
@@ -65,12 +76,14 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
                 }
             }
         }
+        BlockState bsdef = this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false));
+    	if (LAYERS != null) {        		
+    		bsdef = bsdef.setValue(LAYERS, 8);
+    	}
         if (STATE != null) {
-            this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(STATE, STATE.defValue));
+        	bsdef = bsdef.setValue(STATE, STATE.defValue);
         }
-        else {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));
-        }
+    	this.registerDefaultState(bsdef);
     }
 
     @Override
@@ -85,15 +98,22 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> statedef) {
     	if (tempSTATE != null) {
     		STATE = tempSTATE;
     		tempSTATE = null;
     	}
-    	if (STATE != null) {
-	       StateDefinition.add(STATE);
+    	if (tempLAYERS != null) {
+    		LAYERS = tempLAYERS;
+    		tempLAYERS = null;
     	}
-       StateDefinition.add(WATERLOGGED);
+    	if (STATE != null) {
+    		statedef.add(STATE);
+    	}
+    	if (LAYERS != null) {
+    		statedef.add(LAYERS);
+    	}
+    	statedef.add(WATERLOGGED);
     }
 
     @Override
@@ -106,6 +126,22 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
         if (STATE != null) {
      	   bs = bs.setValue(STATE, STATE.defValue); 
         }
+        if (LAYERS != null) {
+        	BlockState below = ctx.getLevel().getBlockState(ctx.getClickedPos().relative(Direction.DOWN));
+        	if ((below != null) && (below.hasProperty(BlockStateProperties.LAYERS))) {
+        		Block blk = below.getBlock();
+        		Integer layer = below.getValue(BlockStateProperties.LAYERS);
+        		// See if soft layer
+        		if ((blk instanceof SnowLayerBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock)blk).softLayer)) {
+        			layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
+        		}
+        		bs = bs.setValue(LAYERS, layer);
+        	}
+        	else if ((below != null) && (below.getBlock() instanceof SlabBlock)) {
+        		SlabType slabtype = below.getValue(BlockStateProperties.SLAB_TYPE);
+        		if (slabtype == SlabType.BOTTOM) bs = bs.setValue(LAYERS, 4);
+        	}
+        }        
     	return bs;    	
     }
     
