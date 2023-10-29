@@ -22,8 +22,9 @@
     "txt5": "westerosblocks:block/cuboid_block_0/sword_broken",
     "txt2": "westerosblocks:block/cuboid_block_0/sword_broken",
     "txt3": "westerosblocks:block/cuboid_block_0/sword_broken",
+    "txt0": "westerosblocks:block/cuboid_block_0/sword_broken",
     "txt1": "westerosblocks:block/cuboid_block_0/sword_broken",
-    "particle": "westerosblocks:block/transparent"
+    "particle": "westerosblocks:block/cuboid_block_0/sword_broken"
   },
   "elements": [
     {
@@ -86,6 +87,15 @@
             16.0
           ],
           "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0"
         }
       }
     }

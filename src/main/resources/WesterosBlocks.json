@@ -4825,7 +4825,7 @@
       "creativeTab": "WesterosDecor",
       "label": "Broken Sword",
       "textures": [
-        "transparent",
+        "cuboid_block_0/sword_broken",
         "cuboid_block_0/sword_broken"
       ],
       "boundingBox": {
@@ -4857,19 +4857,19 @@
       "randomTextures": [
         {
           "textures": [
-            "transparent",
+            "bones/side1",
             "bones/side1"
           ]
         },
         {
           "textures": [
-            "transparent",
+            "bones/side2",
             "bones/side2"
           ]
         },
         {
           "textures": [
-            "transparent",
+            "bones/side3",
             "bones/side3"
           ]
         }
