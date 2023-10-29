@@ -4795,7 +4795,7 @@
       "creativeTab": "WesterosDecor",
       "label": "Frying Pan",
       "textures": [
-        "transparent",
+        "cuboid_block_0/pan_frying",
         "cuboid_block_0/pan_frying"
       ],
       "boundingBox": {
