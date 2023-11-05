@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "up": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "north": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "south": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "west": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "east": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "particle": "westerosblocks:block/stone_block_3/stone_cobble_oldtown"
+    "down": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "up": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "north": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "south": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "west": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "east": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "particle": "westerosblocks:block/stone_block/stone_cobble_oldtown"
   }
 }

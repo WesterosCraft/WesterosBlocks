@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/bench_block_0/spruce_top",
-    "up": "westerosblocks:block/bench_block_0/crafting_table_top",
-    "north": "westerosblocks:block/bench_block_0/bench_drawers",
-    "south": "westerosblocks:block/bench_block_0/bench_drawers",
-    "west": "westerosblocks:block/bench_block_0/bench_drawers",
-    "east": "westerosblocks:block/bench_block_0/bench_drawers",
-    "particle": "westerosblocks:block/bench_block_0/bench_drawers"
+    "down": "westerosblocks:block/bench_block/spruce_top",
+    "up": "westerosblocks:block/bench_block/crafting_table_top",
+    "north": "westerosblocks:block/bench_block/bench_drawers",
+    "south": "westerosblocks:block/bench_block/bench_drawers",
+    "west": "westerosblocks:block/bench_block/bench_drawers",
+    "east": "westerosblocks:block/bench_block/bench_drawers",
+    "particle": "westerosblocks:block/bench_block/bench_drawers"
   }
 }

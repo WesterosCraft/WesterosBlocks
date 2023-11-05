@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/fur_block_0/thatch_dark",
-    "up": "westerosblocks:block/fur_block_0/thatch_dark",
-    "north": "westerosblocks:block/fur_block_0/thatch_dark",
-    "south": "westerosblocks:block/fur_block_0/thatch_dark",
-    "west": "westerosblocks:block/fur_block_0/thatch_dark",
-    "east": "westerosblocks:block/fur_block_0/thatch_dark",
-    "particle": "westerosblocks:block/fur_block_0/thatch_dark"
+    "down": "westerosblocks:block/thatch_dark/thatch_dark",
+    "up": "westerosblocks:block/thatch_dark/thatch_dark",
+    "north": "westerosblocks:block/thatch_dark/thatch_dark",
+    "south": "westerosblocks:block/thatch_dark/thatch_dark",
+    "west": "westerosblocks:block/thatch_dark/thatch_dark",
+    "east": "westerosblocks:block/thatch_dark/thatch_dark",
+    "particle": "westerosblocks:block/thatch_dark/thatch_dark"
   }
 }

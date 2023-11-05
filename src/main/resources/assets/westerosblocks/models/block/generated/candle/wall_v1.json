@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_torch_wall",
   "textures": {
-    "torch": "westerosblocks:block/torch_block_0/candle_on"
+    "torch": "westerosblocks:block/torch_block/candle_on"
   }
 }

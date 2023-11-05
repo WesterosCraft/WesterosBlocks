@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/wood_block_1/wood_red",
-    "txt5": "westerosblocks:block/wood_block_1/wood_red",
-    "txt2": "westerosblocks:block/wood_block_1/wood_red",
-    "txt3": "westerosblocks:block/wood_block_1/wood_red",
-    "txt0": "westerosblocks:block/wood_block_1/wood_red",
-    "txt1": "westerosblocks:block/wood_block_1/wood_red",
-    "particle": "westerosblocks:block/wood_block_1/wood_red"
+    "txt4": "westerosblocks:block/wood_block/wood_red",
+    "txt5": "westerosblocks:block/wood_block/wood_red",
+    "txt2": "westerosblocks:block/wood_block/wood_red",
+    "txt3": "westerosblocks:block/wood_block/wood_red",
+    "txt0": "westerosblocks:block/wood_block/wood_red",
+    "txt1": "westerosblocks:block/wood_block/wood_red",
+    "particle": "westerosblocks:block/wood_block/wood_red"
   },
   "elements": [
     {

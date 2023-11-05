@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/door_bottom",
   "textures": {
-    "bottom": "westerosblocks:block/door_block_0/door_weirwood_bottom",
-    "top": "westerosblocks:block/door_block_0/door_weirwood_top"
+    "bottom": "westerosblocks:block/door_block/door_weirwood_bottom",
+    "top": "westerosblocks:block/door_block/door_weirwood_top"
   }
 }

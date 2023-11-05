@@ -3,7 +3,7 @@
   "textures": {
     "dirt": "minecraft:block/dirt",
     "flowerpot": "minecraft:block/flower_pot",
-    "plant": "westerosblocks:block/brown_mushroom_block_0/mushroom_brown_12",
+    "plant": "westerosblocks:block/brown_mushroom_block/mushroom_brown_12",
     "particle": "minecraft:block/flower_pot"
   }
 }

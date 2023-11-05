@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_top",
-    "up": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_top",
-    "north": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_mossy",
-    "south": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_mossy",
-    "west": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_mossy",
-    "east": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_mossy",
-    "particle": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_mossy"
+    "down": "westerosblocks:block/sandstone_block/sandstone_terracotta_light_top",
+    "up": "westerosblocks:block/sandstone_block/sandstone_terracotta_light_top",
+    "north": "westerosblocks:block/sandstone_block/sandstone_terracotta_light_mossy",
+    "south": "westerosblocks:block/sandstone_block/sandstone_terracotta_light_mossy",
+    "west": "westerosblocks:block/sandstone_block/sandstone_terracotta_light_mossy",
+    "east": "westerosblocks:block/sandstone_block/sandstone_terracotta_light_mossy",
+    "particle": "westerosblocks:block/sandstone_block/sandstone_terracotta_light_mossy"
   }
 }

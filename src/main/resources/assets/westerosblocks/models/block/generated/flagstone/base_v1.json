@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/flagstone"
+    "all": "westerosblocks:block/stone_block/flagstone"
   }
 }

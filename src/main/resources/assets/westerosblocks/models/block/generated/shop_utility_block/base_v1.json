@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/utility_block_0/shop"
+    "all": "westerosblocks:block/utility_block/shop"
   }
 }

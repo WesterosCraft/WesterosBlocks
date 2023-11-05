@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/web_block_1/food_sourleaf"
+    "layer0": "westerosblocks:block/web_block/food_sourleaf"
   }
 }

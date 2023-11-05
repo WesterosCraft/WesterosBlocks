@@ -3,6 +3,6 @@
   "textures": {
     "bottom": "westerosblocks:block/sandstone_light_wall/top",
     "top": "westerosblocks:block/sandstone_light_wall/top",
-    "side": "westerosblocks:block/stone_block_0/sandstone_normal"
+    "side": "westerosblocks:block/sandstone_block/sandstone_normal"
   }
 }

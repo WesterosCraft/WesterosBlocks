@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_0/sandstone_monochrome_top",
-    "up": "westerosblocks:block/stone_block_0/sandstone_monochrome_top",
+    "down": "westerosblocks:block/sandstone_block/sandstone_monochrome_top",
+    "up": "westerosblocks:block/sandstone_block/sandstone_monochrome_top",
     "north": "westerosblocks:block/monochrome_mossy_sandstone/side2",
     "south": "westerosblocks:block/monochrome_mossy_sandstone/side2",
     "west": "westerosblocks:block/monochrome_mossy_sandstone/side2",

@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cuboid_block_1/wheel",
-    "txt5": "westerosblocks:block/cuboid_block_1/wheel",
+    "txt4": "westerosblocks:block/cuboid_block/wheel",
+    "txt5": "westerosblocks:block/cuboid_block/wheel",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

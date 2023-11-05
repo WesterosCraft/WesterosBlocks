@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "top": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "side": "westerosblocks:block/stone_block_3/stone_cobble_oldtown",
-    "particle": "westerosblocks:block/stone_block_3/stone_cobble_oldtown"
+    "bottom": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "top": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "side": "westerosblocks:block/stone_block/stone_cobble_oldtown",
+    "particle": "westerosblocks:block/stone_block/stone_cobble_oldtown"
   }
 }

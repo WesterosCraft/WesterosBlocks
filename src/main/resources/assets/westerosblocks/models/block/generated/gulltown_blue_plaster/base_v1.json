@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_2/plaster_gulltown_blue"
+    "all": "westerosblocks:block/plaster/gulltown_blue_plaster"
   }
 }

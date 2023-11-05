@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block_1/banner_lannister_top",
-    "txt5": "westerosblocks:block/banner_block_1/banner_lannister_top",
+    "txt4": "westerosblocks:block/banner_block/banner_lannister_top",
+    "txt5": "westerosblocks:block/banner_block/banner_lannister_top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

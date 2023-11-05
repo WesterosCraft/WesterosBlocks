@@ -20,9 +20,9 @@
   "textures": {
     "txt2": "westerosblocks:block/profession_sign_base/wine_merchant",
     "txt3": "westerosblocks:block/profession_sign_base/sign_cut3",
-    "txt0": "westerosblocks:block/sign_block_0/sign_bottom",
-    "txt1": "westerosblocks:block/sign_block_0/sign_top",
-    "particle": "westerosblocks:block/sign_block_0/sign_bottom"
+    "txt0": "westerosblocks:block/sign_block/sign_bottom",
+    "txt1": "westerosblocks:block/sign_block/sign_top",
+    "particle": "westerosblocks:block/sign_block/sign_bottom"
   },
   "elements": [
     {

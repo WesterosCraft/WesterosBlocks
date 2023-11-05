@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt2": "westerosblocks:block/cuboid_block_0/dagger_left",
-    "txt3": "westerosblocks:block/cuboid_block_0/dagger_right",
+    "txt2": "westerosblocks:block/cuboid_block/dagger_left",
+    "txt3": "westerosblocks:block/cuboid_block/dagger_right",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

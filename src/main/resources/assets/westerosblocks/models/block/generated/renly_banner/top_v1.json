@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block_1/banner_renly_top",
-    "txt5": "westerosblocks:block/banner_block_1/banner_renly_top",
+    "txt4": "westerosblocks:block/banner_block/banner_renly_top",
+    "txt5": "westerosblocks:block/banner_block/banner_renly_top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

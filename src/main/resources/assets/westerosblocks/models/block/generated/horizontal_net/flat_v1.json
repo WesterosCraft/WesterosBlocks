@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/rail_flat",
   "textures": {
-    "rail": "westerosblocks:block/rail_block_0/net_large"
+    "rail": "westerosblocks:block/rail_block/net_large"
   }
 }

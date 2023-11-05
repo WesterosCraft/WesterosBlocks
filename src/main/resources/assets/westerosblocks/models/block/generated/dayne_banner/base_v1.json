@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block_1/banner_dayne_bottom",
-    "txt5": "westerosblocks:block/banner_block_1/banner_dayne_bottom",
+    "txt4": "westerosblocks:block/banner_block/banner_dayne_bottom",
+    "txt5": "westerosblocks:block/banner_block/banner_dayne_bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

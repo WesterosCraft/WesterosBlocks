@@ -1,7 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/bars_side",
   "textures": {
-    "cap": "westerosblocks:block/bars_iron_block_0/bars_iron_oxidized_crossbars_top",
-    "side": "westerosblocks:block/bars_iron_block_0/bars_iron_oxidized_crossbars"
+    "cap": "westerosblocks:block/bars_iron_block/bars_iron_oxidized_crossbars_top",
+    "side": "westerosblocks:block/bars_iron_block/bars_iron_oxidized_crossbars"
   }
 }

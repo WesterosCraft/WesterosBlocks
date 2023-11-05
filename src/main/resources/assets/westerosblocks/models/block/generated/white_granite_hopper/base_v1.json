@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_2/brick_white_granite",
-    "txt5": "westerosblocks:block/stone_block_2/brick_white_granite",
-    "txt2": "westerosblocks:block/stone_block_2/brick_white_granite",
-    "txt3": "westerosblocks:block/stone_block_2/brick_white_granite",
-    "txt0": "westerosblocks:block/stone_block_2/brick_white_granite",
-    "txt1": "westerosblocks:block/stone_block_2/brick_white_granite",
-    "particle": "westerosblocks:block/stone_block_2/brick_white_granite"
+    "txt4": "westerosblocks:block/stone_block/brick_white_granite",
+    "txt5": "westerosblocks:block/stone_block/brick_white_granite",
+    "txt2": "westerosblocks:block/stone_block/brick_white_granite",
+    "txt3": "westerosblocks:block/stone_block/brick_white_granite",
+    "txt0": "westerosblocks:block/stone_block/brick_white_granite",
+    "txt1": "westerosblocks:block/stone_block/brick_white_granite",
+    "particle": "westerosblocks:block/stone_block/brick_white_granite"
   },
   "elements": [
     {

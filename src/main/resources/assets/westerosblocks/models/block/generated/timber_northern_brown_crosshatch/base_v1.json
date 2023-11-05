@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/daub_wattle_brown_northern/cross_side",
+    "down": "westerosblocks:block/daub_wattle_brown_northern/cross_side_noctm",
     "up": "westerosblocks:block/daub_wattle_brown_northern/top",
     "north": "westerosblocks:block/daub_wattle_brown_northern/cross_side",
     "south": "westerosblocks:block/daub_wattle_brown_northern/cross_side",

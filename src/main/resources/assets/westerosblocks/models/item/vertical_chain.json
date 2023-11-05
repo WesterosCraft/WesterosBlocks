@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/web_block_0/chain_vertical"
+    "layer0": "westerosblocks:block/web_block/chain_vertical"
   }
 }

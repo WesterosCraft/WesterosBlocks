@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt2": "westerosblocks:block/cuboid_block_0/cleaver_left",
-    "txt3": "westerosblocks:block/cuboid_block_0/cleaver_right",
+    "txt2": "westerosblocks:block/cuboid_block/cleaver_left",
+    "txt3": "westerosblocks:block/cuboid_block/cleaver_right",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [
