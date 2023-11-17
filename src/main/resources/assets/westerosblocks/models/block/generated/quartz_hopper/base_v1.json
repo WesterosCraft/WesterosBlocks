@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_1/quartz_block",
-    "txt5": "westerosblocks:block/stone_block_1/quartz_block",
-    "txt2": "westerosblocks:block/stone_block_1/quartz_block",
-    "txt3": "westerosblocks:block/stone_block_1/quartz_block",
-    "txt0": "westerosblocks:block/stone_block_1/quartz_block",
-    "txt1": "westerosblocks:block/stone_block_1/quartz_block",
-    "particle": "westerosblocks:block/stone_block_1/quartz_block"
+    "txt4": "westerosblocks:block/stone_block/quartz_block",
+    "txt5": "westerosblocks:block/stone_block/quartz_block",
+    "txt2": "westerosblocks:block/stone_block/quartz_block",
+    "txt3": "westerosblocks:block/stone_block/quartz_block",
+    "txt0": "westerosblocks:block/stone_block/quartz_block",
+    "txt1": "westerosblocks:block/stone_block/quartz_block",
+    "particle": "westerosblocks:block/stone_block/quartz_block"
   },
   "elements": [
     {

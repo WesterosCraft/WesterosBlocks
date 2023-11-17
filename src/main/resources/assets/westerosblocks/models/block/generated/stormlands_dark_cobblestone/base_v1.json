@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_2/stone_cobble_stormlands_dark"
+    "all": "westerosblocks:block/stone_block/stone_cobble_stormlands_dark"
   }
 }

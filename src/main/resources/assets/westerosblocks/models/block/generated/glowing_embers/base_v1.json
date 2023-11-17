@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/light_emitting_blocks_0/coals_glowing"
+    "all": "westerosblocks:block/light_emitting_blocks/coals_glowing"
   }
 }

@@ -2,6 +2,6 @@
   "parent": "westerosblocks:block/untinted/bars_side",
   "textures": {
     "cap": "westerosblocks:block/transparent",
-    "side": "westerosblocks:block/bars_iron_block_0/iron_bars"
+    "side": "westerosblocks:block/bars_iron_block/iron_bars"
   }
 }

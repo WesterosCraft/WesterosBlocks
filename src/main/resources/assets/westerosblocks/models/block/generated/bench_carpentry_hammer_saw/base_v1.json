@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/bench_block_0/spruce_top",
-    "up": "westerosblocks:block/bench_block_0/crafting_table_top",
-    "north": "westerosblocks:block/bench_block_0/bench_carpentry_hammer_saw",
-    "south": "westerosblocks:block/bench_block_0/bench_carpentry_hammer_saw",
-    "west": "westerosblocks:block/bench_block_0/bench_carpentry_hammer_saw",
-    "east": "westerosblocks:block/bench_block_0/bench_carpentry_hammer_saw",
-    "particle": "westerosblocks:block/bench_block_0/bench_carpentry_hammer_saw"
+    "down": "westerosblocks:block/bench_block/spruce_top",
+    "up": "westerosblocks:block/bench_block/crafting_table_top",
+    "north": "westerosblocks:block/bench_block/bench_carpentry_hammer_saw",
+    "south": "westerosblocks:block/bench_block/bench_carpentry_hammer_saw",
+    "west": "westerosblocks:block/bench_block/bench_carpentry_hammer_saw",
+    "east": "westerosblocks:block/bench_block/bench_carpentry_hammer_saw",
+    "particle": "westerosblocks:block/bench_block/bench_carpentry_hammer_saw"
   }
 }

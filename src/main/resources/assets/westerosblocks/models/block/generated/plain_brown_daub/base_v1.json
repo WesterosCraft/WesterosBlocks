@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/daub_wattle_block_0/daub_plain_brown"
+    "all": "westerosblocks:block/plaster/daub_plain_brown"
   }
 }

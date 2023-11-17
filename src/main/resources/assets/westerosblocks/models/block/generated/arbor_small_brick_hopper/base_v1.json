@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_3/brick_arbor_small",
-    "txt5": "westerosblocks:block/stone_block_3/brick_arbor_small",
-    "txt2": "westerosblocks:block/stone_block_3/brick_arbor_small",
-    "txt3": "westerosblocks:block/stone_block_3/brick_arbor_small",
-    "txt0": "westerosblocks:block/stone_block_3/brick_arbor_small",
-    "txt1": "westerosblocks:block/stone_block_3/brick_arbor_small",
-    "particle": "westerosblocks:block/stone_block_3/brick_arbor_small"
+    "txt4": "westerosblocks:block/stone_block/brick_arbor_small",
+    "txt5": "westerosblocks:block/stone_block/brick_arbor_small",
+    "txt2": "westerosblocks:block/stone_block/brick_arbor_small",
+    "txt3": "westerosblocks:block/stone_block/brick_arbor_small",
+    "txt0": "westerosblocks:block/stone_block/brick_arbor_small",
+    "txt1": "westerosblocks:block/stone_block/brick_arbor_small",
+    "particle": "westerosblocks:block/stone_block/brick_arbor_small"
   },
   "elements": [
     {

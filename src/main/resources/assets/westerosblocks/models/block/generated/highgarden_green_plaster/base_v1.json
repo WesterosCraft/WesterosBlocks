@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_2/plaster_highgarden_green"
+    "all": "westerosblocks:block/plaster/highgarden_green_plaster"
   }
 }

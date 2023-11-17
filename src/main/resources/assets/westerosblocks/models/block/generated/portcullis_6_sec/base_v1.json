@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/sound_trig"
+    "all": "westerosblocks:block/sound_block/sound_trig"
   }
 }

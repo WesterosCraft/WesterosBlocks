@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_1/brick_stone_small_mossy",
-    "up": "westerosblocks:block/stone_block_1/brick_stone_small_mossy",
-    "north": "westerosblocks:block/stone_block_1/brick_stone_small_mossy",
-    "south": "westerosblocks:block/stone_block_1/brick_stone_small_mossy",
-    "west": "westerosblocks:block/stone_block_1/brick_stone_small_mossy",
-    "east": "westerosblocks:block/stone_block_1/brick_stone_small_mossy",
-    "particle": "westerosblocks:block/stone_block_1/brick_stone_small_mossy"
+    "down": "westerosblocks:block/stone_block/brick_stone_small_mossy",
+    "up": "westerosblocks:block/stone_block/brick_stone_small_mossy",
+    "north": "westerosblocks:block/stone_block/brick_stone_small_mossy",
+    "south": "westerosblocks:block/stone_block/brick_stone_small_mossy",
+    "west": "westerosblocks:block/stone_block/brick_stone_small_mossy",
+    "east": "westerosblocks:block/stone_block/brick_stone_small_mossy",
+    "particle": "westerosblocks:block/stone_block/brick_stone_small_mossy"
   }
 }

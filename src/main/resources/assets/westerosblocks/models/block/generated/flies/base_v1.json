@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block_0/bug_flies"
+    "cross": "westerosblocks:block/web_block/bug_flies"
   }
 }

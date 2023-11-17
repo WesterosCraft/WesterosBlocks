@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block_0/chain_vertical"
+    "cross": "westerosblocks:block/web_block/chain_vertical"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_0/sandstone_brown_dark",
-    "top": "westerosblocks:block/stone_block_0/sandstone_brown_dark",
-    "side": "westerosblocks:block/stone_block_0/sandstone_brown_dark",
-    "particle": "westerosblocks:block/stone_block_0/sandstone_brown_dark"
+    "bottom": "westerosblocks:block/sandstone_block/sandstone_brown_dark",
+    "top": "westerosblocks:block/sandstone_block/sandstone_brown_dark",
+    "side": "westerosblocks:block/sandstone_block/sandstone_brown_dark",
+    "particle": "westerosblocks:block/sandstone_block/sandstone_brown_dark"
   }
 }

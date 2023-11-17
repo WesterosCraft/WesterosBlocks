@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy",
-    "txt5": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy",
-    "txt2": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy",
-    "txt3": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy",
-    "txt0": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy",
-    "txt1": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy",
-    "particle": "westerosblocks:block/stone_block_1/stone_cobble_northern_icy"
+    "txt4": "westerosblocks:block/stone_block/stone_cobble_northern_icy",
+    "txt5": "westerosblocks:block/stone_block/stone_cobble_northern_icy",
+    "txt2": "westerosblocks:block/stone_block/stone_cobble_northern_icy",
+    "txt3": "westerosblocks:block/stone_block/stone_cobble_northern_icy",
+    "txt0": "westerosblocks:block/stone_block/stone_cobble_northern_icy",
+    "txt1": "westerosblocks:block/stone_block/stone_cobble_northern_icy",
+    "particle": "westerosblocks:block/stone_block/stone_cobble_northern_icy"
   },
   "elements": [
     {

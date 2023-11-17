@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/rail_raised_sw",
   "textures": {
-    "rail": "westerosblocks:block/rail_block_0/cover_birch"
+    "rail": "westerosblocks:block/rail_block/cover_birch"
   }
 }

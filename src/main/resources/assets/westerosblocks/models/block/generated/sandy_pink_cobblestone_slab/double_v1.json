@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_4/stone_cobble_sandy_pink",
-    "up": "westerosblocks:block/stone_block_4/stone_cobble_sandy_pink",
-    "north": "westerosblocks:block/stone_block_4/stone_cobble_sandy_pink",
-    "south": "westerosblocks:block/stone_block_4/stone_cobble_sandy_pink",
-    "west": "westerosblocks:block/stone_block_4/stone_cobble_sandy_pink",
-    "east": "westerosblocks:block/stone_block_4/stone_cobble_sandy_pink",
-    "particle": "westerosblocks:block/stone_block_4/stone_cobble_sandy_pink"
+    "down": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
+    "up": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
+    "north": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
+    "south": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
+    "west": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
+    "east": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
+    "particle": "westerosblocks:block/stone_block/stone_cobble_sandy_pink"
   }
 }

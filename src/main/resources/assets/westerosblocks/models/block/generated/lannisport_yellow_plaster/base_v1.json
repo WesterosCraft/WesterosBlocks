@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_3/plaster_lannisport_yellow"
+    "all": "westerosblocks:block/plaster/lannisport_yellow_plaster"
   }
 }

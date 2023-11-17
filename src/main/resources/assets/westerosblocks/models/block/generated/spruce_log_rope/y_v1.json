@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/tree/top",
     "up": "westerosblocks:block/tree/top",
-    "north": "westerosblocks:block/log_block_0/bark_spruce_rope",
-    "south": "westerosblocks:block/log_block_0/bark_spruce_rope",
-    "east": "westerosblocks:block/log_block_0/bark_spruce_rope",
-    "west": "westerosblocks:block/log_block_0/bark_spruce_rope",
-    "particle": "westerosblocks:block/log_block_0/bark_spruce_rope"
+    "north": "westerosblocks:block/log_block/bark_spruce_rope",
+    "south": "westerosblocks:block/log_block/bark_spruce_rope",
+    "east": "westerosblocks:block/log_block/bark_spruce_rope",
+    "west": "westerosblocks:block/log_block/bark_spruce_rope",
+    "particle": "westerosblocks:block/log_block/bark_spruce_rope"
   }
 }

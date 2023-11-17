@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "up": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "north": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "south": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "west": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "east": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "particle": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light"
+    "down": "westerosblocks:block/stone_block/brick_pale_pink_faint_light",
+    "up": "westerosblocks:block/stone_block/brick_pale_pink_faint_light",
+    "north": "westerosblocks:block/stone_block/brick_pale_pink_faint_light",
+    "south": "westerosblocks:block/stone_block/brick_pale_pink_faint_light",
+    "west": "westerosblocks:block/stone_block/brick_pale_pink_faint_light",
+    "east": "westerosblocks:block/stone_block/brick_pale_pink_faint_light",
+    "particle": "westerosblocks:block/stone_block/brick_pale_pink_faint_light"
   }
 }

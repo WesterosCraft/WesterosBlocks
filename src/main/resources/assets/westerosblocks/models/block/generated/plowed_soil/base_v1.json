@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/plowed_soil"
+    "all": "westerosblocks:block/soil_block/plowed_soil"
   }
 }

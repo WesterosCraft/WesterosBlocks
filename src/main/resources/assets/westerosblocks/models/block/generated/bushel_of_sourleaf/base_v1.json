@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block_1/food_sourleaf"
+    "cross": "westerosblocks:block/web_block/food_sourleaf"
   }
 }

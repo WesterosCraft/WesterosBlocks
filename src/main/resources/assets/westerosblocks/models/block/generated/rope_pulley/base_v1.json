@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/log_block_1/pulley_rope_front",
-    "txt5": "westerosblocks:block/log_block_1/pulley_rope_front",
-    "txt2": "westerosblocks:block/log_block_1/pulley_rope_side",
-    "txt3": "westerosblocks:block/log_block_1/pulley_rope_side",
-    "txt0": "westerosblocks:block/log_block_1/pulley_rope_topbottom",
-    "txt1": "westerosblocks:block/log_block_1/pulley_rope_topbottom",
-    "particle": "westerosblocks:block/log_block_1/pulley_rope_topbottom"
+    "txt4": "westerosblocks:block/log_block/pulley_rope_front",
+    "txt5": "westerosblocks:block/log_block/pulley_rope_front",
+    "txt2": "westerosblocks:block/log_block/pulley_rope_side",
+    "txt3": "westerosblocks:block/log_block/pulley_rope_side",
+    "txt0": "westerosblocks:block/log_block/pulley_rope_topbottom",
+    "txt1": "westerosblocks:block/log_block/pulley_rope_topbottom",
+    "particle": "westerosblocks:block/log_block/pulley_rope_topbottom"
   },
   "elements": [
     {

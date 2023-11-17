@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/random_slab_block_0/seat_bottom",
-    "up": "westerosblocks:block/random_slab_block_0/seat_top",
-    "north": "westerosblocks:block/random_slab_block_0/seat_side",
-    "south": "westerosblocks:block/random_slab_block_0/seat_side",
-    "west": "westerosblocks:block/random_slab_block_0/seat_side",
-    "east": "westerosblocks:block/random_slab_block_0/seat_side",
-    "particle": "westerosblocks:block/random_slab_block_0/seat_side"
+    "down": "westerosblocks:block/random_slab_block/seat_bottom",
+    "up": "westerosblocks:block/random_slab_block/seat_top",
+    "north": "westerosblocks:block/random_slab_block/seat_side",
+    "south": "westerosblocks:block/random_slab_block/seat_side",
+    "west": "westerosblocks:block/random_slab_block/seat_side",
+    "east": "westerosblocks:block/random_slab_block/seat_side",
+    "particle": "westerosblocks:block/random_slab_block/seat_side"
   }
 }

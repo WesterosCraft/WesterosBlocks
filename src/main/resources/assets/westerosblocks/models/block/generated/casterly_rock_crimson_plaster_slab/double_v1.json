@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_3/plaster_casterly_crimson",
-    "up": "westerosblocks:block/stone_block_3/plaster_casterly_crimson",
-    "north": "westerosblocks:block/stone_block_3/plaster_casterly_crimson",
-    "south": "westerosblocks:block/stone_block_3/plaster_casterly_crimson",
-    "west": "westerosblocks:block/stone_block_3/plaster_casterly_crimson",
-    "east": "westerosblocks:block/stone_block_3/plaster_casterly_crimson",
-    "particle": "westerosblocks:block/stone_block_3/plaster_casterly_crimson"
+    "down": "westerosblocks:block/plaster/casterly_crimson_plaster",
+    "up": "westerosblocks:block/plaster/casterly_crimson_plaster",
+    "north": "westerosblocks:block/plaster/casterly_crimson_plaster",
+    "south": "westerosblocks:block/plaster/casterly_crimson_plaster",
+    "west": "westerosblocks:block/plaster/casterly_crimson_plaster",
+    "east": "westerosblocks:block/plaster/casterly_crimson_plaster",
+    "particle": "westerosblocks:block/plaster/casterly_crimson_plaster"
   }
 }

@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block_1/banner_hightower_top",
-    "txt5": "westerosblocks:block/banner_block_1/banner_hightower_top",
+    "txt4": "westerosblocks:block/banner_block/banner_hightower_top",
+    "txt5": "westerosblocks:block/banner_block/banner_hightower_top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

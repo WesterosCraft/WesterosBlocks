@@ -18,12 +18,12 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/torch_block_0/candle_off",
-    "txt5": "westerosblocks:block/torch_block_0/candle_off",
-    "txt2": "westerosblocks:block/torch_block_0/candle_off",
-    "txt3": "westerosblocks:block/torch_block_0/candle_off",
-    "txt0": "westerosblocks:block/torch_block_0/candle_off",
-    "particle": "westerosblocks:block/torch_block_0/candle_off"
+    "txt4": "westerosblocks:block/torch_block/candle_off",
+    "txt5": "westerosblocks:block/torch_block/candle_off",
+    "txt2": "westerosblocks:block/torch_block/candle_off",
+    "txt3": "westerosblocks:block/torch_block/candle_off",
+    "txt0": "westerosblocks:block/torch_block/candle_off",
+    "particle": "westerosblocks:block/torch_block/candle_off"
   },
   "elements": [
     {

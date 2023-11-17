@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_3/plaster_unused_brown_brick"
+    "all": "westerosblocks:block/stone_block/unused_brown_brick"
   }
 }

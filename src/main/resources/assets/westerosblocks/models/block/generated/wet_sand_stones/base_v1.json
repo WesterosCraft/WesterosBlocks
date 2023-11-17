@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/sand_block_0/sand_wet_stones"
+    "all": "westerosblocks:block/sand_block/sand_wet_stones"
   }
 }

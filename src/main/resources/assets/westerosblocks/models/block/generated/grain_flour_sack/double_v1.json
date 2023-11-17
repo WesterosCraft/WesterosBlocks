@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/miscellaneous_block_0/grain_sack",
-    "up": "westerosblocks:block/miscellaneous_block_0/grain_sack",
-    "north": "westerosblocks:block/miscellaneous_block_0/grain_sack_front",
-    "south": "westerosblocks:block/miscellaneous_block_0/grain_sack_front",
-    "west": "westerosblocks:block/miscellaneous_block_0/grain_sack_side",
-    "east": "westerosblocks:block/miscellaneous_block_0/grain_sack_side",
-    "particle": "westerosblocks:block/miscellaneous_block_0/grain_sack_front"
+    "down": "westerosblocks:block/miscellaneous_block/grain_sack",
+    "up": "westerosblocks:block/miscellaneous_block/grain_sack",
+    "north": "westerosblocks:block/miscellaneous_block/grain_sack_front",
+    "south": "westerosblocks:block/miscellaneous_block/grain_sack_front",
+    "west": "westerosblocks:block/miscellaneous_block/grain_sack_side",
+    "east": "westerosblocks:block/miscellaneous_block/grain_sack_side",
+    "particle": "westerosblocks:block/miscellaneous_block/grain_sack_front"
   }
 }

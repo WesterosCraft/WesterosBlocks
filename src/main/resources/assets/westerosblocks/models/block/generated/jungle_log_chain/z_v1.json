@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/tree/top",
     "up": "westerosblocks:block/tree/top",
-    "north": "westerosblocks:block/log_block_0/bark_jungle_chain",
-    "south": "westerosblocks:block/log_block_0/bark_jungle_chain",
-    "east": "westerosblocks:block/log_block_0/bark_jungle_chain",
-    "west": "westerosblocks:block/log_block_0/bark_jungle_chain",
-    "particle": "westerosblocks:block/log_block_0/bark_jungle_chain"
+    "north": "westerosblocks:block/log_block/bark_jungle_chain",
+    "south": "westerosblocks:block/log_block/bark_jungle_chain",
+    "east": "westerosblocks:block/log_block/bark_jungle_chain",
+    "west": "westerosblocks:block/log_block/bark_jungle_chain",
+    "particle": "westerosblocks:block/log_block/bark_jungle_chain"
   }
 }

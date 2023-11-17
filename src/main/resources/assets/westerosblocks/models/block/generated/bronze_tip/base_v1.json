@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "txt5": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "txt2": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "txt3": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "txt0": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "txt1": "westerosblocks:block/metal_block_0/metal_block_bronze",
-    "particle": "westerosblocks:block/metal_block_0/metal_block_bronze"
+    "txt4": "westerosblocks:block/bronze_block/side1",
+    "txt5": "westerosblocks:block/bronze_block/side1",
+    "txt2": "westerosblocks:block/bronze_block/side1",
+    "txt3": "westerosblocks:block/bronze_block/side1",
+    "txt0": "westerosblocks:block/bronze_block/side1",
+    "txt1": "westerosblocks:block/bronze_block/side1",
+    "particle": "westerosblocks:block/bronze_block/side1"
   },
   "elements": [
     {

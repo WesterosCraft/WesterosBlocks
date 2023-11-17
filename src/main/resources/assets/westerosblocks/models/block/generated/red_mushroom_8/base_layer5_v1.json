@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/cross_layer5",
   "textures": {
-    "cross": "westerosblocks:block/red_mushroom_block_0/mushroom_red_7"
+    "cross": "westerosblocks:block/red_mushroom_block/mushroom_red_7"
   }
 }
