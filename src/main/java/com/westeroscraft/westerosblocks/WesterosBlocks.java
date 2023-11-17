@@ -81,6 +81,12 @@ import net.minecraftforge.network.NetworkDirection;
 public class WesterosBlocks {
 	public static final String MOD_ID = "westerosblocks";
 
+	// Network setup
+	public static SimpleChannel simpleChannel;    // used to transmit your network messages
+    public static final String CHANNEL = "wbchannel";
+    public static final String MESSAGE_PROTOCOL_VERSION = "5.10";
+    public static final ResourceLocation simpleChannelRL = new ResourceLocation("westerosblocks", CHANNEL);
+
 	// Directly reference a log4j logger.
 	public static final Logger log = LogManager.getLogger();
 
@@ -476,12 +482,6 @@ public class WesterosBlocks {
 		return registered_sounds.get(soundName);
 	}
 	
-	// Network setup
-	public static SimpleChannel simpleChannel;    // used to transmit your network messages
-    public static final String CHANNEL = "wbchannel";
-    public static final String MESSAGE_PROTOCOL_VERSION = "5.9";
-    public static final ResourceLocation simpleChannelRL = new ResourceLocation("westerosblocks", CHANNEL);
-
     @SubscribeEvent
     public void onCommonSetupEvent(FMLCommonSetupEvent event) {
 	    simpleChannel = NetworkRegistry.newSimpleChannel(simpleChannelRL, () -> MESSAGE_PROTOCOL_VERSION,
