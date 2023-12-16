@@ -27,7 +27,7 @@ public class WesterosBlockStateRecord {
 	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
 	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
 	public int rotYOffset = 0;		// Additional rotation around Y axis (only for cuboid blocks with rotation) - done in blockstate 0, 90, 180, 270
-	public void doStareRecordInit() {
+	public void doStateRecordInit() {
 		// If just base textures, generate equivalent random textures (simpler logic for blocks that support them
 		if (this.randomTextures == null) {
 			if (this.textures == null) this.textures = new ArrayList<String>();	// Always have at least array;

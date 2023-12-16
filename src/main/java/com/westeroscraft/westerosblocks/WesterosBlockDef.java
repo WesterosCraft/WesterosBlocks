@@ -669,12 +669,12 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			this.ambientOcclusion = true; // Default to true
 		}
 		for (WesterosBlockStateRecord rec : this.states) { 
-			rec.doStareRecordInit();
+			rec.doStateRecordInit();
 		}
 		// If stacks, process these too
 		if (this.stack != null) {
 			for (WesterosBlockStateRecord se : this.stack) {
-				se.doStareRecordInit();
+				se.doStateRecordInit();
 			}
 		}
 		if (this.states.size() > 1) {
