@@ -58,6 +58,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -95,6 +96,7 @@ public class WesterosBlocks {
 	// Says where the client and server 'proxy' code is loaded.
 	public static Proxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> Proxy::new);
 
+	public static WesterosBlockSetDef[] customBlockSetDefs;
 	public static WesterosBlockDef[] customBlockDefs;
 
 	public static HashMap<String, Block> customBlocksByName;
@@ -345,6 +347,7 @@ public class WesterosBlocks {
 			Gson gson = new Gson();
 			try {
 				customConfig = gson.fromJson(rdr, WesterosBlockConfig.class);
+				customBlockSetDefs = customConfig.blockSets;
 				customBlockDefs = customConfig.blocks;
 			} catch (JsonSyntaxException iox) {
 				crash(iox, "WesterosBlocks couldn't parse its block definition");
@@ -370,6 +373,16 @@ public class WesterosBlocks {
 					rdr = null;
 				}
 			}
+			// Generate additional block definitions from block set definitions and append to customBlockDefs
+			List<WesterosBlockDef> expandedBlockDefs = new LinkedList<WesterosBlockDef>(Arrays.asList(customBlockDefs));
+			for (int i = 0; i < customBlockSetDefs.length; i++) {
+				if (customBlockSetDefs[i] == null)
+					continue;
+				List<WesterosBlockDef> variantBlockDefs = customBlockSetDefs[i].generateBlockDefs();
+				expandedBlockDefs.addAll(variantBlockDefs);
+			}
+			customBlockDefs = expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
+
 			log.info("Loaded " + customBlockDefs.length + " block definitions");
 
 			if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {

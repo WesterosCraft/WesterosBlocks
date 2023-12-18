@@ -799,6 +799,33 @@
       "creativeTab": "WesterosDoNotUse"
     }
   ],
+  "blockSets": [
+    {
+      "baseBlockName": "test_block_set",
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [
+        {
+          "tool": "axe",
+          "level": 1
+        }
+      ],
+      "creativeTab": "WesterosTest",
+      "type": "unconnect:false",
+      "baseLabel": "Test Block Set",
+      "colorMult": "textures/colormap/cobblestone",
+      "textures": [
+        "test_block/d_texture",
+        "test_block/u_texture",
+        "test_block/w_texture",
+        "test_block/e_texture",
+        "test_block/s_texture",
+        "test_block/n_texture"
+      ]
+    }
+  ],
   "blocks": [
     {
       "blockName": "oxidized_iron_block",
