@@ -22,6 +22,15 @@ public class WesterosBlockSetDef {
     VARIANT_TYPES.put("stairs", "stair");
     VARIANT_TYPES.put("hopper", "cuboid");
   }
+  public static final Map<String, String[]> VARIANT_TEXTURES = new HashMap<String, String[]>();
+  static {
+    VARIANT_TEXTURES.put("solid", new String[]{ "bottom", "top", "west", "east", "south", "north" });
+    VARIANT_TEXTURES.put("stairs", new String[]{ "bottom", "top", "sides" });
+    VARIANT_TEXTURES.put("slab", new String[]{ "bottom", "top", "sides" });
+    VARIANT_TEXTURES.put("wall", new String[]{ "bottom", "top", "sides" });
+    VARIANT_TEXTURES.put("fence", new String[]{ "bottom", "top", "sides" });
+    VARIANT_TEXTURES.put("hopper", new String[]{ "sides" });
+  }
 	
 	public String baseBlockName; // Unique name to be used as a base for all the generated block names
   public String baseLabel; // Base label associated with blocks in set
@@ -47,10 +56,11 @@ public class WesterosBlockSetDef {
 	public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
 	public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches
 
-  public List<String> textures = null; // List of textures to use for each variant (for single texture set)
-	public List<RandomTextureSet> randomTextures = null;	// Defines sets of textures used for additional random models,
+  public Map<String, String> textures = null; // Map of textures to use for each variant (for single texture set)
+	public Map<String, RandomTextureSet> randomTextures = null;	// Defines sets of textures used for additional random models,
                     // for each variant (if supported)
-	public List<String> overlayTextures = null; // List of overlay textures (for types supporting overlays)
+	public Map<String, String> overlayTextures = null; // Map of overlay textures (for types supporting overlays)
+
 	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
 	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
 
@@ -94,9 +104,6 @@ public class WesterosBlockSetDef {
       variantDef.nonOpaque = this.nonOpaque;
 
       // Copy general block state record properties to variant
-      variantDef.textures = this.textures;
-      variantDef.randomTextures = this.randomTextures;
-      variantDef.overlayTextures = this.overlayTextures;
       variantDef.lightValue = this.lightValue;
       variantDef.colorMult = this.colorMult;
 
@@ -113,9 +120,58 @@ public class WesterosBlockSetDef {
         variantDef.cuboids = Arrays.asList(cuboids);
       }
 
+      // Preprocessing for shorthand in texture map
+      this.textures = WesterosBlockSetDef.preprocessTextureMap(this.textures);
+      this.randomTextures = WesterosBlockSetDef.preprocessTextureMap(this.randomTextures);
+      this.overlayTextures = WesterosBlockSetDef.preprocessTextureMap(this.overlayTextures);
+
+      // Create texture lists for each supported variant type
+      variantDef.textures = WesterosBlockSetDef.getTexturesForVariant(this.textures, variant);
+      variantDef.randomTextures = WesterosBlockSetDef.getTexturesForVariant(this.randomTextures, variant);
+      variantDef.overlayTextures = WesterosBlockSetDef.getTexturesForVariant(this.overlayTextures, variant);
+
       blockDefs.add(variantDef);
     }
 
     return blockDefs;
+  }
+
+  public static <T> Map<String, T> preprocessTextureMap(Map<String, T> textureMap) {
+    if (textureMap == null)
+      return null;
+
+    if (textureMap.containsKey("all")) {
+      textureMap.put("bottom", textureMap.get("all"));
+      textureMap.put("top", textureMap.get("all"));
+      textureMap.put("sides", textureMap.get("all"));
+    }
+
+    if (!textureMap.containsKey("west") && textureMap.containsKey("sides"))
+      textureMap.put("west", textureMap.get("sides"));
+    if (!textureMap.containsKey("east") && textureMap.containsKey("sides"))
+      textureMap.put("east", textureMap.get("sides"));
+    if (!textureMap.containsKey("south") && textureMap.containsKey("sides"))
+      textureMap.put("south", textureMap.get("sides"));
+    if (!textureMap.containsKey("north") && textureMap.containsKey("sides"))
+      textureMap.put("north", textureMap.get("sides"));
+    
+    // fallback if "sides" not explicitly specified
+    if (!textureMap.containsKey("sides") && textureMap.containsKey("bottom"))
+      textureMap.put("sides", textureMap.get("bottom"));
+
+    return textureMap;
+  }
+
+  public static <T> List<T> getTexturesForVariant(Map<String, T> textureMap, String variant) {
+    if (textureMap == null)
+      return null;
+
+    List<T> textureList = new LinkedList<T>();
+
+    for (String texture : WesterosBlockSetDef.VARIANT_TEXTURES.get(variant)) {
+      if (textureMap.containsKey(texture)) textureList.add(textureMap.get(texture));
+    }
+
+    return textureList;
   }
 }

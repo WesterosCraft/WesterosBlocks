@@ -816,14 +816,14 @@
       "type": "unconnect:false",
       "baseLabel": "Test Block Set",
       "colorMult": "textures/colormap/cobblestone",
-      "textures": [
-        "test_block/d_texture",
-        "test_block/u_texture",
-        "test_block/w_texture",
-        "test_block/e_texture",
-        "test_block/s_texture",
-        "test_block/n_texture"
-      ]
+      "textures": {
+        "bottom": "test_block/d_texture",
+        "top": "test_block/u_texture",
+        "west": "test_block/w_texture",
+        "east": "test_block/e_texture",
+        "south": "test_block/s_texture",
+        "north": "test_block/n_texture"
+      }
     }
   ],
   "blocks": [
