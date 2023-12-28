@@ -913,11 +913,16 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				error = true;
 				continue;
 			}
-			if (!def.type.equals(val.type)) {
-				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different type attribute", val.blockName));
-				error = true;
-				continue;
+
+			String[] valTypeAttrs = val.type.split(",");
+			for (String typeAttr : valTypeAttrs) {
+				if (!def.type.contains(typeAttr)) {
+					WesterosBlocks.log.warn(String.format("validation: blockName '%s' is missing type attribute '%s'", val.blockName, typeAttr));
+					error = true;
+					continue;
+				}
 			}
+
 			boolean substateError = false;
 			if (val.stack != null) {
 				if (def.stack == null || def.stack.size() != val.stack.size())
