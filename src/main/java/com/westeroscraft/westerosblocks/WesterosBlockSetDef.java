@@ -17,12 +17,16 @@ public class WesterosBlockSetDef {
 	public static final int DEF_INT = -999;
 
   public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper");
-  public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "fence_gate");
+  public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "fence_gate",
+                                                                      "arrow_slit", "arrow_slit_window", "arrow_slit_ornate");
   public static final Map<String, String> VARIANT_TYPES = new HashMap<String, String>();
   static { // For any variant not listed here, it is assumed that the type is the same as the variant string
     VARIANT_TYPES.put("stairs", "stair");
     VARIANT_TYPES.put("hopper", "cuboid");
     VARIANT_TYPES.put("fence_gate", "fencegate");
+    VARIANT_TYPES.put("arrow_slit", "solid");
+    VARIANT_TYPES.put("arrow_slit_window", "solid");
+    VARIANT_TYPES.put("arrow_slit_ornate", "solid");
   }
   public static final Map<String, String[]> VARIANT_TEXTURES = new HashMap<String, String[]>();
   static {
@@ -33,6 +37,9 @@ public class WesterosBlockSetDef {
     VARIANT_TEXTURES.put("fence", new String[]{ "bottom", "top", "sides" });
     VARIANT_TEXTURES.put("hopper", new String[]{ "sides" });
     VARIANT_TEXTURES.put("fence_gate", new String[]{ "sides" });
+    VARIANT_TEXTURES.put("arrow_slit", new String[]{ "arrow-slit-topbottom", "arrow-slit-topbottom", "arrow-slit" });
+    VARIANT_TEXTURES.put("arrow_slit_window", new String[]{ "arrow-slit-topbottom", "arrow-slit-topbottom", "arrow-slit-window" });
+    VARIANT_TEXTURES.put("arrow_slit_ornate", new String[]{ "arrow-slit-topbottom", "arrow-slit-topbottom", "arrow-slit-ornate" });
   }
 	
 	public String baseBlockName; // Unique name to be used as a base for all the generated block names
@@ -129,6 +136,21 @@ public class WesterosBlockSetDef {
         };
         variantDef.cuboids = Arrays.asList(cuboids);
       }
+      else if (variant.contains("arrow_slit")) {
+        variantDef.nonOpaque = true;
+        variantDef.lightOpacity = 0;
+        WesterosBlockDef.BoundingBox[] collisionBoxes = {
+          new WesterosBlockDef.BoundingBox(0f, 0f, 0f, 0.2f, 1f, 0.2f),
+          new WesterosBlockDef.BoundingBox(0.8f, 0f, 0f, 1f, 1f, 0.2f),
+          new WesterosBlockDef.BoundingBox(0f, 0f, 0.8f, 0.2f, 1f, 1f),
+          new WesterosBlockDef.BoundingBox(0.8f, 0f, 0.8f, 1f, 1f, 1f)
+        };
+        variantDef.collisionBoxes = Arrays.asList(collisionBoxes);
+        WesterosBlockDef.BoundingBox[] supportBoxes = {
+          new WesterosBlockDef.BoundingBox(0f, 0f, 0f, 1f, 1f, 1f)
+        };
+        variantDef.supportBoxes = Arrays.asList(supportBoxes);
+      }
 
       // Preprocessing for shorthand in texture map
       this.textures = WesterosBlockSetDef.preprocessTextureMap(this.textures);
@@ -181,6 +203,10 @@ public class WesterosBlockSetDef {
     // fallback if "sides" not explicitly specified
     if (!textureMap.containsKey("sides") && textureMap.containsKey("bottom"))
       textureMap.put("sides", textureMap.get("bottom"));
+
+    // fallback if arrow slit top/bottom omitted
+    if (!textureMap.containsKey("arrow-slit-topbottom") && textureMap.containsKey("bottom"))
+      textureMap.put("arrow-slit-topbottom", textureMap.get("bottom"));
 
     return textureMap;
   }

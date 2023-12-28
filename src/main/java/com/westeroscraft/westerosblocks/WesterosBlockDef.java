@@ -228,6 +228,18 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		public float zMin = 0.0F;
 		public float zMax = 1.0F;
 
+		public BoundingBox() {
+		}
+
+		public BoundingBox(float x0, float y0, float z0, float x1, float y1, float z1) {
+			this.xMin = x0;
+			this.xMax = x1;
+			this.yMin = y0;
+			this.yMax = y1;
+			this.zMin = z0;
+			this.zMax = z1;
+		}
+
 		private transient VoxelShape aabb = null;
 
 		public VoxelShape getAABB() {
