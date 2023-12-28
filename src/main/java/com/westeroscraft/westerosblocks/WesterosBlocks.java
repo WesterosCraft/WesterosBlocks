@@ -361,7 +361,7 @@ public class WesterosBlocks {
 
 			// Validate custom block definitions against old copy (if one exists)
 			if (validateDefs(customBlockDefs) == false) {
-				log.warn("Some block names or states have been removed relative to oldWesterosBlocks.json");
+				log.error("Some block names or states have been removed relative to oldWesterosBlocks.json");
 			}
 
 			if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {

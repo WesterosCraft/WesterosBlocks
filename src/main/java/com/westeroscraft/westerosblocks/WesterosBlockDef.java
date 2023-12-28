@@ -900,29 +900,44 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public static boolean compareBlockDefs(WesterosBlockDef[] defs, WesterosBlockDef[] validation) {
 		Map<String, WesterosBlockDef> defmap = defsToMap(defs);
 		for (WesterosBlockDef val : validation) {
-			if (!defmap.containsKey(val.blockName))
+			if (!defmap.containsKey(val.blockName)) {
+				WesterosBlocks.log.warn(String.format("validation: blockName '%s' missing", val.blockName));
 				return false;
+			}
 
 			WesterosBlockDef def = defmap.get(val.blockName);
-			if (!def.blockType.equals(val.blockType))
+			if (!def.blockType.equals(val.blockType)) {
+				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different blockType attribute", val.blockName));
 				return false;
-			if (!def.type.equals(val.type))
+			}
+			if (!def.type.equals(val.type)) {
+				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different type attribute", val.blockName));
 				return false;
+			}
+			boolean substateError = false;
 			if (val.stack != null) {
 				if (def.stack == null || def.stack.size() != val.stack.size())
-					return false;
-				for (int i = 0; i < val.stack.size(); i++) {
-					if (!def.stack.get(i).equals(val.stack.get(i)))
-						return false;
+					substateError = true;
+				else {
+					for (int i = 0; i < val.stack.size(); i++) {
+						if (!def.stack.get(i).equals(val.stack.get(i)))
+							substateError = true;
+					}
 				}
 			}
 			if (val.states != null) {
 				if (def.states == null || def.states.size() != val.states.size())
-					return false;
-				for (int i = 0; i < val.states.size(); i++) {
-					if (!def.states.get(i).equals(val.states.get(i)))
-						return false;
+					substateError = true;
+				else {
+					for (int i = 0; i < val.states.size(); i++) {
+						if (!def.states.get(i).equals(val.states.get(i)))
+							substateError = true;
+					}
 				}
+			}
+			if (substateError) {
+				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different stack or state lists", val.blockName));
+				return false;
 			}
 		}
 		return true;
