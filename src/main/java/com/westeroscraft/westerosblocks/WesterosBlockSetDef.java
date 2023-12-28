@@ -16,11 +16,13 @@ public class WesterosBlockSetDef {
 	private static final float DEF_FLOAT = -999.0F;
 	public static final int DEF_INT = -999;
 
-  public static final String[] SUPPORTED_VARIANTS = { "solid", "stairs", "slab", "wall", "fence", "hopper" };
+  public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper");
+  public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "fence_gate");
   public static final Map<String, String> VARIANT_TYPES = new HashMap<String, String>();
   static { // For any variant not listed here, it is assumed that the type is the same as the variant string
     VARIANT_TYPES.put("stairs", "stair");
     VARIANT_TYPES.put("hopper", "cuboid");
+    VARIANT_TYPES.put("fence_gate", "fencegate");
   }
   public static final Map<String, String[]> VARIANT_TEXTURES = new HashMap<String, String[]>();
   static {
@@ -30,6 +32,7 @@ public class WesterosBlockSetDef {
     VARIANT_TEXTURES.put("wall", new String[]{ "bottom", "top", "sides" });
     VARIANT_TEXTURES.put("fence", new String[]{ "bottom", "top", "sides" });
     VARIANT_TEXTURES.put("hopper", new String[]{ "sides" });
+    VARIANT_TEXTURES.put("fence_gate", new String[]{ "sides" });
   }
 	
 	public String baseBlockName; // Unique name to be used as a base for all the generated block names
@@ -50,7 +53,7 @@ public class WesterosBlockSetDef {
 	public String creativeTab = null; // Creative tab for items
 	public List<String> customTags = null;	// If block should add any custom tags
 
-	public String type = ""; // Type field (used for plant types or other block type specific values)
+  public Map<String, String> types = null; // Map of type attributes for each variant
 	
 	public boolean alphaRender = false; // If true, do render on pass 2 (for alpha blending)
 	public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
@@ -71,14 +74,14 @@ public class WesterosBlockSetDef {
     for (String variant : WesterosBlockSetDef.SUPPORTED_VARIANTS) {
       if (this.variants != null && !variants.contains(variant))
         continue;
+      else if (this.variants == null && !WesterosBlockSetDef.DEFAULT_VARIANTS.contains(variant))
+        continue;
       
       WesterosBlockDef variantDef = new WesterosBlockDef();
       
       // Automatically derive name, label, and type for variant
-      String suffix = (variant == "solid") ? "" : "_" + variant;
-      String suffix_label = suffix.replace("_", "");
-      if (!suffix_label.isEmpty())
-        suffix_label = suffix_label.substring(0, 1).toUpperCase() + suffix_label.substring(1);
+      String suffix = (variant.equals("solid")) ? "" : "_" + variant;
+      String suffix_label = WesterosBlockSetDef.generateLabelSuffix(variant);
       String blockType = WesterosBlockSetDef.VARIANT_TYPES.get(variant);
       if (blockType == null)
         blockType = variant;
@@ -98,20 +101,27 @@ public class WesterosBlockSetDef {
       variantDef.flamability = this.flamability;
       variantDef.creativeTab = this.creativeTab;
       variantDef.customTags = this.customTags;
-      variantDef.type = this.type;
       variantDef.alphaRender = this.alphaRender;
       variantDef.ambientOcclusion = this.ambientOcclusion;
       variantDef.nonOpaque = this.nonOpaque;
+
+      // Copy type attribute for variant
+      if (this.types != null && this.types.containsKey(variant)) {
+        variantDef.type = this.types.get(variant);
+      }
+      else {
+        variantDef.type = "";
+      }
 
       // Copy general block state record properties to variant
       variantDef.lightValue = this.lightValue;
       variantDef.colorMult = this.colorMult;
 
       // Process types with special attributes
-      if (variant == "stairs") {
+      if (variant.equals("stairs")) {
         variantDef.modelBlockName = this.baseBlockName;
       }
-      else if (variant == "hopper") {
+      else if (variant.equals("hopper")) {
         WesterosBlockDef.Cuboid[] cuboids = { 
           new WesterosBlockDef.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[] { 0, 0, 0, 0, 0, 0 }),
           new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),
@@ -134,6 +144,19 @@ public class WesterosBlockSetDef {
     }
 
     return blockDefs;
+  }
+
+  public static String generateLabelSuffix(String variant) {
+    if (variant.equals("solid"))
+      return "";
+
+    String[] words = variant.split("_");
+    String label = "";
+    for (String word : words) {
+      String wordCap = word.substring(0,1).toUpperCase() + word.substring(1);
+      label += wordCap + " ";
+    }
+    return label.trim();
   }
 
   public static <T> Map<String, T> preprocessTextureMap(Map<String, T> textureMap) {

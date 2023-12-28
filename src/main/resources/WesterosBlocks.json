@@ -802,6 +802,7 @@
   "blockSets": [
     {
       "baseBlockName": "test_block_set",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "fence_gate"],
       "hardness": 3,
       "stepSound": "wood",
       "material": "wood",
@@ -813,7 +814,12 @@
         }
       ],
       "creativeTab": "WesterosTest",
-      "type": "unconnect:false",
+      "types": {
+        "stairs": "unconnect:false",
+        "wall": "unconnect:false",
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
       "baseLabel": "Test Block Set",
       "colorMult": "textures/colormap/cobblestone",
       "textures": {
