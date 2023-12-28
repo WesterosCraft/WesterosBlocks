@@ -47,6 +47,8 @@ public class WesterosBlockSetDef {
   public List<String> variants = null; // List of supported variants to create (solid, stair, slab, wall, fence, hopper)
                   // By default, all of the above variants will be created
 
+  public Map<String, String> altNames = null; // Alternative name extensions to use for particular variants (optional)
+
 	public float hardness = DEF_FLOAT; // Block hardness
 	public String stepSound = null; // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand,
 									// snow, ladder, anvil)
@@ -88,7 +90,11 @@ public class WesterosBlockSetDef {
       
       // Automatically derive name, label, and type for variant
       String suffix = (variant.equals("solid")) ? "" : "_" + variant;
-      String suffix_label = WesterosBlockSetDef.generateLabelSuffix(variant);
+      if (this.altNames != null && this.altNames.containsKey(variant)) {
+        suffix = this.altNames.get(variant);
+        suffix = (suffix.isEmpty()) ? "" : "_" + suffix;
+      }
+      String suffix_label = (suffix.isEmpty()) ? "" : WesterosBlockSetDef.generateLabelSuffix(suffix);
       String blockType = WesterosBlockSetDef.VARIANT_TYPES.get(variant);
       if (blockType == null)
         blockType = variant;
@@ -168,11 +174,12 @@ public class WesterosBlockSetDef {
     return blockDefs;
   }
 
-  public static String generateLabelSuffix(String variant) {
-    if (variant.equals("solid"))
+  public static String generateLabelSuffix(String suffix) {
+    if (suffix.isEmpty() || suffix.equals("_"))
       return "";
 
-    String[] words = variant.split("_");
+    suffix = suffix.substring(1);
+    String[] words = suffix.split("_");
     String label = "";
     for (String word : words) {
       String wordCap = word.substring(0,1).toUpperCase() + word.substring(1);
