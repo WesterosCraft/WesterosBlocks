@@ -38,6 +38,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonParseException;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.mojang.brigadier.CommandDispatcher;
@@ -96,7 +97,6 @@ public class WesterosBlocks {
 	// Says where the client and server 'proxy' code is loaded.
 	public static Proxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> Proxy::new);
 
-	public static WesterosBlockSetDef[] customBlockSetDefs;
 	public static WesterosBlockDef[] customBlockDefs;
 
 	public static HashMap<String, Block> customBlocksByName;
@@ -337,53 +337,32 @@ public class WesterosBlocks {
 				}
 				log.info("Enabled snow in TAIGA");
 			}
+
 			// Read our block definition resource
-			InputStream in = WesterosBlocks.class.getResourceAsStream("/WesterosBlocks.json");
-			if (in == null) {
+			try {
+				customConfig = loadBlockConfig("/WesterosBlocks.json");
+			} catch (BlockConfigNotFoundException ex) {
 				crash("WesterosBlocks couldn't find its block definition resource");
 				return;
-			}
-			BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
-			Gson gson = new Gson();
-			try {
-				customConfig = gson.fromJson(rdr, WesterosBlockConfig.class);
-				customBlockSetDefs = customConfig.blockSets;
-				customBlockDefs = customConfig.blocks;
 			} catch (JsonSyntaxException iox) {
 				crash(iox, "WesterosBlocks couldn't parse its block definition");
 				return;
 			} catch (JsonIOException iox) {
 				crash(iox, "WesterosBlocks couldn't read its block definition");
 				return;
-			} finally {
-				if (in != null) {
-					try {
-						in.close();
-					} catch (IOException iox) {
-					}
-					;
-					in = null;
-				}
-				if (rdr != null) {
-					try {
-						rdr.close();
-					} catch (IOException iox) {
-					}
-					;
-					rdr = null;
-				}
 			}
-			// Generate additional block definitions from block set definitions and append to customBlockDefs
-			List<WesterosBlockDef> expandedBlockDefs = new LinkedList<WesterosBlockDef>(Arrays.asList(customBlockDefs));
-			for (int i = 0; i < customBlockSetDefs.length; i++) {
-				if (customBlockSetDefs[i] == null)
-					continue;
-				List<WesterosBlockDef> variantBlockDefs = customBlockSetDefs[i].generateBlockDefs();
-				expandedBlockDefs.addAll(variantBlockDefs);
+			if (customConfig == null) {
+				crash("WesterosBlocks couldn't read its block definition");
+				return;
 			}
-			customBlockDefs = expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
 
+			customBlockDefs = getBlockDefs(customConfig);
 			log.info("Loaded " + customBlockDefs.length + " block definitions");
+
+			// Validate custom block definitions against old copy (if one exists)
+			if (validateDefs(customBlockDefs) == false) {
+				log.warn("Some block names or states have been removed relative to oldWesterosBlocks.json");
+			}
 
 			if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {
 				crash("WesterosBlocks.json failed sanity check");
@@ -463,6 +442,62 @@ public class WesterosBlocks {
 		}
 	}
 
+	public static WesterosBlockConfig loadBlockConfig(String filename) throws BlockConfigNotFoundException, JsonParseException {
+		// Read our block definition resource
+		WesterosBlockConfig config;
+		InputStream in = WesterosBlocks.class.getResourceAsStream(filename);
+		if (in == null) {
+			throw new BlockConfigNotFoundException();
+		}
+		BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
+		Gson gson = new Gson();
+		try {
+			config = gson.fromJson(rdr, WesterosBlockConfig.class);
+		} catch (JsonParseException iox) {
+			throw iox;
+		} finally {
+			if (in != null) {
+				try {
+					in.close();
+				} catch (IOException iox) {
+				}
+				;
+				in = null;
+			}
+			if (rdr != null) {
+				try {
+					rdr.close();
+				} catch (IOException iox) {
+				}
+				;
+				rdr = null;
+			}
+		}
+		return config;
+	}
+
+	public static class BlockConfigNotFoundException extends Exception {
+		public BlockConfigNotFoundException() {
+		}
+		public BlockConfigNotFoundException(String message) {
+			super(message);
+		}
+	}
+
+	// Expand block set definitions to obtain the full block definition list
+	public static WesterosBlockDef[] getBlockDefs(WesterosBlockConfig config) {
+		WesterosBlockSetDef[] blockSetDefs = config.blockSets;
+		WesterosBlockDef[] blockDefs = config.blocks;
+		List<WesterosBlockDef> expandedBlockDefs = new LinkedList<WesterosBlockDef>(Arrays.asList(blockDefs));
+		for (int i = 0; i < blockSetDefs.length; i++) {
+			if (blockSetDefs[i] == null)
+				continue;
+			List<WesterosBlockDef> variantBlockDefs = blockSetDefs[i].generateBlockDefs();
+			expandedBlockDefs.addAll(variantBlockDefs);
+		}
+		return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
+	}
+
 	public static Block findBlockByName(String blkname) {
 		Block blk = customBlocksByName.get(blkname);
 		if (blk != null) return blk;
@@ -475,6 +510,29 @@ public class WesterosBlocks {
 		}
 		blk = ForgeRegistries.BLOCKS.getValue(rl);
 		return blk;
+	}
+
+	// Load in oldWesterosBlocks.json, if it exists, and use it as a "source of truth" for
+	// validating modifications to WesterosBlocks.json.
+	// The important things to check are that all of the block names in oldWesterosBlocks.json
+	// are preserved, and that all of the state-related attributes for each block are preserved.
+	public static boolean validateDefs(WesterosBlockDef[] defs) {
+		WesterosBlockDef[] validationDefs;
+		try {
+			validationDefs = getBlockDefs(loadBlockConfig("/oldWesterosBlocks.json"));
+		} catch (BlockConfigNotFoundException ex) {
+			log.warn("no oldWesterosBlocks.json found for validation; skipping");
+			return true;
+		} catch (JsonParseException ex) {
+			log.warn("couldn't read oldWesterosBlocks.json block definition; skipping");
+			return true;
+		}
+		if (validationDefs == null) {
+			log.warn("couldn't read oldWesterosBlocks.json block definition; skipping");
+			return true;
+		}
+
+		return WesterosBlockDef.compareBlockDefs(defs, validationDefs);
 	}
 
 	private static HashMap<String, SoundEvent> registered_sounds = new HashMap<String, SoundEvent>();

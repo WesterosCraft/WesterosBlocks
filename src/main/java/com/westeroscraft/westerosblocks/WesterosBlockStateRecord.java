@@ -140,4 +140,11 @@ public class WesterosBlockStateRecord {
 		return isCustomModel.booleanValue();
 	}
 
+	public boolean equals(WesterosBlockStateRecord other) {
+		if (this.stateID == null) {
+			return (other.stateID == null);
+		}
+		return this.stateID.equals(other.stateID);
+	}
+
 }

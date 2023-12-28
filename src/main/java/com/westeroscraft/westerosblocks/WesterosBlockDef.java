@@ -895,6 +895,47 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		return true;
 	}
 
+	// Return true if defs strictly subsumes validation (i.e., it preserves every block name, as well as
+	// every state-related attribute for each block); otherwise false.
+	public static boolean compareBlockDefs(WesterosBlockDef[] defs, WesterosBlockDef[] validation) {
+		Map<String, WesterosBlockDef> defmap = defsToMap(defs);
+		for (WesterosBlockDef val : validation) {
+			if (!defmap.containsKey(val.blockName))
+				return false;
+
+			WesterosBlockDef def = defmap.get(val.blockName);
+			if (!def.blockType.equals(val.blockType))
+				return false;
+			if (!def.type.equals(val.type))
+				return false;
+			if (val.stack != null) {
+				if (def.stack == null || def.stack.size() != val.stack.size())
+					return false;
+				for (int i = 0; i < val.stack.size(); i++) {
+					if (!def.stack.get(i).equals(val.stack.get(i)))
+						return false;
+				}
+			}
+			if (val.states != null) {
+				if (def.states == null || def.states.size() != val.states.size())
+					return false;
+				for (int i = 0; i < val.states.size(); i++) {
+					if (!def.states.get(i).equals(val.states.get(i)))
+						return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	public static Map<String, WesterosBlockDef> defsToMap(WesterosBlockDef[] defs) {
+		Map<String, WesterosBlockDef> map = new HashMap<String, WesterosBlockDef>();
+		for (WesterosBlockDef def : defs) {
+			map.put(def.blockName, def);
+		}
+		return map;
+	}
+
 	public static void initialize() {
 		materialTable.put("air", Material.AIR);
 		materialTable.put("grass", Material.GRASS);
