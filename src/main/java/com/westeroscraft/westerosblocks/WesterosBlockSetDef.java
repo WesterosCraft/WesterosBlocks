@@ -131,14 +131,20 @@ public class WesterosBlockSetDef {
         variantDef.type = this.types.get(variant);
       }
       else {
-        variantDef.type = "";
+        // Enforce defaults for particular blocktypes
+        if (variant.matches("stairs|wall|fence"))
+          variantDef.type = "unconnect:false";
+        else if (variant.contains("arrow_slit"))
+          variantDef.type = "connectstate:true";
+        else
+          variantDef.type = "";
       }
 
       // Copy general block state record properties to variant
       variantDef.lightValue = this.lightValue;
       variantDef.colorMult = this.colorMult;
 
-      // Process types with special attributes
+      // Process blocktypes with special attributes
       if (variant.equals("stairs")) {
         String solidBlockName = this.baseBlockName;
         if (this.altNames != null && this.altNames.containsKey("solid"))
