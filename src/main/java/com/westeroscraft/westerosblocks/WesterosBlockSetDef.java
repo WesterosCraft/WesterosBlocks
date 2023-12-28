@@ -149,10 +149,10 @@ public class WesterosBlockSetDef {
 
       // Process blocktypes with special attributes
       if (variant.equals("stairs")) {
-        String solidBlockName = this.baseBlockName;
         if (this.altNames != null && this.altNames.containsKey("solid"))
-          solidBlockName += "_" + this.altNames.get("solid");
-        variantDef.modelBlockName = solidBlockName;
+          variantDef.modelBlockName = this.altNames.get("solid");
+        else
+          variantDef.modelBlockName = this.baseBlockName;
       }
       else if (variant.equals("hopper")) {
         WesterosBlockDef.Cuboid[] cuboids = { 
