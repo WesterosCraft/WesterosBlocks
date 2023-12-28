@@ -237,8 +237,10 @@ public class WesterosBlockSetDef {
       textureMap.put("sides", textureMap.get("bottom"));
 
     // fallback if arrow slit top/bottom omitted
-    if (!textureMap.containsKey("arrow-slit-topbottom") && textureMap.containsKey("bottom"))
-      textureMap.put("arrow-slit-topbottom", textureMap.get("bottom"));
+    // if (!textureMap.containsKey("arrow-slit-topbottom") && textureMap.containsKey("bottom"))
+    //   textureMap.put("arrow-slit-topbottom", textureMap.get("bottom"));
+    if (!textureMap.containsKey("arrow-slit-topbottom"))
+      textureMap.put("arrow-slit-topbottom", "transparent");
 
     return textureMap;
   }
