@@ -899,20 +899,24 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	// every state-related attribute for each block); otherwise false.
 	public static boolean compareBlockDefs(WesterosBlockDef[] defs, WesterosBlockDef[] validation) {
 		Map<String, WesterosBlockDef> defmap = defsToMap(defs);
+		boolean error = false;
 		for (WesterosBlockDef val : validation) {
 			if (!defmap.containsKey(val.blockName)) {
 				WesterosBlocks.log.warn(String.format("validation: blockName '%s' missing", val.blockName));
-				return false;
+				error = true;
+				continue;
 			}
 
 			WesterosBlockDef def = defmap.get(val.blockName);
 			if (!def.blockType.equals(val.blockType)) {
 				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different blockType attribute", val.blockName));
-				return false;
+				error = true;
+				continue;
 			}
 			if (!def.type.equals(val.type)) {
 				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different type attribute", val.blockName));
-				return false;
+				error = true;
+				continue;
 			}
 			boolean substateError = false;
 			if (val.stack != null) {
@@ -937,10 +941,11 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			}
 			if (substateError) {
 				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different stack or state lists", val.blockName));
-				return false;
+				error = true;
+				continue;
 			}
 		}
-		return true;
+		return !error;
 	}
 
 	public static Map<String, WesterosBlockDef> defsToMap(WesterosBlockDef[] defs) {
