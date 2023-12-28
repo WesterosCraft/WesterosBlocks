@@ -6,6 +6,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -21,15 +22,30 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	BlockBehaviour.Properties props = def.makeProperties();
-        	return def.registerRenderType(def.registerBlock(new WCSolidBlock(props, def)), true, def.nonOpaque);
+            String t = def.getType();
+			boolean doConnectstate = false;
+			if (t != null) {
+				String[] toks = t.split(",");
+				for (String tok : toks) {
+					String[] parts = tok.split(":");
+					if (parts[0].equals("connectstate")) {
+						doConnectstate = true;
+						tempCONNECTSTATE = CONNECTSTATE;
+					}
+				}
+			}
+        	return def.registerRenderType(def.registerBlock(new WCSolidBlock(props, def, doConnectstate)), true, def.nonOpaque);
         }
     }    
     protected WesterosBlockDef def;
     protected VoxelShape collisionbox;
     protected VoxelShape supportbox;
 
+	public static final IntegerProperty CONNECTSTATE = IntegerProperty.create("connectstate", 0, 3);
+	protected static IntegerProperty tempCONNECTSTATE;
+    public final boolean connectstate;
     
-    protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
+    protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doConnectstate) {
         super(props);
         this.def = def;
         collisionbox = def.makeCollisionBoxShape();
@@ -39,6 +55,17 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         else {
         	supportbox = def.makeSupportBoxShape(null);
         }
+        
+        connectstate = doConnectstate;
+		BlockState defbs = this.stateDefinition.any();
+		if (connectstate) {
+			defbs = defbs.setValue(CONNECTSTATE, 0);
+		}
+		this.registerDefaultState(defbs);
+    }
+
+    protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
+        this(props, def, false);
     }
     
     @Override
@@ -85,6 +112,10 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
+        if (tempCONNECTSTATE != null) {
+            StateDefinition.add(tempCONNECTSTATE);
+            tempCONNECTSTATE = null;
+        }
     	super.createBlockStateDefinition(StateDefinition);
     }
 

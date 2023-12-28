@@ -8,6 +8,7 @@ import java.util.Map;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
 
 import net.minecraft.world.level.block.Block;
 
@@ -35,9 +36,12 @@ public class SolidBlockModelExport extends ModelExport {
     public static class ModelObject {
     	public String parent;
     }
+
+		private final WCSolidBlock sblk;
     
     public SolidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
+				sblk = (blk instanceof WCSolidBlock) ? (WCSolidBlock) blk : null;
         addNLSString("block." + WesterosBlocks.MOD_ID + "." + def.blockName, def.label);
     }
     
@@ -142,6 +146,10 @@ public class SolidBlockModelExport extends ModelExport {
         		oldstate.put(k, oldmap.get(k));    			
     		}
     	}
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+			if (sblk != null && sblk.connectstate) {
+				newstate = new HashMap<String, String>();
+				newstate.put("connectstate", "0");
+			}
+      addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 }

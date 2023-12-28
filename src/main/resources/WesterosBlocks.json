@@ -46374,6 +46374,18 @@
       ]
     },
     {
+      "blockName": "ctm_vertical_connectstate",
+      "blockType": "solid",
+      "stepSound": "wood",
+      "material": "cloth",
+      "creativeTab": "WesterosTest",
+      "type": "connectstate:true",
+      "label": "Vertical CTM (Connectstate)",
+      "textures": [
+        "ctm/vertical"
+      ]
+    },
+    {
       "blockName": "ctm_vertical_overlay",
       "blockType": "solid",
       "stepSound": "wood",
