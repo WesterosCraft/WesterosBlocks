@@ -96,19 +96,22 @@ public class WesterosBlockSetDef {
       
       WesterosBlockDef variantDef = new WesterosBlockDef();
       
-      // Automatically derive name, label, and type for variant
-      String suffix = (variant.equals("solid")) ? "" : "_" + variant;
+      // Automatically derive name and label for variant (or use alt name if provided)
       if (this.altNames != null && this.altNames.containsKey(variant)) {
-        suffix = this.altNames.get(variant);
-        suffix = (suffix.isEmpty()) ? "" : "_" + suffix;
+        variantDef.blockName = this.altNames.get(variant);
+        variantDef.label = WesterosBlockSetDef.generateLabel(variantDef.blockName);
       }
-      String suffix_label = (suffix.isEmpty()) ? "" : WesterosBlockSetDef.generateLabelSuffix(suffix);
+      else {
+        String suffix = (variant.equals("solid")) ? "" : variant;
+        String suffix_label = (suffix.isEmpty()) ? "" : WesterosBlockSetDef.generateLabel(suffix);
+        variantDef.blockName = this.baseBlockName + "_" + suffix;
+        variantDef.label = this.baseLabel + " " + suffix_label;
+      }
+      
+      // Set blocktype for variant
       String blockType = WesterosBlockSetDef.VARIANT_TYPES.get(variant);
       if (blockType == null)
         blockType = variant;
-
-      variantDef.blockName = this.baseBlockName + suffix;
-      variantDef.label = this.baseLabel + " " + suffix_label;
       variantDef.blockType = blockType;
 
       // Copy general block definition properties to variant
@@ -199,12 +202,11 @@ public class WesterosBlockSetDef {
     return blockDefs;
   }
 
-  public static String generateLabelSuffix(String suffix) {
-    if (suffix.isEmpty() || suffix.equals("_"))
+  public static String generateLabel(String name) {
+    if (name.isEmpty() || name.equals("_"))
       return "";
 
-    suffix = suffix.substring(1);
-    String[] words = suffix.split("_");
+    String[] words = name.split("_");
     String label = "";
     for (String word : words) {
       String wordCap = word.substring(0,1).toUpperCase() + word.substring(1);
