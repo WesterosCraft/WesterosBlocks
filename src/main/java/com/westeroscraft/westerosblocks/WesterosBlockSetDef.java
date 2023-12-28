@@ -71,12 +71,18 @@ public class WesterosBlockSetDef {
 	public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches
 
   public Map<String, String> textures = null; // Map of textures to use for each variant (for single texture set)
-	public Map<String, RandomTextureSet> randomTextures = null;	// Defines sets of textures used for additional random models,
+	public List<RandomTextureMap> randomTextures = null;	// Defines sets of textures used for additional random models,
                     // for each variant (if supported)
 	public Map<String, String> overlayTextures = null; // Map of overlay textures (for types supporting overlays)
 
 	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
 	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
+
+
+	public static class RandomTextureMap {
+		public Map<String, String> textures = null; // List of textures (for single texture set)
+		public Integer weight = null;		// Weight for texture set (default = 1)
+	};
 
 
   public List<WesterosBlockDef> generateBlockDefs() {
@@ -173,12 +179,12 @@ public class WesterosBlockSetDef {
 
       // Preprocessing for shorthand in texture map
       this.textures = WesterosBlockSetDef.preprocessTextureMap(this.textures);
-      this.randomTextures = WesterosBlockSetDef.preprocessTextureMap(this.randomTextures);
+      this.randomTextures = WesterosBlockSetDef.preprocessRandomTextureMaps(this.randomTextures);
       this.overlayTextures = WesterosBlockSetDef.preprocessTextureMap(this.overlayTextures);
 
       // Create texture lists for each supported variant type
       variantDef.textures = WesterosBlockSetDef.getTexturesForVariant(this.textures, variant);
-      variantDef.randomTextures = WesterosBlockSetDef.getTexturesForVariant(this.randomTextures, variant);
+      variantDef.randomTextures = WesterosBlockSetDef.getRandomTexturesForVariant(this.randomTextures, variant);
       variantDef.overlayTextures = WesterosBlockSetDef.getTexturesForVariant(this.overlayTextures, variant);
 
       blockDefs.add(variantDef);
@@ -201,7 +207,7 @@ public class WesterosBlockSetDef {
     return label.trim();
   }
 
-  public static <T> Map<String, T> preprocessTextureMap(Map<String, T> textureMap) {
+  public static Map<String, String> preprocessTextureMap(Map<String, String> textureMap) {
     if (textureMap == null)
       return null;
 
@@ -231,16 +237,48 @@ public class WesterosBlockSetDef {
     return textureMap;
   }
 
-  public static <T> List<T> getTexturesForVariant(Map<String, T> textureMap, String variant) {
+  public static List<RandomTextureMap> preprocessRandomTextureMaps(List<RandomTextureMap> randomTextureMaps) {
+    if (randomTextureMaps == null)
+      return null;
+
+    for (int i = 0; i < randomTextureMaps.size(); i++) {
+      RandomTextureMap updated = randomTextureMaps.get(i);
+      updated.textures = preprocessTextureMap(updated.textures);
+      randomTextureMaps.set(i, updated);
+    }
+    return randomTextureMaps;
+  }
+
+  public static List<String> getTexturesForVariant(Map<String, String> textureMap, String variant) {
     if (textureMap == null)
       return null;
 
-    List<T> textureList = new LinkedList<T>();
+    List<String> textureList = new LinkedList<String>();
 
     for (String texture : WesterosBlockSetDef.VARIANT_TEXTURES.get(variant)) {
       if (textureMap.containsKey(texture)) textureList.add(textureMap.get(texture));
     }
 
     return textureList;
+  }
+
+  public static List<RandomTextureSet> getRandomTexturesForVariant(List<RandomTextureMap> randomTextureMaps, String variant) {
+    if (randomTextureMaps == null)
+      return null;
+
+    List<RandomTextureSet> randomTextures = new LinkedList<RandomTextureSet>();
+
+    for (RandomTextureMap randomTextureMap : randomTextureMaps) {
+      RandomTextureSet randomTextureSet = new RandomTextureSet();
+      randomTextureSet.textures = getTexturesForVariant(randomTextureMap.textures, variant);
+      randomTextureSet.weight = randomTextureMap.weight;
+      if (!randomTextureSet.textures.isEmpty())
+        randomTextures.add(randomTextureSet);
+    }
+
+    if (!randomTextures.isEmpty())
+      return randomTextures;
+    else
+      return null;
   }
 }
