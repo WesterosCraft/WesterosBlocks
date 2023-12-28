@@ -104,7 +104,9 @@ public class WesterosBlockSetDef {
       else {
         String suffix = (variant.equals("solid")) ? "" : variant;
         String suffix_label = (suffix.isEmpty()) ? "" : WesterosBlockSetDef.generateLabel(suffix);
-        variantDef.blockName = this.baseBlockName + "_" + suffix;
+        variantDef.blockName = this.baseBlockName;
+        if (!suffix.isEmpty())
+          variantDef.blockName += "_" + suffix;
         variantDef.label = this.baseLabel + " " + suffix_label;
       }
       
