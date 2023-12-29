@@ -246,6 +246,9 @@
   {
     "baseBlockName": "orange_brick",
     "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "altNames": {
+      "stairs": "brick_stairs"
+    },
     "hardness": 1.5,
     "stepSound": "stone",
     "material": "rock",
@@ -676,6 +679,215 @@
     "baseLabel": "Dorne Mossy Dark Sandstone",
     "textures": {
       "all": "sandstone/dorne_mossy_dark/all"
+    }
+  },
+  {
+    "baseBlockName": "reach_brick",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosBrick",
+    "baseLabel": "Reach Brick",
+    "textures": {
+      "all": "brick/reach/all",
+      "arrow-slit": "brick/reach/arrow_slit",
+      "arrow-slit-window": "brick/reach/arrow_slit_window",
+      "arrow-slit-ornate": "brick/reach/arrow_slit_ornate"
+    }
+  },
+  {
+    "baseBlockName": "reach_light_brick",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosBrick",
+    "baseLabel": "Reach Light Brick",
+    "textures": {
+      "all": "brick/reach_light/all",
+      "arrow-slit": "brick/reach_light/arrow_slit",
+      "arrow-slit-window": "brick/reach_light/arrow_slit_window",
+      "arrow-slit-ornate": "brick/reach_light/arrow_slit_ornate"
+    }
+  },
+  {
+    "baseBlockName": "stormlands_dark_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Stormlands Dark Cobblestone",
+    "textures": {
+      "all": "cobblestone/stormlands_dark/all"
+    }
+  },
+  {
+    "baseBlockName": "stone_slab",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosBrick",
+    "baseLabel": "Stone Slab",
+    "textures": {
+      "all": "brick/stone_slab/all",
+      "arrow-slit": "brick/stone_slab/arrow_slit",
+      "arrow-slit-window": "brick/stone_slab/arrow_slit_window",
+      "arrow-slit-ornate": "brick/stone_slab/arrow_slit_ornate"
+    }
+  },
+  {
+    "baseBlockName": "stormlands_brick",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosBrick",
+    "baseLabel": "Stormlands Brick",
+    "textures": {
+      "all": "brick/stormlands/all",
+      "arrow-slit": "brick/stormlands/arrow_slit",
+      "arrow-slit-window": "brick/stormlands/arrow_slit_window",
+      "arrow-slit-ornate": "brick/stormlands/arrow_slit_ornate"
+    }
+  },
+  {
+    "baseBlockName": "river_cobble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "River Cobble",
+    "colorMult": "textures/colormap/lightgreystone",
+    "randomTextures": [
+      {"textures": {"all": "cobblestone/river/all1"}},
+      {"textures": {"all": "cobblestone/river/all2"}},
+      {"textures": {"all": "cobblestone/river/all3"}},
+      {"textures": {"all": "cobblestone/river/all4"}}
+    ]
+  },
+  {
+    "baseBlockName": "northern_cobble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Northern Cobble",
+    "colorMult": "textures/colormap/darkcobble",
+    "randomTextures": [
+      {"textures": {"all": "cobblestone/northern/all1"}},
+      {"textures": {"all": "cobblestone/northern/all2"}},
+      {"textures": {"all": "cobblestone/northern/all3"}},
+      {"textures": {"all": "cobblestone/northern/all4"}}
+    ]
+  },
+  {
+    "baseBlockName": "icy_northern_cobble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Icy Northern Cobble",
+    "colorMult": "textures/colormap/darkcobble",
+    "randomTextures": [
+      {"textures": {"all": "cobblestone/icy_northern/all1"}},
+      {"textures": {"all": "cobblestone/icy_northern/all2"}},
+      {"textures": {"all": "cobblestone/icy_northern/all3"}},
+      {"textures": {"all": "cobblestone/icy_northern/all4"}}
+    ]
+  },
+  {
+    "baseBlockName": "dark_brown_sandstone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosSandstone",
+    "baseLabel": "Dark Brown Sandstone",
+    "textures": {
+      "all": "sandstone/dark_brown/all"
+    }
+  },
+  {
+    "baseBlockName": "large_brick_sandstone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosSandstone",
+    "baseLabel": "Large Brick Sandstone",
+    "textures": {
+      "all": "sandstone/large_brick/all"
+    }
+  },
+  {
+    "baseBlockName": "coarse_red_sandstone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosSandstone",
+    "baseLabel": "Coarse Red Sandstone",
+    "textures": {
+      "all": "sandstone/coarse_red/all"
+    }
+  },
+  {
+    "baseBlockName": "coarse_dark_red_sandstone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosSandstone",
+    "baseLabel": "Coarse Dark Red Sandstone",
+    "textures": {
+      "all": "sandstone/coarse_dark_red/all"
+    }
+  },
+  {
+    "baseBlockName": "pink_sandstone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosSandstone",
+    "baseLabel": "Pink Sandstone",
+    "textures": {
+      "all": "sandstone/pink/all",
+      "arrow-slit": "sandstone/pink/arrow_slit",
+      "arrow-slit-window": "sandstone/pink/arrow_slit_window",
+      "arrow-slit-ornate": "sandstone/pink/arrow_slit_ornate"
     }
   }
 ]

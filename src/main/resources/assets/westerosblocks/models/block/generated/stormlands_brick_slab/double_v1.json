@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "up": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "north": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "south": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "west": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "east": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "particle": "westerosblocks:block/stone_block/brick_stormlands_small"
+    "down": "westerosblocks:block/brick/stormlands/all",
+    "up": "westerosblocks:block/brick/stormlands/all",
+    "north": "westerosblocks:block/brick/stormlands/all",
+    "south": "westerosblocks:block/brick/stormlands/all",
+    "west": "westerosblocks:block/brick/stormlands/all",
+    "east": "westerosblocks:block/brick/stormlands/all",
+    "particle": "westerosblocks:block/brick/stormlands/all"
   }
 }

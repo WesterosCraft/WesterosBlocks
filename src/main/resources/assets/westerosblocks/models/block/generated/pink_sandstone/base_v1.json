@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/pink_sandstone/side"
+    "down": "westerosblocks:block/sandstone/pink/all",
+    "up": "westerosblocks:block/sandstone/pink/all",
+    "north": "westerosblocks:block/sandstone/pink/all",
+    "south": "westerosblocks:block/sandstone/pink/all",
+    "west": "westerosblocks:block/sandstone/pink/all",
+    "east": "westerosblocks:block/sandstone/pink/all",
+    "particle": "westerosblocks:block/sandstone/pink/all"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone/river/all2",
+    "up": "westerosblocks:block/cobblestone/river/all2",
+    "north": "westerosblocks:block/cobblestone/river/all2",
+    "south": "westerosblocks:block/cobblestone/river/all2",
+    "west": "westerosblocks:block/cobblestone/river/all2",
+    "east": "westerosblocks:block/cobblestone/river/all2",
+    "particle": "westerosblocks:block/cobblestone/river/all2"
+  }
+}

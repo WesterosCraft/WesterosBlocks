@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/sandstone/coarse_red/all",
+    "top": "westerosblocks:block/sandstone/coarse_red/all",
+    "side": "westerosblocks:block/sandstone/coarse_red/all",
+    "particle": "westerosblocks:block/sandstone/coarse_red/all"
+  }
+}

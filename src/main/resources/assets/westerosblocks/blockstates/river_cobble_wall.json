@@ -3,20 +3,16 @@
     {
       "apply": [
         {
-          "model": "westerosblocks:block/generated/river_cobble_wall/post-v1",
-          "weight": 30
+          "model": "westerosblocks:block/generated/river_cobble_wall/post-v1"
         },
         {
-          "model": "westerosblocks:block/generated/river_cobble_wall/post-v2",
-          "weight": 10
+          "model": "westerosblocks:block/generated/river_cobble_wall/post-v2"
         },
         {
-          "model": "westerosblocks:block/generated/river_cobble_wall/post-v3",
-          "weight": 30
+          "model": "westerosblocks:block/generated/river_cobble_wall/post-v3"
         },
         {
-          "model": "westerosblocks:block/generated/river_cobble_wall/post-v4",
-          "weight": 30
+          "model": "westerosblocks:block/generated/river_cobble_wall/post-v4"
         }
       ],
       "when": {
@@ -27,23 +23,19 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v1",
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v2",
-          "uvlock": true,
-          "weight": 10
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v3",
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v4",
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         }
       ],
       "when": {
@@ -54,23 +46,19 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v1",
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v2",
-          "uvlock": true,
-          "weight": 10
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v3",
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v4",
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         }
       ],
       "when": {
@@ -82,26 +70,22 @@
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v1",
           "y": 90,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v2",
           "y": 90,
-          "uvlock": true,
-          "weight": 10
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v3",
           "y": 90,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v4",
           "y": 90,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         }
       ],
       "when": {
@@ -113,26 +97,22 @@
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v1",
           "y": 90,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v2",
           "y": 90,
-          "uvlock": true,
-          "weight": 10
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v3",
           "y": 90,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v4",
           "y": 90,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         }
       ],
       "when": {
@@ -144,26 +124,22 @@
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v1",
           "y": 180,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v2",
           "y": 180,
-          "uvlock": true,
-          "weight": 10
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v3",
           "y": 180,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v4",
           "y": 180,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         }
       ],
       "when": {
@@ -175,26 +151,22 @@
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v1",
           "y": 180,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v2",
           "y": 180,
-          "uvlock": true,
-          "weight": 10
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v3",
           "y": 180,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v4",
           "y": 180,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         }
       ],
       "when": {
@@ -206,26 +178,22 @@
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v1",
           "y": 270,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v2",
           "y": 270,
-          "uvlock": true,
-          "weight": 10
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v3",
           "y": 270,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side-v4",
           "y": 270,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         }
       ],
       "when": {
@@ -237,26 +205,22 @@
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v1",
           "y": 270,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v2",
           "y": 270,
-          "uvlock": true,
-          "weight": 10
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v3",
           "y": 270,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         },
         {
           "model": "westerosblocks:block/generated/river_cobble_wall/side_tall-v4",
           "y": 270,
-          "uvlock": true,
-          "weight": 30
+          "uvlock": true
         }
       ],
       "when": {

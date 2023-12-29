@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/reach_brick/side",
-    "txt5": "westerosblocks:block/reach_brick/side",
-    "txt2": "westerosblocks:block/reach_brick/side",
-    "txt3": "westerosblocks:block/reach_brick/side",
-    "txt0": "westerosblocks:block/reach_brick/side",
-    "txt1": "westerosblocks:block/reach_brick/side",
-    "particle": "westerosblocks:block/reach_brick/side"
+    "txt4": "westerosblocks:block/brick/reach/all",
+    "txt5": "westerosblocks:block/brick/reach/all",
+    "txt2": "westerosblocks:block/brick/reach/all",
+    "txt3": "westerosblocks:block/brick/reach/all",
+    "txt0": "westerosblocks:block/brick/reach/all",
+    "txt1": "westerosblocks:block/brick/reach/all",
+    "particle": "westerosblocks:block/brick/reach/all"
   },
   "elements": [
     {

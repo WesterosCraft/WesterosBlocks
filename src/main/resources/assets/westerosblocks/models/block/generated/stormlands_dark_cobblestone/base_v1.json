@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_block/stone_cobble_stormlands_dark"
+    "down": "westerosblocks:block/cobblestone/stormlands_dark/all",
+    "up": "westerosblocks:block/cobblestone/stormlands_dark/all",
+    "north": "westerosblocks:block/cobblestone/stormlands_dark/all",
+    "south": "westerosblocks:block/cobblestone/stormlands_dark/all",
+    "west": "westerosblocks:block/cobblestone/stormlands_dark/all",
+    "east": "westerosblocks:block/cobblestone/stormlands_dark/all",
+    "particle": "westerosblocks:block/cobblestone/stormlands_dark/all"
   }
 }

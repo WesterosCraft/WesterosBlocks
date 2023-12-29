@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone/icy_northern/all2",
+    "up": "westerosblocks:block/cobblestone/icy_northern/all2",
+    "north": "westerosblocks:block/cobblestone/icy_northern/all2",
+    "south": "westerosblocks:block/cobblestone/icy_northern/all2",
+    "west": "westerosblocks:block/cobblestone/icy_northern/all2",
+    "east": "westerosblocks:block/cobblestone/icy_northern/all2",
+    "particle": "westerosblocks:block/cobblestone/icy_northern/all2"
+  }
+}

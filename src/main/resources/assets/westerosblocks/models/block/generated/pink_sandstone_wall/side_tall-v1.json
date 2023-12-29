@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side_tall",
   "textures": {
-    "bottom": "westerosblocks:block/pink_sandstone/side1",
-    "top": "westerosblocks:block/pink_sandstone/side1",
-    "side": "westerosblocks:block/pink_sandstone/side1"
+    "bottom": "westerosblocks:block/sandstone/pink/all",
+    "top": "westerosblocks:block/sandstone/pink/all",
+    "side": "westerosblocks:block/sandstone/pink/all"
   }
 }

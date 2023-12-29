@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/sandstone_block/sandstone_brown_dark"
+    "down": "westerosblocks:block/sandstone/dark_brown/all",
+    "up": "westerosblocks:block/sandstone/dark_brown/all",
+    "north": "westerosblocks:block/sandstone/dark_brown/all",
+    "south": "westerosblocks:block/sandstone/dark_brown/all",
+    "west": "westerosblocks:block/sandstone/dark_brown/all",
+    "east": "westerosblocks:block/sandstone/dark_brown/all",
+    "particle": "westerosblocks:block/sandstone/dark_brown/all"
   }
 }

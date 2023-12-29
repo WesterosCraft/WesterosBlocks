@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/sandstone_block/sandstone_bricks_large",
-    "up": "westerosblocks:block/sandstone_block/sandstone_bricks_large",
-    "north": "westerosblocks:block/large_brick_sandstone/side",
-    "south": "westerosblocks:block/large_brick_sandstone/side",
-    "west": "westerosblocks:block/large_brick_sandstone/side",
-    "east": "westerosblocks:block/large_brick_sandstone/side",
-    "particle": "westerosblocks:block/large_brick_sandstone/side"
+    "down": "westerosblocks:block/sandstone/large_brick/all",
+    "up": "westerosblocks:block/sandstone/large_brick/all",
+    "north": "westerosblocks:block/sandstone/large_brick/all",
+    "south": "westerosblocks:block/sandstone/large_brick/all",
+    "west": "westerosblocks:block/sandstone/large_brick/all",
+    "east": "westerosblocks:block/sandstone/large_brick/all",
+    "particle": "westerosblocks:block/sandstone/large_brick/all"
   }
 }
