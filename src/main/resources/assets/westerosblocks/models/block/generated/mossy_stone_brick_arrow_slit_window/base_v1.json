@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/transparent",
     "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/mossy_stone_brick_arrow_slit_window/side",
-    "south": "westerosblocks:block/mossy_stone_brick_arrow_slit_window/side",
-    "west": "westerosblocks:block/mossy_stone_brick_arrow_slit_window/side",
-    "east": "westerosblocks:block/mossy_stone_brick_arrow_slit_window/side",
-    "particle": "westerosblocks:block/mossy_stone_brick_arrow_slit_window/side"
+    "north": "westerosblocks:block/brick/mossy_stone/arrow_slit_window",
+    "south": "westerosblocks:block/brick/mossy_stone/arrow_slit_window",
+    "west": "westerosblocks:block/brick/mossy_stone/arrow_slit_window",
+    "east": "westerosblocks:block/brick/mossy_stone/arrow_slit_window",
+    "particle": "westerosblocks:block/brick/mossy_stone/arrow_slit_window"
   }
 }

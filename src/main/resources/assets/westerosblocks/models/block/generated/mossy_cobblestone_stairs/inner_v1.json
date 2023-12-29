@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/inner_stairs",
   "textures": {
-    "bottom": "minecraft:block/mossy_cobblestone",
-    "top": "minecraft:block/mossy_cobblestone",
-    "side": "minecraft:block/mossy_cobblestone",
-    "particle": "minecraft:block/mossy_cobblestone"
+    "bottom": "westerosblocks:block/cobblestone/mossy/all1",
+    "top": "westerosblocks:block/cobblestone/mossy/all1",
+    "side": "westerosblocks:block/cobblestone/mossy/all1",
+    "particle": "westerosblocks:block/cobblestone/mossy/all1"
   }
 }

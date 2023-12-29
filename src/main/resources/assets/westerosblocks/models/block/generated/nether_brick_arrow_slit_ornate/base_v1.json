@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/transparent",
     "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/nether_brick_arrow_slit_ornate/side",
-    "south": "westerosblocks:block/nether_brick_arrow_slit_ornate/side",
-    "west": "westerosblocks:block/nether_brick_arrow_slit_ornate/side",
-    "east": "westerosblocks:block/nether_brick_arrow_slit_ornate/side",
-    "particle": "westerosblocks:block/nether_brick_arrow_slit_ornate/side"
+    "north": "westerosblocks:block/brick/nether/arrow_slit_ornate",
+    "south": "westerosblocks:block/brick/nether/arrow_slit_ornate",
+    "west": "westerosblocks:block/brick/nether/arrow_slit_ornate",
+    "east": "westerosblocks:block/brick/nether/arrow_slit_ornate",
+    "particle": "westerosblocks:block/brick/nether/arrow_slit_ornate"
   }
 }

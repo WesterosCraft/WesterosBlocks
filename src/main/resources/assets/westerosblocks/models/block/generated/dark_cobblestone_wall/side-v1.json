@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/tinted/template_wall_side",
   "textures": {
-    "bottom": "westerosblocks:block/dark_cobble/stone_cobble_dark",
-    "top": "westerosblocks:block/dark_cobble/stone_cobble_dark",
-    "side": "westerosblocks:block/dark_cobble/stone_cobble_dark"
+    "bottom": "westerosblocks:block/cobblestone/dark/all",
+    "top": "westerosblocks:block/cobblestone/dark/all",
+    "side": "westerosblocks:block/cobblestone/dark/all"
   }
 }

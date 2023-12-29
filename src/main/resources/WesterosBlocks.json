@@ -122,22 +122,22 @@
   		"customTag": "plank-ctm",
   		"blockNames": [ 
   			"minecraft:oak_stairs",
-			"minecraft:oak_slab",
-			"minecraft:birch_stairs",
-			"minecraft:birch_slab",
-			"minecraft:spruce_stairs",
-			"minecraft:spruce_slab",
-			"minecraft:jungle_stairs",
-			"minecraft:jungle_slab"
+        "minecraft:oak_slab",
+        "minecraft:birch_stairs",
+        "minecraft:birch_slab",
+        "minecraft:spruce_stairs",
+        "minecraft:spruce_slab",
+        "minecraft:jungle_stairs",
+        "minecraft:jungle_slab"
   		]
   	},
   	{ 
   		"customTag": "wood-ctm",
   		"blockNames": [ 
   			"minecraft:oak_planks",
-			"minecraft:birch_planks",
-			"minecraft:spruce_planks",
-			"minecraft:jungle_planks"
+        "minecraft:birch_planks",
+        "minecraft:spruce_planks",
+        "minecraft:jungle_planks"
   		]
   	}
   ],
@@ -807,12 +807,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 2,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
       "creativeTab": "WesterosTest",
       "types": {
         "stairs": "unconnect:false",
@@ -830,232 +825,422 @@
         "south": "test_block/s_texture",
         "north": "test_block/n_texture"
       }
+    },
+    {
+      "baseBlockName": "iron",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "altNames": {
+        "solid": "iron_block"
+      },
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Iron",
+      "randomTextures": [
+        {"textures": {"all": "iron_block/side1"}},
+        {"textures": {"all": "iron_block/side2"}},
+        {"textures": {"all": "iron_block/side3"}}
+      ]
+    },
+    {
+      "baseBlockName": "oxidized_iron",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "altNames": {
+        "solid": "oxidized_iron_block"
+      },
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Oxidized Iron",
+      "randomTextures": [
+        {"textures": {"all": "iron_block_oxidized/side1"}},
+        {"textures": {"all": "iron_block_oxidized/side2"}},
+        {"textures": {"all": "iron_block_oxidized/side3"}}
+      ]
+    },
+    {
+      "baseBlockName": "steel",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "altNames": {
+        "solid": "steel_block"
+      },
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Steel",
+      "randomTextures": [
+        {"textures": {"all": "steel_block/side1"}},
+        {"textures": {"all": "steel_block/side2"}},
+        {"textures": {"all": "steel_block/side3"}}
+      ]
+    },
+    {
+      "baseBlockName": "oxidized_steel",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "altNames": {
+        "solid": "oxidized_steel_block"
+      },
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Oxidized Steel",
+      "randomTextures": [
+        {"textures": {"all": "steel_block_oxidized/side1"}},
+        {"textures": {"all": "steel_block_oxidized/side2"}},
+        {"textures": {"all": "steel_block_oxidized/side3"}}
+      ]
+    },
+    {
+      "baseBlockName": "bronze",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "altNames": {
+        "solid": "bronze_block"
+      },
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Bronze",
+      "randomTextures": [
+        {"textures": {"all": "bronze_block/side1"}},
+        {"textures": {"all": "bronze_block/side2"}},
+        {"textures": {"all": "bronze_block/side3"}},
+        {"textures": {"all": "bronze_block/side4"}}
+      ]
+    },
+    {
+      "baseBlockName": "oxidized_bronze",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "altNames": {
+        "solid": "oxidized_bronze_block"
+      },
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Oxidized Bronze",
+      "randomTextures": [
+        {"textures": {"all": "bronze_block_oxidized/side1"}},
+        {"textures": {"all": "bronze_block_oxidized/side2"}},
+        {"textures": {"all": "bronze_block_oxidized/side3"}}
+      ]
+    },
+    {
+      "baseBlockName": "gold",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "altNames": {
+        "solid": "gold_block"
+      },
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Gold",
+      "randomTextures": [
+        {"textures": {"all": "gold/side1"}},
+        {"textures": {"all": "gold/side2"}},
+        {"textures": {"all": "gold/side3"}}
+      ]
+    },
+    {
+      "baseBlockName": "gold_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Gold Brick",
+      "textures": {
+        "all": "gold_brick/side"
+    }
+    },
+    {
+      "baseBlockName": "iron_throne_blade",
+      "variants": ["solid", "stairs", "slab", "wall", "fence"],
+      "altNames": {
+        "solid": "iron_throne_blade_block"
+      },
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "baseLabel": "Iron Throne Blade",
+      "textures": {
+        "all": "blades_molten/side1"
+      }
+    },
+    {
+      "baseBlockName": "nether_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosBrick",
+      "baseLabel": "Nether Brick",
+      "textures": {
+        "all": "brick/nether/all",
+        "arrow-slit": "brick/nether/arrow_slit",
+        "arrow-slit-window": "brick/nether/arrow_slit_window",
+        "arrow-slit-ornate": "brick/nether/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "stone_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosBrick",
+      "baseLabel": "Stone Brick",
+      "colorMult": "textures/colormap/stonebrick",
+      "textures": {
+        "all": "brick/stone/all",
+        "arrow-slit": "brick/stone/arrow_slit",
+        "arrow-slit-window": "brick/stone/arrow_slit_window",
+        "arrow-slit-ornate": "brick/stone/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "mossy_stone_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosBrick",
+      "baseLabel": "Mossy Stone Brick",
+      "colorMult": "textures/colormap/stonebrick",
+      "textures": {
+        "all": "brick/mossy_stone/all",
+        "arrow-slit": "brick/mossy_stone/arrow_slit",
+        "arrow-slit-window": "brick/mossy_stone/arrow_slit_window",
+        "arrow-slit-ornate": "brick/mossy_stone/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "orange_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosBrick",
+      "baseLabel": "Orange Brick",
+      "colorMult": "textures/colormap/brick",
+      "textures": {
+        "all": "brick/orange/all"
+      }
+    },
+    {
+      "baseBlockName": "small_orange_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "altNames": {
+        "solid": "small_orange_bricks"
+      },
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosBrick",
+      "baseLabel": "Small Orange Brick",
+      "colorMult": "textures/colormap/brick",
+      "textures": {
+        "all": "brick/small_orange/all",
+        "arrow-slit": "brick/small_orange/arrow_slit",
+        "arrow-slit-window": "brick/small_orange/arrow_slit_window",
+        "arrow-slit-ornate": "brick/small_orange/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "desert_sandstone",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "altNames": {
+        "wall": "desert_sandstone_brick_wall",
+        "stairs": "sandstone_stairs"
+      },
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosSandstone",
+      "baseLabel": "Desert Sandstone",
+      "textures": {
+        "all": "brick/desert_sandstone/all",
+        "arrow-slit": "brick/desert_sandstone/arrow_slit",
+        "arrow-slit-window": "brick/desert_sandstone/arrow_slit_window",
+        "arrow-slit-ornate": "brick/desert_sandstone/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "small_stone_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosBrick",
+      "baseLabel": "Small Stone Brick",
+      "colorMult": "textures/colormap/smallstonebrick",
+      "textures": {
+        "all": "brick/small_stone/all",
+        "arrow-slit": "brick/small_stone/arrow_slit",
+        "arrow-slit-window": "brick/small_stone/arrow_slit_window",
+        "arrow-slit-ornate": "brick/small_stone/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "mossy_small_stone_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosBrick",
+      "baseLabel": "Mossy Small Stone Brick",
+      "colorMult": "textures/colormap/smallstonebrick",
+      "textures": {
+        "all": "brick/mossy_small_stone/all"
+      }
+    },
+    {
+      "baseBlockName": "red_sandstone",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosSandstone",
+      "baseLabel": "Red Sandstone",
+      "textures": {
+        "all": "brick/red_sandstone/all",
+        "arrow-slit": "brick/red_sandstone/arrow_slit",
+        "arrow-slit-window": "brick/red_sandstone/arrow_slit_window",
+        "arrow-slit-ornate": "brick/red_sandstone/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "dark_red_sandstone",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosSandstone",
+      "baseLabel": "Dark Red Sandstone",
+      "textures": {
+        "all": "brick/dark_red_sandstone/all",
+        "arrow-slit": "brick/dark_red_sandstone/arrow_slit",
+        "arrow-slit-window": "brick/dark_red_sandstone/arrow_slit_window",
+        "arrow-slit-ornate": "brick/dark_red_sandstone/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "cobblestone",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosCobbleStone",
+      "baseLabel": "Cobblestone",
+      "colorMult": "textures/colormap/cobblestone",
+      "randomTextures": [
+        {"textures": {"all": "cobblestone/normal/all1"}, "weight": 5},
+        {"textures": {"all": "cobblestone/normal/all2"}, "weight": 5},
+        {"textures": {"all": "cobblestone/normal/all3"}, "weight": 5},
+        {"textures": {"all": "cobblestone/normal/all4"}, "weight": 5},
+        {"textures": {"all": "cobblestone/normal/all5"}, "weight": 20}
+      ]
+    },
+    {
+      "baseBlockName": "mossy_cobblestone",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosCobbleStone",
+      "baseLabel": "Mossy Cobblestone",
+      "colorMult": "textures/colormap/cobblestone",
+      "randomTextures": [
+        {"textures": {"all": "cobblestone/mossy/all1"}, "weight": 5},
+        {"textures": {"all": "cobblestone/mossy/all2"}, "weight": 5},
+        {"textures": {"all": "cobblestone/mossy/all3"}, "weight": 5},
+        {"textures": {"all": "cobblestone/mossy/all4"}, "weight": 5},
+        {"textures": {"all": "cobblestone/mossy/all5"}, "weight": 20}
+      ]
+    },
+    {
+      "baseBlockName": "bedrock",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosCobbleStone",
+      "baseLabel": "Bedrock",
+      "randomTextures": [
+        {"textures": {"all": "cobblestone/bedrock/all1"}, "weight": 5},
+        {"textures": {"all": "cobblestone/bedrock/all2"}, "weight": 5},
+        {"textures": {"all": "cobblestone/bedrock/all3"}, "weight": 5},
+        {"textures": {"all": "cobblestone/bedrock/all4"}, "weight": 5},
+        {"textures": {"all": "cobblestone/bedrock/all5"}, "weight": 20}
+      ]
+    },
+    {
+      "baseBlockName": "dark_cobblestone",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosCobbleStone",
+      "baseLabel": "Dark Cobblestone",
+      "colorMult": "textures/colormap/darkcobble",
+      "textures": {
+        "all": "cobblestone/dark/all"
+      }
     }
   ],
   "blocks": [
-    {
-      "blockName": "oxidized_iron_block",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "lightValue": 0,
-      "label": "Oxidized Iron Block",
-      "randomTextures": [
-        {
-          "textures": [
-            "iron_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "bronze_block",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "lightValue": 0,
-      "label": "Bronze Block",
-      "randomTextures": [
-        {
-          "textures": [
-            "bronze_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block/side3"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block/side4"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_bronze_block",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "lightValue": 0,
-      "label": "Oxidized Bronze Block",
-      "randomTextures": [
-        {
-          "textures": [
-            "bronze_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "steel_block",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "lightValue": 0,
-      "label": "Steel Block",
-      "randomTextures": [
-        {
-          "textures": [
-            "steel_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_steel_block",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "lightValue": 0,
-      "label": "Oxidized Steel Block",
-      "randomTextures": [
-        {
-          "textures": [
-            "steel_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "iron_throne_blade_block",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMisc",
-      "lightValue": 0,
-      "label": "Iron Throne Blade Block",
-      "textures": [
-        "blades_molten/side1"
-      ]
-    },
-    {
-      "blockName": "gold_brick",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "lightValue": 0,
-      "label": "Gold Brick",
-      "textures": [
-        "gold_brick/side"
-      ]
-    },
-    {
-      "blockName": "oxidized_iron_stairs",
-      "blockType": "stair",
-      "modelBlockName": "oxidized_iron_block",
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Iron Stairs"
-    },
     {
       "blockName": "closed_barrel",
       "blockType": "log",
@@ -3244,242 +3429,6 @@
       ]
     },
     {
-      "blockName": "iron_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Iron Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "iron_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_iron_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Oxidized Iron Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "iron_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "bronze_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Bronze Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "bronze_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_bronze_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Oxidized Bronze Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "bronze_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_steel_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Oxidized Steel Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "steel_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "steel_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Steel Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "steel_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "gold_brick_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Gold Brick Slab",
-      "textures": [
-        "gold_brick/side"
-      ]
-    },
-    {
-      "blockName": "iron_throne_blade_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMisc",
-      "label": "Iron Throne Blade Slab",
-      "textures": [
-        "blades_molten/side1"
-      ]
-    },
-    {
       "blockName": "oak_fence",
       "blockType": "fence",
       "hardness": 2,
@@ -3816,174 +3765,6 @@
       ]
     },
     {
-      "blockName": "nether_brick_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Nether Brick Wall",
-      "textures": [
-        "nether_brick/side"
-      ]
-    },
-    {
-      "blockName": "stone_brick_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Stone Brick Wall",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "stone_brick/large_unshaded"
-      ]
-    },
-    {
-      "blockName": "orange_brick_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Orange Brick Wall",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "orange_brick/large"
-      ]
-    },
-    {
-      "blockName": "desert_sandstone_brick_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosSandstone",
-      "type": "unconnect:false",
-      "label": "Desert Sandstone Brick Wall",
-      "textures": [
-        "sandstone_light_wall/top",
-        "sandstone_light_wall/top",
-        "sandstone_block/sandstone_normal"
-      ]
-    },
-    {
-      "blockName": "red_sandstone_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosSandstone",
-      "type": "unconnect:false",
-      "label": "Red Sandstone Wall",
-      "textures": [
-        "sandstone_red_wall/top",
-        "sandstone_red_wall/top",
-        "sandstone_red/side"
-      ]
-    },
-    {
-      "blockName": "dark_cobblestone_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Dark Cobblestone Wall",
-      "colorMult": "textures/colormap/darkcobble",
-      "textures": [
-        "dark_cobble/stone_cobble_dark"
-      ]
-    },
-    {
-      "blockName": "bedrock_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Bedrock Wall",
-      "textures": [
-        "stone_bedrock/side"
-      ]
-    },
-    {
-      "blockName": "small_stone_brick_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Small Stone Brick Wall",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "stone_brick/small"
-      ]
-    },
-    {
       "blockName": "dark_red_brick_wall",
       "blockType": "wall",
       "hardness": 1.5,
@@ -4001,27 +3782,6 @@
       "label": "Dark Red Brick Wall",
       "textures": [
         "dark_red_brick/side"
-      ]
-    },
-    {
-      "blockName": "small_orange_brick_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Small Orange Brick Wall",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "orange_brick/small_side"
       ]
     },
     {
@@ -7870,258 +7630,6 @@
       ]
     },
     {
-      "blockName": "small_stone_brick_arrow_slit",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Small Stone Brick Arrow Slit",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "small_stone_brick_arrow_slit/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }
-      ]
-    },
-    {
-      "blockName": "stone_brick_arrow_slit",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stone Brick Arrow Slit",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "stone_brick_arrow_slit/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }
-      ]
-    },
-    {
-      "blockName": "mossy_stone_brick_arrow_slit",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Mossy Stone Brick Arrow Slit",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "mossy_stone_brick_arrow_slit/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }
-      ]
-    },
-    {
-      "blockName": "stone_brick_arrow_slit_window",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stone Brick Arrow Slit Window",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "stone_brick_arrow_slit_window/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }
-      ]
-    },
-    {
       "blockName": "coloured_sept_window",
       "blockType": "solid",
       "creativeTab": "WesterosWindowsGlass",
@@ -8241,130 +7749,6 @@
         "translucent_block/cage_side"
       ],
       "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }
-      ]
-    },
-    {
-      "blockName": "nether_brick_arrow_slit",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Nether Brick Arrow Slit",
-      "textures": [
-        "transparent",
-        "transparent",
-        "nether_brick_arrow_slit/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }
-      ]
-    },
-    {
-      "blockName": "desert_sandstone_arrow_slit_ornate",
-      "blockType": "solid",
-      "creativeTab": "WesterosSandstone",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Desert Sandstone Arrow Slit Ornate",
-      "textures": [
-        "transparent",
-        "transparent",
-        "desert_sandstone_arrow_slit_ornate/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [
         {
           "xMin": 0,
           "xMax": 1,
@@ -9051,9 +8435,9 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosBrick",
-      "label": "Nether Brick Keystone",
+      "label": "Nether Brick Engraved",
       "textures": [
-        "stone_block/keystone_netherbrick"
+        "brick/nether/engraved"
       ]
     },
     {
@@ -9100,20 +8484,6 @@
       ]
     },
     {
-      "blockName": "dark_cobblestone",
-      "blockType": "solid",
-      "hardness": 3,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Dark Cobblestone",
-      "colorMult": "textures/colormap/darkcobble",
-      "textures": [
-        "dark_cobble/stone_cobble_dark"
-      ]
-    },
-    {
       "blockName": "small_orange_bricks_ornate_top",
       "blockType": "solid",
       "hardness": 3,
@@ -9124,9 +8494,9 @@
       "label": "Small Orange Bricks Ornate Top",
       "colorMult": "textures/colormap/brick",
       "textures": [
-        "small_orange_bricks_ornate_top/top_bottom",
-        "small_orange_bricks_ornate_top/top_bottom",
-        "small_orange_bricks_ornate_top/side"
+        "brick/small_orange/ornate/top_bottom",
+        "brick/small_orange/ornate/top_bottom",
+        "brick/small_orange/all"
       ]
     },
     {
@@ -9358,20 +8728,6 @@
       "colorMult": "textures/colormap/lightgreystone",
       "textures": [
         "light_grey_brick/side"
-      ]
-    },
-    {
-      "blockName": "small_stone_brick",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosBrick",
-      "label": "Small Stone Brick",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "stone_brick/small"
       ]
     },
     {
@@ -10407,15 +9763,6 @@
       "label": "Dark Brown Sandstone Stairs"
     },
     {
-      "blockName": "small_stone_brick_stairs",
-      "blockType": "stair",
-      "modelBlockName": "small_stone_brick",
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "label": "Small Stone Brick Stairs"
-    },
-    {
       "blockName": "light_grey_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "light_grey_brick",
@@ -10588,26 +9935,6 @@
         "orange_slate/ctm0",
         "orange_slate/side",
         "orange_slate/ctm0"
-      ]
-    },
-    {
-      "blockName": "small_stone_brick_slab",
-      "blockType": "slab",
-      "hardness": 3,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 2
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Small Stone Brick Slab",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "stone_brick/small"
       ]
     },
     {
@@ -10832,45 +10159,6 @@
             "red_slate/side0"
           ]
         }
-      ]
-    },
-    {
-      "blockName": "bedrock_slab",
-      "blockType": "slab",
-      "hardness": 3,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 2
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Bedrock Slab",
-      "textures": [
-        "stone_bedrock/side"
-      ]
-    },
-    {
-      "blockName": "dark_cobblestone_slab",
-      "blockType": "slab",
-      "hardness": 3,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 2
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Dark Cobblestone Slab",
-      "colorMult": "textures/colormap/darkcobble",
-      "textures": [
-        "dark_cobble/stone_cobble_dark"
       ]
     },
     {
@@ -11577,36 +10865,6 @@
       "label": "Red Slate Stairs"
     },
     {
-      "blockName": "cobblestone_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Cobblestone Fence",
-      "colorMult": "textures/colormap/cobblestone",
-      "textures": [
-        "stone_block/stone_cobble_unshaded"
-      ]
-    },
-    {
-      "blockName": "mossy_cobblestone_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Mossy Cobblestone Fence",
-      "colorMult": "textures/colormap/cobblestone",
-      "textures": [
-        "stone_block/stone_cobble_mossy_unshaded"
-      ]
-    },
-    {
       "blockName": "reinforced_oak_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -11618,20 +10876,6 @@
       "label": "Reinforced Oak Fence",
       "textures": [
         "wood_block/planks_reinforced_oak"
-      ]
-    },
-    {
-      "blockName": "desert_sandstone_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosSandstone",
-      "type": "unconnect:false",
-      "label": "Desert Sandstone Fence",
-      "textures": [
-        "sandstone_block/sandstone_normal"
       ]
     },
     {
@@ -11733,50 +10977,6 @@
       ]
     },
     {
-      "blockName": "small_stone_brick_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Small Stone Brick Fence",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "stone_brick/small"
-      ]
-    },
-    {
-      "blockName": "dark_cobblestone_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Dark Cobblestone Fence",
-      "colorMult": "textures/colormap/darkcobble",
-      "textures": [
-        "dark_cobble/stone_cobble_dark"
-      ]
-    },
-    {
-      "blockName": "bedrock_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Bedrock Fence",
-      "textures": [
-        "stone_bedrock/side"
-      ]
-    },
-    {
       "blockName": "light_grey_brick_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -11789,21 +10989,6 @@
       "colorMult": "textures/colormap/lightgreystone",
       "textures": [
         "light_grey_brick/side"
-      ]
-    },
-    {
-      "blockName": "orange_brick_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Orange Brick Fence",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "orange_brick/large"
       ]
     },
     {
@@ -15047,284 +14232,6 @@
       ]
     },
     {
-      "blockName": "cobblestone_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Cobblestone Hopper",
-      "colorMult": "textures/colormap/cobblestone",
-      "textures": [
-        "stone_block/stone_cobble_unshaded"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "mossy_cobblestone_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Mossy Cobblestone Hopper",
-      "colorMult": "textures/colormap/cobblestone",
-      "textures": [
-        "stone_block/stone_cobble_mossy_unshaded"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "nether_brick_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Nether Brick Hopper",
-      "textures": [
-        "nether_brick/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "desert_sandstone_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosSandstone",
-      "label": "Desert Sandstone Hopper",
-      "textures": [
-        "sandstone_block/sandstone_normal"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
       "blockName": "vivid_sandstone_hopper",
       "blockType": "cuboid",
       "hardness": 5,
@@ -15687,76 +14594,6 @@
       "colorMult": "textures/colormap/lightgreystone",
       "textures": [
         "light_grey_brick/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "small_stone_brick_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Small Stone Brick Hopper",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "stone_brick/small"
       ],
       "cuboids": [
         {
@@ -16240,75 +15077,6 @@
       "label": "Green Slate Tip",
       "textures": [
         "stone_slate/slate_green"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "gold_brick_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Gold Brick Tip",
-      "textures": [
-        "gold_brick/side"
       ],
       "cuboids": [
         {
@@ -18806,54 +17574,6 @@
       ]
     },
     {
-      "blockName": "oxidized_bronze_stairs",
-      "blockType": "stair",
-      "modelBlockName": "oxidized_bronze_block",
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Bronze Stairs"
-    },
-    {
-      "blockName": "oxidized_steel_stairs",
-      "blockType": "stair",
-      "modelBlockName": "oxidized_steel_block",
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Steel Stairs"
-    },
-    {
-      "blockName": "gold_brick_stairs",
-      "blockType": "stair",
-      "modelBlockName": "gold_brick",
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Gold Brick Stairs"
-    },
-    {
-      "blockName": "bronze_stairs",
-      "blockType": "stair",
-      "modelBlockName": "bronze_slab",
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Bronze Stairs"
-    },
-    {
-      "blockName": "iron_stairs",
-      "blockType": "stair",
-      "modelBlockName": "iron_slab",
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Iron Stairs"
-    },
-    {
-      "blockName": "steel_stairs",
-      "blockType": "stair",
-      "modelBlockName": "steel_block",
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Steel Stairs"
-    },
-    {
       "blockName": "snow_stairs",
       "blockType": "stair",
       "modelBlockName": "snow_slab",
@@ -18941,23 +17661,6 @@
         "white_wood/top_bottom",
         "white_wood/side"
       ]
-    },
-    {
-      "blockName": "bedrock_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:bedrock",
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Bedrock Stairs"
-    },
-    {
-      "blockName": "dark_cobblestone_stairs",
-      "blockType": "stair",
-      "modelBlockName": "dark_cobblestone",
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Dark Cobblestone Stairs",
-      "colorMult": "textures/colormap/darkcobble"
     },
     {
       "blockName": "packed_snow",
@@ -19983,34 +18686,6 @@
       ]
     },
     {
-      "blockName": "iron_throne_blade_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosDecor",
-      "type": "unconnect:false",
-      "label": "Iron Throne Blade Fence",
-      "textures": [
-        "blades_molten/side1"
-      ]
-    },
-    {
-      "blockName": "bronze_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Bronze Fence",
-      "textures": [
-        "bronze_block/side1"
-      ]
-    },
-    {
       "blockName": "redorange_slate_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -20022,20 +18697,6 @@
       "label": "Red-Orange Slate Fence",
       "textures": [
         "stone_slate/slate_red_orange"
-      ]
-    },
-    {
-      "blockName": "oxidized_bronze_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Bronze Fence",
-      "textures": [
-        "bronze_block_oxidized/side3"
       ]
     },
     {
@@ -21027,26 +19688,6 @@
       ]
     },
     {
-      "blockName": "iron_throne_blade_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosMisc",
-      "type": "unconnect:false",
-      "label": "Iron Throne Blade Wall",
-      "textures": [
-        "blades_molten/side1"
-      ]
-    },
-    {
       "blockName": "winterfell_granite_wall",
       "blockType": "wall",
       "hardness": 1.5,
@@ -21107,40 +19748,6 @@
       ]
     },
     {
-      "blockName": "bronze_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Bronze Wall",
-      "randomTextures": [
-        {
-          "textures": [
-            "bronze_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block/side3"
-          ]
-        }
-      ]
-    },
-    {
       "blockName": "redorange_slate_wall",
       "blockType": "wall",
       "hardness": 1.5,
@@ -21158,40 +19765,6 @@
       "label": "Red-Orange Slate Wall",
       "textures": [
         "stone_slate/slate_red_orange"
-      ]
-    },
-    {
-      "blockName": "oxidized_bronze_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Bronze Wall",
-      "randomTextures": [
-        {
-          "textures": [
-            "bronze_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "bronze_block_oxidized/side3"
-          ]
-        }
       ]
     },
     {
@@ -22266,76 +20839,6 @@
       ]
     },
     {
-      "blockName": "orange_brick_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Orange Brick Hopper",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "orange_brick/large"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
       "blockName": "reach_brick_hopper",
       "blockType": "cuboid",
       "hardness": 5,
@@ -23229,7 +21732,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 5,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faith Carved Stone Brick",
       "textures": [
         "faith_star/faith_carved_stone_brick"
@@ -23242,10 +21745,10 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 5,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosBrick",
       "label": "Faith Carved Small Stone Brick",
       "textures": [
-        "faith_star/faith_carved_small_stone_brick"
+        "brick/small_stone/faith_carved"
       ]
     },
     {
@@ -23330,20 +21833,6 @@
       ],
       "textures": [
         "terrainset_reach/random_4x4"
-      ]
-    },
-    {
-      "blockName": "mossy_small_stone_brick",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Mossy Small Stone Brick",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "stone_block/brick_stone_small_mossy"
       ]
     },
     {
@@ -23990,131 +22479,6 @@
       }
     },
     {
-      "blockName": "red_sandstone_arrow_slit",
-      "blockType": "solid",
-      "creativeTab": "WesterosSandstone",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Red Sandstone Arrow Slit",
-      "textures": [
-        "transparent",
-        "transparent",
-        "red_sandstone_arrow_slit/base_side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "small_orange_brick_arrow_slit_window",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Small Orange Brick Arrow Slit Window",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "small_orange_brick_arrow_slit_window/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
       "blockName": "kl_dun_brick_arrow_slit",
       "blockType": "solid",
       "creativeTab": "WesterosBrick",
@@ -24673,69 +23037,6 @@
       ]
     },
     {
-      "blockName": "small_stone_brick_arrow_slit_ornate",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Small Stone Brick Arrow Slit Ornate",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "small_stone_brick_arrow_slit_ornate/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
       "blockName": "light_grey_brick_arrow_slit_ornate",
       "blockType": "solid",
       "creativeTab": "WesterosBrick",
@@ -24752,69 +23053,6 @@
         "transparent",
         "transparent",
         "light_grey_brick_arrow_slit_ornate/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "small_stone_brick_arrow_slit_window",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Small Stone Brick Arrow Slit Window",
-      "colorMult": "textures/colormap/smallstonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "small_stone_brick_arrow_slit_window/side"
       ],
       "collisionBoxes": [
         {
@@ -24987,27 +23225,6 @@
       ]
     },
     {
-      "blockName": "red_sandstone_slab",
-      "blockType": "slab",
-      "hardness": 3,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 2
-        }
-      ],
-      "creativeTab": "WesterosSandstone",
-      "label": "Red Sandstone Slab",
-      "textures": [
-        "sandstone_red/top",
-        "sandstone_red/top",
-        "sandstone_red/side"
-      ]
-    },
-    {
       "blockName": "dark_red_brick_slab",
       "blockType": "slab",
       "hardness": 3,
@@ -25160,14 +23377,6 @@
       "textures": [
         "stormlands_brick_large/side"
       ]
-    },
-    {
-      "blockName": "red_sandstone_stairs",
-      "blockType": "stair",
-      "modelBlockName": "red_sandstone_slab",
-      "creativeTab": "WesterosSandstone",
-      "type": "unconnect:false",
-      "label": "Red Sandstone Stairs"
     },
     {
       "blockName": "rope_pulley",
@@ -28455,14 +26664,6 @@
       ]
     },
     {
-      "blockName": "iron_throne_blade_stairs",
-      "blockType": "stair",
-      "modelBlockName": "iron_throne_blade_block",
-      "creativeTab": "WesterosMisc",
-      "type": "unconnect:false",
-      "label": "Iron Throne Blade Stairs"
-    },
-    {
       "blockName": "red_keep_secret_door",
       "blockType": "door",
       "hardness": 7,
@@ -28473,8 +26674,8 @@
       "type": "locked:true,allow-unsupported",
       "label": "Red Keep Secret Door",
       "textures": [
-        "sandstone_red/coarse",
-        "sandstone_red/coarse"
+        "coarse_red_sandstone/default",
+        "coarse_red_sandstone/default"
       ]
     },
     {
@@ -33990,20 +32191,6 @@
       ]
     },
     {
-      "blockName": "small_orange_bricks",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Small Orange Bricks",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "orange_brick/small_side"
-      ]
-    },
-    {
       "blockName": "highgarden_green_plaster",
       "blockType": "solid",
       "hardness": 5,
@@ -37123,76 +35310,6 @@
       ]
     },
     {
-      "blockName": "small_orange_brick_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Small Orange Brick Hopper",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "orange_brick/small_side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
       "blockName": "small_smooth_stone_brick_hopper",
       "blockType": "cuboid",
       "hardness": 5,
@@ -37349,76 +35466,6 @@
       "label": "Arbor Small Brick Hopper",
       "textures": [
         "stone_block/brick_arbor_small"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "stone_brick_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Stone Brick Hopper",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "stone_brick/large_unshaded"
       ],
       "cuboids": [
         {
@@ -39280,132 +37327,6 @@
         "transparent",
         "transparent",
         "kl_dun_brick_arrow_slit_ornate/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "small_orange_brick_arrow_slit",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Small Orange Brick Arrow Slit",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "small_orange_brick_arrow_slit/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "small_orange_brick_arrow_slit_ornate",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Small Orange Brick Arrow Slit Ornate",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "small_orange_brick_arrow_slit_ornate/side"
       ],
       "collisionBoxes": [
         {
@@ -44748,26 +42669,6 @@
       ]
     },
     {
-      "blockName": "small_orange_brick_slab",
-      "blockType": "slab",
-      "hardness": 3,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 2
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Small Orange Brick Slab",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "orange_brick/small_side"
-      ]
-    },
-    {
       "blockName": "arbor_small_brick_slab",
       "blockType": "slab",
       "hardness": 3,
@@ -45807,889 +43708,12 @@
       "label": "Orange Slate Stairs"
     },
     {
-      "blockName": "iron_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Iron Wall",
-      "randomTextures": [
-        {
-          "textures": [
-            "iron_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_iron_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Iron Wall",
-      "randomTextures": [
-        {
-          "textures": [
-            "iron_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "steel_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Steel Wall",
-      "randomTextures": [
-        {
-          "textures": [
-            "steel_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_steel_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Steel Wall",
-      "randomTextures": [
-        {
-          "textures": [
-            "steel_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "gold_brick_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Gold Brick Wall",
-      "textures": [
-        "gold_brick/side"
-      ]
-    },
-    {
-      "blockName": "gold_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Gold Wall",
-      "randomTextures": [
-        {
-          "textures": [
-            "gold/side1"
-          ]
-        },
-        {
-          "textures": [
-            "gold/side2"
-          ]
-        },
-        {
-          "textures": [
-            "gold/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "iron_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Iron Fence",
-      "randomTextures": [
-        {
-          "textures": [
-            "iron_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_iron_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Iron Fence",
-      "randomTextures": [
-        {
-          "textures": [
-            "iron_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "iron_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "steel_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Steel Fence",
-      "randomTextures": [
-        {
-          "textures": [
-            "steel_block/side1"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block/side2"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_steel_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Oxidized Steel Fence",
-      "randomTextures": [
-        {
-          "textures": [
-            "steel_block_oxidized/side1"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block_oxidized/side2"
-          ]
-        },
-        {
-          "textures": [
-            "steel_block_oxidized/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "gold_brick_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Gold Brick Fence",
-      "textures": [
-        "gold_brick/side"
-      ]
-    },
-    {
-      "blockName": "gold_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Gold Fence",
-      "randomTextures": [
-        {
-          "textures": [
-            "gold/side1"
-          ]
-        },
-        {
-          "textures": [
-            "gold/side2"
-          ]
-        },
-        {
-          "textures": [
-            "gold/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "iron_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Iron Tip",
-      "textures": [
-        "iron_block/side1"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_iron_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Oxidized Iron Tip",
-      "textures": [
-        "iron_block_oxidized/side3"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "bronze_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Bronze Tip",
-      "textures": [
-        "bronze_block/side1"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_bronze_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Oxidized Bronze Tip",
-      "textures": [
-        "bronze_block_oxidized/side3"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "steel_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Steel Tip",
-      "textures": [
-        "steel_block/side1"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oxidized_steel_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Oxidized Steel Tip",
-      "textures": [
-        "steel_block_oxidized/side1"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "gold_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Gold Tip",
-      "textures": [
-        "gold/side1"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "small_orange_brick_stairs",
-      "blockType": "stair",
-      "modelBlockName": "small_orange_bricks",
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "colorMult": "textures/colormap/brick",
-      "label": "Small Orange Brick Stairs"
-    },
-    {
       "blockName": "arbor_small_brick_stairs",
       "blockType": "stair",
       "modelBlockName": "arbor_small_brick",
       "creativeTab": "WesterosBrick",
       "type": "unconnect:false",
       "label": "Arbor Small Brick Stairs"
-    },
-    {
-      "blockName": "gold_slab",
-      "blockType": "slab",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosMetal",
-      "label": "Gold Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "gold/side1"
-          ]
-        },
-        {
-          "textures": [
-            "gold/side2"
-          ]
-        },
-        {
-          "textures": [
-            "gold/side3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "gold_stairs",
-      "blockType": "stair",
-      "modelBlockName": "gold_slab",
-      "creativeTab": "WesterosMetal",
-      "type": "unconnect:false",
-      "label": "Gold Stairs"
     },
     {
       "blockName": "gold_road_marker",
@@ -47557,319 +44581,6 @@
       ]
     },
     {
-      "blockName": "stone_brick_arrow_slit_ornate",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stone Brick Arrow Slit Ornate",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "stone_brick_arrow_slit_ornate/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "mossy_stone_brick_arrow_slit_window",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Mossy Stone Brick Arrow Slit Window",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "mossy_stone_brick_arrow_slit_window/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "mossy_stone_brick_arrow_slit_ornate",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Mossy Stone Brick Arrow Slit Ornate",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "transparent",
-        "transparent",
-        "mossy_stone_brick_arrow_slit_ornate/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "nether_brick_arrow_slit_window",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Nether Brick Arrow Slit Window",
-      "textures": [
-        "transparent",
-        "transparent",
-        "nether_brick_arrow_slit_window/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "nether_brick_arrow_slit_ornate",
-      "blockType": "solid",
-      "creativeTab": "WesterosBrick",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Nether Brick Arrow Slit Ornate",
-      "textures": [
-        "transparent",
-        "transparent",
-        "nether_brick_arrow_slit_ornate/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
       "blockName": "reach_brick_arrow_slit",
       "blockType": "solid",
       "creativeTab": "WesterosBrick",
@@ -48133,254 +44844,6 @@
         "transparent",
         "transparent",
         "winterfell_granite_arrow_slit_ornate/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "desert_sandstone_arrow_slit",
-      "blockType": "solid",
-      "creativeTab": "WesterosSandstone",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Desert Sandstone Arrow Slit",
-      "textures": [
-        "transparent",
-        "transparent",
-        "desert_sandstone_arrow_slit/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "desert_sandstone_arrow_slit_window",
-      "blockType": "solid",
-      "creativeTab": "WesterosSandstone",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Desert Sandstone Arrow Slit Window",
-      "textures": [
-        "transparent",
-        "transparent",
-        "desert_sandstone_arrow_slit_window/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "red_sandstone_arrow_slit_window",
-      "blockType": "solid",
-      "creativeTab": "WesterosSandstone",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Red Sandstone Arrow Slit Window",
-      "textures": [
-        "transparent",
-        "transparent",
-        "red_sandstone_arrow_slit_window/base_side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "red_sandstone_arrow_slit_ornate",
-      "blockType": "solid",
-      "creativeTab": "WesterosSandstone",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Red Sandstone Arrow Slit Ornate",
-      "textures": [
-        "transparent",
-        "transparent",
-        "red_sandstone_arrow_slit_ornate/base_side"
       ],
       "collisionBoxes": [
         {
@@ -50431,214 +46894,6 @@
       "label": "Quartz Hopper",
       "textures": [
         "stone_block/quartz_block"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "bedrock_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Bedrock Hopper",
-      "textures": [
-        "stone_bedrock/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "dark_cobblestone_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Dark Cobblestone Hopper",
-      "colorMult": "textures/colormap/darkcobble",
-      "textures": [
-        "dark_cobble/stone_cobble_dark"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "red_sandstone_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosSandstone",
-      "label": "Red Sandstone Hopper",
-      "textures": [
-        "sandstone_red/side"
       ],
       "cuboids": [
         {
@@ -53705,15 +49960,6 @@
       ]
     },
     {
-      "blockName": "cobblestone_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:cobblestone",
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Cobblestone Stairs",
-      "colorMult": "textures/colormap/cobblestone"
-    },
-    {
       "blockName": "quartz_stairs",
       "blockType": "stair",
       "modelBlockName": "minecraft:quartz_block",
@@ -53746,30 +49992,6 @@
       ]
     },
     {
-      "blockName": "sandstone_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:sandstone",
-      "creativeTab": "WesterosSandstone",
-      "type": "unconnect:false",
-      "label": "Sandstone Stairs",
-      "textures": [
-        "minecraft:block/sandstone_bottom",
-        "minecraft:block/sandstone_top",
-        "minecraft:block/sandstone"
-      ]
-    },
-    {
-      "blockName": "nether_brick_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:nether_bricks",
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Nether Brick Stairs",
-      "textures": [
-        "minecraft:block/nether_bricks"
-      ]
-    },
-    {
       "blockName": "brick_stairs",
       "blockType": "stair",
       "modelBlockName": "minecraft:bricks",
@@ -53777,237 +49999,6 @@
       "type": "unconnect:false",
       "label": "Brick Stairs",
       "colorMult": "textures/colormap/brick"
-    },
-    {
-      "blockName": "stone_brick_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:stone_bricks",
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Stone Brick Stairs",
-      "colorMult": "textures/colormap/stonebrick"
-    },
-    {
-      "blockName": "mossy_stone_brick_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:mossy_stone_bricks",
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Mossy Stone Brick Stairs",
-      "colorMult": "textures/colormap/stonebrick"
-    },
-    {
-      "blockName": "mossy_cobblestone_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:mossy_cobblestone",
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Mossy Cobblestone Stairs",
-      "colorMult": "textures/colormap/cobblestone"
-    },
-    {
-      "blockName": "nether_brick_fence",
-      "blockType": "fence",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Nether Brick Fence",
-      "textures": [
-        "minecraft:block/nether_bricks"
-      ]
-    },
-    {
-      "blockName": "cobblestone_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Cobblestone Wall",
-      "colorMult": "textures/colormap/cobblestone",
-      "randomTextures": [
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone1"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone2"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone3"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone4"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone5"
-          ],
-          "weight": 20
-        }
-      ]
-    },
-    {
-      "blockName": "mossy_cobblestone_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "type": "unconnect:false",
-      "label": "Mossy Cobblestone Wall",
-      "colorMult": "textures/colormap/cobblestone",
-      "randomTextures": [
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy1"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy2"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy3"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy4"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy5"
-          ],
-          "weight": 20
-        }
-      ]
-    },
-    {
-      "blockName": "mossy_stone_brick_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "type": "unconnect:false",
-      "label": "Mossy Stone Brick Wall",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "stone_brick/mossy_stone_bricks"
-      ]
-    },
-    {
-      "blockName": "mossy_stone_brick_slab",
-      "blockType": "slab",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosBrick",
-      "label": "Mossy Stone Brick Slab",
-      "colorMult": "textures/colormap/stonebrick",
-      "textures": [
-        "stone_brick/mossy_stone_bricks"
-      ]
-    },
-    {
-      "blockName": "mossy_cobblestone_slab",
-      "blockType": "slab",
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosCobbleStone",
-      "label": "Mossy Cobblestone Slab",
-      "colorMult": "textures/colormap/cobblestone",
-      "randomTextures": [
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy1"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy2"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy3"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy4"
-          ],
-          "weight": 5
-        },
-        {
-          "textures": [
-            "cobblestone_texture_variants/cobblestone_mossy5"
-          ],
-          "weight": 20
-        }
-      ]
     },
     {
       "blockName": "iron_bars",

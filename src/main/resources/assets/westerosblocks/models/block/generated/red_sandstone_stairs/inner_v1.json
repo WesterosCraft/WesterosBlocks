@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone_red/top",
-    "top": "westerosblocks:block/sandstone_red/top",
-    "side": "westerosblocks:block/sandstone_red/side",
-    "particle": "westerosblocks:block/sandstone_red/side"
+    "bottom": "westerosblocks:block/brick/red_sandstone/all",
+    "top": "westerosblocks:block/brick/red_sandstone/all",
+    "side": "westerosblocks:block/brick/red_sandstone/all",
+    "particle": "westerosblocks:block/brick/red_sandstone/all"
   }
 }

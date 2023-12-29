@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/brick/mossy_small_stone/all",
+    "up": "westerosblocks:block/brick/mossy_small_stone/all",
+    "north": "westerosblocks:block/brick/mossy_small_stone/all",
+    "south": "westerosblocks:block/brick/mossy_small_stone/all",
+    "west": "westerosblocks:block/brick/mossy_small_stone/all",
+    "east": "westerosblocks:block/brick/mossy_small_stone/all",
+    "particle": "westerosblocks:block/brick/mossy_small_stone/all"
+  }
+}

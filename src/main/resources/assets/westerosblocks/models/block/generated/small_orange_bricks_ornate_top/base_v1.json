@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "down": "westerosblocks:block/small_orange_bricks_ornate_top/top_bottom",
-    "up": "westerosblocks:block/small_orange_bricks_ornate_top/top_bottom",
-    "north": "westerosblocks:block/small_orange_bricks_ornate_top/side",
-    "south": "westerosblocks:block/small_orange_bricks_ornate_top/side",
-    "west": "westerosblocks:block/small_orange_bricks_ornate_top/side",
-    "east": "westerosblocks:block/small_orange_bricks_ornate_top/side",
-    "particle": "westerosblocks:block/small_orange_bricks_ornate_top/side"
+    "down": "westerosblocks:block/brick/small_orange/ornate/top_bottom",
+    "up": "westerosblocks:block/brick/small_orange/ornate/top_bottom",
+    "north": "westerosblocks:block/brick/small_orange/all",
+    "south": "westerosblocks:block/brick/small_orange/all",
+    "west": "westerosblocks:block/brick/small_orange/all",
+    "east": "westerosblocks:block/brick/small_orange/all",
+    "particle": "westerosblocks:block/brick/small_orange/all"
   }
 }

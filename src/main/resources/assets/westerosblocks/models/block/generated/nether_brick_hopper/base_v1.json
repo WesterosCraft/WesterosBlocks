@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/nether_brick/side",
-    "txt5": "westerosblocks:block/nether_brick/side",
-    "txt2": "westerosblocks:block/nether_brick/side",
-    "txt3": "westerosblocks:block/nether_brick/side",
-    "txt0": "westerosblocks:block/nether_brick/side",
-    "txt1": "westerosblocks:block/nether_brick/side",
-    "particle": "westerosblocks:block/nether_brick/side"
+    "txt4": "westerosblocks:block/brick/nether/all",
+    "txt5": "westerosblocks:block/brick/nether/all",
+    "txt2": "westerosblocks:block/brick/nether/all",
+    "txt3": "westerosblocks:block/brick/nether/all",
+    "txt0": "westerosblocks:block/brick/nether/all",
+    "txt1": "westerosblocks:block/brick/nether/all",
+    "particle": "westerosblocks:block/brick/nether/all"
   },
   "elements": [
     {

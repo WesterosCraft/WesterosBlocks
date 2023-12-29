@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/brick/mossy_small_stone/all",
+    "top": "westerosblocks:block/brick/mossy_small_stone/all",
+    "side": "westerosblocks:block/brick/mossy_small_stone/all",
+    "particle": "westerosblocks:block/brick/mossy_small_stone/all"
+  }
+}

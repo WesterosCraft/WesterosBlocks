@@ -15,6 +15,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=inner_right": [
@@ -35,6 +40,12 @@
         "x": 180,
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=north,half=top,shape=inner_right": [
@@ -50,6 +61,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
         "x": 180,
         "uvlock": true
       }
@@ -72,6 +88,12 @@
         "x": 180,
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=outer_left": [
@@ -87,6 +109,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
         "y": 180,
         "uvlock": true
       }
@@ -109,6 +136,12 @@
         "x": 180,
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=east,half=top,shape=inner_left": [
@@ -124,6 +157,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
+        "x": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
         "x": 180,
         "uvlock": true
       }
@@ -143,6 +181,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=west,half=top,shape=inner_right": [
@@ -160,6 +203,12 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -183,6 +232,12 @@
         "x": 180,
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=inner_left": [
@@ -198,6 +253,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
+        "y": 270,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
         "y": 270,
         "uvlock": true
       }
@@ -217,6 +277,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=outer_right": [
@@ -228,6 +293,9 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4"
       }
     ],
     "facing=north,half=top,shape=outer_left": [
@@ -248,6 +316,12 @@
         "x": 180,
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=straight": [
@@ -263,6 +337,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/base_v3",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/base_v4",
         "y": 90,
         "uvlock": true
       }
@@ -282,6 +361,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=inner_right": [
@@ -297,6 +381,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
         "y": 90,
         "uvlock": true
       }
@@ -316,6 +405,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
         "x": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "x": 180,
+        "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=straight": [
@@ -331,6 +425,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/base_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/base_v4",
         "y": 180,
         "uvlock": true
       }
@@ -350,6 +449,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
         "x": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "x": 180,
+        "uvlock": true
       }
     ],
     "facing=west,half=top,shape=inner_left": [
@@ -367,6 +471,12 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -390,6 +500,12 @@
         "x": 180,
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=outer_left": [
@@ -407,6 +523,12 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -430,6 +552,12 @@
         "x": 180,
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=inner_right": [
@@ -441,6 +569,9 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4"
       }
     ],
     "facing=south,half=bottom,shape=inner_left": [
@@ -452,6 +583,9 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4"
       }
     ],
     "facing=west,half=top,shape=straight": [
@@ -469,6 +603,12 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/base_v3",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/base_v4",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -492,6 +632,12 @@
         "x": 180,
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=straight": [
@@ -512,6 +658,12 @@
         "x": 180,
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/base_v4",
+        "x": 180,
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=east,half=top,shape=straight": [
@@ -529,6 +681,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/base_v3",
         "x": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/base_v4",
+        "x": 180,
+        "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=outer_right": [
@@ -544,6 +701,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
         "y": 180,
         "uvlock": true
       }
@@ -566,6 +728,12 @@
         "x": 180,
         "y": 180,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "x": 180,
+        "y": 180,
+        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=straight": [
@@ -577,6 +745,9 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/base_v4"
       }
     ],
     "facing=west,half=bottom,shape=outer_left": [
@@ -592,6 +763,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
+        "y": 90,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
         "y": 90,
         "uvlock": true
       }
@@ -611,6 +787,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=straight": [
@@ -628,6 +809,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/base_v3",
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/base_v4",
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=inner_left": [
@@ -643,6 +829,11 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/inner_v3",
+        "y": 180,
+        "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/inner_v4",
         "y": 180,
         "uvlock": true
       }
@@ -665,6 +856,12 @@
         "x": 180,
         "y": 270,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/base_v4",
+        "x": 180,
+        "y": 270,
+        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=outer_right": [
@@ -682,6 +879,11 @@
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3",
         "y": 90,
         "uvlock": true
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4",
+        "y": 90,
+        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=outer_left": [
@@ -693,6 +895,9 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_stairs/outer_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_stairs/outer_v4"
       }
     ]
   }

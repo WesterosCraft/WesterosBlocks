@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/brick/dark_red_sandstone/all",
+    "up": "westerosblocks:block/brick/dark_red_sandstone/all",
+    "north": "westerosblocks:block/brick/dark_red_sandstone/all",
+    "south": "westerosblocks:block/brick/dark_red_sandstone/all",
+    "west": "westerosblocks:block/brick/dark_red_sandstone/all",
+    "east": "westerosblocks:block/brick/dark_red_sandstone/all",
+    "particle": "westerosblocks:block/brick/dark_red_sandstone/all"
+  }
+}

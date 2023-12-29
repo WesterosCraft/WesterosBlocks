@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/bronze_block/side4",
+    "top": "westerosblocks:block/bronze_block/side4",
+    "side": "westerosblocks:block/bronze_block/side4",
+    "particle": "westerosblocks:block/bronze_block/side4"
+  }
+}

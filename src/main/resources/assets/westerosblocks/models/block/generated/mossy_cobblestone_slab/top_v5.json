@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy5",
-    "up": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy5",
-    "north": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy5",
-    "south": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy5",
-    "west": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy5",
-    "east": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy5",
-    "particle": "westerosblocks:block/cobblestone_texture_variants/cobblestone_mossy5"
+    "down": "westerosblocks:block/cobblestone/mossy/all5",
+    "up": "westerosblocks:block/cobblestone/mossy/all5",
+    "north": "westerosblocks:block/cobblestone/mossy/all5",
+    "south": "westerosblocks:block/cobblestone/mossy/all5",
+    "west": "westerosblocks:block/cobblestone/mossy/all5",
+    "east": "westerosblocks:block/cobblestone/mossy/all5",
+    "particle": "westerosblocks:block/cobblestone/mossy/all5"
   }
 }

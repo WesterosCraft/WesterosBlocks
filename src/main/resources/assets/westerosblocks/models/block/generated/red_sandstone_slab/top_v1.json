@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/sandstone_red/top",
-    "up": "westerosblocks:block/sandstone_red/top",
-    "north": "westerosblocks:block/sandstone_red/side",
-    "south": "westerosblocks:block/sandstone_red/side",
-    "west": "westerosblocks:block/sandstone_red/side",
-    "east": "westerosblocks:block/sandstone_red/side",
-    "particle": "westerosblocks:block/sandstone_red/side"
+    "down": "westerosblocks:block/brick/red_sandstone/all",
+    "up": "westerosblocks:block/brick/red_sandstone/all",
+    "north": "westerosblocks:block/brick/red_sandstone/all",
+    "south": "westerosblocks:block/brick/red_sandstone/all",
+    "west": "westerosblocks:block/brick/red_sandstone/all",
+    "east": "westerosblocks:block/brick/red_sandstone/all",
+    "particle": "westerosblocks:block/brick/red_sandstone/all"
   }
 }

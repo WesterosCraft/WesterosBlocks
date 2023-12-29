@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "minecraft:block/nether_bricks",
-    "top": "minecraft:block/nether_bricks",
-    "side": "minecraft:block/nether_bricks",
-    "particle": "minecraft:block/nether_bricks"
+    "bottom": "westerosblocks:block/brick/nether/all",
+    "top": "westerosblocks:block/brick/nether/all",
+    "side": "westerosblocks:block/brick/nether/all",
+    "particle": "westerosblocks:block/brick/nether/all"
   }
 }

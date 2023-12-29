@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/gold/side1",
+    "up": "westerosblocks:block/gold/side1",
+    "north": "westerosblocks:block/gold/side1",
+    "south": "westerosblocks:block/gold/side1",
+    "west": "westerosblocks:block/gold/side1",
+    "east": "westerosblocks:block/gold/side1",
+    "particle": "westerosblocks:block/gold/side1"
+  }
+}

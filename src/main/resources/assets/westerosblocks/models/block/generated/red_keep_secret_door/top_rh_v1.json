@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/door_top_rh",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone_red/coarse",
-    "top": "westerosblocks:block/sandstone_red/coarse"
+    "bottom": "westerosblocks:block/coarse_red_sandstone/default",
+    "top": "westerosblocks:block/coarse_red_sandstone/default"
   }
 }
