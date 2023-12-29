@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/brick/desert_sandstone/all",
-    "up": "westerosblocks:block/brick/desert_sandstone/all",
-    "north": "westerosblocks:block/brick/desert_sandstone/all",
-    "south": "westerosblocks:block/brick/desert_sandstone/all",
-    "west": "westerosblocks:block/brick/desert_sandstone/all",
-    "east": "westerosblocks:block/brick/desert_sandstone/all",
-    "particle": "westerosblocks:block/brick/desert_sandstone/all"
+    "down": "westerosblocks:block/sandstone/desert/all",
+    "up": "westerosblocks:block/sandstone/desert/all",
+    "north": "westerosblocks:block/sandstone/desert/all",
+    "south": "westerosblocks:block/sandstone/desert/all",
+    "west": "westerosblocks:block/sandstone/desert/all",
+    "east": "westerosblocks:block/sandstone/desert/all",
+    "particle": "westerosblocks:block/sandstone/desert/all"
   }
 }

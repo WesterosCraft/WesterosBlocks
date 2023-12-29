@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/sandstone_block/sandstone_vivid_top",
-    "up": "westerosblocks:block/sandstone_block/sandstone_vivid_top",
-    "north": "westerosblocks:block/vivid_sandstone/side1",
-    "south": "westerosblocks:block/vivid_sandstone/side1",
-    "west": "westerosblocks:block/vivid_sandstone/side1",
-    "east": "westerosblocks:block/vivid_sandstone/side1",
-    "particle": "westerosblocks:block/vivid_sandstone/side1"
+    "down": "westerosblocks:block/sandstone/vivid/all",
+    "up": "westerosblocks:block/sandstone/vivid/all",
+    "north": "westerosblocks:block/sandstone/vivid/all",
+    "south": "westerosblocks:block/sandstone/vivid/all",
+    "west": "westerosblocks:block/sandstone/vivid/all",
+    "east": "westerosblocks:block/sandstone/vivid/all",
+    "particle": "westerosblocks:block/sandstone/vivid/all"
   }
 }

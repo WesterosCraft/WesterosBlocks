@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/sandstone/vivid_mossy/all2",
+    "up": "westerosblocks:block/sandstone/vivid_mossy/all2",
+    "north": "westerosblocks:block/sandstone/vivid_mossy/all2",
+    "south": "westerosblocks:block/sandstone/vivid_mossy/all2",
+    "west": "westerosblocks:block/sandstone/vivid_mossy/all2",
+    "east": "westerosblocks:block/sandstone/vivid_mossy/all2",
+    "particle": "westerosblocks:block/sandstone/vivid_mossy/all2"
+  }
+}

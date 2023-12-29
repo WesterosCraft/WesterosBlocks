@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_post",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone_block/sandstone_terracotta_top",
-    "top": "westerosblocks:block/sandstone_block/sandstone_terracotta_top",
-    "side": "westerosblocks:block/sandstone_block/sandstone_terracotta_engraved"
+    "bottom": "westerosblocks:block/sandstone/terracotta/engraved",
+    "top": "westerosblocks:block/sandstone/terracotta/engraved",
+    "side": "westerosblocks:block/sandstone/terracotta/engraved"
   }
 }

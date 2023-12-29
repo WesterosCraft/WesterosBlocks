@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/sandstone/monochrome_mossy/all4",
+    "up": "westerosblocks:block/sandstone/monochrome_mossy/all4",
+    "north": "westerosblocks:block/sandstone/monochrome_mossy/all4",
+    "south": "westerosblocks:block/sandstone/monochrome_mossy/all4",
+    "west": "westerosblocks:block/sandstone/monochrome_mossy/all4",
+    "east": "westerosblocks:block/sandstone/monochrome_mossy/all4",
+    "particle": "westerosblocks:block/sandstone/monochrome_mossy/all4"
+  }
+}

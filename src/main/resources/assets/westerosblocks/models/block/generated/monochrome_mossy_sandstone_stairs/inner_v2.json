@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/sandstone/monochrome_mossy/all2",
+    "top": "westerosblocks:block/sandstone/monochrome_mossy/all2",
+    "side": "westerosblocks:block/sandstone/monochrome_mossy/all2",
+    "particle": "westerosblocks:block/sandstone/monochrome_mossy/all2"
+  }
+}

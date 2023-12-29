@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/sandstone/dorne_mossy_light_terracotta/all",
+    "top": "westerosblocks:block/sandstone/dorne_mossy_light_terracotta/all",
+    "side": "westerosblocks:block/sandstone/dorne_mossy_light_terracotta/all",
+    "particle": "westerosblocks:block/sandstone/dorne_mossy_light_terracotta/all"
+  }
+}

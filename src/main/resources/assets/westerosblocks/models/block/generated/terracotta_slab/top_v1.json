@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/sandstone_block/sandstone_terracotta_top",
-    "up": "westerosblocks:block/sandstone_block/sandstone_terracotta_top",
-    "north": "westerosblocks:block/terracotta/side1",
-    "south": "westerosblocks:block/terracotta/side1",
-    "west": "westerosblocks:block/terracotta/side1",
-    "east": "westerosblocks:block/terracotta/side1",
-    "particle": "westerosblocks:block/terracotta/side1"
+    "down": "westerosblocks:block/sandstone/terracotta/all",
+    "up": "westerosblocks:block/sandstone/terracotta/all",
+    "north": "westerosblocks:block/sandstone/terracotta/all",
+    "south": "westerosblocks:block/sandstone/terracotta/all",
+    "west": "westerosblocks:block/sandstone/terracotta/all",
+    "east": "westerosblocks:block/sandstone/terracotta/all",
+    "particle": "westerosblocks:block/sandstone/terracotta/all"
   }
 }

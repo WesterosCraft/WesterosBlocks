@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/fence_side",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone_block/sandstone_terracotta_light",
-    "top": "westerosblocks:block/sandstone_block/sandstone_terracotta_light",
-    "side": "westerosblocks:block/sandstone_block/sandstone_terracotta_light"
+    "bottom": "westerosblocks:block/sandstone/dorne_light_terracotta/all",
+    "top": "westerosblocks:block/sandstone/dorne_light_terracotta/all",
+    "side": "westerosblocks:block/sandstone/dorne_light_terracotta/all"
   }
 }

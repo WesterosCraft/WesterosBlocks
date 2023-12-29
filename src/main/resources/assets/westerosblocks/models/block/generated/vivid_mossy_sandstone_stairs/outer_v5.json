@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/sandstone/vivid_mossy/all5",
+    "top": "westerosblocks:block/sandstone/vivid_mossy/all5",
+    "side": "westerosblocks:block/sandstone/vivid_mossy/all5",
+    "particle": "westerosblocks:block/sandstone/vivid_mossy/all5"
+  }
+}

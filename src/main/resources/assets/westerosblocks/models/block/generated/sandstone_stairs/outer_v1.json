@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/brick/desert_sandstone/all",
-    "top": "westerosblocks:block/brick/desert_sandstone/all",
-    "side": "westerosblocks:block/brick/desert_sandstone/all",
-    "particle": "westerosblocks:block/brick/desert_sandstone/all"
+    "bottom": "westerosblocks:block/sandstone/desert/all",
+    "top": "westerosblocks:block/sandstone/desert/all",
+    "side": "westerosblocks:block/sandstone/desert/all",
+    "particle": "westerosblocks:block/sandstone/desert/all"
   }
 }

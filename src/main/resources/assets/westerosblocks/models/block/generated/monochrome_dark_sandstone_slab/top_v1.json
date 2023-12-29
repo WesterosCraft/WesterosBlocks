@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/sandstone_block/sandstone_monochrome_dark_top",
-    "up": "westerosblocks:block/sandstone_block/sandstone_monochrome_dark_top",
-    "north": "westerosblocks:block/sandstone_block/sandstone_monochrome_dark",
-    "south": "westerosblocks:block/sandstone_block/sandstone_monochrome_dark",
-    "west": "westerosblocks:block/sandstone_block/sandstone_monochrome_dark",
-    "east": "westerosblocks:block/sandstone_block/sandstone_monochrome_dark",
-    "particle": "westerosblocks:block/sandstone_block/sandstone_monochrome_dark"
+    "down": "westerosblocks:block/sandstone/monochrome_dark/all",
+    "up": "westerosblocks:block/sandstone/monochrome_dark/all",
+    "north": "westerosblocks:block/sandstone/monochrome_dark/all",
+    "south": "westerosblocks:block/sandstone/monochrome_dark/all",
+    "west": "westerosblocks:block/sandstone/monochrome_dark/all",
+    "east": "westerosblocks:block/sandstone/monochrome_dark/all",
+    "particle": "westerosblocks:block/sandstone/monochrome_dark/all"
   }
 }

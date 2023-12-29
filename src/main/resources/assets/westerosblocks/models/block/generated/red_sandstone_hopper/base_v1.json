@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/brick/red_sandstone/all",
-    "txt5": "westerosblocks:block/brick/red_sandstone/all",
-    "txt2": "westerosblocks:block/brick/red_sandstone/all",
-    "txt3": "westerosblocks:block/brick/red_sandstone/all",
-    "txt0": "westerosblocks:block/brick/red_sandstone/all",
-    "txt1": "westerosblocks:block/brick/red_sandstone/all",
-    "particle": "westerosblocks:block/brick/red_sandstone/all"
+    "txt4": "westerosblocks:block/sandstone/red/all",
+    "txt5": "westerosblocks:block/sandstone/red/all",
+    "txt2": "westerosblocks:block/sandstone/red/all",
+    "txt3": "westerosblocks:block/sandstone/red/all",
+    "txt0": "westerosblocks:block/sandstone/red/all",
+    "txt1": "westerosblocks:block/sandstone/red/all",
+    "particle": "westerosblocks:block/sandstone/red/all"
   },
   "elements": [
     {

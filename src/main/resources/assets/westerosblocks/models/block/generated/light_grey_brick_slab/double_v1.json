@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "down": "westerosblocks:block/light_grey_brick/side",
-    "up": "westerosblocks:block/light_grey_brick/side",
-    "north": "westerosblocks:block/light_grey_brick/side",
-    "south": "westerosblocks:block/light_grey_brick/side",
-    "west": "westerosblocks:block/light_grey_brick/side",
-    "east": "westerosblocks:block/light_grey_brick/side",
-    "particle": "westerosblocks:block/light_grey_brick/side"
+    "down": "westerosblocks:block/brick/light_grey/all",
+    "up": "westerosblocks:block/brick/light_grey/all",
+    "north": "westerosblocks:block/brick/light_grey/all",
+    "south": "westerosblocks:block/brick/light_grey/all",
+    "west": "westerosblocks:block/brick/light_grey/all",
+    "east": "westerosblocks:block/brick/light_grey/all",
+    "particle": "westerosblocks:block/brick/light_grey/all"
   }
 }

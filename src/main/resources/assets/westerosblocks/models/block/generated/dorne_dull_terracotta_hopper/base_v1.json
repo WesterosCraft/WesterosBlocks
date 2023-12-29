@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/sandstone_block/sandstone_terracotta_dull",
-    "txt5": "westerosblocks:block/sandstone_block/sandstone_terracotta_dull",
-    "txt2": "westerosblocks:block/sandstone_block/sandstone_terracotta_dull",
-    "txt3": "westerosblocks:block/sandstone_block/sandstone_terracotta_dull",
-    "txt0": "westerosblocks:block/sandstone_block/sandstone_terracotta_dull",
-    "txt1": "westerosblocks:block/sandstone_block/sandstone_terracotta_dull",
-    "particle": "westerosblocks:block/sandstone_block/sandstone_terracotta_dull"
+    "txt4": "westerosblocks:block/sandstone/dorne_dull_terracotta/all",
+    "txt5": "westerosblocks:block/sandstone/dorne_dull_terracotta/all",
+    "txt2": "westerosblocks:block/sandstone/dorne_dull_terracotta/all",
+    "txt3": "westerosblocks:block/sandstone/dorne_dull_terracotta/all",
+    "txt0": "westerosblocks:block/sandstone/dorne_dull_terracotta/all",
+    "txt1": "westerosblocks:block/sandstone/dorne_dull_terracotta/all",
+    "particle": "westerosblocks:block/sandstone/dorne_dull_terracotta/all"
   },
   "elements": [
     {
