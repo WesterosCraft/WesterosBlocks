@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_valyrian/3",
-    "up": "westerosblocks:block/stone_valyrian/3",
-    "north": "westerosblocks:block/stone_valyrian/3",
-    "south": "westerosblocks:block/stone_valyrian/3",
-    "west": "westerosblocks:block/stone_valyrian/3",
-    "east": "westerosblocks:block/stone_valyrian/3",
-    "particle": "westerosblocks:block/stone_valyrian/3"
+    "down": "westerosblocks:block/cobblestone/valyrian/all4",
+    "up": "westerosblocks:block/cobblestone/valyrian/all4",
+    "north": "westerosblocks:block/cobblestone/valyrian/all4",
+    "south": "westerosblocks:block/cobblestone/valyrian/all4",
+    "west": "westerosblocks:block/cobblestone/valyrian/all4",
+    "east": "westerosblocks:block/cobblestone/valyrian/all4",
+    "particle": "westerosblocks:block/cobblestone/valyrian/all4"
   }
 }

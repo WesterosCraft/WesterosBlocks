@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_block/stone_cobble_basalt"
+    "down": "westerosblocks:block/cobblestone/basalt/all",
+    "up": "westerosblocks:block/cobblestone/basalt/all",
+    "north": "westerosblocks:block/cobblestone/basalt/all",
+    "south": "westerosblocks:block/cobblestone/basalt/all",
+    "west": "westerosblocks:block/cobblestone/basalt/all",
+    "east": "westerosblocks:block/cobblestone/basalt/all",
+    "particle": "westerosblocks:block/cobblestone/basalt/all"
   }
 }

@@ -1194,5 +1194,168 @@
     "textures": {
       "all": "brick/smooth_purple/all"
     }
+  },
+  {
+    "baseBlockName": "reach_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Reach Cobblestone",
+    "randomTextures": [
+      {"textures": {"all": "cobblestone/reach/all1"}, "weight": 5},
+      {"textures": {"all": "cobblestone/reach/all2"}, "weight": 5},
+      {"textures": {"all": "cobblestone/reach/all3"}, "weight": 5},
+      {"textures": {"all": "cobblestone/reach/all4"}, "weight": 5},
+      {"textures": {"all": "cobblestone/reach/all5"}, "weight": 20}
+    ]
+  },
+  {
+    "baseBlockName": "stormlands_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Stormlands Cobblestone",
+    "randomTextures": [
+      {"textures": {"all": "cobblestone/stormlands/all1"}, "weight": 5},
+      {"textures": {"all": "cobblestone/stormlands/all2"}, "weight": 5},
+      {"textures": {"all": "cobblestone/stormlands/all3"}, "weight": 5},
+      {"textures": {"all": "cobblestone/stormlands/all4"}, "weight": 5},
+      {"textures": {"all": "cobblestone/stormlands/all5"}, "weight": 20}
+    ]
+  },
+  {
+    "baseBlockName": "stormlands_mossy_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Stormlands Mossy Cobblestone",
+    "randomTextures": [
+      {"textures": {"all": "cobblestone/stormlands_mossy/all1"}, "weight": 5},
+      {"textures": {"all": "cobblestone/stormlands_mossy/all2"}, "weight": 5},
+      {"textures": {"all": "cobblestone/stormlands_mossy/all3"}, "weight": 5},
+      {"textures": {"all": "cobblestone/stormlands_mossy/all4"}, "weight": 5},
+      {"textures": {"all": "cobblestone/stormlands_mossy/all5"}, "weight": 20}
+    ]
+  },
+  {
+    "baseBlockName": "white_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "White Cobblestone",
+    "textures": {
+      "all": "cobblestone/white/all"
+    }
+  },
+  {
+    "baseBlockName": "basalt_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Basalt Cobblestone",
+    "textures": {
+      "all": "cobblestone/basalt/all"
+    }
+  },
+  {
+    "baseBlockName": "kl_dun_cobble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "KL Dun Cobblestone",
+    "textures": {
+      "all": "cobblestone/kl_dun/all"
+    }
+  },
+  {
+    "baseBlockName": "sandy_pink_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "altNames": {
+      "wall": "sandy_pink_cobble_wall",
+      "stairs": "sandy_pink_cobble_stairs"
+    },
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Sandy Pink Cobblestone",
+    "textures": {
+      "all": "cobblestone/sandy_pink/all"
+    }
+  },
+  {
+    "baseBlockName": "arbor_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Arbor Cobblestone",
+    "textures": {
+      "all": "cobblestone/arbor/all"
+    }
+  },
+  {
+    "baseBlockName": "oldtown_cobblestone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Oldtown Cobblestone",
+    "textures": {
+      "all": "cobblestone/oldtown/all"
+    }
+  },
+  {
+    "baseBlockName": "valyrian_stone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosCobbleStone",
+    "baseLabel": "Valyrian Stone",
+    "randomTextures": [
+      {"textures": {"all": "cobblestone/valyrian/all1"}},
+      {"textures": {"all": "cobblestone/valyrian/all2"}},
+      {"textures": {"all": "cobblestone/valyrian/all3"}},
+      {"textures": {"all": "cobblestone/valyrian/all4"}},
+      {"textures": {"all": "cobblestone/valyrian/all5"}},
+      {"textures": {"all": "cobblestone/valyrian/all6"}},
+      {"textures": {"all": "cobblestone/valyrian/all7"}},
+      {"textures": {"all": "cobblestone/valyrian/all8"}}
+    ]
   }
 ]

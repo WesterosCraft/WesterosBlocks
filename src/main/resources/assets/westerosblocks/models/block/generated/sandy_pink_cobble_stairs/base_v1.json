@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "top": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "side": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "particle": "westerosblocks:block/stone_block/stone_cobble_sandy_pink"
+    "bottom": "westerosblocks:block/cobblestone/sandy_pink/all",
+    "top": "westerosblocks:block/cobblestone/sandy_pink/all",
+    "side": "westerosblocks:block/cobblestone/sandy_pink/all",
+    "particle": "westerosblocks:block/cobblestone/sandy_pink/all"
   }
 }

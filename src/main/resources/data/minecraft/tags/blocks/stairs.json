@@ -1,11 +1,13 @@
 {
   "replace": false,
   "values": [
+    "westerosblocks:kl_dun_cobble_stairs",
     "westerosblocks:winterfell_granite_stairs",
     "westerosblocks:volcanic_rock_stairs",
     "westerosblocks:arbor_brick_stairs",
     "westerosblocks:basalt_brick_stairs",
     "westerosblocks:black_wood_stairs",
+    "westerosblocks:stormlands_mossy_cobblestone_stairs",
     "westerosblocks:white_granite_stairs",
     "westerosblocks:terrainset_arbor_dorne_alt_stairs",
     "westerosblocks:citadel_green_marble_stairs",

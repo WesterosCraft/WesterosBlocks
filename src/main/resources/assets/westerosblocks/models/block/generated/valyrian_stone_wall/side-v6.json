@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/valyrian/all6",
+    "top": "westerosblocks:block/cobblestone/valyrian/all6",
+    "side": "westerosblocks:block/cobblestone/valyrian/all6"
+  }
+}

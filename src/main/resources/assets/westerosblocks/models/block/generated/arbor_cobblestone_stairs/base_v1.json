@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block/stone_cobble_arbor",
-    "top": "westerosblocks:block/stone_block/stone_cobble_arbor",
-    "side": "westerosblocks:block/stone_block/stone_cobble_arbor",
-    "particle": "westerosblocks:block/stone_block/stone_cobble_arbor"
+    "bottom": "westerosblocks:block/cobblestone/arbor/all",
+    "top": "westerosblocks:block/cobblestone/arbor/all",
+    "side": "westerosblocks:block/cobblestone/arbor/all",
+    "particle": "westerosblocks:block/cobblestone/arbor/all"
   }
 }

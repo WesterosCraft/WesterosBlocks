@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/cobblestone_texture_variants/stormlands2",
-    "top": "westerosblocks:block/cobblestone_texture_variants/stormlands2",
-    "side": "westerosblocks:block/cobblestone_texture_variants/stormlands2",
-    "particle": "westerosblocks:block/cobblestone_texture_variants/stormlands2"
+    "bottom": "westerosblocks:block/cobblestone/stormlands/all2",
+    "top": "westerosblocks:block/cobblestone/stormlands/all2",
+    "side": "westerosblocks:block/cobblestone/stormlands/all2",
+    "particle": "westerosblocks:block/cobblestone/stormlands/all2"
   }
 }

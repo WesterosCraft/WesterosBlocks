@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/kl_dun/all",
+    "top": "westerosblocks:block/cobblestone/kl_dun/all",
+    "side": "westerosblocks:block/cobblestone/kl_dun/all",
+    "particle": "westerosblocks:block/cobblestone/kl_dun/all"
+  }
+}
