@@ -70,6 +70,10 @@ public class WesterosBlockSetDef {
 	public Boolean ambientOcclusion = null; // Set ambient occlusion (default is true)
 	public boolean nonOpaque = false; // If true, does not block visibility of shared faces (solid blocks) and doesn't allow torches
 
+  public Map<String, List<String>> altTextures = null; // Allows idiosyncratic textures for particular variants
+	public Map<String, List<RandomTextureSet>> altRandomTextures = null;	// Allows idiosyncratic randomTextures for particular variants
+	public Map<String, List<String>> altOverlayTextures = null; // Allows idiosyncratic overlayTextures for particular variants
+
   public Map<String, String> textures = null; // Map of textures to use for each variant (for single texture set)
 	public List<RandomTextureMap> randomTextures = null;	// Defines sets of textures used for additional random models,
                     // for each variant (if supported)
@@ -188,15 +192,21 @@ public class WesterosBlockSetDef {
         variantDef.supportBoxes = Arrays.asList(supportBoxes);
       }
 
-      // Preprocessing for shorthand in texture map
-      this.textures = WesterosBlockSetDef.preprocessTextureMap(this.textures);
-      this.randomTextures = WesterosBlockSetDef.preprocessRandomTextureMaps(this.randomTextures);
-      this.overlayTextures = WesterosBlockSetDef.preprocessTextureMap(this.overlayTextures);
+      // If a variant has an alt texture list defined, use it, otherwise create texture lists for this variant type
+      if (this.altTextures != null && this.altTextures.containsKey(variant))
+        variantDef.textures = this.altTextures.get(variant);
+      else
+        variantDef.textures = WesterosBlockSetDef.getTexturesForVariant(WesterosBlockSetDef.preprocessTextureMap(this.textures), variant);
 
-      // Create texture lists for each supported variant type
-      variantDef.textures = WesterosBlockSetDef.getTexturesForVariant(this.textures, variant);
-      variantDef.randomTextures = WesterosBlockSetDef.getRandomTexturesForVariant(this.randomTextures, variant);
-      variantDef.overlayTextures = WesterosBlockSetDef.getTexturesForVariant(this.overlayTextures, variant);
+      if (this.altRandomTextures != null && this.altRandomTextures.containsKey(variant))
+        variantDef.randomTextures = this.altRandomTextures.get(variant);
+      else
+        variantDef.randomTextures = WesterosBlockSetDef.getRandomTexturesForVariant(WesterosBlockSetDef.preprocessRandomTextureMaps(this.randomTextures), variant);
+
+      if (this.altOverlayTextures != null && this.altOverlayTextures.containsKey(variant))
+        variantDef.overlayTextures = this.altOverlayTextures.get(variant);
+      else
+        variantDef.overlayTextures = WesterosBlockSetDef.getTexturesForVariant(WesterosBlockSetDef.preprocessTextureMap(this.overlayTextures), variant);
 
       blockDefs.add(variantDef);
     }
