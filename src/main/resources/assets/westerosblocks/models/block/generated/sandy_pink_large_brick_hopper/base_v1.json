@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block/brick_sandy_pink_large",
-    "txt5": "westerosblocks:block/stone_block/brick_sandy_pink_large",
-    "txt2": "westerosblocks:block/stone_block/brick_sandy_pink_large",
-    "txt3": "westerosblocks:block/stone_block/brick_sandy_pink_large",
-    "txt0": "westerosblocks:block/stone_block/brick_sandy_pink_large",
-    "txt1": "westerosblocks:block/stone_block/brick_sandy_pink_large",
-    "particle": "westerosblocks:block/stone_block/brick_sandy_pink_large"
+    "txt4": "westerosblocks:block/brick/sandy_pink_large/all",
+    "txt5": "westerosblocks:block/brick/sandy_pink_large/all",
+    "txt2": "westerosblocks:block/brick/sandy_pink_large/all",
+    "txt3": "westerosblocks:block/brick/sandy_pink_large/all",
+    "txt0": "westerosblocks:block/brick/sandy_pink_large/all",
+    "txt1": "westerosblocks:block/brick/sandy_pink_large/all",
+    "particle": "westerosblocks:block/brick/sandy_pink_large/all"
   },
   "elements": [
     {

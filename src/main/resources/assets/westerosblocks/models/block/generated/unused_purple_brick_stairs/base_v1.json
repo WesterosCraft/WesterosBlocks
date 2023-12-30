@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/brick/smooth_purple/all",
+    "top": "westerosblocks:block/brick/smooth_purple/all",
+    "side": "westerosblocks:block/brick/smooth_purple/all",
+    "particle": "westerosblocks:block/brick/smooth_purple/all"
+  }
+}

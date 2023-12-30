@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block/brick_winterfell_granite",
-    "txt5": "westerosblocks:block/stone_block/brick_winterfell_granite",
-    "txt2": "westerosblocks:block/stone_block/brick_winterfell_granite",
-    "txt3": "westerosblocks:block/stone_block/brick_winterfell_granite",
-    "txt0": "westerosblocks:block/stone_block/brick_winterfell_granite",
-    "txt1": "westerosblocks:block/stone_block/brick_winterfell_granite",
-    "particle": "westerosblocks:block/stone_block/brick_winterfell_granite"
+    "txt4": "westerosblocks:block/brick/winterfell_granite/all",
+    "txt5": "westerosblocks:block/brick/winterfell_granite/all",
+    "txt2": "westerosblocks:block/brick/winterfell_granite/all",
+    "txt3": "westerosblocks:block/brick/winterfell_granite/all",
+    "txt0": "westerosblocks:block/brick/winterfell_granite/all",
+    "txt1": "westerosblocks:block/brick/winterfell_granite/all",
+    "particle": "westerosblocks:block/brick/winterfell_granite/all"
   },
   "elements": [
     {

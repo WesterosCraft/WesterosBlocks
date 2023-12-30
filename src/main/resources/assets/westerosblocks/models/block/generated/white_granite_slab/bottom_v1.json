@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block/brick_white_granite_top",
-    "up": "westerosblocks:block/stone_block/brick_white_granite_top",
-    "north": "westerosblocks:block/stone_block/brick_white_granite",
-    "south": "westerosblocks:block/stone_block/brick_white_granite",
-    "west": "westerosblocks:block/stone_block/brick_white_granite",
-    "east": "westerosblocks:block/stone_block/brick_white_granite",
-    "particle": "westerosblocks:block/stone_block/brick_white_granite"
+    "down": "westerosblocks:block/brick/white_granite/all",
+    "up": "westerosblocks:block/brick/white_granite/all",
+    "north": "westerosblocks:block/brick/white_granite/all",
+    "south": "westerosblocks:block/brick/white_granite/all",
+    "west": "westerosblocks:block/brick/white_granite/all",
+    "east": "westerosblocks:block/brick/white_granite/all",
+    "particle": "westerosblocks:block/brick/white_granite/all"
   }
 }

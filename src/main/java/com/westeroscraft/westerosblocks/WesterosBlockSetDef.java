@@ -271,7 +271,7 @@ public class WesterosBlockSetDef {
       if (textureMap.containsKey(texture)) textureList.add(textureMap.get(texture));
     }
 
-    return textureList;
+    return (!textureList.isEmpty()) ? textureList : null;
   }
 
   public static List<RandomTextureSet> getRandomTexturesForVariant(List<RandomTextureMap> randomTextureMaps, String variant) {
@@ -284,13 +284,10 @@ public class WesterosBlockSetDef {
       RandomTextureSet randomTextureSet = new RandomTextureSet();
       randomTextureSet.textures = getTexturesForVariant(randomTextureMap.textures, variant);
       randomTextureSet.weight = randomTextureMap.weight;
-      if (!randomTextureSet.textures.isEmpty())
+      if (randomTextureSet.textures != null && !randomTextureSet.textures.isEmpty())
         randomTextures.add(randomTextureSet);
     }
 
-    if (!randomTextures.isEmpty())
-      return randomTextures;
-    else
-      return null;
+    return (!randomTextures.isEmpty()) ? randomTextures : null;
   }
 }

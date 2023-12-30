@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_block/brick_white_small"
+    "down": "westerosblocks:block/brick/small_white/all",
+    "up": "westerosblocks:block/brick/small_white/all",
+    "north": "westerosblocks:block/brick/small_white/all",
+    "south": "westerosblocks:block/brick/small_white/all",
+    "west": "westerosblocks:block/brick/small_white/all",
+    "east": "westerosblocks:block/brick/small_white/all",
+    "particle": "westerosblocks:block/brick/small_white/all"
   }
 }

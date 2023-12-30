@@ -9,13 +9,10 @@
     "westerosblocks:jungle_fence_with_grapes",
     "westerosblocks:test_block_set_fence",
     "westerosblocks:oak_fence_with_vines",
-    "westerosblocks:oldtown_brick_fence",
-    "westerosblocks:light_oldtown_brick_fence",
     "westerosblocks:birch_fence_with_vines",
     "westerosblocks:blue_wood_fence",
     "westerosblocks:oak_fence",
     "westerosblocks:spruce_bark_fence",
-    "westerosblocks:pale_pink_faint_light_brick_fence",
     "westerosblocks:stormlands_cobblestone_fence",
     "westerosblocks:basalt_cobblestone_fence",
     "westerosblocks:black_wood_fence",
@@ -43,16 +40,12 @@
     "westerosblocks:reinforced_oak_fence",
     "westerosblocks:citadel_green_marble_fence",
     "westerosblocks:blue_slate_fence",
-    "westerosblocks:arbor_brick_fence",
     "westerosblocks:oldtown_cobblestone_fence",
     "westerosblocks:reach_cobblestone_fence",
     "westerosblocks:marble_column_fence",
-    "westerosblocks:pale_pink_light_brick_fence",
     "westerosblocks:spruce_fence_with_grapes",
     "westerosblocks:red_slate_fence",
     "westerosblocks:redorange_slate_fence",
-    "westerosblocks:lannisport_light_brick_fence",
-    "westerosblocks:jungle_fence_with_vines",
-    "westerosblocks:white_granite_fence"
+    "westerosblocks:jungle_fence_with_vines"
   ]
 }

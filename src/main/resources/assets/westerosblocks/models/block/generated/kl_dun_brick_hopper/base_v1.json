@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block/brick_dun",
-    "txt5": "westerosblocks:block/stone_block/brick_dun",
-    "txt2": "westerosblocks:block/stone_block/brick_dun",
-    "txt3": "westerosblocks:block/stone_block/brick_dun",
-    "txt0": "westerosblocks:block/stone_block/brick_dun",
-    "txt1": "westerosblocks:block/stone_block/brick_dun",
-    "particle": "westerosblocks:block/stone_block/brick_dun"
+    "txt4": "westerosblocks:block/brick/kl_dun/all",
+    "txt5": "westerosblocks:block/brick/kl_dun/all",
+    "txt2": "westerosblocks:block/brick/kl_dun/all",
+    "txt3": "westerosblocks:block/brick/kl_dun/all",
+    "txt0": "westerosblocks:block/brick/kl_dun/all",
+    "txt1": "westerosblocks:block/brick/kl_dun/all",
+    "particle": "westerosblocks:block/brick/kl_dun/all"
   },
   "elements": [
     {

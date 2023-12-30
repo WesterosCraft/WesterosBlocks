@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block/brick_dun_ornate"
+    "all": "westerosblocks:block/brick/kl_dun/engraved"
   }
 }

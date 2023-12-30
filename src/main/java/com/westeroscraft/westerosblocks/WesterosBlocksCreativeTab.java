@@ -34,7 +34,7 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     public static final CreativeModeTab tabWesterosFlowers = new  WesterosBlocksCreativeTab("WesterosFlowers", "§fFlowers", "blue_bells");
     public static final CreativeModeTab tabWesterosCropsHerbs = new  WesterosBlocksCreativeTab("WesterosCropsHerbs", "§fCrops and Herbs", "strawberry_bush");
     public static final CreativeModeTab tabWesterosWaterAir = new  WesterosBlocksCreativeTab("WesterosWaterAir", "§fWater and Air", "falling_water_block_one");
-    public static final CreativeModeTab tabWesterosMisc = new  WesterosBlocksCreativeTab("WesterosMisc", "§fMiscellaneous", "iron_throne_blade_block");
+    public static final CreativeModeTab tabWesterosMisc = new  WesterosBlocksCreativeTab("WesterosMisc", "§fMiscellaneous", "piled_bones");
     public static final CreativeModeTab tabWesterosUtility = new  WesterosBlocksCreativeTab("WesterosUtility", "§fUtility", "approval_utility_block");
     public static final CreativeModeTab tabWesterosTest = new  WesterosBlocksCreativeTab("WesterosTest", "§fTest", "test_block");
     public static final CreativeModeTab tabWesterosSounds = new  WesterosBlocksCreativeTab("WesterosSounds", "§fSounds", "tavern_small");

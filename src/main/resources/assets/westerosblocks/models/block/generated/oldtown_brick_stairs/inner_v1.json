@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block/brick_oldtown",
-    "top": "westerosblocks:block/stone_block/brick_oldtown",
-    "side": "westerosblocks:block/stone_block/brick_oldtown",
-    "particle": "westerosblocks:block/stone_block/brick_oldtown"
+    "bottom": "westerosblocks:block/brick/oldtown/all",
+    "top": "westerosblocks:block/brick/oldtown/all",
+    "side": "westerosblocks:block/brick/oldtown/all",
+    "particle": "westerosblocks:block/brick/oldtown/all"
   }
 }

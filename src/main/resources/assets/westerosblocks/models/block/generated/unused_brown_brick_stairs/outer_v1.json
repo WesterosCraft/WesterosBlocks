@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/brick/smooth_brown/all",
+    "top": "westerosblocks:block/brick/smooth_brown/all",
+    "side": "westerosblocks:block/brick/smooth_brown/all",
+    "particle": "westerosblocks:block/brick/smooth_brown/all"
+  }
+}

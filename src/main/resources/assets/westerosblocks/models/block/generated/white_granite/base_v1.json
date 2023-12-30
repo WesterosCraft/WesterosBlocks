@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/white_granite/top",
-    "up": "westerosblocks:block/white_granite/top",
-    "north": "westerosblocks:block/white_granite/side1",
-    "south": "westerosblocks:block/white_granite/side1",
-    "west": "westerosblocks:block/white_granite/side1",
-    "east": "westerosblocks:block/white_granite/side1",
-    "particle": "westerosblocks:block/white_granite/side1"
+    "down": "westerosblocks:block/brick/white_granite/all",
+    "up": "westerosblocks:block/brick/white_granite/all",
+    "north": "westerosblocks:block/brick/white_granite/all",
+    "south": "westerosblocks:block/brick/white_granite/all",
+    "west": "westerosblocks:block/brick/white_granite/all",
+    "east": "westerosblocks:block/brick/white_granite/all",
+    "particle": "westerosblocks:block/brick/white_granite/all"
   }
 }

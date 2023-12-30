@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block/brick_arbor_small",
-    "top": "westerosblocks:block/stone_block/brick_arbor_small",
-    "side": "westerosblocks:block/stone_block/brick_arbor_small",
-    "particle": "westerosblocks:block/stone_block/brick_arbor_small"
+    "bottom": "westerosblocks:block/brick/arbor_small/all",
+    "top": "westerosblocks:block/brick/arbor_small/all",
+    "side": "westerosblocks:block/brick/arbor_small/all",
+    "particle": "westerosblocks:block/brick/arbor_small/all"
   }
 }

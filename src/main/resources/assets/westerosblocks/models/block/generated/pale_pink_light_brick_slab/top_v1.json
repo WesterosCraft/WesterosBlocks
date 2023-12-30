@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block/brick_pale_pink_light",
-    "up": "westerosblocks:block/stone_block/brick_pale_pink_light",
-    "north": "westerosblocks:block/stone_block/brick_pale_pink_light",
-    "south": "westerosblocks:block/stone_block/brick_pale_pink_light",
-    "west": "westerosblocks:block/stone_block/brick_pale_pink_light",
-    "east": "westerosblocks:block/stone_block/brick_pale_pink_light",
-    "particle": "westerosblocks:block/stone_block/brick_pale_pink_light"
+    "down": "westerosblocks:block/brick/pale_pink_light/all",
+    "up": "westerosblocks:block/brick/pale_pink_light/all",
+    "north": "westerosblocks:block/brick/pale_pink_light/all",
+    "south": "westerosblocks:block/brick/pale_pink_light/all",
+    "west": "westerosblocks:block/brick/pale_pink_light/all",
+    "east": "westerosblocks:block/brick/pale_pink_light/all",
+    "particle": "westerosblocks:block/brick/pale_pink_light/all"
   }
 }

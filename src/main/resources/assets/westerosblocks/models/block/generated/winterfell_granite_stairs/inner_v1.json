@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/winterfell_granite/top",
-    "top": "westerosblocks:block/winterfell_granite/top",
-    "side": "westerosblocks:block/winterfell_granite/side",
-    "particle": "westerosblocks:block/winterfell_granite/side"
+    "bottom": "westerosblocks:block/brick/winterfell_granite/all",
+    "top": "westerosblocks:block/brick/winterfell_granite/all",
+    "side": "westerosblocks:block/brick/winterfell_granite/all",
+    "particle": "westerosblocks:block/brick/winterfell_granite/all"
   }
 }

@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block/brick_pale_pink_faint_light",
-    "top": "westerosblocks:block/stone_block/brick_pale_pink_faint_light",
-    "side": "westerosblocks:block/stone_block/brick_pale_pink_faint_light"
+    "bottom": "westerosblocks:block/brick/pale_pink_faint_light/all",
+    "top": "westerosblocks:block/brick/pale_pink_faint_light/all",
+    "side": "westerosblocks:block/brick/pale_pink_faint_light/all"
   }
 }

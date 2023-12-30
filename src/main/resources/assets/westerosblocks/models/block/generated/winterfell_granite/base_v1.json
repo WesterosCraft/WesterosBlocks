@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/winterfell_granite/top",
-    "up": "westerosblocks:block/winterfell_granite/top",
-    "north": "westerosblocks:block/winterfell_granite/side",
-    "south": "westerosblocks:block/winterfell_granite/side",
-    "west": "westerosblocks:block/winterfell_granite/side",
-    "east": "westerosblocks:block/winterfell_granite/side",
-    "particle": "westerosblocks:block/winterfell_granite/side"
+    "down": "westerosblocks:block/brick/winterfell_granite/all",
+    "up": "westerosblocks:block/brick/winterfell_granite/all",
+    "north": "westerosblocks:block/brick/winterfell_granite/all",
+    "south": "westerosblocks:block/brick/winterfell_granite/all",
+    "west": "westerosblocks:block/brick/winterfell_granite/all",
+    "east": "westerosblocks:block/brick/winterfell_granite/all",
+    "particle": "westerosblocks:block/brick/winterfell_granite/all"
   }
 }

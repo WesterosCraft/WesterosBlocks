@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block/brick_oldtown",
-    "up": "westerosblocks:block/stone_block/brick_oldtown",
-    "north": "westerosblocks:block/stone_block/brick_oldtown",
-    "south": "westerosblocks:block/stone_block/brick_oldtown",
-    "west": "westerosblocks:block/stone_block/brick_oldtown",
-    "east": "westerosblocks:block/stone_block/brick_oldtown",
-    "particle": "westerosblocks:block/stone_block/brick_oldtown"
+    "down": "westerosblocks:block/brick/oldtown/all",
+    "up": "westerosblocks:block/brick/oldtown/all",
+    "north": "westerosblocks:block/brick/oldtown/all",
+    "south": "westerosblocks:block/brick/oldtown/all",
+    "west": "westerosblocks:block/brick/oldtown/all",
+    "east": "westerosblocks:block/brick/oldtown/all",
+    "particle": "westerosblocks:block/brick/oldtown/all"
   }
 }
