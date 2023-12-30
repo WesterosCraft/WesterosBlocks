@@ -198,7 +198,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Nether Brick",
     "textures": {
       "all": "brick/nether/all",
@@ -215,7 +215,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Stone Brick",
     "colorMult": "textures/colormap/stonebrick",
     "textures": {
@@ -233,7 +233,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Mossy Stone Brick",
     "colorMult": "textures/colormap/stonebrick",
     "textures": {
@@ -254,7 +254,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Orange Brick",
     "colorMult": "textures/colormap/brick",
     "textures": {
@@ -272,7 +272,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Small Orange Brick",
     "colorMult": "textures/colormap/brick",
     "textures": {
@@ -294,7 +294,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Desert Sandstone",
     "textures": {
       "all": "sandstone/desert/all",
@@ -311,7 +311,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Small Stone Brick",
     "colorMult": "textures/colormap/smallstonebrick",
     "textures": {
@@ -329,7 +329,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Mossy Small Stone Brick",
     "colorMult": "textures/colormap/smallstonebrick",
     "textures": {
@@ -344,7 +344,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Red Sandstone",
     "textures": {
       "all": "sandstone/red/all",
@@ -361,7 +361,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Dark Red Sandstone",
     "textures": {
       "all": "sandstone/dark_red/all",
@@ -449,7 +449,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Dark Red Brick",
     "textures": {
       "all": "brick/dark_red/all"
@@ -463,7 +463,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Light Grey Brick",
     "colorMult": "textures/colormap/lightgreystone",
     "textures": {
@@ -481,7 +481,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Faint Light Grey Brick",
     "colorMult": "textures/colormap/faintlightgreystone",
     "textures": {
@@ -496,7 +496,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Vivid Sandstone",
     "textures": {
       "all": "sandstone/vivid/all",
@@ -513,7 +513,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Vivid Mossy Sandstone",
     "randomTextures": [
       {"textures": {"all": "sandstone/vivid_mossy/all1"}},
@@ -532,7 +532,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Vivid Dark Sandstone",
     "textures": {
       "all": "sandstone/vivid_dark/all",
@@ -549,7 +549,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Monochrome Sandstone",
     "textures": {
       "all": "sandstone/monochrome/all",
@@ -566,7 +566,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Monochrome Mossy Sandstone",
     "randomTextures": [
       {"textures": {"all": "sandstone/monochrome_mossy/all1"}},
@@ -585,7 +585,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Monochrome Dark Sandstone",
     "textures": {
       "all": "sandstone/monochrome_dark/all",
@@ -602,7 +602,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Terracotta",
     "textures": {
       "all": "sandstone/terracotta/all",
@@ -619,7 +619,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Dorne Light Terracotta",
     "textures": {
       "all": "sandstone/dorne_light_terracotta/all"
@@ -633,7 +633,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Dorne Mossy Light Terracotta",
     "textures": {
       "all": "sandstone/dorne_mossy_light_terracotta/all"
@@ -647,7 +647,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Dorne Dull Terracotta",
     "textures": {
       "all": "sandstone/dorne_dull_terracotta/all"
@@ -661,7 +661,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Dorne Dark Sandstone",
     "textures": {
       "all": "sandstone/dorne_dark/all"
@@ -675,7 +675,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Dorne Mossy Dark Sandstone",
     "textures": {
       "all": "sandstone/dorne_mossy_dark/all"
@@ -689,7 +689,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Reach Brick",
     "textures": {
       "all": "brick/reach/all",
@@ -706,7 +706,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Reach Light Brick",
     "textures": {
       "all": "brick/reach_light/all",
@@ -737,7 +737,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Stone Slab",
     "textures": {
       "all": "brick/stone_slab/all",
@@ -754,7 +754,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Stormlands Brick",
     "textures": {
       "all": "brick/stormlands/all",
@@ -825,7 +825,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Dark Brown Sandstone",
     "textures": {
       "all": "sandstone/dark_brown/all"
@@ -839,7 +839,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Large Brick Sandstone",
     "textures": {
       "all": "sandstone/large_brick/all"
@@ -853,7 +853,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Coarse Red Sandstone",
     "textures": {
       "all": "sandstone/coarse_red/all"
@@ -867,7 +867,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Coarse Dark Red Sandstone",
     "textures": {
       "all": "sandstone/coarse_dark_red/all"
@@ -881,7 +881,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosSandstone",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Pink Sandstone",
     "textures": {
       "all": "sandstone/pink/all",
@@ -898,7 +898,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Lannisport Light Brick",
     "textures": {
       "all": "brick/lannisport_light/all",
@@ -915,7 +915,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Stormlands Large Brick",
     "textures": {
       "all": "brick/stormlands_large/all"
@@ -929,7 +929,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "KL Dun Brick",
     "textures": {
       "all": "brick/kl_dun/all",
@@ -946,7 +946,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Small White Brick",
     "textures": {
       "all": "brick/small_white/all"
@@ -960,7 +960,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Basalt Brick",
     "textures": {
       "all": "brick/basalt/all",
@@ -977,7 +977,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Light Oldtown Brick",
     "textures": {
       "all": "brick/light_oldtown/all"
@@ -991,7 +991,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Oldtown Brick",
     "textures": {
       "all": "brick/oldtown/all",
@@ -1008,7 +1008,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Arbor Brick",
     "textures": {
       "all": "brick/arbor/all",
@@ -1025,7 +1025,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Arbor Small Brick",
     "textures": {
       "all": "brick/arbor_small/all"
@@ -1039,7 +1039,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Small Smooth Stone Brick",
     "colorMult": "textures/colormap/smallsmoothstonebrick",
     "textures": {
@@ -1054,7 +1054,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Sandy Pink Brick",
     "textures": {
       "all": "brick/sandy_pink/all"
@@ -1068,7 +1068,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Sandy Pink Large Brick",
     "textures": {
       "all": "brick/sandy_pink_large/all"
@@ -1082,7 +1082,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Sandy Pink Light Brick",
     "textures": {
       "all": "brick/sandy_pink_light/all"
@@ -1096,7 +1096,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Sandy Pink Faint Light Brick",
     "textures": {
       "all": "brick/sandy_pink_faint_light/all"
@@ -1110,7 +1110,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Pale Pink Light Brick",
     "textures": {
       "all": "brick/pale_pink_light/all",
@@ -1127,7 +1127,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Pale Pink Faint Light Brick",
     "textures": {
       "all": "brick/pale_pink_faint_light/all"
@@ -1141,7 +1141,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "Winterfell Granite",
     "textures": {
       "all": "brick/winterfell_granite/all",
@@ -1158,7 +1158,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosLargeBrick",
     "baseLabel": "White Granite",
     "textures": {
       "all": "brick/white_granite/all",
@@ -1175,7 +1175,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Smooth Brown Brick",
     "textures": {
       "all": "brick/smooth_brown/all"
@@ -1189,7 +1189,7 @@
     "material": "rock",
     "resistance": 10,
     "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-    "creativeTab": "WesterosBrick",
+    "creativeTab": "WesterosSmallBrick",
     "baseLabel": "Smooth Purple Brick",
     "textures": {
       "all": "brick/smooth_purple/all"
