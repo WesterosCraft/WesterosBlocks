@@ -18,7 +18,7 @@ public class WesterosBlockSetDef {
 
   public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper");
   public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet",
-                                                                      "fence_gate", "half_door", "cover", "hollow_hopper", "timber_window_frame",
+                                                                      "fence_gate", "half_door", "cover", "hollow_hopper", "window_frame",
                                                                       "arrow_slit", "arrow_slit_window", "arrow_slit_ornate");
   public static final Map<String, String> VARIANT_TYPES = new HashMap<String, String>();
   static { // For any variant not listed here, it is assumed that the type is the same as the variant string
@@ -30,7 +30,7 @@ public class WesterosBlockSetDef {
     VARIANT_TYPES.put("half_door", "cuboid-nsew");
     VARIANT_TYPES.put("cover", "rail");
     VARIANT_TYPES.put("hollow_hopper", "cuboid");
-    VARIANT_TYPES.put("timber_window_frame", "solid");
+    VARIANT_TYPES.put("window_frame", "solid");
     VARIANT_TYPES.put("arrow_slit", "solid");
     VARIANT_TYPES.put("arrow_slit_window", "solid");
     VARIANT_TYPES.put("arrow_slit_ornate", "solid");
@@ -49,7 +49,7 @@ public class WesterosBlockSetDef {
     VARIANT_TEXTURES.put("half_door", new String[]{ "sides" });
     VARIANT_TEXTURES.put("cover", new String[]{ "cover" });
     VARIANT_TEXTURES.put("hollow_hopper", new String[]{ "sides" });
-    VARIANT_TEXTURES.put("timber_window_frame", new String[]{ "window-topbottom", "window-topbottom", "timber-window-frame" });
+    VARIANT_TEXTURES.put("window_frame", new String[]{ "window-topbottom", "window-topbottom", "window-frame" });
     VARIANT_TEXTURES.put("arrow_slit", new String[]{ "window-topbottom", "window-topbottom", "arrow-slit" });
     VARIANT_TEXTURES.put("arrow_slit_window", new String[]{ "window-topbottom", "window-topbottom", "arrow-slit-window" });
     VARIANT_TEXTURES.put("arrow_slit_ornate", new String[]{ "window-topbottom", "window-topbottom", "arrow-slit-ornate" });
