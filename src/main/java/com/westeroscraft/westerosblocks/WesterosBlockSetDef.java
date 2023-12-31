@@ -17,14 +17,19 @@ public class WesterosBlockSetDef {
 	public static final int DEF_INT = -999;
 
   public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper");
-  public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "tip",
-                                                                      "fence_gate", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate");
+  public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet",
+                                                                      "fence_gate", "half_door", "cover", "timber_window_frame",
+                                                                      "arrow_slit", "arrow_slit_window", "arrow_slit_ornate");
   public static final Map<String, String> VARIANT_TYPES = new HashMap<String, String>();
   static { // For any variant not listed here, it is assumed that the type is the same as the variant string
     VARIANT_TYPES.put("stairs", "stair");
     VARIANT_TYPES.put("hopper", "cuboid");
     VARIANT_TYPES.put("tip", "cuboid");
+    VARIANT_TYPES.put("carpet", "cuboid");
     VARIANT_TYPES.put("fence_gate", "fencegate");
+    VARIANT_TYPES.put("half_door", "cuboid-nsew");
+    VARIANT_TYPES.put("cover", "rail");
+    VARIANT_TYPES.put("timber_window_frame", "solid");
     VARIANT_TYPES.put("arrow_slit", "solid");
     VARIANT_TYPES.put("arrow_slit_window", "solid");
     VARIANT_TYPES.put("arrow_slit_ornate", "solid");
@@ -38,10 +43,14 @@ public class WesterosBlockSetDef {
     VARIANT_TEXTURES.put("fence", new String[]{ "bottom", "top", "sides" });
     VARIANT_TEXTURES.put("hopper", new String[]{ "sides" });
     VARIANT_TEXTURES.put("tip", new String[]{ "sides" });
+    VARIANT_TEXTURES.put("carpet", new String[]{ "sides" });
     VARIANT_TEXTURES.put("fence_gate", new String[]{ "sides" });
-    VARIANT_TEXTURES.put("arrow_slit", new String[]{ "arrow-slit-topbottom", "arrow-slit-topbottom", "arrow-slit" });
-    VARIANT_TEXTURES.put("arrow_slit_window", new String[]{ "arrow-slit-topbottom", "arrow-slit-topbottom", "arrow-slit-window" });
-    VARIANT_TEXTURES.put("arrow_slit_ornate", new String[]{ "arrow-slit-topbottom", "arrow-slit-topbottom", "arrow-slit-ornate" });
+    VARIANT_TEXTURES.put("half_door", new String[]{ "sides" });
+    VARIANT_TEXTURES.put("cover", new String[]{ "cover" });
+    VARIANT_TEXTURES.put("timber_window_frame", new String[]{ "window-topbottom", "window-topbottom", "timber-window-frame" });
+    VARIANT_TEXTURES.put("arrow_slit", new String[]{ "window-topbottom", "window-topbottom", "arrow-slit" });
+    VARIANT_TEXTURES.put("arrow_slit_window", new String[]{ "window-topbottom", "window-topbottom", "arrow-slit-window" });
+    VARIANT_TEXTURES.put("arrow_slit_ornate", new String[]{ "window-topbottom", "window-topbottom", "arrow-slit-ornate" });
   }
 	
 	public String baseBlockName; // Unique name to be used as a base for all the generated block names
@@ -157,8 +166,10 @@ public class WesterosBlockSetDef {
         // Enforce defaults for particular blocktypes
         if (variant.matches("stairs|wall|fence"))
           variantDef.type = "unconnect:false";
-        else if (variant.contains("arrow_slit"))
+        else if (variant.contains("arrow_slit") || variant.contains("window_frame"))
           variantDef.type = "connectstate:true";
+        else if (variant.equals("cover"))
+          variantDef.type = "allow-unsupported";
         else
           variantDef.type = "";
       }
@@ -190,7 +201,16 @@ public class WesterosBlockSetDef {
         };
         variantDef.cuboids = Arrays.asList(cuboids);
       }
-      else if (variant.contains("arrow_slit")) {
+      else if (variant.equals("carpet")) {
+        WesterosBlockDef.Cuboid[] cuboids = { 
+          new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.0625f, 1f, new int[] { 0, 0, 0, 0, 0, 0 })
+        };
+        variantDef.cuboids = Arrays.asList(cuboids);
+      }
+      else if (variant.equals("half_door")) {
+        variantDef.boundingBox = new WesterosBlockDef.BoundingBox(0f, 0f, 0f, 0.1875f, 1f, 1f);
+      }
+      else if (variant.contains("arrow_slit") || variant.contains("window_frame")) {
         variantDef.nonOpaque = true;
         variantDef.lightOpacity = 0;
         WesterosBlockDef.BoundingBox[] collisionBoxes = {
@@ -284,11 +304,14 @@ public class WesterosBlockSetDef {
     if (!textureMap.containsKey("sides") && textureMap.containsKey("bottom"))
       textureMap.put("sides", textureMap.get("bottom"));
 
-    // fallback if arrow slit top/bottom omitted
-    // if (!textureMap.containsKey("arrow-slit-topbottom") && textureMap.containsKey("bottom"))
-    //   textureMap.put("arrow-slit-topbottom", textureMap.get("bottom"));
-    if (!textureMap.containsKey("arrow-slit-topbottom"))
-      textureMap.put("arrow-slit-topbottom", "transparent");
+    // other variant-specific fallback rules
+    // if (!textureMap.containsKey("window-topbottom") && textureMap.containsKey("bottom"))
+    //   textureMap.put("window-topbottom", textureMap.get("bottom"));
+    if (!textureMap.containsKey("window-topbottom"))
+      textureMap.put("window-topbottom", "transparent");
+
+    if (!textureMap.containsKey("cover") && textureMap.containsKey("sides"))
+      textureMap.put("cover", textureMap.get("sides"));
 
     return textureMap;
   }
