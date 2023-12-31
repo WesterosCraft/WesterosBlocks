@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/blades_molten/side1",
-    "top": "westerosblocks:block/blades_molten/side1",
-    "side": "westerosblocks:block/blades_molten/side1",
-    "particle": "westerosblocks:block/blades_molten/side1"
+    "bottom": "westerosblocks:block/metal/molten_blades/all",
+    "top": "westerosblocks:block/metal/molten_blades/all",
+    "side": "westerosblocks:block/metal/molten_blades/all",
+    "particle": "westerosblocks:block/metal/molten_blades/all"
   }
 }

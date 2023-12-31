@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/transparent",
     "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/red_timber_window_frame/side",
-    "south": "westerosblocks:block/red_timber_window_frame/side",
-    "west": "westerosblocks:block/red_timber_window_frame/side",
-    "east": "westerosblocks:block/red_timber_window_frame/side",
-    "particle": "westerosblocks:block/red_timber_window_frame/side"
+    "north": "westerosblocks:block/wood/red/window_frame",
+    "south": "westerosblocks:block/wood/red/window_frame",
+    "west": "westerosblocks:block/wood/red/window_frame",
+    "east": "westerosblocks:block/wood/red/window_frame",
+    "particle": "westerosblocks:block/wood/red/window_frame"
   }
 }

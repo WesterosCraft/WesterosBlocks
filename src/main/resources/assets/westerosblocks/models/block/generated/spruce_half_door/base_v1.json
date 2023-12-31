@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cuboid_block/door_iron_lower_spruce",
-    "txt5": "westerosblocks:block/cuboid_block/door_iron_lower_spruce",
-    "txt2": "westerosblocks:block/cuboid_block/door_iron_lower_spruce",
-    "txt3": "westerosblocks:block/cuboid_block/door_iron_lower_spruce",
-    "txt0": "westerosblocks:block/cuboid_block/door_iron_lower_spruce",
-    "txt1": "westerosblocks:block/cuboid_block/door_iron_lower_spruce",
-    "particle": "westerosblocks:block/cuboid_block/door_iron_lower_spruce"
+    "txt4": "westerosblocks:block/wood/spruce/vertical",
+    "txt5": "westerosblocks:block/wood/spruce/vertical",
+    "txt2": "westerosblocks:block/wood/spruce/vertical",
+    "txt3": "westerosblocks:block/wood/spruce/vertical",
+    "txt0": "westerosblocks:block/wood/spruce/vertical",
+    "txt1": "westerosblocks:block/wood/spruce/vertical",
+    "particle": "westerosblocks:block/wood/spruce/vertical"
   },
   "elements": [
     {

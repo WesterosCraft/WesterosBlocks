@@ -22,9 +22,9 @@
     "txt5": "westerosblocks:block/light_emitting_blocks/lantern_red_bottom",
     "txt2": "westerosblocks:block/light_emitting_blocks/lantern_red_bottom",
     "txt3": "westerosblocks:block/light_emitting_blocks/lantern_red_bottom",
-    "txt0": "westerosblocks:block/planks_jungle/side",
+    "txt0": "westerosblocks:block/wood/jungle/all",
     "txt1": "westerosblocks:block/light_emitting_blocks/lantern_handheld_red_center",
-    "particle": "westerosblocks:block/planks_jungle/side"
+    "particle": "westerosblocks:block/wood/jungle/all"
   },
   "elements": [
     {

@@ -839,9 +839,9 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Iron",
       "randomTextures": [
-        {"textures": {"all": "iron_block/side1"}},
-        {"textures": {"all": "iron_block/side2"}},
-        {"textures": {"all": "iron_block/side3"}}
+        {"textures": {"all": "metal/iron/all1"}},
+        {"textures": {"all": "metal/iron/all2"}},
+        {"textures": {"all": "metal/iron/all3"}}
       ]
     },
     {
@@ -858,9 +858,9 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Oxidized Iron",
       "randomTextures": [
-        {"textures": {"all": "iron_block_oxidized/side1"}},
-        {"textures": {"all": "iron_block_oxidized/side2"}},
-        {"textures": {"all": "iron_block_oxidized/side3"}}
+        {"textures": {"all": "metal/oxidized_iron/all1"}},
+        {"textures": {"all": "metal/oxidized_iron/all2"}},
+        {"textures": {"all": "metal/oxidized_iron/all3"}}
       ]
     },
     {
@@ -877,9 +877,9 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Steel",
       "randomTextures": [
-        {"textures": {"all": "steel_block/side1"}},
-        {"textures": {"all": "steel_block/side2"}},
-        {"textures": {"all": "steel_block/side3"}}
+        {"textures": {"all": "metal/steel/all1"}},
+        {"textures": {"all": "metal/steel/all2"}},
+        {"textures": {"all": "metal/steel/all3"}}
       ]
     },
     {
@@ -896,9 +896,9 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Oxidized Steel",
       "randomTextures": [
-        {"textures": {"all": "steel_block_oxidized/side1"}},
-        {"textures": {"all": "steel_block_oxidized/side2"}},
-        {"textures": {"all": "steel_block_oxidized/side3"}}
+        {"textures": {"all": "metal/oxidized_steel/all1"}},
+        {"textures": {"all": "metal/oxidized_steel/all2"}},
+        {"textures": {"all": "metal/oxidized_steel/all3"}}
       ]
     },
     {
@@ -915,10 +915,10 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Bronze",
       "randomTextures": [
-        {"textures": {"all": "bronze_block/side1"}},
-        {"textures": {"all": "bronze_block/side2"}},
-        {"textures": {"all": "bronze_block/side3"}},
-        {"textures": {"all": "bronze_block/side4"}}
+        {"textures": {"all": "metal/bronze/all1"}},
+        {"textures": {"all": "metal/bronze/all2"}},
+        {"textures": {"all": "metal/bronze/all3"}},
+        {"textures": {"all": "metal/bronze/all4"}}
       ]
     },
     {
@@ -935,9 +935,9 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Oxidized Bronze",
       "randomTextures": [
-        {"textures": {"all": "bronze_block_oxidized/side1"}},
-        {"textures": {"all": "bronze_block_oxidized/side2"}},
-        {"textures": {"all": "bronze_block_oxidized/side3"}}
+        {"textures": {"all": "metal/oxidized_bronze/all1"}},
+        {"textures": {"all": "metal/oxidized_bronze/all2"}},
+        {"textures": {"all": "metal/oxidized_bronze/all3"}}
       ]
     },
     {
@@ -954,9 +954,9 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Gold",
       "randomTextures": [
-        {"textures": {"all": "gold/side1"}},
-        {"textures": {"all": "gold/side2"}},
-        {"textures": {"all": "gold/side3"}}
+        {"textures": {"all": "metal/gold/all1"}},
+        {"textures": {"all": "metal/gold/all2"}},
+        {"textures": {"all": "metal/gold/all3"}}
       ]
     },
     {
@@ -970,7 +970,7 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Gold Brick",
       "textures": {
-        "all": "gold_brick/side"
+        "all": "metal/gold_brick/all"
     }
     },
     {
@@ -987,7 +987,7 @@
       "creativeTab": "WesterosMetal",
       "baseLabel": "Iron Throne Blade",
       "textures": {
-        "all": "blades_molten/side1"
+        "all": "metal/molten_blades/all1"
       }
     },
     {
@@ -2884,6 +2884,512 @@
       ],
       "overlayTextures": {
         "all": "terrainset_overlays/copper_ore_overlay"
+      }
+    },
+    {
+      "baseBlockName": "oak",
+      "altNames": {
+        "solid": "oak_planks",
+        "fence_gate": "locked_oak_fence_gate",
+        "hollow_hopper": "hollow_oak_hopper",
+        "window_frame": "oak_timber_window_frame"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Oak",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/oak/all",
+        "cover": "wood/oak/cover",
+        "window-frame": "wood/oak/window_frame"
+      },
+      "altTextures": {
+        "solid": ["wood/oak/all", "wood/oak/all", "wood/oak/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/oak/all", "wood/oak/all", "wood/oak/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "spruce",
+      "altNames": {
+        "solid": "spruce_planks",
+        "fence_gate": "locked_spruce_fence_gate",
+        "hollow_hopper": "hollow_spruce_hopper"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Spruce",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/spruce/all",
+        "cover": "wood/spruce/cover"
+      },
+      "altTextures": {
+        "solid": ["wood/spruce/all", "wood/spruce/all", "wood/spruce/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/spruce/all", "wood/spruce/all", "wood/spruce/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "birch",
+      "altNames": {
+        "solid": "birch_planks",
+        "fence_gate": "locked_birch_fence_gate",
+        "hollow_hopper": "hollow_birch_hopper"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Birch",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/birch/all",
+        "cover": "wood/birch/cover"
+      },
+      "altTextures": {
+        "solid": ["wood/birch/all", "wood/birch/all", "wood/birch/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/birch/all", "wood/birch/all", "wood/birch/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "jungle",
+      "altNames": {
+        "solid": "jungle_planks",
+        "fence_gate": "locked_jungle_fence_gate",
+        "hollow_hopper": "hollow_jungle_hopper"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Jungle",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/jungle/all",
+        "cover": "wood/jungle/cover"
+      },
+      "altTextures": {
+        "solid": ["wood/jungle/all", "wood/jungle/all", "wood/jungle/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/jungle/all", "wood/jungle/all", "wood/jungle/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "dark_northern_wood",
+      "altNames": {
+        "fence_gate": "locked_dark_northern_wood_fence_gate",
+        "cover": "northern_wood_cover",
+        "hollow_hopper": "hollow_dark_northern_wood_hopper",
+        "window_frame": "northern_timber_window_frame"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Dark Northern Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/northern/all",
+        "cover": "wood/northern/cover",
+        "window-frame": "wood/northern/window_frame"
+      },
+      "altTextures": {
+        "solid": ["wood/northern/all", "wood/northern/all", "wood/northern/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/northern/all", "wood/northern/all", "wood/northern/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "black_wood",
+      "altNames": {
+        "fence_gate": "locked_black_wood_fence_gate"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Black Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/black/all"
+      },
+      "altTextures": {
+        "solid": ["wood/black/all", "wood/black/all", "wood/black/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/black/all", "wood/black/all", "wood/black/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "grey_wood",
+      "altNames": {
+        "fence_gate": "locked_grey_wood_fence_gate"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Grey Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/grey/all"
+      },
+      "altTextures": {
+        "solid": ["wood/grey/all", "wood/grey/all", "wood/grey/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/grey/all", "wood/grey/all", "wood/grey/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "white_wood",
+      "altNames": {
+        "fence_gate": "locked_white_wood_fence_gate",
+        "window_frame": "whitewashed_timber_window_frame"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "White Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/white/all",
+        "window-frame": "wood/white/window_frame"
+      },
+      "altTextures": {
+        "solid": ["wood/white/all", "wood/white/all", "wood/white/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/white/all", "wood/white/all", "wood/white/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "red_wood",
+      "altNames": {
+        "fence_gate": "locked_red_wood_fence_gate",
+        "window_frame": "red_timber_window_frame"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Red Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/red/all",
+        "window-frame": "wood/red/window_frame"
+      },
+      "altTextures": {
+        "solid": ["wood/red/all", "wood/red/all", "wood/red/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/red/all", "wood/red/all", "wood/red/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "yellow_wood",
+      "altNames": {
+        "fence_gate": "locked_yellow_wood_fence_gate"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Yellow Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/yellow/all"
+      },
+      "altTextures": {
+        "solid": ["wood/yellow/all", "wood/yellow/all", "wood/yellow/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/yellow/all", "wood/yellow/all", "wood/yellow/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "green_wood",
+      "altNames": {
+        "fence_gate": "locked_green_wood_fence_gate"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Green Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/green/all"
+      },
+      "altTextures": {
+        "solid": ["wood/green/all", "wood/green/all", "wood/green/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/green/all", "wood/green/all", "wood/green/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "blue_wood",
+      "altNames": {
+        "fence_gate": "locked_blue_wood_fence_gate"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Blue Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/blue/all"
+      },
+      "altTextures": {
+        "solid": ["wood/blue/all", "wood/blue/all", "wood/blue/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/blue/all", "wood/blue/all", "wood/blue/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "purple_wood",
+      "altNames": {
+        "fence_gate": "locked_purple_wood_fence_gate"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Purple Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/purple/all"
+      },
+      "altTextures": {
+        "solid": ["wood/purple/all", "wood/purple/all", "wood/purple/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/purple/all", "wood/purple/all", "wood/purple/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "oak_vertical_planks",
+      "altNames": {
+        "half_door": "oak_half_door"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Oak Vertical Planks",
+      "textures": {
+        "all": "wood/oak/vertical"
+      }
+    },
+    {
+      "baseBlockName": "spruce_vertical_planks",
+      "altNames": {
+        "half_door": "spruce_half_door"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Spruce Vertical Planks",
+      "textures": {
+        "all": "wood/spruce/vertical"
+      }
+    },
+    {
+      "baseBlockName": "birch_vertical_planks",
+      "altNames": {
+        "half_door": "birch_half_door"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Birch Vertical Planks",
+      "textures": {
+        "all": "wood/birch/vertical"
+      }
+    },
+    {
+      "baseBlockName": "jungle_vertical_planks",
+      "altNames": {
+        "half_door": "jungle_half_door"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Jungle Vertical Planks",
+      "textures": {
+        "all": "wood/jungle/vertical"
+      }
+    },
+    {
+      "baseBlockName": "dark_northern_wood_vertical_planks",
+      "altNames": {
+        "half_door": "dark_northern_wood_half_door"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Dark Northern Wood Vertical Planks",
+      "textures": {
+        "all": "wood/northern/vertical"
+      }
+    },
+    {
+      "baseBlockName": "grey_wood_vertical_planks",
+      "altNames": {
+        "half_door": "grey_wood_half_door"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Grey Wood Vertical Planks",
+      "textures": {
+        "all": "wood/grey/vertical"
+      }
+    },
+    {
+      "baseBlockName": "white_wood_vertical_planks",
+      "altNames": {
+        "half_door": "white_wood_half_door"
+      },
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "White Wood Vertical Planks",
+      "textures": {
+        "all": "wood/white/vertical"
       }
     }
   ],
@@ -5076,118 +5582,6 @@
       ]
     },
     {
-      "blockName": "oak_fence",
-      "blockType": "fence",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Oak Fence",
-      "textures": [
-        "planks_oak/side"
-      ]
-    },
-    {
-      "blockName": "locked_oak_fence_gate",
-      "blockType": "fencegate",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "type": "locked:true",
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Locked Oak Fence Gate",
-      "textures": [
-        "planks_oak/side"
-      ]
-    },
-    {
-      "blockName": "spruce_fence",
-      "blockType": "fence",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Spruce Fence",
-      "textures": [
-        "planks_spruce/side"
-      ]
-    },
-    {
-      "blockName": "locked_spruce_fence_gate",
-      "blockType": "fencegate",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "type": "locked:true",
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Locked Spruce Fence Gate",
-      "textures": [
-        "planks_spruce/side"
-      ]
-    },
-    {
-      "blockName": "birch_fence",
-      "blockType": "fence",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Birch Fence",
-      "textures": [
-        "planks_birch/side"
-      ]
-    },
-    {
-      "blockName": "locked_birch_fence_gate",
-      "blockType": "fencegate",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "type": "locked:true",
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Locked Birch Fence Gate",
-      "textures": [
-        "planks_birch/side"
-      ]
-    },
-    {
-      "blockName": "jungle_fence",
-      "blockType": "fence",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Jungle Fence",
-      "textures": [
-        "planks_jungle/side"
-      ]
-    },
-    {
-      "blockName": "locked_jungle_fence_gate",
-      "blockType": "fencegate",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "type": "locked:true",
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Locked Jungle Fence Gate",
-      "textures": [
-        "planks_jungle/side"
-      ]
-    },
-    {
       "blockName": "oak_bark_fence",
       "blockType": "fence",
       "hardness": 2,
@@ -5310,7 +5704,7 @@
       "type": "unconnect:false",
       "label": "Oak Fence with Vines",
       "textures": [
-        "planks_oak/vines"
+        "wood/oak/vines"
       ]
     },
     {
@@ -5324,7 +5718,7 @@
       "type": "unconnect:false",
       "label": "Spruce Fence with Vines",
       "textures": [
-        "planks_spruce/vines"
+        "wood/spruce/vines"
       ]
     },
     {
@@ -5338,7 +5732,7 @@
       "type": "unconnect:false",
       "label": "Birch Fence with Vines",
       "textures": [
-        "planks_birch/vines"
+        "wood/birch/vines"
       ]
     },
     {
@@ -5352,7 +5746,7 @@
       "type": "unconnect:false",
       "label": "Jungle Fence with Vines",
       "textures": [
-        "planks_jungle/vines"
+        "wood/jungle/vines"
       ]
     },
     {
@@ -5366,7 +5760,7 @@
       "type": "unconnect:false",
       "label": "Oak Fence with Grapes",
       "textures": [
-        "planks_oak/grapevines"
+        "wood/oak/grapevines"
       ]
     },
     {
@@ -5380,7 +5774,7 @@
       "type": "unconnect:false",
       "label": "Spruce Fence with Grapes",
       "textures": [
-        "planks_spruce/grapevines"
+        "wood/spruce/grapevines"
       ]
     },
     {
@@ -5394,7 +5788,7 @@
       "type": "unconnect:false",
       "label": "Birch Fence with Grapes",
       "textures": [
-        "planks_birch/grapevines"
+        "wood/birch/grapevines"
       ]
     },
     {
@@ -5408,7 +5802,7 @@
       "type": "unconnect:false",
       "label": "Jungle Fence with Grapes",
       "textures": [
-        "planks_jungle/grapevines"
+        "wood/jungle/grapevines"
       ]
     },
     {
@@ -5880,33 +6274,6 @@
       "itemTextureIndex": 2
     },
     {
-      "blockName": "spruce_half_door",
-      "blockType": "cuboid-nsew",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Spruce Half Door",
-      "textures": [
-        "cuboid_block/door_iron_lower_spruce"
-      ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 0.1875,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      }
-    },
-    {
       "blockName": "horizontal_paper",
       "blockType": "cuboid-nsew",
       "hardness": 5,
@@ -6376,7 +6743,7 @@
       "lightValue": 0.7,
       "lightOpacity": 0,
       "textures": [
-        "iron_block/side1",
+        "metal/iron/all1",
         "light_emitting_blocks/lantern_handheld_center",
         "light_emitting_blocks/lantern_red_bottom"
       ],
@@ -6876,7 +7243,7 @@
       "lightValue": 0.55,
       "lightOpacity": 0,
       "textures": [
-        "planks_jungle/side",
+        "wood/jungle/all",
         "light_emitting_blocks/lantern_handheld_red_center",
         "light_emitting_blocks/lantern_red_bottom"
       ],
@@ -9427,7 +9794,7 @@
       "creativeTab": "WesterosToolBlocks",
       "label": "Piston Top",
       "textures": [
-        "wood_block/piston_top"
+        "wood/oak/studded"
       ]
     },
     {
@@ -9522,134 +9889,6 @@
       ]
     },
     {
-      "blockName": "purple_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "Purple Wood",
-      "textures": [
-        "purple_wood/top_bottom",
-        "purple_wood/top_bottom",
-        "purple_wood/side-woodctm"
-      ]
-    },
-    {
-      "blockName": "white_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "White Wood",
-      "textures": [
-        "white_wood/top_bottom",
-        "white_wood/top_bottom",
-        "white_wood/side-woodctm"
-      ]
-    },
-    {
-      "blockName": "green_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "Green Wood",
-      "textures": [
-        "green_wood/top_bottom",
-        "green_wood/top_bottom",
-        "green_wood/side-woodctm"
-      ]
-    },
-    {
-      "blockName": "grey_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "Grey Wood",
-      "textures": [
-        "grey_wood/top_bottom",
-        "grey_wood/top_bottom",
-        "grey_wood/side-woodctm"
-      ]
-    },
-    {
-      "blockName": "red_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "Red Wood",
-      "textures": [
-        "red_wood/top_bottom",
-        "red_wood/top_bottom",
-        "red_wood/side-woodctm"
-      ]
-    },
-    {
-      "blockName": "black_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "Black Wood",
-      "textures": [
-        "black_wood/top_bottom",
-        "black_wood/top_bottom",
-        "black_wood/side-woodctm"
-      ]
-    },
-    {
-      "blockName": "blue_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "Blue Wood",
-      "textures": [
-        "blue_wood/top_bottom",
-        "blue_wood/top_bottom",
-        "blue_wood/side-woodctm"
-      ]
-    },
-    {
-      "blockName": "yellow_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "Yellow Wood",
-      "textures": [
-        "yellow_wood/top_bottom",
-        "yellow_wood/top_bottom",
-        "yellow_wood/side-woodctm"
-      ]
-    },
-    {
       "blockName": "parquet_floor",
       "blockType": "solid",
       "hardness": 2,
@@ -9659,7 +9898,7 @@
       "creativeTab": "WesterosWoodPlanks",
       "label": "Parquet Floor",
       "textures": [
-        "wood_block/wood_floor_ornate"
+        "wood/oak/ornate"
       ]
     },
     {
@@ -9738,25 +9977,9 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Northern Carvings",
       "textures": [
-        "northern_carvings/top_bottom",
-        "northern_carvings/top_bottom",
-        "northern_carvings/side"
-      ]
-    },
-    {
-      "blockName": "dark_northern_wood",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "wood-ctm" ],
-      "label": "Dark Northern Wood",
-      "textures": [
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/side-woodctm"
+        "wood/spruce/carving/top_bottom",
+        "wood/spruce/carving/top_bottom",
+        "wood/spruce/carving/side"
       ]
     },
     {
@@ -11122,35 +11345,7 @@
       "type": "unconnect:false",
       "label": "Reinforced Oak Fence",
       "textures": [
-        "wood_block/planks_reinforced_oak"
-      ]
-    },
-    {
-      "blockName": "dark_northern_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Dark Northern Wood Fence",
-      "textures": [
-        "dark_northern_wood/side"
-      ]
-    },
-    {
-      "blockName": "locked_dark_northern_wood_fence_gate",
-      "blockType": "fencegate",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "type": "locked:true",
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Locked Dark Northern Wood Fence Gate",
-      "textures": [
-        "dark_northern_wood/side1"
+        "wood/oak/reinforced"
       ]
     },
     {
@@ -11568,7 +11763,7 @@
       "label": "Spruce Window Shutters",
       "type": "allow-unsupported",
       "textures": [
-        "shutter_block/shutters_spruce"
+        "wood/spruce/shutters"
       ]
     },
     {
@@ -11582,7 +11777,7 @@
       "label": "Oak Window Shutters",
       "type": "allow-unsupported",
       "textures": [
-        "shutter_block/shutters_oak"
+        "wood/oak/shutters"
       ]
     },
     {
@@ -14184,706 +14379,6 @@
       ]
     },
     {
-      "blockName": "spruce_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Spruce Hopper",
-      "textures": [
-        "planks_spruce/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "birch_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Birch Hopper",
-      "textures": [
-        "planks_birch/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "jungle_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Jungle Hopper",
-      "textures": [
-        "planks_jungle/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oak_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Oak Tip",
-      "textures": [
-        "planks_oak/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "spruce_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Spruce Tip",
-      "textures": [
-        "planks_spruce/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "birch_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Birch Tip",
-      "textures": [
-        "planks_birch/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "jungle_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Jungle Tip",
-      "textures": [
-        "planks_jungle/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "dark_northern_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Dark Northern Wood Tip",
-      "textures": [
-        "wood_block/wood_northern"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "grey_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Grey Wood Tip",
-      "textures": [
-        "wood_block/wood_grey"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "white_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "White Wood Tip",
-      "textures": [
-        "wood_block/wood_white"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
       "blockName": "piston_extension",
       "blockType": "cuboid-nsewud",
       "hardness": 3,
@@ -16290,86 +15785,6 @@
       "label": "Snow Stairs"
     },
     {
-      "blockName": "dark_northern_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "dark_northern_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Dark Northern Wood Stairs",
-      "textures": [
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/side"
-      ]
-    },
-    {
-      "blockName": "dark_northern_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Dark Northern Wood Slab",
-      "textures": [
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/side"
-      ]
-    },
-    {
-      "blockName": "grey_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Grey Wood Slab",
-      "textures": [
-        "grey_wood/top_bottom",
-        "grey_wood/top_bottom",
-        "grey_wood/side"
-      ]
-    },
-    {
-      "blockName": "white_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "White Wood Slab",
-      "textures": [
-        "white_wood/top_bottom",
-        "white_wood/top_bottom",
-        "white_wood/side"
-      ]
-    },
-    {
       "blockName": "packed_snow",
       "blockType": "rail",
       "material": "snow",
@@ -16991,8 +16406,8 @@
       "creativeTab": "WesterosWoodPlanks",
       "label": "Spruce Door",
       "textures": [
-        "door_block/door_spruce_top",
-        "door_block/door_spruce_bottom"
+        "wood/spruce/door_top",
+        "wood/spruce/door_bottom"
       ],
       "type": "allow-unsupported"
     },
@@ -17459,815 +16874,6 @@
             false,
             false,
             false
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oak_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Oak Hopper",
-      "textures": [
-        "planks_oak/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "hollow_oak_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Hollow Oak Hopper",
-      "textures": [
-        "planks_oak/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.16,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 0.65,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.125,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.875,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.125,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.875,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "hollow_spruce_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Hollow Spruce Hopper",
-      "textures": [
-        "planks_spruce/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.16,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 0.65,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.125,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.875,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.125,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.875,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "hollow_birch_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Hollow Birch Hopper",
-      "textures": [
-        "planks_birch/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.16,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 0.65,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.125,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.875,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.125,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.875,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "hollow_jungle_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Hollow Jungle Hopper",
-      "textures": [
-        "planks_jungle/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.16,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 0.65,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.125,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.875,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.125,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.875,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "dark_northern_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Dark Northern Wood Hopper",
-      "textures": [
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "hollow_dark_northern_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Hollow Dark Northern Wood Hopper",
-      "textures": [
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.16,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 0.65,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.125,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.875,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.125,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.875,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
           ]
         }
       ]
@@ -18797,23 +17403,23 @@
       "randomTextures": [
         {
           "textures": [
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/side1"
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/side1"
           ]
         },
         {
           "textures": [
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/side2"
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/side2"
           ]
         },
         {
           "textures": [
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/top_bottom",
-            "reach_oak_wood_panelling/side3"
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/side3"
           ]
         }
       ]
@@ -18830,23 +17436,23 @@
       "randomTextures": [
         {
           "textures": [
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/side1"
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/side1"
           ]
         },
         {
           "textures": [
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/side2"
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/side2"
           ]
         },
         {
           "textures": [
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/top_bottom",
-            "reach_spruce_wood_panelling/side3"
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/side3"
           ]
         }
       ]
@@ -19266,52 +17872,6 @@
       "boundingBox": {
         "xMin": 0.92,
         "xMax": 0.97,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      }
-    },
-    {
-      "blockName": "wattle_fence",
-      "blockType": "cuboid-nsew",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Wattle Fence",
-      "randomTextures": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "wattle_fence/side1",
-            "wattle_fence/side1",
-            "wattle_fence/side1",
-            "wattle_fence/side1"
-          ]
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "wattle_fence/side2",
-            "wattle_fence/side2",
-            "wattle_fence/side2",
-            "wattle_fence/side2"
-          ]
-        }
-      ],
-      "boundingBox": {
-        "xMin": 0.01,
-        "xMax": 0.07,
         "yMin": 0,
         "yMax": 1,
         "zMin": 0,
@@ -21012,114 +19572,6 @@
       ]
     },
     {
-      "blockName": "oak_half_door",
-      "blockType": "cuboid-nsew",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Oak Half Door",
-      "textures": [
-        "cuboid_block/door_iron_lower_oak"
-      ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 0.1875,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      }
-    },
-    {
-      "blockName": "birch_half_door",
-      "blockType": "cuboid-nsew",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Birch Half Door",
-      "textures": [
-        "cuboid_block/door_iron_lower_birch"
-      ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 0.1875,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      }
-    },
-    {
-      "blockName": "jungle_half_door",
-      "blockType": "cuboid-nsew",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Jungle Half Door",
-      "textures": [
-        "cuboid_block/door_iron_lower_jungle"
-      ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 0.1875,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      }
-    },
-    {
-      "blockName": "dark_northern_wood_half_door",
-      "blockType": "cuboid-nsew",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Dark Northern Wood Half Door",
-      "textures": [
-        "cuboid_block/door_iron_lower_northern"
-      ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 0.1875,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      }
-    },
-    {
       "blockName": "candle_altar",
       "blockType": "crop",
       "stepSound": "powder",
@@ -21218,10 +19670,11 @@
       "resistance": 10,
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Cobble Keystone",
+      "type": "connectstate:true",
       "textures": [
-        "cobble_keystone/top_bottom",
-        "cobble_keystone/top_bottom",
-        "cobble_keystone/side"
+        "cobblestone/normal/keystone/top_bottom",
+        "cobblestone/normal/keystone/top_bottom",
+        "cobblestone/normal/keystone/side"
       ]
     },
     {
@@ -22490,7 +20943,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 7,
-      "creativeTab": "WesterosWoodPlanks",
+      "creativeTab": "WesterosMisc",
       "type": "locked:true,allow-unsupported",
       "label": "Red Keep Secret Door",
       "textures": [
@@ -28080,34 +26533,6 @@
       ]
     },
     {
-      "blockName": "grey_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Grey Wood Fence",
-      "textures": [
-        "grey_wood/side"
-      ]
-    },
-    {
-      "blockName": "white_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "White Wood Fence",
-      "textures": [
-        "white_wood/side"
-      ]
-    },
-    {
       "blockName": "locked_oak_door",
       "blockType": "door",
       "hardness": 2,
@@ -28118,8 +26543,8 @@
       "type": "locked:true,allow-unsupported",
       "label": "Locked Oak Door",
       "textures": [
-        "door_block/door_locked_oak_top",
-        "door_block/door_locked_oak_bottom"
+        "wood/oak/door_locked_top",
+        "wood/oak/door_locked_bottom"
       ]
     },
     {
@@ -28133,8 +26558,8 @@
       "type": "locked:true,allow-unsupported",
       "label": "Locked Spruce Door",
       "textures": [
-        "door_block/door_locked_spruce_top",
-        "door_block/door_locked_spruce_bottom"
+        "wood/spruce/door_locked_top",
+        "wood/spruce/door_locked_bottom"
       ]
     },
     {
@@ -28148,8 +26573,8 @@
       "type": "locked:true,allow-unsupported",
       "label": "Locked Birch Door",
       "textures": [
-        "door_block/door_locked_birch_top",
-        "door_block/door_locked_birch_bottom"
+        "wood/birch/door_locked_top",
+        "wood/birch/door_locked_bottom"
       ]
     },
     {
@@ -28163,8 +26588,8 @@
       "type": "locked:true,allow-unsupported",
       "label": "Locked Jungle Door",
       "textures": [
-        "door_block/door_locked_jungle_top",
-        "door_block/door_locked_jungle_bottom"
+        "wood/jungle/door_locked_top",
+        "wood/jungle/door_locked_bottom"
       ]
     },
     {
@@ -28178,8 +26603,8 @@
       "type": "locked:true,allow-unsupported",
       "label": "Locked Dark Northern Wood Door",
       "textures": [
-        "door_block/door_locked_northern_top",
-        "door_block/door_locked_northern_bottom"
+        "wood/northern/door_locked_top",
+        "wood/northern/door_locked_bottom"
       ]
     },
     {
@@ -30065,237 +28490,6 @@
       ]
     },
     {
-      "blockName": "grey_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Grey Wood Hopper",
-      "textures": [
-        "grey_wood/top_bottom"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "white_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "White Wood Hopper",
-      "textures": [
-        "white_wood/top_bottom"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "oak_vertical_planks",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Oak Vertical Planks",
-      "textures": [
-        "wood_block/wood_vertical_oak"
-      ]
-    },
-    {
-      "blockName": "spruce_vertical_planks",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Spruce Vertical Planks",
-      "textures": [
-        "wood_block/wood_vertical_spruce"
-      ]
-    },
-    {
-      "blockName": "birch_vertical_planks",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Birch Vertical Planks",
-      "textures": [
-        "wood_block/wood_vertical_birch"
-      ]
-    },
-    {
-      "blockName": "jungle_vertical_planks",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Jungle Vertical Planks",
-      "textures": [
-        "wood_block/wood_vertical_jungle"
-      ]
-    },
-    {
-      "blockName": "dark_northern_wood_vertical_planks",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Dark Northern Wood Vertical Planks",
-      "textures": [
-        "wood_block/wood_vertical_northern"
-      ]
-    },
-    {
-      "blockName": "grey_wood_vertical_planks",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Grey Wood Vertical Planks",
-      "textures": [
-        "wood_block/wood_vertical_grey"
-      ]
-    },
-    {
-      "blockName": "white_wood_vertical_planks",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "White Wood Vertical Planks",
-      "textures": [
-        "wood_block/wood_vertical_white"
-      ]
-    },
-    {
       "blockName": "thatch_light_wall",
       "blockType": "wall",
       "hardness": 1.5,
@@ -30336,113 +28530,6 @@
       ]
     },
     {
-      "blockName": "oak_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Oak Wall",
-      "textures": [
-        "planks_oak/side"
-      ]
-    },
-    {
-      "blockName": "spruce_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Spruce Wall",
-      "textures": [
-        "planks_spruce/side"
-      ]
-    },
-    {
-      "blockName": "birch_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Birch Wall",
-      "textures": [
-        "planks_birch/side"
-      ]
-    },
-    {
-      "blockName": "jungle_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Jungle Wall",
-      "textures": [
-        "planks_jungle/side"
-      ]
-    },
-    {
-      "blockName": "dark_northern_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Dark Northern Wood Wall",
-      "textures": [
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/top_bottom",
-        "dark_northern_wood/top_bottom"
-      ]
-    },
-    {
       "blockName": "reach_oak_wood_panelling_wall",
       "blockType": "wall",
       "hardness": 1.5,
@@ -30461,23 +28548,23 @@
       "randomTextures": [
         {
           "textures": [
-            "reach_oak_wood_panelling_wall/top_bottom",
-            "reach_oak_wood_panelling_wall/top_bottom",
-            "reach_oak_wood_panelling_wall/side1"
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/side1"
           ]
         },
         {
           "textures": [
-            "reach_oak_wood_panelling_wall/top_bottom",
-            "reach_oak_wood_panelling_wall/top_bottom",
-            "reach_oak_wood_panelling_wall/side2"
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/side2"
           ]
         },
         {
           "textures": [
-            "reach_oak_wood_panelling_wall/top_bottom",
-            "reach_oak_wood_panelling_wall/top_bottom",
-            "reach_oak_wood_panelling_wall/side3"
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/top_bottom",
+            "wood/oak/panelling/side3"
           ]
         }
       ]
@@ -30501,23 +28588,23 @@
       "randomTextures": [
         {
           "textures": [
-            "reach_spruce_wood_panelling_wall/top_bottom",
-            "reach_spruce_wood_panelling_wall/top_bottom",
-            "reach_spruce_wood_panelling_wall/side1"
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/side1"
           ]
         },
         {
           "textures": [
-            "reach_spruce_wood_panelling_wall/top_bottom",
-            "reach_spruce_wood_panelling_wall/top_bottom",
-            "reach_spruce_wood_panelling_wall/side2"
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/side2"
           ]
         },
         {
           "textures": [
-            "reach_spruce_wood_panelling_wall/top_bottom",
-            "reach_spruce_wood_panelling_wall/top_bottom",
-            "reach_spruce_wood_panelling_wall/side3"
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/top_bottom",
+            "wood/spruce/panelling/side3"
           ]
         }
       ]
@@ -30560,48 +28647,6 @@
       "label": "Mance's Camp Mance's Tent Wall",
       "textures": [
         "mances_camp_mances_tent/outside"
-      ]
-    },
-    {
-      "blockName": "grey_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Grey Wood Wall",
-      "textures": [
-        "grey_wood/side1"
-      ]
-    },
-    {
-      "blockName": "white_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "White Wood Wall",
-      "textures": [
-        "white_wood/side1"
       ]
     },
     {
@@ -31448,489 +29493,6 @@
       "isCustomModel": true
     },
     {
-      "blockName": "oak_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Oak Carpet",
-      "textures": [
-        "planks_oak/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "spruce_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Spruce Carpet",
-      "textures": [
-        "planks_spruce/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "birch_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Birch Carpet",
-      "textures": [
-        "planks_birch/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "jungle_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Jungle Carpet",
-      "textures": [
-        "planks_jungle/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "dark_northern_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Dark Northern Wood Carpet",
-      "textures": [
-        "dark_northern_wood/side1"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "grey_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Grey Wood Carpet",
-      "textures": [
-        "grey_wood/side1"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "white_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "White Wood Carpet",
-      "textures": [
-        "white_wood/side1"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "black_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Black Wood Carpet",
-      "textures": [
-        "wood_block/wood_black"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "blue_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Blue Wood Carpet",
-      "textures": [
-        "wood_block/wood_blue"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "green_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Green Wood Carpet",
-      "textures": [
-        "wood_block/wood_green"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "red_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Red Wood Carpet",
-      "textures": [
-        "wood_block/wood_red"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "yellow_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Yellow Wood Carpet",
-      "textures": [
-        "wood_block/wood_yellow"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "purple_wood_carpet",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Purple Wood Carpet",
-      "textures": [
-        "wood_block/wood_purple"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.0625,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
       "blockName": "fancy_red_carpet",
       "blockType": "rail",
       "stepSound": "cloth",
@@ -31974,35 +29536,7 @@
       "label": "Mance's Camp Mance's Tent Stairs"
     },
     {
-      "blockName": "grey_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "grey_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Grey Wood Stairs",
-      "textures": [
-        "grey_wood/top_bottom",
-        "grey_wood/top_bottom",
-        "grey_wood/side"
-      ]
-    },
-    {
-      "blockName": "white_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "white_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "White Wood Stairs",
-      "textures": [
-        "white_wood/top_bottom",
-        "white_wood/top_bottom",
-        "white_wood/side"
-      ]
-    },
-    {
-      "blockName": "grey_wood_half_door",
+      "blockName": "wattle_fence",
       "blockType": "cuboid-nsew",
       "hardness": 5,
       "stepSound": "wood",
@@ -32015,40 +29549,32 @@
         }
       ],
       "creativeTab": "WesterosWoodPlanks",
-      "label": "Grey Wood Half Door",
-      "textures": [
-        "cuboid_block/door_iron_lower_grey"
-      ],
-      "boundingBox": {
-        "xMin": 0,
-        "xMax": 0.1875,
-        "yMin": 0,
-        "yMax": 1,
-        "zMin": 0,
-        "zMax": 1
-      }
-    },
-    {
-      "blockName": "white_wood_half_door",
-      "blockType": "cuboid-nsew",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
+      "label": "Wattle Fence",
+      "randomTextures": [
         {
-          "tool": "pickaxe",
-          "level": 3
+          "textures": [
+            "transparent",
+            "transparent",
+            "wattle_fence/side1",
+            "wattle_fence/side1",
+            "wattle_fence/side1",
+            "wattle_fence/side1"
+          ]
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "wattle_fence/side2",
+            "wattle_fence/side2",
+            "wattle_fence/side2",
+            "wattle_fence/side2"
+          ]
         }
       ],
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "White Wood Half Door",
-      "textures": [
-        "cuboid_block/door_iron_lower_white"
-      ],
       "boundingBox": {
-        "xMin": 0,
-        "xMax": 0.1875,
+        "xMin": 0.01,
+        "xMax": 0.07,
         "yMin": 0,
         "yMax": 1,
         "zMin": 0,
@@ -33170,61 +30696,6 @@
       ]
     },
     {
-      "blockName": "oak_cover",
-      "blockType": "rail",
-      "creativeTab": "WesterosWoodPlanks",
-      "material": "wood",
-      "label": "Oak Cover",
-      "textures": [
-        "rail_block/cover_oak"
-      ],
-      "type": "allow-unsupported"
-    },
-    {
-      "blockName": "spruce_cover",
-      "blockType": "rail",
-      "creativeTab": "WesterosWoodPlanks",
-      "material": "wood",
-      "label": "Spruce Cover",
-      "textures": [
-        "rail_block/cover_spruce"
-      ],
-      "type": "allow-unsupported"
-    },
-    {
-      "blockName": "birch_cover",
-      "blockType": "rail",
-      "creativeTab": "WesterosWoodPlanks",
-      "material": "wood",
-      "label": "Birch Cover",
-      "textures": [
-        "rail_block/cover_birch"
-      ],
-      "type": "allow-unsupported"
-    },
-    {
-      "blockName": "jungle_cover",
-      "blockType": "rail",
-      "material": "wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "label": "Jungle Cover",
-      "textures": [
-        "rail_block/cover_jungle"
-      ],
-      "type": "allow-unsupported"
-    },
-    {
-      "blockName": "northern_wood_cover",
-      "blockType": "rail",
-      "creativeTab": "WesterosWoodPlanks",
-      "material": "wood",
-      "label": "Northern Wood Cover",
-      "textures": [
-        "rail_block/cover_northern"
-      ],
-      "type": "allow-unsupported"
-    },
-    {
       "blockName": "path_dirt",
       "blockType": "cuboid",
       "hardness": 2,
@@ -33743,254 +31214,6 @@
             "zMax": 1
           }
         }
-      ]
-    },
-    {
-      "blockName": "oak_timber_window_frame",
-      "blockType": "solid",
-      "creativeTab": "WesterosTimberFrame",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "lightOpacity": 0,
-      "label": "Oak Timber Window Frame",
-      "textures": [
-        "transparent",
-        "transparent",
-        "oak_timber_window_frame/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "red_timber_window_frame",
-      "blockType": "solid",
-      "creativeTab": "WesterosTimberFrame",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "lightOpacity": 0,
-      "label": "Red Timber Window Frame",
-      "textures": [
-        "transparent",
-        "transparent",
-        "red_timber_window_frame/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "northern_timber_window_frame",
-      "blockType": "solid",
-      "creativeTab": "WesterosTimberFrame",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "lightOpacity": 0,
-      "label": "Northern Timber Window Frame",
-      "textures": [
-        "transparent",
-        "transparent",
-        "northern_timber_window_frame/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
-      ]
-    },
-    {
-      "blockName": "whitewashed_timber_window_frame",
-      "blockType": "solid",
-      "creativeTab": "WesterosTimberFrame",
-      "nonOpaque": true,
-      "alphaRender": false,
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "lightOpacity": 0,
-      "label": "Whitewashed Timber Window Frame",
-      "textures": [
-        "transparent",
-        "transparent",
-        "whitewashed_timber_window_frame/side"
-      ],
-      "collisionBoxes": [
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 0.2
-        },
-        {
-          "xMin": 0,
-          "xMax": 0.2,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        },
-        {
-          "xMin": 0.8,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0.8,
-          "zMax": 1
-        }
-      ],
-      "supportBoxes": [ 
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1
-        }      
       ]
     },
     {
@@ -36622,1260 +33845,6 @@
       }
     },
     {
-      "blockName": "black_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Black Wood Tip",
-      "textures": [
-        "wood_block/wood_black"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "blue_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Blue Wood Tip",
-      "textures": [
-        "wood_block/wood_blue"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "green_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Green Wood Tip",
-      "textures": [
-        "wood_block/wood_green"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "red_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Red Wood Tip",
-      "textures": [
-        "wood_block/wood_red"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "yellow_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Yellow Wood Tip",
-      "textures": [
-        "wood_block/wood_yellow"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "purple_wood_tip",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Purple Wood Tip",
-      "textures": [
-        "wood_block/wood_purple"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "black_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],      
-      "label": "Black Wood Hopper",
-      "textures": [
-        "wood_block/wood_black"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "blue_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Blue Wood Hopper",
-      "textures": [
-        "wood_block/wood_blue"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "green_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Green Wood Hopper",
-      "textures": [
-        "wood_block/wood_green"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "red_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Red Wood Hopper",
-      "textures": [
-        "wood_block/wood_red"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "yellow_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Yellow Wood Hopper",
-      "textures": [
-        "wood_block/wood_yellow"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "purple_wood_hopper",
-      "blockType": "cuboid",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 4,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 3
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Purple Wood Hopper",
-      "textures": [
-        "wood_block/wood_purple"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0.3755,
-          "xMax": 0.6245,
-          "yMin": 0,
-          "yMax": 0.275,
-          "zMin": 0.3755,
-          "zMax": 0.6245,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0.25,
-          "xMax": 0.75,
-          "yMin": 0.275,
-          "yMax": 0.625,
-          "zMin": 0.25,
-          "zMax": 0.75,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0.625,
-          "yMax": 1,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "black_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "black_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Black Wood Stairs",
-      "textures": [
-        "black_wood/top_bottom",
-        "black_wood/top_bottom",
-        "black_wood/side"
-      ]
-    },
-    {
-      "blockName": "blue_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "blue_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Blue Wood Stairs",
-      "textures": [
-        "blue_wood/top_bottom",
-        "blue_wood/top_bottom",
-        "blue_wood/side"
-      ]
-    },
-    {
-      "blockName": "green_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "green_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Green Wood Stairs",
-      "textures": [
-        "green_wood/top_bottom",
-        "green_wood/top_bottom",
-        "green_wood/side"
-      ]
-    },
-    {
-      "blockName": "red_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "red_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Red Wood Stairs",
-      "textures": [
-        "red_wood/top_bottom",
-        "red_wood/top_bottom",
-        "red_wood/side"
-      ]
-    },
-    {
-      "blockName": "yellow_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "yellow_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Yellow Wood Stairs",
-      "textures": [
-        "yellow_wood/top_bottom",
-        "yellow_wood/top_bottom",
-        "yellow_wood/side"
-      ]
-    },
-    {
-      "blockName": "purple_wood_stairs",
-      "blockType": "stair",
-      "modelBlockName": "purple_wood",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Purple Wood Stairs",
-      "textures": [
-        "purple_wood/top_bottom",
-        "purple_wood/top_bottom",
-        "purple_wood/side"
-      ]
-    },
-    {
-      "blockName": "black_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Black Wood Wall",
-      "textures": [
-        "wood_block/wood_black"
-      ]
-    },
-    {
-      "blockName": "blue_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Blue Wood Wall",
-      "textures": [
-        "wood_block/wood_blue"
-      ]
-    },
-    {
-      "blockName": "green_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Green Wood Wall",
-      "textures": [
-        "wood_block/wood_green"
-      ]
-    },
-    {
-      "blockName": "red_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Red Wood Wall",
-      "textures": [
-        "wood_block/wood_red"
-      ]
-    },
-    {
-      "blockName": "yellow_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Yellow Wood Wall",
-      "textures": [
-        "wood_block/wood_yellow"
-      ]
-    },
-    {
-      "blockName": "purple_wood_wall",
-      "blockType": "wall",
-      "hardness": 1.5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "harvestLevel": [
-        {
-          "tool": "pickaxe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Purple Wood Wall",
-      "textures": [
-        "wood_block/wood_purple"
-      ]
-    },
-    {
-      "blockName": "black_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Black Wood Fence",
-      "textures": [
-        "wood_block/wood_black"
-      ]
-    },
-    {
-      "blockName": "blue_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Blue Wood Fence",
-      "textures": [
-        "wood_block/wood_blue"
-      ]
-    },
-    {
-      "blockName": "green_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Green Wood Fence",
-      "textures": [
-        "wood_block/wood_green"
-      ]
-    },
-    {
-      "blockName": "red_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Red Wood Fence",
-      "textures": [
-        "wood_block/wood_red"
-      ]
-    },
-    {
-      "blockName": "yellow_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Yellow Wood Fence",
-      "textures": [
-        "wood_block/wood_yellow"
-      ]
-    },
-    {
-      "blockName": "purple_wood_fence",
-      "blockType": "fence",
-      "hardness": 5,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 10,
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "label": "Purple Wood Fence",
-      "textures": [
-        "wood_block/wood_purple"
-      ]
-    },
-    {
-      "blockName": "black_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Black Wood Slab",
-      "textures": [
-        "black_wood/side"
-      ]
-    },
-    {
-      "blockName": "blue_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Blue Wood Slab",
-      "textures": [
-        "blue_wood/side"
-      ]
-    },
-    {
-      "blockName": "green_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Green Wood Slab",
-      "textures": [
-        "green_wood/side"
-      ]
-    },
-    {
-      "blockName": "red_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Red Wood Slab",
-      "textures": [
-        "red_wood/side"
-      ]
-    },
-    {
-      "blockName": "yellow_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Yellow Wood Slab",
-      "textures": [
-        "yellow_wood/side"
-      ]
-    },
-    {
-      "blockName": "purple_wood_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "harvestLevel": [
-        {
-          "tool": "axe",
-          "level": 1
-        }
-      ],
-      "creativeTab": "WesterosWoodPlanks",
-      "customTags": [ "plank-ctm" ],
-      "label": "Purple Wood Slab",
-      "textures": [
-        "purple_wood/side"
-      ]
-    },
-    {
       "blockName": "light_brown_wool",
       "blockType": "solid",
       "hardness": 1,
@@ -38026,60 +33995,12 @@
       ]
     },
     {
-      "blockName": "oak_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:oak_planks",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Oak Stairs",
-      "textures": [
-        "minecraft:block/oak_planks"
-      ]
-    },
-    {
-      "blockName": "birch_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:birch_planks",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Birch Stairs",
-      "textures": [
-        "minecraft:block/birch_planks"
-      ]
-    },
-    {
       "blockName": "quartz_stairs",
       "blockType": "stair",
       "modelBlockName": "minecraft:quartz_block",
       "creativeTab": "WesterosMarblePlaster",
       "type": "unconnect:false",
       "label": "Quartz Stairs"
-    },
-    {
-      "blockName": "jungle_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:jungle_planks",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Jungle Stairs",
-      "textures": [
-        "minecraft:block/jungle_planks"
-      ]
-    },
-    {
-      "blockName": "spruce_stairs",
-      "blockType": "stair",
-      "modelBlockName": "minecraft:spruce_planks",
-      "creativeTab": "WesterosWoodPlanks",
-      "type": "unconnect:false",
-      "customTags": [ "plank-ctm" ],
-      "label": "Spruce Stairs",
-      "textures": [
-        "minecraft:block/spruce_planks"
-      ]
     },
     {
       "blockName": "iron_bars",

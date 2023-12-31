@@ -9,10 +9,14 @@
     "westerosblocks:yellow_wood",
     "westerosblocks:blue_wood",
     "westerosblocks:grey_wood",
+    "westerosblocks:oak_planks",
     "westerosblocks:black_wood",
     "westerosblocks:red_wood",
     "westerosblocks:purple_wood",
+    "westerosblocks:jungle_planks",
     "westerosblocks:white_wood",
-    "westerosblocks:dark_northern_wood"
+    "westerosblocks:birch_planks",
+    "westerosblocks:dark_northern_wood",
+    "westerosblocks:spruce_planks"
   ]
 }

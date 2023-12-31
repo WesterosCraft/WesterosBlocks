@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/dark_northern_wood/top_bottom",
-    "up": "westerosblocks:block/dark_northern_wood/top_bottom",
-    "north": "westerosblocks:block/dark_northern_wood/side",
-    "south": "westerosblocks:block/dark_northern_wood/side",
-    "west": "westerosblocks:block/dark_northern_wood/side",
-    "east": "westerosblocks:block/dark_northern_wood/side",
-    "particle": "westerosblocks:block/dark_northern_wood/side"
+    "down": "westerosblocks:block/wood/northern/all",
+    "up": "westerosblocks:block/wood/northern/all",
+    "north": "westerosblocks:block/wood/northern/plankctm",
+    "south": "westerosblocks:block/wood/northern/plankctm",
+    "west": "westerosblocks:block/wood/northern/plankctm",
+    "east": "westerosblocks:block/wood/northern/plankctm",
+    "particle": "westerosblocks:block/wood/northern/plankctm"
   }
 }

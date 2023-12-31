@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "westerosblocks:locked_black_wood_fence_gate",
     "westerosblocks:terrainset_ocean_rocks_fence_gate",
     "westerosblocks:terrainset_westerlands_fence_gate",
     "westerosblocks:locked_oak_bark_fence_gate",
@@ -13,16 +14,20 @@
     "westerosblocks:terrainset_river_rocks_fence_gate",
     "westerosblocks:terrainset_westerlands_alt_fence_gate",
     "westerosblocks:terrainset_stormlands_alt_fence_gate",
+    "westerosblocks:locked_grey_wood_fence_gate",
     "westerosblocks:test_block_set_fence_gate",
     "westerosblocks:locked_birch_fence_gate",
     "westerosblocks:volcanic_rock_fence_gate",
     "westerosblocks:locked_oak_fence_gate",
     "westerosblocks:terrainset_reach_fence_gate",
+    "westerosblocks:locked_purple_wood_fence_gate",
     "westerosblocks:terrainset_mountains_of_the_moon_fence_gate",
+    "westerosblocks:locked_blue_wood_fence_gate",
     "westerosblocks:locked_spruce_bark_fence_gate",
     "westerosblocks:terrainset_iron_islands_fence_gate",
     "westerosblocks:flowstone_fence_gate",
     "westerosblocks:locked_spruce_fence_gate",
+    "westerosblocks:locked_white_wood_fence_gate",
     "westerosblocks:volcanic_stone_fence_gate",
     "westerosblocks:locked_birch_bark_fence_gate",
     "westerosblocks:terrainset_reach_alt_fence_gate",
@@ -30,6 +35,9 @@
     "westerosblocks:terrainset_eastern_islands_fence_gate",
     "westerosblocks:terrainset_stormlands_fence_gate",
     "westerosblocks:locked_dark_northern_wood_fence_gate",
+    "westerosblocks:locked_red_wood_fence_gate",
+    "westerosblocks:locked_yellow_wood_fence_gate",
+    "westerosblocks:locked_green_wood_fence_gate",
     "westerosblocks:terrainset_red_mountains_fence_gate"
   ]
 }

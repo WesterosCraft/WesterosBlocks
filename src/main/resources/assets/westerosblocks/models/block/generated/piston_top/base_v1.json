@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/wood_block/piston_top"
+    "all": "westerosblocks:block/wood/oak/studded"
   }
 }

@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/iron_block_oxidized/side3",
-    "txt5": "westerosblocks:block/iron_block_oxidized/side3",
-    "txt2": "westerosblocks:block/iron_block_oxidized/side3",
-    "txt3": "westerosblocks:block/iron_block_oxidized/side3",
-    "txt0": "westerosblocks:block/iron_block_oxidized/side3",
-    "txt1": "westerosblocks:block/iron_block_oxidized/side3",
-    "particle": "westerosblocks:block/iron_block_oxidized/side3"
+    "txt4": "westerosblocks:block/metal/oxidized_iron/all3",
+    "txt5": "westerosblocks:block/metal/oxidized_iron/all3",
+    "txt2": "westerosblocks:block/metal/oxidized_iron/all3",
+    "txt3": "westerosblocks:block/metal/oxidized_iron/all3",
+    "txt0": "westerosblocks:block/metal/oxidized_iron/all3",
+    "txt1": "westerosblocks:block/metal/oxidized_iron/all3",
+    "particle": "westerosblocks:block/metal/oxidized_iron/all3"
   },
   "elements": [
     {

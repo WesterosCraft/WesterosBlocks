@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/fence_post",
   "textures": {
-    "bottom": "westerosblocks:block/planks_oak/side",
-    "top": "westerosblocks:block/planks_oak/side",
-    "side": "westerosblocks:block/planks_oak/side"
+    "bottom": "westerosblocks:block/wood/oak/all",
+    "top": "westerosblocks:block/wood/oak/all",
+    "side": "westerosblocks:block/wood/oak/all"
   }
 }

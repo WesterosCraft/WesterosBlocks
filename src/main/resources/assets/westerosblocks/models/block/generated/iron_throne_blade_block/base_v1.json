@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/blades_molten/side1",
-    "up": "westerosblocks:block/blades_molten/side1",
-    "north": "westerosblocks:block/blades_molten/side1",
-    "south": "westerosblocks:block/blades_molten/side1",
-    "west": "westerosblocks:block/blades_molten/side1",
-    "east": "westerosblocks:block/blades_molten/side1",
-    "particle": "westerosblocks:block/blades_molten/side1"
+    "down": "westerosblocks:block/metal/molten_blades/all",
+    "up": "westerosblocks:block/metal/molten_blades/all",
+    "north": "westerosblocks:block/metal/molten_blades/all",
+    "south": "westerosblocks:block/metal/molten_blades/all",
+    "west": "westerosblocks:block/metal/molten_blades/all",
+    "east": "westerosblocks:block/metal/molten_blades/all",
+    "particle": "westerosblocks:block/metal/molten_blades/all"
   }
 }

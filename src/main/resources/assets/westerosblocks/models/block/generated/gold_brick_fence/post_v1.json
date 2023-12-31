@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/fence_post",
   "textures": {
-    "bottom": "westerosblocks:block/gold_brick/side",
-    "top": "westerosblocks:block/gold_brick/side",
-    "side": "westerosblocks:block/gold_brick/side"
+    "bottom": "westerosblocks:block/metal/gold_brick/all",
+    "top": "westerosblocks:block/metal/gold_brick/all",
+    "side": "westerosblocks:block/metal/gold_brick/all"
   }
 }

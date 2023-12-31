@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "minecraft:block/jungle_planks",
-    "top": "minecraft:block/jungle_planks",
-    "side": "minecraft:block/jungle_planks",
-    "particle": "minecraft:block/jungle_planks"
+    "bottom": "westerosblocks:block/wood/jungle/all",
+    "top": "westerosblocks:block/wood/jungle/all",
+    "side": "westerosblocks:block/wood/jungle/plankctm",
+    "particle": "westerosblocks:block/wood/jungle/plankctm"
   }
 }
