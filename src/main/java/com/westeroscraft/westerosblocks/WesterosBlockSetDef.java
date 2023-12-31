@@ -62,7 +62,9 @@ public class WesterosBlockSetDef {
 	public int fireSpreadSpeed = 0; // Fire spread speed
 	public int flamability = 0; // Flamability
 	public String creativeTab = null; // Creative tab for items
+
 	public List<String> customTags = null;	// If block should add any custom tags
+  public Map<String, List<String>> altCustomTags = null; // Allows idiosyncratic tags for particular variants
 
   public Map<String, String> types = null; // Map of type attributes for each variant
 	
@@ -91,6 +93,12 @@ public class WesterosBlockSetDef {
 
   public List<WesterosBlockDef> generateBlockDefs() {
     List<WesterosBlockDef> blockDefs = new LinkedList<WesterosBlockDef>();
+    
+    this.types = preprocessVariantMap(this.types);
+    this.altCustomTags = preprocessVariantMap(this.altCustomTags);
+    this.altTextures = preprocessVariantMap(this.altTextures);
+    this.altRandomTextures = preprocessVariantMap(this.altRandomTextures);
+    this.altOverlayTextures = preprocessVariantMap(this.altOverlayTextures);
 
     for (String variant : WesterosBlockSetDef.SUPPORTED_VARIANTS) {
       if (this.variants != null && !variants.contains(variant))
@@ -130,10 +138,16 @@ public class WesterosBlockSetDef {
       variantDef.fireSpreadSpeed = this.fireSpreadSpeed;
       variantDef.flamability = this.flamability;
       variantDef.creativeTab = this.creativeTab;
-      variantDef.customTags = this.customTags;
       variantDef.alphaRender = this.alphaRender;
       variantDef.ambientOcclusion = this.ambientOcclusion;
       variantDef.nonOpaque = this.nonOpaque;
+
+      if (this.altCustomTags != null && this.altCustomTags.containsKey(variant)) {
+        List<String> tags = altCustomTags.get(variant);
+        variantDef.customTags = (!tags.isEmpty()) ? tags : null;
+      }
+      else
+        variantDef.customTags = this.customTags;
 
       // Copy type attribute for variant
       if (this.types != null && this.types.containsKey(variant)) {
@@ -212,6 +226,26 @@ public class WesterosBlockSetDef {
     }
 
     return blockDefs;
+  }
+
+  // Allow for multiple variants to be provided in one map entry, separated by commas
+  public static <T> Map<String, T> preprocessVariantMap(Map<String, T> map) {
+    if (map == null)
+      return null;
+
+    Map<String, T> newMap = new HashMap<String, T>();
+    for (Map.Entry<String, T> entry : map.entrySet()) {
+      String key = entry.getKey();
+      T value = entry.getValue();
+      if (!key.contains(","))
+        newMap.put(key, value);
+      else {
+        String[] variants = key.split(",");
+        for (String variant : variants)
+          newMap.put(variant, value);
+      }
+    }
+    return newMap;
   }
 
   public static String generateLabel(String name) {
