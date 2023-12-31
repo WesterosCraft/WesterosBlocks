@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_slate/slate_red_orange",
-    "txt5": "westerosblocks:block/stone_slate/slate_red_orange",
-    "txt2": "westerosblocks:block/stone_slate/slate_red_orange",
-    "txt3": "westerosblocks:block/stone_slate/slate_red_orange",
-    "txt0": "westerosblocks:block/stone_slate/slate_red_orange",
-    "txt1": "westerosblocks:block/stone_slate/slate_red_orange",
-    "particle": "westerosblocks:block/stone_slate/slate_red_orange"
+    "txt4": "westerosblocks:block/slate/redorange/all",
+    "txt5": "westerosblocks:block/slate/redorange/all",
+    "txt2": "westerosblocks:block/slate/redorange/all",
+    "txt3": "westerosblocks:block/slate/redorange/all",
+    "txt0": "westerosblocks:block/slate/redorange/all",
+    "txt1": "westerosblocks:block/slate/redorange/all",
+    "particle": "westerosblocks:block/slate/redorange/all"
   },
   "elements": [
     {

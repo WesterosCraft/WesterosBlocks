@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/terrainset_dorne_alt/random_4x4"
+    "down": "westerosblocks:block/terrainset/arbor_dorne_alt/random_4x4",
+    "up": "westerosblocks:block/terrainset/arbor_dorne_alt/random_4x4",
+    "north": "westerosblocks:block/terrainset/arbor_dorne_alt/random_4x4",
+    "south": "westerosblocks:block/terrainset/arbor_dorne_alt/random_4x4",
+    "west": "westerosblocks:block/terrainset/arbor_dorne_alt/random_4x4",
+    "east": "westerosblocks:block/terrainset/arbor_dorne_alt/random_4x4",
+    "particle": "westerosblocks:block/terrainset/arbor_dorne_alt/random_4x4"
   }
 }

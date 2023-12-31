@@ -15,9 +15,10 @@
           "ctmRow": 0,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:cushion_moss"
-            }
+            {"block": "westerosblocks:cushion_moss"},
+            {"block": "westerosblocks:cushion_moss_stairs"},
+            {"block": "westerosblocks:cushion_moss_slab"},
+            {"block": "westerosblocks:cushion_moss_wall"}
           ]
         },
         {

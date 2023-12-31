@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_slate/slate_brown",
-    "txt5": "westerosblocks:block/stone_slate/slate_brown",
-    "txt2": "westerosblocks:block/stone_slate/slate_brown",
-    "txt3": "westerosblocks:block/stone_slate/slate_brown",
-    "txt0": "westerosblocks:block/stone_slate/slate_brown",
-    "txt1": "westerosblocks:block/stone_slate/slate_brown",
-    "particle": "westerosblocks:block/stone_slate/slate_brown"
+    "txt4": "westerosblocks:block/slate/brown/all",
+    "txt5": "westerosblocks:block/slate/brown/all",
+    "txt2": "westerosblocks:block/slate/brown/all",
+    "txt3": "westerosblocks:block/slate/brown/all",
+    "txt0": "westerosblocks:block/slate/brown/all",
+    "txt1": "westerosblocks:block/slate/brown/all",
+    "particle": "westerosblocks:block/slate/brown/all"
   },
   "elements": [
     {

@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay",
     "west_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay",
     "east_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay",
-    "down": "westerosblocks:block/silver_ore/silver_ore2",
-    "up": "westerosblocks:block/silver_ore/silver_ore2",
-    "north": "westerosblocks:block/silver_ore/silver_ore2",
-    "south": "westerosblocks:block/silver_ore/silver_ore2",
-    "west": "westerosblocks:block/silver_ore/silver_ore2",
-    "east": "westerosblocks:block/silver_ore/silver_ore2",
-    "particle": "westerosblocks:block/silver_ore/silver_ore2"
+    "down": "westerosblocks:block/ore/silver/all2",
+    "up": "westerosblocks:block/ore/silver/all2",
+    "north": "westerosblocks:block/ore/silver/all2",
+    "south": "westerosblocks:block/ore/silver/all2",
+    "west": "westerosblocks:block/ore/silver/all2",
+    "east": "westerosblocks:block/ore/silver/all2",
+    "particle": "westerosblocks:block/ore/silver/all2"
   }
 }

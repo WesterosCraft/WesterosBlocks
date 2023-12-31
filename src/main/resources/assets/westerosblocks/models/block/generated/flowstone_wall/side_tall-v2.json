@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side_tall_overlay",
   "textures": {
-    "bottom": "westerosblocks:block/flowstone_wall/side2",
-    "top": "westerosblocks:block/flowstone_wall/side2",
-    "side": "westerosblocks:block/flowstone_wall/side2",
+    "bottom": "westerosblocks:block/terrainset/flowstone/all2",
+    "top": "westerosblocks:block/terrainset/flowstone/all2",
+    "side": "westerosblocks:block/terrainset/flowstone/all2",
     "bottom_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
     "top_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
     "side_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay"

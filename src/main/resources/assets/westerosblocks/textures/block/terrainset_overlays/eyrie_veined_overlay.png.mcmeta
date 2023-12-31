@@ -15,9 +15,10 @@
           "ctmRow": 51,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_mountains_of_the_moon"
-            }
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_stairs"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_slab"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_wall"}
           ]
         },
         {

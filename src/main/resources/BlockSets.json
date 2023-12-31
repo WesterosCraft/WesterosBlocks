@@ -9,8 +9,7 @@
     "harvestLevel": [{ "tool": "axe", "level": 1 }],
     "creativeTab": "WesterosTest",
     "types": {
-      "stairs": "unconnect:false",
-      "wall": "unconnect:false",
+      "stairs,wall": "unconnect:false",
       "fence": "unconnect:true",
       "fence_gate": "locked:true"
     },
@@ -1357,5 +1356,733 @@
       {"textures": {"all": "cobblestone/valyrian/all7"}},
       {"textures": {"all": "cobblestone/valyrian/all8"}}
     ]
+  },
+  {
+    "baseBlockName": "black_slate",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "types": {
+      "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Black Slate",
+    "textures": {
+      "all": "slate/black/all"
+    },
+    "altTextures": {
+      "stairs": ["slate/black/rotated", "slate/black/rotated", "slate/black/all"]
+    },
+    "altRandomTextures": {
+      "slab": [
+        {"textures": ["slate/black/all", "slate/black/directional1", "slate/black/all"]},
+        {"textures": ["slate/black/all", "slate/black/directional2", "slate/black/all"]},
+        {"textures": ["slate/black/all", "slate/black/directional3", "slate/black/all"]},
+        {"textures": ["slate/black/all", "slate/black/directional4", "slate/black/all"]},
+        {"textures": ["slate/black/all", "slate/black/directional5", "slate/black/all"]},
+        {"textures": ["slate/black/all", "slate/black/directional6", "slate/black/all"]},
+        {"textures": ["slate/black/all", "slate/black/directional7", "slate/black/all"]},
+        {"textures": ["slate/black/all", "slate/black/directional8", "slate/black/all"]},
+        {"textures": ["slate/black/all", "slate/black/directional9", "slate/black/all"]}
+      ]
+    }
+  },
+  {
+    "baseBlockName": "blue_slate",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "types": {
+      "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Blue Slate",
+    "textures": {
+      "all": "slate/blue/all"
+    },
+    "altTextures": {
+      "slab": ["slate/blue/all", "slate/blue/directional", "slate/blue/all"],
+      "stairs": ["slate/blue/rotated", "slate/blue/rotated", "slate/blue/all"]
+    }
+  },
+  {
+    "baseBlockName": "red_slate",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "types": {
+      "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Red Slate",
+    "textures": {
+      "all": "slate/red/all"
+    },
+    "altTextures": {
+      "stairs": ["slate/red/rotated", "slate/red/rotated", "slate/red/all"]
+    },
+    "altRandomTextures": {
+      "slab": [
+        {"textures": ["slate/red/all", "slate/red/directional1", "slate/red/all"]},
+        {"textures": ["slate/red/all", "slate/red/directional2", "slate/red/all"]},
+        {"textures": ["slate/red/all", "slate/red/directional3", "slate/red/all"]},
+        {"textures": ["slate/red/all", "slate/red/directional4", "slate/red/all"]},
+        {"textures": ["slate/red/all", "slate/red/directional5", "slate/red/all"]},
+        {"textures": ["slate/red/all", "slate/red/directional6", "slate/red/all"]},
+        {"textures": ["slate/red/all", "slate/red/directional7", "slate/red/all"]},
+        {"textures": ["slate/red/all", "slate/red/directional8", "slate/red/all"]},
+        {"textures": ["slate/red/all", "slate/red/directional9", "slate/red/all"]}
+      ]
+    }
+  },
+  {
+    "baseBlockName": "brown_slate",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "types": {
+      "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Brown Slate",
+    "textures": {
+      "all": "slate/brown/all"
+    },
+    "altTextures": {
+      "stairs": ["slate/brown/rotated", "slate/brown/rotated", "slate/brown/all"]
+    },
+    "altRandomTextures": {
+      "slab": [
+        {"textures": ["slate/brown/all", "slate/brown/directional1", "slate/brown/all"]},
+        {"textures": ["slate/brown/all", "slate/brown/directional2", "slate/brown/all"]},
+        {"textures": ["slate/brown/all", "slate/brown/directional3", "slate/brown/all"]},
+        {"textures": ["slate/brown/all", "slate/brown/directional4", "slate/brown/all"]},
+        {"textures": ["slate/brown/all", "slate/brown/directional5", "slate/brown/all"]},
+        {"textures": ["slate/brown/all", "slate/brown/directional6", "slate/brown/all"]},
+        {"textures": ["slate/brown/all", "slate/brown/directional7", "slate/brown/all"]},
+        {"textures": ["slate/brown/all", "slate/brown/directional8", "slate/brown/all"]},
+        {"textures": ["slate/brown/all", "slate/brown/directional9", "slate/brown/all"]}
+      ]
+    }
+  },
+  {
+    "baseBlockName": "green_slate",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "types": {
+      "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Green Slate",
+    "textures": {
+      "all": "slate/green/all"
+    },
+    "altTextures": {
+      "slab": ["slate/green/all", "slate/green/directional", "slate/green/all"],
+      "stairs": ["slate/green/rotated", "slate/green/rotated", "slate/green/all"]
+    }
+  },
+  {
+    "baseBlockName": "orange_slate",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "types": {
+      "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Orange Slate",
+    "textures": {
+      "all": "slate/orange/all"
+    },
+    "altTextures": {
+      "slab": ["slate/orange/all", "slate/orange/directional", "slate/orange/all"],
+      "stairs": ["slate/orange/rotated", "slate/orange/rotated", "slate/orange/all"]
+    }
+  },
+  {
+    "baseBlockName": "redorange_slate",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 1.5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "types": {
+      "stairs": "unconnect:false,no-uvlock"
+    },
+    "baseLabel": "Red-Orange Slate",
+    "textures": {
+      "all": "slate/redorange/all"
+    },
+    "altTextures": {
+      "slab": ["slate/redorange/all", "slate/redorange/directional", "slate/redorange/all"],
+      "stairs": ["slate/redorange/rotated", "slate/redorange/rotated", "slate/redorange/all"]
+    }
+  },
+  {
+    "baseBlockName": "terrainset_eastern_islands",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Eastern Islands",
+    "colorMult": "textures/colormap/easternisland",
+    "textures": {
+      "all": "terrainset/east/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_eastern_island_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_iron_islands",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Iron Islands",
+    "textures": {
+      "all": "terrainset/iron/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_iron_islands_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_mountains_of_the_moon",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Mountains of the Moon",
+    "textures": {
+      "all": "terrainset/vale/random_6x6"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_vale_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_the_north",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet The North",
+    "textures": {
+      "all": "terrainset/north/random_4x4"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_ocean_rocks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Ocean Rocks",
+    "textures": {
+      "all": "terrainset/ocean/default"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_ocean_rocks_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_red_mountains",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Red Mountains",
+    "textures": {
+      "all": "terrainset/red_mountains/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_red_mountains_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_river_rocks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet River Rocks",
+    "textures": {
+      "all": "terrainset/river/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_river_rocks_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_westerlands",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Westerlands",
+    "textures": {
+      "all": "terrainset/westerlands/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_westerlands_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_arbor_dorne",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Arbor Dorne",
+    "textures": {
+      "all": "terrainset/arbor_dorne/random_4x4"
+    }
+  },
+  {
+    "baseBlockName": "volcanic_stone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "Magma Stone",
+    "textures": {
+      "all": "terrainset/magma/all"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_magma_stone_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_stormlands",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Stormlands",
+    "textures": {
+      "all": "terrainset/stormlands/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_stormlands_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_reach",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Reach",
+    "textures": {
+      "all": "terrainset/reach/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_reach_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_red_mountains_alt",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Red Mountains Alt",
+    "textures": {
+      "all": "terrainset/red_mountains_alt/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_red_mountains_alt_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_westerlands_alt",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Westerlands Alt",
+    "textures": {
+      "all": "terrainset/westerlands_alt/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_westerlands_alt_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_arbor_dorne_alt",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Arbor Dorne Alt",
+    "textures": {
+      "all": "terrainset/arbor_dorne_alt/random_4x4"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_stormlands_alt",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Stormlands Alt",
+    "textures": {
+      "all": "terrainset/stormlands_alt/random_4x4"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_reach_alt",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Reach Alt",
+    "textures": {
+      "all": "terrainset/reach_alt/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_reach_alt_overlay"
+    }
+  },
+  {
+    "baseBlockName": "terrainset_grey_sandstone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Grey Sandstone",
+    "textures": {
+      "all": "terrainset/grey_sandstone/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_grey_sandstone_overlay"
+    }
+  },
+  {
+    "baseBlockName": "volcanic_rock",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "TerrainSet Volcanic Rock",
+    "textures": {
+      "all": "terrainset/volcanic/random_4x4"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/terrainset_volcanic_rock_overlay"
+    }
+  },
+  {
+    "baseBlockName": "flowstone",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosTerrainSets",
+    "types": {
+      "fence": "unconnect:true",
+      "fence_gate": "locked:true"
+    },
+    "baseLabel": "Flowstone",
+    "randomTextures": [
+      {"textures": {"all": "terrainset/flowstone/all1"}},
+      {"textures": {"all": "terrainset/flowstone/all2"}},
+      {"textures": {"all": "terrainset/flowstone/all3"}},
+      {"textures": {"all": "terrainset/flowstone/all4"}}
+    ],
+    "overlayTextures": {
+      "all": "terrainset_overlays/flowstone_overlay"
+    }
+  },
+  {
+    "baseBlockName": "cushion_moss",
+    "variants": ["solid", "stairs", "slab", "wall"],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "plants",
+    "resistance": 5,
+    "creativeTab": "WesterosMisc",
+    "baseLabel": "Cushion Moss",
+    "randomTextures": [
+      {"textures": {"all": "moss_cushion/all1"}},
+      {"textures": {"all": "moss_cushion/all2"}},
+      {"textures": {"all": "moss_cushion/all3"}},
+      {"textures": {"all": "moss_cushion/all4"}}
+    ],
+    "overlayTextures": {
+      "all": "terrainset_overlays/cushion_moss_overlay"
+    }
+  },
+  {
+    "baseBlockName": "gold_ore",
+    "variants": ["solid", "stairs", "slab", "wall"],
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "WesterosTerrainSets",
+    "baseLabel": "Gold Ore",
+    "randomTextures": [
+      {"textures": {"all": "ore/gold/all1"}},
+      {"textures": {"all": "ore/gold/all2"}},
+      {"textures": {"all": "ore/gold/all3"}},
+      {"textures": {"all": "ore/gold/all4"}}
+    ],
+    "overlayTextures": {
+      "all": "terrainset_overlays/gold_ore_overlay"
+    }
+  },
+  {
+    "baseBlockName": "iron_ore",
+    "variants": ["solid", "stairs", "slab", "wall"],
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "WesterosTerrainSets",
+    "baseLabel": "Iron Ore",
+    "randomTextures": [
+      {"textures": {"all": "ore/iron/all1"}},
+      {"textures": {"all": "ore/iron/all2"}},
+      {"textures": {"all": "ore/iron/all3"}},
+      {"textures": {"all": "ore/iron/all4"}}
+    ],
+    "overlayTextures": {
+      "all": "terrainset_overlays/iron_ore_overlay"
+    }
+  },
+  {
+    "baseBlockName": "silver_ore",
+    "variants": ["solid", "stairs", "slab", "wall"],
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "WesterosTerrainSets",
+    "baseLabel": "Silver Ore",
+    "randomTextures": [
+      {"textures": {"all": "ore/silver/all1"}},
+      {"textures": {"all": "ore/silver/all2"}},
+      {"textures": {"all": "ore/silver/all3"}},
+      {"textures": {"all": "ore/silver/all4"}}
+    ],
+    "overlayTextures": {
+      "all": "terrainset_overlays/silver_ore_overlay"
+    }
+  },
+  {
+    "baseBlockName": "tin_ore",
+    "variants": ["solid", "stairs", "slab", "wall"],
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "WesterosTerrainSets",
+    "baseLabel": "Tin Ore",
+    "randomTextures": [
+      {"textures": {"all": "ore/tin/all1"}},
+      {"textures": {"all": "ore/tin/all2"}},
+      {"textures": {"all": "ore/tin/all3"}},
+      {"textures": {"all": "ore/tin/all4"}}
+    ],
+    "overlayTextures": {
+      "all": "terrainset_overlays/tin_ore_overlay"
+    }
+  },
+  {
+    "baseBlockName": "coal_ore",
+    "variants": ["solid", "stairs", "slab", "wall"],
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "WesterosTerrainSets",
+    "baseLabel": "Coal Ore",
+    "randomTextures": [
+      {"textures": {"all": "ore/coal/all1"}},
+      {"textures": {"all": "ore/coal/all2"}},
+      {"textures": {"all": "ore/coal/all3"}},
+      {"textures": {"all": "ore/coal/all4"}}
+    ],
+    "overlayTextures": {
+      "all": "terrainset_overlays/coal_ore_overlay"
+    }
+  },
+  {
+    "baseBlockName": "copper_ore",
+    "variants": ["solid", "stairs", "slab", "wall"],
+    "hardness": 3,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 10,
+    "creativeTab": "WesterosTerrainSets",
+    "baseLabel": "Copper Ore",
+    "randomTextures": [
+      {"textures": {"all": "ore/copper/all1"}},
+      {"textures": {"all": "ore/copper/all2"}},
+      {"textures": {"all": "ore/copper/all3"}},
+      {"textures": {"all": "ore/copper/all4"}}
+    ],
+    "overlayTextures": {
+      "all": "terrainset_overlays/copper_ore_overlay"
+    }
   }
 ]

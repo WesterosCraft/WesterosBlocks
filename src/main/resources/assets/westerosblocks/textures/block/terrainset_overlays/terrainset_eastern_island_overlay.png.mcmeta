@@ -15,9 +15,10 @@
           "ctmRow": 12,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_the_north"
-            }
+            {"block": "westerosblocks:terrainset_the_north"},
+            {"block": "westerosblocks:terrainset_the_north_stairs"},
+            {"block": "westerosblocks:terrainset_the_north_slab"},
+            {"block": "westerosblocks:terrainset_the_north_wall"}
           ]
         },
         {
@@ -25,9 +26,10 @@
           "ctmRow": 15,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_iron_islands"
-            }
+            {"block": "westerosblocks:terrainset_iron_islands"},
+            {"block": "westerosblocks:terrainset_iron_islands_stairs"},
+            {"block": "westerosblocks:terrainset_iron_islands_slab"},
+            {"block": "westerosblocks:terrainset_iron_islands_wall"}
           ]
         },
         {

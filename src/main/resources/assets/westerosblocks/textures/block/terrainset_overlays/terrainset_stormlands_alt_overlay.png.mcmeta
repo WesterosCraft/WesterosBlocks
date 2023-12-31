@@ -15,9 +15,10 @@
           "ctmRow": 45,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_red_mountains_alt"
-            }
+            {"block": "westerosblocks:terrainset_red_mountains_alt"},
+            {"block": "westerosblocks:terrainset_red_mountains_alt_stairs"},
+            {"block": "westerosblocks:terrainset_red_mountains_alt_slab"},
+            {"block": "westerosblocks:terrainset_red_mountains_alt_wall"}
           ]
         },
         {
@@ -25,9 +26,10 @@
           "ctmRow": 39,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_stormlands"
-            }
+            {"block": "westerosblocks:terrainset_stormlands"},
+            {"block": "westerosblocks:terrainset_stormlands_stairs"},
+            {"block": "westerosblocks:terrainset_stormlands_slab"},
+            {"block": "westerosblocks:terrainset_stormlands_wall"}
           ]
         },
         {
@@ -35,9 +37,10 @@
           "ctmRow": 18,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_eastern_islands"
-            }
+            {"block": "westerosblocks:terrainset_eastern_islands"},
+            {"block": "westerosblocks:terrainset_eastern_islands_stairs"},
+            {"block": "westerosblocks:terrainset_eastern_islands_slab"},
+            {"block": "westerosblocks:terrainset_eastern_islands_wall"}
           ]
         },
         {
@@ -45,9 +48,10 @@
           "ctmRow": 51,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_mountains_of_the_moon"
-            }
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_stairs"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_slab"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_wall"}
           ]
         },
         {
@@ -55,9 +59,10 @@
           "ctmRow": 15,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_iron_islands"
-            }
+            {"block": "westerosblocks:terrainset_iron_islands"},
+            {"block": "westerosblocks:terrainset_iron_islands_stairs"},
+            {"block": "westerosblocks:terrainset_iron_islands_slab"},
+            {"block": "westerosblocks:terrainset_iron_islands_wall"}
           ]
         },
         {
@@ -65,9 +70,10 @@
           "ctmRow": 12,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_the_north"
-            }
+            {"block": "westerosblocks:terrainset_the_north"},
+            {"block": "westerosblocks:terrainset_the_north_stairs"},
+            {"block": "westerosblocks:terrainset_the_north_slab"},
+            {"block": "westerosblocks:terrainset_the_north_wall"}
           ]
         }
       ],

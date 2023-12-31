@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/ore/silver/all1",
+    "top": "westerosblocks:block/ore/silver/all1",
+    "side": "westerosblocks:block/ore/silver/all1",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay"
+  }
+}
