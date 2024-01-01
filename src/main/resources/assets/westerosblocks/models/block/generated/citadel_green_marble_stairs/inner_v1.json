@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "top": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "side": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "particle": "westerosblocks:block/citadel_green_marble/citadel_marble"
+    "bottom": "westerosblocks:block/marble/citadel_green/all",
+    "top": "westerosblocks:block/marble/citadel_green/all",
+    "side": "westerosblocks:block/marble/citadel_green/all",
+    "particle": "westerosblocks:block/marble/citadel_green/all"
   }
 }

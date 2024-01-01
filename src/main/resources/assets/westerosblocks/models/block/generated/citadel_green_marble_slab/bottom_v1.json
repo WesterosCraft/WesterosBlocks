@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "up": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "north": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "south": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "west": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "east": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "particle": "westerosblocks:block/citadel_green_marble/citadel_marble"
+    "down": "westerosblocks:block/marble/citadel_green/all",
+    "up": "westerosblocks:block/marble/citadel_green/all",
+    "north": "westerosblocks:block/marble/citadel_green/all",
+    "south": "westerosblocks:block/marble/citadel_green/all",
+    "west": "westerosblocks:block/marble/citadel_green/all",
+    "east": "westerosblocks:block/marble/citadel_green/all",
+    "particle": "westerosblocks:block/marble/citadel_green/all"
   }
 }

@@ -33,6 +33,7 @@
     "westerosblocks:light_oldtown_brick_slab",
     "westerosblocks:vivid_sandstone_slab",
     "westerosblocks:steel_slab",
+    "westerosblocks:eyrie_blue_veined_marble_slab",
     "westerosblocks:white_granite_slab",
     "westerosblocks:bedrock_slab",
     "westerosblocks:sandy_pink_large_brick_slab",
@@ -78,6 +79,7 @@
     "westerosblocks:carrot_basket_slab",
     "westerosblocks:gold_ore_slab",
     "westerosblocks:sourleaf_basket_slab",
+    "westerosblocks:highgarden_pink_marble_slab",
     "westerosblocks:red_wood_slab",
     "westerosblocks:dark_cobblestone_slab",
     "westerosblocks:muddy_snow_slab",
@@ -100,12 +102,14 @@
     "westerosblocks:small_orange_brick_slab",
     "westerosblocks:terrainset_reach_slab",
     "westerosblocks:orange_wool_slab",
+    "westerosblocks:quartz_slab",
     "westerosblocks:mances_camp_common_tent_slab",
     "westerosblocks:oxidized_steel_slab",
     "westerosblocks:iron_throne_blade_slab",
     "westerosblocks:reach_light_brick_slab",
     "westerosblocks:pink_sandstone_slab",
     "westerosblocks:yellow_wood_slab",
+    "westerosblocks:highgarden_pink_veined_marble_slab",
     "westerosblocks:closed_basket_slab",
     "westerosblocks:mossy_stone_brick_slab",
     "westerosblocks:cushion_moss_slab",
@@ -169,6 +173,7 @@
     "westerosblocks:dorne_mossy_dark_sandstone_slab",
     "westerosblocks:terrainset_iron_islands_slab",
     "westerosblocks:lime_basket_slab",
+    "westerosblocks:baelors_brown_veined_marble_slab",
     "westerosblocks:spruce_vertical_planks_slab",
     "westerosblocks:reach_gravel_slab",
     "westerosblocks:stone_brick_slab",
@@ -200,6 +205,7 @@
     "westerosblocks:oldtown_brick_slab",
     "westerosblocks:small_white_brick_slab",
     "westerosblocks:gold_slab",
-    "westerosblocks:pale_pink_faint_light_brick_slab"
+    "westerosblocks:pale_pink_faint_light_brick_slab",
+    "westerosblocks:sunspear_yellow_veined_marble_slab"
   ]
 }

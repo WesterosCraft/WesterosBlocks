@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
     "west_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
     "east_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
-    "down": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
-    "up": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
-    "north": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
-    "south": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
-    "west": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
-    "east": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined",
-    "particle": "westerosblocks:block/highgarden_pink_veined_marble/highgarden_veined"
+    "down": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "up": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "north": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "south": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "west": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "east": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "particle": "westerosblocks:block/marble/highgarden_pink_veined/all"
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log_horizontal",
   "textures": {
-    "down": "westerosblocks:block/marble_pillar/column_block_marble_top_bottom",
-    "up": "westerosblocks:block/marble_pillar/column_block_marble_top_bottom",
-    "north": "westerosblocks:block/marble_pillar/column_block_marble_side",
-    "south": "westerosblocks:block/marble_pillar/column_block_marble_side",
-    "east": "westerosblocks:block/marble_pillar/column_block_marble_side",
-    "west": "westerosblocks:block/marble_pillar/column_block_marble_side",
-    "particle": "westerosblocks:block/marble_pillar/column_block_marble_side"
+    "down": "westerosblocks:block/marble/quartz/column_topbottom",
+    "up": "westerosblocks:block/marble/quartz/column_topbottom",
+    "north": "westerosblocks:block/marble/quartz/column_side",
+    "south": "westerosblocks:block/marble/quartz/column_side",
+    "east": "westerosblocks:block/marble/quartz/column_side",
+    "west": "westerosblocks:block/marble/quartz/column_side",
+    "particle": "westerosblocks:block/marble/quartz/column_side"
   }
 }

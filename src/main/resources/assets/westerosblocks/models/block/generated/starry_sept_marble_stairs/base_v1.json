@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "top": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "side": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "particle": "westerosblocks:block/starry_sept_marble/starry_sept"
+    "bottom": "westerosblocks:block/marble/starry_sept/all",
+    "top": "westerosblocks:block/marble/starry_sept/all",
+    "side": "westerosblocks:block/marble/starry_sept/all",
+    "particle": "westerosblocks:block/marble/starry_sept/all"
   }
 }

@@ -2086,6 +2086,133 @@
     }
   },
   {
+    "baseBlockName": "quartz",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "Quartz",
+    "textures": {
+      "all": "marble/quartz/all"
+    }
+  },
+  {
+    "baseBlockName": "eyrie_blue_veined_marble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "Eyrie Blue Veined Marble",
+    "textures": {
+      "all": "marble/eyrie_blue_veined/all"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/eyrie_veined_overlay"
+    }
+  },
+  {
+    "baseBlockName": "baelors_brown_veined_marble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "Baelors Brown Veined Marble",
+    "textures": {
+      "all": "marble/baelors_brown_veined/all"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/baelors_brown_veined_overlay"
+    }
+  },
+  {
+    "baseBlockName": "highgarden_pink_veined_marble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "Highgarden Pink Veined Marble",
+    "textures": {
+      "all": "marble/highgarden_pink_veined/all"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/highgarden_pink_veined_marble_overlay"
+    }
+  },
+  {
+    "baseBlockName": "highgarden_pink_marble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "Highgarden Pink Marble",
+    "textures": {
+      "all": "marble/highgarden_pink/all"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/highgarden_pink_marble_overlay"
+    }
+  },
+  {
+    "baseBlockName": "sunspear_yellow_veined_marble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "Sunspear Yellow Veined Marble",
+    "textures": {
+      "all": "marble/sunspear_yellow/all"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/sunspear_yellow_veined_marble_overlay"
+    }
+  },
+  {
+    "baseBlockName": "starry_sept_marble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "Starry Sept Marble",
+    "textures": {
+      "all": "marble/starry_sept/all"
+    }
+  },
+  {
+    "baseBlockName": "citadel_green_marble",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "Citadel Green Marble",
+    "textures": {
+      "all": "marble/citadel_green/all"
+    }
+  },
+  {
     "baseBlockName": "oak",
     "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
     "altNames": {
