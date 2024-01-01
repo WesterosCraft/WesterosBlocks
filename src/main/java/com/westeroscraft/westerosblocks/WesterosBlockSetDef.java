@@ -172,7 +172,7 @@ public class WesterosBlockSetDef {
       }
       else {
         // Enforce defaults for particular blocktypes
-        if (variant.matches("stairs|wall|fence"))
+        if (variant.matches("stairs|wall|fence|pane"))
           variantDef.type = "unconnect:false";
         else if (variant.contains("arrow_slit") || variant.contains("window_frame"))
           variantDef.type = "connectstate:true";
