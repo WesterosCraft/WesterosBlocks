@@ -22,9 +22,9 @@
     "txt5": "westerosblocks:block/light_emitting_blocks/lantern_red_bottom",
     "txt2": "westerosblocks:block/light_emitting_blocks/lantern_red_bottom",
     "txt3": "westerosblocks:block/light_emitting_blocks/lantern_red_bottom",
-    "txt0": "westerosblocks:block/iron_block/side1",
+    "txt0": "westerosblocks:block/metal/iron/all1",
     "txt1": "westerosblocks:block/light_emitting_blocks/lantern_handheld_center",
-    "particle": "westerosblocks:block/iron_block/side1"
+    "particle": "westerosblocks:block/metal/iron/all1"
   },
   "elements": [
     {

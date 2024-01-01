@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "minecraft:block/cyan_wool",
-    "up": "minecraft:block/cyan_wool",
-    "north": "minecraft:block/cyan_wool",
-    "south": "minecraft:block/cyan_wool",
-    "west": "minecraft:block/cyan_wool",
-    "east": "minecraft:block/cyan_wool",
-    "particle": "minecraft:block/cyan_wool"
+    "down": "westerosblocks:block/wool/cyan/all",
+    "up": "westerosblocks:block/wool/cyan/all",
+    "north": "westerosblocks:block/wool/cyan/all",
+    "south": "westerosblocks:block/wool/cyan/all",
+    "west": "westerosblocks:block/wool/cyan/all",
+    "east": "westerosblocks:block/wool/cyan/all",
+    "particle": "westerosblocks:block/wool/cyan/all"
   }
 }

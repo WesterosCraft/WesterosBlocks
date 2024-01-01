@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/snow_slab/top_bottom",
     "up": "westerosblocks:block/snow_slab/top_bottom",
-    "north": "westerosblocks:block/snow_slab/north_south",
-    "south": "westerosblocks:block/snow_slab/north_south",
-    "west": "westerosblocks:block/snow_slab/east_west",
-    "east": "westerosblocks:block/snow_slab/east_west",
-    "particle": "westerosblocks:block/snow_slab/north_south"
+    "north": "westerosblocks:block/snow_slab/top_bottom",
+    "south": "westerosblocks:block/snow_slab/top_bottom",
+    "west": "westerosblocks:block/snow_slab/top_bottom",
+    "east": "westerosblocks:block/snow_slab/top_bottom",
+    "particle": "westerosblocks:block/snow_slab/top_bottom"
   }
 }

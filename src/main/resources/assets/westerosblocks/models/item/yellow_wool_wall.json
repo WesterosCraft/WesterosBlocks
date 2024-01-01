@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/wall_inventory",
+  "textures": {
+    "bottom": "westerosblocks:block/wool/yellow/all",
+    "top": "westerosblocks:block/wool/yellow/all",
+    "side": "westerosblocks:block/wool/yellow/all"
+  }
+}

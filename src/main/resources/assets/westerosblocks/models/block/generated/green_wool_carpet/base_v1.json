@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/wool_colours/wool_colored_green",
-    "txt5": "westerosblocks:block/wool_colours/wool_colored_green",
-    "txt2": "westerosblocks:block/wool_colours/wool_colored_green",
-    "txt3": "westerosblocks:block/wool_colours/wool_colored_green",
-    "txt0": "westerosblocks:block/wool_colours/wool_colored_green",
-    "txt1": "westerosblocks:block/wool_colours/wool_colored_green",
-    "particle": "westerosblocks:block/wool_colours/wool_colored_green"
+    "txt4": "westerosblocks:block/wool/green/all",
+    "txt5": "westerosblocks:block/wool/green/all",
+    "txt2": "westerosblocks:block/wool/green/all",
+    "txt3": "westerosblocks:block/wool/green/all",
+    "txt0": "westerosblocks:block/wool/green/all",
+    "txt1": "westerosblocks:block/wool/green/all",
+    "particle": "westerosblocks:block/wool/green/all"
   },
   "elements": [
     {

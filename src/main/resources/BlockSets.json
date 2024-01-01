@@ -2087,13 +2087,13 @@
   },
   {
     "baseBlockName": "oak",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
     "altNames": {
       "solid": "oak_planks",
       "fence_gate": "locked_oak_fence_gate",
       "hollow_hopper": "hollow_oak_hopper",
       "window_frame": "oak_timber_window_frame"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2120,12 +2120,12 @@
   },
   {
     "baseBlockName": "spruce",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
     "altNames": {
       "solid": "spruce_planks",
       "fence_gate": "locked_spruce_fence_gate",
       "hollow_hopper": "hollow_spruce_hopper"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2151,12 +2151,12 @@
   },
   {
     "baseBlockName": "birch",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
     "altNames": {
       "solid": "birch_planks",
       "fence_gate": "locked_birch_fence_gate",
       "hollow_hopper": "hollow_birch_hopper"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2182,12 +2182,12 @@
   },
   {
     "baseBlockName": "jungle",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
     "altNames": {
       "solid": "jungle_planks",
       "fence_gate": "locked_jungle_fence_gate",
       "hollow_hopper": "hollow_jungle_hopper"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2213,13 +2213,13 @@
   },
   {
     "baseBlockName": "dark_northern_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
     "altNames": {
       "fence_gate": "locked_dark_northern_wood_fence_gate",
       "cover": "northern_wood_cover",
       "hollow_hopper": "hollow_dark_northern_wood_hopper",
       "window_frame": "northern_timber_window_frame"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2246,10 +2246,10 @@
   },
   {
     "baseBlockName": "black_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "altNames": {
       "fence_gate": "locked_black_wood_fence_gate"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2274,10 +2274,10 @@
   },
   {
     "baseBlockName": "grey_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "altNames": {
       "fence_gate": "locked_grey_wood_fence_gate"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2302,11 +2302,11 @@
   },
   {
     "baseBlockName": "white_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame"],
     "altNames": {
       "fence_gate": "locked_white_wood_fence_gate",
       "window_frame": "whitewashed_timber_window_frame"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2332,11 +2332,11 @@
   },
   {
     "baseBlockName": "red_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame"],
     "altNames": {
       "fence_gate": "locked_red_wood_fence_gate",
       "window_frame": "red_timber_window_frame"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2362,10 +2362,10 @@
   },
   {
     "baseBlockName": "yellow_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "altNames": {
       "fence_gate": "locked_yellow_wood_fence_gate"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2390,10 +2390,10 @@
   },
   {
     "baseBlockName": "green_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "altNames": {
       "fence_gate": "locked_green_wood_fence_gate"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2418,10 +2418,10 @@
   },
   {
     "baseBlockName": "blue_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "altNames": {
       "fence_gate": "locked_blue_wood_fence_gate"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2446,10 +2446,10 @@
   },
   {
     "baseBlockName": "purple_wood",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "altNames": {
       "fence_gate": "locked_purple_wood_fence_gate"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2474,10 +2474,10 @@
   },
   {
     "baseBlockName": "oak_vertical_planks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "altNames": {
       "half_door": "oak_half_door"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2491,10 +2491,10 @@
   },
   {
     "baseBlockName": "spruce_vertical_planks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "altNames": {
       "half_door": "spruce_half_door"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2508,10 +2508,10 @@
   },
   {
     "baseBlockName": "birch_vertical_planks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "altNames": {
       "half_door": "birch_half_door"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2525,10 +2525,10 @@
   },
   {
     "baseBlockName": "jungle_vertical_planks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "altNames": {
       "half_door": "jungle_half_door"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2542,10 +2542,10 @@
   },
   {
     "baseBlockName": "dark_northern_wood_vertical_planks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "altNames": {
       "half_door": "dark_northern_wood_half_door"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2559,10 +2559,10 @@
   },
   {
     "baseBlockName": "grey_wood_vertical_planks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "altNames": {
       "half_door": "grey_wood_half_door"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2576,10 +2576,10 @@
   },
   {
     "baseBlockName": "white_wood_vertical_planks",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "altNames": {
       "half_door": "white_wood_half_door"
     },
-    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
     "hardness": 5,
     "stepSound": "wood",
     "material": "wood",
@@ -2589,6 +2589,558 @@
     "baseLabel": "White Wood Vertical Planks",
     "textures": {
       "all": "wood/white/vertical"
+    }
+  },
+  {
+    "baseBlockName": "black_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Black Wool",
+    "textures": {
+      "all": "wool/black/all"
+    },
+    "altTextures": {
+      "solid": ["wool/black/block"]
+    }
+  },
+  {
+    "baseBlockName": "grey_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Grey Wool",
+    "textures": {
+      "all": "wool/grey/all"
+    },
+    "altTextures": {
+      "solid": ["wool/grey/block"]
+    }
+  },
+  {
+    "baseBlockName": "light_grey_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Light Grey Wool",
+    "textures": {
+      "all": "wool/light_grey/all"
+    },
+    "altTextures": {
+      "solid": ["wool/light_grey/block"]
+    }
+  },
+  {
+    "baseBlockName": "white_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "White Wool",
+    "textures": {
+      "all": "wool/white/all"
+    },
+    "altTextures": {
+      "solid": ["wool/white/block"]
+    }
+  },
+  {
+    "baseBlockName": "dirty_white_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Dirty White Wool",
+    "textures": {
+      "all": "wool/dirty_white/all"
+    },
+    "altTextures": {
+      "solid": ["wool/dirty_white/block"]
+    }
+  },
+  {
+    "baseBlockName": "light_brown_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Light Brown Wool",
+    "textures": {
+      "all": "wool/light_brown/all"
+    },
+    "altTextures": {
+      "solid": ["wool/light_brown/block"]
+    }
+  },
+  {
+    "baseBlockName": "brown_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Brown Wool",
+    "textures": {
+      "all": "wool/brown/all"
+    },
+    "altTextures": {
+      "solid": ["wool/brown/block"]
+    }
+  },
+  {
+    "baseBlockName": "red_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Red Wool",
+    "textures": {
+      "all": "wool/red/all"
+    },
+    "altTextures": {
+      "solid": ["wool/red/block"]
+    }
+  },
+  {
+    "baseBlockName": "orange_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Orange Wool",
+    "textures": {
+      "all": "wool/orange/all"
+    },
+    "altTextures": {
+      "solid": ["wool/orange/block"]
+    }
+  },
+  {
+    "baseBlockName": "yellow_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Yellow Wool",
+    "textures": {
+      "all": "wool/yellow/all"
+    },
+    "altTextures": {
+      "solid": ["wool/yellow/block"]
+    }
+  },
+  {
+    "baseBlockName": "green_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Green Wool",
+    "textures": {
+      "all": "wool/green/all"
+    },
+    "altTextures": {
+      "solid": ["wool/green/block"]
+    }
+  },
+  {
+    "baseBlockName": "cyan_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Cyan Wool",
+    "textures": {
+      "all": "wool/cyan/all"
+    },
+    "altTextures": {
+      "solid": ["wool/cyan/block"]
+    }
+  },
+  {
+    "baseBlockName": "blue_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Blue Wool",
+    "textures": {
+      "all": "wool/blue/all"
+    },
+    "altTextures": {
+      "solid": ["wool/blue/block"]
+    }
+  },
+  {
+    "baseBlockName": "light_blue_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Light Blue Wool",
+    "textures": {
+      "all": "wool/light_blue/all"
+    },
+    "altTextures": {
+      "solid": ["wool/light_blue/block"]
+    }
+  },
+  {
+    "baseBlockName": "purple_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Purple Wool",
+    "textures": {
+      "all": "wool/purple/all"
+    },
+    "altTextures": {
+      "solid": ["wool/purple/block"]
+    }
+  },
+  {
+    "baseBlockName": "pink_wool",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "hardness": 1.5,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "customTags": [ "wool-ctm" ],
+    "altCustomTags": {
+      "solid": [ "wool-block-ctm" ]
+    },
+    "baseLabel": "Pink Wool",
+    "textures": {
+      "all": "wool/pink/all"
+    },
+    "altTextures": {
+      "solid": ["wool/pink/block"]
+    }
+  },
+  {
+    "baseBlockName": "thatch_light_fur",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "altNames": {
+      "wall": "thatch_light_wall"
+    },
+    "hardness": 2,
+    "stepSound": "plant",
+    "material": "cloth",
+    "resistance": 5,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "baseLabel": "Thatch Light Fur",
+    "textures": {
+      "all": "thatch/light/all"
+    }
+  },
+  {
+    "baseBlockName": "thatch_dark_fur",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
+    "altNames": {
+      "wall": "thatch_dark_wall"
+    },
+    "hardness": 2,
+    "stepSound": "plant",
+    "material": "cloth",
+    "resistance": 5,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "baseLabel": "Thatch Dark Fur",
+    "textures": {
+      "all": "thatch/dark/all"
+    }
+  },
+  {
+    "baseBlockName": "snowy_thatch_light_fur",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet", "directional"],
+    "altNames": {
+      "directional": "snowy_thatch_light_fur2",
+      "wall": "snowy_thatch_light_wall"
+    },
+    "hardness": 2,
+    "stepSound": "plant",
+    "material": "cloth",
+    "resistance": 5,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "baseLabel": "Snowy Thatch Light Fur",
+    "textures": {
+      "all": "thatch/snowy_light/top"
+    },
+    "altTextures": {
+      "slab": ["thatch/snowy_light/bottom", "thatch/snowy_light/top", "thatch/snowy_light/side_half"],
+      "directional": ["thatch/snowy_light/bottom", "thatch/snowy_light/top", "thatch/snowy_light/side1",
+                      "thatch/snowy_light/side1", "thatch/snowy_light/side1", "thatch/snowy_light/bottom"]
+    },
+    "altRandomTextures": {
+      "solid,stairs": [
+        {"textures": ["thatch/snowy_light/bottom", "thatch/snowy_light/top", "thatch/snowy_light/side1"]},
+        {"textures": ["thatch/snowy_light/bottom", "thatch/snowy_light/top", "thatch/snowy_light/side2"]},
+        {"textures": ["thatch/snowy_light/bottom", "thatch/snowy_light/top", "thatch/snowy_light/side3"]}
+      ]
+    }
+  },
+  {
+    "baseBlockName": "snowy_thatch_dark_fur",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet", "directional"],
+    "altNames": {
+      "directional": "snowy_thatch_dark_fur2",
+      "wall": "snowy_thatch_dark_wall"
+    },
+    "hardness": 2,
+    "stepSound": "plant",
+    "material": "cloth",
+    "resistance": 5,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosRoofing",
+    "baseLabel": "Snowy Thatch Dark Fur",
+    "textures": {
+      "all": "thatch/snowy_dark/top"
+    },
+    "altTextures": {
+      "slab": ["thatch/snowy_dark/bottom", "thatch/snowy_dark/top", "thatch/snowy_dark/side_half"],
+      "directional": ["thatch/snowy_dark/bottom", "thatch/snowy_dark/top", "thatch/snowy_dark/side1",
+                      "thatch/snowy_dark/side1", "thatch/snowy_dark/side1", "thatch/snowy_dark/bottom"]
+    },
+    "altRandomTextures": {
+      "solid,stairs": [
+        {"textures": ["thatch/snowy_dark/bottom", "thatch/snowy_dark/top", "thatch/snowy_dark/side1"]},
+        {"textures": ["thatch/snowy_dark/bottom", "thatch/snowy_dark/top", "thatch/snowy_dark/side2"]},
+        {"textures": ["thatch/snowy_dark/bottom", "thatch/snowy_dark/top", "thatch/snowy_dark/side3"]}
+      ]
+    }
+  },
+  {
+    "baseBlockName": "snow",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "craftedSnow",
+    "resistance": 10,
+    "creativeTab": "WesterosWaterAir",
+    "baseLabel": "Snow",
+    "ambientOcclusion": false,
+    "textures": {
+      "bottom": "snow_slab/top_bottom",
+      "top": "snow_slab/top_bottom",
+      "west": "snow_slab/north_south",
+      "east": "snow_slab/north_south",
+      "south": "snow_slab/east_west",
+      "north": "snow_slab/east_west"
+    }
+  },
+  {
+    "baseBlockName": "ice",
+    "variants": ["solid", "stairs", "slab", "wall", "fence"],
+    "hardness": 2,
+    "stepSound": "glass",
+    "nonOpaque": true,
+    "alphaRender": true,
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosWaterAir",
+    "baseLabel": "Ice",
+    "textures": {
+      "all": "ice/ice"
+    }
+  },
+  {
+    "baseBlockName": "mances_camp_common_tent_1",
+    "variants": ["solid", "stairs", "slab", "wall", "directional"],
+    "altNames": {
+      "directional": "mances_camp_common_tent_1",
+      "solid": "mances_camp_common_tent_block_1"
+    },
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "baseLabel": "Mance's Camp Common Tent 1",
+    "textures": {
+      "all": "mances_camp_common_tent/outside1"
+    },
+    "altTextures": {
+      "directional": [
+        "mances_camp_common_tent/inside",
+        "mances_camp_common_tent/outside1",
+        "mances_camp_common_tent/outside1",
+        "mances_camp_common_tent/outside1",
+        "mances_camp_common_tent/outside1",
+        "mances_camp_common_tent/inside"
+      ]
+    }
+  },
+  {
+    "baseBlockName": "mances_camp_common_tent_2",
+    "variants": ["solid", "stairs", "slab", "wall", "directional"],
+    "altNames": {
+      "directional": "mances_camp_common_tent_2",
+      "solid": "mances_camp_common_tent_block_2",
+      "stairs": "mances_camp_common_tent_stairs",
+      "slab": "mances_camp_common_tent_slab",
+      "wall": "mances_camp_common_tent_wall"
+    },
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "baseLabel": "Mance's Camp Common Tent 2",
+    "textures": {
+      "all": "mances_camp_common_tent/outside2"
+    },
+    "altTextures": {
+      "directional": [
+        "mances_camp_common_tent/inside",
+        "mances_camp_common_tent/outside2",
+        "mances_camp_common_tent/outside2",
+        "mances_camp_common_tent/outside2",
+        "mances_camp_common_tent/outside2",
+        "mances_camp_common_tent/inside"
+      ]
+    }
+  },
+  {
+    "baseBlockName": "mances_camp_mances_tent",
+    "variants": ["solid", "stairs", "slab", "wall", "directional"],
+    "altNames": {
+      "directional": "mances_camp_mances_tent",
+      "solid": "mances_camp_mances_tent_block"
+    },
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "wood",
+    "resistance": 5,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "baseLabel": "Mance's Camp Mance's Tent",
+    "textures": {
+      "all": "mances_camp_mances_tent/outside"
+    },
+    "altTextures": {
+      "directional": [
+        "mances_camp_common_tent/inside",
+        "mances_camp_mances_tent/outside",
+        "mances_camp_mances_tent/outside",
+        "mances_camp_mances_tent/outside",
+        "mances_camp_mances_tent/outside",
+        "mances_camp_common_tent/inside"
+      ]
     }
   }
 ]

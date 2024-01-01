@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "westerosblocks:block/snow_slab/top_bottom",
     "top": "westerosblocks:block/snow_slab/top_bottom",
-    "side": "westerosblocks:block/snow_slab/north_south",
-    "particle": "westerosblocks:block/snow_slab/north_south"
+    "side": "westerosblocks:block/snow_slab/top_bottom",
+    "particle": "westerosblocks:block/snow_slab/top_bottom"
   }
 }

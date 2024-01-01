@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "minecraft:block/brown_wool",
-    "up": "minecraft:block/brown_wool",
-    "north": "minecraft:block/brown_wool",
-    "south": "minecraft:block/brown_wool",
-    "west": "minecraft:block/brown_wool",
-    "east": "minecraft:block/brown_wool",
-    "particle": "minecraft:block/brown_wool"
+    "down": "westerosblocks:block/wool/brown/all",
+    "up": "westerosblocks:block/wool/brown/all",
+    "north": "westerosblocks:block/wool/brown/all",
+    "south": "westerosblocks:block/wool/brown/all",
+    "west": "westerosblocks:block/wool/brown/all",
+    "east": "westerosblocks:block/wool/brown/all",
+    "particle": "westerosblocks:block/wool/brown/all"
   }
 }

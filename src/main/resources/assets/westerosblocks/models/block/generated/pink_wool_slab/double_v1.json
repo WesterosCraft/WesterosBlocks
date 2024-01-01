@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "minecraft:block/pink_wool",
-    "up": "minecraft:block/pink_wool",
-    "north": "minecraft:block/pink_wool",
-    "south": "minecraft:block/pink_wool",
-    "west": "minecraft:block/pink_wool",
-    "east": "minecraft:block/pink_wool",
-    "particle": "minecraft:block/pink_wool"
+    "down": "westerosblocks:block/wool/pink/all",
+    "up": "westerosblocks:block/wool/pink/all",
+    "north": "westerosblocks:block/wool/pink/all",
+    "south": "westerosblocks:block/wool/pink/all",
+    "west": "westerosblocks:block/wool/pink/all",
+    "east": "westerosblocks:block/wool/pink/all",
+    "particle": "westerosblocks:block/wool/pink/all"
   }
 }
