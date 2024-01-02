@@ -19,7 +19,7 @@ public class WesterosBlockSetDef {
   public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper");
   public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "tip",
                                                                       "carpet", "fence_gate", "half_door", "cover", "hollow_hopper",
-                                                                      "log", "directional", "layer", "pane",
+                                                                      "log", "directional", "layer", "pane", "sand", "path",
                                                                       "window_frame", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate");
   public static final Map<String, String> VARIANT_TYPES = new HashMap<String, String>();
   static { // For any variant not listed here, it is assumed that the type is the same as the variant string
@@ -32,6 +32,7 @@ public class WesterosBlockSetDef {
     VARIANT_TYPES.put("cover", "rail");
     VARIANT_TYPES.put("hollow_hopper", "cuboid");
     VARIANT_TYPES.put("directional", "cuboid-nsew");
+    VARIANT_TYPES.put("path", "cuboid");
     VARIANT_TYPES.put("window_frame", "solid");
     VARIANT_TYPES.put("arrow_slit", "solid");
     VARIANT_TYPES.put("arrow_slit_window", "solid");
@@ -55,6 +56,8 @@ public class WesterosBlockSetDef {
     VARIANT_TEXTURES.put("directional", new String[]{ "bottom", "top", "west", "east", "south", "north" });
     VARIANT_TEXTURES.put("layer", new String[]{ "sides" });
     VARIANT_TEXTURES.put("pane", new String[]{ "sides", "top" });
+    VARIANT_TEXTURES.put("sand", new String[]{ "bottom", "top", "west", "east", "south", "north" });
+    VARIANT_TEXTURES.put("path", new String[]{ "sides" });
     VARIANT_TEXTURES.put("window_frame", new String[]{ "window-topbottom", "window-topbottom", "window-frame" });
     VARIANT_TEXTURES.put("arrow_slit", new String[]{ "window-topbottom", "window-topbottom", "arrow-slit" });
     VARIANT_TEXTURES.put("arrow_slit_window", new String[]{ "window-topbottom", "window-topbottom", "arrow-slit-window" });
@@ -233,6 +236,12 @@ public class WesterosBlockSetDef {
       else if (variant.equals("directional")) {
         WesterosBlockDef.Cuboid[] cuboids = { 
           new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 1f, 1f)
+        };
+        variantDef.cuboids = Arrays.asList(cuboids);
+      }
+      else if (variant.equals("path")) {
+        WesterosBlockDef.Cuboid[] cuboids = { 
+          new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.9375f, 1f, new int[] { 0, 0, 0, 0, 0, 0 })
         };
         variantDef.cuboids = Arrays.asList(cuboids);
       }
