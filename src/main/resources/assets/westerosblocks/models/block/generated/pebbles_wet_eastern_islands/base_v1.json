@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "down": "westerosblocks:block/pebble_eastern_islands/wet1",
-    "up": "westerosblocks:block/pebble_eastern_islands/wet1",
-    "north": "westerosblocks:block/pebble_eastern_islands/wet1",
-    "south": "westerosblocks:block/pebble_eastern_islands/wet1",
-    "west": "westerosblocks:block/pebble_eastern_islands/wet1",
-    "east": "westerosblocks:block/pebble_eastern_islands/wet1",
-    "particle": "westerosblocks:block/pebble_eastern_islands/wet1"
+    "down": "westerosblocks:block/pebble/eastern_islands/wet1",
+    "up": "westerosblocks:block/pebble/eastern_islands/wet1",
+    "north": "westerosblocks:block/pebble/eastern_islands/wet1",
+    "south": "westerosblocks:block/pebble/eastern_islands/wet1",
+    "west": "westerosblocks:block/pebble/eastern_islands/wet1",
+    "east": "westerosblocks:block/pebble/eastern_islands/wet1",
+    "particle": "westerosblocks:block/pebble/eastern_islands/wet1"
   }
 }

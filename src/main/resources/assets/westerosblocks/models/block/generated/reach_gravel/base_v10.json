@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/reach_gravel/side10"
+    "down": "westerosblocks:block/reach_gravel/side10",
+    "up": "westerosblocks:block/reach_gravel/side10",
+    "north": "westerosblocks:block/reach_gravel/side10",
+    "south": "westerosblocks:block/reach_gravel/side10",
+    "west": "westerosblocks:block/reach_gravel/side10",
+    "east": "westerosblocks:block/reach_gravel/side10",
+    "particle": "westerosblocks:block/reach_gravel/side10"
   }
 }

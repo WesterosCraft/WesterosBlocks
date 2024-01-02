@@ -2,34 +2,44 @@
   "variants": {
     "": [
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v1"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v1",
+        "weight": 100
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v2"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v2",
+        "weight": 100
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v3"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v3",
+        "weight": 20
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v4"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v4",
+        "weight": 100
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v5"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v5",
+        "weight": 100
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v6"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v6",
+        "weight": 153
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v7"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v7",
+        "weight": 77
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v8"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v8",
+        "weight": 20
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v9"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v9",
+        "weight": 77
       },
       {
-        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v10"
+        "model": "westerosblocks:block/generated/path_dorne_dusty_dirt/base_v10",
+        "weight": 77
       }
     ]
   }

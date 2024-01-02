@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/pebble_reach/wet3"
+    "down": "westerosblocks:block/pebble/reach/wet3",
+    "up": "westerosblocks:block/pebble/reach/wet3",
+    "north": "westerosblocks:block/pebble/reach/wet3",
+    "south": "westerosblocks:block/pebble/reach/wet3",
+    "west": "westerosblocks:block/pebble/reach/wet3",
+    "east": "westerosblocks:block/pebble/reach/wet3",
+    "particle": "westerosblocks:block/pebble/reach/wet3"
   }
 }

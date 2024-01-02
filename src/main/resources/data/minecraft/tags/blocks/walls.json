@@ -3,6 +3,7 @@
   "values": [
     "westerosblocks:white_cobblestone_wall",
     "westerosblocks:orange_slate_wall",
+    "westerosblocks:white_stained_clay_wall",
     "westerosblocks:ice_wall",
     "westerosblocks:dorne_dull_terracotta_wall",
     "westerosblocks:small_white_brick_wall",
@@ -69,6 +70,7 @@
     "westerosblocks:vivid_mossy_sandstone_wall",
     "westerosblocks:oldtown_brick_wall",
     "westerosblocks:snowy_thatch_light_wall",
+    "westerosblocks:leather_wall",
     "westerosblocks:oxidized_steel_wall",
     "westerosblocks:sunspear_yellow_veined_marble_wall",
     "westerosblocks:small_smooth_stone_brick_wall",

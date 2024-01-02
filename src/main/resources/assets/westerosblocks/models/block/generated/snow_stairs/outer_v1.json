@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/noocclusion/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/snow_slab/top_bottom",
-    "top": "westerosblocks:block/snow_slab/top_bottom",
-    "side": "westerosblocks:block/snow_slab/top_bottom",
-    "particle": "westerosblocks:block/snow_slab/top_bottom"
+    "bottom": "westerosblocks:block/snow/top_bottom",
+    "top": "westerosblocks:block/snow/top_bottom",
+    "side": "westerosblocks:block/snow/top_bottom",
+    "particle": "westerosblocks:block/snow/top_bottom"
   }
 }

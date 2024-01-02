@@ -28,7 +28,7 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     public static final CreativeModeTab tabWesterosGrassDirt = new  WesterosBlocksCreativeTab("WesterosGrassDirt", "§fGrass and Dirt", "classic_grass_block");
     public static final CreativeModeTab tabWesterosSandGravel = new  WesterosBlocksCreativeTab("WesterosSandGravel", "§fSand and Gravel", "sand_skeleton");
     public static final CreativeModeTab tabWesterosLogs = new  WesterosBlocksCreativeTab("WesterosLogs", "§fLogs", "weirwood_face_4");
-    public static final CreativeModeTab tabWesterosLeaves = new  WesterosBlocksCreativeTab("WesterosLeaves", "§fLeaves", "snowy_weirwood_leaves");
+    public static final CreativeModeTab tabWesterosFoliage = new  WesterosBlocksCreativeTab("WesterosFoliage", "§fFoliage", "weirwood_leaves");
     public static final CreativeModeTab tabWesterosGrassesShrubs = new  WesterosBlocksCreativeTab("WesterosGrassesShrubs", "§fGrasses and Shrubs", "yellow_rose_bush");
     public static final CreativeModeTab tabWesterosFlowers = new  WesterosBlocksCreativeTab("WesterosFlowers", "§fFlowers", "blue_bells");
     public static final CreativeModeTab tabWesterosCropsHerbs = new  WesterosBlocksCreativeTab("WesterosCropsHerbs", "§fCrops and Herbs", "strawberry_bush");

@@ -35,11 +35,18 @@
         {
           "biomeNames": [
             "minecraft:extreme_hills",
+            "minecraft:windswept_hills",
+            "minecraft:windswept_forest",
+            "minecraft:windswept_gravelly_hills",
             "minecraft:stony_shore",
+            "minecraft:snowy_beach",
+            "minecraft:snowy_taiga",
+            "minecraft:snowy_plains",
             "minecraft:taiga",
             "minecraft:taiga_hills",
             "minecraft:taiga_mountains",
-            "minecraft:snowy_taiga",
+            "minecraft:old_growth_pine_taiga",
+            "minecraft:old_growth_spruce_taiga",
             "minecraft:ice_spikes",
             "minecraft:frozen_river",
             "minecraft:frozen_peaks",
@@ -56,12 +63,12 @@
         }
       ],
       "connect_to": [
-        {
-          "block": "minecraft:sand"
-        },
-        {
-          "block": "westerosblocks:grassy_sand"
-        }
+        { "block": "minecraft:sand" },
+        { "block": "westerosblocks:desert_sand" },
+        { "block": "westerosblocks:desert_sand_layer" },
+        { "block": "westerosblocks:grassy_sand" },
+        { "block": "westerosblocks:grassy_sand_slab" },
+        { "block": "westerosblocks:grassy_sand_layer" }
       ]
     }
   }

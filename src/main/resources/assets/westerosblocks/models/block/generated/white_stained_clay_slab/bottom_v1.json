@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab_overlay",
+  "textures": {
+    "down": "westerosblocks:block/marble/white/all",
+    "up": "westerosblocks:block/marble/white/all",
+    "north": "westerosblocks:block/marble/white/all",
+    "south": "westerosblocks:block/marble/white/all",
+    "west": "westerosblocks:block/marble/white/all",
+    "east": "westerosblocks:block/marble/white/all",
+    "particle": "westerosblocks:block/marble/white/all",
+    "down_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay"
+  }
+}

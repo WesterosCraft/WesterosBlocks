@@ -2783,7 +2783,7 @@
       "stepSound": "grass",
       "material": "plants",
       "resistance": 5,
-      "creativeTab": "WesterosMisc",
+      "creativeTab": "WesterosFoliage",
       "baseLabel": "Cushion Moss",
       "randomTextures": [
         {"textures": {"all": "moss_cushion/all1"}},
@@ -2921,6 +2921,23 @@
       "baseLabel": "Quartz",
       "textures": {
         "all": "marble/quartz/all"
+      }
+    },
+    {
+      "baseBlockName": "white_stained_clay",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "White Marble",
+      "textures": {
+        "all": "marble/white/all"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/white_stained_clay_overlay"
       }
     },
     {
@@ -3879,6 +3896,20 @@
       }
     },
     {
+      "baseBlockName": "leather",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 2,
+      "stepSound": "cloth",
+      "material": "cloth",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
+      "creativeTab": "WesterosClothFibers",
+      "baseLabel": "Leather",
+      "textures": {
+        "all": "leather_block/leather"
+      }
+    },
+    {
       "baseBlockName": "thatch_light_fur",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
       "altNames": {
@@ -3983,12 +4014,12 @@
       "baseLabel": "Snow",
       "ambientOcclusion": false,
       "textures": {
-        "bottom": "snow_slab/top_bottom",
-        "top": "snow_slab/top_bottom",
-        "west": "snow_slab/north_south",
-        "east": "snow_slab/north_south",
-        "south": "snow_slab/east_west",
-        "north": "snow_slab/east_west"
+        "bottom": "snow/top_bottom",
+        "top": "snow/top_bottom",
+        "west": "snow/north_south",
+        "east": "snow/north_south",
+        "south": "snow/east_west",
+        "north": "snow/east_west"
       }
     },
     {
@@ -4093,6 +4124,1054 @@
           "mances_camp_common_tent/inside"
         ]
       }
+    },
+    {
+      "baseBlockName": "glass",
+      "variants": ["solid", "pane"],
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Glass",
+      "textures": {
+        "all": "glass/normal/all"
+      },
+      "altTextures": {
+        "pane": ["glass/normal/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "stained_glass_black",
+      "variants": ["solid", "pane"],
+      "altNames": {
+        "pane": "stained_glass_pane_black"
+      },
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Stained Glass Black",
+      "textures": {
+        "all": "glass/black/all"
+      },
+      "altTextures": {
+        "pane": ["glass/black/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "stained_glass_red",
+      "variants": ["solid", "pane"],
+      "altNames": {
+        "pane": "stained_glass_pane_red"
+      },
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Stained Glass Red",
+      "textures": {
+        "all": "glass/red/all"
+      },
+      "altTextures": {
+        "pane": ["glass/red/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "stained_glass_orange",
+      "variants": ["solid", "pane"],
+      "altNames": {
+        "pane": "stained_glass_pane_orange"
+      },
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Stained Glass Orange",
+      "textures": {
+        "all": "glass/orange/all"
+      },
+      "altTextures": {
+        "pane": ["glass/orange/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "stained_glass_yellow",
+      "variants": ["solid", "pane"],
+      "altNames": {
+        "pane": "stained_glass_pane_yellow"
+      },
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Stained Glass Yellow",
+      "textures": {
+        "all": "glass/yellow/all"
+      },
+      "altTextures": {
+        "pane": ["glass/yellow/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "stained_glass_green",
+      "variants": ["solid", "pane"],
+      "altNames": {
+        "pane": "stained_glass_pane_green"
+      },
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Stained Glass Green",
+      "textures": {
+        "all": "glass/green/all"
+      },
+      "altTextures": {
+        "pane": ["glass/green/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "stained_glass_blue",
+      "variants": ["solid", "pane"],
+      "altNames": {
+        "pane": "stained_glass_pane_blue"
+      },
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Stained Glass Blue",
+      "textures": {
+        "all": "glass/blue/all"
+      },
+      "altTextures": {
+        "pane": ["glass/blue/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "stained_glass_purple",
+      "variants": ["solid", "pane"],
+      "altNames": {
+        "pane": "stained_glass_pane_purple"
+      },
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Stained Glass Purple",
+      "textures": {
+        "all": "glass/purple/all"
+      },
+      "altTextures": {
+        "pane": ["glass/purple/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "stained_glass_pink",
+      "variants": ["solid", "pane"],
+      "altNames": {
+        "pane": "stained_glass_pane_pink"
+      },
+      "hardness": 1,
+      "stepSound": "glass",
+      "material": "glass",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "nonOpaque": true,
+      "alphaRender": true,
+      "lightOpacity": 0,
+      "creativeTab": "WesterosWindowsGlass",
+      "types": {
+        "pane": "legacy-model,unconnect:false"
+      },
+      "baseLabel": "Stained Glass Pink",
+      "textures": {
+        "all": "glass/pink/all"
+      },
+      "altTextures": {
+        "pane": ["glass/pink/all", "glass/pane_top"]
+      }
+    },
+    {
+      "baseBlockName": "pebbles_wet_eastern_islands",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Eastern Islands",
+      "colorMult": "textures/colormap/easternisland",
+      "randomTextures": [
+        {"textures": {"all": "pebble/eastern_islands/wet1"}},
+        {"textures": {"all": "pebble/eastern_islands/wet2"}},
+        {"textures": {"all": "pebble/eastern_islands/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_iron_islands",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Iron Islands",
+      "randomTextures": [
+        {"textures": {"all": "pebble/iron_islands/wet1"}},
+        {"textures": {"all": "pebble/iron_islands/wet2"}},
+        {"textures": {"all": "pebble/iron_islands/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_mountains_of_the_moon",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Mountains of the Moon",
+      "randomTextures": [
+        {"textures": {"all": "pebble/vale/wet1"}},
+        {"textures": {"all": "pebble/vale/wet2"}},
+        {"textures": {"all": "pebble/vale/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_the_north",
+      "variants": ["solid", "layer"],
+      "altNames": {
+        "layer": "pebbles_wet_north_layer"
+      },
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet The North",
+      "randomTextures": [
+        {"textures": {"all": "pebble/north/wet1"}},
+        {"textures": {"all": "pebble/north/wet2"}},
+        {"textures": {"all": "pebble/north/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_ocean_rocks",
+      "variants": ["solid", "layer"],
+      "altNames": {
+        "layer": "pebbles_wet_ocean_layer"
+      },
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Ocean Rocks",
+      "randomTextures": [
+        {"textures": {"all": "pebble/ocean/wet1"}},
+        {"textures": {"all": "pebble/ocean/wet2"}},
+        {"textures": {"all": "pebble/ocean/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_red_mountains",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Red Mountains",
+      "randomTextures": [
+        {"textures": {"all": "pebble/red_mountains/wet1"}},
+        {"textures": {"all": "pebble/red_mountains/wet2"}},
+        {"textures": {"all": "pebble/red_mountains/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_river_rocks",
+      "variants": ["solid", "layer"],
+      "altNames": {
+        "layer": "pebbles_wet_river_layer"
+      },
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet River Rocks",
+      "randomTextures": [
+        {"textures": {"all": "pebble/river/wet1"}},
+        {"textures": {"all": "pebble/river/wet2"}},
+        {"textures": {"all": "pebble/river/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_westerlands",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Westerlands",
+      "randomTextures": [
+        {"textures": {"all": "pebble/westerlands/wet1"}},
+        {"textures": {"all": "pebble/westerlands/wet2"}},
+        {"textures": {"all": "pebble/westerlands/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_arbor_dorne",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Arbor Dorne",
+      "randomTextures": [
+        {"textures": {"all": "pebble/arbor_dorne/wet1"}},
+        {"textures": {"all": "pebble/arbor_dorne/wet2"}},
+        {"textures": {"all": "pebble/arbor_dorne/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_stormlands",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Stormlands",
+      "randomTextures": [
+        {"textures": {"all": "pebble/stormlands/wet1"}},
+        {"textures": {"all": "pebble/stormlands/wet2"}},
+        {"textures": {"all": "pebble/stormlands/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_reach",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Reach",
+      "randomTextures": [
+        {"textures": {"all": "pebble/reach/wet1"}},
+        {"textures": {"all": "pebble/reach/wet2"}},
+        {"textures": {"all": "pebble/reach/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_eastern_islands",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Eastern Islands",
+      "colorMult": "textures/colormap/easternisland",
+      "randomTextures": [
+        {"textures": {"all": "pebble/eastern_islands/dry1"}},
+        {"textures": {"all": "pebble/eastern_islands/dry2"}},
+        {"textures": {"all": "pebble/eastern_islands/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_iron_islands",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Iron Islands",
+      "randomTextures": [
+        {"textures": {"all": "pebble/iron_islands/dry1"}},
+        {"textures": {"all": "pebble/iron_islands/dry2"}},
+        {"textures": {"all": "pebble/iron_islands/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_mountains_of_the_moon",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Mountains of the Moon",
+      "randomTextures": [
+        {"textures": {"all": "pebble/vale/dry1"}},
+        {"textures": {"all": "pebble/vale/dry2"}},
+        {"textures": {"all": "pebble/vale/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_the_north",
+      "variants": ["solid", "layer"],
+      "altNames": {
+        "layer": "pebbles_dry_north_layer"
+      },
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry The North",
+      "randomTextures": [
+        {"textures": {"all": "pebble/north/dry1"}},
+        {"textures": {"all": "pebble/north/dry2"}},
+        {"textures": {"all": "pebble/north/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_ocean_rocks",
+      "variants": ["solid", "layer"],
+      "altNames": {
+        "layer": "pebbles_dry_ocean_layer"
+      },
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Ocean Rocks",
+      "randomTextures": [
+        {"textures": {"all": "pebble/ocean/dry1"}},
+        {"textures": {"all": "pebble/ocean/dry2"}},
+        {"textures": {"all": "pebble/ocean/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_red_mountains",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Red Mountains",
+      "randomTextures": [
+        {"textures": {"all": "pebble/red_mountains/dry1"}},
+        {"textures": {"all": "pebble/red_mountains/dry2"}},
+        {"textures": {"all": "pebble/red_mountains/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_river_rocks",
+      "variants": ["solid", "layer"],
+      "altNames": {
+        "layer": "pebbles_dry_river_layer"
+      },
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry River Rocks",
+      "randomTextures": [
+        {"textures": {"all": "pebble/river/dry1"}},
+        {"textures": {"all": "pebble/river/dry2"}},
+        {"textures": {"all": "pebble/river/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_westerlands",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Westerlands",
+      "randomTextures": [
+        {"textures": {"all": "pebble/westerlands/dry1"}},
+        {"textures": {"all": "pebble/westerlands/dry2"}},
+        {"textures": {"all": "pebble/westerlands/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_arbor_dorne",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Arbor Dorne",
+      "randomTextures": [
+        {"textures": {"all": "pebble/arbor_dorne/dry1"}},
+        {"textures": {"all": "pebble/arbor_dorne/dry2"}},
+        {"textures": {"all": "pebble/arbor_dorne/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_stormlands",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Stormlands",
+      "randomTextures": [
+        {"textures": {"all": "pebble/stormlands/dry1"}},
+        {"textures": {"all": "pebble/stormlands/dry2"}},
+        {"textures": {"all": "pebble/stormlands/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_reach",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Reach",
+      "randomTextures": [
+        {"textures": {"all": "pebble/reach/dry1"}},
+        {"textures": {"all": "pebble/reach/dry2"}},
+        {"textures": {"all": "pebble/reach/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "dirt",
+      "variants": ["solid", "slab", "path"],
+      "altNames": {
+        "path": "path_dirt"
+      },
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Dirt",
+      "randomTextures": [
+        {"textures": {"bottom": "dirt/top_bot1", "top": "dirt/top_bot1", "sides": "dirt/ground"}, "weight": 100},
+        {"textures": {"bottom": "dirt/top_bot2", "top": "dirt/top_bot2", "sides": "dirt/ground"}, "weight": 33},
+        {"textures": {"bottom": "dirt/top_bot3", "top": "dirt/top_bot3", "sides": "dirt/ground"}, "weight": 45},
+        {"textures": {"bottom": "dirt/top_bot4", "top": "dirt/top_bot4", "sides": "dirt/ground"}, "weight": 140},
+        {"textures": {"bottom": "dirt/top_bot5", "top": "dirt/top_bot5", "sides": "dirt/ground"}, "weight": 193},
+        {"textures": {"bottom": "dirt/top_bot6", "top": "dirt/top_bot6", "sides": "dirt/ground"}, "weight": 77},
+        {"textures": {"bottom": "dirt/top_bot7", "top": "dirt/top_bot7", "sides": "dirt/ground"}, "weight": 77},
+        {"textures": {"bottom": "dirt/top_bot8", "top": "dirt/top_bot8", "sides": "dirt/ground"}, "weight": 77}
+      ],
+      "altRandomTextures": {
+        "path": [
+          {"textures": ["dirt_path/top_bot1", "dirt_path/top_bot1", "dirt_path/ground"], "weight": 100},
+          {"textures": ["dirt_path/top_bot2", "dirt_path/top_bot2", "dirt_path/ground"], "weight": 33},
+          {"textures": ["dirt_path/top_bot3", "dirt_path/top_bot3", "dirt_path/ground"], "weight": 45},
+          {"textures": ["dirt_path/top_bot4", "dirt_path/top_bot4", "dirt_path/ground"], "weight": 140},
+          {"textures": ["dirt_path/top_bot5", "dirt_path/top_bot5", "dirt_path/ground"], "weight": 193},
+          {"textures": ["dirt_path/top_bot6", "dirt_path/top_bot6", "dirt_path/ground"], "weight": 77},
+          {"textures": ["dirt_path/top_bot7", "dirt_path/top_bot7", "dirt_path/ground"], "weight": 77},
+          {"textures": ["dirt_path/top_bot8", "dirt_path/top_bot8", "dirt_path/ground"], "weight": 77}
+        ]
+      }
+    },
+    {
+      "baseBlockName": "gravel",
+      "variants": ["solid", "slab", "path"],
+      "altNames": {
+        "path": "path_gravel"
+      },
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Gravel",
+      "randomTextures": [
+        {"textures": {"all": "gravel/gravel1"}, "weight": 10},
+        {"textures": {"all": "gravel/gravel2"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel3"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel4"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel5"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel6"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel7"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel8"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel9"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel10"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel11"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel12"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel13"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel14"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel15"}, "weight": 1},
+        {"textures": {"all": "gravel/gravel16"}, "weight": 1}
+      ]
+    },
+    {
+      "baseBlockName": "reach_gravel",
+      "variants": ["solid", "slab", "path"],
+      "altNames": {
+        "path": "path_reach_gravel"
+      },
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Reach Gravel",
+      "randomTextures": [
+        {"textures": {"all": "reach_gravel/side1"}, "weight": 10},
+        {"textures": {"all": "reach_gravel/side2"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side3"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side4"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side5"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side6"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side7"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side8"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side9"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side10"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side11"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side12"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side13"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side14"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side15"}, "weight": 1},
+        {"textures": {"all": "reach_gravel/side16"}, "weight": 1}
+      ]
+    },
+    {
+      "baseBlockName": "dorne_dusty_dirt",
+      "variants": ["solid", "slab", "path"],
+      "altNames": {
+        "path": "path_dorne_dusty_dirt"
+      },
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Dorne Dusty Dirt",
+      "randomTextures": [
+        {"textures": {"all": "dorne_dusty_dirt/side1"}, "weight": 100},
+        {"textures": {"all": "dorne_dusty_dirt/side2"}, "weight": 100},
+        {"textures": {"all": "dorne_dusty_dirt/side3"}, "weight": 20},
+        {"textures": {"all": "dorne_dusty_dirt/side4"}, "weight": 100},
+        {"textures": {"all": "dorne_dusty_dirt/side5"}, "weight": 100},
+        {"textures": {"all": "dorne_dusty_dirt/side6"}, "weight": 153},
+        {"textures": {"all": "dorne_dusty_dirt/side7"}, "weight": 77},
+        {"textures": {"all": "dorne_dusty_dirt/side8"}, "weight": 20},
+        {"textures": {"all": "dorne_dusty_dirt/side9"}, "weight": 77},
+        {"textures": {"all": "dorne_dusty_dirt/side10"}, "weight": 77}
+      ]
+    },
+    {
+      "baseBlockName": "dorne_dry_soil",
+      "variants": ["solid", "slab", "path"],
+      "altNames": {
+        "path": "path_dorne_dry_soil"
+      },
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Dorne Dry Soil",
+      "textures": {
+        "all": "dorne_dry_soil/side"
+      }
+    },
+    {
+      "baseBlockName": "mud",
+      "variants": ["solid", "slab"],
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "craftedSnow",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Mud",
+      "randomTextures": [
+        {"textures": {"all": "mud/side1"}, "weight": 20},
+        {"textures": {"all": "mud/side2"}, "weight": 20},
+        {"textures": {"all": "mud/side3"}, "weight": 20},
+        {"textures": {"all": "mud/side4"}, "weight": 20},
+        {"textures": {"all": "mud/side5"}, "weight": 20},
+        {"textures": {"bottom": "mud/side1", "top": "mud/top1", "sides": "mud/side1"}, "weight": 1},
+        {"textures": {"bottom": "mud/side2", "top": "mud/top2", "sides": "mud/side2"}, "weight": 1},
+        {"textures": {"bottom": "mud/side3", "top": "mud/top3", "sides": "mud/side3"}, "weight": 1}
+      ]
+    },
+    {
+      "baseBlockName": "muddy_snow",
+      "variants": ["solid", "slab"],
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "craftedSnow",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Muddy Snow",
+      "ambientOcclusion": false,
+      "textures": {
+        "bottom": "muddy_snow/top_bottom",
+        "top": "muddy_snow/top_bottom",
+        "west": "muddy_snow/north_south",
+        "east": "muddy_snow/north_south",
+        "south": "muddy_snow/east_west",
+        "north": "muddy_snow/east_west"
+      }
+    },
+    {
+      "baseBlockName": "peat",
+      "variants": ["solid", "slab"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Peat",
+      "textures": {
+        "bottom": "peat/top_bottom",
+        "top": "peat/top_bottom",
+        "sides": "peat/side"
+      }
+    },
+    {
+      "baseBlockName": "bog",
+      "variants": ["solid", "slab"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Bog",
+      "connectTo": "material",
+      "randomTextures": [
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog1", "sides": "bog/bog_side"}, "weight": 6},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog2", "sides": "bog/bog_side"}, "weight": 3},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog3", "sides": "bog/bog_side"}, "weight": 3},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog4", "sides": "bog/bog_side"}, "weight": 3},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog5", "sides": "bog/bog_side"}, "weight": 3},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog6", "sides": "bog/bog_side"}, "weight": 3},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog7", "sides": "bog/bog_side"}, "weight": 1},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog8", "sides": "bog/bog_side"}, "weight": 1},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog9", "sides": "bog/bog_side"}, "weight": 2},
+        {"textures": {"bottom": "bog/mud", "top": "bog/bog10", "sides": "bog/bog_side"}, "weight": 2}
+      ],
+      "altRandomTextures": {
+        "slab": [
+          {"textures": ["bog/mud", "bog/bog1", "bog/bog_slab_side"], "weight": 6},
+          {"textures": ["bog/mud", "bog/bog2", "bog/bog_slab_side"], "weight": 3},
+          {"textures": ["bog/mud", "bog/bog3", "bog/bog_slab_side"], "weight": 3},
+          {"textures": ["bog/mud", "bog/bog4", "bog/bog_slab_side"], "weight": 3},
+          {"textures": ["bog/mud", "bog/bog5", "bog/bog_slab_side"], "weight": 3},
+          {"textures": ["bog/mud", "bog/bog6", "bog/bog_slab_side"], "weight": 3},
+          {"textures": ["bog/mud", "bog/bog7", "bog/bog_slab_side"], "weight": 1},
+          {"textures": ["bog/mud", "bog/bog8", "bog/bog_slab_side"], "weight": 1},
+          {"textures": ["bog/mud", "bog/bog9", "bog/bog_slab_side"], "weight": 2},
+          {"textures": ["bog/mud", "bog/bog10", "bog/bog_slab_side"], "weight": 2}
+        ]
+      }
+    },
+    {
+      "baseBlockName": "ash",
+      "variants": ["solid", "slab", "layer"],
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosMisc",
+      "baseLabel": "Ash",
+      "textures": {
+        "all": "ash/all"
+      }
+    },
+    {
+      "baseBlockName": "scorched_earth",
+      "variants": ["solid", "slab"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Scorched Earth",
+      "randomTextures": [
+        {"textures": {"all": "scorched_earth/all1"}},
+        {"textures": {"all": "scorched_earth/all2"}},
+        {"textures": {"all": "scorched_earth/all3"}},
+        {"textures": {"all": "scorched_earth/all4"}}
+      ]
+    },
+    {
+      "baseBlockName": "plowed_soil",
+      "variants": ["solid", "slab"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Plowed Soil",
+      "textures": {
+        "all": "soil_block/plowed_soil"
+      }
+    },
+    {
+      "baseBlockName": "fallen_leaves",
+      "variants": ["solid", "slab"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Fallen Leaves",
+      "textures": {
+        "all": "fallen_leaves/temperate"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/fallen_leaves_overlay"
+      }
+    },
+    {
+      "baseBlockName": "pine_needles",
+      "variants": ["solid", "slab"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Pine Needles",
+      "textures": {
+        "all": "pine_needles/dirt_pine_cover"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/fallen_leaves_overlay"
+      }
+    },
+    {
+      "baseBlockName": "desert_sand",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Desert Sand",
+      "colorMult": "textures/colormap/sand",
+      "textures": {
+        "all": "sand_block/sand_desert"
+      }
+    },
+    {
+      "baseBlockName": "sand_stones",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Sand Stones",
+      "colorMult": "textures/colormap/sand",
+      "textures": {
+        "all": "sand_block/sand_stones"
+      }
+    },
+    {
+      "baseBlockName": "terracotta_sand",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Terracotta Sand",
+      "textures": {
+        "all": "sand_block/sand_terracotta"
+      }
+    },
+    {
+      "baseBlockName": "pinkorange_sand",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pink/Orange Sand",
+      "textures": {
+        "all": "sand_block/sand_pinkorange"
+      }
+    },
+    {
+      "baseBlockName": "red_sand",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Red Sand",
+      "textures": {
+        "all": "sand_block/sand_red"
+      }
+    },
+    {
+      "baseBlockName": "wet_sand",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Wet Sand",
+      "textures": {
+        "all": "sand_block/sand_wet"
+      }
+    },
+    {
+      "baseBlockName": "wet_sand_stones",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Wet Sand Stones",
+      "textures": {
+        "all": "sand_block/sand_wet_stones"
+      }
+    },
+    {
+      "baseBlockName": "muddy_sand",
+      "variants": ["solid", "slab", "layer"],
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Muddy Sand",
+      "textures": {
+        "all": "muddy_sand/side"
+      }
+    },
+    {
+      "baseBlockName": "grassy_sand",
+      "variants": ["solid", "slab", "layer"],
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Grassy Sand",
+      "textures": {
+        "all": "grassy_sand/side"
+      }
     }
   ],
   "blocks": [
@@ -4189,9 +5268,9 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Sandstone Pillar",
       "textures": [
-        "sandstone_pillar/top",
-        "sandstone_pillar/top",
-        "sandstone_pillar/side"
+        "sandstone/desert/column_top",
+        "sandstone/desert/column_top",
+        "sandstone/desert/column_side"
       ]
     },
     {
@@ -5996,79 +7075,6 @@
       ]
     },
     {
-      "blockName": "wet_sand",
-      "blockType": "sand",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Wet Sand",
-      "textures": [
-        "sand_block/sand_wet"
-      ]
-    },
-    {
-      "blockName": "terracotta_sand",
-      "blockType": "sand",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Terracotta Sand",
-      "textures": [
-        "sand_block/sand_terracotta"
-      ]
-    },
-    {
-      "blockName": "pinkorange_sand",
-      "blockType": "sand",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pink/Orange Sand",
-      "textures": [
-        "sand_block/sand_pinkorange"
-      ]
-    },
-    {
-      "blockName": "red_sand",
-      "blockType": "sand",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Red Sand",
-      "textures": [
-        "sand_block/sand_red"
-      ]
-    },
-    {
-      "blockName": "sand_stones",
-      "blockType": "sand",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Sand Stones",
-      "colorMult": "textures/colormap/sand",
-      "textures": [
-        "sand_block/sand_stones"
-      ]
-    },
-    {
-      "blockName": "wet_sand_stones",
-      "blockType": "sand",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Wet Sand Stones",
-      "textures": [
-        "sand_block/sand_wet_stones"
-      ]
-    },
-    {
       "blockName": "axe_block",
       "blockType": "cuboid-nsew",
       "hardness": 5,
@@ -6986,7 +7992,7 @@
       "material": "iron",
       "resistance": 2,
       "harvestLevel": [{ "tool": "axe", "level": 1 }],
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Fallen Weirwood Leaves",
       "randomTextures": [
         {
@@ -7016,7 +8022,7 @@
       "material": "iron",
       "resistance": 2,
       "harvestLevel": [{ "tool": "axe", "level": 1 }],
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Duckweed",
       "randomTextures": [
         {
@@ -7051,6 +8057,118 @@
       "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0.02, "yMax": 0.029, "zMin": 0, "zMax": 1}
     },
     {
+      "blockName": "vine_jasmine",
+      "blockType": "ladder",
+      "stepSound": "ladder",
+      "material": "iron",
+      "creativeTab": "WesterosFoliage",
+      "label": "Vine Jasmine (Do Not Use)",
+      "randomTextures": [
+        {"textures": ["jasmine_vines/side1"]},
+        {"textures": ["jasmine_vines/side2"]},
+        {"textures": ["jasmine_vines/side3"]},
+        {"textures": ["jasmine_vines/side4"]},
+        {"textures": ["jasmine_vines/side5"]}
+      ],
+      "type": "allow-unsupported"
+    },
+    {
+      "blockName": "vines",
+      "blockType": "vines",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosFoliage",
+      "label": "Vines",
+      "randomTextures": [
+        {
+          "textures": [
+            "vines/side1",
+            "vines/side1"
+          ]
+        },
+        {
+          "textures": [
+            "vines/side2",
+            "vines/side2"
+          ]
+        },
+        {
+          "textures": [
+            "vines/side3",
+            "vines/side3"
+          ]
+        },
+        {
+          "textures": [
+            "vines/side4",
+            "vines/side4"
+          ]
+        },
+        {
+          "textures": [
+            "vines/side5",
+            "vines/side5"
+          ]
+        }
+      ],
+      "type": "allow-unsupported,no-climb,has-down"
+    },
+    {
+      "blockName": "jasmine_vines",
+      "blockType": "vines",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosFoliage",
+      "label": "Jasmine Vines",
+      "randomTextures": [
+        {
+          "textures": [
+            "jasmine_vines/side1",
+            "jasmine_vines/side1"
+          ]
+        },
+        {
+          "textures": [
+            "jasmine_vines/side2",
+            "jasmine_vines/side2"
+          ]
+        },
+        {
+          "textures": [
+            "jasmine_vines/side3",
+            "jasmine_vines/side3"
+          ]
+        },
+        {
+          "textures": [
+            "jasmine_vines/side4",
+            "jasmine_vines/side4"
+          ]
+        },
+        {
+          "textures": [
+            "jasmine_vines/side5",
+            "jasmine_vines/side5"
+          ]
+        }
+      ],
+      "type": "allow-unsupported,no-climb,has-down"
+    },
+    {
+      "blockName": "dappled_moss",
+      "blockType": "vines",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosFoliage",
+      "label": "Dappled Moss",
+      "colorMult": "textures/colormap/moss_dappled",
+      "textures": [
+        "dappled_moss/dappled",
+        "dappled_moss/dappled"
+      ],
+      "type": "allow-unsupported,no-climb,has-down"
+    },
+    {
       "blockName": "candle",
       "blockType": "torch",
       "stepSound": "powder",
@@ -7067,7 +8185,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "type": "no-decay,better-foliage,overlay",
       "label": "Apple Fruit Leaves",
       "colorMult": "textures/colormap/birch",
@@ -7119,7 +8237,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "type": "no-decay,better-foliage,overlay",
       "label": "Apricot Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
@@ -7172,7 +8290,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "type": "no-decay,better-foliage,overlay",
       "label": "Cherry Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
@@ -7225,7 +8343,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "type": "no-decay,better-foliage,overlay",
       "label": "Purple Grape Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
@@ -7278,7 +8396,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "type": "no-decay,better-foliage,overlay",
       "label": "Lemon Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
@@ -7331,7 +8449,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "type": "no-decay,better-foliage,overlay",
       "label": "Lime Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
@@ -7384,7 +8502,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "type": "no-decay,better-foliage,overlay",
       "label": "Orange Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
@@ -7437,7 +8555,7 @@
       "blockType": "leaves",
       "stepSound": "grass",
       "material": "leaves",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "type": "no-decay,better-foliage,overlay",
       "label": "Peach Fruit Leaves",
       "colorMult": "textures/colormap/birch",
@@ -7491,7 +8609,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Plum Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -7544,7 +8662,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Pomegranate Fruit Leaves",
       "colorMult": "textures/colormap/birch",
       "rotateRandom": true,
@@ -7597,7 +8715,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Weirwood Leaves",
       "textures": [
         "leaves_weirwood/leaves_weirwood",
@@ -7612,7 +8730,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Blackberry Bush",
       "colorMult": "textures/colormap/birch",
       "rotateRandom": true,
@@ -7665,7 +8783,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Blueberry Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -7718,7 +8836,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Raspberry Bush",
       "colorMult": "textures/colormap/foliagejungle",
       "rotateRandom": true,
@@ -7771,7 +8889,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Juniper Bush",
       "colorMult": "textures/colormap/pine",
       "rotateRandom": true,
@@ -7824,7 +8942,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Red Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -7877,7 +8995,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Pink Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -7930,7 +9048,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "White Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -7983,7 +9101,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Yellow Rose Bush",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -8036,7 +9154,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Hop Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
       "rotateRandom": true,
@@ -8089,7 +9207,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Olive Fruit Leaves",
       "colorMult": "textures/colormap/foliageoak",
       "rotateRandom": true,
@@ -8142,7 +9260,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Palm Leaves",
       "colorMult": "textures/colormap/foliagepalm",
       "textures": [
@@ -8158,7 +9276,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage,overlay",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "White Grape Fruit Leaves",
       "colorMult": "textures/colormap/foliagejungle",
       "randomTextures": [
@@ -8600,7 +9718,7 @@
       "stepSound": "wood",
       "material": "wood",
       "resistance": 5,
-      "creativeTab": "WesterosWaterAir",
+      "creativeTab": "WesterosDecor",
       "label": "Water Barrel",
       "randomTextures": [
         {
@@ -8673,19 +9791,6 @@
         "crate_block/crate_side_crossbar_right",
         "crate_block/crate_top_tin",
         "crate_block/crate_side_crossbar_crossed"
-      ]
-    },
-    {
-      "blockName": "desert_sand_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Desert Sand Layer",
-      "colorMult": "textures/colormap/sand",
-      "textures": [
-        "sand_block/sand_desert"
       ]
     },
     {
@@ -9382,19 +10487,6 @@
       ]
     },
     {
-      "blockName": "leather",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "cloth",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosClothFibers",
-      "label": "Leather",
-      "textures": [
-        "leather_block/leather"
-      ]
-    },
-    {
       "blockName": "dragon_carving",
       "blockType": "solid",
       "hardness": 2,
@@ -9720,52 +10812,7 @@
       "creativeTab": "WesterosGrassDirt",
       "label": "Bone Dirt",
       "textures": [
-        "ground_block/dirt_bone"
-      ]
-    },
-    {
-      "blockName": "plowed_soil",
-      "blockType": "soulsand",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Plowed Soil",
-      "textures": [
-        "soil_block/plowed_soil"
-      ]
-    },
-    {
-      "blockName": "scorched_earth",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Scorched Earth",
-      "randomTextures": [
-        {
-          "textures": [
-            "scorched_earth/top1"
-          ]
-        },
-        {
-          "textures": [
-            "scorched_earth/top2"
-          ]
-        },
-        {
-          "textures": [
-            "scorched_earth/top3"
-          ]
-        },
-        {
-          "textures": [
-            "scorched_earth/top4"
-          ]
-        }
+        "dirt/bone"
       ]
     },
     {
@@ -9781,38 +10828,6 @@
         "dates/bottom",
         "dates/top",
         "dates/side"
-      ]
-    },
-    {
-      "blockName": "fallen_leaves",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosLeaves",
-      "label": "Fallen Leaves",
-      "textures": [
-        "fallen_leaves/temperate"
-      ],
-      "overlayTextures": [
-        "terrainset_overlays/fallen_leaves_overlay"
-      ]
-    },
-    {
-      "blockName": "pine_needles",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosLeaves",
-      "label": "Pine Needles",
-      "textures": [
-        "pine_needles/dirt_pine_cover"
-      ],
-      "overlayTextures": [
-        "terrainset_overlays/fallen_leaves_overlay"
       ]
     },
     {
@@ -9867,379 +10882,6 @@
       "label": "Plain Brown Daub",
       "textures": [
         "plaster/daub_plain_brown"
-      ]
-    },
-    {
-      "blockName": "mud",
-      "blockType": "soulsand",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Mud",
-      "randomTextures": [
-        {
-          "textures": [
-            "mud/side1"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side2"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side3"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side4"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side5"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side1",
-            "mud/top1",
-            "mud/side1"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "mud/side2",
-            "mud/top2",
-            "mud/side2"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "mud/side3",
-            "mud/top3",
-            "mud/side3"
-          ],
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "blockName": "bog",
-      "blockType": "soulsand",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Bog",
-      "connectTo": "material",
-      "randomTextures": [
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog",
-            "bog/bog_side"
-          ],
-          "weight": 6
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog2",
-            "bog/bog_side"
-          ],
-          "weight": 3
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog3",
-            "bog/bog_side"
-          ],
-          "weight": 3
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog4",
-            "bog/bog_side"
-          ],
-          "weight": 3
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog5",
-            "bog/bog_side"
-          ],
-          "weight": 3
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog6",
-            "bog/bog_side"
-          ],
-          "weight": 3
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog7",
-            "bog/bog_side"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog8",
-            "bog/bog_side"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog9",
-            "bog/bog_side"
-          ],
-          "weight": 2
-        },
-        {
-          "textures": [
-            "bog/mud",
-            "bog/bog10",
-            "bog/bog_side"
-          ],
-          "weight": 2
-        }
-      ]
-    },
-    {
-      "blockName": "peat",
-      "blockType": "soulsand",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Peat",
-      "textures": [
-        "peat/top_bottom",
-        "peat/top_bottom",
-        "peat/side"
-      ]
-    },
-    {
-      "blockName": "dirt_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Dirt Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "dirt/top_bot1",
-            "dirt/top_bot1",
-            "dirt/ground"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dirt/top_bot2",
-            "dirt/top_bot2",
-            "dirt/ground"
-          ]
-        },
-        {
-          "textures": [
-            "dirt/top_bot3",
-            "dirt/top_bot3",
-            "dirt/ground"
-          ],
-          "weight": 45
-        },
-        {
-          "textures": [
-            "dirt/top_bot4",
-            "dirt/top_bot4",
-            "dirt/ground"
-          ],
-          "weight": 140
-        },
-        {
-          "textures": [
-            "dirt/top_bot5",
-            "dirt/top_bot5",
-            "dirt/ground"
-          ],
-          "weight": 193
-        },
-        {
-          "textures": [
-            "dirt/top_bot6",
-            "dirt/top_bot6",
-            "dirt/ground"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dirt/top_bot7",
-            "dirt/top_bot7",
-            "dirt/ground"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dirt/top_bot8",
-            "dirt/top_bot8",
-            "dirt/ground"
-          ],
-          "weight": 77
-        }
-      ]
-    },
-    {
-      "blockName": "gravel_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosSandGravel",
-      "label": "Gravel Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "gravel/gravel1"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "gravel/gravel2"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel3"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel4"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel5"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel6"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel7"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel8"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel9"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel10"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel11"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel12"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel13"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel14"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel15"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "gravel/gravel16"
-          ],
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "blockName": "leather_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "cloth",
-      "material": "cloth",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosClothFibers",
-      "label": "Leather Slab",
-      "textures": [
-        "leather_block/leather"
       ]
     },
     {
@@ -10315,291 +10957,6 @@
       ]
     },
     {
-      "blockName": "muddy_snow_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "craftedSnow",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Muddy Snow Slab",
-      "ambientOcclusion": false,
-      "textures": [
-        "muddy_snow_slab/top_bottom",
-        "muddy_snow_slab/top_bottom",
-        "muddy_snow_slab/north_south",
-        "muddy_snow_slab/north_south",
-        "muddy_snow_slab/east_west",
-        "muddy_snow_slab/east_west"
-      ]
-    },
-    {
-      "blockName": "reach_gravel_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosSandGravel",
-      "label": "Reach Gravel Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "reach_gravel/side1"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "reach_gravel/side2"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side3"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side4"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side5"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side6"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side7"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side8"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side9"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side10"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side11"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side12"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side13"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side14"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side15"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side16"
-          ],
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "blockName": "dorne_dusty_dirt_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Dorne Dusty Dirt Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "dorne_dusty_dirt/side1"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side2"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side3"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side4"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side5"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side6"
-          ],
-          "weight": 153
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side7"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side8"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side9"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side10"
-          ],
-          "weight": 77
-        }
-      ]
-    },
-    {
-      "blockName": "mud_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "craftedSnow",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Mud Slab",
-      "randomTextures": [
-        {
-          "textures": [
-            "mud/side1"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side2"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side3"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side4"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side5"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "mud/side1",
-            "mud/top1",
-            "mud/side1"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "mud/side2",
-            "mud/top2",
-            "mud/side2"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "mud/side3",
-            "mud/top3",
-            "mud/side3"
-          ],
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "blockName": "peat_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "craftedSnow",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Peat Slab",
-      "textures": [
-        "peat/top_bottom",
-        "peat/top_bottom",
-        "peat/side"
-      ]
-    },
-    {
       "blockName": "reinforced_oak_fence",
       "blockType": "fence",
       "hardness": 5,
@@ -10635,41 +10992,13 @@
       "creativeTab": "WesterosWaterAir",
       "label": "Smoke",
       "randomTextures": [
-        {
-          "textures": [
-            "smoke/smoke1"
-          ]
-        },
-        {
-          "textures": [
-            "smoke/smoke2"
-          ]
-        },
-        {
-          "textures": [
-            "smoke/smoke3"
-          ]
-        },
-        {
-          "textures": [
-            "smoke/smoke4"
-          ]
-        },
-        {
-          "textures": [
-            "smoke/smoke5"
-          ]
-        },
-        {
-          "textures": [
-            "smoke/smoke6"
-          ]
-        },
-        {
-          "textures": [
-            "smoke/smoke7"
-          ]
-        }
+        {"textures": ["smoke/smoke1"]},
+        {"textures": ["smoke/smoke2"]},
+        {"textures": ["smoke/smoke3"]},
+        {"textures": ["smoke/smoke4"]},
+        {"textures": ["smoke/smoke5"]},
+        {"textures": ["smoke/smoke6"]},
+        {"textures": ["smoke/smoke7"]}
       ],
       "type": "no-in-web"
     },
@@ -10774,24 +11103,12 @@
       "blockType": "web",
       "stepSound": "cloth",
       "material": "web",
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosFoodBlocks",
       "label": "Dead Hare",
       "randomTextures": [
-        {
-          "textures": [
-            "dead_hare/rabbit_dead1"
-          ]
-        },
-        {
-          "textures": [
-            "dead_hare/rabbit_dead2"
-          ]
-        },
-        {
-          "textures": [
-            "dead_hare/rabbit_dead3"
-          ]
-        }
+        {"textures": ["dead_hare/rabbit_dead1"]},
+        {"textures": ["dead_hare/rabbit_dead2"]},
+        {"textures": ["dead_hare/rabbit_dead3"]}
       ],
       "type": "no-in-web"
     },
@@ -10803,26 +11120,10 @@
       "creativeTab": "WesterosFoodBlocks",
       "label": "Dead Fowl",
       "randomTextures": [
-        {
-          "textures": [
-            "dead_fowl/fowl"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/fowl2"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/gooseplains"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fowl/gooseplains2"
-          ]
-        }
+        {"textures": ["dead_fowl/fowl"]},
+        {"textures": ["dead_fowl/fowl2"]},
+        {"textures": ["dead_fowl/gooseplains"]},
+        {"textures": ["dead_fowl/gooseplains2"]}
       ],
       "type": "no-in-web"
     },
@@ -10834,31 +11135,11 @@
       "creativeTab": "WesterosFoodBlocks",
       "label": "Dead Fish",
       "randomTextures": [
-        {
-          "textures": [
-            "dead_fish/fish_dead1"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fish/fish_dead2"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fish/fish_dead3"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fish/fish_dead4"
-          ]
-        },
-        {
-          "textures": [
-            "dead_fish/fish_dead5"
-          ]
-        }
+        {"textures": ["dead_fish/fish_dead1"]},
+        {"textures": ["dead_fish/fish_dead2"]},
+        {"textures": ["dead_fish/fish_dead3"]},
+        {"textures": ["dead_fish/fish_dead4"]},
+        {"textures": ["dead_fish/fish_dead5"]}
       ],
       "type": "no-in-web"
     },
@@ -10906,14 +11187,52 @@
       "creativeTab": "WesterosFoodBlocks",
       "label": "Dead Frog",
       "randomTextures": [
+        {"textures": ["dead_frog/toad_dead1"]},
+        {"textures": ["dead_frog/toad_dead2"]}
+      ],
+      "type": "no-in-web"
+    },
+    {
+      "blockName": "dead_rat",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "WesterosFoodBlocks",
+      "label": "Dead Rat",
+      "randomTextures": [
         {
           "textures": [
-            "dead_frog/toad_dead1"
+            "dead_rat/rat1"
           ]
         },
         {
           "textures": [
-            "dead_frog/toad_dead2"
+            "dead_rat/rat2"
+          ]
+        },
+        {
+          "textures": [
+            "dead_rat/rat3"
+          ]
+        },
+        {
+          "textures": [
+            "dead_rat/rat4"
+          ]
+        },
+        {
+          "textures": [
+            "dead_rat/rat5"
+          ]
+        },
+        {
+          "textures": [
+            "dead_rat/rat6"
+          ]
+        },
+        {
+          "textures": [
+            "dead_rat/rat7"
           ]
         }
       ],
@@ -10927,32 +11246,11 @@
       "creativeTab": "WesterosMetal",
       "label": "Iron Rungs",
       "randomTextures": [
-        {
-          "textures": [
-            "iron_rungs/ladder"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "iron_rungs/ladder2"
-          ]
-        },
-        {
-          "textures": [
-            "iron_rungs/ladder3"
-          ]
-        },
-        {
-          "textures": [
-            "iron_rungs/ladder4"
-          ]
-        },
-        {
-          "textures": [
-            "iron_rungs/ladder5"
-          ]
-        }
+        {"textures": ["iron_rungs/ladder"], "weight": 10},
+        {"textures": ["iron_rungs/ladder2"]},
+        {"textures": ["iron_rungs/ladder3"]},
+        {"textures": ["iron_rungs/ladder4"]},
+        {"textures": ["iron_rungs/ladder5"]}
       ],
       "type": "allow-unsupported"
     },
@@ -10965,42 +11263,6 @@
       "label": "Rope Ladder",
       "textures": [
         "rope_ladder/side"
-      ],
-      "type": "allow-unsupported"
-    },
-    {
-      "blockName": "vine_jasmine",
-      "blockType": "ladder",
-      "stepSound": "ladder",
-      "material": "iron",
-      "creativeTab": "WesterosMisc",
-      "label": "Vine Jasmine",
-      "randomTextures": [
-        {
-          "textures": [
-            "jasmine_vines/side1"
-          ]
-        },
-        {
-          "textures": [
-            "jasmine_vines/side2"
-          ]
-        },
-        {
-          "textures": [
-            "jasmine_vines/side3"
-          ]
-        },
-        {
-          "textures": [
-            "jasmine_vines/side4"
-          ]
-        },
-        {
-          "textures": [
-            "jasmine_vines/side5"
-          ]
-        }
       ],
       "type": "allow-unsupported"
     },
@@ -11070,31 +11332,11 @@
       "type": "legacy-model,unconnect:false",
       "label": "Vertical Net",
       "randomTextures": [
-        {
-          "textures": [
-            "vertical_net/vertical_net1"
-          ]
-        },
-        {
-          "textures": [
-            "vertical_net/vertical_net2"
-          ]
-        },
-        {
-          "textures": [
-            "vertical_net/vertical_net3"
-          ]
-        },
-        {
-          "textures": [
-            "vertical_net/vertical_net4"
-          ]
-        },
-        {
-          "textures": [
-            "vertical_net/vertical_net5"
-          ]
-        }
+        {"textures": ["vertical_net/vertical_net1"]},
+        {"textures": ["vertical_net/vertical_net2"]},
+        {"textures": ["vertical_net/vertical_net3"]},
+        {"textures": ["vertical_net/vertical_net4"]},
+        {"textures": ["vertical_net/vertical_net5"]}
       ]
     },
     {
@@ -11115,33 +11357,16 @@
       "blockName": "red_dark_roses",
       "blockType": "plant",
       "type": "layerSensitive",
-
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Dark Roses",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/red_dark_roses1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_dark_roses2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_dark_roses3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_dark_roses4"
-          ]
-        }
+        {"textures": ["flowers/red_dark_roses1"]},
+        {"textures": ["flowers/red_dark_roses2"]},
+        {"textures": ["flowers/red_dark_roses3"]},
+        {"textures": ["flowers/red_dark_roses4"]}
       ]
     },
     {
@@ -11187,22 +11412,13 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Yellow Hellebore",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/yellow_hellebore1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/yellow_hellebore2"
-          ]
-        }
+        {"textures": ["flowers/yellow_hellebore1"]},
+        {"textures": ["flowers/yellow_hellebore2"]}
       ]
     },
     {
@@ -11239,16 +11455,8 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Meadow Fescue",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/meadow_fescue/side1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/meadow_fescue/side2"
-          ]
-        }
+        {"textures": ["flowers/meadow_fescue/side1"]},
+        {"textures": ["flowers/meadow_fescue/side2"]}
       ]
     },
     {
@@ -11280,22 +11488,13 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Poppies",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/red_poppies1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_poppies2"
-          ]
-        }
+        {"textures": ["flowers/red_poppies1"]},
+        {"textures": ["flowers/red_poppies2"]}
       ]
     },
     {
@@ -11327,32 +11526,15 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Roses",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/red_roses1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_roses2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_roses3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_roses4"
-          ]
-        }
+        {"textures": ["flowers/red_roses1"]},
+        {"textures": ["flowers/red_roses2"]},
+        {"textures": ["flowers/red_roses3"]},
+        {"textures": ["flowers/red_roses4"]}
       ]
     },
     {
@@ -11398,32 +11580,15 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Purple Pansies",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/purple_pansies1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_pansies2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_pansies3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_pansies4"
-          ]
-        }
+        {"textures": ["flowers/purple_pansies1"]},
+        {"textures": ["flowers/purple_pansies2"]},
+        {"textures": ["flowers/purple_pansies3"]},
+        {"textures": ["flowers/purple_pansies4"]}
       ]
     },
     {
@@ -11469,32 +11634,15 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Purple Roses",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/purple_roses1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_roses2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_roses3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_roses4"
-          ]
-        }
+        {"textures": ["flowers/purple_roses1"]},
+        {"textures": ["flowers/purple_roses2"]},
+        {"textures": ["flowers/purple_roses3"]},
+        {"textures": ["flowers/purple_roses4"]}
       ]
     },
     {
@@ -11540,22 +11688,13 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Orange Sun Star",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/orange_sun_star1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/orange_sun_star2"
-          ]
-        }
+        {"textures": ["flowers/orange_sun_star1"]},
+        {"textures": ["flowers/orange_sun_star2"]}
       ]
     },
     {
@@ -11587,22 +11726,13 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Pink Primrose",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/pink_primrose1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_primrose2"
-          ]
-        }
+        {"textures": ["flowers/pink_primrose1"]},
+        {"textures": ["flowers/pink_primrose2"]}
       ]
     },
     {
@@ -11635,31 +11765,14 @@
       "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
-
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Aster",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/red_aster1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_aster2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_aster3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_aster4"
-          ]
-        }
+        {"textures": ["flowers/red_aster1"]},
+        {"textures": ["flowers/red_aster2"]},
+        {"textures": ["flowers/red_aster3"]},
+        {"textures": ["flowers/red_aster4"]}
       ]
     },
     {
@@ -11706,31 +11819,14 @@
       "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
-
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Blue Chicory",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/blue_chicory/side1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/blue_chicory/side2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/blue_chicory/side3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/blue_chicory/side4"
-          ]
-        }
+        {"textures": ["flowers/blue_chicory/side1"]},
+        {"textures": ["flowers/blue_chicory/side2"]},
+        {"textures": ["flowers/blue_chicory/side3"]},
+        {"textures": ["flowers/blue_chicory/side4"]}
       ]
     },
     {
@@ -11777,7 +11873,6 @@
       "type": "layerSensitive",
       "stepSound": "grass",
       "material": "plants",
-
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Flowering Spiny Herb",
@@ -11803,32 +11898,15 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Purple Foxglove",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/purple_foxglove1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_foxglove2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_foxglove3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_foxglove4"
-          ]
-        }
+        {"textures": ["flowers/purple_foxglove1"]},
+        {"textures": ["flowers/purple_foxglove2"]},
+        {"textures": ["flowers/purple_foxglove3"]},
+        {"textures": ["flowers/purple_foxglove4"]}
       ]
     },
     {
@@ -11873,33 +11951,16 @@
       "blockName": "pink_allium",
       "blockType": "plant",
       "type": "layerSensitive",
-
       "stepSound": "grass",
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Pink Allium",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/pink_allium1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_allium2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_allium3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_allium4"
-          ]
-        }
+        {"textures": ["flowers/pink_allium1"]},
+        {"textures": ["flowers/pink_allium2"]},
+        {"textures": ["flowers/pink_allium3"]},
+        {"textures": ["flowers/pink_allium4"]}
       ]
     },
     {
@@ -11945,27 +12006,14 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Purple Violets",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/purple_violets1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_violets2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_violets3"
-          ]
-        }
+        {"textures": ["flowers/purple_violets1"]},
+        {"textures": ["flowers/purple_violets2"]},
+        {"textures": ["flowers/purple_violets3"]}
       ]
     },
     {
@@ -12004,27 +12052,14 @@
       "blockType": "plant",
       "type": "layerSensitive",
       "stepSound": "grass",
-
       "material": "plants",
       "creativeTab": "WesterosFlowers",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "White Chamomile",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/white_chamomile1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/white_chamomile2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/white_chamomile3"
-          ]
-        }
+        {"textures": ["flowers/white_chamomile1"]},
+        {"textures": ["flowers/white_chamomile2"]},
+        {"textures": ["flowers/white_chamomile3"]}
       ]
     },
     {
@@ -12068,26 +12103,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Tulips",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/red_tulips1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_tulips2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_tulips3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_tulips4"
-          ]
-        }
+        {"textures": ["flowers/red_tulips1"]},
+        {"textures": ["flowers/red_tulips2"]},
+        {"textures": ["flowers/red_tulips3"]},
+        {"textures": ["flowers/red_tulips4"]}
       ]
     },
     {
@@ -12164,26 +12183,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Purple Alpine Sow-thistle",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/purple_alpine_sowthistle/side1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_alpine_sowthistle/side2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_alpine_sowthistle/side3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_alpine_sowthistle/side4"
-          ]
-        }
+        {"textures": ["flowers/purple_alpine_sowthistle/side1"]},
+        {"textures": ["flowers/purple_alpine_sowthistle/side2"]},
+        {"textures": ["flowers/purple_alpine_sowthistle/side3"]},
+        {"textures": ["flowers/purple_alpine_sowthistle/side4"]}
       ]
     },
     {
@@ -12234,26 +12237,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Carnations",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/red_carnations1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_carnations2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_carnations3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_carnations4"
-          ]
-        }
+        {"textures": ["flowers/red_carnations1"]},
+        {"textures": ["flowers/red_carnations2"]},
+        {"textures": ["flowers/red_carnations3"]},
+        {"textures": ["flowers/red_carnations4"]}
       ]
     },
     {
@@ -12304,26 +12291,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Magenta Roses",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/magenta_roses1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/magenta_roses2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/magenta_roses3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/magenta_roses4"
-          ]
-        }
+        {"textures": ["flowers/magenta_roses1"]},
+        {"textures": ["flowers/magenta_roses2"]},
+        {"textures": ["flowers/magenta_roses3"]},
+        {"textures": ["flowers/magenta_roses4"]}
       ]
     },
     {
@@ -12400,21 +12371,9 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Blue Orchid",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/blue_orchid1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/blue_orchid2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/blue_orchid3"
-          ]
-        }
+        {"textures": ["flowers/blue_orchid1"]},
+        {"textures": ["flowers/blue_orchid2"]},
+        {"textures": ["flowers/blue_orchid3"]}
       ]
     },
     {
@@ -12484,26 +12443,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Pink Tulips",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/pink_tulips1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_tulips2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_tulips3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_tulips4"
-          ]
-        }
+        {"textures": ["flowers/pink_tulips1"]},
+        {"textures": ["flowers/pink_tulips2"]},
+        {"textures": ["flowers/pink_tulips3"]},
+        {"textures": ["flowers/pink_tulips4"]}
       ]
     },
     {
@@ -12554,16 +12497,8 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Cranberry Bush",
       "randomTextures": [
-        {
-          "textures": [
-            "cranberry/base1"
-          ]
-        },
-        {
-          "textures": [
-            "cranberry/base2"
-          ]
-        }
+        {"textures": ["cranberry/base1"]},
+        {"textures": ["cranberry/base2"]}
       ]
     },
     {
@@ -12576,21 +12511,9 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Purple Lavender",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/purple_lavender1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_lavender2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/purple_lavender3"
-          ]
-        }
+        {"textures": ["flowers/purple_lavender1"]},
+        {"textures": ["flowers/purple_lavender2"]},
+        {"textures": ["flowers/purple_lavender3"]}
       ]
     },
     {
@@ -12634,16 +12557,8 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Sourleaf Bush",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/red_sourleaf_bush1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/red_sourleaf_bush2"
-          ]
-        }
+        {"textures": ["flowers/red_sourleaf_bush1"]},
+        {"textures": ["flowers/red_sourleaf_bush2"]}
       ]
     },
     {
@@ -12732,26 +12647,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Pink Roses",
       "randomTextures": [
-        {
-          "textures": [
-            "flowers/pink_roses1"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_roses2"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_roses3"
-          ]
-        },
-        {
-          "textures": [
-            "flowers/pink_roses4"
-          ]
-        }
+        {"textures": ["flowers/pink_roses1"]},
+        {"textures": ["flowers/pink_roses2"]},
+        {"textures": ["flowers/pink_roses3"]},
+        {"textures": ["flowers/pink_roses4"]}
       ]
     },
     {
@@ -13218,46 +13117,14 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Unshaded Grass",
       "randomTextures": [
-        {
-          "textures": [
-            "deadbush/side1"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/side2"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/side3"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/side4"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/side5"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/side6"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/side7"
-          ]
-        },
-        {
-          "textures": [
-            "deadbush/side8"
-          ]
-        }
+        {"textures": ["deadbush/side1"]},
+        {"textures": ["deadbush/side2"]},
+        {"textures": ["deadbush/side3"]},
+        {"textures": ["deadbush/side4"]},
+        {"textures": ["deadbush/side5"]},
+        {"textures": ["deadbush/side6"]},
+        {"textures": ["deadbush/side7"]},
+        {"textures": ["deadbush/side8"]}
       ]
     },
     {
@@ -14558,42 +14425,6 @@
       "type": "allow-unsupported"
     },
     {
-      "blockName": "terracotta_sand_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Terracotta Sand Layer",
-      "textures": [
-        "sand_block/sand_terracotta"
-      ]
-    },
-    {
-      "blockName": "pinkorange_sand_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pink/Orange Sand Layer",
-      "textures": [
-        "sand_block/sand_pinkorange"
-      ]
-    },
-    {
-      "blockName": "red_sand_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Red Sand Layer",
-      "textures": [
-        "sand_block/sand_red"
-      ]
-    },
-    {
       "blockName": "dorne_carved_stone_window",
       "blockType": "pane",
       "hardness": 1,
@@ -14604,7 +14435,7 @@
       "type": "legacy-model,unconnect:false",
       "label": "Dorne Carved Stone Window",
       "textures": [
-        "glass_pane_block/moorish_stone_window_pane"
+        "pane_block/moorish_stone_window_pane"
       ]
     },
     {
@@ -14618,7 +14449,7 @@
       "type": "legacy-model,unconnect:false",
       "label": "Dorne Carved Wooden Window",
       "textures": [
-        "glass_pane_block/moorish_wood_window_pane"
+        "pane_block/moorish_wood_window_pane"
       ]
     },
     {
@@ -14664,214 +14495,6 @@
       ]
     },
     {
-      "blockName": "reach_gravel",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Reach Gravel",
-      "randomTextures": [
-        {
-          "textures": [
-            "reach_gravel/side1"
-          ],
-          "weight": 10
-        },
-        {
-          "textures": [
-            "reach_gravel/side2"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side3"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side4"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side5"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side6"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side7"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side8"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side9"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side10"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side11"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side12"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side13"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side14"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side15"
-          ],
-          "weight": 1
-        },
-        {
-          "textures": [
-            "reach_gravel/side16"
-          ],
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "blockName": "dorne_dry_soil",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Dorne Dry Soil",
-      "textures": [
-        "dorne_dry_soil/side"
-      ]
-    },
-    {
-      "blockName": "dorne_dusty_dirt",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Dorne Dusty Dirt",
-      "randomTextures": [
-        {
-          "textures": [
-            "dorne_dusty_dirt/side1"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side2"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side3"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side4"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side5"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side6"
-          ],
-          "weight": 153
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side7"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side8"
-          ],
-          "weight": 20
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side9"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side10"
-          ],
-          "weight": 77
-        }
-      ]
-    },
-    {
-      "blockName": "ash",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosMisc",
-      "label": "Ash",
-      "textures": [
-        "dirt/ground",
-        "ground_block/ash_top",
-        "ground_block/ash"
-      ]
-    },
-    {
       "blockName": "flagstone",
       "blockType": "solid",
       "hardness": 2,
@@ -14882,32 +14505,6 @@
       "label": "Flagstone",
       "textures": [
         "stone_block/flagstone"
-      ]
-    },
-    {
-      "blockName": "muddy_sand",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Muddy Sand",
-      "textures": [
-        "muddy_sand/side"
-      ]
-    },
-    {
-      "blockName": "grassy_sand",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Grassy Sand",
-      "textures": [
-        "grassy_sand/side"
       ]
     },
     {
@@ -15033,46 +14630,14 @@
       "creativeTab": "WesterosGrassesShrubs",
       "label": "Cattails",
       "randomTextures": [
-        {
-          "textures": [
-            "cattails/side1"
-          ]
-        },
-        {
-          "textures": [
-            "cattails/side2"
-          ]
-        },
-        {
-          "textures": [
-            "cattails/side3"
-          ]
-        },
-        {
-          "textures": [
-            "cattails/side4"
-          ]
-        },
-        {
-          "textures": [
-            "cattails/side5"
-          ]
-        },
-        {
-          "textures": [
-            "cattails/side6"
-          ]
-        },
-        {
-          "textures": [
-            "cattails/side7"
-          ]
-        },
-        {
-          "textures": [
-            "cattails/side8"
-          ]
-        }
+        {"textures": ["cattails/side1"]},
+        {"textures": ["cattails/side2"]},
+        {"textures": ["cattails/side3"]},
+        {"textures": ["cattails/side4"]},
+        {"textures": ["cattails/side5"]},
+        {"textures": ["cattails/side6"]},
+        {"textures": ["cattails/side7"]},
+        {"textures": ["cattails/side8"]}
       ],
       "colorMult": "textures/colormap/reed",
       "type": "no-in-web,layerSensitive"
@@ -15155,21 +14720,9 @@
       "label": "Dead Bush",
       "colorMult": "textures/colormap/deadbush",
       "randomTextures": [
-        {
-          "textures": [
-            "dorne_bush_thorny/side1"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_bush_thorny/side2"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_bush_thorny/side3"
-          ]
-        }
+        {"textures": ["dorne_bush_thorny/side1"]},
+        {"textures": ["dorne_bush_thorny/side2"]},
+        {"textures": ["dorne_bush_thorny/side3"]}
       ]
     },
     {
@@ -15201,22 +14754,6 @@
             "dorne_bush_thorny/side3"
           ]
         }
-      ]
-    },
-    {
-      "blockName": "white_stained_clay",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "grass",
-      "material": "clay",
-      "resistance": 5,
-      "creativeTab": "WesterosSandGravel",
-      "label": "White Stained Clay",
-      "overlayTextures": [
-        "terrainset_overlays/white_stained_clay_overlay"
-      ],
-      "textures": [
-        "clay/white_stained_clay"
       ]
     },
     {
@@ -15921,7 +15458,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosClothFibers",
+      "creativeTab": "WesterosDecor",
       "label": "Closed Basket",
       "textures": [
         "crate_block/basket_bottom",
@@ -15936,7 +15473,7 @@
       "stepSound": "cloth",
       "material": "cloth",
       "resistance": 5,
-      "creativeTab": "WesterosClothFibers",
+      "creativeTab": "WesterosDecor",
       "label": "Open Basket",
       "textures": [
         "crate_block/basket_bottom",
@@ -17102,52 +16639,6 @@
       "type": "no-in-web"
     },
     {
-      "blockName": "dead_rat",
-      "blockType": "web",
-      "stepSound": "cloth",
-      "material": "web",
-      "creativeTab": "WesterosFoodBlocks",
-      "label": "Dead Rat",
-      "randomTextures": [
-        {
-          "textures": [
-            "dead_rat/rat1"
-          ]
-        },
-        {
-          "textures": [
-            "dead_rat/rat2"
-          ]
-        },
-        {
-          "textures": [
-            "dead_rat/rat3"
-          ]
-        },
-        {
-          "textures": [
-            "dead_rat/rat4"
-          ]
-        },
-        {
-          "textures": [
-            "dead_rat/rat5"
-          ]
-        },
-        {
-          "textures": [
-            "dead_rat/rat6"
-          ]
-        },
-        {
-          "textures": [
-            "dead_rat/rat7"
-          ]
-        }
-      ],
-      "type": "no-in-web"
-    },
-    {
       "blockName": "closed_basket_slab",
       "blockType": "slab",
       "hardness": 2,
@@ -17155,7 +16646,7 @@
       "material": "cloth",
       "resistance": 2,
       "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosClothFibers",
+      "creativeTab": "WesterosDecor",
       "label": "Closed Basket Slab",
       "textures": [
         "crate_block/basket_bottom",
@@ -17171,7 +16662,7 @@
       "material": "cloth",
       "resistance": 2,
       "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosClothFibers",
+      "creativeTab": "WesterosDecor",
       "label": "Open Basket Slab",
       "textures": [
         "crate_block/basket_bottom",
@@ -18092,278 +17583,6 @@
       ]
     },
     {
-      "blockName": "stained_glass_red",
-      "blockType": "solid",
-      "creativeTab": "WesterosWindowsGlass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "glass",
-      "material": "glass",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stained Glass Red",
-      "textures": [
-        "glass_red/glass_red"
-      ]
-    },
-    {
-      "blockName": "stained_glass_orange",
-      "blockType": "solid",
-      "creativeTab": "WesterosWindowsGlass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "glass",
-      "material": "glass",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stained Glass Orange",
-      "textures": [
-        "glass_orange/glass_orange"
-      ]
-    },
-    {
-      "blockName": "stained_glass_yellow",
-      "blockType": "solid",
-      "creativeTab": "WesterosWindowsGlass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "glass",
-      "material": "glass",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stained Glass Yellow",
-      "textures": [
-        "glass_yellow/glass_yellow"
-      ]
-    },
-    {
-      "blockName": "stained_glass_green",
-      "blockType": "solid",
-      "creativeTab": "WesterosWindowsGlass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "glass",
-      "material": "glass",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stained Glass Green",
-      "textures": [
-        "glass_green/glass_green"
-      ]
-    },
-    {
-      "blockName": "stained_glass_blue",
-      "blockType": "solid",
-      "creativeTab": "WesterosWindowsGlass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "glass",
-      "material": "glass",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stained Glass Blue",
-      "textures": [
-        "glass_blue/glass_blue"
-      ]
-    },
-    {
-      "blockName": "stained_glass_purple",
-      "blockType": "solid",
-      "creativeTab": "WesterosWindowsGlass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "glass",
-      "material": "glass",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stained Glass Purple",
-      "textures": [
-        "glass_purple/glass_purple"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pink",
-      "blockType": "solid",
-      "creativeTab": "WesterosWindowsGlass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "glass",
-      "material": "glass",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stained Glass Pink",
-      "textures": [
-        "glass_pink/glass_pink"
-      ]
-    },
-    {
-      "blockName": "stained_glass_black",
-      "blockType": "solid",
-      "creativeTab": "WesterosWindowsGlass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "hardness": 2,
-      "stepSound": "glass",
-      "material": "glass",
-      "resistance": 10,
-      "lightOpacity": 0,
-      "label": "Stained Glass Black",
-      "textures": [
-        "glass_black/glass_black"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pane_red",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Stained Glass Pane Red",
-      "textures": [
-        "glass_red/glass_pane_red"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pane_orange",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Stained Glass Pane Orange",
-      "textures": [
-        "glass_orange/glass_pane_orange"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pane_yellow",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Stained Glass Pane Yellow",
-      "textures": [
-        "glass_yellow/glass_pane_yellow"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pane_green",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Stained Glass Pane Green",
-      "textures": [
-        "glass_green/glass_pane_green"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pane_blue",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Stained Glass Pane Blue",
-      "textures": [
-        "glass_blue/glass_pane_blue"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pane_purple",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Stained Glass Pane Purple",
-      "textures": [
-        "glass_purple/glass_pane_purple"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pane_pink",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Stained Glass Pane Pink",
-      "textures": [
-        "glass_pink/glass_pane_pink"
-      ]
-    },
-    {
-      "blockName": "stained_glass_pane_black",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Stained Glass Pane Black",
-      "textures": [
-        "glass_black/glass_pane_black"
-      ]
-    },
-    {
       "blockName": "red_keep_secret_door",
       "blockType": "door",
       "hardness": 7,
@@ -18623,7 +17842,7 @@
       "material": "wood",
       "resistance": 2,
       "harvestLevel": [{ "tool": "axe", "level": 1 }],
-      "creativeTab": "WesterosMisc",
+      "creativeTab": "WesterosDecor",
       "label": "City Profession: Armorer",
       "lightOpacity": 0,
       "randomTextures": [
@@ -21398,16 +20617,8 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Cow Parsely",
       "randomTextures": [
-        {
-          "textures": [
-            "cow_parsely/side1"
-          ]
-        },
-        {
-          "textures": [
-            "cow_parsely/side2"
-          ]
-        }
+        {"textures": ["cow_parsely/side1"]},
+        {"textures": ["cow_parsely/side2"]}
       ]
     },
     {
@@ -21444,46 +20655,14 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Bracken",
       "randomTextures": [
-        {
-          "textures": [
-            "bracken/side1"
-          ]
-        },
-        {
-          "textures": [
-            "bracken/side2"
-          ]
-        },
-        {
-          "textures": [
-            "bracken/side3"
-          ]
-        },
-        {
-          "textures": [
-            "bracken/side4"
-          ]
-        },
-        {
-          "textures": [
-            "bracken/side5"
-          ]
-        },
-        {
-          "textures": [
-            "bracken/side6"
-          ]
-        },
-        {
-          "textures": [
-            "bracken/side7"
-          ]
-        },
-        {
-          "textures": [
-            "bracken/side8"
-          ]
-        }
+        {"textures": ["bracken/side1"]},
+        {"textures": ["bracken/side2"]},
+        {"textures": ["bracken/side3"]},
+        {"textures": ["bracken/side4"]},
+        {"textures": ["bracken/side5"]},
+        {"textures": ["bracken/side6"]},
+        {"textures": ["bracken/side7"]},
+        {"textures": ["bracken/side8"]}
       ]
     },
     {
@@ -21562,26 +20741,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Lady Fern",
       "randomTextures": [
-        {
-          "textures": [
-            "lady_fern/side1"
-          ]
-        },
-        {
-          "textures": [
-            "lady_fern/side2"
-          ]
-        },
-        {
-          "textures": [
-            "lady_fern/side3"
-          ]
-        },
-        {
-          "textures": [
-            "lady_fern/side4"
-          ]
-        }
+        {"textures": ["lady_fern/side1"]},
+        {"textures": ["lady_fern/side2"]},
+        {"textures": ["lady_fern/side3"]},
+        {"textures": ["lady_fern/side4"]}
       ]
     },
     {
@@ -21632,21 +20795,9 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Nettle",
       "randomTextures": [
-        {
-          "textures": [
-            "nettle/side1"
-          ]
-        },
-        {
-          "textures": [
-            "nettle/side2"
-          ]
-        },
-        {
-          "textures": [
-            "nettle/side3"
-          ]
-        }
+        {"textures": ["nettle/side1"]},
+        {"textures": ["nettle/side2"]},
+        {"textures": ["nettle/side3"]}
       ]
     },
     {
@@ -21690,66 +20841,18 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Dead Bracken",
       "randomTextures": [
-        {
-          "textures": [
-            "dead_bracken/side1"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side2"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side3"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side4"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side5"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side6"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side7"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side8"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side9"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side10"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side11"
-          ]
-        },
-        {
-          "textures": [
-            "dead_bracken/side12"
-          ]
-        }
+        {"textures": ["dead_bracken/side1"]},
+        {"textures": ["dead_bracken/side2"]},
+        {"textures": ["dead_bracken/side3"]},
+        {"textures": ["dead_bracken/side4"]},
+        {"textures": ["dead_bracken/side5"]},
+        {"textures": ["dead_bracken/side6"]},
+        {"textures": ["dead_bracken/side7"]},
+        {"textures": ["dead_bracken/side8"]},
+        {"textures": ["dead_bracken/side9"]},
+        {"textures": ["dead_bracken/side10"]},
+        {"textures": ["dead_bracken/side11"]},
+        {"textures": ["dead_bracken/side12"]}
       ]
     },
     {
@@ -21856,26 +20959,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Fireweed",
       "randomTextures": [
-        {
-          "textures": [
-            "fireweed/side1"
-          ]
-        },
-        {
-          "textures": [
-            "fireweed/side2"
-          ]
-        },
-        {
-          "textures": [
-            "fireweed/side3"
-          ]
-        },
-        {
-          "textures": [
-            "fireweed/side4"
-          ]
-        }
+        {"textures": ["fireweed/side1"]},
+        {"textures": ["fireweed/side2"]},
+        {"textures": ["fireweed/side3"]},
+        {"textures": ["fireweed/side4"]}
       ]
     },
     {
@@ -21926,26 +21013,10 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Heather",
       "randomTextures": [
-        {
-          "textures": [
-            "heather/side1"
-          ]
-        },
-        {
-          "textures": [
-            "heather/side2"
-          ]
-        },
-        {
-          "textures": [
-            "heather/side3"
-          ]
-        },
-        {
-          "textures": [
-            "heather/side4"
-          ]
-        }
+        {"textures": ["heather/side1"]},
+        {"textures": ["heather/side2"]},
+        {"textures": ["heather/side3"]},
+        {"textures": ["heather/side4"]}
       ]
     },
     {
@@ -21996,21 +21067,9 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Red Fern",
       "randomTextures": [
-        {
-          "textures": [
-            "red_fern/side1"
-          ]
-        },
-        {
-          "textures": [
-            "red_fern/side2"
-          ]
-        },
-        {
-          "textures": [
-            "red_fern/side3"
-          ]
-        }
+        {"textures": ["red_fern/side1"]},
+        {"textures": ["red_fern/side2"]},
+        {"textures": ["red_fern/side3"]}
       ]
     },
     {
@@ -22054,16 +21113,8 @@
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
       "label": "Dock Leaf",
       "randomTextures": [
-        {
-          "textures": [
-            "dock_leaf/side1"
-          ]
-        },
-        {
-          "textures": [
-            "dock_leaf/side2"
-          ]
-        }
+        {"textures": ["dock_leaf/side1"]},
+        {"textures": ["dock_leaf/side2"]}
       ]
     },
     {
@@ -22377,591 +21428,6 @@
         "wight_head/north"
       ],
       "boundingBox": {"xMin": 0.25, "xMax": 0.75, "yMin": 0, "yMax": 0.5, "zMin": 0.25, "zMax": 0.75}
-    },
-    {
-      "blockName": "pebbles_wet_eastern_islands",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Eastern Islands",
-      "colorMult": "textures/colormap/easternisland",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_eastern_islands/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_eastern_islands/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_eastern_islands/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_iron_islands",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Iron Islands",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_iron_islands/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_iron_islands/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_iron_islands/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_mountains_of_the_moon",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Mountains of the Moon",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_vale/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_vale/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_vale/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_the_north",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet The North",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_north/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_north/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_north/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_ocean_rocks",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Ocean Rocks",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_ocean/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_ocean/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_ocean/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_red_mountains",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Red Mountains",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_red_mountains/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_red_mountains/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_red_mountains/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_river_rocks",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet River Rocks",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_river/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_river/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_river/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_westerlands",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Westerlands",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_westerlands/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_westerlands/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_westerlands/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_arbor_dorne",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Arbor Dorne",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_dorne/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_dorne/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_dorne/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_stormlands",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Stormlands",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_stormlands/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_stormlands/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_stormlands/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_reach",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Reach",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_reach/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_reach/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_reach/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_eastern_islands_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Eastern Islands Layer",
-      "colorMult": "textures/colormap/easternisland",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_eastern_islands/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_eastern_islands/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_eastern_islands/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_iron_islands_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Iron Islands Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_iron_islands/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_iron_islands/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_iron_islands/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_mountains_of_the_moon_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Mountains of the Moon Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_vale/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_vale/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_vale/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_north_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet North Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_north/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_north/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_north/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_ocean_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Ocean Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_ocean/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_ocean/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_ocean/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_red_mountains_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Red Mountains Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_red_mountains/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_red_mountains/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_red_mountains/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_river_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet River Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_river/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_river/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_river/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_westerlands_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Westerlands Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_westerlands/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_westerlands/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_westerlands/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_arbor_dorne_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Arbor Dorne Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_dorne/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_dorne/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_dorne/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_stormlands_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Stormlands Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_stormlands/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_stormlands/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_stormlands/wet3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_wet_reach_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Wet Reach Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_reach/wet1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_reach/wet2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_reach/wet3"
-          ]
-        }
-      ]
     },
     {
       "blockName": "highgarden_green_plaster",
@@ -23784,628 +22250,6 @@
       ]
     },
     {
-      "blockName": "pebbles_dry_eastern_islands",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Eastern Islands",
-      "colorMult": "textures/colormap/easternisland",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_eastern_islands/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_eastern_islands/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_eastern_islands/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_iron_islands",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Iron Islands",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_iron_islands/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_iron_islands/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_iron_islands/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_mountains_of_the_moon",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Mountains of the Moon",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_vale/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_vale/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_vale/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_the_north",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry The North",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_north/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_north/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_north/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_ocean_rocks",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Ocean Rocks",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_ocean/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_ocean/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_ocean/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_red_mountains",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Red Mountains",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_red_mountains/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_red_mountains/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_red_mountains/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_river_rocks",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry River Rocks",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_river/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_river/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_river/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_westerlands",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Westerlands",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_westerlands/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_westerlands/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_westerlands/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_arbor_dorne",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Arbor Dorne",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_dorne/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_dorne/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_dorne/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_stormlands",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Stormlands",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_stormlands/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_stormlands/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_stormlands/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_reach",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 10,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Reach",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_reach/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_reach/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_reach/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_eastern_islands_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Eastern Islands Layer",
-      "colorMult": "textures/colormap/easternisland",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_eastern_islands/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_eastern_islands/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_eastern_islands/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_iron_islands_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Iron Islands Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_iron_islands/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_iron_islands/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_iron_islands/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_mountains_of_the_moon_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Mountains of the Moon Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_vale/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_vale/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_vale/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_north_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry North Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_north/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_north/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_north/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_ocean_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Ocean Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_ocean/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_ocean/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_ocean/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_red_mountains_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Red Mountains Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_red_mountains/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_red_mountains/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_red_mountains/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_river_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry River Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_river/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_river/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_river/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_westerlands_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Westerlands Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_westerlands/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_westerlands/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_westerlands/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_arbor_dorne_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Arbor Dorne Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_dorne/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_dorne/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_dorne/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_stormlands_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Stormlands Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_stormlands/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_stormlands/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_stormlands/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "pebbles_dry_reach_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "gravel",
-      "material": "ground",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Pebbles Dry Reach Layer",
-      "randomTextures": [
-        {
-          "textures": [
-            "pebble_reach/dry1"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_reach/dry2"
-          ]
-        },
-        {
-          "textures": [
-            "pebble_reach/dry3"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "wet_sand_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Wet Sand Layer",
-      "textures": [
-        "sand_block/sand_wet"
-      ]
-    },
-    {
-      "blockName": "sand_stones_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Sand Stones Layer",
-      "colorMult": "textures/colormap/sand",
-      "textures": [
-        "sand_block/sand_stones"
-      ]
-    },
-    {
-      "blockName": "wet_sand_stones_layer",
-      "blockType": "layer",
-      "hardness": 0.5,
-      "stepSound": "sand",
-      "material": "sand",
-      "creativeTab": "WesterosSandGravel",
-      "label": "Wet Sand Stones Layer",
-      "textures": [
-        "sand_block/sand_wet_stones"
-      ]
-    },
-    {
       "blockName": "arbor_brick_ornate",
       "blockType": "solid",
       "hardness": 5,
@@ -25199,7 +23043,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Snowy Spruce Leaves",
       "rotateRandom": true,
       "textures": [
@@ -25214,7 +23058,7 @@
       "stepSound": "grass",
       "material": "leaves",
       "type": "no-decay,better-foliage",
-      "creativeTab": "WesterosLeaves",
+      "creativeTab": "WesterosFoliage",
       "label": "Snowy Weirwood Leaves",
       "rotateRandom": true,
       "textures": [
@@ -25222,61 +23066,6 @@
         "leaves_weirwood/leaves_weirwood_snowy",
         "leaves_weirwood/leaves_bf_weirwood_snowy"
       ]
-    },
-    {
-      "blockName": "jasmine_vines",
-      "blockType": "vines",
-      "stepSound": "grass",
-      "material": "plants",
-      "creativeTab": "WesterosDecor",
-      "label": "Jasmine Vines",
-      "randomTextures": [
-        {
-          "textures": [
-            "jasmine_vines/side1",
-            "jasmine_vines/side1"
-          ]
-        },
-        {
-          "textures": [
-            "jasmine_vines/side2",
-            "jasmine_vines/side2"
-          ]
-        },
-        {
-          "textures": [
-            "jasmine_vines/side3",
-            "jasmine_vines/side3"
-          ]
-        },
-        {
-          "textures": [
-            "jasmine_vines/side4",
-            "jasmine_vines/side4"
-          ]
-        },
-        {
-          "textures": [
-            "jasmine_vines/side5",
-            "jasmine_vines/side5"
-          ]
-        }
-      ],
-      "type": "allow-unsupported,no-climb,has-down"
-    },
-    {
-      "blockName": "dappled_moss",
-      "blockType": "vines",
-      "stepSound": "grass",
-      "material": "plants",
-      "creativeTab": "WesterosMisc",
-      "label": "Dappled Moss",
-      "colorMult": "textures/colormap/moss_dappled",
-      "textures": [
-        "dappled_moss/dappled",
-        "dappled_moss/dappled"
-      ],
-      "type": "allow-unsupported,no-climb,has-down"
     },
     {
       "blockName": "timber_oak_lannisport_brick_crosshatch",
@@ -26262,380 +24051,6 @@
       ]
     },
     {
-      "blockName": "path_dirt",
-      "blockType": "cuboid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Path Dirt",
-      "randomTextures": [
-        {
-          "textures": [
-            "dirt_path/top_bot1",
-            "dirt_path/top_bot1",
-            "dirt_path/ground"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "dirt_path/top_bot2",
-            "dirt_path/top_bot2",
-            "dirt_path/ground"
-          ],
-          "weight": 33
-        },
-        {
-          "textures": [
-            "dirt_path/top_bot3",
-            "dirt_path/top_bot3",
-            "dirt_path/ground"
-          ],
-          "weight": 45
-        },
-        {
-          "textures": [
-            "dirt_path/top_bot4",
-            "dirt_path/top_bot4",
-            "dirt_path/ground"
-          ],
-          "weight": 140
-        },
-        {
-          "textures": [
-            "dirt_path/top_bot5",
-            "dirt_path/top_bot5",
-            "dirt_path/ground"
-          ],
-          "weight": 193
-        },
-        {
-          "textures": [
-            "dirt_path/top_bot6",
-            "dirt_path/top_bot6",
-            "dirt_path/ground"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dirt_path/top_bot7",
-            "dirt_path/top_bot7",
-            "dirt_path/ground"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "dirt_path/top_bot8",
-            "dirt_path/top_bot8",
-            "dirt_path/ground"
-          ],
-          "weight": 77
-        }
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.9375,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [0, 0, 0, 0, 0, 0]
-        }
-      ]
-    },
-    {
-      "blockName": "path_gravel",
-      "blockType": "cuboid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Path Gravel",
-      "randomTextures": [
-        {
-          "textures": [
-            "gravel/gravel1"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "gravel/gravel2"
-          ],
-          "weight": 33
-        },
-        {
-          "textures": [
-            "gravel/gravel4"
-          ],
-          "weight": 45
-        },
-        {
-          "textures": [
-            "gravel/gravel5"
-          ],
-          "weight": 140
-        },
-        {
-          "textures": [
-            "gravel/gravel6"
-          ],
-          "weight": 193
-        },
-        {
-          "textures": [
-            "gravel/gravel7"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "gravel/gravel9"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "gravel/gravel10"
-          ],
-          "weight": 77
-        }
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.9375,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [0, 0, 0, 0, 0, 0]
-        }
-      ]
-    },
-    {
-      "blockName": "path_reach_gravel",
-      "blockType": "cuboid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosSandGravel",
-      "label": "Path Reach Gravel",
-      "randomTextures": [
-        {
-          "textures": [
-            "reach_gravel/side1"
-          ],
-          "weight": 100
-        },
-        {
-          "textures": [
-            "reach_gravel/side2"
-          ],
-          "weight": 33
-        },
-        {
-          "textures": [
-            "reach_gravel/side3"
-          ],
-          "weight": 45
-        },
-        {
-          "textures": [
-            "reach_gravel/side4"
-          ],
-          "weight": 140
-        },
-        {
-          "textures": [
-            "reach_gravel/side5"
-          ],
-          "weight": 193
-        },
-        {
-          "textures": [
-            "reach_gravel/side6"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side7"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side8"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side9"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side10"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side11"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side12"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side13"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side14"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side15"
-          ],
-          "weight": 77
-        },
-        {
-          "textures": [
-            "reach_gravel/side16"
-          ],
-          "weight": 77
-        }
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.9375,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [0, 0, 0, 0, 0, 0]
-        }
-      ]
-    },
-    {
-      "blockName": "path_dorne_dusty_dirt",
-      "blockType": "cuboid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Path Dorne Dusty Dirt",
-      "randomTextures": [
-        {
-          "textures": [
-            "dorne_dusty_dirt/side1"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side2"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side3"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side4"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side5"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side6"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side7"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side8"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side9"
-          ]
-        },
-        {
-          "textures": [
-            "dorne_dusty_dirt/side10"
-          ]
-        }
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.9375,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [0, 0, 0, 0, 0, 0]
-        }
-      ]
-    },
-    {
-      "blockName": "path_dorne_dry_soil",
-      "blockType": "cuboid",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Path Dorne Dry Soil",
-      "textures": [
-        "dorne_dry_soil/side"
-      ],
-      "cuboids": [
-        {
-          "xMin": 0,
-          "xMax": 1,
-          "yMin": 0,
-          "yMax": 0.9375,
-          "zMin": 0,
-          "zMax": 1,
-          "sideTextures": [0, 0, 0, 0, 0, 0]
-        }
-      ]
-    },
-    {
       "blockName": "redwyne_banner",
       "blockType": "cuboid-nsew-stack",
       "hardness": 1,
@@ -27327,7 +24742,7 @@
       "stepSound": "grass",
       "material": "ground",
       "resistance": 2,
-      "creativeTab": "WesterosDecor",
+      "creativeTab": "WesterosFoliage",
       "label": "Lily Pad",
       "rotateRandom": true,
       "randomTextures": [
@@ -27500,20 +24915,6 @@
         "firewood/side2",
         "firewood/side2",
         "firewood/top"
-      ]
-    },
-    {
-      "blockName": "dorne_dry_soil_slab",
-      "blockType": "slab",
-      "hardness": 2,
-      "stepSound": "gravel",
-      "material": "ground",
-      "resistance": 2,
-      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
-      "creativeTab": "WesterosGrassDirt",
-      "label": "Dorne Dry Soil Slab",
-      "textures": [
-        "dorne_dry_soil/side"
       ]
     },
     {
@@ -27952,25 +25353,6 @@
       "textures": [
         "bars_iron_block/iron_bars",
         "transparent"
-      ]
-    },
-    {
-      "blockName": "glass_pane",
-      "blockType": "pane",
-      "hardness": 2,
-      "stepSound": "glass",
-      "nonOpaque": true,
-      "alphaRender": true,
-      "lightOpacity": 0,
-      "material": "glass",
-      "resistance": 10,
-      "type": "legacy-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
-      "creativeTab": "WesterosWindowsGlass",
-      "label": "Glass Pane",
-      "textures": [
-        "glass/glass",
-        "glass/glass_pane_top"
       ]
     }
   ]

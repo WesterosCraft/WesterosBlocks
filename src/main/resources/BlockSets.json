@@ -1959,7 +1959,7 @@
     "stepSound": "grass",
     "material": "plants",
     "resistance": 5,
-    "creativeTab": "WesterosMisc",
+    "creativeTab": "WesterosFoliage",
     "baseLabel": "Cushion Moss",
     "randomTextures": [
       {"textures": {"all": "moss_cushion/all1"}},
@@ -2097,6 +2097,23 @@
     "baseLabel": "Quartz",
     "textures": {
       "all": "marble/quartz/all"
+    }
+  },
+  {
+    "baseBlockName": "white_stained_clay",
+    "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+    "hardness": 5,
+    "stepSound": "stone",
+    "material": "rock",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+    "creativeTab": "WesterosMarblePlaster",
+    "baseLabel": "White Marble",
+    "textures": {
+      "all": "marble/white/all"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/white_stained_clay_overlay"
     }
   },
   {
@@ -3055,6 +3072,20 @@
     }
   },
   {
+    "baseBlockName": "leather",
+    "variants": ["solid", "stairs", "slab", "wall"],
+    "hardness": 2,
+    "stepSound": "cloth",
+    "material": "cloth",
+    "resistance": 4,
+    "harvestLevel": [{ "tool": "axe", "level": 1 }],
+    "creativeTab": "WesterosClothFibers",
+    "baseLabel": "Leather",
+    "textures": {
+      "all": "leather_block/leather"
+    }
+  },
+  {
     "baseBlockName": "thatch_light_fur",
     "variants": ["solid", "stairs", "slab", "wall", "fence", "tip", "carpet"],
     "altNames": {
@@ -3159,12 +3190,12 @@
     "baseLabel": "Snow",
     "ambientOcclusion": false,
     "textures": {
-      "bottom": "snow_slab/top_bottom",
-      "top": "snow_slab/top_bottom",
-      "west": "snow_slab/north_south",
-      "east": "snow_slab/north_south",
-      "south": "snow_slab/east_west",
-      "north": "snow_slab/east_west"
+      "bottom": "snow/top_bottom",
+      "top": "snow/top_bottom",
+      "west": "snow/north_south",
+      "east": "snow/north_south",
+      "south": "snow/east_west",
+      "north": "snow/east_west"
     }
   },
   {
@@ -3268,6 +3299,1054 @@
         "mances_camp_mances_tent/outside",
         "mances_camp_common_tent/inside"
       ]
+    }
+  },
+  {
+    "baseBlockName": "glass",
+    "variants": ["solid", "pane"],
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Glass",
+    "textures": {
+      "all": "glass/normal/all"
+    },
+    "altTextures": {
+      "pane": ["glass/normal/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "stained_glass_black",
+    "variants": ["solid", "pane"],
+    "altNames": {
+      "pane": "stained_glass_pane_black"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Black",
+    "textures": {
+      "all": "glass/black/all"
+    },
+    "altTextures": {
+      "pane": ["glass/black/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "stained_glass_red",
+    "variants": ["solid", "pane"],
+    "altNames": {
+      "pane": "stained_glass_pane_red"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Red",
+    "textures": {
+      "all": "glass/red/all"
+    },
+    "altTextures": {
+      "pane": ["glass/red/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "stained_glass_orange",
+    "variants": ["solid", "pane"],
+    "altNames": {
+      "pane": "stained_glass_pane_orange"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Orange",
+    "textures": {
+      "all": "glass/orange/all"
+    },
+    "altTextures": {
+      "pane": ["glass/orange/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "stained_glass_yellow",
+    "variants": ["solid", "pane"],
+    "altNames": {
+      "pane": "stained_glass_pane_yellow"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Yellow",
+    "textures": {
+      "all": "glass/yellow/all"
+    },
+    "altTextures": {
+      "pane": ["glass/yellow/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "stained_glass_green",
+    "variants": ["solid", "pane"],
+    "altNames": {
+      "pane": "stained_glass_pane_green"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Green",
+    "textures": {
+      "all": "glass/green/all"
+    },
+    "altTextures": {
+      "pane": ["glass/green/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "stained_glass_blue",
+    "variants": ["solid", "pane"],
+    "altNames": {
+      "pane": "stained_glass_pane_blue"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Blue",
+    "textures": {
+      "all": "glass/blue/all"
+    },
+    "altTextures": {
+      "pane": ["glass/blue/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "stained_glass_purple",
+    "variants": ["solid", "pane"],
+    "altNames": {
+      "pane": "stained_glass_pane_purple"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Purple",
+    "textures": {
+      "all": "glass/purple/all"
+    },
+    "altTextures": {
+      "pane": ["glass/purple/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "stained_glass_pink",
+    "variants": ["solid", "pane"],
+    "altNames": {
+      "pane": "stained_glass_pane_pink"
+    },
+    "hardness": 1,
+    "stepSound": "glass",
+    "material": "glass",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+    "nonOpaque": true,
+    "alphaRender": true,
+    "lightOpacity": 0,
+    "creativeTab": "WesterosWindowsGlass",
+    "types": {
+      "pane": "legacy-model,unconnect:false"
+    },
+    "baseLabel": "Stained Glass Pink",
+    "textures": {
+      "all": "glass/pink/all"
+    },
+    "altTextures": {
+      "pane": ["glass/pink/all", "glass/pane_top"]
+    }
+  },
+  {
+    "baseBlockName": "pebbles_wet_eastern_islands",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Eastern Islands",
+    "colorMult": "textures/colormap/easternisland",
+    "randomTextures": [
+      {"textures": {"all": "pebble/eastern_islands/wet1"}},
+      {"textures": {"all": "pebble/eastern_islands/wet2"}},
+      {"textures": {"all": "pebble/eastern_islands/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_iron_islands",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Iron Islands",
+    "randomTextures": [
+      {"textures": {"all": "pebble/iron_islands/wet1"}},
+      {"textures": {"all": "pebble/iron_islands/wet2"}},
+      {"textures": {"all": "pebble/iron_islands/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_mountains_of_the_moon",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Mountains of the Moon",
+    "randomTextures": [
+      {"textures": {"all": "pebble/vale/wet1"}},
+      {"textures": {"all": "pebble/vale/wet2"}},
+      {"textures": {"all": "pebble/vale/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_the_north",
+    "variants": ["solid", "layer"],
+    "altNames": {
+      "layer": "pebbles_wet_north_layer"
+    },
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet The North",
+    "randomTextures": [
+      {"textures": {"all": "pebble/north/wet1"}},
+      {"textures": {"all": "pebble/north/wet2"}},
+      {"textures": {"all": "pebble/north/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_ocean_rocks",
+    "variants": ["solid", "layer"],
+    "altNames": {
+      "layer": "pebbles_wet_ocean_layer"
+    },
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Ocean Rocks",
+    "randomTextures": [
+      {"textures": {"all": "pebble/ocean/wet1"}},
+      {"textures": {"all": "pebble/ocean/wet2"}},
+      {"textures": {"all": "pebble/ocean/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_red_mountains",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Red Mountains",
+    "randomTextures": [
+      {"textures": {"all": "pebble/red_mountains/wet1"}},
+      {"textures": {"all": "pebble/red_mountains/wet2"}},
+      {"textures": {"all": "pebble/red_mountains/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_river_rocks",
+    "variants": ["solid", "layer"],
+    "altNames": {
+      "layer": "pebbles_wet_river_layer"
+    },
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet River Rocks",
+    "randomTextures": [
+      {"textures": {"all": "pebble/river/wet1"}},
+      {"textures": {"all": "pebble/river/wet2"}},
+      {"textures": {"all": "pebble/river/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_westerlands",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Westerlands",
+    "randomTextures": [
+      {"textures": {"all": "pebble/westerlands/wet1"}},
+      {"textures": {"all": "pebble/westerlands/wet2"}},
+      {"textures": {"all": "pebble/westerlands/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_arbor_dorne",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Arbor Dorne",
+    "randomTextures": [
+      {"textures": {"all": "pebble/arbor_dorne/wet1"}},
+      {"textures": {"all": "pebble/arbor_dorne/wet2"}},
+      {"textures": {"all": "pebble/arbor_dorne/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_stormlands",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Stormlands",
+    "randomTextures": [
+      {"textures": {"all": "pebble/stormlands/wet1"}},
+      {"textures": {"all": "pebble/stormlands/wet2"}},
+      {"textures": {"all": "pebble/stormlands/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_wet_reach",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Wet Reach",
+    "randomTextures": [
+      {"textures": {"all": "pebble/reach/wet1"}},
+      {"textures": {"all": "pebble/reach/wet2"}},
+      {"textures": {"all": "pebble/reach/wet3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_eastern_islands",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Eastern Islands",
+    "colorMult": "textures/colormap/easternisland",
+    "randomTextures": [
+      {"textures": {"all": "pebble/eastern_islands/dry1"}},
+      {"textures": {"all": "pebble/eastern_islands/dry2"}},
+      {"textures": {"all": "pebble/eastern_islands/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_iron_islands",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Iron Islands",
+    "randomTextures": [
+      {"textures": {"all": "pebble/iron_islands/dry1"}},
+      {"textures": {"all": "pebble/iron_islands/dry2"}},
+      {"textures": {"all": "pebble/iron_islands/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_mountains_of_the_moon",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Mountains of the Moon",
+    "randomTextures": [
+      {"textures": {"all": "pebble/vale/dry1"}},
+      {"textures": {"all": "pebble/vale/dry2"}},
+      {"textures": {"all": "pebble/vale/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_the_north",
+    "variants": ["solid", "layer"],
+    "altNames": {
+      "layer": "pebbles_dry_north_layer"
+    },
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry The North",
+    "randomTextures": [
+      {"textures": {"all": "pebble/north/dry1"}},
+      {"textures": {"all": "pebble/north/dry2"}},
+      {"textures": {"all": "pebble/north/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_ocean_rocks",
+    "variants": ["solid", "layer"],
+    "altNames": {
+      "layer": "pebbles_dry_ocean_layer"
+    },
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Ocean Rocks",
+    "randomTextures": [
+      {"textures": {"all": "pebble/ocean/dry1"}},
+      {"textures": {"all": "pebble/ocean/dry2"}},
+      {"textures": {"all": "pebble/ocean/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_red_mountains",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Red Mountains",
+    "randomTextures": [
+      {"textures": {"all": "pebble/red_mountains/dry1"}},
+      {"textures": {"all": "pebble/red_mountains/dry2"}},
+      {"textures": {"all": "pebble/red_mountains/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_river_rocks",
+    "variants": ["solid", "layer"],
+    "altNames": {
+      "layer": "pebbles_dry_river_layer"
+    },
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry River Rocks",
+    "randomTextures": [
+      {"textures": {"all": "pebble/river/dry1"}},
+      {"textures": {"all": "pebble/river/dry2"}},
+      {"textures": {"all": "pebble/river/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_westerlands",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Westerlands",
+    "randomTextures": [
+      {"textures": {"all": "pebble/westerlands/dry1"}},
+      {"textures": {"all": "pebble/westerlands/dry2"}},
+      {"textures": {"all": "pebble/westerlands/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_arbor_dorne",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Arbor Dorne",
+    "randomTextures": [
+      {"textures": {"all": "pebble/arbor_dorne/dry1"}},
+      {"textures": {"all": "pebble/arbor_dorne/dry2"}},
+      {"textures": {"all": "pebble/arbor_dorne/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_stormlands",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Stormlands",
+    "randomTextures": [
+      {"textures": {"all": "pebble/stormlands/dry1"}},
+      {"textures": {"all": "pebble/stormlands/dry2"}},
+      {"textures": {"all": "pebble/stormlands/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "pebbles_dry_reach",
+    "variants": ["solid", "layer"],
+    "hardness": 5,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 10,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pebbles Dry Reach",
+    "randomTextures": [
+      {"textures": {"all": "pebble/reach/dry1"}},
+      {"textures": {"all": "pebble/reach/dry2"}},
+      {"textures": {"all": "pebble/reach/dry3"}}
+    ]
+  },
+  {
+    "baseBlockName": "dirt",
+    "variants": ["solid", "slab", "path"],
+    "altNames": {
+      "path": "path_dirt"
+    },
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Dirt",
+    "randomTextures": [
+      {"textures": {"bottom": "dirt/top_bot1", "top": "dirt/top_bot1", "sides": "dirt/ground"}, "weight": 100},
+      {"textures": {"bottom": "dirt/top_bot2", "top": "dirt/top_bot2", "sides": "dirt/ground"}, "weight": 33},
+      {"textures": {"bottom": "dirt/top_bot3", "top": "dirt/top_bot3", "sides": "dirt/ground"}, "weight": 45},
+      {"textures": {"bottom": "dirt/top_bot4", "top": "dirt/top_bot4", "sides": "dirt/ground"}, "weight": 140},
+      {"textures": {"bottom": "dirt/top_bot5", "top": "dirt/top_bot5", "sides": "dirt/ground"}, "weight": 193},
+      {"textures": {"bottom": "dirt/top_bot6", "top": "dirt/top_bot6", "sides": "dirt/ground"}, "weight": 77},
+      {"textures": {"bottom": "dirt/top_bot7", "top": "dirt/top_bot7", "sides": "dirt/ground"}, "weight": 77},
+      {"textures": {"bottom": "dirt/top_bot8", "top": "dirt/top_bot8", "sides": "dirt/ground"}, "weight": 77}
+    ],
+    "altRandomTextures": {
+      "path": [
+        {"textures": ["dirt_path/top_bot1", "dirt_path/top_bot1", "dirt_path/ground"], "weight": 100},
+        {"textures": ["dirt_path/top_bot2", "dirt_path/top_bot2", "dirt_path/ground"], "weight": 33},
+        {"textures": ["dirt_path/top_bot3", "dirt_path/top_bot3", "dirt_path/ground"], "weight": 45},
+        {"textures": ["dirt_path/top_bot4", "dirt_path/top_bot4", "dirt_path/ground"], "weight": 140},
+        {"textures": ["dirt_path/top_bot5", "dirt_path/top_bot5", "dirt_path/ground"], "weight": 193},
+        {"textures": ["dirt_path/top_bot6", "dirt_path/top_bot6", "dirt_path/ground"], "weight": 77},
+        {"textures": ["dirt_path/top_bot7", "dirt_path/top_bot7", "dirt_path/ground"], "weight": 77},
+        {"textures": ["dirt_path/top_bot8", "dirt_path/top_bot8", "dirt_path/ground"], "weight": 77}
+      ]
+    }
+  },
+  {
+    "baseBlockName": "gravel",
+    "variants": ["solid", "slab", "path"],
+    "altNames": {
+      "path": "path_gravel"
+    },
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Gravel",
+    "randomTextures": [
+      {"textures": {"all": "gravel/gravel1"}, "weight": 10},
+      {"textures": {"all": "gravel/gravel2"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel3"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel4"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel5"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel6"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel7"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel8"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel9"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel10"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel11"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel12"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel13"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel14"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel15"}, "weight": 1},
+      {"textures": {"all": "gravel/gravel16"}, "weight": 1}
+    ]
+  },
+  {
+    "baseBlockName": "reach_gravel",
+    "variants": ["solid", "slab", "path"],
+    "altNames": {
+      "path": "path_reach_gravel"
+    },
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Reach Gravel",
+    "randomTextures": [
+      {"textures": {"all": "reach_gravel/side1"}, "weight": 10},
+      {"textures": {"all": "reach_gravel/side2"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side3"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side4"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side5"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side6"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side7"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side8"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side9"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side10"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side11"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side12"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side13"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side14"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side15"}, "weight": 1},
+      {"textures": {"all": "reach_gravel/side16"}, "weight": 1}
+    ]
+  },
+  {
+    "baseBlockName": "dorne_dusty_dirt",
+    "variants": ["solid", "slab", "path"],
+    "altNames": {
+      "path": "path_dorne_dusty_dirt"
+    },
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Dorne Dusty Dirt",
+    "randomTextures": [
+      {"textures": {"all": "dorne_dusty_dirt/side1"}, "weight": 100},
+      {"textures": {"all": "dorne_dusty_dirt/side2"}, "weight": 100},
+      {"textures": {"all": "dorne_dusty_dirt/side3"}, "weight": 20},
+      {"textures": {"all": "dorne_dusty_dirt/side4"}, "weight": 100},
+      {"textures": {"all": "dorne_dusty_dirt/side5"}, "weight": 100},
+      {"textures": {"all": "dorne_dusty_dirt/side6"}, "weight": 153},
+      {"textures": {"all": "dorne_dusty_dirt/side7"}, "weight": 77},
+      {"textures": {"all": "dorne_dusty_dirt/side8"}, "weight": 20},
+      {"textures": {"all": "dorne_dusty_dirt/side9"}, "weight": 77},
+      {"textures": {"all": "dorne_dusty_dirt/side10"}, "weight": 77}
+    ]
+  },
+  {
+    "baseBlockName": "dorne_dry_soil",
+    "variants": ["solid", "slab", "path"],
+    "altNames": {
+      "path": "path_dorne_dry_soil"
+    },
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Dorne Dry Soil",
+    "textures": {
+      "all": "dorne_dry_soil/side"
+    }
+  },
+  {
+    "baseBlockName": "mud",
+    "variants": ["solid", "slab"],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "craftedSnow",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Mud",
+    "randomTextures": [
+      {"textures": {"all": "mud/side1"}, "weight": 20},
+      {"textures": {"all": "mud/side2"}, "weight": 20},
+      {"textures": {"all": "mud/side3"}, "weight": 20},
+      {"textures": {"all": "mud/side4"}, "weight": 20},
+      {"textures": {"all": "mud/side5"}, "weight": 20},
+      {"textures": {"bottom": "mud/side1", "top": "mud/top1", "sides": "mud/side1"}, "weight": 1},
+      {"textures": {"bottom": "mud/side2", "top": "mud/top2", "sides": "mud/side2"}, "weight": 1},
+      {"textures": {"bottom": "mud/side3", "top": "mud/top3", "sides": "mud/side3"}, "weight": 1}
+    ]
+  },
+  {
+    "baseBlockName": "muddy_snow",
+    "variants": ["solid", "slab"],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "craftedSnow",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Muddy Snow",
+    "ambientOcclusion": false,
+    "textures": {
+      "bottom": "muddy_snow/top_bottom",
+      "top": "muddy_snow/top_bottom",
+      "west": "muddy_snow/north_south",
+      "east": "muddy_snow/north_south",
+      "south": "muddy_snow/east_west",
+      "north": "muddy_snow/east_west"
+    }
+  },
+  {
+    "baseBlockName": "peat",
+    "variants": ["solid", "slab"],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Peat",
+    "textures": {
+      "bottom": "peat/top_bottom",
+      "top": "peat/top_bottom",
+      "sides": "peat/side"
+    }
+  },
+  {
+    "baseBlockName": "bog",
+    "variants": ["solid", "slab"],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Bog",
+    "connectTo": "material",
+    "randomTextures": [
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog1", "sides": "bog/bog_side"}, "weight": 6},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog2", "sides": "bog/bog_side"}, "weight": 3},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog3", "sides": "bog/bog_side"}, "weight": 3},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog4", "sides": "bog/bog_side"}, "weight": 3},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog5", "sides": "bog/bog_side"}, "weight": 3},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog6", "sides": "bog/bog_side"}, "weight": 3},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog7", "sides": "bog/bog_side"}, "weight": 1},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog8", "sides": "bog/bog_side"}, "weight": 1},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog9", "sides": "bog/bog_side"}, "weight": 2},
+      {"textures": {"bottom": "bog/mud", "top": "bog/bog10", "sides": "bog/bog_side"}, "weight": 2}
+    ],
+    "altRandomTextures": {
+      "slab": [
+        {"textures": ["bog/mud", "bog/bog1", "bog/bog_slab_side"], "weight": 6},
+        {"textures": ["bog/mud", "bog/bog2", "bog/bog_slab_side"], "weight": 3},
+        {"textures": ["bog/mud", "bog/bog3", "bog/bog_slab_side"], "weight": 3},
+        {"textures": ["bog/mud", "bog/bog4", "bog/bog_slab_side"], "weight": 3},
+        {"textures": ["bog/mud", "bog/bog5", "bog/bog_slab_side"], "weight": 3},
+        {"textures": ["bog/mud", "bog/bog6", "bog/bog_slab_side"], "weight": 3},
+        {"textures": ["bog/mud", "bog/bog7", "bog/bog_slab_side"], "weight": 1},
+        {"textures": ["bog/mud", "bog/bog8", "bog/bog_slab_side"], "weight": 1},
+        {"textures": ["bog/mud", "bog/bog9", "bog/bog_slab_side"], "weight": 2},
+        {"textures": ["bog/mud", "bog/bog10", "bog/bog_slab_side"], "weight": 2}
+      ]
+    }
+  },
+  {
+    "baseBlockName": "ash",
+    "variants": ["solid", "slab", "layer"],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosMisc",
+    "baseLabel": "Ash",
+    "textures": {
+      "all": "ash/all"
+    }
+  },
+  {
+    "baseBlockName": "scorched_earth",
+    "variants": ["solid", "slab"],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Scorched Earth",
+    "randomTextures": [
+      {"textures": {"all": "scorched_earth/all1"}},
+      {"textures": {"all": "scorched_earth/all2"}},
+      {"textures": {"all": "scorched_earth/all3"}},
+      {"textures": {"all": "scorched_earth/all4"}}
+    ]
+  },
+  {
+    "baseBlockName": "plowed_soil",
+    "variants": ["solid", "slab"],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Plowed Soil",
+    "textures": {
+      "all": "soil_block/plowed_soil"
+    }
+  },
+  {
+    "baseBlockName": "fallen_leaves",
+    "variants": ["solid", "slab"],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Fallen Leaves",
+    "textures": {
+      "all": "fallen_leaves/temperate"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/fallen_leaves_overlay"
+    }
+  },
+  {
+    "baseBlockName": "pine_needles",
+    "variants": ["solid", "slab"],
+    "hardness": 2,
+    "stepSound": "grass",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosGrassDirt",
+    "baseLabel": "Pine Needles",
+    "textures": {
+      "all": "pine_needles/dirt_pine_cover"
+    },
+    "overlayTextures": {
+      "all": "terrainset_overlays/fallen_leaves_overlay"
+    }
+  },
+  {
+    "baseBlockName": "desert_sand",
+    "variants": ["solid", "layer"],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Desert Sand",
+    "colorMult": "textures/colormap/sand",
+    "textures": {
+      "all": "sand_block/sand_desert"
+    }
+  },
+  {
+    "baseBlockName": "sand_stones",
+    "variants": ["solid", "layer"],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Sand Stones",
+    "colorMult": "textures/colormap/sand",
+    "textures": {
+      "all": "sand_block/sand_stones"
+    }
+  },
+  {
+    "baseBlockName": "terracotta_sand",
+    "variants": ["solid", "layer"],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Terracotta Sand",
+    "textures": {
+      "all": "sand_block/sand_terracotta"
+    }
+  },
+  {
+    "baseBlockName": "pinkorange_sand",
+    "variants": ["solid", "layer"],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Pink/Orange Sand",
+    "textures": {
+      "all": "sand_block/sand_pinkorange"
+    }
+  },
+  {
+    "baseBlockName": "red_sand",
+    "variants": ["solid", "layer"],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Red Sand",
+    "textures": {
+      "all": "sand_block/sand_red"
+    }
+  },
+  {
+    "baseBlockName": "wet_sand",
+    "variants": ["solid", "layer"],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Wet Sand",
+    "textures": {
+      "all": "sand_block/sand_wet"
+    }
+  },
+  {
+    "baseBlockName": "wet_sand_stones",
+    "variants": ["solid", "layer"],
+    "hardness": 0.5,
+    "stepSound": "sand",
+    "material": "sand",
+    "resistance": 1,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Wet Sand Stones",
+    "textures": {
+      "all": "sand_block/sand_wet_stones"
+    }
+  },
+  {
+    "baseBlockName": "muddy_sand",
+    "variants": ["solid", "slab", "layer"],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Muddy Sand",
+    "textures": {
+      "all": "muddy_sand/side"
+    }
+  },
+  {
+    "baseBlockName": "grassy_sand",
+    "variants": ["solid", "slab", "layer"],
+    "hardness": 2,
+    "stepSound": "gravel",
+    "material": "ground",
+    "resistance": 2,
+    "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+    "creativeTab": "WesterosSandGravel",
+    "baseLabel": "Grassy Sand",
+    "textures": {
+      "all": "grassy_sand/side"
     }
   }
 ]

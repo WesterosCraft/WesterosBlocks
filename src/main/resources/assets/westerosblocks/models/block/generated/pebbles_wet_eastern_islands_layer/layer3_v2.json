@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:block/pebble_eastern_islands/wet2",
-    "txt5": "westerosblocks:block/pebble_eastern_islands/wet2",
-    "txt2": "westerosblocks:block/pebble_eastern_islands/wet2",
-    "txt3": "westerosblocks:block/pebble_eastern_islands/wet2",
-    "txt0": "westerosblocks:block/pebble_eastern_islands/wet2",
-    "txt1": "westerosblocks:block/pebble_eastern_islands/wet2",
-    "particle": "westerosblocks:block/pebble_eastern_islands/wet2"
+    "txt4": "westerosblocks:block/pebble/eastern_islands/wet2",
+    "txt5": "westerosblocks:block/pebble/eastern_islands/wet2",
+    "txt2": "westerosblocks:block/pebble/eastern_islands/wet2",
+    "txt3": "westerosblocks:block/pebble/eastern_islands/wet2",
+    "txt0": "westerosblocks:block/pebble/eastern_islands/wet2",
+    "txt1": "westerosblocks:block/pebble/eastern_islands/wet2",
+    "particle": "westerosblocks:block/pebble/eastern_islands/wet2"
   },
   "elements": [
     {

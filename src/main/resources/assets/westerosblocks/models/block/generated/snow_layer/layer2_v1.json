@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:block/snow_slab/top_bottom",
-    "txt5": "westerosblocks:block/snow_slab/top_bottom",
-    "txt2": "westerosblocks:block/snow_slab/top_bottom",
-    "txt3": "westerosblocks:block/snow_slab/top_bottom",
-    "txt0": "westerosblocks:block/snow_slab/top_bottom",
-    "txt1": "westerosblocks:block/snow_slab/top_bottom",
-    "particle": "westerosblocks:block/snow_slab/top_bottom"
+    "txt4": "westerosblocks:block/snow/top_bottom",
+    "txt5": "westerosblocks:block/snow/top_bottom",
+    "txt2": "westerosblocks:block/snow/top_bottom",
+    "txt3": "westerosblocks:block/snow/top_bottom",
+    "txt0": "westerosblocks:block/snow/top_bottom",
+    "txt1": "westerosblocks:block/snow/top_bottom",
+    "particle": "westerosblocks:block/snow/top_bottom"
   },
   "elements": [
     {
