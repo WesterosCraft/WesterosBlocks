@@ -1,3 +1,13 @@
+2 Jan 2024:
+-Refactored WesterosBlocks.json into "block sets" that are used to auto-generate standard variants (e.g. stairs, slabs, walls, etc.);
+ several blocks got additional variants in this process.
+-Added directional firewood slab.
+-Added vanilla vines as custom block.
+-Added slabs and layers for muddy sand, grassy sand, and ash.
+-Added variants for wool blocks.
+-Fixed slate stairs missing uvlock.
+-Fixed northern biome CTM for grassy sand.
+
 10 October 2023:
 -Officially migrated WesterosBlocks to minecraft 1.18. The structural changes to the modpack are too vast to fully note here, but some of the block changes are listed below:
 -Migrated many vanilla blocks to custom blocks in order to ensure that remaining vanilla textures resemble the underlying block meaning.
