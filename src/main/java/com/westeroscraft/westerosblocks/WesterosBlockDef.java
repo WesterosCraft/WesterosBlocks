@@ -909,9 +909,12 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 			WesterosBlockDef def = defmap.get(val.blockName);
 			if (!def.blockType.equals(val.blockType)) {
-				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different blockType attribute", val.blockName));
-				error = true;
-				continue;
+				// allow for solid subtypes to be recast
+				if (!def.blockType.matches("solid|sand|soulsand") && !def.blockType.matches("solid|sand|soulsand")) {
+					WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different blockType attribute", val.blockName));
+					error = true;
+					continue;
+				}
 			}
 
 			String[] valTypeAttrs = val.type.split(",");
