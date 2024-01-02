@@ -18,7 +18,7 @@
     ]
   },
   "textures": {
-    "txt2": "westerosblocks:block/profession_sign_base/rope_maker",
+    "txt2": "westerosblocks:block/profession_sign_base/ropemaker",
     "txt3": "westerosblocks:block/profession_sign_base/sign_cut6",
     "txt0": "westerosblocks:block/sign_block/sign_bottom",
     "txt1": "westerosblocks:block/sign_block/sign_top",
