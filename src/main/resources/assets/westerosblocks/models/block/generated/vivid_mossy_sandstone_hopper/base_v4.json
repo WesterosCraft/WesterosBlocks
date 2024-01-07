@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/sandstone/vivid_mossy/all4",
-    "txt5": "westerosblocks:block/sandstone/vivid_mossy/all4",
-    "txt2": "westerosblocks:block/sandstone/vivid_mossy/all4",
-    "txt3": "westerosblocks:block/sandstone/vivid_mossy/all4",
-    "txt0": "westerosblocks:block/sandstone/vivid_mossy/all4",
-    "txt1": "westerosblocks:block/sandstone/vivid_mossy/all4",
-    "particle": "westerosblocks:block/sandstone/vivid_mossy/all4"
+    "txt4": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
+    "txt5": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
+    "txt2": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
+    "txt3": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
+    "txt0": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
+    "txt1": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
+    "particle": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4"
   },
   "elements": [
     {

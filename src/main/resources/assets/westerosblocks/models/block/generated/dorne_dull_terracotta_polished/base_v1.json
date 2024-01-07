@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "westerosblocks:block/ashlar_third/dorne_dull_terracotta/polished"
+  }
+}

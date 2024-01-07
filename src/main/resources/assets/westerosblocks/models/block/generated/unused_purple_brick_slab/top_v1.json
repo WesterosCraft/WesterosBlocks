@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/brick/smooth_purple/all",
-    "up": "westerosblocks:block/brick/smooth_purple/all",
-    "north": "westerosblocks:block/brick/smooth_purple/all",
-    "south": "westerosblocks:block/brick/smooth_purple/all",
-    "west": "westerosblocks:block/brick/smooth_purple/all",
-    "east": "westerosblocks:block/brick/smooth_purple/all",
-    "particle": "westerosblocks:block/brick/smooth_purple/all"
+    "down": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "up": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "north": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "south": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "west": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "east": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "particle": "westerosblocks:block/ashlar_quarter/smooth_purple/all"
   }
 }

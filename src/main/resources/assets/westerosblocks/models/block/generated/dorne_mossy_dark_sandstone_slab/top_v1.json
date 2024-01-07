@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/sandstone/dorne_mossy_dark/all",
-    "up": "westerosblocks:block/sandstone/dorne_mossy_dark/all",
-    "north": "westerosblocks:block/sandstone/dorne_mossy_dark/all",
-    "south": "westerosblocks:block/sandstone/dorne_mossy_dark/all",
-    "west": "westerosblocks:block/sandstone/dorne_mossy_dark/all",
-    "east": "westerosblocks:block/sandstone/dorne_mossy_dark/all",
-    "particle": "westerosblocks:block/sandstone/dorne_mossy_dark/all"
+    "down": "westerosblocks:block/ashlar_third/dorne_mossy_dark_sandstone/all",
+    "up": "westerosblocks:block/ashlar_third/dorne_mossy_dark_sandstone/all",
+    "north": "westerosblocks:block/ashlar_third/dorne_mossy_dark_sandstone/all",
+    "south": "westerosblocks:block/ashlar_third/dorne_mossy_dark_sandstone/all",
+    "west": "westerosblocks:block/ashlar_third/dorne_mossy_dark_sandstone/all",
+    "east": "westerosblocks:block/ashlar_third/dorne_mossy_dark_sandstone/all",
+    "particle": "westerosblocks:block/ashlar_third/dorne_mossy_dark_sandstone/all"
   }
 }

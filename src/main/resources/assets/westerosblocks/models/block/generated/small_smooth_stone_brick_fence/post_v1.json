@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/tinted/fence_post",
   "textures": {
-    "bottom": "westerosblocks:block/brick/small_smooth_stone/all",
-    "top": "westerosblocks:block/brick/small_smooth_stone/all",
-    "side": "westerosblocks:block/brick/small_smooth_stone/all"
+    "bottom": "westerosblocks:block/ashlar_quarter/small_smooth_stone/all",
+    "top": "westerosblocks:block/ashlar_quarter/small_smooth_stone/all",
+    "side": "westerosblocks:block/ashlar_quarter/small_smooth_stone/all"
   }
 }

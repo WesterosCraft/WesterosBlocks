@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/brick/sandy_pink_large/all",
-    "up": "westerosblocks:block/brick/sandy_pink_large/all",
-    "north": "westerosblocks:block/brick/sandy_pink_large/all",
-    "south": "westerosblocks:block/brick/sandy_pink_large/all",
-    "west": "westerosblocks:block/brick/sandy_pink_large/all",
-    "east": "westerosblocks:block/brick/sandy_pink_large/all",
-    "particle": "westerosblocks:block/brick/sandy_pink_large/all"
+    "down": "westerosblocks:block/ashlar_half/sandy_pink_large/all",
+    "up": "westerosblocks:block/ashlar_half/sandy_pink_large/all",
+    "north": "westerosblocks:block/ashlar_half/sandy_pink_large/all",
+    "south": "westerosblocks:block/ashlar_half/sandy_pink_large/all",
+    "west": "westerosblocks:block/ashlar_half/sandy_pink_large/all",
+    "east": "westerosblocks:block/ashlar_half/sandy_pink_large/all",
+    "particle": "westerosblocks:block/ashlar_half/sandy_pink_large/all"
   }
 }

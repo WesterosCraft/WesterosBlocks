@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/brick/lannisport_light/all",
-    "top": "westerosblocks:block/brick/lannisport_light/all",
-    "side": "westerosblocks:block/brick/lannisport_light/all",
-    "particle": "westerosblocks:block/brick/lannisport_light/all"
+    "bottom": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "top": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "side": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "particle": "westerosblocks:block/fieldstone/lannisport_light/all"
   }
 }

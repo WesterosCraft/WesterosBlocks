@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/sandstone/terracotta/all",
-    "up": "westerosblocks:block/sandstone/terracotta/all",
-    "north": "westerosblocks:block/sandstone/terracotta/all",
-    "south": "westerosblocks:block/sandstone/terracotta/all",
-    "west": "westerosblocks:block/sandstone/terracotta/all",
-    "east": "westerosblocks:block/sandstone/terracotta/all",
-    "particle": "westerosblocks:block/sandstone/terracotta/all"
+    "down": "westerosblocks:block/ashlar_third/terracotta/all",
+    "up": "westerosblocks:block/ashlar_third/terracotta/all",
+    "north": "westerosblocks:block/ashlar_third/terracotta/all",
+    "south": "westerosblocks:block/ashlar_third/terracotta/all",
+    "west": "westerosblocks:block/ashlar_third/terracotta/all",
+    "east": "westerosblocks:block/ashlar_third/terracotta/all",
+    "particle": "westerosblocks:block/ashlar_third/terracotta/all"
   }
 }

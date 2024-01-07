@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/brick/small_stone/all",
-    "up": "westerosblocks:block/brick/small_stone/all",
-    "north": "westerosblocks:block/brick/small_stone/all",
-    "south": "westerosblocks:block/brick/small_stone/all",
-    "west": "westerosblocks:block/brick/small_stone/all",
-    "east": "westerosblocks:block/brick/small_stone/all",
-    "particle": "westerosblocks:block/brick/small_stone/all"
+    "down": "westerosblocks:block/ashlar_quarter/small_stone/all",
+    "up": "westerosblocks:block/ashlar_quarter/small_stone/all",
+    "north": "westerosblocks:block/ashlar_quarter/small_stone/all",
+    "south": "westerosblocks:block/ashlar_quarter/small_stone/all",
+    "west": "westerosblocks:block/ashlar_quarter/small_stone/all",
+    "east": "westerosblocks:block/ashlar_quarter/small_stone/all",
+    "particle": "westerosblocks:block/ashlar_quarter/small_stone/all"
   }
 }

@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
-    "bottom": "westerosblocks:block/brick/nether/all",
-    "top": "westerosblocks:block/brick/nether/all",
-    "side": "westerosblocks:block/brick/nether/all"
+    "bottom": "westerosblocks:block/ashlar_half/nether/all",
+    "top": "westerosblocks:block/ashlar_half/nether/all",
+    "side": "westerosblocks:block/ashlar_half/nether/all"
   }
 }

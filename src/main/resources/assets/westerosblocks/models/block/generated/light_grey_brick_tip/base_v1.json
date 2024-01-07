@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/brick/light_grey/all",
-    "txt5": "westerosblocks:block/brick/light_grey/all",
-    "txt2": "westerosblocks:block/brick/light_grey/all",
-    "txt3": "westerosblocks:block/brick/light_grey/all",
-    "txt0": "westerosblocks:block/brick/light_grey/all",
-    "txt1": "westerosblocks:block/brick/light_grey/all",
-    "particle": "westerosblocks:block/brick/light_grey/all"
+    "txt4": "westerosblocks:block/fieldstone/light_grey/all",
+    "txt5": "westerosblocks:block/fieldstone/light_grey/all",
+    "txt2": "westerosblocks:block/fieldstone/light_grey/all",
+    "txt3": "westerosblocks:block/fieldstone/light_grey/all",
+    "txt0": "westerosblocks:block/fieldstone/light_grey/all",
+    "txt1": "westerosblocks:block/fieldstone/light_grey/all",
+    "particle": "westerosblocks:block/fieldstone/light_grey/all"
   },
   "elements": [
     {

@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/brick/stormlands_large/all",
-    "txt5": "westerosblocks:block/brick/stormlands_large/all",
-    "txt2": "westerosblocks:block/brick/stormlands_large/all",
-    "txt3": "westerosblocks:block/brick/stormlands_large/all",
-    "txt0": "westerosblocks:block/brick/stormlands_large/all",
-    "txt1": "westerosblocks:block/brick/stormlands_large/all",
-    "particle": "westerosblocks:block/brick/stormlands_large/all"
+    "txt4": "westerosblocks:block/ashlar_half/stormlands_large/all",
+    "txt5": "westerosblocks:block/ashlar_half/stormlands_large/all",
+    "txt2": "westerosblocks:block/ashlar_half/stormlands_large/all",
+    "txt3": "westerosblocks:block/ashlar_half/stormlands_large/all",
+    "txt0": "westerosblocks:block/ashlar_half/stormlands_large/all",
+    "txt1": "westerosblocks:block/ashlar_half/stormlands_large/all",
+    "particle": "westerosblocks:block/ashlar_half/stormlands_large/all"
   },
   "elements": [
     {

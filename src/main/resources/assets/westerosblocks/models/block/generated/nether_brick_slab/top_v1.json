@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/brick/nether/all",
-    "up": "westerosblocks:block/brick/nether/all",
-    "north": "westerosblocks:block/brick/nether/all",
-    "south": "westerosblocks:block/brick/nether/all",
-    "west": "westerosblocks:block/brick/nether/all",
-    "east": "westerosblocks:block/brick/nether/all",
-    "particle": "westerosblocks:block/brick/nether/all"
+    "down": "westerosblocks:block/ashlar_half/nether/all",
+    "up": "westerosblocks:block/ashlar_half/nether/all",
+    "north": "westerosblocks:block/ashlar_half/nether/all",
+    "south": "westerosblocks:block/ashlar_half/nether/all",
+    "west": "westerosblocks:block/ashlar_half/nether/all",
+    "east": "westerosblocks:block/ashlar_half/nether/all",
+    "particle": "westerosblocks:block/ashlar_half/nether/all"
   }
 }

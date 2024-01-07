@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "top": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "side": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "particle": "westerosblocks:block/sandstone/monochrome_mossy/all5"
+    "bottom": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "top": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "side": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "particle": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5"
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/brick/reach/all",
-    "up": "westerosblocks:block/brick/reach/all",
-    "north": "westerosblocks:block/brick/reach/all",
-    "south": "westerosblocks:block/brick/reach/all",
-    "west": "westerosblocks:block/brick/reach/all",
-    "east": "westerosblocks:block/brick/reach/all",
-    "particle": "westerosblocks:block/brick/reach/all"
+    "down": "westerosblocks:block/ashlar_quarter/reach/all",
+    "up": "westerosblocks:block/ashlar_quarter/reach/all",
+    "north": "westerosblocks:block/ashlar_quarter/reach/all",
+    "south": "westerosblocks:block/ashlar_quarter/reach/all",
+    "west": "westerosblocks:block/ashlar_quarter/reach/all",
+    "east": "westerosblocks:block/ashlar_quarter/reach/all",
+    "particle": "westerosblocks:block/ashlar_quarter/reach/all"
   }
 }

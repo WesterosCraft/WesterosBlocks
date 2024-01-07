@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "txt5": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "txt2": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "txt3": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "txt0": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "txt1": "westerosblocks:block/sandstone/monochrome_mossy/all5",
-    "particle": "westerosblocks:block/sandstone/monochrome_mossy/all5"
+    "txt4": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "txt5": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "txt2": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "txt3": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "txt0": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "txt1": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5",
+    "particle": "westerosblocks:block/ashlar_third/monochrome_mossy_sandstone/all5"
   },
   "elements": [
     {

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/brick/reach/all",
-    "top": "westerosblocks:block/brick/reach/all",
-    "side": "westerosblocks:block/brick/reach/all",
-    "particle": "westerosblocks:block/brick/reach/all"
+    "bottom": "westerosblocks:block/ashlar_quarter/reach/all",
+    "top": "westerosblocks:block/ashlar_quarter/reach/all",
+    "side": "westerosblocks:block/ashlar_quarter/reach/all",
+    "particle": "westerosblocks:block/ashlar_quarter/reach/all"
   }
 }

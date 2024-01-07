@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone/dorne_light_terracotta/all",
-    "top": "westerosblocks:block/sandstone/dorne_light_terracotta/all",
-    "side": "westerosblocks:block/sandstone/dorne_light_terracotta/all",
-    "particle": "westerosblocks:block/sandstone/dorne_light_terracotta/all"
+    "bottom": "westerosblocks:block/ashlar_third/dorne_light_terracotta/all",
+    "top": "westerosblocks:block/ashlar_third/dorne_light_terracotta/all",
+    "side": "westerosblocks:block/ashlar_third/dorne_light_terracotta/all",
+    "particle": "westerosblocks:block/ashlar_third/dorne_light_terracotta/all"
   }
 }

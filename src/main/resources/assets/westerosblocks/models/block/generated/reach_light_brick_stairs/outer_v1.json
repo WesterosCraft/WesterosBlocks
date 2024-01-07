@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/brick/reach_light/all",
-    "top": "westerosblocks:block/brick/reach_light/all",
-    "side": "westerosblocks:block/brick/reach_light/all",
-    "particle": "westerosblocks:block/brick/reach_light/all"
+    "bottom": "westerosblocks:block/fieldstone/reach_light/all",
+    "top": "westerosblocks:block/fieldstone/reach_light/all",
+    "side": "westerosblocks:block/fieldstone/reach_light/all",
+    "particle": "westerosblocks:block/fieldstone/reach_light/all"
   }
 }

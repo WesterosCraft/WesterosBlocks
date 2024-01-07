@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/brick/smooth_purple/all",
-    "txt5": "westerosblocks:block/brick/smooth_purple/all",
-    "txt2": "westerosblocks:block/brick/smooth_purple/all",
-    "txt3": "westerosblocks:block/brick/smooth_purple/all",
-    "txt0": "westerosblocks:block/brick/smooth_purple/all",
-    "txt1": "westerosblocks:block/brick/smooth_purple/all",
-    "particle": "westerosblocks:block/brick/smooth_purple/all"
+    "txt4": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "txt5": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "txt2": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "txt3": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "txt0": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "txt1": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
+    "particle": "westerosblocks:block/ashlar_quarter/smooth_purple/all"
   },
   "elements": [
     {

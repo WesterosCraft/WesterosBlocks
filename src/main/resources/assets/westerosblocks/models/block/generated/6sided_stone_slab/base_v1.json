@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/brick/stone_slab/tile"
+    "all": "westerosblocks:block/ashlar_half/stone_slab/tile"
   }
 }

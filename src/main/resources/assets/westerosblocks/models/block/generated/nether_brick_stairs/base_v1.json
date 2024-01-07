@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/brick/nether/all",
-    "top": "westerosblocks:block/brick/nether/all",
-    "side": "westerosblocks:block/brick/nether/all",
-    "particle": "westerosblocks:block/brick/nether/all"
+    "bottom": "westerosblocks:block/ashlar_half/nether/all",
+    "top": "westerosblocks:block/ashlar_half/nether/all",
+    "side": "westerosblocks:block/ashlar_half/nether/all",
+    "particle": "westerosblocks:block/ashlar_half/nether/all"
   }
 }

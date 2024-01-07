@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/brick/kl_dun/faith_carved"
+    "all": "westerosblocks:block/ashlar_third/kl_dun/faith_carved"
   }
 }

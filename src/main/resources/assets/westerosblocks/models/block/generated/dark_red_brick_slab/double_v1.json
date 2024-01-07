@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/brick/dark_red/all",
-    "up": "westerosblocks:block/brick/dark_red/all",
-    "north": "westerosblocks:block/brick/dark_red/all",
-    "south": "westerosblocks:block/brick/dark_red/all",
-    "west": "westerosblocks:block/brick/dark_red/all",
-    "east": "westerosblocks:block/brick/dark_red/all",
-    "particle": "westerosblocks:block/brick/dark_red/all"
+    "down": "westerosblocks:block/ashlar_quarter/dark_red/all",
+    "up": "westerosblocks:block/ashlar_quarter/dark_red/all",
+    "north": "westerosblocks:block/ashlar_quarter/dark_red/all",
+    "south": "westerosblocks:block/ashlar_quarter/dark_red/all",
+    "west": "westerosblocks:block/ashlar_quarter/dark_red/all",
+    "east": "westerosblocks:block/ashlar_quarter/dark_red/all",
+    "particle": "westerosblocks:block/ashlar_quarter/dark_red/all"
   }
 }

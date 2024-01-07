@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/brick/lannisport_light/all",
-    "up": "westerosblocks:block/brick/lannisport_light/all",
-    "north": "westerosblocks:block/brick/lannisport_light/all",
-    "south": "westerosblocks:block/brick/lannisport_light/all",
-    "west": "westerosblocks:block/brick/lannisport_light/all",
-    "east": "westerosblocks:block/brick/lannisport_light/all",
-    "particle": "westerosblocks:block/brick/lannisport_light/all"
+    "down": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "up": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "north": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "south": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "west": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "east": "westerosblocks:block/fieldstone/lannisport_light/all",
+    "particle": "westerosblocks:block/fieldstone/lannisport_light/all"
   }
 }

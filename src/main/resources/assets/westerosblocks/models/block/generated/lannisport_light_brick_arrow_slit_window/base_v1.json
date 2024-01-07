@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/transparent",
     "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/brick/lannisport_light/arrow_slit_window",
-    "south": "westerosblocks:block/brick/lannisport_light/arrow_slit_window",
-    "west": "westerosblocks:block/brick/lannisport_light/arrow_slit_window",
-    "east": "westerosblocks:block/brick/lannisport_light/arrow_slit_window",
-    "particle": "westerosblocks:block/brick/lannisport_light/arrow_slit_window"
+    "north": "westerosblocks:block/fieldstone/lannisport_light/arrow_slit_window",
+    "south": "westerosblocks:block/fieldstone/lannisport_light/arrow_slit_window",
+    "west": "westerosblocks:block/fieldstone/lannisport_light/arrow_slit_window",
+    "east": "westerosblocks:block/fieldstone/lannisport_light/arrow_slit_window",
+    "particle": "westerosblocks:block/fieldstone/lannisport_light/arrow_slit_window"
   }
 }

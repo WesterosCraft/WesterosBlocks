@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side_tall",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone/large_brick/all",
-    "top": "westerosblocks:block/sandstone/large_brick/all",
-    "side": "westerosblocks:block/sandstone/large_brick/all"
+    "bottom": "westerosblocks:block/ashlar_half/large_brick_sandstone/all",
+    "top": "westerosblocks:block/ashlar_half/large_brick_sandstone/all",
+    "side": "westerosblocks:block/ashlar_half/large_brick_sandstone/all"
   }
 }

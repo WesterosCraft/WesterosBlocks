@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone/large_brick/all",
-    "top": "westerosblocks:block/sandstone/large_brick/all",
-    "side": "westerosblocks:block/sandstone/large_brick/all",
-    "particle": "westerosblocks:block/sandstone/large_brick/all"
+    "bottom": "westerosblocks:block/ashlar_half/large_brick_sandstone/all",
+    "top": "westerosblocks:block/ashlar_half/large_brick_sandstone/all",
+    "side": "westerosblocks:block/ashlar_half/large_brick_sandstone/all",
+    "particle": "westerosblocks:block/ashlar_half/large_brick_sandstone/all"
   }
 }

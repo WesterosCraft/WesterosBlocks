@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/brick/sandy_pink_faint_light/all",
-    "txt5": "westerosblocks:block/brick/sandy_pink_faint_light/all",
-    "txt2": "westerosblocks:block/brick/sandy_pink_faint_light/all",
-    "txt3": "westerosblocks:block/brick/sandy_pink_faint_light/all",
-    "txt0": "westerosblocks:block/brick/sandy_pink_faint_light/all",
-    "txt1": "westerosblocks:block/brick/sandy_pink_faint_light/all",
-    "particle": "westerosblocks:block/brick/sandy_pink_faint_light/all"
+    "txt4": "westerosblocks:block/fieldstone/sandy_pink_faint_light/all",
+    "txt5": "westerosblocks:block/fieldstone/sandy_pink_faint_light/all",
+    "txt2": "westerosblocks:block/fieldstone/sandy_pink_faint_light/all",
+    "txt3": "westerosblocks:block/fieldstone/sandy_pink_faint_light/all",
+    "txt0": "westerosblocks:block/fieldstone/sandy_pink_faint_light/all",
+    "txt1": "westerosblocks:block/fieldstone/sandy_pink_faint_light/all",
+    "particle": "westerosblocks:block/fieldstone/sandy_pink_faint_light/all"
   },
   "elements": [
     {

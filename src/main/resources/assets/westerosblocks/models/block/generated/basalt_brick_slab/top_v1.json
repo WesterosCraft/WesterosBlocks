@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/brick/basalt/all",
-    "up": "westerosblocks:block/brick/basalt/all",
-    "north": "westerosblocks:block/brick/basalt/all",
-    "south": "westerosblocks:block/brick/basalt/all",
-    "west": "westerosblocks:block/brick/basalt/all",
-    "east": "westerosblocks:block/brick/basalt/all",
-    "particle": "westerosblocks:block/brick/basalt/all"
+    "down": "westerosblocks:block/ashlar_quarter/basalt/all",
+    "up": "westerosblocks:block/ashlar_quarter/basalt/all",
+    "north": "westerosblocks:block/ashlar_quarter/basalt/all",
+    "south": "westerosblocks:block/ashlar_quarter/basalt/all",
+    "west": "westerosblocks:block/ashlar_quarter/basalt/all",
+    "east": "westerosblocks:block/ashlar_quarter/basalt/all",
+    "particle": "westerosblocks:block/ashlar_quarter/basalt/all"
   }
 }

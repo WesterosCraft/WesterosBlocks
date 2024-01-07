@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/brick/small_white/all",
-    "top": "westerosblocks:block/brick/small_white/all",
-    "side": "westerosblocks:block/brick/small_white/all",
-    "particle": "westerosblocks:block/brick/small_white/all"
+    "bottom": "westerosblocks:block/ashlar_quarter/small_white/all",
+    "top": "westerosblocks:block/ashlar_quarter/small_white/all",
+    "side": "westerosblocks:block/ashlar_quarter/small_white/all",
+    "particle": "westerosblocks:block/ashlar_quarter/small_white/all"
   }
 }

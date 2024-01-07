@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/brick/reach/all",
-    "txt5": "westerosblocks:block/brick/reach/all",
-    "txt2": "westerosblocks:block/brick/reach/all",
-    "txt3": "westerosblocks:block/brick/reach/all",
-    "txt0": "westerosblocks:block/brick/reach/all",
-    "txt1": "westerosblocks:block/brick/reach/all",
-    "particle": "westerosblocks:block/brick/reach/all"
+    "txt4": "westerosblocks:block/ashlar_quarter/reach/all",
+    "txt5": "westerosblocks:block/ashlar_quarter/reach/all",
+    "txt2": "westerosblocks:block/ashlar_quarter/reach/all",
+    "txt3": "westerosblocks:block/ashlar_quarter/reach/all",
+    "txt0": "westerosblocks:block/ashlar_quarter/reach/all",
+    "txt1": "westerosblocks:block/ashlar_quarter/reach/all",
+    "particle": "westerosblocks:block/ashlar_quarter/reach/all"
   },
   "elements": [
     {

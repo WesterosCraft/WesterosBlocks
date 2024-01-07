@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/sandstone/coarse_dark_red/engraved"
+    "all": "westerosblocks:block/ashlar_third/coarse_dark_red_sandstone/engraved"
   }
 }
