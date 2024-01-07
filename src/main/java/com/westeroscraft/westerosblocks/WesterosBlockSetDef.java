@@ -65,11 +65,12 @@ public class WesterosBlockSetDef {
   }
 	
 	public String baseBlockName; // Unique name to be used as a base for all the generated block names
-  public String baseLabel; // Base label associated with blocks in set
+  public String baseLabel = null; // Base label associated with blocks in set
   public List<String> variants = null; // List of supported variants to create (solid, stair, slab, wall, fence, hopper)
                   // By default, all of the above variants will be created
 
-  public Map<String, String> altNames = null; // Alternative name extensions to use for particular variants (optional)
+  public Map<String, String> altNames = null; // Alternative names to use for particular variants (optional)
+  public Map<String, String> altLabels = null; // Alternative labels to use for particular variants (optional)
 
 	public float hardness = DEF_FLOAT; // Block hardness
 	public String stepSound = null; // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand,
@@ -128,18 +129,27 @@ public class WesterosBlockSetDef {
       
       WesterosBlockDef variantDef = new WesterosBlockDef();
       
-      // Automatically derive name and label for variant (or use alt name if provided)
+      // Automatically derive name for variant (or use alt name if provided)
+      String suffix = (variant.equals("solid")) ? "" : variant;
       if (this.altNames != null && this.altNames.containsKey(variant)) {
         variantDef.blockName = this.altNames.get(variant);
-        variantDef.label = WesterosBlockSetDef.generateLabel(variantDef.blockName);
       }
       else {
-        String suffix = (variant.equals("solid")) ? "" : variant;
-        String suffix_label = (suffix.isEmpty()) ? "" : WesterosBlockSetDef.generateLabel(suffix);
         variantDef.blockName = this.baseBlockName;
         if (!suffix.isEmpty())
           variantDef.blockName += "_" + suffix;
+      }
+
+      // Automatically derive label for variant (or use alt label if provided)
+      if (this.altLabels != null && this.altLabels.containsKey(variant)) {
+        variantDef.label = this.altLabels.get(variant);
+      }
+      else if (this.baseLabel != null) {
+        String suffix_label = (suffix.isEmpty()) ? "" : WesterosBlockSetDef.generateLabel(suffix);
         variantDef.label = this.baseLabel + " " + suffix_label;
+      }
+      else {
+        variantDef.label = WesterosBlockSetDef.generateLabel(variantDef.blockName);
       }
       
       // Set blocktype for variant
