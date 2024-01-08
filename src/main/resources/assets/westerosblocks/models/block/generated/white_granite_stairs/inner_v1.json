@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/white_granite/all",
-    "top": "westerosblocks:block/ashlar_third/white_granite/all",
-    "side": "westerosblocks:block/ashlar_third/white_granite/all",
-    "particle": "westerosblocks:block/ashlar_third/white_granite/all"
+    "bottom": "westerosblocks:block/ashlar_third/white/all",
+    "top": "westerosblocks:block/ashlar_third/white/all",
+    "side": "westerosblocks:block/ashlar_third/white/all",
+    "particle": "westerosblocks:block/ashlar_third/white/all"
   }
 }

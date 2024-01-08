@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/cobblestone/normal/all5",
-    "top": "westerosblocks:block/cobblestone/normal/all5",
-    "side": "westerosblocks:block/cobblestone/normal/all5",
-    "particle": "westerosblocks:block/cobblestone/normal/all5"
+    "bottom": "westerosblocks:block/cobblestone/grey/all5",
+    "top": "westerosblocks:block/cobblestone/grey/all5",
+    "side": "westerosblocks:block/cobblestone/grey/all5",
+    "particle": "westerosblocks:block/cobblestone/grey/all5"
   }
 }

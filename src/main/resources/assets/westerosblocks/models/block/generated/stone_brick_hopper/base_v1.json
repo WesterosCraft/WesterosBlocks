@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ashlar_half/stone/all",
-    "txt5": "westerosblocks:block/ashlar_half/stone/all",
-    "txt2": "westerosblocks:block/ashlar_half/stone/all",
-    "txt3": "westerosblocks:block/ashlar_half/stone/all",
-    "txt0": "westerosblocks:block/ashlar_half/stone/all",
-    "txt1": "westerosblocks:block/ashlar_half/stone/all",
-    "particle": "westerosblocks:block/ashlar_half/stone/all"
+    "txt4": "westerosblocks:block/ashlar_half/grey/all",
+    "txt5": "westerosblocks:block/ashlar_half/grey/all",
+    "txt2": "westerosblocks:block/ashlar_half/grey/all",
+    "txt3": "westerosblocks:block/ashlar_half/grey/all",
+    "txt0": "westerosblocks:block/ashlar_half/grey/all",
+    "txt1": "westerosblocks:block/ashlar_half/grey/all",
+    "particle": "westerosblocks:block/ashlar_half/grey/all"
   },
   "elements": [
     {

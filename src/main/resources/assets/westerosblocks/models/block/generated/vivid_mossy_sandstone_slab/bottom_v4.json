@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
-    "up": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
-    "north": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
-    "south": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
-    "west": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
-    "east": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4",
-    "particle": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all4"
+    "down": "westerosblocks:block/ashlar_third/tan_mossy/all4",
+    "up": "westerosblocks:block/ashlar_third/tan_mossy/all4",
+    "north": "westerosblocks:block/ashlar_third/tan_mossy/all4",
+    "south": "westerosblocks:block/ashlar_third/tan_mossy/all4",
+    "west": "westerosblocks:block/ashlar_third/tan_mossy/all4",
+    "east": "westerosblocks:block/ashlar_third/tan_mossy/all4",
+    "particle": "westerosblocks:block/ashlar_third/tan_mossy/all4"
   }
 }

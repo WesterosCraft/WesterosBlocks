@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side_tall",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all3",
-    "top": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all3",
-    "side": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all3"
+    "bottom": "westerosblocks:block/ashlar_third/tan_mossy/all3",
+    "top": "westerosblocks:block/ashlar_third/tan_mossy/all3",
+    "side": "westerosblocks:block/ashlar_third/tan_mossy/all3"
   }
 }

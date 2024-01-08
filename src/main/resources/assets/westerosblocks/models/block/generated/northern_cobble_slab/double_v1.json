@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "down": "westerosblocks:block/cobblestone/northern/all1",
-    "up": "westerosblocks:block/cobblestone/northern/all1",
-    "north": "westerosblocks:block/cobblestone/northern/all1",
-    "south": "westerosblocks:block/cobblestone/northern/all1",
-    "west": "westerosblocks:block/cobblestone/northern/all1",
-    "east": "westerosblocks:block/cobblestone/northern/all1",
-    "particle": "westerosblocks:block/cobblestone/northern/all1"
+    "down": "westerosblocks:block/rubble/northern/all1",
+    "up": "westerosblocks:block/rubble/northern/all1",
+    "north": "westerosblocks:block/rubble/northern/all1",
+    "south": "westerosblocks:block/rubble/northern/all1",
+    "west": "westerosblocks:block/rubble/northern/all1",
+    "east": "westerosblocks:block/rubble/northern/all1",
+    "particle": "westerosblocks:block/rubble/northern/all1"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
-    "top": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
-    "side": "westerosblocks:block/ashlar_quarter/smooth_purple/all",
-    "particle": "westerosblocks:block/ashlar_quarter/smooth_purple/all"
+    "bottom": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all",
+    "top": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all",
+    "side": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all"
   }
 }

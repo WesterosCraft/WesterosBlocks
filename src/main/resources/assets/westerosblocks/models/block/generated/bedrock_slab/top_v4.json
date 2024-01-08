@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/cobblestone/bedrock/all4",
-    "up": "westerosblocks:block/cobblestone/bedrock/all4",
-    "north": "westerosblocks:block/cobblestone/bedrock/all4",
-    "south": "westerosblocks:block/cobblestone/bedrock/all4",
-    "west": "westerosblocks:block/cobblestone/bedrock/all4",
-    "east": "westerosblocks:block/cobblestone/bedrock/all4",
-    "particle": "westerosblocks:block/cobblestone/bedrock/all4"
+    "down": "westerosblocks:block/cobblestone/black/all4",
+    "up": "westerosblocks:block/cobblestone/black/all4",
+    "north": "westerosblocks:block/cobblestone/black/all4",
+    "south": "westerosblocks:block/cobblestone/black/all4",
+    "west": "westerosblocks:block/cobblestone/black/all4",
+    "east": "westerosblocks:block/cobblestone/black/all4",
+    "particle": "westerosblocks:block/cobblestone/black/all4"
   }
 }

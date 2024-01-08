@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/fieldstone/arbor_small/all",
-    "up": "westerosblocks:block/fieldstone/arbor_small/all",
-    "north": "westerosblocks:block/fieldstone/arbor_small/all",
-    "south": "westerosblocks:block/fieldstone/arbor_small/all",
-    "west": "westerosblocks:block/fieldstone/arbor_small/all",
-    "east": "westerosblocks:block/fieldstone/arbor_small/all",
-    "particle": "westerosblocks:block/fieldstone/arbor_small/all"
+    "down": "westerosblocks:block/fieldstone/arbor/all",
+    "up": "westerosblocks:block/fieldstone/arbor/all",
+    "north": "westerosblocks:block/fieldstone/arbor/all",
+    "south": "westerosblocks:block/fieldstone/arbor/all",
+    "west": "westerosblocks:block/fieldstone/arbor/all",
+    "east": "westerosblocks:block/fieldstone/arbor/all",
+    "particle": "westerosblocks:block/fieldstone/arbor/all"
   }
 }

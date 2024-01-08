@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ashlar_third/kl_dun/all",
-    "txt5": "westerosblocks:block/ashlar_third/kl_dun/all",
-    "txt2": "westerosblocks:block/ashlar_third/kl_dun/all",
-    "txt3": "westerosblocks:block/ashlar_third/kl_dun/all",
-    "txt0": "westerosblocks:block/ashlar_third/kl_dun/all",
-    "txt1": "westerosblocks:block/ashlar_third/kl_dun/all",
-    "particle": "westerosblocks:block/ashlar_third/kl_dun/all"
+    "txt4": "westerosblocks:block/ashlar_third/dun/all",
+    "txt5": "westerosblocks:block/ashlar_third/dun/all",
+    "txt2": "westerosblocks:block/ashlar_third/dun/all",
+    "txt3": "westerosblocks:block/ashlar_third/dun/all",
+    "txt0": "westerosblocks:block/ashlar_third/dun/all",
+    "txt1": "westerosblocks:block/ashlar_third/dun/all",
+    "particle": "westerosblocks:block/ashlar_third/dun/all"
   },
   "elements": [
     {

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/dark_red_sandstone/all",
-    "top": "westerosblocks:block/ashlar_third/dark_red_sandstone/all",
-    "side": "westerosblocks:block/ashlar_third/dark_red_sandstone/all",
-    "particle": "westerosblocks:block/ashlar_third/dark_red_sandstone/all"
+    "bottom": "westerosblocks:block/ashlar_third/dark_red/all",
+    "top": "westerosblocks:block/ashlar_third/dark_red/all",
+    "side": "westerosblocks:block/ashlar_third/dark_red/all",
+    "particle": "westerosblocks:block/ashlar_third/dark_red/all"
   }
 }

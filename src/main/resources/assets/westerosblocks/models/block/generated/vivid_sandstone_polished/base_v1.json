@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/ashlar_third/vivid_sandstone/polished"
+    "all": "westerosblocks:block/ashlar_third/tan/polished"
   }
 }

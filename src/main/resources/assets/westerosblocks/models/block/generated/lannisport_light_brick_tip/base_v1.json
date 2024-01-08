@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/fieldstone/lannisport_light/all",
-    "txt5": "westerosblocks:block/fieldstone/lannisport_light/all",
-    "txt2": "westerosblocks:block/fieldstone/lannisport_light/all",
-    "txt3": "westerosblocks:block/fieldstone/lannisport_light/all",
-    "txt0": "westerosblocks:block/fieldstone/lannisport_light/all",
-    "txt1": "westerosblocks:block/fieldstone/lannisport_light/all",
-    "particle": "westerosblocks:block/fieldstone/lannisport_light/all"
+    "txt4": "westerosblocks:block/fieldstone/westerlands/all",
+    "txt5": "westerosblocks:block/fieldstone/westerlands/all",
+    "txt2": "westerosblocks:block/fieldstone/westerlands/all",
+    "txt3": "westerosblocks:block/fieldstone/westerlands/all",
+    "txt0": "westerosblocks:block/fieldstone/westerlands/all",
+    "txt1": "westerosblocks:block/fieldstone/westerlands/all",
+    "particle": "westerosblocks:block/fieldstone/westerlands/all"
   },
   "elements": [
     {

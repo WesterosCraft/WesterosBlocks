@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/ashlar_third/dorne_light_terracotta/polished"
+    "all": "westerosblocks:block/ashlar_third/light_terracotta/polished"
   }
 }

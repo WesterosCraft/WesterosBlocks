@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log_horizontal",
   "textures": {
-    "down": "westerosblocks:block/ashlar_third/desert_sandstone/column_top",
-    "up": "westerosblocks:block/ashlar_third/desert_sandstone/column_top",
-    "north": "westerosblocks:block/ashlar_third/desert_sandstone/column_side",
-    "south": "westerosblocks:block/ashlar_third/desert_sandstone/column_side",
-    "east": "westerosblocks:block/ashlar_third/desert_sandstone/column_side",
-    "west": "westerosblocks:block/ashlar_third/desert_sandstone/column_side",
-    "particle": "westerosblocks:block/ashlar_third/desert_sandstone/column_side"
+    "down": "westerosblocks:block/ashlar_third/sandstone/column_top",
+    "up": "westerosblocks:block/ashlar_third/sandstone/column_top",
+    "north": "westerosblocks:block/ashlar_third/sandstone/column_side",
+    "south": "westerosblocks:block/ashlar_third/sandstone/column_side",
+    "east": "westerosblocks:block/ashlar_third/sandstone/column_side",
+    "west": "westerosblocks:block/ashlar_third/sandstone/column_side",
+    "particle": "westerosblocks:block/ashlar_third/sandstone/column_side"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/cobblestone/river/all1",
-    "top": "westerosblocks:block/cobblestone/river/all1",
-    "side": "westerosblocks:block/cobblestone/river/all1",
-    "particle": "westerosblocks:block/cobblestone/river/all1"
+    "bottom": "westerosblocks:block/rubble/river/all1",
+    "top": "westerosblocks:block/rubble/river/all1",
+    "side": "westerosblocks:block/rubble/river/all1",
+    "particle": "westerosblocks:block/rubble/river/all1"
   }
 }

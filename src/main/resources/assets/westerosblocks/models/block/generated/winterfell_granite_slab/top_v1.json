@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/ashlar_third/winterfell_granite/all",
-    "up": "westerosblocks:block/ashlar_third/winterfell_granite/all",
-    "north": "westerosblocks:block/ashlar_third/winterfell_granite/all",
-    "south": "westerosblocks:block/ashlar_third/winterfell_granite/all",
-    "west": "westerosblocks:block/ashlar_third/winterfell_granite/all",
-    "east": "westerosblocks:block/ashlar_third/winterfell_granite/all",
-    "particle": "westerosblocks:block/ashlar_third/winterfell_granite/all"
+    "down": "westerosblocks:block/ashlar_third/dark_grey/all",
+    "up": "westerosblocks:block/ashlar_third/dark_grey/all",
+    "north": "westerosblocks:block/ashlar_third/dark_grey/all",
+    "south": "westerosblocks:block/ashlar_third/dark_grey/all",
+    "west": "westerosblocks:block/ashlar_third/dark_grey/all",
+    "east": "westerosblocks:block/ashlar_third/dark_grey/all",
+    "particle": "westerosblocks:block/ashlar_third/dark_grey/all"
   }
 }

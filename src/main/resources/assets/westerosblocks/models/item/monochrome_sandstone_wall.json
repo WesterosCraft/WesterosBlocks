@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/monochrome_sandstone/all",
-    "top": "westerosblocks:block/ashlar_third/monochrome_sandstone/all",
-    "side": "westerosblocks:block/ashlar_third/monochrome_sandstone/all"
+    "bottom": "westerosblocks:block/ashlar_third/westerlands/all",
+    "top": "westerosblocks:block/ashlar_third/westerlands/all",
+    "side": "westerosblocks:block/ashlar_third/westerlands/all"
   }
 }

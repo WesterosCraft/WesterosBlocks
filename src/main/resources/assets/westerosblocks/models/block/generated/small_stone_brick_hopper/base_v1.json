@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ashlar_quarter/small_stone/all",
-    "txt5": "westerosblocks:block/ashlar_quarter/small_stone/all",
-    "txt2": "westerosblocks:block/ashlar_quarter/small_stone/all",
-    "txt3": "westerosblocks:block/ashlar_quarter/small_stone/all",
-    "txt0": "westerosblocks:block/ashlar_quarter/small_stone/all",
-    "txt1": "westerosblocks:block/ashlar_quarter/small_stone/all",
-    "particle": "westerosblocks:block/ashlar_quarter/small_stone/all"
+    "txt4": "westerosblocks:block/ashlar_quarter/green_grey/all",
+    "txt5": "westerosblocks:block/ashlar_quarter/green_grey/all",
+    "txt2": "westerosblocks:block/ashlar_quarter/green_grey/all",
+    "txt3": "westerosblocks:block/ashlar_quarter/green_grey/all",
+    "txt0": "westerosblocks:block/ashlar_quarter/green_grey/all",
+    "txt1": "westerosblocks:block/ashlar_quarter/green_grey/all",
+    "particle": "westerosblocks:block/ashlar_quarter/green_grey/all"
   },
   "elements": [
     {

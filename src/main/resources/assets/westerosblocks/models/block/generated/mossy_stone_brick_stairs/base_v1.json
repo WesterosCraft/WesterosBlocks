@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_half/mossy_stone/all",
-    "top": "westerosblocks:block/ashlar_half/mossy_stone/all",
-    "side": "westerosblocks:block/ashlar_half/mossy_stone/all",
-    "particle": "westerosblocks:block/ashlar_half/mossy_stone/all"
+    "bottom": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "top": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "side": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "particle": "westerosblocks:block/ashlar_half/grey_mossy/all"
   }
 }

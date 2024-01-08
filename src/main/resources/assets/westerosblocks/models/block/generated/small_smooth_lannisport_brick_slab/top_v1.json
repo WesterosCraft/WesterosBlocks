@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
+    "up": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
+    "north": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
+    "south": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
+    "west": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
+    "east": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/westerlands/all"
+  }
+}

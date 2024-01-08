@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cobblestone/bedrock/all3",
-    "txt5": "westerosblocks:block/cobblestone/bedrock/all3",
-    "txt2": "westerosblocks:block/cobblestone/bedrock/all3",
-    "txt3": "westerosblocks:block/cobblestone/bedrock/all3",
-    "txt0": "westerosblocks:block/cobblestone/bedrock/all3",
-    "txt1": "westerosblocks:block/cobblestone/bedrock/all3",
-    "particle": "westerosblocks:block/cobblestone/bedrock/all3"
+    "txt4": "westerosblocks:block/cobblestone/black/all3",
+    "txt5": "westerosblocks:block/cobblestone/black/all3",
+    "txt2": "westerosblocks:block/cobblestone/black/all3",
+    "txt3": "westerosblocks:block/cobblestone/black/all3",
+    "txt0": "westerosblocks:block/cobblestone/black/all3",
+    "txt1": "westerosblocks:block/cobblestone/black/all3",
+    "particle": "westerosblocks:block/cobblestone/black/all3"
   },
   "elements": [
     {

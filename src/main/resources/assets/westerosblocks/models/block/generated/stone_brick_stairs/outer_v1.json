@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_half/stone/all",
-    "top": "westerosblocks:block/ashlar_half/stone/all",
-    "side": "westerosblocks:block/ashlar_half/stone/all",
-    "particle": "westerosblocks:block/ashlar_half/stone/all"
+    "bottom": "westerosblocks:block/ashlar_half/grey/all",
+    "top": "westerosblocks:block/ashlar_half/grey/all",
+    "side": "westerosblocks:block/ashlar_half/grey/all",
+    "particle": "westerosblocks:block/ashlar_half/grey/all"
   }
 }

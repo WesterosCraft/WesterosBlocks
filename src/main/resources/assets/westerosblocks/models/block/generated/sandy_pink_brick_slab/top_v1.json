@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/ashlar_quarter/sandy_pink/all",
-    "up": "westerosblocks:block/ashlar_quarter/sandy_pink/all",
-    "north": "westerosblocks:block/ashlar_quarter/sandy_pink/all",
-    "south": "westerosblocks:block/ashlar_quarter/sandy_pink/all",
-    "west": "westerosblocks:block/ashlar_quarter/sandy_pink/all",
-    "east": "westerosblocks:block/ashlar_quarter/sandy_pink/all",
-    "particle": "westerosblocks:block/ashlar_quarter/sandy_pink/all"
+    "down": "westerosblocks:block/ashlar_quarter_rounded/sandy_pink/all",
+    "up": "westerosblocks:block/ashlar_quarter_rounded/sandy_pink/all",
+    "north": "westerosblocks:block/ashlar_quarter_rounded/sandy_pink/all",
+    "south": "westerosblocks:block/ashlar_quarter_rounded/sandy_pink/all",
+    "west": "westerosblocks:block/ashlar_quarter_rounded/sandy_pink/all",
+    "east": "westerosblocks:block/ashlar_quarter_rounded/sandy_pink/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/sandy_pink/all"
   }
 }

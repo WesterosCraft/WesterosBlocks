@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_quarter/mossy_small_stone/all",
-    "top": "westerosblocks:block/ashlar_quarter/mossy_small_stone/all",
-    "side": "westerosblocks:block/ashlar_quarter/mossy_small_stone/all",
-    "particle": "westerosblocks:block/ashlar_quarter/mossy_small_stone/all"
+    "bottom": "westerosblocks:block/ashlar_quarter/green_grey_mossy/all",
+    "top": "westerosblocks:block/ashlar_quarter/green_grey_mossy/all",
+    "side": "westerosblocks:block/ashlar_quarter/green_grey_mossy/all",
+    "particle": "westerosblocks:block/ashlar_quarter/green_grey_mossy/all"
   }
 }

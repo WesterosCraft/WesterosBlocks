@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/cobblestone/river/all1",
-    "up": "westerosblocks:block/cobblestone/river/all1",
-    "north": "westerosblocks:block/cobblestone/river/all1",
-    "south": "westerosblocks:block/cobblestone/river/all1",
-    "west": "westerosblocks:block/cobblestone/river/all1",
-    "east": "westerosblocks:block/cobblestone/river/all1",
-    "particle": "westerosblocks:block/cobblestone/river/all1"
+    "down": "westerosblocks:block/rubble/river/all1",
+    "up": "westerosblocks:block/rubble/river/all1",
+    "north": "westerosblocks:block/rubble/river/all1",
+    "south": "westerosblocks:block/rubble/river/all1",
+    "west": "westerosblocks:block/rubble/river/all1",
+    "east": "westerosblocks:block/rubble/river/all1",
+    "particle": "westerosblocks:block/rubble/river/all1"
   }
 }

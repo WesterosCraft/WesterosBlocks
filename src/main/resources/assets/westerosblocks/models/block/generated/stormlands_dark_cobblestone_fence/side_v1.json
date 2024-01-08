@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/fence_side",
   "textures": {
-    "bottom": "westerosblocks:block/cobblestone/stormlands_dark/all",
-    "top": "westerosblocks:block/cobblestone/stormlands_dark/all",
-    "side": "westerosblocks:block/cobblestone/stormlands_dark/all"
+    "bottom": "westerosblocks:block/cobblestone_dark/stormlands/all",
+    "top": "westerosblocks:block/cobblestone_dark/stormlands/all",
+    "side": "westerosblocks:block/cobblestone_dark/stormlands/all"
   }
 }

@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/fieldstone/arbor_small/all",
-    "txt5": "westerosblocks:block/fieldstone/arbor_small/all",
-    "txt2": "westerosblocks:block/fieldstone/arbor_small/all",
-    "txt3": "westerosblocks:block/fieldstone/arbor_small/all",
-    "txt0": "westerosblocks:block/fieldstone/arbor_small/all",
-    "txt1": "westerosblocks:block/fieldstone/arbor_small/all",
-    "particle": "westerosblocks:block/fieldstone/arbor_small/all"
+    "txt4": "westerosblocks:block/fieldstone/arbor/all",
+    "txt5": "westerosblocks:block/fieldstone/arbor/all",
+    "txt2": "westerosblocks:block/fieldstone/arbor/all",
+    "txt3": "westerosblocks:block/fieldstone/arbor/all",
+    "txt0": "westerosblocks:block/fieldstone/arbor/all",
+    "txt1": "westerosblocks:block/fieldstone/arbor/all",
+    "particle": "westerosblocks:block/fieldstone/arbor/all"
   },
   "elements": [
     {

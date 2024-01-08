@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/sandy_pink/all2",
+    "top": "westerosblocks:block/cobblestone/sandy_pink/all2",
+    "side": "westerosblocks:block/cobblestone/sandy_pink/all2",
+    "particle": "westerosblocks:block/cobblestone/sandy_pink/all2"
+  }
+}

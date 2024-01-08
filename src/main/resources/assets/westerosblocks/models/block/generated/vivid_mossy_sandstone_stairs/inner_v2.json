@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all2",
-    "top": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all2",
-    "side": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all2",
-    "particle": "westerosblocks:block/ashlar_third/vivid_mossy_sandstone/all2"
+    "bottom": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "top": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "side": "westerosblocks:block/ashlar_third/tan_mossy/all2",
+    "particle": "westerosblocks:block/ashlar_third/tan_mossy/all2"
   }
 }

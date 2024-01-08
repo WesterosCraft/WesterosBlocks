@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ashlar_third/red_sandstone/all",
-    "txt5": "westerosblocks:block/ashlar_third/red_sandstone/all",
-    "txt2": "westerosblocks:block/ashlar_third/red_sandstone/all",
-    "txt3": "westerosblocks:block/ashlar_third/red_sandstone/all",
-    "txt0": "westerosblocks:block/ashlar_third/red_sandstone/all",
-    "txt1": "westerosblocks:block/ashlar_third/red_sandstone/all",
-    "particle": "westerosblocks:block/ashlar_third/red_sandstone/all"
+    "txt4": "westerosblocks:block/ashlar_third/red/all",
+    "txt5": "westerosblocks:block/ashlar_third/red/all",
+    "txt2": "westerosblocks:block/ashlar_third/red/all",
+    "txt3": "westerosblocks:block/ashlar_third/red/all",
+    "txt0": "westerosblocks:block/ashlar_third/red/all",
+    "txt1": "westerosblocks:block/ashlar_third/red/all",
+    "particle": "westerosblocks:block/ashlar_third/red/all"
   },
   "elements": [
     {

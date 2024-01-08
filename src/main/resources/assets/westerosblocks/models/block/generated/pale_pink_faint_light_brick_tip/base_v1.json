@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "txt5": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "txt2": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "txt3": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "txt0": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "txt1": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "particle": "westerosblocks:block/fieldstone/pale_pink_faint_light/all"
+    "txt4": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "txt5": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "txt2": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "txt3": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "txt0": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "txt1": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "particle": "westerosblocks:block/fieldstone/light_pale_pink/all"
   },
   "elements": [
     {

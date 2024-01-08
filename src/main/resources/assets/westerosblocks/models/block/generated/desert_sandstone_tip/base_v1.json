@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ashlar_third/desert_sandstone/all",
-    "txt5": "westerosblocks:block/ashlar_third/desert_sandstone/all",
-    "txt2": "westerosblocks:block/ashlar_third/desert_sandstone/all",
-    "txt3": "westerosblocks:block/ashlar_third/desert_sandstone/all",
-    "txt0": "westerosblocks:block/ashlar_third/desert_sandstone/all",
-    "txt1": "westerosblocks:block/ashlar_third/desert_sandstone/all",
-    "particle": "westerosblocks:block/ashlar_third/desert_sandstone/all"
+    "txt4": "westerosblocks:block/ashlar_third/sandstone/all",
+    "txt5": "westerosblocks:block/ashlar_third/sandstone/all",
+    "txt2": "westerosblocks:block/ashlar_third/sandstone/all",
+    "txt3": "westerosblocks:block/ashlar_third/sandstone/all",
+    "txt0": "westerosblocks:block/ashlar_third/sandstone/all",
+    "txt1": "westerosblocks:block/ashlar_third/sandstone/all",
+    "particle": "westerosblocks:block/ashlar_third/sandstone/all"
   },
   "elements": [
     {

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/cobblestone/valyrian/all5",
-    "top": "westerosblocks:block/cobblestone/valyrian/all5",
-    "side": "westerosblocks:block/cobblestone/valyrian/all5",
-    "particle": "westerosblocks:block/cobblestone/valyrian/all5"
+    "bottom": "westerosblocks:block/stone_valyrian/all5",
+    "top": "westerosblocks:block/stone_valyrian/all5",
+    "side": "westerosblocks:block/stone_valyrian/all5",
+    "particle": "westerosblocks:block/stone_valyrian/all5"
   }
 }

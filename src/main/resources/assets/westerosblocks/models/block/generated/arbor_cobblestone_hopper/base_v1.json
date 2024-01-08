@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cobblestone/arbor/all",
-    "txt5": "westerosblocks:block/cobblestone/arbor/all",
-    "txt2": "westerosblocks:block/cobblestone/arbor/all",
-    "txt3": "westerosblocks:block/cobblestone/arbor/all",
-    "txt0": "westerosblocks:block/cobblestone/arbor/all",
-    "txt1": "westerosblocks:block/cobblestone/arbor/all",
-    "particle": "westerosblocks:block/cobblestone/arbor/all"
+    "txt4": "westerosblocks:block/cobblestone_dark/arbor/all",
+    "txt5": "westerosblocks:block/cobblestone_dark/arbor/all",
+    "txt2": "westerosblocks:block/cobblestone_dark/arbor/all",
+    "txt3": "westerosblocks:block/cobblestone_dark/arbor/all",
+    "txt0": "westerosblocks:block/cobblestone_dark/arbor/all",
+    "txt1": "westerosblocks:block/cobblestone_dark/arbor/all",
+    "particle": "westerosblocks:block/cobblestone_dark/arbor/all"
   },
   "elements": [
     {

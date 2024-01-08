@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "up": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "north": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "south": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "west": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "east": "westerosblocks:block/fieldstone/pale_pink_faint_light/all",
-    "particle": "westerosblocks:block/fieldstone/pale_pink_faint_light/all"
+    "down": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "up": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "north": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "south": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "west": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "east": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "particle": "westerosblocks:block/fieldstone/light_pale_pink/all"
   }
 }

@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/ashlar_half/nether/all",
-    "txt5": "westerosblocks:block/ashlar_half/nether/all",
-    "txt2": "westerosblocks:block/ashlar_half/nether/all",
-    "txt3": "westerosblocks:block/ashlar_half/nether/all",
-    "txt0": "westerosblocks:block/ashlar_half/nether/all",
-    "txt1": "westerosblocks:block/ashlar_half/nether/all",
-    "particle": "westerosblocks:block/ashlar_half/nether/all"
+    "txt4": "westerosblocks:block/ashlar_half/black/all",
+    "txt5": "westerosblocks:block/ashlar_half/black/all",
+    "txt2": "westerosblocks:block/ashlar_half/black/all",
+    "txt3": "westerosblocks:block/ashlar_half/black/all",
+    "txt0": "westerosblocks:block/ashlar_half/black/all",
+    "txt1": "westerosblocks:block/ashlar_half/black/all",
+    "particle": "westerosblocks:block/ashlar_half/black/all"
   },
   "elements": [
     {

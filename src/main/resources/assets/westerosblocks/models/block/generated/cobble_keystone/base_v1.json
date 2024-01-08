@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/cobblestone/normal/keystone/top_bottom",
-    "up": "westerosblocks:block/cobblestone/normal/keystone/top_bottom",
-    "north": "westerosblocks:block/cobblestone/normal/keystone/side",
-    "south": "westerosblocks:block/cobblestone/normal/keystone/side",
-    "west": "westerosblocks:block/cobblestone/normal/keystone/side",
-    "east": "westerosblocks:block/cobblestone/normal/keystone/side",
-    "particle": "westerosblocks:block/cobblestone/normal/keystone/side"
+    "down": "westerosblocks:block/cobblestone/grey/keystone/top_bottom",
+    "up": "westerosblocks:block/cobblestone/grey/keystone/top_bottom",
+    "north": "westerosblocks:block/cobblestone/grey/keystone/side",
+    "south": "westerosblocks:block/cobblestone/grey/keystone/side",
+    "west": "westerosblocks:block/cobblestone/grey/keystone/side",
+    "east": "westerosblocks:block/cobblestone/grey/keystone/side",
+    "particle": "westerosblocks:block/cobblestone/grey/keystone/side"
   }
 }
