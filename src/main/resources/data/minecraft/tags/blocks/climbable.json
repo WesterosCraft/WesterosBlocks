@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "westerosblocks:iron_rungs_broken",
     "westerosblocks:wood_ladder",
     "westerosblocks:iron_rungs",
     "westerosblocks:winterfell_stone_ladder",

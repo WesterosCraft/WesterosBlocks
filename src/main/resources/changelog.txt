@@ -1,3 +1,11 @@
+7 Jan 2024:
+-Added a large number of new stone brick and cobblestone sets to fill in gaps in existing block sets, and to remove biome dependencies.
+-Added volcanic pebbles and sand.
+-Added dragonfly and butterfly blocks.
+-Reorganized stone brick and cobblestone sets, using the format "<texture type> <set name>" (e.g., "Half Ashlar Dark Grey").
+-Changed "light stone" textures to a new smooth ashlar texture.
+-Changed iron rungs to custom model and added new broken iron rungs block.
+
 2 Jan 2024:
 -Refactored WesterosBlocks.json into "block sets" that are used to auto-generate standard variants (e.g. stairs, slabs, walls, etc.);
  several blocks got additional variants in this process.

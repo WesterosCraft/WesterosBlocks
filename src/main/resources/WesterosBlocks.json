@@ -5481,6 +5481,22 @@
       ]
     },
     {
+      "baseBlockName": "pebbles_wet_volcanic",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Volcanic",
+      "randomTextures": [
+        {"textures": {"all": "pebble/volcanic/wet1"}},
+        {"textures": {"all": "pebble/volcanic/wet2"}},
+        {"textures": {"all": "pebble/volcanic/wet3"}}
+      ]
+    },
+    {
       "baseBlockName": "pebbles_dry_eastern_islands",
       "variants": ["solid", "layer"],
       "hardness": 5,
@@ -5664,6 +5680,22 @@
         {"textures": {"all": "pebble/reach/dry1"}},
         {"textures": {"all": "pebble/reach/dry2"}},
         {"textures": {"all": "pebble/reach/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_volcanic",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Volcanic",
+      "randomTextures": [
+        {"textures": {"all": "pebble/volcanic/dry1"}},
+        {"textures": {"all": "pebble/volcanic/dry2"}},
+        {"textures": {"all": "pebble/volcanic/dry3"}}
       ]
     },
     {
@@ -6081,6 +6113,34 @@
       "baseLabel": "Wet Sand Stones",
       "textures": {
         "all": "sand_block/sand_wet_stones"
+      }
+    },
+    {
+      "baseBlockName": "volcanic_sand",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Volcanic Sand",
+      "textures": {
+        "all": "sand_block/sand_volcanic"
+      }
+    },
+    {
+      "baseBlockName": "volcanic_sand_stones",
+      "variants": ["solid", "layer"],
+      "hardness": 0.5,
+      "stepSound": "sand",
+      "material": "sand",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Volcanic Sand Stones",
+      "textures": {
+        "all": "sand_block/sand_volcanic_stones"
       }
     },
     {
@@ -12624,6 +12684,66 @@
       "type": "no-in-web"
     },
     {
+      "blockName": "dragonfly",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "WesterosMisc",
+      "label": "Dragonfly",
+      "textures": [
+        "web_block/bug_dragonfly"
+      ],
+      "type": "no-in-web"
+    },
+    {
+      "blockName": "butterfly_white",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "WesterosMisc",
+      "label": "White Butterfly",
+      "textures": [
+        "web_block/bug_butterfly_white"
+      ],
+      "type": "no-in-web"
+    },
+    {
+      "blockName": "butterfly_orange",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "WesterosMisc",
+      "label": "Orange Butterfly",
+      "textures": [
+        "web_block/bug_butterfly_orange"
+      ],
+      "type": "no-in-web"
+    },
+    {
+      "blockName": "butterfly_yellow",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "WesterosMisc",
+      "label": "Yellow Butterfly",
+      "textures": [
+        "web_block/bug_butterfly_yellow"
+      ],
+      "type": "no-in-web"
+    },
+    {
+      "blockName": "butterfly_blue",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "WesterosMisc",
+      "label": "Blue Butterfly",
+      "textures": [
+        "web_block/bug_butterfly_blue"
+      ],
+      "type": "no-in-web"
+    },
+    {
       "blockName": "icicle",
       "blockType": "web",
       "stepSound": "cloth",
@@ -12794,14 +12914,22 @@
       "material": "iron",
       "creativeTab": "WesterosMetal",
       "label": "Iron Rungs",
-      "randomTextures": [
-        {"textures": ["iron_rungs/ladder"], "weight": 10},
-        {"textures": ["iron_rungs/ladder2"]},
-        {"textures": ["iron_rungs/ladder3"]},
-        {"textures": ["iron_rungs/ladder4"]},
-        {"textures": ["iron_rungs/ladder5"]}
+      "textures": [
+        "iron_rungs/ladder"
       ],
-      "type": "allow-unsupported"
+      "type": "allow-unsupported",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "iron_rungs_broken",
+      "blockType": "ladder",
+      "stepSound": "ladder",
+      "material": "iron",
+      "creativeTab": "WesterosMetal",
+      "label": "Iron Rungs Broken",
+      "randomTextures": [{}, {}, {}, {}, {}, {}],
+      "type": "allow-unsupported",
+      "isCustomModel": true
     },
     {
       "blockName": "rope_ladder",
