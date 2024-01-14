@@ -15,14 +15,9 @@
     "minecraft:red_wool",
     "minecraft:white_wool",
     "minecraft:yellow_wool",
-    "westerosblocks:green_wool",
-    "westerosblocks:light_brown_wool",
     "westerosblocks:yellow_wool",
     "westerosblocks:blue_wool",
-    "westerosblocks:grey_wool",
     "westerosblocks:orange_wool",
-    "westerosblocks:light_blue_wool",
-    "westerosblocks:cyan_wool",
     "westerosblocks:pink_wool",
     "westerosblocks:red_wool",
     "westerosblocks:black_wool",
@@ -30,6 +25,11 @@
     "westerosblocks:white_wool",
     "westerosblocks:light_grey_wool",
     "westerosblocks:dirty_white_wool",
+    "westerosblocks:green_wool",
+    "westerosblocks:light_brown_wool",
+    "westerosblocks:grey_wool",
+    "westerosblocks:light_blue_wool",
+    "westerosblocks:cyan_wool",
     "westerosblocks:brown_wool"
   ]
 }

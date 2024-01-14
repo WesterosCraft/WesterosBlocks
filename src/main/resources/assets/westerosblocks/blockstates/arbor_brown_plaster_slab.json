@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "westerosblocks:block/generated/arbor_brown_plaster_slab/bottom_v1"
+    },
+    "type=double": {
+      "model": "westerosblocks:block/generated/arbor_brown_plaster_slab/double_v1"
+    },
+    "type=top": {
+      "model": "westerosblocks:block/generated/arbor_brown_plaster_slab/top_v1"
+    }
+  }
+}

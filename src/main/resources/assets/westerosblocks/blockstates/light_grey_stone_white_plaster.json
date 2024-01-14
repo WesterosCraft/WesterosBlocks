@@ -1,12 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "westerosblocks:block/generated/light_grey_stone_white_plaster/base_v1"
-      },
-      {
-        "model": "westerosblocks:block/generated/light_grey_stone_white_plaster/base_v2"
-      }
-    ]
+    "": {
+      "model": "westerosblocks:block/generated/light_grey_stone_white_plaster/base_v1"
+    }
   }
 }

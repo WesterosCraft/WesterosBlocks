@@ -1,12 +1,18 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "down": "westerosblocks:block/daub_wattle_white_red/cross_side_noctm",
-    "up": "westerosblocks:block/daub_wattle_white_red/top",
-    "north": "westerosblocks:block/daub_wattle_white_red/open_side",
-    "south": "westerosblocks:block/daub_wattle_white_red/open_side",
-    "west": "westerosblocks:block/daub_wattle_white_red/open_side",
-    "east": "westerosblocks:block/daub_wattle_white_red/open_side",
-    "particle": "westerosblocks:block/daub_wattle_white_red/open_side"
+    "down_ov": "westerosblocks:block/timber/red/bottom",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/timber/red/frame",
+    "south_ov": "westerosblocks:block/timber/red/frame",
+    "west_ov": "westerosblocks:block/timber/red/frame",
+    "east_ov": "westerosblocks:block/timber/red/frame",
+    "down": "westerosblocks:block/plaster/smooth/white_daub/all",
+    "up": "westerosblocks:block/wood/red/all",
+    "north": "westerosblocks:block/plaster/smooth/white_daub/all",
+    "south": "westerosblocks:block/plaster/smooth/white_daub/all",
+    "west": "westerosblocks:block/plaster/smooth/white_daub/all",
+    "east": "westerosblocks:block/plaster/smooth/white_daub/all",
+    "particle": "westerosblocks:block/plaster/smooth/white_daub/all"
   }
 }

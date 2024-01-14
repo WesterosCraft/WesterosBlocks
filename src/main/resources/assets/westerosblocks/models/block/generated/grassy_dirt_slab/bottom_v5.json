@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/dirt_forest/top_bot5",
+    "up": "westerosblocks:block/dirt_forest/top_bot5",
+    "north": "westerosblocks:block/dirt_forest/top_bot5",
+    "south": "westerosblocks:block/dirt_forest/top_bot5",
+    "west": "westerosblocks:block/dirt_forest/top_bot5",
+    "east": "westerosblocks:block/dirt_forest/top_bot5",
+    "particle": "westerosblocks:block/dirt_forest/top_bot5"
+  }
+}

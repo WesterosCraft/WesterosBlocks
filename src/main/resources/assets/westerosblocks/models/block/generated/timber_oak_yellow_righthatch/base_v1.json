@@ -1,12 +1,18 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "down": "westerosblocks:block/daub_wattle_yellow_oak/cross_side_noctm",
-    "up": "westerosblocks:block/daub_wattle_yellow_oak/top",
-    "north": "westerosblocks:block/daub_wattle_yellow_oak/right_side",
-    "south": "westerosblocks:block/daub_wattle_yellow_oak/right_side",
-    "west": "westerosblocks:block/daub_wattle_yellow_oak/right_side",
-    "east": "westerosblocks:block/daub_wattle_yellow_oak/right_side",
-    "particle": "westerosblocks:block/daub_wattle_yellow_oak/right_side"
+    "down_ov": "westerosblocks:block/timber/oak/bottom",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/timber/oak/righthatch",
+    "south_ov": "westerosblocks:block/timber/oak/righthatch",
+    "west_ov": "westerosblocks:block/timber/oak/righthatch",
+    "east_ov": "westerosblocks:block/timber/oak/righthatch",
+    "down": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "up": "westerosblocks:block/wood/oak/all",
+    "north": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "south": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "west": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "east": "westerosblocks:block/plaster/smooth/lannisport_yellow/all",
+    "particle": "westerosblocks:block/plaster/smooth/lannisport_yellow/all"
   }
 }

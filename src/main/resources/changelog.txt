@@ -1,7 +1,12 @@
-7 Jan 2024:
+14 Jan 2024:
 -Added a large number of new stone brick and cobblestone sets to fill in gaps in existing block sets, and to remove biome dependencies.
+-Added "smooth" and "rough" plaster blocks and variants, retexturing existing plaster blocks as appropriate.
+-Added new timber frame CTM variants (bressummer, left/righthatch large, left/righthatch studded), and added new CTM to existing crosshatch/frame blocks.
+-Added mullion window frames.
 -Added volcanic pebbles and sand.
 -Added dragonfly and butterfly blocks.
+-Added "grassy dirt" and "thick grass" blocks to replace forest biome CTMs for dirt/grass.
+-Updated timber frame textures.
 -Reorganized stone brick and cobblestone sets, using the format "<texture type> <set name>" (e.g., "Half Ashlar Dark Grey").
 -Changed "light stone" textures to a new smooth ashlar texture.
 -Changed iron rungs to custom model and added new broken iron rungs block.

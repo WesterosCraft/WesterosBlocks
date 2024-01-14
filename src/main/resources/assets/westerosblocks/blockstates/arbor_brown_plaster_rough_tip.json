@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/arbor_brown_plaster_rough_tip/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/arbor_brown_plaster_rough_tip/base_v2"
+      }
+    ]
+  }
+}

@@ -1,12 +1,18 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "down": "westerosblocks:block/daub_wattle_whitewashed/cross_side_noctm",
-    "up": "westerosblocks:block/daub_wattle_whitewashed/top",
-    "north": "westerosblocks:block/daub_wattle_whitewashed/cross_side",
-    "south": "westerosblocks:block/daub_wattle_whitewashed/cross_side",
-    "west": "westerosblocks:block/daub_wattle_whitewashed/cross_side",
-    "east": "westerosblocks:block/daub_wattle_whitewashed/cross_side",
-    "particle": "westerosblocks:block/daub_wattle_whitewashed/cross_side"
+    "down_ov": "westerosblocks:block/timber/white/bottom",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/timber/white/crosshatch",
+    "south_ov": "westerosblocks:block/timber/white/crosshatch",
+    "west_ov": "westerosblocks:block/timber/white/crosshatch",
+    "east_ov": "westerosblocks:block/timber/white/crosshatch",
+    "down": "westerosblocks:block/plaster/smooth/grey_white/all",
+    "up": "westerosblocks:block/wood/white/all",
+    "north": "westerosblocks:block/plaster/smooth/grey_white/all",
+    "south": "westerosblocks:block/plaster/smooth/grey_white/all",
+    "west": "westerosblocks:block/plaster/smooth/grey_white/all",
+    "east": "westerosblocks:block/plaster/smooth/grey_white/all",
+    "particle": "westerosblocks:block/plaster/smooth/grey_white/all"
   }
 }

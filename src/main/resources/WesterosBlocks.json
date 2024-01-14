@@ -1493,7 +1493,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosLargeBrick",
-      "baseLabel": "Half Ashlar Grey",
+      "baseLabel": "Half Ashlar Normal Grey",
       "colorMult": "textures/colormap/stonebrick",
       "textures": {
         "all": "ashlar_half/grey/all",
@@ -1511,7 +1511,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosLargeBrick",
-      "baseLabel": "Half Ashlar Grey Mossy",
+      "baseLabel": "Half Ashlar Normal Grey Mossy",
       "colorMult": "textures/colormap/stonebrick",
       "textures": {
         "all": "ashlar_half/grey_mossy/all",
@@ -1529,7 +1529,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosSmallBrick",
-      "baseLabel": "Quarter Rounded Ashlar Grey",
+      "baseLabel": "Quarter Rounded Ashlar Normal Grey",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": {
         "all": "ashlar_quarter_rounded/grey/all"
@@ -1544,7 +1544,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosLargeBrick",
-      "baseLabel": "Medium Ashlar Grey",
+      "baseLabel": "Medium Ashlar Normal Grey",
       "textures": {
         "all": "ashlar_third/grey/all"
       }
@@ -1558,7 +1558,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosSmallBrick",
-      "baseLabel": "Smooth Ashlar Grey",
+      "baseLabel": "Smooth Ashlar Normal Grey",
       "textures": {
         "all": "ashlar_smooth/grey/all"
       }
@@ -1572,7 +1572,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosSmallBrick",
-      "baseLabel": "Fieldstone Grey",
+      "baseLabel": "Fieldstone Normal Grey",
       "colorMult": "textures/colormap/lightgreystone",
       "textures": {
         "all": "fieldstone/grey/all",
@@ -1590,7 +1590,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosCobbleStone",
-      "baseLabel": "Cobblestone Grey",
+      "baseLabel": "Cobblestone Normal Grey",
       "colorMult": "textures/colormap/cobblestone",
       "randomTextures": [
         {"textures": {"all": "cobblestone/grey/all1"}, "weight": 5},
@@ -1609,7 +1609,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosCobbleStone",
-      "baseLabel": "Cobblestone Grey Mossy",
+      "baseLabel": "Cobblestone Normal Grey Mossy",
       "colorMult": "textures/colormap/cobblestone",
       "randomTextures": [
         {"textures": {"all": "cobblestone/grey_mossy/all1"}, "weight": 5},
@@ -1628,7 +1628,7 @@
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosCobbleStone",
-      "baseLabel": "Dark Cobblestone Grey",
+      "baseLabel": "Dark Cobblestone Normal Grey",
       "textures": {
         "all": "cobblestone_dark/grey/all"
       }
@@ -3977,6 +3977,963 @@
       }
     },
     {
+      "baseBlockName": "white_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "White Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/white/all"
+      }
+    },
+    {
+      "baseBlockName": "plain_white_daub",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Plain White Daub Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/white_daub/all"
+      }
+    },
+    {
+      "baseBlockName": "brownish_white_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Brownish White Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/brown_white/all"
+      }
+    },
+    {
+      "baseBlockName": "pale_white_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale White Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/pale_white/all"
+      }
+    },
+    {
+      "baseBlockName": "greyish_white_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Greyish White Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/grey_white/all"
+      }
+    },
+    {
+      "baseBlockName": "light_grey_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Grey Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/light_grey/all"
+      }
+    },
+    {
+      "baseBlockName": "grey_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Grey Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/grey/all"
+      }
+    },
+    {
+      "baseBlockName": "dark_grey_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dark Grey Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/dark_grey/all"
+      }
+    },
+    {
+      "baseBlockName": "light_red_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Red Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/light_red/all"
+      }
+    },
+    {
+      "baseBlockName": "red_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Red Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/red/all"
+      }
+    },
+    {
+      "baseBlockName": "casterly_rock_crimson_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Casterly Crimson Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/casterly_crimson/all"
+      }
+    },
+    {
+      "baseBlockName": "dark_red_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dark Red Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/dark_red/all"
+      }
+    },
+    {
+      "baseBlockName": "lannisport_orange_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Lannisport Orange Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/lannisport_orange/all"
+      }
+    },
+    {
+      "baseBlockName": "orange_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Orange Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/orange/all"
+      }
+    },
+    {
+      "baseBlockName": "dark_orange_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dark Orange Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/dark_orange/all"
+      }
+    },
+    {
+      "baseBlockName": "lannisport_yellow_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Lannisport Yellow Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/lannisport_yellow/all"
+      }
+    },
+    {
+      "baseBlockName": "dorne_mud_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dorne Mud Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/mud/all"
+      }
+    },
+    {
+      "baseBlockName": "pale_yellow_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale Yellow Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/pale_yellow/all"
+      }
+    },
+    {
+      "baseBlockName": "dorne_dark_mud_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dorne Dark Mud Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/dark_mud/all"
+      }
+    },
+    {
+      "baseBlockName": "arbor_brown_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Arbor Brown Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/arbor_brown/all"
+      }
+    },
+    {
+      "baseBlockName": "plain_brown_daub",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Plain Brown Daub Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/brown_daub/all"
+      }
+    },
+    {
+      "baseBlockName": "gulltown_green_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Gulltown Green Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/gulltown_green/all"
+      }
+    },
+    {
+      "baseBlockName": "green_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Green Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/green/all"
+      }
+    },
+    {
+      "baseBlockName": "highgarden_green_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Highgarden Green Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/highgarden_green/all"
+      }
+    },
+    {
+      "baseBlockName": "gulltown_blue_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Gulltown Blue Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/gulltown_blue/all"
+      }
+    },
+    {
+      "baseBlockName": "light_blue_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Blue Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/light_blue/all"
+      }
+    },
+    {
+      "baseBlockName": "blue_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Blue Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/blue/all"
+      }
+    },
+    {
+      "baseBlockName": "light_purple_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Purple Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/light_purple/all"
+      }
+    },
+    {
+      "baseBlockName": "purple_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Purple Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/purple/all"
+      }
+    },
+    {
+      "baseBlockName": "pale_purple_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale Purple Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/pale_purple/all"
+      }
+    },
+    {
+      "baseBlockName": "highgarden_pink_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Highgarden Pink Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/highgarden_pink/all"
+      }
+    },
+    {
+      "baseBlockName": "pink_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pink Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/pink/all"
+      }
+    },
+    {
+      "baseBlockName": "pale_pink_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale Pink Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/pale_pink/all"
+      }
+    },
+    {
+      "baseBlockName": "white_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "White Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/white/all1"}},
+        {"textures": {"all": "plaster/rough/white/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "plain_white_daub_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Plain White Daub Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/white_daub/all1"}},
+        {"textures": {"all": "plaster/rough/white_daub/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "brownish_white_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Brownish White Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/brown_white/all1"}},
+        {"textures": {"all": "plaster/rough/brown_white/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "pale_white_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale White Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/pale_white/all1"}},
+        {"textures": {"all": "plaster/rough/pale_white/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "greyish_white_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Greyish White Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/grey_white/all1"}},
+        {"textures": {"all": "plaster/rough/grey_white/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "light_grey_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Grey Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/light_grey/all1"}},
+        {"textures": {"all": "plaster/rough/light_grey/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "grey_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Grey Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/grey/all1"}},
+        {"textures": {"all": "plaster/rough/grey/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "dark_grey_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dark Grey Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/dark_grey/all1"}},
+        {"textures": {"all": "plaster/rough/dark_grey/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "light_red_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Red Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/light_red/all1"}},
+        {"textures": {"all": "plaster/rough/light_red/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "red_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Red Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/red/all1"}},
+        {"textures": {"all": "plaster/rough/red/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "casterly_rock_crimson_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Casterly Crimson Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/casterly_crimson/all1"}},
+        {"textures": {"all": "plaster/rough/casterly_crimson/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "dark_red_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dark Red Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/dark_red/all1"}},
+        {"textures": {"all": "plaster/rough/dark_red/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "lannisport_orange_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Lannisport Orange Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/lannisport_orange/all1"}},
+        {"textures": {"all": "plaster/rough/lannisport_orange/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "orange_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Orange Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/orange/all1"}},
+        {"textures": {"all": "plaster/rough/orange/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "dark_orange_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dark Orange Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/dark_orange/all1"}},
+        {"textures": {"all": "plaster/rough/dark_orange/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "lannisport_yellow_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Lannisport Yellow Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/lannisport_yellow/all1"}},
+        {"textures": {"all": "plaster/rough/lannisport_yellow/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "dorne_mud_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dorne Mud Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/mud/all1"}},
+        {"textures": {"all": "plaster/rough/mud/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "pale_yellow_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale Yellow Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/pale_yellow/all1"}},
+        {"textures": {"all": "plaster/rough/pale_yellow/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "dorne_dark_mud_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Dorne Dark Mud Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/dark_mud/all1"}},
+        {"textures": {"all": "plaster/rough/dark_mud/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "arbor_brown_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Arbor Brown Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/arbor_brown/all1"}},
+        {"textures": {"all": "plaster/rough/arbor_brown/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "plain_brown_daub_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Plain Brown Daub Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/brown_daub/all1"}},
+        {"textures": {"all": "plaster/rough/brown_daub/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "gulltown_green_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Gulltown Green Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/gulltown_green/all1"}},
+        {"textures": {"all": "plaster/rough/gulltown_green/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "green_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Green Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/green/all1"}},
+        {"textures": {"all": "plaster/rough/green/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "highgarden_green_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Highgarden Green Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/highgarden_green/all1"}},
+        {"textures": {"all": "plaster/rough/highgarden_green/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "gulltown_blue_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Gulltown Blue Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/gulltown_blue/all1"}},
+        {"textures": {"all": "plaster/rough/gulltown_blue/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "light_blue_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Blue Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/light_blue/all1"}},
+        {"textures": {"all": "plaster/rough/light_blue/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "blue_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Blue Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/blue/all1"}},
+        {"textures": {"all": "plaster/rough/blue/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "light_purple_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Purple Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/light_purple/all1"}},
+        {"textures": {"all": "plaster/rough/light_purple/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "purple_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Purple Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/purple/all1"}},
+        {"textures": {"all": "plaster/rough/purple/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "pale_purple_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale Purple Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/pale_purple/all1"}},
+        {"textures": {"all": "plaster/rough/pale_purple/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "highgarden_pink_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Highgarden Pink Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/highgarden_pink/all1"}},
+        {"textures": {"all": "plaster/rough/highgarden_pink/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "pink_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pink Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/pink/all1"}},
+        {"textures": {"all": "plaster/rough/pink/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "pale_pink_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale Pink Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/pale_pink/all1"}},
+        {"textures": {"all": "plaster/rough/pale_pink/all2"}}
+      ]
+    },
+    {
       "baseBlockName": "oak",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
       "altNames": {
@@ -4002,7 +4959,7 @@
       "textures": {
         "all": "wood/oak/all",
         "cover": "wood/oak/cover",
-        "window-frame": "wood/oak/window_frame"
+        "window-frame": "timber/oak/window_frame"
       },
       "altTextures": {
         "solid": ["wood/oak/all", "wood/oak/all", "wood/oak/woodctm"],
@@ -4128,7 +5085,7 @@
       "textures": {
         "all": "wood/northern/all",
         "cover": "wood/northern/cover",
-        "window-frame": "wood/northern/window_frame"
+        "window-frame": "timber/northern/window_frame"
       },
       "altTextures": {
         "solid": ["wood/northern/all", "wood/northern/all", "wood/northern/woodctm"],
@@ -4214,7 +5171,7 @@
       },
       "textures": {
         "all": "wood/white/all",
-        "window-frame": "wood/white/window_frame"
+        "window-frame": "timber/white/window_frame"
       },
       "altTextures": {
         "solid": ["wood/white/all", "wood/white/all", "wood/white/woodctm"],
@@ -4244,7 +5201,7 @@
       },
       "textures": {
         "all": "wood/red/all",
-        "window-frame": "wood/red/window_frame"
+        "window-frame": "timber/red/window_frame"
       },
       "altTextures": {
         "solid": ["wood/red/all", "wood/red/all", "wood/red/woodctm"],
@@ -5733,6 +6690,29 @@
           {"textures": ["dirt_path/top_bot8", "dirt_path/top_bot8", "dirt_path/ground"], "weight": 77}
         ]
       }
+    },
+    {
+      "baseBlockName": "grassy_dirt",
+      "variants": ["solid", "slab", "path"],
+      "hardness": 2,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosGrassDirt",
+      "baseLabel": "Grassy Dirt",
+      "randomTextures": [
+        {"textures": {"all": "dirt_forest/top_bot1"}, "weight": 100},
+        {"textures": {"all": "dirt_forest/top_bot2"}, "weight": 33},
+        {"textures": {"all": "dirt_forest/top_bot3"}, "weight": 45},
+        {"textures": {"all": "dirt_forest/top_bot4"}, "weight": 140},
+        {"textures": {"all": "dirt_forest/top_bot5"}, "weight": 193},
+        {"textures": {"all": "dirt_forest/top_bot6"}, "weight": 77},
+        {"textures": {"all": "dirt_forest/top_bot7"}, "weight": 77},
+        {"textures": {"all": "dirt_forest/top_bot8"}, "weight": 45},
+        {"textures": {"all": "dirt_forest/top_bot9"}, "weight": 77},
+        {"textures": {"all": "dirt_forest/top_bot10"}, "weight": 77}
+      ]
     },
     {
       "baseBlockName": "gravel",
@@ -8236,6 +9216,22 @@
         "marble/quartz/wall/top",
         "marble/quartz/wall/top",
         "marble/quartz/wall/column_side"
+      ]
+    },
+    {
+      "blockName": "iron_bars",
+      "blockType": "pane",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "type": "bars-model,unconnect:false",
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMetal",
+      "label": "Iron Bars",
+      "textures": [
+        "bars_iron_block/iron_bars",
+        "transparent"
       ]
     },
     {
@@ -12084,32 +13080,6 @@
       ]
     },
     {
-      "blockName": "lannisport_orange_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Lannisport Orange Plaster",
-      "textures": [
-        "plaster/lannisport_orange_plaster"
-      ]
-    },
-    {
-      "blockName": "lannisport_yellow_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Lannisport Yellow Plaster",
-      "textures": [
-        "plaster/lannisport_yellow_plaster"
-      ]
-    },
-    {
       "blockName": "parquet_floor",
       "blockType": "solid",
       "hardness": 2,
@@ -12135,250 +13105,6 @@
         "wood/spruce/carving/top_bottom",
         "wood/spruce/carving/top_bottom",
         "wood/spruce/carving/side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_brown_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Brown Crosshatch",
-      "textures": [
-        "daub_wattle_brown_oak/cross_side_noctm",
-        "daub_wattle_brown_oak/top",
-        "daub_wattle_brown_oak/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_brown_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Brown Lefthatch",
-      "textures": [
-        "daub_wattle_brown_oak/cross_side_noctm",
-        "daub_wattle_brown_oak/top",
-        "daub_wattle_brown_oak/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_brown_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Brown Righthatch",
-      "textures": [
-        "daub_wattle_brown_oak/cross_side_noctm",
-        "daub_wattle_brown_oak/top",
-        "daub_wattle_brown_oak/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_brown_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Brown Frame",
-      "textures": [
-        "daub_wattle_brown_oak/cross_side_noctm",
-        "daub_wattle_brown_oak/top",
-        "daub_wattle_brown_oak/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_white_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak White Crosshatch",
-      "textures": [
-        "daub_wattle_white_oak/cross_side_noctm",
-        "daub_wattle_white_oak/top",
-        "daub_wattle_white_oak/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_white_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak White Righthatch",
-      "textures": [
-        "daub_wattle_white_oak/cross_side_noctm",
-        "daub_wattle_white_oak/top",
-        "daub_wattle_white_oak/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_white_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak White Lefthatch",
-      "textures": [
-        "daub_wattle_white_oak/cross_side_noctm",
-        "daub_wattle_white_oak/top",
-        "daub_wattle_white_oak/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_white_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak White Frame",
-      "textures": [
-        "daub_wattle_white_oak/cross_side_noctm",
-        "daub_wattle_white_oak/top",
-        "daub_wattle_white_oak/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_red_white_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Red White Crosshatch",
-      "textures": [
-        "daub_wattle_white_red/cross_side_noctm",
-        "daub_wattle_white_red/top",
-        "daub_wattle_white_red/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_red_white_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Red White Lefthatch",
-      "textures": [
-        "daub_wattle_white_red/cross_side_noctm",
-        "daub_wattle_white_red/top",
-        "daub_wattle_white_red/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_red_white_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Red White Righthatch",
-      "textures": [
-        "daub_wattle_white_red/cross_side_noctm",
-        "daub_wattle_white_red/top",
-        "daub_wattle_white_red/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_red_white_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Red White Frame",
-      "textures": [
-        "daub_wattle_white_red/cross_side_noctm",
-        "daub_wattle_white_red/top",
-        "daub_wattle_white_red/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_orange_brick_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Orange Brick Crosshatch",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_oak/cross_side_noctm",
-        "daub_wattle_orange_brick_oak/top",
-        "daub_wattle_orange_brick_oak/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_orange_brick_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Orange Brick Lefthatch",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_oak/cross_side_noctm",
-        "daub_wattle_orange_brick_oak/top",
-        "daub_wattle_orange_brick_oak/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_orange_brick_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Orange Brick Righthatch",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_oak/cross_side_noctm",
-        "daub_wattle_orange_brick_oak/top",
-        "daub_wattle_orange_brick_oak/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_orange_brick_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Orange Brick Frame",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_oak/cross_side_noctm",
-        "daub_wattle_orange_brick_oak/top",
-        "daub_wattle_orange_brick_oak/open_side"
       ]
     },
     {
@@ -12465,32 +13191,6 @@
         "miscellaneous_block/food_squash_top",
         "miscellaneous_block/food_squash_top",
         "miscellaneous_block/food_squash_side"
-      ]
-    },
-    {
-      "blockName": "plain_white_daub",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Plain White Daub",
-      "textures": [
-        "plaster/daub_plain_white"
-      ]
-    },
-    {
-      "blockName": "plain_brown_daub",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "grass",
-      "material": "ground",
-      "resistance": 2,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Plain Brown Daub",
-      "textures": [
-        "plaster/daub_plain_brown"
       ]
     },
     {
@@ -12701,7 +13401,7 @@
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosMisc",
-      "label": "White Butterfly",
+      "label": "Central White Butterfly",
       "textures": [
         "web_block/bug_butterfly_white"
       ],
@@ -12713,7 +13413,7 @@
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosMisc",
-      "label": "Orange Butterfly",
+      "label": "Southern Orange Butterfly",
       "textures": [
         "web_block/bug_butterfly_orange"
       ],
@@ -12725,7 +13425,7 @@
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosMisc",
-      "label": "Yellow Butterfly",
+      "label": "Western Yellow Butterfly",
       "textures": [
         "web_block/bug_butterfly_yellow"
       ],
@@ -12737,7 +13437,7 @@
       "stepSound": "cloth",
       "material": "web",
       "creativeTab": "WesterosMisc",
-      "label": "Blue Butterfly",
+      "label": "Northern Blue Butterfly",
       "textures": [
         "web_block/bug_butterfly_blue"
       ],
@@ -14988,62 +15688,6 @@
       ]
     },
     {
-      "blockName": "lannisport_keystone_orange_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Lannisport Keystone Orange Plaster",
-      "randomTextures": [
-        {
-          "textures": [
-            "lannisport_keystone_orange_plaster/top_bottom",
-            "lannisport_keystone_orange_plaster/top_bottom",
-            "lannisport_keystone_orange_plaster/side1"
-          ],
-          "weight": 50
-        },
-        {
-          "textures": [
-            "lannisport_keystone_orange_plaster/top_bottom",
-            "lannisport_keystone_orange_plaster/top_bottom",
-            "lannisport_keystone_orange_plaster/side2"
-          ],
-          "weight": 1
-        }
-      ]
-    },
-    {
-      "blockName": "lannisport_keystone_yellow_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Lannisport Keystone Yellow Plaster",
-      "randomTextures": [
-        {
-          "textures": [
-            "lannisport_keystone_yellow_plaster/top_bottom",
-            "lannisport_keystone_yellow_plaster/top_bottom",
-            "lannisport_keystone_yellow_plaster/side1"
-          ],
-          "weight": 50
-        },
-        {
-          "textures": [
-            "lannisport_keystone_yellow_plaster/top_bottom",
-            "lannisport_keystone_yellow_plaster/top_bottom",
-            "lannisport_keystone_yellow_plaster/side2"
-          ],
-          "weight": 1
-        }
-      ]
-    },
-    {
       "blockName": "mirror_block",
       "blockType": "solid",
       "hardness": 3,
@@ -15849,46 +16493,6 @@
       ]
     },
     {
-      "blockName": "dorne_mud_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Dorne Mud Plaster",
-      "textures": [
-        "dorne_mud_plaster/default"
-      ]
-    },
-    {
-      "blockName": "dorne_dark_mud_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Dorne Dark Mud Plaster",
-      "textures": [
-        "dorne_dark_mud_plaster/default"
-      ]
-    },
-    {
-      "blockName": "casterly_rock_crimson_plaster_slab",
-      "blockType": "slab",
-      "hardness": 3,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "harvestLevel": [{ "tool": "pickaxe", "level": 2 }],
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Casterly Rock Crimson Plaster Slab",
-      "textures": [
-        "plaster/casterly_crimson_plaster"
-      ]
-    },
-    {
       "blockName": "orange_brick_furnace",
       "blockType": "furnace",
       "nonOpaque": true,
@@ -16055,6 +16659,23 @@
       "label": "Flagstone",
       "textures": [
         "stone_block/flagstone"
+      ]
+    },
+    {
+      "blockName": "thick_grass_block",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "grass",
+      "material": "plants",
+      "resistance": 5,
+      "harvestLevel": [{ "tool": "shovel", "level": 3 }],
+      "colorMult": "textures/colormap/grass",
+      "creativeTab": "WesterosGrassDirt",
+      "label": "Thick Grass Block",
+      "randomTextures": [
+        {"textures": ["grass_block/forest_top1"]},
+        {"textures": ["grass_block/forest_top2"]},
+        {"textures": ["grass_block/forest_top3"]}
       ]
     },
     {
@@ -16320,45 +16941,6 @@
       ]
     },
     {
-      "blockName": "white_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "White Plaster",
-      "textures": [
-        "plaster/white_plaster"
-      ]
-    },
-    {
-      "blockName": "brownish_white_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Brownish White Plaster",
-      "textures": [
-        "plaster/brownish_white_plaster"
-      ]
-    },
-    {
-      "blockName": "greyish_white_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Greyish White Plaster",
-      "textures": [
-        "plaster/greyish_white_plaster"
-      ]
-    },
-    {
       "blockName": "small_smooth_stone_brick_blue_plaster",
       "blockType": "solid",
       "hardness": 5,
@@ -16366,26 +16948,16 @@
       "material": "rock",
       "resistance": 5,
       "creativeTab": "WesterosMarblePlaster",
-      "label": "Small Smooth Stone Brick Blue Plaster",
+      "label": "Small Smooth Stone Brick Keystone Blue Plaster",
       "textures": [
-        "plaster/small_smooth_stone_brick_blue_plaster/top_bottom",
-        "plaster/small_smooth_stone_brick_blue_plaster/top_bottom",
-        "plaster/small_smooth_stone_brick_blue_plaster/side"
-      ]
-    },
-    {
-      "blockName": "small_white_brick_brownish_white_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Small White Brick Brownish White Plaster",
-      "textures": [
-        "plaster/small_white_brick_brownish_white_plaster/top_bottom",
-        "plaster/small_white_brick_brownish_white_plaster/top_bottom",
-        "plaster/small_white_brick_brownish_white_plaster/side"
+        "ashlar_quarter_rounded/grey/all",
+        "ashlar_quarter_rounded/grey/all",
+        "plaster/smooth/blue/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_grey/side"
       ]
     },
     {
@@ -16396,37 +16968,36 @@
       "material": "rock",
       "resistance": 5,
       "creativeTab": "WesterosMarblePlaster",
-      "label": "Small Smooth Stone Brick White Plaster",
+      "label": "Small Smooth Stone Brick Keystone Brownish White Plaster",
       "textures": [
-        "plaster/small_smooth_stone_brick_white_plaster/top_bottom",
-        "plaster/small_smooth_stone_brick_white_plaster/top_bottom",
-        "plaster/small_smooth_stone_brick_white_plaster/side"
+        "ashlar_quarter_rounded/grey/all",
+        "ashlar_quarter_rounded/grey/all",
+        "plaster/smooth/brown_white/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_grey/side"
       ]
     },
     {
-      "blockName": "small_stone_brick_white_plaster",
+      "blockName": "small_white_brick_brownish_white_plaster",
       "blockType": "solid",
       "hardness": 5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 5,
       "creativeTab": "WesterosMarblePlaster",
-      "label": "Small Stone Brick White Plaster",
-      "randomTextures": [
-        {
-          "textures": [
-            "plaster/small_stone_brick_white_plaster/top_bottom",
-            "plaster/small_stone_brick_white_plaster/top_bottom",
-            "plaster/small_stone_brick_white_plaster/side1"
-          ]
-        },
-        {
-          "textures": [
-            "plaster/small_stone_brick_white_plaster/top_bottom",
-            "plaster/small_stone_brick_white_plaster/top_bottom",
-            "plaster/small_stone_brick_white_plaster/side2"
-          ]
-        }
+      "label": "Small White Brick Keystone Brownish White Plaster",
+      "textures": [
+        "ashlar_quarter_rounded/white/all",
+        "ashlar_quarter_rounded/white/all",
+        "plaster/smooth/brown_white/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_white/side"
       ]
     },
     {
@@ -16437,11 +17008,36 @@
       "material": "rock",
       "resistance": 5,
       "creativeTab": "WesterosMarblePlaster",
-      "label": "Small White Brick White Plaster",
+      "label": "Small White Brick Keystone White Plaster",
       "textures": [
-        "plaster/small_white_brick_white_plaster/top_bottom",
-        "plaster/small_white_brick_white_plaster/top_bottom",
-        "plaster/small_white_brick_white_plaster/side"
+        "ashlar_quarter_rounded/white/all",
+        "ashlar_quarter_rounded/white/all",
+        "plaster/smooth/white/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_white/side"
+      ]
+    },
+    {
+      "blockName": "small_stone_brick_white_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosMarblePlaster",
+      "label": "Small Stone Brick Keystone White Plaster",
+      "textures": [
+        "ashlar_quarter/green_grey/all",
+        "ashlar_quarter/green_grey/all",
+        "plaster/smooth/white/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_green_grey/side"
       ]
     },
     {
@@ -16452,62 +17048,56 @@
       "material": "rock",
       "resistance": 5,
       "creativeTab": "WesterosMarblePlaster",
-      "label": "Light Grey Stone White Plaster",
-      "randomTextures": [
-        {
-          "textures": [
-            "plaster/light_grey_stone_white_plaster/top_bottom",
-            "plaster/light_grey_stone_white_plaster/top_bottom",
-            "plaster/light_grey_stone_white_plaster/side1"
-          ]
-        },
-        {
-          "textures": [
-            "plaster/light_grey_stone_white_plaster/top_bottom",
-            "plaster/light_grey_stone_white_plaster/top_bottom",
-            "plaster/light_grey_stone_white_plaster/side2"
-          ]
-        }
-      ]
-    },
-    {
-      "blockName": "red_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Red Plaster",
-      "colorMult": "textures/colormap/clay",
+      "label": "Light Grey Brick Keystone White Plaster",
       "textures": [
-        "plaster/red_plaster"
+        "fieldstone/grey/all",
+        "fieldstone/grey/all",
+        "plaster/smooth/white/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/fieldstone_grey/side"
       ]
     },
     {
-      "blockName": "blue_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 5,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Blue Plaster",
-      "textures": [
-        "plaster/blue_plaster"
-      ]
-    },
-    {
-      "blockName": "casterly_rock_crimson_plaster",
+      "blockName": "lannisport_keystone_orange_plaster",
       "blockType": "solid",
       "hardness": 5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
-      "label": "Casterly Rock Crimson Plaster",
+      "label": "Lannisport Keystone Orange Plaster",
       "textures": [
-        "plaster/casterly_crimson_plaster"
+        "fieldstone/westerlands/all",
+        "fieldstone/westerlands/all",
+        "plaster/smooth/lannisport_orange/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/fieldstone_westerlands/side"
+      ]
+    },
+    {
+      "blockName": "lannisport_keystone_yellow_plaster",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosMarblePlaster",
+      "label": "Lannisport Keystone Yellow Plaster",
+      "textures": [
+        "fieldstone/westerlands/all",
+        "fieldstone/westerlands/all",
+        "plaster/smooth/lannisport_yellow/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/fieldstone_westerlands/side"
       ]
     },
     {
@@ -16518,11 +17108,16 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
-      "label": "Smooth Brown Brick Plaster",
+      "label": "Smooth Brown Brick Keystone Brownish White Plaster",
       "textures": [
-        "unused_brown_plaster/top_bottom",
-        "unused_brown_plaster/top_bottom",
-        "unused_brown_plaster/side"
+        "ashlar_quarter_rounded/light_brown/all",
+        "ashlar_quarter_rounded/light_brown/all",
+        "plaster/smooth/brown_white/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_light_brown/side"
       ]
     },
     {
@@ -16533,11 +17128,16 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosMarblePlaster",
-      "label": "Smooth Purple Brick Plaster",
+      "label": "Smooth Purple Brick Keystone Brownish White Plaster",
       "textures": [
-        "unused_purple_plaster/top_bottom",
-        "unused_purple_plaster/top_bottom",
-        "unused_purple_plaster/side"
+        "ashlar_quarter_rounded/dark_red/all",
+        "ashlar_quarter_rounded/dark_red/all",
+        "plaster/smooth/brown_white/all"
+      ],
+      "overlayTextures": [
+        "transparent",
+        "transparent",
+        "plaster_keystone/ashlar_quarter_rounded_dark_red/side"
       ]
     },
     {
@@ -16815,14 +17415,6 @@
       "textures": [
         "utility_block/yard"
       ]
-    },
-    {
-      "blockName": "casterly_rock_crimson_plaster_stairs",
-      "blockType": "stair",
-      "modelBlockName": "casterly_rock_crimson_plaster",
-      "creativeTab": "WesterosMarblePlaster",
-      "type": "unconnect:false",
-      "label": "Casterly Rock Crimson Plaster Stairs"
     },
     {
       "blockName": "winterfell_stone_ladder",
@@ -22840,71 +23432,6 @@
       "boundingBox": {"xMin": 0.25, "xMax": 0.75, "yMin": 0, "yMax": 0.5, "zMin": 0.25, "zMax": 0.75}
     },
     {
-      "blockName": "highgarden_green_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Highgarden Green Plaster",
-      "textures": [
-        "plaster/highgarden_green_plaster"
-      ]
-    },
-    {
-      "blockName": "highgarden_pink_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Highgarden Pink Plaster",
-      "textures": [
-        "plaster/highgarden_pink_plaster"
-      ]
-    },
-    {
-      "blockName": "gulltown_blue_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Gulltown Blue Plaster",
-      "textures": [
-        "plaster/gulltown_blue_plaster"
-      ]
-    },
-    {
-      "blockName": "gulltown_green_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Gulltown Green Plaster",
-      "textures": [
-        "plaster/gulltown_green_plaster"
-      ]
-    },
-    {
-      "blockName": "pale_yellow_plaster",
-      "blockType": "solid",
-      "hardness": 5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "creativeTab": "WesterosMarblePlaster",
-      "label": "Pale Yellow Plaster",
-      "textures": [
-        "plaster/pale_yellow_plaster"
-      ]
-    },
-    {
       "blockName": "locked_oak_door",
       "blockType": "door",
       "hardness": 2,
@@ -23930,6 +24457,246 @@
       ]
     },
     {
+      "blockName": "timber_oak_brown_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
+    },
+    {
+      "blockName": "timber_oak_brown_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+    },
+    {
+      "blockName": "timber_oak_brown_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+    },
+    {
+      "blockName": "timber_oak_brown_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_brown_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_brown_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_white_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
+    },
+    {
+      "blockName": "timber_oak_white_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+    },
+    {
+      "blockName": "timber_oak_white_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+    },
+    {
+      "blockName": "timber_oak_white_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_white_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_white_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Crosshatch",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Lefthatch",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Righthatch",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Frame",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Vertical",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Close Studding",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
       "blockName": "timber_oak_reach_brick_crosshatch",
       "blockType": "solid",
       "hardness": 2,
@@ -23937,12 +24704,10 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Reach Brick Crosshatch",
-      "textures": [
-        "daub_wattle_reach_brick_oak/cross_side_noctm",
-        "daub_wattle_reach_brick_oak/top",
-        "daub_wattle_reach_brick_oak/cross_side"
-      ]
+      "label": "Timber Oak Fieldstone Reach Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
       "blockName": "timber_oak_reach_brick_lefthatch",
@@ -23952,12 +24717,10 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Reach Brick Lefthatch",
-      "textures": [
-        "daub_wattle_reach_brick_oak/cross_side_noctm",
-        "daub_wattle_reach_brick_oak/top",
-        "daub_wattle_reach_brick_oak/left_side"
-      ]
+      "label": "Timber Oak Fieldstone Reach Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_reach_brick_righthatch",
@@ -23967,12 +24730,10 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Reach Brick Righthatch",
-      "textures": [
-        "daub_wattle_reach_brick_oak/cross_side_noctm",
-        "daub_wattle_reach_brick_oak/top",
-        "daub_wattle_reach_brick_oak/right_side"
-      ]
+      "label": "Timber Oak Fieldstone Reach Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_reach_brick_frame",
@@ -23982,12 +24743,36 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Reach Brick Frame",
-      "textures": [
-        "daub_wattle_reach_brick_oak/cross_side_noctm",
-        "daub_wattle_reach_brick_oak/top",
-        "daub_wattle_reach_brick_oak/open_side"
-      ]
+      "label": "Timber Oak Fieldstone Reach Frame",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_reach_brick_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Reach Vertical",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_reach_brick_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Reach Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_crosshatch",
@@ -23997,12 +24782,10 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Oldtown Brick Crosshatch",
-      "textures": [
-        "daub_wattle_oldtown_brick_oak/cross_side_noctm",
-        "daub_wattle_oldtown_brick_oak/top",
-        "daub_wattle_oldtown_brick_oak/cross_side"
-      ]
+      "label": "Timber Oak Fieldstone Oldtown Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_lefthatch",
@@ -24012,12 +24795,10 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Oldtown Brick Lefthatch",
-      "textures": [
-        "daub_wattle_oldtown_brick_oak/cross_side_noctm",
-        "daub_wattle_oldtown_brick_oak/top",
-        "daub_wattle_oldtown_brick_oak/left_side"
-      ]
+      "label": "Timber Oak Fieldstone Oldtown Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_righthatch",
@@ -24027,12 +24808,10 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Oldtown Brick Righthatch",
-      "textures": [
-        "daub_wattle_oldtown_brick_oak/cross_side_noctm",
-        "daub_wattle_oldtown_brick_oak/top",
-        "daub_wattle_oldtown_brick_oak/right_side"
-      ]
+      "label": "Timber Oak Fieldstone Oldtown Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_frame",
@@ -24042,12 +24821,36 @@
       "material": "wood",
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Oldtown Brick Frame",
-      "textures": [
-        "daub_wattle_oldtown_brick_oak/cross_side_noctm",
-        "daub_wattle_oldtown_brick_oak/top",
-        "daub_wattle_oldtown_brick_oak/open_side"
-      ]
+      "label": "Timber Oak Fieldstone Oldtown Frame",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_oldtown_brick_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Oldtown Vertical",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_oldtown_brick_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Oldtown Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
     },
     {
       "blockName": "timber_oak_yellow_crosshatch",
@@ -24058,11 +24861,9 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Crosshatch",
-      "textures": [
-        "daub_wattle_yellow_oak/cross_side_noctm",
-        "daub_wattle_yellow_oak/top",
-        "daub_wattle_yellow_oak/cross_side"
-      ]
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
       "blockName": "timber_oak_yellow_lefthatch",
@@ -24073,11 +24874,9 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Lefthatch",
-      "textures": [
-        "daub_wattle_yellow_oak/cross_side_noctm",
-        "daub_wattle_yellow_oak/top",
-        "daub_wattle_yellow_oak/left_side"
-      ]
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_yellow_righthatch",
@@ -24088,11 +24887,9 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Righthatch",
-      "textures": [
-        "daub_wattle_yellow_oak/cross_side_noctm",
-        "daub_wattle_yellow_oak/top",
-        "daub_wattle_yellow_oak/right_side"
-      ]
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_yellow_frame",
@@ -24103,11 +24900,35 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Frame",
-      "textures": [
-        "daub_wattle_yellow_oak/cross_side_noctm",
-        "daub_wattle_yellow_oak/top",
-        "daub_wattle_yellow_oak/open_side"
-      ]
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_yellow_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Yellow Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_yellow_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Yellow Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
     },
     {
       "blockName": "timber_oak_orange_crosshatch",
@@ -24118,11 +24939,9 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Crosshatch",
-      "textures": [
-        "daub_wattle_orange_oak/cross_side_noctm",
-        "daub_wattle_orange_oak/top",
-        "daub_wattle_orange_oak/cross_side"
-      ]
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
       "blockName": "timber_oak_orange_lefthatch",
@@ -24133,11 +24952,9 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Lefthatch",
-      "textures": [
-        "daub_wattle_orange_oak/cross_side_noctm",
-        "daub_wattle_orange_oak/top",
-        "daub_wattle_orange_oak/left_side"
-      ]
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_orange_righthatch",
@@ -24148,11 +24965,9 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Righthatch",
-      "textures": [
-        "daub_wattle_orange_oak/cross_side_noctm",
-        "daub_wattle_orange_oak/top",
-        "daub_wattle_orange_oak/right_side"
-      ]
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_orange_frame",
@@ -24163,11 +24978,899 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Frame",
-      "textures": [
-        "daub_wattle_orange_oak/cross_side_noctm",
-        "daub_wattle_orange_oak/top",
-        "daub_wattle_orange_oak/open_side"
-      ]
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_orange_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_orange_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Frame",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Vertical",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_brown_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_brown_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_brown_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_brown_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_brown_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_brown_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_white_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_white_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_white_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_white_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_white_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_white_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Crosshatch",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Lefthatch",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Righthatch",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Frame",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Vertical",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Close Studding",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Frame",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Vertical",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_red_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_red_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_red_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_red_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_red_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_red_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_blue_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_blue_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_blue_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_blue_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_blue_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_blue_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_green_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_green_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_green_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_green_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_green_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_green_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_whitewashed_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/crosshatch" ]
+    },
+    {
+      "blockName": "timber_whitewashed_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/lefthatch" ]
+    },
+    {
+      "blockName": "timber_whitewashed_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/righthatch" ]
+    },
+    {
+      "blockName": "timber_whitewashed_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/frame" ]
+    },
+    {
+      "blockName": "timber_whitewashed_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/vertical" ]
+    },
+    {
+      "blockName": "timber_whitewashed_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/close_studding" ]
+    },
+    {
+      "blockName": "timber_red_white_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Crosshatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/crosshatch" ]
+    },
+    {
+      "blockName": "timber_red_white_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Lefthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/lefthatch" ]
+    },
+    {
+      "blockName": "timber_red_white_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Righthatch",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/righthatch" ]
+    },
+    {
+      "blockName": "timber_red_white_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Frame",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/frame" ]
+    },
+    {
+      "blockName": "timber_red_white_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Vertical",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/vertical" ]
+    },
+    {
+      "blockName": "timber_red_white_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Close Studding",
+      "type": "connectstate:true",
+      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/close_studding" ]
     },
     {
       "blockName": "oldtown_sewer_manhole",
@@ -24337,989 +26040,6 @@
         "leaves_weirwood/leaves_weirwood_snowy_top",
         "leaves_weirwood/leaves_weirwood_snowy",
         "leaves_weirwood/leaves_bf_weirwood_snowy"
-      ]
-    },
-    {
-      "blockName": "timber_oak_lannisport_brick_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Lannisport Brick Crosshatch",
-      "textures": [
-        "daub_wattle_lannisport_brick_oak/cross_side_noctm",
-        "daub_wattle_lannisport_brick_oak/top",
-        "daub_wattle_lannisport_brick_oak/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_lannisport_brick_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Lannisport Brick Lefthatch",
-      "textures": [
-        "daub_wattle_lannisport_brick_oak/cross_side_noctm",
-        "daub_wattle_lannisport_brick_oak/top",
-        "daub_wattle_lannisport_brick_oak/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_lannisport_brick_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Lannisport Brick Righthatch",
-      "textures": [
-        "daub_wattle_lannisport_brick_oak/cross_side_noctm",
-        "daub_wattle_lannisport_brick_oak/top",
-        "daub_wattle_lannisport_brick_oak/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_lannisport_brick_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Lannisport Brick Frame",
-      "textures": [
-        "daub_wattle_lannisport_brick_oak/cross_side_noctm",
-        "daub_wattle_lannisport_brick_oak/top",
-        "daub_wattle_lannisport_brick_oak/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_whitewashed_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Whitewashed Crosshatch",
-      "textures": [
-        "daub_wattle_whitewashed/cross_side_noctm",
-        "daub_wattle_whitewashed/top",
-        "daub_wattle_whitewashed/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_whitewashed_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Whitewashed Lefthatch",
-      "textures": [
-        "daub_wattle_whitewashed/cross_side_noctm",
-        "daub_wattle_whitewashed/top",
-        "daub_wattle_whitewashed/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_whitewashed_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Whitewashed Righthatch",
-      "textures": [
-        "daub_wattle_whitewashed/cross_side_noctm",
-        "daub_wattle_whitewashed/top",
-        "daub_wattle_whitewashed/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_whitewashed_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Whitewashed Frame",
-      "textures": [
-        "daub_wattle_whitewashed/cross_side_noctm",
-        "daub_wattle_whitewashed/top",
-        "daub_wattle_whitewashed/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_brown_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Brown Crosshatch",
-      "textures": [
-        "daub_wattle_brown_northern/cross_side_noctm",
-        "daub_wattle_brown_northern/top",
-        "daub_wattle_brown_northern/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_brown_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Brown Lefthatch",
-      "textures": [
-        "daub_wattle_brown_northern/cross_side_noctm",
-        "daub_wattle_brown_northern/top",
-        "daub_wattle_brown_northern/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_brown_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Brown Righthatch",
-      "textures": [
-        "daub_wattle_brown_northern/cross_side_noctm",
-        "daub_wattle_brown_northern/top",
-        "daub_wattle_brown_northern/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_brown_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Brown Frame",
-      "textures": [
-        "daub_wattle_brown_northern/cross_side_noctm",
-        "daub_wattle_brown_northern/top",
-        "daub_wattle_brown_northern/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_white_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern White Crosshatch",
-      "textures": [
-        "daub_wattle_white_northern/cross_side_noctm",
-        "daub_wattle_white_northern/top",
-        "daub_wattle_white_northern/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_white_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern White Lefthatch",
-      "textures": [
-        "daub_wattle_white_northern/cross_side_noctm",
-        "daub_wattle_white_northern/top",
-        "daub_wattle_white_northern/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_white_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern White Righthatch",
-      "textures": [
-        "daub_wattle_white_northern/cross_side_noctm",
-        "daub_wattle_white_northern/top",
-        "daub_wattle_white_northern/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_white_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern White Frame",
-      "textures": [
-        "daub_wattle_white_northern/cross_side_noctm",
-        "daub_wattle_white_northern/top",
-        "daub_wattle_white_northern/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_orange_brick_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Orange Brick Crosshatch",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_northern/cross_side_noctm",
-        "daub_wattle_orange_brick_northern/top",
-        "daub_wattle_orange_brick_northern/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_orange_brick_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Orange Brick Lefthatch",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_northern/cross_side_noctm",
-        "daub_wattle_orange_brick_northern/top",
-        "daub_wattle_orange_brick_northern/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_orange_brick_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Orange Brick Righthatch",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_northern/cross_side_noctm",
-        "daub_wattle_orange_brick_northern/top",
-        "daub_wattle_orange_brick_northern/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_orange_brick_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Orange Brick Frame",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_northern/cross_side_noctm",
-        "daub_wattle_orange_brick_northern/top",
-        "daub_wattle_orange_brick_northern/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_grey_brick_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Grey Brick Crosshatch",
-      "textures": [
-        "daub_wattle_grey_brick_northern/cross_side_noctm",
-        "daub_wattle_grey_brick_northern/top",
-        "daub_wattle_grey_brick_northern/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_grey_brick_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Grey Brick Lefthatch",
-      "textures": [
-        "daub_wattle_grey_brick_northern/cross_side_noctm",
-        "daub_wattle_grey_brick_northern/top",
-        "daub_wattle_grey_brick_northern/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_grey_brick_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Grey Brick Righthatch",
-      "textures": [
-        "daub_wattle_grey_brick_northern/cross_side_noctm",
-        "daub_wattle_grey_brick_northern/top",
-        "daub_wattle_grey_brick_northern/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_grey_brick_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Grey Brick Frame",
-      "textures": [
-        "daub_wattle_grey_brick_northern/cross_side_noctm",
-        "daub_wattle_grey_brick_northern/top",
-        "daub_wattle_grey_brick_northern/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_red_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Red Crosshatch",
-      "textures": [
-        "daub_wattle_red_northern/cross_side_noctm",
-        "daub_wattle_red_northern/top",
-        "daub_wattle_red_northern/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_red_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Red Lefthatch",
-      "textures": [
-        "daub_wattle_red_northern/cross_side_noctm",
-        "daub_wattle_red_northern/top",
-        "daub_wattle_red_northern/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_red_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Red Righthatch",
-      "textures": [
-        "daub_wattle_red_northern/cross_side_noctm",
-        "daub_wattle_red_northern/top",
-        "daub_wattle_red_northern/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_red_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Red Frame",
-      "textures": [
-        "daub_wattle_red_northern/cross_side_noctm",
-        "daub_wattle_red_northern/top",
-        "daub_wattle_red_northern/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_pale_yellow_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Pale Yellow Crosshatch",
-      "textures": [
-        "daub_wattle_yellow_northern/cross_side_noctm",
-        "daub_wattle_yellow_northern/top",
-        "daub_wattle_yellow_northern/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_pale_yellow_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Pale Yellow Lefthatch",
-      "textures": [
-        "daub_wattle_yellow_northern/cross_side_noctm",
-        "daub_wattle_yellow_northern/top",
-        "daub_wattle_yellow_northern/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_pale_yellow_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Pale Yellow Righthatch",
-      "textures": [
-        "daub_wattle_yellow_northern/cross_side_noctm",
-        "daub_wattle_yellow_northern/top",
-        "daub_wattle_yellow_northern/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_pale_yellow_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Pale Yellow Frame",
-      "textures": [
-        "daub_wattle_yellow_northern/cross_side_noctm",
-        "daub_wattle_yellow_northern/top",
-        "daub_wattle_yellow_northern/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_blue_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Blue Crosshatch",
-      "textures": [
-        "daub_wattle_blue_northern/cross_side_noctm",
-        "daub_wattle_blue_northern/top",
-        "daub_wattle_blue_northern/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_blue_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Blue Lefthatch",
-      "textures": [
-        "daub_wattle_blue_northern/cross_side_noctm",
-        "daub_wattle_blue_northern/top",
-        "daub_wattle_blue_northern/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_blue_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Blue Righthatch",
-      "textures": [
-        "daub_wattle_blue_northern/cross_side_noctm",
-        "daub_wattle_blue_northern/top",
-        "daub_wattle_blue_northern/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_blue_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Blue Frame",
-      "textures": [
-        "daub_wattle_blue_northern/cross_side_noctm",
-        "daub_wattle_blue_northern/top",
-        "daub_wattle_blue_northern/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_green_crosshatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Green Crosshatch",
-      "textures": [
-        "daub_wattle_green_northern/cross_side_noctm",
-        "daub_wattle_green_northern/top",
-        "daub_wattle_green_northern/cross_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_green_lefthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Green Lefthatch",
-      "textures": [
-        "daub_wattle_green_northern/cross_side_noctm",
-        "daub_wattle_green_northern/top",
-        "daub_wattle_green_northern/left_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_green_righthatch",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Green Righthatch",
-      "textures": [
-        "daub_wattle_green_northern/cross_side_noctm",
-        "daub_wattle_green_northern/top",
-        "daub_wattle_green_northern/right_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_green_frame",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Green Frame",
-      "textures": [
-        "daub_wattle_green_northern/cross_side_noctm",
-        "daub_wattle_green_northern/top",
-        "daub_wattle_green_northern/open_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_brown_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Brown Vertical",
-      "textures": [
-        "daub_wattle_brown_oak/cross_side_noctm",
-        "daub_wattle_brown_oak/top",
-        "daub_wattle_brown_oak/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_white_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak White Vertical",
-      "textures": [
-        "daub_wattle_white_oak/cross_side_noctm",
-        "daub_wattle_white_oak/top",
-        "daub_wattle_white_oak/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_red_white_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Red White Vertical",
-      "textures": [
-        "daub_wattle_white_red/cross_side_noctm",
-        "daub_wattle_white_red/top",
-        "daub_wattle_white_red/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_orange_brick_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Orange Brick Vertical",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_oak/cross_side_noctm",
-        "daub_wattle_orange_brick_oak/top",
-        "daub_wattle_orange_brick_oak/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_reach_brick_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Reach Brick Vertical",
-      "textures": [
-        "daub_wattle_reach_brick_oak/cross_side_noctm",
-        "daub_wattle_reach_brick_oak/top",
-        "daub_wattle_reach_brick_oak/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_oldtown_brick_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Oldtown Brick Vertical",
-      "textures": [
-        "daub_wattle_oldtown_brick_oak/cross_side_noctm",
-        "daub_wattle_oldtown_brick_oak/top",
-        "daub_wattle_oldtown_brick_oak/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_yellow_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Yellow Vertical",
-      "textures": [
-        "daub_wattle_yellow_oak/cross_side_noctm",
-        "daub_wattle_yellow_oak/top",
-        "daub_wattle_yellow_oak/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_orange_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Orange Vertical",
-      "textures": [
-        "daub_wattle_orange_oak/cross_side_noctm",
-        "daub_wattle_orange_oak/top",
-        "daub_wattle_orange_oak/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_lannisport_brick_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Lannisport Brick Vertical",
-      "textures": [
-        "daub_wattle_lannisport_brick_oak/cross_side_noctm",
-        "daub_wattle_lannisport_brick_oak/top",
-        "daub_wattle_lannisport_brick_oak/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_whitewashed_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Whitewashed Vertical",
-      "textures": [
-        "daub_wattle_whitewashed/cross_side_noctm",
-        "daub_wattle_whitewashed/top",
-        "daub_wattle_whitewashed/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_brown_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Brown Vertical",
-      "textures": [
-        "daub_wattle_brown_northern/cross_side_noctm",
-        "daub_wattle_brown_northern/top",
-        "daub_wattle_brown_northern/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_white_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern White Vertical",
-      "textures": [
-        "daub_wattle_white_northern/cross_side_noctm",
-        "daub_wattle_white_northern/top",
-        "daub_wattle_white_northern/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_orange_brick_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Orange Brick Vertical",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_northern/cross_side_noctm",
-        "daub_wattle_orange_brick_northern/top",
-        "daub_wattle_orange_brick_northern/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_grey_brick_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Grey Brick Vertical",
-      "textures": [
-        "daub_wattle_grey_brick_northern/cross_side_noctm",
-        "daub_wattle_grey_brick_northern/top",
-        "daub_wattle_grey_brick_northern/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_red_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Red Vertical",
-      "textures": [
-        "daub_wattle_red_northern/cross_side_noctm",
-        "daub_wattle_red_northern/top",
-        "daub_wattle_red_northern/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_pale_yellow_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Pale Yellow Vertical",
-      "textures": [
-        "daub_wattle_yellow_northern/cross_side_noctm",
-        "daub_wattle_yellow_northern/top",
-        "daub_wattle_yellow_northern/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_blue_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Blue Vertical",
-      "textures": [
-        "daub_wattle_blue_northern/cross_side_noctm",
-        "daub_wattle_blue_northern/top",
-        "daub_wattle_blue_northern/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_green_vertical",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Green Vertical",
-      "textures": [
-        "daub_wattle_green_northern/cross_side_noctm",
-        "daub_wattle_green_northern/top",
-        "daub_wattle_green_northern/vert_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_brown_close_studding",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Brown Close Studding",
-      "textures": [
-        "daub_wattle_brown_oak/cross_side_noctm",
-        "daub_wattle_brown_oak/top",
-        "daub_wattle_brown_oak/close_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_white_close_studding",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak White Close Studding",
-      "textures": [
-        "daub_wattle_white_oak/cross_side_noctm",
-        "daub_wattle_white_oak/top",
-        "daub_wattle_white_oak/close_side"
-      ]
-    },
-    {
-      "blockName": "timber_oak_orange_brick_close_studding",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Oak Orange Brick Close Studding",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_oak/cross_side_noctm",
-        "daub_wattle_orange_brick_oak/top",
-        "daub_wattle_orange_brick_oak/close_side"
-      ]
-    },
-    {
-      "blockName": "timber_whitewashed_close_studding",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Whitewashed Close Studding",
-      "textures": [
-        "daub_wattle_whitewashed/cross_side_noctm",
-        "daub_wattle_whitewashed/top",
-        "daub_wattle_whitewashed/close_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_brown_close_studding",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Brown Close Studding",
-      "textures": [
-        "daub_wattle_brown_northern/cross_side_noctm",
-        "daub_wattle_brown_northern/top",
-        "daub_wattle_brown_northern/close_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_white_close_studding",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern White Close Studding",
-      "textures": [
-        "daub_wattle_white_northern/cross_side_noctm",
-        "daub_wattle_white_northern/top",
-        "daub_wattle_white_northern/close_side"
-      ]
-    },
-    {
-      "blockName": "timber_northern_orange_brick_close_studding",
-      "blockType": "solid",
-      "hardness": 2,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 5,
-      "creativeTab": "WesterosTimberFrame",
-      "label": "Timber Northern Orange Brick Close Studding",
-      "colorMult": "textures/colormap/brick",
-      "textures": [
-        "daub_wattle_orange_brick_northern/cross_side_noctm",
-        "daub_wattle_orange_brick_northern/top",
-        "daub_wattle_orange_brick_northern/close_side"
       ]
     },
     {
@@ -26507,22 +27227,6 @@
           "zMax": 1,
           "sideTextures": [0, 1, 0, 0, 0, 0]
         }
-      ]
-    },
-    {
-      "blockName": "iron_bars",
-      "blockType": "pane",
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "type": "bars-model,unconnect:false",
-      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
-      "creativeTab": "WesterosMetal",
-      "label": "Iron Bars",
-      "textures": [
-        "bars_iron_block/iron_bars",
-        "transparent"
       ]
     }
   ]

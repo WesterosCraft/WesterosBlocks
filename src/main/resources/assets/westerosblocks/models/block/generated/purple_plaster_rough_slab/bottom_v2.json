@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/rough/purple/all2",
+    "up": "westerosblocks:block/plaster/rough/purple/all2",
+    "north": "westerosblocks:block/plaster/rough/purple/all2",
+    "south": "westerosblocks:block/plaster/rough/purple/all2",
+    "west": "westerosblocks:block/plaster/rough/purple/all2",
+    "east": "westerosblocks:block/plaster/rough/purple/all2",
+    "particle": "westerosblocks:block/plaster/rough/purple/all2"
+  }
+}

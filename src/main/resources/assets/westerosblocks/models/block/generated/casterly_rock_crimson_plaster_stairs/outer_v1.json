@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "top": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "side": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "particle": "westerosblocks:block/plaster/casterly_crimson_plaster"
+    "bottom": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "top": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "side": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "particle": "westerosblocks:block/plaster/smooth/casterly_crimson/all"
   }
 }

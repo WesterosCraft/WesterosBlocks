@@ -1,12 +1,18 @@
 {
-  "parent": "westerosblocks:block/tinted/cube",
+  "parent": "westerosblocks:block/tinted/cube_overlay",
   "textures": {
-    "down": "westerosblocks:block/daub_wattle_orange_brick_oak/cross_side_noctm",
-    "up": "westerosblocks:block/daub_wattle_orange_brick_oak/top",
-    "north": "westerosblocks:block/daub_wattle_orange_brick_oak/cross_side",
-    "south": "westerosblocks:block/daub_wattle_orange_brick_oak/cross_side",
-    "west": "westerosblocks:block/daub_wattle_orange_brick_oak/cross_side",
-    "east": "westerosblocks:block/daub_wattle_orange_brick_oak/cross_side",
-    "particle": "westerosblocks:block/daub_wattle_orange_brick_oak/cross_side"
+    "down_ov": "westerosblocks:block/timber/oak/bottom",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/timber/oak/crosshatch",
+    "south_ov": "westerosblocks:block/timber/oak/crosshatch",
+    "west_ov": "westerosblocks:block/timber/oak/crosshatch",
+    "east_ov": "westerosblocks:block/timber/oak/crosshatch",
+    "down": "westerosblocks:block/brick/small_orange/all",
+    "up": "westerosblocks:block/wood/oak/all",
+    "north": "westerosblocks:block/brick/small_orange/all",
+    "south": "westerosblocks:block/brick/small_orange/all",
+    "west": "westerosblocks:block/brick/small_orange/all",
+    "east": "westerosblocks:block/brick/small_orange/all",
+    "particle": "westerosblocks:block/brick/small_orange/all"
   }
 }

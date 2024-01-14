@@ -1,12 +1,18 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "down": "westerosblocks:block/daub_wattle_reach_brick_oak/cross_side_noctm",
-    "up": "westerosblocks:block/daub_wattle_reach_brick_oak/top",
-    "north": "westerosblocks:block/daub_wattle_reach_brick_oak/open_side",
-    "south": "westerosblocks:block/daub_wattle_reach_brick_oak/open_side",
-    "west": "westerosblocks:block/daub_wattle_reach_brick_oak/open_side",
-    "east": "westerosblocks:block/daub_wattle_reach_brick_oak/open_side",
-    "particle": "westerosblocks:block/daub_wattle_reach_brick_oak/open_side"
+    "down_ov": "westerosblocks:block/timber/oak/bottom",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/timber/oak/frame",
+    "south_ov": "westerosblocks:block/timber/oak/frame",
+    "west_ov": "westerosblocks:block/timber/oak/frame",
+    "east_ov": "westerosblocks:block/timber/oak/frame",
+    "down": "westerosblocks:block/fieldstone/reach/all",
+    "up": "westerosblocks:block/wood/oak/all",
+    "north": "westerosblocks:block/fieldstone/reach/all",
+    "south": "westerosblocks:block/fieldstone/reach/all",
+    "west": "westerosblocks:block/fieldstone/reach/all",
+    "east": "westerosblocks:block/fieldstone/reach/all",
+    "particle": "westerosblocks:block/fieldstone/reach/all"
   }
 }
