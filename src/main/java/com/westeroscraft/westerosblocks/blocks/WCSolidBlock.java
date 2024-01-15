@@ -22,6 +22,12 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	BlockBehaviour.Properties props = def.makeProperties();
+            // See if we have a state property
+        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
+        	if (state != null) {
+        		tempSTATE = state;
+        	}   
+            // See if we have connectstate
             String t = def.getType();
 			boolean doConnectstate = false;
 			if (t != null) {
@@ -44,6 +50,9 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
 	public static final IntegerProperty CONNECTSTATE = IntegerProperty.create("connectstate", 0, 3);
 	protected static IntegerProperty tempCONNECTSTATE;
     public final boolean connectstate;
+
+    protected static WesterosBlockDef.StateProperty tempSTATE;
+    protected WesterosBlockDef.StateProperty STATE;
     
     protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doConnectstate) {
         super(props);
@@ -61,6 +70,9 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
 		if (connectstate) {
 			defbs = defbs.setValue(CONNECTSTATE, 0);
 		}
+        if (STATE != null) {
+        	defbs = defbs.setValue(STATE, STATE.defValue);
+        }
 		this.registerDefaultState(defbs);
     }
 
@@ -116,6 +128,13 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
             StateDefinition.add(tempCONNECTSTATE);
             tempCONNECTSTATE = null;
         }
+        if (tempSTATE != null) {
+    		STATE = tempSTATE;
+    		tempSTATE = null;
+    	}
+    	if (STATE != null) {
+	       StateDefinition.add(STATE);
+    	}
     	super.createBlockStateDefinition(StateDefinition);
     }
 
@@ -123,6 +142,9 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
     	BlockState bs = super.getStateForPlacement(ctx);
+        if (STATE != null) {
+            bs = bs.setValue(STATE, STATE.defValue); 
+        }
     	return bs;
     }
 

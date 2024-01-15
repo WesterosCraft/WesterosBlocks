@@ -680,7 +680,12 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		if (this.ambientOcclusion == null) {
 			this.ambientOcclusion = true; // Default to true
 		}
-		for (WesterosBlockStateRecord rec : this.states) { 
+		for (WesterosBlockStateRecord rec : this.states) {
+			// allow for textures/randomtextures/overlaytextures/colormult to be inherited from base def
+			if (rec.textures == null) rec.textures = this.textures;
+			if (rec.randomTextures == null) rec.randomTextures = this.randomTextures;
+			if (rec.overlayTextures == null) rec.overlayTextures = this.overlayTextures;
+			if (rec.colorMult.equals("#FFFFFF")) rec.colorMult = this.colorMult;
 			rec.doStateRecordInit();
 		}
 		// If stacks, process these too
