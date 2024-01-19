@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/timber_oak_white_lefthatch/base_v1"
+    "state=state2": {
+      "model": "westerosblocks:block/generated/timber_oak_white_lefthatch/state2_v1"
+    },
+    "state=state1": {
+      "model": "westerosblocks:block/generated/timber_oak_white_lefthatch/state1_v1"
+    },
+    "state=state4": {
+      "model": "westerosblocks:block/generated/timber_oak_white_lefthatch/state4_v1"
+    },
+    "state=state3": {
+      "model": "westerosblocks:block/generated/timber_oak_white_lefthatch/state3_v1"
+    },
+    "state=state0": {
+      "model": "westerosblocks:block/generated/timber_oak_white_lefthatch/state0_v1"
     }
   }
 }

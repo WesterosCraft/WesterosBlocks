@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/timber_oak_yellow_close_studding/base_v1"
+    "state=state2": {
+      "model": "westerosblocks:block/generated/timber_oak_yellow_close_studding/state2_v1"
+    },
+    "state=state1": {
+      "model": "westerosblocks:block/generated/timber_oak_yellow_close_studding/state1_v1"
+    },
+    "state=state4": {
+      "model": "westerosblocks:block/generated/timber_oak_yellow_close_studding/state4_v1"
+    },
+    "state=state3": {
+      "model": "westerosblocks:block/generated/timber_oak_yellow_close_studding/state3_v1"
+    },
+    "state=state0": {
+      "model": "westerosblocks:block/generated/timber_oak_yellow_close_studding/state0_v1"
     }
   }
 }

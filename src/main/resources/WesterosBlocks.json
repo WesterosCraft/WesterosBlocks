@@ -3066,7 +3066,7 @@
       "baseLabel": "Orange Brick",
       "colorMult": "textures/colormap/brick",
       "textures": {
-        "all": "brick/orange/all"
+        "all": "brick/orange_rough/all"
       }
     },
     {
@@ -3084,10 +3084,10 @@
       "baseLabel": "Small Orange Brick",
       "colorMult": "textures/colormap/brick",
       "textures": {
-        "all": "brick/small_orange/all",
-        "arrow-slit": "brick/small_orange/arrow_slit",
-        "arrow-slit-window": "brick/small_orange/arrow_slit_window",
-        "arrow-slit-ornate": "brick/small_orange/arrow_slit_ornate"
+        "all": "brick/orange/all",
+        "arrow-slit": "brick/orange/arrow_slit",
+        "arrow-slit-window": "brick/orange/arrow_slit_window",
+        "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"
       }
     },
     {
@@ -4935,12 +4935,13 @@
     },
     {
       "baseBlockName": "oak",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame", "window_frame_mullion"],
       "altNames": {
         "solid": "oak_planks",
         "fence_gate": "locked_oak_fence_gate",
         "hollow_hopper": "hollow_oak_hopper",
-        "window_frame": "oak_timber_window_frame"
+        "window_frame": "oak_timber_window_frame",
+        "window_frame_mullion": "oak_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -4959,7 +4960,8 @@
       "textures": {
         "all": "wood/oak/all",
         "cover": "wood/oak/cover",
-        "window-frame": "timber/oak/window_frame"
+        "window-frame": "timber/oak/window_frame",
+        "window-frame-mullion": "timber/oak/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/oak/all", "wood/oak/all", "wood/oak/woodctm"],
@@ -5061,12 +5063,13 @@
     },
     {
       "baseBlockName": "dark_northern_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame", "window_frame_mullion"],
       "altNames": {
         "fence_gate": "locked_dark_northern_wood_fence_gate",
         "cover": "northern_wood_cover",
         "hollow_hopper": "hollow_dark_northern_wood_hopper",
-        "window_frame": "northern_timber_window_frame"
+        "window_frame": "northern_timber_window_frame",
+        "window_frame_mullion": "northern_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5085,7 +5088,8 @@
       "textures": {
         "all": "wood/northern/all",
         "cover": "wood/northern/cover",
-        "window-frame": "timber/northern/window_frame"
+        "window-frame": "timber/northern/window_frame",
+        "window-frame-mullion": "timber/northern/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/northern/all", "wood/northern/all", "wood/northern/woodctm"],
@@ -5150,10 +5154,11 @@
     },
     {
       "baseBlockName": "white_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
       "altNames": {
         "fence_gate": "locked_white_wood_fence_gate",
-        "window_frame": "whitewashed_timber_window_frame"
+        "window_frame": "whitewashed_timber_window_frame",
+        "window_frame_mullion": "whitewashed_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5171,7 +5176,8 @@
       },
       "textures": {
         "all": "wood/white/all",
-        "window-frame": "timber/white/window_frame"
+        "window-frame": "timber/white/window_frame",
+        "window-frame-mullion": "timber/white/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/white/all", "wood/white/all", "wood/white/woodctm"],
@@ -5180,10 +5186,11 @@
     },
     {
       "baseBlockName": "red_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
       "altNames": {
         "fence_gate": "locked_red_wood_fence_gate",
-        "window_frame": "red_timber_window_frame"
+        "window_frame": "red_timber_window_frame",
+        "window_frame_mullion": "red_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5201,7 +5208,8 @@
       },
       "textures": {
         "all": "wood/red/all",
-        "window-frame": "timber/red/window_frame"
+        "window-frame": "timber/red/window_frame",
+        "window-frame-mullion": "timber/red/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/red/all", "wood/red/all", "wood/red/woodctm"],
@@ -12491,9 +12499,9 @@
       "label": "Small Orange Bricks Ornate Top",
       "colorMult": "textures/colormap/brick",
       "textures": [
-        "brick/small_orange/ornate/top_bottom",
-        "brick/small_orange/ornate/top_bottom",
-        "brick/small_orange/all"
+        "brick/orange/ornate/top_bottom",
+        "brick/orange/ornate/top_bottom",
+        "brick/orange/all"
       ]
     },
     {
@@ -12507,7 +12515,7 @@
       "label": "Small Orange Bricks Ornate",
       "colorMult": "textures/colormap/brick",
       "textures": [
-        "brick/small_orange/ornate/top_bottom"
+        "brick/orange/ornate/top_bottom"
       ]
     },
     {
@@ -13404,6 +13412,18 @@
       "label": "Central White Butterfly",
       "textures": [
         "web_block/bug_butterfly_white"
+      ],
+      "type": "no-in-web"
+    },
+    {
+      "blockName": "butterfly_red",
+      "blockType": "web",
+      "stepSound": "cloth",
+      "material": "web",
+      "creativeTab": "WesterosMisc",
+      "label": "Eastern Red Butterfly",
+      "textures": [
+        "web_block/bug_butterfly_red"
       ],
       "type": "no-in-web"
     },
@@ -24466,7 +24486,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
@@ -24479,7 +24505,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
@@ -24492,7 +24524,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
@@ -24505,7 +24543,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
     },
     {
@@ -24518,7 +24562,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
     },
     {
@@ -24531,8 +24581,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_brown_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_brown_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_brown_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_brown_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_brown_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Brown Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/oak/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
       "blockName": "timber_oak_white_crosshatch",
@@ -24544,7 +24695,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
@@ -24557,7 +24714,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
@@ -24570,7 +24733,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
@@ -24583,7 +24752,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
     },
     {
@@ -24596,7 +24771,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
     },
     {
@@ -24609,8 +24790,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_white_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_white_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_white_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_white_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_white_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak White Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/oak/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
       "blockName": "timber_oak_orange_brick_crosshatch",
@@ -24623,7 +24905,11 @@
       "label": "Timber Oak Orange Brick Crosshatch",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
@@ -24637,7 +24923,11 @@
       "label": "Timber Oak Orange Brick Lefthatch",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
@@ -24651,7 +24941,11 @@
       "label": "Timber Oak Orange Brick Righthatch",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
@@ -24665,7 +24959,11 @@
       "label": "Timber Oak Orange Brick Frame",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
     },
     {
@@ -24679,7 +24977,11 @@
       "label": "Timber Oak Orange Brick Vertical",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
     },
     {
@@ -24693,8 +24995,102 @@
       "label": "Timber Oak Orange Brick Close Studding",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/oak/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Lefthatch Large",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Righthatch Large",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Lefthatch Studded",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Righthatch Studded",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_orange_brick_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Brick Bressummer",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/oak/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
       "blockName": "timber_oak_reach_brick_crosshatch",
@@ -24706,7 +25102,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
@@ -24719,7 +25119,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
@@ -24732,7 +25136,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Righthatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
@@ -24745,7 +25153,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Frame",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
     },
     {
@@ -24758,7 +25170,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Vertical",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
     },
     {
@@ -24771,8 +25187,97 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Close Studding",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ],
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_reach_brick_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Reach Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_reach_brick_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Reach Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_reach_brick_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Reach Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_reach_brick_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Reach Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_reach_brick_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Reach Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_crosshatch",
@@ -24784,7 +25289,12 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
@@ -24797,7 +25307,12 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
@@ -24810,7 +25325,12 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Righthatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
@@ -24823,7 +25343,12 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Frame",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
     },
     {
@@ -24836,7 +25361,12 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Vertical",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
     },
     {
@@ -24849,8 +25379,103 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Close Studding",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ],
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_oldtown_brick_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Oldtown Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_oldtown_brick_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Oldtown Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_oldtown_brick_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Oldtown Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_oldtown_brick_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Oldtown Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_oldtown_brick_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Oldtown Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
+        {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
       "blockName": "timber_oak_yellow_crosshatch",
@@ -24862,7 +25487,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
@@ -24875,7 +25506,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
@@ -24888,7 +25525,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
@@ -24901,7 +25544,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
     },
     {
@@ -24914,7 +25563,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
     },
     {
@@ -24927,8 +25582,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_yellow_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Yellow Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_yellow_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Yellow Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_yellow_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Yellow Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_yellow_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Yellow Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_yellow_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Yellow Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/oak/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
       "blockName": "timber_oak_orange_crosshatch",
@@ -24940,7 +25696,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
@@ -24953,7 +25715,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
@@ -24966,7 +25734,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
@@ -24979,7 +25753,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
     },
     {
@@ -24992,7 +25772,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
     },
     {
@@ -25005,8 +25791,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_orange_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_orange_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_orange_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_orange_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_orange_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Orange Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
+        {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
+        {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
       "blockName": "timber_oak_lannisport_brick_crosshatch",
@@ -25018,7 +25905,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
     },
     {
@@ -25031,7 +25922,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
     },
     {
@@ -25044,7 +25939,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Righthatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
     },
     {
@@ -25057,7 +25956,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Frame",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
     },
     {
@@ -25070,7 +25973,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Vertical",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
     },
     {
@@ -25083,8 +25990,97 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Close Studding",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ],
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_lannisport_brick_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Fieldstone Westerlands Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
       "blockName": "timber_northern_brown_crosshatch",
@@ -25096,7 +26092,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
     },
     {
@@ -25109,7 +26111,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
     },
     {
@@ -25122,7 +26130,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
     },
     {
@@ -25135,7 +26149,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
     },
     {
@@ -25148,7 +26168,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
     },
     {
@@ -25161,8 +26187,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_brown_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_brown_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_brown_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_brown_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_brown_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Brown Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
+        {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
+        {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
     {
       "blockName": "timber_northern_white_crosshatch",
@@ -25174,7 +26301,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
     },
     {
@@ -25187,7 +26320,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
     },
     {
@@ -25200,7 +26339,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
     },
     {
@@ -25213,7 +26358,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
     },
     {
@@ -25226,7 +26377,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
     },
     {
@@ -25239,8 +26396,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_white_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_white_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_white_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_white_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_white_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern White Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/northern/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
     {
       "blockName": "timber_northern_orange_brick_crosshatch",
@@ -25253,7 +26511,11 @@
       "label": "Timber Northern Orange Brick Crosshatch",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
     },
     {
@@ -25267,7 +26529,11 @@
       "label": "Timber Northern Orange Brick Lefthatch",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
     },
     {
@@ -25281,7 +26547,11 @@
       "label": "Timber Northern Orange Brick Righthatch",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
     },
     {
@@ -25295,7 +26565,11 @@
       "label": "Timber Northern Orange Brick Frame",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
     },
     {
@@ -25309,7 +26583,11 @@
       "label": "Timber Northern Orange Brick Vertical",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
     },
     {
@@ -25323,8 +26601,102 @@
       "label": "Timber Northern Orange Brick Close Studding",
       "colorMult": "textures/colormap/brick",
       "type": "connectstate:true",
-      "textures": [ "brick/small_orange/all", "wood/northern/all", "brick/small_orange/all" ],
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Lefthatch Large",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Righthatch Large",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Lefthatch Studded",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Righthatch Studded",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_orange_brick_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Orange Brick Bressummer",
+      "colorMult": "textures/colormap/brick",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
+        {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
+        {"textures": [ "brick/orange_dark/all", "wood/northern/all", "brick/orange_dark/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
     {
       "blockName": "timber_northern_grey_brick_crosshatch",
@@ -25336,7 +26708,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
     },
     {
@@ -25349,7 +26725,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
     },
     {
@@ -25362,7 +26742,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Righthatch",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
     },
     {
@@ -25375,7 +26759,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Frame",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
     },
     {
@@ -25388,7 +26776,11 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Vertical",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
     },
     {
@@ -25401,8 +26793,97 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Close Studding",
       "type": "connectstate:true",
-      "textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ],
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_grey_brick_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Fieldstone Normal Grey Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
     {
       "blockName": "timber_northern_red_crosshatch",
@@ -25414,7 +26895,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
     },
     {
@@ -25427,7 +26914,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
     },
     {
@@ -25440,7 +26933,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
     },
     {
@@ -25453,7 +26952,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
     },
     {
@@ -25466,7 +26971,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
     },
     {
@@ -25479,8 +26990,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_red_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_red_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_red_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_red_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_red_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Red Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
+        {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
+        {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
+        {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
     {
       "blockName": "timber_northern_pale_yellow_crosshatch",
@@ -25492,7 +27104,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
     },
     {
@@ -25505,7 +27123,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
     },
     {
@@ -25518,7 +27142,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
     },
     {
@@ -25531,7 +27161,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
     },
     {
@@ -25544,7 +27180,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
     },
     {
@@ -25557,8 +27199,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_pale_yellow_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Pale Yellow Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
+        {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
+        {"textures": [ "plaster/smooth/dark_mud/all", "wood/northern/all", "plaster/smooth/dark_mud/all" ]},
+        {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
+        {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
     {
       "blockName": "timber_northern_blue_crosshatch",
@@ -25570,7 +27313,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
     },
     {
@@ -25583,7 +27332,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
     },
     {
@@ -25596,7 +27351,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
     },
     {
@@ -25609,7 +27370,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
     },
     {
@@ -25622,7 +27389,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
     },
     {
@@ -25635,8 +27408,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_blue_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_blue_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_blue_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_blue_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_blue_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Blue Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
+        {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
+        {"textures": [ "plaster/smooth/blue/all", "wood/northern/all", "plaster/smooth/blue/all" ]},
+        {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
     {
       "blockName": "timber_northern_green_crosshatch",
@@ -25648,7 +27522,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
     },
     {
@@ -25661,7 +27541,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
     },
     {
@@ -25674,7 +27560,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
     },
     {
@@ -25687,7 +27579,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
     },
     {
@@ -25700,7 +27598,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
     },
     {
@@ -25713,8 +27617,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_green_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_green_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_green_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_green_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_green_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Green Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
+        {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
+        {"textures": [ "plaster/smooth/highgarden_green/all", "wood/northern/all", "plaster/smooth/highgarden_green/all" ]},
+        {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
+        {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
     {
       "blockName": "timber_whitewashed_crosshatch",
@@ -25726,7 +27731,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
       "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/crosshatch" ]
     },
     {
@@ -25739,7 +27750,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
       "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/lefthatch" ]
     },
     {
@@ -25752,7 +27769,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
       "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/righthatch" ]
     },
     {
@@ -25765,7 +27788,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
       "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/frame" ]
     },
     {
@@ -25778,7 +27807,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
       "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/vertical" ]
     },
     {
@@ -25791,8 +27826,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
       "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/close_studding" ]
+    },
+    {
+      "blockName": "timber_whitewashed_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_whitewashed_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_whitewashed_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_whitewashed_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_whitewashed_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Whitewashed Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
+        {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
+        {"textures": [ "plaster/smooth/light_grey/all", "wood/white/all", "plaster/smooth/light_grey/all" ]},
+        {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
+        {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
+      ],
+      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/bressummer" ]
     },
     {
       "blockName": "timber_red_white_crosshatch",
@@ -25804,7 +27940,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Crosshatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
       "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/crosshatch" ]
     },
     {
@@ -25817,7 +27959,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Lefthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
       "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/lefthatch" ]
     },
     {
@@ -25830,7 +27978,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Righthatch",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
       "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/righthatch" ]
     },
     {
@@ -25843,7 +27997,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Frame",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
       "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/frame" ]
     },
     {
@@ -25856,7 +28016,13 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Vertical",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
       "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/vertical" ]
     },
     {
@@ -25869,8 +28035,109 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Close Studding",
       "type": "connectstate:true",
-      "textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ],
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
       "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/close_studding" ]
+    },
+    {
+      "blockName": "timber_red_white_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Lefthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_red_white_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Righthatch Large",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_red_white_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Lefthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_red_white_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Righthatch Studded",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_red_white_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Red White Bressummer",
+      "type": "connectstate:true",
+      "states": [
+        {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
+        {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
+        {"textures": [ "plaster/smooth/pale_white/all", "wood/red/all", "plaster/smooth/pale_white/all" ]},
+        {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
+        {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
+      ],
+      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/bressummer" ]
     },
     {
       "blockName": "oldtown_sewer_manhole",

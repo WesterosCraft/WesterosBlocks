@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/brick/small_orange/all",
-    "txt5": "westerosblocks:block/brick/small_orange/all",
-    "txt2": "westerosblocks:block/brick/small_orange/all",
-    "txt3": "westerosblocks:block/brick/small_orange/all",
-    "txt0": "westerosblocks:block/brick/small_orange/all",
-    "txt1": "westerosblocks:block/brick/small_orange/all",
-    "particle": "westerosblocks:block/brick/small_orange/all"
+    "txt4": "westerosblocks:block/brick/orange/all",
+    "txt5": "westerosblocks:block/brick/orange/all",
+    "txt2": "westerosblocks:block/brick/orange/all",
+    "txt3": "westerosblocks:block/brick/orange/all",
+    "txt0": "westerosblocks:block/brick/orange/all",
+    "txt1": "westerosblocks:block/brick/orange/all",
+    "particle": "westerosblocks:block/brick/orange/all"
   },
   "elements": [
     {

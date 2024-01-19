@@ -1,8 +1,11 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "ctm_vertical",
+    "type": "westeros_horizontal",
     "layer": "CUTOUT",
-    "textures": []
+    "textures": [],
+    "extra": {
+      "connect_to_state": "connectstate"
+    }
   }
 }

@@ -5,6 +5,9 @@
     "layer": "CUTOUT",
     "textures": [
       "westerosblocks:block/timber/white/frame_ctm"
-    ]
+    ],
+    "extra": {
+      "connect_to_state": "connectstate"
+    }
   }
 }
