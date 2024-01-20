@@ -749,7 +749,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	public void registerWallOrFloorBlock(Block floorblock, Block wallblock) {
 		BlockItem itemBlock = new StandingAndWallBlockItem(floorblock, wallblock,
-				(new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS));
+				(new Item.Properties()).tab(getCreativeTab()));
 		floorblock.setRegistryName(this.blockName);
 		wallblock.setRegistryName("wall_" + this.blockName);
 		itemBlock.setRegistryName(this.blockName);
