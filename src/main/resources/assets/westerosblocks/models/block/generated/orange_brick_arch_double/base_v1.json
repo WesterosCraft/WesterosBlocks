@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/cube",
+  "textures": {
+    "down": "westerosblocks:block/brick/orange/all1",
+    "up": "westerosblocks:block/brick/orange/all1",
+    "north": "westerosblocks:block/brick/orange/arch_double",
+    "south": "westerosblocks:block/brick/orange/arch_double",
+    "west": "westerosblocks:block/brick/orange/arch_double",
+    "east": "westerosblocks:block/brick/orange/arch_double",
+    "particle": "westerosblocks:block/brick/orange/arch_double"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/torch_block/candle_on"
+    "layer0": "westerosblocks:block/lighting/candle"
   }
 }

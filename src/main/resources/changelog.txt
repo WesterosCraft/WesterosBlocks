@@ -6,10 +6,24 @@
 -Added volcanic pebbles and sand.
 -Added dragonfly and butterfly blocks.
 -Added "grassy dirt" and "thick grass" blocks to replace forest biome CTMs for dirt/grass.
--Updated timber frame textures.
--Reorganized stone brick and cobblestone sets, using the format "<texture type> <set name>" (e.g., "Half Ashlar Dark Grey").
--Changed "light stone" textures to a new smooth ashlar texture.
+-Added southern brick block with rough reused brick, dark mortar brick, lintel, arch, and flat arch variants.
+-Added additional orange brick variants: dark mortar bricks, rowlock course, dentil course, single arch, and double arch.
+-Added unlit torch block, unlit candle block (non-cuboid), and unlit blockstates for candle altar and lantern blocks.
+-Added blockstates to random blocks to allow control over textures: plates, paper, clothesline, bones, cobweb, smoke, coins, profession signs
+-Changed small orange bricks to use a new brick texture, and orange bricks to use a new rough reused brick texture.
+-Changed timber frame blocks to use new plaster and timber textures.
+-Changed small orange brick to new light mortar orange brick texture, and orange brick to a rough "reused" brick texture.
+-Changed light stone textures to a new smooth ashlar texture.
 -Changed iron rungs to custom model and added new broken iron rungs block.
+-Changed the large paintings to use a tapestry-like texture.
+-Changed cuboid unlit candle block to use new model/texture to fix transparent pixels.
+-Fixed candle/torch blocks not being placeable on non-solid surfaces and moved them to correct inventory tab.
+-Fixed cow parsley and fireweed CTMs.
+-Fixed bottom texture for clay pot blocks (to oak planks, so that they can be used in shelves).
+-Fixed wrong red lady 2x2 painting texture.
+-Fixed bug with red sandstone slab.
+-Fixed rendering conflicts w/ Embeddium for blood, table, bread, cheese, fish trap, and cage blocks.
+-Reorganized stone brick and cobblestone sets, using the format "<texture type> <set name>" (e.g., "Half Ashlar Dark Grey").
 
 2 Jan 2024:
 -Refactored WesterosBlocks.json into "block sets" that are used to auto-generate standard variants (e.g. stairs, slabs, walls, etc.);

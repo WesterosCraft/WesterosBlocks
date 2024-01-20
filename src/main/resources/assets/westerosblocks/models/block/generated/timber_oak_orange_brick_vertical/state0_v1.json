@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/timber/oak/vertical",
     "west_ov": "westerosblocks:block/timber/oak/vertical",
     "east_ov": "westerosblocks:block/timber/oak/vertical",
-    "down": "westerosblocks:block/brick/orange/all",
+    "down": "westerosblocks:block/brick/orange/all1",
     "up": "westerosblocks:block/wood/oak/all",
-    "north": "westerosblocks:block/brick/orange/all",
-    "south": "westerosblocks:block/brick/orange/all",
-    "west": "westerosblocks:block/brick/orange/all",
-    "east": "westerosblocks:block/brick/orange/all",
-    "particle": "westerosblocks:block/brick/orange/all"
+    "north": "westerosblocks:block/brick/orange/all1",
+    "south": "westerosblocks:block/brick/orange/all1",
+    "west": "westerosblocks:block/brick/orange/all1",
+    "east": "westerosblocks:block/brick/orange/all1",
+    "particle": "westerosblocks:block/brick/orange/all1"
   }
 }

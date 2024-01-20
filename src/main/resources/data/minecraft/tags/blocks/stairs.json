@@ -30,6 +30,7 @@
     "westerosblocks:gulltown_blue_plaster_stairs",
     "westerosblocks:snowy_thatch_light_fur_stairs",
     "westerosblocks:small_kl_dun_brick_stairs",
+    "westerosblocks:dark_orange_brick_stairs",
     "westerosblocks:arbor_large_brick_stairs",
     "westerosblocks:light_grey_plaster_stairs",
     "westerosblocks:oldtown_dark_cobblestone_stairs",
@@ -95,6 +96,7 @@
     "westerosblocks:mances_camp_common_tent_1_stairs",
     "westerosblocks:white_dark_cobblestone_stairs",
     "westerosblocks:lannisport_cobblestone_stairs",
+    "westerosblocks:southern_brick_stairs",
     "westerosblocks:brown_grey_river_cobble_stairs",
     "westerosblocks:grey_wool_stairs",
     "westerosblocks:green_wood_stairs",
@@ -210,6 +212,7 @@
     "westerosblocks:stormlands_light_stone_stairs",
     "westerosblocks:light_grey_plaster_rough_stairs",
     "westerosblocks:nether_brick_stairs",
+    "westerosblocks:rough_southern_brick_stairs",
     "westerosblocks:arbor_brown_plaster_rough_stairs",
     "westerosblocks:orange_slate_stairs",
     "westerosblocks:red_slate_stairs",
@@ -303,6 +306,7 @@
     "westerosblocks:icy_northern_cobble_stairs",
     "westerosblocks:dorne_mossy_light_terracotta_stairs",
     "westerosblocks:brick_stairs",
-    "westerosblocks:pink_sandstone_stairs"
+    "westerosblocks:pink_sandstone_stairs",
+    "westerosblocks:dark_southern_brick_stairs"
   ]
 }

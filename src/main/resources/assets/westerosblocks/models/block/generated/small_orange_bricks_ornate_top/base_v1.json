@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/brick/orange/ornate/top_bottom",
     "up": "westerosblocks:block/brick/orange/ornate/top_bottom",
-    "north": "westerosblocks:block/brick/orange/all",
-    "south": "westerosblocks:block/brick/orange/all",
-    "west": "westerosblocks:block/brick/orange/all",
-    "east": "westerosblocks:block/brick/orange/all",
-    "particle": "westerosblocks:block/brick/orange/all"
+    "north": "westerosblocks:block/brick/orange/all1",
+    "south": "westerosblocks:block/brick/orange/all1",
+    "west": "westerosblocks:block/brick/orange/all1",
+    "east": "westerosblocks:block/brick/orange/all1",
+    "particle": "westerosblocks:block/brick/orange/all1"
   }
 }

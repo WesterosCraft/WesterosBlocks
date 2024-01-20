@@ -4,6 +4,27 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/small_orange_brick_fence/post_v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/post_v2"
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/post_v3"
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/post_v4"
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/post_v5"
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/post_v6"
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/post_v7"
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/post_v8"
         }
       ]
     },
@@ -11,6 +32,34 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v1",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v3",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v4",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v5",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v6",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v7",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v8",
           "uvlock": true
         }
       ],
@@ -22,6 +71,41 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v1",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v3",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v4",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v5",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v6",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v7",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v8",
           "y": 90,
           "uvlock": true
         }
@@ -36,6 +120,41 @@
           "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v1",
           "y": 180,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v3",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v4",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v5",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v6",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v7",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v8",
+          "y": 180,
+          "uvlock": true
         }
       ],
       "when": {
@@ -46,6 +165,41 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v1",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v3",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v4",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v5",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v6",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v7",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/small_orange_brick_fence/side_v8",
           "y": 270,
           "uvlock": true
         }

@@ -1,7 +1,18 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/orange_brick/base_v1"
-    }
+    "": [
+      {
+        "model": "westerosblocks:block/generated/orange_brick/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_brick/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_brick/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_brick/base_v4"
+      }
+    ]
   }
 }

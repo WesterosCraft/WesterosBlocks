@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/timber/northern/crosshatch",
     "west_ov": "westerosblocks:block/timber/northern/crosshatch",
     "east_ov": "westerosblocks:block/timber/northern/crosshatch",
-    "down": "westerosblocks:block/brick/orange_dark/all",
+    "down": "westerosblocks:block/brick/orange_dark/all1",
     "up": "westerosblocks:block/wood/northern/all",
-    "north": "westerosblocks:block/brick/orange_dark/all",
-    "south": "westerosblocks:block/brick/orange_dark/all",
-    "west": "westerosblocks:block/brick/orange_dark/all",
-    "east": "westerosblocks:block/brick/orange_dark/all",
-    "particle": "westerosblocks:block/brick/orange_dark/all"
+    "north": "westerosblocks:block/brick/orange_dark/all1",
+    "south": "westerosblocks:block/brick/orange_dark/all1",
+    "west": "westerosblocks:block/brick/orange_dark/all1",
+    "east": "westerosblocks:block/brick/orange_dark/all1",
+    "particle": "westerosblocks:block/brick/orange_dark/all1"
   }
 }

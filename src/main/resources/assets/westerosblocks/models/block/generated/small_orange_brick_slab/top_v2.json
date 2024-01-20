@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/brick/orange/all2",
+    "up": "westerosblocks:block/brick/orange/all2",
+    "north": "westerosblocks:block/brick/orange/all2",
+    "south": "westerosblocks:block/brick/orange/all2",
+    "west": "westerosblocks:block/brick/orange/all2",
+    "east": "westerosblocks:block/brick/orange/all2",
+    "particle": "westerosblocks:block/brick/orange/all2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/brick/southern_dark/all3",
+    "up": "westerosblocks:block/brick/southern_dark/all3",
+    "north": "westerosblocks:block/brick/southern_dark/all3",
+    "south": "westerosblocks:block/brick/southern_dark/all3",
+    "west": "westerosblocks:block/brick/southern_dark/all3",
+    "east": "westerosblocks:block/brick/southern_dark/all3",
+    "particle": "westerosblocks:block/brick/southern_dark/all3"
+  }
+}
