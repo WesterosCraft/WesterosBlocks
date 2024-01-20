@@ -24485,7 +24485,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24504,7 +24504,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24523,7 +24523,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24542,7 +24542,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24561,7 +24561,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24580,7 +24580,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24599,7 +24599,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24618,7 +24618,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24637,7 +24637,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24656,7 +24656,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24675,7 +24675,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Brown Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/oak/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/oak/all", "plaster/smooth/arbor_brown/all" ]},
@@ -24694,7 +24694,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24713,7 +24713,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24732,7 +24732,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24751,7 +24751,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24770,7 +24770,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24789,7 +24789,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24808,7 +24808,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24827,7 +24827,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24846,7 +24846,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24865,7 +24865,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24884,7 +24884,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak White Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/oak/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/oak/all", "plaster/smooth/brown_white/all" ]},
@@ -24904,7 +24904,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Crosshatch",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -24922,7 +24922,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Lefthatch",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -24940,7 +24940,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Righthatch",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -24958,7 +24958,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Frame",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -24976,7 +24976,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Vertical",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -24994,7 +24994,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Close Studding",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -25012,7 +25012,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Lefthatch Large",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -25030,7 +25030,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Righthatch Large",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -25048,7 +25048,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Lefthatch Studded",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -25066,7 +25066,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Righthatch Studded",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -25084,7 +25084,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Bressummer",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/oak/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/oak/all", "brick/orange_rough/all" ]},
@@ -25101,7 +25101,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25118,7 +25118,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25135,7 +25135,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25152,7 +25152,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25169,7 +25169,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25186,7 +25186,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25203,7 +25203,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25220,7 +25220,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25237,7 +25237,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25254,7 +25254,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25271,7 +25271,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Reach Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
@@ -25288,7 +25288,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25306,7 +25306,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25324,7 +25324,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25342,7 +25342,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25360,7 +25360,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25378,7 +25378,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25396,7 +25396,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25414,7 +25414,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25432,7 +25432,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25450,7 +25450,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25468,7 +25468,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Oldtown Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
@@ -25486,7 +25486,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25505,7 +25505,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25524,7 +25524,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25543,7 +25543,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25562,7 +25562,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25581,7 +25581,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25600,7 +25600,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25619,7 +25619,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25638,7 +25638,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25657,7 +25657,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25676,7 +25676,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Yellow Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_yellow/all", "wood/oak/all", "plaster/smooth/lannisport_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/oak/all", "plaster/smooth/mud/all" ]},
@@ -25695,7 +25695,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25714,7 +25714,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25733,7 +25733,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25752,7 +25752,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25771,7 +25771,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25790,7 +25790,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25809,7 +25809,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25828,7 +25828,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25847,7 +25847,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25866,7 +25866,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25885,7 +25885,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/lannisport_orange/all", "wood/oak/all", "plaster/smooth/lannisport_orange/all" ]},
         {"textures": [ "plaster/smooth/orange/all", "wood/oak/all", "plaster/smooth/orange/all" ]},
@@ -25904,7 +25904,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -25921,7 +25921,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -25938,7 +25938,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -25955,7 +25955,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -25972,7 +25972,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -25989,7 +25989,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -26006,7 +26006,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -26023,7 +26023,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -26040,7 +26040,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -26057,7 +26057,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -26074,7 +26074,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Fieldstone Westerlands Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
@@ -26091,7 +26091,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26110,7 +26110,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26129,7 +26129,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26148,7 +26148,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26167,7 +26167,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26186,7 +26186,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26205,7 +26205,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26224,7 +26224,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26243,7 +26243,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26262,7 +26262,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26281,7 +26281,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Brown Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/brown_daub/all", "wood/northern/all", "plaster/smooth/brown_daub/all" ]},
         {"textures": [ "plaster/smooth/arbor_brown/all", "wood/northern/all", "plaster/smooth/arbor_brown/all" ]},
@@ -26300,7 +26300,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26319,7 +26319,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26338,7 +26338,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26357,7 +26357,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26376,7 +26376,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26395,7 +26395,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26414,7 +26414,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26433,7 +26433,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26452,7 +26452,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26471,7 +26471,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26490,7 +26490,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern White Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/northern/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/northern/all", "plaster/smooth/brown_white/all" ]},
@@ -26510,7 +26510,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Crosshatch",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26528,7 +26528,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Lefthatch",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26546,7 +26546,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Righthatch",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26564,7 +26564,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Frame",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26582,7 +26582,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Vertical",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26600,7 +26600,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Close Studding",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26618,7 +26618,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Lefthatch Large",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26636,7 +26636,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Righthatch Large",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26654,7 +26654,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Lefthatch Studded",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26672,7 +26672,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Righthatch Studded",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26690,7 +26690,7 @@
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Bressummer",
       "colorMult": "textures/colormap/brick",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all", "wood/northern/all", "brick/orange/all" ]},
         {"textures": [ "brick/orange_rough/all", "wood/northern/all", "brick/orange_rough/all" ]},
@@ -26707,7 +26707,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26724,7 +26724,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26741,7 +26741,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26758,7 +26758,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26775,7 +26775,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26792,7 +26792,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26809,7 +26809,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26826,7 +26826,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26843,7 +26843,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26860,7 +26860,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26877,7 +26877,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Fieldstone Normal Grey Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
@@ -26894,7 +26894,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -26913,7 +26913,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -26932,7 +26932,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -26951,7 +26951,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -26970,7 +26970,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -26989,7 +26989,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -27008,7 +27008,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -27027,7 +27027,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -27046,7 +27046,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -27065,7 +27065,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -27084,7 +27084,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Red Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
         {"textures": [ "plaster/smooth/light_red/all", "wood/northern/all", "plaster/smooth/light_red/all" ]},
@@ -27103,7 +27103,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27122,7 +27122,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27141,7 +27141,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27160,7 +27160,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27179,7 +27179,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27198,7 +27198,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27217,7 +27217,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27236,7 +27236,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27255,7 +27255,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27274,7 +27274,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27293,7 +27293,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Pale Yellow Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/pale_yellow/all", "wood/northern/all", "plaster/smooth/pale_yellow/all" ]},
         {"textures": [ "plaster/smooth/mud/all", "wood/northern/all", "plaster/smooth/mud/all" ]},
@@ -27312,7 +27312,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27331,7 +27331,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27350,7 +27350,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27369,7 +27369,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27388,7 +27388,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27407,7 +27407,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27426,7 +27426,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27445,7 +27445,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27464,7 +27464,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27483,7 +27483,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27502,7 +27502,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Blue Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_blue/all", "wood/northern/all", "plaster/smooth/gulltown_blue/all" ]},
         {"textures": [ "plaster/smooth/light_blue/all", "wood/northern/all", "plaster/smooth/light_blue/all" ]},
@@ -27521,7 +27521,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27540,7 +27540,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27559,7 +27559,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27578,7 +27578,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27597,7 +27597,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27616,7 +27616,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27635,7 +27635,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27654,7 +27654,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27673,7 +27673,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27692,7 +27692,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27711,7 +27711,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Green Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/gulltown_green/all", "wood/northern/all", "plaster/smooth/gulltown_green/all" ]},
         {"textures": [ "plaster/smooth/green/all", "wood/northern/all", "plaster/smooth/green/all" ]},
@@ -27730,7 +27730,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27749,7 +27749,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27768,7 +27768,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27787,7 +27787,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27806,7 +27806,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27825,7 +27825,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27844,7 +27844,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27863,7 +27863,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27882,7 +27882,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27901,7 +27901,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27920,7 +27920,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Whitewashed Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/grey_white/all", "wood/white/all", "plaster/smooth/grey_white/all" ]},
         {"textures": [ "plaster/smooth/white/all", "wood/white/all", "plaster/smooth/white/all" ]},
@@ -27939,7 +27939,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Crosshatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -27958,7 +27958,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Lefthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -27977,7 +27977,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Righthatch",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -27996,7 +27996,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Frame",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -28015,7 +28015,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Vertical",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -28034,7 +28034,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Close Studding",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -28053,7 +28053,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Lefthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -28072,7 +28072,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Righthatch Large",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -28091,7 +28091,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Lefthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -28110,7 +28110,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Righthatch Studded",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
@@ -28129,7 +28129,7 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Red White Bressummer",
-      "type": "connectstate:true",
+      "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "plaster/smooth/white_daub/all", "wood/red/all", "plaster/smooth/white_daub/all" ]},
         {"textures": [ "plaster/smooth/brown_white/all", "wood/red/all", "plaster/smooth/brown_white/all" ]},
