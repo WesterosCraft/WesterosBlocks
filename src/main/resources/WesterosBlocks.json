@@ -5050,11 +5050,13 @@
     },
     {
       "baseBlockName": "spruce",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame", "window_frame_mullion"],
       "altNames": {
         "solid": "spruce_planks",
         "fence_gate": "locked_spruce_fence_gate",
-        "hollow_hopper": "hollow_spruce_hopper"
+        "hollow_hopper": "hollow_spruce_hopper",
+        "window_frame": "spruce_timber_window_frame",
+        "window_frame_mullion": "spruce_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5072,7 +5074,9 @@
       },
       "textures": {
         "all": "wood/spruce/all",
-        "cover": "wood/spruce/cover"
+        "cover": "wood/spruce/cover",
+        "window-frame": "timber/spruce/window_frame",
+        "window-frame-mullion": "timber/spruce/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/spruce/all", "wood/spruce/all", "wood/spruce/woodctm"],
@@ -5081,11 +5085,13 @@
     },
     {
       "baseBlockName": "birch",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame", "window_frame_mullion"],
       "altNames": {
         "solid": "birch_planks",
         "fence_gate": "locked_birch_fence_gate",
-        "hollow_hopper": "hollow_birch_hopper"
+        "hollow_hopper": "hollow_birch_hopper",
+        "window_frame": "birch_timber_window_frame",
+        "window_frame_mullion": "birch_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5103,7 +5109,9 @@
       },
       "textures": {
         "all": "wood/birch/all",
-        "cover": "wood/birch/cover"
+        "cover": "wood/birch/cover",
+        "window-frame": "timber/birch/window_frame",
+        "window-frame-mullion": "timber/birch/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/birch/all", "wood/birch/all", "wood/birch/woodctm"],
@@ -5112,11 +5120,13 @@
     },
     {
       "baseBlockName": "jungle",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "cover", "hollow_hopper", "window_frame", "window_frame_mullion"],
       "altNames": {
         "solid": "jungle_planks",
         "fence_gate": "locked_jungle_fence_gate",
-        "hollow_hopper": "hollow_jungle_hopper"
+        "hollow_hopper": "hollow_jungle_hopper",
+        "window_frame": "jungle_timber_window_frame",
+        "window_frame_mullion": "jungle_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5134,7 +5144,9 @@
       },
       "textures": {
         "all": "wood/jungle/all",
-        "cover": "wood/jungle/cover"
+        "cover": "wood/jungle/cover",
+        "window-frame": "timber/jungle/window_frame",
+        "window-frame-mullion": "timber/jungle/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/jungle/all", "wood/jungle/all", "wood/jungle/woodctm"],
@@ -5178,9 +5190,11 @@
     },
     {
       "baseBlockName": "black_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
       "altNames": {
-        "fence_gate": "locked_black_wood_fence_gate"
+        "fence_gate": "locked_black_wood_fence_gate",
+        "window_frame": "black_timber_window_frame",
+        "window_frame_mullion": "black_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5197,7 +5211,9 @@
         "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
       },
       "textures": {
-        "all": "wood/black/all"
+        "all": "wood/black/all",
+        "window-frame": "timber/black/window_frame",
+        "window-frame-mullion": "timber/black/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/black/all", "wood/black/all", "wood/black/woodctm"],
@@ -5206,9 +5222,11 @@
     },
     {
       "baseBlockName": "grey_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
       "altNames": {
-        "fence_gate": "locked_grey_wood_fence_gate"
+        "fence_gate": "locked_grey_wood_fence_gate",
+        "window_frame": "grey_timber_window_frame",
+        "window_frame_mullion": "grey_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5225,7 +5243,9 @@
         "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
       },
       "textures": {
-        "all": "wood/grey/all"
+        "all": "wood/grey/all",
+        "window-frame": "timber/grey/window_frame",
+        "window-frame-mullion": "timber/grey/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/grey/all", "wood/grey/all", "wood/grey/woodctm"],
@@ -5297,10 +5317,44 @@
       }
     },
     {
-      "baseBlockName": "yellow_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "baseBlockName": "orange_wood",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
       "altNames": {
-        "fence_gate": "locked_yellow_wood_fence_gate"
+        "fence_gate": "locked_orange_wood_fence_gate",
+        "window_frame": "orange_timber_window_frame",
+        "window_frame_mullion": "orange_timber_window_frame_mullion"
+      },
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "types": {
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "Orange Wood",
+      "altCustomTags": {
+        "solid": [ "wood-ctm" ],
+        "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
+      },
+      "textures": {
+        "all": "wood/orange/all",
+        "window-frame": "timber/orange/window_frame",
+        "window-frame-mullion": "timber/orange/window_frame_mullion"
+      },
+      "altTextures": {
+        "solid": ["wood/orange/all", "wood/orange/all", "wood/orange/woodctm"],
+        "stairs,slab,wall,hopper,tip": ["wood/orange/all", "wood/orange/all", "wood/orange/plankctm"]
+      }
+    },
+    {
+      "baseBlockName": "yellow_wood",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
+      "altNames": {
+        "fence_gate": "locked_yellow_wood_fence_gate",
+        "window_frame": "yellow_timber_window_frame",
+        "window_frame_mullion": "yellow_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5317,7 +5371,9 @@
         "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
       },
       "textures": {
-        "all": "wood/yellow/all"
+        "all": "wood/yellow/all",
+        "window-frame": "timber/yellow/window_frame",
+        "window-frame-mullion": "timber/yellow/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/yellow/all", "wood/yellow/all", "wood/yellow/woodctm"],
@@ -5326,9 +5382,11 @@
     },
     {
       "baseBlockName": "green_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
       "altNames": {
-        "fence_gate": "locked_green_wood_fence_gate"
+        "fence_gate": "locked_green_wood_fence_gate",
+        "window_frame": "green_timber_window_frame",
+        "window_frame_mullion": "green_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5345,7 +5403,9 @@
         "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
       },
       "textures": {
-        "all": "wood/green/all"
+        "all": "wood/green/all",
+        "window-frame": "timber/green/window_frame",
+        "window-frame-mullion": "timber/green/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/green/all", "wood/green/all", "wood/green/woodctm"],
@@ -5354,9 +5414,11 @@
     },
     {
       "baseBlockName": "blue_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
       "altNames": {
-        "fence_gate": "locked_blue_wood_fence_gate"
+        "fence_gate": "locked_blue_wood_fence_gate",
+        "window_frame": "blue_timber_window_frame",
+        "window_frame_mullion": "blue_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5373,7 +5435,9 @@
         "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
       },
       "textures": {
-        "all": "wood/blue/all"
+        "all": "wood/blue/all",
+        "window-frame": "timber/blue/window_frame",
+        "window-frame-mullion": "timber/blue/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/blue/all", "wood/blue/all", "wood/blue/woodctm"],
@@ -5382,9 +5446,11 @@
     },
     {
       "baseBlockName": "purple_wood",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "fence_gate", "window_frame", "window_frame_mullion"],
       "altNames": {
-        "fence_gate": "locked_purple_wood_fence_gate"
+        "fence_gate": "locked_purple_wood_fence_gate",
+        "window_frame": "purple_timber_window_frame",
+        "window_frame_mullion": "purple_timber_window_frame_mullion"
       },
       "hardness": 5,
       "stepSound": "wood",
@@ -5401,7 +5467,9 @@
         "stairs,slab,wall,hopper,tip": [ "plank-ctm" ]
       },
       "textures": {
-        "all": "wood/purple/all"
+        "all": "wood/purple/all",
+        "window-frame": "timber/purple/window_frame",
+        "window-frame-mullion": "timber/purple/window_frame_mullion"
       },
       "altTextures": {
         "solid": ["wood/purple/all", "wood/purple/all", "wood/purple/woodctm"],
@@ -5494,6 +5562,23 @@
       }
     },
     {
+      "baseBlockName": "black_wood_vertical_planks",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "altNames": {
+        "half_door": "black_wood_half_door"
+      },
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Black Wood Vertical Planks",
+      "textures": {
+        "all": "wood/black/vertical"
+      }
+    },
+    {
       "baseBlockName": "grey_wood_vertical_planks",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
       "altNames": {
@@ -5525,6 +5610,108 @@
       "baseLabel": "White Wood Vertical Planks",
       "textures": {
         "all": "wood/white/vertical"
+      }
+    },
+    {
+      "baseBlockName": "red_wood_vertical_planks",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "altNames": {
+        "half_door": "red_wood_half_door"
+      },
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Red Wood Vertical Planks",
+      "textures": {
+        "all": "wood/red/vertical"
+      }
+    },
+    {
+      "baseBlockName": "orange_wood_vertical_planks",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "altNames": {
+        "half_door": "orange_wood_half_door"
+      },
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Orange Wood Vertical Planks",
+      "textures": {
+        "all": "wood/orange/vertical"
+      }
+    },
+    {
+      "baseBlockName": "yellow_wood_vertical_planks",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "altNames": {
+        "half_door": "yellow_wood_half_door"
+      },
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Yellow Wood Vertical Planks",
+      "textures": {
+        "all": "wood/yellow/vertical"
+      }
+    },
+    {
+      "baseBlockName": "green_wood_vertical_planks",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "altNames": {
+        "half_door": "green_wood_half_door"
+      },
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Green Wood Vertical Planks",
+      "textures": {
+        "all": "wood/green/vertical"
+      }
+    },
+    {
+      "baseBlockName": "blue_wood_vertical_planks",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "altNames": {
+        "half_door": "blue_wood_half_door"
+      },
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Blue Wood Vertical Planks",
+      "textures": {
+        "all": "wood/blue/vertical"
+      }
+    },
+    {
+      "baseBlockName": "purple_wood_vertical_planks",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "carpet", "half_door"],
+      "altNames": {
+        "half_door": "purple_wood_half_door"
+      },
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "axe", "level": 3 }],
+      "creativeTab": "WesterosWoodPlanks",
+      "baseLabel": "Purple Wood Vertical Planks",
+      "textures": {
+        "all": "wood/purple/vertical"
       }
     },
     {
@@ -13891,6 +14078,76 @@
       ]
     },
     {
+      "blockName": "birch_window_shutters",
+      "blockType": "halfdoor",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWindowsGlass",
+      "label": "Birch Window Shutters",
+      "type": "allow-unsupported",
+      "textures": [
+        "wood/birch/shutters"
+      ]
+    },
+    {
+      "blockName": "jungle_window_shutters",
+      "blockType": "halfdoor",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWindowsGlass",
+      "label": "Jungle Window Shutters",
+      "type": "allow-unsupported",
+      "textures": [
+        "wood/jungle/shutters"
+      ]
+    },
+    {
+      "blockName": "northern_wood_window_shutters",
+      "blockType": "halfdoor",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWindowsGlass",
+      "label": "Northern Wood Window Shutters",
+      "type": "allow-unsupported",
+      "textures": [
+        "wood/northern/shutters"
+      ]
+    },
+    {
+      "blockName": "grey_wood_window_shutters",
+      "blockType": "halfdoor",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWindowsGlass",
+      "label": "Grey Wood Window Shutters",
+      "type": "allow-unsupported",
+      "textures": [
+        "wood/grey/shutters"
+      ]
+    },
+    {
+      "blockName": "white_wood_window_shutters",
+      "blockType": "halfdoor",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWindowsGlass",
+      "label": "White Wood Window Shutters",
+      "type": "allow-unsupported",
+      "textures": [
+        "wood/white/shutters"
+      ]
+    },
+    {
       "blockName": "dorne_red_window_shutters",
       "blockType": "halfdoor",
       "hardness": 2,
@@ -16812,6 +17069,21 @@
       "isCustomModel": true
     },
     {
+      "blockName": "oak_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Oak Door",
+      "textures": [
+        "wood/oak/door_top",
+        "wood/oak/door_bottom"
+      ],
+      "type": "allow-unsupported"
+    },
+    {
       "blockName": "spruce_door",
       "blockType": "door",
       "hardness": 2,
@@ -16823,6 +17095,81 @@
       "textures": [
         "wood/spruce/door_top",
         "wood/spruce/door_bottom"
+      ],
+      "type": "allow-unsupported"
+    },
+    {
+      "blockName": "birch_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Birch Door",
+      "textures": [
+        "wood/birch/door_top",
+        "wood/birch/door_bottom"
+      ],
+      "type": "allow-unsupported"
+    },
+    {
+      "blockName": "jungle_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Jungle Door",
+      "textures": [
+        "wood/jungle/door_top",
+        "wood/jungle/door_bottom"
+      ],
+      "type": "allow-unsupported"
+    },
+    {
+      "blockName": "northern_wood_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Northern Wood Door",
+      "textures": [
+        "wood/northern/door_top",
+        "wood/northern/door_bottom"
+      ],
+      "type": "allow-unsupported"
+    },
+    {
+      "blockName": "grey_wood_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "Grey Wood Door",
+      "textures": [
+        "wood/grey/door_top",
+        "wood/grey/door_bottom"
+      ],
+      "type": "allow-unsupported"
+    },
+    {
+      "blockName": "white_wood_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "label": "White Wood Door",
+      "textures": [
+        "wood/white/door_top",
+        "wood/white/door_bottom"
       ],
       "type": "allow-unsupported"
     },
@@ -16961,19 +17308,6 @@
       ]
     },
     {
-      "blockName": "savanna_tall_grass",
-      "blockType": "web",
-      "stepSound": "grass",
-      "material": "plants",
-      "creativeTab": "WesterosGrassesShrubs",
-      "label": "Savanna Tall Grass",
-      "textures": [
-        "savanna_tall_grass/savanna_tall_grass"
-      ],
-      "colorMult": "textures/colormap/grass",
-      "type": "no-in-web,layerSensitive"
-    },
-    {
       "blockName": "jungle_tall_fern",
       "blockType": "web",
       "stepSound": "grass",
@@ -16997,6 +17331,43 @@
         "jungle_tall_grass/down_side1"
       ],
       "colorMult": "textures/colormap/grass",
+      "type": "no-in-web,layerSensitive"
+    },
+    {
+      "blockName": "savanna_tall_grass",
+      "blockType": "web",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosGrassesShrubs",
+      "label": "Savanna Tall Grass",
+      "textures": [
+        "savanna_tall_grass/savanna_tall_grass"
+      ],
+      "colorMult": "textures/colormap/grass",
+      "type": "no-in-web,layerSensitive"
+    },
+    {
+      "blockName": "dead_jungle_tall_grass",
+      "blockType": "web",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosGrassesShrubs",
+      "label": "Dead Jungle Tall Grass",
+      "textures": [
+        "dead_jungle_tall_grass/down_side1"
+      ],
+      "type": "no-in-web,layerSensitive"
+    },
+    {
+      "blockName": "dead_savanna_tall_grass",
+      "blockType": "web",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosGrassesShrubs",
+      "label": "Dead Savanna Tall Grass",
+      "textures": [
+        "dead_savanna_tall_grass/dead_savanna_tall_grass"
+      ],
       "type": "no-in-web,layerSensitive"
     },
     {

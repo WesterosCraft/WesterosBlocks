@@ -9,7 +9,11 @@
 -Added southern brick block with rough reused brick, dark mortar brick, lintel, arch, and flat arch variants.
 -Added additional orange brick variants: dark mortar bricks, rowlock course, dentil course, single arch, and double arch.
 -Added unlit torch block, unlit candle block (non-cuboid), and unlit blockstates for candle altar and lantern blocks.
--Added blockstates to random blocks to allow control over textures: plates, paper, clothesline, bones, cobweb, smoke, coins, profession signs
+-Added blockstates to random blocks to allow control over textures: plates, paper, clothesline, bones, cobweb, smoke, coins, profession signs.
+-Added birch, jungle, northern, grey, and white wood doors and shutters.
+-Added vertical planks and window frame blocks for all colored woods.
+-Added orange wood and variants.
+-Added dead jungle tall grass and savanna tall grass blocks.
 -Changed small orange bricks to use a new brick texture, and orange bricks to use a new rough reused brick texture.
 -Changed timber frame blocks to use new plaster and timber textures.
 -Changed small orange brick to new light mortar orange brick texture, and orange brick to a rough "reused" brick texture.
