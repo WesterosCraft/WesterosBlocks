@@ -1,0 +1,39 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+    "layer": "TRANSLUCENT",
+    "textures": [
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
+    ],
+    "extra": {
+      "condWidth": 7,
+      "condHeight": 84,
+      "conds": [
+        {
+          "type": "overlay",
+          "ctmRow": 63,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_the_north_alt"},
+            {"block": "westerosblocks:terrainset_the_north_alt_stairs"},
+            {"block": "westerosblocks:terrainset_the_north_alt_slab"},
+            {"block": "westerosblocks:terrainset_the_north_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 78,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_brown_granite"},
+            {"block": "westerosblocks:terrainset_brown_granite_stairs"},
+            {"block": "westerosblocks:terrainset_brown_granite_slab"},
+            {"block": "westerosblocks:terrainset_brown_granite_wall"}
+          ]
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

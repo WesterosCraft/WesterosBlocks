@@ -1,0 +1,94 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+    "layer": "TRANSLUCENT",
+    "textures": [
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
+    ],
+    "extra": {
+      "condWidth": 7,
+      "condHeight": 84,
+      "conds": [
+        {
+          "type": "overlay",
+          "ctmRow": 15,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_iron_islands"},
+            {"block": "westerosblocks:terrainset_iron_islands_stairs"},
+            {"block": "westerosblocks:terrainset_iron_islands_slab"},
+            {"block": "westerosblocks:terrainset_iron_islands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 33,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_stormlands_alt"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_slab"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 36,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_grey_sandstone"},
+            {"block": "westerosblocks:terrainset_grey_sandstone_stairs"},
+            {"block": "westerosblocks:terrainset_grey_sandstone_slab"},
+            {"block": "westerosblocks:terrainset_grey_sandstone_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 57,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_eastern_islands_alt"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_slab"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 69,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_red_granite"},
+            {"block": "westerosblocks:terrainset_red_granite_stairs"},
+            {"block": "westerosblocks:terrainset_red_granite_slab"},
+            {"block": "westerosblocks:terrainset_red_granite_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 78,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_brown_granite"},
+            {"block": "westerosblocks:terrainset_brown_granite_stairs"},
+            {"block": "westerosblocks:terrainset_brown_granite_slab"},
+            {"block": "westerosblocks:terrainset_brown_granite_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 81,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_brown_granite_alt"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_stairs"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_slab"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_wall"}
+          ]
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

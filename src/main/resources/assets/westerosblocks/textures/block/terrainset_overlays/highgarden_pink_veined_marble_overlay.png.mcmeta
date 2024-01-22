@@ -4,11 +4,11 @@
     "type": "westeros_cond",
     "layer": "TRANSLUCENT",
     "textures": [
-      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay_7x54"
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
     ],
     "extra": {
       "condWidth": 7,
-      "condHeight": 54,
+      "condHeight": 84,
       "conds": [
         {
           "type": "overlay",

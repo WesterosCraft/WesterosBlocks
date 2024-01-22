@@ -3386,7 +3386,7 @@
         "all": "terrainset/east/random_4x4"
       },
       "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_eastern_island_overlay"
+        "all": "terrainset_overlays/terrainset_east_overlay"
       }
     },
     {
@@ -3407,7 +3407,7 @@
         "all": "terrainset/iron/random_4x4"
       },
       "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_iron_islands_overlay"
+        "all": "terrainset_overlays/terrainset_iron_overlay"
       }
     },
     {
@@ -3447,6 +3447,9 @@
       "baseLabel": "TerrainSet The North",
       "textures": {
         "all": "terrainset/north/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_north_overlay"
       }
     },
     {
@@ -3467,7 +3470,7 @@
         "all": "terrainset/ocean/default"
       },
       "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_ocean_rocks_overlay"
+        "all": "terrainset_overlays/terrainset_ocean_overlay"
       }
     },
     {
@@ -3509,7 +3512,7 @@
         "all": "terrainset/river/random_4x4"
       },
       "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_river_rocks_overlay"
+        "all": "terrainset_overlays/terrainset_river_overlay"
       }
     },
     {
@@ -3549,6 +3552,9 @@
       "baseLabel": "TerrainSet Arbor Dorne",
       "textures": {
         "all": "terrainset/arbor_dorne/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_arbor_dorne_overlay"
       }
     },
     {
@@ -3672,6 +3678,9 @@
       "baseLabel": "TerrainSet Arbor Dorne Alt",
       "textures": {
         "all": "terrainset/arbor_dorne_alt/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_arbor_dorne_alt_overlay"
       }
     },
     {
@@ -3690,6 +3699,9 @@
       "baseLabel": "TerrainSet Stormlands Alt",
       "textures": {
         "all": "terrainset/stormlands_alt/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_stormlands_alt_overlay"
       }
     },
     {
@@ -3732,6 +3744,216 @@
       },
       "overlayTextures": {
         "all": "terrainset_overlays/terrainset_grey_sandstone_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_mountains_of_the_moon_alt",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Mountains of the Moon Alt",
+      "textures": {
+        "all": "terrainset/vale_alt/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_vale_alt_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_eastern_islands_alt",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Eastern Islands Alt",
+      "textures": {
+        "all": "terrainset/east_alt/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_east_alt_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_iron_islands_alt",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Iron Islands Alt",
+      "textures": {
+        "all": "terrainset/iron_alt/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_iron_alt_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_the_north_alt",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet The North Alt",
+      "textures": {
+        "all": "terrainset/north_alt/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_north_alt_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_dark_westerlands",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Dark Westerlands",
+      "textures": {
+        "all": "terrainset/dark_westerlands/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_dark_westerlands_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_red_granite",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Red Granite",
+      "textures": {
+        "all": "terrainset/red_granite/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_red_granite_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_dornish_marches",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Dornish Marches",
+      "textures": {
+        "all": "terrainset/dornish_marches/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_dornish_marches_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_dornish_marches_alt",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Dornish Marches Alt",
+      "textures": {
+        "all": "terrainset/dornish_marches_alt/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_dornish_marches_alt_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_brown_granite",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Brown Granite",
+      "textures": {
+        "all": "terrainset/brown_granite/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_brown_granite_overlay"
+      }
+    },
+    {
+      "baseBlockName": "terrainset_brown_granite_alt",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "fence_gate"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosTerrainSets",
+      "types": {
+        "fence": "unconnect:true",
+        "fence_gate": "locked:true"
+      },
+      "baseLabel": "TerrainSet Brown Granite Alt",
+      "textures": {
+        "all": "terrainset/brown_granite_alt/random_4x4"
+      },
+      "overlayTextures": {
+        "all": "terrainset_overlays/terrainset_brown_granite_alt_overlay"
       }
     },
     {
@@ -4110,6 +4332,20 @@
       "baseLabel": "Pale White Plaster Smooth",
       "textures": {
         "all": "plaster/smooth/pale_white/all"
+      }
+    },
+    {
+      "baseBlockName": "yellowish_white_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Yellowish White Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/yellow_white/all"
       }
     },
     {
@@ -4576,6 +4812,21 @@
       "randomTextures": [
         {"textures": {"all": "plaster/rough/pale_white/all1"}},
         {"textures": {"all": "plaster/rough/pale_white/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "yellowish_white_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Yellowish White Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/yellow_white/all1"}},
+        {"textures": {"all": "plaster/rough/yellow_white/all2"}}
       ]
     },
     {
