@@ -8,9 +8,15 @@ import net.minecraft.world.item.ItemStack;
 
 public class  WesterosBlocksCreativeTab extends CreativeModeTab {
 
-    public static final CreativeModeTab tabWesterosCobbleStone = new  WesterosBlocksCreativeTab("WesterosCobbleStone", "§fCobble and Stone", "cobblestone"/*, CreativeModeTab.TAB_BUILDING_BLOCKS*/);
-    public static final CreativeModeTab tabWesterosSmallBrick = new  WesterosBlocksCreativeTab("WesterosSmallBrick", "§fSmall Brick", "light_grey_brick");
-    public static final CreativeModeTab tabWesterosLargeBrick = new  WesterosBlocksCreativeTab("WesterosLargeBrick", "§fLarge Brick", "stone_brick");
+    public static final CreativeModeTab tabWesterosCobblestone = new  WesterosBlocksCreativeTab("WesterosCobblestone", "§fCobblestone", "cobblestone"/*, CreativeModeTab.TAB_BUILDING_BLOCKS*/);
+    public static final CreativeModeTab tabWesterosFieldstone = new  WesterosBlocksCreativeTab("WesterosFieldstone", "§fFieldstone", "light_grey_brick");
+    public static final CreativeModeTab tabWesterosSmoothAshlar = new  WesterosBlocksCreativeTab("WesterosSmoothAshlar", "§fSmooth Ashlar", "grey_light_stone");
+    public static final CreativeModeTab tabWesterosQuarterAshlar = new  WesterosBlocksCreativeTab("WesterosQuarterAshlar", "§fQuarter Ashlar", "small_smooth_stone_brick");
+    public static final CreativeModeTab tabWesterosMediumAshlar = new  WesterosBlocksCreativeTab("WesterosMediumAshlar", "§fMedium Ashlar", "grey_granite");
+    public static final CreativeModeTab tabWesterosHalfAshlar = new  WesterosBlocksCreativeTab("WesterosHalfAshlar", "§fHalf Ashlar", "stone_brick");
+    public static final CreativeModeTab tabWesterosBrick = new  WesterosBlocksCreativeTab("WesterosBrick", "§fBrick", "small_orange_bricks");
+    // public static final CreativeModeTab tabWesterosSmallBrick = new  WesterosBlocksCreativeTab("WesterosSmallBrick", "§fSmall Brick", "light_grey_brick");
+    // public static final CreativeModeTab tabWesterosLargeBrick = new  WesterosBlocksCreativeTab("WesterosLargeBrick", "§fLarge Brick", "stone_brick");
     public static final CreativeModeTab tabWesterosMarblePlaster = new  WesterosBlocksCreativeTab("WesterosMarblePlaster", "§fMarble and Plaster", "marble_pillar");
     public static final CreativeModeTab tabWesterosTimberFrame = new  WesterosBlocksCreativeTab("WesterosTimberFrame", "§fTimber Frame", "timber_oak_reach_brick_crosshatch");
     public static final CreativeModeTab tabWesterosRoofing = new  WesterosBlocksCreativeTab("WesterosRoofing", "§fRoofing", "orange_slate");

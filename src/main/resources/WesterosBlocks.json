@@ -1020,7 +1020,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Black",
       "textures": {
         "all": "ashlar_half/black/all",
@@ -1037,7 +1037,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Black",
       "textures": {
         "all": "ashlar_quarter/black/all",
@@ -1048,30 +1048,36 @@
     },
     {
       "baseBlockName": "black_granite",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Black",
       "textures": {
-        "all": "ashlar_third/black/all"
+        "all": "ashlar_third/black/all",
+        "arrow-slit": "ashlar_third/black/arrow_slit",
+        "arrow-slit-window": "ashlar_third/black/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/black/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "black_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Black",
       "textures": {
-        "all": "ashlar_smooth/black/all"
+        "all": "ashlar_smooth/black/all",
+        "arrow-slit": "ashlar_smooth/black/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/black/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/black/arrow_slit_ornate"
       }
     },
     {
@@ -1082,7 +1088,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Black",
       "randomTextures": [
         {"textures": {"all": "cobblestone/black/all1"}, "weight": 5},
@@ -1100,7 +1106,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Black",
       "textures": {
         "all": "cobblestone_dark/black/all"
@@ -1114,7 +1120,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Valyrian Stone",
       "randomTextures": [
         {"textures": {"all": "stone_valyrian/all1"}},
@@ -1129,30 +1135,36 @@
     },
     {
       "baseBlockName": "dark_grey_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Dark Grey",
       "textures": {
-        "all": "ashlar_half/dark_grey/all"
+        "all": "ashlar_half/dark_grey/all",
+        "arrow-slit": "ashlar_half/dark_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_half/dark_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/dark_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_dark_grey_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Dark Grey",
       "textures": {
-        "all": "ashlar_quarter/dark_grey/all"
+        "all": "ashlar_quarter/dark_grey/all",
+        "arrow-slit": "ashlar_quarter/dark_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter/dark_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter/dark_grey/arrow_slit_ornate"
       }
     },
     {
@@ -1163,7 +1175,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Dark Grey",
       "textures": {
         "all": "ashlar_third/dark_grey/all",
@@ -1180,7 +1192,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Dark Grey",
       "randomTextures": [
         {"textures": {"all": "cobblestone/dark_grey/all1"}, "weight": 5},
@@ -1198,7 +1210,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Dark Grey",
       "textures": {
         "all": "cobblestone_dark/dark_grey/all"
@@ -1212,7 +1224,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Northern Rubble",
       "colorMult": "textures/colormap/darkcobble",
       "randomTextures": [
@@ -1230,7 +1242,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Icy Northern Rubble",
       "colorMult": "textures/colormap/darkcobble",
       "randomTextures": [
@@ -1242,86 +1254,104 @@
     },
     {
       "baseBlockName": "brown_grey_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Brown Grey",
       "textures": {
-        "all": "ashlar_half/brown_grey/all"
+        "all": "ashlar_half/brown_grey/all",
+        "arrow-slit": "ashlar_half/brown_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_half/brown_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/brown_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_smooth_brown_grey_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Brown Grey",
       "textures": {
-        "all": "ashlar_quarter_rounded/brown_grey/all"
+        "all": "ashlar_quarter_rounded/brown_grey/all",
+        "arrow-slit": "ashlar_quarter_rounded/brown_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/brown_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/brown_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_brown_grey_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Brown Grey",
       "textures": {
-        "all": "ashlar_quarter/brown_grey/all"
+        "all": "ashlar_quarter/brown_grey/all",
+        "arrow-slit": "ashlar_quarter/brown_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter/brown_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter/brown_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "brown_grey_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Brown Grey",
       "textures": {
-        "all": "ashlar_smooth/brown_grey/all"
+        "all": "ashlar_smooth/brown_grey/all",
+        "arrow-slit": "ashlar_smooth/brown_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/brown_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/brown_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "faint_brown_grey_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Light Brown Grey",
       "textures": {
-        "all": "fieldstone/light_brown_grey/all"
+        "all": "fieldstone/light_brown_grey/all",
+        "arrow-slit": "fieldstone/light_brown_grey/arrow_slit",
+        "arrow-slit-window": "fieldstone/light_brown_grey/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/light_brown_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "brown_grey_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Brown Grey",
       "textures": {
-        "all": "fieldstone/brown_grey/all"
+        "all": "fieldstone/brown_grey/all",
+        "arrow-slit": "fieldstone/brown_grey/arrow_slit",
+        "arrow-slit-window": "fieldstone/brown_grey/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/brown_grey/arrow_slit_ornate"
       }
     },
     {
@@ -1332,7 +1362,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Brown Grey",
       "randomTextures": [
         {"textures": {"all": "cobblestone/brown_grey/all1"}, "weight": 5},
@@ -1350,7 +1380,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Brown Grey",
       "textures": {
         "all": "cobblestone_dark/brown_grey/all"
@@ -1364,7 +1394,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Brown Grey Rubble",
       "randomTextures": [
         {"textures": {"all": "rubble/brown_grey/all1"}},
@@ -1381,7 +1411,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Brown Grey River Rubble",
       "randomTextures": [
         {"textures": {"all": "rubble/brown_grey_river/all1"}},
@@ -1392,16 +1422,19 @@
     },
     {
       "baseBlockName": "green_grey_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Green Grey",
       "textures": {
-        "all": "ashlar_half/green_grey/all"
+        "all": "ashlar_half/green_grey/all",
+        "arrow-slit": "ashlar_half/green_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_half/green_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/green_grey/arrow_slit_ornate"
       }
     },
     {
@@ -1412,7 +1445,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Green Grey",
       "colorMult": "textures/colormap/smallstonebrick",
       "textures": {
@@ -1430,7 +1463,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Green Grey Mossy",
       "colorMult": "textures/colormap/smallstonebrick",
       "textures": {
@@ -1439,16 +1472,19 @@
     },
     {
       "baseBlockName": "green_grey_granite",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Green Grey",
       "textures": {
-        "all": "ashlar_third/green_grey/all"
+        "all": "ashlar_third/green_grey/all",
+        "arrow-slit": "ashlar_third/green_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_third/green_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/green_grey/arrow_slit_ornate"
       }
     },
     {
@@ -1459,7 +1495,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Green Grey",
       "randomTextures": [
         {"textures": {"all": "cobblestone/green_grey/all1"}, "weight": 5},
@@ -1477,7 +1513,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Green Grey",
       "colorMult": "textures/colormap/darkcobble",
       "textures": {
@@ -1492,7 +1528,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Normal Grey",
       "colorMult": "textures/colormap/stonebrick",
       "textures": {
@@ -1510,7 +1546,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Normal Grey Mossy",
       "colorMult": "textures/colormap/stonebrick",
       "textures": {
@@ -1522,45 +1558,54 @@
     },
     {
       "baseBlockName": "small_smooth_stone_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Normal Grey",
       "colorMult": "textures/colormap/smallsmoothstonebrick",
       "textures": {
-        "all": "ashlar_quarter_rounded/grey/all"
+        "all": "ashlar_quarter_rounded/grey/all",
+        "arrow-slit": "ashlar_quarter_rounded/grey/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "grey_granite",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Normal Grey",
       "textures": {
-        "all": "ashlar_third/grey/all"
+        "all": "ashlar_third/grey/all",
+        "arrow-slit": "ashlar_third/grey/arrow_slit",
+        "arrow-slit-window": "ashlar_third/grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "grey_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Normal Grey",
       "textures": {
-        "all": "ashlar_smooth/grey/all"
+        "all": "ashlar_smooth/grey/all",
+        "arrow-slit": "ashlar_smooth/grey/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/grey/arrow_slit_ornate"
       }
     },
     {
@@ -1571,7 +1616,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Normal Grey",
       "colorMult": "textures/colormap/lightgreystone",
       "textures": {
@@ -1589,7 +1634,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Normal Grey",
       "colorMult": "textures/colormap/cobblestone",
       "randomTextures": [
@@ -1608,7 +1653,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Normal Grey Mossy",
       "colorMult": "textures/colormap/cobblestone",
       "randomTextures": [
@@ -1627,7 +1672,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Normal Grey",
       "textures": {
         "all": "cobblestone_dark/grey/all"
@@ -1641,7 +1686,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "River Rubble",
       "colorMult": "textures/colormap/lightgreystone",
       "randomTextures": [
@@ -1653,59 +1698,71 @@
     },
     {
       "baseBlockName": "faint_light_grey_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Light Grey",
       "textures": {
-        "all": "ashlar_half/light_grey/all"
+        "all": "ashlar_half/light_grey/all",
+        "arrow-slit": "ashlar_half/light_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_half/light_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/light_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_faint_light_grey_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Light Grey",
       "textures": {
-        "all": "ashlar_quarter_rounded/light_grey/all"
+        "all": "ashlar_quarter_rounded/light_grey/all",
+        "arrow-slit": "ashlar_quarter_rounded/light_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/light_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/light_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "faint_light_grey_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Light Grey",
       "textures": {
-        "all": "ashlar_smooth/light_grey/all"
+        "all": "ashlar_smooth/light_grey/all",
+        "arrow-slit": "ashlar_smooth/light_grey/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/light_grey/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/light_grey/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "faint_light_grey_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Light Grey",
       "colorMult": "textures/colormap/faintlightgreystone",
       "textures": {
-        "all": "fieldstone/light_grey/all"
+        "all": "fieldstone/light_grey/all",
+        "arrow-slit": "fieldstone/light_grey/arrow_slit",
+        "arrow-slit-window": "fieldstone/light_grey/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/light_grey/arrow_slit_ornate"
       }
     },
     {
@@ -1716,7 +1773,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Light Grey",
       "randomTextures": [
         {"textures": {"all": "cobblestone/light_grey/all1"}, "weight": 5},
@@ -1734,7 +1791,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Light Grey",
       "textures": {
         "all": "cobblestone_dark/light_grey/all"
@@ -1748,7 +1805,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar White",
       "textures": {
         "all": "ashlar_half/white/all",
@@ -1759,16 +1816,19 @@
     },
     {
       "baseBlockName": "small_white_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar White",
       "textures": {
-        "all": "ashlar_quarter_rounded/white/all"
+        "all": "ashlar_quarter_rounded/white/all",
+        "arrow-slit": "ashlar_quarter_rounded/white/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/white/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/white/arrow_slit_ornate"
       }
     },
     {
@@ -1779,7 +1839,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar White",
       "textures": {
         "all": "ashlar_third/white/all",
@@ -1790,30 +1850,36 @@
     },
     {
       "baseBlockName": "white_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar White",
       "textures": {
-        "all": "ashlar_smooth/white/all"
+        "all": "ashlar_smooth/white/all",
+        "arrow-slit": "ashlar_smooth/white/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/white/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/white/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "white_light_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone White",
       "textures": {
-        "all": "fieldstone/white/all"
+        "all": "fieldstone/white/all",
+        "arrow-slit": "fieldstone/white/arrow_slit",
+        "arrow-slit-window": "fieldstone/white/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/white/arrow_slit_ornate"
       }
     },
     {
@@ -1824,7 +1890,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone White",
       "textures": {
         "all": "cobblestone/white/all"
@@ -1838,7 +1904,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone White",
       "textures": {
         "all": "cobblestone_dark/white/all"
@@ -1846,16 +1912,19 @@
     },
     {
       "baseBlockName": "reach_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Reach",
       "textures": {
-        "all": "ashlar_half/reach/all"
+        "all": "ashlar_half/reach/all",
+        "arrow-slit": "ashlar_half/reach/arrow_slit",
+        "arrow-slit-window": "ashlar_half/reach/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/reach/arrow_slit_ornate"
       }
     },
     {
@@ -1866,7 +1935,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Reach",
       "textures": {
         "all": "ashlar_quarter_rounded/reach/all",
@@ -1877,16 +1946,19 @@
     },
     {
       "baseBlockName": "light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Reach",
       "textures": {
-        "all": "ashlar_smooth/reach/all"
+        "all": "ashlar_smooth/reach/all",
+        "arrow-slit": "ashlar_smooth/reach/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/reach/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/reach/arrow_slit_ornate"
       }
     },
     {
@@ -1897,7 +1969,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Reach",
       "textures": {
         "all": "fieldstone/reach/all",
@@ -1914,7 +1986,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Reach",
       "randomTextures": [
         {"textures": {"all": "cobblestone/reach/all1"}, "weight": 5},
@@ -1932,7 +2004,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Reach",
       "textures": {
         "all": "cobblestone_dark/reach/all"
@@ -1940,30 +2012,36 @@
     },
     {
       "baseBlockName": "pale_pink_faint_light_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Light Pale Pink",
       "textures": {
-        "all": "fieldstone/light_pale_pink/all"
+        "all": "fieldstone/light_pale_pink/all",
+        "arrow-slit": "fieldstone/light_pale_pink/arrow_slit",
+        "arrow-slit-window": "fieldstone/light_pale_pink/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/light_pale_pink/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "pale_pink_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Pale Pink",
       "textures": {
-        "all": "ashlar_smooth/pale_pink/all"
+        "all": "ashlar_smooth/pale_pink/all",
+        "arrow-slit": "ashlar_smooth/pale_pink/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/pale_pink/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/pale_pink/arrow_slit_ornate"
       }
     },
     {
@@ -1974,7 +2052,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Pale Pink",
       "textures": {
         "all": "fieldstone/pale_pink/all",
@@ -1985,44 +2063,53 @@
     },
     {
       "baseBlockName": "sandy_pink_faint_light_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Light Sandy Pink",
       "textures": {
-        "all": "fieldstone/light_sandy_pink/all"
+        "all": "fieldstone/light_sandy_pink/all",
+        "arrow-slit": "fieldstone/light_sandy_pink/arrow_slit",
+        "arrow-slit-window": "fieldstone/light_sandy_pink/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/light_sandy_pink/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "sandy_pink_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Sandy Pink",
       "textures": {
-        "all": "ashlar_half/sandy_pink/all"
+        "all": "ashlar_half/sandy_pink/all",
+        "arrow-slit": "ashlar_half/sandy_pink/arrow_slit",
+        "arrow-slit-window": "ashlar_half/sandy_pink/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/sandy_pink/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "sandy_pink_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Sandy Pink",
       "textures": {
-        "all": "ashlar_quarter_rounded/sandy_pink/all"
+        "all": "ashlar_quarter_rounded/sandy_pink/all",
+        "arrow-slit": "ashlar_quarter_rounded/sandy_pink/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/sandy_pink/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/sandy_pink/arrow_slit_ornate"
       }
     },
     {
@@ -2033,7 +2120,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Sandy Pink",
       "textures": {
         "all": "ashlar_third/sandy_pink/all",
@@ -2044,16 +2131,19 @@
     },
     {
       "baseBlockName": "sandy_pink_light_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Sandy Pink",
       "textures": {
-        "all": "fieldstone/sandy_pink/all"
+        "all": "fieldstone/sandy_pink/all",
+        "arrow-slit": "fieldstone/sandy_pink/arrow_slit",
+        "arrow-slit-window": "fieldstone/sandy_pink/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/sandy_pink/arrow_slit_ornate"
       }
     },
     {
@@ -2064,7 +2154,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Sandy Pink",
       "randomTextures": [
         {"textures": {"all": "cobblestone/sandy_pink/all1"}, "weight": 5},
@@ -2086,7 +2176,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Sandy Pink",
       "textures": {
         "all": "cobblestone_dark/sandy_pink/all"
@@ -2094,30 +2184,36 @@
     },
     {
       "baseBlockName": "kl_dun_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Dun",
       "textures": {
-        "all": "ashlar_half/dun/all"
+        "all": "ashlar_half/dun/all",
+        "arrow-slit": "ashlar_half/dun/arrow_slit",
+        "arrow-slit-window": "ashlar_half/dun/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/dun/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_kl_dun_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Dun",
       "textures": {
-        "all": "ashlar_quarter_rounded/dun/all"
+        "all": "ashlar_quarter_rounded/dun/all",
+        "arrow-slit": "ashlar_quarter_rounded/dun/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/dun/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/dun/arrow_slit_ornate"
       }
     },
     {
@@ -2128,7 +2224,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Dun",
       "textures": {
         "all": "ashlar_third/dun/all",
@@ -2145,7 +2241,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Dun",
       "textures": {
         "all": "cobblestone_dark/dun/all"
@@ -2153,44 +2249,53 @@
     },
     {
       "baseBlockName": "coarse_red_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Pale Red",
       "textures": {
-        "all": "ashlar_half/pale_red/all"
+        "all": "ashlar_half/pale_red/all",
+        "arrow-slit": "ashlar_half/pale_red/arrow_slit",
+        "arrow-slit-window": "ashlar_half/pale_red/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/pale_red/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_coarse_red_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Pale Red",
       "textures": {
-        "all": "ashlar_quarter_rounded/pale_red/all"
+        "all": "ashlar_quarter_rounded/pale_red/all",
+        "arrow-slit": "ashlar_quarter_rounded/pale_red/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/pale_red/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/pale_red/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "coarse_red_sandstone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Pale Red",
       "textures": {
-        "all": "ashlar_third/pale_red/all"
+        "all": "ashlar_third/pale_red/all",
+        "arrow-slit": "ashlar_third/pale_red/arrow_slit",
+        "arrow-slit-window": "ashlar_third/pale_red/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/pale_red/arrow_slit_ornate"
       }
     },
     {
@@ -2201,7 +2306,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Pale Red",
       "textures": {
         "all": "cobblestone_dark/pale_red/all"
@@ -2215,7 +2320,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Red",
       "textures": {
         "all": "ashlar_third/red/all",
@@ -2226,16 +2331,19 @@
     },
     {
       "baseBlockName": "red_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Red",
       "textures": {
-        "all": "ashlar_smooth/red/all"
+        "all": "ashlar_smooth/red/all",
+        "arrow-slit": "ashlar_smooth/red/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/red/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/red/arrow_slit_ornate"
       }
     },
     {
@@ -2246,7 +2354,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Red",
       "randomTextures": [
         {"textures": {"all": "cobblestone/red/all1"}, "weight": 5},
@@ -2258,44 +2366,53 @@
     },
     {
       "baseBlockName": "coarse_dark_red_sandstone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Pale Dark Red",
       "textures": {
-        "all": "ashlar_third/pale_dark_red/all"
+        "all": "ashlar_third/pale_dark_red/all",
+        "arrow-slit": "ashlar_third/pale_dark_red/arrow_slit",
+        "arrow-slit-window": "ashlar_third/pale_dark_red/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/pale_dark_red/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "unused_purple_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Dark Red",
       "textures": {
-        "all": "ashlar_quarter_rounded/dark_red/all"
+        "all": "ashlar_quarter_rounded/dark_red/all",
+        "arrow-slit": "ashlar_quarter_rounded/dark_red/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/dark_red/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/dark_red/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "dark_red_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Dark Red",
       "textures": {
-        "all": "ashlar_quarter/dark_red/all"
+        "all": "ashlar_quarter/dark_red/all",
+        "arrow-slit": "ashlar_quarter/dark_red/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter/dark_red/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter/dark_red/arrow_slit_ornate"
       }
     },
     {
@@ -2306,7 +2423,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Dark Red",
       "textures": {
         "all": "ashlar_third/dark_red/all",
@@ -2317,100 +2434,121 @@
     },
     {
       "baseBlockName": "dark_red_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Dark Red",
       "textures": {
-        "all": "ashlar_smooth/dark_red/all"
+        "all": "ashlar_smooth/dark_red/all",
+        "arrow-slit": "ashlar_smooth/dark_red/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/dark_red/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/dark_red/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "oldtown_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Light Oldtown",
       "textures": {
-        "all": "ashlar_half/light_oldtown/all"
+        "all": "ashlar_half/light_oldtown/all",
+        "arrow-slit": "ashlar_half/light_oldtown/arrow_slit",
+        "arrow-slit-window": "ashlar_half/light_oldtown/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/light_oldtown/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_smooth_oldtown_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Light Oldtown",
       "textures": {
-        "all": "ashlar_quarter_rounded/light_oldtown/all"
+        "all": "ashlar_quarter_rounded/light_oldtown/all",
+        "arrow-slit": "ashlar_quarter_rounded/light_oldtown/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/light_oldtown/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/light_oldtown/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "oldtown_granite",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Light Oldtown",
       "textures": {
-        "all": "ashlar_third/light_oldtown/all"
+        "all": "ashlar_third/light_oldtown/all",
+        "arrow-slit": "ashlar_third/light_oldtown/arrow_slit",
+        "arrow-slit-window": "ashlar_third/light_oldtown/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/light_oldtown/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "oldtown_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Light Oldtown",
       "textures": {
-        "all": "ashlar_smooth/light_oldtown/all"
+        "all": "ashlar_smooth/light_oldtown/all",
+        "arrow-slit": "ashlar_smooth/light_oldtown/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/light_oldtown/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/light_oldtown/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "light_oldtown_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Light Oldtown",
       "textures": {
-        "all": "fieldstone/light_oldtown/all"
+        "all": "fieldstone/light_oldtown/all",
+        "arrow-slit": "fieldstone/light_oldtown/arrow_slit",
+        "arrow-slit-window": "fieldstone/light_oldtown/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/light_oldtown/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_oldtown_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Oldtown",
       "textures": {
-        "all": "ashlar_quarter/oldtown/all"
+        "all": "ashlar_quarter/oldtown/all",
+        "arrow-slit": "ashlar_quarter/oldtown/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter/oldtown/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter/oldtown/arrow_slit_ornate"
       }
     },
     {
@@ -2421,7 +2559,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Oldtown",
       "textures": {
         "all": "fieldstone/oldtown/all",
@@ -2438,7 +2576,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Oldtown",
       "textures": {
         "all": "cobblestone/oldtown/all"
@@ -2452,7 +2590,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Oldtown",
       "textures": {
         "all": "cobblestone_dark/oldtown/all"
@@ -2460,30 +2598,36 @@
     },
     {
       "baseBlockName": "arbor_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Arbor",
       "textures": {
-        "all": "ashlar_half/arbor/all"
+        "all": "ashlar_half/arbor/all",
+        "arrow-slit": "ashlar_half/arbor/arrow_slit",
+        "arrow-slit-window": "ashlar_half/arbor/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/arbor/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_arbor_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Arbor",
       "textures": {
-        "all": "ashlar_quarter_rounded/arbor/all"
+        "all": "ashlar_quarter_rounded/arbor/all",
+        "arrow-slit": "ashlar_quarter_rounded/arbor/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/arbor/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/arbor/arrow_slit_ornate"
       }
     },
     {
@@ -2494,7 +2638,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Arbor",
       "textures": {
         "all": "ashlar_third/arbor/all",
@@ -2505,30 +2649,36 @@
     },
     {
       "baseBlockName": "arbor_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Arbor",
       "textures": {
-        "all": "ashlar_smooth/arbor/all"
+        "all": "ashlar_smooth/arbor/all",
+        "arrow-slit": "ashlar_smooth/arbor/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/arbor/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/arbor/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "arbor_small_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Arbor",
       "textures": {
-        "all": "fieldstone/arbor/all"
+        "all": "fieldstone/arbor/all",
+        "arrow-slit": "fieldstone/arbor/arrow_slit",
+        "arrow-slit-window": "fieldstone/arbor/arrow_slit_window",
+        "arrow-slit-ornate": "fieldstone/arbor/arrow_slit_ornate"
       }
     },
     {
@@ -2539,7 +2689,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Arbor",
       "randomTextures": [
         {"textures": {"all": "cobblestone/arbor/all1"}, "weight": 5},
@@ -2557,7 +2707,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Arbor",
       "textures": {
         "all": "cobblestone_dark/arbor/all"
@@ -2571,7 +2721,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Tan",
       "textures": {
         "all": "ashlar_third/tan/all",
@@ -2588,7 +2738,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Tan Mossy",
       "randomTextures": [
         {"textures": {"all": "ashlar_third/tan_mossy/all1"}},
@@ -2601,44 +2751,53 @@
     },
     {
       "baseBlockName": "large_brick_sandstone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Westerlands",
       "textures": {
-        "all": "ashlar_half/westerlands/all"
+        "all": "ashlar_half/westerlands/all",
+        "arrow-slit": "ashlar_half/westerlands/arrow_slit",
+        "arrow-slit-window": "ashlar_half/westerlands/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/westerlands/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_smooth_lannisport_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Westerlands",
       "textures": {
-        "all": "ashlar_quarter_rounded/westerlands/all"
+        "all": "ashlar_quarter_rounded/westerlands/all",
+        "arrow-slit": "ashlar_quarter_rounded/westerlands/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/westerlands/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/westerlands/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_lannisport_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Westerlands",
       "textures": {
-        "all": "ashlar_quarter/westerlands/all"
+        "all": "ashlar_quarter/westerlands/all",
+        "arrow-slit": "ashlar_quarter/westerlands/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter/westerlands/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter/westerlands/arrow_slit_ornate"
       }
     },
     {
@@ -2649,7 +2808,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Westerlands",
       "textures": {
         "all": "ashlar_third/westerlands/all",
@@ -2666,7 +2825,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Westerlands Mossy",
       "randomTextures": [
         {"textures": {"all": "ashlar_third/westerlands_mossy/all1"}},
@@ -2679,16 +2838,19 @@
     },
     {
       "baseBlockName": "lannisport_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Westerlands",
       "textures": {
-        "all": "ashlar_smooth/westerlands/all"
+        "all": "ashlar_smooth/westerlands/all",
+        "arrow-slit": "ashlar_smooth/westerlands/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/westerlands/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/westerlands/arrow_slit_ornate"
       }
     },
     {
@@ -2699,7 +2861,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosFieldstone",
       "baseLabel": "Fieldstone Westerlands",
       "textures": {
         "all": "fieldstone/westerlands/all",
@@ -2716,7 +2878,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Westerlands",
       "randomTextures": [
         {"textures": {"all": "cobblestone/westerlands/all1"}, "weight": 5},
@@ -2734,7 +2896,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Westerlands",
       "textures": {
         "all": "cobblestone_dark/westerlands/all"
@@ -2748,7 +2910,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Dark Tan",
       "textures": {
         "all": "ashlar_third/dark_tan/all",
@@ -2759,16 +2921,19 @@
     },
     {
       "baseBlockName": "unused_brown_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Light Brown",
       "textures": {
-        "all": "ashlar_quarter_rounded/light_brown/all"
+        "all": "ashlar_quarter_rounded/light_brown/all",
+        "arrow-slit": "ashlar_quarter_rounded/light_brown/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/light_brown/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/light_brown/arrow_slit_ornate"
       }
     },
     {
@@ -2779,7 +2944,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Light Brown",
       "textures": {
         "all": "ashlar_third/light_brown/all",
@@ -2790,16 +2955,19 @@
     },
     {
       "baseBlockName": "stormlands_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Stormlands",
       "textures": {
-        "all": "ashlar_half/stormlands/all"
+        "all": "ashlar_half/stormlands/all",
+        "arrow-slit": "ashlar_half/stormlands/arrow_slit",
+        "arrow-slit-window": "ashlar_half/stormlands/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/stormlands/arrow_slit_ornate"
       }
     },
     {
@@ -2810,7 +2978,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Ashlar Stormlands",
       "textures": {
         "all": "ashlar_quarter/stormlands/all",
@@ -2821,16 +2989,19 @@
     },
     {
       "baseBlockName": "stormlands_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Stormlands",
       "textures": {
-        "all": "ashlar_smooth/stormlands/all"
+        "all": "ashlar_smooth/stormlands/all",
+        "arrow-slit": "ashlar_smooth/stormlands/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/stormlands/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/stormlands/arrow_slit_ornate"
       }
     },
     {
@@ -2841,7 +3012,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Stormlands",
       "randomTextures": [
         {"textures": {"all": "cobblestone/stormlands/all1"}, "weight": 5},
@@ -2859,7 +3030,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Stormlands Mossy",
       "randomTextures": [
         {"textures": {"all": "cobblestone/stormlands_mossy/all1"}, "weight": 5},
@@ -2877,7 +3048,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Dark Cobblestone Stormlands",
       "textures": {
         "all": "cobblestone_dark/stormlands/all"
@@ -2895,7 +3066,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Sandstone",
       "textures": {
         "all": "ashlar_third/sandstone/all",
@@ -2906,16 +3077,19 @@
     },
     {
       "baseBlockName": "dorne_dark_sandstone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Dark Sandstone",
       "textures": {
-        "all": "ashlar_third/dark_sandstone/all"
+        "all": "ashlar_third/dark_sandstone/all",
+        "arrow-slit": "ashlar_third/dark_sandstone/arrow_slit",
+        "arrow-slit-window": "ashlar_third/dark_sandstone/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/dark_sandstone/arrow_slit_ornate"
       }
     },
     {
@@ -2926,7 +3100,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Dark Sandstone Mossy",
       "textures": {
         "all": "ashlar_third/dark_sandstone_mossy/all"
@@ -2934,30 +3108,36 @@
     },
     {
       "baseBlockName": "dorne_dull_terracotta",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Dull Terracotta",
       "textures": {
-        "all": "ashlar_third/dull_terracotta/all"
+        "all": "ashlar_third/dull_terracotta/all",
+        "arrow-slit": "ashlar_third/dull_terracotta/arrow_slit",
+        "arrow-slit-window": "ashlar_third/dull_terracotta/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/dull_terracotta/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "dorne_light_terracotta",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Light Terracotta",
       "textures": {
-        "all": "ashlar_third/light_terracotta/all"
+        "all": "ashlar_third/light_terracotta/all",
+        "arrow-slit": "ashlar_third/light_terracotta/arrow_slit",
+        "arrow-slit-window": "ashlar_third/light_terracotta/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_third/light_terracotta/arrow_slit_ornate"
       }
     },
     {
@@ -2968,7 +3148,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Light Terracotta Mossy",
       "textures": {
         "all": "ashlar_third/light_terracotta_mossy/all"
@@ -2976,30 +3156,36 @@
     },
     {
       "baseBlockName": "terracotta_large_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Half Ashlar Terracotta",
       "textures": {
-        "all": "ashlar_half/terracotta/all"
+        "all": "ashlar_half/terracotta/all",
+        "arrow-slit": "ashlar_half/terracotta/arrow_slit",
+        "arrow-slit-window": "ashlar_half/terracotta/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_half/terracotta/arrow_slit_ornate"
       }
     },
     {
       "baseBlockName": "small_terracotta_brick",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosQuarterAshlar",
       "baseLabel": "Quarter Rounded Ashlar Terracotta",
       "textures": {
-        "all": "ashlar_quarter_rounded/terracotta/all"
+        "all": "ashlar_quarter_rounded/terracotta/all",
+        "arrow-slit": "ashlar_quarter_rounded/terracotta/arrow_slit",
+        "arrow-slit-window": "ashlar_quarter_rounded/terracotta/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_quarter_rounded/terracotta/arrow_slit_ornate"
       }
     },
     {
@@ -3010,7 +3196,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosMediumAshlar",
       "baseLabel": "Medium Ashlar Terracotta",
       "textures": {
         "all": "ashlar_third/terracotta/all",
@@ -3021,16 +3207,19 @@
     },
     {
       "baseBlockName": "terracotta_light_stone",
-      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosSmoothAshlar",
       "baseLabel": "Smooth Ashlar Terracotta",
       "textures": {
-        "all": "ashlar_smooth/terracotta/all"
+        "all": "ashlar_smooth/terracotta/all",
+        "arrow-slit": "ashlar_smooth/terracotta/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/terracotta/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/terracotta/arrow_slit_ornate"
       }
     },
     {
@@ -3041,7 +3230,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "baseLabel": "Cobblestone Terracotta",
       "randomTextures": [
         {"textures": {"all": "cobblestone/terracotta/all1"}, "weight": 5},
@@ -3062,7 +3251,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "baseLabel": "Orange Brick",
       "colorMult": "textures/colormap/brick",
       "randomTextures": [
@@ -3087,7 +3276,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "baseLabel": "Orange Brick Rough",
       "colorMult": "textures/colormap/brick",
       "randomTextures": [
@@ -3105,7 +3294,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "baseLabel": "Orange Brick Dark",
       "colorMult": "textures/colormap/brick",
       "randomTextures": [
@@ -3123,7 +3312,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "baseLabel": "Southern Brick",
       "randomTextures": [
         {"textures": {"all": "brick/southern/all1", "arrow-slit": "brick/southern/arrow_slit", "arrow-slit-window": "brick/southern/arrow_slit_window", "arrow-slit-ornate": "brick/southern/arrow_slit_ornate"}},
@@ -3144,7 +3333,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "baseLabel": "Southern Brick Rough",
       "randomTextures": [
         {"textures": {"all": "brick/southern_rough/all1"}},
@@ -3161,7 +3350,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "baseLabel": "Southern Brick Dark",
       "randomTextures": [
         {"textures": {"all": "brick/southern_dark/all1"}},
@@ -3178,7 +3367,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "baseLabel": "Dark Brown Sandstone",
       "textures": {
         "all": "dark_brown_sandstone/all"
@@ -6964,6 +7153,54 @@
       ]
     },
     {
+      "baseBlockName": "pebbles_wet_red_granite",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Red Granite",
+      "randomTextures": [
+        {"textures": {"all": "pebble/red_granite/wet1"}},
+        {"textures": {"all": "pebble/red_granite/wet2"}},
+        {"textures": {"all": "pebble/red_granite/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_dornish_marches",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Dornish Marches",
+      "randomTextures": [
+        {"textures": {"all": "pebble/dornish_marches/wet1"}},
+        {"textures": {"all": "pebble/dornish_marches/wet2"}},
+        {"textures": {"all": "pebble/dornish_marches/wet3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_wet_brown_granite",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Wet Brown Granite",
+      "randomTextures": [
+        {"textures": {"all": "pebble/brown_granite/wet1"}},
+        {"textures": {"all": "pebble/brown_granite/wet2"}},
+        {"textures": {"all": "pebble/brown_granite/wet3"}}
+      ]
+    },
+    {
       "baseBlockName": "pebbles_wet_volcanic",
       "variants": ["solid", "layer"],
       "hardness": 5,
@@ -7163,6 +7400,54 @@
         {"textures": {"all": "pebble/reach/dry1"}},
         {"textures": {"all": "pebble/reach/dry2"}},
         {"textures": {"all": "pebble/reach/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_red_granite",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Red Granite",
+      "randomTextures": [
+        {"textures": {"all": "pebble/red_granite/dry1"}},
+        {"textures": {"all": "pebble/red_granite/dry2"}},
+        {"textures": {"all": "pebble/red_granite/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_dornish_marches",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Dornish Marches",
+      "randomTextures": [
+        {"textures": {"all": "pebble/dornish_marches/dry1"}},
+        {"textures": {"all": "pebble/dornish_marches/dry2"}},
+        {"textures": {"all": "pebble/dornish_marches/dry3"}}
+      ]
+    },
+    {
+      "baseBlockName": "pebbles_dry_brown_granite",
+      "variants": ["solid", "layer"],
+      "hardness": 5,
+      "stepSound": "gravel",
+      "material": "ground",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+      "creativeTab": "WesterosSandGravel",
+      "baseLabel": "Pebbles Dry Brown Granite",
+      "randomTextures": [
+        {"textures": {"all": "pebble/brown_granite/dry1"}},
+        {"textures": {"all": "pebble/brown_granite/dry2"}},
+        {"textures": {"all": "pebble/brown_granite/dry3"}}
       ]
     },
     {
@@ -7700,7 +7985,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "label": "Sandy Stone Slabs",
       "randomTextures": [
         {"textures": ["sandy_stone/sandy_stone_0"]},
@@ -12988,7 +13273,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "label": "Orange Brick Rowlock",
       "colorMult": "textures/colormap/brick",
       "randomTextures": [
@@ -13003,7 +13288,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "label": "Orange Brick Dentil",
       "colorMult": "textures/colormap/brick",
       "textures": ["brick/orange/all1", "brick/orange/all1", "brick/orange/dentil"]
@@ -13015,7 +13300,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "label": "Orange Brick Arch Single",
       "type": "connectstate:true",
       "colorMult": "textures/colormap/brick",
@@ -13028,7 +13313,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "label": "Orange Brick Arch Double",
       "type": "connectstate:true",
       "colorMult": "textures/colormap/brick",
@@ -13041,7 +13326,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "label": "Southern Brick Lintel",
       "textures": ["brick/southern/all1", "brick/southern/all1", "brick/southern/lintel"]
     },
@@ -13052,7 +13337,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "label": "Southern Brick Arch",
       "type": "connectstate:true",
       "textures": ["brick/southern/all1", "brick/southern/all1", "brick/southern/arch"]
@@ -13064,7 +13349,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosSmallBrick",
+      "creativeTab": "WesterosBrick",
       "label": "Southern Brick Arch Flat",
       "type": "connectstate:true",
       "textures": ["brick/southern/all1", "brick/southern/all1", "brick/southern/arch_flat"]
@@ -13632,7 +13917,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 5,
-      "creativeTab": "WesterosLargeBrick",
+      "creativeTab": "WesterosHalfAshlar",
       "label": "6-Sided Stone Slab",
       "textures": [
         "ashlar_half/white/tile"
@@ -17459,7 +17744,7 @@
       "stepSound": "stone",
       "material": "ground",
       "resistance": 2,
-      "creativeTab": "WesterosCobbleStone",
+      "creativeTab": "WesterosCobblestone",
       "label": "Flagstone",
       "textures": [
         "stone_block/flagstone"
