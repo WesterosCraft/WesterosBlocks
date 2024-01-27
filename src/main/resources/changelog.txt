@@ -16,6 +16,9 @@
 -Added dead jungle tall grass and savanna tall grass blocks.
 -Added new terrainsets: alts for vale/east/iron/north, a darker alt for westerlands, red granite, dornish marches + alt, and gray granite + alt (replacement for biome shaded eastern island).
 -Added pebbles for new red granite, dornish marches, and brown granite sets.
+-Added more furnace, faith carving, and engraving variants.
+-Added generic version of iron grate/sewer manhole blocks.
+-Added night's watch banner.
 -Changed small orange bricks to use a new brick texture, and orange bricks to use a new rough reused brick texture.
 -Changed timber frame blocks to use new plaster and timber textures.
 -Changed small orange brick to new light mortar orange brick texture, and orange brick to a rough "reused" brick texture.

@@ -8038,6 +8038,174 @@
       ]
     },
     {
+      "blockName": "black_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Black",
+      "textures": [
+        "ashlar_third/black/engraved"
+      ]
+    },
+    {
+      "blockName": "black_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Black Wall",
+      "textures": [
+        "ashlar_third/black/engraved"
+      ]
+    },
+    {
+      "blockName": "dark_grey_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Dark Grey",
+      "textures": [
+        "ashlar_third/dark_grey/engraved"
+      ]
+    },
+    {
+      "blockName": "dark_grey_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Dark Grey Wall",
+      "textures": [
+        "ashlar_third/dark_grey/engraved"
+      ]
+    },
+    {
+      "blockName": "green_grey_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Green Grey",
+      "textures": [
+        "ashlar_third/green_grey/engraved"
+      ]
+    },
+    {
+      "blockName": "green_grey_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Green Grey Wall",
+      "textures": [
+        "ashlar_third/green_grey/engraved"
+      ]
+    },
+    {
+      "blockName": "grey_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Normal Grey",
+      "textures": [
+        "ashlar_third/grey/engraved"
+      ]
+    },
+    {
+      "blockName": "grey_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Normal Grey Wall",
+      "textures": [
+        "ashlar_third/grey/engraved"
+      ]
+    },
+    {
+      "blockName": "white_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved White",
+      "textures": [
+        "ashlar_third/white/engraved"
+      ]
+    },
+    {
+      "blockName": "white_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved White Wall",
+      "textures": [
+        "ashlar_third/white/engraved"
+      ]
+    },
+    {
+      "blockName": "pink_sandstone_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Sandy Pink",
+      "textures": [
+        "ashlar_third/sandy_pink/engraved"
+      ]
+    },
+    {
+      "blockName": "pink_sandstone_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Sandy Pink Wall",
+      "textures": [
+        "ashlar_third/sandy_pink/engraved"
+      ]
+    },
+    {
       "blockName": "kl_dun_carved_brick",
       "blockType": "solid",
       "hardness": 5,
@@ -8046,6 +8214,21 @@
       "resistance": 10,
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Dun",
+      "textures": [
+        "ashlar_third/dun/engraved"
+      ]
+    },
+    {
+      "blockName": "kl_dun_carved_brick_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Dun Wall",
       "textures": [
         "ashlar_third/dun/engraved"
       ]
@@ -8064,6 +8247,21 @@
       ]
     },
     {
+      "blockName": "coarse_red_carved_sandstone_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Pale Red Wall",
+      "textures": [
+        "ashlar_third/pale_red/engraved"
+      ]
+    },
+    {
       "blockName": "coarse_dark_red_carved_sandstone",
       "blockType": "solid",
       "hardness": 5,
@@ -8072,6 +8270,21 @@
       "resistance": 10,
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Pale Dark Red",
+      "textures": [
+        "ashlar_third/pale_dark_red/engraved"
+      ]
+    },
+    {
+      "blockName": "coarse_dark_red_carved_sandstone_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Pale Dark Red Wall",
       "textures": [
         "ashlar_third/pale_dark_red/engraved"
       ]
@@ -8090,6 +8303,77 @@
       ]
     },
     {
+      "blockName": "arbor_brick_ornate_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Arbor Wall",
+      "textures": [
+        "ashlar_third/arbor/engraved"
+      ]
+    },
+    {
+      "blockName": "vivid_sandstone_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Tan",
+      "textures": [
+        "ashlar_third/tan/engraved"
+      ]
+    },
+    {
+      "blockName": "vivid_sandstone_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Tan Wall",
+      "textures": [
+        "ashlar_third/tan/engraved"
+      ]
+    },
+    {
+      "blockName": "monochrome_sandstone_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Westerlands",
+      "textures": [
+        "ashlar_third/westerlands/engraved"
+      ]
+    },
+    {
+      "blockName": "monochrome_sandstone_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Westerlands Wall",
+      "textures": [
+        "ashlar_third/westerlands/engraved"
+      ]
+    },
+    {
       "blockName": "vivid_dark_sandstone_engraved",
       "blockType": "solid",
       "hardness": 5,
@@ -8103,6 +8387,49 @@
       ]
     },
     {
+      "blockName": "vivid_dark_sandstone_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Dark Tan Wall",
+      "textures": [
+        "ashlar_third/dark_tan/engraved"
+      ]
+    },
+    {
+      "blockName": "monochrome_dark_sandstone_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Light Brown",
+      "textures": [
+        "ashlar_third/light_brown/engraved"
+      ]
+    },
+    {
+      "blockName": "monochrome_dark_sandstone_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Light Brown Wall",
+      "textures": [
+        "ashlar_third/light_brown/engraved"
+      ]
+    },
+    {
       "blockName": "desert_sandstone_engraved",
       "blockType": "solid",
       "hardness": 3,
@@ -8111,6 +8438,21 @@
       "resistance": 10,
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Sandstone",
+      "textures": [
+        "ashlar_third/sandstone/engraved"
+      ]
+    },
+    {
+      "blockName": "desert_sandstone_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Sandstone Wall",
       "textures": [
         "ashlar_third/sandstone/engraved"
       ]
@@ -8144,6 +8486,45 @@
       ]
     },
     {
+      "blockName": "faith_carved_black_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Faith Carved Black",
+      "textures": [
+        "ashlar_quarter/black/faith_carved"
+      ]
+    },
+    {
+      "blockName": "faith_carved_dark_grey_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Faith Carved Dark Grey",
+      "textures": [
+        "ashlar_quarter/dark_grey/faith_carved"
+      ]
+    },
+    {
+      "blockName": "faith_carved_brown_grey_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Faith Carved Brown Grey",
+      "textures": [
+        "ashlar_quarter/brown_grey/faith_carved"
+      ]
+    },
+    {
       "blockName": "faith_carved_small_stone_brick",
       "blockType": "solid",
       "hardness": 5,
@@ -8157,6 +8538,19 @@
       ]
     },
     {
+      "blockName": "faith_carved_grey_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Faith Carved Normal Grey",
+      "textures": [
+        "ashlar_third/grey/faith_carved"
+      ]
+    },
+    {
       "blockName": "faith_carved_stone_brick",
       "blockType": "solid",
       "hardness": 5,
@@ -8167,6 +8561,19 @@
       "label": "Ashlar Faith Carved White",
       "textures": [
         "ashlar_half/white/faith_carved"
+      ]
+    },
+    {
+      "blockName": "faith_carved_reach_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Faith Carved Reach",
+      "textures": [
+        "ashlar_quarter_rounded/reach/faith_carved"
       ]
     },
     {
@@ -8196,6 +8603,32 @@
       ]
     },
     {
+      "blockName": "faith_carved_coarse_red_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Faith Carved Pale Red",
+      "textures": [
+        "ashlar_third/pale_red/faith_carved"
+      ]
+    },
+    {
+      "blockName": "faith_carved_oldtown_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Faith Carved Light Oldtown",
+      "textures": [
+        "ashlar_quarter_rounded/light_oldtown/faith_carved"
+      ]
+    },
+    {
       "blockName": "faith_carved_arbor_brick",
       "blockType": "solid",
       "hardness": 5,
@@ -8206,6 +8639,19 @@
       "label": "Ashlar Faith Carved Arbor",
       "textures": [
         "ashlar_third/arbor/faith_carved"
+      ]
+    },
+    {
+      "blockName": "faith_carved_westerlands_brick",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 5,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Faith Carved Westerlands",
+      "textures": [
+        "ashlar_quarter/westerlands/faith_carved"
       ]
     },
     {
@@ -16650,43 +17096,6 @@
       ]
     },
     {
-      "blockName": "grey_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Grey Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_grey_bottom",
-            "banner_block/banner_grey_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_grey_top",
-            "banner_block/banner_grey_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
       "blockName": "mirror_block",
       "blockType": "solid",
       "hardness": 3,
@@ -16884,6 +17293,43 @@
         "bed_block/bed_hammock_3",
         "bed_block/bed_hammock_4",
         "bed_block/bed_hammock_5"
+      ]
+    },
+    {
+      "blockName": "grey_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Grey Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_grey_bottom",
+            "banner_block/banner_grey_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_grey_top",
+            "banner_block/banner_grey_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
       ]
     },
     {
@@ -17368,6 +17814,783 @@
       ]
     },
     {
+      "blockName": "nights_watch_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Nights Watch Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_nightswatch_bottom",
+            "banner_block/banner_nightswatch_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_nightswatch_top",
+            "banner_block/banner_nightswatch_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "red_keep_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Red Keep Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_redkeep_bottom",
+            "banner_block/banner_redkeep_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_redkeep_top",
+            "banner_block/banner_redkeep_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "arryn_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Arryn Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_arryn_bottom",
+            "banner_block/banner_arryn_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_arryn_top",
+            "banner_block/banner_arryn_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "baratheon_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Baratheon Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_baratheon_bottom",
+            "banner_block/banner_baratheon_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_baratheon_top",
+            "banner_block/banner_baratheon_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "bolton_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Bolton Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_bolton_bottom",
+            "banner_block/banner_bolton_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_bolton_top",
+            "banner_block/banner_bolton_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "dayne_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Dayne Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_dayne_bottom",
+            "banner_block/banner_dayne_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_dayne_top",
+            "banner_block/banner_dayne_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "frey_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Frey Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_frey_bottom",
+            "banner_block/banner_frey_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_frey_top",
+            "banner_block/banner_frey_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "greyjoy_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Greyjoy Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_greyjoy_bottom",
+            "banner_block/banner_greyjoy_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_greyjoy_top",
+            "banner_block/banner_greyjoy_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "hightower_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Hightower Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_hightower_bottom",
+            "banner_block/banner_hightower_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_hightower_top",
+            "banner_block/banner_hightower_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "lannister_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Lannister Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_lannister_bottom",
+            "banner_block/banner_lannister_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_lannister_top",
+            "banner_block/banner_lannister_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "manderly_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Manderly Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_manderly_bottom",
+            "banner_block/banner_manderly_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_manderly_top",
+            "banner_block/banner_manderly_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "martell_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Martell Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_martell_bottom",
+            "banner_block/banner_martell_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_martell_top",
+            "banner_block/banner_martell_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "stannis_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Stannis Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_stannis_bottom",
+            "banner_block/banner_stannis_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_stannis_top",
+            "banner_block/banner_stannis_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "stark_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Stark Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_stark_bottom",
+            "banner_block/banner_stark_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_stark_top",
+            "banner_block/banner_stark_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "targaryen_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Targaryen Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_targaryen_bottom",
+            "banner_block/banner_targaryen_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_targaryen_top",
+            "banner_block/banner_targaryen_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "tarly_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Tarly Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_tarly_bottom",
+            "banner_block/banner_tarly_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_tarly_top",
+            "banner_block/banner_tarly_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "tully_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Tully Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_tully_bottom",
+            "banner_block/banner_tully_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_tully_top",
+            "banner_block/banner_tully_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "tyrell_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Tyrell Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_tyrell_bottom",
+            "banner_block/banner_tyrell_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_tyrell_top",
+            "banner_block/banner_tyrell_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "redwyne_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Redwyne Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_redwyne_bottom",
+            "banner_block/banner_redwyne_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_redwyne_top",
+            "banner_block/banner_redwyne_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "grafton_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Grafton Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_grafton_bottom",
+            "banner_block/banner_grafton_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_grafton_top",
+            "banner_block/banner_grafton_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
+      "blockName": "renly_banner",
+      "blockType": "cuboid-nsew-stack",
+      "hardness": 1,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 1,
+      "harvestLevel": [{ "tool": "sword", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "type": "no-break-under,allowHalfBreak",
+      "label": "Renly Banner",
+      "itemTextureIndex": 2,
+      "stack": [
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_renly_bottom",
+            "banner_block/banner_renly_bottom"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        },
+        {
+          "textures": [
+            "transparent",
+            "transparent",
+            "transparent",
+            "transparent",
+            "banner_block/banner_renly_top",
+            "banner_block/banner_renly_top"
+          ],
+          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+        }
+      ]
+    },
+    {
       "blockName": "packed_snow",
       "blockType": "rail",
       "material": "snow",
@@ -17492,7 +18715,7 @@
       ]
     },
     {
-      "blockName": "orange_brick_furnace",
+      "blockName": "dark_grey_brick_furnace",
       "blockType": "furnace",
       "nonOpaque": true,
       "hardness": 5,
@@ -17501,12 +18724,12 @@
       "resistance": 10,
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
-      "label": "Orange Brick Furnace",
-      "colorMult": "textures/colormap/brick",
+      "label": "Ashlar Furnace Dark Grey",
+      "type": "always-on:false",
       "isCustomModel": true
     },
     {
-      "blockName": "always_active_brick_furnace",
+      "blockName": "always_active_dark_grey_brick_furnace",
       "blockType": "furnace",
       "nonOpaque": true,
       "hardness": 5,
@@ -17515,8 +18738,149 @@
       "resistance": 10,
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
-      "label": "Always Active Brick Furnace",
-      "colorMult": "textures/colormap/brick",
+      "label": "Always Active Ashlar Furnace Dark Grey",
+      "type": "always-on:true",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "stone_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Ashlar Furnace Green Grey",
+      "type": "always-on:false",
+      "colorMult": "textures/colormap/furnace",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "always_active_stone_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Always Active Ashlar Furnace Green Grey",
+      "type": "always-on:true",
+      "colorMult": "textures/colormap/furnace",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "light_grey_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Ashlar Furnace Light Grey",
+      "type": "always-on:false",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "always_active_light_grey_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Always Active Ashlar Furnace Light Grey",
+      "type": "always-on:true",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "reach_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Ashlar Furnace Reach",
+      "type": "always-on:false",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "always_active_reach_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Always Active Ashlar Furnace Reach",
+      "type": "always-on:true",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "dun_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Ashlar Furnace Dun",
+      "type": "always-on:false",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "always_active_dun_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Always Active Ashlar Furnace Dun",
+      "type": "always-on:true",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "oldtown_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Ashlar Furnace Oldtown",
+      "type": "always-on:false",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "always_active_oldtown_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Always Active Ashlar Furnace Oldtown",
       "type": "always-on:true",
       "isCustomModel": true
     },
@@ -17530,7 +18894,7 @@
       "resistance": 10,
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
-      "label": "Sandstone Furnace",
+      "label": "Ashlar Furnace Light Brown",
       "isCustomModel": true
     },
     {
@@ -17543,12 +18907,12 @@
       "resistance": 10,
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
-      "label": "Always Active Sandstone Furnace",
+      "label": "Always Active Ashlar Furnace Light Brown",
       "type": "always-on:true",
       "isCustomModel": true
     },
     {
-      "blockName": "always_active_stone_furnace",
+      "blockName": "arbor_brick_furnace",
       "blockType": "furnace",
       "nonOpaque": true,
       "hardness": 5,
@@ -17557,13 +18921,11 @@
       "resistance": 10,
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
-      "label": "Always Active Stone Furnace",
-      "type": "always-on:true",
-      "colorMult": "textures/colormap/furnace",
+      "label": "Ashlar Furnace Arbor",
       "isCustomModel": true
     },
     {
-      "blockName": "stone_furnace",
+      "blockName": "always_active_arbor_brick_furnace",
       "blockType": "furnace",
       "nonOpaque": true,
       "hardness": 5,
@@ -17572,9 +18934,8 @@
       "resistance": 10,
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
-      "label": "Stone Furnace",
-      "type": "always-on:false",
-      "colorMult": "textures/colormap/furnace",
+      "label": "Always Active Ashlar Furnace Arbor",
+      "type": "always-on:true",
       "isCustomModel": true
     },
     {
@@ -17601,6 +18962,62 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
       "label": "Always Active Dornish Mud Furnace",
+      "type": "always-on:true",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "orange_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Orange Brick Furnace",
+      "colorMult": "textures/colormap/brick",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "always_active_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Always Active Orange Brick Furnace",
+      "colorMult": "textures/colormap/brick",
+      "type": "always-on:true",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "southern_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Southern Brick Furnace",
+      "isCustomModel": true
+    },
+    {
+      "blockName": "always_active_southern_brick_furnace",
+      "blockType": "furnace",
+      "nonOpaque": true,
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 10,
+      "lightValue": 0.875,
+      "creativeTab": "WesterosFurniture",
+      "label": "Always Active Southern Brick Furnace",
       "type": "always-on:true",
       "isCustomModel": true
     },
@@ -20068,43 +21485,6 @@
       ]
     },
     {
-      "blockName": "red_keep_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Red Keep Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_redkeep_bottom",
-            "banner_block/banner_redkeep_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_redkeep_top",
-            "banner_block/banner_redkeep_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
       "blockName": "sept_crystal_medium",
       "blockType": "wall",
       "hardness": 1.5,
@@ -22532,20 +23912,6 @@
       "boundingBox": {"xMin": 0.47, "xMax": 0.53, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     },
     {
-      "blockName": "kings_landing_sewer_manhole",
-      "blockType": "trapdoor",
-      "hardness": 2,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 5,
-      "creativeTab": "WesterosDecor",
-      "type": "locked:false",
-      "label": "King's Landing Sewer Manhole",
-      "textures": [
-        "trapdoor_block/kings_landing_manhole"
-      ]
-    },
-    {
       "blockName": "cow_parsely",
       "blockType": "plant",
       "type": "layerSensitive",
@@ -23133,20 +24499,6 @@
       ]
     },
     {
-      "blockName": "white_harbor_sewer_manhole",
-      "blockType": "trapdoor",
-      "hardness": 2,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 5,
-      "creativeTab": "WesterosDecor",
-      "type": "locked:false",
-      "label": "White Harbor Sewer Manhole",
-      "textures": [
-        "trapdoor_block/white_harbor_manhole"
-      ]
-    },
-    {
       "blockName": "test_block",
       "blockType": "cuboid-nsewud",
       "hardness": 3,
@@ -23529,598 +24881,6 @@
         "alyssas_tears_mist/mist4"
       ],
       "boundingBox": {"xMin": 0.92, "xMax": 0.97, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-    },
-    {
-      "blockName": "arryn_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Arryn Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_arryn_bottom",
-            "banner_block/banner_arryn_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_arryn_top",
-            "banner_block/banner_arryn_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "baratheon_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Baratheon Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_baratheon_bottom",
-            "banner_block/banner_baratheon_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_baratheon_top",
-            "banner_block/banner_baratheon_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "bolton_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Bolton Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_bolton_bottom",
-            "banner_block/banner_bolton_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_bolton_top",
-            "banner_block/banner_bolton_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "dayne_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Dayne Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_dayne_bottom",
-            "banner_block/banner_dayne_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_dayne_top",
-            "banner_block/banner_dayne_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "frey_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Frey Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_frey_bottom",
-            "banner_block/banner_frey_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_frey_top",
-            "banner_block/banner_frey_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "greyjoy_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Greyjoy Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_greyjoy_bottom",
-            "banner_block/banner_greyjoy_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_greyjoy_top",
-            "banner_block/banner_greyjoy_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "hightower_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Hightower Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_hightower_bottom",
-            "banner_block/banner_hightower_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_hightower_top",
-            "banner_block/banner_hightower_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "lannister_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Lannister Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_lannister_bottom",
-            "banner_block/banner_lannister_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_lannister_top",
-            "banner_block/banner_lannister_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "manderly_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Manderly Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_manderly_bottom",
-            "banner_block/banner_manderly_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_manderly_top",
-            "banner_block/banner_manderly_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "martell_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Martell Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_martell_bottom",
-            "banner_block/banner_martell_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_martell_top",
-            "banner_block/banner_martell_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "stannis_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Stannis Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_stannis_bottom",
-            "banner_block/banner_stannis_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_stannis_top",
-            "banner_block/banner_stannis_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "stark_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Stark Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_stark_bottom",
-            "banner_block/banner_stark_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_stark_top",
-            "banner_block/banner_stark_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "targaryen_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Targaryen Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_targaryen_bottom",
-            "banner_block/banner_targaryen_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_targaryen_top",
-            "banner_block/banner_targaryen_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "tarly_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Tarly Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_tarly_bottom",
-            "banner_block/banner_tarly_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_tarly_top",
-            "banner_block/banner_tarly_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "tully_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Tully Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_tully_bottom",
-            "banner_block/banner_tully_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_tully_top",
-            "banner_block/banner_tully_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "tyrell_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Tyrell Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_tyrell_bottom",
-            "banner_block/banner_tyrell_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_tyrell_top",
-            "banner_block/banner_tyrell_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
     },
     {
       "blockName": "reach_oak_wood_panelling_wall",
@@ -28056,6 +28816,48 @@
       "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/bressummer" ]
     },
     {
+      "blockName": "sewer_manhole",
+      "blockType": "trapdoor",
+      "hardness": 2,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 5,
+      "creativeTab": "WesterosDecor",
+      "type": "locked:false",
+      "label": "Generic Sewer Manhole",
+      "textures": [
+        "trapdoor_block/manhole"
+      ]
+    },
+    {
+      "blockName": "kings_landing_sewer_manhole",
+      "blockType": "trapdoor",
+      "hardness": 2,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 5,
+      "creativeTab": "WesterosDecor",
+      "type": "locked:false",
+      "label": "King's Landing Sewer Manhole",
+      "textures": [
+        "trapdoor_block/kings_landing_manhole"
+      ]
+    },
+    {
+      "blockName": "white_harbor_sewer_manhole",
+      "blockType": "trapdoor",
+      "hardness": 2,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 5,
+      "creativeTab": "WesterosDecor",
+      "type": "locked:false",
+      "label": "White Harbor Sewer Manhole",
+      "textures": [
+        "trapdoor_block/white_harbor_manhole"
+      ]
+    },
+    {
       "blockName": "oldtown_sewer_manhole",
       "blockType": "trapdoor",
       "hardness": 2,
@@ -28223,117 +29025,6 @@
         "leaves_weirwood/leaves_weirwood_snowy_top",
         "leaves_weirwood/leaves_weirwood_snowy",
         "leaves_weirwood/leaves_bf_weirwood_snowy"
-      ]
-    },
-    {
-      "blockName": "redwyne_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Redwyne Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_redwyne_bottom",
-            "banner_block/banner_redwyne_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_redwyne_top",
-            "banner_block/banner_redwyne_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "grafton_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Grafton Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_grafton_bottom",
-            "banner_block/banner_grafton_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_grafton_top",
-            "banner_block/banner_grafton_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
-      ]
-    },
-    {
-      "blockName": "renly_banner",
-      "blockType": "cuboid-nsew-stack",
-      "hardness": 1,
-      "stepSound": "wood",
-      "material": "wood",
-      "resistance": 1,
-      "harvestLevel": [{ "tool": "sword", "level": 1 }],
-      "creativeTab": "WesterosDecor",
-      "type": "no-break-under,allowHalfBreak",
-      "label": "Renly Banner",
-      "itemTextureIndex": 2,
-      "stack": [
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_renly_bottom",
-            "banner_block/banner_renly_bottom"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        },
-        {
-          "textures": [
-            "transparent",
-            "transparent",
-            "transparent",
-            "transparent",
-            "banner_block/banner_renly_top",
-            "banner_block/banner_renly_top"
-          ],
-          "boundingBox": {"xMin": 0.96875, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-        }
       ]
     },
     {
@@ -28924,33 +29615,6 @@
         "road_marker_block/rose_road"
       ],
       "boundingBox": {"xMin": 0.961, "xMax": 0.97, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
-    },
-    {
-      "blockName": "arbor_brick_furnace",
-      "blockType": "furnace",
-      "nonOpaque": true,
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "lightValue": 0.875,
-      "creativeTab": "WesterosFurniture",
-      "label": "Arbor Brick Furnace",
-      "isCustomModel": true
-    },
-    {
-      "blockName": "always_active_arbor_brick_furnace",
-      "blockType": "furnace",
-      "nonOpaque": true,
-      "hardness": 5,
-      "stepSound": "metal",
-      "material": "iron",
-      "resistance": 10,
-      "lightValue": 0.875,
-      "creativeTab": "WesterosFurniture",
-      "label": "Always Active Arbor Brick Furnace",
-      "type": "always-on:true",
-      "isCustomModel": true
     },
     {
       "blockName": "stacked_bones",
