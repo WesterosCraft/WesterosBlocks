@@ -24795,6 +24795,36 @@
       ]
     },
     {
+      "blockName": "locked_grey_wood_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "locked:true,allow-unsupported",
+      "label": "Locked Grey Wood Door",
+      "textures": [
+        "wood/grey/door_locked_top",
+        "wood/grey/door_locked_bottom"
+      ]
+    },
+    {
+      "blockName": "locked_white_wood_door",
+      "blockType": "door",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosWoodPlanks",
+      "type": "locked:true,allow-unsupported",
+      "label": "Locked White Wood Door",
+      "textures": [
+        "wood/white/door_locked_top",
+        "wood/white/door_locked_bottom"
+      ]
+    },
+    {
       "blockName": "falling_water_block_one_old",
       "blockType": "cuboid-nsew",
       "hardness": 5,

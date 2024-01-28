@@ -26,6 +26,8 @@
 -Changed iron rungs to custom model and added new broken iron rungs block.
 -Changed the large paintings to use a tapestry-like texture.
 -Changed cuboid unlit candle block to use new model/texture to fix transparent pixels.
+-Changed vanilla campfire block to custom texture.
+-Updated particle textures.
 -Fixed candle/torch blocks not being placeable on non-solid surfaces and moved them to correct inventory tab.
 -Fixed cow parsley and fireweed CTMs.
 -Fixed bottom texture for clay pot blocks (to oak planks, so that they can be used in shelves).
