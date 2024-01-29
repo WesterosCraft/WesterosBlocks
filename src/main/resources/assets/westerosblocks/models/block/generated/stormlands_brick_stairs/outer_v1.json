@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "top": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "side": "westerosblocks:block/stone_block/brick_stormlands_small",
-    "particle": "westerosblocks:block/stone_block/brick_stormlands_small"
+    "bottom": "westerosblocks:block/ashlar_quarter/stormlands/all",
+    "top": "westerosblocks:block/ashlar_quarter/stormlands/all",
+    "side": "westerosblocks:block/ashlar_quarter/stormlands/all",
+    "particle": "westerosblocks:block/ashlar_quarter/stormlands/all"
   }
 }

@@ -4,6 +4,21 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/post-v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/post-v2"
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/post-v3"
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/post-v4"
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/post-v5"
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/post-v6"
         }
       ],
       "when": {
@@ -14,6 +29,26 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v1",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v3",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v4",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v5",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v6",
           "uvlock": true
         }
       ],
@@ -26,6 +61,26 @@
         {
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v1",
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v2",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v3",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v4",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v5",
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v6",
+          "uvlock": true
         }
       ],
       "when": {
@@ -36,6 +91,31 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v1",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v3",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v4",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v5",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v6",
           "y": 90,
           "uvlock": true
         }
@@ -50,6 +130,31 @@
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v1",
           "y": 90,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v2",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v3",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v4",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v5",
+          "y": 90,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v6",
+          "y": 90,
+          "uvlock": true
         }
       ],
       "when": {
@@ -60,6 +165,31 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v1",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v3",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v4",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v5",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v6",
           "y": 180,
           "uvlock": true
         }
@@ -74,6 +204,31 @@
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v1",
           "y": 180,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v2",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v3",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v4",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v5",
+          "y": 180,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v6",
+          "y": 180,
+          "uvlock": true
         }
       ],
       "when": {
@@ -86,6 +241,31 @@
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v1",
           "y": 270,
           "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v3",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v4",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v5",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side-v6",
+          "y": 270,
+          "uvlock": true
         }
       ],
       "when": {
@@ -96,6 +276,31 @@
       "apply": [
         {
           "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v1",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v2",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v3",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v4",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v5",
+          "y": 270,
+          "uvlock": true
+        },
+        {
+          "model": "westerosblocks:block/generated/monochrome_mossy_sandstone_wall/side_tall-v6",
           "y": 270,
           "uvlock": true
         }

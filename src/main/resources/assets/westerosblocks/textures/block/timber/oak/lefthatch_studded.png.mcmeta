@@ -1,0 +1,13 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_ctm_single",
+    "layer": "CUTOUT",
+    "textures": [
+      "westerosblocks:block/timber/oak/lefthatch_studded_ctm"
+    ],
+    "extra": {
+      "connect_to_state": "connectstate"
+    }
+  }
+}

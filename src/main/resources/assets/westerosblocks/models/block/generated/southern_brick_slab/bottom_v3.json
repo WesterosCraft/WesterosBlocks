@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/brick/southern/all3",
+    "up": "westerosblocks:block/brick/southern/all3",
+    "north": "westerosblocks:block/brick/southern/all3",
+    "south": "westerosblocks:block/brick/southern/all3",
+    "west": "westerosblocks:block/brick/southern/all3",
+    "east": "westerosblocks:block/brick/southern/all3",
+    "particle": "westerosblocks:block/brick/southern/all3"
+  }
+}

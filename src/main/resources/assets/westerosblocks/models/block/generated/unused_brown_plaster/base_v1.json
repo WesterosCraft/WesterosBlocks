@@ -1,12 +1,18 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "down": "westerosblocks:block/unused_brown_plaster/top_bottom",
-    "up": "westerosblocks:block/unused_brown_plaster/top_bottom",
-    "north": "westerosblocks:block/unused_brown_plaster/side",
-    "south": "westerosblocks:block/unused_brown_plaster/side",
-    "west": "westerosblocks:block/unused_brown_plaster/side",
-    "east": "westerosblocks:block/unused_brown_plaster/side",
-    "particle": "westerosblocks:block/unused_brown_plaster/side"
+    "down_ov": "westerosblocks:block/transparent",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/plaster_keystone/ashlar_quarter_rounded_light_brown/side",
+    "south_ov": "westerosblocks:block/plaster_keystone/ashlar_quarter_rounded_light_brown/side",
+    "west_ov": "westerosblocks:block/plaster_keystone/ashlar_quarter_rounded_light_brown/side",
+    "east_ov": "westerosblocks:block/plaster_keystone/ashlar_quarter_rounded_light_brown/side",
+    "down": "westerosblocks:block/ashlar_quarter_rounded/light_brown/all",
+    "up": "westerosblocks:block/ashlar_quarter_rounded/light_brown/all",
+    "north": "westerosblocks:block/plaster/smooth/brown_white/all",
+    "south": "westerosblocks:block/plaster/smooth/brown_white/all",
+    "west": "westerosblocks:block/plaster/smooth/brown_white/all",
+    "east": "westerosblocks:block/plaster/smooth/brown_white/all",
+    "particle": "westerosblocks:block/plaster/smooth/brown_white/all"
   }
 }

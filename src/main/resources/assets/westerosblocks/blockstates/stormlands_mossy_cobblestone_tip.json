@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/stormlands_mossy_cobblestone_tip/base_v1",
+        "weight": 5
+      },
+      {
+        "model": "westerosblocks:block/generated/stormlands_mossy_cobblestone_tip/base_v2",
+        "weight": 5
+      },
+      {
+        "model": "westerosblocks:block/generated/stormlands_mossy_cobblestone_tip/base_v3",
+        "weight": 5
+      },
+      {
+        "model": "westerosblocks:block/generated/stormlands_mossy_cobblestone_tip/base_v4",
+        "weight": 5
+      },
+      {
+        "model": "westerosblocks:block/generated/stormlands_mossy_cobblestone_tip/base_v5",
+        "weight": 20
+      }
+    ]
+  }
+}

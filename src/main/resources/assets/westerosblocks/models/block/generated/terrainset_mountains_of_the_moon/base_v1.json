@@ -1,18 +1,18 @@
 {
   "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
-    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
-    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
-    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
-    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
-    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_eyrie_overlay",
-    "down": "westerosblocks:block/terrainset_eyrie/random_6x6",
-    "up": "westerosblocks:block/terrainset_eyrie/random_6x6",
-    "north": "westerosblocks:block/terrainset_eyrie/random_6x6",
-    "south": "westerosblocks:block/terrainset_eyrie/random_6x6",
-    "west": "westerosblocks:block/terrainset_eyrie/random_6x6",
-    "east": "westerosblocks:block/terrainset_eyrie/random_6x6",
-    "particle": "westerosblocks:block/terrainset_eyrie/random_6x6"
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_vale_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_vale_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_vale_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_vale_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_vale_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_vale_overlay",
+    "down": "westerosblocks:block/terrainset/vale/random_6x6",
+    "up": "westerosblocks:block/terrainset/vale/random_6x6",
+    "north": "westerosblocks:block/terrainset/vale/random_6x6",
+    "south": "westerosblocks:block/terrainset/vale/random_6x6",
+    "west": "westerosblocks:block/terrainset/vale/random_6x6",
+    "east": "westerosblocks:block/terrainset/vale/random_6x6",
+    "particle": "westerosblocks:block/terrainset/vale/random_6x6"
   }
 }

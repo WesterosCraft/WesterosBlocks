@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/terracotta/all5",
+    "top": "westerosblocks:block/cobblestone/terracotta/all5",
+    "side": "westerosblocks:block/cobblestone/terracotta/all5",
+    "particle": "westerosblocks:block/cobblestone/terracotta/all5"
+  }
+}

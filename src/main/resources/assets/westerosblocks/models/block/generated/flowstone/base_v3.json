@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
     "west_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
     "east_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
-    "down": "westerosblocks:block/flowstone/side3",
-    "up": "westerosblocks:block/flowstone/side3",
-    "north": "westerosblocks:block/flowstone/side3",
-    "south": "westerosblocks:block/flowstone/side3",
-    "west": "westerosblocks:block/flowstone/side3",
-    "east": "westerosblocks:block/flowstone/side3",
-    "particle": "westerosblocks:block/flowstone/side3"
+    "down": "westerosblocks:block/terrainset/flowstone/all3",
+    "up": "westerosblocks:block/terrainset/flowstone/all3",
+    "north": "westerosblocks:block/terrainset/flowstone/all3",
+    "south": "westerosblocks:block/terrainset/flowstone/all3",
+    "west": "westerosblocks:block/terrainset/flowstone/all3",
+    "east": "westerosblocks:block/terrainset/flowstone/all3",
+    "particle": "westerosblocks:block/terrainset/flowstone/all3"
   }
 }

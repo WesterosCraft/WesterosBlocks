@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/wood_block/wood_yellow",
-    "txt5": "westerosblocks:block/wood_block/wood_yellow",
-    "txt2": "westerosblocks:block/wood_block/wood_yellow",
-    "txt3": "westerosblocks:block/wood_block/wood_yellow",
-    "txt0": "westerosblocks:block/wood_block/wood_yellow",
-    "txt1": "westerosblocks:block/wood_block/wood_yellow",
-    "particle": "westerosblocks:block/wood_block/wood_yellow"
+    "txt4": "westerosblocks:block/wood/yellow/all",
+    "txt5": "westerosblocks:block/wood/yellow/all",
+    "txt2": "westerosblocks:block/wood/yellow/all",
+    "txt3": "westerosblocks:block/wood/yellow/all",
+    "txt0": "westerosblocks:block/wood/yellow/all",
+    "txt1": "westerosblocks:block/wood/yellow/all",
+    "particle": "westerosblocks:block/wood/yellow/all"
   },
   "elements": [
     {

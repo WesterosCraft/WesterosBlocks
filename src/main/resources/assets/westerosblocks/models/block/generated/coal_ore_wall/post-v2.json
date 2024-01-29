@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/ore/coal/all2",
+    "top": "westerosblocks:block/ore/coal/all2",
+    "side": "westerosblocks:block/ore/coal/all2",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay"
+  }
+}

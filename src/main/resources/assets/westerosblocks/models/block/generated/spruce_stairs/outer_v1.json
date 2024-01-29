@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "minecraft:block/spruce_planks",
-    "top": "minecraft:block/spruce_planks",
-    "side": "minecraft:block/spruce_planks",
-    "particle": "minecraft:block/spruce_planks"
+    "bottom": "westerosblocks:block/wood/spruce/all",
+    "top": "westerosblocks:block/wood/spruce/all",
+    "side": "westerosblocks:block/wood/spruce/plankctm",
+    "particle": "westerosblocks:block/wood/spruce/plankctm"
   }
 }

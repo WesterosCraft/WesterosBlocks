@@ -1,0 +1,133 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt2": "westerosblocks:block/profession_sign_base/fishmongerer",
+    "txt3": "westerosblocks:block/profession_sign_base/sign_cut4",
+    "txt0": "westerosblocks:block/sign_block/sign_bottom",
+    "txt1": "westerosblocks:block/sign_block/sign_top",
+    "particle": "westerosblocks:block/sign_block/sign_bottom"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.0,
+        7.2
+      ],
+      "to": [
+        16.0,
+        16.0,
+        8.8
+      ],
+      "faces": {
+        "south": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt2"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt2"
+        }
+      }
+    },
+    {
+      "from": [
+        0.0,
+        0.0,
+        7.36
+      ],
+      "to": [
+        16.0,
+        16.0,
+        8.64
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            7.3599997,
+            0.0,
+            8.639999,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "east"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt3"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt3"
+        },
+        "west": {
+          "uv": [
+            7.36,
+            0.0,
+            8.64,
+            16.0
+          ],
+          "texture": "#txt0",
+          "cullface": "west"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            7.36,
+            16.0,
+            8.64
+          ],
+          "texture": "#txt1",
+          "cullface": "up"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            7.3599997,
+            16.0,
+            8.639999
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

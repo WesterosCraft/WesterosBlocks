@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "up": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "north": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "south": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "west": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "east": "westerosblocks:block/starry_sept_marble/starry_sept",
-    "particle": "westerosblocks:block/starry_sept_marble/starry_sept"
+    "down": "westerosblocks:block/marble/starry_sept/all",
+    "up": "westerosblocks:block/marble/starry_sept/all",
+    "north": "westerosblocks:block/marble/starry_sept/all",
+    "south": "westerosblocks:block/marble/starry_sept/all",
+    "west": "westerosblocks:block/marble/starry_sept/all",
+    "east": "westerosblocks:block/marble/starry_sept/all",
+    "particle": "westerosblocks:block/marble/starry_sept/all"
   }
 }

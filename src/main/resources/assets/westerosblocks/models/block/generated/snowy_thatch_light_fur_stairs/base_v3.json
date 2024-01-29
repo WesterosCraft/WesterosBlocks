@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/snowy_thatch_light_fur/bottom",
-    "top": "westerosblocks:block/snowy_thatch_light_fur/top",
-    "side": "westerosblocks:block/snowy_thatch_light_fur/side3",
-    "particle": "westerosblocks:block/snowy_thatch_light_fur/side3"
+    "bottom": "westerosblocks:block/thatch/snowy_light/bottom",
+    "top": "westerosblocks:block/thatch/snowy_light/top",
+    "side": "westerosblocks:block/thatch/snowy_light/side3",
+    "particle": "westerosblocks:block/thatch/snowy_light/side3"
   }
 }

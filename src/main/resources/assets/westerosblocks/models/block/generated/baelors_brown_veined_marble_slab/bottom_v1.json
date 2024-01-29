@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab_overlay",
+  "textures": {
+    "down": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "up": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "north": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "south": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "west": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "east": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "particle": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "down_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay"
+  }
+}

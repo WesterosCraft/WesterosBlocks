@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block/stone_cobble_unshaded",
-    "txt5": "westerosblocks:block/stone_block/stone_cobble_unshaded",
-    "txt2": "westerosblocks:block/stone_block/stone_cobble_unshaded",
-    "txt3": "westerosblocks:block/stone_block/stone_cobble_unshaded",
-    "txt0": "westerosblocks:block/stone_block/stone_cobble_unshaded",
-    "txt1": "westerosblocks:block/stone_block/stone_cobble_unshaded",
-    "particle": "westerosblocks:block/stone_block/stone_cobble_unshaded"
+    "txt4": "westerosblocks:block/cobblestone/grey/all1",
+    "txt5": "westerosblocks:block/cobblestone/grey/all1",
+    "txt2": "westerosblocks:block/cobblestone/grey/all1",
+    "txt3": "westerosblocks:block/cobblestone/grey/all1",
+    "txt0": "westerosblocks:block/cobblestone/grey/all1",
+    "txt1": "westerosblocks:block/cobblestone/grey/all1",
+    "particle": "westerosblocks:block/cobblestone/grey/all1"
   },
   "elements": [
     {

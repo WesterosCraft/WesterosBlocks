@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cuboid_block/door_iron_lower_jungle",
-    "txt5": "westerosblocks:block/cuboid_block/door_iron_lower_jungle",
-    "txt2": "westerosblocks:block/cuboid_block/door_iron_lower_jungle",
-    "txt3": "westerosblocks:block/cuboid_block/door_iron_lower_jungle",
-    "txt0": "westerosblocks:block/cuboid_block/door_iron_lower_jungle",
-    "txt1": "westerosblocks:block/cuboid_block/door_iron_lower_jungle",
-    "particle": "westerosblocks:block/cuboid_block/door_iron_lower_jungle"
+    "txt4": "westerosblocks:block/wood/jungle/vertical",
+    "txt5": "westerosblocks:block/wood/jungle/vertical",
+    "txt2": "westerosblocks:block/wood/jungle/vertical",
+    "txt3": "westerosblocks:block/wood/jungle/vertical",
+    "txt0": "westerosblocks:block/wood/jungle/vertical",
+    "txt1": "westerosblocks:block/wood/jungle/vertical",
+    "particle": "westerosblocks:block/wood/jungle/vertical"
   },
   "elements": [
     {

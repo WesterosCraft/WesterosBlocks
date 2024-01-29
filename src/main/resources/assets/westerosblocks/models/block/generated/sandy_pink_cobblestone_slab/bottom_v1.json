@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "up": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "north": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "south": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "west": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "east": "westerosblocks:block/stone_block/stone_cobble_sandy_pink",
-    "particle": "westerosblocks:block/stone_block/stone_cobble_sandy_pink"
+    "down": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "up": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "north": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "south": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "west": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "east": "westerosblocks:block/cobblestone_dark/sandy_pink/all",
+    "particle": "westerosblocks:block/cobblestone_dark/sandy_pink/all"
   }
 }

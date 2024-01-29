@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/gold_ore_overlay",
+    "down": "westerosblocks:block/ore/gold/all4",
+    "up": "westerosblocks:block/ore/gold/all4",
+    "north": "westerosblocks:block/ore/gold/all4",
+    "south": "westerosblocks:block/ore/gold/all4",
+    "west": "westerosblocks:block/ore/gold/all4",
+    "east": "westerosblocks:block/ore/gold/all4",
+    "particle": "westerosblocks:block/ore/gold/all4"
+  }
+}

@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block/brick_oldtown_light",
-    "txt5": "westerosblocks:block/stone_block/brick_oldtown_light",
-    "txt2": "westerosblocks:block/stone_block/brick_oldtown_light",
-    "txt3": "westerosblocks:block/stone_block/brick_oldtown_light",
-    "txt0": "westerosblocks:block/stone_block/brick_oldtown_light",
-    "txt1": "westerosblocks:block/stone_block/brick_oldtown_light",
-    "particle": "westerosblocks:block/stone_block/brick_oldtown_light"
+    "txt4": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "txt5": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "txt2": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "txt3": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "txt0": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "txt1": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "particle": "westerosblocks:block/fieldstone/light_oldtown/all"
   },
   "elements": [
     {

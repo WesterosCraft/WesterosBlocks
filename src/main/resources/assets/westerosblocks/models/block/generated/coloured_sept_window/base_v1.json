@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/translucent_block/glass_stained"
+    "all": "westerosblocks:block/glass/sept/all"
   }
 }

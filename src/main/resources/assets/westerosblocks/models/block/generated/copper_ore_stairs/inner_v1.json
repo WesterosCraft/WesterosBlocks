@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/ore/copper/all1",
+    "top": "westerosblocks:block/ore/copper/all1",
+    "side": "westerosblocks:block/ore/copper/all1",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "particle": "westerosblocks:block/ore/copper/all1"
+  }
+}

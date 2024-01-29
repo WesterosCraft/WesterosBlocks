@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/dirty_white_wool/side",
-    "up": "westerosblocks:block/dirty_white_wool/side",
-    "north": "westerosblocks:block/dirty_white_wool/side",
-    "south": "westerosblocks:block/dirty_white_wool/side",
-    "west": "westerosblocks:block/dirty_white_wool/side",
-    "east": "westerosblocks:block/dirty_white_wool/side",
-    "particle": "westerosblocks:block/dirty_white_wool/side"
+    "down": "westerosblocks:block/wool/dirty_white/all",
+    "up": "westerosblocks:block/wool/dirty_white/all",
+    "north": "westerosblocks:block/wool/dirty_white/all",
+    "south": "westerosblocks:block/wool/dirty_white/all",
+    "west": "westerosblocks:block/wool/dirty_white/all",
+    "east": "westerosblocks:block/wool/dirty_white/all",
+    "particle": "westerosblocks:block/wool/dirty_white/all"
   }
 }

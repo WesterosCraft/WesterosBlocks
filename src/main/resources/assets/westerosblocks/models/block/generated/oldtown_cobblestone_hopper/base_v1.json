@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block/stone_cobble_oldtown",
-    "txt5": "westerosblocks:block/stone_block/stone_cobble_oldtown",
-    "txt2": "westerosblocks:block/stone_block/stone_cobble_oldtown",
-    "txt3": "westerosblocks:block/stone_block/stone_cobble_oldtown",
-    "txt0": "westerosblocks:block/stone_block/stone_cobble_oldtown",
-    "txt1": "westerosblocks:block/stone_block/stone_cobble_oldtown",
-    "particle": "westerosblocks:block/stone_block/stone_cobble_oldtown"
+    "txt4": "westerosblocks:block/cobblestone/oldtown/all",
+    "txt5": "westerosblocks:block/cobblestone/oldtown/all",
+    "txt2": "westerosblocks:block/cobblestone/oldtown/all",
+    "txt3": "westerosblocks:block/cobblestone/oldtown/all",
+    "txt0": "westerosblocks:block/cobblestone/oldtown/all",
+    "txt1": "westerosblocks:block/cobblestone/oldtown/all",
+    "particle": "westerosblocks:block/cobblestone/oldtown/all"
   },
   "elements": [
     {

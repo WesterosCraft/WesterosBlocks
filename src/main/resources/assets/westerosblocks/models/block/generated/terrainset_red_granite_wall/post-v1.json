@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/red_granite/random_4x4",
+    "top": "westerosblocks:block/terrainset/red_granite/random_4x4",
+    "side": "westerosblocks:block/terrainset/red_granite/random_4x4",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_granite_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_granite_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_red_granite_overlay"
+  }
+}

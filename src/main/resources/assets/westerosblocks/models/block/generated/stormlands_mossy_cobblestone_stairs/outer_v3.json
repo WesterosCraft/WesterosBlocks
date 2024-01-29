@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "top": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "side": "westerosblocks:block/cobblestone/stormlands_mossy/all3",
+    "particle": "westerosblocks:block/cobblestone/stormlands_mossy/all3"
+  }
+}

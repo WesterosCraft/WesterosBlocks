@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/cube_all",
   "textures": {
-    "all": "westerosblocks:block/cobblestone_texture_variants/bedrock5"
+    "all": "westerosblocks:block/cobblestone/bedrock/all5"
   }
 }

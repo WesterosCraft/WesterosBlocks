@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "state=state2": {
+      "model": "westerosblocks:block/generated/timber_northern_orange_brick_bressummer/state2_v1"
+    },
+    "state=state1": {
+      "model": "westerosblocks:block/generated/timber_northern_orange_brick_bressummer/state1_v1"
+    },
+    "state=state0": {
+      "model": "westerosblocks:block/generated/timber_northern_orange_brick_bressummer/state0_v1"
+    }
+  }
+}

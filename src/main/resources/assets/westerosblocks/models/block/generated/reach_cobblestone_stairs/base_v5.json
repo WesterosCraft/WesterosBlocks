@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/cobblestone_texture_variants/reach5",
-    "top": "westerosblocks:block/cobblestone_texture_variants/reach5",
-    "side": "westerosblocks:block/cobblestone_texture_variants/reach5",
-    "particle": "westerosblocks:block/cobblestone_texture_variants/reach5"
+    "bottom": "westerosblocks:block/cobblestone/reach/all5",
+    "top": "westerosblocks:block/cobblestone/reach/all5",
+    "side": "westerosblocks:block/cobblestone/reach/all5",
+    "particle": "westerosblocks:block/cobblestone/reach/all5"
   }
 }

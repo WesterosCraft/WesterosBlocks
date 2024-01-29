@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/glass_pane_block/moorish_wood_window_pane"
+    "layer0": "westerosblocks:block/pane_block/moorish_wood_window_pane"
   }
 }

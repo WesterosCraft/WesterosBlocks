@@ -4,20 +4,21 @@
     "type": "westeros_cond",
     "layer": "TRANSLUCENT",
     "textures": [
-      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay_7x54"
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
     ],
     "extra": {
       "condWidth": 7,
-      "condHeight": 54,
+      "condHeight": 84,
       "conds": [
         {
           "type": "overlay",
           "ctmRow": 21,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_arbor_dorne_alt"
-            }
+            {"block": "westerosblocks:terrainset_arbor_dorne_alt"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_alt_stairs"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_alt_slab"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_alt_wall"}
           ]
         },
         {
@@ -25,9 +26,10 @@
           "ctmRow": 24,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_arbor_dorne"
-            }
+            {"block": "westerosblocks:terrainset_arbor_dorne"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_stairs"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_slab"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_wall"}
           ]
         },
         {
@@ -35,9 +37,10 @@
           "ctmRow": 27,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_westerlands_alt"
-            }
+            {"block": "westerosblocks:terrainset_westerlands_alt"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_slab"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_wall"}
           ]
         },
         {
@@ -45,9 +48,65 @@
           "ctmRow": 30,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_westerlands"
-            }
+            {"block": "westerosblocks:terrainset_westerlands"},
+            {"block": "westerosblocks:terrainset_westerlands_stairs"},
+            {"block": "westerosblocks:terrainset_westerlands_slab"},
+            {"block": "westerosblocks:terrainset_westerlands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 66,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_dark_westerlands"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_stairs"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_slab"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 69,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_red_granite"},
+            {"block": "westerosblocks:terrainset_red_granite_stairs"},
+            {"block": "westerosblocks:terrainset_red_granite_slab"},
+            {"block": "westerosblocks:terrainset_red_granite_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 72,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_dornish_marches"},
+            {"block": "westerosblocks:terrainset_dornish_marches_stairs"},
+            {"block": "westerosblocks:terrainset_dornish_marches_slab"},
+            {"block": "westerosblocks:terrainset_dornish_marches_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 75,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_dornish_marches_alt"},
+            {"block": "westerosblocks:terrainset_dornish_marches_alt_stairs"},
+            {"block": "westerosblocks:terrainset_dornish_marches_alt_slab"},
+            {"block": "westerosblocks:terrainset_dornish_marches_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 81,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_brown_granite_alt"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_stairs"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_slab"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_wall"}
           ]
         }
       ],

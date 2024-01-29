@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:block/pebble_river/dry2",
-    "txt5": "westerosblocks:block/pebble_river/dry2",
-    "txt2": "westerosblocks:block/pebble_river/dry2",
-    "txt3": "westerosblocks:block/pebble_river/dry2",
-    "txt0": "westerosblocks:block/pebble_river/dry2",
-    "txt1": "westerosblocks:block/pebble_river/dry2",
-    "particle": "westerosblocks:block/pebble_river/dry2"
+    "txt4": "westerosblocks:block/pebble/river/dry2",
+    "txt5": "westerosblocks:block/pebble/river/dry2",
+    "txt2": "westerosblocks:block/pebble/river/dry2",
+    "txt3": "westerosblocks:block/pebble/river/dry2",
+    "txt0": "westerosblocks:block/pebble/river/dry2",
+    "txt1": "westerosblocks:block/pebble/river/dry2",
+    "particle": "westerosblocks:block/pebble/river/dry2"
   },
   "elements": [
     {

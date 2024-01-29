@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down_ov": "westerosblocks:block/timber/oak/bottom",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/timber/oak/bressummer",
+    "south_ov": "westerosblocks:block/timber/oak/bressummer",
+    "west_ov": "westerosblocks:block/timber/oak/bressummer",
+    "east_ov": "westerosblocks:block/timber/oak/bressummer",
+    "down": "westerosblocks:block/plaster/rough/brown_daub/all1",
+    "up": "westerosblocks:block/wood/oak/all",
+    "north": "westerosblocks:block/plaster/rough/brown_daub/all1",
+    "south": "westerosblocks:block/plaster/rough/brown_daub/all1",
+    "west": "westerosblocks:block/plaster/rough/brown_daub/all1",
+    "east": "westerosblocks:block/plaster/rough/brown_daub/all1",
+    "particle": "westerosblocks:block/plaster/rough/brown_daub/all1"
+  }
+}

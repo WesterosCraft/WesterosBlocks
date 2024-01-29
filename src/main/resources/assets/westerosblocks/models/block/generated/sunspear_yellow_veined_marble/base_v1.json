@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
     "west_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
     "east_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
-    "down": "westerosblocks:block/sunspear_yellow_veined_marble/marble_sunspear",
-    "up": "westerosblocks:block/sunspear_yellow_veined_marble/marble_sunspear",
-    "north": "westerosblocks:block/sunspear_yellow_veined_marble/marble_sunspear",
-    "south": "westerosblocks:block/sunspear_yellow_veined_marble/marble_sunspear",
-    "west": "westerosblocks:block/sunspear_yellow_veined_marble/marble_sunspear",
-    "east": "westerosblocks:block/sunspear_yellow_veined_marble/marble_sunspear",
-    "particle": "westerosblocks:block/sunspear_yellow_veined_marble/marble_sunspear"
+    "down": "westerosblocks:block/marble/sunspear_yellow/all",
+    "up": "westerosblocks:block/marble/sunspear_yellow/all",
+    "north": "westerosblocks:block/marble/sunspear_yellow/all",
+    "south": "westerosblocks:block/marble/sunspear_yellow/all",
+    "west": "westerosblocks:block/marble/sunspear_yellow/all",
+    "east": "westerosblocks:block/marble/sunspear_yellow/all",
+    "particle": "westerosblocks:block/marble/sunspear_yellow/all"
   }
 }

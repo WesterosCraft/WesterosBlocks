@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_smooth/light_grey/all",
+    "top": "westerosblocks:block/ashlar_smooth/light_grey/all",
+    "side": "westerosblocks:block/ashlar_smooth/light_grey/all"
+  }
+}

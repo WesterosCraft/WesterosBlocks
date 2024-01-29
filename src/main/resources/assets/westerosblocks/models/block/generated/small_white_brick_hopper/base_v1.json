@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block/brick_white_small",
-    "txt5": "westerosblocks:block/stone_block/brick_white_small",
-    "txt2": "westerosblocks:block/stone_block/brick_white_small",
-    "txt3": "westerosblocks:block/stone_block/brick_white_small",
-    "txt0": "westerosblocks:block/stone_block/brick_white_small",
-    "txt1": "westerosblocks:block/stone_block/brick_white_small",
-    "particle": "westerosblocks:block/stone_block/brick_white_small"
+    "txt4": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "txt5": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "txt2": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "txt3": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "txt0": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "txt1": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/white/all"
   },
   "elements": [
     {

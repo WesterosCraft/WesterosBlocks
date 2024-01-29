@@ -1,12 +1,18 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
-    "down": "westerosblocks:block/lannisport_keystone_orange_plaster/top_bottom",
-    "up": "westerosblocks:block/lannisport_keystone_orange_plaster/top_bottom",
-    "north": "westerosblocks:block/lannisport_keystone_orange_plaster/side1",
-    "south": "westerosblocks:block/lannisport_keystone_orange_plaster/side1",
-    "west": "westerosblocks:block/lannisport_keystone_orange_plaster/side1",
-    "east": "westerosblocks:block/lannisport_keystone_orange_plaster/side1",
-    "particle": "westerosblocks:block/lannisport_keystone_orange_plaster/side1"
+    "down_ov": "westerosblocks:block/transparent",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/plaster_keystone/fieldstone_westerlands/side",
+    "south_ov": "westerosblocks:block/plaster_keystone/fieldstone_westerlands/side",
+    "west_ov": "westerosblocks:block/plaster_keystone/fieldstone_westerlands/side",
+    "east_ov": "westerosblocks:block/plaster_keystone/fieldstone_westerlands/side",
+    "down": "westerosblocks:block/fieldstone/westerlands/all",
+    "up": "westerosblocks:block/fieldstone/westerlands/all",
+    "north": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "south": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "west": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "east": "westerosblocks:block/plaster/smooth/lannisport_orange/all",
+    "particle": "westerosblocks:block/plaster/smooth/lannisport_orange/all"
   }
 }

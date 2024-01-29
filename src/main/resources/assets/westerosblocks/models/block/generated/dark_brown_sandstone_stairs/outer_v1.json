@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone_block/sandstone_brown_dark",
-    "top": "westerosblocks:block/sandstone_block/sandstone_brown_dark",
-    "side": "westerosblocks:block/sandstone_block/sandstone_brown_dark",
-    "particle": "westerosblocks:block/sandstone_block/sandstone_brown_dark"
+    "bottom": "westerosblocks:block/dark_brown_sandstone/all",
+    "top": "westerosblocks:block/dark_brown_sandstone/all",
+    "side": "westerosblocks:block/dark_brown_sandstone/all",
+    "particle": "westerosblocks:block/dark_brown_sandstone/all"
   }
 }

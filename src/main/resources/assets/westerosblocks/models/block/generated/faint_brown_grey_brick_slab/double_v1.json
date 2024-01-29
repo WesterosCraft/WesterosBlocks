@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/fieldstone/light_brown_grey/all",
+    "up": "westerosblocks:block/fieldstone/light_brown_grey/all",
+    "north": "westerosblocks:block/fieldstone/light_brown_grey/all",
+    "south": "westerosblocks:block/fieldstone/light_brown_grey/all",
+    "west": "westerosblocks:block/fieldstone/light_brown_grey/all",
+    "east": "westerosblocks:block/fieldstone/light_brown_grey/all",
+    "particle": "westerosblocks:block/fieldstone/light_brown_grey/all"
+  }
+}

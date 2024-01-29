@@ -1,0 +1,328 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+    "layer": "TRANSLUCENT",
+    "textures": [
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
+    ],
+    "extra": {
+      "condWidth": 7,
+      "condHeight": 84,
+      "conds": [
+	      {
+          "type": "overlay",
+          "ctmRow": 0,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:cushion_moss"},
+            {"block": "westerosblocks:cushion_moss_stairs"},
+            {"block": "westerosblocks:cushion_moss_slab"},
+            {"block": "westerosblocks:cushion_moss_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 3,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:volcanic_rock"},
+            {"block": "westerosblocks:volcanic_rock_stairs"},
+            {"block": "westerosblocks:volcanic_rock_slab"},
+            {"block": "westerosblocks:volcanic_rock_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 6,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_reach_alt"},
+            {"block": "westerosblocks:terrainset_reach_alt_stairs"},
+            {"block": "westerosblocks:terrainset_reach_alt_slab"},
+            {"block": "westerosblocks:terrainset_reach_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 9,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_reach"},
+            {"block": "westerosblocks:terrainset_reach_stairs"},
+            {"block": "westerosblocks:terrainset_reach_slab"},
+            {"block": "westerosblocks:terrainset_reach_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 12,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_the_north"},
+            {"block": "westerosblocks:terrainset_the_north_stairs"},
+            {"block": "westerosblocks:terrainset_the_north_slab"},
+            {"block": "westerosblocks:terrainset_the_north_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 15,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_iron_islands"},
+            {"block": "westerosblocks:terrainset_iron_islands_stairs"},
+            {"block": "westerosblocks:terrainset_iron_islands_slab"},
+            {"block": "westerosblocks:terrainset_iron_islands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 18,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_eastern_islands"},
+            {"block": "westerosblocks:terrainset_eastern_islands_stairs"},
+            {"block": "westerosblocks:terrainset_eastern_islands_slab"},
+            {"block": "westerosblocks:terrainset_eastern_islands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 21,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_arbor_dorne_alt"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_alt_stairs"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_alt_slab"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 24,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_arbor_dorne"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_stairs"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_slab"},
+            {"block": "westerosblocks:terrainset_arbor_dorne_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 27,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_westerlands_alt"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_slab"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 30,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_westerlands"},
+            {"block": "westerosblocks:terrainset_westerlands_stairs"},
+            {"block": "westerosblocks:terrainset_westerlands_slab"},
+            {"block": "westerosblocks:terrainset_westerlands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 33,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_stormlands_alt"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_slab"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 36,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_grey_sandstone"},
+            {"block": "westerosblocks:terrainset_grey_sandstone_stairs"},
+            {"block": "westerosblocks:terrainset_grey_sandstone_slab"},
+            {"block": "westerosblocks:terrainset_grey_sandstone_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 39,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_stormlands"},
+            {"block": "westerosblocks:terrainset_stormlands_stairs"},
+            {"block": "westerosblocks:terrainset_stormlands_slab"},
+            {"block": "westerosblocks:terrainset_stormlands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 42,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_river_rocks"},
+            {"block": "westerosblocks:terrainset_river_rocks_stairs"},
+            {"block": "westerosblocks:terrainset_river_rocks_slab"},
+            {"block": "westerosblocks:terrainset_river_rocks_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 45,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_red_mountains_alt"},
+            {"block": "westerosblocks:terrainset_red_mountains_alt_stairs"},
+            {"block": "westerosblocks:terrainset_red_mountains_alt_slab"},
+            {"block": "westerosblocks:terrainset_red_mountains_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 48,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_red_mountains"},
+            {"block": "westerosblocks:terrainset_red_mountains_stairs"},
+            {"block": "westerosblocks:terrainset_red_mountains_slab"},
+            {"block": "westerosblocks:terrainset_red_mountains_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 51,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_stairs"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_slab"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 54,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_alt"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_alt_stairs"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_alt_slab"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 57,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_eastern_islands_alt"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_slab"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 60,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_iron_islands_alt"},
+            {"block": "westerosblocks:terrainset_iron_islands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_iron_islands_alt_slab"},
+            {"block": "westerosblocks:terrainset_iron_islands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 63,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_the_north_alt"},
+            {"block": "westerosblocks:terrainset_the_north_alt_stairs"},
+            {"block": "westerosblocks:terrainset_the_north_alt_slab"},
+            {"block": "westerosblocks:terrainset_the_north_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 66,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_dark_westerlands"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_stairs"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_slab"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 69,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_red_granite"},
+            {"block": "westerosblocks:terrainset_red_granite_stairs"},
+            {"block": "westerosblocks:terrainset_red_granite_slab"},
+            {"block": "westerosblocks:terrainset_red_granite_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 72,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_dornish_marches"},
+            {"block": "westerosblocks:terrainset_dornish_marches_stairs"},
+            {"block": "westerosblocks:terrainset_dornish_marches_slab"},
+            {"block": "westerosblocks:terrainset_dornish_marches_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 75,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_dornish_marches_alt"},
+            {"block": "westerosblocks:terrainset_dornish_marches_alt_stairs"},
+            {"block": "westerosblocks:terrainset_dornish_marches_alt_slab"},
+            {"block": "westerosblocks:terrainset_dornish_marches_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 78,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_brown_granite"},
+            {"block": "westerosblocks:terrainset_brown_granite_stairs"},
+            {"block": "westerosblocks:terrainset_brown_granite_slab"},
+            {"block": "westerosblocks:terrainset_brown_granite_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 81,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_brown_granite_alt"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_stairs"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_slab"},
+            {"block": "westerosblocks:terrainset_brown_granite_alt_wall"}
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

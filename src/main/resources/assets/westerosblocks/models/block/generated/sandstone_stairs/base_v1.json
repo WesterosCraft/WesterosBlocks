@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "minecraft:block/sandstone_bottom",
-    "top": "minecraft:block/sandstone_top",
-    "side": "minecraft:block/sandstone",
-    "particle": "minecraft:block/sandstone"
+    "bottom": "westerosblocks:block/ashlar_third/sandstone/all",
+    "top": "westerosblocks:block/ashlar_third/sandstone/all",
+    "side": "westerosblocks:block/ashlar_third/sandstone/all",
+    "particle": "westerosblocks:block/ashlar_third/sandstone/all"
   }
 }

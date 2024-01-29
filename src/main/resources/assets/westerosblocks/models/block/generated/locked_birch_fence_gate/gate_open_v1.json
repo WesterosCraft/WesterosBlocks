@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/template_fence_gate_open",
   "textures": {
-    "texture": "westerosblocks:block/planks_birch/side"
+    "texture": "westerosblocks:block/wood/birch/all"
   }
 }

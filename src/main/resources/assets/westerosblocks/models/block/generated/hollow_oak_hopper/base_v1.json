@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/planks_oak/side",
-    "txt5": "westerosblocks:block/planks_oak/side",
-    "txt2": "westerosblocks:block/planks_oak/side",
-    "txt3": "westerosblocks:block/planks_oak/side",
-    "txt0": "westerosblocks:block/planks_oak/side",
-    "txt1": "westerosblocks:block/planks_oak/side",
-    "particle": "westerosblocks:block/planks_oak/side"
+    "txt4": "westerosblocks:block/wood/oak/all",
+    "txt5": "westerosblocks:block/wood/oak/all",
+    "txt2": "westerosblocks:block/wood/oak/all",
+    "txt3": "westerosblocks:block/wood/oak/all",
+    "txt0": "westerosblocks:block/wood/oak/all",
+    "txt1": "westerosblocks:block/wood/oak/all",
+    "particle": "westerosblocks:block/wood/oak/all"
   },
   "elements": [
     {

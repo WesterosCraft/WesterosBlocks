@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "westerosblocks:block/generated/red_lantern/base_v1"
+    "state=unlit": {
+      "model": "westerosblocks:block/generated/red_lantern/unlit_v1"
+    },
+    "state=lit": {
+      "model": "westerosblocks:block/generated/red_lantern/lit_v1"
     }
   }
 }

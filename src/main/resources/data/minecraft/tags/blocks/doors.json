@@ -2,17 +2,30 @@
   "replace": false,
   "values": [
     "westerosblocks:eyrie_weirwood_door",
+    "westerosblocks:northern_wood_door",
+    "westerosblocks:spruce_window_shutters",
+    "westerosblocks:northern_wood_window_shutters",
+    "westerosblocks:oak_window_shutters",
+    "westerosblocks:grey_wood_door",
+    "westerosblocks:white_wood_window_shutters",
+    "westerosblocks:locked_birch_door",
+    "westerosblocks:locked_grey_wood_door",
+    "westerosblocks:locked_white_wood_door",
     "westerosblocks:red_keep_secret_door",
     "westerosblocks:spruce_door",
+    "westerosblocks:white_wood_door",
     "westerosblocks:green_lannisport_window_shutters",
     "westerosblocks:dorne_red_window_shutters",
     "westerosblocks:locked_oak_door",
+    "westerosblocks:birch_door",
+    "westerosblocks:birch_window_shutters",
+    "westerosblocks:jungle_window_shutters",
+    "westerosblocks:grey_wood_window_shutters",
     "westerosblocks:locked_spruce_door",
     "westerosblocks:locked_dark_northern_wood_door",
     "westerosblocks:locked_jungle_door",
-    "westerosblocks:spruce_window_shutters",
-    "westerosblocks:oak_window_shutters",
+    "westerosblocks:jungle_door",
     "westerosblocks:reach_blue_window_shutters",
-    "westerosblocks:locked_birch_door"
+    "westerosblocks:oak_door"
   ]
 }

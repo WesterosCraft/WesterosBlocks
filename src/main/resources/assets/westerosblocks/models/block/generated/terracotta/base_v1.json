@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/sandstone_block/sandstone_terracotta_top",
-    "up": "westerosblocks:block/sandstone_block/sandstone_terracotta_top",
-    "north": "westerosblocks:block/terracotta/side1",
-    "south": "westerosblocks:block/terracotta/side1",
-    "west": "westerosblocks:block/terracotta/side1",
-    "east": "westerosblocks:block/terracotta/side1",
-    "particle": "westerosblocks:block/terracotta/side1"
+    "down": "westerosblocks:block/ashlar_third/terracotta/all",
+    "up": "westerosblocks:block/ashlar_third/terracotta/all",
+    "north": "westerosblocks:block/ashlar_third/terracotta/all",
+    "south": "westerosblocks:block/ashlar_third/terracotta/all",
+    "west": "westerosblocks:block/ashlar_third/terracotta/all",
+    "east": "westerosblocks:block/ashlar_third/terracotta/all",
+    "particle": "westerosblocks:block/ashlar_third/terracotta/all"
   }
 }

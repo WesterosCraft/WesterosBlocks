@@ -10,7 +10,13 @@
     "extra": {
       "width": 3,
       "height": 3,
-      "connect_to": [{ "block": "westerosblocks:wet_sand" }, { "block": "westerosblocks:muddy_sand" }]
+      "connect_to": [
+        { "block": "westerosblocks:wet_sand" },
+        { "block": "westerosblocks:wet_sand_layer" },
+        { "block": "westerosblocks:muddy_sand" },
+        { "block": "westerosblocks:muddy_sand_slab" },
+        { "block": "westerosblocks:muddy_sand_layer" }
+      ]
     }
   }
 }

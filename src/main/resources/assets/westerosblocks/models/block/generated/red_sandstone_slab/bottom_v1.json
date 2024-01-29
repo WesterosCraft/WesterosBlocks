@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/sandstone_red/top",
-    "up": "westerosblocks:block/sandstone_red/top",
-    "north": "westerosblocks:block/sandstone_red/side",
-    "south": "westerosblocks:block/sandstone_red/side",
-    "west": "westerosblocks:block/sandstone_red/side",
-    "east": "westerosblocks:block/sandstone_red/side",
-    "particle": "westerosblocks:block/sandstone_red/side"
+    "down": "westerosblocks:block/ashlar_third/red/all",
+    "up": "westerosblocks:block/ashlar_third/red/all",
+    "north": "westerosblocks:block/ashlar_third/red/all",
+    "south": "westerosblocks:block/ashlar_third/red/all",
+    "west": "westerosblocks:block/ashlar_third/red/all",
+    "east": "westerosblocks:block/ashlar_third/red/all",
+    "particle": "westerosblocks:block/ashlar_third/red/all"
   }
 }

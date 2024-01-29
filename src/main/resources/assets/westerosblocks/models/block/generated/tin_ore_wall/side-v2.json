@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/ore/tin/all2",
+    "top": "westerosblocks:block/ore/tin/all2",
+    "side": "westerosblocks:block/ore/tin/all2",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/tin_ore_overlay"
+  }
+}

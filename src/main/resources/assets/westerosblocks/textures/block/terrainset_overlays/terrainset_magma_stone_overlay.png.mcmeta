@@ -1,0 +1,72 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+    "layer": "TRANSLUCENT",
+    "textures": [
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
+    ],
+    "extra": {
+      "condWidth": 7,
+      "condHeight": 84,
+      "conds": [
+        {
+          "type": "overlay",
+          "ctmRow": 15,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_iron_islands"},
+            {"block": "westerosblocks:terrainset_iron_islands_stairs"},
+            {"block": "westerosblocks:terrainset_iron_islands_slab"},
+            {"block": "westerosblocks:terrainset_iron_islands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 39,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_stormlands"},
+            {"block": "westerosblocks:terrainset_stormlands_stairs"},
+            {"block": "westerosblocks:terrainset_stormlands_slab"},
+            {"block": "westerosblocks:terrainset_stormlands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 33,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_stormlands_alt"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_slab"},
+            {"block": "westerosblocks:terrainset_stormlands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 12,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_the_north"},
+            {"block": "westerosblocks:terrainset_the_north_stairs"},
+            {"block": "westerosblocks:terrainset_the_north_slab"},
+            {"block": "westerosblocks:terrainset_the_north_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 3,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:volcanic_rock"},
+            {"block": "westerosblocks:volcanic_rock_stairs"},
+            {"block": "westerosblocks:volcanic_rock_slab"},
+            {"block": "westerosblocks:volcanic_rock_wall"}
+          ]
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

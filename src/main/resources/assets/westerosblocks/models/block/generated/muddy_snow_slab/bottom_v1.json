@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/noocclusion/half_slab",
   "textures": {
-    "down": "westerosblocks:block/muddy_snow_slab/top_bottom",
-    "up": "westerosblocks:block/muddy_snow_slab/top_bottom",
-    "north": "westerosblocks:block/muddy_snow_slab/north_south",
-    "south": "westerosblocks:block/muddy_snow_slab/north_south",
-    "west": "westerosblocks:block/muddy_snow_slab/east_west",
-    "east": "westerosblocks:block/muddy_snow_slab/east_west",
-    "particle": "westerosblocks:block/muddy_snow_slab/north_south"
+    "down": "westerosblocks:block/muddy_snow/top_bottom",
+    "up": "westerosblocks:block/muddy_snow/top_bottom",
+    "north": "westerosblocks:block/muddy_snow/top_bottom",
+    "south": "westerosblocks:block/muddy_snow/top_bottom",
+    "west": "westerosblocks:block/muddy_snow/top_bottom",
+    "east": "westerosblocks:block/muddy_snow/top_bottom",
+    "particle": "westerosblocks:block/muddy_snow/top_bottom"
   }
 }

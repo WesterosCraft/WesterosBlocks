@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/tinted/template_wall_side_tall",
+  "textures": {
+    "bottom": "westerosblocks:block/rubble/icy_northern/all2",
+    "top": "westerosblocks:block/rubble/icy_northern/all2",
+    "side": "westerosblocks:block/rubble/icy_northern/all2"
+  }
+}

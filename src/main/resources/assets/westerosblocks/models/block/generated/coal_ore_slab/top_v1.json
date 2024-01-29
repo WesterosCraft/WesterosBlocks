@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
+  "textures": {
+    "down": "westerosblocks:block/ore/coal/all1",
+    "up": "westerosblocks:block/ore/coal/all1",
+    "north": "westerosblocks:block/ore/coal/all1",
+    "south": "westerosblocks:block/ore/coal/all1",
+    "west": "westerosblocks:block/ore/coal/all1",
+    "east": "westerosblocks:block/ore/coal/all1",
+    "particle": "westerosblocks:block/ore/coal/all1",
+    "down_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay"
+  }
+}

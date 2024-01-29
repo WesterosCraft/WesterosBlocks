@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/door_block/door_locked_oak_top"
+    "layer0": "westerosblocks:block/wood/oak/door_locked_top"
   }
 }

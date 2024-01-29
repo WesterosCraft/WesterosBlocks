@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "minecraft:block/yellow_wool",
-    "up": "minecraft:block/yellow_wool",
-    "north": "minecraft:block/yellow_wool",
-    "south": "minecraft:block/yellow_wool",
-    "west": "minecraft:block/yellow_wool",
-    "east": "minecraft:block/yellow_wool",
-    "particle": "minecraft:block/yellow_wool"
+    "down": "westerosblocks:block/wool/yellow/all",
+    "up": "westerosblocks:block/wool/yellow/all",
+    "north": "westerosblocks:block/wool/yellow/all",
+    "south": "westerosblocks:block/wool/yellow/all",
+    "west": "westerosblocks:block/wool/yellow/all",
+    "east": "westerosblocks:block/wool/yellow/all",
+    "particle": "westerosblocks:block/wool/yellow/all"
   }
 }

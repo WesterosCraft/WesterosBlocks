@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "txt5": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "txt2": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "txt3": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "txt0": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "txt1": "westerosblocks:block/citadel_green_marble/citadel_marble",
-    "particle": "westerosblocks:block/citadel_green_marble/citadel_marble"
+    "txt4": "westerosblocks:block/marble/citadel_green/all",
+    "txt5": "westerosblocks:block/marble/citadel_green/all",
+    "txt2": "westerosblocks:block/marble/citadel_green/all",
+    "txt3": "westerosblocks:block/marble/citadel_green/all",
+    "txt0": "westerosblocks:block/marble/citadel_green/all",
+    "txt1": "westerosblocks:block/marble/citadel_green/all",
+    "particle": "westerosblocks:block/marble/citadel_green/all"
   },
   "elements": [
     {

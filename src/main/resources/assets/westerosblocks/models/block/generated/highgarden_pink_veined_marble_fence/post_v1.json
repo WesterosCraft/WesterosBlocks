@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_post_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "top": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "side": "westerosblocks:block/marble/highgarden_pink_veined/all",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_veined_marble_overlay"
+  }
+}

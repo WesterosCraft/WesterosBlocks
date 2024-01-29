@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cuboid_block/door_iron_lower_grey",
-    "txt5": "westerosblocks:block/cuboid_block/door_iron_lower_grey",
-    "txt2": "westerosblocks:block/cuboid_block/door_iron_lower_grey",
-    "txt3": "westerosblocks:block/cuboid_block/door_iron_lower_grey",
-    "txt0": "westerosblocks:block/cuboid_block/door_iron_lower_grey",
-    "txt1": "westerosblocks:block/cuboid_block/door_iron_lower_grey",
-    "particle": "westerosblocks:block/cuboid_block/door_iron_lower_grey"
+    "txt4": "westerosblocks:block/wood/grey/vertical",
+    "txt5": "westerosblocks:block/wood/grey/vertical",
+    "txt2": "westerosblocks:block/wood/grey/vertical",
+    "txt3": "westerosblocks:block/wood/grey/vertical",
+    "txt0": "westerosblocks:block/wood/grey/vertical",
+    "txt1": "westerosblocks:block/wood/grey/vertical",
+    "particle": "westerosblocks:block/wood/grey/vertical"
   },
   "elements": [
     {

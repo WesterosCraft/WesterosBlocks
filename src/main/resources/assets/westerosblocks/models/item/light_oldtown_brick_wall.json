@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block/brick_oldtown_light",
-    "top": "westerosblocks:block/stone_block/brick_oldtown_light",
-    "side": "westerosblocks:block/stone_block/brick_oldtown_light"
+    "bottom": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "top": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "side": "westerosblocks:block/fieldstone/light_oldtown/all"
   }
 }

@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/transparent",
     "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/nether_brick_arrow_slit/side",
-    "south": "westerosblocks:block/nether_brick_arrow_slit/side",
-    "west": "westerosblocks:block/nether_brick_arrow_slit/side",
-    "east": "westerosblocks:block/nether_brick_arrow_slit/side",
-    "particle": "westerosblocks:block/nether_brick_arrow_slit/side"
+    "north": "westerosblocks:block/ashlar_half/black/arrow_slit",
+    "south": "westerosblocks:block/ashlar_half/black/arrow_slit",
+    "west": "westerosblocks:block/ashlar_half/black/arrow_slit",
+    "east": "westerosblocks:block/ashlar_half/black/arrow_slit",
+    "particle": "westerosblocks:block/ashlar_half/black/arrow_slit"
   }
 }

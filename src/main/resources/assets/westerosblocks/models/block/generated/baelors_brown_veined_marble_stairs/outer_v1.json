@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "top": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "side": "westerosblocks:block/marble/baelors_brown_veined/all",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/baelors_brown_veined_overlay",
+    "particle": "westerosblocks:block/marble/baelors_brown_veined/all"
+  }
+}

@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "up": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "north": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "south": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "west": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "east": "westerosblocks:block/plaster/casterly_crimson_plaster",
-    "particle": "westerosblocks:block/plaster/casterly_crimson_plaster"
+    "down": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "up": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "north": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "south": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "west": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "east": "westerosblocks:block/plaster/smooth/casterly_crimson/all",
+    "particle": "westerosblocks:block/plaster/smooth/casterly_crimson/all"
   }
 }

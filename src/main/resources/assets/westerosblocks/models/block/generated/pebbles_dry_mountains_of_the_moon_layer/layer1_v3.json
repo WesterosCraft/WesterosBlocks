@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:block/pebble_vale/dry3",
-    "txt5": "westerosblocks:block/pebble_vale/dry3",
-    "txt2": "westerosblocks:block/pebble_vale/dry3",
-    "txt3": "westerosblocks:block/pebble_vale/dry3",
-    "txt0": "westerosblocks:block/pebble_vale/dry3",
-    "txt1": "westerosblocks:block/pebble_vale/dry3",
-    "particle": "westerosblocks:block/pebble_vale/dry3"
+    "txt4": "westerosblocks:block/pebble/vale/dry3",
+    "txt5": "westerosblocks:block/pebble/vale/dry3",
+    "txt2": "westerosblocks:block/pebble/vale/dry3",
+    "txt3": "westerosblocks:block/pebble/vale/dry3",
+    "txt0": "westerosblocks:block/pebble/vale/dry3",
+    "txt1": "westerosblocks:block/pebble/vale/dry3",
+    "particle": "westerosblocks:block/pebble/vale/dry3"
   },
   "elements": [
     {

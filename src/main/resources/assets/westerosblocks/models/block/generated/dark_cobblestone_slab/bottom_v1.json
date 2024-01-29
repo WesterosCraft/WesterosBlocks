@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/dark_cobble/stone_cobble_dark",
-    "up": "westerosblocks:block/dark_cobble/stone_cobble_dark",
-    "north": "westerosblocks:block/dark_cobble/stone_cobble_dark",
-    "south": "westerosblocks:block/dark_cobble/stone_cobble_dark",
-    "west": "westerosblocks:block/dark_cobble/stone_cobble_dark",
-    "east": "westerosblocks:block/dark_cobble/stone_cobble_dark",
-    "particle": "westerosblocks:block/dark_cobble/stone_cobble_dark"
+    "down": "westerosblocks:block/cobblestone_dark/green_grey/all",
+    "up": "westerosblocks:block/cobblestone_dark/green_grey/all",
+    "north": "westerosblocks:block/cobblestone_dark/green_grey/all",
+    "south": "westerosblocks:block/cobblestone_dark/green_grey/all",
+    "west": "westerosblocks:block/cobblestone_dark/green_grey/all",
+    "east": "westerosblocks:block/cobblestone_dark/green_grey/all",
+    "particle": "westerosblocks:block/cobblestone_dark/green_grey/all"
   }
 }

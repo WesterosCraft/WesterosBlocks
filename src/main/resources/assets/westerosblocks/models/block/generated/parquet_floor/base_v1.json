@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/wood_block/wood_floor_ornate"
+    "all": "westerosblocks:block/wood/oak/ornate"
   }
 }

@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/sand_block/sand_red"
+    "down": "westerosblocks:block/sand_block/sand_red",
+    "up": "westerosblocks:block/sand_block/sand_red",
+    "north": "westerosblocks:block/sand_block/sand_red",
+    "south": "westerosblocks:block/sand_block/sand_red",
+    "west": "westerosblocks:block/sand_block/sand_red",
+    "east": "westerosblocks:block/sand_block/sand_red",
+    "particle": "westerosblocks:block/sand_block/sand_red"
   }
 }

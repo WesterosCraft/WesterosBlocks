@@ -228,6 +228,18 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		public float zMin = 0.0F;
 		public float zMax = 1.0F;
 
+		public BoundingBox() {
+		}
+
+		public BoundingBox(float x0, float y0, float z0, float x1, float y1, float z1) {
+			this.xMin = x0;
+			this.xMax = x1;
+			this.yMin = y0;
+			this.yMax = y1;
+			this.zMin = z0;
+			this.zMax = z1;
+		}
+
 		private transient VoxelShape aabb = null;
 
 		public VoxelShape getAABB() {
@@ -668,13 +680,22 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		if (this.ambientOcclusion == null) {
 			this.ambientOcclusion = true; // Default to true
 		}
-		for (WesterosBlockStateRecord rec : this.states) { 
-			rec.doStareRecordInit();
+		for (WesterosBlockStateRecord rec : this.states) {
+			// if states array, allow attributes to be inherited from base def if not specified
+			if (rec.boundingBox == null) rec.boundingBox = this.boundingBox;
+			if (rec.cuboids == null) rec.cuboids = this.cuboids;
+			if (rec.collisionBoxes == null) rec.collisionBoxes = this.collisionBoxes;
+			if (rec.supportBoxes == null) rec.supportBoxes = this.supportBoxes;
+			if (rec.textures == null) rec.textures = this.textures;
+			if (rec.randomTextures == null) rec.randomTextures = this.randomTextures;
+			if (rec.overlayTextures == null) rec.overlayTextures = this.overlayTextures;
+			if (rec.colorMult.equals("#FFFFFF")) rec.colorMult = this.colorMult;
+			rec.doStateRecordInit();
 		}
 		// If stacks, process these too
 		if (this.stack != null) {
 			for (WesterosBlockStateRecord se : this.stack) {
-				se.doStareRecordInit();
+				se.doStateRecordInit();
 			}
 		}
 		if (this.states.size() > 1) {
@@ -732,7 +753,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	public void registerWallOrFloorBlock(Block floorblock, Block wallblock) {
 		BlockItem itemBlock = new StandingAndWallBlockItem(floorblock, wallblock,
-				(new Item.Properties()).tab(CreativeModeTab.TAB_DECORATIONS));
+				(new Item.Properties()).tab(getCreativeTab()));
 		floorblock.setRegistryName(this.blockName);
 		wallblock.setRegistryName("wall_" + this.blockName);
 		itemBlock.setRegistryName(this.blockName);
@@ -881,6 +902,75 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}
 		WesterosBlocks.log.info("WesterosBlocks.json passed sanity check");
 		return true;
+	}
+
+	// Return true if defs strictly subsumes validation (i.e., it preserves every block name, as well as
+	// every state-related attribute for each block); otherwise false.
+	public static boolean compareBlockDefs(WesterosBlockDef[] defs, WesterosBlockDef[] validation) {
+		Map<String, WesterosBlockDef> defmap = defsToMap(defs);
+		boolean error = false;
+		for (WesterosBlockDef val : validation) {
+			if (!defmap.containsKey(val.blockName)) {
+				WesterosBlocks.log.warn(String.format("validation: blockName '%s' missing", val.blockName));
+				error = true;
+				continue;
+			}
+
+			WesterosBlockDef def = defmap.get(val.blockName);
+			if (!def.blockType.equals(val.blockType)) {
+				// allow for solid subtypes to be recast
+				if (!def.blockType.matches("solid|sand|soulsand") && !def.blockType.matches("solid|sand|soulsand")) {
+					WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different blockType attribute", val.blockName));
+					error = true;
+					continue;
+				}
+			}
+
+			String[] valTypeAttrs = val.type.split(",");
+			for (String typeAttr : valTypeAttrs) {
+				if (!def.type.contains(typeAttr)) {
+					WesterosBlocks.log.warn(String.format("validation: blockName '%s' is missing type attribute '%s'", val.blockName, typeAttr));
+					error = true;
+					continue;
+				}
+			}
+
+			boolean substateError = false;
+			if (val.stack != null) {
+				if (def.stack == null || def.stack.size() != val.stack.size())
+					substateError = true;
+				else {
+					for (int i = 0; i < val.stack.size(); i++) {
+						if (!def.stack.get(i).equals(val.stack.get(i)))
+							substateError = true;
+					}
+				}
+			}
+			if (val.states != null) {
+				if (def.states == null || def.states.size() != val.states.size())
+					substateError = true;
+				else {
+					for (int i = 0; i < val.states.size(); i++) {
+						if (!def.states.get(i).equals(val.states.get(i)))
+							substateError = true;
+					}
+				}
+			}
+			if (substateError) {
+				WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different stack or state lists", val.blockName));
+				error = true;
+				continue;
+			}
+		}
+		return !error;
+	}
+
+	public static Map<String, WesterosBlockDef> defsToMap(WesterosBlockDef[] defs) {
+		Map<String, WesterosBlockDef> map = new HashMap<String, WesterosBlockDef>();
+		for (WesterosBlockDef def : defs) {
+			map.put(def.blockName, def);
+		}
+		return map;
 	}
 
 	public static void initialize() {

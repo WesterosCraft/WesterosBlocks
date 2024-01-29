@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/sandstone_block/sandstone_bricks_large",
-    "up": "westerosblocks:block/sandstone_block/sandstone_bricks_large",
-    "north": "westerosblocks:block/large_brick_sandstone/side",
-    "south": "westerosblocks:block/large_brick_sandstone/side",
-    "west": "westerosblocks:block/large_brick_sandstone/side",
-    "east": "westerosblocks:block/large_brick_sandstone/side",
-    "particle": "westerosblocks:block/large_brick_sandstone/side"
+    "down": "westerosblocks:block/ashlar_half/westerlands/all",
+    "up": "westerosblocks:block/ashlar_half/westerlands/all",
+    "north": "westerosblocks:block/ashlar_half/westerlands/all",
+    "south": "westerosblocks:block/ashlar_half/westerlands/all",
+    "west": "westerosblocks:block/ashlar_half/westerlands/all",
+    "east": "westerosblocks:block/ashlar_half/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_half/westerlands/all"
   }
 }

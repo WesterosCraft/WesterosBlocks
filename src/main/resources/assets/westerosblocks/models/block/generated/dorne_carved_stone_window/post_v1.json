@@ -1,7 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/ctm_pane_post",
   "textures": {
-    "cap": "westerosblocks:block/glass_pane_block/moorish_stone_window_pane",
-    "side": "westerosblocks:block/glass_pane_block/moorish_stone_window_pane"
+    "cap": "westerosblocks:block/pane_block/moorish_stone_window_pane",
+    "side": "westerosblocks:block/pane_block/moorish_stone_window_pane"
   }
 }

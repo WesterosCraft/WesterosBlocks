@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/light_grey/all5",
+    "top": "westerosblocks:block/cobblestone/light_grey/all5",
+    "side": "westerosblocks:block/cobblestone/light_grey/all5",
+    "particle": "westerosblocks:block/cobblestone/light_grey/all5"
+  }
+}

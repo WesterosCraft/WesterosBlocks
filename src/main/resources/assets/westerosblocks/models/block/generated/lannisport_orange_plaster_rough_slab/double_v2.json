@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/plaster/rough/lannisport_orange/all2",
+    "up": "westerosblocks:block/plaster/rough/lannisport_orange/all2",
+    "north": "westerosblocks:block/plaster/rough/lannisport_orange/all2",
+    "south": "westerosblocks:block/plaster/rough/lannisport_orange/all2",
+    "west": "westerosblocks:block/plaster/rough/lannisport_orange/all2",
+    "east": "westerosblocks:block/plaster/rough/lannisport_orange/all2",
+    "particle": "westerosblocks:block/plaster/rough/lannisport_orange/all2"
+  }
+}

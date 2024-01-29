@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/grey_wood/top_bottom",
-    "up": "westerosblocks:block/grey_wood/top_bottom",
-    "north": "westerosblocks:block/grey_wood/side",
-    "south": "westerosblocks:block/grey_wood/side",
-    "west": "westerosblocks:block/grey_wood/side",
-    "east": "westerosblocks:block/grey_wood/side",
-    "particle": "westerosblocks:block/grey_wood/side"
+    "down": "westerosblocks:block/wood/grey/all",
+    "up": "westerosblocks:block/wood/grey/all",
+    "north": "westerosblocks:block/wood/grey/plankctm",
+    "south": "westerosblocks:block/wood/grey/plankctm",
+    "west": "westerosblocks:block/wood/grey/plankctm",
+    "east": "westerosblocks:block/wood/grey/plankctm",
+    "particle": "westerosblocks:block/wood/grey/plankctm"
   }
 }

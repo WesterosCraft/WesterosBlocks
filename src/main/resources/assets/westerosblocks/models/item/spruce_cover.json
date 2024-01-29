@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/rail_block/cover_spruce"
+    "layer0": "westerosblocks:block/wood/spruce/cover"
   }
 }

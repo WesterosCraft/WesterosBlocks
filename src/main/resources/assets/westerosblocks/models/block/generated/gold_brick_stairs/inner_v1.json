@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/gold_brick/side",
-    "top": "westerosblocks:block/gold_brick/side",
-    "side": "westerosblocks:block/gold_brick/side",
-    "particle": "westerosblocks:block/gold_brick/side"
+    "bottom": "westerosblocks:block/metal/gold_brick/all",
+    "top": "westerosblocks:block/metal/gold_brick/all",
+    "side": "westerosblocks:block/metal/gold_brick/all",
+    "particle": "westerosblocks:block/metal/gold_brick/all"
   }
 }

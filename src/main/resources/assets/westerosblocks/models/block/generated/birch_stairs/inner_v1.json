@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "minecraft:block/birch_planks",
-    "top": "minecraft:block/birch_planks",
-    "side": "minecraft:block/birch_planks",
-    "particle": "minecraft:block/birch_planks"
+    "bottom": "westerosblocks:block/wood/birch/all",
+    "top": "westerosblocks:block/wood/birch/all",
+    "side": "westerosblocks:block/wood/birch/plankctm",
+    "particle": "westerosblocks:block/wood/birch/plankctm"
   }
 }

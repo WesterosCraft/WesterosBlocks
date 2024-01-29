@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/ctm_pane_noside",
   "textures": {
-    "side": "westerosblocks:block/glass_yellow/glass_pane_yellow"
+    "side": "westerosblocks:block/glass/yellow/all"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/sandstone_block/sandstone_bricks_large",
-    "top": "westerosblocks:block/sandstone_block/sandstone_bricks_large",
-    "side": "westerosblocks:block/large_brick_sandstone/side",
-    "particle": "westerosblocks:block/large_brick_sandstone/side"
+    "bottom": "westerosblocks:block/ashlar_half/westerlands/all",
+    "top": "westerosblocks:block/ashlar_half/westerlands/all",
+    "side": "westerosblocks:block/ashlar_half/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_half/westerlands/all"
   }
 }

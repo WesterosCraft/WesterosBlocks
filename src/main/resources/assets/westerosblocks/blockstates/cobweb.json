@@ -1,0 +1,54 @@
+{
+  "variants": {
+    "state=random": [
+      {
+        "model": "westerosblocks:block/generated/cobweb/random_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/cobweb/random_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/cobweb/random_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/cobweb/random_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/cobweb/random_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/cobweb/random_v6"
+      },
+      {
+        "model": "westerosblocks:block/generated/cobweb/random_v7"
+      },
+      {
+        "model": "westerosblocks:block/generated/cobweb/random_v8"
+      }
+    ],
+    "state=cobweb1": {
+      "model": "westerosblocks:block/generated/cobweb/cobweb1_v1"
+    },
+    "state=cobweb2": {
+      "model": "westerosblocks:block/generated/cobweb/cobweb2_v1"
+    },
+    "state=cobweb3": {
+      "model": "westerosblocks:block/generated/cobweb/cobweb3_v1"
+    },
+    "state=cobweb4": {
+      "model": "westerosblocks:block/generated/cobweb/cobweb4_v1"
+    },
+    "state=cobweb5": {
+      "model": "westerosblocks:block/generated/cobweb/cobweb5_v1"
+    },
+    "state=cobweb6": {
+      "model": "westerosblocks:block/generated/cobweb/cobweb6_v1"
+    },
+    "state=cobweb7": {
+      "model": "westerosblocks:block/generated/cobweb/cobweb7_v1"
+    },
+    "state=cobweb8": {
+      "model": "westerosblocks:block/generated/cobweb/cobweb8_v1"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/marble/white/all",
+    "top": "westerosblocks:block/marble/white/all",
+    "side": "westerosblocks:block/marble/white/all",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/white_stained_clay_overlay",
+    "particle": "westerosblocks:block/marble/white/all"
+  }
+}

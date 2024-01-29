@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_quarter/westerlands/all",
+    "up": "westerosblocks:block/ashlar_quarter/westerlands/all",
+    "north": "westerosblocks:block/ashlar_quarter/westerlands/all",
+    "south": "westerosblocks:block/ashlar_quarter/westerlands/all",
+    "west": "westerosblocks:block/ashlar_quarter/westerlands/all",
+    "east": "westerosblocks:block/ashlar_quarter/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_quarter/westerlands/all"
+  }
+}

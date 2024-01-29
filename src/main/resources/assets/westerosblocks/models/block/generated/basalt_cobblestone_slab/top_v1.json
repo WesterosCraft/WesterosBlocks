@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block/stone_cobble_basalt",
-    "up": "westerosblocks:block/stone_block/stone_cobble_basalt",
-    "north": "westerosblocks:block/stone_block/stone_cobble_basalt",
-    "south": "westerosblocks:block/stone_block/stone_cobble_basalt",
-    "west": "westerosblocks:block/stone_block/stone_cobble_basalt",
-    "east": "westerosblocks:block/stone_block/stone_cobble_basalt",
-    "particle": "westerosblocks:block/stone_block/stone_cobble_basalt"
+    "down": "westerosblocks:block/cobblestone_dark/black/all",
+    "up": "westerosblocks:block/cobblestone_dark/black/all",
+    "north": "westerosblocks:block/cobblestone_dark/black/all",
+    "south": "westerosblocks:block/cobblestone_dark/black/all",
+    "west": "westerosblocks:block/cobblestone_dark/black/all",
+    "east": "westerosblocks:block/cobblestone_dark/black/all",
+    "particle": "westerosblocks:block/cobblestone_dark/black/all"
   }
 }

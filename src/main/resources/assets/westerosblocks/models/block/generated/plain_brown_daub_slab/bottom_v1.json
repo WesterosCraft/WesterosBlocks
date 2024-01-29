@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/smooth/brown_daub/all",
+    "up": "westerosblocks:block/plaster/smooth/brown_daub/all",
+    "north": "westerosblocks:block/plaster/smooth/brown_daub/all",
+    "south": "westerosblocks:block/plaster/smooth/brown_daub/all",
+    "west": "westerosblocks:block/plaster/smooth/brown_daub/all",
+    "east": "westerosblocks:block/plaster/smooth/brown_daub/all",
+    "particle": "westerosblocks:block/plaster/smooth/brown_daub/all"
+  }
+}

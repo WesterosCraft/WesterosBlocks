@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/light_terracotta_mossy/all",
+    "up": "westerosblocks:block/ashlar_third/light_terracotta_mossy/all",
+    "north": "westerosblocks:block/ashlar_third/light_terracotta_mossy/all",
+    "south": "westerosblocks:block/ashlar_third/light_terracotta_mossy/all",
+    "west": "westerosblocks:block/ashlar_third/light_terracotta_mossy/all",
+    "east": "westerosblocks:block/ashlar_third/light_terracotta_mossy/all",
+    "particle": "westerosblocks:block/ashlar_third/light_terracotta_mossy/all"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/door_block/door_locked_jungle_top"
+    "layer0": "westerosblocks:block/wood/jungle/door_locked_top"
   }
 }

@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/pebble_ocean/dry1"
+    "down": "westerosblocks:block/pebble/ocean/dry1",
+    "up": "westerosblocks:block/pebble/ocean/dry1",
+    "north": "westerosblocks:block/pebble/ocean/dry1",
+    "south": "westerosblocks:block/pebble/ocean/dry1",
+    "west": "westerosblocks:block/pebble/ocean/dry1",
+    "east": "westerosblocks:block/pebble/ocean/dry1",
+    "particle": "westerosblocks:block/pebble/ocean/dry1"
   }
 }
