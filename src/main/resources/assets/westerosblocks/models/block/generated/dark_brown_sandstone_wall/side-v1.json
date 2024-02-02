@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_0/sandstone_brown_dark",
-    "top": "westerosblocks:block/stone_block_0/sandstone_brown_dark",
-    "side": "westerosblocks:block/stone_block_0/sandstone_brown_dark"
+    "bottom": "westerosblocks:block/dark_brown_sandstone/all",
+    "top": "westerosblocks:block/dark_brown_sandstone/all",
+    "side": "westerosblocks:block/dark_brown_sandstone/all"
   }
 }

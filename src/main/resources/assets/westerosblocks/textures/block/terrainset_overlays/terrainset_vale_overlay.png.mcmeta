@@ -1,0 +1,141 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+    "layer": "TRANSLUCENT",
+    "textures": [
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
+    ],
+    "extra": {
+      "condWidth": 7,
+      "condHeight": 84,
+      "conds": [
+        {
+          "type": "overlay",
+          "ctmRow": 6,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_reach_alt"},
+            {"block": "westerosblocks:terrainset_reach_alt_stairs"},
+            {"block": "westerosblocks:terrainset_reach_alt_slab"},
+            {"block": "westerosblocks:terrainset_reach_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 9,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_reach"},
+            {"block": "westerosblocks:terrainset_reach_stairs"},
+            {"block": "westerosblocks:terrainset_reach_slab"},
+            {"block": "westerosblocks:terrainset_reach_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 12,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_the_north"},
+            {"block": "westerosblocks:terrainset_the_north_stairs"},
+            {"block": "westerosblocks:terrainset_the_north_slab"},
+            {"block": "westerosblocks:terrainset_the_north_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 15,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_iron_islands"},
+            {"block": "westerosblocks:terrainset_iron_islands_stairs"},
+            {"block": "westerosblocks:terrainset_iron_islands_slab"},
+            {"block": "westerosblocks:terrainset_iron_islands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 18,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_eastern_islands"},
+            {"block": "westerosblocks:terrainset_eastern_islands_stairs"},
+            {"block": "westerosblocks:terrainset_eastern_islands_slab"},
+            {"block": "westerosblocks:terrainset_eastern_islands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 27,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_westerlands_alt"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_slab"},
+            {"block": "westerosblocks:terrainset_westerlands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 30,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_westerlands"},
+            {"block": "westerosblocks:terrainset_westerlands_stairs"},
+            {"block": "westerosblocks:terrainset_westerlands_slab"},
+            {"block": "westerosblocks:terrainset_westerlands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 54,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_alt"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_alt_stairs"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_alt_slab"},
+            {"block": "westerosblocks:terrainset_mountains_of_the_moon_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 57,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_eastern_islands_alt"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_stairs"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_slab"},
+            {"block": "westerosblocks:terrainset_eastern_islands_alt_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 66,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_dark_westerlands"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_stairs"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_slab"},
+            {"block": "westerosblocks:terrainset_dark_westerlands_wall"}
+          ]
+        },
+        {
+          "type": "overlay",
+          "ctmRow": 69,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_red_granite"},
+            {"block": "westerosblocks:terrainset_red_granite_stairs"},
+            {"block": "westerosblocks:terrainset_red_granite_slab"},
+            {"block": "westerosblocks:terrainset_red_granite_wall"}
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

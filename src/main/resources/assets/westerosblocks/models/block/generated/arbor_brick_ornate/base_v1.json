@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/arbor_brick_ornate/side"
+    "all": "westerosblocks:block/ashlar_third/arbor/engraved"
   }
 }

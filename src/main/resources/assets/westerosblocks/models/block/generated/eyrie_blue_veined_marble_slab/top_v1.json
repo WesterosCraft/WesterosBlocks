@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
+  "textures": {
+    "down": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "up": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "north": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "south": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "west": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "east": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "particle": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "down_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay"
+  }
+}

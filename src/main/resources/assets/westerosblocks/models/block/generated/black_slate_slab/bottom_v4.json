@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/black_slate/side0",
-    "up": "westerosblocks:block/black_slate/side4",
-    "north": "westerosblocks:block/black_slate/side0",
-    "south": "westerosblocks:block/black_slate/side0",
-    "west": "westerosblocks:block/black_slate/side0",
-    "east": "westerosblocks:block/black_slate/side0",
-    "particle": "westerosblocks:block/black_slate/side0"
+    "down": "westerosblocks:block/slate/black/all",
+    "up": "westerosblocks:block/slate/black/directional4",
+    "north": "westerosblocks:block/slate/black/all",
+    "south": "westerosblocks:block/slate/black/all",
+    "west": "westerosblocks:block/slate/black/all",
+    "east": "westerosblocks:block/slate/black/all",
+    "particle": "westerosblocks:block/slate/black/all"
   }
 }

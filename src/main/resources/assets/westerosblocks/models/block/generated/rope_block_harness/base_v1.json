@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/untinted/cross",
   "textures": {
-    "cross": "westerosblocks:block/web_block_0/rope_blockharness"
+    "cross": "westerosblocks:block/web_block/rope_blockharness"
   }
 }

@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/stone_bedrock/side",
-    "top": "westerosblocks:block/stone_bedrock/side",
-    "side": "westerosblocks:block/stone_bedrock/side"
+    "bottom": "westerosblocks:block/cobblestone/black/all1",
+    "top": "westerosblocks:block/cobblestone/black/all1",
+    "side": "westerosblocks:block/cobblestone/black/all1"
   }
 }

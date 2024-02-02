@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/wool_colours/wool_colored_light_brown",
-    "up": "westerosblocks:block/wool_colours/wool_colored_light_brown",
-    "north": "westerosblocks:block/wool_colours/wool_colored_light_brown",
-    "south": "westerosblocks:block/wool_colours/wool_colored_light_brown",
-    "west": "westerosblocks:block/wool_colours/wool_colored_light_brown",
-    "east": "westerosblocks:block/wool_colours/wool_colored_light_brown",
-    "particle": "westerosblocks:block/wool_colours/wool_colored_light_brown"
+    "down": "westerosblocks:block/wool/light_brown/all",
+    "up": "westerosblocks:block/wool/light_brown/all",
+    "north": "westerosblocks:block/wool/light_brown/all",
+    "south": "westerosblocks:block/wool/light_brown/all",
+    "west": "westerosblocks:block/wool/light_brown/all",
+    "east": "westerosblocks:block/wool/light_brown/all",
+    "particle": "westerosblocks:block/wool/light_brown/all"
   }
 }

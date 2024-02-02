@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_3/keystone_netherbrick"
+    "all": "westerosblocks:block/ashlar_half/black/engraved"
   }
 }

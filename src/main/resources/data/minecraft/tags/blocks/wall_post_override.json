@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
+    "westerosblocks:torch",
+    "westerosblocks:torch_unlit",
+    "westerosblocks:candle_unlit",
     "westerosblocks:candle"
   ]
 }

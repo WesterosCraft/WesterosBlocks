@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/magma/all",
+    "top": "westerosblocks:block/terrainset/magma/all",
+    "side": "westerosblocks:block/terrainset/magma/all",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_magma_stone_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_magma_stone_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_magma_stone_overlay",
+    "particle": "westerosblocks:block/terrainset/magma/all"
+  }
+}

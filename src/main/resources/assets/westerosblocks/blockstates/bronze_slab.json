@@ -9,6 +9,9 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_slab/bottom_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_slab/bottom_v4"
       }
     ],
     "type=double": [
@@ -20,6 +23,9 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_slab/double_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_slab/double_v4"
       }
     ],
     "type=top": [
@@ -31,6 +37,9 @@
       },
       {
         "model": "westerosblocks:block/generated/bronze_slab/top_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/bronze_slab/top_v4"
       }
     ]
   }

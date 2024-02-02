@@ -6,7 +6,8 @@
         "weight": 100
       },
       {
-        "model": "westerosblocks:block/generated/dirt_slab/bottom_v2"
+        "model": "westerosblocks:block/generated/dirt_slab/bottom_v2",
+        "weight": 33
       },
       {
         "model": "westerosblocks:block/generated/dirt_slab/bottom_v3",
@@ -39,7 +40,8 @@
         "weight": 100
       },
       {
-        "model": "westerosblocks:block/generated/dirt_slab/double_v2"
+        "model": "westerosblocks:block/generated/dirt_slab/double_v2",
+        "weight": 33
       },
       {
         "model": "westerosblocks:block/generated/dirt_slab/double_v3",
@@ -72,7 +74,8 @@
         "weight": 100
       },
       {
-        "model": "westerosblocks:block/generated/dirt_slab/top_v2"
+        "model": "westerosblocks:block/generated/dirt_slab/top_v2",
+        "weight": 33
       },
       {
         "model": "westerosblocks:block/generated/dirt_slab/top_v3",

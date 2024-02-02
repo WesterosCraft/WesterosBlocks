@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/snowy_thatch_light_fur/side1",
-    "txt5": "westerosblocks:block/snowy_thatch_light_fur/side1",
-    "txt2": "westerosblocks:block/snowy_thatch_light_fur/side1",
-    "txt3": "westerosblocks:block/snowy_thatch_light_fur/side1",
-    "txt0": "westerosblocks:block/snowy_thatch_light_fur/bottom",
-    "txt1": "westerosblocks:block/snowy_thatch_light_fur/top",
-    "particle": "westerosblocks:block/snowy_thatch_light_fur/bottom"
+    "txt4": "westerosblocks:block/thatch/snowy_light/side1",
+    "txt5": "westerosblocks:block/thatch/snowy_light/bottom",
+    "txt2": "westerosblocks:block/thatch/snowy_light/side1",
+    "txt3": "westerosblocks:block/thatch/snowy_light/side1",
+    "txt0": "westerosblocks:block/thatch/snowy_light/bottom",
+    "txt1": "westerosblocks:block/thatch/snowy_light/top",
+    "particle": "westerosblocks:block/thatch/snowy_light/bottom"
   },
   "elements": [
     {

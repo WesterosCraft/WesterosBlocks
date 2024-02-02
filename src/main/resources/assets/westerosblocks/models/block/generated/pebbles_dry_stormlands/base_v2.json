@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/pebble_stormlands/dry2"
+    "down": "westerosblocks:block/pebble/stormlands/dry2",
+    "up": "westerosblocks:block/pebble/stormlands/dry2",
+    "north": "westerosblocks:block/pebble/stormlands/dry2",
+    "south": "westerosblocks:block/pebble/stormlands/dry2",
+    "west": "westerosblocks:block/pebble/stormlands/dry2",
+    "east": "westerosblocks:block/pebble/stormlands/dry2",
+    "particle": "westerosblocks:block/pebble/stormlands/dry2"
   }
 }

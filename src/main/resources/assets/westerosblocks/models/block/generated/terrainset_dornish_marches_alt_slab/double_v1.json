@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down": "westerosblocks:block/terrainset/dornish_marches_alt/random_4x4",
+    "up": "westerosblocks:block/terrainset/dornish_marches_alt/random_4x4",
+    "north": "westerosblocks:block/terrainset/dornish_marches_alt/random_4x4",
+    "south": "westerosblocks:block/terrainset/dornish_marches_alt/random_4x4",
+    "west": "westerosblocks:block/terrainset/dornish_marches_alt/random_4x4",
+    "east": "westerosblocks:block/terrainset/dornish_marches_alt/random_4x4",
+    "particle": "westerosblocks:block/terrainset/dornish_marches_alt/random_4x4",
+    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_dornish_marches_alt_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_dornish_marches_alt_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_dornish_marches_alt_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_dornish_marches_alt_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_dornish_marches_alt_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_dornish_marches_alt_overlay"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab_overlay",
+  "textures": {
+    "down": "westerosblocks:block/fallen_leaves/temperate",
+    "up": "westerosblocks:block/fallen_leaves/temperate",
+    "north": "westerosblocks:block/fallen_leaves/temperate",
+    "south": "westerosblocks:block/fallen_leaves/temperate",
+    "west": "westerosblocks:block/fallen_leaves/temperate",
+    "east": "westerosblocks:block/fallen_leaves/temperate",
+    "particle": "westerosblocks:block/fallen_leaves/temperate",
+    "down_ov": "westerosblocks:block/terrainset_overlays/fallen_leaves_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/fallen_leaves_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/fallen_leaves_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/fallen_leaves_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/fallen_leaves_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/fallen_leaves_overlay"
+  }
+}

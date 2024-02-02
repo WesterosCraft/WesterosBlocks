@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:block/thin_block",
   "textures": {
-    "txt4": "westerosblocks:block/sand_block_0/sand_wet_stones",
-    "txt5": "westerosblocks:block/sand_block_0/sand_wet_stones",
-    "txt2": "westerosblocks:block/sand_block_0/sand_wet_stones",
-    "txt3": "westerosblocks:block/sand_block_0/sand_wet_stones",
-    "txt0": "westerosblocks:block/sand_block_0/sand_wet_stones",
-    "txt1": "westerosblocks:block/sand_block_0/sand_wet_stones",
-    "particle": "westerosblocks:block/sand_block_0/sand_wet_stones"
+    "txt4": "westerosblocks:block/sand_block/sand_wet_stones",
+    "txt5": "westerosblocks:block/sand_block/sand_wet_stones",
+    "txt2": "westerosblocks:block/sand_block/sand_wet_stones",
+    "txt3": "westerosblocks:block/sand_block/sand_wet_stones",
+    "txt0": "westerosblocks:block/sand_block/sand_wet_stones",
+    "txt1": "westerosblocks:block/sand_block/sand_wet_stones",
+    "particle": "westerosblocks:block/sand_block/sand_wet_stones"
   },
   "elements": [
     {

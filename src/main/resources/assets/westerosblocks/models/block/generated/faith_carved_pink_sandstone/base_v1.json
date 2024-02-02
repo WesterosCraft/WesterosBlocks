@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/stone_block_4/faith_star_sandstone_pink"
+    "all": "westerosblocks:block/ashlar_third/sandy_pink/faith_carved"
   }
 }

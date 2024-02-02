@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark",
-    "txt5": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark",
-    "txt2": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark",
-    "txt3": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark",
-    "txt0": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark",
-    "txt1": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark",
-    "particle": "westerosblocks:block/stone_block_0/sandstone_monochrome_dark"
+    "txt4": "westerosblocks:block/ashlar_third/light_brown/all",
+    "txt5": "westerosblocks:block/ashlar_third/light_brown/all",
+    "txt2": "westerosblocks:block/ashlar_third/light_brown/all",
+    "txt3": "westerosblocks:block/ashlar_third/light_brown/all",
+    "txt0": "westerosblocks:block/ashlar_third/light_brown/all",
+    "txt1": "westerosblocks:block/ashlar_third/light_brown/all",
+    "particle": "westerosblocks:block/ashlar_third/light_brown/all"
   },
   "elements": [
     {

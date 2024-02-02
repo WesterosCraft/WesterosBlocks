@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_1/brick_basalt",
-    "up": "westerosblocks:block/stone_block_1/brick_basalt",
-    "north": "westerosblocks:block/stone_block_1/brick_basalt",
-    "south": "westerosblocks:block/stone_block_1/brick_basalt",
-    "west": "westerosblocks:block/stone_block_1/brick_basalt",
-    "east": "westerosblocks:block/stone_block_1/brick_basalt",
-    "particle": "westerosblocks:block/stone_block_1/brick_basalt"
+    "down": "westerosblocks:block/ashlar_quarter/black/all",
+    "up": "westerosblocks:block/ashlar_quarter/black/all",
+    "north": "westerosblocks:block/ashlar_quarter/black/all",
+    "south": "westerosblocks:block/ashlar_quarter/black/all",
+    "west": "westerosblocks:block/ashlar_quarter/black/all",
+    "east": "westerosblocks:block/ashlar_quarter/black/all",
+    "particle": "westerosblocks:block/ashlar_quarter/black/all"
   }
 }

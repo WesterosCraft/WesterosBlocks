@@ -1,7 +1,7 @@
 {
   "parent": "westerosblocks:block/untinted/half_door_rh",
   "textures": {
-    "top": "westerosblocks:block/halfdoor_block_0/shutters_spruce",
-    "bottom": "westerosblocks:block/halfdoor_block_0/shutters_spruce"
+    "top": "westerosblocks:block/wood/spruce/shutters",
+    "bottom": "westerosblocks:block/wood/spruce/shutters"
   }
 }

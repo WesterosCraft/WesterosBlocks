@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/fur_block_0/leather_block_leather"
+    "down": "westerosblocks:block/leather_block/leather",
+    "up": "westerosblocks:block/leather_block/leather",
+    "north": "westerosblocks:block/leather_block/leather",
+    "south": "westerosblocks:block/leather_block/leather",
+    "west": "westerosblocks:block/leather_block/leather",
+    "east": "westerosblocks:block/leather_block/leather",
+    "particle": "westerosblocks:block/leather_block/leather"
   }
 }

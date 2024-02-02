@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_valyrian/3"
+    "down": "westerosblocks:block/stone_valyrian/all4",
+    "up": "westerosblocks:block/stone_valyrian/all4",
+    "north": "westerosblocks:block/stone_valyrian/all4",
+    "south": "westerosblocks:block/stone_valyrian/all4",
+    "west": "westerosblocks:block/stone_valyrian/all4",
+    "east": "westerosblocks:block/stone_valyrian/all4",
+    "particle": "westerosblocks:block/stone_valyrian/all4"
   }
 }

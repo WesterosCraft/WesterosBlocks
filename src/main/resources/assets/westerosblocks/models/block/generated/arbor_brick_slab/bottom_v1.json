@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_3/brick_arbor",
-    "up": "westerosblocks:block/stone_block_3/brick_arbor",
-    "north": "westerosblocks:block/stone_block_3/brick_arbor",
-    "south": "westerosblocks:block/stone_block_3/brick_arbor",
-    "west": "westerosblocks:block/stone_block_3/brick_arbor",
-    "east": "westerosblocks:block/stone_block_3/brick_arbor",
-    "particle": "westerosblocks:block/stone_block_3/brick_arbor"
+    "down": "westerosblocks:block/ashlar_third/arbor/all",
+    "up": "westerosblocks:block/ashlar_third/arbor/all",
+    "north": "westerosblocks:block/ashlar_third/arbor/all",
+    "south": "westerosblocks:block/ashlar_third/arbor/all",
+    "west": "westerosblocks:block/ashlar_third/arbor/all",
+    "east": "westerosblocks:block/ashlar_third/arbor/all",
+    "particle": "westerosblocks:block/ashlar_third/arbor/all"
   }
 }

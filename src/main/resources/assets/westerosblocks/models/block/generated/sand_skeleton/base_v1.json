@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/tinted/cube",
   "textures": {
-    "down": "westerosblocks:block/sand_block_0/sand_skeleton",
-    "up": "westerosblocks:block/sand_block_0/sand_skeleton",
-    "north": "westerosblocks:block/sand_block_0/sand_skeleton",
-    "south": "westerosblocks:block/sand_block_0/sand_skeleton",
-    "west": "westerosblocks:block/sand_block_0/sand_skeleton",
-    "east": "westerosblocks:block/sand_block_0/sand_skeleton",
-    "particle": "westerosblocks:block/sand_block_0/sand_skeleton"
+    "down": "westerosblocks:block/sand_block/sand_skeleton",
+    "up": "westerosblocks:block/sand_block/sand_skeleton",
+    "north": "westerosblocks:block/sand_block/sand_skeleton",
+    "south": "westerosblocks:block/sand_block/sand_skeleton",
+    "west": "westerosblocks:block/sand_block/sand_skeleton",
+    "east": "westerosblocks:block/sand_block/sand_skeleton",
+    "particle": "westerosblocks:block/sand_block/sand_skeleton"
   }
 }

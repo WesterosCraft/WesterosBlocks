@@ -1,0 +1,28 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_cond",
+    "layer": "TRANSLUCENT",
+    "textures": [
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
+    ],
+    "extra": {
+      "condWidth": 7,
+      "condHeight": 84,
+      "conds": [
+        {
+          "type": "overlay",
+          "ctmRow": 39,
+          "ctmCol": 0,
+          "connect_to": [
+            {"block": "westerosblocks:terrainset_stormlands"},
+            {"block": "westerosblocks:terrainset_stormlands_stairs"},
+            {"block": "westerosblocks:terrainset_stormlands_slab"},
+            {"block": "westerosblocks:terrainset_stormlands_wall"}
+          ]
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

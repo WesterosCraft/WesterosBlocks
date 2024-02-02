@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/soil_block/plowed_soil",
+    "up": "westerosblocks:block/soil_block/plowed_soil",
+    "north": "westerosblocks:block/soil_block/plowed_soil",
+    "south": "westerosblocks:block/soil_block/plowed_soil",
+    "west": "westerosblocks:block/soil_block/plowed_soil",
+    "east": "westerosblocks:block/soil_block/plowed_soil",
+    "particle": "westerosblocks:block/soil_block/plowed_soil"
+  }
+}

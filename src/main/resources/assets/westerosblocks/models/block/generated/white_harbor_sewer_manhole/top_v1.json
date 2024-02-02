@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_trapdoor_top",
   "textures": {
-    "texture": "westerosblocks:block/trapdoor_block_0/white_harbor_manhole"
+    "texture": "westerosblocks:block/trapdoor_block/white_harbor_manhole"
   }
 }

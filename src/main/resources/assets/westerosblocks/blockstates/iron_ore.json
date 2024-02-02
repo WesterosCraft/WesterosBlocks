@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/iron_ore/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/iron_ore/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/iron_ore/base_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/iron_ore/base_v4"
+      }
+    ]
+  }
+}

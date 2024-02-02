@@ -4,20 +4,21 @@
     "type": "westeros_cond",
     "layer": "TRANSLUCENT",
     "textures": [
-      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay_7x54"
+      "westerosblocks:block/terrainset_overlays/terrainset_atlas_overlay"
     ],
     "extra": {
       "condWidth": 7,
-      "condHeight": 54,
+      "condHeight": 84,
       "conds": [
         {
           "type": "overlay",
           "ctmRow": 6,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_reach_alt"
-            }
+            {"block": "westerosblocks:terrainset_reach_alt"},
+            {"block": "westerosblocks:terrainset_reach_alt_stairs"},
+            {"block": "westerosblocks:terrainset_reach_alt_slab"},
+            {"block": "westerosblocks:terrainset_reach_alt_wall"}
           ]
         },
         {
@@ -25,9 +26,10 @@
           "ctmRow": 9,
           "ctmCol": 0,
           "connect_to": [
-            {
-              "block": "westerosblocks:terrainset_reach"
-            }
+            {"block": "westerosblocks:terrainset_reach"},
+            {"block": "westerosblocks:terrainset_reach_stairs"},
+            {"block": "westerosblocks:terrainset_reach_slab"},
+            {"block": "westerosblocks:terrainset_reach_wall"}
           ]
         }
       ],

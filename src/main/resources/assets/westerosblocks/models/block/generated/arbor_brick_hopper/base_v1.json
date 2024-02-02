@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_3/brick_arbor",
-    "txt5": "westerosblocks:block/stone_block_3/brick_arbor",
-    "txt2": "westerosblocks:block/stone_block_3/brick_arbor",
-    "txt3": "westerosblocks:block/stone_block_3/brick_arbor",
-    "txt0": "westerosblocks:block/stone_block_3/brick_arbor",
-    "txt1": "westerosblocks:block/stone_block_3/brick_arbor",
-    "particle": "westerosblocks:block/stone_block_3/brick_arbor"
+    "txt4": "westerosblocks:block/ashlar_third/arbor/all",
+    "txt5": "westerosblocks:block/ashlar_third/arbor/all",
+    "txt2": "westerosblocks:block/ashlar_third/arbor/all",
+    "txt3": "westerosblocks:block/ashlar_third/arbor/all",
+    "txt0": "westerosblocks:block/ashlar_third/arbor/all",
+    "txt1": "westerosblocks:block/ashlar_third/arbor/all",
+    "particle": "westerosblocks:block/ashlar_third/arbor/all"
   },
   "elements": [
     {

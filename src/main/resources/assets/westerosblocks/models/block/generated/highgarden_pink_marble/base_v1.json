@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
     "west_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
     "east_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
-    "down": "westerosblocks:block/highgarden_pink_marble/highgarden_marble",
-    "up": "westerosblocks:block/highgarden_pink_marble/highgarden_marble",
-    "north": "westerosblocks:block/highgarden_pink_marble/highgarden_marble",
-    "south": "westerosblocks:block/highgarden_pink_marble/highgarden_marble",
-    "west": "westerosblocks:block/highgarden_pink_marble/highgarden_marble",
-    "east": "westerosblocks:block/highgarden_pink_marble/highgarden_marble",
-    "particle": "westerosblocks:block/highgarden_pink_marble/highgarden_marble"
+    "down": "westerosblocks:block/marble/highgarden_pink/all",
+    "up": "westerosblocks:block/marble/highgarden_pink/all",
+    "north": "westerosblocks:block/marble/highgarden_pink/all",
+    "south": "westerosblocks:block/marble/highgarden_pink/all",
+    "west": "westerosblocks:block/marble/highgarden_pink/all",
+    "east": "westerosblocks:block/marble/highgarden_pink/all",
+    "particle": "westerosblocks:block/marble/highgarden_pink/all"
   }
 }

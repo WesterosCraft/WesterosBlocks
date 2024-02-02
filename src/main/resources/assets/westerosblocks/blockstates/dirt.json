@@ -6,7 +6,8 @@
         "weight": 100
       },
       {
-        "model": "westerosblocks:block/generated/dirt/base_v2"
+        "model": "westerosblocks:block/generated/dirt/base_v2",
+        "weight": 33
       },
       {
         "model": "westerosblocks:block/generated/dirt/base_v3",

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/pebble/brown_granite/wet2",
+    "up": "westerosblocks:block/pebble/brown_granite/wet2",
+    "north": "westerosblocks:block/pebble/brown_granite/wet2",
+    "south": "westerosblocks:block/pebble/brown_granite/wet2",
+    "west": "westerosblocks:block/pebble/brown_granite/wet2",
+    "east": "westerosblocks:block/pebble/brown_granite/wet2",
+    "particle": "westerosblocks:block/pebble/brown_granite/wet2"
+  }
+}

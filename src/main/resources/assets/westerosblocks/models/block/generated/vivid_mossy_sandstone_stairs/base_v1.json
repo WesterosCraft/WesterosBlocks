@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_third/tan_mossy/all1",
+    "top": "westerosblocks:block/ashlar_third/tan_mossy/all1",
+    "side": "westerosblocks:block/ashlar_third/tan_mossy/all1",
+    "particle": "westerosblocks:block/ashlar_third/tan_mossy/all1"
+  }
+}

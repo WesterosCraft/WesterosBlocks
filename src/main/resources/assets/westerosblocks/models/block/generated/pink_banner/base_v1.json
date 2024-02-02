@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block_0/banner_pink_bottom",
-    "txt5": "westerosblocks:block/banner_block_0/banner_pink_bottom",
+    "txt4": "westerosblocks:block/banner_block/banner_pink_bottom",
+    "txt5": "westerosblocks:block/banner_block/banner_pink_bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

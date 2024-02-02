@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/snowy_thatch_light_fur/bottom",
-    "up": "westerosblocks:block/snowy_thatch_light_fur/top",
-    "north": "westerosblocks:block/snowy_thatch_light_fur/side_half",
-    "south": "westerosblocks:block/snowy_thatch_light_fur/side_half",
-    "west": "westerosblocks:block/snowy_thatch_light_fur/side_half",
-    "east": "westerosblocks:block/snowy_thatch_light_fur/side_half",
-    "particle": "westerosblocks:block/snowy_thatch_light_fur/side_half"
+    "down": "westerosblocks:block/thatch/snowy_light/bottom",
+    "up": "westerosblocks:block/thatch/snowy_light/top",
+    "north": "westerosblocks:block/thatch/snowy_light/side_half",
+    "south": "westerosblocks:block/thatch/snowy_light/side_half",
+    "west": "westerosblocks:block/thatch/snowy_light/side_half",
+    "east": "westerosblocks:block/thatch/snowy_light/side_half",
+    "particle": "westerosblocks:block/thatch/snowy_light/side_half"
   }
 }

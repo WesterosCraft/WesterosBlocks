@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/ore/copper/all3",
+    "top": "westerosblocks:block/ore/copper/all3",
+    "side": "westerosblocks:block/ore/copper/all3",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/copper_ore_overlay"
+  }
+}

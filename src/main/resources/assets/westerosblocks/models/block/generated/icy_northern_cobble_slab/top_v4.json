@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/rubble/icy_northern/all4",
+    "up": "westerosblocks:block/rubble/icy_northern/all4",
+    "north": "westerosblocks:block/rubble/icy_northern/all4",
+    "south": "westerosblocks:block/rubble/icy_northern/all4",
+    "west": "westerosblocks:block/rubble/icy_northern/all4",
+    "east": "westerosblocks:block/rubble/icy_northern/all4",
+    "particle": "westerosblocks:block/rubble/icy_northern/all4"
+  }
+}

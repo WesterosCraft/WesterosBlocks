@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/thatch_light/thatch_light",
-    "up": "westerosblocks:block/thatch_light/thatch_light",
-    "north": "westerosblocks:block/thatch_light/thatch_light",
-    "south": "westerosblocks:block/thatch_light/thatch_light",
-    "west": "westerosblocks:block/thatch_light/thatch_light",
-    "east": "westerosblocks:block/thatch_light/thatch_light",
-    "particle": "westerosblocks:block/thatch_light/thatch_light"
+    "down": "westerosblocks:block/thatch/light/all",
+    "up": "westerosblocks:block/thatch/light/all",
+    "north": "westerosblocks:block/thatch/light/all",
+    "south": "westerosblocks:block/thatch/light/all",
+    "west": "westerosblocks:block/thatch/light/all",
+    "east": "westerosblocks:block/thatch/light/all",
+    "particle": "westerosblocks:block/thatch/light/all"
   }
 }

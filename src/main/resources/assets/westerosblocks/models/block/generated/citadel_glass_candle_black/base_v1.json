@@ -18,10 +18,10 @@
     ]
   },
   "textures": {
-    "txt2": "westerosblocks:block/translucent_block_0/candle_glass_black_side",
-    "txt0": "westerosblocks:block/translucent_block_0/candle_glass_black_bottom",
-    "txt1": "westerosblocks:block/translucent_block_0/candle_glass_black_top",
-    "particle": "westerosblocks:block/translucent_block_0/candle_glass_black_bottom"
+    "txt2": "westerosblocks:block/candle_glass/black_side",
+    "txt0": "westerosblocks:block/candle_glass/black_bottom",
+    "txt1": "westerosblocks:block/candle_glass/black_top",
+    "particle": "westerosblocks:block/candle_glass/black_bottom"
   },
   "elements": [
     {

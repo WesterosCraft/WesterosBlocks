@@ -1,29 +1,50 @@
 {
   "variants": {
-    "facing=east": [
+    "facing=east,state=clothes1": {
+      "model": "westerosblocks:block/generated/clothesline/clothes1_v1"
+    },
+    "facing=east,state=clothes2": {
+      "model": "westerosblocks:block/generated/clothesline/clothes2_v1"
+    },
+    "facing=east,state=clothes3": {
+      "model": "westerosblocks:block/generated/clothesline/clothes3_v1"
+    },
+    "facing=north,state=clothes3": {
+      "model": "westerosblocks:block/generated/clothesline/clothes3_v1",
+      "y": 90
+    },
+    "facing=north,state=clothes2": {
+      "model": "westerosblocks:block/generated/clothesline/clothes2_v1",
+      "y": 90
+    },
+    "facing=north,state=random": [
       {
-        "model": "westerosblocks:block/generated/clothesline/base_v1"
+        "model": "westerosblocks:block/generated/clothesline/random_v1",
+        "y": 90
       },
       {
-        "model": "westerosblocks:block/generated/clothesline/base_v2"
+        "model": "westerosblocks:block/generated/clothesline/random_v2",
+        "y": 90
       },
       {
-        "model": "westerosblocks:block/generated/clothesline/base_v3"
+        "model": "westerosblocks:block/generated/clothesline/random_v3",
+        "y": 90
       }
     ],
-    "facing=north": [
+    "facing=east,state=random": [
       {
-        "model": "westerosblocks:block/generated/clothesline/base_v1",
-        "y": 90
+        "model": "westerosblocks:block/generated/clothesline/random_v1"
       },
       {
-        "model": "westerosblocks:block/generated/clothesline/base_v2",
-        "y": 90
+        "model": "westerosblocks:block/generated/clothesline/random_v2"
       },
       {
-        "model": "westerosblocks:block/generated/clothesline/base_v3",
-        "y": 90
+        "model": "westerosblocks:block/generated/clothesline/random_v3"
       }
-    ]
+    ],
+    "facing=north,state=clothes1": {
+      "model": "westerosblocks:block/generated/clothesline/clothes1_v1",
+      "y": 90
+    }
   }
 }

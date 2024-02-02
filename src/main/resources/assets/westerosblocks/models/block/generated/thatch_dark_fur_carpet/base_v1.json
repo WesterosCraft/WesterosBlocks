@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/fur_block_0/thatch_dark",
-    "txt5": "westerosblocks:block/fur_block_0/thatch_dark",
-    "txt2": "westerosblocks:block/fur_block_0/thatch_dark",
-    "txt3": "westerosblocks:block/fur_block_0/thatch_dark",
-    "txt0": "westerosblocks:block/fur_block_0/thatch_dark",
-    "txt1": "westerosblocks:block/fur_block_0/thatch_dark",
-    "particle": "westerosblocks:block/fur_block_0/thatch_dark"
+    "txt4": "westerosblocks:block/thatch/dark/all",
+    "txt5": "westerosblocks:block/thatch/dark/all",
+    "txt2": "westerosblocks:block/thatch/dark/all",
+    "txt3": "westerosblocks:block/thatch/dark/all",
+    "txt0": "westerosblocks:block/thatch/dark/all",
+    "txt1": "westerosblocks:block/thatch/dark/all",
+    "particle": "westerosblocks:block/thatch/dark/all"
   },
   "elements": [
     {

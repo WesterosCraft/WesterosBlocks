@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_3/brick_dun",
-    "top": "westerosblocks:block/stone_block_3/brick_dun",
-    "side": "westerosblocks:block/kl_dun_brick/side",
-    "particle": "westerosblocks:block/kl_dun_brick/side"
+    "bottom": "westerosblocks:block/ashlar_third/dun/all",
+    "top": "westerosblocks:block/ashlar_third/dun/all",
+    "side": "westerosblocks:block/ashlar_third/dun/all",
+    "particle": "westerosblocks:block/ashlar_third/dun/all"
   }
 }

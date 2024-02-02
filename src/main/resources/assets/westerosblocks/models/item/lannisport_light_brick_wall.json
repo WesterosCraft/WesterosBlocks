@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "top": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "side": "westerosblocks:block/stone_block_2/brick_lannisport"
+    "bottom": "westerosblocks:block/fieldstone/westerlands/all",
+    "top": "westerosblocks:block/fieldstone/westerlands/all",
+    "side": "westerosblocks:block/fieldstone/westerlands/all"
   }
 }

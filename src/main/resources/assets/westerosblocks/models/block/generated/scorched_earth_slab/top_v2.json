@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/scorched_earth/all2",
+    "up": "westerosblocks:block/scorched_earth/all2",
+    "north": "westerosblocks:block/scorched_earth/all2",
+    "south": "westerosblocks:block/scorched_earth/all2",
+    "west": "westerosblocks:block/scorched_earth/all2",
+    "east": "westerosblocks:block/scorched_earth/all2",
+    "particle": "westerosblocks:block/scorched_earth/all2"
+  }
+}

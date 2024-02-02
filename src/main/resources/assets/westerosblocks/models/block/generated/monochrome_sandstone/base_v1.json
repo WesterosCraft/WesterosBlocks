@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_0/sandstone_monochrome_top",
-    "up": "westerosblocks:block/stone_block_0/sandstone_monochrome_top",
-    "north": "westerosblocks:block/monochrome_sandstone/side1",
-    "south": "westerosblocks:block/monochrome_sandstone/side1",
-    "west": "westerosblocks:block/monochrome_sandstone/side1",
-    "east": "westerosblocks:block/monochrome_sandstone/side1",
-    "particle": "westerosblocks:block/monochrome_sandstone/side1"
+    "down": "westerosblocks:block/ashlar_third/westerlands/all",
+    "up": "westerosblocks:block/ashlar_third/westerlands/all",
+    "north": "westerosblocks:block/ashlar_third/westerlands/all",
+    "south": "westerosblocks:block/ashlar_third/westerlands/all",
+    "west": "westerosblocks:block/ashlar_third/westerlands/all",
+    "east": "westerosblocks:block/ashlar_third/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_third/westerlands/all"
   }
 }

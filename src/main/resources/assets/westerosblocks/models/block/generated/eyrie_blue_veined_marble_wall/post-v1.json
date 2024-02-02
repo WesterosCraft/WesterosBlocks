@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "top": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "side": "westerosblocks:block/marble/eyrie_blue_veined/all",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/eyrie_veined_overlay"
+  }
+}

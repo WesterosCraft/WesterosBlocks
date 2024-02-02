@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/stone_block_1/stone_valyrian",
-    "txt5": "westerosblocks:block/stone_block_1/stone_valyrian",
-    "txt2": "westerosblocks:block/stone_block_1/stone_valyrian",
-    "txt3": "westerosblocks:block/stone_block_1/stone_valyrian",
-    "txt0": "westerosblocks:block/stone_block_1/stone_valyrian",
-    "txt1": "westerosblocks:block/stone_block_1/stone_valyrian",
-    "particle": "westerosblocks:block/stone_block_1/stone_valyrian"
+    "txt4": "westerosblocks:block/stone_valyrian/all1",
+    "txt5": "westerosblocks:block/stone_valyrian/all1",
+    "txt2": "westerosblocks:block/stone_valyrian/all1",
+    "txt3": "westerosblocks:block/stone_valyrian/all1",
+    "txt0": "westerosblocks:block/stone_valyrian/all1",
+    "txt1": "westerosblocks:block/stone_valyrian/all1",
+    "particle": "westerosblocks:block/stone_valyrian/all1"
   },
   "elements": [
     {

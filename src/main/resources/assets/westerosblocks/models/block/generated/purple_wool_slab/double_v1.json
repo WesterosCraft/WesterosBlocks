@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "minecraft:block/purple_wool",
-    "up": "minecraft:block/purple_wool",
-    "north": "minecraft:block/purple_wool",
-    "south": "minecraft:block/purple_wool",
-    "west": "minecraft:block/purple_wool",
-    "east": "minecraft:block/purple_wool",
-    "particle": "minecraft:block/purple_wool"
+    "down": "westerosblocks:block/wool/purple/all",
+    "up": "westerosblocks:block/wool/purple/all",
+    "north": "westerosblocks:block/wool/purple/all",
+    "south": "westerosblocks:block/wool/purple/all",
+    "west": "westerosblocks:block/wool/purple/all",
+    "east": "westerosblocks:block/wool/purple/all",
+    "particle": "westerosblocks:block/wool/purple/all"
   }
 }

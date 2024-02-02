@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light"
+    "down": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "up": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "north": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "south": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "west": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "east": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "particle": "westerosblocks:block/fieldstone/light_pale_pink/all"
   }
 }

@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/stone_block_3/brick_arbor_small"
+    "down": "westerosblocks:block/fieldstone/arbor/all",
+    "up": "westerosblocks:block/fieldstone/arbor/all",
+    "north": "westerosblocks:block/fieldstone/arbor/all",
+    "south": "westerosblocks:block/fieldstone/arbor/all",
+    "west": "westerosblocks:block/fieldstone/arbor/all",
+    "east": "westerosblocks:block/fieldstone/arbor/all",
+    "particle": "westerosblocks:block/fieldstone/arbor/all"
   }
 }

@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_3/brick_oldtown_light",
-    "top": "westerosblocks:block/stone_block_3/brick_oldtown_light",
-    "side": "westerosblocks:block/stone_block_3/brick_oldtown_light",
-    "particle": "westerosblocks:block/stone_block_3/brick_oldtown_light"
+    "bottom": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "top": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "side": "westerosblocks:block/fieldstone/light_oldtown/all",
+    "particle": "westerosblocks:block/fieldstone/light_oldtown/all"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_post_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/north_alt/random_4x4",
+    "top": "westerosblocks:block/terrainset/north_alt/random_4x4",
+    "side": "westerosblocks:block/terrainset/north_alt/random_4x4",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/terrainset_north_alt_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/terrainset_north_alt_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/terrainset_north_alt_overlay"
+  }
+}

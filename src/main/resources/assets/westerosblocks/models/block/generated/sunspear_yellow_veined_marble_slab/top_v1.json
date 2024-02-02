@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
+  "textures": {
+    "down": "westerosblocks:block/marble/sunspear_yellow/all",
+    "up": "westerosblocks:block/marble/sunspear_yellow/all",
+    "north": "westerosblocks:block/marble/sunspear_yellow/all",
+    "south": "westerosblocks:block/marble/sunspear_yellow/all",
+    "west": "westerosblocks:block/marble/sunspear_yellow/all",
+    "east": "westerosblocks:block/marble/sunspear_yellow/all",
+    "particle": "westerosblocks:block/marble/sunspear_yellow/all",
+    "down_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay"
+  }
+}

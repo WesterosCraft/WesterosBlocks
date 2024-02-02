@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/firewood/side2",
-    "up": "westerosblocks:block/firewood/side2",
+    "down": "westerosblocks:block/firewood/side",
+    "up": "westerosblocks:block/firewood/side",
     "north": "westerosblocks:block/firewood/top",
     "south": "westerosblocks:block/firewood/top",
     "west": "westerosblocks:block/firewood/top",

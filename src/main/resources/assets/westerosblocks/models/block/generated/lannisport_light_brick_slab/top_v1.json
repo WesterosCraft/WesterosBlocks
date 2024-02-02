@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "up": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "north": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "south": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "west": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "east": "westerosblocks:block/stone_block_2/brick_lannisport",
-    "particle": "westerosblocks:block/stone_block_2/brick_lannisport"
+    "down": "westerosblocks:block/fieldstone/westerlands/all",
+    "up": "westerosblocks:block/fieldstone/westerlands/all",
+    "north": "westerosblocks:block/fieldstone/westerlands/all",
+    "south": "westerosblocks:block/fieldstone/westerlands/all",
+    "west": "westerosblocks:block/fieldstone/westerlands/all",
+    "east": "westerosblocks:block/fieldstone/westerlands/all",
+    "particle": "westerosblocks:block/fieldstone/westerlands/all"
   }
 }

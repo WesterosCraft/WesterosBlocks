@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_top",
-    "up": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_top",
-    "north": "westerosblocks:block/dorne_light_terracotta/side",
-    "south": "westerosblocks:block/dorne_light_terracotta/side",
-    "west": "westerosblocks:block/dorne_light_terracotta/side",
-    "east": "westerosblocks:block/dorne_light_terracotta/side",
-    "particle": "westerosblocks:block/dorne_light_terracotta/side"
+    "down": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "up": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "north": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "south": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "west": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "east": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "particle": "westerosblocks:block/ashlar_third/light_terracotta/all"
   }
 }

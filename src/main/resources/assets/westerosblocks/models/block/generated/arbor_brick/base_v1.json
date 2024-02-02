@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/arbor_brick/side"
+    "down": "westerosblocks:block/ashlar_third/arbor/all",
+    "up": "westerosblocks:block/ashlar_third/arbor/all",
+    "north": "westerosblocks:block/ashlar_third/arbor/all",
+    "south": "westerosblocks:block/ashlar_third/arbor/all",
+    "west": "westerosblocks:block/ashlar_third/arbor/all",
+    "east": "westerosblocks:block/ashlar_third/arbor/all",
+    "particle": "westerosblocks:block/ashlar_third/arbor/all"
   }
 }

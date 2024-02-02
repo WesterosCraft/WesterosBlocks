@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/glass_purple/glass_pane_purple"
+    "layer0": "westerosblocks:block/glass/purple/all"
   }
 }

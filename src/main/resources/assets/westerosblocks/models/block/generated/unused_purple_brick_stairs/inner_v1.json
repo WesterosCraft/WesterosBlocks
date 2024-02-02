@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all",
+    "top": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all",
+    "side": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/dark_red/all"
+  }
+}

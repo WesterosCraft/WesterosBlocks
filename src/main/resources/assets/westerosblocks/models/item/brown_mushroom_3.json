@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/brown_mushroom_block_0/mushroom_brown_2"
+    "layer0": "westerosblocks:block/brown_mushroom_block/mushroom_brown_2"
   }
 }

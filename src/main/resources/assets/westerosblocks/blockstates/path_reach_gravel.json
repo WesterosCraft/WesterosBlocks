@@ -3,67 +3,67 @@
     "": [
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v1",
-        "weight": 100
+        "weight": 10
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v2",
-        "weight": 33
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v3",
-        "weight": 45
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v4",
-        "weight": 140
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v5",
-        "weight": 193
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v6",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v7",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v8",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v9",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v10",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v11",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v12",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v13",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v14",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v15",
-        "weight": 77
+        "weight": 1
       },
       {
         "model": "westerosblocks:block/generated/path_reach_gravel/base_v16",
-        "weight": 77
+        "weight": 1
       }
     ]
   }

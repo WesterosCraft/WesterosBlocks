@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/northern_carvings/top_bottom",
-    "up": "westerosblocks:block/northern_carvings/top_bottom",
-    "north": "westerosblocks:block/northern_carvings/side",
-    "south": "westerosblocks:block/northern_carvings/side",
-    "west": "westerosblocks:block/northern_carvings/side",
-    "east": "westerosblocks:block/northern_carvings/side",
-    "particle": "westerosblocks:block/northern_carvings/side"
+    "down": "westerosblocks:block/wood/spruce/carving/top_bottom",
+    "up": "westerosblocks:block/wood/spruce/carving/top_bottom",
+    "north": "westerosblocks:block/wood/spruce/carving/side",
+    "south": "westerosblocks:block/wood/spruce/carving/side",
+    "west": "westerosblocks:block/wood/spruce/carving/side",
+    "east": "westerosblocks:block/wood/spruce/carving/side",
+    "particle": "westerosblocks:block/wood/spruce/carving/side"
   }
 }

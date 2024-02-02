@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/cuboid_nsewud_block_0/spoke",
-    "txt5": "westerosblocks:block/cuboid_nsewud_block_0/spoke",
-    "txt2": "westerosblocks:block/cuboid_nsewud_block_0/rim_top",
-    "txt3": "westerosblocks:block/cuboid_nsewud_block_0/spoke",
-    "txt0": "westerosblocks:block/cuboid_nsewud_block_0/axle",
-    "txt1": "westerosblocks:block/cuboid_nsewud_block_0/rim",
-    "particle": "westerosblocks:block/cuboid_nsewud_block_0/axle"
+    "txt4": "westerosblocks:block/cuboid_nsewud_block/spoke",
+    "txt5": "westerosblocks:block/cuboid_nsewud_block/spoke",
+    "txt2": "westerosblocks:block/cuboid_nsewud_block/rim_top",
+    "txt3": "westerosblocks:block/cuboid_nsewud_block/spoke",
+    "txt0": "westerosblocks:block/cuboid_nsewud_block/axle",
+    "txt1": "westerosblocks:block/cuboid_nsewud_block/rim",
+    "particle": "westerosblocks:block/cuboid_nsewud_block/axle"
   },
   "elements": [
     {

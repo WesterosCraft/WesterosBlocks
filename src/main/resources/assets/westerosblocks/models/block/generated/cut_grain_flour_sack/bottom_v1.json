@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/miscellaneous_block_0/grain_sack",
-    "up": "westerosblocks:block/miscellaneous_block_0/grain_sack_cut",
-    "north": "westerosblocks:block/miscellaneous_block_0/grain_sack_front",
-    "south": "westerosblocks:block/miscellaneous_block_0/grain_sack_front",
-    "west": "westerosblocks:block/miscellaneous_block_0/grain_sack_side",
-    "east": "westerosblocks:block/miscellaneous_block_0/grain_sack_side",
-    "particle": "westerosblocks:block/miscellaneous_block_0/grain_sack_front"
+    "down": "westerosblocks:block/grain_sack/all",
+    "up": "westerosblocks:block/grain_sack/cut",
+    "north": "westerosblocks:block/grain_sack/front",
+    "south": "westerosblocks:block/grain_sack/front",
+    "west": "westerosblocks:block/grain_sack/side",
+    "east": "westerosblocks:block/grain_sack/side",
+    "particle": "westerosblocks:block/grain_sack/front"
   }
 }

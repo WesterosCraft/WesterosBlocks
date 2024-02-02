@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_1/brick_white_small",
-    "up": "westerosblocks:block/stone_block_1/brick_white_small",
-    "north": "westerosblocks:block/stone_block_1/brick_white_small",
-    "south": "westerosblocks:block/stone_block_1/brick_white_small",
-    "west": "westerosblocks:block/stone_block_1/brick_white_small",
-    "east": "westerosblocks:block/stone_block_1/brick_white_small",
-    "particle": "westerosblocks:block/stone_block_1/brick_white_small"
+    "down": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "up": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "north": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "south": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "west": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "east": "westerosblocks:block/ashlar_quarter_rounded/white/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/white/all"
   }
 }

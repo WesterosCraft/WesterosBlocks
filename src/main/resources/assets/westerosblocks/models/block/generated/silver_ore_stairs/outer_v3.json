@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/ore/silver/all3",
+    "top": "westerosblocks:block/ore/silver/all3",
+    "side": "westerosblocks:block/ore/silver/all3",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/silver_ore_overlay",
+    "particle": "westerosblocks:block/ore/silver/all3"
+  }
+}

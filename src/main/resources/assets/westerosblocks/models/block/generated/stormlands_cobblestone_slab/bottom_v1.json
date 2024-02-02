@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "up": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "north": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "south": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "west": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "east": "westerosblocks:block/stone_block_2/stone_cobble_stormlands",
-    "particle": "westerosblocks:block/stone_block_2/stone_cobble_stormlands"
+    "down": "westerosblocks:block/cobblestone/stormlands/all1",
+    "up": "westerosblocks:block/cobblestone/stormlands/all1",
+    "north": "westerosblocks:block/cobblestone/stormlands/all1",
+    "south": "westerosblocks:block/cobblestone/stormlands/all1",
+    "west": "westerosblocks:block/cobblestone/stormlands/all1",
+    "east": "westerosblocks:block/cobblestone/stormlands/all1",
+    "particle": "westerosblocks:block/cobblestone/stormlands/all1"
   }
 }

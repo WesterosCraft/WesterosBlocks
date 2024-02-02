@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/glass_yellow/glass_yellow"
+    "down": "westerosblocks:block/glass/yellow/all",
+    "up": "westerosblocks:block/glass/yellow/all",
+    "north": "westerosblocks:block/glass/yellow/all",
+    "south": "westerosblocks:block/glass/yellow/all",
+    "west": "westerosblocks:block/glass/yellow/all",
+    "east": "westerosblocks:block/glass/yellow/all",
+    "particle": "westerosblocks:block/glass/yellow/all"
   }
 }

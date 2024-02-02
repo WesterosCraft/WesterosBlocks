@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "westerosblocks:block/rail_block_0/cover_jungle"
+    "layer0": "westerosblocks:block/wood/jungle/cover"
   }
 }

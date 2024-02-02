@@ -20,26 +20,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
         "y": 270,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "y": 270,
-        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=inner_right": [
@@ -66,30 +46,6 @@
         "x": 180,
         "y": 180,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
       }
     ],
     "facing=north,half=top,shape=inner_right": [
@@ -110,26 +66,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
         "x": 180,
         "uvlock": true
       }
@@ -158,30 +94,6 @@
         "x": 180,
         "y": 90,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=outer_left": [
@@ -202,26 +114,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
         "y": 180,
         "uvlock": true
       }
@@ -250,30 +142,6 @@
         "x": 180,
         "y": 90,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
       }
     ],
     "facing=east,half=top,shape=inner_left": [
@@ -296,26 +164,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
         "x": 180,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
-        "x": 180,
-        "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=inner_right": [
@@ -336,26 +184,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
         "y": 180,
         "uvlock": true
       }
@@ -381,30 +209,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
         "x": 180,
         "y": 270,
         "uvlock": true
@@ -434,30 +238,6 @@
         "x": 180,
         "y": 270,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=inner_left": [
@@ -478,26 +258,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
         "y": 270,
         "uvlock": true
       }
@@ -522,26 +282,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
         "y": 90,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
-        "y": 90,
-        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=outer_right": [
@@ -556,18 +296,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8"
       }
     ],
     "facing=north,half=top,shape=outer_left": [
@@ -594,30 +322,6 @@
         "x": 180,
         "y": 270,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=straight": [
@@ -638,26 +342,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v4",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v5",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v6",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v7",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v8",
         "y": 90,
         "uvlock": true
       }
@@ -682,26 +366,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
         "y": 270,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
-        "y": 270,
-        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=inner_right": [
@@ -722,26 +386,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
         "y": 90,
         "uvlock": true
       }
@@ -766,26 +410,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
         "x": 180,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "x": 180,
-        "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=straight": [
@@ -808,26 +432,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v4",
         "y": 180,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v5",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v6",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v7",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v8",
-        "y": 180,
-        "uvlock": true
       }
     ],
     "facing=north,half=top,shape=outer_right": [
@@ -848,26 +452,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
         "x": 180,
         "uvlock": true
       }
@@ -893,30 +477,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -946,30 +506,6 @@
         "x": 180,
         "y": 270,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=outer_left": [
@@ -993,30 +529,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
         "x": 180,
         "y": 90,
         "uvlock": true
@@ -1046,30 +558,6 @@
         "x": 180,
         "y": 90,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=inner_right": [
@@ -1084,18 +572,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8"
       }
     ],
     "facing=south,half=bottom,shape=inner_left": [
@@ -1110,18 +586,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8"
       }
     ],
     "facing=west,half=top,shape=straight": [
@@ -1145,30 +609,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v4",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v5",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v6",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v7",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v8",
         "x": 180,
         "y": 180,
         "uvlock": true
@@ -1198,30 +638,6 @@
         "x": 180,
         "y": 180,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
       }
     ],
     "facing=south,half=top,shape=straight": [
@@ -1248,30 +664,6 @@
         "x": 180,
         "y": 90,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v5",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v6",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v7",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v8",
-        "x": 180,
-        "y": 90,
-        "uvlock": true
       }
     ],
     "facing=east,half=top,shape=straight": [
@@ -1294,26 +686,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v4",
         "x": 180,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v5",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v6",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v7",
-        "x": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v8",
-        "x": 180,
-        "uvlock": true
       }
     ],
     "facing=west,half=bottom,shape=outer_right": [
@@ -1334,26 +706,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
         "y": 180,
         "uvlock": true
       }
@@ -1382,30 +734,6 @@
         "x": 180,
         "y": 180,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "x": 180,
-        "y": 180,
-        "uvlock": true
       }
     ],
     "facing=east,half=bottom,shape=straight": [
@@ -1420,18 +748,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v8"
       }
     ],
     "facing=west,half=bottom,shape=outer_left": [
@@ -1452,26 +768,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
         "y": 90,
         "uvlock": true
       }
@@ -1496,26 +792,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
         "y": 270,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "y": 270,
-        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=straight": [
@@ -1538,26 +814,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v4",
         "y": 270,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v5",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v6",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v7",
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v8",
-        "y": 270,
-        "uvlock": true
       }
     ],
     "facing=north,half=bottom,shape=inner_left": [
@@ -1578,26 +834,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v4",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v5",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v6",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v7",
-        "y": 180,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/inner_v8",
         "y": 180,
         "uvlock": true
       }
@@ -1626,30 +862,6 @@
         "x": 180,
         "y": 270,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v5",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v6",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v7",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/base_v8",
-        "x": 180,
-        "y": 270,
-        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=outer_right": [
@@ -1672,26 +884,6 @@
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4",
         "y": 90,
         "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7",
-        "y": 90,
-        "uvlock": true
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8",
-        "y": 90,
-        "uvlock": true
       }
     ],
     "facing=south,half=bottom,shape=outer_left": [
@@ -1706,18 +898,6 @@
       },
       {
         "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v4"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v5"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v6"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v7"
-      },
-      {
-        "model": "westerosblocks:block/generated/icy_northern_cobble_stairs/outer_v8"
       }
     ]
   }

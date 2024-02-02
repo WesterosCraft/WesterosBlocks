@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/transparent",
     "up": "westerosblocks:block/transparent",
-    "north": "westerosblocks:block/terracotta_arrow_slit_ornate/side",
-    "south": "westerosblocks:block/terracotta_arrow_slit_ornate/side",
-    "west": "westerosblocks:block/terracotta_arrow_slit_ornate/side",
-    "east": "westerosblocks:block/terracotta_arrow_slit_ornate/side",
-    "particle": "westerosblocks:block/terracotta_arrow_slit_ornate/side"
+    "north": "westerosblocks:block/ashlar_third/terracotta/arrow_slit_ornate",
+    "south": "westerosblocks:block/ashlar_third/terracotta/arrow_slit_ornate",
+    "west": "westerosblocks:block/ashlar_third/terracotta/arrow_slit_ornate",
+    "east": "westerosblocks:block/ashlar_third/terracotta/arrow_slit_ornate",
+    "particle": "westerosblocks:block/ashlar_third/terracotta/arrow_slit_ornate"
   }
 }

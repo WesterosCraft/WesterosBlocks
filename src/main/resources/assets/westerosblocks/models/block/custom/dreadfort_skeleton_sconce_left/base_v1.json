@@ -18,8 +18,8 @@
     ]
   },
 	"textures": {
-		"texture": "westerosblocks:block/cuboid_block_1/skeleton_hand_base",
-		"particle": "westerosblocks:block/cuboid_block_1/skeleton_hand"
+		"texture": "westerosblocks:block/cuboid_block/skeleton_hand_base",
+		"particle": "westerosblocks:block/cuboid_block/skeleton_hand"
 	},
 	"elements": [ 	 
 		{

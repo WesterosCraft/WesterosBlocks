@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "top": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "side": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light",
-    "particle": "westerosblocks:block/stone_block_4/brick_pale_pink_faint_light"
+    "bottom": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "top": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "side": "westerosblocks:block/fieldstone/light_pale_pink/all",
+    "particle": "westerosblocks:block/fieldstone/light_pale_pink/all"
   }
 }

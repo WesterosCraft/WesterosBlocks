@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/marble/sunspear_yellow/all",
+    "top": "westerosblocks:block/marble/sunspear_yellow/all",
+    "side": "westerosblocks:block/marble/sunspear_yellow/all",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay"
+  }
+}

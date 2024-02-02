@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/tinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/light_grey_brick/side",
-    "top": "westerosblocks:block/light_grey_brick/side",
-    "side": "westerosblocks:block/light_grey_brick/side",
-    "particle": "westerosblocks:block/light_grey_brick/side"
+    "bottom": "westerosblocks:block/fieldstone/grey/all",
+    "top": "westerosblocks:block/fieldstone/grey/all",
+    "side": "westerosblocks:block/fieldstone/grey/all",
+    "particle": "westerosblocks:block/fieldstone/grey/all"
   }
 }

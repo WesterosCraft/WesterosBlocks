@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/stormlands_brick_large/side",
-    "up": "westerosblocks:block/stormlands_brick_large/side",
-    "north": "westerosblocks:block/stormlands_brick_large/side",
-    "south": "westerosblocks:block/stormlands_brick_large/side",
-    "west": "westerosblocks:block/stormlands_brick_large/side",
-    "east": "westerosblocks:block/stormlands_brick_large/side",
-    "particle": "westerosblocks:block/stormlands_brick_large/side"
+    "down": "westerosblocks:block/ashlar_half/stormlands/all",
+    "up": "westerosblocks:block/ashlar_half/stormlands/all",
+    "north": "westerosblocks:block/ashlar_half/stormlands/all",
+    "south": "westerosblocks:block/ashlar_half/stormlands/all",
+    "west": "westerosblocks:block/ashlar_half/stormlands/all",
+    "east": "westerosblocks:block/ashlar_half/stormlands/all",
+    "particle": "westerosblocks:block/ashlar_half/stormlands/all"
   }
 }

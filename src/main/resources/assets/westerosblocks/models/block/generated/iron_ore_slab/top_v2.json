@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
+  "textures": {
+    "down": "westerosblocks:block/ore/iron/all2",
+    "up": "westerosblocks:block/ore/iron/all2",
+    "north": "westerosblocks:block/ore/iron/all2",
+    "south": "westerosblocks:block/ore/iron/all2",
+    "west": "westerosblocks:block/ore/iron/all2",
+    "east": "westerosblocks:block/ore/iron/all2",
+    "particle": "westerosblocks:block/ore/iron/all2",
+    "down_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
+    "up_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
+    "north_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
+    "south_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
+    "west_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
+    "east_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/stormlands_brick_large/side",
-    "top": "westerosblocks:block/stormlands_brick_large/side",
-    "side": "westerosblocks:block/stormlands_brick_large/side"
+    "bottom": "westerosblocks:block/ashlar_half/stormlands/all",
+    "top": "westerosblocks:block/ashlar_half/stormlands/all",
+    "side": "westerosblocks:block/ashlar_half/stormlands/all"
   }
 }

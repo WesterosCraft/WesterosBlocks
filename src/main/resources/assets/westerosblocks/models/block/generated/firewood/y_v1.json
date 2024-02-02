@@ -3,10 +3,10 @@
   "textures": {
     "down": "westerosblocks:block/firewood/top",
     "up": "westerosblocks:block/firewood/top",
-    "north": "westerosblocks:block/firewood/side2",
-    "south": "westerosblocks:block/firewood/side2",
-    "east": "westerosblocks:block/firewood/side2",
-    "west": "westerosblocks:block/firewood/side2",
-    "particle": "westerosblocks:block/firewood/side2"
+    "north": "westerosblocks:block/firewood/side",
+    "south": "westerosblocks:block/firewood/side",
+    "east": "westerosblocks:block/firewood/side",
+    "west": "westerosblocks:block/firewood/side",
+    "particle": "westerosblocks:block/firewood/side"
   }
 }

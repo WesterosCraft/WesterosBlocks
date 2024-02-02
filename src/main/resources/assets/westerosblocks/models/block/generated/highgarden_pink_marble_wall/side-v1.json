@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/marble/highgarden_pink/all",
+    "top": "westerosblocks:block/marble/highgarden_pink/all",
+    "side": "westerosblocks:block/marble/highgarden_pink/all",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay"
+  }
+}

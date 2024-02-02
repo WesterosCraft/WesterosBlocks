@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "westerosblocks:block/pebble_red_mountains/wet3"
+    "down": "westerosblocks:block/pebble/red_mountains/wet3",
+    "up": "westerosblocks:block/pebble/red_mountains/wet3",
+    "north": "westerosblocks:block/pebble/red_mountains/wet3",
+    "south": "westerosblocks:block/pebble/red_mountains/wet3",
+    "west": "westerosblocks:block/pebble/red_mountains/wet3",
+    "east": "westerosblocks:block/pebble/red_mountains/wet3",
+    "particle": "westerosblocks:block/pebble/red_mountains/wet3"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/ore/iron/all2",
+    "top": "westerosblocks:block/ore/iron/all2",
+    "side": "westerosblocks:block/ore/iron/all2",
+    "bottom_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
+    "top_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay",
+    "side_ov": "westerosblocks:block/terrainset_overlays/iron_ore_overlay"
+  }
+}

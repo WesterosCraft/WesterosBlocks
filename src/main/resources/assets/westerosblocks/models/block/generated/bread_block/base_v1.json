@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/random_slab_block_0/bread_side",
-    "txt5": "westerosblocks:block/random_slab_block_0/bread_side",
-    "txt2": "westerosblocks:block/random_slab_block_0/bread_side",
-    "txt3": "westerosblocks:block/random_slab_block_0/bread_side",
-    "txt0": "westerosblocks:block/random_slab_block_0/bread_bottom",
-    "txt1": "westerosblocks:block/random_slab_block_0/bread_top",
-    "particle": "westerosblocks:block/random_slab_block_0/bread_bottom"
+    "txt4": "westerosblocks:block/bread/side",
+    "txt5": "westerosblocks:block/bread/side",
+    "txt2": "westerosblocks:block/bread/side",
+    "txt3": "westerosblocks:block/bread/side",
+    "txt0": "westerosblocks:block/bread/bottom",
+    "txt1": "westerosblocks:block/bread/top",
+    "particle": "westerosblocks:block/bread/bottom"
   },
   "elements": [
     {

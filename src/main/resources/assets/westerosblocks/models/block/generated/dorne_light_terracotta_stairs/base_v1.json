@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/stairs",
   "textures": {
-    "bottom": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_top",
-    "top": "westerosblocks:block/stone_block_0/sandstone_terracotta_light_top",
-    "side": "westerosblocks:block/dorne_light_terracotta/side",
-    "particle": "westerosblocks:block/dorne_light_terracotta/side"
+    "bottom": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "top": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "side": "westerosblocks:block/ashlar_third/light_terracotta/all",
+    "particle": "westerosblocks:block/ashlar_third/light_terracotta/all"
   }
 }

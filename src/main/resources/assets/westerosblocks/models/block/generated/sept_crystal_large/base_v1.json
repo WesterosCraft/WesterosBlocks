@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/translucent_block_0/crystal_block"
+    "all": "westerosblocks:block/crystal/all"
   }
 }
