@@ -1,6 +1,6 @@
 {
   "parent": "westerosblocks:block/tinted/cube_all",
   "textures": {
-    "all": "westerosblocks:block/cobblestone/mossy/all3"
+    "all": "westerosblocks:block/cobblestone/grey_mossy/all3"
   }
 }
