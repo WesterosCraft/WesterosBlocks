@@ -4,21 +4,8 @@
     "type": "westeros_horizontal_cond",
     "layer": "SOLID",
     "textures": [
-      "westerosblocks:block/coarse_red_sandstone/jungle_2x2"
     ],
     "extra": {
-      "condWidth": 2,
-      "condHeight": 2,
-      "conds": [
-        {
-          "biomeNames": [
-            "minecraft:jungle"
-          ],
-          "rowOut": 0,
-          "colOut": 0,
-          "type": "horizontal"
-        }
-      ],
       "ignore_states": true
     }
   }
