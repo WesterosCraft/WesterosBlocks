@@ -13,11 +13,11 @@ import net.minecraft.world.level.block.Block;
 public class TorchBlockModelExport extends ModelExport {
     // Template objects for Gson export of block models
     public static class ModelObjectTorch {
-        public String parent = "minecraft:block/template_torch";    // Use 'torch' model for single texture
+        public String parent = "westerosblocks:block/untinted/template_torch";    // Use 'torch' model for single texture
         public Texture textures = new Texture();
     }
     public static class ModelObjectTorchWall {
-        public String parent = "minecraft:block/template_torch_wall";    // Use 'torch_wall' model for single texture
+        public String parent = "westerosblocks:block/untinted/template_torch_wall";    // Use 'torch_wall' model for single texture
         public Texture textures = new Texture();
     }
     public static class Texture {

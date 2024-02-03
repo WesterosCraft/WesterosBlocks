@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/wool/dirty_white/all",
-    "txt5": "westerosblocks:block/wool/dirty_white/all",
-    "txt2": "westerosblocks:block/wool/dirty_white/all",
-    "txt3": "westerosblocks:block/wool/dirty_white/all",
-    "txt0": "westerosblocks:block/wool/dirty_white/all",
-    "txt1": "westerosblocks:block/wool/dirty_white/all",
-    "particle": "westerosblocks:block/wool/dirty_white/all"
+    "txt4": "westerosblocks:block/wool/dirty_white/noctm",
+    "txt5": "westerosblocks:block/wool/dirty_white/noctm",
+    "txt2": "westerosblocks:block/wool/dirty_white/noctm",
+    "txt3": "westerosblocks:block/wool/dirty_white/noctm",
+    "txt0": "westerosblocks:block/wool/dirty_white/noctm",
+    "txt1": "westerosblocks:block/wool/dirty_white/noctm",
+    "particle": "westerosblocks:block/wool/dirty_white/noctm"
   },
   "elements": [
     {

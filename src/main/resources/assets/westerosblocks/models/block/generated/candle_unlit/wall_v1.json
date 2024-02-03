@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/template_torch_wall",
+  "parent": "westerosblocks:block/untinted/template_torch_wall",
   "textures": {
     "torch": "westerosblocks:block/lighting/candle_unlit"
   }
