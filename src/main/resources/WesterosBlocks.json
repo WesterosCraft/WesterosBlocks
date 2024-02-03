@@ -6171,7 +6171,8 @@
         "all": "wool/black/all"
       },
       "altTextures": {
-        "solid": ["wool/black/block"]
+        "solid": ["wool/black/block"],
+        "carpet": ["wool/black/noctm"]
       }
     },
     {
@@ -6192,7 +6193,8 @@
         "all": "wool/grey/all"
       },
       "altTextures": {
-        "solid": ["wool/grey/block"]
+        "solid": ["wool/grey/block"],
+        "carpet": ["wool/grey/noctm"]
       }
     },
     {
@@ -6213,7 +6215,8 @@
         "all": "wool/light_grey/all"
       },
       "altTextures": {
-        "solid": ["wool/light_grey/block"]
+        "solid": ["wool/light_grey/block"],
+        "carpet": ["wool/light_grey/noctm"]
       }
     },
     {
@@ -6234,7 +6237,8 @@
         "all": "wool/white/all"
       },
       "altTextures": {
-        "solid": ["wool/white/block"]
+        "solid": ["wool/white/block"],
+        "carpet": ["wool/white/noctm"]
       }
     },
     {
@@ -6255,7 +6259,8 @@
         "all": "wool/dirty_white/all"
       },
       "altTextures": {
-        "solid": ["wool/dirty_white/block"]
+        "solid": ["wool/dirty_white/block"],
+        "carpet": ["wool/dirty_white/noctm"]
       }
     },
     {
@@ -6276,7 +6281,8 @@
         "all": "wool/light_brown/all"
       },
       "altTextures": {
-        "solid": ["wool/light_brown/block"]
+        "solid": ["wool/light_brown/block"],
+        "carpet": ["wool/light_brown/noctm"]
       }
     },
     {
@@ -6297,7 +6303,8 @@
         "all": "wool/brown/all"
       },
       "altTextures": {
-        "solid": ["wool/brown/block"]
+        "solid": ["wool/brown/block"],
+        "carpet": ["wool/brown/noctm"]
       }
     },
     {
@@ -6318,7 +6325,8 @@
         "all": "wool/red/all"
       },
       "altTextures": {
-        "solid": ["wool/red/block"]
+        "solid": ["wool/red/block"],
+        "carpet": ["wool/red/noctm"]
       }
     },
     {
@@ -6339,7 +6347,8 @@
         "all": "wool/orange/all"
       },
       "altTextures": {
-        "solid": ["wool/orange/block"]
+        "solid": ["wool/orange/block"],
+        "carpet": ["wool/orange/noctm"]
       }
     },
     {
@@ -6360,7 +6369,8 @@
         "all": "wool/yellow/all"
       },
       "altTextures": {
-        "solid": ["wool/yellow/block"]
+        "solid": ["wool/yellow/block"],
+        "carpet": ["wool/yellow/noctm"]
       }
     },
     {
@@ -6381,7 +6391,8 @@
         "all": "wool/green/all"
       },
       "altTextures": {
-        "solid": ["wool/green/block"]
+        "solid": ["wool/green/block"],
+        "carpet": ["wool/green/noctm"]
       }
     },
     {
@@ -6402,7 +6413,8 @@
         "all": "wool/cyan/all"
       },
       "altTextures": {
-        "solid": ["wool/cyan/block"]
+        "solid": ["wool/cyan/block"],
+        "carpet": ["wool/cyan/noctm"]
       }
     },
     {
@@ -6423,7 +6435,8 @@
         "all": "wool/blue/all"
       },
       "altTextures": {
-        "solid": ["wool/blue/block"]
+        "solid": ["wool/blue/block"],
+        "carpet": ["wool/blue/noctm"]
       }
     },
     {
@@ -6444,7 +6457,8 @@
         "all": "wool/light_blue/all"
       },
       "altTextures": {
-        "solid": ["wool/light_blue/block"]
+        "solid": ["wool/light_blue/block"],
+        "carpet": ["wool/light_blue/noctm"]
       }
     },
     {
@@ -6465,7 +6479,8 @@
         "all": "wool/purple/all"
       },
       "altTextures": {
-        "solid": ["wool/purple/block"]
+        "solid": ["wool/purple/block"],
+        "carpet": ["wool/purple/noctm"]
       }
     },
     {
@@ -6486,7 +6501,8 @@
         "all": "wool/pink/all"
       },
       "altTextures": {
-        "solid": ["wool/pink/block"]
+        "solid": ["wool/pink/block"],
+        "carpet": ["wool/pink/noctm"]
       }
     },
     {

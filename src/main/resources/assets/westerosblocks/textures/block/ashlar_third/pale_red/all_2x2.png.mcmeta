@@ -1,10 +1,9 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_horizontal_cond",
+    "type": "ctm_horizontal",
     "layer": "SOLID",
-    "textures": [
-    ],
+    "textures": [],
     "extra": {
       "ignore_states": true
     }

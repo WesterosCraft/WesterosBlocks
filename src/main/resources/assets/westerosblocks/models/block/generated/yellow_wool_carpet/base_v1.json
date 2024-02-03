@@ -18,13 +18,13 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/wool/yellow/all",
-    "txt5": "westerosblocks:block/wool/yellow/all",
-    "txt2": "westerosblocks:block/wool/yellow/all",
-    "txt3": "westerosblocks:block/wool/yellow/all",
-    "txt0": "westerosblocks:block/wool/yellow/all",
-    "txt1": "westerosblocks:block/wool/yellow/all",
-    "particle": "westerosblocks:block/wool/yellow/all"
+    "txt4": "westerosblocks:block/wool/yellow/noctm",
+    "txt5": "westerosblocks:block/wool/yellow/noctm",
+    "txt2": "westerosblocks:block/wool/yellow/noctm",
+    "txt3": "westerosblocks:block/wool/yellow/noctm",
+    "txt0": "westerosblocks:block/wool/yellow/noctm",
+    "txt1": "westerosblocks:block/wool/yellow/noctm",
+    "particle": "westerosblocks:block/wool/yellow/noctm"
   },
   "elements": [
     {
