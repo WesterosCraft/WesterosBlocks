@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/grey/polished",
+    "up": "westerosblocks:block/ashlar_third/grey/polished",
+    "north": "westerosblocks:block/ashlar_third/grey/polished",
+    "south": "westerosblocks:block/ashlar_third/grey/polished",
+    "west": "westerosblocks:block/ashlar_third/grey/polished",
+    "east": "westerosblocks:block/ashlar_third/grey/polished",
+    "particle": "westerosblocks:block/ashlar_third/grey/polished"
+  }
+}

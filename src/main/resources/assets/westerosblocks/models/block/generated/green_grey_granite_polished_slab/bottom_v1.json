@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/green_grey/polished",
+    "up": "westerosblocks:block/ashlar_third/green_grey/polished",
+    "north": "westerosblocks:block/ashlar_third/green_grey/polished",
+    "south": "westerosblocks:block/ashlar_third/green_grey/polished",
+    "west": "westerosblocks:block/ashlar_third/green_grey/polished",
+    "east": "westerosblocks:block/ashlar_third/green_grey/polished",
+    "particle": "westerosblocks:block/ashlar_third/green_grey/polished"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_third/light_oldtown/polished",
+    "top": "westerosblocks:block/ashlar_third/light_oldtown/polished",
+    "side": "westerosblocks:block/ashlar_third/light_oldtown/polished",
+    "particle": "westerosblocks:block/ashlar_third/light_oldtown/polished"
+  }
+}

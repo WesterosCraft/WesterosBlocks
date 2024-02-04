@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/tinted/cube_all",
+  "textures": {
+    "all": "westerosblocks:block/brick/orange_rough/all4"
+  }
+}
