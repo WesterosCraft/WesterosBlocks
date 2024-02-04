@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_side",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_third/green_grey/polished",
+    "top": "westerosblocks:block/ashlar_third/green_grey/polished",
+    "side": "westerosblocks:block/ashlar_third/green_grey/polished"
+  }
+}

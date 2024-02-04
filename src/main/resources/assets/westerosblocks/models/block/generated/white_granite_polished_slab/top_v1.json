@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/white/polished",
+    "up": "westerosblocks:block/ashlar_third/white/polished",
+    "north": "westerosblocks:block/ashlar_third/white/polished",
+    "south": "westerosblocks:block/ashlar_third/white/polished",
+    "west": "westerosblocks:block/ashlar_third/white/polished",
+    "east": "westerosblocks:block/ashlar_third/white/polished",
+    "particle": "westerosblocks:block/ashlar_third/white/polished"
+  }
+}

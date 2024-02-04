@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/light_brown/polished",
+    "up": "westerosblocks:block/ashlar_third/light_brown/polished",
+    "north": "westerosblocks:block/ashlar_third/light_brown/polished",
+    "south": "westerosblocks:block/ashlar_third/light_brown/polished",
+    "west": "westerosblocks:block/ashlar_third/light_brown/polished",
+    "east": "westerosblocks:block/ashlar_third/light_brown/polished",
+    "particle": "westerosblocks:block/ashlar_third/light_brown/polished"
+  }
+}
