@@ -16,37 +16,31 @@ geeberry, Thamus_Knoward, Emoticone11, CashBanks, Moozipan, Marken4, Hal9007
 
 Special thanks to Doku, Misa, Hickerydickery, WantedRobot, SMP, WhitefireNeo, Monsterfish_, Rota_Fortunae (ex:Wheellee), and the following users from the DokuCommunity for their input on the respective textures:
 
-Balloftape - Skull, CreeperHead, SurvivorHead, Redstone Lamp
-Metatron - Zombie Head
-Savage Alien - Empty Map
-Gabriel MBR - Baked Potatoe, Pumpkin Pie
-Duru - Armor Icons, Compass, Pork, Brewing Stand
-Foodstamp - Armor Icons
-CCCode - Chainmail Icons
-LordofSax - Helmet, Chestplate, Leggings, etc.
-Dark_Tundra - Banner
-Wessexstock - Survivor Skin, Zombie Skin
-Zaph34r - Sign
-Diet Taco - Trap Door
-Alexium - Cake, Cake Item
-Kloporte - Bread
-Noodaa - Rotten Flesh, Melon Slice
-Dark Defender - ChickenMeat, Cauldron, Mushroom Block
-Aceofhrts97 - Beef
-Dubca7 - Cauldron
-SerAaron - Book, Flagstones
-Straxael - Explosion
-JetStorm - Wooden Planks, Chiseled Stone Brick, Sandstone
-Staretta - Glass Panes
-AwesomeSauceUK- Nether Brick
-Recreps4444, SeanFletcher,DWSkanska, TheBaconizer - Oak Sapling, Assorted Flowers
-Max - Diamond Block
-DWSkanska - Carrot, Skull, Language Buttons
-
-Textures taken from Conquest, by Monsterfish_:
-
--Assorted grass textures, oak leaves, reed/cattails, wheat, grass block, vines, bracken, butterflies, dragonfly, base for dirt/gravel textures
-
-From Ardacraft, by Rota_Fortunae (ex:Wheellee):
-
--Cow parsely texture, lady fern texture, nettle texture, fireweed texture
+* Monsterfish_ - Assorted grass textures, Oak Leaves, Reed/Cattails, Wheat, Grass Block, Vines, Bracken, Butterflies, Dragonfly, base for Dirt/Gravel textures
+* Rota_Fortunae (ex:Wheellee) - Cow Parsley, Lady Fern, Nettle, Fireweed
+* Balloftape - Skull, CreeperHead, SurvivorHead, Redstone Lamp
+* Metatron - Zombie Head
+* Savage Alien - Empty Map
+* Gabriel MBR - Baked Potatoe, Pumpkin Pie
+* Duru - Armor Icons, Compass, Pork, Brewing Stand
+* Foodstamp - Armor Icons
+* CCCode - Chainmail Icons
+* LordofSax - Helmet, Chestplate, Leggings, etc.
+* Dark_Tundra - Banner
+* Wessexstock - Survivor Skin, Zombie Skin
+* Zaph34r - Sign
+* Diet Taco - Trap Door
+* Alexium - Cake, Cake Item
+* Kloporte - Bread
+* Noodaa - Rotten Flesh, Melon Slice
+* Dark Defender - ChickenMeat, Cauldron, Mushroom Block
+* Aceofhrts97 - Beef
+* Dubca7 - Cauldron
+* SerAaron - Book, Flagstones
+* Straxael - Explosion
+* JetStorm - Wooden Planks, Chiseled Stone Brick, Sandstone
+* Staretta - Glass Panes
+* AwesomeSauceUK- Nether Brick
+* Recreps4444, SeanFletcher,DWSkanska, TheBaconizer - Oak Sapling, Assorted Flowers
+* Max - Diamond Block
+* DWSkanska - Carrot, Skull, Language Buttons
