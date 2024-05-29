@@ -370,6 +370,8 @@ public class WesterosBlocks {
 			}
 			// Register custom tags
 			ModelExport.declareCustomTags(customConfig);
+			// Dump block set information
+			WesterosBlockSetDef.dumpBlockSets(customConfig.blockSets, modConfigPath);
 			log.info("initialize done");
 		}
 		@SubscribeEvent

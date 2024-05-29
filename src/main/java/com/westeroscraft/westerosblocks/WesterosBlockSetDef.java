@@ -5,6 +5,14 @@ import java.util.Map;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef.HarvestLevel;
 import com.westeroscraft.westerosblocks.WesterosBlockDef.RandomTextureSet;
@@ -117,7 +125,7 @@ public class WesterosBlockSetDef {
 
   public List<WesterosBlockDef> generateBlockDefs() {
     List<WesterosBlockDef> blockDefs = new LinkedList<WesterosBlockDef>();
-    
+
     this.types = preprocessVariantMap(this.types);
     this.altCustomTags = preprocessVariantMap(this.altCustomTags);
     this.altTextures = preprocessVariantMap(this.altTextures);
@@ -404,5 +412,74 @@ public class WesterosBlockSetDef {
     }
 
     return (!randomTextures.isEmpty()) ? randomTextures : null;
+  }
+
+  /*
+   * The following allows block set information to be dumped to a json for
+   * the purpose of supporting external tools
+   */
+  private static class BlockSetFileDef {
+    public String id = "";
+    public String variant = "";
+  }
+  private static class BlockSetFileSetDef {
+    public String id = "";
+    public String altname = "";
+    public List<BlockSetFileDef> blocks = new ArrayList<BlockSetFileDef>();
+  }
+  private static class BlockSetFile {
+    public List<BlockSetFileSetDef> blocksets = new ArrayList<BlockSetFileSetDef>();
+  }
+
+  public static void dumpBlockSets(WesterosBlockSetDef[] blockSets, Path path) {
+    FileWriter fos = null;
+    try {
+      // Create output file format
+      BlockSetFile bsf = new BlockSetFile();
+      for (WesterosBlockSetDef blockSet : blockSets) {
+        BlockSetFileSetDef bsf_set = new BlockSetFileSetDef();
+        bsf_set.id = WesterosBlocks.MOD_ID + ":" + blockSet.baseBlockName;
+        if (blockSet.baseLabel != null) {
+          bsf_set.altname = blockSet.baseLabel.replaceAll(" ", "_").toLowerCase();
+        }
+        // The following is duplicated from generateBlockDefs and can perhaps be refactored
+        for (String variant : WesterosBlockSetDef.SUPPORTED_VARIANTS) {
+          if (blockSet.variants != null && !blockSet.variants.contains(variant))
+            continue;
+          else if (blockSet.variants == null && !WesterosBlockSetDef.DEFAULT_VARIANTS.contains(variant))
+            continue;
+          BlockSetFileDef bsf_def = new BlockSetFileDef();
+          String suffix = (variant.equals("solid")) ? "" : variant;
+          if (blockSet.altNames != null && blockSet.altNames.containsKey(variant)) {
+            bsf_def.id = WesterosBlocks.MOD_ID + ":" + blockSet.altNames.get(variant);
+          }
+          else {
+            bsf_def.id = WesterosBlocks.MOD_ID + ":" + blockSet.baseBlockName;
+            if (!suffix.isEmpty())
+              bsf_def.id += "_" + suffix;
+          }
+          bsf_def.variant = variant;
+          bsf_set.blocks.add(bsf_def);
+        }
+        bsf.blocksets.add(bsf_set);
+      }
+      // Write json
+      fos = new FileWriter(new File(path.toFile(), "blocksets.json"));
+      Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();                
+      gson.toJson(bsf, fos);
+      
+    } catch (IOException e) {
+      WesterosBlocks.log.error("Could not write blocksets.json");
+      return;
+
+    } finally {
+      if (fos != null) {
+        try {
+          fos.close();
+        } catch (IOException e) {
+          return;
+        }
+      }
+    }	
   }
 }
