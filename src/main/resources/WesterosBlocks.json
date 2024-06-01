@@ -3847,7 +3847,7 @@
       "types": {
         "fence": "unconnect:true",
         "fence_gate": "locked:true"
-      },
+      }, 
       "baseLabel": "TerrainSet Eastern Islands",
       "colorMult": "textures/colormap/easternisland",
       "textures": {
