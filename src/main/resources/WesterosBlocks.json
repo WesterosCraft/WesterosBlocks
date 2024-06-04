@@ -30118,6 +30118,19 @@
           "sideTextures": [2, 1, 0, 0, 0, 0]
         }
       ]
+    },
+    {
+      "blockName": "particle_spawner",
+      "blockType": "particle",
+      "hardness": 5,
+      "stepSound": "cloth",
+      "material": "web",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosUtility",
+      "label": "Particle Spawner",
+      "isCustomModel": true,
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     }
   ]
 }

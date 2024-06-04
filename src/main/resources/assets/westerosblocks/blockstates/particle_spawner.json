@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "westerosblocks:block/custom/particle_spawner/particle_spawner_off" },
+    "powered=true": { "model": "westerosblocks:block/custom/particle_spawner/particle_spawner_on" }
+  }
+}
