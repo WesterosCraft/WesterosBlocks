@@ -5,8 +5,10 @@ import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -22,6 +24,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Random;
 
 public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, WesterosBlockLifecycle {
     private final WesterosBlockDef def;
@@ -64,6 +68,17 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
     }
 
     @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, Random rnd) {
+        super.animateTick(state, level, pos, rnd);
+
+        if (state.getValue(POWERED)) {
+            for (int i = 0; i < state.getValue(PARTICLE_STRENGTH); i++) {
+                level.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, true, (double) pos.getX() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getY() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getZ() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), 0.0D, 0.0D, 0.00);
+            }
+        }
+    }
+
+    @Override
     public VoxelShape getCollisionShape(BlockState state, @NotNull BlockGetter p_58056_, BlockPos p_58057_,
                                         CollisionContext p_58058_) {
         if (state.getValue(POWERED)) {
@@ -78,6 +93,7 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
         builder.add(POWERED, PARTICLE_TYPE, PARTICLE_STRENGTH, PARTICLE_RANGE, WATERLOGGED);
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
 
@@ -94,7 +110,12 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
         return super.updateShape(state, dir, state2, world, pos, pos2);
     }
 
-    private static final String[] TAGS = { "particles" };
+    @Override
+    public FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+
+    private static final String[] TAGS = {};
 
     @Override
     public String[] getBlockTags() {
