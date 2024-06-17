@@ -6,6 +6,7 @@ import com.westeroscraft.westerosblocks.*;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.StairsShape;
 import net.minecraft.world.level.material.Fluids;
@@ -24,14 +25,21 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
         public Block buildBlockClass(WesterosBlockDef def) {
             String t = def.getType();
             boolean doUnconnect = false;
+            boolean doConnectstate = false;
             if (t != null) {
                 String[] toks = t.split(",");
                 for (String tok : toks) {
                 	String[] parts = tok.split(":");
+                    // See if we have unconnect
                     if (parts[0].equals("unconnect")) {
                     	doUnconnect = true;
                     	tempUNCONNECT = UNCONNECT;
                     }
+                    // See if we have connectstate
+					if (parts[0].equals("connectstate")) {
+						doConnectstate = true;
+						tempCONNECTSTATE = CONNECTSTATE;
+					}
                 }
             }
             if (def.modelBlockName == null) {
@@ -52,7 +60,7 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
                 return null;
             }
             BlockBehaviour.Properties props = def.makeAndCopyProperties(blk);
-            return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def, doUnconnect)),
+            return def.registerRenderType(def.registerBlock(new WCStairBlock(blk.defaultBlockState(), props, def, doUnconnect, doConnectstate)),
                     false, false);
         }
     }
@@ -60,11 +68,15 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
     private WesterosBlockDef def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.create("unconnect");
     protected static BooleanProperty tempUNCONNECT;
-
     public final boolean unconnect;
+
+    public static final IntegerProperty CONNECTSTATE = IntegerProperty.create("connectstate", 0, 3);
+	protected static IntegerProperty tempCONNECTSTATE;
+    public final boolean connectstate;
+
     public final boolean no_uvlock;
 
-    protected WCStairBlock(BlockState modelstate, BlockBehaviour.Properties props, WesterosBlockDef def, boolean doUnconnect) {
+    protected WCStairBlock(BlockState modelstate, BlockBehaviour.Properties props, WesterosBlockDef def, boolean doUnconnect, boolean doConnectstate) {
         super(() -> modelstate, props);
         this.def = def;
         String t = def.getType();
@@ -79,14 +91,20 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
         }
         this.no_uvlock = no_uvlock;
         this.unconnect = doUnconnect;
-        if (doUnconnect) {
-            this.registerDefaultState(this.stateDefinition.any().
-        		setValue(FACING, Direction.NORTH).
-        		setValue(HALF, Half.BOTTOM).
-        		setValue(SHAPE, StairsShape.STRAIGHT).
-        		setValue(WATERLOGGED, Boolean.valueOf(false)).
-        		setValue(UNCONNECT, Boolean.valueOf(false)));
-        }
+        this.connectstate = doConnectstate;
+
+		BlockState defbs = this.stateDefinition.any()
+                            .setValue(FACING, Direction.NORTH)
+                            .setValue(HALF, Half.BOTTOM)
+				            .setValue(SHAPE, StairsShape.STRAIGHT)
+                            .setValue(WATERLOGGED, Boolean.valueOf(false));
+		if (unconnect) {
+			defbs = defbs.setValue(UNCONNECT, Boolean.valueOf(false));
+		}
+		if (connectstate) {
+			defbs = defbs.setValue(CONNECTSTATE, 0);
+		}
+		this.registerDefaultState(defbs);
     }
 
     @Override
@@ -100,6 +118,10 @@ public class WCStairBlock extends StairBlock implements WesterosBlockLifecycle {
     		StateDefinition.add(tempUNCONNECT);
     		tempUNCONNECT = null;
     	}
+		if (tempCONNECTSTATE != null) {
+			StateDefinition.add(tempCONNECTSTATE);
+			tempCONNECTSTATE = null;
+		}
         super.createBlockStateDefinition(StateDefinition);
     }
 

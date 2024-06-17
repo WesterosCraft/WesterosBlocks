@@ -14,6 +14,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.properties.WallSide;
@@ -43,17 +44,24 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 			BlockBehaviour.Properties props = def.makeProperties();
 			String t = def.getType();
 			boolean doUnconnect = false;
+			boolean doConnectstate = false;
 			if (t != null) {
 				String[] toks = t.split(",");
 				for (String tok : toks) {
 					String[] parts = tok.split(":");
+					// See if we have unconnect
 					if (parts[0].equals("unconnect")) {
 						doUnconnect = true;
 						tempUNCONNECT = UNCONNECT;
 					}
+					// See if we have connectstate
+					if (parts[0].equals("connectstate")) {
+						doConnectstate = true;
+						tempCONNECTSTATE = CONNECTSTATE;
+					}
 				}
 			}
-			return def.registerRenderType(def.registerBlock(new WCWallBlock(props, def, doUnconnect)), false, false);
+			return def.registerRenderType(def.registerBlock(new WCWallBlock(props, def, doUnconnect, doConnectstate)), false, false);
 		}
 	}
 
@@ -73,8 +81,11 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 	private WesterosBlockDef def;
 	public static final BooleanProperty UNCONNECT = BooleanProperty.create("unconnect");
 	protected static BooleanProperty tempUNCONNECT;
-
 	public final boolean unconnect;
+
+	public static final IntegerProperty CONNECTSTATE = IntegerProperty.create("connectstate", 0, 3);
+	protected static IntegerProperty tempCONNECTSTATE;
+  public final boolean connectstate;
 
 	public final VoxelShape[] ourShapeByIndex;
 	public final VoxelShape[] ourCollisionShapeByIndex;
@@ -90,7 +101,7 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 
 	public final WallSize wallSize; // "normal", or "short"
 
-	protected WCWallBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doUnconnect) {
+	protected WCWallBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doUnconnect, boolean doConnectstate) {
 		super(props);
 		this.def = def;
 		String height = def.getTypeValue("size", "normal");
@@ -103,11 +114,19 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 			wheight = 16;
 		}
 		unconnect = doUnconnect;
-		BlockState defbs = this.stateDefinition.any().setValue(UP, Boolean.valueOf(true)).setValue(NORTH_WALL, WallSide.NONE)
-				.setValue(EAST_WALL, WallSide.NONE).setValue(SOUTH_WALL, WallSide.NONE)
-				.setValue(WEST_WALL, WallSide.NONE).setValue(WATERLOGGED, Boolean.valueOf(false));
+		connectstate = doConnectstate;
+		BlockState defbs = this.stateDefinition.any()
+												.setValue(UP, Boolean.valueOf(true))
+												.setValue(NORTH_WALL, WallSide.NONE)
+												.setValue(EAST_WALL, WallSide.NONE)
+												.setValue(SOUTH_WALL, WallSide.NONE)
+												.setValue(WEST_WALL, WallSide.NONE)
+												.setValue(WATERLOGGED, Boolean.valueOf(false));
 		if (unconnect) {
 			defbs = defbs.setValue(UNCONNECT, Boolean.valueOf(false));
+		}
+		if (connectstate) {
+			defbs = defbs.setValue(CONNECTSTATE, 0);
 		}
 		this.registerDefaultState(defbs);
 		
@@ -126,6 +145,14 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 			}
 			this.ourShapeByIndex = ourShapeByIndexSharedNormal;
 		}
+	}
+
+	protected WCWallBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doUnconnect) {
+		this(props, def, doUnconnect, false);
+	}
+
+	protected WCWallBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
+		this(props, def, false, false);
 	}
 
 	@Override
@@ -149,6 +176,10 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 		if (tempUNCONNECT != null) {
 			sd.add(tempUNCONNECT);
 			tempUNCONNECT = null;
+		}
+		if (tempCONNECTSTATE != null) {
+			sd.add(tempCONNECTSTATE);
+			tempCONNECTSTATE = null;
 		}
 		sd.add(UP, NORTH_WALL, EAST_WALL, WEST_WALL, SOUTH_WALL, WATERLOGGED);
 	}
