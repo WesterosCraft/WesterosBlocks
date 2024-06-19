@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "westerosblocks:block/particle_spawner_on"
+    "all": "particle_spawner:block/particle_spawner_on"
   }
 }

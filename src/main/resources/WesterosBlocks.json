@@ -30120,16 +30120,16 @@
       ]
     },
     {
-      "blockName": "particle_spawner",
+      "blockName": "smoke_particle",
       "blockType": "particle",
       "hardness": 5,
-      "stepSound": "cloth",
-      "material": "web",
+      "stepSound": "metal",
+      "material": "iron",
       "resistance": 4,
+      "isCustomModel": true,
       "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
       "creativeTab": "WesterosUtility",
-      "label": "Particle Spawner",
-      "isCustomModel": true,
+      "label": "Smoke Particle",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     }
   ]

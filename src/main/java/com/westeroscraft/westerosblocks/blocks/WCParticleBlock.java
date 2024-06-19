@@ -28,6 +28,16 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Random;
 
 public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, WesterosBlockLifecycle {
+
+    public static class Factory extends WesterosBlockFactory {
+        @Override
+        public Block buildBlockClass(WesterosBlockDef def) {
+            BlockBehaviour.Properties props = def.makeProperties().noCollission().noOcclusion();
+//          def.registerParticleBlock(particleBlock);
+            return def.registerRenderType(def.registerBlock(new WCParticleBlock(props,def)), false, true);
+        }
+    }
+
     private final WesterosBlockDef def;
     protected static final VoxelShape OFF_SHAPE = Block.box(4.0D, 4.0D, 4.0D, 12.0D, 12.0D, 12.0D);
     protected static final VoxelShape ON_SHAPE = Block.box(6.0D, 6.0D, 6.0D, 10.0D, 10.0D, 10.0D);
@@ -35,18 +45,8 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
     public static final IntegerProperty PARTICLE_RANGE = IntegerProperty.create("range", 1, 100);
-    public static final IntegerProperty PARTICLE_TYPE = IntegerProperty.create("type", 1, 100);
     public static final IntegerProperty PARTICLE_STRENGTH = IntegerProperty.create("strength", 1, 100);
 
-
-    public static class Factory extends WesterosBlockFactory {
-        @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
-            BlockBehaviour.Properties props = def.makeProperties();
-
-            return def.registerRenderType(def.registerBlock(new WCParticleBlock(props, def)), false, true);
-        }
-    }
 
     protected WCParticleBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
@@ -90,14 +90,14 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(POWERED, PARTICLE_TYPE, PARTICLE_STRENGTH, PARTICLE_RANGE, WATERLOGGED);
+        builder.add(POWERED, PARTICLE_STRENGTH, PARTICLE_RANGE, WATERLOGGED);
     }
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
 
-        return this.defaultBlockState().setValue(POWERED, false).setValue(PARTICLE_TYPE, 1).setValue(PARTICLE_STRENGTH, 1).setValue(PARTICLE_RANGE, 1).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER));
+        return this.defaultBlockState().setValue(POWERED, false).setValue(PARTICLE_STRENGTH, 1).setValue(PARTICLE_RANGE, 1).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER));
     }
 
     @Override

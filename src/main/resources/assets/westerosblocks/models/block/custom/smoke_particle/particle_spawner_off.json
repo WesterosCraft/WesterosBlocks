@@ -1,7 +1,7 @@
 {
   "textures": {
-    "0": "westerosblocks:block/particle_spawner/off",
-    "particle": "westerosblocks:block/particle_spawner/off"
+    "0": "westerosblocks:block/particle_spawner",
+    "particle": "westerosblocks:block/particle_spawner"
   },
   "elements": [
     {
