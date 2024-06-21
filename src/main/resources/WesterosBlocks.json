@@ -30126,7 +30126,6 @@
       "stepSound": "metal",
       "material": "iron",
       "resistance": 4,
-      "isCustomModel": true,
       "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
       "creativeTab": "WesterosUtility",
       "label": "Smoke Particle",

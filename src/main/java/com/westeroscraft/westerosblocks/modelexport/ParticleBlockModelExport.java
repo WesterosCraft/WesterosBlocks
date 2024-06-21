@@ -1,29 +1,17 @@
 package com.westeroscraft.westerosblocks.modelexport;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.world.level.block.Block;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Set;
+
 
 public class ParticleBlockModelExport extends ModelExport {
 
-    public static class ModelObjectCubeAll {
-        public String parent = "minecraft:block/cube_all";    // Use 'cube_all' model for single texture
-        public TextureAll textures = new TextureAll();
-    }
-
-    public static class TextureAll {
-        public String all;
-    }
-
-    public static class ModelObject {
+    public static class ModelItemObject {
         public String parent = "item/generated";
-        public TextureAll textures = new TextureAll();
     }
 
     public ParticleBlockModelExport(Block block, WesterosBlockDef def, File dest) {
@@ -33,25 +21,38 @@ public class ParticleBlockModelExport extends ModelExport {
 
     @Override
     public void doBlockStateExport() throws IOException {
-//        StateObject so = new StateObject();
-//
-//        this.writeBlockStateFile(def.blockName, so);
-    }
+        StateObject so = new StateObject();
 
-    protected void doParticleBlockModel(String name) throws IOException {
-        Object model;
+        Variant var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":block/custom/particle_block/particle_block_off";
+        so.addVariant("powered=false", var, null);
 
-        ModelObjectCubeAll mod = new ModelObjectCubeAll();
-        mod.textures.all = getTextureID(def.getTextureByIndex(0));
-        model = mod;
+        var = new Variant();
+        var.model = WesterosBlocks.MOD_ID + ":block/custom/particle_block/particle_block_on";
+        so.addVariant("powered=true", var, null);
 
-        this.writeBlockModelFile(name, model);
+        this.writeBlockStateFile(def.blockName, so);
     }
 
     @Override
     public void doModelExports() throws IOException {
-        for (int idx = 0; idx < def.states.size(); idx++) {
-            doParticleBlockModel(def.blockName);
-        }
+//        // build on model
+//        String txt = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "/transparent";
+//        ModelObjectParticleOn onmod = new ModelObjectParticleOn();
+//        onmod.textures.all = txt;
+//        onmod.parent = "block/cube_all";
+//        this.writeBlockModelFile(def.blockName + "_on", onmod);
+//
+//        // build off model
+//        String offtx = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "particle_block/off";
+//        ModelObjectParticleOff offmod = new ModelObjectParticleOff();
+//        offmod.textures.off = offtx;
+//        this.writeBlockModelFile(def.blockName + "_off", offmod);
+
+        // Build simple item model that refers to block model
+        String item = WesterosBlocks.MOD_ID + ":block/custom/particle_block/particle_block_off";
+        ModelItemObject mo = new ModelItemObject();
+        mo.parent = item;
+        this.writeItemModelFile(def.blockName, mo);
     }
 }

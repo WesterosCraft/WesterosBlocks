@@ -33,8 +33,7 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
             BlockBehaviour.Properties props = def.makeProperties().noCollission().noOcclusion();
-//          def.registerParticleBlock(particleBlock);
-            return def.registerRenderType(def.registerBlock(new WCParticleBlock(props,def)), false, true);
+            return def.registerRenderType(def.registerBlock(new WCParticleBlock(props, def)), false, true);
         }
     }
 
@@ -73,6 +72,7 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
 
         if (state.getValue(POWERED)) {
             for (int i = 0; i < state.getValue(PARTICLE_STRENGTH); i++) {
+                // TODO: replace the hard-coded ParticleType.CAMPFIRE_COSY_SMOKE with the 'type' property
                 level.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, true, (double) pos.getX() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getY() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getZ() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), 0.0D, 0.0D, 0.00);
             }
         }
