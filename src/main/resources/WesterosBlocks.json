@@ -30120,7 +30120,7 @@
       ]
     },
     {
-      "blockName": "smoke_particle",
+      "blockName": "cosy_smoke_particle",
       "blockType": "particle",
       "hardness": 5,
       "stepSound": "metal",
@@ -30129,6 +30129,20 @@
       "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
       "creativeTab": "WesterosUtility",
       "label": "Smoke Particle",
+      "type": "particleType:campfire_cosy_smoke",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+    },
+    {
+      "blockName": "ash_particle",
+      "blockType": "particle",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosUtility",
+      "label": "Ash Particle",
+      "type": "particleType:ash",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     }
   ]

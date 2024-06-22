@@ -36,19 +36,6 @@ public class ParticleBlockModelExport extends ModelExport {
 
     @Override
     public void doModelExports() throws IOException {
-//        // build on model
-//        String txt = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "/transparent";
-//        ModelObjectParticleOn onmod = new ModelObjectParticleOn();
-//        onmod.textures.all = txt;
-//        onmod.parent = "block/cube_all";
-//        this.writeBlockModelFile(def.blockName + "_on", onmod);
-//
-//        // build off model
-//        String offtx = WesterosBlocks.MOD_ID + ":block/generated/" + def.blockName + "particle_block/off";
-//        ModelObjectParticleOff offmod = new ModelObjectParticleOff();
-//        offmod.textures.off = offtx;
-//        this.writeBlockModelFile(def.blockName + "_off", offmod);
-
         // Build simple item model that refers to block model
         String item = WesterosBlocks.MOD_ID + ":block/custom/particle_block/particle_block_off";
         ModelItemObject mo = new ModelItemObject();

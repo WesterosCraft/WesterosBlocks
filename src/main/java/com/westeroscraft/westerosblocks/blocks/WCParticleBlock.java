@@ -6,6 +6,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -33,6 +34,7 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
             BlockBehaviour.Properties props = def.makeProperties().noCollission().noOcclusion();
+
             return def.registerRenderType(def.registerBlock(new WCParticleBlock(props, def)), false, true);
         }
     }
@@ -50,6 +52,8 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
     protected WCParticleBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
         super(props);
         this.def = def;
+
+        this.registerDefaultState(this.defaultBlockState().setValue(POWERED, Boolean.valueOf(false)).setValue(PARTICLE_STRENGTH, 1).setValue(PARTICLE_RANGE, 1).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Override
@@ -68,12 +72,12 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
 
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, Random rnd) {
+        final String ptype = def.getTypeValue("particleType");
         super.animateTick(state, level, pos, rnd);
 
         if (state.getValue(POWERED)) {
             for (int i = 0; i < state.getValue(PARTICLE_STRENGTH); i++) {
-                // TODO: replace the hard-coded ParticleType.CAMPFIRE_COSY_SMOKE with the 'type' property
-                level.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, true, (double) pos.getX() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getY() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getZ() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), 0.0D, 0.0D, 0.00);
+                level.addParticle(getParticleByType(ptype), true, (double) pos.getX() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getY() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getZ() - (state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), 0.0D, 0.0D, 0.00);
             }
         }
     }
@@ -97,7 +101,7 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
 
-        return this.defaultBlockState().setValue(POWERED, false).setValue(PARTICLE_STRENGTH, 1).setValue(PARTICLE_RANGE, 1).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER));
+        return this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, 1).setValue(PARTICLE_RANGE, 1).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER));
     }
 
     @Override
@@ -120,5 +124,16 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
     @Override
     public String[] getBlockTags() {
         return TAGS;
+    }
+
+    public static SimpleParticleType getParticleByType(String type) {
+        switch (type) {
+            case "campfire_cosy_smoke":
+                return ParticleTypes.CAMPFIRE_COSY_SMOKE;
+            case "ash":
+                return ParticleTypes.ASH;
+            default:
+                return ParticleTypes.CLOUD;
+        }
     }
 }
