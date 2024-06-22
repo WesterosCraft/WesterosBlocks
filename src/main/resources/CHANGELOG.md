@@ -1,3 +1,7 @@
+# 21 Jun 2024:
+- Added additional polished stone variants to fill gaps.
+- Added CTM and connectstate to polished stone, allowing for creation of arbitrary block sizes using data cycler tool.
+
 # 22 Jan 2024:
 - Added a large number of new stone brick and cobblestone sets to fill in gaps in existing block sets, and to remove biome dependencies.
 - Added "smooth" and "rough" plaster blocks and variants, retexturing existing plaster blocks as appropriate.

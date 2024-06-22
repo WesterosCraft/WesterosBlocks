@@ -162,6 +162,10 @@
     {
       "customTag": "wool-ctm",
       "blockNames": []
+    },
+    {
+      "customTag": "polished-stone-ctm",
+      "blockNames": []
     }
   ],
   "menuOverrides": [
@@ -1012,6 +1016,25 @@
       }
     },
     {
+      "baseBlockName": "black_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Black",
+      "textures": {
+        "all": "ashlar_full/black/all"
+      }
+    },
+    {
       "baseBlockName": "nether_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -1060,20 +1083,6 @@
         "arrow-slit": "ashlar_third/black/arrow_slit",
         "arrow-slit-window": "ashlar_third/black/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/black/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "black_granite_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Black",
-      "textures": {
-        "all": "ashlar_third/black/polished"
       }
     },
     {
@@ -1147,6 +1156,25 @@
       ]
     },
     {
+      "baseBlockName": "winterfell_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Dark Grey",
+      "textures": {
+        "all": "ashlar_full/dark_grey/all"
+      }
+    },
+    {
       "baseBlockName": "dark_grey_large_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -1195,20 +1223,6 @@
         "arrow-slit": "ashlar_third/dark_grey/arrow_slit",
         "arrow-slit-window": "ashlar_third/dark_grey/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/dark_grey/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "winterfell_granite_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Dark Grey",
-      "textures": {
-        "all": "ashlar_third/dark_grey/polished"
       }
     },
     {
@@ -1278,6 +1292,25 @@
         {"textures": {"all": "rubble/icy_northern/all3"}},
         {"textures": {"all": "rubble/icy_northern/all4"}}
       ]
+    },
+    {
+      "baseBlockName": "brown_grey_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Brown Grey",
+      "textures": {
+        "all": "ashlar_full/brown_grey/all"
+      }
     },
     {
       "baseBlockName": "brown_grey_large_brick",
@@ -1448,6 +1481,25 @@
       ]
     },
     {
+      "baseBlockName": "green_grey_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Green Grey",
+      "textures": {
+        "all": "ashlar_full/green_grey/all"
+      }
+    },
+    {
       "baseBlockName": "green_grey_large_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -1515,20 +1567,6 @@
       }
     },
     {
-      "baseBlockName": "green_grey_granite_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Green Grey",
-      "textures": {
-        "all": "ashlar_third/green_grey/polished"
-      }
-    },
-    {
       "baseBlockName": "green_grey_cobblestone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 1.5,
@@ -1559,6 +1597,25 @@
       "colorMult": "textures/colormap/darkcobble",
       "textures": {
         "all": "cobblestone_dark/green_grey/all"
+      }
+    },
+    {
+      "baseBlockName": "grey_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Normal Grey",
+      "textures": {
+        "all": "ashlar_full/grey/all"
       }
     },
     {
@@ -1630,20 +1687,6 @@
         "arrow-slit": "ashlar_third/grey/arrow_slit",
         "arrow-slit-window": "ashlar_third/grey/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/grey/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "grey_granite_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Normal Grey",
-      "textures": {
-        "all": "ashlar_third/grey/polished"
       }
     },
     {
@@ -1752,6 +1795,25 @@
       ]
     },
     {
+      "baseBlockName": "light_grey_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Light Grey",
+      "textures": {
+        "all": "ashlar_full/light_grey/all"
+      }
+    },
+    {
       "baseBlockName": "faint_light_grey_large_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -1853,6 +1915,25 @@
       }
     },
     {
+      "baseBlockName": "white_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone White",
+      "textures": {
+        "all": "ashlar_full/white/all"
+      }
+    },
+    {
       "baseBlockName": "stone_slab",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -1901,20 +1982,6 @@
         "arrow-slit": "ashlar_third/white/arrow_slit",
         "arrow-slit-window": "ashlar_third/white/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/white/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "white_granite_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone White",
-      "textures": {
-        "all": "ashlar_third/white/polished"
       }
     },
     {
@@ -1977,6 +2044,25 @@
       "baseLabel": "Dark Cobblestone White",
       "textures": {
         "all": "cobblestone_dark/white/all"
+      }
+    },
+    {
+      "baseBlockName": "reach_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Reach",
+      "textures": {
+        "all": "ashlar_full/reach/all"
       }
     },
     {
@@ -2148,6 +2234,25 @@
       }
     },
     {
+      "baseBlockName": "pink_sandstone_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Sandy Pink",
+      "textures": {
+        "all": "ashlar_full/sandy_pink/all"
+      }
+    },
+    {
       "baseBlockName": "sandy_pink_large_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -2196,20 +2301,6 @@
         "arrow-slit": "ashlar_third/sandy_pink/arrow_slit",
         "arrow-slit-window": "ashlar_third/sandy_pink/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/sandy_pink/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "pink_sandstone_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Sandy Pink",
-      "textures": {
-        "all": "ashlar_third/sandy_pink/polished"
       }
     },
     {
@@ -2266,6 +2357,25 @@
       }
     },
     {
+      "baseBlockName": "kl_dun_brick_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Dun",
+      "textures": {
+        "all": "ashlar_full/dun/all"
+      }
+    },
+    {
       "baseBlockName": "kl_dun_large_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -2317,20 +2427,6 @@
       }
     },
     {
-      "baseBlockName": "kl_dun_brick_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Dun",
-      "textures": {
-        "all": "ashlar_third/dun/polished"
-      }
-    },
-    {
       "baseBlockName": "kl_dun_cobble",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 1.5,
@@ -2342,6 +2438,25 @@
       "baseLabel": "Dark Cobblestone Dun",
       "textures": {
         "all": "cobblestone_dark/dun/all"
+      }
+    },
+    {
+      "baseBlockName": "coarse_red_sandstone_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Pale Red",
+      "textures": {
+        "all": "ashlar_full/pale_red/all"
       }
     },
     {
@@ -2410,6 +2525,25 @@
       }
     },
     {
+      "baseBlockName": "red_sandstone_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Red",
+      "textures": {
+        "all": "ashlar_full/red/all"
+      }
+    },
+    {
       "baseBlockName": "red_sandstone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -2424,20 +2558,6 @@
         "arrow-slit": "ashlar_third/red/arrow_slit",
         "arrow-slit-window": "ashlar_third/red/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/red/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "red_sandstone_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Red",
-      "textures": {
-        "all": "ashlar_third/red/polished"
       }
     },
     {
@@ -2493,6 +2613,25 @@
       }
     },
     {
+      "baseBlockName": "dark_red_sandstone_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Dark Red",
+      "textures": {
+        "all": "ashlar_full/dark_red/all"
+      }
+    },
+    {
       "baseBlockName": "unused_purple_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -2544,20 +2683,6 @@
       }
     },
     {
-      "baseBlockName": "dark_red_sandstone_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Dark Red",
-      "textures": {
-        "all": "ashlar_third/dark_red/polished"
-      }
-    },
-    {
       "baseBlockName": "dark_red_light_stone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -2572,6 +2697,25 @@
         "arrow-slit": "ashlar_smooth/dark_red/arrow_slit",
         "arrow-slit-window": "ashlar_smooth/dark_red/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_smooth/dark_red/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "oldtown_granite_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Light Oldtown",
+      "textures": {
+        "all": "ashlar_full/light_oldtown/all"
       }
     },
     {
@@ -2626,20 +2770,6 @@
       }
     },
     {
-      "baseBlockName": "oldtown_granite_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Light Oldtown",
-      "textures": {
-        "all": "ashlar_third/light_oldtown/polished"
-      }
-    },
-    {
       "baseBlockName": "oldtown_light_stone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -2671,6 +2801,25 @@
         "arrow-slit": "fieldstone/light_oldtown/arrow_slit",
         "arrow-slit-window": "fieldstone/light_oldtown/arrow_slit_window",
         "arrow-slit-ornate": "fieldstone/light_oldtown/arrow_slit_ornate"
+      }
+    },
+    {
+      "baseBlockName": "oldtown_brick_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Oldtown",
+      "textures": {
+        "all": "ashlar_full/oldtown/all"
       }
     },
     {
@@ -2736,6 +2885,25 @@
       }
     },
     {
+      "baseBlockName": "arbor_brick_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Arbor",
+      "textures": {
+        "all": "ashlar_full/arbor/all"
+      }
+    },
+    {
       "baseBlockName": "arbor_large_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -2784,20 +2952,6 @@
         "arrow-slit": "ashlar_third/arbor/arrow_slit",
         "arrow-slit-window": "ashlar_third/arbor/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/arbor/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "arbor_brick_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Arbor",
-      "textures": {
-        "all": "ashlar_third/arbor/polished"
       }
     },
     {
@@ -2867,6 +3021,25 @@
       }
     },
     {
+      "baseBlockName": "vivid_sandstone_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Tan",
+      "textures": {
+        "all": "ashlar_full/tan/all"
+      }
+    },
+    {
       "baseBlockName": "vivid_sandstone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -2881,20 +3054,6 @@
         "arrow-slit": "ashlar_third/tan/arrow_slit",
         "arrow-slit-window": "ashlar_third/tan/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/tan/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "vivid_sandstone_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Tan",
-      "textures": {
-        "all": "ashlar_third/tan/polished"
       }
     },
     {
@@ -2915,6 +3074,25 @@
         {"textures": {"all": "ashlar_third/tan_mossy/all5"}},
         {"textures": {"all": "ashlar_third/tan_mossy/all6"}}
       ]
+    },
+    {
+      "baseBlockName": "monochrome_sandstone_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Westerlands",
+      "textures": {
+        "all": "ashlar_full/westerlands/all"
+      }
     },
     {
       "baseBlockName": "large_brick_sandstone",
@@ -2982,20 +3160,6 @@
         "arrow-slit": "ashlar_third/westerlands/arrow_slit",
         "arrow-slit-window": "ashlar_third/westerlands/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/westerlands/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "monochrome_sandstone_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Westerlands",
-      "textures": {
-        "all": "ashlar_third/westerlands/polished"
       }
     },
     {
@@ -3084,6 +3248,25 @@
       }
     },
     {
+      "baseBlockName": "vivid_dark_sandstone_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Dark Tan",
+      "textures": {
+        "all": "ashlar_full/dark_tan/all"
+      }
+    },
+    {
       "baseBlockName": "vivid_dark_sandstone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -3101,17 +3284,22 @@
       }
     },
     {
-      "baseBlockName": "vivid_dark_sandstone_polished",
+      "baseBlockName": "monochrome_dark_sandstone_polished",
       "variants": ["solid", "stairs", "slab", "wall"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Dark Tan",
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Light Brown",
       "textures": {
-        "all": "ashlar_third/dark_tan/polished"
+        "all": "ashlar_full/light_brown/all"
       }
     },
     {
@@ -3149,17 +3337,22 @@
       }
     },
     {
-      "baseBlockName": "monochrome_dark_sandstone_polished",
+      "baseBlockName": "stormlands_brick_polished",
       "variants": ["solid", "stairs", "slab", "wall"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Light Brown",
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Stormlands",
       "textures": {
-        "all": "ashlar_third/light_brown/polished"
+        "all": "ashlar_full/stormlands/all"
       }
     },
     {
@@ -3264,6 +3457,25 @@
       }
     },
     {
+      "baseBlockName": "desert_sandstone_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Sandstone",
+      "textures": {
+        "all": "ashlar_full/sandstone/all"
+      }
+    },
+    {
       "baseBlockName": "desert_sandstone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "altNames": {
@@ -3285,17 +3497,22 @@
       }
     },
     {
-      "baseBlockName": "desert_sandstone_polished",
+      "baseBlockName": "dorne_dark_sandstone_polished",
       "variants": ["solid", "stairs", "slab", "wall"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Sandstone",
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Dark Sandstone",
       "textures": {
-        "all": "ashlar_third/sandstone/polished"
+        "all": "ashlar_full/dark_sandstone/all"
       }
     },
     {
@@ -3316,20 +3533,6 @@
       }
     },
     {
-      "baseBlockName": "dorne_dark_sandstone_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Dark Sandstone",
-      "textures": {
-        "all": "ashlar_third/dark_sandstone/polished"
-      }
-    },
-    {
       "baseBlockName": "dorne_mossy_dark_sandstone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 1.5,
@@ -3341,6 +3544,25 @@
       "baseLabel": "Medium Ashlar Dark Sandstone Mossy",
       "textures": {
         "all": "ashlar_third/dark_sandstone_mossy/all"
+      }
+    },
+    {
+      "baseBlockName": "dorne_dull_terracotta_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Dull Terracotta",
+      "textures": {
+        "all": "ashlar_full/dull_terracotta/all"
       }
     },
     {
@@ -3361,17 +3583,22 @@
       }
     },
     {
-      "baseBlockName": "dorne_dull_terracotta_polished",
+      "baseBlockName": "dorne_light_terracotta_polished",
       "variants": ["solid", "stairs", "slab", "wall"],
       "hardness": 1.5,
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Dull Terracotta",
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Light Terracotta",
       "textures": {
-        "all": "ashlar_third/dull_terracotta/polished"
+        "all": "ashlar_full/light_terracotta/all"
       }
     },
     {
@@ -3392,20 +3619,6 @@
       }
     },
     {
-      "baseBlockName": "dorne_light_terracotta_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Light Terracotta",
-      "textures": {
-        "all": "ashlar_third/light_terracotta/polished"
-      }
-    },
-    {
       "baseBlockName": "dorne_mossy_light_terracotta",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 1.5,
@@ -3417,6 +3630,25 @@
       "baseLabel": "Medium Ashlar Light Terracotta Mossy",
       "textures": {
         "all": "ashlar_third/light_terracotta_mossy/all"
+      }
+    },
+    {
+      "baseBlockName": "terracotta_polished",
+      "variants": ["solid", "stairs", "slab", "wall"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosPolishedStone",
+      "customTags": [ "polished-stone-ctm" ],
+      "types": {
+        "solid,slab": "connectstate:true",
+        "stairs,wall": "unconnect:false,connectstate:true"
+      },
+      "baseLabel": "Polished Stone Terracotta",
+      "textures": {
+        "all": "ashlar_full/terracotta/all"
       }
     },
     {
@@ -3468,20 +3700,6 @@
         "arrow-slit": "ashlar_third/terracotta/arrow_slit",
         "arrow-slit-window": "ashlar_third/terracotta/arrow_slit_window",
         "arrow-slit-ornate": "ashlar_third/terracotta/arrow_slit_ornate"
-      }
-    },
-    {
-      "baseBlockName": "terracotta_polished",
-      "variants": ["solid", "stairs", "slab", "wall"],
-      "hardness": 1.5,
-      "stepSound": "stone",
-      "material": "rock",
-      "resistance": 10,
-      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosPanellingCarvings",
-      "baseLabel": "Polished Stone Terracotta",
-      "textures": {
-        "all": "ashlar_third/terracotta/polished"
       }
     },
     {

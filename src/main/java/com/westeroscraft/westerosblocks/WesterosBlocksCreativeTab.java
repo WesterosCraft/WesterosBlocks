@@ -14,6 +14,7 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     public static final CreativeModeTab tabWesterosQuarterAshlar = new  WesterosBlocksCreativeTab("WesterosQuarterAshlar", "§fQuarter Ashlar", "small_smooth_stone_brick");
     public static final CreativeModeTab tabWesterosMediumAshlar = new  WesterosBlocksCreativeTab("WesterosMediumAshlar", "§fMedium Ashlar", "grey_granite");
     public static final CreativeModeTab tabWesterosHalfAshlar = new  WesterosBlocksCreativeTab("WesterosHalfAshlar", "§fHalf Ashlar", "stone_brick");
+    public static final CreativeModeTab tabWesterosPolishedStone = new  WesterosBlocksCreativeTab("WesterosPolishedStone", "§fPolished Stone", "grey_granite_polished");
     public static final CreativeModeTab tabWesterosBrick = new  WesterosBlocksCreativeTab("WesterosBrick", "§fBrick", "small_orange_bricks");
     // public static final CreativeModeTab tabWesterosSmallBrick = new  WesterosBlocksCreativeTab("WesterosSmallBrick", "§fSmall Brick", "light_grey_brick");
     // public static final CreativeModeTab tabWesterosLargeBrick = new  WesterosBlocksCreativeTab("WesterosLargeBrick", "§fLarge Brick", "stone_brick");
