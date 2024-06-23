@@ -3,10 +3,17 @@ package com.westeroscraft.westerosblocks.blocks;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -21,6 +28,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -101,7 +109,7 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
 
-        return this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, 1).setValue(PARTICLE_RANGE, 1).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER));
+        return this.defaultBlockState().setValue(POWERED, false).setValue(PARTICLE_STRENGTH, 1).setValue(PARTICLE_RANGE, 1).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER));
     }
 
     @Override
@@ -119,6 +127,63 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
+//    public static void refreshBlockStates(Level level, BlockPos pos, BlockState state, Integer strengthChange, Integer rangeChange) {
+//
+//        //calculate the new blockstate value
+//        int strength = state.getValue(PARTICLE_STRENGTH) + strengthChange;
+//         int range = state.getValue(PARTICLE_RANGE) + rangeChange;
+//
+//        //test if new value is higher than the max value, and reset it if to high
+//        if (strength > 10) 	strength = 1;
+//        if (range > 10)     range = 1;
+//
+//        level.setBlock(pos, this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, strength).setValue(PARTICLE_RANGE, range).setValue(ParticleBlock.WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER)), 11)
+//
+//    }
+
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
+
+        level.playSound(null, pos, SoundEvents.UI_BUTTON_CLICK, SoundSource.BLOCKS, 1.0f, 1.0f);
+
+        // set POWER on first use
+        if (!state.getValue(POWERED) && player.getMainHandItem().isEmpty()) {
+            level.setBlock(pos, this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, state.getValue(PARTICLE_STRENGTH)).setValue(WATERLOGGED, Boolean.valueOf(level.getFluidState(pos).getType() == Fluids.WATER)), 11);
+        }
+
+        if (state.getValue(POWERED) && player.isShiftKeyDown()) {
+            // testing - just cycle through strength of particle for now
+//            this.refreshBlockStates(world, pos, state, +1, 0);
+
+            //calculate the new blockstate value
+            int strength = state.getValue(PARTICLE_STRENGTH);
+            int range = state.getValue(PARTICLE_RANGE) + 1;
+
+            //test if new value is higher than the max value, and reset it if to high
+            if (strength > 10) 	strength = 1;
+            if (range > 10)     range = 1;
+
+            level.setBlock(pos, this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, strength).setValue(PARTICLE_RANGE, range).setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER), 11);
+
+
+        } else {
+            return InteractionResult.PASS;
+        }
+
+        return InteractionResult.sidedSuccess(level.isClientSide);
+
+
+//        if ( player.isCreative() && player.getMainHandItem().isEmpty()) {
+////            state = state.cycle(this.STATE);
+//            level.setBlock(pos, state, 10);
+//            level.levelEvent(player, 1006, pos, 0);
+//            return InteractionResult.sidedSuccess(level.isClientSide);
+//        }
+//        else {
+//            return InteractionResult.PASS;
+//        }
+    }
+
     private static final String[] TAGS = {};
 
     @Override
@@ -127,13 +192,14 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
     }
 
     public static SimpleParticleType getParticleByType(String type) {
-        switch (type) {
-            case "campfire_cosy_smoke":
-                return ParticleTypes.CAMPFIRE_COSY_SMOKE;
-            case "ash":
-                return ParticleTypes.ASH;
-            default:
-                return ParticleTypes.CLOUD;
-        }
+        return switch (type) {
+            case "campfire_cosy_smoke" -> ParticleTypes.CAMPFIRE_COSY_SMOKE;
+            case "campfire_signal_smoke" -> ParticleTypes.CAMPFIRE_SIGNAL_SMOKE;
+            case "smoke" -> ParticleTypes.SMOKE;
+            case "large_smoke" -> ParticleTypes.LARGE_SMOKE;
+            case "ash" -> ParticleTypes.ASH;
+            case "bubble" -> ParticleTypes.BUBBLE;
+            default -> ParticleTypes.CLOUD;
+        };
     }
 }

@@ -30120,7 +30120,7 @@
       ]
     },
     {
-      "blockName": "cosy_smoke_particle",
+      "blockName": "particle_cosy_smoke",
       "blockType": "particle",
       "hardness": 5,
       "stepSound": "metal",
@@ -30128,12 +30128,12 @@
       "resistance": 4,
       "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
       "creativeTab": "WesterosUtility",
-      "label": "Smoke Particle",
+      "label": "Cosy Smoke Particle",
       "type": "particleType:campfire_cosy_smoke",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     },
     {
-      "blockName": "ash_particle",
+      "blockName": "particle_ash",
       "blockType": "particle",
       "hardness": 5,
       "stepSound": "metal",
@@ -30143,6 +30143,58 @@
       "creativeTab": "WesterosUtility",
       "label": "Ash Particle",
       "type": "particleType:ash",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+    },
+    {
+      "blockName": "particle_bubble",
+      "blockType": "particle",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosUtility",
+      "label": "Bubble Particle",
+      "type": "particleType:bubble",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+    },
+    {
+      "blockName": "particle_signal_smoke",
+      "blockType": "particle",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosUtility",
+      "label": "Signal Smoke Particle",
+      "type": "particleType:campfire_signal_smoke",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+    },
+    {
+      "blockName": "particle_smoke",
+      "blockType": "particle",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosUtility",
+      "label": "Smoke Particle",
+      "type": "particleType:smoke",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+    },
+    {
+      "blockName": "particle_large_smoke",
+      "blockType": "particle",
+      "hardness": 5,
+      "stepSound": "metal",
+      "material": "iron",
+      "resistance": 4,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosUtility",
+      "label": "Large Smoke Particle",
+      "type": "particleType:smoke",
       "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     }
   ]
