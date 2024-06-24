@@ -851,6 +851,50 @@
       }
     },
     {
+      "baseBlockName": "test_multistate_overlay_block_set",
+      "variants": ["solid", "slab", "wall", "fence", "hopper"],
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
+      "creativeTab": "WesterosTest",
+      "states": [
+        {
+          "stateID": "base"
+        },
+        {
+          "stateID": "red",
+          "excludeVariants": "hopper",
+          "overlayTextures": {
+            "all": "test_block/overlay_red"
+          }
+        },
+        {
+          "stateID": "blue",
+          "excludeVariants": "hopper",
+          "overlayTextures": {
+            "all": "test_block/overlay_blue"
+          }
+        },
+        {
+          "stateID": "green",
+          "excludeVariants": "hopper",
+          "overlayTextures": {
+            "all": "test_block/overlay_green"
+          }
+        }
+      ],
+      "textures": {
+        "bottom": "test_block/d_texture",
+        "top": "test_block/u_texture",
+        "west": "test_block/w_texture",
+        "east": "test_block/e_texture",
+        "south": "test_block/s_texture",
+        "north": "test_block/n_texture"
+      }
+    },
+    {
       "baseBlockName": "iron",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "altNames": {

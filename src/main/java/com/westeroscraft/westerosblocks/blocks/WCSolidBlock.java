@@ -31,14 +31,15 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
-        	}   
-            // See if we have connectstate
+        	}
+            // Process types
             String t = def.getType();
 			boolean doConnectstate = false;
 			if (t != null) {
 				String[] toks = t.split(",");
 				for (String tok : toks) {
 					String[] parts = tok.split(":");
+                    // See if we have connectstate
 					if (parts[0].equals("connectstate")) {
 						doConnectstate = true;
 						tempCONNECTSTATE = CONNECTSTATE;
