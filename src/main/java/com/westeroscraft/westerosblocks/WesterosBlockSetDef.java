@@ -229,13 +229,7 @@ public class WesterosBlockSetDef {
       variantDef.colorMult = this.colorMult;
 
       // Process blocktypes with special attributes
-      if (variant.equals("stairs")) {
-        if (this.altNames != null && this.altNames.containsKey("solid"))
-          variantDef.modelBlockName = this.altNames.get("solid");
-        else if (this.variants.contains("solid"))
-          variantDef.modelBlockName = this.baseBlockName;
-      }
-      else if (variant.equals("hopper")) {
+      if (variant.equals("hopper")) {
         WesterosBlockDef.Cuboid[] cuboids = { 
           new WesterosBlockDef.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[] { 0, 0, 0, 0, 0, 0 }),
           new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),

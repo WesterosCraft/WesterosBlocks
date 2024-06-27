@@ -852,7 +852,7 @@
     },
     {
       "baseBlockName": "test_multistate_overlay_block_set",
-      "variants": ["solid", "slab", "wall", "fence", "hopper"],
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper"],
       "hardness": 3,
       "stepSound": "wood",
       "material": "wood",
@@ -24980,7 +24980,11 @@
     {
       "blockName": "test_block_6",
       "blockType": "stair",
-      "modelBlockName": "test_block",
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
       "creativeTab": "WesterosTest",
       "label": "Test Stair (unconnect)",
       "type": "unconnect:false",
@@ -24989,7 +24993,7 @@
         "test_block/u_texture",
         "test_block/w_texture"
       ]
-    },    
+    }, 
     {
       "blockName": "test_block_7",
       "blockType": "pane",
@@ -30065,11 +30069,18 @@
     {
       "blockName": "stacked_bones_stairs",
       "blockType": "stair",
-      "modelBlockName": "stacked_bones_solid",
+      "stepSound": "stone",
+      "material": "rock",
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
       "creativeTab": "WesterosMisc",
       "type": "unconnect:false,no-uvlock",
       "label": "Stacked Bones Stairs",
-      "isCustomModel": true
+      "isCustomModel": true,
+      "textures": [
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_front",
+        "stacked_bones/bone_stacked_rotated"
+      ]
     },
     {
       "blockName": "stacked_bones_slab",
@@ -30135,10 +30146,16 @@
     {
       "blockName": "piled_bones_stairs",
       "blockType": "stair",
-      "modelBlockName": "piled_bones",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
       "creativeTab": "WesterosMisc",
       "type": "unconnect:false",
-      "label": "Piled Bones Stairs"
+      "label": "Piled Bones Stairs",
+      "textures": [
+        "piled_bones/side"
+      ]
     },
     {
       "blockName": "piled_bones_slab",
