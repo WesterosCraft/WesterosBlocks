@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_grafton_bottom",
-    "txt5": "westerosblocks:block/banner_block/banner_grafton_bottom",
+    "txt4": "westerosblocks:block/banner/house/grafton/bottom",
+    "txt5": "westerosblocks:block/banner/house/grafton/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

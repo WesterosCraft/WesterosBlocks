@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_targaryen_top",
-    "txt5": "westerosblocks:block/banner_block/banner_targaryen_top",
+    "txt4": "westerosblocks:block/banner/house/targaryen/top",
+    "txt5": "westerosblocks:block/banner/house/targaryen/top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

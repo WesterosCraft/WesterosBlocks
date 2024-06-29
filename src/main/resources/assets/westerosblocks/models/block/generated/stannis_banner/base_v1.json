@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_stannis_bottom",
-    "txt5": "westerosblocks:block/banner_block/banner_stannis_bottom",
+    "txt4": "westerosblocks:block/banner/house/stannis/bottom",
+    "txt5": "westerosblocks:block/banner/house/stannis/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_rhllor_bottom",
-    "txt5": "westerosblocks:block/banner_block/banner_rhllor_bottom",
+    "txt4": "westerosblocks:block/banner/other/lord_of_light_rhllor/bottom",
+    "txt5": "westerosblocks:block/banner/other/lord_of_light_rhllor/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [
