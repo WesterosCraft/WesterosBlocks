@@ -1,8 +1,11 @@
 # 21 Jun 2024:
 - Added additional polished stone variants to fill gaps.
 - Added CTM and connectstate to polished stone, allowing for creation of arbitrary block sizes using data cycler tool.
-- Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 - Added house banners, generic wool banners, and updates to existing banners.
+- Added additional engraved ashlar colors.
+- Added scorched earth layers.
+- Added sandy pink smooth ashlar and plaster.
+- Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 
 # 22 Jan 2024:
 - Added a large number of new stone brick and cobblestone sets to fill in gaps in existing block sets, and to remove biome dependencies.

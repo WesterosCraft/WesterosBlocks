@@ -2348,6 +2348,23 @@
       }
     },
     {
+      "baseBlockName": "sandy_pink_light_stone",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosSmoothAshlar",
+      "baseLabel": "Smooth Ashlar Sandy Pink",
+      "textures": {
+        "all": "ashlar_smooth/sandy_pink/all",
+        "arrow-slit": "ashlar_smooth/sandy_pink/arrow_slit",
+        "arrow-slit-window": "ashlar_smooth/sandy_pink/arrow_slit_window",
+        "arrow-slit-ornate": "ashlar_smooth/sandy_pink/arrow_slit_ornate"
+      }
+    },
+    {
       "baseBlockName": "sandy_pink_light_brick",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip", "arrow_slit", "arrow_slit_window", "arrow_slit_ornate"],
       "hardness": 1.5,
@@ -5471,6 +5488,20 @@
       }
     },
     {
+      "baseBlockName": "sandy_pink_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Sandy Pink Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/sandy_pink/all"
+      }
+    },
+    {
       "baseBlockName": "pale_pink_plaster",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 2,
@@ -5977,6 +6008,21 @@
       "randomTextures": [
         {"textures": {"all": "plaster/rough/pink/all1"}},
         {"textures": {"all": "plaster/rough/pink/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "sandy_pink_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Sandy Pink Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/sandy_pink/all1"}},
+        {"textures": {"all": "plaster/rough/sandy_pink/all2"}}
       ]
     },
     {
@@ -8300,7 +8346,7 @@
     },
     {
       "baseBlockName": "scorched_earth",
-      "variants": ["solid", "slab"],
+      "variants": ["solid", "slab", "layer"],
       "hardness": 2,
       "stepSound": "grass",
       "material": "ground",
@@ -8589,9 +8635,9 @@
       "material": "rock",
       "resistance": 10,
       "creativeTab": "WesterosPanellingCarvings",
-      "label": "Ashlar Engraved Black",
+      "label": "Ashlar Embellished Black",
       "textures": [
-        "ashlar_half/black/engraved"
+        "ashlar_half/black/embellished"
       ]
     },
     {
@@ -8604,7 +8650,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Black",
       "textures": [
-        "ashlar_third/black/engraved"
+        "ashlar_engraved/black/all"
       ]
     },
     {
@@ -8619,7 +8665,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Black Wall",
       "textures": [
-        "ashlar_third/black/engraved"
+        "ashlar_engraved/black/all"
       ]
     },
     {
@@ -8632,7 +8678,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Dark Grey",
       "textures": [
-        "ashlar_third/dark_grey/engraved"
+        "ashlar_engraved/dark_grey/all"
       ]
     },
     {
@@ -8647,7 +8693,35 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Dark Grey Wall",
       "textures": [
-        "ashlar_third/dark_grey/engraved"
+        "ashlar_engraved/dark_grey/all"
+      ]
+    },
+    {
+      "blockName": "brown_grey_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Brown Grey",
+      "textures": [
+        "ashlar_engraved/brown_grey/all"
+      ]
+    },
+    {
+      "blockName": "brown_grey_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Brown Grey Wall",
+      "textures": [
+        "ashlar_engraved/brown_grey/all"
       ]
     },
     {
@@ -8660,7 +8734,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Green Grey",
       "textures": [
-        "ashlar_third/green_grey/engraved"
+        "ashlar_engraved/green_grey/all"
       ]
     },
     {
@@ -8675,7 +8749,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Green Grey Wall",
       "textures": [
-        "ashlar_third/green_grey/engraved"
+        "ashlar_engraved/green_grey/all"
       ]
     },
     {
@@ -8688,7 +8762,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Normal Grey",
       "textures": [
-        "ashlar_third/grey/engraved"
+        "ashlar_engraved/grey/all"
       ]
     },
     {
@@ -8703,7 +8777,35 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Normal Grey Wall",
       "textures": [
-        "ashlar_third/grey/engraved"
+        "ashlar_engraved/grey/all"
+      ]
+    },
+    {
+      "blockName": "light_grey_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Light Grey",
+      "textures": [
+        "ashlar_engraved/light_grey/all"
+      ]
+    },
+    {
+      "blockName": "light_grey_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Light Grey Wall",
+      "textures": [
+        "ashlar_engraved/light_grey/all"
       ]
     },
     {
@@ -8716,7 +8818,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved White",
       "textures": [
-        "ashlar_third/white/engraved"
+        "ashlar_engraved/white/all"
       ]
     },
     {
@@ -8731,7 +8833,35 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved White Wall",
       "textures": [
-        "ashlar_third/white/engraved"
+        "ashlar_engraved/white/all"
+      ]
+    },
+    {
+      "blockName": "reach_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Reach",
+      "textures": [
+        "ashlar_engraved/reach/all"
+      ]
+    },
+    {
+      "blockName": "reach_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Reach Wall",
+      "textures": [
+        "ashlar_engraved/reach/all"
       ]
     },
     {
@@ -8744,7 +8874,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Sandy Pink",
       "textures": [
-        "ashlar_third/sandy_pink/engraved"
+        "ashlar_engraved/sandy_pink/all"
       ]
     },
     {
@@ -8759,7 +8889,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Sandy Pink Wall",
       "textures": [
-        "ashlar_third/sandy_pink/engraved"
+        "ashlar_engraved/sandy_pink/all"
       ]
     },
     {
@@ -8772,7 +8902,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Dun",
       "textures": [
-        "ashlar_third/dun/engraved"
+        "ashlar_engraved/dun/all"
       ]
     },
     {
@@ -8787,7 +8917,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Dun Wall",
       "textures": [
-        "ashlar_third/dun/engraved"
+        "ashlar_engraved/dun/all"
       ]
     },
     {
@@ -8800,7 +8930,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Pale Red",
       "textures": [
-        "ashlar_third/pale_red/engraved"
+        "ashlar_engraved/pale_red/all"
       ]
     },
     {
@@ -8815,7 +8945,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Pale Red Wall",
       "textures": [
-        "ashlar_third/pale_red/engraved"
+        "ashlar_engraved/pale_red/all"
       ]
     },
     {
@@ -8828,7 +8958,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Pale Dark Red",
       "textures": [
-        "ashlar_third/pale_dark_red/engraved"
+        "ashlar_engraved/pale_dark_red/all"
       ]
     },
     {
@@ -8843,7 +8973,35 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Pale Dark Red Wall",
       "textures": [
-        "ashlar_third/pale_dark_red/engraved"
+        "ashlar_engraved/pale_dark_red/all"
+      ]
+    },
+    {
+      "blockName": "light_oldtown_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Light Oldtown",
+      "textures": [
+        "ashlar_engraved/light_oldtown/all"
+      ]
+    },
+    {
+      "blockName": "light_oldtown_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Light Oldtown Wall",
+      "textures": [
+        "ashlar_engraved/light_oldtown/all"
       ]
     },
     {
@@ -8856,7 +9014,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Arbor",
       "textures": [
-        "ashlar_third/arbor/engraved"
+        "ashlar_engraved/arbor/all"
       ]
     },
     {
@@ -8871,7 +9029,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Arbor Wall",
       "textures": [
-        "ashlar_third/arbor/engraved"
+        "ashlar_engraved/arbor/all"
       ]
     },
     {
@@ -8884,7 +9042,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Tan",
       "textures": [
-        "ashlar_third/tan/engraved"
+        "ashlar_engraved/tan/all"
       ]
     },
     {
@@ -8899,7 +9057,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Tan Wall",
       "textures": [
-        "ashlar_third/tan/engraved"
+        "ashlar_engraved/tan/all"
       ]
     },
     {
@@ -8912,7 +9070,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Westerlands",
       "textures": [
-        "ashlar_third/westerlands/engraved"
+        "ashlar_engraved/westerlands/all"
       ]
     },
     {
@@ -8927,7 +9085,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Westerlands Wall",
       "textures": [
-        "ashlar_third/westerlands/engraved"
+        "ashlar_engraved/westerlands/all"
       ]
     },
     {
@@ -8940,7 +9098,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Dark Tan",
       "textures": [
-        "ashlar_third/dark_tan/engraved"
+        "ashlar_engraved/dark_tan/all"
       ]
     },
     {
@@ -8955,7 +9113,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Dark Tan Wall",
       "textures": [
-        "ashlar_third/dark_tan/engraved"
+        "ashlar_engraved/dark_tan/all"
       ]
     },
     {
@@ -8968,7 +9126,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Light Brown",
       "textures": [
-        "ashlar_third/light_brown/engraved"
+        "ashlar_engraved/light_brown/all"
       ]
     },
     {
@@ -8983,7 +9141,35 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Light Brown Wall",
       "textures": [
-        "ashlar_third/light_brown/engraved"
+        "ashlar_engraved/light_brown/all"
+      ]
+    },
+    {
+      "blockName": "stormlands_brick_engraved",
+      "blockType": "solid",
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "WesterosPanellingCarvings",
+      "label": "Ashlar Engraved Stormlands",
+      "textures": [
+        "ashlar_engraved/stormlands/all"
+      ]
+    },
+    {
+      "blockName": "stormlands_brick_engraved_wall",
+      "blockType": "wall",
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+      "creativeTab": "WesterosPanellingCarvings",
+      "type": "unconnect:false",
+      "label": "Ashlar Engraved Stormlands Wall",
+      "textures": [
+        "ashlar_engraved/stormlands/all"
       ]
     },
     {
@@ -8996,7 +9182,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Sandstone",
       "textures": [
-        "ashlar_third/sandstone/engraved"
+        "ashlar_engraved/sandstone/all"
       ]
     },
     {
@@ -9011,7 +9197,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Sandstone Wall",
       "textures": [
-        "ashlar_third/sandstone/engraved"
+        "ashlar_engraved/sandstone/all"
       ]
     },
     {
@@ -9024,7 +9210,7 @@
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Ashlar Engraved Terracotta",
       "textures": [
-        "ashlar_third/terracotta/engraved"
+        "ashlar_engraved/terracotta/all"
       ]
     },
     {
@@ -9039,7 +9225,7 @@
       "type": "unconnect:false",
       "label": "Ashlar Engraved Terracotta Wall",
       "textures": [
-        "ashlar_third/terracotta/engraved"
+        "ashlar_engraved/terracotta/all"
       ]
     },
     {
