@@ -1,13 +1,22 @@
 {
   "variants": {
-    "state=state2": {
-      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/state2_v1"
+    "symmetrical=false,state=state1": {
+      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/asymmetrical/state1_v1"
     },
-    "state=state1": {
-      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/state1_v1"
+    "symmetrical=false,state=state2": {
+      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/asymmetrical/state2_v1"
     },
-    "state=state0": {
-      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/state0_v1"
+    "symmetrical=true,state=state0": {
+      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/symmetrical/state0_v1"
+    },
+    "symmetrical=true,state=state1": {
+      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/symmetrical/state1_v1"
+    },
+    "symmetrical=true,state=state2": {
+      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/symmetrical/state2_v1"
+    },
+    "symmetrical=false,state=state0": {
+      "model": "westerosblocks:block/generated/timber_oak_orange_brick_lefthatch_large/asymmetrical/state0_v1"
     }
   }
 }

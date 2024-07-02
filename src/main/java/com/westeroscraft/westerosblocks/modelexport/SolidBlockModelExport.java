@@ -52,8 +52,17 @@ public class SolidBlockModelExport extends ModelExport {
     	return def.blockName + "/" + ext + ("_v" + (setidx+1));
     }
 
+		protected String getModelName(String ext, int setidx, boolean symmetrical) {
+			String dir = (symmetrical) ? "symmetrical" : "asymmetrical";
+			return def.blockName + "/" + dir + "/" + ext + ("_v" + (setidx+1));
+		}
+
     public String modelFileName(String ext, int setidx, boolean isCustom) {
     	return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx);
+    }
+
+    public String modelFileName(String ext, int setidx, boolean isCustom, boolean symmetrical) {
+    	return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx, symmetrical);
     }
 
     @Override
@@ -69,18 +78,32 @@ public class SolidBlockModelExport extends ModelExport {
 					WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
 					int cnt = sr.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
 					for (int i = 0; i < cnt; i++) {
-						Variant var = new Variant();
-						var.model = modelFileName(fname, setidx, sr.isCustomModel());
-						var.weight = set.weight;
-						if (i > 0) var.y = 90*i;
-						so.addVariant("", var, stateIDs);	// Add our variant                	
+						if (sblk != null && sblk.symmetrical) {
+							Variant var_s = new Variant();
+							var_s.model = modelFileName(fname, setidx, sr.isCustomModel(), true);
+							var_s.weight = set.weight;
+							if (i > 0) var_s.y = 90*i;
+							so.addVariant("symmetrical=true", var_s, stateIDs);
+							Variant var_as = new Variant();
+							var_as.model = modelFileName(fname, setidx, sr.isCustomModel(), false);
+							var_as.weight = set.weight;
+							if (i > 0) var_as.y = 90*i;
+							so.addVariant("symmetrical=false", var_as, stateIDs);
+						}
+						else {
+							Variant var = new Variant();
+							var.model = modelFileName(fname, setidx, sr.isCustomModel());
+							var.weight = set.weight;
+							if (i > 0) var.y = 90*i;
+							so.addVariant("", var, stateIDs);	// Add our variant    
+						}            	
 	        }
 	      }
     	}
     	this.writeBlockStateFile(def.blockName, so);        	
     }
 
-		protected void doSolidModel(String name, boolean isTinted, boolean isOverlay, int setidx, WesterosBlockStateRecord sr, int sridx) throws IOException {
+		protected void doSolidModel(String name, boolean isTinted, boolean isOverlay, boolean isAsymmetrical, int setidx, WesterosBlockStateRecord sr, int sridx) throws IOException {
 			Object model;
 			WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
 			if (isOverlay) {
@@ -100,9 +123,10 @@ public class SolidBlockModelExport extends ModelExport {
 				ot.west_ov = getTextureID(sr.getOverlayTextureByIndex(4));
 				ot.east_ov = getTextureID(sr.getOverlayTextureByIndex(5));
 				mod.textures = ot;
+				String parentmod = (isAsymmetrical) ? "cube_overlay_asymmetrical" : "cube_overlay";
 				mod.parent = isTinted ? 
-					WesterosBlocks.MOD_ID + ":block/tinted/cube_overlay" : 
-					WesterosBlocks.MOD_ID + ":block/untinted/cube_overlay";
+					WesterosBlocks.MOD_ID + ":block/tinted/" + parentmod : 
+					WesterosBlocks.MOD_ID + ":block/untinted/" + parentmod;
 				model = mod;
 			}
 			else if ((set.getTextureCount() > 1) || isTinted) { // More than one texture, or tinted?
@@ -115,13 +139,20 @@ public class SolidBlockModelExport extends ModelExport {
 				mod.textures.east = getTextureID(set.getTextureByIndex(5));
 				mod.textures.particle = getTextureID(set.getTextureByIndex(2));
 				if (isTinted) {
-					mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube";
+					String parentmod = (isAsymmetrical) ? "cube_asymmetrical" : "cube";
+					mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/" + parentmod;
+				}
+				else if (isAsymmetrical) {
+					mod.parent = WesterosBlocks.MOD_ID + ":block/untinted/cube_asymmetrical";
 				}
 				model = mod;
 			}
 			else {
 				ModelObjectCubeAll mod = new ModelObjectCubeAll();
 				mod.textures.all = getTextureID(set.getTextureByIndex(0)); 
+				if (isAsymmetrical) {
+					mod.parent = WesterosBlocks.MOD_ID + ":block/untinted/cube_all_asymmetrical";
+				}
 				model = mod;
 			}
 			this.writeBlockModelFile(name, model);
@@ -136,7 +167,13 @@ public class SolidBlockModelExport extends ModelExport {
 				String id = (rec.stateID == null) ? "base" : rec.stateID;
 				// Loop over the random sets we've got
 				for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {
-					doSolidModel(getModelName(id, setidx), isTinted, isOverlay, setidx, rec, idx);
+					if (sblk != null && sblk.symmetrical) {
+						doSolidModel(getModelName(id, setidx, true), isTinted, isOverlay, false, setidx, rec, idx);
+						doSolidModel(getModelName(id, setidx, false), isTinted, isOverlay, true, setidx, rec, idx);
+					}
+					else {
+						doSolidModel(getModelName(id, setidx), isTinted, isOverlay, false, setidx, rec, idx);
+					}
 				}
       }
       // Build simple item model that refers to block model
@@ -144,7 +181,8 @@ public class SolidBlockModelExport extends ModelExport {
       WesterosBlockStateRecord sr0 = def.states.get(0);
       boolean isTinted = sr0.isTinted();
     	String id = (sr0.stateID == null) ? "base" : sr0.stateID;
-      mo.parent = modelFileName(id, 0, sr0.isCustomModel());
+      mo.parent = (sblk != null && sblk.symmetrical) ? modelFileName(id, 0, sr0.isCustomModel(), true) :
+																											 modelFileName(id, 0, sr0.isCustomModel());
       this.writeItemModelFile(def.blockName, mo);
 			// Add tint overrides
 			if (isTinted) {
@@ -170,8 +208,14 @@ public class SolidBlockModelExport extends ModelExport {
     		}
     	}
 			if (sblk != null && sblk.connectstate) {
-				newstate = new HashMap<String, String>();
+				if (newstate == null)
+					newstate = new HashMap<String, String>();
 				newstate.put("connectstate", "0");
+			}
+			if (sblk != null && sblk.symmetrical) {
+				if (newstate == null)
+					newstate = new HashMap<String, String>();
+				newstate.put("symmetrical", "false");
 			}
       addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }

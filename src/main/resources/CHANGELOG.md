@@ -5,6 +5,7 @@
 - Added additional engraved ashlar colors.
 - Added scorched earth layers.
 - Added sandy pink smooth ashlar and plaster.
+- Added "symmetrical" blockstate to left/righthatch timber frame blocks, allowing for better corner patterns.
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 
 # 22 Jan 2024:
