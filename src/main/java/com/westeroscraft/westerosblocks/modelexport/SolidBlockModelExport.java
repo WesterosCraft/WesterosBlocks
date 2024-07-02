@@ -103,7 +103,7 @@ public class SolidBlockModelExport extends ModelExport {
     	this.writeBlockStateFile(def.blockName, so);        	
     }
 
-		protected void doSolidModel(String name, boolean isTinted, boolean isOverlay, boolean isAsymmetrical, int setidx, WesterosBlockStateRecord sr, int sridx) throws IOException {
+		protected void doSolidModel(String name, boolean isTinted, boolean isOverlay, boolean isSymmetrical, int setidx, WesterosBlockStateRecord sr, int sridx) throws IOException {
 			Object model;
 			WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
 			if (isOverlay) {
@@ -113,20 +113,23 @@ public class SolidBlockModelExport extends ModelExport {
 				ot.up = getTextureID(set.getTextureByIndex(1));
 				ot.north = getTextureID(set.getTextureByIndex(2));
 				ot.south = getTextureID(set.getTextureByIndex(3));
-				ot.west = getTextureID(set.getTextureByIndex(4));
-				ot.east = getTextureID(set.getTextureByIndex(5));
+				ot.west = (isSymmetrical) ? getTextureID(set.getTextureByIndex(4)) :
+																		getTextureID(set.getTextureByIndex(6));
+				ot.east = (isSymmetrical) ? getTextureID(set.getTextureByIndex(5)) :
+																		getTextureID(set.getTextureByIndex(7));
 				ot.particle = getTextureID(set.getTextureByIndex(2));
 				ot.down_ov = getTextureID(sr.getOverlayTextureByIndex(0));
 				ot.up_ov = getTextureID(sr.getOverlayTextureByIndex(1));
 				ot.north_ov = getTextureID(sr.getOverlayTextureByIndex(2));
 				ot.south_ov = getTextureID(sr.getOverlayTextureByIndex(3));
-				ot.west_ov = getTextureID(sr.getOverlayTextureByIndex(4));
-				ot.east_ov = getTextureID(sr.getOverlayTextureByIndex(5));
+				ot.west_ov = (isSymmetrical) ? getTextureID(sr.getOverlayTextureByIndex(4)) :
+																			 getTextureID(sr.getOverlayTextureByIndex(6));
+				ot.east_ov = (isSymmetrical) ? getTextureID(sr.getOverlayTextureByIndex(5)) :
+																			 getTextureID(sr.getOverlayTextureByIndex(7));
 				mod.textures = ot;
-				String parentmod = (isAsymmetrical) ? "cube_overlay_asymmetrical" : "cube_overlay";
 				mod.parent = isTinted ? 
-					WesterosBlocks.MOD_ID + ":block/tinted/" + parentmod : 
-					WesterosBlocks.MOD_ID + ":block/untinted/" + parentmod;
+					WesterosBlocks.MOD_ID + ":block/tinted/cube_overlay" : 
+					WesterosBlocks.MOD_ID + ":block/untinted/cube_overlay";
 				model = mod;
 			}
 			else if ((set.getTextureCount() > 1) || isTinted) { // More than one texture, or tinted?
@@ -135,24 +138,19 @@ public class SolidBlockModelExport extends ModelExport {
 				mod.textures.up = getTextureID(set.getTextureByIndex(1));
 				mod.textures.north = getTextureID(set.getTextureByIndex(2));
 				mod.textures.south = getTextureID(set.getTextureByIndex(3));
-				mod.textures.west = getTextureID(set.getTextureByIndex(4));
-				mod.textures.east = getTextureID(set.getTextureByIndex(5));
+				mod.textures.west = (isSymmetrical) ? getTextureID(set.getTextureByIndex(4)) :
+																							getTextureID(set.getTextureByIndex(6));
+				mod.textures.east = (isSymmetrical) ? getTextureID(set.getTextureByIndex(5)) :
+																							getTextureID(set.getTextureByIndex(7));
 				mod.textures.particle = getTextureID(set.getTextureByIndex(2));
 				if (isTinted) {
-					String parentmod = (isAsymmetrical) ? "cube_asymmetrical" : "cube";
-					mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/" + parentmod;
-				}
-				else if (isAsymmetrical) {
-					mod.parent = WesterosBlocks.MOD_ID + ":block/untinted/cube_asymmetrical";
+					mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/cube";
 				}
 				model = mod;
 			}
 			else {
 				ModelObjectCubeAll mod = new ModelObjectCubeAll();
 				mod.textures.all = getTextureID(set.getTextureByIndex(0)); 
-				if (isAsymmetrical) {
-					mod.parent = WesterosBlocks.MOD_ID + ":block/untinted/cube_all_asymmetrical";
-				}
 				model = mod;
 			}
 			this.writeBlockModelFile(name, model);
@@ -168,8 +166,8 @@ public class SolidBlockModelExport extends ModelExport {
 				// Loop over the random sets we've got
 				for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {
 					if (sblk != null && sblk.symmetrical) {
-						doSolidModel(getModelName(id, setidx, true), isTinted, isOverlay, false, setidx, rec, idx);
-						doSolidModel(getModelName(id, setidx, false), isTinted, isOverlay, true, setidx, rec, idx);
+						doSolidModel(getModelName(id, setidx, true), isTinted, isOverlay, true, setidx, rec, idx);
+						doSolidModel(getModelName(id, setidx, false), isTinted, isOverlay, false, setidx, rec, idx);
 					}
 					else {
 						doSolidModel(getModelName(id, setidx), isTinted, isOverlay, false, setidx, rec, idx);

@@ -30783,7 +30783,29 @@
         "bars_iron_block/bars_iron_crossbars_top"
       ]
     },
-    
+    {
+      "blockName": "test_block_symmetrical",
+      "blockType": "solid",
+      "hardness": 3,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
+      "creativeTab": "WesterosTest",
+      "type": "symmetrical:true",
+      "label": "Test Block (symmetrical)",
+      "textures": [
+        "test_block/solid",
+        "test_block/solid",
+        "test_block/left",
+        "test_block/left",
+        "test_block/left",
+        "test_block/left",
+        "test_block/right",
+        "test_block/right"
+      ],
+      "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+    },
     {
       "blockName": "cabbage",
       "blockType": "cuboid-16way",
@@ -31383,7 +31405,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_brown_righthatch",
@@ -31402,7 +31426,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_brown_frame",
@@ -31478,7 +31504,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
     },
     {
       "blockName": "timber_oak_brown_righthatch_large",
@@ -31497,7 +31525,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
     },
     {
       "blockName": "timber_oak_brown_lefthatch_studded",
@@ -31516,7 +31546,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
     },
     {
       "blockName": "timber_oak_brown_righthatch_studded",
@@ -31535,7 +31567,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/oak/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub/all", "wood/oak/all", "plaster/wattle/brown_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
     },
     {
       "blockName": "timber_oak_brown_bressummer",
@@ -31592,7 +31626,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_white_lefthatch",
@@ -31611,7 +31647,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_white_frame",
@@ -31687,7 +31725,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
     },
     {
       "blockName": "timber_oak_white_righthatch_large",
@@ -31706,7 +31746,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
     },
     {
       "blockName": "timber_oak_white_lefthatch_studded",
@@ -31725,7 +31767,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
     },
     {
       "blockName": "timber_oak_white_righthatch_studded",
@@ -31744,7 +31788,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/oak/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub/all", "wood/oak/all", "plaster/wattle/white_daub/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
     },
     {
       "blockName": "timber_oak_white_bressummer",
@@ -31799,7 +31845,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/oak/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/oak/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_orange_brick_righthatch",
@@ -31817,7 +31865,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/oak/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/oak/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_orange_brick_frame",
@@ -31889,7 +31939,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/oak/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/oak/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
     },
     {
       "blockName": "timber_oak_orange_brick_righthatch_large",
@@ -31907,7 +31959,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/oak/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/oak/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
     },
     {
       "blockName": "timber_oak_orange_brick_lefthatch_studded",
@@ -31925,7 +31979,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/oak/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/oak/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
     },
     {
       "blockName": "timber_oak_orange_brick_righthatch_studded",
@@ -31943,7 +31999,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/oak/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/oak/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
     },
     {
       "blockName": "timber_oak_orange_brick_bressummer",
@@ -31995,7 +32053,9 @@
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_reach_brick_righthatch",
@@ -32012,7 +32072,9 @@
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_reach_brick_frame",
@@ -32080,7 +32142,9 @@
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
     },
     {
       "blockName": "timber_oak_reach_brick_righthatch_large",
@@ -32097,7 +32161,9 @@
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
     },
     {
       "blockName": "timber_oak_reach_brick_lefthatch_studded",
@@ -32114,7 +32180,9 @@
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
     },
     {
       "blockName": "timber_oak_reach_brick_righthatch_studded",
@@ -32131,7 +32199,9 @@
         {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
     },
     {
       "blockName": "timber_oak_reach_brick_bressummer",
@@ -32184,7 +32254,9 @@
         {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_righthatch",
@@ -32202,7 +32274,9 @@
         {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_frame",
@@ -32274,7 +32348,9 @@
         {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_righthatch_large",
@@ -32292,7 +32368,9 @@
         {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_lefthatch_studded",
@@ -32310,7 +32388,9 @@
         {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_righthatch_studded",
@@ -32328,7 +32408,9 @@
         {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
     },
     {
       "blockName": "timber_oak_oldtown_brick_bressummer",
@@ -32384,7 +32466,9 @@
         {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_yellow_righthatch",
@@ -32403,7 +32487,9 @@
         {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_yellow_frame",
@@ -32479,7 +32565,9 @@
         {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
     },
     {
       "blockName": "timber_oak_yellow_righthatch_large",
@@ -32498,7 +32586,9 @@
         {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
     },
     {
       "blockName": "timber_oak_yellow_lefthatch_studded",
@@ -32517,7 +32607,9 @@
         {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
     },
     {
       "blockName": "timber_oak_yellow_righthatch_studded",
@@ -32536,7 +32628,9 @@
         {"textures": [ "plaster/rough/lannisport_yellow/all1", "wood/oak/all", "plaster/rough/lannisport_yellow/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_yellow/all", "wood/oak/all", "plaster/wattle/lannisport_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
     },
     {
       "blockName": "timber_oak_yellow_bressummer",
@@ -32593,7 +32687,9 @@
         {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_orange_righthatch",
@@ -32612,7 +32708,9 @@
         {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_orange_frame",
@@ -32688,7 +32786,9 @@
         {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
     },
     {
       "blockName": "timber_oak_orange_righthatch_large",
@@ -32707,7 +32807,9 @@
         {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
     },
     {
       "blockName": "timber_oak_orange_lefthatch_studded",
@@ -32726,7 +32828,9 @@
         {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
     },
     {
       "blockName": "timber_oak_orange_righthatch_studded",
@@ -32745,7 +32849,9 @@
         {"textures": [ "plaster/rough/lannisport_orange/all1", "wood/oak/all", "plaster/rough/lannisport_orange/all1" ]},
         {"textures": [ "plaster/wattle/lannisport_orange/all", "wood/oak/all", "plaster/wattle/lannisport_orange/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
     },
     {
       "blockName": "timber_oak_orange_bressummer",
@@ -32798,7 +32904,9 @@
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
     },
     {
       "blockName": "timber_oak_lannisport_brick_righthatch",
@@ -32815,7 +32923,9 @@
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
     },
     {
       "blockName": "timber_oak_lannisport_brick_frame",
@@ -32883,7 +32993,9 @@
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
     },
     {
       "blockName": "timber_oak_lannisport_brick_righthatch_large",
@@ -32900,7 +33012,9 @@
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_large" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
     },
     {
       "blockName": "timber_oak_lannisport_brick_lefthatch_studded",
@@ -32917,7 +33031,9 @@
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/lefthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
     },
     {
       "blockName": "timber_oak_lannisport_brick_righthatch_studded",
@@ -32934,7 +33050,9 @@
         {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
-      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/righthatch_studded" ]
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
     },
     {
       "blockName": "timber_oak_lannisport_brick_bressummer",
@@ -32989,7 +33107,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
     },
     {
       "blockName": "timber_northern_brown_righthatch",
@@ -33008,7 +33128,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
     },
     {
       "blockName": "timber_northern_brown_frame",
@@ -33084,7 +33206,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
     },
     {
       "blockName": "timber_northern_brown_righthatch_large",
@@ -33103,7 +33227,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
     },
     {
       "blockName": "timber_northern_brown_lefthatch_studded",
@@ -33122,7 +33248,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
     },
     {
       "blockName": "timber_northern_brown_righthatch_studded",
@@ -33141,7 +33269,9 @@
         {"textures": [ "plaster/rough/brown_daub/all1", "wood/northern/all", "plaster/rough/brown_daub/all1" ]},
         {"textures": [ "plaster/wattle/brown_daub_dark/all", "wood/northern/all", "plaster/wattle/brown_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
     },
     {
       "blockName": "timber_northern_brown_bressummer",
@@ -33198,7 +33328,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
     },
     {
       "blockName": "timber_northern_white_righthatch",
@@ -33217,7 +33349,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
     },
     {
       "blockName": "timber_northern_white_frame",
@@ -33293,7 +33427,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
     },
     {
       "blockName": "timber_northern_white_righthatch_large",
@@ -33312,7 +33448,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
     },
     {
       "blockName": "timber_northern_white_lefthatch_studded",
@@ -33331,7 +33469,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
     },
     {
       "blockName": "timber_northern_white_righthatch_studded",
@@ -33350,7 +33490,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/northern/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_dark/all", "wood/northern/all", "plaster/wattle/white_daub_dark/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
     },
     {
       "blockName": "timber_northern_white_bressummer",
@@ -33405,7 +33547,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/northern/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/northern/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
     },
     {
       "blockName": "timber_northern_orange_brick_righthatch",
@@ -33423,7 +33567,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/northern/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/northern/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
     },
     {
       "blockName": "timber_northern_orange_brick_frame",
@@ -33495,7 +33641,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/northern/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/northern/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
     },
     {
       "blockName": "timber_northern_orange_brick_righthatch_large",
@@ -33513,7 +33661,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/northern/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/northern/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
     },
     {
       "blockName": "timber_northern_orange_brick_lefthatch_studded",
@@ -33531,7 +33681,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/northern/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/northern/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
     },
     {
       "blockName": "timber_northern_orange_brick_righthatch_studded",
@@ -33549,7 +33701,9 @@
         {"textures": [ "brick/orange_rough/all1", "wood/northern/all", "brick/orange_rough/all1" ]},
         {"textures": [ "brick/orange_dark/all1", "wood/northern/all", "brick/orange_dark/all1" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
     },
     {
       "blockName": "timber_northern_orange_brick_bressummer",
@@ -33601,7 +33755,9 @@
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
     },
     {
       "blockName": "timber_northern_grey_brick_righthatch",
@@ -33618,7 +33774,9 @@
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
     },
     {
       "blockName": "timber_northern_grey_brick_frame",
@@ -33686,7 +33844,9 @@
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
     },
     {
       "blockName": "timber_northern_grey_brick_righthatch_large",
@@ -33703,7 +33863,9 @@
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
     },
     {
       "blockName": "timber_northern_grey_brick_lefthatch_studded",
@@ -33720,7 +33882,9 @@
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
     },
     {
       "blockName": "timber_northern_grey_brick_righthatch_studded",
@@ -33737,7 +33901,9 @@
         {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
     },
     {
       "blockName": "timber_northern_grey_brick_bressummer",
@@ -33792,7 +33958,9 @@
         {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
         {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
     },
     {
       "blockName": "timber_northern_red_righthatch",
@@ -33811,7 +33979,9 @@
         {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
         {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
     },
     {
       "blockName": "timber_northern_red_frame",
@@ -33887,7 +34057,9 @@
         {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
         {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
     },
     {
       "blockName": "timber_northern_red_righthatch_large",
@@ -33906,7 +34078,9 @@
         {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
         {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
     },
     {
       "blockName": "timber_northern_red_lefthatch_studded",
@@ -33925,7 +34099,9 @@
         {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
         {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
     },
     {
       "blockName": "timber_northern_red_righthatch_studded",
@@ -33944,7 +34120,9 @@
         {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
         {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
     },
     {
       "blockName": "timber_northern_red_bressummer",
@@ -34001,7 +34179,9 @@
         {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
         {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
     },
     {
       "blockName": "timber_northern_pale_yellow_righthatch",
@@ -34020,7 +34200,9 @@
         {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
         {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
     },
     {
       "blockName": "timber_northern_pale_yellow_frame",
@@ -34096,7 +34278,9 @@
         {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
         {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
     },
     {
       "blockName": "timber_northern_pale_yellow_righthatch_large",
@@ -34115,7 +34299,9 @@
         {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
         {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
     },
     {
       "blockName": "timber_northern_pale_yellow_lefthatch_studded",
@@ -34134,7 +34320,9 @@
         {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
         {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
     },
     {
       "blockName": "timber_northern_pale_yellow_righthatch_studded",
@@ -34153,7 +34341,9 @@
         {"textures": [ "plaster/rough/pale_yellow/all1", "wood/northern/all", "plaster/rough/pale_yellow/all1" ]},
         {"textures": [ "plaster/wattle/pale_yellow/all", "wood/northern/all", "plaster/wattle/pale_yellow/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
     },
     {
       "blockName": "timber_northern_pale_yellow_bressummer",
@@ -34210,7 +34400,9 @@
         {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
     },
     {
       "blockName": "timber_northern_blue_righthatch",
@@ -34229,7 +34421,9 @@
         {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
     },
     {
       "blockName": "timber_northern_blue_frame",
@@ -34305,7 +34499,9 @@
         {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
     },
     {
       "blockName": "timber_northern_blue_righthatch_large",
@@ -34324,7 +34520,9 @@
         {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
     },
     {
       "blockName": "timber_northern_blue_lefthatch_studded",
@@ -34343,7 +34541,9 @@
         {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
     },
     {
       "blockName": "timber_northern_blue_righthatch_studded",
@@ -34362,7 +34562,9 @@
         {"textures": [ "plaster/rough/gulltown_blue/all1", "wood/northern/all", "plaster/rough/gulltown_blue/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_blue/all", "wood/northern/all", "plaster/wattle/gulltown_blue/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
     },
     {
       "blockName": "timber_northern_blue_bressummer",
@@ -34419,7 +34621,9 @@
         {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
     },
     {
       "blockName": "timber_northern_green_righthatch",
@@ -34438,7 +34642,9 @@
         {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
     },
     {
       "blockName": "timber_northern_green_frame",
@@ -34514,7 +34720,9 @@
         {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
     },
     {
       "blockName": "timber_northern_green_righthatch_large",
@@ -34533,7 +34741,9 @@
         {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_large" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
     },
     {
       "blockName": "timber_northern_green_lefthatch_studded",
@@ -34552,7 +34762,9 @@
         {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/lefthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
     },
     {
       "blockName": "timber_northern_green_righthatch_studded",
@@ -34571,7 +34783,9 @@
         {"textures": [ "plaster/rough/gulltown_green/all1", "wood/northern/all", "plaster/rough/gulltown_green/all1" ]},
         {"textures": [ "plaster/wattle/gulltown_green/all", "wood/northern/all", "plaster/wattle/gulltown_green/all" ]}
       ],
-      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/righthatch_studded" ]
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
     },
     {
       "blockName": "timber_northern_green_bressummer",
@@ -34628,7 +34842,9 @@
         {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
         {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
       ],
-      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/lefthatch" ]
+      "overlayTextures": [ "timber/white/bottom", "transparent", 
+                           "timber/white/lefthatch", "timber/white/lefthatch", "timber/white/lefthatch", "timber/white/lefthatch",
+                           "timber/white/righthatch" ]
     },
     {
       "blockName": "timber_whitewashed_righthatch",
@@ -34647,7 +34863,9 @@
         {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
         {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
       ],
-      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/righthatch" ]
+      "overlayTextures": [ "timber/white/bottom", "transparent",
+                           "timber/white/righthatch", "timber/white/righthatch", "timber/white/righthatch", "timber/white/righthatch",
+                           "timber/white/lefthatch" ]
     },
     {
       "blockName": "timber_whitewashed_frame",
@@ -34723,7 +34941,9 @@
         {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
         {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
       ],
-      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/lefthatch_large" ]
+      "overlayTextures": [ "timber/white/bottom", "transparent",
+                           "timber/white/lefthatch_large", "timber/white/lefthatch_large", "timber/white/lefthatch_large", "timber/white/lefthatch_large",
+                           "timber/white/righthatch_large" ]
     },
     {
       "blockName": "timber_whitewashed_righthatch_large",
@@ -34742,7 +34962,9 @@
         {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
         {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
       ],
-      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/righthatch_large" ]
+      "overlayTextures": [ "timber/white/bottom", "transparent",
+                           "timber/white/righthatch_large", "timber/white/righthatch_large", "timber/white/righthatch_large", "timber/white/righthatch_large",
+                           "timber/white/lefthatch_large" ]
     },
     {
       "blockName": "timber_whitewashed_lefthatch_studded",
@@ -34761,7 +34983,9 @@
         {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
         {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
       ],
-      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/lefthatch_studded" ]
+      "overlayTextures": [ "timber/white/bottom", "transparent",
+                           "timber/white/lefthatch_studded", "timber/white/lefthatch_studded", "timber/white/lefthatch_studded", "timber/white/lefthatch_studded",
+                           "timber/white/righthatch_studded" ]
     },
     {
       "blockName": "timber_whitewashed_righthatch_studded",
@@ -34780,7 +35004,9 @@
         {"textures": [ "plaster/rough/grey_white/all1", "wood/white/all", "plaster/rough/grey_white/all1" ]},
         {"textures": [ "plaster/wattle/grey_white/all", "wood/white/all", "plaster/wattle/grey_white/all" ]}
       ],
-      "overlayTextures": [ "timber/white/bottom", "transparent", "timber/white/righthatch_studded" ]
+      "overlayTextures": [ "timber/white/bottom", "transparent",
+                           "timber/white/righthatch_studded", "timber/white/righthatch_studded", "timber/white/righthatch_studded", "timber/white/righthatch_studded",
+                           "timber/white/lefthatch_studded" ]
     },
     {
       "blockName": "timber_whitewashed_bressummer",
@@ -34837,7 +35063,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
       ],
-      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/lefthatch" ]
+      "overlayTextures": [ "timber/red/bottom", "transparent",
+                           "timber/red/lefthatch", "timber/red/lefthatch", "timber/red/lefthatch", "timber/red/lefthatch",
+                           "timber/red/righthatch" ]
     },
     {
       "blockName": "timber_red_white_righthatch",
@@ -34856,7 +35084,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
       ],
-      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/righthatch" ]
+      "overlayTextures": [ "timber/red/bottom", "transparent",
+                           "timber/red/righthatch", "timber/red/righthatch", "timber/red/righthatch", "timber/red/righthatch",
+                           "timber/red/lefthatch" ]
     },
     {
       "blockName": "timber_red_white_frame",
@@ -34932,7 +35162,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
       ],
-      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/lefthatch_large" ]
+      "overlayTextures": [ "timber/red/bottom", "transparent",
+                           "timber/red/lefthatch_large", "timber/red/lefthatch_large", "timber/red/lefthatch_large", "timber/red/lefthatch_large",
+                           "timber/red/righthatch_large" ]
     },
     {
       "blockName": "timber_red_white_righthatch_large",
@@ -34951,7 +35183,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
       ],
-      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/righthatch_large" ]
+      "overlayTextures": [ "timber/red/bottom", "transparent",
+                           "timber/red/righthatch_large", "timber/red/righthatch_large", "timber/red/righthatch_large", "timber/red/righthatch_large",
+                           "timber/red/lefthatch_large" ]
     },
     {
       "blockName": "timber_red_white_lefthatch_studded",
@@ -34970,7 +35204,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
       ],
-      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/lefthatch_studded" ]
+      "overlayTextures": [ "timber/red/bottom", "transparent",
+                           "timber/red/lefthatch_studded", "timber/red/lefthatch_studded", "timber/red/lefthatch_studded", "timber/red/lefthatch_studded",
+                           "timber/red/righthatch_studded" ]
     },
     {
       "blockName": "timber_red_white_righthatch_studded",
@@ -34989,7 +35225,9 @@
         {"textures": [ "plaster/rough/white_daub/all1", "wood/red/all", "plaster/rough/white_daub/all1" ]},
         {"textures": [ "plaster/wattle/white_daub_light/all", "wood/red/all", "plaster/wattle/white_daub_light/all" ]}
       ],
-      "overlayTextures": [ "timber/red/bottom", "transparent", "timber/red/righthatch_studded" ]
+      "overlayTextures": [ "timber/red/bottom", "transparent",
+                           "timber/red/righthatch_studded", "timber/red/righthatch_studded", "timber/red/righthatch_studded", "timber/red/righthatch_studded",
+                           "timber/red/lefthatch_studded" ]
     },
     {
       "blockName": "timber_red_white_bressummer",

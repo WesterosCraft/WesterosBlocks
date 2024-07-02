@@ -5,7 +5,7 @@
     "up": "westerosblocks:block/test_block/u_texture",
     "north": "westerosblocks:block/test_block/w_texture",
     "south": "westerosblocks:block/test_block/e_texture",
-    "west": "westerosblocks:block/test_block/s_texture",
+    "west": "westerosblocks:block/test_block/n_texture",
     "east": "westerosblocks:block/test_block/n_texture",
     "particle": "westerosblocks:block/test_block/w_texture"
   }

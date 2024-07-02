@@ -1,12 +1,12 @@
 {
-  "parent": "westerosblocks:block/untinted/cube_overlay_asymmetrical",
+  "parent": "westerosblocks:block/untinted/cube_overlay",
   "textures": {
     "down_ov": "westerosblocks:block/timber/oak/bottom",
     "up_ov": "westerosblocks:block/transparent",
     "north_ov": "westerosblocks:block/timber/oak/righthatch",
     "south_ov": "westerosblocks:block/timber/oak/righthatch",
-    "west_ov": "westerosblocks:block/timber/oak/righthatch",
-    "east_ov": "westerosblocks:block/timber/oak/righthatch",
+    "west_ov": "westerosblocks:block/timber/oak/lefthatch",
+    "east_ov": "westerosblocks:block/timber/oak/lefthatch",
     "down": "westerosblocks:block/ashlar_smooth/westerlands/all",
     "up": "westerosblocks:block/wood/oak/all",
     "north": "westerosblocks:block/ashlar_smooth/westerlands/all",
