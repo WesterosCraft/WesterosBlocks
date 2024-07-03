@@ -24,11 +24,11 @@ public class ParticleBlockModelExport extends ModelExport {
         StateObject so = new StateObject();
 
         Variant var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/custom/particle_block/particle_block_off";
+        var.model = WesterosBlocks.MOD_ID + ":block/custom/particle_emitter/particle_emitter_off";
         so.addVariant("powered=false", var, null);
 
         var = new Variant();
-        var.model = WesterosBlocks.MOD_ID + ":block/custom/particle_block/particle_block_on";
+        var.model = WesterosBlocks.MOD_ID + ":block/custom/particle_emitter/particle_emitter_on";
         so.addVariant("powered=true", var, null);
 
         this.writeBlockStateFile(def.blockName, so);
@@ -37,7 +37,7 @@ public class ParticleBlockModelExport extends ModelExport {
     @Override
     public void doModelExports() throws IOException {
         // Build simple item model that refers to block model
-        String item = WesterosBlocks.MOD_ID + ":block/custom/particle_block/particle_block_off";
+        String item = WesterosBlocks.MOD_ID + ":block/custom/particle_emitter/particle_emitter_off";
         ModelItemObject mo = new ModelItemObject();
         mo.parent = item;
         this.writeItemModelFile(def.blockName, mo);
