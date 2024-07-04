@@ -247,6 +247,8 @@ public class WesterosBlocks {
 		public static final ForgeConfigSpec.BooleanValue doorSurviveAny;
 		public static final ForgeConfigSpec.BooleanValue doorNoConnect;
 		public static final ForgeConfigSpec.IntValue seaLevelOverride;
+		public static final ForgeConfigSpec.IntValue particleEmitterStrengthMax;
+		public static final ForgeConfigSpec.IntValue particleEmitterRangeMax;
 
 		static {
 			BUILDER.comment("Module options");
@@ -263,6 +265,10 @@ public class WesterosBlocks {
             BUILDER.push("worldMod");
             seaLevelOverride = BUILDER.comment("Override sea level (default for Westeros=33, 0=disable override)").defineInRange("seaLevelOverride", 33, 0, 639);
             BUILDER.pop();
+			BUILDER.push("particleEmitter");
+			particleEmitterStrengthMax = BUILDER.comment("Max value of particle strength for particle emitter blocks").defineInRange("particleEmitterStrengthMax", 10, 1, 100);
+			particleEmitterRangeMax = BUILDER.comment("Max value of particle strength for particle emitter blocks").defineInRange("particleEmitterRangeMax", 10, 1, 100);
+			BUILDER.pop();
 
 			SPEC = BUILDER.build();
 		}
