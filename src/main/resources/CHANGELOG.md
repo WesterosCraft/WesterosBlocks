@@ -5,8 +5,15 @@
 - Added additional engraved ashlar colors.
 - Added scorched earth layers.
 - Added sandy pink smooth ashlar and plaster.
+- Added harrenhal secret door.
 - Added "symmetrical" blockstate to left/righthatch timber frame blocks, allowing for better corner patterns.
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
+- Fixed bug with red keep secret door texture.
+- Fixed bug with empty cabinet CTM.
+- Fixed bug with pale dark red medium ashlar.
+- Fixed issue with signs not being placeable on cloth material blocks.
+- Fixed wrong biome colors in desert biome.
+- Fixed transparency issues with fruit leaves and dappled moss.
 
 # 22 Jan 2024:
 - Added a large number of new stone brick and cobblestone sets to fill in gaps in existing block sets, and to remove biome dependencies.
