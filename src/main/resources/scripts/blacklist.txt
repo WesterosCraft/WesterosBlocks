@@ -1,0 +1,16 @@
+colormap
+entity
+environment
+font
+gui
+item
+items
+map
+misc
+models
+painting
+particle
+test_block
+terrainset_overlays
+stone_unused
+westerosblocks/textures/block/ctm
