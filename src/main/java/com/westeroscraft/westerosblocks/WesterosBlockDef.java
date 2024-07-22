@@ -539,18 +539,26 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	// Custom color multiplier
 	public static class CustomColorMultHandler extends ColorMultHandler implements ColorResolver {
-		private int[] colorBuffer = new int[65536];
-		private final String rname;
+		private List<int[]> colorBuffers;
+		private final List<String> rnames;
 		private boolean brokenOptifine = false;
 
 		CustomColorMultHandler(String rname, String blockName) {
+			this(Collections.singletonList(rname), blockName);
+		}
+
+		CustomColorMultHandler(List<String> rnames, String blockName) {
 			super();
-			this.rname = rname;
+			this.colorBuffers = new ArrayList<int[]>();
+			this.rnames = rnames;
+			for (String rname : rnames) {
+				colorBuffers.add(new int[65536]);
+			}
 		}
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {				
+		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {		
 			if ((world != null) && (pos != null)) {
 				LevelReader rdr = null;
 				
@@ -569,7 +577,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 						for (int zz = -1; zz <= 1; ++zz) {
 							BlockPos bp = pos.offset(xx, 0, zz);
 							Biome biome = rdr.getBiome(bp).value();
-							int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall());
+							int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall(), txtindx);
 							red += (mult & 0xFF0000) >> 16;
 							green += (mult & 0x00FF00) >> 8;
 							blue += (mult & 0x0000FF);
@@ -588,19 +596,22 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 					}
 				}
 			}
-			return getColor(null, 0.5D, 1.0D);
+			return getColor(null, 0.5D, 1.0D, txtindx);
 		}
-		private int getColor(double tmp, double hum) {
+		private int getColor(double tmp, double hum, int txtindx) {
 			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
 			hum = Mth.clamp(hum, 0.0F, 1.0F);
 			hum *= tmp;
 			int i = (int) ((1.0D - tmp) * 255.0D);
 			int j = (int) ((1.0D - hum) * 255.0D);
-			return colorBuffer[j << 8 | i];
+			return colorBuffers.get(txtindx)[j << 8 | i];
 		}
 
 		@Override
 		public int getColor(Biome biome, double x, double z) {
+			return getColor(biome, x, z, 0);
+		}
+		public int getColor(Biome biome, double x, double z, int txtindx) {
 			float hum = 1.0F;
 			float tmp = 0.5F;
 			if (biome != null) {
@@ -612,22 +623,25 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			hum *= tmp;
 			int i = (int) ((1.0D - tmp) * 255.0D);
 			int j = (int) ((1.0D - hum) * 255.0D);
-			return colorBuffer[j << 8 | i];
+			return colorBuffers.get(txtindx)[j << 8 | i];
 		}
 
 		@OnlyIn(Dist.CLIENT)
-		public void loadColorMap(ResourceManager resMgr) {
-			String resName = rname;
-			if (resName.indexOf(':') < 0)
-				resName = WesterosBlocks.MOD_ID + ":" + resName;
-			if (resName.endsWith(".png") == false)
-				resName += ".png";
-			try {
-				colorBuffer = LegacyStuffWrapper.getPixels(resMgr, new ResourceLocation(resName));
-				WesterosBlocks.log.debug(String.format("Loaded color resource '%s'", rname));
-			} catch (Exception e) {
-				WesterosBlocks.log.error(String.format("Invalid color resource '%s'", rname), e);
-				Arrays.fill(colorBuffer, 0xFFFFFF);
+		public void loadColorMaps(ResourceManager resMgr) {
+			int txtindx = 0;
+			for (String resName : rnames) {
+				if (resName.indexOf(':') < 0)
+					resName = WesterosBlocks.MOD_ID + ":" + resName;
+				if (resName.endsWith(".png") == false)
+					resName += ".png";
+				try {
+					colorBuffers.set(txtindx, LegacyStuffWrapper.getPixels(resMgr, new ResourceLocation(resName)));
+					WesterosBlocks.log.debug(String.format("Loaded color resource '%s'", resName));
+				} catch (Exception e) {
+					WesterosBlocks.log.error(String.format("Invalid color resource '%s'", resName), e);
+					Arrays.fill(colorBuffers.get(txtindx), 0xFFFFFF);
+				}
+				txtindx++;
 			}
 		}
 	}
@@ -693,6 +707,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			if (rec.randomTextures == null) rec.randomTextures = this.randomTextures;
 			if (rec.overlayTextures == null) rec.overlayTextures = this.overlayTextures;
 			if (rec.colorMult.equals("#FFFFFF")) rec.colorMult = this.colorMult;
+			if (rec.colorMults == null) rec.colorMults = this.colorMults;
 			rec.doStateRecordInit();
 
 			// If any state has overlay textures, set nonOpaque to true
@@ -1127,7 +1142,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			ColorMultHandler prev = colorMultTable.get(hndid);
 			// Only reload those from resources
 			if (prev instanceof CustomColorMultHandler) {
-				((CustomColorMultHandler)prev).loadColorMap(pResourceManager);
+				((CustomColorMultHandler)prev).loadColorMaps(pResourceManager);
 			}
 		}		
 	}
@@ -1161,10 +1176,33 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 		return cmh;
 	}
+	public static ColorMultHandler getColorHandler(List<String> hnd, String blockName) {
+		String hndid = String.join("_", hnd).toLowerCase();
+		ColorMultHandler cmh = colorMultTable.get(hndid);
+		if (cmh == null) {
+			for (int i = 0; i < hnd.size(); i++) {
+				int idx = hnd.get(i).indexOf(':');
+				if (idx < 0) {
+					hnd.set(i, WesterosBlocks.MOD_ID + ":" + hnd.get(i));
+				}
+			}
+			hndid = String.join("_", hnd).toLowerCase();
+			cmh = colorMultTable.get(hndid);
+			if (cmh == null) {
+				cmh = new CustomColorMultHandler(hnd, blockName);
+				colorMultTable.put(hndid, cmh);
+			}
+		}
+
+		return cmh;
+	}
 
 	public String getBlockColorMapResource() {
 		String res = null;
 		String blockColor = colorMult;
+		if (blockColor == null && colorMults != null && colorMults.size() >= 1) {
+			blockColor = colorMults.get(0);
+		}
 		if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
 			String tok[] = blockColor.split(":");
 			if (tok.length == 1) {
@@ -1207,6 +1245,15 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			return rec.regobj;
 		return null;
 	}
+
+	public static ColorMultHandler getStateColorHandler(WesterosBlockStateRecord rec, String blockName) {
+		if (rec.colorMults != null) {
+			return getColorHandler(rec.colorMults, blockName);
+		}
+		else {
+			return getColorHandler(rec.colorMult, blockName);
+		}
+	}
 	
 	// Handle registration of tint handling and other client rendering
 	@OnlyIn(Dist.CLIENT)
@@ -1215,7 +1262,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			if (this.stateProp != null) {
 				final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
 				for (WesterosBlockStateRecord rec : this.states) {
-					ColorMultHandler handler = getColorHandler(rec.colorMult, this.blockName);
+					ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
 					cmmap.put(rec.stateID, handler);
 				}
 				blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> 
@@ -1223,7 +1270,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
 			}
 			else {
-				ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);
+				ColorMultHandler handler = getStateColorHandler(this, this.blockName);
 				
 				blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
 						.getColor(state, world, pos, txtindx), blk);
@@ -1238,14 +1285,14 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			if (this.stateProp != null) {
 				final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
 				for (WesterosBlockStateRecord rec : this.states) {
-					ColorMultHandler handler = getColorHandler(rec.colorMult, this.blockName);
+					ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
 					cmmap.put(rec.stateID, handler);
 				}
 				final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
 				itemColors.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
 			}
 			else {
-				ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);				
+				ColorMultHandler handler = getStateColorHandler(this, this.blockName);				
 				itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 			}
 		}
