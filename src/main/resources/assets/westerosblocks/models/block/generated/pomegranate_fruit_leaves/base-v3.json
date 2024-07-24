@@ -1,11 +1,11 @@
 {
   "parent": "westerosblocks:block/tinted/leaves_overlay_bf",
   "textures": {
-    "end": "westerosblocks:block/leaves_block/leaves_birch",
-    "side": "westerosblocks:block/leaves_block/leaves_birch",
-    "bf": "westerosblocks:block/leaves_block_bf/leaves_bf_birch",
+    "end": "westerosblocks:block/leaves/birch/all",
+    "side": "westerosblocks:block/leaves/birch/all",
+    "bf": "westerosblocks:block/leaves/birch/bf",
     "overlayend": "westerosblocks:block/transparent",
-    "overlayside": "westerosblocks:block/leaves/pomegranate2",
-    "particle": "westerosblocks:block/leaves_block/leaves_birch"
+    "overlayside": "westerosblocks:block/leaves/overlay/pomegranate2",
+    "particle": "westerosblocks:block/leaves/birch/all"
   }
 }

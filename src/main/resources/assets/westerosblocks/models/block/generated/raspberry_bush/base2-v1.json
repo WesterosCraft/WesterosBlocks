@@ -1,11 +1,11 @@
 {
   "parent": "westerosblocks:block/tinted/leaves_overlay_bf2",
   "textures": {
-    "end": "westerosblocks:block/leaves_block/leaves_jungle",
-    "side": "westerosblocks:block/leaves_block/leaves_jungle",
-    "bf": "westerosblocks:block/leaves_block_bf/leaves_bf_jungle",
+    "end": "westerosblocks:block/leaves/jungle/all",
+    "side": "westerosblocks:block/leaves/jungle/all",
+    "bf": "westerosblocks:block/leaves/jungle/bf",
     "overlayend": "westerosblocks:block/transparent",
-    "overlayside": "westerosblocks:block/leaves/raspberry0",
-    "particle": "westerosblocks:block/leaves_block/leaves_jungle"
+    "overlayside": "westerosblocks:block/leaves/overlay/raspberry0",
+    "particle": "westerosblocks:block/leaves/jungle/all"
   }
 }

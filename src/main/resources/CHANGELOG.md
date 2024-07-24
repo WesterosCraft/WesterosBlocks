@@ -7,6 +7,7 @@
 - Added sandy pink smooth ashlar and plaster.
 - Added harrenhal secret door.
 - Added "symmetrical" blockstate to left/righthatch timber frame blocks, allowing for better corner patterns.
+- Added scarred weirwood block.
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 - Fixed bug with red keep secret door texture.
 - Fixed bug with empty cabinet CTM.

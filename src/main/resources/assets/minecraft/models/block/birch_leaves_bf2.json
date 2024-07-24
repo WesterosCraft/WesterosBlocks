@@ -3,9 +3,9 @@
 	"ambientocclusion": true,
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "minecraft:block/birch_leaves",
-		"1": "minecraft:block/leaves_bf_birch",
-		"particle": "minecraft:block/birch_leaves"
+		"0": "westerosblocks:block/leaves/birch/all",
+		"1": "westerosblocks:block/leaves/birch/bf",
+		"particle": "westerosblocks:block/leaves/birch/all"
 	},
 	"elements": [
 		{

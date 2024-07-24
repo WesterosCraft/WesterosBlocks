@@ -12213,41 +12213,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/apple0"
+            "leaves/overlay/apple0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/apple1"
+            "leaves/overlay/apple1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/apple2"
+            "leaves/overlay/apple2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/apple3"
+            "leaves/overlay/apple3"
           ],
           "weight": 2
         }
@@ -12266,41 +12266,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/apricot0"
+            "leaves/overlay/apricot0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/apricot1"
+            "leaves/overlay/apricot1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/apricot2"
+            "leaves/overlay/apricot2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/apricot3"
+            "leaves/overlay/apricot3"
           ],
           "weight": 2
         }
@@ -12319,41 +12319,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/cherry0"
+            "leaves/overlay/cherry0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/cherry1"
+            "leaves/overlay/cherry1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/cherry2"
+            "leaves/overlay/cherry2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/cherry3"
+            "leaves/overlay/cherry3"
           ],
           "weight": 2
         }
@@ -12372,41 +12372,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/grapes_purple0"
+            "leaves/overlay/grapes_purple0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/grapes_purple1"
+            "leaves/overlay/grapes_purple1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/grapes_purple2"
+            "leaves/overlay/grapes_purple2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/grapes_purple3"
+            "leaves/overlay/grapes_purple3"
           ],
           "weight": 2
         }
@@ -12425,41 +12425,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/lemon0"
+            "leaves/overlay/lemon0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/lemon1"
+            "leaves/overlay/lemon1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/lemon2"
+            "leaves/overlay/lemon2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/lemon3"
+            "leaves/overlay/lemon3"
           ],
           "weight": 2
         }
@@ -12478,41 +12478,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/lime0"
+            "leaves/overlay/lime0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/lime1"
+            "leaves/overlay/lime1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/lime2"
+            "leaves/overlay/lime2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/lime3"
+            "leaves/overlay/lime3"
           ],
           "weight": 2
         }
@@ -12531,41 +12531,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/orange0"
+            "leaves/overlay/orange0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/orange1"
+            "leaves/overlay/orange1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/orange2"
+            "leaves/overlay/orange2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/orange3"
+            "leaves/overlay/orange3"
           ],
           "weight": 2
         }
@@ -12584,41 +12584,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/peach0"
+            "leaves/overlay/peach0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/peach1"
+            "leaves/overlay/peach1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/peach2"
+            "leaves/overlay/peach2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/peach3"
+            "leaves/overlay/peach3"
           ],
           "weight": 2
         }
@@ -12637,41 +12637,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/plum0"
+            "leaves/overlay/plum0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/plum1"
+            "leaves/overlay/plum1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/plum2"
+            "leaves/overlay/plum2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/plum3"
+            "leaves/overlay/plum3"
           ],
           "weight": 2
         }
@@ -12690,41 +12690,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/pomegranate0"
+            "leaves/overlay/pomegranate0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/pomegranate1"
+            "leaves/overlay/pomegranate1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/pomegranate2"
+            "leaves/overlay/pomegranate2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/pomegranate3"
+            "leaves/overlay/pomegranate3"
           ],
           "weight": 2
         }
@@ -12739,9 +12739,9 @@
       "creativeTab": "WesterosFoliage",
       "label": "Weirwood Leaves",
       "textures": [
-        "leaves_weirwood/leaves_weirwood",
-        "leaves_weirwood/leaves_weirwood",
-        "leaves_weirwood/leaves_bf_weirwood"
+        "leaves/weirwood/all",
+        "leaves/weirwood/all",
+        "leaves/weirwood/bf"
       ],
       "rotateRandom": true
     },
@@ -12758,41 +12758,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/blackberry0"
+            "leaves/overlay/blackberry0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/blackberry1"
+            "leaves/overlay/blackberry1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/blackberry2"
+            "leaves/overlay/blackberry2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_birch",
-            "leaves_block/leaves_birch",
-            "leaves_block_bf/leaves_bf_birch",
+            "leaves/birch/all",
+            "leaves/birch/all",
+            "leaves/birch/bf",
             "transparent",
-            "leaves/blackberry3"
+            "leaves/overlay/blackberry3"
           ],
           "weight": 2
         }
@@ -12811,41 +12811,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/blueberry0"
+            "leaves/overlay/blueberry0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/blueberry1"
+            "leaves/overlay/blueberry1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/blueberry2"
+            "leaves/overlay/blueberry2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/blueberry3"
+            "leaves/overlay/blueberry3"
           ],
           "weight": 2
         }
@@ -12864,41 +12864,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/raspberry0"
+            "leaves/overlay/raspberry0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/raspberry1"
+            "leaves/overlay/raspberry1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/raspberry2"
+            "leaves/overlay/raspberry2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/raspberry3"
+            "leaves/overlay/raspberry3"
           ],
           "weight": 2
         }
@@ -12917,41 +12917,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_spruce/leaves_spruce",
-            "leaves_spruce/leaves_spruce",
-            "leaves_spruce/leaves_bf_spruce",
+            "leaves/spruce/all",
+            "leaves/spruce/all",
+            "leaves/spruce/bf",
             "transparent",
-            "leaves/juniper0"
+            "leaves/overlay/juniper0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_spruce/leaves_spruce",
-            "leaves_spruce/leaves_spruce",
-            "leaves_spruce/leaves_bf_spruce",
+            "leaves/spruce/all",
+            "leaves/spruce/all",
+            "leaves/spruce/bf",
             "transparent",
-            "leaves/juniper1"
+            "leaves/overlay/juniper1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_spruce/leaves_spruce",
-            "leaves_spruce/leaves_spruce",
-            "leaves_spruce/leaves_bf_spruce",
+            "leaves/spruce/all",
+            "leaves/spruce/all",
+            "leaves/spruce/bf",
             "transparent",
-            "leaves/juniper2"
+            "leaves/overlay/juniper2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_spruce/leaves_spruce",
-            "leaves_spruce/leaves_spruce",
-            "leaves_spruce/leaves_bf_spruce",
+            "leaves/spruce/all",
+            "leaves/spruce/all",
+            "leaves/spruce/bf",
             "transparent",
-            "leaves/juniper3"
+            "leaves/overlay/juniper3"
           ],
           "weight": 2
         }
@@ -12970,41 +12970,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/red_rose0"
+            "leaves/overlay/red_rose0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/red_rose1"
+            "leaves/overlay/red_rose1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/red_rose2"
+            "leaves/overlay/red_rose2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/red_rose3"
+            "leaves/overlay/red_rose3"
           ],
           "weight": 2
         }
@@ -13023,41 +13023,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/pink_rose0"
+            "leaves/overlay/pink_rose0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/pink_rose1"
+            "leaves/overlay/pink_rose1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/pink_rose2"
+            "leaves/overlay/pink_rose2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/pink_rose3"
+            "leaves/overlay/pink_rose3"
           ],
           "weight": 2
         }
@@ -13076,41 +13076,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/white_rose0"
+            "leaves/overlay/white_rose0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/white_rose1"
+            "leaves/overlay/white_rose1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/white_rose2"
+            "leaves/overlay/white_rose2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/white_rose3"
+            "leaves/overlay/white_rose3"
           ],
           "weight": 2
         }
@@ -13129,41 +13129,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/yellow_rose0"
+            "leaves/overlay/yellow_rose0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/yellow_rose1"
+            "leaves/overlay/yellow_rose1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/yellow_rose2"
+            "leaves/overlay/yellow_rose2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/yellow_rose3"
+            "leaves/overlay/yellow_rose3"
           ],
           "weight": 2
         }
@@ -13182,41 +13182,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/hop0"
+            "leaves/overlay/hop0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/hop1"
+            "leaves/overlay/hop1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/hop2"
+            "leaves/overlay/hop2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/hop3"
+            "leaves/overlay/hop3"
           ],
           "weight": 2
         }
@@ -13235,41 +13235,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/olive0"
+            "leaves/overlay/olive0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/olive1"
+            "leaves/overlay/olive1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/olive2"
+            "leaves/overlay/olive2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_oak",
-            "leaves_block/leaves_oak",
-            "leaves_block_bf/leaves_bf_oak",
+            "leaves/oak/all",
+            "leaves/oak/all",
+            "leaves/oak/bf",
             "transparent",
-            "leaves/olive3"
+            "leaves/overlay/olive3"
           ],
           "weight": 2
         }
@@ -13285,9 +13285,9 @@
       "label": "Palm Leaves",
       "colorMult": "textures/colormap/foliagepalm",
       "textures": [
-        "leaves_block/leaves_palm",
-        "leaves_block/leaves_palm",
-        "leaves_block_bf/leaves_bf_palm"
+        "leaves/palm/all",
+        "leaves/palm/all",
+        "leaves/palm/bf"
       ],
       "rotateRandom": true
     },
@@ -13303,41 +13303,41 @@
       "randomTextures": [
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/grapes_white0"
+            "leaves/overlay/grapes_white0"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/grapes_white1"
+            "leaves/overlay/grapes_white1"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/grapes_white2"
+            "leaves/overlay/grapes_white2"
           ],
           "weight": 10
         },
         {
           "textures": [
-            "leaves_block/leaves_jungle",
-            "leaves_block/leaves_jungle",
-            "leaves_block_bf/leaves_bf_jungle",
+            "leaves/jungle/all",
+            "leaves/jungle/all",
+            "leaves/jungle/bf",
             "transparent",
-            "leaves/grapes_white3"
+            "leaves/overlay/grapes_white3"
           ],
           "weight": 2
         }
@@ -14397,7 +14397,7 @@
       "creativeTab": "WesterosLogs",
       "label": "6-Sided Oak",
       "textures": [
-        "bark_oak/side"
+        "bark/oak/side"
       ]
     },
     {
@@ -14412,9 +14412,9 @@
       "type": "unconnect:false",
       "label": "Thin Oak Log",
       "textures": [
-        "bark_oak/top",
-        "bark_oak/top",
-        "bark_oak/side"
+        "bark/oak/wall_top",
+        "bark/oak/wall_top",
+        "bark/oak/side"
       ]
     },
     {
@@ -14428,7 +14428,7 @@
       "type": "unconnect:false",
       "label": "Oak Bark Fence",
       "textures": [
-        "bark_oak/side"
+        "bark/oak/side"
       ]
     },
     {
@@ -14442,7 +14442,7 @@
       "creativeTab": "WesterosLogs",
       "label": "Locked Oak Bark Fence Gate",
       "textures": [
-        "bark_oak/side"
+        "bark/oak/side"
       ]
     },
     {
@@ -14454,9 +14454,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Mossy Oak Log",
       "textures": [
-        "mossy_oak_log/bottom",
-        "mossy_oak_log/top",
-        "mossy_oak_log/side"
+        "bark/oak/mossy/bottom",
+        "bark/oak/mossy/top",
+        "bark/oak/mossy/side"
       ]
     },
     {
@@ -14468,9 +14468,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Oak Log Rope",
       "textures": [
-        "tree/top",
-        "tree/top",
-        "bark_oak/rope"
+        "bark/oak/top",
+        "bark/oak/top",
+        "bark/oak/rope"
       ]
     },
     {
@@ -14482,9 +14482,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Oak Log Chain",
       "textures": [
-        "tree/top",
-        "tree/top",
-        "bark_oak/chain"
+        "bark/oak/top",
+        "bark/oak/top",
+        "bark/oak/chain"
       ]
     },
     {
@@ -14497,7 +14497,7 @@
       "creativeTab": "WesterosLogs",
       "label": "6-Sided Spruce",
       "textures": [
-        "bark_spruce/side"
+        "bark/spruce/side"
       ]
     },
     {
@@ -14512,9 +14512,9 @@
       "type": "unconnect:false",
       "label": "Thin Spruce Log",
       "textures": [
-        "bark_spruce/top",
-        "bark_spruce/top",
-        "bark_spruce/side"
+        "bark/spruce/wall_top",
+        "bark/spruce/wall_top",
+        "bark/spruce/side"
       ]
     },
     {
@@ -14528,7 +14528,7 @@
       "type": "unconnect:false",
       "label": "Spruce Bark Fence",
       "textures": [
-        "bark_spruce/side"
+        "bark/spruce/side"
       ]
     },
     {
@@ -14542,7 +14542,7 @@
       "creativeTab": "WesterosLogs",
       "label": "Locked Spruce Bark Fence Gate",
       "textures": [
-        "bark_spruce/side"
+        "bark/spruce/side"
       ]
     },
     {
@@ -14554,9 +14554,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Mossy Spruce Log",
       "textures": [
-        "mossy_spruce_log/bottom",
-        "mossy_spruce_log/top",
-        "mossy_spruce_log/side"
+        "bark/spruce/mossy/bottom",
+        "bark/spruce/mossy/top",
+        "bark/spruce/mossy/side"
       ]
     },
     {
@@ -14568,9 +14568,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Spruce Log Rope",
       "textures": [
-        "tree/top",
-        "tree/top",
-        "log_block/bark_spruce_rope"
+        "bark/spruce/top",
+        "bark/spruce/top",
+        "bark/spruce/rope"
       ]
     },
     {
@@ -14582,9 +14582,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Spruce Log Chain",
       "textures": [
-        "tree/top",
-        "tree/top",
-        "log_block/bark_spruce_chain"
+        "bark/spruce/top",
+        "bark/spruce/top",
+        "bark/spruce/chain"
       ]
     },
     {
@@ -14597,7 +14597,7 @@
       "creativeTab": "WesterosLogs",
       "label": "6-Sided Birch",
       "textures": [
-        "bark_birch/side"
+        "bark/birch/side"
       ]
     },
     {
@@ -14612,9 +14612,9 @@
       "type": "unconnect:false",
       "label": "Thin Birch Log",
       "textures": [
-        "bark_birch/top",
-        "bark_birch/top",
-        "bark_birch/side"
+        "bark/birch/wall_top",
+        "bark/birch/wall_top",
+        "bark/birch/side"
       ]
     },
     {
@@ -14628,7 +14628,7 @@
       "type": "unconnect:false",
       "label": "Birch Bark Fence",
       "textures": [
-        "bark_birch/side"
+        "bark/birch/side"
       ]
     },
     {
@@ -14642,7 +14642,7 @@
       "creativeTab": "WesterosLogs",
       "label": "Locked Birch Bark Fence Gate",
       "textures": [
-        "bark_birch/side"
+        "bark/birch/side"
       ]
     },
     {
@@ -14654,9 +14654,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Mossy Birch Log",
       "textures": [
-        "mossy_birch_log/bottom",
-        "mossy_birch_log/top",
-        "mossy_birch_log/side"
+        "bark/birch/mossy/bottom",
+        "bark/birch/mossy/top",
+        "bark/birch/mossy/side"
       ]
     },
     {
@@ -14669,7 +14669,7 @@
       "creativeTab": "WesterosLogs",
       "label": "6-Sided Jungle",
       "textures": [
-        "bark_jungle/side"
+        "bark/jungle/side"
       ]
     },
     {
@@ -14684,9 +14684,9 @@
       "type": "unconnect:false",
       "label": "Thin Jungle Log",
       "textures": [
-        "bark_jungle/top",
-        "bark_jungle/top",
-        "bark_jungle/side"
+        "bark/jungle/wall_top",
+        "bark/jungle/wall_top",
+        "bark/jungle/side"
       ]
     },
     {
@@ -14700,7 +14700,7 @@
       "type": "unconnect:false",
       "label": "Jungle Bark Fence",
       "textures": [
-        "bark_jungle/side"
+        "bark/jungle/side"
       ]
     },
     {
@@ -14714,7 +14714,7 @@
       "creativeTab": "WesterosLogs",
       "label": "Locked Jungle Bark Fence Gate",
       "textures": [
-        "bark_jungle/side"
+        "bark/jungle/side"
       ]
     },
     {
@@ -14726,9 +14726,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Mossy Jungle Log",
       "textures": [
-        "mossy_jungle_log/bottom",
-        "mossy_jungle_log/top",
-        "mossy_jungle_log/side"
+        "bark/jungle/mossy/bottom",
+        "bark/jungle/mossy/top",
+        "bark/jungle/mossy/side"
       ]
     },
     {
@@ -14740,9 +14740,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Jungle Log Rope",
       "textures": [
-        "tree/top",
-        "tree/top",
-        "log_block/bark_jungle_rope"
+        "bark/jungle/top",
+        "bark/jungle/top",
+        "bark/jungle/rope"
       ]
     },
     {
@@ -14754,9 +14754,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Jungle Log Chain",
       "textures": [
-        "tree/top",
-        "tree/top",
-        "log_block/bark_jungle_chain"
+        "bark/jungle/top",
+        "bark/jungle/top",
+        "bark/jungle/chain"
       ]
     },
     {
@@ -14768,9 +14768,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Palm Tree Log",
       "textures": [
-        "log_block/log_palm_top",
-        "log_block/log_palm_top",
-        "bark_palm/side"
+        "bark/palm/top",
+        "bark/palm/top",
+        "bark/palm/side"
       ]
     },
     {
@@ -14785,9 +14785,9 @@
       "type": "unconnect:false",
       "label": "Thin Palm Log",
       "textures": [
-        "bark_palm/top",
-        "bark_palm/top",
-        "bark_palm/side"
+        "bark/palm/wall_top",
+        "bark/palm/wall_top",
+        "bark/palm/side"
       ]
     },
     {
@@ -14801,7 +14801,7 @@
       "type": "unconnect:false",
       "label": "Palm Fence",
       "textures": [
-        "bark_palm/side"
+        "bark/palm/side"
       ]
     },
     {
@@ -14813,9 +14813,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 0",
       "textures": [
-        "weirwood/weirwood_face_0",
-        "weirwood/weirwood_face_0",
-        "bark_birch/side"
+        "bark/weirwood/face_0",
+        "bark/weirwood/face_0",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -14827,9 +14827,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 1",
       "textures": [
-        "weirwood/weirwood_face_1",
-        "weirwood/weirwood_face_1",
-        "bark_birch/side"
+        "bark/weirwood/face_1",
+        "bark/weirwood/face_1",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -14841,9 +14841,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 2",
       "textures": [
-        "weirwood/weirwood_face_2",
-        "weirwood/weirwood_face_2",
-        "bark_birch/side"
+        "bark/weirwood/face_2",
+        "bark/weirwood/face_2",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -14855,9 +14855,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 3",
       "textures": [
-        "weirwood/weirwood_face_3",
-        "weirwood/weirwood_face_3",
-        "bark_birch/side"
+        "bark/weirwood/face_3",
+        "bark/weirwood/face_3",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -14869,9 +14869,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 4",
       "textures": [
-        "weirwood/weirwood_face_4",
-        "weirwood/weirwood_face_4",
-        "bark_birch/side"
+        "bark/weirwood/face_4",
+        "bark/weirwood/face_4",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -14883,9 +14883,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 5",
       "textures": [
-        "weirwood/weirwood_face_5",
-        "weirwood/weirwood_face_5",
-        "bark_birch/side"
+        "bark/weirwood/face_5",
+        "bark/weirwood/face_5",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -14897,9 +14897,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 6",
       "textures": [
-        "weirwood/weirwood_face_6",
-        "weirwood/weirwood_face_6",
-        "bark_birch/side"
+        "bark/weirwood/face_6",
+        "bark/weirwood/face_6",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -14911,9 +14911,9 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 7",
       "textures": [
-        "weirwood/weirwood_face_7",
-        "weirwood/weirwood_face_7",
-        "bark_birch/side"
+        "bark/weirwood/face_7",
+        "bark/weirwood/face_7",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -14925,9 +14925,23 @@
       "creativeTab": "WesterosLogs",
       "label": "Weirwood Face 8",
       "textures": [
-        "weirwood/weirwood_face_8",
-        "weirwood/weirwood_face_8",
-        "bark_birch/side"
+        "bark/weirwood/face_8",
+        "bark/weirwood/face_8",
+        "bark/weirwood/side"
+      ]
+    },
+    {
+      "blockName": "weirwood_scars",
+      "blockType": "log",
+      "stepSound": "wood",
+      "material": "wood",
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
+      "creativeTab": "WesterosLogs",
+      "label": "Weirwood Scars",
+      "textures": [
+        "bark/weirwood/scars",
+        "bark/weirwood/scars",
+        "bark/weirwood/side"
       ]
     },
     {
@@ -15772,9 +15786,9 @@
       "creativeTab": "WesterosMisc",
       "label": "Archery Target",
       "textures": [
-        "log_block/target_front",
-        "log_block/target_front",
-        "log_block/target_sides"
+        "archery_target/front",
+        "archery_target/front",
+        "archery_target/side"
       ]
     },
     {
@@ -26196,7 +26210,7 @@
       "creativeTab": "WesterosDecor",
       "label": "Star Chart 3x3",
       "textures": [
-        "star_chart_3x3/side"
+        "star_chart/3x3/side"
       ],
       "boundingBox": {"xMin": 0.961, "xMax": 0.97, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     },
@@ -26211,7 +26225,7 @@
       "creativeTab": "WesterosDecor",
       "label": "Star Chart 2x2",
       "textures": [
-        "star_chart_2x2/side"
+        "star_chart/2x2/side"
       ],
       "boundingBox": {"xMin": 0.961, "xMax": 0.97, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     },
@@ -26226,12 +26240,12 @@
       "creativeTab": "WesterosMisc",
       "label": "Rope Pulley",
       "textures": [
-        "log_block/pulley_rope_topbottom",
-        "log_block/pulley_rope_topbottom",
-        "log_block/pulley_rope_side",
-        "log_block/pulley_rope_side",
-        "log_block/pulley_rope_front",
-        "log_block/pulley_rope_front"
+        "pulley/rope/top_bottom",
+        "pulley/rope/top_bottom",
+        "pulley/rope/side",
+        "pulley/rope/side",
+        "pulley/rope/front",
+        "pulley/rope/front"
       ],
       "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     },
@@ -26246,12 +26260,12 @@
       "creativeTab": "WesterosMisc",
       "label": "Chain Pulley",
       "textures": [
-        "log_block/pulley_chain_topbottom",
-        "log_block/pulley_chain_topbottom",
-        "log_block/pulley_chain_side",
-        "log_block/pulley_chain_side",
-        "log_block/pulley_chain_front",
-        "log_block/pulley_chain_front"
+        "pulley/chain/top_bottom",
+        "pulley/chain/top_bottom",
+        "pulley/chain/side",
+        "pulley/chain/side",
+        "pulley/chain/front",
+        "pulley/chain/front"
       ],
       "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
     },
@@ -35492,9 +35506,9 @@
       "label": "Snowy Spruce Leaves",
       "rotateRandom": true,
       "textures": [
-        "leaves_spruce/leaves_spruce_snowy_top",
-        "leaves_spruce/leaves_spruce_snowy",
-        "leaves_spruce/leaves_bf_spruce_snowy"
+        "leaves/spruce/snowy/top",
+        "leaves/spruce/snowy/side",
+        "leaves/spruce/snowy/bf"
       ]
     },
     {
@@ -35507,9 +35521,9 @@
       "label": "Snowy Weirwood Leaves",
       "rotateRandom": true,
       "textures": [
-        "leaves_weirwood/leaves_weirwood_snowy_top",
-        "leaves_weirwood/leaves_weirwood_snowy",
-        "leaves_weirwood/leaves_bf_weirwood_snowy"
+        "leaves/weirwood/snowy/top",
+        "leaves/weirwood/snowy/side",
+        "leaves/weirwood/snowy/bf"
       ]
     },
     {

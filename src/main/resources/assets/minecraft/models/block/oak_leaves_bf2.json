@@ -3,9 +3,9 @@
 	"ambientocclusion": true,
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "minecraft:block/oak_leaves",
-		"1": "minecraft:block/leaves_bf_oak",
-		"particle": "minecraft:block/oak_leaves"
+		"0": "westerosblocks:block/leaves/oak/all",
+		"1": "westerosblocks:block/leaves/oak/bf",
+		"particle": "westerosblocks:block/leaves/oak/all"
 	},
 	"elements": [
 		{

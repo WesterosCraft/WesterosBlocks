@@ -3,9 +3,9 @@
 	"ambientocclusion": true,
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "minecraft:block/spruce_leaves",
-		"1": "minecraft:block/leaves_bf_spruce",
-		"particle": "minecraft:block/spruce_leaves"
+		"0": "westerosblocks:block/leaves/spruce/all",
+		"1": "westerosblocks:block/leaves/spruce/bf",
+		"particle": "westerosblocks:block/leaves/spruce/all"
 	},
 	"elements": [
 		{
