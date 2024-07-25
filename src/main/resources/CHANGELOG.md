@@ -8,6 +8,8 @@
 - Added harrenhal secret door.
 - Added "symmetrical" blockstate to left/righthatch timber frame blocks, allowing for better corner patterns.
 - Added scarred weirwood block.
+- Added green-veined black harrenhal marble.
+- Added bushy grass blocks to replace uses of leaf blocks in ground.
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 - Fixed bug with red keep secret door texture.
 - Fixed bug with empty cabinet CTM.

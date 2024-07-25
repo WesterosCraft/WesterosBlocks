@@ -541,7 +541,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public static class CustomColorMultHandler extends ColorMultHandler implements ColorResolver {
 		private List<int[]> colorBuffers;
 		private final List<String> rnames;
-		private boolean brokenOptifine = false;
+		private boolean brokenCustomRenderer = false;
 
 		CustomColorMultHandler(String rname, String blockName) {
 			this(Collections.singletonList(rname), blockName);
@@ -554,6 +554,24 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			for (String rname : rnames) {
 				colorBuffers.add(new int[65536]);
 			}
+		}
+
+		public int calculateColor(LevelReader rdr, BlockPos pos, int txtindx) {
+			int red = 0;
+			int green = 0;
+			int blue = 0;
+							
+			for (int xx = -1; xx <= 1; ++xx) {
+				for (int zz = -1; zz <= 1; ++zz) {
+					BlockPos bp = pos.offset(xx, 0, zz);
+					Biome biome = rdr.getBiome(bp).value();
+					int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall(), txtindx);
+					red += (mult & 0xFF0000) >> 16;
+					green += (mult & 0x00FF00) >> 8;
+					blue += (mult & 0x0000FF);
+				}
+			}
+			return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
 		}
 
 		@Override
@@ -569,29 +587,23 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 					rdr = (LevelReader) world;
 				}
 				if (rdr != null) {
-					int red = 0;
-					int green = 0;
-					int blue = 0;
-									
-					for (int xx = -1; xx <= 1; ++xx) {
-						for (int zz = -1; zz <= 1; ++zz) {
-							BlockPos bp = pos.offset(xx, 0, zz);
-							Biome biome = rdr.getBiome(bp).value();
-							int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall(), txtindx);
-							red += (mult & 0xFF0000) >> 16;
-							green += (mult & 0x00FF00) >> 8;
-							blue += (mult & 0x0000FF);
-						}
-					}
-					return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+					return calculateColor(rdr, pos, txtindx);
 				}
-				// Workaround to keep Optifine from exploding, but it does break custom biome tinting....
+				// Workaround to attempt to support custom renderers such as Optifine or Embeddium
 				else {
-					if (!brokenOptifine) {
+					if (!brokenCustomRenderer) {
+						// First try to access non-thread-safe level reader from minecraft client instance...
 						try {
-							return world.getBlockTint(pos, this);		
-						} catch (Exception x) {
-							brokenOptifine = true;
+							rdr = Minecraft.getInstance().level;
+							return calculateColor(rdr, pos, txtindx);
+						} catch(Exception x) {
+							// If fails, try to use color resolver method...
+							try {
+								return world.getBlockTint(pos, this);		
+							} catch (Exception y) {
+								// If both fail, biome colors will be broken, but should not explode.
+								brokenCustomRenderer = true;
+							}
 						}
 					}
 				}
