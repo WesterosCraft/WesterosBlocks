@@ -2,9 +2,9 @@
   "parent": "westerosblocks:block/tinted/leaves_overlay",
   "textures": {
     "end": "westerosblocks:block/leaves/spruce/all",
-    "side": "westerosblocks:block/leaves/spruce/all",
-    "overlayend": "westerosblocks:block/transparent",
+    "side": "westerosblocks:block/transparent",
+    "overlayend": "westerosblocks:block/leaves/overlay/juniper0",
     "overlayside": "westerosblocks:block/leaves/overlay/juniper0",
-    "particle": "westerosblocks:block/leaves/spruce/all"
+    "particle": "westerosblocks:block/transparent"
   }
 }

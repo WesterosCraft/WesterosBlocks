@@ -2,9 +2,9 @@
   "parent": "westerosblocks:block/tinted/leaves_overlay",
   "textures": {
     "end": "westerosblocks:block/leaves/jungle/all",
-    "side": "westerosblocks:block/leaves/jungle/all",
-    "overlayend": "westerosblocks:block/transparent",
+    "side": "westerosblocks:block/transparent",
+    "overlayend": "westerosblocks:block/leaves/overlay/grapes_white0",
     "overlayside": "westerosblocks:block/leaves/overlay/grapes_white0",
-    "particle": "westerosblocks:block/leaves/jungle/all"
+    "particle": "westerosblocks:block/transparent"
   }
 }

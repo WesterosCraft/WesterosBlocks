@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/untinted/leaves_bf2",
-  "textures": {
-    "end": "westerosblocks:block/leaves/weirwood/snowy/top",
-    "side": "westerosblocks:block/leaves/weirwood/snowy/side",
-    "bf": "westerosblocks:block/leaves/weirwood/snowy/bf",
-    "particle": "westerosblocks:block/leaves/weirwood/snowy/side"
-  }
-}

@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/tinted/leaves_bf3",
+  "textures": {
+    "all": "westerosblocks:block/leaves/spruce/all",
+    "particle": "westerosblocks:block/leaves/spruce/all"
+  }
+}
