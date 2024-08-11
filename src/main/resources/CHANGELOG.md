@@ -11,6 +11,7 @@
 - Added green-veined black harrenhal marble.
 - Added bushy grass blocks to replace uses of leaf blocks in ground.
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
+- Changed betterfoliage leaf models.
 - Fixed bug with red keep secret door texture.
 - Fixed bug with empty cabinet CTM.
 - Fixed bug with pale dark red medium ashlar.
