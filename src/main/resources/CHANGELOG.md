@@ -6,6 +6,7 @@
 - Added scorched earth layers.
 - Added sandy pink smooth ashlar and plaster.
 - Added harrenhal secret door.
+- Added black melted ashlar blocks and "bricicles" for harrenhal.
 - Added "symmetrical" blockstate to left/righthatch timber frame blocks, allowing for better corner patterns.
 - Added scarred weirwood block.
 - Added green-veined black harrenhal marble.

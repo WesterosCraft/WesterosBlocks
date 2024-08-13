@@ -1179,6 +1179,20 @@
       }
     },
     {
+      "baseBlockName": "black_melted_brick",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 1.5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMisc",
+      "baseLabel": "Melted Ashlar Black",
+      "textures": {
+        "all": "ashlar_melted/black/all"
+      }
+    },
+    {
       "baseBlockName": "valyrian_stone",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 1.5,
@@ -9439,6 +9453,18 @@
         "cobblestone/grey/keystone/top_bottom",
         "cobblestone/grey/keystone/side"
       ]
+    },
+    {
+      "blockName": "black_bricicle",
+      "blockType": "web",
+      "stepSound": "stone",
+      "material": "rock",
+      "creativeTab": "WesterosMisc",
+      "label": "Melted Ashlar Black Bricicle",
+      "textures": [
+        "ashlar_melted/black/bricicle/side"
+      ],
+      "type": "no-in-web"
     },
     {
       "blockName": "closed_barrel",
