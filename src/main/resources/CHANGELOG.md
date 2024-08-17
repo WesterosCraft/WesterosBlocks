@@ -11,6 +11,7 @@
 - Added scarred weirwood block.
 - Added green-veined black harrenhal marble.
 - Added bushy grass blocks to replace uses of leaf blocks in ground.
+- Added coral, seagrass, and kelp blocks.
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 - Changed betterfoliage leaf models.
 - Fixed bug with red keep secret door texture.

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/coral/horn/all",
+    "top": "westerosblocks:block/coral/horn/all",
+    "side": "westerosblocks:block/coral/horn/all",
+    "particle": "westerosblocks:block/coral/horn/all"
+  }
+}

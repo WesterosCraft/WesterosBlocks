@@ -8592,6 +8592,91 @@
       "textures": {
         "all": "grassy_sand/side"
       }
+    },
+    {
+      "baseBlockName": "coral_brain",
+      "variants": ["solid", "stairs", "slab", "wall", "fence"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosWaterAir",
+      "types": {
+        "fence": "unconnect:true"
+      },
+      "baseLabel": "Brain Coral",
+      "textures": {
+        "all": "coral/brain/all"
+      }
+    },
+    {
+      "baseBlockName": "coral_bubble",
+      "variants": ["solid", "stairs", "slab", "wall", "fence"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosWaterAir",
+      "types": {
+        "fence": "unconnect:true"
+      },
+      "baseLabel": "Bubble Coral",
+      "textures": {
+        "all": "coral/bubble/all"
+      }
+    },
+    {
+      "baseBlockName": "coral_fire",
+      "variants": ["solid", "stairs", "slab", "wall", "fence"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosWaterAir",
+      "types": {
+        "fence": "unconnect:true"
+      },
+      "baseLabel": "Fire Coral",
+      "textures": {
+        "all": "coral/fire/all"
+      }
+    },
+    {
+      "baseBlockName": "coral_horn",
+      "variants": ["solid", "stairs", "slab", "wall", "fence"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosWaterAir",
+      "types": {
+        "fence": "unconnect:true"
+      },
+      "baseLabel": "Horn Coral",
+      "textures": {
+        "all": "coral/horn/all"
+      }
+    },
+    {
+      "baseBlockName": "coral_tube",
+      "variants": ["solid", "stairs", "slab", "wall", "fence"],
+      "hardness": 5,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "harvestLevel": [{ "tool": "pickaxe","level": 2 }],
+      "creativeTab": "WesterosWaterAir",
+      "types": {
+        "fence": "unconnect:true"
+      },
+      "baseLabel": "Tube Coral",
+      "textures": {
+        "all": "coral/tube/all"
+      }
     }
   ],
   "blocks": [
@@ -30517,6 +30602,164 @@
         {"textures": ["dock_leaf/side1"]},
         {"textures": ["dock_leaf/side2"]}
       ]
+    },
+    {
+      "blockName": "coral_brain_web",
+      "blockType": "plant",
+      "type": "layerSensitive",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
+      "label": "Brain Coral Web",
+      "randomTextures": [
+        {"textures": ["coral/brain/web1"]},
+        {"textures": ["coral/brain/web2"]}
+      ]
+    },
+    {
+      "blockName": "coral_brain_fan",
+      "blockType": "fan",
+      "stepSound": "stone",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "label": "Brain Coral Fan",
+      "type": "allow-unsupported",
+      "randomTextures": [
+        {"textures": ["coral/brain/fan1"]},
+        {"textures": ["coral/brain/fan2"]}
+      ]
+    },
+    {
+      "blockName": "coral_bubble_web",
+      "blockType": "plant",
+      "type": "layerSensitive",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
+      "label": "Bubble Coral Web",
+      "randomTextures": [
+        {"textures": ["coral/bubble/web1"]},
+        {"textures": ["coral/bubble/web2"]}
+      ]
+    },
+    {
+      "blockName": "coral_bubble_fan",
+      "blockType": "fan",
+      "stepSound": "stone",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "label": "Bubble Coral Fan",
+      "type": "allow-unsupported",
+      "randomTextures": [
+        {"textures": ["coral/bubble/fan1"]},
+        {"textures": ["coral/bubble/fan2"]}
+      ]
+    },
+    {
+      "blockName": "coral_fire_web",
+      "blockType": "plant",
+      "type": "layerSensitive",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
+      "label": "Fire Coral Web",
+      "randomTextures": [
+        {"textures": ["coral/fire/web1"]},
+        {"textures": ["coral/fire/web2"]}
+      ]
+    },
+    {
+      "blockName": "coral_fire_fan",
+      "blockType": "fan",
+      "stepSound": "stone",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "label": "Fire Coral Fan",
+      "type": "allow-unsupported",
+      "randomTextures": [
+        {"textures": ["coral/fire/fan1"]},
+        {"textures": ["coral/fire/fan2"]}
+      ]
+    },
+    {
+      "blockName": "coral_horn_web",
+      "blockType": "plant",
+      "type": "layerSensitive",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
+      "label": "Horn Coral Web",
+      "randomTextures": [
+        {"textures": ["coral/horn/web1"]},
+        {"textures": ["coral/horn/web2"]}
+      ]
+    },
+    {
+      "blockName": "coral_horn_fan",
+      "blockType": "fan",
+      "stepSound": "stone",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "label": "Horn Coral Fan",
+      "type": "allow-unsupported",
+      "randomTextures": [
+        {"textures": ["coral/horn/fan1"]},
+        {"textures": ["coral/horn/fan2"]}
+      ]
+    },
+    {
+      "blockName": "coral_tube_web",
+      "blockType": "plant",
+      "type": "layerSensitive",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
+      "label": "Tube Coral Web",
+      "randomTextures": [
+        {"textures": ["coral/tube/web1"]},
+        {"textures": ["coral/tube/web2"]}
+      ]
+    },
+    {
+      "blockName": "coral_tube_fan",
+      "blockType": "fan",
+      "stepSound": "stone",
+      "material": "rock",
+      "creativeTab": "WesterosWaterAir",
+      "label": "Tube Coral Fan",
+      "type": "allow-unsupported",
+      "randomTextures": [
+        {"textures": ["coral/tube/fan1"]},
+        {"textures": ["coral/tube/fan2"]}
+      ]
+    },
+    {
+      "blockName": "seagrass",
+      "blockType": "crop",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosWaterAir",
+      "label": "Seagrass",
+      "randomTextures": [
+        {"textures": ["seagrass/side1"]},
+        {"textures": ["seagrass/side2"]},
+        {"textures": ["seagrass/side3"]},
+        {"textures": ["seagrass/side4"]}
+      ],
+      "type": "layerSensitive"
+    },
+    {
+      "blockName": "kelp",
+      "blockType": "plant",
+      "stepSound": "grass",
+      "material": "plants",
+      "creativeTab": "WesterosWaterAir",
+      "label": "Kelp",
+      "randomTextures": [
+        {"textures": ["kelp/side1"]},
+        {"textures": ["kelp/side2"]}
+      ],
+      "type": "layerSensitive"
     },
     {
       "blockName": "potted_dock_leaf",

@@ -45,6 +45,7 @@ import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
 import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFanBlock;
 import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
 import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
@@ -1076,6 +1077,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		typeTable.put("fence", new WCFenceBlock.Factory());
 		typeTable.put("web", new WCWebBlock.Factory());
 		typeTable.put("torch", new WCTorchBlock.Factory());
+		typeTable.put("fan", new WCFanBlock.Factory());
 		typeTable.put("ladder", new WCLadderBlock.Factory());
 		typeTable.put("cuboid", new WCCuboidBlock.Factory());
 		typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());

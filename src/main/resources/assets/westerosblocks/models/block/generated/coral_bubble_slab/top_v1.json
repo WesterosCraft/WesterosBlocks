@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/coral/bubble/all",
+    "up": "westerosblocks:block/coral/bubble/all",
+    "north": "westerosblocks:block/coral/bubble/all",
+    "south": "westerosblocks:block/coral/bubble/all",
+    "west": "westerosblocks:block/coral/bubble/all",
+    "east": "westerosblocks:block/coral/bubble/all",
+    "particle": "westerosblocks:block/coral/bubble/all"
+  }
+}
