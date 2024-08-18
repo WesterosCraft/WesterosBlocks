@@ -1,10 +1,12 @@
 # 21 Jun 2024:
-- Added additional polished stone variants to fill gaps.
+- Added additional polished stone variants.
 - Added CTM and connectstate to polished stone, allowing for creation of arbitrary block sizes using data cycler tool.
 - Added house banners, generic wool banners, and updates to existing banners.
 - Added additional engraved ashlar colors.
 - Added scorched earth layers.
 - Added sandy pink smooth ashlar and plaster.
+- Added warm pink plaster.
+- Added umber and light umber plaster and timber frames.
 - Added harrenhal secret door.
 - Added black melted ashlar blocks and "bricicles" for harrenhal.
 - Added "symmetrical" blockstate to left/righthatch timber frame blocks, allowing for better corner patterns.
@@ -12,6 +14,8 @@
 - Added green-veined black harrenhal marble.
 - Added bushy grass blocks to replace uses of leaf blocks in ground.
 - Added coral, seagrass, and kelp blocks.
+- Added cheval de frise.
+- Added custom model for flat wheel as well as new large wheel.
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 - Changed betterfoliage leaf models.
 - Fixed bug with red keep secret door texture.

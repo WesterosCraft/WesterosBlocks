@@ -5180,6 +5180,34 @@
       }
     },
     {
+      "baseBlockName": "light_umber_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Umber Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/light_umber/all"
+      }
+    },
+    {
+      "baseBlockName": "umber_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Umber Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/umber/all"
+      }
+    },
+    {
       "baseBlockName": "light_red_plaster",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 2,
@@ -5516,6 +5544,20 @@
       }
     },
     {
+      "baseBlockName": "pale_pink_plaster",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale Pink Plaster Smooth",
+      "textures": {
+        "all": "plaster/smooth/pale_pink/all"
+      }
+    },
+    {
       "baseBlockName": "sandy_pink_plaster",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 2,
@@ -5530,7 +5572,7 @@
       }
     },
     {
-      "baseBlockName": "pale_pink_plaster",
+      "baseBlockName": "warm_pink_plaster",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 2,
       "stepSound": "grass",
@@ -5538,9 +5580,9 @@
       "resistance": 2,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosMarblePlaster",
-      "baseLabel": "Pale Pink Plaster Smooth",
+      "baseLabel": "Warm Pink Plaster Smooth",
       "textures": {
-        "all": "plaster/smooth/pale_pink/all"
+        "all": "plaster/smooth/warm_pink/all"
       }
     },
     {
@@ -5676,6 +5718,36 @@
       "randomTextures": [
         {"textures": {"all": "plaster/rough/dark_grey/all1"}},
         {"textures": {"all": "plaster/rough/dark_grey/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "light_umber_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Light Umber Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/light_umber/all1"}},
+        {"textures": {"all": "plaster/rough/light_umber/all2"}}
+      ]
+    },
+    {
+      "baseBlockName": "umber_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Umber Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/umber/all1"}},
+        {"textures": {"all": "plaster/rough/umber/all2"}}
       ]
     },
     {
@@ -6039,6 +6111,21 @@
       ]
     },
     {
+      "baseBlockName": "pale_pink_plaster_rough",
+      "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
+      "hardness": 2,
+      "stepSound": "grass",
+      "material": "ground",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
+      "creativeTab": "WesterosMarblePlaster",
+      "baseLabel": "Pale Pink Plaster Rough",
+      "randomTextures": [
+        {"textures": {"all": "plaster/rough/pale_pink/all1"}},
+        {"textures": {"all": "plaster/rough/pale_pink/all2"}}
+      ]
+    },
+    {
       "baseBlockName": "sandy_pink_plaster_rough",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 2,
@@ -6054,7 +6141,7 @@
       ]
     },
     {
-      "baseBlockName": "pale_pink_plaster_rough",
+      "baseBlockName": "warm_pink_plaster_rough",
       "variants": ["solid", "stairs", "slab", "wall", "fence", "hopper", "tip"],
       "hardness": 2,
       "stepSound": "grass",
@@ -6062,10 +6149,10 @@
       "resistance": 2,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosMarblePlaster",
-      "baseLabel": "Pale Pink Plaster Rough",
+      "baseLabel": "Warm Pink Plaster Rough",
       "randomTextures": [
-        {"textures": {"all": "plaster/rough/pale_pink/all1"}},
-        {"textures": {"all": "plaster/rough/pale_pink/all2"}}
+        {"textures": {"all": "plaster/rough/warm_pink/all1"}},
+        {"textures": {"all": "plaster/rough/warm_pink/all2"}}
       ]
     },
     {
@@ -9618,6 +9705,20 @@
       "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0, "yMax": 0.5, "zMin": 0, "zMax": 1}
     },
     {
+      "blockName": "cheval_de_frise",
+      "blockType": "cuboid-ne",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 2,
+      "harvestLevel": [{ "tool": "axe", "level": 1 }],
+      "creativeTab": "WesterosDecor",
+      "label": "Cheval de Frise",
+      "textures": ["transparent"],
+      "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1},
+      "isCustomModel": true
+    },
+    {
       "blockName": "sandstone_pillar",
       "blockType": "log",
       "stepSound": "stone",
@@ -11844,14 +11945,47 @@
       "harvestLevel": [{ "tool": "axe", "level": 1 }],
       "creativeTab": "WesterosDecor",
       "label": "Blood",
-      "randomTextures": [
-        {"textures": ["blood/blood1"]},
-        {"textures": ["blood/blood2"]},
-        {"textures": ["blood/blood3"]},
-        {"textures": ["blood/blood4"]},
-        {"textures": ["blood/blood5"]},
-        {"textures": ["blood/blood6"]},
-        {"textures": ["blood/blood7"]}
+      "states": [
+        {
+          "stateID": "random",
+          "randomTextures": [
+            {"textures": ["blood/blood1"]},
+            {"textures": ["blood/blood2"]},
+            {"textures": ["blood/blood3"]},
+            {"textures": ["blood/blood4"]},
+            {"textures": ["blood/blood5"]},
+            {"textures": ["blood/blood6"]},
+            {"textures": ["blood/blood7"]}
+          ]
+        },
+        {
+          "stateID": "blood1",
+          "textures": ["blood/blood1"]
+        },
+        {
+          "stateID": "blood2",
+          "textures": ["blood/blood2"]
+        },
+        {
+          "stateID": "blood3",
+          "textures": ["blood/blood3"]
+        },
+        {
+          "stateID": "blood4",
+          "textures": ["blood/blood4"]
+        },
+        {
+          "stateID": "blood5",
+          "textures": ["blood/blood5"]
+        },
+        {
+          "stateID": "blood6",
+          "textures": ["blood/blood6"]
+        },
+        {
+          "stateID": "blood7",
+          "textures": ["blood/blood7"]
+        }
       ],
       "boundingBox": {"xMin": 0, "xMax": 1, "yMin": 0.03, "yMax": 0.039, "zMin": 0, "zMax": 1}
     },
@@ -26145,14 +26279,26 @@
       "creativeTab": "WesterosMisc",
       "label": "Flat Wheel",
       "textures": [
-        "transparent",
-        "transparent",
-        "transparent",
-        "transparent",
-        "cuboid_block/wheel",
-        "cuboid_block/wheel"
+        "transparent"
       ],
-      "boundingBox": {"xMin": 0.92, "xMax": 0.97, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1}
+      "boundingBox": {"xMin": 0.92, "xMax": 0.97, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1},
+      "isCustomModel": true
+    },
+    {
+      "blockName": "flat_wheel_large",
+      "blockType": "cuboid-nsew",
+      "hardness": 5,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "harvestLevel": [{ "tool": "pickaxe", "level": 3 }],
+      "creativeTab": "WesterosMisc",
+      "label": "Flat Wheel Large",
+      "textures": [
+        "transparent"
+      ],
+      "boundingBox": {"xMin": 0.92, "xMax": 0.97, "yMin": 0, "yMax": 1, "zMin": 0, "zMax": 1},
+      "isCustomModel": true
     },
     {
       "blockName": "star_chart_3x3",
@@ -33052,6 +33198,227 @@
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
     },
     {
+      "blockName": "timber_oak_light_umber_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Crosshatch",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Lefthatch",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch", "timber/oak/lefthatch",
+                           "timber/oak/righthatch" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Righthatch",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch", "timber/oak/righthatch",
+                           "timber/oak/lefthatch" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Frame",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Vertical",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Close Studding",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Lefthatch Large",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large", "timber/oak/lefthatch_large",
+                           "timber/oak/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Righthatch Large",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large", "timber/oak/righthatch_large",
+                           "timber/oak/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Lefthatch Studded",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded", "timber/oak/lefthatch_studded",
+                           "timber/oak/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Righthatch Studded",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent",
+                           "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded", "timber/oak/righthatch_studded",
+                           "timber/oak/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_oak_light_umber_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Oak Light Umber Bressummer",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/oak/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/dark_orange/all", "wood/oak/all", "plaster/smooth/dark_orange/all" ]},
+        {"textures": [ "plaster/smooth/umber/all", "wood/oak/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/rough/light_umber/all1", "wood/oak/all", "plaster/rough/light_umber/all1" ]},
+        {"textures": [ "plaster/wattle/light_umber/all", "wood/oak/all", "plaster/wattle/light_umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
+    },
+    {
       "blockName": "timber_oak_lannisport_brick_crosshatch",
       "blockType": "solid",
       "hardness": 2,
@@ -34319,6 +34686,227 @@
         {"textures": [ "plaster/smooth/casterly_crimson/all", "wood/northern/all", "plaster/smooth/casterly_crimson/all" ]},
         {"textures": [ "plaster/rough/red/all1", "wood/northern/all", "plaster/rough/red/all1" ]},
         {"textures": [ "plaster/wattle/red/all", "wood/northern/all", "plaster/wattle/red/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
+    },
+    {
+      "blockName": "timber_northern_umber_crosshatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Crosshatch",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
+    },
+    {
+      "blockName": "timber_northern_umber_lefthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Lefthatch",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch", "timber/northern/lefthatch",
+                           "timber/northern/righthatch" ]
+    },
+    {
+      "blockName": "timber_northern_umber_righthatch",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Righthatch",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch", "timber/northern/righthatch",
+                           "timber/northern/lefthatch" ]
+    },
+    {
+      "blockName": "timber_northern_umber_frame",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Frame",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
+    },
+    {
+      "blockName": "timber_northern_umber_vertical",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Vertical",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
+    },
+    {
+      "blockName": "timber_northern_umber_close_studding",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Close Studding",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
+    },
+    {
+      "blockName": "timber_northern_umber_lefthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Lefthatch Large",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large", "timber/northern/lefthatch_large",
+                           "timber/northern/righthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_umber_righthatch_large",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Righthatch Large",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large", "timber/northern/righthatch_large",
+                           "timber/northern/lefthatch_large" ]
+    },
+    {
+      "blockName": "timber_northern_umber_lefthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Lefthatch Studded",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded", "timber/northern/lefthatch_studded",
+                           "timber/northern/righthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_umber_righthatch_studded",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Righthatch Studded",
+      "type": "connectstate:true,symmetrical:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
+      ],
+      "overlayTextures": [ "timber/northern/bottom", "transparent",
+                           "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded", "timber/northern/righthatch_studded",
+                           "timber/northern/lefthatch_studded" ]
+    },
+    {
+      "blockName": "timber_northern_umber_bressummer",
+      "blockType": "solid",
+      "hardness": 2,
+      "stepSound": "wood",
+      "material": "wood",
+      "resistance": 5,
+      "creativeTab": "WesterosTimberFrame",
+      "label": "Timber Northern Umber Bressummer",
+      "type": "connectstate:true,toggleOnUse",
+      "states": [
+        {"textures": [ "plaster/smooth/umber/all", "wood/northern/all", "plaster/smooth/umber/all" ]},
+        {"textures": [ "plaster/smooth/light_umber/all", "wood/northern/all", "plaster/smooth/light_umber/all" ]},
+        {"textures": [ "plaster/smooth/red/all", "wood/northern/all", "plaster/smooth/red/all" ]},
+        {"textures": [ "plaster/rough/umber/all1", "wood/northern/all", "plaster/rough/umber/all1" ]},
+        {"textures": [ "plaster/wattle/umber/all", "wood/northern/all", "plaster/wattle/umber/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]
     },
