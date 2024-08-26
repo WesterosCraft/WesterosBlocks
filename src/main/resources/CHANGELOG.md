@@ -18,6 +18,7 @@
 - Added custom model for flat wheel as well as new large wheel.
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 - Changed betterfoliage leaf models.
+- Changed butterfly and dragonfly textures.
 - Fixed bug with red keep secret door texture.
 - Fixed bug with empty cabinet CTM.
 - Fixed bug with pale dark red medium ashlar.
