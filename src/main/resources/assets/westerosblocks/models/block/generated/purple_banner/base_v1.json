@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_purple_bottom",
-    "txt5": "westerosblocks:block/banner_block/banner_purple_bottom",
+    "txt4": "westerosblocks:block/banner/embroidered/purple/bottom",
+    "txt5": "westerosblocks:block/banner/embroidered/purple/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

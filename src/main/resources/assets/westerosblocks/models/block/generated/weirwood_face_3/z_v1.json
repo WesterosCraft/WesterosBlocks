@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log_horizontal",
   "textures": {
-    "down": "westerosblocks:block/weirwood/weirwood_face_3",
-    "up": "westerosblocks:block/weirwood/weirwood_face_3",
-    "north": "westerosblocks:block/bark_birch/side",
-    "south": "westerosblocks:block/bark_birch/side",
-    "east": "westerosblocks:block/bark_birch/side",
-    "west": "westerosblocks:block/bark_birch/side",
-    "particle": "westerosblocks:block/bark_birch/side"
+    "down": "westerosblocks:block/bark/weirwood/face_3",
+    "up": "westerosblocks:block/bark/weirwood/face_3",
+    "north": "westerosblocks:block/bark/weirwood/side",
+    "south": "westerosblocks:block/bark/weirwood/side",
+    "east": "westerosblocks:block/bark/weirwood/side",
+    "west": "westerosblocks:block/bark/weirwood/side",
+    "particle": "westerosblocks:block/bark/weirwood/side"
   }
 }

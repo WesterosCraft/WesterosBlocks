@@ -7,6 +7,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -15,11 +16,15 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.phys.BlockHitResult;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import net.minecraft.world.level.block.state.BlockState;
 
 public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
 
@@ -27,12 +32,19 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	BlockBehaviour.Properties props = def.makeProperties();
+			// See if we have a state property
+			WesterosBlockDef.StateProperty state = def.buildStateProperty();
+			if (state != null) {
+				tempSTATE = state;
+			}
+            // Process types
             String t = def.getType();
             Boolean doUnconnect = null;
             if (t != null) {
                 String[] toks = t.split(",");
                 for (String tok : toks) {
                 	String[] parts = tok.split(":");
+                    // See if we have unconnect
                     if (parts[0].equals("unconnect")) {
                     	doUnconnect = "true".equals(parts[1]);
                     	tempUNCONNECT = UNCONNECT;
@@ -48,17 +60,43 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
 
     public final boolean unconnect;
     public final Boolean unconnectDef;
+
+	protected static WesterosBlockDef.StateProperty tempSTATE;
+	protected WesterosBlockDef.StateProperty STATE;
+
+	protected boolean toggleOnUse = false;
     
     private WesterosBlockDef def;
 
     protected WCFenceBlock(BlockBehaviour.Properties props, WesterosBlockDef def, Boolean doUnconnect) {
         super(props);
         this.def = def;
+
+		String t = def.getType();
+		if (t != null) {
+				String[] toks = t.split(",");
+				for (String tok : toks) {
+						if (tok.equals("toggleOnUse")) {
+								toggleOnUse = true;
+						}
+				}
+		}
+
         unconnect = (doUnconnect != null);
         unconnectDef = doUnconnect;
+        BlockState defbs = this.stateDefinition.any()
+                            .setValue(NORTH, Boolean.valueOf(false))
+                            .setValue(EAST, Boolean.valueOf(false))
+                            .setValue(SOUTH, Boolean.valueOf(false))
+                            .setValue(WEST, Boolean.valueOf(false))
+                            .setValue(WATERLOGGED, Boolean.valueOf(false));
         if (unconnect) {
-        	this.registerDefaultState(this.stateDefinition.any().setValue(NORTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false)).setValue(SOUTH, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(UNCONNECT, unconnectDef));
+            defbs = defbs.setValue(UNCONNECT, unconnectDef);
         }
+		if (STATE != null) {
+			defbs = defbs.setValue(STATE, STATE.defValue);
+		}
+        this.registerDefaultState(defbs);
     }
 
     @Override
@@ -72,6 +110,13 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     		stateDefinition.add(tempUNCONNECT);
     		tempUNCONNECT = null;
     	}
+		if (tempSTATE != null) {
+			STATE = tempSTATE;
+			tempSTATE = null;
+		}
+		if (STATE != null) {
+			stateDefinition.add(STATE);
+		}
     	super.createBlockStateDefinition(stateDefinition);
     }
 
@@ -102,11 +147,24 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
         boolean flag = this.isSameFence(p_53330_) && ((!p_53330_.hasProperty(UNCONNECT)) || (!p_53330_.getValue(UNCONNECT)));
         boolean flag1 = block instanceof FenceGateBlock && FenceGateBlock.connectsToDirection(p_53330_, p_53332_);
         return !isExceptionForConnection(p_53330_) && p_53331_ || flag || flag1;
-     }
+    }
 
-     private boolean isSameFence(BlockState p_153255_) {
+    private boolean isSameFence(BlockState p_153255_) {
         return p_153255_.is(BlockTags.FENCES) && p_153255_.is(BlockTags.WOODEN_FENCES) == this.defaultBlockState().is(BlockTags.WOODEN_FENCES);
-     }
+    }
+
+	@Override
+	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
+		if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
+				state = state.cycle(this.STATE);
+				level.setBlock(pos, state, 10);
+				level.levelEvent(player, 1006, pos, 0);
+				return InteractionResult.sidedSuccess(level.isClientSide);
+		}
+		else {
+			return InteractionResult.PASS;
+		}
+	}
 
     private static String[] TAGS = { "fences" };
     private static String[] TAGS2 = { "fences", "wooden_fences" };

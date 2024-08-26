@@ -1,19 +1,34 @@
 {
   "variants": {
-    "state=state2": {
-      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/state2_v1"
+    "symmetrical=false,state=state1": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/asymmetrical/state1_v1"
     },
-    "state=state1": {
-      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/state1_v1"
+    "symmetrical=false,state=state2": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/asymmetrical/state2_v1"
     },
-    "state=state4": {
-      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/state4_v1"
+    "symmetrical=true,state=state0": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/symmetrical/state0_v1"
     },
-    "state=state3": {
-      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/state3_v1"
+    "symmetrical=false,state=state3": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/asymmetrical/state3_v1"
     },
-    "state=state0": {
-      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/state0_v1"
+    "symmetrical=true,state=state1": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/symmetrical/state1_v1"
+    },
+    "symmetrical=false,state=state4": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/asymmetrical/state4_v1"
+    },
+    "symmetrical=true,state=state2": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/symmetrical/state2_v1"
+    },
+    "symmetrical=true,state=state3": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/symmetrical/state3_v1"
+    },
+    "symmetrical=true,state=state4": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/symmetrical/state4_v1"
+    },
+    "symmetrical=false,state=state0": {
+      "model": "westerosblocks:block/generated/timber_whitewashed_lefthatch/asymmetrical/state0_v1"
     }
   }
 }

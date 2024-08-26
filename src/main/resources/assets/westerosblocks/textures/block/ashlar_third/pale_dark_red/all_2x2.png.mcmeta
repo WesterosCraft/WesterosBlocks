@@ -1,24 +1,10 @@
 {
   "ctm": {
     "ctm_version": 1,
-    "type": "westeros_horizontal_cond",
+    "type": "ctm_horizontal",
     "layer": "SOLID",
-    "textures": [
-      "westerosblocks:block/coarse_red_sandstone/jungle_2x2"
-    ],
+    "textures": [],
     "extra": {
-      "condWidth": 2,
-      "condHeight": 2,
-      "conds": [
-        {
-          "biomeNames": [
-            "minecraft:jungle"
-          ],
-          "rowOut": 0,
-          "colOut": 0,
-          "type": "horizontal"
-        }
-      ],
       "ignore_states": true
     }
   }

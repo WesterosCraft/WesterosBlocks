@@ -14,6 +14,7 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     public static final CreativeModeTab tabWesterosQuarterAshlar = new  WesterosBlocksCreativeTab("WesterosQuarterAshlar", "§fQuarter Ashlar", "small_smooth_stone_brick");
     public static final CreativeModeTab tabWesterosMediumAshlar = new  WesterosBlocksCreativeTab("WesterosMediumAshlar", "§fMedium Ashlar", "grey_granite");
     public static final CreativeModeTab tabWesterosHalfAshlar = new  WesterosBlocksCreativeTab("WesterosHalfAshlar", "§fHalf Ashlar", "stone_brick");
+    public static final CreativeModeTab tabWesterosPolishedStone = new  WesterosBlocksCreativeTab("WesterosPolishedStone", "§fPolished Stone", "grey_granite_polished");
     public static final CreativeModeTab tabWesterosBrick = new  WesterosBlocksCreativeTab("WesterosBrick", "§fBrick", "small_orange_bricks");
     // public static final CreativeModeTab tabWesterosSmallBrick = new  WesterosBlocksCreativeTab("WesterosSmallBrick", "§fSmall Brick", "light_grey_brick");
     // public static final CreativeModeTab tabWesterosLargeBrick = new  WesterosBlocksCreativeTab("WesterosLargeBrick", "§fLarge Brick", "stone_brick");
@@ -30,14 +31,15 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     public static final CreativeModeTab tabWesterosToolBlocks = new  WesterosBlocksCreativeTab("WesterosToolBlocks", "§fTool Blocks", "piston_extension");
     public static final CreativeModeTab tabWesterosFoodBlocks = new  WesterosBlocksCreativeTab("WesterosFoodBlocks", "§fFood Blocks", "squash");
     public static final CreativeModeTab tabWesterosClothFibers = new  WesterosBlocksCreativeTab("WesterosClothFibers", "§fCloth and Fibers", "fancy_blue_carpet");
+    public static final CreativeModeTab tabWesterosBanners = new  WesterosBlocksCreativeTab("WesterosBanners", "§fBanners", "westeroscraft_banner");
     public static final CreativeModeTab tabWesterosTerrainSets = new  WesterosBlocksCreativeTab("WesterosTerrainSets", "§fTerrain Sets", "terrainset_eastern_islands");
     public static final CreativeModeTab tabWesterosGrassDirt = new  WesterosBlocksCreativeTab("WesterosGrassDirt", "§fGrass and Dirt", "classic_grass_block");
     public static final CreativeModeTab tabWesterosSandGravel = new  WesterosBlocksCreativeTab("WesterosSandGravel", "§fSand and Gravel", "sand_skeleton");
     public static final CreativeModeTab tabWesterosLogs = new  WesterosBlocksCreativeTab("WesterosLogs", "§fLogs", "weirwood_face_4");
     public static final CreativeModeTab tabWesterosFoliage = new  WesterosBlocksCreativeTab("WesterosFoliage", "§fFoliage", "weirwood_leaves");
-    public static final CreativeModeTab tabWesterosGrassesShrubs = new  WesterosBlocksCreativeTab("WesterosGrassesShrubs", "§fGrasses and Shrubs", "yellow_rose_bush");
+    public static final CreativeModeTab tabWesterosGrassesShrubs = new  WesterosBlocksCreativeTab("WesterosGrassesShrubs", "§fGrasses and Shrubs", "thick_grass");
     public static final CreativeModeTab tabWesterosFlowers = new  WesterosBlocksCreativeTab("WesterosFlowers", "§fFlowers", "blue_bells");
-    public static final CreativeModeTab tabWesterosCropsHerbs = new  WesterosBlocksCreativeTab("WesterosCropsHerbs", "§fCrops and Herbs", "strawberry_bush");
+    public static final CreativeModeTab tabWesterosCropsHerbs = new  WesterosBlocksCreativeTab("WesterosCropsHerbs", "§fCrops and Herbs", "crop_wheat");
     public static final CreativeModeTab tabWesterosWaterAir = new  WesterosBlocksCreativeTab("WesterosWaterAir", "§fWater and Air", "falling_water_block_one");
     public static final CreativeModeTab tabWesterosMisc = new  WesterosBlocksCreativeTab("WesterosMisc", "§fMiscellaneous", "piled_bones");
     public static final CreativeModeTab tabWesterosUtility = new  WesterosBlocksCreativeTab("WesterosUtility", "§fUtility", "approval_utility_block");

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/smooth/umber/all",
+    "up": "westerosblocks:block/plaster/smooth/umber/all",
+    "north": "westerosblocks:block/plaster/smooth/umber/all",
+    "south": "westerosblocks:block/plaster/smooth/umber/all",
+    "west": "westerosblocks:block/plaster/smooth/umber/all",
+    "east": "westerosblocks:block/plaster/smooth/umber/all",
+    "particle": "westerosblocks:block/plaster/smooth/umber/all"
+  }
+}

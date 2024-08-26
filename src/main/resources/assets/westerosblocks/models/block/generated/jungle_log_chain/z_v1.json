@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log_horizontal",
   "textures": {
-    "down": "westerosblocks:block/tree/top",
-    "up": "westerosblocks:block/tree/top",
-    "north": "westerosblocks:block/log_block/bark_jungle_chain",
-    "south": "westerosblocks:block/log_block/bark_jungle_chain",
-    "east": "westerosblocks:block/log_block/bark_jungle_chain",
-    "west": "westerosblocks:block/log_block/bark_jungle_chain",
-    "particle": "westerosblocks:block/log_block/bark_jungle_chain"
+    "down": "westerosblocks:block/bark/jungle/top",
+    "up": "westerosblocks:block/bark/jungle/top",
+    "north": "westerosblocks:block/bark/jungle/chain",
+    "south": "westerosblocks:block/bark/jungle/chain",
+    "east": "westerosblocks:block/bark/jungle/chain",
+    "west": "westerosblocks:block/bark/jungle/chain",
+    "particle": "westerosblocks:block/bark/jungle/chain"
   }
 }

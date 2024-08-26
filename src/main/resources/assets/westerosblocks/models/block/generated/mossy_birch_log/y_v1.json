@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log",
   "textures": {
-    "down": "westerosblocks:block/mossy_birch_log/bottom",
-    "up": "westerosblocks:block/mossy_birch_log/top",
-    "north": "westerosblocks:block/mossy_birch_log/side",
-    "south": "westerosblocks:block/mossy_birch_log/side",
-    "east": "westerosblocks:block/mossy_birch_log/side",
-    "west": "westerosblocks:block/mossy_birch_log/side",
-    "particle": "westerosblocks:block/mossy_birch_log/side"
+    "down": "westerosblocks:block/bark/birch/mossy/bottom",
+    "up": "westerosblocks:block/bark/birch/mossy/top",
+    "north": "westerosblocks:block/bark/birch/mossy/side",
+    "south": "westerosblocks:block/bark/birch/mossy/side",
+    "east": "westerosblocks:block/bark/birch/mossy/side",
+    "west": "westerosblocks:block/bark/birch/mossy/side",
+    "particle": "westerosblocks:block/bark/birch/mossy/side"
   }
 }

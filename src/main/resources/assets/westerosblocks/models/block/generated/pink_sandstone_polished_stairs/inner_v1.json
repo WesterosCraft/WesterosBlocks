@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/sandy_pink/polished",
-    "top": "westerosblocks:block/ashlar_third/sandy_pink/polished",
-    "side": "westerosblocks:block/ashlar_third/sandy_pink/polished",
-    "particle": "westerosblocks:block/ashlar_third/sandy_pink/polished"
+    "bottom": "westerosblocks:block/ashlar_full/sandy_pink/all",
+    "top": "westerosblocks:block/ashlar_full/sandy_pink/all",
+    "side": "westerosblocks:block/ashlar_full/sandy_pink/all",
+    "particle": "westerosblocks:block/ashlar_full/sandy_pink/all"
   }
 }

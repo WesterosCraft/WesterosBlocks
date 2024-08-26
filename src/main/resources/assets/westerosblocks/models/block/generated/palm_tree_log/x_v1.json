@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/cube_log_horizontal",
   "textures": {
-    "down": "westerosblocks:block/log_block/log_palm_top",
-    "up": "westerosblocks:block/log_block/log_palm_top",
-    "north": "westerosblocks:block/bark_palm/side",
-    "south": "westerosblocks:block/bark_palm/side",
-    "east": "westerosblocks:block/bark_palm/side",
-    "west": "westerosblocks:block/bark_palm/side",
-    "particle": "westerosblocks:block/bark_palm/side"
+    "down": "westerosblocks:block/bark/palm/top",
+    "up": "westerosblocks:block/bark/palm/top",
+    "north": "westerosblocks:block/bark/palm/side",
+    "south": "westerosblocks:block/bark/palm/side",
+    "east": "westerosblocks:block/bark/palm/side",
+    "west": "westerosblocks:block/bark/palm/side",
+    "particle": "westerosblocks:block/bark/palm/side"
   }
 }

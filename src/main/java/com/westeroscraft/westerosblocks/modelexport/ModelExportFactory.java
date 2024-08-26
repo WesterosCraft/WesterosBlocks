@@ -55,6 +55,9 @@ public class ModelExportFactory {
             case "torch":
                 me = new TorchBlockModelExport(blk, def, dest);
                 break;
+            case "fan":
+                me = new FanBlockModelExport(blk, def, dest);
+                break;
             case "ladder":
                 me = new LadderBlockModelExport(blk, def, dest);
                 break;

@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_seven_top",
-    "txt5": "westerosblocks:block/banner_block/banner_seven_top",
+    "txt4": "westerosblocks:block/banner/other/the_faith_of_the_seven/top",
+    "txt5": "westerosblocks:block/banner/other/the_faith_of_the_seven/top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

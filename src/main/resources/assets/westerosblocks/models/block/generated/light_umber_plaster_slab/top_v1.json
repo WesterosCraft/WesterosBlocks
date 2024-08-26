@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "up": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "north": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "south": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "west": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "east": "westerosblocks:block/plaster/smooth/light_umber/all",
+    "particle": "westerosblocks:block/plaster/smooth/light_umber/all"
+  }
+}

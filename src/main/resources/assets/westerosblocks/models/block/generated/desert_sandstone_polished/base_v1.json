@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/ashlar_third/sandstone/polished",
-    "up": "westerosblocks:block/ashlar_third/sandstone/polished",
-    "north": "westerosblocks:block/ashlar_third/sandstone/polished",
-    "south": "westerosblocks:block/ashlar_third/sandstone/polished",
-    "west": "westerosblocks:block/ashlar_third/sandstone/polished",
-    "east": "westerosblocks:block/ashlar_third/sandstone/polished",
-    "particle": "westerosblocks:block/ashlar_third/sandstone/polished"
+    "down": "westerosblocks:block/ashlar_full/sandstone/all",
+    "up": "westerosblocks:block/ashlar_full/sandstone/all",
+    "north": "westerosblocks:block/ashlar_full/sandstone/all",
+    "south": "westerosblocks:block/ashlar_full/sandstone/all",
+    "west": "westerosblocks:block/ashlar_full/sandstone/all",
+    "east": "westerosblocks:block/ashlar_full/sandstone/all",
+    "particle": "westerosblocks:block/ashlar_full/sandstone/all"
   }
 }

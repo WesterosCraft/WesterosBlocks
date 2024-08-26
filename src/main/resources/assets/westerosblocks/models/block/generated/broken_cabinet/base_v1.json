@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "westerosblocks:block/full_cabinet/top_bottom",
-    "up": "westerosblocks:block/full_cabinet/top_bottom",
+    "down": "westerosblocks:block/cabinet/top_bottom",
+    "up": "westerosblocks:block/cabinet/top_bottom",
     "north": "westerosblocks:block/bench_block/cabinet_broken",
     "south": "westerosblocks:block/bench_block/cabinet_broken",
     "west": "westerosblocks:block/bench_block/cabinet_broken",

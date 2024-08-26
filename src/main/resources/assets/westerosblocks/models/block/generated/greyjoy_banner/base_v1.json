@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_greyjoy_bottom",
-    "txt5": "westerosblocks:block/banner_block/banner_greyjoy_bottom",
+    "txt4": "westerosblocks:block/banner/house/greyjoy/bottom",
+    "txt5": "westerosblocks:block/banner/house/greyjoy/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

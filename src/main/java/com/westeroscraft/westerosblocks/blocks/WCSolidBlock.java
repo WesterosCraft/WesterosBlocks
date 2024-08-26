@@ -9,6 +9,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,21 +32,28 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
-        	}   
-            // See if we have connectstate
+        	}
+            // Process types
             String t = def.getType();
 			boolean doConnectstate = false;
+            Boolean doSymmetrical = null;
 			if (t != null) {
 				String[] toks = t.split(",");
 				for (String tok : toks) {
 					String[] parts = tok.split(":");
+                    // See if we have connectstate
 					if (parts[0].equals("connectstate")) {
 						doConnectstate = true;
 						tempCONNECTSTATE = CONNECTSTATE;
 					}
+                    // See if we have symmetrical
+                    if (parts[0].equals("symmetrical")) {
+                    	doSymmetrical = "true".equals(parts[1]);
+                    	tempSYMMETRICAL = SYMMETRICAL;
+                    }
 				}
 			}
-        	return def.registerRenderType(def.registerBlock(new WCSolidBlock(props, def, doConnectstate)), true, def.nonOpaque);
+        	return def.registerRenderType(def.registerBlock(new WCSolidBlock(props, def, doConnectstate, doSymmetrical)), true, def.nonOpaque);
         }
     }    
     protected WesterosBlockDef def;
@@ -56,12 +64,18 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
 	protected static IntegerProperty tempCONNECTSTATE;
     public final boolean connectstate;
 
+    public static final BooleanProperty SYMMETRICAL = BooleanProperty.create("symmetrical");
+    protected static BooleanProperty tempSYMMETRICAL;
+
+    public final boolean symmetrical;
+    public final Boolean symmetricalDef;
+
     protected static WesterosBlockDef.StateProperty tempSTATE;
     protected WesterosBlockDef.StateProperty STATE;
 
     protected boolean toggleOnUse = false;
     
-    protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doConnectstate) {
+    protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doConnectstate, Boolean doSymmetrical) {
         super(props);
         this.def = def;
 
@@ -84,18 +98,27 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         }
         
         connectstate = doConnectstate;
+        symmetrical = (doSymmetrical != null);
+        symmetricalDef = doSymmetrical;
 		BlockState defbs = this.stateDefinition.any();
 		if (connectstate) {
 			defbs = defbs.setValue(CONNECTSTATE, 0);
 		}
+        if (symmetrical) {
+            defbs = defbs.setValue(SYMMETRICAL, symmetricalDef);
+        }
         if (STATE != null) {
         	defbs = defbs.setValue(STATE, STATE.defValue);
         }
 		this.registerDefaultState(defbs);
     }
 
+    protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def, boolean doConnectstate) {
+        this(props, def, doConnectstate, null);
+    }
+
     protected WCSolidBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        this(props, def, false);
+        this(props, def, false, null);
     }
     
     @Override
@@ -146,6 +169,10 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
             StateDefinition.add(tempCONNECTSTATE);
             tempCONNECTSTATE = null;
         }
+    	if (tempSYMMETRICAL != null) {
+    		StateDefinition.add(tempSYMMETRICAL);
+    		tempSYMMETRICAL = null;
+    	}
         if (tempSTATE != null) {
     		STATE = tempSTATE;
     		tempSTATE = null;

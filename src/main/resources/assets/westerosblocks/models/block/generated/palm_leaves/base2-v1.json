@@ -1,9 +1,0 @@
-{
-  "parent": "westerosblocks:block/tinted/leaves_bf2",
-  "textures": {
-    "end": "westerosblocks:block/leaves_block/leaves_palm",
-    "side": "westerosblocks:block/leaves_block/leaves_palm",
-    "bf": "westerosblocks:block/leaves_block_bf/leaves_bf_palm",
-    "particle": "westerosblocks:block/leaves_block/leaves_palm"
-  }
-}

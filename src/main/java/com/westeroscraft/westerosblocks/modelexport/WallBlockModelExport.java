@@ -2,10 +2,13 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
 
@@ -55,6 +58,12 @@ public class WallBlockModelExport extends ModelExport {
 		return def.blockName + "/" + ext + ("-v" + (setidx + 1));
 	}
 
+	protected String getModelName(String ext, int setidx, String cond) {
+		if (cond == null)
+			return getModelName(ext, setidx);
+		return def.blockName + "/" + cond + "/" + ext + ("-v" + (setidx + 1));
+	}
+
 	private static class ModelPart {
 		String modExt;
 		WhenRec when;
@@ -98,93 +107,109 @@ public class WallBlockModelExport extends ModelExport {
 	@Override
 	public void doBlockStateExport() throws IOException {
 		StateObject so = new StateObject();
-		// Loop through the parts
-		for (ModelPart mp : PARTS) {
-			for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-				WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-				Apply a = new Apply();
-				a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(mp.modExt, setidx);
-				a.weight = set.weight;
-				if (mp.uvlock != null)
-					a.uvlock = mp.uvlock;
-				if (mp.y != null)
-					a.y = mp.y;
 
-				so.addStates(mp.when, a, null);
+		for (WesterosBlockStateRecord sr : def.states) {
+			boolean justBase = sr.stateID == null;
+			Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+			// Loop through the parts
+			for (ModelPart mp : PARTS) {
+				// Loop over the random sets we've got
+				for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
+					WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
+					Apply a = new Apply();
+					a.model = (justBase) ? WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(mp.modExt, setidx) :
+																 WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(mp.modExt, setidx, sr.stateID);
+					a.weight = set.weight;
+					if (mp.uvlock != null)
+						a.uvlock = mp.uvlock;
+					if (mp.y != null)
+						a.y = mp.y;
+
+					so.addStates(mp.when, a, stateIDs);
+				}
 			}
 		}
-
 		this.writeBlockStateFile(def.blockName, so);
+	}
+
+	protected void doWallModel(boolean isTinted, boolean isOverlay, int setidx, WesterosBlockStateRecord sr, int sridx, String cond) throws IOException {
+		WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
+
+		// Post model
+		ModelObjectPost mod = new ModelObjectPost();
+		mod.textures.bottom = getTextureID(set.getTextureByIndex(0));
+		mod.textures.top = getTextureID(set.getTextureByIndex(1));
+		mod.textures.side = getTextureID(set.getTextureByIndex(2));
+		if (isTinted)
+			mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/template_wall_post";
+		if (isOverlay) {
+			mod.parent += "_overlay";
+				 mod.textures.bottom_ov = getTextureID(sr.getOverlayTextureByIndex(0));
+				 mod.textures.top_ov = getTextureID(sr.getOverlayTextureByIndex(1));
+				 mod.textures.side_ov = getTextureID(sr.getOverlayTextureByIndex(2));
+		}
+		this.writeBlockModelFile(getModelName("post", setidx, cond), mod);
+		// Side model
+		ModelObjectSide smod = new ModelObjectSide();
+		smod.textures.bottom = getTextureID(set.getTextureByIndex(0));
+		smod.textures.top = getTextureID(set.getTextureByIndex(1));
+		smod.textures.side = getTextureID(set.getTextureByIndex(2));
+		if (isTinted) {
+			smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/template_wall_side" +
+					((wblk.wallSize == WCWallBlock.WallSize.SHORT) ? "_2" : "");
+		} else {
+			smod.parent = WesterosBlocks.MOD_ID + ":block/untinted/template_wall_side" +
+					((wblk.wallSize == WCWallBlock.WallSize.SHORT) ? "_2" : "");
+		}
+		if (isOverlay) {
+			smod.parent += "_overlay";
+				 smod.textures.bottom_ov = getTextureID(sr.getOverlayTextureByIndex(0));
+				 smod.textures.top_ov = getTextureID(sr.getOverlayTextureByIndex(1));
+				 smod.textures.side_ov = getTextureID(sr.getOverlayTextureByIndex(2));
+		}
+		this.writeBlockModelFile(getModelName("side", setidx, cond), smod);
+		// Tall side model
+		ModelObjectSide tsmod = new ModelObjectSide();
+		tsmod.textures.bottom = getTextureID(set.getTextureByIndex(0));
+		tsmod.textures.top = getTextureID(set.getTextureByIndex(1));
+		tsmod.textures.side = getTextureID(set.getTextureByIndex(2));
+		if (isTinted)
+			tsmod.parent = WesterosBlocks.MOD_ID + ":block/tinted/template_wall_side_tall";
+		else
+			tsmod.parent = WesterosBlocks.MOD_ID + ":block/untinted/template_wall_side_tall";
+		if (isOverlay) {
+			tsmod.parent += "_overlay";
+				 tsmod.textures.bottom_ov = getTextureID(sr.getOverlayTextureByIndex(0));
+				 tsmod.textures.top_ov = getTextureID(sr.getOverlayTextureByIndex(1));
+				 tsmod.textures.side_ov = getTextureID(sr.getOverlayTextureByIndex(2));
+		}
+		this.writeBlockModelFile(getModelName("side_tall", setidx, cond), tsmod);
 	}
 
 	@Override
 	public void doModelExports() throws IOException {
-		boolean isTinted = def.isTinted();
-		WesterosBlockDef.RandomTextureSet set;
-        boolean isOverlay = def.getOverlayTextureByIndex(0) != null;
-
-		for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-			set = def.getRandomTextureSet(setidx);
-
-			ModelObjectPost mod = new ModelObjectPost();
-			mod.textures.bottom = getTextureID(set.getTextureByIndex(0));
-			mod.textures.top = getTextureID(set.getTextureByIndex(1));
-			mod.textures.side = getTextureID(set.getTextureByIndex(2));
-			if (isTinted)
-				mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/template_wall_post";
-			if (isOverlay) {
-				mod.parent += "_overlay";
-     			mod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
-     			mod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
-     			mod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));
+		for (int idx = 0; idx < def.states.size(); idx++) {
+			WesterosBlockStateRecord rec = def.states.get(idx);
+			boolean isTinted = rec.isTinted();
+			boolean isOverlay = rec.getOverlayTextureByIndex(0) != null;
+			String cond = rec.stateID;
+			// Loop over the random sets we've got
+			for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {
+				doWallModel(isTinted, isOverlay, setidx, rec, idx, cond);
 			}
-			this.writeBlockModelFile(getModelName("post", setidx), mod);
-			// Side model
-			ModelObjectSide smod = new ModelObjectSide();
-			smod.textures.bottom = getTextureID(set.getTextureByIndex(0));
-			smod.textures.top = getTextureID(set.getTextureByIndex(1));
-			smod.textures.side = getTextureID(set.getTextureByIndex(2));
-			if (isTinted) {
-				smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/template_wall_side" +
-						((wblk.wallSize == WCWallBlock.WallSize.SHORT) ? "_2" : "");
-			} else {
-				smod.parent = WesterosBlocks.MOD_ID + ":block/untinted/template_wall_side" +
-						((wblk.wallSize == WCWallBlock.WallSize.SHORT) ? "_2" : "");
-			}
-			if (isOverlay) {
-				smod.parent += "_overlay";
-     			smod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
-     			smod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
-     			smod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));
-			}
-			this.writeBlockModelFile(getModelName("side", setidx), smod);
-			// Tall side model
-			ModelObjectSide tsmod = new ModelObjectSide();
-			tsmod.textures.bottom = getTextureID(set.getTextureByIndex(0));
-			tsmod.textures.top = getTextureID(set.getTextureByIndex(1));
-			tsmod.textures.side = getTextureID(set.getTextureByIndex(2));
-			if (isTinted)
-				tsmod.parent = WesterosBlocks.MOD_ID + ":block/tinted/template_wall_side_tall";
-			else
-				tsmod.parent = WesterosBlocks.MOD_ID + ":block/untinted/template_wall_side_tall";
-			if (isOverlay) {
-				tsmod.parent += "_overlay";
-     			tsmod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
-     			tsmod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
-     			tsmod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));
-			}
-			this.writeBlockModelFile(getModelName("side_tall", setidx), tsmod);
 		}
+
 		// Build simple item model that refers to fence inventory model
 		ModelObject mo = new ModelObject();
-		set = def.getRandomTextureSet(0);
+		WesterosBlockStateRecord sr0 = def.states.get(0);
+		boolean isTinted = sr0.isTinted();
+		WesterosBlockDef.RandomTextureSet set = sr0.getRandomTextureSet(0);
 		mo.textures.bottom = getTextureID(set.getTextureByIndex(0));
 		mo.textures.top = getTextureID(set.getTextureByIndex(1));
 		mo.textures.side = getTextureID(set.getTextureByIndex(2));
 		if (isTinted)
 			mo.parent = WesterosBlocks.MOD_ID + ":block/tinted/wall_inventory";
 		this.writeItemModelFile(def.getBlockName(), mo);
-
 		// Handle tint resources
 		if (isTinted) {
 			String tintres = def.getBlockColorMapResource();
@@ -228,6 +253,9 @@ public class WallBlockModelExport extends ModelExport {
 		newstate.put("waterlogged", "false");
 		if (wblk.unconnect) {
 			newstate.put("unconnect", "false");			
+		}
+		if (wblk != null && wblk.connectstate) {
+			newstate.put("connectstate", "0");
 		}
 		addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
 	}

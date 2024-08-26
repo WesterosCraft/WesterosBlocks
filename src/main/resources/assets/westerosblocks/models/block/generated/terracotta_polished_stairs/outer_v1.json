@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/terracotta/polished",
-    "top": "westerosblocks:block/ashlar_third/terracotta/polished",
-    "side": "westerosblocks:block/ashlar_third/terracotta/polished",
-    "particle": "westerosblocks:block/ashlar_third/terracotta/polished"
+    "bottom": "westerosblocks:block/ashlar_full/terracotta/all",
+    "top": "westerosblocks:block/ashlar_full/terracotta/all",
+    "side": "westerosblocks:block/ashlar_full/terracotta/all",
+    "particle": "westerosblocks:block/ashlar_full/terracotta/all"
   }
 }

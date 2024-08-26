@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "westerosblocks:coral_bubble_fan",
+    "westerosblocks:coral_tube_fan",
+    "westerosblocks:coral_horn_fan",
+    "westerosblocks:coral_fire_fan",
+    "westerosblocks:coral_brain_fan"
+  ]
+}

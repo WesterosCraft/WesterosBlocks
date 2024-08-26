@@ -1,6 +1,6 @@
 # Preamble
 
-The WesterosBlocks texture pack originated from [Dokucraft](https://dokucraft.co.uk/), but contains elements from other resource packs including [John Smith](https://www.johnsmithlegacy.co.uk/) and [Conquest](https://conquestreforged.com/) (and overlays by [Ardacraft](https://ardacraft.me/)). We have made many alterations and additions to the pack over the years, so most of the textures are originals only to be found in this pack. Ultimately, we aim for the WesterosBLocks textures to be made up exclusively from original textures created by artists within the community.
+The WesterosBlocks texture pack originated from [Dokucraft](https://dokucraft.co.uk/), but contains elements from other resource packs including [John Smith](https://www.johnsmithlegacy.co.uk/) and [Conquest](https://conquestreforged.com/) (and overlays by [Ardacraft](https://ardacraft.me/)). We have made many alterations and additions to the pack over the years, so most of the textures are originals only to be found in this pack. Ultimately, we aim for the WesterosBlocks textures to be made up exclusively from original textures created by artists within the community.
 
 The sound components were created and/or arranged by Hal9007. The sound effects used in this resource pack are based off of edited loops and sound samples from [SoundJay.com](https://www.soundjay.com/) or [Pond5.com](https://www.pond5.com/). Third-party samples are either public domain or paid for under an Attribution 3.0 licesnse.
 
@@ -16,7 +16,7 @@ geeberry, Thamus_Knoward, Emoticone11, CashBanks, Moozipan, Marken4, Hal9007
 
 Special thanks to Doku, Misa, Hickerydickery, WantedRobot, SMP, WhitefireNeo, Monsterfish_, Rota_Fortunae (ex:Wheellee), and the following users from the DokuCommunity for their input on the respective textures:
 
-* Monsterfish_ - Assorted grass textures, Oak Leaves, Reed/Cattails, Wheat, Grass Block, Vines, Bracken, Butterflies, Dragonfly, base for Dirt/Gravel textures
+* Monsterfish_ - Assorted grass textures, Oak Leaves, Reed/Cattails, Wheat, Grass Block, Vines, Bracken, base for Dirt/Gravel textures
 * Rota_Fortunae (ex:Wheellee) - Cow Parsley, Lady Fern, Nettle, Fireweed
 * Balloftape - Skull, CreeperHead, SurvivorHead, Redstone Lamp
 * Metatron - Zombie Head

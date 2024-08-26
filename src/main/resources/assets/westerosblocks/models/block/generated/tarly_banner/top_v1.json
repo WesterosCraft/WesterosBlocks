@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_tarly_top",
-    "txt5": "westerosblocks:block/banner_block/banner_tarly_top",
+    "txt4": "westerosblocks:block/banner/house/tarly/top",
+    "txt5": "westerosblocks:block/banner/house/tarly/top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

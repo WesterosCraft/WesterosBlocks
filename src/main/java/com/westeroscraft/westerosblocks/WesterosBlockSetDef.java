@@ -116,11 +116,29 @@ public class WesterosBlockSetDef {
 	public float lightValue = 0.0F; // Emitted light level (0.0-1.0)
 	public String colorMult = "#FFFFFF"; // Color multiplier ("#rrggbb' for fixed value, 'foliage', 'grass', 'water')
 
+  public List<StateRecord> states = null;
+
 
 	public static class RandomTextureMap {
 		public Map<String, String> textures = null; // List of textures (for single texture set)
 		public Integer weight = null;		// Weight for texture set (default = 1)
 	};
+
+  // Used for sets that support multiple blockstates
+  public static class StateRecord {
+    public String stateID = null;
+    public String excludeVariants = null;
+    public float lightValue = 0.0F;
+    public String colorMult = "#FFFFFF";
+
+    public Map<String, List<String>> altTextures = null;
+    public Map<String, List<RandomTextureSet>> altRandomTextures = null;
+    public Map<String, List<String>> altOverlayTextures = null;
+
+    public Map<String, String> textures = null;
+    public List<RandomTextureMap> randomTextures = null;
+    public Map<String, String> overlayTextures = null;
+  }
 
 
   public List<WesterosBlockDef> generateBlockDefs() {
@@ -211,13 +229,7 @@ public class WesterosBlockSetDef {
       variantDef.colorMult = this.colorMult;
 
       // Process blocktypes with special attributes
-      if (variant.equals("stairs")) {
-        if (this.altNames != null && this.altNames.containsKey("solid"))
-          variantDef.modelBlockName = this.altNames.get("solid");
-        else if (this.variants.contains("solid"))
-          variantDef.modelBlockName = this.baseBlockName;
-      }
-      else if (variant.equals("hopper")) {
+      if (variant.equals("hopper")) {
         WesterosBlockDef.Cuboid[] cuboids = { 
           new WesterosBlockDef.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[] { 0, 0, 0, 0, 0, 0 }),
           new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),
@@ -283,25 +295,51 @@ public class WesterosBlockSetDef {
       }
 
       // If a variant has an alt texture list defined, use it, otherwise create texture lists for this variant type
-      if (this.altTextures != null && this.altTextures.containsKey(variant))
-        variantDef.textures = this.altTextures.get(variant);
-      else
-        variantDef.textures = WesterosBlockSetDef.getTexturesForVariant(WesterosBlockSetDef.preprocessTextureMap(this.textures), variant);
+      variantDef.textures = pickVariantTextures(this.textures, this.altTextures, variant);
+      variantDef.randomTextures = pickVariantRandomTextures(this.randomTextures, this.altRandomTextures, variant);
+      variantDef.overlayTextures = pickVariantTextures(this.overlayTextures, this.altOverlayTextures, variant);
 
-      if (this.altRandomTextures != null && this.altRandomTextures.containsKey(variant))
-        variantDef.randomTextures = this.altRandomTextures.get(variant);
-      else
-        variantDef.randomTextures = WesterosBlockSetDef.getRandomTexturesForVariant(WesterosBlockSetDef.preprocessRandomTextureMaps(this.randomTextures), variant);
-
-      if (this.altOverlayTextures != null && this.altOverlayTextures.containsKey(variant))
-        variantDef.overlayTextures = this.altOverlayTextures.get(variant);
-      else
-        variantDef.overlayTextures = WesterosBlockSetDef.getTexturesForVariant(WesterosBlockSetDef.preprocessTextureMap(this.overlayTextures), variant);
+      // If block set has multistate, create list of states for each variant
+      if (this.states != null) {
+        List<WesterosBlockStateRecord> states = new ArrayList<WesterosBlockStateRecord>();
+        for (StateRecord sr : this.states) {
+          if (sr.excludeVariants == null || !sr.excludeVariants.contains(variant)) {
+            WesterosBlockStateRecord newsr = new WesterosBlockStateRecord();
+            newsr.stateID = sr.stateID;
+            newsr.lightValue = sr.lightValue;
+            newsr.colorMult = sr.colorMult;
+            newsr.textures = pickVariantTextures(sr.textures, sr.altTextures, variant);
+            newsr.randomTextures = pickVariantRandomTextures(sr.randomTextures, sr.altRandomTextures, variant);
+            newsr.overlayTextures = pickVariantTextures(sr.overlayTextures, sr.altOverlayTextures, variant);
+            states.add(newsr);
+          }
+        }
+        // Make sure states list is not empty or singleton after exclusions
+        variantDef.states = (states.size() > 1) ? states : null;
+      }
+      // By default, turn on toggleOnUse if block set has multistate
+      if (variantDef.states != null && (this.types == null || !this.types.containsKey(variant))) {
+        variantDef.type = (variantDef.type == null || variantDef.type.equals("")) ? "toggleOnUse" : variantDef.type+",toggleOnUse";
+      }
 
       blockDefs.add(variantDef);
     }
 
     return blockDefs;
+  }
+
+  public static List<String> pickVariantTextures(Map<String, String> textures, Map<String, List<String>> altTextures, String variant) {
+    if (altTextures != null && altTextures.containsKey(variant))
+      return altTextures.get(variant);
+    else
+      return getTexturesForVariant(preprocessTextureMap(textures), variant);
+  }
+
+  public static List<RandomTextureSet> pickVariantRandomTextures(List<RandomTextureMap> randomTextures, Map<String, List<RandomTextureSet>> altRandomTextures, String variant) {
+    if (altRandomTextures != null && altRandomTextures.containsKey(variant))
+      return altRandomTextures.get(variant);
+    else
+      return getRandomTexturesForVariant(preprocessRandomTextureMaps(randomTextures), variant);
   }
 
   // Allow for multiple variants to be provided in one map entry, separated by commas

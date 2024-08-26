@@ -95,6 +95,12 @@ public abstract class ModelExport {
     	return def.blockName + "/" + ext + ("_v" + (setidx+1));
     }
 
+    protected String getModelName(String ext, int setidx, String cond) {
+			if (cond == null)
+				return getModelName(ext, setidx);
+    	return def.blockName + "/" + cond + "/" + ext + ("_v" + (setidx+1));
+    }
+
     public void writeBlockModelFile(String model, Object obj) throws IOException {
         File f = new File(blockmodeldir, model + ".json");
         f.getParentFile().mkdirs();
@@ -409,7 +415,7 @@ public abstract class ModelExport {
 
     // Template objects for Gson export of block state
     public static class StateObject {
-        public Map<String, VarOrVarList> variants;
+      public Map<String, VarOrVarList> variants;
     	public List<States> multipart;
         
         public void addVariant(String cond, Variant v, Set<String> stateIDs) {
@@ -442,17 +448,17 @@ public abstract class ModelExport {
 		    	}
         	}
         }
-        public void addStates(States st, Set<String> condIDs) {
+        public void addStates(States st, Set<String> stateIDs) {
         	if (multipart == null) {
         		multipart = new ArrayList<States>();
         	}
-        	if (condIDs == null) {
+        	if (stateIDs == null) {
         		multipart.add(st);
         	}
         	else {
-        		for (String cond : condIDs) {
+        		for (String cond : stateIDs) {
         			States newst = new States(st, cond);
-            		multipart.add(newst);        			
+            	multipart.add(newst);        			
         		}
         	}
         }
@@ -466,7 +472,7 @@ public abstract class ModelExport {
         		}
         		else {
         			wr = new WhenRec();
-        			wr.cond = cond;
+        			wr.state = cond;
         		}
         	}
         	for (States st : multipart) {
@@ -486,15 +492,15 @@ public abstract class ModelExport {
         	matchst.apply.add(a);
         }
         
-        public void addStates(WhenRec rec, Apply a, Set<String> condIDs) {
+        public void addStates(WhenRec rec, Apply a, Set<String> stateIDs) {
         	if (multipart == null) {
         		multipart = new ArrayList<States>();
         	}
-        	if (condIDs == null) {
+        	if (stateIDs == null) {
         		addState(rec, a, null);
         	}
         	else {
-        		for (String cond : condIDs) {
+        		for (String cond : stateIDs) {
             		addState(rec, a, cond);
         		}
         	}
@@ -522,12 +528,12 @@ public abstract class ModelExport {
     		}
     		else {
     			this.when = new WhenRec();
-    			this.when.cond = cond;
+    			this.when.state = cond;
     		}
     	}
     }    
     public static class WhenRec {
-    	String north, south, west, east, up, down, cond;
+    	String north, south, west, east, up, down, state;
     	public List<WhenRec> OR;
     	
     	public WhenRec() {}
@@ -536,10 +542,10 @@ public abstract class ModelExport {
     		this.south = orig.south;
     		this.east = orig.east;
     		this.west = orig.west;
-       		this.up = orig.up;
-       		this.down = orig.down;
-       		this.OR = orig.OR;
-       		this.cond = cond;
+				this.up = orig.up;
+				this.down = orig.down;
+				this.OR = orig.OR;
+				this.state = cond;
     	}
     	public void addOR(WhenRec r) {
     		if (OR == null) OR = new ArrayList<WhenRec>();
@@ -560,7 +566,7 @@ public abstract class ModelExport {
 					isSame(or.west, this.west) &&
 					isSame(or.up, this.up) &&
 					isSame(or.down, this.down) &&
-					isSame(or.cond, this.cond)) {
+					isSame(or.state, this.state)) {
     				if ((or.OR == null) && (this.OR == null)) return true;
     				if ((or.OR != null) && (this.OR != null) && (this.OR.equals(or.OR))) return true;
     			}

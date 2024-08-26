@@ -1,0 +1,67 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "side": "westerosblocks:block/grass_block/forest_top1",
+    "end": "westerosblocks:block/grass_block/forest_top1",
+    "bf": "westerosblocks:block/leaves/palm/bf",
+    "particle": "westerosblocks:block/grass_block/forest_top1"
+  },
+  "elements": [
+    { 
+      "name": "Base",
+      "from": [ 0, 0, 0 ], "to": [ 16, 16, 16 ],
+      "faces": {
+        "east": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "east", "tintindex": 0 },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "south", "tintindex": 0 },
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "north", "tintindex": 0 },
+        "west": { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "west", "tintindex": 0 },
+        "up": { "uv": [ 0, 0, 16, 16 ], "texture": "#end", "cullface": "up", "tintindex": 0 },
+        "down": { "uv": [ 0, 0, 16, 16 ], "texture": "#end", "cullface": "down", "tintindex": 0 }
+      }
+    },
+    {
+		"name": "Cross1",
+		"from": [-11, -11, 5],
+		"to": [27, 27, 5],
+		"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
+		"shade": false,
+		"faces": {
+			"north": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 1 },
+			"south": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 1 }
+		}
+	},
+	{
+		"name": "Cross2",
+		"from": [-11, -11, 7],
+		"to": [27, 27, 7],
+		"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
+		"shade": false,
+		"faces": {
+			"north": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 1 },
+			"south": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 1 }
+		}
+	},
+	{
+		"name": "Cross3",
+		"from": [10, -11, -11],
+		"to": [10, 27, 27],
+		"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
+		"shade": false,
+		"faces": {
+			"east": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 1 },
+			"west": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 1 }
+		}
+	},
+	{
+		"name": "Cross4",
+		"from": [12, -11, -11],
+		"to": [12, 27, 27],
+		"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
+		"shade": false,
+		"faces": {
+			"east": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 1 },
+			"west": {"uv": [0, 0, 16, 16], "texture": "#bf", "tintindex": 1 }
+		}
+	}
+  ]
+}

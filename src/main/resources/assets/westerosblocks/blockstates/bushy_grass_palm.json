@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/custom/bushy_grass_palm/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/custom/bushy_grass_palm/base_v2"
+      },
+      {
+        "model": "westerosblocks:block/custom/bushy_grass_palm/base_v3"
+      }
+    ]
+  }
+}
