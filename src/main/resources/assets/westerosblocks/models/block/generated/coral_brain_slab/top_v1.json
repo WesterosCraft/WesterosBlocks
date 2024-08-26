@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/coral/brain/all",
+    "up": "westerosblocks:block/coral/brain/all",
+    "north": "westerosblocks:block/coral/brain/all",
+    "south": "westerosblocks:block/coral/brain/all",
+    "west": "westerosblocks:block/coral/brain/all",
+    "east": "westerosblocks:block/coral/brain/all",
+    "particle": "westerosblocks:block/coral/brain/all"
+  }
+}

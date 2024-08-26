@@ -2,10 +2,13 @@ package com.westeroscraft.westerosblocks.modelexport;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Set;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
 
@@ -30,7 +33,8 @@ public class FenceBlockModelExport extends ModelExport {
         public Texture textures = new Texture();
     }
 
-    WCFenceBlock fblk;
+    private final WCFenceBlock fblk;
+
     public FenceBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);
         fblk = (WCFenceBlock) blk;
@@ -53,6 +57,7 @@ public class FenceBlockModelExport extends ModelExport {
     		this.y = y;
     	}
     };
+
     private static ModelPart[] PARTS = {
 		// Post
 		new ModelPart("post", null, null, null, null, null, null),
@@ -65,77 +70,98 @@ public class FenceBlockModelExport extends ModelExport {
 		// East low
 		new ModelPart("side", null, null, null, "true", true, 270),    		
     };
+
     @Override
     public void doBlockStateExport() throws IOException {
-        StateObject so = new StateObject();
-        // Loop through parts
-        for (ModelPart mp : PARTS) {
-        	// Add post based on our variant
-            for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-            	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-            	Apply a = new Apply();
-            	a.model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(mp.modExt, setidx);
-            	a.weight = set.weight;
-            	if (mp.uvlock != null) a.uvlock = mp.uvlock;
-            	if (mp.y != null) a.y = mp.y;
+			StateObject so = new StateObject();
 
-            	so.addStates(mp.when, a, null);
-            }
-        }
-        this.writeBlockStateFile(def.blockName, so);
+			for (WesterosBlockStateRecord sr : def.states) {
+				boolean justBase = sr.stateID == null;
+				Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+				// Loop through parts
+				for (ModelPart mp : PARTS) {
+					// Loop over the random sets we've got
+					for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
+						WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
+						Apply a = new Apply();
+						a.model = (justBase) ? WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(mp.modExt, setidx) :
+																	 WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(mp.modExt, setidx, sr.stateID);
+						a.weight = set.weight;
+						if (mp.uvlock != null)
+							a.uvlock = mp.uvlock;
+						if (mp.y != null)
+							a.y = mp.y;
+
+						so.addStates(mp.when, a, stateIDs);
+					}
+				}
+			}
+			this.writeBlockStateFile(def.blockName, so);
     }
+
+		protected void doFenceModel(boolean isTinted, boolean isOverlay, int setidx, WesterosBlockStateRecord sr, int sridx, String cond) throws IOException {
+			WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
+
+			ModelObjectPost mod = new ModelObjectPost();
+			mod.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
+			mod.textures.top = getTextureID(set.getTextureByIndex(1)); 
+			mod.textures.side = getTextureID(set.getTextureByIndex(2)); 
+			if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_post";
+			if (isOverlay) {
+				mod.parent += "_overlay";
+			mod.textures.bottom_ov = getTextureID(sr.getOverlayTextureByIndex(0));
+			mod.textures.top_ov = getTextureID(sr.getOverlayTextureByIndex(1));
+			mod.textures.side_ov = getTextureID(sr.getOverlayTextureByIndex(2));        		
+			}
+			this.writeBlockModelFile(getModelName("post", setidx, cond), mod);
+			// Side model
+			ModelObjectSide smod = new ModelObjectSide();
+			smod.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
+			smod.textures.top = getTextureID(set.getTextureByIndex(1)); 
+			smod.textures.side = getTextureID(set.getTextureByIndex(2)); 
+			if (isTinted) smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_side";
+			if (isOverlay) {
+				smod.parent += "_overlay";
+			smod.textures.bottom_ov = getTextureID(sr.getOverlayTextureByIndex(0));
+			smod.textures.top_ov = getTextureID(sr.getOverlayTextureByIndex(1));
+			smod.textures.side_ov = getTextureID(sr.getOverlayTextureByIndex(2));        		
+			}
+			this.writeBlockModelFile(getModelName("side", setidx, cond), smod);
+		}
 
     @Override
     public void doModelExports() throws IOException {
-        boolean isTinted = def.isTinted();
-        boolean isOverlay = def.getOverlayTextureByIndex(0) != null;
-    	WesterosBlockDef.RandomTextureSet set;
+			for (int idx = 0; idx < def.states.size(); idx++) {
+				WesterosBlockStateRecord rec = def.states.get(idx);
+				boolean isTinted = rec.isTinted();
+				boolean isOverlay = rec.getOverlayTextureByIndex(0) != null;
+				String cond = rec.stateID;
+				// Loop over the random sets we've got
+				for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {
+					doFenceModel(isTinted, isOverlay, setidx, rec, idx, cond);
+				}
+			}
 
-        for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-        	set = def.getRandomTextureSet(setidx);
-        
-        	ModelObjectPost mod = new ModelObjectPost();
-        	mod.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
-        	mod.textures.top = getTextureID(set.getTextureByIndex(1)); 
-        	mod.textures.side = getTextureID(set.getTextureByIndex(2)); 
-        	if (isTinted) mod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_post";
-        	if (isOverlay) {
-        		mod.parent += "_overlay";
-     			mod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
-     			mod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
-     			mod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));        		
-        	}
-        	this.writeBlockModelFile(getModelName("post", setidx), mod);
-        	// Side model
-        	ModelObjectSide smod = new ModelObjectSide();
-        	smod.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
-        	smod.textures.top = getTextureID(set.getTextureByIndex(1)); 
-        	smod.textures.side = getTextureID(set.getTextureByIndex(2)); 
-        	if (isTinted) smod.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_side";
-        	if (isOverlay) {
-        		smod.parent += "_overlay";
-     			smod.textures.bottom_ov = getTextureID(def.getOverlayTextureByIndex(0));
-     			smod.textures.top_ov = getTextureID(def.getOverlayTextureByIndex(1));
-     			smod.textures.side_ov = getTextureID(def.getOverlayTextureByIndex(2));        		
-        	}
-        	this.writeBlockModelFile(getModelName("side", setidx), smod);
-        }
     	// Build simple item model that refers to fence inventory model
     	ModelObject mo = new ModelObject();
-    	set = def.getRandomTextureSet(0);
+			WesterosBlockStateRecord sr0 = def.states.get(0);
+			boolean isTinted = sr0.isTinted();
+			WesterosBlockDef.RandomTextureSet set = sr0.getRandomTextureSet(0);
     	mo.textures.bottom = getTextureID(set.getTextureByIndex(0)); 
     	mo.textures.top = getTextureID(set.getTextureByIndex(1)); 
     	mo.textures.side = getTextureID(set.getTextureByIndex(2)); 
-    	if (isTinted) mo.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_inventory";
+    	if (isTinted)
+				mo.parent = WesterosBlocks.MOD_ID + ":block/tinted/fence_inventory";
     	this.writeItemModelFile(def.getBlockName(), mo);
-        // Handle tint resources
-        if (isTinted) {
-            String tintres = def.getBlockColorMapResource();
-            if (tintres != null) {
-                ModelExport.addTintingOverride(def.getBlockName(), "", tintres);
-            }
-        }
+			// Handle tint resources
+			if (isTinted) {
+				String tintres = def.getBlockColorMapResource();
+				if (tintres != null) {
+						ModelExport.addTintingOverride(def.getBlockName(), "", tintres);
+				}
+			}
     }
+
     @Override
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
@@ -163,7 +189,7 @@ public class FenceBlockModelExport extends ModelExport {
     	if (fblk.unconnect) {
         	newstate.put("unconnect", fblk.unconnectDef.toString());
     	}
-        addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
+      addWorldConverterRecord(oldID, oldstate, def.getBlockName(), newstate);
     }
 
 }

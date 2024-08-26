@@ -42,6 +42,7 @@
     "westerosblocks:blue_hyacinth",
     "westerosblocks:pink_thistle",
     "westerosblocks:red_tulips",
+    "westerosblocks:kelp",
     "westerosblocks:red_carnations",
     "westerosblocks:orange_marigolds",
     "westerosblocks:dead_bush",
@@ -60,11 +61,15 @@
     "westerosblocks:red_mushroom_4",
     "westerosblocks:red_poppies",
     "westerosblocks:yellow_roses",
+    "westerosblocks:coral_bubble_web",
     "westerosblocks:green_spiny_herb",
     "westerosblocks:meadow_fescue",
     "westerosblocks:heather",
+    "westerosblocks:coral_tube_web",
     "westerosblocks:orange_sun_star",
+    "westerosblocks:coral_horn_web",
     "westerosblocks:white_peony",
+    "westerosblocks:coral_fire_web",
     "westerosblocks:orange_trollius",
     "westerosblocks:purple_violets",
     "westerosblocks:fireweed",
@@ -96,6 +101,7 @@
     "westerosblocks:yellow_dandelions",
     "westerosblocks:yellow_daffodils",
     "westerosblocks:blue_orchid",
-    "westerosblocks:green_leafy_herb"
+    "westerosblocks:green_leafy_herb",
+    "westerosblocks:coral_brain_web"
   ]
 }

@@ -1,3 +1,31 @@
+# 21 Jun 2024:
+- Added additional polished stone variants.
+- Added CTM and connectstate to polished stone, allowing for creation of arbitrary block sizes using data cycler tool.
+- Added house banners, generic wool banners, and updates to existing banners.
+- Added additional engraved ashlar colors.
+- Added scorched earth layers.
+- Added sandy pink smooth ashlar and plaster.
+- Added warm pink plaster.
+- Added umber and light umber plaster and timber frames.
+- Added harrenhal secret door.
+- Added black melted ashlar blocks and "bricicles" for harrenhal.
+- Added "symmetrical" blockstate to left/righthatch timber frame blocks, allowing for better corner patterns.
+- Added scarred weirwood block.
+- Added green-veined black harrenhal marble.
+- Added bushy grass blocks to replace uses of leaf blocks in ground.
+- Added coral, seagrass, and kelp blocks.
+- Added cheval de frise.
+- Added custom model for flat wheel as well as new large wheel.
+- Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
+- Changed betterfoliage leaf models.
+- Changed butterfly and dragonfly textures.
+- Fixed bug with red keep secret door texture.
+- Fixed bug with empty cabinet CTM.
+- Fixed bug with pale dark red medium ashlar.
+- Fixed issue with signs not being placeable on cloth material blocks.
+- Fixed wrong biome colors in desert biome.
+- Fixed transparency issues with fruit leaves and dappled moss.
+
 # 22 Jan 2024:
 - Added a large number of new stone brick and cobblestone sets to fill in gaps in existing block sets, and to remove biome dependencies.
 - Added "smooth" and "rough" plaster blocks and variants, retexturing existing plaster blocks as appropriate.

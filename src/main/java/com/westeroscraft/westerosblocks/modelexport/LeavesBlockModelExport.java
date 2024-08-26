@@ -31,12 +31,23 @@ public class LeavesBlockModelExport extends ModelExport {
         public Integer weight;
     }
     // Template objects for Gson export of block models
-    public static class ModelObjectLeaves {
-        public String parent = "westeroscraft:block/tinted/leaves";
-        public Texture textures = new Texture();
+    public static abstract class ModelObjectLeaves {
     }
-    public static class Texture {
-        public String end, side, bf, overlayend, overlayside, particle;
+    public static abstract class Texture {
+    }
+    public static class ModelObjectLeavesCube extends ModelObjectLeaves {
+        public String parent = "westeroscraft:block/tinted/leaves";
+        public TextureCube textures = new TextureCube ();
+    }
+    public static class TextureCube extends Texture {
+        public String end, side, overlayend, overlayside, particle;
+    }
+    public static class ModelObjectLeavesBF extends ModelObjectLeaves {
+        public String parent = "westeroscraft:block/tinted/leaves_bf";
+        public TextureBF textures = new TextureBF();
+    }
+    public static class TextureBF extends Texture {
+        public String all, overlayend, overlayside, particle;
     }
 
     public LeavesBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
@@ -55,24 +66,43 @@ public class LeavesBlockModelExport extends ModelExport {
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
         	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
-        	String model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
+        	String model;
         	int cnt = def.rotateRandom ? 4 : 1;	// 4 for random, just 1 if not
-            for (int i = 0; i < cnt; i++) {
-            	Variant var = new Variant();
-            	var.model = model;
-            	var.weight = set.weight;
-            	if (i > 0) var.y = 90*i;
-            	vars.add(var);
-            }
             if (blk.betterfoliage) {
-            	model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base2", setidx);
+            	model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("bf1", setidx);
                 for (int i = 0; i < cnt; i++) {
                 	Variant var = new Variant();
                 	var.model = model;
                 	var.weight = set.weight;
                 	if (i > 0) var.y = 90*i;
                 	vars.add(var);
-                }            	
+                }
+            	model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("bf2", setidx);
+                for (int i = 0; i < cnt; i++) {
+                	Variant var = new Variant();
+                	var.model = model;
+                	var.weight = set.weight;
+                	if (i > 0) var.y = 90*i;
+                	vars.add(var);
+                }
+            	model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("bf3", setidx);
+                for (int i = 0; i < cnt; i++) {
+                	Variant var = new Variant();
+                	var.model = model;
+                	var.weight = set.weight;
+                	if (i > 0) var.y = 90*i;
+                	vars.add(var);
+                }
+            }
+            else {
+                model = WesterosBlocks.MOD_ID + ":block/generated/" + getModelName("base", setidx);
+                for (int i = 0; i < cnt; i++) {
+                    Variant var = new Variant();
+                    var.model = model;
+                    var.weight = set.weight;
+                    if (i > 0) var.y = 90*i;
+                    vars.add(var);
+                }
             }
         }
         if (vars.size() == 1) {
@@ -92,34 +122,36 @@ public class LeavesBlockModelExport extends ModelExport {
     private ModelObjectLeaves makeModel(int setidx, boolean isTinted, boolean bf, boolean overlay, int bfidx) {
     	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);
     	
-        ModelObjectLeaves mod = new ModelObjectLeaves();
-        mod.textures.end = getTextureID(set.getTextureByIndex(0)); 
-        mod.textures.side = getTextureID(set.getTextureByIndex(1)); 
-        mod.textures.particle = mod.textures.side;
         if (bf) {
-    		mod.textures.bf = getTextureID(set.getTextureByIndex(2)); 
-        	if (overlay) {
-        		mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_overlay_bf" : "westerosblocks:block/untinted/leaves_overlay_bf";
-        		if (bfidx > 0) mod.parent = mod.parent + (bfidx+1);
-        		mod.textures.overlayend = getTextureID(set.getTextureByIndex(3)); 
-        		mod.textures.overlayside = getTextureID(set.getTextureByIndex(4)); 
-        	}
-        	else {
-        		mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_bf" : "westerosblocks:block/untinted/leaves_bf";        		
-           		if (bfidx > 0) mod.parent = mod.parent + (bfidx+1);
-        	}
+            ModelObjectLeavesBF mod = new ModelObjectLeavesBF();
+            mod.textures.all = getTextureID(set.getTextureByIndex(0));
+            mod.textures.particle = mod.textures.all;
+            if (overlay) {
+                mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_overlay_bf" : "westerosblocks:block/untinted/leaves_overlay_bf";
+        		mod.textures.overlayend = getTextureID(set.getTextureByIndex(1)); 
+        		mod.textures.overlayside = getTextureID(set.getTextureByIndex(2));
+            }
+            else {
+                mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_bf" : "westerosblocks:block/untinted/leaves_bf";
+            }
+            mod.parent = mod.parent + (bfidx+1);
+            return mod;
         }
         else {
-        	if (overlay) {
-        		mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_overlay" : "westerosblocks:block/untinted/leaves_overlay";
-        		mod.textures.overlayend = getTextureID(set.getTextureByIndex(3)); 
-        		mod.textures.overlayside = getTextureID(set.getTextureByIndex(4)); 
-        	}
-        	else {
-        		mod.parent = isTinted ? "westerosblocks:block/tinted/leaves" : "westerosblocks:block/untinted/leaves";        		
-        	}        	
+            ModelObjectLeavesCube mod = new ModelObjectLeavesCube();
+            mod.textures.end = getTextureID(set.getTextureByIndex(0)); 
+            mod.textures.side = getTextureID(set.getTextureByIndex(1)); 
+            mod.textures.particle = mod.textures.side;
+            if (overlay) {
+                mod.parent = isTinted ? "westerosblocks:block/tinted/leaves_overlay" : "westerosblocks:block/untinted/leaves_overlay";
+        		mod.textures.overlayend = getTextureID(set.getTextureByIndex(2)); 
+        		mod.textures.overlayside = getTextureID(set.getTextureByIndex(3));
+            }
+            else {
+                mod.parent = isTinted ? "westerosblocks:block/tinted/leaves" : "westerosblocks:block/untinted/leaves";  
+            }
+            return mod;
         }
-        return mod;
     }
     @Override
     public void doModelExports() throws IOException {
@@ -127,15 +159,18 @@ public class LeavesBlockModelExport extends ModelExport {
         
         // Loop over the random sets we've got
         for (int setidx = 0; setidx < def.getRandomTextureSetCount(); setidx++) {
-            ModelObjectLeaves mod = makeModel(setidx, isTinted, blk.betterfoliage, blk.overlay, 0);
 
-            this.writeBlockModelFile(getModelName("base", setidx), mod);
-            
             if (blk.betterfoliage) {
-                mod = makeModel(setidx, isTinted, blk.betterfoliage, blk.overlay, 1);
-
-                this.writeBlockModelFile(getModelName("base2", setidx), mod);
-            	
+                ModelObjectLeaves mod1 = makeModel(setidx, isTinted, true, blk.overlay, 0);
+                this.writeBlockModelFile(getModelName("bf1", setidx), mod1);
+                ModelObjectLeaves mod2 = makeModel(setidx, isTinted, true, blk.overlay, 1);
+                this.writeBlockModelFile(getModelName("bf2", setidx), mod2);
+                ModelObjectLeaves mod3 = makeModel(setidx, isTinted, true, blk.overlay, 2);
+                this.writeBlockModelFile(getModelName("bf3", setidx), mod3);
+            }
+            else {
+                ModelObjectLeaves mod = makeModel(setidx, isTinted, false, blk.overlay, 0);
+                this.writeBlockModelFile(getModelName("base", setidx), mod);
             }
         }
         // Build base model for item

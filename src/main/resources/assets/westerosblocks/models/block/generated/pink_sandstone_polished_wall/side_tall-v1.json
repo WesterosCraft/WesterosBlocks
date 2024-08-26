@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/template_wall_side_tall",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/sandy_pink/polished",
-    "top": "westerosblocks:block/ashlar_third/sandy_pink/polished",
-    "side": "westerosblocks:block/ashlar_third/sandy_pink/polished"
+    "bottom": "westerosblocks:block/ashlar_full/sandy_pink/all",
+    "top": "westerosblocks:block/ashlar_full/sandy_pink/all",
+    "side": "westerosblocks:block/ashlar_full/sandy_pink/all"
   }
 }

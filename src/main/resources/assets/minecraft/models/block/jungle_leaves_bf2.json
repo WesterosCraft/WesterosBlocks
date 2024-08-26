@@ -1,69 +1,7 @@
 {
-	"credit": "Made with Blockbench",
-	"ambientocclusion": true,
-	"texture_size": [32, 32],
-	"textures": {
-		"0": "minecraft:block/jungle_leaves",
-		"1": "minecraft:block/leaves_bf_jungle",
-		"particle": "minecraft:block/jungle_leaves"
-	},
-	"elements": [
-		{
-			"name": "Base",
-			"from": [0, 0, 0],
-			"to": [16, 16, 16],
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
-				"east": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
-				"south": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
-				"west": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
-				"up": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 },
-				"down": {"uv": [0, 0, 16, 16], "texture": "#0", "tintindex": 0 }
-			}
-		},
-		{
-			"name": "Cross1",
-			"from": [-10, -10, 5],
-			"to": [28, 28, 5],
-			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
-			"shade": false,
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0, "rotation": 180},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0, "rotation": 180 }
-			}
-		},
-		{
-			"name": "Cross2",
-			"from": [-10, -10, 7],
-			"to": [28, 28, 7],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
-			"shade": false,
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0, "rotation": 180 },
-				"south": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0, "rotation": 180 }
-			}
-		},
-		{
-			"name": "Cross3",
-			"from": [10, -10, -10],
-			"to": [10, 28, 28],
-			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 8, 8]},
-			"shade": false,
-			"faces": {
-				"east": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0, "rotation": 180 },
-				"west": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0, "rotation": 180 }
-			}
-		},
-		{
-			"name": "Cross4",
-			"from": [12, -10, -10],
-			"to": [12, 28, 28],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 8, 8]},
-			"shade": false,
-			"faces": {
-				"east": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0, "rotation": 180 },
-				"west": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0, "rotation": 180 }
-			}
-		}
-	]
+  "parent": "westerosblocks:block/tinted/leaves_bf2",
+  "textures": {
+    "all": "westerosblocks:block/leaves/jungle/all",
+    "particle": "westerosblocks:block/leaves/jungle/all"
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs_overlay",
+  "textures": {
+    "bottom": "westerosblocks:block/test_block/d_texture",
+    "top": "westerosblocks:block/test_block/u_texture",
+    "side": "westerosblocks:block/test_block/d_texture",
+    "bottom_ov": "westerosblocks:block/test_block/overlay_green",
+    "top_ov": "westerosblocks:block/test_block/overlay_green",
+    "side_ov": "westerosblocks:block/test_block/overlay_green",
+    "particle": "westerosblocks:block/test_block/d_texture"
+  }
+}

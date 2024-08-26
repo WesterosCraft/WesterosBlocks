@@ -14,7 +14,42 @@ import java.util.Set;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
-import com.westeroscraft.westerosblocks.blocks.*;
+import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
+import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboid16WayBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
+import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
+import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFenceGateBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFlowerPotBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
+import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
+import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
+import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
+import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
+import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
+import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
+import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
+import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
+import com.westeroscraft.westerosblocks.blocks.WCFanBlock;
+import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
+import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
+import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -72,7 +107,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	
 	public String blockName; // Locally unique block name
 	public String blockType = "solid"; // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
-	public String modelBlockName; // Model block name (stairs use this)
 	public float hardness = DEF_FLOAT; // Block hardness
 	public String stepSound = null; // Step sound (powder, wood, gravel, grass, stone, metal, glass, cloth, sand,
 									// snow, ladder, anvil)
@@ -506,18 +540,44 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	// Custom color multiplier
 	public static class CustomColorMultHandler extends ColorMultHandler implements ColorResolver {
-		private int[] colorBuffer = new int[65536];
-		private final String rname;
-		private boolean brokenOptifine = false;
+		private List<int[]> colorBuffers;
+		private final List<String> rnames;
+		private boolean brokenCustomRenderer = false;
 
 		CustomColorMultHandler(String rname, String blockName) {
+			this(Collections.singletonList(rname), blockName);
+		}
+
+		CustomColorMultHandler(List<String> rnames, String blockName) {
 			super();
-			this.rname = rname;
+			this.colorBuffers = new ArrayList<int[]>();
+			this.rnames = rnames;
+			for (String rname : rnames) {
+				colorBuffers.add(new int[65536]);
+			}
+		}
+
+		public int calculateColor(LevelReader rdr, BlockPos pos, int txtindx) {
+			int red = 0;
+			int green = 0;
+			int blue = 0;
+							
+			for (int xx = -1; xx <= 1; ++xx) {
+				for (int zz = -1; zz <= 1; ++zz) {
+					BlockPos bp = pos.offset(xx, 0, zz);
+					Biome biome = rdr.getBiome(bp).value();
+					int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall(), txtindx);
+					red += (mult & 0xFF0000) >> 16;
+					green += (mult & 0x00FF00) >> 8;
+					blue += (mult & 0x0000FF);
+				}
+			}
+			return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
 		}
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
-		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {				
+		public int getColor(BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) {		
 			if ((world != null) && (pos != null)) {
 				LevelReader rdr = null;
 				
@@ -528,46 +588,43 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 					rdr = (LevelReader) world;
 				}
 				if (rdr != null) {
-					int red = 0;
-					int green = 0;
-					int blue = 0;
-									
-					for (int xx = -1; xx <= 1; ++xx) {
-						for (int zz = -1; zz <= 1; ++zz) {
-							BlockPos bp = pos.offset(xx, 0, zz);
-							Biome biome = rdr.getBiome(bp).value();
-							int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall());
-							red += (mult & 0xFF0000) >> 16;
-							green += (mult & 0x00FF00) >> 8;
-							blue += (mult & 0x0000FF);
-						}
-					}
-					return (((red / 9) & 0xFF) << 16) | (((green / 9) & 0xFF) << 8) | ((blue / 9) & 0xFF);
+					return calculateColor(rdr, pos, txtindx);
 				}
-				// Workaround to keep Optifine from exploding, but it does break custom biome tinting....
+				// Workaround to attempt to support custom renderers such as Optifine or Embeddium
 				else {
-					if (!brokenOptifine) {
+					if (!brokenCustomRenderer) {
+						// First try to access non-thread-safe level reader from minecraft client instance...
 						try {
-							return world.getBlockTint(pos, this);		
-						} catch (Exception x) {
-							brokenOptifine = true;
+							rdr = Minecraft.getInstance().level;
+							return calculateColor(rdr, pos, txtindx);
+						} catch(Exception x) {
+							// If fails, try to use color resolver method...
+							try {
+								return world.getBlockTint(pos, this);		
+							} catch (Exception y) {
+								// If both fail, biome colors will be broken, but should not explode.
+								brokenCustomRenderer = true;
+							}
 						}
 					}
 				}
 			}
-			return getColor(null, 0.5D, 1.0D);
+			return getColor(null, 0.5D, 1.0D, txtindx);
 		}
-		private int getColor(double tmp, double hum) {
+		private int getColor(double tmp, double hum, int txtindx) {
 			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
 			hum = Mth.clamp(hum, 0.0F, 1.0F);
 			hum *= tmp;
 			int i = (int) ((1.0D - tmp) * 255.0D);
 			int j = (int) ((1.0D - hum) * 255.0D);
-			return colorBuffer[j << 8 | i];
+			return colorBuffers.get(txtindx)[j << 8 | i];
 		}
 
 		@Override
 		public int getColor(Biome biome, double x, double z) {
+			return getColor(biome, x, z, 0);
+		}
+		public int getColor(Biome biome, double x, double z, int txtindx) {
 			float hum = 1.0F;
 			float tmp = 0.5F;
 			if (biome != null) {
@@ -579,22 +636,25 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			hum *= tmp;
 			int i = (int) ((1.0D - tmp) * 255.0D);
 			int j = (int) ((1.0D - hum) * 255.0D);
-			return colorBuffer[j << 8 | i];
+			return colorBuffers.get(txtindx)[j << 8 | i];
 		}
 
 		@OnlyIn(Dist.CLIENT)
-		public void loadColorMap(ResourceManager resMgr) {
-			String resName = rname;
-			if (resName.indexOf(':') < 0)
-				resName = WesterosBlocks.MOD_ID + ":" + resName;
-			if (resName.endsWith(".png") == false)
-				resName += ".png";
-			try {
-				colorBuffer = LegacyStuffWrapper.getPixels(resMgr, new ResourceLocation(resName));
-				WesterosBlocks.log.debug(String.format("Loaded color resource '%s'", rname));
-			} catch (Exception e) {
-				WesterosBlocks.log.error(String.format("Invalid color resource '%s'", rname), e);
-				Arrays.fill(colorBuffer, 0xFFFFFF);
+		public void loadColorMaps(ResourceManager resMgr) {
+			int txtindx = 0;
+			for (String resName : rnames) {
+				if (resName.indexOf(':') < 0)
+					resName = WesterosBlocks.MOD_ID + ":" + resName;
+				if (resName.endsWith(".png") == false)
+					resName += ".png";
+				try {
+					colorBuffers.set(txtindx, LegacyStuffWrapper.getPixels(resMgr, new ResourceLocation(resName)));
+					WesterosBlocks.log.debug(String.format("Loaded color resource '%s'", resName));
+				} catch (Exception e) {
+					WesterosBlocks.log.error(String.format("Invalid color resource '%s'", resName), e);
+					Arrays.fill(colorBuffers.get(txtindx), 0xFFFFFF);
+				}
+				txtindx++;
 			}
 		}
 	}
@@ -646,6 +706,10 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		if (this.ambientOcclusion == null) {
 			this.ambientOcclusion = true; // Default to true
 		}
+		// If overlay textures, set nonOpaque to true
+		if (this.overlayTextures != null) {
+			this.nonOpaque = true;
+		}
 		for (WesterosBlockStateRecord rec : this.states) {
 			// if states array, allow attributes to be inherited from base def if not specified
 			if (rec.boundingBox == null) rec.boundingBox = this.boundingBox;
@@ -656,7 +720,13 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			if (rec.randomTextures == null) rec.randomTextures = this.randomTextures;
 			if (rec.overlayTextures == null) rec.overlayTextures = this.overlayTextures;
 			if (rec.colorMult.equals("#FFFFFF")) rec.colorMult = this.colorMult;
+			if (rec.colorMults == null) rec.colorMults = this.colorMults;
 			rec.doStateRecordInit();
+
+			// If any state has overlay textures, set nonOpaque to true
+			if (rec.overlayTextures != null) {
+				this.nonOpaque = true;
+			}
 		}
 		// If stacks, process these too
 		if (this.stack != null) {
@@ -1007,6 +1077,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		typeTable.put("fence", new WCFenceBlock.Factory());
 		typeTable.put("web", new WCWebBlock.Factory());
 		typeTable.put("torch", new WCTorchBlock.Factory());
+		typeTable.put("fan", new WCFanBlock.Factory());
 		typeTable.put("ladder", new WCLadderBlock.Factory());
 		typeTable.put("cuboid", new WCCuboidBlock.Factory());
 		typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
@@ -1032,7 +1103,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		typeTable.put("vines", new WCVinesBlock.Factory());
 		typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
 		typeTable.put("fencegate", new WCFenceGateBlock.Factory());
-		typeTable.put("particle", new WCParticleBlock.Factory());
 
 		// Standard color multipliers
 		colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
@@ -1086,7 +1156,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			ColorMultHandler prev = colorMultTable.get(hndid);
 			// Only reload those from resources
 			if (prev instanceof CustomColorMultHandler) {
-				((CustomColorMultHandler)prev).loadColorMap(pResourceManager);
+				((CustomColorMultHandler)prev).loadColorMaps(pResourceManager);
 			}
 		}		
 	}
@@ -1120,10 +1190,33 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 		return cmh;
 	}
+	public static ColorMultHandler getColorHandler(List<String> hnd, String blockName) {
+		String hndid = String.join("_", hnd).toLowerCase();
+		ColorMultHandler cmh = colorMultTable.get(hndid);
+		if (cmh == null) {
+			for (int i = 0; i < hnd.size(); i++) {
+				int idx = hnd.get(i).indexOf(':');
+				if (idx < 0) {
+					hnd.set(i, WesterosBlocks.MOD_ID + ":" + hnd.get(i));
+				}
+			}
+			hndid = String.join("_", hnd).toLowerCase();
+			cmh = colorMultTable.get(hndid);
+			if (cmh == null) {
+				cmh = new CustomColorMultHandler(hnd, blockName);
+				colorMultTable.put(hndid, cmh);
+			}
+		}
+
+		return cmh;
+	}
 
 	public String getBlockColorMapResource() {
 		String res = null;
 		String blockColor = colorMult;
+		if (blockColor == null && colorMults != null && colorMults.size() >= 1) {
+			blockColor = colorMults.get(0);
+		}
 		if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
 			String tok[] = blockColor.split(":");
 			if (tok.length == 1) {
@@ -1166,6 +1259,15 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			return rec.regobj;
 		return null;
 	}
+
+	public static ColorMultHandler getStateColorHandler(WesterosBlockStateRecord rec, String blockName) {
+		if (rec.colorMults != null) {
+			return getColorHandler(rec.colorMults, blockName);
+		}
+		else {
+			return getColorHandler(rec.colorMult, blockName);
+		}
+	}
 	
 	// Handle registration of tint handling and other client rendering
 	@OnlyIn(Dist.CLIENT)
@@ -1174,7 +1276,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			if (this.stateProp != null) {
 				final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
 				for (WesterosBlockStateRecord rec : this.states) {
-					ColorMultHandler handler = getColorHandler(rec.colorMult, this.blockName);
+					ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
 					cmmap.put(rec.stateID, handler);
 				}
 				blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> 
@@ -1182,7 +1284,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
 			}
 			else {
-				ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);
+				ColorMultHandler handler = getStateColorHandler(this, this.blockName);
 				
 				blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
 						.getColor(state, world, pos, txtindx), blk);
@@ -1197,14 +1299,14 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			if (this.stateProp != null) {
 				final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
 				for (WesterosBlockStateRecord rec : this.states) {
-					ColorMultHandler handler = getColorHandler(rec.colorMult, this.blockName);
+					ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
 					cmmap.put(rec.stateID, handler);
 				}
 				final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
 				itemColors.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
 			}
 			else {
-				ColorMultHandler handler = getColorHandler(this.colorMult, this.blockName);				
+				ColorMultHandler handler = getStateColorHandler(this, this.blockName);				
 				itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 			}
 		}

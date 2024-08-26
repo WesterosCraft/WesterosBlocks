@@ -3,15 +3,15 @@ package com.westeroscraft.westerosblocks.modelexport;
 import java.io.File;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.ArrayList;
+import java.util.Set;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
+import com.westeroscraft.westerosblocks.WesterosBlockStateRecord;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
-import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
 import net.minecraft.world.level.block.Block;
 
@@ -30,14 +30,10 @@ public class StairsBlockModelExport extends ModelExport {
         }
     }
 
-    protected String getModelName(String ext, int setidx) {
-    	return def.getBlockName() + "/" + ext + ("_v" + (setidx+1));
-    }
     // Template objects for Gson export of block models
     public static class ModelObjectStair {
         public String parent;
         public Texture textures = new Texture();
-
         public ModelObjectStair(final boolean ambientocclusion, final boolean tinted, boolean overlay) {
             if (ambientocclusion) {
                 if (tinted) {
@@ -54,11 +50,9 @@ public class StairsBlockModelExport extends ModelExport {
             }
         }
     }
-
     public static class ModelObjectInnerStair {
         public String parent;
         public Texture textures = new Texture();
-
         public ModelObjectInnerStair(final boolean ambientocclusion, final boolean tinted, boolean overlay) {
             if (ambientocclusion) {
                 if (tinted) {
@@ -75,11 +69,9 @@ public class StairsBlockModelExport extends ModelExport {
             }
         }
     }
-
     public static class ModelObjectOuterStair {
         public String parent;
         public Texture textures = new Texture();
-
         public ModelObjectOuterStair(final boolean ambientocclusion, final boolean tinted, boolean overlay) {
             if (ambientocclusion) {
                 if (tinted) {
@@ -96,22 +88,16 @@ public class StairsBlockModelExport extends ModelExport {
             }
         }
     }
-
     public static class Texture {
         public String bottom, top, side;
         public String bottom_ov, top_ov, side_ov;
         public String particle;
     }
-
     public static class ModelObject {
         public String parent;
     }
 
-    private WesterosBlockDef bbdef = null;
-    private int setcnt = 1;
-    private boolean isTinted = false;
-	private boolean ambientOcclusion = true;
-	private WCStairBlock sblk;
+	private final WCStairBlock sblk;
 
     public StairsBlockModelExport(final Block blk, final WesterosBlockDef def, final File dest) {
         super(blk, def, dest);
@@ -119,247 +105,183 @@ public class StairsBlockModelExport extends ModelExport {
         this.sblk = (WCStairBlock) blk;
     }
 
-    private List<Variant> buildVariantList(StateObject so, String cond, String ext, int xrot, int yrot) {
-    	List<Variant> vars = new ArrayList<Variant>();
-        // Loop over the random sets we've got
-        for (int setidx = 0; setidx < setcnt; setidx++) {
-    		String modname = modelFileName(ext, setidx);
-    		Variant var;
-        	if (bbdef != null) {
-        		WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);
-        		var = new OurVariant(modname, xrot, yrot, set.weight, sblk.no_uvlock);
-        		so.addVariant(cond, var, null);
-        	}
-        	else {
-        		var = new OurVariant(modname, xrot, yrot, null, sblk.no_uvlock);
-        		so.addVariant(cond, var, null);
-        	}
-        }
-    	return vars;
-    }
-    
-    private Block getModelBlock() throws IOException {
-        // Find base block for stairs - textures come from there
-        Block bblk = WesterosBlocks.findBlockByName(def.modelBlockName);
-        if (bblk == null) {
-            throw new IOException(
-                    String.format("modelBlockName '%s' not found for block '%s'", def.modelBlockName, def.blockName));
-        }
-        return bblk;
-    }
-    
-    public String modelFileName(String ext, int setidx) {
-    	if (def.isCustomModel())
-    		return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx);
-    	else
-    		return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx);
+    protected String getModelName(String ext, int setidx) {
+    	return def.getBlockName() + "/" + ext + ("_v" + (setidx+1));
     }
 
-    private void doInit() throws IOException {
-        Block bblk = getModelBlock();
-        // Find base block for stairs - textures come from there
-    	if (bblk instanceof WesterosBlockLifecycle) {
-    		bbdef = ((WesterosBlockLifecycle) bblk).getWBDefinition();
-    		setcnt = bbdef.getRandomTextureSetCount();
-    		isTinted = bbdef.isTinted();
-    		ambientOcclusion = (def.ambientOcclusion != null) ? def.ambientOcclusion : true;
-    	}    	
-    	isTinted |= def.isTinted();
+    protected String getModelName(String ext, int setidx, String cond) {
+        if (cond == null)
+            return getModelName(ext, setidx);
+        return def.getBlockName() + "/" + cond + "/" + ext + ("_v" + (setidx+1));
     }
+
+    public String modelFileName(String ext, int setidx) {
+        return modelFileName(ext, setidx, null);
+    }
+
+    public String modelFileName(String ext, int setidx, String cond) {
+    	if (def.isCustomModel())
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx, cond);
+    	else
+    		return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx, cond);
+    }
+
+    public String modelFileName(WesterosBlockStateRecord sr, String ext, int setidx, String cond) {
+    	if (sr.isCustomModel())
+    		return WesterosBlocks.MOD_ID + ":block/custom/" + getModelName(ext, setidx, cond);
+    	else
+    		return WesterosBlocks.MOD_ID + ":block/generated/" + getModelName(ext, setidx, cond);
+    }
+
+    private void buildVariantList(StateObject so, WesterosBlockStateRecord sr, String cond, String ext, int xrot, int yrot) {
+        boolean justBase = sr.stateID == null;
+        Set<String> stateIDs = justBase ? null : Collections.singleton(sr.stateID);
+
+        // Loop over the random sets we've got
+        for (int setidx = 0; setidx < sr.getRandomTextureSetCount(); setidx++) {
+            WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
+            String modname = (justBase) ? modelFileName(ext, setidx) : modelFileName(sr, ext, setidx, sr.stateID);
+            Integer weight = set.weight;
+            Variant var = new OurVariant(modname, xrot, yrot, weight, sblk.no_uvlock);
+            so.addVariant(cond, var, stateIDs);
+        }
+    }
+
     @Override
     public void doBlockStateExport() throws IOException {
-        final StateObject so = new StateObject();
-        doInit();
-        buildVariantList(so,"facing=east,half=bottom,shape=straight", "base", 0, 0);
-        buildVariantList(so,"facing=west,half=bottom,shape=straight", "base", 0, 180);
-        buildVariantList(so,"facing=south,half=bottom,shape=straight", "base", 0, 90);
-        buildVariantList(so,"facing=north,half=bottom,shape=straight", "base", 0, 270);
-        buildVariantList(so,"facing=east,half=bottom,shape=outer_right", "outer", 0, 0);
-        buildVariantList(so,"facing=west,half=bottom,shape=outer_right", "outer", 0, 180);
-        buildVariantList(so,"facing=south,half=bottom,shape=outer_right", "outer", 0, 90);
-        buildVariantList(so,"facing=north,half=bottom,shape=outer_right", "outer", 0, 270);
-        buildVariantList(so,"facing=east,half=bottom,shape=outer_left", "outer", 0, 270);
-        buildVariantList(so,"facing=west,half=bottom,shape=outer_left", "outer", 0, 90);
-        buildVariantList(so,"facing=south,half=bottom,shape=outer_left", "outer", 0, 0);
-        buildVariantList(so,"facing=north,half=bottom,shape=outer_left", "outer", 0, 180);
-        buildVariantList(so,"facing=east,half=bottom,shape=inner_right", "inner", 0, 0);
-        buildVariantList(so,"facing=west,half=bottom,shape=inner_right", "inner", 0, 180);
-        buildVariantList(so,"facing=south,half=bottom,shape=inner_right", "inner", 0, 90);
-        buildVariantList(so,"facing=north,half=bottom,shape=inner_right", "inner", 0, 270);
-        buildVariantList(so,"facing=east,half=bottom,shape=inner_left", "inner", 0, 270);
-        buildVariantList(so,"facing=west,half=bottom,shape=inner_left", "inner", 0, 90);
-        buildVariantList(so,"facing=south,half=bottom,shape=inner_left", "inner", 0, 0);
-        buildVariantList(so,"facing=north,half=bottom,shape=inner_left", "inner", 0, 180);
-        buildVariantList(so,"facing=east,half=top,shape=straight", "base", 180, 0);
-        buildVariantList(so,"facing=west,half=top,shape=straight", "base", 180, 180);
-        buildVariantList(so,"facing=south,half=top,shape=straight", "base", 180, 90);
-        buildVariantList(so,"facing=north,half=top,shape=straight", "base", 180, 270);
-        buildVariantList(so,"facing=east,half=top,shape=outer_right", "outer", 180, 90);
-        buildVariantList(so,"facing=west,half=top,shape=outer_right", "outer", 180, 270);
-        buildVariantList(so,"facing=south,half=top,shape=outer_right", "outer", 180, 180);
-        buildVariantList(so,"facing=north,half=top,shape=outer_right", "outer", 180, 0);
-        buildVariantList(so,"facing=east,half=top,shape=outer_left", "outer", 180, 0);
-        buildVariantList(so,"facing=west,half=top,shape=outer_left", "outer", 180, 180);
-        buildVariantList(so,"facing=south,half=top,shape=outer_left", "outer", 180, 90);
-        buildVariantList(so,"facing=north,half=top,shape=outer_left", "outer", 180, 270);
-        buildVariantList(so,"facing=east,half=top,shape=inner_right", "inner", 180, 90);
-        buildVariantList(so,"facing=west,half=top,shape=inner_right", "inner", 180, 270);
-        buildVariantList(so,"facing=south,half=top,shape=inner_right", "inner", 180, 180);
-        buildVariantList(so,"facing=north,half=top,shape=inner_right", "inner", 180, 0);
-        buildVariantList(so,"facing=east,half=top,shape=inner_left", "inner", 180, 0);
-        buildVariantList(so,"facing=west,half=top,shape=inner_left", "inner", 180, 180);
-        buildVariantList(so,"facing=south,half=top,shape=inner_left", "inner", 180, 90);
-        buildVariantList(so,"facing=north,half=top,shape=inner_left", "inner", 180, 270);
+        StateObject so = new StateObject();
+
+        for (WesterosBlockStateRecord sr : def.states) {
+            buildVariantList(so,sr,"facing=east,half=bottom,shape=straight", "base", 0, 0);
+            buildVariantList(so,sr,"facing=west,half=bottom,shape=straight", "base", 0, 180);
+            buildVariantList(so,sr,"facing=south,half=bottom,shape=straight", "base", 0, 90);
+            buildVariantList(so,sr,"facing=north,half=bottom,shape=straight", "base", 0, 270);
+            buildVariantList(so,sr,"facing=east,half=bottom,shape=outer_right", "outer", 0, 0);
+            buildVariantList(so,sr,"facing=west,half=bottom,shape=outer_right", "outer", 0, 180);
+            buildVariantList(so,sr,"facing=south,half=bottom,shape=outer_right", "outer", 0, 90);
+            buildVariantList(so,sr,"facing=north,half=bottom,shape=outer_right", "outer", 0, 270);
+            buildVariantList(so,sr,"facing=east,half=bottom,shape=outer_left", "outer", 0, 270);
+            buildVariantList(so,sr,"facing=west,half=bottom,shape=outer_left", "outer", 0, 90);
+            buildVariantList(so,sr,"facing=south,half=bottom,shape=outer_left", "outer", 0, 0);
+            buildVariantList(so,sr,"facing=north,half=bottom,shape=outer_left", "outer", 0, 180);
+            buildVariantList(so,sr,"facing=east,half=bottom,shape=inner_right", "inner", 0, 0);
+            buildVariantList(so,sr,"facing=west,half=bottom,shape=inner_right", "inner", 0, 180);
+            buildVariantList(so,sr,"facing=south,half=bottom,shape=inner_right", "inner", 0, 90);
+            buildVariantList(so,sr,"facing=north,half=bottom,shape=inner_right", "inner", 0, 270);
+            buildVariantList(so,sr,"facing=east,half=bottom,shape=inner_left", "inner", 0, 270);
+            buildVariantList(so,sr,"facing=west,half=bottom,shape=inner_left", "inner", 0, 90);
+            buildVariantList(so,sr,"facing=south,half=bottom,shape=inner_left", "inner", 0, 0);
+            buildVariantList(so,sr,"facing=north,half=bottom,shape=inner_left", "inner", 0, 180);
+            buildVariantList(so,sr,"facing=east,half=top,shape=straight", "base", 180, 0);
+            buildVariantList(so,sr,"facing=west,half=top,shape=straight", "base", 180, 180);
+            buildVariantList(so,sr,"facing=south,half=top,shape=straight", "base", 180, 90);
+            buildVariantList(so,sr,"facing=north,half=top,shape=straight", "base", 180, 270);
+            buildVariantList(so,sr,"facing=east,half=top,shape=outer_right", "outer", 180, 90);
+            buildVariantList(so,sr,"facing=west,half=top,shape=outer_right", "outer", 180, 270);
+            buildVariantList(so,sr,"facing=south,half=top,shape=outer_right", "outer", 180, 180);
+            buildVariantList(so,sr,"facing=north,half=top,shape=outer_right", "outer", 180, 0);
+            buildVariantList(so,sr,"facing=east,half=top,shape=outer_left", "outer", 180, 0);
+            buildVariantList(so,sr,"facing=west,half=top,shape=outer_left", "outer", 180, 180);
+            buildVariantList(so,sr,"facing=south,half=top,shape=outer_left", "outer", 180, 90);
+            buildVariantList(so,sr,"facing=north,half=top,shape=outer_left", "outer", 180, 270);
+            buildVariantList(so,sr,"facing=east,half=top,shape=inner_right", "inner", 180, 90);
+            buildVariantList(so,sr,"facing=west,half=top,shape=inner_right", "inner", 180, 270);
+            buildVariantList(so,sr,"facing=south,half=top,shape=inner_right", "inner", 180, 180);
+            buildVariantList(so,sr,"facing=north,half=top,shape=inner_right", "inner", 180, 0);
+            buildVariantList(so,sr,"facing=east,half=top,shape=inner_left", "inner", 180, 0);
+            buildVariantList(so,sr,"facing=west,half=top,shape=inner_left", "inner", 180, 180);
+            buildVariantList(so,sr,"facing=south,half=top,shape=inner_left", "inner", 180, 90);
+            buildVariantList(so,sr,"facing=north,half=top,shape=inner_left", "inner", 180, 270);
+        }
         this.writeBlockStateFile(def.getBlockName(), so);
+    }
+
+	protected void doStairModel(boolean isOccluded, boolean isTinted, boolean isOverlay, int setidx, WesterosBlockStateRecord sr, int sridx, String cond) throws IOException {
+		WesterosBlockDef.RandomTextureSet set = sr.getRandomTextureSet(setidx);
+
+        // Textures
+        String downtxt = null;
+        String uptxt = null;
+        String sidetxt = null;
+        String downtxt_ov = null;
+        String uptxt_ov = null;
+        String sidetxt_ov = null;
+        downtxt = getTextureID(set.getTextureByIndex(0));
+        uptxt = getTextureID(set.getTextureByIndex(1));
+        sidetxt = getTextureID(set.getTextureByIndex(2));
+        if (isOverlay) {
+            downtxt_ov = getTextureID(sr.getOverlayTextureByIndex(0));
+            uptxt_ov = getTextureID(sr.getOverlayTextureByIndex(1));
+            sidetxt_ov = getTextureID(sr.getOverlayTextureByIndex(2));
+        }	        		
+        // Base model
+        ModelObjectStair base = new ModelObjectStair(isOccluded, isTinted, isOverlay);
+        base.textures.bottom = downtxt;
+        base.textures.top = uptxt;
+        base.textures.side = base.textures.particle = sidetxt;
+        if (isOverlay) {
+            base.textures.bottom_ov = downtxt_ov;
+            base.textures.top_ov = uptxt_ov;
+            base.textures.side_ov = sidetxt_ov;
+        }
+        this.writeBlockModelFile(getModelName("base", setidx, cond), base);
+        // Outer model
+        final ModelObjectOuterStair outer = new ModelObjectOuterStair(isOccluded, isTinted, isOverlay);
+        outer.textures.bottom = downtxt;
+        outer.textures.top = uptxt;
+        outer.textures.side = outer.textures.particle = sidetxt;
+        if (isOverlay) {
+            outer.textures.bottom_ov = downtxt_ov;
+            outer.textures.top_ov = uptxt_ov;
+            outer.textures.side_ov = sidetxt_ov;
+        }
+        this.writeBlockModelFile(getModelName("outer", setidx, cond), outer);
+        // Inner model
+        final ModelObjectInnerStair inner = new ModelObjectInnerStair(isOccluded, isTinted, isOverlay);
+        inner.textures.bottom = downtxt;
+        inner.textures.top = uptxt;
+        inner.textures.side = inner.textures.particle = sidetxt;
+        if (isOverlay) {
+            inner.textures.bottom_ov = downtxt_ov;
+            inner.textures.top_ov = uptxt_ov;
+            inner.textures.side_ov = sidetxt_ov;
+        }
+        this.writeBlockModelFile(getModelName("inner", setidx, cond), inner);
     }
 
     @Override
     public void doModelExports() throws IOException {
-        doInit();
-        // Export if not set to custom model
-        if (!def.isCustomModel()) {
-            boolean isOverlay = def.getOverlayTextureByIndex(0) != null;	
-	        // Loop over the random sets we've got
-	        for (int setidx = 0; setidx < setcnt; setidx++) {
-	        	String downtxt = null;
-	        	String uptxt = null;
-	        	String sidetxt = null;
-	        	String downtxt_ov = null;
-	        	String uptxt_ov = null;
-	        	String sidetxt_ov = null;
-	        	if (def.getTextureCount() > 0) {
-	            	WesterosBlockDef.RandomTextureSet set = def.getRandomTextureSet(setidx);        		
-	         		downtxt = getTextureID(set.getTextureByIndex(0));
-	         		uptxt = getTextureID(set.getTextureByIndex(1));
-	         		sidetxt = getTextureID(set.getTextureByIndex(2));
-	         		if (isOverlay) {
-	         			downtxt_ov = getTextureID(def.getOverlayTextureByIndex(0));
-	         			uptxt_ov = getTextureID(def.getOverlayTextureByIndex(1));
-	         			sidetxt_ov = getTextureID(def.getOverlayTextureByIndex(2));
-	         		}	        		
-	        	}
-	        	else if (bbdef != null) {
-	            	WesterosBlockDef.RandomTextureSet set = bbdef.getRandomTextureSet(setidx);        		
-	         		downtxt = getTextureID(set.getTextureByIndex(0));
-	         		uptxt = getTextureID(set.getTextureByIndex(1));
-	         		sidetxt = getTextureID(set.getTextureByIndex(2));
-	         		if (isOverlay) {
-	         			downtxt_ov = getTextureID(def.getOverlayTextureByIndex(0));
-	         			uptxt_ov = getTextureID(def.getOverlayTextureByIndex(1));
-	         			sidetxt_ov = getTextureID(def.getOverlayTextureByIndex(2));
-	         		}
-	        	}
-	        	else {
-	        		switch (def.modelBlockName) {
-	                	case "minecraft:bedrock":
-	                		downtxt = uptxt = sidetxt = "minecraft:block/bedrock";
-	                		break;
-	                	case "minecraft:lapis_block":
-	                		downtxt = uptxt = sidetxt = "minecraft:block/lapis_block";
-	                		break;
-	                	case "minecraft:sandstone":
-	                		downtxt = "minecraft:block/sandstone_bottom"; 
-	                		uptxt = "minecraft:block/sandstone_top";
-	                		sidetxt = "minecraft:block/sandstone";
-	                		break;
-	                	case "minecraft:iron_block":
-	                		downtxt = uptxt = sidetxt = "minecraft:block/iron_block";
-	                		break;
-	                	case "minecraft:stone_slab":
-	                		downtxt = uptxt = "minecraft:block/stone";
-	                		sidetxt = "minecraft:block/stone";
-	                		break;
-	                	case "minecraft:snow":
-	                		downtxt = uptxt = sidetxt = "minecraft:block/snow";
-	                		break;
-	                	case "minecraft:emerald_block":
-	                		downtxt = uptxt = sidetxt = "minecraft:block/emerald_block";
-	                		break;
-	                	case "minecraft:obsidian":
-	                		downtxt = uptxt = sidetxt = "minecraft:block/obsidian";
-	                		break;
-	                	case "minecraft:terracotta":
-	                		downtxt = uptxt = sidetxt = "minecraft:block/terracotta";
-	                		break;
-	                    case "minecraft:gold_block":
-	                        downtxt = uptxt = sidetxt = "minecraft:block/gold_block";                	
-	                        break;
-	                    case "minecraft:ice":
-	                        downtxt = uptxt = sidetxt = "minecraft:block/ice";                	
-	                        break;
-                        case "minecraft:quartz_block":
-                            downtxt = "minecraft:block/quartz_block_bottom";
-                            sidetxt = "minecraft:block/quartz_block_side";
-                            uptxt = "minecraft:block/quartz_block_top";
-                            break;
-                        case "minecraft:cobblestone":
-                            downtxt = uptxt = sidetxt = "minecraft:block/cobblestone";
-                            break;
-                        case "minecraft:bricks":
-                            downtxt = uptxt = sidetxt = "minecraft:block/bricks";
-                            break;
-                        case "minecraft:stone_bricks":
-                            downtxt = uptxt = sidetxt = "minecraft:block/stone_bricks";
-                            break;
-                        case "minecraft:mossy_stone_bricks":
-                            downtxt = uptxt = sidetxt = "minecraft:block/mossy_stone_bricks";
-                            break;
-                        case "minecraft:mossy_cobblestone":
-                            downtxt = uptxt = sidetxt = "minecraft:block/mossy_cobblestone";
-                            break;
-	                	default:
-	                		throw new IOException(String.format("modelBlockName '%s' not found for block '%s' - no vanilla",
-	                            def.modelBlockName, def.blockName));
-	        		}
-	        	}
-	        	// Base model
-	        	final ModelObjectStair base = new ModelObjectStair(ambientOcclusion, isTinted, isOverlay);
-	        	base.textures.bottom = downtxt;
-	        	base.textures.top = uptxt;
-	        	base.textures.side = base.textures.particle = sidetxt;
-	        	if (isOverlay) {
-	        		base.textures.bottom_ov = downtxt_ov;
-	        		base.textures.top_ov = uptxt_ov;
-	        		base.textures.side_ov = sidetxt_ov;
-	        	}
-	        	this.writeBlockModelFile(getModelName("base", setidx), base);
-	        	// Outer model
-	        	final ModelObjectOuterStair outer = new ModelObjectOuterStair(ambientOcclusion, isTinted, isOverlay);
-	        	outer.textures.bottom = downtxt;
-	        	outer.textures.top = uptxt;
-	        	outer.textures.side = outer.textures.particle = sidetxt;
-	        	if (isOverlay) {
-	        		outer.textures.bottom_ov = downtxt_ov;
-	        		outer.textures.top_ov = uptxt_ov;
-	        		outer.textures.side_ov = sidetxt_ov;
-	        	}
-	        	this.writeBlockModelFile(getModelName("outer", setidx), outer);
-	        	// Inner model
-	        	final ModelObjectInnerStair inner = new ModelObjectInnerStair(ambientOcclusion, isTinted, isOverlay);
-	        	inner.textures.bottom = downtxt;
-	        	inner.textures.top = uptxt;
-	        	inner.textures.side = inner.textures.particle = sidetxt;
-	        	if (isOverlay) {
-	        		inner.textures.bottom_ov = downtxt_ov;
-	        		inner.textures.top_ov = uptxt_ov;
-	        		inner.textures.side_ov = sidetxt_ov;
-	        	}
-	        	this.writeBlockModelFile(getModelName("inner", setidx), inner);
-	        }
+        boolean isOccluded = (def.ambientOcclusion != null) ? def.ambientOcclusion : true;
+		for (int idx = 0; idx < def.states.size(); idx++) {
+			WesterosBlockStateRecord rec = def.states.get(idx);
+            // Export if not set to custom model
+            if (!rec.isCustomModel()) {
+                boolean isTinted = rec.isTinted();
+                boolean isOverlay = rec.getOverlayTextureByIndex(0) != null;
+                String cond = rec.stateID;
+                // Loop over the random sets we've got
+                for (int setidx = 0; setidx < rec.getRandomTextureSetCount(); setidx++) {
+                    doStairModel(isOccluded, isTinted, isOverlay, setidx, rec, idx, cond);
+                }
+            }
         }
-    	// Build simple item model that refers to base block model
-        final ModelObject mo = new ModelObject();
-        mo.parent = modelFileName("base", 0);
-        this.writeItemModelFile(def.getBlockName(), mo);
 
+    	// Build simple item model that refers to base block model
+        ModelObject mo = new ModelObject();
+        WesterosBlockStateRecord sr0 = def.states.get(0);
+        boolean isTinted = sr0.isTinted();
+        String cond = sr0.stateID;
+        mo.parent = modelFileName(sr0, "base", 0, cond);
+        this.writeItemModelFile(def.getBlockName(), mo);
         // Handle tint resources
         if (isTinted) {
-            final String tintres = def.getBlockColorMapResource();
+            String tintres = def.getBlockColorMapResource();
             if (tintres != null) {
                 ModelExport.addTintingOverride(def.getBlockName(), null, tintres);
             }
         }
     }
+
     @Override
     public void doWorldConverterMigrate() throws IOException {
     	String oldID = def.getLegacyBlockName();
@@ -378,6 +300,9 @@ public class StairsBlockModelExport extends ModelExport {
     	if (sblk.unconnect) {
         	newstate.put("unconnect", "false");    		
     	}
+		if (sblk != null && sblk.connectstate) {
+			newstate.put("connectstate", "0");
+		}
     	for (String facing : FACING) {
         	oldstate.put("facing", facing);
         	newstate.put("facing", facing);

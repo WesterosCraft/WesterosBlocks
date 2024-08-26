@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_manderly_bottom",
-    "txt5": "westerosblocks:block/banner_block/banner_manderly_bottom",
+    "txt4": "westerosblocks:block/banner/house/manderly/bottom",
+    "txt5": "westerosblocks:block/banner/house/manderly/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

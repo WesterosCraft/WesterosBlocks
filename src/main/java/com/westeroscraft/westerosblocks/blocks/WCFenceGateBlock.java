@@ -51,7 +51,12 @@ public class WCFenceGateBlock extends FenceGateBlock implements WesterosBlockLif
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
         if (this.locked) {
-           return InteractionResult.PASS;
+            if (player.isCreative() && player.getMainHandItem().isEmpty()) {
+                return super.use(state, world, pos, player, hand, hitrslt);
+            }
+            else {
+                return InteractionResult.PASS;
+            }
         }
         else {
         	return super.use(state, world, pos, player, hand, hitrslt);

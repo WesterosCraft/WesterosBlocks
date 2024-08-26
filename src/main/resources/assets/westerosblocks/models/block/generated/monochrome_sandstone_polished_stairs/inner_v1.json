@@ -1,9 +1,9 @@
 {
   "parent": "westerosblocks:block/untinted/inner_stairs",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/westerlands/polished",
-    "top": "westerosblocks:block/ashlar_third/westerlands/polished",
-    "side": "westerosblocks:block/ashlar_third/westerlands/polished",
-    "particle": "westerosblocks:block/ashlar_third/westerlands/polished"
+    "bottom": "westerosblocks:block/ashlar_full/westerlands/all",
+    "top": "westerosblocks:block/ashlar_full/westerlands/all",
+    "side": "westerosblocks:block/ashlar_full/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_full/westerlands/all"
   }
 }

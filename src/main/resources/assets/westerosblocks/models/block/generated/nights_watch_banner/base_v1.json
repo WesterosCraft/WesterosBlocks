@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_nightswatch_bottom",
-    "txt5": "westerosblocks:block/banner_block/banner_nightswatch_bottom",
+    "txt4": "westerosblocks:block/banner/house/nights_watch/bottom",
+    "txt5": "westerosblocks:block/banner/house/nights_watch/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

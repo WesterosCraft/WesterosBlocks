@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,half=lower": {
+      "model": "westerosblocks:block/generated/blackmont_banner/base_v1",
+      "y": 270
+    },
+    "facing=west,half=upper": {
+      "model": "westerosblocks:block/generated/blackmont_banner/top_v1",
+      "y": 180
+    },
+    "facing=west,half=lower": {
+      "model": "westerosblocks:block/generated/blackmont_banner/base_v1",
+      "y": 180
+    },
+    "facing=north,half=upper": {
+      "model": "westerosblocks:block/generated/blackmont_banner/top_v1",
+      "y": 270
+    },
+    "facing=south,half=upper": {
+      "model": "westerosblocks:block/generated/blackmont_banner/top_v1",
+      "y": 90
+    },
+    "facing=east,half=upper": {
+      "model": "westerosblocks:block/generated/blackmont_banner/top_v1"
+    },
+    "facing=east,half=lower": {
+      "model": "westerosblocks:block/generated/blackmont_banner/base_v1"
+    },
+    "facing=south,half=lower": {
+      "model": "westerosblocks:block/generated/blackmont_banner/base_v1",
+      "y": 90
+    }
+  }
+}

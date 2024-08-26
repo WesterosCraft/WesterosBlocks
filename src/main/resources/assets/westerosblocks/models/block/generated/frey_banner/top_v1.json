@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner_block/banner_frey_top",
-    "txt5": "westerosblocks:block/banner_block/banner_frey_top",
+    "txt4": "westerosblocks:block/banner/house/frey/top",
+    "txt5": "westerosblocks:block/banner/house/frey/top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

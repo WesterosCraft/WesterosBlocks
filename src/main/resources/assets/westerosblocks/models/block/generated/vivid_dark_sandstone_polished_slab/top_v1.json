@@ -1,12 +1,12 @@
 {
   "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
-    "down": "westerosblocks:block/ashlar_third/dark_tan/polished",
-    "up": "westerosblocks:block/ashlar_third/dark_tan/polished",
-    "north": "westerosblocks:block/ashlar_third/dark_tan/polished",
-    "south": "westerosblocks:block/ashlar_third/dark_tan/polished",
-    "west": "westerosblocks:block/ashlar_third/dark_tan/polished",
-    "east": "westerosblocks:block/ashlar_third/dark_tan/polished",
-    "particle": "westerosblocks:block/ashlar_third/dark_tan/polished"
+    "down": "westerosblocks:block/ashlar_full/dark_tan/all",
+    "up": "westerosblocks:block/ashlar_full/dark_tan/all",
+    "north": "westerosblocks:block/ashlar_full/dark_tan/all",
+    "south": "westerosblocks:block/ashlar_full/dark_tan/all",
+    "west": "westerosblocks:block/ashlar_full/dark_tan/all",
+    "east": "westerosblocks:block/ashlar_full/dark_tan/all",
+    "particle": "westerosblocks:block/ashlar_full/dark_tan/all"
   }
 }

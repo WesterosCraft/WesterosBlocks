@@ -1,8 +1,8 @@
 {
   "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
-    "bottom": "westerosblocks:block/ashlar_third/dun/polished",
-    "top": "westerosblocks:block/ashlar_third/dun/polished",
-    "side": "westerosblocks:block/ashlar_third/dun/polished"
+    "bottom": "westerosblocks:block/ashlar_full/dun/all",
+    "top": "westerosblocks:block/ashlar_full/dun/all",
+    "side": "westerosblocks:block/ashlar_full/dun/all"
   }
 }
