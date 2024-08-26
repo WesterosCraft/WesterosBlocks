@@ -40,7 +40,7 @@ public class SolidBlockModelExport extends ModelExport {
     	public String parent;
     }
 
-		private final WCSolidBlock sblk;
+	private final WCSolidBlock sblk;
     
     public SolidBlockModelExport(Block blk, WesterosBlockDef def, File dest) {
         super(blk, def, dest);

@@ -7,7 +7,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import net.minecraft.world.level.block.Block;
 
 public class ModelExportFactory {
-    public static ModelExport   forBlock(Block blk, WesterosBlockDef def, File dest) {
+    public static ModelExport forBlock(Block blk, WesterosBlockDef def, File dest) {
         ModelExport me = null;
         switch (def.blockType) {
             case "solid":
@@ -110,6 +110,9 @@ public class ModelExportFactory {
             case "fencegate":
             	me = new FenceGateBlockModelExport(blk, def, dest);
             	break;
+            case "particle":
+                me = new ParticleBlockModelExport(blk, def, dest);
+                break;
         }
         return me;
     }
