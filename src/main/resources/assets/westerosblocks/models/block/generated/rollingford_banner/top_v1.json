@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner/house/eroll/top",
-    "txt5": "westerosblocks:block/banner/house/eroll/top",
+    "txt4": "westerosblocks:block/banner/house/rollingford/top",
+    "txt5": "westerosblocks:block/banner/house/rollingford/top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner/house/mooten/bottom",
-    "txt5": "westerosblocks:block/banner/house/mooten/bottom",
+    "txt4": "westerosblocks:block/banner/house/yronwood/bottom",
+    "txt5": "westerosblocks:block/banner/house/yronwood/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [
