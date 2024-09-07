@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/outer_stairs",
+  "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
     "bottom": "westerosblocks:block/brick/orange/all2",
     "top": "westerosblocks:block/brick/orange/all2",

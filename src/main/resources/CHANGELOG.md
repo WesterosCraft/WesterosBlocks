@@ -1,4 +1,4 @@
-# 21 Jun 2024:
+# 6 Sep 2024:
 - Added additional polished stone variants.
 - Added CTM and connectstate to polished stone, allowing for creation of arbitrary block sizes using data cycler tool.
 - Added house banners, generic wool banners, and updates to existing banners.
@@ -19,12 +19,14 @@
 - Changed locked fence gates to allow opening by clicking with empty hand while in creative mode.
 - Changed betterfoliage leaf models.
 - Changed butterfly and dragonfly textures.
+- Changed orange brick textures to be slightly less saturated and have smoother gradient; removed biome shading.
 - Fixed bug with red keep secret door texture.
 - Fixed bug with empty cabinet CTM.
 - Fixed bug with pale dark red medium ashlar.
 - Fixed issue with signs not being placeable on cloth material blocks.
 - Fixed wrong biome colors in desert biome.
 - Fixed transparency issues with fruit leaves and dappled moss.
+- Fixed vanilla farmland dry/moist texture mapping.
 
 # 22 Jan 2024:
 - Added a large number of new stone brick and cobblestone sets to fill in gaps in existing block sets, and to remove biome dependencies.

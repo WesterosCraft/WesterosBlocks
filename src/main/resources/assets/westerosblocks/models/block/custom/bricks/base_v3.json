@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/cube_all",
+  "parent": "westerosblocks:block/untinted/cube_all",
   "textures": {
     "all": "westerosblocks:block/brick/orange_rough/all3"
   }

@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner/house/yrnwood/bottom",
-    "txt5": "westerosblocks:block/banner/house/yrnwood/bottom",
+    "txt4": "westerosblocks:block/banner/house/rollingford/bottom",
+    "txt5": "westerosblocks:block/banner/house/rollingford/bottom",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

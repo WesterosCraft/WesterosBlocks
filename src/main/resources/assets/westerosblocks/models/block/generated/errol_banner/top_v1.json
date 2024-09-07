@@ -18,8 +18,8 @@
     ]
   },
   "textures": {
-    "txt4": "westerosblocks:block/banner/house/carron/bottom",
-    "txt5": "westerosblocks:block/banner/house/carron/bottom",
+    "txt4": "westerosblocks:block/banner/house/errol/top",
+    "txt5": "westerosblocks:block/banner/house/errol/top",
     "particle": "westerosblocks:block/transparent"
   },
   "elements": [

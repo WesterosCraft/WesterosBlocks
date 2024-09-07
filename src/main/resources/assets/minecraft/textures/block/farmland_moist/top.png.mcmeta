@@ -1,9 +1,9 @@
 {
-    "ctm":{
-        "ctm_version": 1,
-        "type":"westeros_ctm",
-        "layer":"SOLID",
-        "textures":[
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_ctm",
+    "layer": "SOLID",
+    "textures": [
       "minecraft:block/farmland_moist/ctm0",
       "minecraft:block/farmland_moist/ctm1",
       "minecraft:block/farmland_moist/ctm2",
@@ -50,6 +50,10 @@
       "minecraft:block/farmland_moist/ctm43",
       "minecraft:block/farmland_moist/ctm44",
       "minecraft:block/farmland_moist/ctm45",
-      "minecraft:block/farmland_moist/ctm46"        ]
+      "minecraft:block/farmland_moist/ctm46"
+    ],
+    "extra": {
+      "ignore_states": true
     }
+  }
 }

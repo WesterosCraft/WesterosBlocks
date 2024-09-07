@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/upper_slab",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
     "down": "westerosblocks:block/brick/orange_rough/all1",
     "up": "westerosblocks:block/brick/orange_rough/all1",
