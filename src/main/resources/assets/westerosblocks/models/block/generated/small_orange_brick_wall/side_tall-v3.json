@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/template_wall_side_tall",
+  "parent": "westerosblocks:block/untinted/template_wall_side_tall",
   "textures": {
     "bottom": "westerosblocks:block/brick/orange/all3",
     "top": "westerosblocks:block/brick/orange/all3",

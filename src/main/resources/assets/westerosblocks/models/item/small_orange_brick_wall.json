@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/wall_inventory",
+  "parent": "westerosblocks:block/untinted/wall_inventory",
   "textures": {
     "bottom": "westerosblocks:block/brick/orange/all1",
     "top": "westerosblocks:block/brick/orange/all1",

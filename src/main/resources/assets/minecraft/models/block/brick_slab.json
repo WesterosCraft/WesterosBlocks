@@ -1,12 +1,12 @@
 {
-  "parent": "westerosblocks:block/tinted/half_slab",
+  "parent": "westerosblocks:block/untinted/half_slab",
   "textures": {
-    "down": "westerosblocks:block/tinted/bricks",
-    "up": "westerosblocks:block/tinted/bricks",
-    "north": "westerosblocks:block/tinted/bricks",
-    "south": "westerosblocks:block/tinted/bricks",
-    "west": "westerosblocks:block/tinted/bricks",
-    "east": "westerosblocks:block/tinted/bricks",
-    "particle": "westerosblocks:block/tinted/bricks"
+    "down": "minecraft:block/bricks",
+    "up": "minecraft:block/bricks",
+    "north": "minecraft:block/bricks",
+    "south": "minecraft:block/bricks",
+    "west": "minecraft:block/bricks",
+    "east": "minecraft:block/bricks",
+    "particle": "minecraft:block/bricks"
   }
 }

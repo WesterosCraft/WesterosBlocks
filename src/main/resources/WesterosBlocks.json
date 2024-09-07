@@ -92,14 +92,6 @@
     },
     {
       "blockNames": [
-        "minecraft:bricks",
-        "minecraft:brick_slab",
-        "minecraft:brick_stairs"
-      ],
-      "colorMult": "textures/colormap/brick"
-    },
-    {
-      "blockNames": [
         "minecraft:lily_pad"
       ],
       "colorMult": "#FFFFFF"
@@ -3825,7 +3817,6 @@
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosBrick",
       "baseLabel": "Orange Brick",
-      "colorMult": "textures/colormap/brick",
       "randomTextures": [
         {"textures": {"all": "brick/orange/all1", "arrow-slit": "brick/orange/arrow_slit", "arrow-slit-window": "brick/orange/arrow_slit_window", "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"}},
         {"textures": {"all": "brick/orange/all2", "arrow-slit": "brick/orange/arrow_slit", "arrow-slit-window": "brick/orange/arrow_slit_window", "arrow-slit-ornate": "brick/orange/arrow_slit_ornate"}},
@@ -3850,7 +3841,6 @@
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosBrick",
       "baseLabel": "Orange Brick Rough",
-      "colorMult": "textures/colormap/brick",
       "randomTextures": [
         {"textures": {"all": "brick/orange_rough/all1"}},
         {"textures": {"all": "brick/orange_rough/all2"}},
@@ -3868,7 +3858,6 @@
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
       "creativeTab": "WesterosBrick",
       "baseLabel": "Orange Brick Dark",
-      "colorMult": "textures/colormap/brick",
       "randomTextures": [
         {"textures": {"all": "brick/orange_dark/all1"}},
         {"textures": {"all": "brick/orange_dark/all2"}},
@@ -14354,7 +14343,6 @@
       "resistance": 10,
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Orange Brick Ornate Top",
-      "colorMult": "textures/colormap/brick",
       "textures": [
         "brick/orange/ornate/top_bottom",
         "brick/orange/ornate/top_bottom",
@@ -14370,7 +14358,6 @@
       "resistance": 10,
       "creativeTab": "WesterosPanellingCarvings",
       "label": "Orange Brick Ornate",
-      "colorMult": "textures/colormap/brick",
       "textures": [
         "brick/orange/ornate/top_bottom"
       ]
@@ -14384,7 +14371,6 @@
       "resistance": 10,
       "creativeTab": "WesterosBrick",
       "label": "Orange Brick Rowlock",
-      "colorMult": "textures/colormap/brick",
       "randomTextures": [
         {"textures": ["brick/orange/all1", "brick/orange/all1", "brick/orange/rowlock1"]},
         {"textures": ["brick/orange/all1", "brick/orange/all1", "brick/orange/rowlock2"]}
@@ -14399,7 +14385,6 @@
       "resistance": 10,
       "creativeTab": "WesterosBrick",
       "label": "Orange Brick Dentil",
-      "colorMult": "textures/colormap/brick",
       "textures": ["brick/orange/all1", "brick/orange/all1", "brick/orange/dentil"]
     },
     {
@@ -14412,7 +14397,6 @@
       "creativeTab": "WesterosBrick",
       "label": "Orange Brick Arch Single",
       "type": "connectstate:true",
-      "colorMult": "textures/colormap/brick",
       "textures": ["brick/orange/all1", "brick/orange/all1", "brick/orange/arch_single"]
     },
     {
@@ -14425,7 +14409,6 @@
       "creativeTab": "WesterosBrick",
       "label": "Orange Brick Arch Double",
       "type": "connectstate:true",
-      "colorMult": "textures/colormap/brick",
       "textures": ["brick/orange/all1", "brick/orange/all1", "brick/orange/arch_double"]
     },
     {
@@ -25277,7 +25260,6 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
       "label": "Orange Brick Furnace",
-      "colorMult": "textures/colormap/brick",
       "isCustomModel": true
     },
     {
@@ -25291,7 +25273,6 @@
       "lightValue": 0.875,
       "creativeTab": "WesterosFurniture",
       "label": "Always Active Orange Brick Furnace",
-      "colorMult": "textures/colormap/brick",
       "type": "always-on:true",
       "isCustomModel": true
     },
@@ -32145,7 +32126,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Crosshatch",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32163,7 +32143,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Lefthatch",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32183,7 +32162,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Righthatch",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32203,7 +32181,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Frame",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32221,7 +32198,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Vertical",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32239,7 +32215,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Close Studding",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32257,7 +32232,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Lefthatch Large",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32277,7 +32251,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Righthatch Large",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32297,7 +32270,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Lefthatch Studded",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32317,7 +32289,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Righthatch Studded",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -32337,7 +32308,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Oak Orange Brick Bressummer",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/oak/all", "brick/orange/all1" ]},
@@ -34068,7 +34038,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Crosshatch",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34086,7 +34055,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Lefthatch",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34106,7 +34074,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Righthatch",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34126,7 +34093,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Frame",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34144,7 +34110,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Vertical",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34162,7 +34127,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Close Studding",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34180,7 +34144,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Lefthatch Large",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34200,7 +34163,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Righthatch Large",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34220,7 +34182,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Lefthatch Studded",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34240,7 +34201,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Righthatch Studded",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},
@@ -34260,7 +34220,6 @@
       "resistance": 5,
       "creativeTab": "WesterosTimberFrame",
       "label": "Timber Northern Orange Brick Bressummer",
-      "colorMult": "textures/colormap/brick",
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "brick/orange/all1", "wood/northern/all", "brick/orange/all1" ]},

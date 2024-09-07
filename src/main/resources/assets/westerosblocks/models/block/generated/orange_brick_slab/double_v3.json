@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/tinted/cube",
+  "parent": "minecraft:block/cube",
   "textures": {
     "down": "westerosblocks:block/brick/orange_rough/all3",
     "up": "westerosblocks:block/brick/orange_rough/all3",
