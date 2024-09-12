@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/timber/oak/bressummer",
     "west_ov": "westerosblocks:block/timber/oak/bressummer",
     "east_ov": "westerosblocks:block/timber/oak/bressummer",
-    "down": "westerosblocks:block/ashlar_smooth/westerlands/all",
+    "down": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
     "up": "westerosblocks:block/wood/oak/all",
-    "north": "westerosblocks:block/ashlar_smooth/westerlands/all",
-    "south": "westerosblocks:block/ashlar_smooth/westerlands/all",
-    "west": "westerosblocks:block/ashlar_smooth/westerlands/all",
-    "east": "westerosblocks:block/ashlar_smooth/westerlands/all",
-    "particle": "westerosblocks:block/ashlar_smooth/westerlands/all"
+    "north": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "south": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "west": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "east": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout",
+    "particle": "westerosblocks:block/ashlar_smooth/westerlands/all_cutout"
   }
 }

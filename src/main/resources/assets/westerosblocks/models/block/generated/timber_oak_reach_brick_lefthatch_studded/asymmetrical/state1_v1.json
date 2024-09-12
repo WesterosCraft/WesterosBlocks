@@ -7,12 +7,12 @@
     "south_ov": "westerosblocks:block/timber/oak/lefthatch_studded",
     "west_ov": "westerosblocks:block/timber/oak/righthatch_studded",
     "east_ov": "westerosblocks:block/timber/oak/righthatch_studded",
-    "down": "westerosblocks:block/ashlar_smooth/reach/all",
+    "down": "westerosblocks:block/ashlar_smooth/reach/all_cutout",
     "up": "westerosblocks:block/wood/oak/all",
-    "north": "westerosblocks:block/ashlar_smooth/reach/all",
-    "south": "westerosblocks:block/ashlar_smooth/reach/all",
-    "west": "westerosblocks:block/ashlar_smooth/reach/all",
-    "east": "westerosblocks:block/ashlar_smooth/reach/all",
-    "particle": "westerosblocks:block/ashlar_smooth/reach/all"
+    "north": "westerosblocks:block/ashlar_smooth/reach/all_cutout",
+    "south": "westerosblocks:block/ashlar_smooth/reach/all_cutout",
+    "west": "westerosblocks:block/ashlar_smooth/reach/all_cutout",
+    "east": "westerosblocks:block/ashlar_smooth/reach/all_cutout",
+    "particle": "westerosblocks:block/ashlar_smooth/reach/all_cutout"
   }
 }

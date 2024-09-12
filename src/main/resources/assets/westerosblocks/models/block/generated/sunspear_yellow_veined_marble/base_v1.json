@@ -1,12 +1,6 @@
 {
-  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "down_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
-    "up_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
-    "north_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
-    "south_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
-    "west_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
-    "east_ov": "westerosblocks:block/terrainset_overlays/sunspear_yellow_veined_marble_overlay",
     "down": "westerosblocks:block/marble/sunspear_yellow/all",
     "up": "westerosblocks:block/marble/sunspear_yellow/all",
     "north": "westerosblocks:block/marble/sunspear_yellow/all",

@@ -1,12 +1,9 @@
 {
-  "parent": "westerosblocks:block/untinted/outer_stairs_overlay",
+  "parent": "westerosblocks:block/untinted/outer_stairs",
   "textures": {
     "bottom": "westerosblocks:block/terrainset/flowstone/all1",
     "top": "westerosblocks:block/terrainset/flowstone/all1",
     "side": "westerosblocks:block/terrainset/flowstone/all1",
-    "bottom_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
-    "top_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
-    "side_ov": "westerosblocks:block/terrainset_overlays/flowstone_overlay",
     "particle": "westerosblocks:block/terrainset/flowstone/all1"
   }
 }
