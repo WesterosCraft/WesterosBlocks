@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
     "down": "westerosblocks:block/terrainset/river/random_4x4",
     "up": "westerosblocks:block/terrainset/river/random_4x4",
@@ -7,12 +7,6 @@
     "south": "westerosblocks:block/terrainset/river/random_4x4",
     "west": "westerosblocks:block/terrainset/river/random_4x4",
     "east": "westerosblocks:block/terrainset/river/random_4x4",
-    "particle": "westerosblocks:block/terrainset/river/random_4x4",
-    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_river_overlay",
-    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_river_overlay",
-    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_river_overlay",
-    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_river_overlay",
-    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_river_overlay",
-    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_river_overlay"
+    "particle": "westerosblocks:block/terrainset/river/random_4x4"
   }
 }

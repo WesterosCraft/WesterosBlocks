@@ -1,11 +1,8 @@
 {
-  "parent": "westerosblocks:block/untinted/template_wall_side_overlay",
+  "parent": "westerosblocks:block/untinted/template_wall_side",
   "textures": {
     "bottom": "westerosblocks:block/moss_cushion/all1",
     "top": "westerosblocks:block/moss_cushion/all1",
-    "side": "westerosblocks:block/moss_cushion/all1",
-    "bottom_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
-    "top_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
-    "side_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay"
+    "side": "westerosblocks:block/moss_cushion/all1"
   }
 }

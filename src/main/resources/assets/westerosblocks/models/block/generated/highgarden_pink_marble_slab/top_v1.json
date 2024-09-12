@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
+  "parent": "westerosblocks:block/untinted/upper_slab",
   "textures": {
     "down": "westerosblocks:block/marble/highgarden_pink/all",
     "up": "westerosblocks:block/marble/highgarden_pink/all",
@@ -7,12 +7,6 @@
     "south": "westerosblocks:block/marble/highgarden_pink/all",
     "west": "westerosblocks:block/marble/highgarden_pink/all",
     "east": "westerosblocks:block/marble/highgarden_pink/all",
-    "particle": "westerosblocks:block/marble/highgarden_pink/all",
-    "down_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
-    "up_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
-    "north_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
-    "south_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
-    "west_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay",
-    "east_ov": "westerosblocks:block/terrainset_overlays/highgarden_pink_marble_overlay"
+    "particle": "westerosblocks:block/marble/highgarden_pink/all"
   }
 }

@@ -1,12 +1,6 @@
 {
-  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "down_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
-    "up_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
-    "north_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
-    "south_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
-    "west_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
-    "east_ov": "westerosblocks:block/terrainset_overlays/cushion_moss_overlay",
     "down": "westerosblocks:block/moss_cushion/all1",
     "up": "westerosblocks:block/moss_cushion/all1",
     "north": "westerosblocks:block/moss_cushion/all1",

@@ -4134,9 +4134,6 @@
       "colorMult": "textures/colormap/easternisland",
       "textures": {
         "all": "terrainset/east/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_east_overlay"
       }
     },
     {
@@ -4155,9 +4152,6 @@
       "baseLabel": "TerrainSet Iron Islands",
       "textures": {
         "all": "terrainset/iron/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_iron_overlay"
       }
     },
     {
@@ -4176,9 +4170,6 @@
       "baseLabel": "TerrainSet Mountains of the Moon",
       "textures": {
         "all": "terrainset/vale/random_6x6"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_vale_overlay"
       }
     },
     {
@@ -4197,9 +4188,6 @@
       "baseLabel": "TerrainSet The North",
       "textures": {
         "all": "terrainset/north/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_north_overlay"
       }
     },
     {
@@ -4218,9 +4206,6 @@
       "baseLabel": "TerrainSet Ocean Rocks",
       "textures": {
         "all": "terrainset/ocean/default"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_ocean_overlay"
       }
     },
     {
@@ -4239,9 +4224,6 @@
       "baseLabel": "TerrainSet Red Mountains",
       "textures": {
         "all": "terrainset/red_mountains/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_red_mountains_overlay"
       }
     },
     {
@@ -4260,9 +4242,6 @@
       "baseLabel": "TerrainSet River Rocks",
       "textures": {
         "all": "terrainset/river/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_river_overlay"
       }
     },
     {
@@ -4281,9 +4260,6 @@
       "baseLabel": "TerrainSet Westerlands",
       "textures": {
         "all": "terrainset/westerlands/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_westerlands_overlay"
       }
     },
     {
@@ -4302,9 +4278,6 @@
       "baseLabel": "TerrainSet Arbor Dorne",
       "textures": {
         "all": "terrainset/arbor_dorne/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_arbor_dorne_overlay"
       }
     },
     {
@@ -4323,9 +4296,6 @@
       "baseLabel": "Magma Stone",
       "textures": {
         "all": "terrainset/magma/all"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_magma_stone_overlay"
       }
     },
     {
@@ -4344,9 +4314,6 @@
       "baseLabel": "TerrainSet Stormlands",
       "textures": {
         "all": "terrainset/stormlands/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_stormlands_overlay"
       }
     },
     {
@@ -4365,9 +4332,6 @@
       "baseLabel": "TerrainSet Reach",
       "textures": {
         "all": "terrainset/reach/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_reach_overlay"
       }
     },
     {
@@ -4386,9 +4350,6 @@
       "baseLabel": "TerrainSet Red Mountains Alt",
       "textures": {
         "all": "terrainset/red_mountains_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_red_mountains_alt_overlay"
       }
     },
     {
@@ -4407,9 +4368,6 @@
       "baseLabel": "TerrainSet Westerlands Alt",
       "textures": {
         "all": "terrainset/westerlands_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_westerlands_alt_overlay"
       }
     },
     {
@@ -4428,9 +4386,6 @@
       "baseLabel": "TerrainSet Arbor Dorne Alt",
       "textures": {
         "all": "terrainset/arbor_dorne_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_arbor_dorne_alt_overlay"
       }
     },
     {
@@ -4449,9 +4404,6 @@
       "baseLabel": "TerrainSet Stormlands Alt",
       "textures": {
         "all": "terrainset/stormlands_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_stormlands_alt_overlay"
       }
     },
     {
@@ -4470,9 +4422,6 @@
       "baseLabel": "TerrainSet Reach Alt",
       "textures": {
         "all": "terrainset/reach_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_reach_alt_overlay"
       }
     },
     {
@@ -4491,9 +4440,6 @@
       "baseLabel": "TerrainSet Grey Sandstone",
       "textures": {
         "all": "terrainset/grey_sandstone/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_grey_sandstone_overlay"
       }
     },
     {
@@ -4512,9 +4458,6 @@
       "baseLabel": "TerrainSet Mountains of the Moon Alt",
       "textures": {
         "all": "terrainset/vale_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_vale_alt_overlay"
       }
     },
     {
@@ -4533,9 +4476,6 @@
       "baseLabel": "TerrainSet Eastern Islands Alt",
       "textures": {
         "all": "terrainset/east_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_east_alt_overlay"
       }
     },
     {
@@ -4554,9 +4494,6 @@
       "baseLabel": "TerrainSet Iron Islands Alt",
       "textures": {
         "all": "terrainset/iron_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_iron_alt_overlay"
       }
     },
     {
@@ -4575,9 +4512,6 @@
       "baseLabel": "TerrainSet The North Alt",
       "textures": {
         "all": "terrainset/north_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_north_alt_overlay"
       }
     },
     {
@@ -4596,9 +4530,6 @@
       "baseLabel": "TerrainSet Dark Westerlands",
       "textures": {
         "all": "terrainset/dark_westerlands/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_dark_westerlands_overlay"
       }
     },
     {
@@ -4617,9 +4548,6 @@
       "baseLabel": "TerrainSet Red Granite",
       "textures": {
         "all": "terrainset/red_granite/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_red_granite_overlay"
       }
     },
     {
@@ -4638,9 +4566,6 @@
       "baseLabel": "TerrainSet Dornish Marches",
       "textures": {
         "all": "terrainset/dornish_marches/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_dornish_marches_overlay"
       }
     },
     {
@@ -4659,9 +4584,6 @@
       "baseLabel": "TerrainSet Dornish Marches Alt",
       "textures": {
         "all": "terrainset/dornish_marches_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_dornish_marches_alt_overlay"
       }
     },
     {
@@ -4680,9 +4602,6 @@
       "baseLabel": "TerrainSet Brown Granite",
       "textures": {
         "all": "terrainset/brown_granite/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_brown_granite_overlay"
       }
     },
     {
@@ -4701,9 +4620,6 @@
       "baseLabel": "TerrainSet Brown Granite Alt",
       "textures": {
         "all": "terrainset/brown_granite_alt/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_brown_granite_alt_overlay"
       }
     },
     {
@@ -4722,9 +4638,6 @@
       "baseLabel": "TerrainSet Volcanic Rock",
       "textures": {
         "all": "terrainset/volcanic/random_4x4"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/terrainset_volcanic_rock_overlay"
       }
     },
     {
@@ -4746,10 +4659,7 @@
         {"textures": {"all": "terrainset/flowstone/all2"}},
         {"textures": {"all": "terrainset/flowstone/all3"}},
         {"textures": {"all": "terrainset/flowstone/all4"}}
-      ],
-      "overlayTextures": {
-        "all": "terrainset_overlays/flowstone_overlay"
-      }
+      ]
     },
     {
       "baseBlockName": "cushion_moss",
@@ -4765,10 +4675,7 @@
         {"textures": {"all": "moss_cushion/all2"}},
         {"textures": {"all": "moss_cushion/all3"}},
         {"textures": {"all": "moss_cushion/all4"}}
-      ],
-      "overlayTextures": {
-        "all": "terrainset_overlays/cushion_moss_overlay"
-      }
+      ]
     },
     {
       "baseBlockName": "gold_ore",
@@ -4784,10 +4691,7 @@
         {"textures": {"all": "ore/gold/all2"}},
         {"textures": {"all": "ore/gold/all3"}},
         {"textures": {"all": "ore/gold/all4"}}
-      ],
-      "overlayTextures": {
-        "all": "terrainset_overlays/gold_ore_overlay"
-      }
+      ]
     },
     {
       "baseBlockName": "iron_ore",
@@ -4803,10 +4707,7 @@
         {"textures": {"all": "ore/iron/all2"}},
         {"textures": {"all": "ore/iron/all3"}},
         {"textures": {"all": "ore/iron/all4"}}
-      ],
-      "overlayTextures": {
-        "all": "terrainset_overlays/iron_ore_overlay"
-      }
+      ]
     },
     {
       "baseBlockName": "silver_ore",
@@ -4822,10 +4723,7 @@
         {"textures": {"all": "ore/silver/all2"}},
         {"textures": {"all": "ore/silver/all3"}},
         {"textures": {"all": "ore/silver/all4"}}
-      ],
-      "overlayTextures": {
-        "all": "terrainset_overlays/silver_ore_overlay"
-      }
+      ]
     },
     {
       "baseBlockName": "tin_ore",
@@ -4841,10 +4739,7 @@
         {"textures": {"all": "ore/tin/all2"}},
         {"textures": {"all": "ore/tin/all3"}},
         {"textures": {"all": "ore/tin/all4"}}
-      ],
-      "overlayTextures": {
-        "all": "terrainset_overlays/tin_ore_overlay"
-      }
+      ]
     },
     {
       "baseBlockName": "coal_ore",
@@ -4860,10 +4755,7 @@
         {"textures": {"all": "ore/coal/all2"}},
         {"textures": {"all": "ore/coal/all3"}},
         {"textures": {"all": "ore/coal/all4"}}
-      ],
-      "overlayTextures": {
-        "all": "terrainset_overlays/coal_ore_overlay"
-      }
+      ]
     },
     {
       "baseBlockName": "copper_ore",
@@ -4879,10 +4771,7 @@
         {"textures": {"all": "ore/copper/all2"}},
         {"textures": {"all": "ore/copper/all3"}},
         {"textures": {"all": "ore/copper/all4"}}
-      ],
-      "overlayTextures": {
-        "all": "terrainset_overlays/copper_ore_overlay"
-      }
+      ]
     },
     {
       "baseBlockName": "quartz",
@@ -4910,9 +4799,6 @@
       "baseLabel": "White Marble",
       "textures": {
         "all": "marble/white/all"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/white_stained_clay_overlay"
       }
     },
     {
@@ -4927,9 +4813,6 @@
       "baseLabel": "Eyrie Blue Veined Marble",
       "textures": {
         "all": "marble/eyrie_blue_veined/all"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/eyrie_veined_overlay"
       }
     },
     {
@@ -4944,9 +4827,6 @@
       "baseLabel": "Baelors Brown Veined Marble",
       "textures": {
         "all": "marble/baelors_brown_veined/all"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/baelors_brown_veined_overlay"
       }
     },
     {
@@ -4961,9 +4841,6 @@
       "baseLabel": "Highgarden Pink Veined Marble",
       "textures": {
         "all": "marble/highgarden_pink_veined/all"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/highgarden_pink_veined_marble_overlay"
       }
     },
     {
@@ -4978,9 +4855,6 @@
       "baseLabel": "Highgarden Pink Marble",
       "textures": {
         "all": "marble/highgarden_pink/all"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/highgarden_pink_marble_overlay"
       }
     },
     {
@@ -4995,9 +4869,6 @@
       "baseLabel": "Sunspear Yellow Veined Marble",
       "textures": {
         "all": "marble/sunspear_yellow/all"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/sunspear_yellow_veined_marble_overlay"
       }
     },
     {
@@ -8491,9 +8362,6 @@
       "baseLabel": "Fallen Leaves",
       "textures": {
         "all": "fallen_leaves/temperate"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/fallen_leaves_overlay"
       }
     },
     {
@@ -8508,9 +8376,6 @@
       "baseLabel": "Pine Needles",
       "textures": {
         "all": "pine_needles/dirt_pine_cover"
-      },
-      "overlayTextures": {
-        "all": "terrainset_overlays/fallen_leaves_overlay"
       }
     },
     {
@@ -32328,7 +32193,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
@@ -32345,7 +32210,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32364,7 +32229,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32383,7 +32248,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
@@ -32400,7 +32265,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
@@ -32417,7 +32282,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
@@ -32434,7 +32299,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32453,7 +32318,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32472,7 +32337,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32491,7 +32356,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32510,7 +32375,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/reach/all", "wood/oak/all", "fieldstone/reach/all" ]},
-        {"textures": [ "ashlar_smooth/reach/all", "wood/oak/all", "ashlar_smooth/reach/all" ]},
+        {"textures": [ "ashlar_smooth/reach/all_cutout", "wood/oak/all", "ashlar_smooth/reach/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/reach/all", "wood/oak/all", "ashlar_quarter_rounded/reach/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
@@ -32528,7 +32393,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
@@ -32546,7 +32411,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32566,7 +32431,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32586,7 +32451,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
@@ -32604,7 +32469,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
@@ -32622,7 +32487,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
@@ -32640,7 +32505,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32660,7 +32525,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32680,7 +32545,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32700,7 +32565,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -32720,7 +32585,7 @@
       "states": [
         {"textures": [ "fieldstone/oldtown/all", "wood/oak/all", "fieldstone/oldtown/all" ]},
         {"textures": [ "fieldstone/light_oldtown/all", "wood/oak/all", "fieldstone/light_oldtown/all" ]},
-        {"textures": [ "ashlar_smooth/light_oldtown/all", "wood/oak/all", "ashlar_smooth/light_oldtown/all" ]},
+        {"textures": [ "ashlar_smooth/light_oldtown/all_cutout", "wood/oak/all", "ashlar_smooth/light_oldtown/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/light_oldtown/all", "wood/oak/all", "ashlar_quarter_rounded/light_oldtown/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
@@ -33400,7 +33265,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/crosshatch" ]
@@ -33417,7 +33282,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -33436,7 +33301,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -33455,7 +33320,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/frame" ]
@@ -33472,7 +33337,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/vertical" ]
@@ -33489,7 +33354,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/close_studding" ]
@@ -33506,7 +33371,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -33525,7 +33390,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -33544,7 +33409,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -33563,7 +33428,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent",
@@ -33582,7 +33447,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/westerlands/all", "wood/oak/all", "fieldstone/westerlands/all" ]},
-        {"textures": [ "ashlar_smooth/westerlands/all", "wood/oak/all", "ashlar_smooth/westerlands/all" ]},
+        {"textures": [ "ashlar_smooth/westerlands/all_cutout", "wood/oak/all", "ashlar_smooth/westerlands/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/westerlands/all", "wood/oak/all", "ashlar_quarter_rounded/westerlands/all" ]}
       ],
       "overlayTextures": [ "timber/oak/bottom", "transparent", "timber/oak/bressummer" ]
@@ -34240,7 +34105,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/crosshatch" ]
@@ -34257,7 +34122,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent",
@@ -34276,7 +34141,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent",
@@ -34295,7 +34160,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/frame" ]
@@ -34312,7 +34177,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/vertical" ]
@@ -34329,7 +34194,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/close_studding" ]
@@ -34346,7 +34211,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent",
@@ -34365,7 +34230,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent",
@@ -34384,7 +34249,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent",
@@ -34403,7 +34268,7 @@
       "type": "connectstate:true,symmetrical:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent",
@@ -34422,7 +34287,7 @@
       "type": "connectstate:true,toggleOnUse",
       "states": [
         {"textures": [ "fieldstone/grey/all", "wood/northern/all", "fieldstone/grey/all" ]},
-        {"textures": [ "ashlar_smooth/grey/all", "wood/northern/all", "ashlar_smooth/grey/all" ]},
+        {"textures": [ "ashlar_smooth/grey/all_cutout", "wood/northern/all", "ashlar_smooth/grey/all_cutout" ]},
         {"textures": [ "ashlar_quarter_rounded/grey/all", "wood/northern/all", "ashlar_quarter_rounded/grey/all" ]}
       ],
       "overlayTextures": [ "timber/northern/bottom", "transparent", "timber/northern/bressummer" ]

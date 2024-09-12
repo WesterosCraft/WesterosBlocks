@@ -1,5 +1,5 @@
 {
-  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "parent": "minecraft:block/cube",
   "textures": {
     "down": "westerosblocks:block/terrainset/ocean/default",
     "up": "westerosblocks:block/terrainset/ocean/default",
@@ -7,12 +7,6 @@
     "south": "westerosblocks:block/terrainset/ocean/default",
     "west": "westerosblocks:block/terrainset/ocean/default",
     "east": "westerosblocks:block/terrainset/ocean/default",
-    "particle": "westerosblocks:block/terrainset/ocean/default",
-    "down_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_overlay",
-    "up_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_overlay",
-    "north_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_overlay",
-    "south_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_overlay",
-    "west_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_overlay",
-    "east_ov": "westerosblocks:block/terrainset_overlays/terrainset_ocean_overlay"
+    "particle": "westerosblocks:block/terrainset/ocean/default"
   }
 }
