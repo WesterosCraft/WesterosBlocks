@@ -122,36 +122,6 @@
 			}
 		},
 		{
-			"name": "OverlayX2",
-			"from": [-8, -7, 8.99],
-			"to": [24, 25, 9.01],
-			"shade": false,
-			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 9, 9]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "overlayside"},
-				"east": {"uv": [0, 0, 16, 0], "rotation": 270, "texture": "overlayend"},
-				"south": {"uv": [16, 0, 0, 16], "texture": "overlayside"},
-				"west": {"uv": [0, 0, 16, 0], "rotation": 90, "texture": "overlayend"},
-				"up": {"uv": [0, 0, 16, 0], "rotation": 180, "texture": "overlayend"},
-				"down": {"uv": [0, 0, 16, 0], "texture": "overlayend"}
-			}
-		},
-		{
-			"name": "OverlayX3",
-			"from": [7.99, -7, -7],
-			"to": [8.01, 25, 25],
-			"shade": false,
-			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 9, 9]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 0], "rotation": 90, "texture": "overlayend"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "overlayside"},
-				"south": {"uv": [0, 0, 16, 0], "rotation": 270, "texture": "overlayend"},
-				"west": {"uv": [16, 0, 0, 16], "texture": "overlayside"},
-				"up": {"uv": [0, 0, 16, 0], "rotation": 270, "texture": "overlayend"},
-				"down": {"uv": [0, 0, 16, 0], "rotation": 270, "texture": "overlayend"}
-			}
-		},
-		{
 			"name": "OverlayY1",
 			"from": [8.24, -7, -6.75],
 			"to": [8.26, 25, 25.25],
@@ -164,21 +134,6 @@
 				"west": {"uv": [16, 0, 0, 16], "texture": "overlayside"},
 				"up": {"uv": [0, 0, 16, 0], "rotation": 90, "texture": "overlayend"},
 				"down": {"uv": [0, 0, 16, 0], "rotation": 90, "texture": "overlayend"}
-			}
-		},
-		{
-			"name": "OverlayZ2",
-			"from": [-8, 8.99, -7],
-			"to": [24, 9.01, 25],
-			"shade": false,
-			"rotation": {"angle": -45, "axis": "z", "origin": [8, 9, 9]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 0], "texture": "overlayend"},
-				"east": {"uv": [0, 0, 16, 0], "texture": "overlayend"},
-				"south": {"uv": [0, 0, 16, 0], "texture": "overlayend"},
-				"west": {"uv": [0, 0, 16, 0], "texture": "overlayend"},
-				"up": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "overlayside"},
-				"down": {"uv": [16, 0, 0, 16], "rotation": 270, "texture": "overlayside"}
 			}
 		}
 	]
