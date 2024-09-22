@@ -1,12 +1,6 @@
 {
-  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "parent": "westerosblocks:block/untinted/cube",
   "textures": {
-    "down_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
-    "up_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
-    "north_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
-    "south_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
-    "west_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
-    "east_ov": "westerosblocks:block/terrainset_overlays/coal_ore_overlay",
     "down": "minecraft:block/coal_ore/coal_ore1",
     "up": "minecraft:block/coal_ore/coal_ore1",
     "north": "minecraft:block/coal_ore/coal_ore1",
