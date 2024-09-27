@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks.mixin;
 
+import com.westeroscraft.westerosblocks.Config;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.world.level.Level;
 
@@ -21,7 +22,7 @@ public abstract class MixinLevel
 
 	@Inject(method = "getSeaLevel()I", at = @At("TAIL"), cancellable=true)	
 	private void doGetSeaLevel(CallbackInfoReturnable<Integer> ci) {
-		Integer override = WesterosBlocks.Config.seaLevelOverride.get();
+		Integer override = Config.seaLevelOverride;
 		if (override.intValue() != 0) {
 			ci.setReturnValue(override);
 		}

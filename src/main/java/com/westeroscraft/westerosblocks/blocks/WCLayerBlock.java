@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -131,8 +132,8 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle, Simpl
 	}
 
 	@Override
-	public boolean canPlaceLiquid(BlockGetter world, BlockPos pos, BlockState state, Fluid fluid) {
-		return (state.getValue(LAYERS) < layerCount) ? SimpleWaterloggedBlock.super.canPlaceLiquid(world, pos, state, fluid)
+	public boolean canPlaceLiquid(@org.jetbrains.annotations.Nullable Player player, BlockGetter level, BlockPos pos, BlockState state, Fluid fluid) {
+		return (state.getValue(LAYERS) < layerCount) ? SimpleWaterloggedBlock.super.canPlaceLiquid(player, level, pos, state, fluid)
 				: false;
 	}
 

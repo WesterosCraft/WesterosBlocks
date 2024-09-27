@@ -89,17 +89,18 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
+
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType PathComputationType) {
-        switch(PathComputationType) {
-        case LAND:
-           return false;
-        case WATER:
-           return reader.getFluidState(pos).is(FluidTags.WATER);
-        case AIR:
-           return false;
-        default:
-           return false;
+    protected boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
+        switch(pathComputationType) {
+            case LAND:
+                return false;
+            case WATER:
+                return state.getFluidState().is(FluidTags.WATER);
+            case AIR:
+                return false;
+            default:
+                return false;
         }
     }
 

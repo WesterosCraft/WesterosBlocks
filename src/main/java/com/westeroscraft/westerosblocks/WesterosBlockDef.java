@@ -14,87 +14,40 @@ import java.util.Set;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
-import com.westeroscraft.westerosblocks.blocks.WCBeaconBlock;
-import com.westeroscraft.westerosblocks.blocks.WCBedBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCakeBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCropBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboid16WayBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNEBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWStackBlock;
-import com.westeroscraft.westerosblocks.blocks.WCCuboidNSEWUDBlock;
-import com.westeroscraft.westerosblocks.blocks.WCDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFenceBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFenceGateBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFireBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFlowerPotBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFurnaceBlock;
-import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLadderBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLayerBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLeavesBlock;
-import com.westeroscraft.westerosblocks.blocks.WCLogBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPaneBlock;
-import com.westeroscraft.westerosblocks.blocks.WCPlantBlock;
-import com.westeroscraft.westerosblocks.blocks.WCRailBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSandBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSlabBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSolidBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSoulSandBlock;
-import com.westeroscraft.westerosblocks.blocks.WCSoundBlock;
-import com.westeroscraft.westerosblocks.blocks.WCStairBlock;
-import com.westeroscraft.westerosblocks.blocks.WCTorchBlock;
-import com.westeroscraft.westerosblocks.blocks.WCFanBlock;
-import com.westeroscraft.westerosblocks.blocks.WCTrapDoorBlock;
-import com.westeroscraft.westerosblocks.blocks.WCVinesBlock;
-import com.westeroscraft.westerosblocks.blocks.WCWallBlock;
-import com.westeroscraft.westerosblocks.blocks.WCWebBlock;
+import com.westeroscraft.westerosblocks.blocks.*;
 
-import net.minecraft.world.level.block.state.BlockBehaviour;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.chunk.RenderChunkRegion;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.color.item.ItemColors;
-import net.minecraft.client.resources.LegacyStuffWrapper;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.RenderChunkRegion;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.util.Mth;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.*;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.BlockEntityType.BlockEntitySupplier;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.core.BlockPos;
-import net.minecraft.util.Mth;
-import net.minecraft.world.level.FoliageColor;
-import net.minecraft.world.level.GrassColor;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.BlockAndTintGetter;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.client.renderer.BiomeColors;
-import net.minecraft.world.level.ColorResolver;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.fml.loading.FMLEnvironment;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -142,13 +95,13 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	
     public String legacyBlockID = null;
     public List<String> legacyBlockIDList = null;
-	       
+
 	public boolean isConnectMatch(BlockState bs1, BlockState bs2) {
 		if (this.connectBy.equals("material")) {
-			return bs1.getMaterial() == bs2.getMaterial();
+			return AuxMaterial.getMaterial(bs1) == AuxMaterial.getMaterial(bs2);
 		}
 		else {
-			return bs1.getBlock() == bs2.getBlock();			
+			return bs1.getBlock() == bs2.getBlock();
 		}
 	}
 	
@@ -566,7 +519,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				for (int zz = -1; zz <= 1; ++zz) {
 					BlockPos bp = pos.offset(xx, 0, zz);
 					Biome biome = rdr.getBiome(bp).value();
-					int mult = getColor(biome.getHeightAdjustedTemperature(bp), biome.getDownfall(), txtindx);
+					int mult = getColor(biome.getBaseTemperature(), biome.getModifiedClimateSettings().downfall(), txtindx);
 					red += (mult & 0xFF0000) >> 16;
 					green += (mult & 0x00FF00) >> 8;
 					blue += (mult & 0x0000FF);
@@ -582,7 +535,9 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				LevelReader rdr = null;
 				
 				if (world instanceof RenderChunkRegion) {
-					rdr = ((RenderChunkRegion)world).level;
+					// TODO FIXME idk if using Minecraft.getInstance is correct
+//					rdr = ((RenderChunkRegion)world).level;
+					rdr = Minecraft.getInstance().level;
 				}
 				else if (world instanceof LevelReader) {
 					rdr = (LevelReader) world;
@@ -628,8 +583,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			float hum = 1.0F;
 			float tmp = 0.5F;
 			if (biome != null) {
-				hum = biome.climateSettings.downfall;
-				tmp = biome.climateSettings.temperature;
+				hum = biome.getModifiedClimateSettings().downfall();
+				tmp = biome.getBaseTemperature();
 			}
 			tmp = Mth.clamp(tmp, 0.0F, 1.0F);
 			hum = Mth.clamp(hum, 0.0F, 1.0F);
@@ -648,7 +603,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				if (resName.endsWith(".png") == false)
 					resName += ".png";
 				try {
-					colorBuffers.set(txtindx, LegacyStuffWrapper.getPixels(resMgr, new ResourceLocation(resName)));
+					// TODO FIXME - replace since its legacy?
+//					colorBuffers.set(txtindx, LegacyStuffWrapper.getPixels(resMgr, new ResourceLocation(resName)));
 					WesterosBlocks.log.debug(String.format("Loaded color resource '%s'", resName));
 				} catch (Exception e) {
 					WesterosBlocks.log.error(String.format("Invalid color resource '%s'", resName), e);
@@ -687,9 +643,9 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	private transient boolean hasCollisionBoxes = false;
 
-	private static final Map<String, Material> materialTable = new HashMap<String, Material>();
+	private static final Map<String, AuxMaterial> materialTable = new HashMap<String, AuxMaterial>();
 	private static final Map<String, SoundType> stepSoundTable = new HashMap<String, SoundType>();
-	private static final Map<String, CreativeModeTab> tabTable = new HashMap<String, CreativeModeTab>();
+	private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
 	private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
 	private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<String, ColorMultHandler>();
 	private static final Map<String, ParticleType<?>> particles = new HashMap<String, ParticleType<?>>();
@@ -779,24 +735,47 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	}
 
 	public Block registerBlock(Block block) {
-		BlockItem itemBlock = new BlockItem(block, new Item.Properties().tab(getCreativeTab()));
-		block.setRegistryName(this.blockName);
-		itemBlock.setRegistryName(this.blockName);
-		ForgeRegistries.BLOCKS.register(block);
-		ForgeRegistries.ITEMS.register(itemBlock);
+		BlockItem itemBlock = new BlockItem(block, new Item.Properties());
+		WesterosBlocks.BLOCKS.register(this.blockName, () -> block);
+		WesterosBlocks.ITEMS.register(this.blockName, () -> itemBlock);
+		AuxileryUtils.registerCreativeTab(itemBlock, getCreativeTab());
 		return block;
 	}
 
 	public void registerWallOrFloorBlock(Block floorblock, Block wallblock) {
-		BlockItem itemBlock = new StandingAndWallBlockItem(floorblock, wallblock,
-				(new Item.Properties()).tab(getCreativeTab()));
-		floorblock.setRegistryName(this.blockName);
-		wallblock.setRegistryName("wall_" + this.blockName);
-		itemBlock.setRegistryName(this.blockName);
-		ForgeRegistries.BLOCKS.register(floorblock);
-		ForgeRegistries.BLOCKS.register(wallblock);
-		ForgeRegistries.ITEMS.register(itemBlock);
+		BlockItem itemBlock = new StandingAndWallBlockItem(floorblock, wallblock, new Item.Properties(), Direction.DOWN);
+		WesterosBlocks.BLOCKS.register(this.blockName, () -> floorblock);
+		WesterosBlocks.BLOCKS.register("wall_" + this.blockName, () -> wallblock);
+		WesterosBlocks.ITEMS.register(this.blockName, () -> itemBlock);
+		AuxileryUtils.registerCreativeTab(itemBlock, getCreativeTab());
+
+
+
+//		DeferredBlock<Block> floorBlock = BLOCKS.register(blockName, floorBlockSupplier);
+//		DeferredBlock<Block> wallBlock = BLOCKS.register("wall_" + blockName, wallBlockSupplier);
+//		TODO FIXME
+//		ITEMS.register(blockName, () -> new StandingAndWallBlockItem(floorBlock.get(), wallBlock.get(), new Item.Properties()));
 	}
+
+//	public Block registerBlock(Block block) {
+//		BlockItem itemBlock = new BlockItem(block, new Item.Properties().tab(getCreativeTab()));
+//		block.setRegistryName(this.blockName);
+//		itemBlock.setRegistryName(this.blockName);
+//		ForgeRegistries.BLOCKS.register(block);
+//		ForgeRegistries.ITEMS.register(itemBlock);
+//		return block;
+//	}
+
+//	public void registerWallOrFloorBlock(Block floorblock, Block wallblock) {
+//		BlockItem itemBlock = new StandingAndWallBlockItem(floorblock, wallblock,
+//				(new Item.Properties()).tab(getCreativeTab()));
+//		floorblock.setRegistryName(this.blockName);
+//		wallblock.setRegistryName("wall_" + this.blockName);
+//		itemBlock.setRegistryName(this.blockName);
+//		ForgeRegistries.BLOCKS.register(floorblock);
+//		ForgeRegistries.BLOCKS.register(wallblock);
+//		ForgeRegistries.ITEMS.register(itemBlock);
+//	}
 
 	public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
 		if (FMLEnvironment.dist == Dist.CLIENT) {
@@ -822,10 +801,10 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public BlockBehaviour.Properties makeAndCopyProperties(Block blk) {
 		BlockBehaviour.Properties props;
 		if (blk != null) {
-			props = BlockBehaviour.Properties.copy(blk);
+			props = BlockBehaviour.Properties.ofFullCopy(blk);
 		} else {
-			Material mat = getMaterial();
-			props = BlockBehaviour.Properties.of(mat); // TODO - material color?
+			AuxMaterial mat = getMaterial();
+			props = BlockBehaviour.Properties.of(); // TODO - material color?
 		}
 		if (hardness >= 0.0F) {
 			if (resistance >= 0.0)
@@ -873,11 +852,11 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	 * 
 	 * @return this WesterosBlockDef's default Material
 	 */
-	public Material getMaterial() {
-		Material m = materialTable.get(material);
+	public AuxMaterial getMaterial() {
+		AuxMaterial m = materialTable.get(material);
 		if (m == null) {
 			WesterosBlocks.log.warn(String.format("Invalid material '%s' in block '%s'", material, blockName));
-			return Material.STONE;
+			return AuxMaterial.STONE;
 		}
 		return m;
 	}
@@ -1010,35 +989,35 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	}
 
 	public static void initialize() {
-		materialTable.put("air", Material.AIR);
-		materialTable.put("grass", Material.GRASS);
-		materialTable.put("ground", Material.DIRT);
-		materialTable.put("wood", Material.WOOD);
-		materialTable.put("rock", Material.STONE);
-		materialTable.put("iron", Material.METAL);
-		materialTable.put("anvil", Material.METAL);
-		materialTable.put("water", Material.WATER);
-		materialTable.put("lava", Material.LAVA);
-		materialTable.put("leaves", Material.LEAVES);
-		materialTable.put("plants", Material.PLANT);
-		materialTable.put("vine", Material.PLANT);
-		materialTable.put("sponge", Material.SPONGE);
-		materialTable.put("cloth", Material.CLOTH_DECORATION);
-		materialTable.put("fire", Material.FIRE);
-		materialTable.put("sand", Material.SAND);
-		materialTable.put("glass", Material.GLASS);
-		materialTable.put("tnt", Material.EXPLOSIVE);
-		materialTable.put("coral", Material.STONE);
-		materialTable.put("ice", Material.ICE);
-		materialTable.put("snow", Material.SNOW);
-		materialTable.put("craftedSnow", Material.SNOW);
-		materialTable.put("cactus", Material.CACTUS);
-		materialTable.put("clay", Material.CLAY);
-		materialTable.put("portal", Material.PORTAL);
-		materialTable.put("cake", Material.CAKE);
-		materialTable.put("web", Material.WEB);
-		materialTable.put("piston", Material.PISTON);
-		materialTable.put("decoration", Material.DECORATION);
+		materialTable.put("air", AuxMaterial.AIR);
+		materialTable.put("grass", AuxMaterial.GRASS);
+		materialTable.put("ground", AuxMaterial.DIRT);
+		materialTable.put("wood", AuxMaterial.WOOD);
+		materialTable.put("rock", AuxMaterial.STONE);
+		materialTable.put("iron", AuxMaterial.METAL);
+		materialTable.put("anvil", AuxMaterial.METAL);
+		materialTable.put("water", AuxMaterial.WATER);
+		materialTable.put("lava", AuxMaterial.LAVA);
+		materialTable.put("leaves", AuxMaterial.LEAVES);
+		materialTable.put("plants", AuxMaterial.PLANT);
+		materialTable.put("vine", AuxMaterial.PLANT);
+		materialTable.put("sponge", AuxMaterial.SPONGE);
+		materialTable.put("cloth", AuxMaterial.CLOTH_DECORATION);
+		materialTable.put("fire", AuxMaterial.FIRE);
+		materialTable.put("sand", AuxMaterial.SAND);
+		materialTable.put("glass", AuxMaterial.GLASS);
+		materialTable.put("tnt", AuxMaterial.EXPLOSIVE);
+		materialTable.put("coral", AuxMaterial.STONE);
+		materialTable.put("ice", AuxMaterial.ICE);
+		materialTable.put("snow", AuxMaterial.SNOW);
+		materialTable.put("craftedSnow", AuxMaterial.SNOW);
+		materialTable.put("cactus", AuxMaterial.CACTUS);
+		materialTable.put("clay", AuxMaterial.CLAY);
+		materialTable.put("portal", AuxMaterial.PORTAL);
+		materialTable.put("cake", AuxMaterial.CAKE);
+		materialTable.put("web", AuxMaterial.WEB);
+		materialTable.put("piston", AuxMaterial.PISTON);
+		materialTable.put("decoration", AuxMaterial.DECORATION);
 
 		stepSoundTable.put("powder", SoundType.SAND);
 		stepSoundTable.put("wood", SoundType.WOOD);
@@ -1055,16 +1034,16 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		stepSoundTable.put("plant", SoundType.CROP);
 		stepSoundTable.put("slime", SoundType.FUNGUS);
 		// Tab table
-		tabTable.put("buildingBlocks", CreativeModeTab.TAB_BUILDING_BLOCKS);
-		tabTable.put("decorations", CreativeModeTab.TAB_DECORATIONS);
-		tabTable.put("redstone", CreativeModeTab.TAB_REDSTONE);
-		tabTable.put("transportation", CreativeModeTab.TAB_TRANSPORTATION);
-		tabTable.put("misc", CreativeModeTab.TAB_MISC);
-		tabTable.put("food", CreativeModeTab.TAB_FOOD);
-		tabTable.put("tools", CreativeModeTab.TAB_TOOLS);
-		tabTable.put("combat", CreativeModeTab.TAB_COMBAT);
-		tabTable.put("brewing", CreativeModeTab.TAB_BREWING);
-		tabTable.put("materials", CreativeModeTab.TAB_MATERIALS);
+		tabTable.put("buildingBlocks", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.BUILDING_BLOCKS));
+		//tabTable.put("decorations", CreativeModeTabs.DECORATIONS);
+		tabTable.put("redstone", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.REDSTONE_BLOCKS));
+		//tabTable.put("transportation", CreativeModeTabs.TRANSPORTATION);
+		//tabTable.put("misc", CreativeModeTabs.MISC);
+		tabTable.put("food",  BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.FOOD_AND_DRINKS));
+		tabTable.put("tools",  BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.TOOLS_AND_UTILITIES));
+		tabTable.put("combat",  BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.COMBAT));
+		//tabTable.put("brewing", CreativeModeTabs.BREWING);
+		tabTable.put("materials",  BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.INGREDIENTS));
 
 		// Standard block types
 		typeTable.put("solid", new WCSolidBlock.Factory());
@@ -1234,26 +1213,27 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	private static class BlockEntityRec {
 		ArrayList<Block> blocks = new ArrayList<Block>();
-		RegistryObject<BlockEntityType<?>> regobj;
+		BlockEntityType<?> regobj;
 	}
 
 	private static HashMap<String, BlockEntityRec> te_rec = new HashMap<String, BlockEntityRec>();
 
 	public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
-			DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, WesterosBlocks.MOD_ID);
+			DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, WesterosBlocks.MOD_ID);
 
-	public static <T extends BlockEntity> void registerBlockEntity(String name, BlockEntitySupplier<T> BlockEntitySupplier, Block blk)
+	public static <T extends BlockEntity> void registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<T> BlockEntitySupplier, Block blk)
 	{
 		BlockEntityRec rec = (BlockEntityRec) te_rec.get(name);
 		if (rec == null) {
 			rec = new BlockEntityRec();
 			te_rec.put(name, rec);
 			final BlockEntityRec frec = rec;
-			rec.regobj = TILE_ENTITY_TYPES.register(name, () -> BlockEntityType.Builder.of(BlockEntitySupplier, frec.blocks.toArray(new Block[frec.blocks.size()])).build(null));
+			// TODO FIXME
+//			rec.regobj = TILE_ENTITY_TYPES.register(name, () -> BlockEntityType.Builder.of(BlockEntitySupplier, frec.blocks.toArray(new Block[frec.blocks.size()])).build(null));
 		}
 		rec.blocks.add(blk);
 	}
-	public static RegistryObject<BlockEntityType<?>> getBlockEntityType(String name) {
+	public static BlockEntityType<?> getBlockEntityType(String name) {
 		BlockEntityRec rec = te_rec.get(name);
 		if (rec != null)
 			return rec.regobj;
@@ -1321,7 +1301,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		// If water shader, override global one too
 		if (blockName.equals("minecraft:water") && (handler instanceof CustomColorMultHandler)) {
 			final CustomColorMultHandler cchandler = (CustomColorMultHandler) handler;	// crappy java lambda limitation workaround
-			BiomeColors.WATER_COLOR_RESOLVER = (Biome b, double tmp, double hum) -> cchandler.getColor(b, tmp, hum);
+			// TODO FIXME
+//			BiomeColors.WATER_COLOR_RESOLVER = (Biome b, double tmp, double hum) -> cchandler.getColor(b, tmp, hum);
 		}
 	}
 

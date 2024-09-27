@@ -161,22 +161,23 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
+
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType PathComputationType) {
-        switch(PathComputationType) {
-        case LAND:
-           return false;
-        case WATER:
-           return reader.getFluidState(pos).is(FluidTags.WATER);
-        case AIR:
-           return false;
-        default:
-           return false;
+    protected boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
+        switch(pathComputationType) {
+            case LAND:
+                return false;
+            case WATER:
+                return state.getFluidState().is(FluidTags.WATER);
+            case AIR:
+                return false;
+            default:
+                return false;
         }
     }
-    
+
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
             state = state.cycle(this.STATE);
             level.setBlock(pos, state, 10);
@@ -184,9 +185,9 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
         else {
-			return InteractionResult.PASS;
+            return InteractionResult.PASS;
         }
-	}
+    }
 
     protected VoxelShape getBoundingBoxFromCuboidList(List<WesterosBlockDef.Cuboid> cl) {
         VoxelShape vs = Shapes.empty();

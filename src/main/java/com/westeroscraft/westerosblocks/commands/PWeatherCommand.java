@@ -4,11 +4,12 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
 import com.westeroscraft.westerosblocks.network.PWeatherMessage;
 
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraftforge.network.PacketDistributor;
+import net.minecraft.network.chat.Component;
+
+import java.awt.*;
 
 public class PWeatherCommand {
    public static void register(CommandDispatcher<CommandSourceStack> source) {
@@ -31,10 +32,10 @@ public class PWeatherCommand {
 		if (source.getEntity() instanceof ServerPlayer) {
 			ServerPlayer player = (ServerPlayer) source.getEntity();
 			// Send relative of zero for reset
-			WesterosBlocks.simpleChannel.send(PacketDistributor.PLAYER.with(() -> player), new PWeatherMessage(PWeatherMessage.WeatherCond.RESET));
-			source.sendSuccess(new TextComponent("Reset player weather to server weather"), true);
+//			WesterosBlocks.simpleChannel.send(PacketDistributor.PLAYER.with(() -> player), new PWeatherMessage(PWeatherMessage.WeatherCond.RESET));
+			source.sendSuccess(() -> Component.literal("Reset player weather to server weather"), true);
 		} else {
-			source.sendFailure(new TextComponent("Cannot be used by console"));
+			source.sendFailure(Component.literal("Cannot be used by console"));
 		}
 		return 1;
 	}
@@ -43,10 +44,11 @@ public class PWeatherCommand {
 		if (source.getEntity() instanceof ServerPlayer) {
 			ServerPlayer player = (ServerPlayer) source.getEntity();
 			// Send relative of zero for reset
-			WesterosBlocks.simpleChannel.send(PacketDistributor.PLAYER.with(() -> player), new PWeatherMessage(cond));
-			source.sendSuccess(new TextComponent("Set player weather to " + cond), true);
+			// TODO FIXME
+//			WesterosBlocks.simpleChannel.send(PacketDistributor.PLAYER.with(() -> player), new PWeatherMessage(cond));
+			source.sendSuccess(() -> Component.literal("Set player weather to " + cond), true);
 		} else {
-			source.sendFailure(new TextComponent("Cannot be used by console"));
+			source.sendFailure(Component.literal("Cannot be used by console"));
 		}
 		return 1;
 	}

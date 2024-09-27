@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import com.westeroscraft.westerosblocks.*;
 import java.util.function.Supplier;
+
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -42,7 +44,7 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
                     return null;            		
             	}
             	//WesterosBlocks.log.info(String.format("emptyPotBlk=%s", emptyPotBlk.getRegistryName()));
-            	emptyPot = () -> (FlowerPotBlock) emptyPotBlk.delegate.get();
+            	emptyPot = () -> emptyPotBlk;
             	if (plantBlockID != null) {
             		Block plantBlk = WesterosBlocks.findBlockByName(plantBlockID);
             		if ((plantBlk == null) || (plantBlk == Blocks.AIR)) {
@@ -51,7 +53,7 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
                         return null;            		            			
             		}
                 	//WesterosBlocks.log.info(String.format("plantBlk=%s", plantBlk.getRegistryName()));
-            		plant = () -> plantBlk.delegate.get();
+            		plant = () -> plantBlk;
             	}
             }                        
         	return def.registerRenderType(def.registerBlock(new WCFlowerPotBlock(emptyPot, plant, props, def)), false, def.nonOpaque);
@@ -65,7 +67,7 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         Block pl = plant.get();
         if ((pl != null) && (emptyPot != null) && (emptyPot.get() != null)) {
         	//WesterosBlocks.log.info(String.format("addPlant=%s to %s", pl.getRegistryName(), emptyPot.get().getRegistryName()));
-        	emptyPot.get().addPlant(pl.getRegistryName(), () -> this);
+        	emptyPot.get().addPlant(BuiltInRegistries.BLOCK.getKey(pl), () -> this);
         }
     }
     

@@ -92,12 +92,12 @@ public class WCWallFanBlock extends Block implements SimpleWaterloggedBlock, Wes
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType PathComputationType) {
-        switch(PathComputationType) {
+    public boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
+        switch(pathComputationType) {
         case LAND:
            return false;
         case WATER:
-           return reader.getFluidState(pos).is(FluidTags.WATER);
+           return state.getFluidState().is(FluidTags.WATER);
         case AIR:
            return false;
         default:

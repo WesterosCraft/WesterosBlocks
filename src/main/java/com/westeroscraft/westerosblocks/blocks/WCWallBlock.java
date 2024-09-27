@@ -288,8 +288,7 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 	}
 
 	@Override
-	public boolean isPathfindable(BlockState p_57996_, BlockGetter p_57997_, BlockPos p_57998_,
-			PathComputationType p_57999_) {
+	protected boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
 		return false;
 	}
 
@@ -480,7 +479,7 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 	}
 
 	@Override
-	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
+	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 		if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
 				state = state.cycle(this.STATE);
 				level.setBlock(pos, state, 10);

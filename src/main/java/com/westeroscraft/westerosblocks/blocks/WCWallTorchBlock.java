@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.BlockPos;
@@ -19,9 +20,16 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
     private WesterosBlockDef def;
     private boolean allow_unsupported = false;
     private boolean no_particle = false;
+
+    private static SimpleParticleType getParticle(String typeStr) {
+        if (typeStr != null && typeStr.contains("no-particle")) {
+            return new SimpleParticleType(false);
+        }
+        return ParticleTypes.FLAME;
+    }
     
     protected WCWallTorchBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(props, ParticleTypes.FLAME);
+        super(WCWallTorchBlock.getParticle(def.getType()), props);
         this.def = def;
         String t = def.getType();
         if (t != null) {
@@ -43,7 +51,7 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
     }
 
     @Override
-    public void animateTick(BlockState state, Level level, BlockPos pos, Random rnd) {
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource rnd) {
         if (!this.no_particle) super.animateTick(state, level, pos, rnd);
     }
 

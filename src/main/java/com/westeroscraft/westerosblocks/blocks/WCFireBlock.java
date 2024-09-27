@@ -6,6 +6,7 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -37,9 +38,11 @@ public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle
     public boolean canSurvive(BlockState p_196260_1_, LevelReader p_196260_2_, BlockPos p_196260_3_) {
     	return true;
     }
-    
+
+
     @Override
-    public void tick(BlockState p_225534_1_, ServerLevel p_225534_2_, BlockPos p_225534_3_, Random p_225534_4_) {
+    protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+//        super.tick(state, level, pos, random);
     }
 
     @Override

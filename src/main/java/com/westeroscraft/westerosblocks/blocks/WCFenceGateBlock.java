@@ -30,7 +30,7 @@ public class WCFenceGateBlock extends FenceGateBlock implements WesterosBlockLif
     private boolean locked = false;
 
     protected WCFenceGateBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(props);
+        super(AuxileryUtils.getWoodType(props, def), props);
         this.def = def;
         String type = def.getType();
         if (type != null) {
@@ -48,18 +48,19 @@ public class WCFenceGateBlock extends FenceGateBlock implements WesterosBlockLif
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
+
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         if (this.locked) {
             if (player.isCreative() && player.getMainHandItem().isEmpty()) {
-                return super.use(state, world, pos, player, hand, hitrslt);
+                return super.useWithoutItem(state, level, pos, player, hitResult);
             }
             else {
                 return InteractionResult.PASS;
             }
         }
         else {
-        	return super.use(state, world, pos, player, hand, hitrslt);
+            return super.useWithoutItem(state, level, pos, player, hitResult);
         }
     }
 

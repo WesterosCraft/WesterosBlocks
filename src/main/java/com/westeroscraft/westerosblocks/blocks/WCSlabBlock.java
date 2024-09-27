@@ -114,8 +114,9 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
     	return bs;
     }
 
+
 	@Override
-	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
+	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 		if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
             state = state.cycle(this.STATE);
             level.setBlock(pos, state, 10);

@@ -31,7 +31,7 @@ public class WCTrapDoorBlock extends TrapDoorBlock implements WesterosBlockLifec
     private boolean locked = false;
     
     protected WCTrapDoorBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(props);
+        super(AuxileryUtils.getBlockSetType(props, def), props);
         this.def = def;
         String type = def.getType();
         if (type != null) {
@@ -50,20 +50,22 @@ public class WCTrapDoorBlock extends TrapDoorBlock implements WesterosBlockLifec
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
+
+
     @Override
-	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand,
-		BlockHitResult ctx) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+
         if (this.locked) {
            return InteractionResult.PASS;
         }
         else {
             state = state.cycle(OPEN);
-            world.setBlock(pos, state, 2);
+            level.setBlock(pos, state, 2);
             if (state.getValue(WATERLOGGED)) {
-               world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+                level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
             }
-            this.playSound(player, world, pos, state.getValue(OPEN));
-            return InteractionResult.sidedSuccess(world.isClientSide);
+            this.playSound(player, level, pos, state.getValue(OPEN));
+            return InteractionResult.sidedSuccess(level.isClientSide);
         }
     }
 

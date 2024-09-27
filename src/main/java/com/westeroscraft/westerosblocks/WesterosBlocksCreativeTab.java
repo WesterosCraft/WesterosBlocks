@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks;
 
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -58,36 +59,42 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     	this(id, label, type, null);
     }
     public  WesterosBlocksCreativeTab(String id, String label, String type, CreativeModeTab insertBefore) {
-        super(id);
+        super(CreativeModeTab.builder().title(Component.literal(id)).icon(()->{
+            Block itm = WesterosBlocks.findBlockByName(type);
+            if (itm == null) {
+                itm = WesterosBlocks.customBlocks[0];
+            }
+            return new ItemStack(itm);
+        }));
         this.type = type;
         WesterosBlockDef.addCreativeTab(id,  this);
-        if (insertBefore != null) {	// Tab to be inserted before?
-        	for (int i = 0; i < CreativeModeTab.TABS.length; i++) {
-        		if (CreativeModeTab.TABS[i] == insertBefore) {
-                	// We were inserted last, so shift everyone forward from index
-        			for (int j = CreativeModeTab.TABS.length - 2; j >= i; j--) {
-        				CreativeModeTab.TABS[j+1] = CreativeModeTab.TABS[j];
-        				CreativeModeTab.TABS[j+1].id = j+1;
-        			}
-        			CreativeModeTab.TABS[i] = this;
-        			CreativeModeTab.TABS[i].id = i;
-        			break;
-        		}
-        	}
-        }
+//        if (insertBefore != null) {	// Tab to be inserted before?
+//        	for (int i = 0; i < CreativeModeTab.TABS.length; i++) {
+//        		if (CreativeModeTab.TABS[i] == insertBefore) {
+//                	// We were inserted last, so shift everyone forward from index
+//        			for (int j = CreativeModeTab.TABS.length - 2; j >= i; j--) {
+//        				CreativeModeTab.TABS[j+1] = CreativeModeTab.TABS[j];
+//        				CreativeModeTab.TABS[j+1].id = j+1;
+//        			}
+//        			CreativeModeTab.TABS[i] = this;
+//        			CreativeModeTab.TABS[i].id = i;
+//        			break;
+//        		}
+//        	}
+//        }
         // Add to our NLS export
         ModelExport.addNLSString("itemGroup." + id, label);
     }
     
-    @Override
-    public ItemStack makeIcon()
-    {
-        if (itm == null) {
-            itm = WesterosBlocks.findBlockByName(this.type);
-            if (itm == null) {
-                itm = WesterosBlocks.customBlocks[0];
-            }
-        }
-        return new ItemStack(itm);
-    }
+//    @Override
+//    public ItemStack makeIcon()
+//    {
+//        if (itm == null) {
+//            itm = WesterosBlocks.findBlockByName(this.type);
+//            if (itm == null) {
+//                itm = WesterosBlocks.customBlocks[0];
+//            }
+//        }
+//        return new ItemStack(itm);
+//    }
 }

@@ -1,5 +1,11 @@
 package com.westeroscraft.westerosblocks;
 
+import com.westeroscraft.westerosblocks.blocks.AuxileryUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -9,31 +15,29 @@ import net.minecraft.CrashReport;
 import net.minecraft.ReportedException;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ColorHandlerEvent;
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.TickEvent.ServerTickEvent;
-import net.minecraftforge.event.server.ServerStoppingEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.network.simple.SimpleChannel;
-import net.minecraftforge.registries.ForgeRegistries;
-
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.fml.loading.FMLPaths;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.gui.ConfigurationScreen;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.RegisterEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -58,525 +62,511 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 import java.util.Map.Entry;
 
-import net.minecraftforge.network.NetworkRegistry;
 
-import com.westeroscraft.westerosblocks.network.ClientMessageHandler;
-import com.westeroscraft.westerosblocks.network.PWeatherMessage;
-import com.westeroscraft.westerosblocks.network.PTimeMessage;
-import com.westeroscraft.westerosblocks.network.ServerMessageHandler;
-
-import net.minecraftforge.network.NetworkDirection;
-
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(WesterosBlocks.MOD_ID)
 public class WesterosBlocks {
-	public static final String MOD_ID = "westerosblocks";
+    public static final String MOD_ID = "westerosblocks";
 
-	// Network setup
-	public static SimpleChannel simpleChannel;    // used to transmit your network messages
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(WesterosBlocks.MOD_ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WesterosBlocks.MOD_ID);
+    public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
+            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, WesterosBlocks.MOD_ID);
+    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WesterosBlocks.MOD_ID);
+
+
+    // Network setup
+    // TODO FIXME NETOWRKING
+//	public static SimpleChannel simpleChannel;    // used to transmit your network messages
     public static final String CHANNEL = "wbchannel";
     public static final String MESSAGE_PROTOCOL_VERSION = "5.10";
-    public static final ResourceLocation simpleChannelRL = new ResourceLocation("westerosblocks", CHANNEL);
+//    public static final ResourceLocation simpleChannelRL =  ResourceLocation("westerosblocks", CHANNEL);
 
-	// Directly reference a log4j logger.
-	public static final Logger log = LogManager.getLogger();
+    // Directly reference a log4j logger.
+    public static final Logger log = LogManager.getLogger();
 
-	public static WesterosBlockConfig customConfig;
+    public static WesterosBlockConfig customConfig;
 
-	// Says where the client and server 'proxy' code is loaded.
-	public static Proxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> Proxy::new);
+    // TODO FIXME
+    // Says where the client and server 'proxy' code is loaded.
+//	public static Proxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> Proxy::new);
 
-	public static WesterosBlockDef[] customBlockDefs;
+    public static WesterosBlockDef[] customBlockDefs;
 
-	public static HashMap<String, Block> customBlocksByName;
+    public static HashMap<String, Block> customBlocksByName;
 
-	public static Block[] customBlocks = new Block[0];
+    public static Block[] customBlocks = new Block[0];
 
-	public static Path modConfigPath;
-	
-	public static WesterosBlockColorMap[] colorMaps;
-	
-	public static WesterosItemMenuOverrides[] menuOverrides;
+    public static Path modConfigPath;
 
-	public WesterosBlocks() {
-		// Register the doClientStuff method for modloading
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-		// Register the setup method for load complete
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::loadComplete);
-		// Register the doClientStuff method for modloading
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onCommonSetupEvent);
-		// Register the setup method for tile entities
-		WesterosBlockDef.TILE_ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+    public static WesterosBlockColorMap[] colorMaps;
 
-		// Register ourselves for server and other game events we are interested in
-		MinecraftForge.EVENT_BUS.register(this);
+    public static WesterosItemMenuOverrides[] menuOverrides;
 
-		Path configPath = FMLPaths.CONFIGDIR.get();
+    public WesterosBlocks(IEventBus modEventBus, ModContainer modContainer) {
+        // Register the doClientStuff method for modloading
+//		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        // Register the setup method for load complete
+//		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::loadComplete);
+        // Register the doClientStuff method for modloading
+//		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onCommonSetupEvent);
+        // Register the setup method for tile entities
+        WesterosBlockDef.TILE_ENTITY_TYPES.register(modEventBus);
 
-		modConfigPath = Paths.get(configPath.toAbsolutePath().toString(), MOD_ID);
+        // Register ourselves for server and other game events we are interested in
+        NeoForge.EVENT_BUS.register(this);
 
-		// Create the config folder
-		try {
-			Files.createDirectory(modConfigPath);
-		} catch (FileAlreadyExistsException e) {
-			// Do nothing
-		} catch (IOException e) {
-			log.error("Failed to create westerosblocks config directory", e);
-		}
+        Path configPath = FMLPaths.CONFIGDIR.get();
 
-		ModLoadingContext.get().registerConfig(net.minecraftforge.fml.config.ModConfig.Type.COMMON, Config.SPEC,
-				MOD_ID + "/" + MOD_ID + ".toml");
-	}
+        modConfigPath = Paths.get(configPath.toAbsolutePath().toString(), MOD_ID);
 
-	private void doClientStuff(final FMLClientSetupEvent event) {
-		// do something that can only be done on the client
-		log.info("Got game settings {}", event.description());
-	}
+        // Create the config folder
+        try {
+            Files.createDirectory(modConfigPath);
+        } catch (FileAlreadyExistsException e) {
+            // Do nothing
+        } catch (IOException e) {
+            log.error("Failed to create westerosblocks config directory", e);
+        }
 
-	@SubscribeEvent
-	public void onRegisterCommandEvent(RegisterCommandsEvent event) {
-	    CommandDispatcher<CommandSourceStack> commandDispatcher = event.getDispatcher();
-		PTimeCommand.register(commandDispatcher);
-		PWeatherCommand.register(commandDispatcher);
-		NVCommand.register(commandDispatcher);
-	}
-	
-	private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
-	{
-		// Initialize with standard block IDs
-		if (Config.blockDevMode.get()) {
-			log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/"
-					+ MOD_ID);
-		}
-		// Do blocks state export here
-		if (Config.blockDevMode.get()) {
-			// Clean up old export
-			deleteDirectory(new File(modConfigPath.toFile(), "assets"));
-			deleteDirectory(new File(modConfigPath.toFile(), "data"));
-			
-			for (int i = 0; i < customBlockDefs.length; i++) {
-				if (customBlockDefs[i] == null)
-					continue;
-				Block blk = customBlocksByName.get(customBlockDefs[i].blockName);
-				if (blk != null) {
-					ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
-					if (exp != null) {
-						try {
-							exp.doBlockStateExport();
-							exp.doModelExports();
-							// If list, roll through choices as legacyBlockID
-							if (customBlockDefs[i].legacyBlockIDList != null) {
-								for (String legacyid : customBlockDefs[i].legacyBlockIDList) {
-									customBlockDefs[i].legacyBlockID = legacyid;
-									exp.doWorldConverterMigrate();									
-									ModelExport.addWorldConverterItemMap(legacyid, customBlockDefs[i].blockName);
-								}
-								customBlockDefs[i].legacyBlockID = null;
-							}
-							else if (customBlockDefs[i].legacyBlockID != null) {
-								exp.doWorldConverterMigrate();
-								ModelExport.addWorldConverterItemMap(customBlockDefs[i].legacyBlockID, customBlockDefs[i].blockName);
-							}
-						} catch (IOException iox) {
-							log.warn(String.format("Error exporting block %s - %s", blk.getRegistryName(), iox));
-						}
-					}
-				}
-			}
-			try {
-				ModelExport.writeNLSFile(modConfigPath);
-			} catch (IOException iox) {
-				log.warn(String.format("Error writing NLS - %s", iox));
-			}
-			try {
-				ModelExport.writeTagDataFiles(modConfigPath);
-			} catch (IOException iox) {
-				log.warn(String.format("Error writing tag data files - %s", iox));
-			}
-			try {
-				ModelExport.writeCustomTagDataFiles(modConfigPath, customConfig);
-			} catch (IOException iox) {
-				log.warn(String.format("Error writing custom tag data files - %s", iox));
-			}
-			try {
-				ModelExport.writeWorldConverterFile(modConfigPath);
-			} catch (IOException iox) {
-				log.warn(String.format("Error writing WorldConfig mapping - %s", iox));
-			}
-			try {
-				ModelExport.writeDynmapOverridesFile(modConfigPath);
-			} catch (IOException iox) {
-				log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
-			}
-			try {
-				ModelExport.writeWorldConverterItemMapFile(modConfigPath);
-			} catch (IOException iox) {
-				log.warn(String.format("Error writing WorldConfig item mapping - %s", iox));
-			}
-		}
-		proxy.initRenderRegistry();
+        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
-	}
+        // This will use NeoForge's ConfigurationScreen to display this mod's configs
+        if (FMLEnvironment.dist.isClient()) {
+            modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+        }
+    }
 
-	public static void crash(Exception x, String msg) {
-		throw new ReportedException(new CrashReport(msg, x));
-	}
+    private void doClientStuff(final FMLClientSetupEvent event) {
+        // do something that can only be done on the client
+        log.info("Got game settings {}", event.description());
+    }
 
-	public static void crash(String msg) {
-		crash(new Exception(), msg);
-	}
+    @SubscribeEvent
+    public void onRegisterCommandEvent(RegisterCommandsEvent event) {
+        CommandDispatcher<CommandSourceStack> commandDispatcher = event.getDispatcher();
+        PTimeCommand.register(commandDispatcher);
+        PWeatherCommand.register(commandDispatcher);
+        NVCommand.register(commandDispatcher);
+    }
 
-	public static class Config {
-		public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
-		public static final ForgeConfigSpec SPEC;
-		public static final ForgeConfigSpec.BooleanValue snowInTaiga;
-		public static final ForgeConfigSpec.BooleanValue blockDevMode;
-		public static final ForgeConfigSpec.IntValue autoRestoreTime;
-		public static final ForgeConfigSpec.BooleanValue autoRestoreAllHalfDoors;
-		public static final ForgeConfigSpec.BooleanValue doorSurviveAny;
-		public static final ForgeConfigSpec.BooleanValue doorNoConnect;
-		public static final ForgeConfigSpec.IntValue seaLevelOverride;
-		public static final ForgeConfigSpec.IntValue particleEmitterStrengthMax;
-		public static final ForgeConfigSpec.IntValue particleEmitterRangeMax;
+    private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
+    {
+        // Initialize with standard block IDs
+        if (Config.blockDevMode) {
+            log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/"
+                    + MOD_ID);
+        }
+        // Do blocks state export here
+        if (Config.blockDevMode) {
+            // Clean up old export
+            deleteDirectory(new File(modConfigPath.toFile(), "assets"));
+            deleteDirectory(new File(modConfigPath.toFile(), "data"));
 
-		static {
-			BUILDER.comment("Module options");
-			snowInTaiga = BUILDER.comment("Enable snow in taiga").define("snowInTaiga", true);
-			blockDevMode = BUILDER.comment("Block development mode").define("blockDevMode", false);
-			BUILDER.push("autoRestore");
-            autoRestoreTime = BUILDER.comment("Number of seconds before auto-restore").defineInRange("autoRestoreTime", 30, 5, 300);
-            autoRestoreAllHalfDoors = BUILDER.comment("Auto restore all half-door blocks").define("autoRestoreAllHalfDoors", true);
-            BUILDER.pop();
-			BUILDER.push("blockMod");
-			doorSurviveAny = BUILDER.comment("Allow door to survive on any surface").define("doorSurviveAny", true);
-			doorNoConnect = BUILDER.comment("Avoid doors connecting to walls/panes/etc").define("doorNoConnect", true);
-            BUILDER.pop();
-            BUILDER.push("worldMod");
-            seaLevelOverride = BUILDER.comment("Override sea level (default for Westeros=33, 0=disable override)").defineInRange("seaLevelOverride", 33, 0, 639);
-            BUILDER.pop();
-			BUILDER.push("particleEmitter");
-			particleEmitterStrengthMax = BUILDER.comment("Max value of particle strength for particle emitter blocks").defineInRange("particleEmitterStrengthMax", 10, 1, 100);
-			particleEmitterRangeMax = BUILDER.comment("Max value of particle strength for particle emitter blocks").defineInRange("particleEmitterRangeMax", 10, 1, 100);
-			BUILDER.pop();
+            for (int i = 0; i < customBlockDefs.length; i++) {
+                if (customBlockDefs[i] == null)
+                    continue;
+                Block blk = customBlocksByName.get(customBlockDefs[i].blockName);
+                if (blk != null) {
+                    ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
+                    if (exp != null) {
+                        try {
+                            exp.doBlockStateExport();
+                            exp.doModelExports();
+                            // If list, roll through choices as legacyBlockID
+                            if (customBlockDefs[i].legacyBlockIDList != null) {
+                                for (String legacyid : customBlockDefs[i].legacyBlockIDList) {
+                                    customBlockDefs[i].legacyBlockID = legacyid;
+                                    exp.doWorldConverterMigrate();
+                                    ModelExport.addWorldConverterItemMap(legacyid, customBlockDefs[i].blockName);
+                                }
+                                customBlockDefs[i].legacyBlockID = null;
+                            } else if (customBlockDefs[i].legacyBlockID != null) {
+                                exp.doWorldConverterMigrate();
+                                ModelExport.addWorldConverterItemMap(customBlockDefs[i].legacyBlockID, customBlockDefs[i].blockName);
+                            }
+                        } catch (IOException iox) {
+                            log.warn(String.format("Error exporting block %s - %s", blk.getName(), iox));
+                        }
+                    }
+                }
+            }
+            try {
+                ModelExport.writeNLSFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing NLS - %s", iox));
+            }
+            try {
+                ModelExport.writeTagDataFiles(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing tag data files - %s", iox));
+            }
+            try {
+                ModelExport.writeCustomTagDataFiles(modConfigPath, customConfig);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing custom tag data files - %s", iox));
+            }
+            try {
+                ModelExport.writeWorldConverterFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing WorldConfig mapping - %s", iox));
+            }
+            try {
+                ModelExport.writeDynmapOverridesFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
+            }
+            try {
+                ModelExport.writeWorldConverterItemMapFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing WorldConfig item mapping - %s", iox));
+            }
+        }
+        // TODO FIXME
+//		proxy.initRenderRegistry();
+    }
 
-			SPEC = BUILDER.build();
-		}
-	}
+    public static void crash(Exception x, String msg) {
+        throw new ReportedException(new CrashReport(msg, x));
+    }
 
-	@Mod.EventBusSubscriber(modid = WesterosBlocks.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-	public class ColorHandler {
-	    @SubscribeEvent
-	    public static void registerItemColors(ColorHandlerEvent.Item event) {
-	        for (Block blk : WesterosBlocks.customBlocks) {
-	     	   if (blk instanceof WesterosBlockLifecycle) {
-	     		   WesterosBlockDef def = ((WesterosBlockLifecycle)blk).getWBDefinition();
-	     		   if (def != null) {
-	     			   def.registerItemColorHandler(blk, event.getItemColors());
-	     		   }
-	     	   }
-	        }
-	        if (WesterosBlocks.colorMaps != null) {
-	     	   WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
-	     	   for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
-	     		   for (String bn : map.blockNames) {
-	     			   Block blk = WesterosBlocks.findBlockByName(bn);
-	     			   if (blk != null) {
-	     				   WesterosBlockDef.registerVanillaItemColorHandler(bn, blk, map.colorMult, event.getItemColors());
-	     			   }
-	     		   }
-	     	   }
-	        }	    	
-	    }
-	    @SubscribeEvent
-	    public static void registerBlockColors(ColorHandlerEvent.Block event) {
-	        for (Block blk : WesterosBlocks.customBlocks) {
-	     	   if (blk instanceof WesterosBlockLifecycle) {
-	     		   WesterosBlockDef def = ((WesterosBlockLifecycle)blk).getWBDefinition();
-	     		   if (def != null) {
-	     			   def.registerBlockColorHandler(blk, event.getBlockColors());
-	     		   }
-	     	   }
-	        }
-	        if (WesterosBlocks.colorMaps != null) {
-	     	   WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
-	     	   for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
-	     		   for (String bn : map.blockNames) {
-	     			   Block blk = WesterosBlocks.findBlockByName(bn);
-	     			   if (blk != null) {
-	     				   WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event.getBlockColors());
-	     			   }
-	     		   }
-	     	   }
-	        }
-	    }
-	}
-	// You can use EventBusSubscriber to automatically subscribe events on the
-	// contained class (this is subscribing to the MOD
-	// Event bus for receiving Registry Events)
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	public static class RegistryEvents {
-		private static boolean didInit = false;
-		public static void initialize() {
-			if (didInit) return;
-			
-			// Initialize
-			log.info("initialize start");
-			WesterosBlockDef.initialize();
-			WesterosBlocksCreativeTab.init();
-			// If snow-in-taiga
-			if (Config.snowInTaiga.get()) {
-				Biome b = ForgeRegistries.BIOMES.getValue(new ResourceLocation("minecraft:taiga"));
-				if (b != null) {
-					b.climateSettings.temperature = -0.5F; 
-					b.climateSettings.precipitation = Biome.Precipitation.SNOW;
-				}
-				log.info("Enabled snow in TAIGA");
-			}
+    public static void crash(String msg) {
+        crash(new Exception(), msg);
+    }
 
-			// Read our block definition resource
-			try {
-				customConfig = loadBlockConfig("/WesterosBlocks.json");
-			} catch (BlockConfigNotFoundException ex) {
-				crash("WesterosBlocks couldn't find its block definition resource");
-				return;
-			} catch (JsonSyntaxException iox) {
-				crash(iox, "WesterosBlocks couldn't parse its block definition");
-				return;
-			} catch (JsonIOException iox) {
-				crash(iox, "WesterosBlocks couldn't read its block definition");
-				return;
-			}
-			if (customConfig == null) {
-				crash("WesterosBlocks couldn't read its block definition");
-				return;
-			}
+    @EventBusSubscriber(modid = WesterosBlocks.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
+    public class ColorHandler {
+        @SubscribeEvent
+        public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+            for (Block blk : WesterosBlocks.customBlocks) {
+                if (blk instanceof WesterosBlockLifecycle) {
+                    WesterosBlockDef def = ((WesterosBlockLifecycle) blk).getWBDefinition();
+                    if (def != null) {
+                        def.registerItemColorHandler(blk, Minecraft.getInstance().getItemColors());
+                    }
+                }
+            }
+            if (WesterosBlocks.colorMaps != null) {
+                WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
+                for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
+                    for (String bn : map.blockNames) {
+                        Block blk = WesterosBlocks.findBlockByName(bn);
+                        if (blk != null) {
+                            WesterosBlockDef.registerVanillaItemColorHandler(bn, blk, map.colorMult, event.getItemColors());
+                        }
+                    }
+                }
+            }
+        }
 
-			customBlockDefs = getBlockDefs(customConfig);
-			log.info("Loaded " + customBlockDefs.length + " block definitions");
+        @SubscribeEvent
+        public static void registerBlockColors(RegisterColorHandlersEvent.Item event) {
+            for (Block blk : WesterosBlocks.customBlocks) {
+                if (blk instanceof WesterosBlockLifecycle) {
+                    WesterosBlockDef def = ((WesterosBlockLifecycle) blk).getWBDefinition();
+                    if (def != null) {
+                        def.registerBlockColorHandler(blk, Minecraft.getInstance().getBlockColors());
+                    }
+                }
+            }
+            if (WesterosBlocks.colorMaps != null) {
+                WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
+                for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
+                    for (String bn : map.blockNames) {
+                        Block blk = WesterosBlocks.findBlockByName(bn);
+                        if (blk != null) {
+                            WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event.getBlockColors());
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-			// Validate custom block definitions against old copy (if one exists)
-			if (validateDefs(customBlockDefs) == false) {
-				log.error("Some block names or states have been removed relative to oldWesterosBlocks.json");
-			}
+    // You can use EventBusSubscriber to automatically subscribe events on the
+    // contained class (this is subscribing to the MOD
+    // Event bus for receiving Registry Events)
+    @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+    public static class RegistryEvents {
+        private static boolean didInit = false;
 
-			if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {
-				crash("WesterosBlocks.json failed sanity check");
-				return;
-			}
-			// Register custom tags
-			ModelExport.declareCustomTags(customConfig);
-			// Dump block set information
-			WesterosBlockSetDef.dumpBlockSets(customConfig.blockSets, modConfigPath);
-			log.info("initialize done");
-		}
-		@SubscribeEvent
-		public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-			log.info("block register start");
-			// Do initialization, if needed
-			initialize();
+        public static void initialize() {
+            if (didInit) return;
 
-			// Construct custom block definitions
-			List<Block> blklist = new LinkedList<Block>();
-			customBlocksByName = new HashMap<String, Block>();
-			HashMap<String, Integer> countsByType = new HashMap<String, Integer>();
-			int blockcount = 0;
-			for (int i = 0; i < customBlockDefs.length; i++) {
-				if (customBlockDefs[i] == null)
-					continue;
-				Block blk = customBlockDefs[i].createBlock();
-				if (blk != null) {
-					blklist.add(blk);
-					customBlocksByName.put(customBlockDefs[i].blockName, blk);
-					// Register sound events
-					customBlockDefs[i].registerSoundEvents();
-					// Add to counts
-					Integer cnt = countsByType.get(customBlockDefs[i].blockType);
-					cnt = (cnt == null) ? 1 : (cnt+1);
-					countsByType.put(customBlockDefs[i].blockType, cnt);					
-					blockcount++;
-				} else {
-					// crash("Invalid block definition for " + customBlockDefs[i].blockName + " -
-					// aborted during load()");
-					// return;
-				}
-			}
-			customBlocks = blklist.toArray(new Block[blklist.size()]);
-			WesterosBlockDef.dumpBlockPerf();
-			// Brag on block type counts
-			log.info("Count of custom blocks by type:");
-			for (String type : countsByType.keySet()) {
-				log.info(type + ": " + countsByType.get(type) + " blocks");				
-			}
-			log.info("TOTAL: " + blockcount + " blocks");
-			colorMaps = customConfig.colorMaps;
-			menuOverrides = customConfig.menuOverrides;
-			log.info("block register done");
-		}
-		@SubscribeEvent
-		public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-			log.info("item register start");
-			if (menuOverrides != null) {
-				for (WesterosItemMenuOverrides mo : menuOverrides) {
-					if (mo.blockNames != null) {
-						for (String bn : mo.blockNames) {
-							Item itm = ForgeRegistries.ITEMS.getValue(new ResourceLocation(bn));
-							if (itm == null) {
-								log.warn("Item for " + bn + " not found - cannot override");
-							}
-							else {
-								CreativeModeTab tab = null;
-								if (mo.creativeTab != null) {
-									tab = WesterosBlockDef.getCreativeTab(mo.creativeTab);
-								}
-								itm.category = tab;
-								//log.info("Item for " + bn + " set to tab " + mo.creativeTab);
-							}
-						}
-					}
-				}
-			}
-			log.info("item register done");
-		}
-	}
+            // Initialize
+            log.info("initialize start");
+            WesterosBlockDef.initialize();
+            WesterosBlocksCreativeTab.init();
+            // TODO FIXME
+            // If snow-in-taiga
+//			if (Config.snowInTaiga) {
+//				Biome b = ForgeRegistries.BIOMES.getValue(ResourceLocation.fromNamespaceAndPath("minecraft","taiga"));
+//				if (b != null) {
+//					b.climateSettings.temperature = -0.5F;
+//					b.climateSettings.precipitation = Biome.Precipitation.SNOW;
+//				}
+//				log.info("Enabled snow in TAIGA");
+//			}
 
-	public static WesterosBlockConfig loadBlockConfig(String filename) throws BlockConfigNotFoundException, JsonParseException {
-		// Read our block definition resource
-		WesterosBlockConfig config;
-		InputStream in = WesterosBlocks.class.getResourceAsStream(filename);
-		if (in == null) {
-			throw new BlockConfigNotFoundException();
-		}
-		BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
-		Gson gson = new Gson();
-		try {
-			config = gson.fromJson(rdr, WesterosBlockConfig.class);
-		} catch (JsonParseException iox) {
-			throw iox;
-		} finally {
-			if (in != null) {
-				try {
-					in.close();
-				} catch (IOException iox) {
-				}
-				;
-				in = null;
-			}
-			if (rdr != null) {
-				try {
-					rdr.close();
-				} catch (IOException iox) {
-				}
-				;
-				rdr = null;
-			}
-		}
-		return config;
-	}
+            // Read our block definition resource
+            try {
+                customConfig = loadBlockConfig("/WesterosBlocks.json");
+            } catch (BlockConfigNotFoundException ex) {
+                crash("WesterosBlocks couldn't find its block definition resource");
+                return;
+            } catch (JsonSyntaxException iox) {
+                crash(iox, "WesterosBlocks couldn't parse its block definition");
+                return;
+            } catch (JsonIOException iox) {
+                crash(iox, "WesterosBlocks couldn't read its block definition");
+                return;
+            }
+            if (customConfig == null) {
+                crash("WesterosBlocks couldn't read its block definition");
+                return;
+            }
 
-	public static class BlockConfigNotFoundException extends Exception {
-		public BlockConfigNotFoundException() {
-		}
-		public BlockConfigNotFoundException(String message) {
-			super(message);
-		}
-	}
+            customBlockDefs = getBlockDefs(customConfig);
+            log.info("Loaded " + customBlockDefs.length + " block definitions");
 
-	// Expand block set definitions to obtain the full block definition list
-	public static WesterosBlockDef[] getBlockDefs(WesterosBlockConfig config) {
-		WesterosBlockSetDef[] blockSetDefs = config.blockSets;
-		WesterosBlockDef[] blockDefs = config.blocks;
-		List<WesterosBlockDef> expandedBlockDefs = new LinkedList<WesterosBlockDef>(Arrays.asList(blockDefs));
-		for (int i = 0; i < blockSetDefs.length; i++) {
-			if (blockSetDefs[i] == null)
-				continue;
-			List<WesterosBlockDef> variantBlockDefs = blockSetDefs[i].generateBlockDefs();
-			expandedBlockDefs.addAll(variantBlockDefs);
-		}
-		return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
-	}
+            // Validate custom block definitions against old copy (if one exists)
+            if (validateDefs(customBlockDefs) == false) {
+                log.error("Some block names or states have been removed relative to oldWesterosBlocks.json");
+            }
 
-	public static Block findBlockByName(String blkname) {
-		Block blk = customBlocksByName.get(blkname);
-		if (blk != null) return blk;
-		ResourceLocation rl = new ResourceLocation(blkname);
-		if (rl.getNamespace().equals(WesterosBlocks.MOD_ID)) {
-			blk = customBlocksByName.get(rl.getPath());
-		}			
-		if (blk != null) {
-			return blk;
-		}
-		blk = ForgeRegistries.BLOCKS.getValue(rl);
-		return blk;
-	}
+            if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {
+                crash("WesterosBlocks.json failed sanity check");
+                return;
+            }
+            // Register custom tags
+            ModelExport.declareCustomTags(customConfig);
+            // Dump block set information
+            WesterosBlockSetDef.dumpBlockSets(customConfig.blockSets, modConfigPath);
+            log.info("initialize done");
+        }
 
-	// Load in oldWesterosBlocks.json, if it exists, and use it as a "source of truth" for
-	// validating modifications to WesterosBlocks.json.
-	// The important things to check are that all of the block names in oldWesterosBlocks.json
-	// are preserved, and that all of the state-related attributes for each block are preserved.
-	public static boolean validateDefs(WesterosBlockDef[] defs) {
-		WesterosBlockDef[] validationDefs;
-		try {
-			validationDefs = getBlockDefs(loadBlockConfig("/oldWesterosBlocks.json"));
-		} catch (BlockConfigNotFoundException ex) {
-			log.warn("no oldWesterosBlocks.json found for validation; skipping");
-			return true;
-		} catch (JsonParseException ex) {
-			log.warn("couldn't read oldWesterosBlocks.json block definition; skipping");
-			return true;
-		}
-		if (validationDefs == null) {
-			log.warn("couldn't read oldWesterosBlocks.json block definition; skipping");
-			return true;
-		}
+        @SubscribeEvent
+        public static void onBlocksRegistry(final RegisterEvent event) {
+            event.register(SOUND_EVENTS.getRegistryKey(), (helper) -> {
+                initialize();
+                for (WesterosBlockDef customBlockDef : customBlockDefs) {
+                    if (customBlockDef == null)
+                        continue;
+                    // Register sound events
+                    customBlockDef.registerSoundEvents();
+                }
+            });
+            event.register(BLOCKS.getRegistryKey(), (helper) -> {
+                log.info("block register start");
+                // Do initialization, if needed
+                initialize();
 
-		return WesterosBlockDef.compareBlockDefs(defs, validationDefs);
-	}
+                // Construct custom block definitions
+                List<Block> blklist = new LinkedList<Block>();
+                customBlocksByName = new HashMap<String, Block>();
+                HashMap<String, Integer> countsByType = new HashMap<String, Integer>();
+                int blockcount = 0;
+                for (int i = 0; i < customBlockDefs.length; i++) {
+                    if (customBlockDefs[i] == null)
+                        continue;
+                    Block blk = customBlockDefs[i].createBlock();
+                    if (blk != null) {
+                        blklist.add(blk);
+                        customBlocksByName.put(customBlockDefs[i].blockName, blk);
+                        // Add to counts
+                        Integer cnt = countsByType.get(customBlockDefs[i].blockType);
+                        cnt = (cnt == null) ? 1 : (cnt + 1);
+                        countsByType.put(customBlockDefs[i].blockType, cnt);
+                        blockcount++;
+                    } else {
+                        crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
+                        return;
+                    }
+                }
+                customBlocks = blklist.toArray(new Block[blklist.size()]);
+                WesterosBlockDef.dumpBlockPerf();
+                // Brag on block type counts
+                log.info("Count of custom blocks by type:");
+                for (String type : countsByType.keySet()) {
+                    log.info(type + ": " + countsByType.get(type) + " blocks");
+                }
+                log.info("TOTAL: " + blockcount + " blocks");
+                colorMaps = customConfig.colorMaps;
+                menuOverrides = customConfig.menuOverrides;
+                log.info("block register done");
+            });
+        }
 
-	private static HashMap<String, SoundEvent> registered_sounds = new HashMap<String, SoundEvent>();
+        @SubscribeEvent
+        public void buildContents(BuildCreativeModeTabContentsEvent event) {
+            log.info("item register start");
+            if (menuOverrides != null) {
+                for (WesterosItemMenuOverrides mo : menuOverrides) {
+                    if (mo.blockNames != null) {
+                        for (String bn : mo.blockNames) {
+                            Item itm = BuiltInRegistries.ITEM.get(ResourceLocation.parse(bn));
+                            if (itm == null) {
+                                log.warn("Item for " + bn + " not found - cannot override");
+                            } else {
+                                CreativeModeTab tab = null;
+                                if (mo.creativeTab != null) {
+                                    tab = WesterosBlockDef.getCreativeTab(mo.creativeTab);
+                                }
+                                if (event.getTab() == tab) {
+                                    event.accept(itm);
+                                }
+                                log.info("Item for " + bn + " set to tab " + mo.creativeTab);
+                            }
+                        }
+                    }
+                }
+            }
+            Set<BlockItem> blockItems = AuxileryUtils.BLOCK_ITEM_TABS.get(event.getTab());
+            if (blockItems != null) {
+                for (BlockItem item : blockItems) {
+                    event.accept(item);
+                }
+            }
+        }
+    }
 
-	public static SoundEvent registerSound(String soundName) {
-		SoundEvent event = registered_sounds.get(soundName);
-		if (event == null) {
-			ResourceLocation location = new ResourceLocation(WesterosBlocks.MOD_ID, soundName);
-			event = new SoundEvent(location);
-			event.setRegistryName(location);
-			ForgeRegistries.SOUND_EVENTS.register(event);
-			registered_sounds.put(soundName, event);
-		}
-		return event;
-	}
+    public static WesterosBlockConfig loadBlockConfig(String filename) throws BlockConfigNotFoundException, JsonParseException {
+        // Read our block definition resource
+        WesterosBlockConfig config;
+        InputStream in = WesterosBlocks.class.getResourceAsStream(filename);
+        if (in == null) {
+            throw new BlockConfigNotFoundException();
+        }
+        BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
+        Gson gson = new Gson();
+        try {
+            config = gson.fromJson(rdr, WesterosBlockConfig.class);
+        } catch (JsonParseException iox) {
+            throw iox;
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException iox) {
+                }
+                ;
+                in = null;
+            }
+            if (rdr != null) {
+                try {
+                    rdr.close();
+                } catch (IOException iox) {
+                }
+                ;
+                rdr = null;
+            }
+        }
+        return config;
+    }
 
-	public static SoundEvent getRegisteredSound(String soundName) {
-		return registered_sounds.get(soundName);
-	}
-	
+    public static class BlockConfigNotFoundException extends Exception {
+        public BlockConfigNotFoundException() {
+        }
+
+        public BlockConfigNotFoundException(String message) {
+            super(message);
+        }
+    }
+
+    // Expand block set definitions to obtain the full block definition list
+    public static WesterosBlockDef[] getBlockDefs(WesterosBlockConfig config) {
+        WesterosBlockSetDef[] blockSetDefs = config.blockSets;
+        WesterosBlockDef[] blockDefs = config.blocks;
+        List<WesterosBlockDef> expandedBlockDefs = new LinkedList<WesterosBlockDef>(Arrays.asList(blockDefs));
+        for (int i = 0; i < blockSetDefs.length; i++) {
+            if (blockSetDefs[i] == null)
+                continue;
+            List<WesterosBlockDef> variantBlockDefs = blockSetDefs[i].generateBlockDefs();
+            expandedBlockDefs.addAll(variantBlockDefs);
+        }
+        return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
+    }
+
+    public static Block findBlockByName(String blkname) {
+        Block blk = customBlocksByName.get(blkname);
+        if (blk != null) return blk;
+        ResourceLocation rl = ResourceLocation.fromNamespaceAndPath(MOD_ID, blkname);
+        if (rl.getNamespace().equals(WesterosBlocks.MOD_ID)) {
+            blk = customBlocksByName.get(rl.getPath());
+        }
+        if (blk != null) {
+            return blk;
+        }
+        blk = BuiltInRegistries.BLOCK.get(rl);
+        return blk;
+    }
+
+    // Load in oldWesterosBlocks.json, if it exists, and use it as a "source of truth" for
+    // validating modifications to WesterosBlocks.json.
+    // The important things to check are that all of the block names in oldWesterosBlocks.json
+    // are preserved, and that all of the state-related attributes for each block are preserved.
+    public static boolean validateDefs(WesterosBlockDef[] defs) {
+        WesterosBlockDef[] validationDefs;
+        try {
+            validationDefs = getBlockDefs(loadBlockConfig("/oldWesterosBlocks.json"));
+        } catch (BlockConfigNotFoundException ex) {
+            log.warn("no oldWesterosBlocks.json found for validation; skipping");
+            return true;
+        } catch (JsonParseException ex) {
+            log.warn("couldn't read oldWesterosBlocks.json block definition; skipping");
+            return true;
+        }
+        if (validationDefs == null) {
+            log.warn("couldn't read oldWesterosBlocks.json block definition; skipping");
+            return true;
+        }
+
+        return WesterosBlockDef.compareBlockDefs(defs, validationDefs);
+    }
+
+    private static HashMap<String, SoundEvent> registered_sounds = new HashMap<String, SoundEvent>();
+
+    public static SoundEvent registerSound(String soundName) {
+        SoundEvent event = registered_sounds.get(soundName);
+        if (event == null) {
+            event = SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, soundName));
+            SoundEvent finalEvent = event;
+            SOUND_EVENTS.register(soundName, () -> finalEvent);
+            registered_sounds.put(soundName, finalEvent);
+        }
+        return event;
+    }
+
+    public static SoundEvent getRegisteredSound(String soundName) {
+        return registered_sounds.get(soundName);
+    }
+
     @SubscribeEvent
     public void onCommonSetupEvent(FMLCommonSetupEvent event) {
-	    simpleChannel = NetworkRegistry.newSimpleChannel(simpleChannelRL, () -> MESSAGE_PROTOCOL_VERSION,
-	            ClientMessageHandler::isThisProtocolAcceptedByClient,
-	            ServerMessageHandler::isThisProtocolAcceptedByServer);
+        // TODO FIXME
+//        simpleChannel = ChannelBuilder.named(simpleChannelRL).networkProtocolVersion(1).simpleChannel()
+//                .messageBuilder(PTimeMessage.class, NetworkDirection.PLAY_TO_CLIENT)
+//                .encoder(PTimeMessage::encode)
+//                .decoder(PTimeMessage::decode)
+//                .consumerNetworkThread(ClientMessageHandler::onPTimeMessageReceived)
+//                .add()
+//                .messageBuilder(PWeatherMessage.class, NetworkDirection.PLAY_TO_CLIENT)
+//                .encoder(PWeatherMessage::encode)
+//                .decoder(PWeatherMessage::decode)
+//                .consumerNetworkThread(ClientMessageHandler::onPWeatherMessageReceived)
+//                .add();
+    }
 
-	    simpleChannel.registerMessage(PTimeMessage.PTIME_MSGID, PTimeMessage.class,
-	    		PTimeMessage::encode, PTimeMessage::decode,
-	            ClientMessageHandler::onPTimeMessageReceived,
-	            Optional.of(NetworkDirection.PLAY_TO_CLIENT));
-	    simpleChannel.registerMessage(PWeatherMessage.PWEATHER_MSGID, PWeatherMessage.class,
-	    		PWeatherMessage::encode, PWeatherMessage::decode,
-	            ClientMessageHandler::onPWeatherMessageReceived,
-	            Optional.of(NetworkDirection.PLAY_TO_CLIENT));
-	  }
-    
     // Directory tree delete
     public static boolean deleteDirectory(File directoryToBeDeleted) {
         File[] allContents = directoryToBeDeleted.listFiles();
@@ -587,97 +577,109 @@ public class WesterosBlocks {
         }
         return directoryToBeDeleted.delete();
     }
-    
-	private static class PendingRestore {
-		BlockPos pos;
-		Level world;
-		PendingRestore(Level lvl, BlockPos p) {
-			this.world = lvl;
-			this.pos = p;
-		}
-		@Override
-		public int hashCode() {
-			return pos.hashCode() ^ world.hashCode();
-		}
-		@Override
-		public boolean equals(Object o) {
-			if (o instanceof PendingRestore) {
-				PendingRestore pdo = (PendingRestore) o;
-				return (pdo.world == this.world) && (pdo.pos.asLong() == this.pos.asLong()); 
-			}
-			return false;
-		}
-	};
-	private static class RestoreInfo {
-		long secCount;
-		Boolean open;
-	};
-	private static Map<PendingRestore, RestoreInfo> pendingHalfDoorRestore = new HashMap<PendingRestore, RestoreInfo>();
-	private static int ticks = 0;
-	private static long secCount = 0;
 
-    public static boolean isAutoRestoreHalfDoor(Block blk) {
-    	if (Config.autoRestoreAllHalfDoors.get()) return true;
-    	return false;
-    }
-    public static void setPendingHalfDoorRestore(Level world, BlockPos pos, boolean isOpen, boolean isCreative) {
-    	PendingRestore pdc = new PendingRestore(world, pos);
-    	RestoreInfo ri = pendingHalfDoorRestore.get(pdc);
-    	if ((ri == null) && (!isCreative)) {	// New one, and not creative mode, add record
-    		ri = new RestoreInfo();
-    		ri.open = isOpen; ri.secCount = secCount + Config.autoRestoreTime.get();
-    		pendingHalfDoorRestore.put(pdc, ri);
-    	}
-    	// Else, if restore record pending, but creative change, drop it
-    	else if (ri != null) {
-    		if (isCreative) {
-    			pendingHalfDoorRestore.remove(pdc);
-    		}
-    		else {	// Else, reset restore time
-    			ri.secCount = secCount + Config.autoRestoreTime.get();
-    		}
-    	}
-    }
-    public static void handlePendingHalfDoorRestores(boolean now) {
-    	// Handle pending door close checks
-    	Set<Entry<PendingRestore, RestoreInfo>> kvset = pendingHalfDoorRestore.entrySet();
-    	Iterator<Entry<PendingRestore, RestoreInfo>> iter = kvset.iterator();	// So that we can remove during iteration
-    	while (iter.hasNext()) {
-    		Entry<PendingRestore, RestoreInfo> kv = iter.next();
-			PendingRestore pdc = kv.getKey();
-    		RestoreInfo ri = kv.getValue();
-    		if (now || (ri.secCount <= secCount)) {
-    			BlockState bs = pdc.world.getBlockState(pdc.pos);	// Get the block state
-    			if (bs != null) {
-    				Block blk = bs.getBlock();
-    				if ((blk instanceof WCHalfDoorBlock) && isAutoRestoreHalfDoor(blk)) {	// Still right type of door
-    					if (bs.getValue(DoorBlock.OPEN) != ri.open) {	// And still wrong state?
-    						WCHalfDoorBlock dblk = (WCHalfDoorBlock)blk;
-    						dblk.setOpen(null, pdc.world, bs, pdc.pos, ri.open);
-    					}
-    				}
-    			}
-    			iter.remove();	// And remove it from the set
-    		}	
-    	}
-    }
+    private static class PendingRestore {
+        BlockPos pos;
+        Level world;
 
-	@SubscribeEvent
-    public void countTicks(ServerTickEvent event){
-        if (event.phase != TickEvent.Phase.END) return;
-        ticks++;
-        if (ticks >= 20) {
-        	secCount++;
-        	// Handle any pending door restores
-        	handlePendingHalfDoorRestores(false);
-        	
-        	ticks = 0;
+        PendingRestore(Level lvl, BlockPos p) {
+            this.world = lvl;
+            this.pos = p;
+        }
+
+        @Override
+        public int hashCode() {
+            return pos.hashCode() ^ world.hashCode();
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (o instanceof PendingRestore) {
+                PendingRestore pdo = (PendingRestore) o;
+                return (pdo.world == this.world) && (pdo.pos.asLong() == this.pos.asLong());
+            }
+            return false;
         }
     }
-	@SubscribeEvent
-	public void serverStopping(ServerStoppingEvent event) {
-    	// Handle any pending door restores (force immediate)
-    	handlePendingHalfDoorRestores(true);
-	}
+
+    ;
+
+    private static class RestoreInfo {
+        long secCount;
+        Boolean open;
+    }
+
+    ;
+    private static Map<PendingRestore, RestoreInfo> pendingHalfDoorRestore = new HashMap<PendingRestore, RestoreInfo>();
+    private static int ticks = 0;
+    private static long secCount = 0;
+
+    public static boolean isAutoRestoreHalfDoor(Block blk) {
+        if (Config.autoRestoreAllHalfDoors) return true;
+        return false;
+    }
+
+    public static void setPendingHalfDoorRestore(Level world, BlockPos pos, boolean isOpen, boolean isCreative) {
+        PendingRestore pdc = new PendingRestore(world, pos);
+        RestoreInfo ri = pendingHalfDoorRestore.get(pdc);
+        if ((ri == null) && (!isCreative)) {    // New one, and not creative mode, add record
+            ri = new RestoreInfo();
+            ri.open = isOpen;
+            ri.secCount = secCount + Config.autoRestoreTime;
+            pendingHalfDoorRestore.put(pdc, ri);
+        }
+        // Else, if restore record pending, but creative change, drop it
+        else if (ri != null) {
+            if (isCreative) {
+                pendingHalfDoorRestore.remove(pdc);
+            } else {    // Else, reset restore time
+                ri.secCount = secCount + Config.autoRestoreTime;
+            }
+        }
+    }
+
+    public static void handlePendingHalfDoorRestores(boolean now) {
+        // Handle pending door close checks
+        Set<Entry<PendingRestore, RestoreInfo>> kvset = pendingHalfDoorRestore.entrySet();
+        Iterator<Entry<PendingRestore, RestoreInfo>> iter = kvset.iterator();    // So that we can remove during iteration
+        while (iter.hasNext()) {
+            Entry<PendingRestore, RestoreInfo> kv = iter.next();
+            PendingRestore pdc = kv.getKey();
+            RestoreInfo ri = kv.getValue();
+            if (now || (ri.secCount <= secCount)) {
+                BlockState bs = pdc.world.getBlockState(pdc.pos);    // Get the block state
+                if (bs != null) {
+                    Block blk = bs.getBlock();
+                    if ((blk instanceof WCHalfDoorBlock) && isAutoRestoreHalfDoor(blk)) {    // Still right type of door
+                        if (bs.getValue(DoorBlock.OPEN) != ri.open) {    // And still wrong state?
+                            WCHalfDoorBlock dblk = (WCHalfDoorBlock) blk;
+                            dblk.setOpen(null, pdc.world, bs, pdc.pos, ri.open);
+                        }
+                    }
+                }
+                iter.remove();    // And remove it from the set
+            }
+        }
+    }
+
+    // TODO FIXME
+//    @SubscribeEvent
+//    public void countTicks(ServerTickEvent event) {
+//        if (event.phase != TickEvent.Phase.END) return;
+//        ticks++;
+//        if (ticks >= 20) {
+//            secCount++;
+//            // Handle any pending door restores
+//            handlePendingHalfDoorRestores(false);
+//
+//            ticks = 0;
+//        }
+//    }
+
+    @SubscribeEvent
+    public void serverStopping(ServerStoppingEvent event) {
+        // Handle any pending door restores (force immediate)
+        handlePendingHalfDoorRestores(true);
+    }
 
 }

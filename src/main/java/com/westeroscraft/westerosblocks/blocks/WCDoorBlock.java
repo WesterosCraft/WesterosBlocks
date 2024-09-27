@@ -33,7 +33,7 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
     private boolean allow_unsupported = false;
 
     protected WCDoorBlock(BlockBehaviour.Properties props, WesterosBlockDef def) {
-        super(props);
+        super(AuxileryUtils.getBlockSetType(props, def), props);
         this.def = def;
         String type = def.getType();
         if (type != null) {
@@ -54,15 +54,20 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
+
+
     @Override
-    public InteractionResult use(BlockState p_225533_1_, Level p_225533_2_, BlockPos p_225533_3_, Player p_225533_4_, InteractionHand p_225533_5_, BlockHitResult p_225533_6_) {
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+
+
         if (this.locked) {
-           return InteractionResult.PASS;
+            return InteractionResult.PASS;
         }
         else {
-        	return super.use(p_225533_1_, p_225533_2_, p_225533_3_, p_225533_4_, p_225533_5_, p_225533_6_);
+            return super.useWithoutItem(state, level, pos, player, hitResult);
         }
     }
+
     @Override
     public boolean canSurvive(BlockState p_52783_, LevelReader p_52784_, BlockPos p_52785_) {
     	if (allow_unsupported && (p_52783_.getValue(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) return true;

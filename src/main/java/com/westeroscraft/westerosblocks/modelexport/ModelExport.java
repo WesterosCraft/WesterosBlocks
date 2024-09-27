@@ -348,7 +348,7 @@ public abstract class ModelExport {
         	customTags = new ArrayList<TagKey<Block>>();
         	for (WesterosBlockTags tag : cfg.blockTags) {
         		String tagid = tag.customTag.toLowerCase();
-        		customTags.add(BlockTags.create(new ResourceLocation(WesterosBlocks.MOD_ID, tagid)));
+        		customTags.add(BlockTags.create(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, tagid)));
         	}
         }	
     }

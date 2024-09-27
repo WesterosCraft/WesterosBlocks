@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -238,13 +239,16 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
      public FluidState getFluidState(BlockState state) { 
          return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
      }
+
+
+
      @Override
-     public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType PathComputationType) {
-         switch(PathComputationType) {
+     public boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
+         switch(pathComputationType) {
          case LAND:
             return false;
          case WATER:
-            return reader.getFluidState(pos).is(FluidTags.WATER);
+            return state.getFluidState().is(FluidTags.WATER);
          case AIR:
             return false;
          default:
@@ -253,7 +257,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
      }
 
      @Override
-     public void randomTick(BlockState p_225542_1_, ServerLevel p_225542_2_, BlockPos p_225542_3_, Random p_225542_4_) {
+     public void randomTick(BlockState p_225542_1_, ServerLevel p_225542_2_, BlockPos p_225542_3_, RandomSource p_225542_4_) {
      }
      @Override
      protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> container) {

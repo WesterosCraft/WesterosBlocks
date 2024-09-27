@@ -2,6 +2,7 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import javax.annotation.Nullable;
 
+import com.westeroscraft.westerosblocks.AuxMaterial;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
@@ -15,7 +16,6 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResult;
@@ -153,23 +153,25 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
         return p_153255_.is(BlockTags.FENCES) && p_153255_.is(BlockTags.WOODEN_FENCES) == this.defaultBlockState().is(BlockTags.WOODEN_FENCES);
     }
 
-	@Override
-	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
-		if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
-				state = state.cycle(this.STATE);
-				level.setBlock(pos, state, 10);
-				level.levelEvent(player, 1006, pos, 0);
-				return InteractionResult.sidedSuccess(level.isClientSide);
-		}
-		else {
-			return InteractionResult.PASS;
-		}
-	}
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
+            state = state.cycle(this.STATE);
+            level.setBlock(pos, state, 10);
+            level.levelEvent(player, 1006, pos, 0);
+            return InteractionResult.sidedSuccess(level.isClientSide);
+        }
+        else {
+            return InteractionResult.PASS;
+        }
+    }
+
 
     private static String[] TAGS = { "fences" };
     private static String[] TAGS2 = { "fences", "wooden_fences" };
     @Override
     public String[] getBlockTags() {
-    	return def.getMaterial() == Material.WOOD ? TAGS2 : TAGS;
+        return def.getMaterial() == AuxMaterial.WOOD ? TAGS2 : TAGS;
     }    
 }

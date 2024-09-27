@@ -1,21 +1,17 @@
 package com.westeroscraft.westerosblocks.blocks;
 
-import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockFactory;
-import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.WesterosBlocks;
+import com.westeroscraft.westerosblocks.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -36,6 +32,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
+import java.awt.*;
 import java.util.Random;
 
 public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, WesterosBlockLifecycle {
@@ -81,18 +78,22 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
         }
     }
 
-    @SuppressWarnings("null")
     @Override
-    public void animateTick(BlockState state, Level level, BlockPos pos, Random rnd) {
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         final String ptype = def.getTypeValue("particleType");
-        super.animateTick(state, level, pos, rnd);
+        super.animateTick(state, level, pos, random);
 
         if (state.getValue(POWERED)) {
             for (int i = 0; i < state.getValue(PARTICLE_STRENGTH); i++) {
-                level.addParticle(getParticleByType(ptype), true, (double) pos.getX() - ((double) state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getY() - ((double) state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), (double) pos.getZ() - ((double) state.getValue(PARTICLE_RANGE) / 2) + rnd.nextDouble(state.getValue(PARTICLE_RANGE)), 0.0D, 0.0D, 0.00);
+                level.addParticle(getParticleByType(ptype), true,
+                        (double) pos.getX() - ((double) state.getValue(PARTICLE_RANGE) / 2) + random.nextDouble(),
+                        (double) pos.getY() - ((double) state.getValue(PARTICLE_RANGE) / 2) + random.nextDouble(),
+                        (double) pos.getZ() - ((double) state.getValue(PARTICLE_RANGE) / 2) + random.nextDouble(),
+                        0.0D, 0.0D, 0.00);
             }
         }
     }
+
 
     @SuppressWarnings("null")
     @Override
@@ -135,48 +136,47 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-
-    @SuppressWarnings("null")
-    @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitrslt) {
-
-        level.playSound(null, pos, SoundEvents.UI_BUTTON_CLICK, SoundSource.BLOCKS, 1.0f, 1.0f);
-
-        // auto set power on first use
-        if (!state.getValue(POWERED) && player.getMainHandItem().isEmpty()) {
-            level.setBlock(pos, this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, state.getValue(PARTICLE_STRENGTH)).setValue(WATERLOGGED, Boolean.valueOf(level.getFluidState(pos).getType() == Fluids.WATER)), 11);
-        }
-
-        if (state.getValue(POWERED) && player.getMainHandItem().isEmpty()) {
-            int range = state.getValue(PARTICLE_RANGE);
-            int strength = state.getValue(PARTICLE_STRENGTH);
-
-            if (player.isShiftKeyDown()) {
-                // calculate the new range value
-                range = range + 1;
-                if (range > WesterosBlocks.Config.particleEmitterRangeMax.get()) range = 1;
-                if (range == 0) range = 10;
-                if (level.isClientSide) {
-                    player.sendMessage(new TextComponent(ChatFormatting.YELLOW + "PARTICLE RANGE: " + range), player.getUUID());
-                }
-            } else {
-                // otherwise calculate strength value
-                strength = strength + 1;
-                if (strength > WesterosBlocks.Config.particleEmitterStrengthMax.get()) strength = 1;
-                if (strength == 0) strength = 10;
-                if (level.isClientSide) {
-                    player.sendMessage(new TextComponent(ChatFormatting.YELLOW + "PARTICLE STRENGTH: " + strength), player.getUUID());
-                }
-            }
-
-            level.setBlock(pos, this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, strength).setValue(PARTICLE_RANGE, range).setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER), 11);
-
-            return InteractionResult.sidedSuccess(level.isClientSide);
-
-        } else {
-            return InteractionResult.PASS;
-        }
-    }
+    // TODO FIXME
+//    @Override
+//    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+//
+//        level.playSound(null, pos, SoundEvents.UI_BUTTON_CLICK, SoundSource.BLOCKS, 1.0f, 1.0f);
+//
+//        // auto set power on first use
+//        if (!state.getValue(POWERED) && player.getMainHandItem().isEmpty()) {
+//            level.setBlock(pos, this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, state.getValue(PARTICLE_STRENGTH)).setValue(WATERLOGGED, Boolean.valueOf(level.getFluidState(pos).getType() == Fluids.WATER)), 11);
+//        }
+//
+//        if (state.getValue(POWERED) && player.getMainHandItem().isEmpty()) {
+//            int range = state.getValue(PARTICLE_RANGE);
+//            int strength = state.getValue(PARTICLE_STRENGTH);
+//
+//            if (player.isShiftKeyDown()) {
+//                // calculate the new range value
+//                range = range + 1;
+//                if (range > Config.particleEmitterRangeMax.get()) range = 1;
+//                if (range == 0) range = 10;
+//                if (level.isClientSide) {
+//                    player.sendMessage(new TextComponent(ChatFormatting.YELLOW + "PARTICLE RANGE: " + range), player.getUUID());
+//                }
+//            } else {
+//                // otherwise calculate strength value
+//                strength = strength + 1;
+//                if (strength > WesterosBlocks.Config.particleEmitterStrengthMax.get()) strength = 1;
+//                if (strength == 0) strength = 10;
+//                if (level.isClientSide) {
+//                    player.sendMessage(new TextComponent(ChatFormatting.YELLOW + "PARTICLE STRENGTH: " + strength), player.getUUID());
+//                }
+//            }
+//
+//            level.setBlock(pos, this.defaultBlockState().setValue(POWERED, true).setValue(PARTICLE_STRENGTH, strength).setValue(PARTICLE_RANGE, range).setValue(WATERLOGGED, level.getFluidState(pos).getType() == Fluids.WATER), 11);
+//
+//            return InteractionResult.sidedSuccess(level.isClientSide);
+//
+//        } else {
+//            return InteractionResult.PASS;
+//        }
+//    }
 
     private static final String[] TAGS = {};
 

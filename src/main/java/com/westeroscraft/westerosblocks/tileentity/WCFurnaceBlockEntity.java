@@ -7,7 +7,6 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 
@@ -16,11 +15,11 @@ import net.minecraft.core.BlockPos;
 public class WCFurnaceBlockEntity extends AbstractFurnaceBlockEntity {
 	public static final String ENTITYTYPE = "wcfurnacetileentity";
 	public WCFurnaceBlockEntity(BlockPos pos, BlockState bs) {		
-		super(WesterosBlockDef.getBlockEntityType(ENTITYTYPE).get(), pos, bs, RecipeType.SMELTING);
+		super(WesterosBlockDef.getBlockEntityType(ENTITYTYPE), pos, bs, RecipeType.SMELTING);
 	}
 
 	protected Component getDefaultName() {
-	   return new TranslatableComponent("container.furnace");
+	   return Component.literal("container.furnace");
 	}
 
 	protected AbstractContainerMenu createMenu(int p_59293_, Inventory p_59294_) {
