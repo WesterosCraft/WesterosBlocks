@@ -31,6 +31,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, SimpleWaterloggedBlock {
 

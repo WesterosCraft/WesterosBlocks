@@ -113,17 +113,19 @@ public class WesterosBlocks {
     public static WesterosItemMenuOverrides[] menuOverrides;
 
     public WesterosBlocks(IEventBus modEventBus, ModContainer modContainer) {
+
         // Register the doClientStuff method for modloading
         modEventBus.addListener(this::doClientStuff);
         // Register the setup method for load complete
         modEventBus.addListener(this::loadComplete);
         // Register the doClientStuff method for modloading
         modEventBus.addListener(this::onCommonSetupEvent);
-        // Register the setup method for tile entities
-        WesterosBlockDef.TILE_ENTITY_TYPES.register(modEventBus);
+
+        // Register the item to a creative tab
+        modEventBus.addListener(this::buildContents);
 
         // Register ourselves for server and other game events we are interested in
-        NeoForge.EVENT_BUS.register(this);
+//        NeoForge.EVENT_BUS.register(this);
 
         Path configPath = FMLPaths.CONFIGDIR.get();
 
@@ -137,6 +139,13 @@ public class WesterosBlocks {
         } catch (IOException e) {
             log.error("Failed to create westerosblocks config directory", e);
         }
+
+        BLOCKS.register(modEventBus);
+        ITEMS.register(modEventBus);
+        SOUND_EVENTS.register(modEventBus);
+        CREATIVE_MODE_TABS.register(modEventBus);
+        // Register the setup method for tile entities
+        WesterosBlockDef.TILE_ENTITY_TYPES.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -167,72 +176,72 @@ public class WesterosBlocks {
             log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/"
                     + MOD_ID);
         }
-        // Do blocks state export here
-        if (Config.blockDevMode) {
-            // Clean up old export
-            deleteDirectory(new File(modConfigPath.toFile(), "assets"));
-            deleteDirectory(new File(modConfigPath.toFile(), "data"));
-
-            for (int i = 0; i < customBlockDefs.length; i++) {
-                if (customBlockDefs[i] == null)
-                    continue;
-                Block blk = customBlocksByName.get(customBlockDefs[i].blockName);
-                if (blk != null) {
-                    ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
-                    if (exp != null) {
-                        try {
-                            exp.doBlockStateExport();
-                            exp.doModelExports();
-                            // If list, roll through choices as legacyBlockID
-                            if (customBlockDefs[i].legacyBlockIDList != null) {
-                                for (String legacyid : customBlockDefs[i].legacyBlockIDList) {
-                                    customBlockDefs[i].legacyBlockID = legacyid;
-                                    exp.doWorldConverterMigrate();
-                                    ModelExport.addWorldConverterItemMap(legacyid, customBlockDefs[i].blockName);
-                                }
-                                customBlockDefs[i].legacyBlockID = null;
-                            } else if (customBlockDefs[i].legacyBlockID != null) {
-                                exp.doWorldConverterMigrate();
-                                ModelExport.addWorldConverterItemMap(customBlockDefs[i].legacyBlockID, customBlockDefs[i].blockName);
-                            }
-                        } catch (IOException iox) {
-                            log.warn(String.format("Error exporting block %s - %s", blk.getName(), iox));
-                        }
-                    }
-                }
-            }
-            try {
-                ModelExport.writeNLSFile(modConfigPath);
-            } catch (IOException iox) {
-                log.warn(String.format("Error writing NLS - %s", iox));
-            }
-            try {
-                ModelExport.writeTagDataFiles(modConfigPath);
-            } catch (IOException iox) {
-                log.warn(String.format("Error writing tag data files - %s", iox));
-            }
-            try {
-                ModelExport.writeCustomTagDataFiles(modConfigPath, customConfig);
-            } catch (IOException iox) {
-                log.warn(String.format("Error writing custom tag data files - %s", iox));
-            }
-            try {
-                ModelExport.writeWorldConverterFile(modConfigPath);
-            } catch (IOException iox) {
-                log.warn(String.format("Error writing WorldConfig mapping - %s", iox));
-            }
-            try {
-                ModelExport.writeDynmapOverridesFile(modConfigPath);
-            } catch (IOException iox) {
-                log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
-            }
-            try {
-                ModelExport.writeWorldConverterItemMapFile(modConfigPath);
-            } catch (IOException iox) {
-                log.warn(String.format("Error writing WorldConfig item mapping - %s", iox));
-            }
-        }
         // TODO FIXME
+        // Do blocks state export here
+//        if (Config.blockDevMode) {
+//            // Clean up old export
+//            deleteDirectory(new File(modConfigPath.toFile(), "assets"));
+//            deleteDirectory(new File(modConfigPath.toFile(), "data"));
+//
+//            for (int i = 0; i < customBlockDefs.length; i++) {
+//                if (customBlockDefs[i] == null)
+//                    continue;
+//                Block blk = customBlocksByName.get(customBlockDefs[i].blockName);
+//                if (blk != null) {
+//                    ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
+//                    if (exp != null) {
+//                        try {
+//                            exp.doBlockStateExport();
+//                            exp.doModelExports();
+//                            // If list, roll through choices as legacyBlockID
+//                            if (customBlockDefs[i].legacyBlockIDList != null) {
+//                                for (String legacyid : customBlockDefs[i].legacyBlockIDList) {
+//                                    customBlockDefs[i].legacyBlockID = legacyid;
+//                                    exp.doWorldConverterMigrate();
+//                                    ModelExport.addWorldConverterItemMap(legacyid, customBlockDefs[i].blockName);
+//                                }
+//                                customBlockDefs[i].legacyBlockID = null;
+//                            } else if (customBlockDefs[i].legacyBlockID != null) {
+//                                exp.doWorldConverterMigrate();
+//                                ModelExport.addWorldConverterItemMap(customBlockDefs[i].legacyBlockID, customBlockDefs[i].blockName);
+//                            }
+//                        } catch (IOException iox) {
+//                            log.warn(String.format("Error exporting block %s - %s", blk.getName(), iox));
+//                        }
+//                    }
+//                }
+//            }
+//            try {
+//                ModelExport.writeNLSFile(modConfigPath);
+//            } catch (IOException iox) {
+//                log.warn(String.format("Error writing NLS - %s", iox));
+//            }
+//            try {
+//                ModelExport.writeTagDataFiles(modConfigPath);
+//            } catch (IOException iox) {
+//                log.warn(String.format("Error writing tag data files - %s", iox));
+//            }
+//            try {
+//                ModelExport.writeCustomTagDataFiles(modConfigPath, customConfig);
+//            } catch (IOException iox) {
+//                log.warn(String.format("Error writing custom tag data files - %s", iox));
+//            }
+//            try {
+//                ModelExport.writeWorldConverterFile(modConfigPath);
+//            } catch (IOException iox) {
+//                log.warn(String.format("Error writing WorldConfig mapping - %s", iox));
+//            }
+//            try {
+//                ModelExport.writeDynmapOverridesFile(modConfigPath);
+//            } catch (IOException iox) {
+//                log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
+//            }
+//            try {
+//                ModelExport.writeWorldConverterItemMapFile(modConfigPath);
+//            } catch (IOException iox) {
+//                log.warn(String.format("Error writing WorldConfig item mapping - %s", iox));
+//            }
+//        }
 //		proxy.initRenderRegistry();
     }
 
@@ -296,8 +305,6 @@ public class WesterosBlocks {
     // You can use EventBusSubscriber to automatically subscribe events on the
     // contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
-    @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
         private static boolean didInit = false;
 
         public static void initialize() {
@@ -356,7 +363,9 @@ public class WesterosBlocks {
         }
 
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegisterEvent event) {
+        public static void onBlocksRegistry(
+                final RegisterEvent event
+        ) {
             event.register(SOUND_EVENTS.getRegistryKey(), (helper) -> {
                 initialize();
                 for (WesterosBlockDef customBlockDef : customBlockDefs) {
@@ -437,7 +446,6 @@ public class WesterosBlocks {
                 }
             }
         }
-    }
 
     public static WesterosBlockConfig loadBlockConfig(String filename) throws BlockConfigNotFoundException, JsonParseException {
         // Read our block definition resource
@@ -538,7 +546,8 @@ public class WesterosBlocks {
     public static SoundEvent registerSound(String soundName) {
         SoundEvent event = registered_sounds.get(soundName);
         if (event == null) {
-            event = SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, soundName));
+            ResourceLocation location =  ResourceLocation.fromNamespaceAndPath(MOD_ID, soundName);
+            event = SoundEvent.createVariableRangeEvent(location);
             SoundEvent finalEvent = event;
             SOUND_EVENTS.register(soundName, () -> finalEvent);
             registered_sounds.put(soundName, finalEvent);
@@ -551,6 +560,7 @@ public class WesterosBlocks {
     }
 
     public void onCommonSetupEvent(FMLCommonSetupEvent event) {
+
         // TODO FIXME
 //        simpleChannel = ChannelBuilder.named(simpleChannelRL).networkProtocolVersion(1).simpleChannel()
 //                .messageBuilder(PTimeMessage.class, NetworkDirection.PLAY_TO_CLIENT)

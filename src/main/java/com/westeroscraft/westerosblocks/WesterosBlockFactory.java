@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks;
 
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 // Abstract factory class : each custom block type needs to have one
 public abstract class WesterosBlockFactory {

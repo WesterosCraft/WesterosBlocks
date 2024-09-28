@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Consumer;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -48,6 +49,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 //
 // Template for block configuration data (populated using GSON)
@@ -736,6 +738,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	public Block registerBlock(Block block) {
 		BlockItem itemBlock = new BlockItem(block, new Item.Properties());
+		WesterosBlocks.log.info("BLOCK REGISTERED: {}", itemBlock);
 		WesterosBlocks.BLOCKS.register(this.blockName, () -> block);
 		WesterosBlocks.ITEMS.register(this.blockName, () -> itemBlock);
 		AuxileryUtils.registerCreativeTab(itemBlock, getCreativeTab());
