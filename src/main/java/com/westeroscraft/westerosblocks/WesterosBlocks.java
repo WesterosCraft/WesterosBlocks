@@ -114,11 +114,11 @@ public class WesterosBlocks {
 
     public WesterosBlocks(IEventBus modEventBus, ModContainer modContainer) {
         // Register the doClientStuff method for modloading
-//		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        modEventBus.addListener(this::doClientStuff);
         // Register the setup method for load complete
-//		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::loadComplete);
+        modEventBus.addListener(this::loadComplete);
         // Register the doClientStuff method for modloading
-//		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onCommonSetupEvent);
+        modEventBus.addListener(this::onCommonSetupEvent);
         // Register the setup method for tile entities
         WesterosBlockDef.TILE_ENTITY_TYPES.register(modEventBus);
 
@@ -260,7 +260,7 @@ public class WesterosBlocks {
                 WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
                 for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
                     for (String bn : map.blockNames) {
-                        Block blk = WesterosBlocks.findBlockByName(bn);
+                        Block blk = WesterosBlocks.findBlockByName(bn, MOD_ID);
                         if (blk != null) {
                             WesterosBlockDef.registerVanillaItemColorHandler(bn, blk, map.colorMult, event.getItemColors());
                         }
@@ -283,7 +283,7 @@ public class WesterosBlocks {
                 WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
                 for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
                     for (String bn : map.blockNames) {
-                        Block blk = WesterosBlocks.findBlockByName(bn);
+                        Block blk = WesterosBlocks.findBlockByName(bn, MOD_ID);
                         if (blk != null) {
                             WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event.getBlockColors());
                         }
@@ -407,7 +407,6 @@ public class WesterosBlocks {
             });
         }
 
-        @SubscribeEvent
         public void buildContents(BuildCreativeModeTabContentsEvent event) {
             log.info("item register start");
             if (menuOverrides != null) {
@@ -497,11 +496,11 @@ public class WesterosBlocks {
         return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
     }
 
-    public static Block findBlockByName(String blkname) {
+    public static Block findBlockByName(String blkname, String namespace) {
         Block blk = customBlocksByName.get(blkname);
         if (blk != null) return blk;
-        ResourceLocation rl = ResourceLocation.fromNamespaceAndPath(MOD_ID, blkname);
-        if (rl.getNamespace().equals(WesterosBlocks.MOD_ID)) {
+        ResourceLocation rl = ResourceLocation.fromNamespaceAndPath(namespace, blkname);
+        if (rl.getNamespace().equals(namespace)) {
             blk = customBlocksByName.get(rl.getPath());
         }
         if (blk != null) {
@@ -551,7 +550,6 @@ public class WesterosBlocks {
         return registered_sounds.get(soundName);
     }
 
-    @SubscribeEvent
     public void onCommonSetupEvent(FMLCommonSetupEvent event) {
         // TODO FIXME
 //        simpleChannel = ChannelBuilder.named(simpleChannelRL).networkProtocolVersion(1).simpleChannel()

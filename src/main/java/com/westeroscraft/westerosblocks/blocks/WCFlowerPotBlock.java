@@ -37,16 +37,17 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         	Supplier<FlowerPotBlock> emptyPot = null;
         	Supplier<Block> plant = () -> null;
             if (emptyPotID != null) {
-            	FlowerPotBlock emptyPotBlk = (FlowerPotBlock) WesterosBlocks.findBlockByName(emptyPotID);
+				emptyPotID = "flower_pot";
+            	FlowerPotBlock emptyPotBlk = (FlowerPotBlock) WesterosBlocks.findBlockByName(emptyPotID, "minecraft");
             	if ((emptyPotBlk == null) || (emptyPotBlk == Blocks.AIR)) {
                     WesterosBlocks.log.error(String.format("emptyPotID '%s' not found for block '%s'",
                             emptyPotID, def.blockName));
-                    return null;            		
+                    return null;
             	}
             	//WesterosBlocks.log.info(String.format("emptyPotBlk=%s", emptyPotBlk.getRegistryName()));
             	emptyPot = () -> emptyPotBlk;
             	if (plantBlockID != null) {
-            		Block plantBlk = WesterosBlocks.findBlockByName(plantBlockID);
+            		Block plantBlk = WesterosBlocks.findBlockByName(plantBlockID, "minecraft");
             		if ((plantBlk == null) || (plantBlk == Blocks.AIR)) {
                         WesterosBlocks.log.error(String.format("plantBlockID '%s' not found for block '%s'",
                         		plantBlockID, def.blockName));

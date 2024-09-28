@@ -60,7 +60,7 @@ public class  WesterosBlocksCreativeTab extends CreativeModeTab {
     }
     public  WesterosBlocksCreativeTab(String id, String label, String type, CreativeModeTab insertBefore) {
         super(CreativeModeTab.builder().title(Component.literal(id)).icon(()->{
-            Block itm = WesterosBlocks.findBlockByName(type);
+            Block itm = WesterosBlocks.findBlockByName(type, WesterosBlocks.MOD_ID);
             if (itm == null) {
                 itm = WesterosBlocks.customBlocks[0];
             }
