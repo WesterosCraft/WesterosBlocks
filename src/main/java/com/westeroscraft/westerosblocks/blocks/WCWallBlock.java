@@ -78,6 +78,8 @@ public class WCWallBlock extends Block implements SimpleWaterloggedBlock, Wester
 
             Block blk = new WCWallBlock(props, def, doUnconnect, doConnectstate);
             helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+
             return def.registerRenderType(blk, false, false);
         }
     }
