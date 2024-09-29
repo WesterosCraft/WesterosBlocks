@@ -2,6 +2,13 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'net.neoforged.moddev' version '1.0.17'
+    id 'eclipse'
+}
+
+eclipse {
+    project {
+        name = "WesterosBlocks(NeoForge v1.21.1)"
+    }
 }
 
 tasks.named('wrapper', Wrapper).configure {
@@ -13,11 +20,11 @@ tasks.named('wrapper', Wrapper).configure {
     distributionType = Wrapper.DistributionType.BIN
 }
 
-version = mod_version
+version =  "1.21.1-${mod_version}.${System.getenv().BUILD_NUMBER ?: 'Dev'}"
 group = mod_group_id
 
 repositories {
-    mavenLocal()
+    mavenCentral()
 }
 
 base {
