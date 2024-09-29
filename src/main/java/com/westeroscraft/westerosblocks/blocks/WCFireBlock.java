@@ -6,6 +6,8 @@ import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
@@ -16,15 +18,19 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 
 public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle
 {
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	BlockBehaviour.Properties props = def.makeProperties().noCollission().instabreak(); //.randomTicks();
-        	return def.registerRenderType(def.registerBlock(new WCFireBlock(props, def)), false, false);
+            Block blk = new WCFireBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
     }
     private WesterosBlockDef def;

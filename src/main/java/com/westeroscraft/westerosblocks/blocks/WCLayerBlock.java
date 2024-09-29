@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import javax.annotation.Nullable;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
@@ -28,17 +30,21 @@ import net.minecraft.world.level.LevelAccessor;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCLayerBlock extends Block implements WesterosBlockLifecycle, SimpleWaterloggedBlock {
 
 	public static class Factory extends WesterosBlockFactory {
 		@Override
-		public Block buildBlockClass(WesterosBlockDef def) {
+		public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
 			BlockBehaviour.Properties props = def.makeProperties();
 			props = props.isViewBlocking((state, level, pos) -> {
 			      return state.getValue(LAYERS) >= 8;
 			   });
-			return def.registerRenderType(def.registerBlock(new WCLayerBlock(props, def)), false, false);
+			Block blk = new WCLayerBlock(props, def);
+			helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+			def.registerBlockItem(def.blockName, blk);
+			return def.registerRenderType(blk, false, false);
 		}
 	}
 

@@ -6,9 +6,11 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 import com.mojang.serialization.MapCodec;
+import com.westeroscraft.westerosblocks.WesterosBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -38,6 +40,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.registries.RegisterEvent;
 import org.apache.commons.lang3.ArrayUtils;
 
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
@@ -60,10 +63,13 @@ public class WCBedBlock extends HorizontalDirectionalBlock implements WesterosBl
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
             def.nonOpaque = true;
             BlockBehaviour.Properties props = def.makeProperties().noOcclusion();
-            return def.registerRenderType(def.registerBlock(new WCBedBlock(props, def)), false, false);
+            Block blk = new WCBedBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
     }
 

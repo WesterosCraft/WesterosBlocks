@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoulSandBlock;
@@ -7,13 +9,17 @@ import net.minecraft.world.level.block.SoulSandBlock;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCSoulSandBlock extends SoulSandBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	BlockBehaviour.Properties props = def.makeProperties();
-        	return def.registerRenderType(def.registerBlock(new WCSoulSandBlock(props, def)), true, false);
+            Block blk = new WCSoulSandBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, true, false);
         }
     }
     

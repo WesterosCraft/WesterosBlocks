@@ -1,6 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
 import com.westeroscraft.westerosblocks.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -35,6 +36,7 @@ import net.minecraft.world.level.LevelReader;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 import javax.annotation.Nullable;
 
@@ -42,10 +44,13 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
             def.nonOpaque = true;
             BlockBehaviour.Properties props = def.makeProperties();
-            return def.registerRenderType(def.registerBlock(new WCHalfDoorBlock(props, def)), false, false);
+            Block blk = new WCHalfDoorBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
     }
 

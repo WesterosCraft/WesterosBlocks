@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.TrapDoorBlock;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -16,14 +18,18 @@ import net.minecraft.core.BlockPos;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCTrapDoorBlock extends TrapDoorBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	BlockBehaviour.Properties props = def.makeProperties();
-        	return def.registerRenderType(def.registerBlock(new WCTrapDoorBlock(props, def)), false, false);
+            Block blk = new WCTrapDoorBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
     }
     

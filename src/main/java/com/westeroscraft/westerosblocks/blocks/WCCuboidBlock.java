@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 
 import com.westeroscraft.westerosblocks.*;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -37,16 +38,20 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle, Simp
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	def.nonOpaque = true;
         	BlockBehaviour.Properties props = def.makeProperties();
         	// See if we have a state property
         	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
-        	}        	
-        	return def.registerRenderType(def.registerBlock(new WCCuboidBlock(props, def, 1)), false, false);
+        	}
+            Block blk = new WCCuboidBlock(props, def, 1);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
+
     }
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;

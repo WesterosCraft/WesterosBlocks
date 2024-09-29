@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.WebBlock;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -29,6 +31,7 @@ import net.minecraft.tags.FluidTags;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 import javax.annotation.Nullable;
 
@@ -36,7 +39,7 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	// See if we have a state property
         	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
@@ -47,7 +50,11 @@ public class WCWebBlock extends WebBlock implements WesterosBlockLifecycle {
             	tempLAYERS = BlockStateProperties.LAYERS;
             }
         	BlockBehaviour.Properties props = def.makeProperties().noCollission();
-        	return def.registerRenderType(def.registerBlock(new WCWebBlock(props, def)), false, false);
+
+            Block blk = new WCWebBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
     }
     private WesterosBlockDef def;

@@ -1,5 +1,6 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.Level;
@@ -23,11 +24,12 @@ import java.util.Random;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCSoundBlock extends WCSolidBlock {
 	public static class Factory extends WesterosBlockFactory {
 		@Override
-		public Block buildBlockClass(WesterosBlockDef def) {
+		public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
 			BlockBehaviour.Properties props = def.makeProperties().randomTicks();
 			if ((def.soundList == null) || (def.soundList.size() == 0)) {
 	            WesterosBlocks.log.error(String.format("Non-empty soundList rrquired for ''%s'", def.blockName));
@@ -35,8 +37,11 @@ public class WCSoundBlock extends WCSolidBlock {
 			}
 			if ((def.soundList != null) && (def.soundList.size() > 1)) {
 				protoINDEX = IntegerProperty.create("index", 0, def.soundList.size()-1);
-			}								
-			return def.registerRenderType(def.registerBlock(new WCSoundBlock(props, def)), true, def.nonOpaque);
+			}
+			Block blk = new WCSoundBlock(props, def);
+			helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+			def.registerBlockItem(def.blockName, blk);
+			return def.registerRenderType(blk, true, def.nonOpaque);
 		}
 	}
 

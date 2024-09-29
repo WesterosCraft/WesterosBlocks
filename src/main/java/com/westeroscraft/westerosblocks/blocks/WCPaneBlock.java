@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -14,12 +16,13 @@ import net.minecraft.world.level.block.IronBarsBlock;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCPaneBlock extends IronBarsBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	BlockBehaviour.Properties props = def.makeProperties().noOcclusion();
             String t = def.getType();
             boolean doUnconnect = false;
@@ -32,8 +35,11 @@ public class WCPaneBlock extends IronBarsBlock implements WesterosBlockLifecycle
                     	tempUNCONNECT = UNCONNECT;
                     }
                 }
-            }        	
-        	return def.registerRenderType(def.registerBlock(new WCPaneBlock(props, def, doUnconnect)), false, true);
+            }
+            Block blk = new WCPaneBlock(props, def, doUnconnect);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, true);
         }
     }
     

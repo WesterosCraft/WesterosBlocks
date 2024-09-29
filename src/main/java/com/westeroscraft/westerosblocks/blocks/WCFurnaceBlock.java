@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import java.util.Random;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -24,21 +26,25 @@ import com.westeroscraft.westerosblocks.WesterosBlockFactory;
 import com.westeroscraft.westerosblocks.tileentity.WCFurnaceBlockEntity;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 // Custom furnace block
 public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecycle {
 	public static class Factory extends WesterosBlockFactory {
 		@Override
-		public Block buildBlockClass(WesterosBlockDef def) {
+		public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
 			final boolean alwaysOnVal = def.getTypeValue("always-on").equals("true");
 			BlockBehaviour.Properties props = def.makeProperties().lightLevel((state) -> {
 				return (alwaysOnVal || state.getValue(BlockStateProperties.LIT)) ? (int) (16 * def.lightValue) : 0;
 			});
-			Block blk = def.registerRenderType(def.registerBlock(new WCFurnaceBlock(props, def)), true, def.nonOpaque);
+			Block blk = new WCFurnaceBlock(props, def);
+			helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+			def.registerBlockItem(def.blockName, blk);
+			Block rblk = def.registerRenderType(blk, true, def.nonOpaque);
 			// Register tile entity
-			WesterosBlockDef.registerBlockEntity(WCFurnaceBlockEntity.ENTITYTYPE, WCFurnaceBlockEntity::new, blk);
+			WesterosBlockDef.registerBlockEntity(WCFurnaceBlockEntity.ENTITYTYPE, WCFurnaceBlockEntity::new, rblk);
 
-			return blk;
+			return rblk;
 
 		}
 	}

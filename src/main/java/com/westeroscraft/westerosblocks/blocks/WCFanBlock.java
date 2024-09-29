@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -26,20 +28,25 @@ import javax.annotation.Nullable;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCFanBlock extends Block implements SimpleWaterloggedBlock, WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	BlockBehaviour.Properties floorprops = def.makeProperties().noCollission().instabreak();
         	Block floorblock = new WCFanBlock(floorprops, def);
         	@SuppressWarnings("deprecation")
 			    BlockBehaviour.Properties wallprops = def.makeProperties().noCollission().instabreak().dropsLike(floorblock);
         	Block wallblock = new WCWallFanBlock(wallprops, def);
-        	def.registerWallOrFloorBlock(floorblock, wallblock);
-        	
-        	def.registerRenderType(floorblock, false, false);
+//        	def.registerWallOrFloorBlock(floorblock, wallblock, helper);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), floorblock);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, "wall_" + def.blockName), wallblock);
+            def.registerBlockItem(def.blockName, floorblock);
+            def.registerBlockItem("wall_" + def.blockName, wallblock);
+
+            def.registerRenderType(floorblock, false, false);
         	def.registerRenderType(wallblock, false, false);
         	return floorblock;
         }

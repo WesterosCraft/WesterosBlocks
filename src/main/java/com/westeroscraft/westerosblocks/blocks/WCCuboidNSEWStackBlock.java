@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 
 import com.westeroscraft.westerosblocks.*;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -27,15 +28,19 @@ import net.minecraft.world.level.block.state.StateDefinition;
 
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	def.nonOpaque = true;
         	BlockBehaviour.Properties props = def.makeProperties();
-        	return def.registerRenderType(def.registerBlock(new WCCuboidNSEWStackBlock(props, def)), false, false);
+            Block blk = new WCCuboidNSEWStackBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
     }
     // Support waterlogged on these blocks

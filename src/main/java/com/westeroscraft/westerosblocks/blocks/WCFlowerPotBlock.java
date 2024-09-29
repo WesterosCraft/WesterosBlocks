@@ -4,16 +4,18 @@ import com.westeroscraft.westerosblocks.*;
 import java.util.function.Supplier;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	BlockBehaviour.Properties props = def.makeProperties();
         	String emptyPotID = "minecraft:flower_pot";
         	String plantBlockID = null;
@@ -56,8 +58,11 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
                 	//WesterosBlocks.log.info(String.format("plantBlk=%s", plantBlk.getRegistryName()));
             		plant = () -> plantBlk;
             	}
-            }                        
-        	return def.registerRenderType(def.registerBlock(new WCFlowerPotBlock(emptyPot, plant, props, def)), false, def.nonOpaque);
+            }
+			Block blk = new WCFlowerPotBlock(emptyPot, plant, props, def);
+			helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+			def.registerBlockItem(def.blockName, blk);
+			return def.registerRenderType(blk, false, def.nonOpaque);
         }
     }    
     protected WesterosBlockDef def;

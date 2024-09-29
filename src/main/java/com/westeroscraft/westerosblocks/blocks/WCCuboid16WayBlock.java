@@ -2,6 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import javax.annotation.Nullable;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
@@ -18,19 +20,23 @@ import net.minecraft.util.Mth;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	def.nonOpaque = true;
         	BlockBehaviour.Properties props = def.makeProperties();
         	// See if we have a state property
         	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
-        	}        	
-        	return def.registerRenderType(def.registerBlock(new WCCuboid16WayBlock(props, def)), false, false);
+        	}
+            Block blk = new WCCuboid16WayBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, true, true);
         }
     }
 

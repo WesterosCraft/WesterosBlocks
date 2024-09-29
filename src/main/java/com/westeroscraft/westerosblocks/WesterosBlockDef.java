@@ -11,6 +11,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -31,7 +33,9 @@ import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
@@ -48,6 +52,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
 
@@ -707,7 +712,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 	private static Map<String, long[]> perfCounts = new HashMap<String, long[]>();
 	
-	public Block createBlock() {
+	public Block createBlock(RegisterEvent.RegisterHelper<Block> helper) {
 		try {
 			doInit(); // Prime the block model
 		} catch (Exception x) {
@@ -722,7 +727,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 			return null;
 		}
 		long start = System.currentTimeMillis();
-		Block blk = bf.buildBlockClass(this);
+		Block blk = bf.buildBlockClass(this, helper);
 		long end = System.currentTimeMillis();
 		pc[0]++; pc[1] += (end - start);
 		
@@ -736,21 +741,26 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		}		
 	}
 
-	public Block registerBlock(Block block) {
+	public Block registerBlock(Block block, RegisterEvent.RegisterHelper<Block> helper) {
 		BlockItem itemBlock = new BlockItem(block, new Item.Properties());
-		WesterosBlocks.log.info("BLOCK REGISTERED: {}", itemBlock);
-		WesterosBlocks.BLOCKS.register(this.blockName, () -> block);
-		WesterosBlocks.ITEMS.register(this.blockName, () -> itemBlock);
-		AuxileryUtils.registerCreativeTab(itemBlock, getCreativeTab());
+		helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, this.blockName), block);
+		helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, this.blockName), itemBlock.getBlock());
+//		WesterosBlocks.BLOCKS.register(this.blockName, () -> block);
+//		WesterosBlocks.ITEMS.register(this.blockName, () -> itemBlock);
+//		AuxileryUtils.registerCreativeTab(itemBlock, getCreativeTab());
 		return block;
 	}
 
-	public void registerWallOrFloorBlock(Block floorblock, Block wallblock) {
+	public void registerWallOrFloorBlock(Block floorblock, Block wallblock, RegisterEvent.RegisterHelper<Block> helper) {
 		BlockItem itemBlock = new StandingAndWallBlockItem(floorblock, wallblock, new Item.Properties(), Direction.DOWN);
-		WesterosBlocks.BLOCKS.register(this.blockName, () -> floorblock);
-		WesterosBlocks.BLOCKS.register("wall_" + this.blockName, () -> wallblock);
-		WesterosBlocks.ITEMS.register(this.blockName, () -> itemBlock);
-		AuxileryUtils.registerCreativeTab(itemBlock, getCreativeTab());
+		helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, this.blockName), floorblock);
+		helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, "wall_" + this.blockName), wallblock);
+		helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, this.blockName), itemBlock.getBlock());
+
+//		WesterosBlocks.BLOCKS.register(this.blockName, () -> floorblock);
+//		WesterosBlocks.BLOCKS.register("wall_" + this.blockName, () -> wallblock);
+//		WesterosBlocks.ITEMS.register(this.blockName, () -> itemBlock);
+//		AuxileryUtils.registerCreativeTab(itemBlock, getCreativeTab());
 
 
 
@@ -779,6 +789,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 //		ForgeRegistries.BLOCKS.register(wallblock);
 //		ForgeRegistries.ITEMS.register(itemBlock);
 //	}
+
+
 
 	public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
 		if (FMLEnvironment.dist == Dist.CLIENT) {
@@ -882,13 +894,10 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		CreativeModeTab ct = tabTable.get(creativeTab);
 		if (ct == null) {
 			WesterosBlocks.log.warn(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
-			ct = WesterosBlocksCreativeTab.tabWesterosMisc;
+			// TODO FIXME
+//			ct = WesterosBlocksCreativeTab.tabWesterosMisc;
 		}
 		return ct;
-	}
-
-	public static CreativeModeTab getCreativeTab(String tabName) {
-		return tabTable.get(tabName);
 	}
 
 	public boolean hasCollisionBoxes() {
@@ -1224,6 +1233,10 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 	public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
 			DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, WesterosBlocks.MOD_ID);
 
+	public void registerBlockItem(String blockName, Block block){
+		WesterosBlocks.ITEMS.register(blockName, () -> new BlockItem(block, new Item.Properties()));
+	}
+
 	public static <T extends BlockEntity> void registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<T> BlockEntitySupplier, Block blk)
 	{
 		BlockEntityRec rec = (BlockEntityRec) te_rec.get(name);
@@ -1289,8 +1302,9 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 				itemColors.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
 			}
 			else {
-				ColorMultHandler handler = getStateColorHandler(this, this.blockName);				
-				itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
+				ColorMultHandler handler = getStateColorHandler(this, this.blockName);
+				// TODO FIXME
+//				itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 			}
 		}
 	}
@@ -1316,10 +1330,10 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 		itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 	}
 
-	public void registerSoundEvents() {
+	public void registerSoundEvents(RegisterEvent.RegisterHelper<SoundEvent> helper) {
 		if (this.soundList != null) {
 			for (String snd : this.soundList) {
-				WesterosBlocks.registerSound(snd);
+				WesterosBlocks.registerSound(snd, helper);
 			}
 		}
 	}

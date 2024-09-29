@@ -4,6 +4,7 @@ import com.westeroscraft.westerosblocks.*;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -17,12 +18,13 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.core.BlockPos;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	BlockBehaviour.Properties props = def.makeProperties();
 			// See if we have a state property
 			WesterosBlockDef.StateProperty state = def.buildStateProperty();
@@ -43,7 +45,10 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 					}
 				}
 			}
-        	return def.registerRenderType(def.registerBlock(new WCSlabBlock(props, def, doConnectstate)), false, false);
+			Block blk = new WCSlabBlock(props, def, doConnectstate);
+			helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+			def.registerBlockItem(def.blockName, blk);
+			return def.registerRenderType(blk, false, false);
         }
     }
     protected WesterosBlockDef def;

@@ -10,5 +10,5 @@ public abstract class WesterosBlockFactory {
      * @param def - definition loaded for block
      * @returns block based on definition
      */
-    public abstract Block buildBlockClass(WesterosBlockDef def);
+    public abstract Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper);
 }

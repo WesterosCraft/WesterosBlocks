@@ -80,8 +80,6 @@ public class WesterosBlocks {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WesterosBlocks.MOD_ID);
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, WesterosBlocks.MOD_ID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WesterosBlocks.MOD_ID);
 
 
     // Network setup
@@ -102,6 +100,10 @@ public class WesterosBlocks {
 
     public static WesterosBlockDef[] customBlockDefs;
 
+    public static WesterosBlockDef[] getCustomBlockDefs() {
+        return customBlockDefs;
+    }
+
     public static HashMap<String, Block> customBlocksByName;
 
     public static Block[] customBlocks = new Block[0];
@@ -121,11 +123,8 @@ public class WesterosBlocks {
         // Register the doClientStuff method for modloading
         modEventBus.addListener(this::onCommonSetupEvent);
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::buildContents);
-
         // Register ourselves for server and other game events we are interested in
-//        NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
 
         Path configPath = FMLPaths.CONFIGDIR.get();
 
@@ -143,7 +142,7 @@ public class WesterosBlocks {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         SOUND_EVENTS.register(modEventBus);
-        CREATIVE_MODE_TABS.register(modEventBus);
+        WesterosCreativeModeTabs.register(modEventBus);
         // Register the setup method for tile entities
         WesterosBlockDef.TILE_ENTITY_TYPES.register(modEventBus);
 
@@ -155,6 +154,7 @@ public class WesterosBlocks {
             modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         }
     }
+
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
@@ -292,7 +292,7 @@ public class WesterosBlocks {
                 WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
                 for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
                     for (String bn : map.blockNames) {
-                        Block blk = WesterosBlocks.findBlockByName(bn, MOD_ID);
+                        Block blk = WesterosBlocks.findBlockByName(bn, "minecraft");
                         if (blk != null) {
                             WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event.getBlockColors());
                         }
@@ -305,6 +305,9 @@ public class WesterosBlocks {
     // You can use EventBusSubscriber to automatically subscribe events on the
     // contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
+
+    @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+    public static class RegistryEvents {
         private static boolean didInit = false;
 
         public static void initialize() {
@@ -313,7 +316,7 @@ public class WesterosBlocks {
             // Initialize
             log.info("initialize start");
             WesterosBlockDef.initialize();
-            WesterosBlocksCreativeTab.init();
+//            WesterosBlocksCreativeTab.init();
             // TODO FIXME
             // If snow-in-taiga
 //			if (Config.snowInTaiga) {
@@ -359,20 +362,19 @@ public class WesterosBlocks {
             ModelExport.declareCustomTags(customConfig);
             // Dump block set information
             WesterosBlockSetDef.dumpBlockSets(customConfig.blockSets, modConfigPath);
+            didInit = true;
             log.info("initialize done");
         }
 
         @SubscribeEvent
-        public static void onBlocksRegistry(
-                final RegisterEvent event
-        ) {
+        public static void onBlocksRegistry(final RegisterEvent event) {
             event.register(SOUND_EVENTS.getRegistryKey(), (helper) -> {
                 initialize();
                 for (WesterosBlockDef customBlockDef : customBlockDefs) {
                     if (customBlockDef == null)
                         continue;
                     // Register sound events
-                    customBlockDef.registerSoundEvents();
+                    customBlockDef.registerSoundEvents(helper);
                 }
             });
             event.register(BLOCKS.getRegistryKey(), (helper) -> {
@@ -385,20 +387,23 @@ public class WesterosBlocks {
                 customBlocksByName = new HashMap<String, Block>();
                 HashMap<String, Integer> countsByType = new HashMap<String, Integer>();
                 int blockcount = 0;
-                for (int i = 0; i < customBlockDefs.length; i++) {
-                    if (customBlockDefs[i] == null)
+
+                for (WesterosBlockDef customBlock : customBlockDefs) {
+                    if (customBlock == null)
                         continue;
-                    Block blk = customBlockDefs[i].createBlock();
+                    Block blk = customBlock.createBlock(helper);
+
                     if (blk != null) {
                         blklist.add(blk);
-                        customBlocksByName.put(customBlockDefs[i].blockName, blk);
+                        customBlocksByName.put(customBlock.blockName, blk);
                         // Add to counts
-                        Integer cnt = countsByType.get(customBlockDefs[i].blockType);
+                        Integer cnt = countsByType.get(customBlock.blockType);
                         cnt = (cnt == null) ? 1 : (cnt + 1);
-                        countsByType.put(customBlockDefs[i].blockType, cnt);
+                        countsByType.put(customBlock.blockType, cnt);
                         blockcount++;
+
                     } else {
-                        crash("Invalid block definition for " + customBlockDefs[i].blockName + " - aborted during load()");
+                        crash("Invalid block definition for " + customBlock.blockName + " - aborted during load()");
                         return;
                     }
                 }
@@ -414,38 +419,45 @@ public class WesterosBlocks {
                 menuOverrides = customConfig.menuOverrides;
                 log.info("block register done");
             });
+
         }
 
-        public void buildContents(BuildCreativeModeTabContentsEvent event) {
-            log.info("item register start");
-            if (menuOverrides != null) {
-                for (WesterosItemMenuOverrides mo : menuOverrides) {
-                    if (mo.blockNames != null) {
-                        for (String bn : mo.blockNames) {
-                            Item itm = BuiltInRegistries.ITEM.get(ResourceLocation.parse(bn));
-                            if (itm == null) {
-                                log.warn("Item for " + bn + " not found - cannot override");
-                            } else {
-                                CreativeModeTab tab = null;
-                                if (mo.creativeTab != null) {
-                                    tab = WesterosBlockDef.getCreativeTab(mo.creativeTab);
-                                }
-                                if (event.getTab() == tab) {
-                                    event.accept(itm);
-                                }
-                                log.info("Item for " + bn + " set to tab " + mo.creativeTab);
-                            }
-                        }
-                    }
-                }
-            }
-            Set<BlockItem> blockItems = AuxileryUtils.BLOCK_ITEM_TABS.get(event.getTab());
-            if (blockItems != null) {
-                for (BlockItem item : blockItems) {
-                    event.accept(item);
-                }
-            }
-        }
+//        @SubscribeEvent
+//        public static void buildContents(BuildCreativeModeTabContentsEvent event) {
+//            if (menuOverrides != null) {
+//                for (WesterosItemMenuOverrides mo : menuOverrides) {
+//                    if (mo.blockNames != null) {
+//                        for (String bn : mo.blockNames) {
+//                            log.info("bnname: {}", bn);
+//                            Item itm = BuiltInRegistries.ITEM.get(ResourceLocation.parse(bn));
+//                            if (itm == null) {
+//                                log.warn("Item for " + bn + " not found - cannot override");
+//                            } else {
+//                                CreativeModeTab tab = null;
+//                                if (mo.creativeTab != null) {
+//                                    log.warn("this work?");
+//                                    tab = WesterosBlockDef.getCreativeTab(mo.creativeTab);
+//                                }
+//                                if (event.getTab() == tab) {
+//                                    event.accept(itm);
+//                                }
+//                                log.info("Item for " + bn + " set to tab " + mo.creativeTab);
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//            Set<BlockItem> blockItems = AuxileryUtils.BLOCK_ITEM_TABS.get(event.getTab());
+//            if (blockItems != null) {
+//                for (BlockItem item : blockItems) {
+//                    event.accept(item);
+//                }
+//            }
+//
+//        }
+
+
+    }
 
     public static WesterosBlockConfig loadBlockConfig(String filename) throws BlockConfigNotFoundException, JsonParseException {
         // Read our block definition resource
@@ -507,7 +519,7 @@ public class WesterosBlocks {
     public static Block findBlockByName(String blkname, String namespace) {
         Block blk = customBlocksByName.get(blkname);
         if (blk != null) return blk;
-        ResourceLocation rl = ResourceLocation.fromNamespaceAndPath(namespace, blkname);
+        ResourceLocation rl = ResourceLocation.parse(blkname);
         if (rl.getNamespace().equals(namespace)) {
             blk = customBlocksByName.get(rl.getPath());
         }
@@ -543,14 +555,15 @@ public class WesterosBlocks {
 
     private static HashMap<String, SoundEvent> registered_sounds = new HashMap<String, SoundEvent>();
 
-    public static SoundEvent registerSound(String soundName) {
+    public static SoundEvent registerSound(String soundName, RegisterEvent.RegisterHelper<SoundEvent> helper) {
         SoundEvent event = registered_sounds.get(soundName);
         if (event == null) {
-            ResourceLocation location =  ResourceLocation.fromNamespaceAndPath(MOD_ID, soundName);
+            ResourceLocation location = ResourceLocation.fromNamespaceAndPath(MOD_ID, soundName);
             event = SoundEvent.createVariableRangeEvent(location);
-            SoundEvent finalEvent = event;
-            SOUND_EVENTS.register(soundName, () -> finalEvent);
-            registered_sounds.put(soundName, finalEvent);
+
+//            SOUND_EVENTS.register(soundName, () -> finalEvent);
+            helper.register(location, event);
+            registered_sounds.put(soundName, event);
         }
         return event;
     }

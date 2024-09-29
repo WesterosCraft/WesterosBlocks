@@ -1940,7 +1940,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Light Grey",
       "randomTextures": [
         {"textures": {"all": "cobblestone/light_grey/all1"}, "weight": 5},
@@ -1958,7 +1958,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Light Grey",
       "textures": {
         "all": "cobblestone_dark/light_grey/all"
@@ -2076,7 +2076,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone White",
       "textures": {
         "all": "cobblestone/white/all"
@@ -2090,7 +2090,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone White",
       "textures": {
         "all": "cobblestone_dark/white/all"
@@ -2191,7 +2191,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Reach",
       "randomTextures": [
         {"textures": {"all": "cobblestone/reach/all1"}, "weight": 5},
@@ -2209,7 +2209,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Reach",
       "textures": {
         "all": "cobblestone_dark/reach/all"
@@ -2395,7 +2395,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Sandy Pink",
       "randomTextures": [
         {"textures": {"all": "cobblestone/sandy_pink/all1"}, "weight": 5},
@@ -2417,7 +2417,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Sandy Pink",
       "textures": {
         "all": "cobblestone_dark/sandy_pink/all"
@@ -2501,7 +2501,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Dun",
       "textures": {
         "all": "cobblestone_dark/dun/all"
@@ -2585,7 +2585,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Pale Red",
       "textures": {
         "all": "cobblestone_dark/pale_red/all"
@@ -2652,7 +2652,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Red",
       "randomTextures": [
         {"textures": {"all": "cobblestone/red/all1"}, "weight": 5},
@@ -2931,7 +2931,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Oldtown",
       "textures": {
         "all": "cobblestone/oldtown/all"
@@ -2945,7 +2945,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Oldtown",
       "textures": {
         "all": "cobblestone_dark/oldtown/all"
@@ -3063,7 +3063,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Arbor",
       "randomTextures": [
         {"textures": {"all": "cobblestone/arbor/all1"}, "weight": 5},
@@ -3081,7 +3081,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Arbor",
       "textures": {
         "all": "cobblestone_dark/arbor/all"
@@ -3290,7 +3290,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Westerlands",
       "randomTextures": [
         {"textures": {"all": "cobblestone/westerlands/all1"}, "weight": 5},
@@ -3308,7 +3308,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Westerlands",
       "textures": {
         "all": "cobblestone_dark/westerlands/all"
@@ -3481,7 +3481,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Stormlands",
       "randomTextures": [
         {"textures": {"all": "cobblestone/stormlands/all1"}, "weight": 5},
@@ -3499,7 +3499,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Stormlands Mossy",
       "randomTextures": [
         {"textures": {"all": "cobblestone/stormlands_mossy/all1"}, "weight": 5},
@@ -3517,7 +3517,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Dark Cobblestone Stormlands",
       "textures": {
         "all": "cobblestone_dark/stormlands/all"
@@ -3794,7 +3794,7 @@
       "material": "rock",
       "resistance": 10,
       "harvestLevel": [{ "tool": "pickaxe","level": 1 }],
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "baseLabel": "Cobblestone Terracotta",
       "randomTextures": [
         {"textures": {"all": "cobblestone/terracotta/all1"}, "weight": 5},
@@ -8628,7 +8628,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosPanellingCarvings",
+      "creativeTab": "westeros_panelling_carvings_tab",
       "label": "Grey Keystone",
       "colorMult": "textures/colormap/smallstonebrick",
       "textures": [
@@ -8642,7 +8642,7 @@
       "stepSound": "stone",
       "material": "rock",
       "resistance": 10,
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "label": "Sandy Stone Slabs",
       "randomTextures": [
         {"textures": ["sandy_stone/sandy_stone_0"]},
@@ -25308,7 +25308,7 @@
       "stepSound": "stone",
       "material": "ground",
       "resistance": 2,
-      "creativeTab": "WesterosCobblestone",
+      "creativeTab": "westeros_cobblestone_tab",
       "label": "Flagstone",
       "textures": [
         "stone_block/flagstone"

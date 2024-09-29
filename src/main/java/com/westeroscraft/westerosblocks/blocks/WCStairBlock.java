@@ -3,6 +3,7 @@ package com.westeroscraft.westerosblocks.blocks;
 import java.util.stream.IntStream;
 
 import com.westeroscraft.westerosblocks.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
@@ -34,12 +35,13 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCStairBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
 			BlockBehaviour.Properties props = def.makeProperties();
 			// See if we have a state property
 			WesterosBlockDef.StateProperty state = def.buildStateProperty();
@@ -66,7 +68,11 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
 					}
                 }
             }
-            return def.registerRenderType(def.registerBlock(new WCStairBlock(props, def, doUnconnect, doConnectstate)), false, false);
+
+            Block blk = new WCStairBlock(props, def, doUnconnect, doConnectstate);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
     }
 

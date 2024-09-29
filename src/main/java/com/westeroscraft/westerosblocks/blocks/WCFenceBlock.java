@@ -2,7 +2,8 @@ package com.westeroscraft.westerosblocks.blocks;
 
 import javax.annotation.Nullable;
 
-import com.westeroscraft.westerosblocks.AuxMaterial;
+import com.westeroscraft.westerosblocks.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
@@ -22,15 +23,13 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.phys.BlockHitResult;
 
-import com.westeroscraft.westerosblocks.WesterosBlockDef;
-import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
-import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
         	BlockBehaviour.Properties props = def.makeProperties();
 			// See if we have a state property
 			WesterosBlockDef.StateProperty state = def.buildStateProperty();
@@ -51,7 +50,10 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
                     }
                 }
             }
-        	return def.registerRenderType(def.registerBlock(new WCFenceBlock(props, def, doUnconnect)), false, false);
+            Block blk = new WCFenceBlock(props, def, doUnconnect);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
     };
     

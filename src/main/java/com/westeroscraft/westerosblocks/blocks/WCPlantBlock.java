@@ -1,5 +1,7 @@
 package com.westeroscraft.westerosblocks.blocks;
 
+import com.westeroscraft.westerosblocks.WesterosBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
@@ -30,6 +32,7 @@ import net.minecraft.tags.FluidTags;
 import com.westeroscraft.westerosblocks.WesterosBlockDef;
 import com.westeroscraft.westerosblocks.WesterosBlockLifecycle;
 import com.westeroscraft.westerosblocks.WesterosBlockFactory;
+import net.neoforged.neoforge.registries.RegisterEvent;
 
 import javax.annotation.Nullable;
 
@@ -37,20 +40,24 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
-        public Block buildBlockClass(WesterosBlockDef def) {
-        	BlockBehaviour.Properties props = def.makeProperties().noCollission().instabreak();
-        	// See if we have a state property
-        	WesterosBlockDef.StateProperty state = def.buildStateProperty();
-        	if (state != null) {
-        		tempSTATE = state;
-        	}        	
+        public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
+            BlockBehaviour.Properties props = def.makeProperties().noCollission().instabreak();
+            // See if we have a state property
+            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            if (state != null) {
+                tempSTATE = state;
+            }
             String t = def.getType();
             if ((t != null) && (t.indexOf(WesterosBlockDef.LAYER_SENSITIVE) >= 0)) {
-            	tempLAYERS = BlockStateProperties.LAYERS;
+                tempLAYERS = BlockStateProperties.LAYERS;
             }
-        	return def.registerRenderType(def.registerBlock(new WCPlantBlock(props, def)), false, false);
+            Block blk = new WCPlantBlock(props, def);
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+            return def.registerRenderType(blk, false, false);
         }
-    }    
+    }
+
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
@@ -78,55 +85,56 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
         }
         BlockState defbs = this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false));
         if (STATE != null) {
-        	defbs = defbs.setValue(STATE, STATE.defValue);
+            defbs = defbs.setValue(STATE, STATE.defValue);
         }
-    	if (LAYERS != null) {        		
-    		defbs = defbs.setValue(LAYERS, 8);
-    	}
-		this.registerDefaultState(defbs);
+        if (LAYERS != null) {
+            defbs = defbs.setValue(LAYERS, 8);
+        }
+        this.registerDefaultState(defbs);
     }
+
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
+
     @Override
     @Nullable
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-    	BlockState bs = super.getStateForPlacement(ctx);
-    	if (bs == null) return null;
+        BlockState bs = super.getStateForPlacement(ctx);
+        if (bs == null) return null;
         FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
         bs = bs.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
         if (STATE != null) {
-        	bs = bs.setValue(STATE, STATE.defValue);
+            bs = bs.setValue(STATE, STATE.defValue);
         }
         if (LAYERS != null) {
-        	BlockState below = ctx.getLevel().getBlockState(ctx.getClickedPos().relative(Direction.DOWN));
-        	if ((below != null) && (below.hasProperty(BlockStateProperties.LAYERS))) {
-        		Block blk = below.getBlock();
-        		Integer layer = below.getValue(BlockStateProperties.LAYERS);
-        		// See if soft layer
-        		if ((blk instanceof SnowLayerBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock)blk).softLayer)) {
-        			layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
-        		}
-        		bs = bs.setValue(LAYERS, layer);
-        	}
-        	else if ((below != null) && (below.getBlock() instanceof SlabBlock)) {
-        		SlabType slabtype = below.getValue(BlockStateProperties.SLAB_TYPE);
-        		if (slabtype == SlabType.BOTTOM) bs = bs.setValue(LAYERS, 4);
-        	}
+            BlockState below = ctx.getLevel().getBlockState(ctx.getClickedPos().relative(Direction.DOWN));
+            if ((below != null) && (below.hasProperty(BlockStateProperties.LAYERS))) {
+                Block blk = below.getBlock();
+                Integer layer = below.getValue(BlockStateProperties.LAYERS);
+                // See if soft layer
+                if ((blk instanceof SnowLayerBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock) blk).softLayer)) {
+                    layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
+                }
+                bs = bs.setValue(LAYERS, layer);
+            } else if ((below != null) && (below.getBlock() instanceof SlabBlock)) {
+                SlabType slabtype = below.getValue(BlockStateProperties.SLAB_TYPE);
+                if (slabtype == SlabType.BOTTOM) bs = bs.setValue(LAYERS, 4);
+            }
         }
-    	return bs;
+        return bs;
     }
 
     @SuppressWarnings("deprecation")
-	@Override
+    @Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
     @Override
     protected boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
-        switch(pathComputationType) {
+        switch (pathComputationType) {
             case LAND:
                 return false;
             case WATER:
@@ -141,21 +149,21 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateDefinition) {
-    	if (tempSTATE != null) {
-    		STATE = tempSTATE;
-    		tempSTATE = null;
-    	}
-    	if (tempLAYERS != null) {
-    		LAYERS = tempLAYERS;
-    		tempLAYERS = null;
-    	}
-    	if (STATE != null) {
-	       stateDefinition.add(STATE);
-    	}
-    	if (LAYERS != null) {
-    		stateDefinition.add(LAYERS);
-    	}
-    	stateDefinition.add(WATERLOGGED);
+        if (tempSTATE != null) {
+            STATE = tempSTATE;
+            tempSTATE = null;
+        }
+        if (tempLAYERS != null) {
+            LAYERS = tempLAYERS;
+            tempLAYERS = null;
+        }
+        if (STATE != null) {
+            stateDefinition.add(STATE);
+        }
+        if (LAYERS != null) {
+            stateDefinition.add(LAYERS);
+        }
+        stateDefinition.add(WATERLOGGED);
     }
 
     @Override
@@ -165,9 +173,8 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
             level.setBlock(pos, state, 10);
             level.levelEvent(player, 1006, pos, 0);
             return InteractionResult.sidedSuccess(level.isClientSide);
-        }
-        else {
-			return InteractionResult.PASS;
+        } else {
+            return InteractionResult.PASS;
         }
     }
 
@@ -179,25 +186,25 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
 //      	return state;
 //	}
 
-	@Override
-	public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-		return state.getFluidState().isEmpty();
+    @Override
+    public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+        return state.getFluidState().isEmpty();
     }
-	
-	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
-		if (LAYERS != null) {
-			return SHAPE_BY_LAYER[state.getValue(LAYERS)];
-		}
-		else {
-			return Shapes.block();
-		}
-	}
 
-    private static String[] TAGS = { "flowers" };
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
+        if (LAYERS != null) {
+            return SHAPE_BY_LAYER[state.getValue(LAYERS)];
+        } else {
+            return Shapes.block();
+        }
+    }
+
+    private static String[] TAGS = {"flowers"};
+
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
-    }    
-	
+        return TAGS;
+    }
+
 }
