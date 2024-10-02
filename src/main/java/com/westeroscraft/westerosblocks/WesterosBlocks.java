@@ -360,8 +360,6 @@ public class WesterosBlocks {
             }
             // Register custom tags
             ModelExport.declareCustomTags(customConfig);
-            // Dump block set information
-            WesterosBlockSetDef.dumpBlockSets(customConfig.blockSets, modConfigPath);
             didInit = true;
             log.info("initialize done");
         }
@@ -409,6 +407,9 @@ public class WesterosBlocks {
                 }
                 customBlocks = blklist.toArray(new Block[blklist.size()]);
                 WesterosBlockDef.dumpBlockPerf();
+                // Dump information for external mods
+                WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
+                WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks, modConfigPath);
                 // Brag on block type counts
                 log.info("Count of custom blocks by type:");
                 for (String type : countsByType.keySet()) {
