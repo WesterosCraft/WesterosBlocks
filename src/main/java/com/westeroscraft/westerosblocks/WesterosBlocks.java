@@ -42,6 +42,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.mojang.brigadier.CommandDispatcher;
+
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.commands.NVCommand;
 import com.westeroscraft.westerosblocks.commands.PTimeCommand;
@@ -326,6 +327,7 @@ public class WesterosBlocks {
 	// Event bus for receiving Registry Events)
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	public static class RegistryEvents {
+
 		private static boolean didInit = false;
 		public static void initialize() {
 			if (didInit) return;
@@ -376,10 +378,10 @@ public class WesterosBlocks {
 			}
 			// Register custom tags
 			ModelExport.declareCustomTags(customConfig);
-			// Dump block set information
-			WesterosBlockSetDef.dumpBlockSets(customConfig.blockSets, modConfigPath);
+
 			log.info("initialize done");
 		}
+
 		@SubscribeEvent
 		public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
 			log.info("block register start");
@@ -413,16 +415,24 @@ public class WesterosBlocks {
 			}
 			customBlocks = blklist.toArray(new Block[blklist.size()]);
 			WesterosBlockDef.dumpBlockPerf();
+
+			// Dump information for external mods
+			WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
+			WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks, modConfigPath);
+
 			// Brag on block type counts
 			log.info("Count of custom blocks by type:");
 			for (String type : countsByType.keySet()) {
 				log.info(type + ": " + countsByType.get(type) + " blocks");				
 			}
 			log.info("TOTAL: " + blockcount + " blocks");
+
 			colorMaps = customConfig.colorMaps;
 			menuOverrides = customConfig.menuOverrides;
+
 			log.info("block register done");
 		}
+
 		@SubscribeEvent
 		public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
 			log.info("item register start");
