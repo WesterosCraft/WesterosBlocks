@@ -50,6 +50,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
@@ -371,8 +372,9 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         @OnlyIn(Dist.CLIENT)
         public int getItemColor(ItemStack stack, int tintIndex) {
             BlockColors blockColors = Minecraft.getInstance().getBlockColors();
-            BlockState BlockState = ((BlockItem) stack.getItem()).getBlock().defaultBlockState();
-            return blockColors.getColor(BlockState, null, null, tintIndex);
+            BlockState blockState = ((BlockItem) stack.getItem()).getBlock().defaultBlockState();
+
+            return blockColors.getColor(blockState, null, null, tintIndex);
         }
 
         @OnlyIn(Dist.CLIENT)
@@ -1145,13 +1147,17 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     public static ColorMultHandler getColorHandler(String hnd, String blockName) {
         String hndid = hnd.toLowerCase();
         ColorMultHandler cmh = colorMultTable.get(hndid);
+
+
         if (cmh == null) {
+
             // See if color code
             if ((hndid.length() == 7) && (hndid.charAt(0) == '#')) {
                 try {
                     cmh = new FixedColorMultHandler(Integer.parseInt(hndid.substring(1), 16));
                     colorMultTable.put(hndid, cmh);
                 } catch (NumberFormatException nfx) {
+                    WesterosBlocks.log.error("Invalid color code for block " + blockName + ": " + hnd, nfx);
                 }
             }
             // See if resource
@@ -1257,7 +1263,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     // Handle registration of tint handling and other client rendering
     @OnlyIn(Dist.CLIENT)
-    public void registerBlockColorHandler(Block blk, BlockColors blockColors) {
+    public void registerBlockColorHandler(Block blk, RegisterColorHandlersEvent.Block event) {
         if (this.isTinted()) {
             if (this.stateProp != null) {
                 final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
@@ -1265,44 +1271,21 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
                     ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
                     cmmap.put(rec.stateID, handler);
                 }
-                blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) ->
+                event.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) ->
                         cmmap.get(state.getValue(this.stateProp)).getColor(state, world, pos, txtindx), blk);
                 final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
             } else {
                 ColorMultHandler handler = getStateColorHandler(this, this.blockName);
-
-                blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
-                        .getColor(state, world, pos, txtindx), blk);
+                event.register(handler::getColor, blk);
             }
         }
     }
 
     // Handle registration of tint handling and other client rendering
     @OnlyIn(Dist.CLIENT)
-    public void registerItemColorHandler(Block blk, ItemColors itemColors) {
-        if (this.isTinted()) {
-            if (this.stateProp != null) {
-                final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
-                for (WesterosBlockStateRecord rec : this.states) {
-                    ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
-                    cmmap.put(rec.stateID, handler);
-                }
-                final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
-                itemColors.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
-            } else {
-                ColorMultHandler handler = getStateColorHandler(this, this.blockName);
-                // TODO FIXME
-//				itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
-            }
-        }
-    }
-
-    // Handle registration of tint handling and other client rendering
-    @OnlyIn(Dist.CLIENT)
-    public static void registerVanillaBlockColorHandler(String blockName, Block blk, String colorMult, BlockColors blockColors) {
+    public static void registerVanillaBlockColorHandler(String blockName, Block blk, String colorMult, RegisterColorHandlersEvent.Block event) {
         ColorMultHandler handler = getColorHandler(colorMult, blockName);
-        blockColors.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
-                .getColor(state, world, pos, txtindx), blk);
+        event.register(handler::getColor, blk);
         // If water shader, override global one too
         if (blockName.equals("minecraft:water") && (handler instanceof CustomColorMultHandler)) {
             final CustomColorMultHandler cchandler = (CustomColorMultHandler) handler;    // crappy java lambda limitation workaround
@@ -1313,9 +1296,29 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     // Handle registration of tint handling and other client rendering
     @OnlyIn(Dist.CLIENT)
-    public static void registerVanillaItemColorHandler(String blockName, Block blk, String colorMult, ItemColors itemColors) {
+    public void registerItemColorHandler(Block blk, RegisterColorHandlersEvent.Item event) {
+        if (this.isTinted()) {
+            if (this.stateProp != null) {
+                final Map<String, ColorMultHandler> cmmap = new HashMap<>();
+                for (WesterosBlockStateRecord rec : this.states) {
+                    ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
+                    cmmap.put(rec.stateID, handler);
+                }
+                final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
+                event.register(itemHandler::getItemColor, blk);
+            } else {
+                ColorMultHandler handler = getStateColorHandler(this, this.blockName);
+				event.register(handler::getItemColor, blk);
+            }
+        }
+    }
+
+    // Handle registration of tint handling and other client rendering
+    @OnlyIn(Dist.CLIENT)
+    public static void registerVanillaItemColorHandler(String blockName, Block blk, String colorMult, RegisterColorHandlersEvent.Item event) {
         ColorMultHandler handler = getColorHandler(colorMult, blockName);
-        itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
+
+        event.register(handler::getItemColor, blk);
     }
 
     public void registerSoundEvents(RegisterEvent.RegisterHelper<SoundEvent> helper) {

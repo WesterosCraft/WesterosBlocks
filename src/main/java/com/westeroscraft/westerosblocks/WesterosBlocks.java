@@ -1,20 +1,15 @@
 package com.westeroscraft.westerosblocks;
 
-import com.westeroscraft.westerosblocks.blocks.AuxileryUtils;
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.color.block.BlockColors;
+import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.CrashReport;
 import net.minecraft.ReportedException;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
@@ -33,8 +28,6 @@ import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
@@ -45,13 +38,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
-import com.mojang.brigadier.CommandDispatcher;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
-import com.westeroscraft.westerosblocks.commands.NVCommand;
-import com.westeroscraft.westerosblocks.commands.PTimeCommand;
-import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
-import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -78,26 +66,11 @@ public class WesterosBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(WesterosBlocks.MOD_ID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WesterosBlocks.MOD_ID);
-    public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
-            DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, WesterosBlocks.MOD_ID);
+    public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, WesterosBlocks.MOD_ID);
 
-
-    // Network setup
-    // TODO FIXME NETOWRKING
-//	public static SimpleChannel simpleChannel;    // used to transmit your network messages
-    public static final String CHANNEL = "wbchannel";
     public static final String MESSAGE_PROTOCOL_VERSION = "5.10";
-//    public static final ResourceLocation simpleChannelRL =  ResourceLocation("westerosblocks", CHANNEL);
-
-    // Directly reference a log4j logger.
     public static final Logger log = LogManager.getLogger();
-
     public static WesterosBlockConfig customConfig;
-
-    // TODO FIXME
-    // Says where the client and server 'proxy' code is loaded.
-//	public static Proxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> Proxy::new);
-
     public static WesterosBlockDef[] customBlockDefs;
 
     public static WesterosBlockDef[] getCustomBlockDefs() {
@@ -105,29 +78,19 @@ public class WesterosBlocks {
     }
 
     public static HashMap<String, Block> customBlocksByName;
-
     public static Block[] customBlocks = new Block[0];
-
     public static Path modConfigPath;
-
     public static WesterosBlockColorMap[] colorMaps;
-
     public static WesterosItemMenuOverrides[] menuOverrides;
 
     public WesterosBlocks(IEventBus modEventBus, ModContainer modContainer) {
-
-        // Register the doClientStuff method for modloading
         modEventBus.addListener(this::doClientStuff);
-        // Register the setup method for load complete
         modEventBus.addListener(this::loadComplete);
-        // Register the doClientStuff method for modloading
         modEventBus.addListener(this::onCommonSetupEvent);
 
-        // Register ourselves for server and other game events we are interested in
         NeoForge.EVENT_BUS.register(this);
 
         Path configPath = FMLPaths.CONFIGDIR.get();
-
         modConfigPath = Paths.get(configPath.toAbsolutePath().toString(), MOD_ID);
 
         // Create the config folder
@@ -143,10 +106,7 @@ public class WesterosBlocks {
         ITEMS.register(modEventBus);
         SOUND_EVENTS.register(modEventBus);
         WesterosCreativeModeTabs.register(modEventBus);
-        // Register the setup method for tile entities
         WesterosBlockDef.TILE_ENTITY_TYPES.register(modEventBus);
-
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         // This will use NeoForge's ConfigurationScreen to display this mod's configs
@@ -155,27 +115,18 @@ public class WesterosBlocks {
         }
     }
 
-
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         log.info("Got game settings {}", event.description());
     }
 
-    @SubscribeEvent
-    public void onRegisterCommandEvent(RegisterCommandsEvent event) {
-        CommandDispatcher<CommandSourceStack> commandDispatcher = event.getDispatcher();
-        PTimeCommand.register(commandDispatcher);
-        PWeatherCommand.register(commandDispatcher);
-        NVCommand.register(commandDispatcher);
-    }
-
-    private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
+    private void loadComplete(final FMLLoadCompleteEvent event)
     {
         // Initialize with standard block IDs
-        if (Config.blockDevMode) {
-            log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/"
-                    + MOD_ID);
-        }
+//        if (Config.blockDevMode) {
+//            log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/"
+//                    + MOD_ID);
+//        }
         // TODO FIXME
         // Do blocks state export here
 //        if (Config.blockDevMode) {
@@ -254,14 +205,14 @@ public class WesterosBlocks {
     }
 
     @EventBusSubscriber(modid = WesterosBlocks.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
-    public class ColorHandler {
+    public static class ColorHandler {
         @SubscribeEvent
         public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
             for (Block blk : WesterosBlocks.customBlocks) {
                 if (blk instanceof WesterosBlockLifecycle) {
                     WesterosBlockDef def = ((WesterosBlockLifecycle) blk).getWBDefinition();
                     if (def != null) {
-                        def.registerItemColorHandler(blk, Minecraft.getInstance().getItemColors());
+                        def.registerItemColorHandler(blk, event);
                     }
                 }
             }
@@ -270,31 +221,30 @@ public class WesterosBlocks {
                 for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
                     for (String bn : map.blockNames) {
                         Block blk = WesterosBlocks.findBlockByName(bn, MOD_ID);
-                        if (blk != null) {
-                            WesterosBlockDef.registerVanillaItemColorHandler(bn, blk, map.colorMult, event.getItemColors());
-                        }
+                        WesterosBlockDef.registerVanillaItemColorHandler(bn, blk, map.colorMult, event);
                     }
                 }
             }
         }
 
         @SubscribeEvent
-        public static void registerBlockColors(RegisterColorHandlersEvent.Item event) {
+        public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
             for (Block blk : WesterosBlocks.customBlocks) {
                 if (blk instanceof WesterosBlockLifecycle) {
                     WesterosBlockDef def = ((WesterosBlockLifecycle) blk).getWBDefinition();
                     if (def != null) {
-                        def.registerBlockColorHandler(blk, Minecraft.getInstance().getBlockColors());
+                        def.registerBlockColorHandler(blk, event);
                     }
                 }
             }
+
             if (WesterosBlocks.colorMaps != null) {
                 WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
                 for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
                     for (String bn : map.blockNames) {
                         Block blk = WesterosBlocks.findBlockByName(bn, "minecraft");
                         if (blk != null) {
-                            WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event.getBlockColors());
+                            WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event);
                         }
                     }
                 }
@@ -350,11 +300,11 @@ public class WesterosBlocks {
             log.info("Loaded " + customBlockDefs.length + " block definitions");
 
             // Validate custom block definitions against old copy (if one exists)
-            if (validateDefs(customBlockDefs) == false) {
+            if (!validateDefs(customBlockDefs)) {
                 log.error("Some block names or states have been removed relative to oldWesterosBlocks.json");
             }
 
-            if (WesterosBlockDef.sanityCheck(customBlockDefs) == false) {
+            if (!WesterosBlockDef.sanityCheck(customBlockDefs)) {
                 crash("WesterosBlocks.json failed sanity check");
                 return;
             }
