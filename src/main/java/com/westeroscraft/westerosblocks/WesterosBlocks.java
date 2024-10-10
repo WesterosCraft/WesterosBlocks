@@ -178,71 +178,71 @@ public class WesterosBlocks {
         }
         // TODO FIXME
         // Do blocks state export here
-//        if (Config.blockDevMode) {
-//            // Clean up old export
-//            deleteDirectory(new File(modConfigPath.toFile(), "assets"));
-//            deleteDirectory(new File(modConfigPath.toFile(), "data"));
-//
-//            for (int i = 0; i < customBlockDefs.length; i++) {
-//                if (customBlockDefs[i] == null)
-//                    continue;
-//                Block blk = customBlocksByName.get(customBlockDefs[i].blockName);
-//                if (blk != null) {
-//                    ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
-//                    if (exp != null) {
-//                        try {
-//                            exp.doBlockStateExport();
-//                            exp.doModelExports();
-//                            // If list, roll through choices as legacyBlockID
-//                            if (customBlockDefs[i].legacyBlockIDList != null) {
-//                                for (String legacyid : customBlockDefs[i].legacyBlockIDList) {
-//                                    customBlockDefs[i].legacyBlockID = legacyid;
-//                                    exp.doWorldConverterMigrate();
-//                                    ModelExport.addWorldConverterItemMap(legacyid, customBlockDefs[i].blockName);
-//                                }
-//                                customBlockDefs[i].legacyBlockID = null;
-//                            } else if (customBlockDefs[i].legacyBlockID != null) {
-//                                exp.doWorldConverterMigrate();
-//                                ModelExport.addWorldConverterItemMap(customBlockDefs[i].legacyBlockID, customBlockDefs[i].blockName);
-//                            }
-//                        } catch (IOException iox) {
-//                            log.warn(String.format("Error exporting block %s - %s", blk.getName(), iox));
-//                        }
-//                    }
-//                }
-//            }
-//            try {
-//                ModelExport.writeNLSFile(modConfigPath);
-//            } catch (IOException iox) {
-//                log.warn(String.format("Error writing NLS - %s", iox));
-//            }
-//            try {
-//                ModelExport.writeTagDataFiles(modConfigPath);
-//            } catch (IOException iox) {
-//                log.warn(String.format("Error writing tag data files - %s", iox));
-//            }
-//            try {
-//                ModelExport.writeCustomTagDataFiles(modConfigPath, customConfig);
-//            } catch (IOException iox) {
-//                log.warn(String.format("Error writing custom tag data files - %s", iox));
-//            }
-//            try {
-//                ModelExport.writeWorldConverterFile(modConfigPath);
-//            } catch (IOException iox) {
-//                log.warn(String.format("Error writing WorldConfig mapping - %s", iox));
-//            }
-//            try {
-//                ModelExport.writeDynmapOverridesFile(modConfigPath);
-//            } catch (IOException iox) {
-//                log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
-//            }
-//            try {
-//                ModelExport.writeWorldConverterItemMapFile(modConfigPath);
-//            } catch (IOException iox) {
-//                log.warn(String.format("Error writing WorldConfig item mapping - %s", iox));
-//            }
-//        }
-//		proxy.initRenderRegistry();
+        if (Config.blockDevMode) {
+            // Clean up old export
+            deleteDirectory(new File(modConfigPath.toFile(), "assets"));
+            deleteDirectory(new File(modConfigPath.toFile(), "data"));
+
+            for (int i = 0; i < customBlockDefs.length; i++) {
+                if (customBlockDefs[i] == null)
+                    continue;
+                Block blk = customBlocksByName.get(customBlockDefs[i].blockName);
+                if (blk != null) {
+                    ModelExport exp = ModelExportFactory.forBlock(blk, customBlockDefs[i], modConfigPath.toFile());
+                    if (exp != null) {
+                        try {
+                            exp.doBlockStateExport();
+                            exp.doModelExports();
+                            // If list, roll through choices as legacyBlockID
+                            if (customBlockDefs[i].legacyBlockIDList != null) {
+                                for (String legacyid : customBlockDefs[i].legacyBlockIDList) {
+                                    customBlockDefs[i].legacyBlockID = legacyid;
+                                    exp.doWorldConverterMigrate();
+                                    ModelExport.addWorldConverterItemMap(legacyid, customBlockDefs[i].blockName);
+                                }
+                                customBlockDefs[i].legacyBlockID = null;
+                            } else if (customBlockDefs[i].legacyBlockID != null) {
+                                exp.doWorldConverterMigrate();
+                                ModelExport.addWorldConverterItemMap(customBlockDefs[i].legacyBlockID, customBlockDefs[i].blockName);
+                            }
+                        } catch (IOException iox) {
+                            log.warn(String.format("Error exporting block %s - %s", blk.getName(), iox));
+                        }
+                    }
+                }
+            }
+            try {
+                ModelExport.writeNLSFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing NLS - %s", iox));
+            }
+            try {
+                ModelExport.writeTagDataFiles(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing tag data files - %s", iox));
+            }
+            try {
+                ModelExport.writeCustomTagDataFiles(modConfigPath, customConfig);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing custom tag data files - %s", iox));
+            }
+            try {
+                ModelExport.writeWorldConverterFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing WorldConfig mapping - %s", iox));
+            }
+            try {
+                ModelExport.writeDynmapOverridesFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing Dynmap Overrides - %s", iox));
+            }
+            try {
+                ModelExport.writeWorldConverterItemMapFile(modConfigPath);
+            } catch (IOException iox) {
+                log.warn(String.format("Error writing WorldConfig item mapping - %s", iox));
+            }
+        }
+        ClientSetup.initRenderRegistry();
     }
 
     public static void crash(Exception x, String msg) {
