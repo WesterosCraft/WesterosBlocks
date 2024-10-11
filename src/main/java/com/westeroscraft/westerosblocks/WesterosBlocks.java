@@ -36,6 +36,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.server.ServerStoppingEvent;
+import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import org.apache.logging.log4j.LogManager;
@@ -242,6 +243,7 @@ public class WesterosBlocks {
                 log.warn(String.format("Error writing WorldConfig item mapping - %s", iox));
             }
         }
+
         ClientSetup.initRenderRegistry();
     }
 
@@ -261,7 +263,7 @@ public class WesterosBlocks {
                 if (blk instanceof WesterosBlockLifecycle) {
                     WesterosBlockDef def = ((WesterosBlockLifecycle) blk).getWBDefinition();
                     if (def != null) {
-                        def.registerItemColorHandler(blk, Minecraft.getInstance().getItemColors());
+                        def.registerItemColorHandler(blk, event);
                     }
                 }
             }
@@ -271,7 +273,7 @@ public class WesterosBlocks {
                     for (String bn : map.blockNames) {
                         Block blk = WesterosBlocks.findBlockByName(bn, MOD_ID);
                         if (blk != null) {
-                            WesterosBlockDef.registerVanillaItemColorHandler(bn, blk, map.colorMult, event.getItemColors());
+                            WesterosBlockDef.registerVanillaItemColorHandler(bn, blk, map.colorMult, event);
                         }
                     }
                 }
@@ -279,12 +281,12 @@ public class WesterosBlocks {
         }
 
         @SubscribeEvent
-        public static void registerBlockColors(RegisterColorHandlersEvent.Item event) {
+        public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
             for (Block blk : WesterosBlocks.customBlocks) {
                 if (blk instanceof WesterosBlockLifecycle) {
                     WesterosBlockDef def = ((WesterosBlockLifecycle) blk).getWBDefinition();
                     if (def != null) {
-                        def.registerBlockColorHandler(blk, Minecraft.getInstance().getBlockColors());
+                        def.registerBlockColorHandler(blk, event);
                     }
                 }
             }
@@ -294,7 +296,7 @@ public class WesterosBlocks {
                     for (String bn : map.blockNames) {
                         Block blk = WesterosBlocks.findBlockByName(bn, "minecraft");
                         if (blk != null) {
-                            WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event.getBlockColors());
+                            WesterosBlockDef.registerVanillaBlockColorHandler(bn, blk, map.colorMult, event);
                         }
                     }
                 }
@@ -316,7 +318,6 @@ public class WesterosBlocks {
             // Initialize
             log.info("initialize start");
             WesterosBlockDef.initialize();
-//            WesterosBlocksCreativeTab.init();
             // TODO FIXME
             // If snow-in-taiga
 //			if (Config.snowInTaiga) {
@@ -575,18 +576,6 @@ public class WesterosBlocks {
 
     public void onCommonSetupEvent(FMLCommonSetupEvent event) {
 
-        // TODO FIXME
-//        simpleChannel = ChannelBuilder.named(simpleChannelRL).networkProtocolVersion(1).simpleChannel()
-//                .messageBuilder(PTimeMessage.class, NetworkDirection.PLAY_TO_CLIENT)
-//                .encoder(PTimeMessage::encode)
-//                .decoder(PTimeMessage::decode)
-//                .consumerNetworkThread(ClientMessageHandler::onPTimeMessageReceived)
-//                .add()
-//                .messageBuilder(PWeatherMessage.class, NetworkDirection.PLAY_TO_CLIENT)
-//                .encoder(PWeatherMessage::encode)
-//                .decoder(PWeatherMessage::decode)
-//                .consumerNetworkThread(ClientMessageHandler::onPWeatherMessageReceived)
-//                .add();
     }
 
     // Directory tree delete

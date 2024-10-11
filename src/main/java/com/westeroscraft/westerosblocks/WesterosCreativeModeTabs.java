@@ -78,9 +78,8 @@ public class WesterosCreativeModeTabs {
                         .displayItems((parameters, output) -> {
                             // Add logic here to populate the tab with items
                             // This is where you'd add your blocks/items to the tab
-                            for (WesterosBlockDef def: WesterosBlocks.getCustomBlockDefs()) {
+                            for (WesterosBlockDef def : WesterosBlocks.getCustomBlockDefs()) {
                                 if (def != null && Objects.equals(def.creativeTab, tabName)) {
-                                    WesterosBlocks.log.info("BLOCKNAME: {}", def.blockName);
                                     output.accept(BuiltInRegistries.ITEM.get(ResourceLocation
                                             .fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName)));
                                 }
