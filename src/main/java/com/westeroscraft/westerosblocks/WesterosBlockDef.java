@@ -1291,8 +1291,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
                 event.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
             } else {
                 ColorMultHandler handler = getStateColorHandler(this, this.blockName);
-                // TODO FIXME
-//				itemColors.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
+				event.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
             }
         }
     }
