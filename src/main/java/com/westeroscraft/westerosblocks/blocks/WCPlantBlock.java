@@ -178,7 +178,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
         }
     }
 
-    // TODO FIXME
+//     TODO: not sure if required anymore
 //	@Override
 //	public BlockState getPlant(BlockGetter world, BlockPos pos) {
 //		BlockState state = world.getBlockState(pos);

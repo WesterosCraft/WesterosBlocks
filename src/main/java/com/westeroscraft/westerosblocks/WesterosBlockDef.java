@@ -557,7 +557,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
                 LevelReader rdr = null;
 
                 if (world instanceof RenderChunkRegion) {
-                    // TODO FIXME idk if using Minecraft.getInstance is correct
+                    // TODO: idk if using Minecraft.getInstance is correct
 //					rdr = ((RenderChunkRegion)world).level;
                     rdr = Minecraft.getInstance().level;
                 } else if (world instanceof LevelReader) {
@@ -766,7 +766,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         }
     }
 
-    // TODO: we can use render_type in the model file itself instead
+    // TODO: we can use render_type in the model file itself instead https://docs.neoforged.net/docs/resources/client/models/#render-types
     public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
         if (FMLEnvironment.dist == Dist.CLIENT) {
             if (this.alphaRender) {
@@ -868,7 +868,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         CreativeModeTab ct = tabTable.get(creativeTab);
         if (ct == null) {
             WesterosBlocks.log.warn(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
-            // TODO FIXME
+            // TODO
 //			ct = WesterosBlocksCreativeTab.tabWesterosMisc;
         }
         return ct;
@@ -1219,7 +1219,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
             rec = new BlockEntityRec();
             te_rec.put(name, rec);
             final BlockEntityRec frec = rec;
-            // TODO FIXME
+            // TODO
 //			rec.regobj = TILE_ENTITY_TYPES.register(name, () -> BlockEntityType.Builder.of(BlockEntitySupplier, frec.blocks.toArray(new Block[frec.blocks.size()])).build(null));
         }
         rec.blocks.add(blk);
@@ -1271,7 +1271,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         // If water shader, override global one too
         if (blockName.equals("minecraft:water") && (handler instanceof CustomColorMultHandler)) {
             final CustomColorMultHandler cchandler = (CustomColorMultHandler) handler;    // crappy java lambda limitation workaround
-            // TODO FIXME
+            // TODO: biome modifiers maybe
 //			BiomeColors.WATER_COLOR_RESOLVER = (Biome b, double tmp, double hum) -> cchandler.getColor(b, tmp, hum);
         }
     }

@@ -141,7 +141,7 @@ public class WCParticleBlock extends Block implements SimpleWaterloggedBlock, We
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-    // TODO FIXME
+    // TODO
 //    @Override
 //    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
 //

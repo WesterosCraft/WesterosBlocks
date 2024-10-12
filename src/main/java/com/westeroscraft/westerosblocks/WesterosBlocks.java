@@ -48,9 +48,6 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.mojang.brigadier.CommandDispatcher;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
-import com.westeroscraft.westerosblocks.commands.NVCommand;
-import com.westeroscraft.westerosblocks.commands.PTimeCommand;
-import com.westeroscraft.westerosblocks.commands.PWeatherCommand;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
 
@@ -76,28 +73,14 @@ import java.util.Map.Entry;
 @Mod(WesterosBlocks.MOD_ID)
 public class WesterosBlocks {
     public static final String MOD_ID = "westerosblocks";
+    public static final Logger log = LogManager.getLogger();
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(WesterosBlocks.MOD_ID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(WesterosBlocks.MOD_ID);
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
             DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, WesterosBlocks.MOD_ID);
 
-
-    // Network setup
-    // TODO FIXME NETOWRKING
-//	public static SimpleChannel simpleChannel;    // used to transmit your network messages
-    public static final String CHANNEL = "wbchannel";
-    public static final String MESSAGE_PROTOCOL_VERSION = "5.10";
-//    public static final ResourceLocation simpleChannelRL =  ResourceLocation("westerosblocks", CHANNEL);
-
-    // Directly reference a log4j logger.
-    public static final Logger log = LogManager.getLogger();
-
     public static WesterosBlockConfig customConfig;
-
-    // TODO FIXME
-    // Says where the client and server 'proxy' code is loaded.
-//	public static Proxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> Proxy::new);
 
     public static WesterosBlockDef[] customBlockDefs;
 
@@ -116,12 +99,8 @@ public class WesterosBlocks {
     public static WesterosItemMenuOverrides[] menuOverrides;
 
     public WesterosBlocks(IEventBus modEventBus, ModContainer modContainer) {
-
-        // Register the doClientStuff method for modloading
         modEventBus.addListener(this::doClientStuff);
-        // Register the setup method for load complete
         modEventBus.addListener(this::loadComplete);
-        // Register the doClientStuff method for modloading
         modEventBus.addListener(this::onCommonSetupEvent);
 
         // Register ourselves for server and other game events we are interested in
@@ -156,28 +135,18 @@ public class WesterosBlocks {
         }
     }
 
-
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         log.info("Got game settings {}", event.description());
     }
 
-    @SubscribeEvent
-    public void onRegisterCommandEvent(RegisterCommandsEvent event) {
-        CommandDispatcher<CommandSourceStack> commandDispatcher = event.getDispatcher();
-        PTimeCommand.register(commandDispatcher);
-        PWeatherCommand.register(commandDispatcher);
-        NVCommand.register(commandDispatcher);
-    }
-
-    private void loadComplete(final FMLLoadCompleteEvent event) // PostRegistrationEven
-    {
+    private void loadComplete(final FMLLoadCompleteEvent event) {
         // Initialize with standard block IDs
         if (Config.blockDevMode) {
             log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/"
                     + MOD_ID);
         }
-        // TODO FIXME
+        // TODO
         // Do blocks state export here
         if (Config.blockDevMode) {
             // Clean up old export
@@ -256,7 +225,7 @@ public class WesterosBlocks {
     }
 
     @EventBusSubscriber(modid = WesterosBlocks.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
-    public class ColorHandler {
+    public static class ColorHandler {
         @SubscribeEvent
         public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
             for (Block blk : WesterosBlocks.customBlocks) {
@@ -304,10 +273,6 @@ public class WesterosBlocks {
         }
     }
 
-    // You can use EventBusSubscriber to automatically subscribe events on the
-    // contained class (this is subscribing to the MOD
-    // Event bus for receiving Registry Events)
-
     @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         private static boolean didInit = false;
@@ -318,7 +283,7 @@ public class WesterosBlocks {
             // Initialize
             log.info("initialize start");
             WesterosBlockDef.initialize();
-            // TODO FIXME
+            // TODO: maybe need biome modifiers? https://docs.neoforged.net/docs/worldgen/biomemodifier/#applying-biome-modifiers
             // If snow-in-taiga
 //			if (Config.snowInTaiga) {
 //				Biome b = ForgeRegistries.BIOMES.getValue(ResourceLocation.fromNamespaceAndPath("minecraft","taiga"));
@@ -673,7 +638,7 @@ public class WesterosBlocks {
         }
     }
 
-    // TODO FIXME
+    // TODO: phase doesnt exist
 //    @SubscribeEvent
 //    public void countTicks(ServerTickEvent event) {
 //        if (event.phase != TickEvent.Phase.END) return;
