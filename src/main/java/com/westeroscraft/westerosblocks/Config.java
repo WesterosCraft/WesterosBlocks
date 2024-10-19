@@ -18,7 +18,7 @@ public class Config
 
     private static final ModConfigSpec.BooleanValue BLOCK_DEV_MODE = BUILDER
             .translation("westerosblocks.configuration.blockDevMode").comment("Block development mode")
-            .define("blockDevMode", true);
+            .define("blockDevMode", false);
 
     private static final ModConfigSpec.IntValue AUTO_RESTORE_TIME = BUILDER
             .translation("westerosblocks.configuration.autoRestoreTime").comment("Number of seconds before auto-restore")

@@ -33,10 +33,7 @@ import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.server.ServerStoppingEvent;
-import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import org.apache.logging.log4j.LogManager;
@@ -46,7 +43,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
-import com.mojang.brigadier.CommandDispatcher;
 import com.westeroscraft.westerosblocks.blocks.WCHalfDoorBlock;
 import com.westeroscraft.westerosblocks.modelexport.ModelExport;
 import com.westeroscraft.westerosblocks.modelexport.ModelExportFactory;
@@ -138,6 +134,7 @@ public class WesterosBlocks {
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         log.info("Got game settings {}", event.description());
+        ClientSetup.initRenderRegistry();
     }
 
     private void loadComplete(final FMLLoadCompleteEvent event) {
@@ -146,7 +143,6 @@ public class WesterosBlocks {
             log.info("Block dev mode enabled : block export processing will be done to " + modConfigPath + "/assets/"
                     + MOD_ID);
         }
-        // TODO
         // Do blocks state export here
         if (Config.blockDevMode) {
             // Clean up old export
@@ -213,7 +209,6 @@ public class WesterosBlocks {
             }
         }
 
-        ClientSetup.initRenderRegistry();
     }
 
     public static void crash(Exception x, String msg) {
