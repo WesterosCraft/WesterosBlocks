@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/untinted/crop_layer2",
+  "textures": {
+    "crop": "westerosblocks:block/wheat/stage5_2"
+  }
+}

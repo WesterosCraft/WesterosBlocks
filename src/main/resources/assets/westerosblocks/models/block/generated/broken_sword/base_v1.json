@@ -1,0 +1,59 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt0": "westerosblocks:block/broken_sword/bottom",
+    "txt1": "westerosblocks:block/broken_sword/top",
+    "particle": "westerosblocks:block/broken_sword/bottom"
+  },
+  "elements": [
+    {
+      "from": [
+        0.0,
+        0.48,
+        0.0
+      ],
+      "to": [
+        16.0,
+        0.624,
+        16.0
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt0"
+        }
+      }
+    }
+  ]
+}

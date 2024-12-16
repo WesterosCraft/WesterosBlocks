@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log_horizontal",
+  "textures": {
+    "down": "westerosblocks:block/archery_target/front",
+    "up": "westerosblocks:block/archery_target/front",
+    "north": "westerosblocks:block/archery_target/side",
+    "south": "westerosblocks:block/archery_target/side",
+    "east": "westerosblocks:block/archery_target/side",
+    "west": "westerosblocks:block/archery_target/side",
+    "particle": "westerosblocks:block/archery_target/side"
+  }
+}

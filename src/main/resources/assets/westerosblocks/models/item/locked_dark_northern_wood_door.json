@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/wood/northern/door_locked_top"
+  }
+}

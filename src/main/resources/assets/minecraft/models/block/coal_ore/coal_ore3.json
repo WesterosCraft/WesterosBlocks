@@ -1,0 +1,13 @@
+{
+  "parent": "westerosblocks:block/untinted/cube",
+  "textures": {
+    "down": "minecraft:block/coal_ore/coal_ore3",
+    "up": "minecraft:block/coal_ore/coal_ore3",
+    "north": "minecraft:block/coal_ore/coal_ore3",
+    "south": "minecraft:block/coal_ore/coal_ore3",
+    "west": "minecraft:block/coal_ore/coal_ore3",
+    "east": "minecraft:block/coal_ore/coal_ore3",
+    "particle": "minecraft:block/coal_ore/coal_ore3"
+  }
+}
+

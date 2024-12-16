@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_log",
+  "textures": {
+    "down": "westerosblocks:block/marble/quartz/column_topbottom",
+    "up": "westerosblocks:block/marble/quartz/column_topbottom",
+    "north": "westerosblocks:block/marble/quartz/column_side",
+    "south": "westerosblocks:block/marble/quartz/column_side",
+    "east": "westerosblocks:block/marble/quartz/column_side",
+    "west": "westerosblocks:block/marble/quartz/column_side",
+    "particle": "westerosblocks:block/marble/quartz/column_side"
+  }
+}

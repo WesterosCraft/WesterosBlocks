@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_half/black/all",
+    "up": "westerosblocks:block/ashlar_half/black/all",
+    "north": "westerosblocks:block/ashlar_half/black/all",
+    "south": "westerosblocks:block/ashlar_half/black/all",
+    "west": "westerosblocks:block/ashlar_half/black/all",
+    "east": "westerosblocks:block/ashlar_half/black/all",
+    "particle": "westerosblocks:block/ashlar_half/black/all"
+  }
+}

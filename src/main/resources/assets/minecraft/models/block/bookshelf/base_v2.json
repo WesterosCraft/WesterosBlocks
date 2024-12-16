@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/bookshelf/bookshelf_top",
+    "up": "minecraft:block/bookshelf/bookshelf_top",
+    "north": "minecraft:block/bookshelf/side2",
+    "south": "minecraft:block/bookshelf/side2",
+    "west": "minecraft:block/bookshelf/side2",
+    "east": "minecraft:block/bookshelf/side2",
+    "particle": "minecraft:block/bookshelf/side2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/rubble/northern/all1",
+    "top": "westerosblocks:block/rubble/northern/all1",
+    "side": "westerosblocks:block/rubble/northern/all1",
+    "particle": "westerosblocks:block/rubble/northern/all1"
+  }
+}

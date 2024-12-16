@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_bottom",
+  "textures": {
+    "texture": "westerosblocks:block/trapdoor_block/manhole"
+  }
+}

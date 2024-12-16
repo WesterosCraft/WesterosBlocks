@@ -1,0 +1,156 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v2"
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v3"
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v4"
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v5"
+        }
+      ],
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v1",
+          "y": 90
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v2",
+          "y": 90
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v3",
+          "y": 90
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v4",
+          "y": 90
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v5",
+          "y": 90
+        }
+      ],
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v1",
+          "y": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v2",
+          "y": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v3",
+          "y": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v4",
+          "y": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v5",
+          "y": 180
+        }
+      ],
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v1",
+          "y": 270
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v2",
+          "y": 270
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v3",
+          "y": 270
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v4",
+          "y": 270
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/base_v5",
+          "y": 270
+        }
+      ],
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v1"
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v2"
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v3"
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v4"
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v5"
+        }
+      ],
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v1",
+          "x": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v2",
+          "x": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v3",
+          "x": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v4",
+          "x": 180
+        },
+        {
+          "model": "westerosblocks:block/generated/jasmine_vines/top_v5",
+          "x": 180
+        }
+      ],
+      "when": {
+        "down": "true"
+      }
+    }
+  ]
+}

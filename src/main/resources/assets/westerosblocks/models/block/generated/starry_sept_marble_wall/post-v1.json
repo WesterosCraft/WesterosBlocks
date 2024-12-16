@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/template_wall_post",
+  "textures": {
+    "bottom": "westerosblocks:block/marble/starry_sept/all",
+    "top": "westerosblocks:block/marble/starry_sept/all",
+    "side": "westerosblocks:block/marble/starry_sept/all"
+  }
+}

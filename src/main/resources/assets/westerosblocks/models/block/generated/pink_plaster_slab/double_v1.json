@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/plaster/smooth/pink/all",
+    "up": "westerosblocks:block/plaster/smooth/pink/all",
+    "north": "westerosblocks:block/plaster/smooth/pink/all",
+    "south": "westerosblocks:block/plaster/smooth/pink/all",
+    "west": "westerosblocks:block/plaster/smooth/pink/all",
+    "east": "westerosblocks:block/plaster/smooth/pink/all",
+    "particle": "westerosblocks:block/plaster/smooth/pink/all"
+  }
+}

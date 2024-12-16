@@ -1,0 +1,29 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_pattern_cond",
+    "layer": "SOLID",
+    "textures": [
+      "minecraft:block/grass_block/forest_top2_3x3"
+    ],
+    "extra": {
+      "width": 4,
+      "height": 4,
+      "condWidth": 3,
+      "condHeight": 3,
+      "conds": [
+        {
+          "biomeNames": [
+            "minecraft:forest"
+          ],
+          "type": "pattern",
+          "patRow": 0,
+          "patCol": 0,
+          "patWidth": 3,
+          "patHeight": 3
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/metal/iron/all3",
+    "top": "westerosblocks:block/metal/iron/all3",
+    "side": "westerosblocks:block/metal/iron/all3",
+    "particle": "westerosblocks:block/metal/iron/all3"
+  }
+}

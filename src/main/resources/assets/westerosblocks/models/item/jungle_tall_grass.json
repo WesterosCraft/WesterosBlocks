@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "westerosblocks:block/jungle_tall_grass/down_side1"
+  }
+}

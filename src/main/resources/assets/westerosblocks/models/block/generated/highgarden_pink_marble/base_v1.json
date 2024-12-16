@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/marble/highgarden_pink/all",
+    "up": "westerosblocks:block/marble/highgarden_pink/all",
+    "north": "westerosblocks:block/marble/highgarden_pink/all",
+    "south": "westerosblocks:block/marble/highgarden_pink/all",
+    "west": "westerosblocks:block/marble/highgarden_pink/all",
+    "east": "westerosblocks:block/marble/highgarden_pink/all",
+    "particle": "westerosblocks:block/marble/highgarden_pink/all"
+  }
+}

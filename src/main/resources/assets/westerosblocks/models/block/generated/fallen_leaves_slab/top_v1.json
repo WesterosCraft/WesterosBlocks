@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/fallen_leaves/temperate",
+    "up": "westerosblocks:block/fallen_leaves/temperate",
+    "north": "westerosblocks:block/fallen_leaves/temperate",
+    "south": "westerosblocks:block/fallen_leaves/temperate",
+    "west": "westerosblocks:block/fallen_leaves/temperate",
+    "east": "westerosblocks:block/fallen_leaves/temperate",
+    "particle": "westerosblocks:block/fallen_leaves/temperate"
+  }
+}

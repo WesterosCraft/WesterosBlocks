@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/leaves_bf3",
+  "textures": {
+    "all": "westerosblocks:block/leaves/weirwood/snowy/all",
+    "particle": "westerosblocks:block/leaves/weirwood/snowy/all"
+  }
+}

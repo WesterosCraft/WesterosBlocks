@@ -1,0 +1,404 @@
+{
+  "variants": {
+    "layers=6,state=age7": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer6_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer6_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer6_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer6_v4"
+      }
+    ],
+    "layers=6,state=age6": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer6_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer6_v2"
+      }
+    ],
+    "layers=6,state=age3": {
+      "model": "westerosblocks:block/generated/crop_wheat/age3_layer6_v1"
+    },
+    "layers=6,state=age2": {
+      "model": "westerosblocks:block/generated/crop_wheat/age2_layer6_v1"
+    },
+    "layers=6,state=age5": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer6_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer6_v2"
+      }
+    ],
+    "layers=6,state=age4": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer6_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer6_v2"
+      }
+    ],
+    "layers=1,state=age1": {
+      "model": "westerosblocks:block/generated/crop_wheat/age1_layer1_v1"
+    },
+    "layers=1,state=age2": {
+      "model": "westerosblocks:block/generated/crop_wheat/age2_layer1_v1"
+    },
+    "layers=1,state=age3": {
+      "model": "westerosblocks:block/generated/crop_wheat/age3_layer1_v1"
+    },
+    "layers=6,state=age1": {
+      "model": "westerosblocks:block/generated/crop_wheat/age1_layer6_v1"
+    },
+    "layers=1,state=age4": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer1_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer1_v2"
+      }
+    ],
+    "layers=6,state=age0": {
+      "model": "westerosblocks:block/generated/crop_wheat/age0_layer6_v1"
+    },
+    "layers=1,state=age0": {
+      "model": "westerosblocks:block/generated/crop_wheat/age0_layer1_v1"
+    },
+    "layers=1,state=age5": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer1_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer1_v2"
+      }
+    ],
+    "layers=1,state=age6": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer1_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer1_v2"
+      }
+    ],
+    "layers=1,state=age7": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer1_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer1_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer1_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer1_v4"
+      }
+    ],
+    "layers=7,state=age1": {
+      "model": "westerosblocks:block/generated/crop_wheat/age1_layer7_v1"
+    },
+    "layers=7,state=age2": {
+      "model": "westerosblocks:block/generated/crop_wheat/age2_layer7_v1"
+    },
+    "layers=7,state=age0": {
+      "model": "westerosblocks:block/generated/crop_wheat/age0_layer7_v1"
+    },
+    "layers=7,state=age7": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer7_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer7_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer7_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer7_v4"
+      }
+    ],
+    "layers=7,state=age5": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer7_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer7_v2"
+      }
+    ],
+    "layers=7,state=age6": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer7_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer7_v2"
+      }
+    ],
+    "layers=7,state=age3": {
+      "model": "westerosblocks:block/generated/crop_wheat/age3_layer7_v1"
+    },
+    "layers=7,state=age4": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer7_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer7_v2"
+      }
+    ],
+    "layers=2,state=age4": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer2_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer2_v2"
+      }
+    ],
+    "layers=2,state=age5": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer2_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer2_v2"
+      }
+    ],
+    "layers=2,state=age2": {
+      "model": "westerosblocks:block/generated/crop_wheat/age2_layer2_v1"
+    },
+    "layers=2,state=age3": {
+      "model": "westerosblocks:block/generated/crop_wheat/age3_layer2_v1"
+    },
+    "layers=2,state=age0": {
+      "model": "westerosblocks:block/generated/crop_wheat/age0_layer2_v1"
+    },
+    "layers=5,state=age0": {
+      "model": "westerosblocks:block/generated/crop_wheat/age0_layer5_v1"
+    },
+    "layers=2,state=age1": {
+      "model": "westerosblocks:block/generated/crop_wheat/age1_layer2_v1"
+    },
+    "layers=8,state=age0": {
+      "model": "westerosblocks:block/generated/crop_wheat/age0_v1"
+    },
+    "layers=8,state=age1": {
+      "model": "westerosblocks:block/generated/crop_wheat/age1_v1"
+    },
+    "layers=8,state=age2": {
+      "model": "westerosblocks:block/generated/crop_wheat/age2_v1"
+    },
+    "layers=2,state=age6": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer2_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer2_v2"
+      }
+    ],
+    "layers=8,state=age3": {
+      "model": "westerosblocks:block/generated/crop_wheat/age3_v1"
+    },
+    "layers=2,state=age7": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer2_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer2_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer2_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer2_v4"
+      }
+    ],
+    "layers=8,state=age4": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_v2"
+      }
+    ],
+    "layers=8,state=age5": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_v2"
+      }
+    ],
+    "layers=8,state=age6": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_v2"
+      }
+    ],
+    "layers=8,state=age7": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_v4"
+      }
+    ],
+    "layers=5,state=age4": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer5_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer5_v2"
+      }
+    ],
+    "layers=5,state=age3": {
+      "model": "westerosblocks:block/generated/crop_wheat/age3_layer5_v1"
+    },
+    "layers=5,state=age2": {
+      "model": "westerosblocks:block/generated/crop_wheat/age2_layer5_v1"
+    },
+    "layers=5,state=age1": {
+      "model": "westerosblocks:block/generated/crop_wheat/age1_layer5_v1"
+    },
+    "layers=5,state=age7": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer5_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer5_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer5_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer5_v4"
+      }
+    ],
+    "layers=5,state=age6": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer5_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer5_v2"
+      }
+    ],
+    "layers=5,state=age5": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer5_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer5_v2"
+      }
+    ],
+    "layers=4,state=age1": {
+      "model": "westerosblocks:block/generated/crop_wheat/age1_layer4_v1"
+    },
+    "layers=4,state=age0": {
+      "model": "westerosblocks:block/generated/crop_wheat/age0_layer4_v1"
+    },
+    "layers=4,state=age3": {
+      "model": "westerosblocks:block/generated/crop_wheat/age3_layer4_v1"
+    },
+    "layers=4,state=age2": {
+      "model": "westerosblocks:block/generated/crop_wheat/age2_layer4_v1"
+    },
+    "layers=4,state=age5": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer4_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer4_v2"
+      }
+    ],
+    "layers=4,state=age4": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer4_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer4_v2"
+      }
+    ],
+    "layers=4,state=age7": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer4_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer4_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer4_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer4_v4"
+      }
+    ],
+    "layers=4,state=age6": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer4_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer4_v2"
+      }
+    ],
+    "layers=3,state=age7": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer3_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer3_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer3_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age7_layer3_v4"
+      }
+    ],
+    "layers=3,state=age0": {
+      "model": "westerosblocks:block/generated/crop_wheat/age0_layer3_v1"
+    },
+    "layers=3,state=age1": {
+      "model": "westerosblocks:block/generated/crop_wheat/age1_layer3_v1"
+    },
+    "layers=3,state=age2": {
+      "model": "westerosblocks:block/generated/crop_wheat/age2_layer3_v1"
+    },
+    "layers=3,state=age3": {
+      "model": "westerosblocks:block/generated/crop_wheat/age3_layer3_v1"
+    },
+    "layers=3,state=age4": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer3_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age4_layer3_v2"
+      }
+    ],
+    "layers=3,state=age5": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer3_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age5_layer3_v2"
+      }
+    ],
+    "layers=3,state=age6": [
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer3_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/crop_wheat/age6_layer3_v2"
+      }
+    ]
+  }
+}

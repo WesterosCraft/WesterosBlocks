@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/test_block/solid",
+    "up": "westerosblocks:block/test_block/solid",
+    "north": "westerosblocks:block/test_block/left",
+    "south": "westerosblocks:block/test_block/left",
+    "west": "westerosblocks:block/test_block/right",
+    "east": "westerosblocks:block/test_block/right",
+    "particle": "westerosblocks:block/test_block/left"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_post",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/jungle/vines",
+    "top": "westerosblocks:block/wood/jungle/vines",
+    "side": "westerosblocks:block/wood/jungle/vines"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "random",
+    "layer": "SOLID",
+    "textures": [],
+    "extra": {
+      "width": 3,
+      "height": 2,
+      "ignore_states": true
+    }
+  }
+}

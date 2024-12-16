@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/marble/starry_sept/all",
+    "up": "westerosblocks:block/marble/starry_sept/all",
+    "north": "westerosblocks:block/marble/starry_sept/all",
+    "south": "westerosblocks:block/marble/starry_sept/all",
+    "west": "westerosblocks:block/marble/starry_sept/all",
+    "east": "westerosblocks:block/marble/starry_sept/all",
+    "particle": "westerosblocks:block/marble/starry_sept/all"
+  }
+}

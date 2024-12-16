@@ -1,0 +1,58 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dorne_dull_terracotta_fence/post_v1"
+        }
+      ]
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dorne_dull_terracotta_fence/side_v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dorne_dull_terracotta_fence/side_v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dorne_dull_terracotta_fence/side_v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dorne_dull_terracotta_fence/side_v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "true"
+      }
+    }
+  ]
+}

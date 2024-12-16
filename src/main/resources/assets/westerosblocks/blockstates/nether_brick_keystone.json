@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "westerosblocks:block/generated/nether_brick_keystone/base_v1"
+    }
+  }
+}

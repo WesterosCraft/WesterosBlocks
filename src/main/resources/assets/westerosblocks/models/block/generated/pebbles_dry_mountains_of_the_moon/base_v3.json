@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/pebble/vale/dry3",
+    "up": "westerosblocks:block/pebble/vale/dry3",
+    "north": "westerosblocks:block/pebble/vale/dry3",
+    "south": "westerosblocks:block/pebble/vale/dry3",
+    "west": "westerosblocks:block/pebble/vale/dry3",
+    "east": "westerosblocks:block/pebble/vale/dry3",
+    "particle": "westerosblocks:block/pebble/vale/dry3"
+  }
+}

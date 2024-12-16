@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/fieldstone/reach/all",
+    "up": "westerosblocks:block/fieldstone/reach/all",
+    "north": "westerosblocks:block/fieldstone/reach/all",
+    "south": "westerosblocks:block/fieldstone/reach/all",
+    "west": "westerosblocks:block/fieldstone/reach/all",
+    "east": "westerosblocks:block/fieldstone/reach/all",
+    "particle": "westerosblocks:block/fieldstone/reach/all"
+  }
+}

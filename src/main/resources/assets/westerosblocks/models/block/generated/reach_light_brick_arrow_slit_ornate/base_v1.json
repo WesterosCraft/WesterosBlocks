@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/transparent",
+    "up": "westerosblocks:block/transparent",
+    "north": "westerosblocks:block/fieldstone/reach/arrow_slit_ornate",
+    "south": "westerosblocks:block/fieldstone/reach/arrow_slit_ornate",
+    "west": "westerosblocks:block/fieldstone/reach/arrow_slit_ornate",
+    "east": "westerosblocks:block/fieldstone/reach/arrow_slit_ornate",
+    "particle": "westerosblocks:block/fieldstone/reach/arrow_slit_ornate"
+  }
+}

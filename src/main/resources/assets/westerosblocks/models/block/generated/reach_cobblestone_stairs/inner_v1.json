@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/cobblestone/reach/all1",
+    "top": "westerosblocks:block/cobblestone/reach/all1",
+    "side": "westerosblocks:block/cobblestone/reach/all1",
+    "particle": "westerosblocks:block/cobblestone/reach/all1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "westerosblocks:block/tinted/leaves_overlay",
+  "textures": {
+    "end": "westerosblocks:block/leaves/birch/all",
+    "side": "westerosblocks:block/transparent",
+    "overlayend": "westerosblocks:block/leaves/overlay/apple0",
+    "overlayside": "westerosblocks:block/leaves/overlay/apple0",
+    "particle": "westerosblocks:block/transparent"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "westerosblocks:block/untinted/half_door_rh",
+  "textures": {
+    "top": "westerosblocks:block/wood/jungle/shutters",
+    "bottom": "westerosblocks:block/wood/jungle/shutters"
+  }
+}

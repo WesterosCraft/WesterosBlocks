@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_full/light_brown/all",
+    "top": "westerosblocks:block/ashlar_full/light_brown/all",
+    "side": "westerosblocks:block/ashlar_full/light_brown/all",
+    "particle": "westerosblocks:block/ashlar_full/light_brown/all"
+  }
+}

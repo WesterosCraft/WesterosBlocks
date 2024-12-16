@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/metal/gold/all1",
+    "top": "westerosblocks:block/metal/gold/all1",
+    "side": "westerosblocks:block/metal/gold/all1",
+    "particle": "westerosblocks:block/metal/gold/all1"
+  }
+}

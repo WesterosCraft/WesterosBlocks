@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/mirror/top_bottom",
+    "up": "westerosblocks:block/mirror/top_bottom",
+    "north": "westerosblocks:block/mirror/side",
+    "south": "westerosblocks:block/mirror/side",
+    "west": "westerosblocks:block/mirror/side",
+    "east": "westerosblocks:block/mirror/side",
+    "particle": "westerosblocks:block/mirror/side"
+  }
+}

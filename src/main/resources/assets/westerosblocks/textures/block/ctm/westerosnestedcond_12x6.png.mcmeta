@@ -1,0 +1,58 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_single_cond",
+    "layer": "SOLID",
+    "textures": [],
+    "extra": {
+      "condWidth": 12,
+      "condHeight": 6,
+      "conds": [
+        {
+          "type": "ctm",
+          "ctmRow": 0,
+          "ctmCol": 0,
+          "conds": [
+            {
+              "sources": [
+                {
+                  "row": 2,
+                  "col": 2
+                }
+              ],
+              "type": "pattern",
+              "patRow": 4,
+              "patCol": 0,
+              "patWidth": 3,
+              "patHeight": 2,
+              "conds": [
+                {
+                  "sources": [
+                    {
+                      "row": 4,
+                      "col": 1
+                    }
+                  ],
+                  "type": "random",
+                  "rndRow": 4,
+                  "rndCol": 3,
+                  "rndWidth": 3,
+                  "rndHeight": 2,
+                  "weights": [
+                    1,
+                    1,
+                    5,
+                    1,
+                    1,
+                    5
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

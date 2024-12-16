@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/metal/oxidized_iron/all3",
+    "up": "westerosblocks:block/metal/oxidized_iron/all3",
+    "north": "westerosblocks:block/metal/oxidized_iron/all3",
+    "south": "westerosblocks:block/metal/oxidized_iron/all3",
+    "west": "westerosblocks:block/metal/oxidized_iron/all3",
+    "east": "westerosblocks:block/metal/oxidized_iron/all3",
+    "particle": "westerosblocks:block/metal/oxidized_iron/all3"
+  }
+}

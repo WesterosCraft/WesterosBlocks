@@ -1,0 +1,43 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_single_cond",
+    "layer": "SOLID",
+    "textures": [],
+    "extra": {
+      "condWidth": 3,
+      "condHeight": 24,
+      "conds": [
+        {
+          "type": "random",
+          "yPosMax": 35,
+          "rndRow": 0,
+          "rndCol": 0,
+          "rndWidth": 1,
+          "rndHeight": 24,
+          "rndSameAllSides": true
+        },
+        {
+          "type": "random",
+          "yPosMin": 36,
+          "yPosMax": 44,
+          "rndRow": 0,
+          "rndCol": 1,
+          "rndWidth": 1,
+          "rndHeight": 24,
+          "rndSameAllSides": true
+        },
+        {
+          "type": "random",
+          "yPosMin": 45,
+          "rndRow": 0,
+          "rndCol": 2,
+          "rndWidth": 1,
+          "rndHeight": 24,
+          "rndSameAllSides": true
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

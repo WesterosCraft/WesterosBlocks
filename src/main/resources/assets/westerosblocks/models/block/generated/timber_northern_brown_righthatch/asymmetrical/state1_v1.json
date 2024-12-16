@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down_ov": "westerosblocks:block/timber/northern/bottom",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/timber/northern/righthatch",
+    "south_ov": "westerosblocks:block/timber/northern/righthatch",
+    "west_ov": "westerosblocks:block/timber/northern/lefthatch",
+    "east_ov": "westerosblocks:block/timber/northern/lefthatch",
+    "down": "westerosblocks:block/plaster/smooth/arbor_brown/all",
+    "up": "westerosblocks:block/wood/northern/all",
+    "north": "westerosblocks:block/plaster/smooth/arbor_brown/all",
+    "south": "westerosblocks:block/plaster/smooth/arbor_brown/all",
+    "west": "westerosblocks:block/plaster/smooth/arbor_brown/all",
+    "east": "westerosblocks:block/plaster/smooth/arbor_brown/all",
+    "particle": "westerosblocks:block/plaster/smooth/arbor_brown/all"
+  }
+}

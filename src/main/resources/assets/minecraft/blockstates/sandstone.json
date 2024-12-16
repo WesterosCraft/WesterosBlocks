@@ -1,0 +1,45 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/sandstone/base_v1"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v2"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v3"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v4"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v5"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v6"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v7"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v8"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v9"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v10"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v11"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v12"
+      },
+      {
+        "model": "minecraft:block/sandstone/base_v13"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_smooth/terracotta/all",
+    "up": "westerosblocks:block/ashlar_smooth/terracotta/all",
+    "north": "westerosblocks:block/ashlar_smooth/terracotta/all",
+    "south": "westerosblocks:block/ashlar_smooth/terracotta/all",
+    "west": "westerosblocks:block/ashlar_smooth/terracotta/all",
+    "east": "westerosblocks:block/ashlar_smooth/terracotta/all",
+    "particle": "westerosblocks:block/ashlar_smooth/terracotta/all"
+  }
+}

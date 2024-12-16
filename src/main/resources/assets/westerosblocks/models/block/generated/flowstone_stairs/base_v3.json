@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/flowstone/all3",
+    "top": "westerosblocks:block/terrainset/flowstone/all3",
+    "side": "westerosblocks:block/terrainset/flowstone/all3",
+    "particle": "westerosblocks:block/terrainset/flowstone/all3"
+  }
+}

@@ -1,0 +1,456 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/post-v1"
+        }
+      ],
+      "when": {
+        "up": "true",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/side-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/side_tall-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/side-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/side_tall-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/side-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/side_tall-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/side-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "low",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/base/side_tall-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "tall",
+        "state": "base"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/post-v1"
+        }
+      ],
+      "when": {
+        "up": "true",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/side-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "low",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/side_tall-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "tall",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/side-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "low",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/side_tall-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "tall",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/side-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "low",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/side_tall-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "tall",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/side-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "low",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/red/side_tall-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "tall",
+        "state": "red"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/post-v1"
+        }
+      ],
+      "when": {
+        "up": "true",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/side-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "low",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/side_tall-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "tall",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/side-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "low",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/side_tall-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "tall",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/side-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "low",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/side_tall-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "tall",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/side-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "low",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/blue/side_tall-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "tall",
+        "state": "blue"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/post-v1"
+        }
+      ],
+      "when": {
+        "up": "true",
+        "state": "green"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/side-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "low",
+        "state": "green"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/side_tall-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "tall",
+        "state": "green"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/side-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "low",
+        "state": "green"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/side_tall-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "tall",
+        "state": "green"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/side-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "low",
+        "state": "green"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/side_tall-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "tall",
+        "state": "green"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/side-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "low",
+        "state": "green"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/test_multistate_overlay_block_set_wall/green/side_tall-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "tall",
+        "state": "green"
+      }
+    }
+  ]
+}

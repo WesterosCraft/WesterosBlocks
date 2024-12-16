@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/thatch/snowy_light/bottom",
+    "up": "westerosblocks:block/thatch/snowy_light/top",
+    "north": "westerosblocks:block/thatch/snowy_light/side1",
+    "south": "westerosblocks:block/thatch/snowy_light/side1",
+    "west": "westerosblocks:block/thatch/snowy_light/side1",
+    "east": "westerosblocks:block/thatch/snowy_light/side1",
+    "particle": "westerosblocks:block/thatch/snowy_light/side1"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_single_cond",
+    "layer": "SOLID",
+    "textures": [],
+    "extra": {
+      "condWidth": 2,
+      "condHeight": 2,
+      "conds": [
+        {
+          "yPosMin": 45,
+          "rowOut": 0,
+          "colOut": 1
+        },
+        {
+          "yPosMin": 36,
+          "yPosMax": 44,
+          "rowOut": 1,
+          "colOut": 0
+        }
+      ],
+      "ignore_states": true
+    }
+  }
+}

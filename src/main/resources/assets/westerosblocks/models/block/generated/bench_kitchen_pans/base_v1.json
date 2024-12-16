@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/bench_block/spruce_top",
+    "up": "westerosblocks:block/bench_block/crafting_table_top",
+    "north": "westerosblocks:block/bench_block/bench_kitchen_pans",
+    "south": "westerosblocks:block/bench_block/bench_kitchen_pans",
+    "west": "westerosblocks:block/bench_block/bench_kitchen_pans",
+    "east": "westerosblocks:block/bench_block/bench_kitchen_pans",
+    "particle": "westerosblocks:block/bench_block/bench_kitchen_pans"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/fieldstone/oldtown/all",
+    "top": "westerosblocks:block/fieldstone/oldtown/all",
+    "side": "westerosblocks:block/fieldstone/oldtown/all",
+    "particle": "westerosblocks:block/fieldstone/oldtown/all"
+  }
+}

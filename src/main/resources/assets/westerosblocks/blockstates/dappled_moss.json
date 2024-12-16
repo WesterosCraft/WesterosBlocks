@@ -1,0 +1,68 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dappled_moss/base_v1"
+        }
+      ],
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dappled_moss/base_v1",
+          "y": 90
+        }
+      ],
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dappled_moss/base_v1",
+          "y": 180
+        }
+      ],
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dappled_moss/base_v1",
+          "y": 270
+        }
+      ],
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dappled_moss/top_v1"
+        }
+      ],
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/dappled_moss/top_v1",
+          "x": 180
+        }
+      ],
+      "when": {
+        "down": "true"
+      }
+    }
+  ]
+}

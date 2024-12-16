@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/terrainset/ocean/default",
+    "up": "westerosblocks:block/terrainset/ocean/default",
+    "north": "westerosblocks:block/terrainset/ocean/default",
+    "south": "westerosblocks:block/terrainset/ocean/default",
+    "west": "westerosblocks:block/terrainset/ocean/default",
+    "east": "westerosblocks:block/terrainset/ocean/default",
+    "particle": "westerosblocks:block/terrainset/ocean/default"
+  }
+}

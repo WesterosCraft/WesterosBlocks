@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "westerosblocks:block/generated/mances_camp_mances_tent/base_v1"
+    },
+    "facing=south": {
+      "model": "westerosblocks:block/generated/mances_camp_mances_tent/base_v1",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "westerosblocks:block/generated/mances_camp_mances_tent/base_v1",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "westerosblocks:block/generated/mances_camp_mances_tent/base_v1",
+      "y": 180
+    }
+  }
+}

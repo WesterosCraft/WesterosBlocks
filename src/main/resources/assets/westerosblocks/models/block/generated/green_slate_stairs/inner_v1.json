@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/slate/green/rotated",
+    "top": "westerosblocks:block/slate/green/rotated",
+    "side": "westerosblocks:block/slate/green/all",
+    "particle": "westerosblocks:block/slate/green/all"
+  }
+}

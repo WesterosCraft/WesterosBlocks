@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/fieldstone/oldtown/all",
+    "up": "westerosblocks:block/fieldstone/oldtown/all",
+    "north": "westerosblocks:block/fieldstone/oldtown/all",
+    "south": "westerosblocks:block/fieldstone/oldtown/all",
+    "west": "westerosblocks:block/fieldstone/oldtown/all",
+    "east": "westerosblocks:block/fieldstone/oldtown/all",
+    "particle": "westerosblocks:block/fieldstone/oldtown/all"
+  }
+}

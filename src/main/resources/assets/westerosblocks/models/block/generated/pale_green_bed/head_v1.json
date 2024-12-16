@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/bed_head",
+  "textures": {
+    "bedtop": "westerosblocks:block/bed_block/bed_patchy_green_0",
+    "bedend": "westerosblocks:block/bed_block/bed_patchy_green_4",
+    "bedside": "westerosblocks:block/bed_block/bed_patchy_green_2"
+  }
+}

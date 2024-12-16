@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_full/westerlands/all",
+    "top": "westerosblocks:block/ashlar_full/westerlands/all",
+    "side": "westerosblocks:block/ashlar_full/westerlands/all",
+    "particle": "westerosblocks:block/ashlar_full/westerlands/all"
+  }
+}

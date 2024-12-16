@@ -1,0 +1,13 @@
+{
+  "parent": "westerosblocks:block/untinted/cube",
+  "textures": {
+    "down": "minecraft:block/copper_ore/copper_ore1",
+    "up": "minecraft:block/copper_ore/copper_ore1",
+    "north": "minecraft:block/copper_ore/copper_ore1",
+    "south": "minecraft:block/copper_ore/copper_ore1",
+    "west": "minecraft:block/copper_ore/copper_ore1",
+    "east": "minecraft:block/copper_ore/copper_ore1",
+    "particle": "minecraft:block/copper_ore/copper_ore1"
+  }
+}
+

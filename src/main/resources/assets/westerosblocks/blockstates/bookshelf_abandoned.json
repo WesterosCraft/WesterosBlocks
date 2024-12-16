@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/bookshelf_abandoned/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/bookshelf_abandoned/base_v2"
+      }
+    ]
+  }
+}

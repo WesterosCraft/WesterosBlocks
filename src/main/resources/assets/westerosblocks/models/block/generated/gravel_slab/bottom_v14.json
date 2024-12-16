@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/gravel/gravel14",
+    "up": "westerosblocks:block/gravel/gravel14",
+    "north": "westerosblocks:block/gravel/gravel14",
+    "south": "westerosblocks:block/gravel/gravel14",
+    "west": "westerosblocks:block/gravel/gravel14",
+    "east": "westerosblocks:block/gravel/gravel14",
+    "particle": "westerosblocks:block/gravel/gravel14"
+  }
+}

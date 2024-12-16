@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/flower_pot_cross",
+  "textures": {
+    "dirt": "minecraft:block/dirt",
+    "flowerpot": "minecraft:block/flower_pot",
+    "plant": "westerosblocks:block/brown_mushroom_block/mushroom_brown_5",
+    "particle": "minecraft:block/flower_pot"
+  }
+}

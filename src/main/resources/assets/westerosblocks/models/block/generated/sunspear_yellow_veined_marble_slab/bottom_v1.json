@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/marble/sunspear_yellow/all",
+    "up": "westerosblocks:block/marble/sunspear_yellow/all",
+    "north": "westerosblocks:block/marble/sunspear_yellow/all",
+    "south": "westerosblocks:block/marble/sunspear_yellow/all",
+    "west": "westerosblocks:block/marble/sunspear_yellow/all",
+    "east": "westerosblocks:block/marble/sunspear_yellow/all",
+    "particle": "westerosblocks:block/marble/sunspear_yellow/all"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_third/dark_sandstone_mossy/all",
+    "up": "westerosblocks:block/ashlar_third/dark_sandstone_mossy/all",
+    "north": "westerosblocks:block/ashlar_third/dark_sandstone_mossy/all",
+    "south": "westerosblocks:block/ashlar_third/dark_sandstone_mossy/all",
+    "west": "westerosblocks:block/ashlar_third/dark_sandstone_mossy/all",
+    "east": "westerosblocks:block/ashlar_third/dark_sandstone_mossy/all",
+    "particle": "westerosblocks:block/ashlar_third/dark_sandstone_mossy/all"
+  }
+}

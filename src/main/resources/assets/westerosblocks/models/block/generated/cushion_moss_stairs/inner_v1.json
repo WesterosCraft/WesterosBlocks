@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/moss_cushion/all1",
+    "top": "westerosblocks:block/moss_cushion/all1",
+    "side": "westerosblocks:block/moss_cushion/all1",
+    "particle": "westerosblocks:block/moss_cushion/all1"
+  }
+}

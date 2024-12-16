@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/moss_cushion/all4",
+    "up": "westerosblocks:block/moss_cushion/all4",
+    "north": "westerosblocks:block/moss_cushion/all4",
+    "south": "westerosblocks:block/moss_cushion/all4",
+    "west": "westerosblocks:block/moss_cushion/all4",
+    "east": "westerosblocks:block/moss_cushion/all4",
+    "particle": "westerosblocks:block/moss_cushion/all4"
+  }
+}

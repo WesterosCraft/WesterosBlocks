@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/marble/harrenhal/all",
+    "top": "westerosblocks:block/marble/harrenhal/all",
+    "side": "westerosblocks:block/marble/harrenhal/all",
+    "particle": "westerosblocks:block/marble/harrenhal/all"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "westerosblocks:block/untinted/cube",
+  "textures": {
+    "down": "minecraft:block/gold_ore/gold_ore1",
+    "up": "minecraft:block/gold_ore/gold_ore1",
+    "north": "minecraft:block/gold_ore/gold_ore1",
+    "south": "minecraft:block/gold_ore/gold_ore1",
+    "west": "minecraft:block/gold_ore/gold_ore1",
+    "east": "minecraft:block/gold_ore/gold_ore1",
+    "particle": "minecraft:block/gold_ore/gold_ore1"
+  }
+}
+

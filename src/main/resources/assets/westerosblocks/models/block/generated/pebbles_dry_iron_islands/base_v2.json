@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/pebble/iron_islands/dry2",
+    "up": "westerosblocks:block/pebble/iron_islands/dry2",
+    "north": "westerosblocks:block/pebble/iron_islands/dry2",
+    "south": "westerosblocks:block/pebble/iron_islands/dry2",
+    "west": "westerosblocks:block/pebble/iron_islands/dry2",
+    "east": "westerosblocks:block/pebble/iron_islands/dry2",
+    "particle": "westerosblocks:block/pebble/iron_islands/dry2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_quarter/black/all",
+    "up": "westerosblocks:block/ashlar_quarter/black/all",
+    "north": "westerosblocks:block/ashlar_quarter/black/all",
+    "south": "westerosblocks:block/ashlar_quarter/black/all",
+    "west": "westerosblocks:block/ashlar_quarter/black/all",
+    "east": "westerosblocks:block/ashlar_quarter/black/all",
+    "particle": "westerosblocks:block/ashlar_quarter/black/all"
+  }
+}

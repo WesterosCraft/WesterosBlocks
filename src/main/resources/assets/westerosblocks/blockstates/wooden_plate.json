@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "state=food": {
+      "model": "westerosblocks:block/generated/wooden_plate/food_v1"
+    },
+    "state=empty": {
+      "model": "westerosblocks:block/generated/wooden_plate/empty_v1"
+    }
+  }
+}

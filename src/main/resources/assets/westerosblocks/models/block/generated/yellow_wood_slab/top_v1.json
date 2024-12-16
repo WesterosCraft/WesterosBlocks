@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/wood/yellow/all",
+    "up": "westerosblocks:block/wood/yellow/all",
+    "north": "westerosblocks:block/wood/yellow/plankctm",
+    "south": "westerosblocks:block/wood/yellow/plankctm",
+    "west": "westerosblocks:block/wood/yellow/plankctm",
+    "east": "westerosblocks:block/wood/yellow/plankctm",
+    "particle": "westerosblocks:block/wood/yellow/plankctm"
+  }
+}

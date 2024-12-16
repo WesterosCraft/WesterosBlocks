@@ -1,0 +1,156 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt2": "westerosblocks:block/candle_glass/green_side",
+    "txt0": "westerosblocks:block/candle_glass/green_bottom",
+    "txt1": "westerosblocks:block/candle_glass/green_top",
+    "particle": "westerosblocks:block/candle_glass/green_bottom"
+  },
+  "elements": [
+    {
+      "from": [
+        6.5,
+        0.0,
+        6.5
+      ],
+      "to": [
+        9.5,
+        14.0,
+        9.5
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            6.5,
+            2.0,
+            9.5,
+            16.0
+          ],
+          "texture": "#txt2"
+        },
+        "south": {
+          "uv": [
+            6.5,
+            2.0,
+            9.5,
+            16.0
+          ],
+          "texture": "#txt2"
+        },
+        "north": {
+          "uv": [
+            6.5,
+            2.0,
+            9.5,
+            16.0
+          ],
+          "texture": "#txt2"
+        },
+        "west": {
+          "uv": [
+            6.5,
+            2.0,
+            9.5,
+            16.0
+          ],
+          "texture": "#txt2"
+        },
+        "up": {
+          "uv": [
+            6.5,
+            6.5,
+            9.5,
+            9.5
+          ],
+          "texture": "#txt1"
+        },
+        "down": {
+          "uv": [
+            6.5,
+            6.5,
+            9.5,
+            9.5
+          ],
+          "texture": "#txt0",
+          "cullface": "down"
+        }
+      }
+    },
+    {
+      "from": [
+        7.5,
+        14.0,
+        7.5
+      ],
+      "to": [
+        8.5,
+        15.5,
+        8.5
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            7.5,
+            0.5,
+            8.5,
+            2.0
+          ],
+          "texture": "#txt2"
+        },
+        "south": {
+          "uv": [
+            7.5,
+            0.5,
+            8.5,
+            2.0
+          ],
+          "texture": "#txt2"
+        },
+        "north": {
+          "uv": [
+            7.5,
+            0.5,
+            8.5,
+            2.0
+          ],
+          "texture": "#txt2"
+        },
+        "west": {
+          "uv": [
+            7.5,
+            0.5,
+            8.5,
+            2.0
+          ],
+          "texture": "#txt2"
+        },
+        "up": {
+          "uv": [
+            7.5,
+            7.5,
+            8.5,
+            8.5
+          ],
+          "texture": "#txt1"
+        }
+      }
+    }
+  ]
+}

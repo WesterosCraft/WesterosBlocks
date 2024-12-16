@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "westerosblocks:block/generated/potted_yellow_hellebore/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/potted_yellow_hellebore/base_v2"
+      }
+    ]
+  }
+}

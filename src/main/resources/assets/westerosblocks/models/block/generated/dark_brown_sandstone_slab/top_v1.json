@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/dark_brown_sandstone/all",
+    "up": "westerosblocks:block/dark_brown_sandstone/all",
+    "north": "westerosblocks:block/dark_brown_sandstone/all",
+    "south": "westerosblocks:block/dark_brown_sandstone/all",
+    "west": "westerosblocks:block/dark_brown_sandstone/all",
+    "east": "westerosblocks:block/dark_brown_sandstone/all",
+    "particle": "westerosblocks:block/dark_brown_sandstone/all"
+  }
+}

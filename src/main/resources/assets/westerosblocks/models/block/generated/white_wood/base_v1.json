@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/wood/white/all",
+    "up": "westerosblocks:block/wood/white/all",
+    "north": "westerosblocks:block/wood/white/woodctm",
+    "south": "westerosblocks:block/wood/white/woodctm",
+    "west": "westerosblocks:block/wood/white/woodctm",
+    "east": "westerosblocks:block/wood/white/woodctm",
+    "particle": "westerosblocks:block/wood/white/woodctm"
+  }
+}

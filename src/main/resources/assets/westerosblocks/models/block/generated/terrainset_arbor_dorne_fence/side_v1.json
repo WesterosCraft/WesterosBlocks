@@ -1,0 +1,8 @@
+{
+  "parent": "westerosblocks:block/untinted/fence_side",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/arbor_dorne/random_4x4",
+    "top": "westerosblocks:block/terrainset/arbor_dorne/random_4x4",
+    "side": "westerosblocks:block/terrainset/arbor_dorne/random_4x4"
+  }
+}

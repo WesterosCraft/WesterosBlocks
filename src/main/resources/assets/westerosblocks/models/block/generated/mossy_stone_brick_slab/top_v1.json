@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "up": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "north": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "south": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "west": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "east": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "particle": "westerosblocks:block/ashlar_half/grey_mossy/all"
+  }
+}

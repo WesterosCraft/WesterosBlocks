@@ -1,0 +1,22 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "westeros_ctm+pattern",
+    "layer": "SOLID",
+    "textures": [
+      "westerosblocks:block/muddy_sand/side_ctmtemplate",
+      "westerosblocks:block/muddy_sand/side_pattern_3x3"
+    ],
+    "extra": {
+      "width": 3,
+      "height": 3,
+      "connect_to": [
+        { "block": "westerosblocks:wet_sand" },
+        { "block": "westerosblocks:wet_sand_layer" },
+        { "block": "westerosblocks:muddy_sand" },
+        { "block": "westerosblocks:muddy_sand_slab" },
+        { "block": "westerosblocks:muddy_sand_layer" }
+      ]
+    }
+  }
+}

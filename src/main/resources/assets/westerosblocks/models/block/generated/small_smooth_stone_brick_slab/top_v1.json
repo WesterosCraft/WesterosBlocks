@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/tinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "up": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "north": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "south": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "west": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "east": "westerosblocks:block/ashlar_quarter_rounded/grey/all",
+    "particle": "westerosblocks:block/ashlar_quarter_rounded/grey/all"
+  }
+}

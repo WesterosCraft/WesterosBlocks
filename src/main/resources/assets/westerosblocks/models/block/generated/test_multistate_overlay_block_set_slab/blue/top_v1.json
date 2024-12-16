@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab_overlay",
+  "textures": {
+    "down": "westerosblocks:block/test_block/d_texture",
+    "up": "westerosblocks:block/test_block/u_texture",
+    "north": "westerosblocks:block/test_block/d_texture",
+    "south": "westerosblocks:block/test_block/d_texture",
+    "west": "westerosblocks:block/test_block/d_texture",
+    "east": "westerosblocks:block/test_block/d_texture",
+    "particle": "westerosblocks:block/test_block/d_texture",
+    "down_ov": "westerosblocks:block/test_block/overlay_blue",
+    "up_ov": "westerosblocks:block/test_block/overlay_blue",
+    "north_ov": "westerosblocks:block/test_block/overlay_blue",
+    "south_ov": "westerosblocks:block/test_block/overlay_blue",
+    "west_ov": "westerosblocks:block/test_block/overlay_blue",
+    "east_ov": "westerosblocks:block/test_block/overlay_blue"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/cabinet/top_bottom",
+    "up": "westerosblocks:block/cabinet/top_bottom",
+    "north": "westerosblocks:block/cabinet/empty/side",
+    "south": "westerosblocks:block/cabinet/empty/side",
+    "west": "westerosblocks:block/cabinet/empty/side",
+    "east": "westerosblocks:block/cabinet/empty/side",
+    "particle": "westerosblocks:block/cabinet/empty/side"
+  }
+}

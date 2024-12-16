@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/wool/blue/all",
+    "up": "westerosblocks:block/wool/blue/all",
+    "north": "westerosblocks:block/wool/blue/all",
+    "south": "westerosblocks:block/wool/blue/all",
+    "west": "westerosblocks:block/wool/blue/all",
+    "east": "westerosblocks:block/wool/blue/all",
+    "particle": "westerosblocks:block/wool/blue/all"
+  }
+}

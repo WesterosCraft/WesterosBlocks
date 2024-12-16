@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/stacked_bones/bone_stacked_side",
+    "up": "westerosblocks:block/stacked_bones/bone_stacked_side",
+    "north": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "south": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "west": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "east": "westerosblocks:block/stacked_bones/bone_stacked_front",
+    "particle": "westerosblocks:block/stacked_bones/bone_stacked_front"
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "variants": {
+        "": [
+            { "model": "minecraft:block/spruce_leaves_bf1" },
+            { "model": "minecraft:block/spruce_leaves_bf1", "y": 90 },
+            { "model": "minecraft:block/spruce_leaves_bf1", "y": 180 },
+            { "model": "minecraft:block/spruce_leaves_bf1", "y": 270 },
+            { "model": "minecraft:block/spruce_leaves_bf2" },
+            { "model": "minecraft:block/spruce_leaves_bf2", "y": 90 },
+            { "model": "minecraft:block/spruce_leaves_bf2", "y": 180 },
+            { "model": "minecraft:block/spruce_leaves_bf2", "y": 270 },
+            { "model": "minecraft:block/spruce_leaves_bf3" },
+            { "model": "minecraft:block/spruce_leaves_bf3", "y": 90 },
+            { "model": "minecraft:block/spruce_leaves_bf3", "y": 180 },
+            { "model": "minecraft:block/spruce_leaves_bf3", "y": 270 }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "ctm_vertical",
+    "layer": "SOLID",
+    "textures": [],
+    "extra": {
+      "ignore_states": true
+    }
+  }
+}

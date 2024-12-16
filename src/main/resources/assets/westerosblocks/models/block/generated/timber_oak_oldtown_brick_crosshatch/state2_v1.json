@@ -1,0 +1,18 @@
+{
+  "parent": "westerosblocks:block/untinted/cube_overlay",
+  "textures": {
+    "down_ov": "westerosblocks:block/timber/oak/bottom",
+    "up_ov": "westerosblocks:block/transparent",
+    "north_ov": "westerosblocks:block/timber/oak/crosshatch",
+    "south_ov": "westerosblocks:block/timber/oak/crosshatch",
+    "west_ov": "westerosblocks:block/timber/oak/crosshatch",
+    "east_ov": "westerosblocks:block/timber/oak/crosshatch",
+    "down": "westerosblocks:block/ashlar_smooth/light_oldtown/all_cutout",
+    "up": "westerosblocks:block/wood/oak/all",
+    "north": "westerosblocks:block/ashlar_smooth/light_oldtown/all_cutout",
+    "south": "westerosblocks:block/ashlar_smooth/light_oldtown/all_cutout",
+    "west": "westerosblocks:block/ashlar_smooth/light_oldtown/all_cutout",
+    "east": "westerosblocks:block/ashlar_smooth/light_oldtown/all_cutout",
+    "particle": "westerosblocks:block/ashlar_smooth/light_oldtown/all_cutout"
+  }
+}

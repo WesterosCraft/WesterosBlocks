@@ -1,0 +1,108 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/post-v1"
+        }
+      ],
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/side-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "low"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/side_tall-v1",
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "north": "tall"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/side-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "low"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/side_tall-v1",
+          "y": 90,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "east": "tall"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/side-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "low"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/side_tall-v1",
+          "y": 180,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "south": "tall"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/side-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "low"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "westerosblocks:block/generated/thatch_light_wall/side_tall-v1",
+          "y": 270,
+          "uvlock": true
+        }
+      ],
+      "when": {
+        "west": "tall"
+      }
+    }
+  ]
+}

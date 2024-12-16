@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_third/terracotta/all",
+    "top": "westerosblocks:block/ashlar_third/terracotta/all",
+    "side": "westerosblocks:block/ashlar_third/terracotta/all",
+    "particle": "westerosblocks:block/ashlar_third/terracotta/all"
+  }
+}

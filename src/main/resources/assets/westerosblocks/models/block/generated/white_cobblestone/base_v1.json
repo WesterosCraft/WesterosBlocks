@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "westerosblocks:block/cobblestone/white/all",
+    "up": "westerosblocks:block/cobblestone/white/all",
+    "north": "westerosblocks:block/cobblestone/white/all",
+    "south": "westerosblocks:block/cobblestone/white/all",
+    "west": "westerosblocks:block/cobblestone/white/all",
+    "east": "westerosblocks:block/cobblestone/white/all",
+    "particle": "westerosblocks:block/cobblestone/white/all"
+  }
+}

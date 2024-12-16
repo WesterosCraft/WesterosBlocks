@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/fieldstone/pale_pink/all",
+    "up": "westerosblocks:block/fieldstone/pale_pink/all",
+    "north": "westerosblocks:block/fieldstone/pale_pink/all",
+    "south": "westerosblocks:block/fieldstone/pale_pink/all",
+    "west": "westerosblocks:block/fieldstone/pale_pink/all",
+    "east": "westerosblocks:block/fieldstone/pale_pink/all",
+    "particle": "westerosblocks:block/fieldstone/pale_pink/all"
+  }
+}

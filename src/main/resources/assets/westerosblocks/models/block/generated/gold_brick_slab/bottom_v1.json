@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/half_slab",
+  "textures": {
+    "down": "westerosblocks:block/metal/gold_brick/all",
+    "up": "westerosblocks:block/metal/gold_brick/all",
+    "north": "westerosblocks:block/metal/gold_brick/all",
+    "south": "westerosblocks:block/metal/gold_brick/all",
+    "west": "westerosblocks:block/metal/gold_brick/all",
+    "east": "westerosblocks:block/metal/gold_brick/all",
+    "particle": "westerosblocks:block/metal/gold_brick/all"
+  }
+}

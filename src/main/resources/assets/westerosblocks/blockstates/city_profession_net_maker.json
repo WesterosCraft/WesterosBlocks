@@ -1,0 +1,92 @@
+{
+  "variants": {
+    "facing=east,state=cut5": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut5_v1"
+    },
+    "facing=east,state=cut4": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut4_v1"
+    },
+    "facing=east,state=cut3": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut3_v1"
+    },
+    "facing=east,state=cut2": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut2_v1"
+    },
+    "facing=north,state=cut6": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut6_v1",
+      "y": 90
+    },
+    "facing=north,state=cut4": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut4_v1",
+      "y": 90
+    },
+    "facing=north,state=cut5": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut5_v1",
+      "y": 90
+    },
+    "facing=east,state=cut6": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut6_v1"
+    },
+    "facing=north,state=cut2": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut2_v1",
+      "y": 90
+    },
+    "facing=north,state=cut3": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut3_v1",
+      "y": 90
+    },
+    "facing=north,state=cut1": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut1_v1",
+      "y": 90
+    },
+    "facing=east,state=cut1": {
+      "model": "westerosblocks:block/generated/city_profession_net_maker/cut1_v1"
+    },
+    "facing=north,state=random": [
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v1",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v2",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v3",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v4",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v5",
+        "y": 90
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v6",
+        "y": 90
+      }
+    ],
+    "facing=east,state=random": [
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v2"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v3"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v4"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v5"
+      },
+      {
+        "model": "westerosblocks:block/generated/city_profession_net_maker/random_v6"
+      }
+    ]
+  }
+}

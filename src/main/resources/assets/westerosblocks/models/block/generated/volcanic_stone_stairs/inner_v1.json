@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/terrainset/magma/all",
+    "top": "westerosblocks:block/terrainset/magma/all",
+    "side": "westerosblocks:block/terrainset/magma/all",
+    "particle": "westerosblocks:block/terrainset/magma/all"
+  }
+}

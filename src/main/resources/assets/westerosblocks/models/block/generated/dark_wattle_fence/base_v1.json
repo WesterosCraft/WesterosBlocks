@@ -1,0 +1,81 @@
+{
+  "parent": "block/block",
+  "display": {
+    "rotation": [
+      0,
+      90,
+      0
+    ],
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  },
+  "textures": {
+    "txt4": "westerosblocks:block/wattle_fence_dark/side1",
+    "txt5": "westerosblocks:block/wattle_fence_dark/side2",
+    "txt2": "westerosblocks:block/wattle_fence_dark/side1",
+    "txt3": "westerosblocks:block/wattle_fence_dark/side1",
+    "particle": "westerosblocks:block/transparent"
+  },
+  "elements": [
+    {
+      "from": [
+        0.16,
+        0.0,
+        0.0
+      ],
+      "to": [
+        1.12,
+        16.0,
+        16.0
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt5"
+        },
+        "south": {
+          "uv": [
+            0.16,
+            0.0,
+            1.12,
+            16.0
+          ],
+          "texture": "#txt3",
+          "cullface": "south"
+        },
+        "north": {
+          "uv": [
+            14.88,
+            0.0,
+            15.84,
+            16.0
+          ],
+          "texture": "#txt2",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            0.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#txt4"
+        }
+      }
+    }
+  ]
+}

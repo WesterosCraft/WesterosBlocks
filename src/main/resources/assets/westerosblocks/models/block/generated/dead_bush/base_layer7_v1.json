@@ -1,0 +1,6 @@
+{
+  "parent": "westerosblocks:block/tinted/cross_layer7",
+  "textures": {
+    "cross": "westerosblocks:block/dorne_bush_thorny/side1"
+  }
+}

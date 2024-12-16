@@ -1,0 +1,12 @@
+{
+  "parent": "westerosblocks:block/untinted/upper_slab",
+  "textures": {
+    "down": "westerosblocks:block/terrainset/flowstone/all4",
+    "up": "westerosblocks:block/terrainset/flowstone/all4",
+    "north": "westerosblocks:block/terrainset/flowstone/all4",
+    "south": "westerosblocks:block/terrainset/flowstone/all4",
+    "west": "westerosblocks:block/terrainset/flowstone/all4",
+    "east": "westerosblocks:block/terrainset/flowstone/all4",
+    "particle": "westerosblocks:block/terrainset/flowstone/all4"
+  }
+}

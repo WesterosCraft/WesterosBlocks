@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "layers=5": [
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer5_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer5_v2"
+      }
+    ],
+    "layers=6": [
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer6_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer6_v2"
+      }
+    ],
+    "layers=3": [
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer3_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer3_v2"
+      }
+    ],
+    "layers=4": [
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer4_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer4_v2"
+      }
+    ],
+    "layers=7": [
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer7_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer7_v2"
+      }
+    ],
+    "layers=8": [
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_v2"
+      }
+    ],
+    "layers=1": [
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer1_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer1_v2"
+      }
+    ],
+    "layers=2": [
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer2_v1"
+      },
+      {
+        "model": "westerosblocks:block/generated/orange_sun_star/base_layer2_v2"
+      }
+    ]
+  }
+}

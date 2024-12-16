@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/untinted/outer_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/wood/grey/vertical",
+    "top": "westerosblocks:block/wood/grey/vertical",
+    "side": "westerosblocks:block/wood/grey/vertical",
+    "particle": "westerosblocks:block/wood/grey/vertical"
+  }
+}

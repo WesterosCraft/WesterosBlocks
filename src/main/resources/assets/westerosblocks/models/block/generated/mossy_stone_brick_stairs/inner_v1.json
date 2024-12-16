@@ -1,0 +1,9 @@
+{
+  "parent": "westerosblocks:block/tinted/inner_stairs",
+  "textures": {
+    "bottom": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "top": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "side": "westerosblocks:block/ashlar_half/grey_mossy/all",
+    "particle": "westerosblocks:block/ashlar_half/grey_mossy/all"
+  }
+}
