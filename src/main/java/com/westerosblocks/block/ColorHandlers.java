@@ -12,6 +12,7 @@ import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.resource.ResourceManager;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BlockRenderView;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -244,8 +245,8 @@ public class ColorHandlers {
 //        }
 //
 //        private int getColor(double tmp, double hum, int txtindx) {
-//            tmp = Mth.clamp(tmp, 0.0F, 1.0F);
-//            hum = Mth.clamp(hum, 0.0F, 1.0F);
+//            tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
+//            hum = MathHelper.clamp(hum, 0.0F, 1.0F);
 //            hum *= tmp;
 //            int i = (int) ((1.0D - tmp) * 255.0D);
 //            int j = (int) ((1.0D - hum) * 255.0D);
@@ -264,8 +265,8 @@ public class ColorHandlers {
 //                hum = biome.getModifiedClimateSettings().downfall();
 //                tmp = biome.getBaseTemperature();
 //            }
-//            tmp = Mth.clamp(tmp, 0.0F, 1.0F);
-//            hum = Mth.clamp(hum, 0.0F, 1.0F);
+//            tmp = MathHelper.clamp(tmp, 0.0F, 1.0F);
+//            hum = MathHelper.clamp(hum, 0.0F, 1.0F);
 //            hum *= tmp;
 //            int i = (int) ((1.0D - tmp) * 255.0D);
 //            int j = (int) ((1.0D - hum) * 255.0D);
@@ -305,8 +306,8 @@ public class ColorHandlers {
 
         public static int get(double temperature, double humidity) {
             humidity *= temperature;
-            int i = (int)((1.0 - temperature) * 255.0);
-            int j = (int)((1.0 - humidity) * 255.0);
+            int i = (int) ((1.0 - temperature) * 255.0);
+            int j = (int) ((1.0 - humidity) * 255.0);
             int k = j << 8 | i;
             return k >= pixels.length ? -65281 : pixels[k];
         }
