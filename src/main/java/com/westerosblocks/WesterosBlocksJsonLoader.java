@@ -1,6 +1,7 @@
 package com.westerosblocks;
 
 import com.google.gson.*;
+import com.westerosblocks.block.WesterosBlockColorMap;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockSetDef;
 
@@ -12,14 +13,14 @@ import java.util.HashSet;
 import java.util.List;
 
 // Top level container for WesterosBlocks.json parsed data
-public class WesterosBlocksConfigLoader {
+public class WesterosBlocksJsonLoader {
     public static class WesterosBlocksConfig {
         public WesterosBlockSetDef[] blockSets;
         public WesterosBlockDef[] blocks;
         // TODO
-//    public WesterosBlockColorMap[] colorMaps;
-//    public WesterosItemMenuOverrides[] menuOverrides;
-//    public WesterosBlockTags[] blockTags;
+        public WesterosBlockColorMap[] colorMaps;
+        // public WesterosItemMenuOverrides[] menuOverrides;
+        // public WesterosBlockTags[] blockTags;
     }
 
     public static class BlockConfigNotFoundException extends Exception {
@@ -102,14 +103,11 @@ public class WesterosBlocksConfigLoader {
 
     /**
      * Returns the block config defined in blocks.json, blockSets.json etc
-     * @param filenames
-     * @return
      */
     public static WesterosBlocksConfig getBlockConfig(List<String> filenames) {
-        WesterosBlocksConfig combinedConfig;
+        WesterosBlocksConfig combinedConfig = null;
         try {
             combinedConfig = loadBlockConfigs(filenames);
-            return combinedConfig;
         } catch (BlockConfigNotFoundException e) {
             WesterosBlocks.LOGGER.error("WesterosBlocks couldn't find its block definition resource");
         } catch (JsonSyntaxException iox) {
@@ -117,7 +115,11 @@ public class WesterosBlocksConfigLoader {
         } catch (JsonParseException ex) {
             WesterosBlocks.LOGGER.warn("couldn't read oldWesterosBlocks.json block definition; skipping");
         }
-        return null;
+
+        if (combinedConfig == null) {
+            WesterosBlocks.LOGGER.error("WesterosBlocks couldn't read its block definition");
+        }
+        return combinedConfig;
     }
 
     public static boolean sanityCheck(WesterosBlockDef[] defs) {

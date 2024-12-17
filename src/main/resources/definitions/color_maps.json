@@ -1,0 +1,112 @@
+{
+  "colorMaps": [
+    {
+      "blockNames": [
+        "minecraft:stone",
+        "minecraft:stone_pressure_plate",
+        "minecraft:stone_button",
+        "minecraft:iron_ore",
+        "minecraft:gold_ore"
+      ],
+      "colorMult": "textures/colormap/stone"
+    },
+    {
+      "blockNames": [
+        "minecraft:terracotta"
+      ],
+      "colorMult": "textures/colormap/lightgreystone"
+    },
+    {
+      "blockNames": [
+        "minecraft:stone_brick_slab",
+        "minecraft:stone_bricks",
+        "minecraft:mossy_stone_bricks",
+        "minecraft:cracked_stone_bricks",
+        "minecraft:stone_brick_stairs"
+      ],
+      "colorMult": "textures/colormap/stonebrick"
+    },
+    {
+      "blockNames": [
+        "minecraft:sugar_cane"
+      ],
+      "colorMult": "textures/colormap/reed"
+    },
+    {
+      "blockNames": [
+        "minecraft:cobblestone",
+        "minecraft:stone_stairs",
+        "minecraft:cobblestone_slab",
+        "minecraft:cobblestone_wall",
+        "minecraft:cobblestone_stairs",
+        "minecraft:mossy_cobblestone",
+        "minecraft:mossy_cobblestone_wall",
+        "minecraft:lever",
+        "westerosblocks:cobblestone_stairs"
+      ],
+      "colorMult": "textures/colormap/cobblestone"
+    },
+    {
+      "blockNames": [
+        "minecraft:furnace"
+      ],
+      "colorMult": "textures/colormap/furnace"
+    },
+    {
+      "blockNames": [
+        "minecraft:clay"
+      ],
+      "colorMult": "textures/colormap/clay"
+    },
+    {
+      "blockNames": [
+        "minecraft:sand"
+      ],
+      "colorMult": "textures/colormap/sand"
+    },
+    {
+      "blockNames": [
+        "minecraft:jungle_leaves"
+      ],
+      "colorMult": "textures/colormap/foliagejungle"
+    },
+    {
+      "blockNames": [
+        "minecraft:oak_leaves"
+      ],
+      "colorMult": "textures/colormap/foliageoak"
+    },
+    {
+      "blockNames": [
+        "minecraft:vine"
+      ],
+      "colorMult": "textures/colormap/foliagevine"
+    },
+    {
+      "blockNames": [
+        "minecraft:water",
+        "minecraft:bubble_column",
+        "minecraft:water_cauldron"
+      ],
+      "colorMult": "textures/colormap/water"
+    },
+    {
+      "blockNames": [
+        "minecraft:lily_pad"
+      ],
+      "colorMult": "#FFFFFF"
+    },
+    {
+      "blockNames": [
+        "minecraft:birch_leaves"
+      ],
+      "colorMult": "textures/colormap/birch"
+    },
+    {
+      "blockNames": [
+        "minecraft:spruce_leaves"
+      ],
+      "colorMult": "textures/colormap/pine"
+    }
+  ]
+}
