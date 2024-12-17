@@ -7,9 +7,10 @@ public interface WesterosBlockLifecycle {
     /**
      * Get definition for block
      */
-    public WesterosBlockDef getWBDefinition();
+    WesterosBlockDef getWBDefinition();
+
     /**
      * Get block tags for block
      */
-    public String[] getBlockTags();
+    String[] getBlockTags();
 }

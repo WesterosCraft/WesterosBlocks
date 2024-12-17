@@ -4,6 +4,8 @@ import com.google.gson.*;
 import com.westerosblocks.block.WesterosBlockColorMap;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockSetDef;
+import com.westerosblocks.block.WesterosBlockTags;
+import com.westerosblocks.item.WesterosItemMenuOverrides;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,10 +19,9 @@ public class WesterosBlocksJsonLoader {
     public static class WesterosBlocksConfig {
         public WesterosBlockSetDef[] blockSets;
         public WesterosBlockDef[] blocks;
-        // TODO
         public WesterosBlockColorMap[] colorMaps;
-        // public WesterosItemMenuOverrides[] menuOverrides;
-        // public WesterosBlockTags[] blockTags;
+        public WesterosItemMenuOverrides[] menuOverrides;
+        public WesterosBlockTags[] blockTags;
     }
 
     public static class BlockConfigNotFoundException extends Exception {

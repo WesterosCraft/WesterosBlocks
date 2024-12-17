@@ -19,7 +19,7 @@ public class DoorBlockMixin extends Block {
         super(settings);
     }
 
-    @Inject(method = "canPlaceAt", at = @At("HEAD"), cancellable=true)
+    @Inject(method = "canPlaceAt", at = @At("HEAD"), cancellable = true)
     private void doCanSurvive(BlockState state, WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         boolean doorSurviveAny = ModConfig.get().doorSurviveAny;
         if ((state.get(DoorBlock.HALF) == DoubleBlockHalf.LOWER) && doorSurviveAny) {

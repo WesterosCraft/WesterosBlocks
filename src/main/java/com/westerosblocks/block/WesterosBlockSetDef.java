@@ -51,14 +51,13 @@ public class WesterosBlockSetDef {
     public List<StateRecord> states = null;
 
 
-
     public static final List<String> DEFAULT_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper");
     public static final List<String> SUPPORTED_VARIANTS = Arrays.asList("solid", "stairs", "slab", "wall", "fence", "hopper", "tip",
             "carpet", "fence_gate", "half_door", "cover", "hollow_hopper",
             "log", "directional", "layer", "pane", "sand", "path",
             "window_frame", "window_frame_mullion",
             "arrow_slit", "arrow_slit_window", "arrow_slit_ornate");
-    public static final Map<String, String> VARIANT_TYPES = new HashMap<String, String>();
+    public static final Map<String, String> VARIANT_TYPES = new HashMap<>();
 
     // For any variant not listed here, it is assumed that the type is the same as the variant string
     static {
@@ -79,7 +78,7 @@ public class WesterosBlockSetDef {
         VARIANT_TYPES.put("arrow_slit_ornate", "solid");
     }
 
-    public static final Map<String, String[]> VARIANT_TEXTURES = new HashMap<String, String[]>();
+    public static final Map<String, String[]> VARIANT_TEXTURES = new HashMap<>();
 
     static {
         VARIANT_TEXTURES.put("solid", new String[]{"bottom", "top", "west", "east", "south", "north"});
@@ -109,8 +108,8 @@ public class WesterosBlockSetDef {
 
     public static class RandomTextureMap {
         public Map<String, String> textures = null; // List of textures (for single texture set)
-        public Integer weight = null;		// Weight for texture set (default = 1)
-    };
+        public Integer weight = null;        // Weight for texture set (default = 1)
+    }
 
     // Used for sets that support multiple blockstates
     public static class StateRecord {
@@ -129,7 +128,7 @@ public class WesterosBlockSetDef {
     }
 
     public List<WesterosBlockDef> generateBlockDefs() {
-        List<WesterosBlockDef> blockDefs = new LinkedList<WesterosBlockDef>();
+        List<WesterosBlockDef> blockDefs = new LinkedList<>();
 
         this.types = preprocessVariantMap(this.types);
         this.altCustomTags = preprocessVariantMap(this.altCustomTags);
@@ -149,8 +148,7 @@ public class WesterosBlockSetDef {
             String suffix = (variant.equals("solid")) ? "" : variant;
             if (this.altNames != null && this.altNames.containsKey(variant)) {
                 variantDef.blockName = this.altNames.get(variant);
-            }
-            else {
+            } else {
                 variantDef.blockName = this.baseBlockName;
                 if (!suffix.isEmpty())
                     variantDef.blockName += "_" + suffix;
@@ -159,12 +157,10 @@ public class WesterosBlockSetDef {
             // Automatically derive label for variant (or use alt label if provided)
             if (this.altLabels != null && this.altLabels.containsKey(variant)) {
                 variantDef.label = this.altLabels.get(variant);
-            }
-            else if (this.baseLabel != null) {
+            } else if (this.baseLabel != null) {
                 String suffix_label = (suffix.isEmpty()) ? "" : WesterosBlockSetDef.generateLabel(suffix);
                 variantDef.label = this.baseLabel + " " + suffix_label;
-            }
-            else {
+            } else {
                 variantDef.label = WesterosBlockSetDef.generateLabel(variantDef.blockName);
             }
 
@@ -191,15 +187,13 @@ public class WesterosBlockSetDef {
             if (this.altCustomTags != null && this.altCustomTags.containsKey(variant)) {
                 List<String> tags = altCustomTags.get(variant);
                 variantDef.customTags = (!tags.isEmpty()) ? tags : null;
-            }
-            else
+            } else
                 variantDef.customTags = this.customTags;
 
             // Copy type attribute for variant
             if (this.types != null && this.types.containsKey(variant)) {
                 variantDef.type = this.types.get(variant);
-            }
-            else {
+            } else {
                 // Enforce defaults for particular blocktypes
                 if (variant.matches("stairs|wall|fence|pane"))
                     variantDef.type = "unconnect:false";
@@ -218,54 +212,47 @@ public class WesterosBlockSetDef {
             // Process blocktypes with special attributes
             if (variant.equals("hopper")) {
                 WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 1f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new WesterosBlockDef.Cuboid(0.3755f, 0f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
-            }
-            else if (variant.equals("tip")) {
+            } else if (variant.equals("tip")) {
                 WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0.3755f, 0.625f, 0.3755f, 0.6245f, 1f, 0.6245f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.275f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new WesterosBlockDef.Cuboid(0.3755f, 0.625f, 0.3755f, 0.6245f, 1f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.275f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
-            }
-            else if (variant.equals("carpet")) {
+            } else if (variant.equals("carpet")) {
                 WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.0625f, 1f, new int[] { 0, 0, 0, 0, 0, 0 })
+                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.0625f, 1f, new int[]{0, 0, 0, 0, 0, 0})
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
-            }
-            else if (variant.equals("half_door")) {
+            } else if (variant.equals("half_door")) {
                 variantDef.boundingBox = new WesterosBlockDef.BoundingBox(0f, 0f, 0f, 0.1875f, 1f, 1f);
-            }
-            else if (variant.equals("hollow_hopper")) {
+            } else if (variant.equals("hollow_hopper")) {
                 WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0.3755f, 0.16f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 0.65f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 0.125f, 1f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0.875f, 0.625f, 0f, 1f, 1f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 1f, 0.125f, new int[] { 0, 0, 0, 0, 0, 0 }),
-                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0.875f, 1f, 1f, 1f, new int[] { 0, 0, 0, 0, 0, 0 }),
+                        new WesterosBlockDef.Cuboid(0.3755f, 0.16f, 0.3755f, 0.6245f, 0.275f, 0.6245f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0.25f, 0.275f, 0.25f, 0.75f, 0.625f, 0.75f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 0.65f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 0.125f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0.875f, 0.625f, 0f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0f, 1f, 1f, 0.125f, new int[]{0, 0, 0, 0, 0, 0}),
+                        new WesterosBlockDef.Cuboid(0f, 0.625f, 0.875f, 1f, 1f, 1f, new int[]{0, 0, 0, 0, 0, 0}),
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
-            }
-            else if (variant.equals("directional")) {
+            } else if (variant.equals("directional")) {
                 WesterosBlockDef.Cuboid[] cuboids = {
                         new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 1f, 1f)
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
-            }
-            else if (variant.equals("path")) {
+            } else if (variant.equals("path")) {
                 WesterosBlockDef.Cuboid[] cuboids = {
-                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.9375f, 1f, new int[] { 0, 0, 0, 0, 0, 0 })
+                        new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0.9375f, 1f, new int[]{0, 0, 0, 0, 0, 0})
                 };
                 variantDef.cuboids = Arrays.asList(cuboids);
-            }
-            else if (variant.contains("arrow_slit") || variant.contains("window_frame")) {
+            } else if (variant.contains("arrow_slit") || variant.contains("window_frame")) {
                 variantDef.nonOpaque = true;
                 variantDef.lightOpacity = 0;
                 WesterosBlockDef.BoundingBox[] collisionBoxes = {
@@ -288,7 +275,7 @@ public class WesterosBlockSetDef {
 
             // If block set has multistate, create list of states for each variant
             if (this.states != null) {
-                List<WesterosBlockStateRecord> states = new ArrayList<WesterosBlockStateRecord>();
+                List<WesterosBlockStateRecord> states = new ArrayList<>();
                 for (StateRecord sr : this.states) {
                     if (sr.excludeVariants == null || !sr.excludeVariants.contains(variant)) {
                         WesterosBlockStateRecord newsr = new WesterosBlockStateRecord();
@@ -306,7 +293,7 @@ public class WesterosBlockSetDef {
             }
             // By default, turn on toggleOnUse if block set has multistate
             if (variantDef.states != null && (this.types == null || !this.types.containsKey(variant))) {
-                variantDef.type = (variantDef.type == null || variantDef.type.equals("")) ? "toggleOnUse" : variantDef.type+",toggleOnUse";
+                variantDef.type = (variantDef.type == null || variantDef.type.isEmpty()) ? "toggleOnUse" : variantDef.type + ",toggleOnUse";
             }
 
             blockDefs.add(variantDef);
@@ -323,7 +310,7 @@ public class WesterosBlockSetDef {
     }
 
     public static List<WesterosBlockDef.RandomTextureSet> pickVariantRandomTextures(List<RandomTextureMap> randomTextures,
-                              Map<String, List<WesterosBlockDef.RandomTextureSet>> altRandomTextures,String variant) {
+                                                                                    Map<String, List<WesterosBlockDef.RandomTextureSet>> altRandomTextures, String variant) {
         if (altRandomTextures != null && altRandomTextures.containsKey(variant))
             return altRandomTextures.get(variant);
         else
@@ -337,7 +324,7 @@ public class WesterosBlockSetDef {
         if (map == null)
             return null;
 
-        Map<String, T> newMap = new HashMap<String, T>();
+        Map<String, T> newMap = new HashMap<>();
         for (Map.Entry<String, T> entry : map.entrySet()) {
             String key = entry.getKey();
             T value = entry.getValue();
@@ -359,7 +346,7 @@ public class WesterosBlockSetDef {
         String[] words = name.split("_");
         StringBuilder label = new StringBuilder();
         for (String word : words) {
-            String wordCap = word.substring(0,1).toUpperCase() + word.substring(1);
+            String wordCap = word.substring(0, 1).toUpperCase() + word.substring(1);
             label.append(wordCap).append(" ");
         }
         return label.toString().trim();
@@ -416,7 +403,7 @@ public class WesterosBlockSetDef {
         if (textureMap == null)
             return null;
 
-        List<String> textureList = new LinkedList<String>();
+        List<String> textureList = new LinkedList<>();
 
         for (String texture : WesterosBlockSetDef.VARIANT_TEXTURES.get(variant)) {
             if (textureMap.containsKey(texture)) textureList.add(textureMap.get(texture));
@@ -429,7 +416,7 @@ public class WesterosBlockSetDef {
         if (randomTextureMaps == null)
             return null;
 
-        List<WesterosBlockDef.RandomTextureSet> randomTextures = new LinkedList<WesterosBlockDef.RandomTextureSet>();
+        List<WesterosBlockDef.RandomTextureSet> randomTextures = new LinkedList<>();
 
         for (RandomTextureMap randomTextureMap : randomTextureMaps) {
             WesterosBlockDef.RandomTextureSet randomTextureSet = new WesterosBlockDef.RandomTextureSet();
