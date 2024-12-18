@@ -20,13 +20,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.ColorResolver;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 
 public class ColorHandlers {
+    private static final Map<String, ColorMultHandler> colorMultTable = new HashMap<>();
+
     public static abstract class ColorMultHandler implements BlockColorProvider, ItemColorProvider {
         ColorMultHandler() {
         }
@@ -292,6 +291,160 @@ public class ColorHandlers {
 //                txtindx++;
 //            }
 //        }
+//    }
+
+    // Force reload of color handlers
+//    public static void reloadColorHandler(ResourceManager pResourceManager) {
+//        Set<String> hndids = new HashSet<String>(colorMultTable.keySet());
+//        for (String hndid : hndids) {
+//            ColorMultHandler prev = colorMultTable.get(hndid);
+//            // Only reload those from resources
+//            if (prev instanceof CustomColorMultHandler) {
+//                ((CustomColorMultHandler) prev).loadColorMaps(pResourceManager);
+//            }
+//        }
+//    }
+
+//    public static ColorMultHandler getColorHandler(String hnd, String blockName) {
+//        String hndid = hnd.toLowerCase();
+//        ColorMultHandler cmh = colorMultTable.get(hndid);
+//        if (cmh == null) {
+//            // See if color code
+//            if ((hndid.length() == 7) && (hndid.charAt(0) == '#')) {
+//                try {
+//                    cmh = new FixedColorMultHandler(Integer.parseInt(hndid.substring(1), 16));
+//                    colorMultTable.put(hndid, cmh);
+//                } catch (NumberFormatException nfx) {
+//                }
+//            }
+//            // See if resource
+//            else {
+//                int idx = hnd.indexOf(':');
+//                if (idx < 0) {
+//                    hnd = WesterosBlocks.MOD_ID + ":" + hnd;
+//                    hndid = hnd.toLowerCase();
+//                }
+//                cmh = colorMultTable.get(hndid);
+//                if (cmh == null) {
+//                    cmh = new CustomColorMultHandler(hnd, blockName);
+//                    colorMultTable.put(hndid, cmh);
+//                }
+//            }
+//        }
+//
+//        return cmh;
+//    }
+//
+//    public static ColorMultHandler getColorHandler(List<String> hnd, String blockName) {
+//        String hndid = String.join("_", hnd).toLowerCase();
+//        ColorMultHandler cmh = colorMultTable.get(hndid);
+//        if (cmh == null) {
+//            for (int i = 0; i < hnd.size(); i++) {
+//                int idx = hnd.get(i).indexOf(':');
+//                if (idx < 0) {
+//                    hnd.set(i, WesterosBlocks.MOD_ID + ":" + hnd.get(i));
+//                }
+//            }
+//            hndid = String.join("_", hnd).toLowerCase();
+//            cmh = colorMultTable.get(hndid);
+//            if (cmh == null) {
+//                cmh = new CustomColorMultHandler(hnd, blockName);
+//                colorMultTable.put(hndid, cmh);
+//            }
+//        }
+//
+//        return cmh;
+//    }
+
+//    public static ColorMultHandler getStateColorHandler(WesterosBlockStateRecord rec, String blockName) {
+//        if (rec.colorMults != null) {
+//            return getColorHandler(rec.colorMults, blockName);
+//        } else {
+//            return getColorHandler(rec.colorMult, blockName);
+//        }
+//    }
+
+//    public String getBlockColorMapResource() {
+//        String res = null;
+//        String blockColor = colorMult;
+//        if (blockColor == null && colorMults != null && colorMults.size() >= 1) {
+//            blockColor = colorMults.get(0);
+//        }
+//        if ((blockColor != null) && (blockColor.startsWith("#") == false)) {
+//            String tok[] = blockColor.split(":");
+//            if (tok.length == 1) {
+//                if (tok[0].startsWith("textures/"))
+//                    tok[0] = tok[0].substring(9);
+//                res = WesterosBlocks.MOD_ID + ":" + tok[0];
+//            } else {
+//                if (tok[1].startsWith("textures/"))
+//                    tok[1] = tok[1].substring(9);
+//                res = tok[0] + ":" + tok[1];
+//            }
+//        }
+//        return res;
+//    }
+
+    // Handle registration of tint handling and other client rendering
+//    @Environment(EnvType.CLIENT)
+//    public void registerBlockColorHandler(Block blk, RegisterColorHandlersEvent.Block event) {
+//        if (this.isTinted()) {
+//            if (this.stateProp != null) {
+//                final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
+//                for (WesterosBlockStateRecord rec : this.states) {
+//                    ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
+//                    cmmap.put(rec.stateID, handler);
+//                }
+//                event.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) ->
+//                        cmmap.get(state.getValue(this.stateProp)).getColor(state, world, pos, txtindx), blk);
+//                final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
+//            } else {
+//                ColorMultHandler handler = getStateColorHandler(this, this.blockName);
+//
+//                event.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
+//                        .getColor(state, world, pos, txtindx), blk);
+//            }
+//        }
+//    }
+
+    // Handle registration of tint handling and other client rendering
+//    @Environment(EnvType.CLIENT)
+//    public static void registerVanillaBlockColorHandler(String blockName, Block blk, String colorMult, RegisterColorHandlersEvent.Block event) {
+//        ColorMultHandler handler = getColorHandler(colorMult, blockName);
+//        event.register((BlockState state, BlockAndTintGetter world, BlockPos pos, int txtindx) -> handler
+//                .getColor(state, world, pos, txtindx), blk);
+//        // If water shader, override global one too
+//        if (blockName.equals("minecraft:water") && (handler instanceof CustomColorMultHandler)) {
+//            final CustomColorMultHandler cchandler = (CustomColorMultHandler) handler;    // crappy java lambda limitation workaround
+//            // TODO: biome modifiers maybe
+////			BiomeColors.WATER_COLOR_RESOLVER = (Biome b, double tmp, double hum) -> cchandler.getColor(b, tmp, hum);
+//        }
+//    }
+
+    // Handle registration of tint handling and other client rendering
+//    @Environment(EnvType.CLIENT)
+//    public void registerItemColorHandler(Block blk, RegisterColorHandlersEvent.Item event) {
+//        if (this.isTinted()) {
+//            if (this.stateProp != null) {
+//                final Map<String, ColorMultHandler> cmmap = new HashMap<String, ColorMultHandler>();
+//                for (WesterosBlockStateRecord rec : this.states) {
+//                    ColorMultHandler handler = getStateColorHandler(rec, this.blockName);
+//                    cmmap.put(rec.stateID, handler);
+//                }
+//                final ColorMultHandler itemHandler = cmmap.get(this.states.get(0).stateID);
+//                event.register((ItemStack stack, int tintIndex) -> itemHandler.getItemColor(stack, tintIndex), blk);
+//            } else {
+//                ColorMultHandler handler = getStateColorHandler(this, this.blockName);
+//                event.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
+//            }
+//        }
+//    }
+
+    // Handle registration of tint handling and other client rendering
+//    @Environment(EnvType.CLIENT)
+//    public static void registerVanillaItemColorHandler(String blockName, Block blk, String colorMult, RegisterColorHandlersEvent.Item event) {
+//        ColorMultHandler handler = getColorHandler(colorMult, blockName);
+//        event.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 //    }
 
     public static class GrassColor {

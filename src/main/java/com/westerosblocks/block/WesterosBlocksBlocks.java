@@ -1,4 +1,5 @@
 package com.westerosblocks.block;
+
 import com.westerosblocks.WesterosBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -18,14 +19,14 @@ public class WesterosBlocksBlocks {
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
 
-private static Block registerBlock(String name, Block block) {
-    registerBlockItem(name, block);
-    return Registry.register(Registries.BLOCK, Identifier.of(WesterosBlocks.MOD_ID,name), block);
-}
+    private static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(WesterosBlocks.MOD_ID, name), block);
+    }
 
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(WesterosBlocks.MOD_ID, name),
-            new BlockItem(block, new Item.Settings()));
+                new BlockItem(block, new Item.Settings()));
     }
 
     public static void registerModBlocks() {
