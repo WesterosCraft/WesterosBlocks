@@ -1,15 +1,17 @@
 package com.westerosblocks;
 
-import com.westerosblocks.block.WesterosBlockColorMap;
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockSetDef;
-import com.westerosblocks.block.WesterosBlocksBlocks;
+import com.westerosblocks.block.*;
 import com.westerosblocks.item.WesterosBlocksItems;
 import com.westerosblocks.item.WesterosItemMenuOverrides;
 import com.westerosblocks.sound.ModSounds;
+import com.westerosblocks.util.AutoDoorRestore;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.block.Block;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.InvalidIdentifierException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,7 +49,13 @@ public class WesterosBlocks implements ModInitializer {
 
         WesterosBlocksItems.registerModItems();
         WesterosBlocksBlocks.registerModBlocks();
+        ColorHandlers.registerColorProviders();
         ModSounds.registerSounds(customBlockDefs);
+
+        ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
+            // Handle any pending door restores (force immediate)
+            AutoDoorRestore.handlePendingHalfDoorRestores(true);
+        });
     }
 
     public static WesterosBlockDef[] getCustomBlockDefs() {
@@ -67,4 +75,33 @@ public class WesterosBlocks implements ModInitializer {
         }
         return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
     }
+
+    public static Block findBlockByName(String blkname, String namespace) {
+        Block blk = customBlocksByName.get(blkname);
+        if (blk != null) return blk;
+
+        Identifier id;
+        try {
+            id = Identifier.tryParse(blkname);
+        } catch (InvalidIdentifierException e) {
+            if (namespace != null) {
+                try {
+                    id = Identifier.of(namespace, blkname);
+                } catch (InvalidIdentifierException e2) {
+                    return null;
+                }
+            } else {
+                return null;
+            }
+        }
+
+        if (id.getNamespace().equals(namespace)) {
+            blk = customBlocksByName.get(id.getPath());
+            if (blk != null) return blk;
+        }
+
+        return Registries.BLOCK.get(id);
+    }
+
+
 }

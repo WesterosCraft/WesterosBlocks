@@ -1,5 +1,6 @@
 package com.westerosblocks;
 
+import com.westerosblocks.block.ColorHandlers;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.SimpleSynchronousResourceReloadListener;
@@ -24,16 +25,13 @@ public class WesterosBlocksClient implements ClientModInitializer {
 
         @Override
         public void reload(ResourceManager manager) {
-            WesterosBlocks.LOGGER.info("Handling resource reload");
-            // TODO
-//            WesterosBlockDef.reloadColorHandler(manager);
+            ColorHandlers.reloadColorHandler(manager);
             WesterosBlocks.LOGGER.info("Handling resource reload completed");
         }
     }
 
     private static void initRenderRegistry() {
         ResourceManager resourceManager = MinecraftClient.getInstance().getResourceManager();
-        // TODO
-//        WesterosBlockDef.reloadColorHandler(resourceManager);
+        ColorHandlers.reloadColorHandler(resourceManager);
     }
 }

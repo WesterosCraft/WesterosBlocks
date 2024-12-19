@@ -293,17 +293,19 @@ public class ColorHandlers {
 //        }
 //    }
 
+    // TODO
     // Force reload of color handlers
-//    public static void reloadColorHandler(ResourceManager pResourceManager) {
-//        Set<String> hndids = new HashSet<String>(colorMultTable.keySet());
-//        for (String hndid : hndids) {
-//            ColorMultHandler prev = colorMultTable.get(hndid);
-//            // Only reload those from resources
+    public static void reloadColorHandler(ResourceManager pResourceManager) {
+        Set<String> hndids = new HashSet<String>(colorMultTable.keySet());
+        for (String hndid : hndids) {
+            ColorMultHandler prev = colorMultTable.get(hndid);
+            // Only reload those from resources
+            // TODO
 //            if (prev instanceof CustomColorMultHandler) {
 //                ((CustomColorMultHandler) prev).loadColorMaps(pResourceManager);
 //            }
-//        }
-//    }
+        }
+    }
 
 //    public static ColorMultHandler getColorHandler(String hnd, String blockName) {
 //        String hndid = hnd.toLowerCase();
@@ -446,6 +448,59 @@ public class ColorHandlers {
 //        ColorMultHandler handler = getColorHandler(colorMult, blockName);
 //        event.register((ItemStack stack, int tintIndex) -> handler.getItemColor(stack, tintIndex), blk);
 //    }
+
+    public static void registerColorProviders() {
+        // Register item colors
+//        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+//            Block block = Block.getBlockFromItem(stack.getItem());
+//            if (block instanceof WesterosBlockLifecycle) {
+//                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
+//                if (def != null) {
+//                    return def.getItemColor(stack, tintIndex);
+//                }
+//            }
+//            return -1;
+//        }, WesterosBlocks.customBlocks.toArray(new Block[0]));
+//
+//        // Register custom color maps for items
+//        if (WesterosBlocks.colorMaps != null) {
+//            WesterosBlocks.log.info("Initializing " + WesterosBlocks.colorMaps.length + " custom color maps");
+//            for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
+//                for (String bn : map.blockNames) {
+//                    Block blk = WesterosBlocks.findBlockByName(bn, MOD_ID);
+//                    if (blk != null) {
+//                        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+//                                map.colorMult, blk);
+//                    }
+//                }
+//            }
+//        }
+//
+//        // Register block colors
+//        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+//            Block block = state.getBlock();
+//            if (block instanceof WesterosBlockLifecycle) {
+//                WesterosBlockDef def = ((WesterosBlockLifecycle) block).getWBDefinition();
+//                if (def != null) {
+//                    return def.getBlockColor(state, world, pos, tintIndex);
+//                }
+//            }
+//            return -1;
+//        }, WesterosBlocks.customBlocks.toArray(new Block[0]));
+//
+//        // Register custom color maps for blocks
+//        if (WesterosBlocks.colorMaps != null) {
+//            for (WesterosBlockColorMap map : WesterosBlocks.colorMaps) {
+//                for (String bn : map.blockNames) {
+//                    Block blk = WesterosBlocks.findBlockByName(bn, "minecraft");
+//                    if (blk != null) {
+//                        ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) ->
+//                                map.colorMult, blk);
+//                    }
+//                }
+//            }
+//        }
+    }
 
     public static class GrassColor {
         private static int[] pixels = new int[65536];
