@@ -5,6 +5,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.property.BooleanProperty;
@@ -16,65 +17,65 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     protected WesterosBlockDef def;
     protected VoxelShape collisionbox;
     protected VoxelShape supportbox;
-//  public static final IntegerProperty CONNECTSTATE = IntegerProperty.create("connectstate", 0, 3);
-//  protected static IntegerProperty tempCONNECTSTATE;
-//  public final boolean connectstate;
-//
-//  public static final BooleanProperty SYMMETRICAL = BooleanProperty.create("symmetrical");
-//  protected static BooleanProperty tempSYMMETRICAL;
-//
-//  public final boolean symmetrical;
-//  public final Boolean symmetricalDef;
-//
-//  protected static WesterosBlockDef.StateProperty tempSTATE;
-//  protected WesterosBlockDef.StateProperty STATE;
-//
-//  protected boolean toggleOnUse = false;
+    public static final IntegerProperty CONNECTSTATE = IntegerProperty.create("connectstate", 0, 3);
+    protected static IntegerProperty tempCONNECTSTATE;
+    public final boolean connectstate;
+
+    public static final BooleanProperty SYMMETRICAL = BooleanProperty.create("symmetrical");
+    protected static BooleanProperty tempSYMMETRICAL;
+
+    public final boolean symmetrical;
+    public final Boolean symmetricalDef;
+
+    protected static WesterosBlockDef.StateProperty tempSTATE;
+    protected WesterosBlockDef.StateProperty STATE;
+
+    protected boolean toggleOnUse = false;
+
     public WCSolidBlock(Settings settings) {
         super(settings);
     }
-
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def
 //                , RegisterEvent.RegisterHelper<Block> helper
         ) {
-//            BlockBehaviour.Properties props = def.makeProperties();
-//            // See if we have a state property
-//            WesterosBlockDef.StateProperty state = def.buildStateProperty();
-//            if (state != null) {
-//                tempSTATE = state;
-//            }
-//            // Process types
-//            String t = def.getType();
-//            boolean doConnectstate = false;
-//            Boolean doSymmetrical = null;
-//            if (t != null) {
-//                String[] toks = t.split(",");
-//                for (String tok : toks) {
-//                    String[] parts = tok.split(":");
-//                    // See if we have connectstate
-//                    if (parts[0].equals("connectstate")) {
-//                        doConnectstate = true;
-//                        tempCONNECTSTATE = CONNECTSTATE;
-//                    }
-//                    // See if we have symmetrical
-//                    if (parts[0].equals("symmetrical")) {
-//                        doSymmetrical = "true".equals(parts[1]);
-//                        tempSYMMETRICAL = SYMMETRICAL;
-//                    }
-//                }
-//            }
-//            boolean finalDoConnectstate = doConnectstate;
-//            Boolean finalDoSymmetrical = doSymmetrical;
-//
-//            Block blk = new WCSolidBlock(props, def, finalDoConnectstate, finalDoSymmetrical);
-//
-//            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
-//            def.registerBlockItem(def.blockName, blk);
-////            AuxileryUtils.registerCreativeTab(blk.asItem(), def.creativeTab);
-//            return def.registerRenderType(blk, true, def.nonOpaque);
+            AbstractBlock.Settings settings = def.makeProperties();
+            // See if we have a state property
+            WesterosBlockDef.StateProperty state = def.buildStateProperty();
+            if (state != null) {
+                tempSTATE = state;
+            }
+            // Process types
+            String t = def.getType();
+            boolean doConnectstate = false;
+            Boolean doSymmetrical = null;
+            if (t != null) {
+                String[] toks = t.split(",");
+                for (String tok : toks) {
+                    String[] parts = tok.split(":");
+                    // See if we have connectstate
+                    if (parts[0].equals("connectstate")) {
+                        doConnectstate = true;
+                        tempCONNECTSTATE = CONNECTSTATE;
+                    }
+                    // See if we have symmetrical
+                    if (parts[0].equals("symmetrical")) {
+                        doSymmetrical = "true".equals(parts[1]);
+                        tempSYMMETRICAL = SYMMETRICAL;
+                    }
+                }
+            }
+            boolean finalDoConnectstate = doConnectstate;
+            Boolean finalDoSymmetrical = doSymmetrical;
+
+            Block blk = new WCSolidBlock(settings, def, finalDoConnectstate, finalDoSymmetrical);
+
+            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
+            def.registerBlockItem(def.blockName, blk);
+//            AuxileryUtils.registerCreativeTab(blk.asItem(), def.creativeTab);
+            return def.registerRenderType(blk, true, def.nonOpaque);
             return null;
         }
     }
@@ -165,7 +166,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
 //    }
 //
 
-//
+    //
 //    @Override
 //    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
 //        if (tempCONNECTSTATE != null) {
@@ -208,7 +209,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
 //        }
 //    }
 //
-    private static String[] TAGS = {};
+    private static final String[] TAGS = {};
 
     @Override
     public WesterosBlockDef getWBDefinition() {

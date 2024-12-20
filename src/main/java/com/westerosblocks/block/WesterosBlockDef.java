@@ -6,6 +6,7 @@ import com.google.common.collect.Maps;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.sound.ModSounds;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -18,6 +19,7 @@ import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 
 import java.util.*;
 
@@ -498,7 +500,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     private static Map<String, long[]> perfCounts = new HashMap<String, long[]>();
 
-    public Block createBlock(RegisterEvent.RegisterHelper<Block> helper) {
+    public Block createBlock() {
         try {
             doInit(); // Prime the block model
         } catch (Exception x) {
@@ -542,60 +544,59 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return block;
     }
 
-    public BlockBehaviour.Properties makeProperties() {
+    public AbstractBlock.Settings makeProperties() {
         return makeAndCopyProperties(null);
     }
 
-    private static boolean never(BlockState p_50806_, BlockGetter p_50807_, BlockPos p_50808_) {
+    private static boolean never(BlockState state, BlockView world, BlockPos pos) {
         return false;
     }
 
-    public BlockBehaviour.Properties makeAndCopyProperties(Block blk) {
-        BlockBehaviour.Properties props;
+    public AbstractBlock.Settings makeAndCopyProperties(Block blk) {
+        AbstractBlock.Settings settings;
         if (blk != null) {
-            props = BlockBehaviour.Properties.ofFullCopy(blk);
+            settings = AbstractBlock.Settings.copy(blk);
         } else {
             AuxMaterial mat = getMaterial();
-            props = BlockBehaviour.Properties.of(); // TODO - material color?
+            settings = AbstractBlock.Settings.create(); // TODO - material color?
         }
         if (hardness >= 0.0F) {
             if (resistance >= 0.0)
-                props = props.strength(hardness, resistance);
+                settings = settings.strength(hardness, resistance);
             else
-                props = props.strength(hardness);
+                settings = settings.strength(hardness);
         }
         if (stepSound != null) {
-            props = props.sound(getSoundType());
+            settings = settings.sounds(getSoundType());
         }
         // See if any nonzero light levels
         if (this.stateProp != null) {
             Map<String, Integer> llmap = null;
-            for (int i = 0; i < this.states.size(); i++) {
-                WesterosBlockStateRecord sr = this.states.get(i);
+            for (WesterosBlockStateRecord sr : this.states) {
                 if (sr.lightValue > 0.0F) {
                     if (llmap == null) llmap = new HashMap<String, Integer>();
                     llmap.put(sr.stateID, (int) (16.0 * sr.lightValue));
                 }
                 if (llmap != null) {
                     final Map<String, Integer> final_llmap = llmap;
-                    props = props.lightLevel((state) ->
-                            final_llmap.getOrDefault(state.getValue(this.stateProp), 0));
+                    settings = settings.luminance((state) ->
+                            final_llmap.getOrDefault(state.get(this.stateProp), 0));
                 }
             }
         } else {
             float ll = this.states.get(0).lightValue;
             if (ll > 0.0F) {
-                props = props.lightLevel((state) -> (int) (16.0 * ll));
+                settings = settings.luminance((state) -> (int) (16.0 * ll));
             }
         }
         if (lightValue > 0.0F) {
-            props = props.lightLevel((state) -> (int) (16.0 * lightValue));
+            settings = settings.luminance((state) -> (int) (16.0 * lightValue));
         }
         if ((!ambientOcclusion) || (nonOpaque)) { // If no ambient occlusion
-            props = props.noOcclusion();
-            props = props.isViewBlocking(WesterosBlockDef::never);
+            settings = settings.nonOpaque();
+            settings = settings.blockVision(WesterosBlockDef::never);
         }
-        return props;
+        return settings;
     }
 
     public CreativeModeTab getCreativeTab() {
@@ -702,35 +703,35 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     public static void initialize() {
-        materialTable.put("air", AuxMaterial.AIR);
-        materialTable.put("grass", AuxMaterial.GRASS);
-        materialTable.put("ground", AuxMaterial.DIRT);
-        materialTable.put("wood", AuxMaterial.WOOD);
-        materialTable.put("rock", AuxMaterial.STONE);
-        materialTable.put("iron", AuxMaterial.METAL);
-        materialTable.put("anvil", AuxMaterial.METAL);
-        materialTable.put("water", AuxMaterial.WATER);
-        materialTable.put("lava", AuxMaterial.LAVA);
-        materialTable.put("leaves", AuxMaterial.LEAVES);
-        materialTable.put("plants", AuxMaterial.PLANT);
-        materialTable.put("vine", AuxMaterial.PLANT);
-        materialTable.put("sponge", AuxMaterial.SPONGE);
-        materialTable.put("cloth", AuxMaterial.CLOTH_DECORATION);
-        materialTable.put("fire", AuxMaterial.FIRE);
-        materialTable.put("sand", AuxMaterial.SAND);
-        materialTable.put("glass", AuxMaterial.GLASS);
-        materialTable.put("tnt", AuxMaterial.EXPLOSIVE);
-        materialTable.put("coral", AuxMaterial.STONE);
-        materialTable.put("ice", AuxMaterial.ICE);
-        materialTable.put("snow", AuxMaterial.SNOW);
-        materialTable.put("craftedSnow", AuxMaterial.SNOW);
-        materialTable.put("cactus", AuxMaterial.CACTUS);
-        materialTable.put("clay", AuxMaterial.CLAY);
-        materialTable.put("portal", AuxMaterial.PORTAL);
-        materialTable.put("cake", AuxMaterial.CAKE);
-        materialTable.put("web", AuxMaterial.WEB);
-        materialTable.put("piston", AuxMaterial.PISTON);
-        materialTable.put("decoration", AuxMaterial.DECORATION);
+//        materialTable.put("air", AuxMaterial.AIR);
+//        materialTable.put("grass", AuxMaterial.GRASS);
+//        materialTable.put("ground", AuxMaterial.DIRT);
+//        materialTable.put("wood", AuxMaterial.WOOD);
+//        materialTable.put("rock", AuxMaterial.STONE);
+//        materialTable.put("iron", AuxMaterial.METAL);
+//        materialTable.put("anvil", AuxMaterial.METAL);
+//        materialTable.put("water", AuxMaterial.WATER);
+//        materialTable.put("lava", AuxMaterial.LAVA);
+//        materialTable.put("leaves", AuxMaterial.LEAVES);
+//        materialTable.put("plants", AuxMaterial.PLANT);
+//        materialTable.put("vine", AuxMaterial.PLANT);
+//        materialTable.put("sponge", AuxMaterial.SPONGE);
+//        materialTable.put("cloth", AuxMaterial.CLOTH_DECORATION);
+//        materialTable.put("fire", AuxMaterial.FIRE);
+//        materialTable.put("sand", AuxMaterial.SAND);
+//        materialTable.put("glass", AuxMaterial.GLASS);
+//        materialTable.put("tnt", AuxMaterial.EXPLOSIVE);
+//        materialTable.put("coral", AuxMaterial.STONE);
+//        materialTable.put("ice", AuxMaterial.ICE);
+//        materialTable.put("snow", AuxMaterial.SNOW);
+//        materialTable.put("craftedSnow", AuxMaterial.SNOW);
+//        materialTable.put("cactus", AuxMaterial.CACTUS);
+//        materialTable.put("clay", AuxMaterial.CLAY);
+//        materialTable.put("portal", AuxMaterial.PORTAL);
+//        materialTable.put("cake", AuxMaterial.CAKE);
+//        materialTable.put("web", AuxMaterial.WEB);
+//        materialTable.put("piston", AuxMaterial.PISTON);
+//        materialTable.put("decoration", AuxMaterial.DECORATION);
 
         stepSoundTable.put("powder", SoundType.SAND);
         stepSoundTable.put("wood", SoundType.WOOD);
@@ -760,51 +761,51 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
-        typeTable.put("stair", new WCStairBlock.Factory());
-        typeTable.put("log", new WCLogBlock.Factory());
-        typeTable.put("plant", new WCPlantBlock.Factory());
-        typeTable.put("crop", new WCCropBlock.Factory());
-        typeTable.put("slab", new WCSlabBlock.Factory());
-        typeTable.put("wall", new WCWallBlock.Factory());
-        typeTable.put("fence", new WCFenceBlock.Factory());
-        typeTable.put("web", new WCWebBlock.Factory());
-        typeTable.put("torch", new WCTorchBlock.Factory());
-        typeTable.put("fan", new WCFanBlock.Factory());
-        typeTable.put("ladder", new WCLadderBlock.Factory());
-        typeTable.put("cuboid", new WCCuboidBlock.Factory());
-        typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
-        typeTable.put("cuboid-16way", new WCCuboid16WayBlock.Factory());
-        typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
-        typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
-        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
-        typeTable.put("door", new WCDoorBlock.Factory());
-        typeTable.put("fire", new WCFireBlock.Factory());
-        typeTable.put("leaves", new WCLeavesBlock.Factory());
-        typeTable.put("pane", new WCPaneBlock.Factory());
-        typeTable.put("layer", new WCLayerBlock.Factory());
-        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
-        typeTable.put("rail", new WCRailBlock.Factory());
-        typeTable.put("cake", new WCCakeBlock.Factory());
-        typeTable.put("bed", new WCBedBlock.Factory());
-        typeTable.put("sand", new WCSandBlock.Factory());
-        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
-        typeTable.put("furnace", new WCFurnaceBlock.Factory());
-        typeTable.put("sound", new WCSoundBlock.Factory());
-        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
-        typeTable.put("beacon", new WCBeaconBlock.Factory());
-        typeTable.put("vines", new WCVinesBlock.Factory());
-        typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
-        typeTable.put("fencegate", new WCFenceGateBlock.Factory());
+//        typeTable.put("stair", new WCStairBlock.Factory());
+//        typeTable.put("log", new WCLogBlock.Factory());
+//        typeTable.put("plant", new WCPlantBlock.Factory());
+//        typeTable.put("crop", new WCCropBlock.Factory());
+//        typeTable.put("slab", new WCSlabBlock.Factory());
+//        typeTable.put("wall", new WCWallBlock.Factory());
+//        typeTable.put("fence", new WCFenceBlock.Factory());
+//        typeTable.put("web", new WCWebBlock.Factory());
+//        typeTable.put("torch", new WCTorchBlock.Factory());
+//        typeTable.put("fan", new WCFanBlock.Factory());
+//        typeTable.put("ladder", new WCLadderBlock.Factory());
+//        typeTable.put("cuboid", new WCCuboidBlock.Factory());
+//        typeTable.put("cuboid-nsew", new WCCuboidNSEWBlock.Factory());
+//        typeTable.put("cuboid-16way", new WCCuboid16WayBlock.Factory());
+//        typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
+//        typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
+//        typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
+//        typeTable.put("door", new WCDoorBlock.Factory());
+//        typeTable.put("fire", new WCFireBlock.Factory());
+//        typeTable.put("leaves", new WCLeavesBlock.Factory());
+//        typeTable.put("pane", new WCPaneBlock.Factory());
+//        typeTable.put("layer", new WCLayerBlock.Factory());
+//        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
+//        typeTable.put("rail", new WCRailBlock.Factory());
+//        typeTable.put("cake", new WCCakeBlock.Factory());
+//        typeTable.put("bed", new WCBedBlock.Factory());
+//        typeTable.put("sand", new WCSandBlock.Factory());
+//        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
+//        typeTable.put("furnace", new WCFurnaceBlock.Factory());
+//        typeTable.put("sound", new WCSoundBlock.Factory());
+//        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
+//        typeTable.put("beacon", new WCBeaconBlock.Factory());
+//        typeTable.put("vines", new WCVinesBlock.Factory());
+//        typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
+//        typeTable.put("fencegate", new WCFenceGateBlock.Factory());
 
         // Standard color multipliers
-        colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
-        colorMultTable.put("water", new WaterColorMultHandler());
-        colorMultTable.put("foliage", new FoliageColorMultHandler());
-        colorMultTable.put("grass", new GrassColorMultHandler());
-        colorMultTable.put("pine", new PineColorMultHandler());
-        colorMultTable.put("birch", new BirchColorMultHandler());
-        colorMultTable.put("basic", new BasicColorMultHandler());
-        colorMultTable.put("lily", new FixedColorMultHandler(2129968));
+//        colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
+//        colorMultTable.put("water", new WaterColorMultHandler());
+//        colorMultTable.put("foliage", new FoliageColorMultHandler());
+//        colorMultTable.put("grass", new GrassColorMultHandler());
+//        colorMultTable.put("pine", new PineColorMultHandler());
+//        colorMultTable.put("birch", new BirchColorMultHandler());
+//        colorMultTable.put("basic", new BasicColorMultHandler());
+//        colorMultTable.put("lily", new FixedColorMultHandler(2129968));
 
         // Valid particle values
         particles.put("hugeexplosion", ParticleTypes.EXPLOSION);

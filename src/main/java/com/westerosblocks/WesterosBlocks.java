@@ -12,6 +12,8 @@ import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.InvalidIdentifierException;
+import net.minecraft.util.crash.CrashException;
+import net.minecraft.util.crash.CrashReport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +22,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+
+import static com.westerosblocks.WesterosBlocksJsonLoader.sanityCheck;
 
 public class WesterosBlocks implements ModInitializer {
     public static final String MOD_ID = "westerosblocks";
@@ -45,10 +49,15 @@ public class WesterosBlocks implements ModInitializer {
         customConfig = WesterosBlocksJsonLoader.getBlockConfig(configFiles);
 
         customBlockDefs = getBlockDefs(customConfig);
-        LOGGER.info("Loaded " + customBlockDefs.length + " block definitions");
+        LOGGER.info("Loaded {} block definitions", customBlockDefs.length);
+
+        if (!sanityCheck(customBlockDefs)) {
+            LOGGER.error("WesterosBlocks.json failed sanity check");
+            return;
+        }
 
         WesterosBlocksItems.registerModItems();
-        WesterosBlocksBlocks.registerModBlocks();
+        ModBlocks.registerModBlocks(customBlockDefs);
         ColorHandlers.registerColorProviders();
         ModSounds.registerSounds(customBlockDefs);
 
@@ -56,6 +65,14 @@ public class WesterosBlocks implements ModInitializer {
             // Handle any pending door restores (force immediate)
             AutoDoorRestore.handlePendingHalfDoorRestores(true);
         });
+    }
+
+    public static void crash(Exception x, String msg) {
+        throw new CrashException(new CrashReport(msg, x));
+    }
+
+    public static void crash(String msg) {
+        crash(new Exception(), msg);
     }
 
     public static WesterosBlockDef[] getCustomBlockDefs() {
@@ -102,6 +119,5 @@ public class WesterosBlocks implements ModInitializer {
 
         return Registries.BLOCK.get(id);
     }
-
 
 }
