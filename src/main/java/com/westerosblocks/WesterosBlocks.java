@@ -33,7 +33,9 @@ public class WesterosBlocks implements ModInitializer {
             "/definitions/block_tags.json",
             "/definitions/menu_overrides.json",
             "/definitions/block_sets.json",
-            "/definitions/blocks.json");
+//            "/definitions/blocks.json"
+            "/definitions/testblocks.json"
+    );
 
     public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;
     private static WesterosBlockDef[] customBlockDefs;
@@ -46,6 +48,8 @@ public class WesterosBlocks implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
+        WesterosBlockDef.initialize();
         customConfig = WesterosBlocksJsonLoader.getBlockConfig(configFiles);
 
         customBlockDefs = getBlockDefs(customConfig);
@@ -84,12 +88,18 @@ public class WesterosBlocks implements ModInitializer {
         WesterosBlockSetDef[] blockSetDefs = config.blockSets;
         WesterosBlockDef[] blockDefs = config.blocks;
         List<WesterosBlockDef> expandedBlockDefs = new LinkedList<WesterosBlockDef>(Arrays.asList(blockDefs));
-        for (WesterosBlockSetDef blockSetDef : blockSetDefs) {
-            if (blockSetDef == null)
-                continue;
-            List<WesterosBlockDef> variantBlockDefs = blockSetDef.generateBlockDefs();
-            expandedBlockDefs.addAll(variantBlockDefs);
+
+        // TODO
+        if (config.blockSets.length < 0) {
+            for (WesterosBlockSetDef blockSetDef : blockSetDefs) {
+                if (blockSetDef == null)
+                    continue;
+                List<WesterosBlockDef> variantBlockDefs = blockSetDef.generateBlockDefs();
+                expandedBlockDefs.addAll(variantBlockDefs);
+            }
         }
+
+
         return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
     }
 

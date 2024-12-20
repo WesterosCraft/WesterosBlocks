@@ -1,7 +1,6 @@
 package com.westerosblocks.block;
 
 import com.westerosblocks.WesterosBlocks;
-import com.westerosblocks.WesterosBlocksCompatibility;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -16,6 +15,7 @@ import net.minecraft.util.Identifier;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.westerosblocks.WesterosBlocks.crash;
 
@@ -42,28 +42,35 @@ public class ModBlocks {
         List<Block> blklist = new LinkedList<>();
         HashMap<String, Block> customBlocksByName = new HashMap<>();
         HashMap<String, Integer> countsByType = new HashMap<>();
-        int blockcount = 0;
+        AtomicInteger blockcount = new AtomicInteger();
 
         for (WesterosBlockDef customBlock : customBlockDefs) {
             if (customBlock == null)
                 continue;
-            // TODO helper arg is gone now
             Block blk = customBlock.createBlock();
 
             if (blk != null) {
+                // This is where the block is registered
+                registerBlock(customBlock.blockName, blk);
+
+                ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+                    entries.add(blk);
+                });
+
                 blklist.add(blk);
                 customBlocksByName.put(customBlock.blockName, blk);
                 // Add to counts
                 Integer cnt = countsByType.get(customBlock.blockType);
                 cnt = (cnt == null) ? 1 : (cnt + 1);
                 countsByType.put(customBlock.blockType, cnt);
-                blockcount++;
+                blockcount.getAndIncrement();
 
             } else {
                 crash("Invalid block definition for " + customBlock.blockName + " - aborted during load()");
                 return;
             }
         }
+
         // TODO
 //        customBlocks = blklist.toArray(new Block[blklist.size()]);
         WesterosBlockDef.dumpBlockPerf();
@@ -85,7 +92,5 @@ public class ModBlocks {
         WesterosBlocks.LOGGER.info("WesterosBlocks custom block registration complete.");
     }
 
-    //        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-//            entries.add(ModBlocks.PINK_GARNET_BLOCK);
-//        });
+
 }

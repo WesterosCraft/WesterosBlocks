@@ -1,0 +1,18 @@
+{
+  "blocks": [
+    {
+      "blockName": "grey_keystone",
+      "blockType": "solid",
+      "hardness": 3,
+      "stepSound": "stone",
+      "material": "rock",
+      "resistance": 10,
+      "creativeTab": "westeros_panelling_carvings_tab",
+      "label": "Grey Keystone",
+      "colorMult": "textures/colormap/smallstonebrick",
+      "textures": [
+        "stone_block/keystone_grey"
+      ]
+    }
+  ]
+}

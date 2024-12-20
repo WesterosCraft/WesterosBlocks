@@ -15,9 +15,11 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.sound.Sound;
 import net.minecraft.item.BlockItem;
 import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
@@ -444,7 +446,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     // TODO
 //    private static final Map<String, AuxMaterial> materialTable = new HashMap<String, AuxMaterial>();
-//    private static final Map<String, SoundType> stepSoundTable = new HashMap<String, SoundType>();
+    private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
 //    private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
     private static final Map<String, ParticleType<?>> particles = new HashMap<String, ParticleType<?>>();
@@ -519,7 +521,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
             return null;
         }
         long start = System.currentTimeMillis();
-        Block blk = bf.buildBlockClass(this, helper);
+        Block blk = bf.buildBlockClass(this);
         long end = System.currentTimeMillis();
         pc[0]++;
         pc[1] += (end - start);
@@ -560,7 +562,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         if (blk != null) {
             settings = AbstractBlock.Settings.copy(blk);
         } else {
-            AuxMaterial mat = getMaterial();
+            // TODO
+//            AuxMaterial mat = getMaterial();
             settings = AbstractBlock.Settings.create(); // TODO - material color?
         }
         if (hardness >= 0.0F) {
@@ -602,28 +605,28 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return settings;
     }
 
-    public CreativeModeTab getCreativeTab() {
-        CreativeModeTab ct = tabTable.get(creativeTab);
-        if (ct == null) {
-            WesterosBlocks.log.warn(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
-            // TODO
-//			ct = WesterosBlocksCreativeTab.tabWesterosMisc;
-        }
-        return ct;
-    }
-
-    public static void addCreativeTab(String name, CreativeModeTab tab) {
-        tabTable.put(name, tab);
-    }
+//    public CreativeModeTab getCreativeTab() {
+//        CreativeModeTab ct = tabTable.get(creativeTab);
+//        if (ct == null) {
+//            WesterosBlocks.log.warn(String.format("Invalid tab name '%s' in block '%s'", creativeTab, blockName));
+//            // TODO
+////			ct = WesterosBlocksCreativeTab.tabWesterosMisc;
+//        }
+//        return ct;
+//    }
+//
+//    public static void addCreativeTab(String name, CreativeModeTab tab) {
+//        tabTable.put(name, tab);
+//    }
 
     // Get customized collision box for default solid block
     public VoxelShape makeCollisionBoxShape() {
         if (collisionBoxes == null) {
-            return Shapes.block();    // Default to solid block
+            return VoxelShapes.fullCube();  // Default to solid block
         }
-        VoxelShape s = Shapes.empty();
+        VoxelShape s = VoxelShapes.empty();
         for (BoundingBox b : collisionBoxes) {
-            s = Shapes.or(s, b.getAABB());
+            s = VoxelShapes.union(s, b.getAABB());
         }
         return s;
     }
@@ -643,7 +646,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         boolean error = false;
         for (WesterosBlockDef val : validation) {
             if (!defmap.containsKey(val.blockName)) {
-                WesterosBlocks.log.warn(String.format("validation: blockName '%s' missing", val.blockName));
+                WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' missing", val.blockName));
                 error = true;
                 continue;
             }
@@ -652,7 +655,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
             if (!def.blockType.equals(val.blockType)) {
                 // allow for solid subtypes to be recast
                 if (!def.blockType.matches("solid|sand|soulsand") && !def.blockType.matches("solid|sand|soulsand")) {
-                    WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different blockType attribute", val.blockName));
+                    WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' has different blockType attribute", val.blockName));
                     error = true;
                     continue;
                 }
@@ -661,7 +664,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
             String[] valTypeAttrs = val.type.split(",");
             for (String typeAttr : valTypeAttrs) {
                 if (!def.type.contains(typeAttr)) {
-                    WesterosBlocks.log.warn(String.format("validation: blockName '%s' is missing type attribute '%s'", val.blockName, typeAttr));
+                    WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' is missing type attribute '%s'", val.blockName, typeAttr));
                     error = true;
                     continue;
                 }
@@ -689,7 +692,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
                 }
             }
             if (substateError) {
-                WesterosBlocks.log.warn(String.format("validation: blockName '%s' has different stack or state lists", val.blockName));
+                WesterosBlocks.LOGGER.warn(String.format("validation: blockName '%s' has different stack or state lists", val.blockName));
                 error = true;
                 continue;
             }
@@ -736,31 +739,31 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 //        materialTable.put("piston", AuxMaterial.PISTON);
 //        materialTable.put("decoration", AuxMaterial.DECORATION);
 
-        stepSoundTable.put("powder", SoundType.SAND);
-        stepSoundTable.put("wood", SoundType.WOOD);
-        stepSoundTable.put("gravel", SoundType.GRAVEL);
-        stepSoundTable.put("grass", SoundType.GRASS);
-        stepSoundTable.put("stone", SoundType.STONE);
-        stepSoundTable.put("metal", SoundType.METAL);
-        stepSoundTable.put("glass", SoundType.GLASS);
-        stepSoundTable.put("cloth", SoundType.WOOL);
-        stepSoundTable.put("sand", SoundType.SAND);
-        stepSoundTable.put("snow", SoundType.SNOW);
-        stepSoundTable.put("ladder", SoundType.LADDER);
-        stepSoundTable.put("anvil", SoundType.ANVIL);
-        stepSoundTable.put("plant", SoundType.CROP);
-        stepSoundTable.put("slime", SoundType.FUNGUS);
+        stepSoundTable.put("powder", BlockSoundGroup.SAND);
+        stepSoundTable.put("wood", BlockSoundGroup.WOOD);
+        stepSoundTable.put("gravel", BlockSoundGroup.GRAVEL);
+        stepSoundTable.put("grass", BlockSoundGroup.GRASS);
+        stepSoundTable.put("stone", BlockSoundGroup.STONE);
+        stepSoundTable.put("metal", BlockSoundGroup.METAL);
+        stepSoundTable.put("glass", BlockSoundGroup.GLASS);
+        stepSoundTable.put("cloth", BlockSoundGroup.WOOL);
+        stepSoundTable.put("sand", BlockSoundGroup.SAND);
+        stepSoundTable.put("snow", BlockSoundGroup.SNOW);
+        stepSoundTable.put("ladder", BlockSoundGroup.LADDER);
+        stepSoundTable.put("anvil", BlockSoundGroup.ANVIL);
+        stepSoundTable.put("plant", BlockSoundGroup.CROP);
+        stepSoundTable.put("slime", BlockSoundGroup.FUNGUS);
         // Tab table
-        tabTable.put("buildingBlocks", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.BUILDING_BLOCKS));
+//        tabTable.put("buildingBlocks", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.BUILDING_BLOCKS));
         //tabTable.put("decorations", CreativeModeTabs.DECORATIONS);
-        tabTable.put("redstone", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.REDSTONE_BLOCKS));
+//        tabTable.put("redstone", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.REDSTONE_BLOCKS));
         //tabTable.put("transportation", CreativeModeTabs.TRANSPORTATION);
         //tabTable.put("misc", CreativeModeTabs.MISC);
-        tabTable.put("food", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.FOOD_AND_DRINKS));
-        tabTable.put("tools", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.TOOLS_AND_UTILITIES));
-        tabTable.put("combat", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.COMBAT));
+//        tabTable.put("food", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.FOOD_AND_DRINKS));
+//        tabTable.put("tools", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.TOOLS_AND_UTILITIES));
+//        tabTable.put("combat", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.COMBAT));
         //tabTable.put("brewing", CreativeModeTabs.BREWING);
-        tabTable.put("materials", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.INGREDIENTS));
+//        tabTable.put("materials", BuiltInRegistries.CREATIVE_MODE_TAB.getOrThrow(CreativeModeTabs.INGREDIENTS));
 
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
@@ -861,14 +864,14 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     /**
      * Returns this WesterosBlockDef's default SoundType
      */
-//    public SoundType getSoundType() {
-//        SoundType ss = stepSoundTable.get(stepSound);
-//        if (ss == null) {
-//            WesterosBlocks.log.warn(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
-//            return SoundType.STONE;
-//        }
-//        return ss;
-//    }
+    public BlockSoundGroup getSoundType() {
+        BlockSoundGroup ss = stepSoundTable.get(stepSound);
+        if (ss == null) {
+            WesterosBlocks.LOGGER.warn(String.format("Invalid step sound '%s' in block '%s'", stepSound, blockName));
+            return BlockSoundGroup.STONE;
+        }
+        return ss;
+    }
 
     // TODO not sure if needed anymore
 //    public String getLegacyBlockName() {
@@ -933,24 +936,24 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     private static HashMap<String, BlockEntityRec> te_rec = new HashMap<String, BlockEntityRec>();
 
-    public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
-            DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, WesterosBlocks.MOD_ID);
+//    public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
+//            DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, WesterosBlocks.MOD_ID);
 
-    public void registerBlockItem(String blockName, Block block) {
-        WesterosBlocks.ITEMS.register(blockName, () -> new BlockItem(block, new Item.Properties()));
-    }
+//    public void registerBlockItem(String blockName, Block block) {
+//        WesterosBlocks.ITEMS.register(blockName, () -> new BlockItem(block, new Item.Properties()));
+//    }
 
-    public static <T extends BlockEntity> void registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<T> BlockEntitySupplier, Block blk) {
-        BlockEntityRec rec = (BlockEntityRec) te_rec.get(name);
-        if (rec == null) {
-            rec = new BlockEntityRec();
-            te_rec.put(name, rec);
-            final BlockEntityRec frec = rec;
-            // TODO
-//			rec.regobj = TILE_ENTITY_TYPES.register(name, () -> BlockEntityType.Builder.of(BlockEntitySupplier, frec.blocks.toArray(new Block[frec.blocks.size()])).build(null));
-        }
-        rec.blocks.add(blk);
-    }
+//    public static <T extends BlockEntity> void registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<T> BlockEntitySupplier, Block blk) {
+//        BlockEntityRec rec = (BlockEntityRec) te_rec.get(name);
+//        if (rec == null) {
+//            rec = new BlockEntityRec();
+//            te_rec.put(name, rec);
+//            final BlockEntityRec frec = rec;
+//            // TODO
+////			rec.regobj = TILE_ENTITY_TYPES.register(name, () -> BlockEntityType.Builder.of(BlockEntitySupplier, frec.blocks.toArray(new Block[frec.blocks.size()])).build(null));
+//        }
+//        rec.blocks.add(blk);
+//    }
 
     public static BlockEntityType<?> getBlockEntityType(String name) {
         BlockEntityRec rec = te_rec.get(name);
