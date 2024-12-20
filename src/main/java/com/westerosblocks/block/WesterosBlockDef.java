@@ -6,11 +6,15 @@ import com.google.common.collect.Maps;
 import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.custom.WCSolidBlock;
 import com.westerosblocks.sound.ModSounds;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
@@ -531,15 +535,14 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         }
     }
 
+    @Environment(EnvType.CLIENT)
     public Block registerRenderType(Block block, boolean isSolid, boolean isTransparent) {
-        if (FMLEnvironment.dist == Dist.CLIENT) {
-            if (this.alphaRender) {
-                ItemBlockRenderTypes.setRenderLayer(block, RenderType.translucent());
-            } else if (!isSolid) {
-                ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
-            } else if (isTransparent) {
-                ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutoutMipped());
-            }
+        if (this.alphaRender) {
+            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
+        } else if (!isSolid) {
+            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+        } else if (isTransparent) {
+            BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutoutMipped());
         }
         return block;
     }
