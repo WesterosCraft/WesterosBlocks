@@ -45,7 +45,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
     private static final VoxelShape WEST_TEST = VoxelShapes.cuboid(0.0D, 0.0D, 7.0D, 9.0D, 16.0D, 9.0D);
     private static final VoxelShape EAST_TEST = VoxelShapes.cuboid(7.0D, 0.0D, 7.0D, 16.0D, 16.0D, 9.0D);
 
-    private WesterosBlockDef def;
+    private final WesterosBlockDef def;
     public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     protected static BooleanProperty tempUNCONNECT;
     public final boolean unconnect;
@@ -119,6 +119,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
             for (String tok : toks) {
                 if (tok.equals("toggleOnUse")) {
                     toggleOnUse = true;
+                    break;
                 }
             }
         }
@@ -236,23 +237,23 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
         float f1 = 8.0F + minX;
         float f2 = 8.0F - minY;
         float f3 = 8.0F + minY;
-        VoxelShape voxelshape = VoxelShapes.cuboid((double) f, 0.0D, (double) f, (double) f1, (double) minZ, (double) f1);
-        VoxelShape voxelshape1 = VoxelShapes.cuboid((double) f2, (double) maxX, 0.0D, (double) f3, (double) maxY,
-                (double) f3);
-        VoxelShape voxelshape2 = VoxelShapes.cuboid((double) f2, (double) maxX, (double) f2, (double) f3, (double) maxY,
+        VoxelShape voxelshape = VoxelShapes.cuboid(f, 0.0D, f, f1, minZ, f1);
+        VoxelShape voxelshape1 = VoxelShapes.cuboid(f2, maxX, 0.0D, f3, maxY,
+                f3);
+        VoxelShape voxelshape2 = VoxelShapes.cuboid(f2, maxX, f2, f3, maxY,
                 16.0D);
-        VoxelShape voxelshape3 = VoxelShapes.cuboid(0.0D, (double) maxX, (double) f2, (double) f3, (double) maxY,
-                (double) f3);
-        VoxelShape voxelshape4 = VoxelShapes.cuboid((double) f2, (double) maxX, (double) f2, 16.0D, (double) maxY,
-                (double) f3);
-        VoxelShape voxelshape5 = VoxelShapes.cuboid((double) f2, (double) maxX, 0.0D, (double) f3, (double) maxZ,
-                (double) f3);
-        VoxelShape voxelshape6 = VoxelShapes.cuboid((double) f2, (double) maxX, (double) f2, (double) f3, (double) maxZ,
+        VoxelShape voxelshape3 = VoxelShapes.cuboid(0.0D, maxX, f2, f3, maxY,
+                f3);
+        VoxelShape voxelshape4 = VoxelShapes.cuboid(f2, maxX, f2, 16.0D, maxY,
+                f3);
+        VoxelShape voxelshape5 = VoxelShapes.cuboid(f2, maxX, 0.0D, f3, maxZ,
+                f3);
+        VoxelShape voxelshape6 = VoxelShapes.cuboid(f2, maxX, f2, f3, maxZ,
                 16.0D);
-        VoxelShape voxelshape7 = VoxelShapes.cuboid(0.0D, (double) maxX, (double) f2, (double) f3, (double) maxZ,
-                (double) f3);
-        VoxelShape voxelshape8 = VoxelShapes.cuboid((double) f2, (double) maxX, (double) f2, 16.0D, (double) maxZ,
-                (double) f3);
+        VoxelShape voxelshape7 = VoxelShapes.cuboid(0.0D, maxX, f2, f3, maxZ,
+                f3);
+        VoxelShape voxelshape8 = VoxelShapes.cuboid(f2, maxX, f2, 16.0D, maxZ,
+                f3);
         VoxelShape[] map = new VoxelShape[2 * 3 * 3 * 3 * 3];
 
         for (Boolean up : UP.getValues()) {
@@ -481,7 +482,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
         }
     }
 
-    private static String[] TAGS = {"walls"};
+    private static final String[] TAGS = {"walls"};
 
     @Override
     public String[] getBlockTags() {

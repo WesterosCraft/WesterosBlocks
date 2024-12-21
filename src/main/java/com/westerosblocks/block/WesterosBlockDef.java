@@ -769,7 +769,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
         // Standard block types
         typeTable.put("solid", new WCSolidBlock.Factory());
-//        typeTable.put("stair", new WCStairBlock.Factory());
+        typeTable.put("stair", new WCStairBlock.Factory());
         typeTable.put("log", new WCLogBlock.Factory());
 //        typeTable.put("plant", new WCPlantBlock.Factory());
 //        typeTable.put("crop", new WCCropBlock.Factory());
