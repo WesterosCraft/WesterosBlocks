@@ -17,11 +17,5 @@ public class WesterosBlocksItems {
 
     public static void registerModItems() {
         WesterosBlocks.LOGGER.info("Registering items for " + WesterosBlocks.MOD_ID);
-
-
-
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-//            entries.add(TEST_ITEM);
-//        });
     }
 }

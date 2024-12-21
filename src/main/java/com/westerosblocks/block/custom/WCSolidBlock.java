@@ -24,11 +24,24 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
+    protected WesterosBlockDef def;
+    protected VoxelShape collisionbox;
+    protected VoxelShape supportbox;
+    public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
+    protected static IntProperty tempCONNECTSTATE;
+    public final boolean connectstate;
+    public static final BooleanProperty SYMMETRICAL = BooleanProperty.of("symmetrical");
+    protected static BooleanProperty tempSYMMETRICAL;
+    public final boolean symmetrical;
+    public final Boolean symmetricalDef;
+    protected static WesterosBlockDef.StateProperty tempSTATE;
+    protected WesterosBlockDef.StateProperty STATE;
+    protected boolean toggleOnUse = false;
+
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
             AbstractBlock.Settings settings = def.makeProperties();
-            // See if we have a state property
             WesterosBlockDef.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
@@ -55,35 +68,11 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
             }
             boolean finalDoConnectstate = doConnectstate;
             Boolean finalDoSymmetrical = doSymmetrical;
-
             Block blk = new WCSolidBlock(settings, def, finalDoConnectstate, finalDoSymmetrical);
-            // old 1.18.2
-//            return def.registerRenderType(def.registerBlock(new WCSolidBlock(props, def, doConnectstate, doSymmetrical)), true, def.nonOpaque);
 
-//            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), blk);
-//            def.registerBlockItem(def.blockName, blk);
-//            AuxileryUtils.registerCreativeTab(blk.asItem(), def.creativeTab);
             return def.registerRenderType(blk, true, def.nonOpaque);
         }
     }
-
-    protected WesterosBlockDef def;
-    protected VoxelShape collisionbox;
-    protected VoxelShape supportbox;
-    public static final IntProperty CONNECTSTATE = IntProperty.of("connectstate", 0, 3);
-    protected static IntProperty tempCONNECTSTATE;
-    public final boolean connectstate;
-
-    public static final BooleanProperty SYMMETRICAL = BooleanProperty.of("symmetrical");
-    protected static BooleanProperty tempSYMMETRICAL;
-
-    public final boolean symmetrical;
-    public final Boolean symmetricalDef;
-
-    protected static WesterosBlockDef.StateProperty tempSTATE;
-    protected WesterosBlockDef.StateProperty STATE;
-
-    protected boolean toggleOnUse = false;
 
     protected WCSolidBlock(AbstractBlock.Settings props, WesterosBlockDef def, boolean doConnectstate, Boolean doSymmetrical) {
         super(props);

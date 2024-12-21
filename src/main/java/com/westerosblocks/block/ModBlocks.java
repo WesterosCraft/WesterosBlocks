@@ -1,6 +1,8 @@
 package com.westerosblocks.block;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.WesterosBlocksCompatibility;
+import com.westerosblocks.WesterosCreativeModeTabs;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -20,12 +22,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static com.westerosblocks.WesterosBlocks.crash;
 
 public class ModBlocks {
-    // TODO: sample block registration
-    public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
-
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(WesterosBlocks.MOD_ID, name), block);
@@ -53,7 +49,8 @@ public class ModBlocks {
                 // This is where the block is registered
                 registerBlock(customBlock.blockName, blk);
 
-                ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+                // Register tab
+                ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(customBlock.creativeTab)).register(entries -> {
                     entries.add(blk);
                 });
 
@@ -75,9 +72,7 @@ public class ModBlocks {
 //        customBlocks = blklist.toArray(new Block[blklist.size()]);
         WesterosBlockDef.dumpBlockPerf();
         // Dump information for external mods
-        // TODO
 //        WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
-        // TODO
 //        WesterosBlocksCompatibility.dumpWorldPainterConfig(customBlocks, modConfigPath);
         // Brag on block type counts
         WesterosBlocks.LOGGER.info("Count of custom blocks by type:");

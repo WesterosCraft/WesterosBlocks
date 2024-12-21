@@ -33,8 +33,7 @@ public class WesterosBlocks implements ModInitializer {
             "/definitions/block_tags.json",
             "/definitions/menu_overrides.json",
             "/definitions/block_sets.json",
-//            "/definitions/blocks.json"
-            "/definitions/testblocks.json"
+            "/definitions/blocks.json"
     );
 
     public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;
@@ -59,11 +58,12 @@ public class WesterosBlocks implements ModInitializer {
             LOGGER.error("WesterosBlocks.json failed sanity check");
             return;
         }
-
+        WesterosCreativeModeTabs.registerCreativeModeTabs();
         WesterosBlocksItems.registerModItems();
         ModBlocks.registerModBlocks(customBlockDefs);
         ColorHandlers.registerColorProviders();
         ModSounds.registerSounds(customBlockDefs);
+
 
         ServerLifecycleEvents.SERVER_STOPPING.register(server -> {
             // Handle any pending door restores (force immediate)

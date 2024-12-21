@@ -4,7 +4,10 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.custom.WCLayerBlock;
 import com.westerosblocks.block.custom.WCSolidBlock;
+import com.westerosblocks.block.custom.WCWallBlock;
+import com.westerosblocks.block.custom.WCWebBlock;
 import com.westerosblocks.sound.ModSounds;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -33,6 +36,8 @@ import java.util.*;
 public class WesterosBlockDef extends WesterosBlockStateRecord {
     private static final float DEF_FLOAT = -999.0F;
     public static final int DEF_INT = -999;
+    public static final String LAYER_SENSITIVE = "layerSensitive";
+
     // Locally unique block name
     public String blockName;
     // Block type ('solid', 'liquid', 'plant', 'log', 'stairs', etc)
@@ -772,9 +777,9 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 //        typeTable.put("plant", new WCPlantBlock.Factory());
 //        typeTable.put("crop", new WCCropBlock.Factory());
 //        typeTable.put("slab", new WCSlabBlock.Factory());
-//        typeTable.put("wall", new WCWallBlock.Factory());
+        typeTable.put("wall", new WCWallBlock.Factory());
 //        typeTable.put("fence", new WCFenceBlock.Factory());
-//        typeTable.put("web", new WCWebBlock.Factory());
+        typeTable.put("web", new WCWebBlock.Factory());
 //        typeTable.put("torch", new WCTorchBlock.Factory());
 //        typeTable.put("fan", new WCFanBlock.Factory());
 //        typeTable.put("ladder", new WCLadderBlock.Factory());
@@ -788,7 +793,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 //        typeTable.put("fire", new WCFireBlock.Factory());
 //        typeTable.put("leaves", new WCLeavesBlock.Factory());
 //        typeTable.put("pane", new WCPaneBlock.Factory());
-//        typeTable.put("layer", new WCLayerBlock.Factory());
+        typeTable.put("layer", new WCLayerBlock.Factory());
 //        typeTable.put("soulsand", new WCSoulSandBlock.Factory());
 //        typeTable.put("rail", new WCRailBlock.Factory());
 //        typeTable.put("cake", new WCCakeBlock.Factory());
@@ -938,10 +943,6 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
 //    public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITY_TYPES =
 //            DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, WesterosBlocks.MOD_ID);
-
-//    public void registerBlockItem(String blockName, Block block) {
-//        WesterosBlocks.ITEMS.register(blockName, () -> new BlockItem(block, new Item.Properties()));
-//    }
 
 //    public static <T extends BlockEntity> void registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<T> BlockEntitySupplier, Block blk) {
 //        BlockEntityRec rec = (BlockEntityRec) te_rec.get(name);
