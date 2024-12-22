@@ -4,10 +4,7 @@ import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -26,6 +23,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
@@ -108,7 +106,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
             bs = bs.with(STATE, STATE.defValue);
         }
         if (LAYERS != null) {
-            BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().relative(Direction.DOWN));
+            BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().offset(Direction.DOWN));
             if ((below != null) && (below.hasProperty(Properties.LAYERS))) {
                 Block blk = below.getBlock();
                 Integer layer = below.get(Properties.LAYERS);
@@ -192,7 +190,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         if (LAYERS != null) {
             return SHAPE_BY_LAYER[state.get(LAYERS)];
         } else {

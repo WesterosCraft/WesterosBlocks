@@ -1,7 +1,5 @@
 package com.westerosblocks.block.custom;
 
-
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -10,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.data.client.VariantSettings.Rotation;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
@@ -32,7 +31,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
         }
     }
 
-    public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.NORTH);
+    public static final DirectionProperty FACING = DirectionProperty.of("facing", Direction.EAST, Direction.NORTH);
 
     protected WCCuboidNEBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings, def, 2);
@@ -48,7 +47,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
                 SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
             }
         }
-        BlockState defbs = this.stateDefinition.any().with(FACING, Direction.EAST).with(WATERLOGGED, Boolean.valueOf(false));
+        BlockState defbs = getDefaultState().with(FACING, Direction.EAST).with(WATERLOGGED, Boolean.valueOf(false));
         if (STATE != null) {
             defbs = defbs.with(STATE, STATE.defValue);
         }
@@ -81,10 +80,9 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     }
 
     @Override
-    @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
-        Direction[] adirection = ctx.getNearestLookingDirections();
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        Direction[] adirection = ctx.getPlacementDirections();
         Direction dir = Direction.EAST;    // Default
         for (Direction d : adirection) {
             if (d == Direction.EAST || d == Direction.WEST) {
@@ -96,7 +94,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
                 break;
             }
         }
-        BlockState bs = this.defaultBlockState().with(FACING, dir).with(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+        BlockState bs = getDefaultState().with(FACING, dir).with(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
         if (STATE != null) {
             bs = bs.with(STATE, STATE.defValue);
         }

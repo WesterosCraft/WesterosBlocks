@@ -1,6 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -9,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FireBlock;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.WorldView;
 
 public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
@@ -27,7 +27,7 @@ public class WCFireBlock extends FireBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public boolean canSurvive(BlockState p_196260_1_, LevelReader p_196260_2_, BlockPos p_196260_3_) {
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
     	return true;
     }
 

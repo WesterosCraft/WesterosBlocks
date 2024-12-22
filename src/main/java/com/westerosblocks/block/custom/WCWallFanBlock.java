@@ -4,10 +4,7 @@ import com.google.common.collect.Maps;
 import com.sun.jdi.Mirror;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockLifecycle;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.data.client.VariantSettings.Rotation;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
@@ -17,24 +14,37 @@ import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 
 import java.util.Map;
 
-public class WCWallFanBlock extends Block implements SimpleWaterloggedBlock, WesterosBlockLifecycle {
+public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
 
-    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    private WesterosBlockDef def;
+    private final WesterosBlockDef def;
     private boolean allow_unsupported = false;
 
-    private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap((Map)ImmutableMap.of((Object) Direction.NORTH, (Object)Block.box(0.0, 4.0, 5.0, 16.0, 12.0, 16.0), (Object)Direction.SOUTH, (Object)Block.box(0.0, 4.0, 0.0, 16.0, 12.0, 11.0), (Object)Direction.WEST, (Object)Block.box(5.0, 4.0, 0.0, 16.0, 12.0, 16.0), (Object)Direction.EAST, (Object)Block.box(0.0, 4.0, 0.0, 11.0, 12.0, 16.0)));
+    private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap((Map)
+            ImmutableMap.of((Object) Direction.NORTH,
+                    (Object) VoxelShapes.cuboid(0.0, 4.0, 5.0, 16.0, 12.0, 16.0),
+                    (Object) Direction.SOUTH,
+                    (Object) VoxelShapes.cuboid(0.0, 4.0, 0.0, 16.0, 12.0, 11.0),
+                    (Object) Direction.WEST,
+                    (Object) VoxelShapes.cuboid(5.0, 4.0, 0.0, 16.0, 12.0, 16.0),
+                    (Object) Direction.EAST,
+                    (Object) VoxelShapes.cuboid(0.0, 4.0, 0.0, 11.0, 12.0, 16.0)));
 
     protected WCWallFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
@@ -45,10 +55,11 @@ public class WCWallFanBlock extends Block implements SimpleWaterloggedBlock, Wes
             for (String tok : toks) {
                 if (tok.equals("allow-unsupported")) {
                     allow_unsupported = true;
+                    break;
                 }
             }
         }
-        BlockState defbs = this.stateDefinition.any().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false));
+        BlockState defbs = getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false));
         setDefaultState(defbs);
     }
 
@@ -68,68 +79,65 @@ public class WCWallFanBlock extends Block implements SimpleWaterloggedBlock, Wes
         Direction[] directionArray;
         World world = ctx.getWorld();
         BlockPos blockPos = ctx.getBlockPos();
-        for (Direction direction : directionArray = ctx.getNearestLookingDirections()) {
-            if (!direction.getAxis().isHorizontal() || !(bs = (BlockState)bs.with(FACING, direction.getOpposite())).canSurvive(world, blockPos)) continue;
+        for (Direction direction : directionArray = ctx.getPlacementDirections()) {
+            if (!direction.getAxis().isHorizontal() || !(bs = bs.with(FACING, direction.getOpposite())).canPlaceAt(world, blockPos))
+                continue;
             return bs;
         }
         return null;
     }
 
-    @SuppressWarnings("deprecation")
-	  @Override
+    @Override
     public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     @Override
     protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        switch(type) {
-        case LAND:
-           return false;
-        case WATER:
-           return state.getFluidState().isIn(FluidTags.WATER);
-        case AIR:
-           return false;
-        default:
-           return false;
-        }
+        return switch (type) {
+            case LAND -> false;
+            case WATER -> state.getFluidState().isIn(FluidTags.WATER);
+            case AIR -> false;
+            default -> false;
+        };
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-    	builder.add(FACING, WATERLOGGED);
+        builder.add(FACING, WATERLOGGED);
     }
 
     @Override
-    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
-        if (direction.getOpposite() == blockState.get(FACING) && !blockState.canSurvive(levelAccessor, blockPos)) {
-            return Blocks.AIR.defaultBlockState();
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
+                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        if (direction.getOpposite() == state.get(FACING) && !state.canPlaceAt(world, pos)) {
+            return Blocks.AIR.getDefaultState();
         }
-        return blockState;
+        return state;
     }
 
     @Override
-    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         if (this.allow_unsupported) return true;
-        Direction direction = blockState.get(FACING);
-        BlockPos blockPos2 = blockPos.relative(direction.getOpposite());
-        BlockState blockState2 = levelReader.getBlockState(blockPos2);
-        return blockState2.isFaceSturdy(levelReader, blockPos2, direction);
+        Direction direction = state.get(FACING);
+        BlockPos blockPos2 = pos.offset(direction.getOpposite());
+        BlockState blockState2 = world.getBlockState(blockPos2);
+        return blockState2.isFaceSturdy(world, blockPos2, direction);
     }
 
     @Override
     public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
-      return state.getFluidState().isEmpty();
+        return state.getFluidState().isEmpty();
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
-      return SHAPES.get(state.get(FACING));
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPES.get(state.get(FACING));
     }
 
     @Override
     protected BlockState rotate(BlockState blockState, BlockRotation rotation) {
-        return (BlockState)blockState.with(FACING, rotation.rotate(blockState.get(FACING)));
+        return blockState.with(FACING, rotation.rotate(blockState.get(FACING)));
     }
 
     @Override
@@ -137,9 +145,10 @@ public class WCWallFanBlock extends Block implements SimpleWaterloggedBlock, Wes
         return blockState.rotate(mirror.getRotation(blockState.get(FACING)));
     }
 
-    private static String[] TAGS = { "fans" };
+    private static final String[] TAGS = {"fans"};
+
     @Override
     public String[] getBlockTags() {
-    	return TAGS;
+        return TAGS;
     }
 }

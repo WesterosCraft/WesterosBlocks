@@ -7,18 +7,20 @@ import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.PaneBlock;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.WorldAccess;
 
-public class WCPaneBlock extends IronBarsBlock implements WesterosBlockLifecycle {
+public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties().noOcclusion();
+            AbstractBlock.Settings settings = def.makeProperties().nonOpaque();
             String t = def.getType();
             boolean doUnconnect = false;
             if (t != null) {
@@ -80,15 +82,22 @@ public class WCPaneBlock extends IronBarsBlock implements WesterosBlockLifecycle
         super.appendProperties(builder);
     }
 
-    @Override  
-    public BlockState updateShape(BlockState state, Direction dir, BlockState nstate, LevelAccessor world, BlockPos pos, BlockPos pos2) {
-    	if (unconnect && state.get(UNCONNECT)) {
+    @Override
+    public BlockState getStateForNeighborUpdate(
+            BlockState state,
+            Direction direction,
+            BlockState neighborState,
+            WorldAccess world,
+            BlockPos pos,
+            BlockPos neighborPos
+    ) {
+        if (unconnect && state.get(UNCONNECT)) {
             if (state.get(WATERLOGGED)) {
-                world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+                world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
             }
             return state;
     	}
-    	return super.updateShape(state, dir, nstate, world, pos, pos);
+    	return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
     public boolean isLegacyModel() {

@@ -66,10 +66,10 @@ public class WCSoundBlock extends WCSolidBlock {
 			}
 		}
 		if (INDEX != null) {
-			this.registerDefaultState(this.stateDefinition.any().with(POWERED, Boolean.valueOf(false)).with(INDEX, 1));
+			setDefaultState(getDefaultState().with(POWERED, Boolean.FALSE).with(INDEX, 1));
 		}
 		else {
-			this.registerDefaultState(this.stateDefinition.any().with(POWERED, Boolean.valueOf(false)));
+			setDefaultState(getDefaultState().with(POWERED, Boolean.FALSE));
 		}
 	}
 

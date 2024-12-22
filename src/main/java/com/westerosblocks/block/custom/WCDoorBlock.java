@@ -1,6 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -11,6 +10,7 @@ import net.minecraft.block.DoorBlock;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.WorldView;
 
 public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
 
@@ -50,11 +50,8 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
         return def;
     }
 
-
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-
-
         if (this.locked) {
             return InteractionResult.PASS;
         }
@@ -64,9 +61,9 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public boolean canSurvive(BlockState p_52783_, LevelReader p_52784_, BlockPos p_52785_) {
-    	if (allow_unsupported && (p_52783_.getValue(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) return true;
-    	return super.canSurvive(p_52783_, p_52784_, p_52785_);
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+    	if (allow_unsupported && (state.get(DoorBlock.HALF) == DoubleBlockHalf.LOWER)) return true;
+    	return super.canPlaceAt(state, world, pos);
      }
 
     private static String[] TAGS = { "doors" };

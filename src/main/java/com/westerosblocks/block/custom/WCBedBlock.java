@@ -10,6 +10,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.enums.BedPart;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -21,6 +22,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 import java.util.Optional;
 
@@ -118,7 +122,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
             return InteractionResult.CONSUME;
         } else {
             if (state.get(PART) != BedPart.HEAD) {
-                pos = pos.relative(state.get(FACING));
+                pos = pos.offset(state.get(FACING));
                 state = level.getBlockState(pos);
                 if (!state.is(this)) {
                     return InteractionResult.CONSUME;
@@ -127,7 +131,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
 
             if (!canSetSpawn(level)) {
                 level.removeBlock(pos, false);
-                BlockPos blockpos = pos.relative(state.get(FACING).getOpposite());
+                BlockPos blockpos = pos.offset(state.get(FACING).getOpposite());
                 if (level.getBlockState(blockpos).is(this)) {
                     level.removeBlock(blockpos, false);
                 }
@@ -226,13 +230,13 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
 
     }
 
-    @SuppressWarnings("deprecation")
     @Override
-    public BlockState updateShape(BlockState p_49525_, Direction p_49526_, BlockState p_49527_, LevelAccessor p_49528_, BlockPos p_49529_, BlockPos p_49530_) {
-        if (p_49526_ == getNeighbourDirection(p_49525_.get(PART), p_49525_.get(FACING))) {
-            return p_49527_.is(this) && p_49527_.get(PART) != p_49525_.get(PART) ? p_49525_.setValue(OCCUPIED, p_49527_.get(OCCUPIED)) : Blocks.AIR.defaultBlockState();
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
+                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        if (direction == getNeighbourDirection(state.get(PART), state.get(FACING))) {
+            return neighborState.isOf(this) && neighborState.get(PART) != state.get(PART) ? state.with(OCCUPIED, neighborState.get(OCCUPIED)) : Blocks.AIR.defaultBlockState();
         } else {
-            return super.updateShape(p_49525_, p_49526_, p_49527_, p_49528_, p_49529_, p_49530_);
+            return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
         }
     }
 
@@ -245,7 +249,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
         if (!level.isClientSide && player.isCreative()) {
             BedPart bedpart = state.get(PART);
             if (bedpart == BedPart.FOOT) {
-                BlockPos blockpos = pos.relative(getNeighbourDirection(bedpart, state.get(FACING)));
+                BlockPos blockpos = pos.offset(getNeighbourDirection(bedpart, state.get(FACING)));
                 BlockState blockstate = level.getBlockState(blockpos);
                 if (blockstate.is(this) && blockstate.get(PART) == BedPart.HEAD) {
                     level.setBlock(blockpos, Blocks.AIR.defaultBlockState(), 35);
@@ -257,16 +261,17 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
         return super.playerWillDestroy(level, pos, state, player);
     }
 
-    @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext p_49479_) {
-        Direction direction = p_49479_.getHorizontalDirection();
-        BlockPos blockpos = p_49479_.getClickedPos();
-        BlockPos blockpos1 = blockpos.relative(direction);
-        Level level = p_49479_.getLevel();
-        return level.getBlockState(blockpos1).canBeReplaced(p_49479_) && level.getWorldBorder().isWithinBounds(blockpos1) ? this.defaultBlockState().setValue(FACING, direction) : null;
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        Direction direction = ctx.getHorizontalDirection();
+        BlockPos blockpos = ctx.getBlockPos();
+        BlockPos blockpos1 = blockpos.offset(direction);
+        World world = ctx.getWorld();
+        return world.getBlockState(blockpos1).canBeReplaced(ctx) && world.getWorldBorder().isWithinBounds(blockpos1) ? getDefaultState().with(FACING, direction) : null;
     }
 
-    public VoxelShape getShape(BlockState p_49547_, BlockGetter p_49548_, BlockPos p_49549_, CollisionContext p_49550_) {
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         Direction direction = getConnectedDirection(p_49547_).getOpposite();
         switch (direction) {
             case NORTH:
@@ -361,7 +366,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
     public void setPlacedBy(Level p_49499_, BlockPos p_49500_, BlockState p_49501_, @Nullable LivingEntity p_49502_, ItemStack p_49503_) {
         super.setPlacedBy(p_49499_, p_49500_, p_49501_, p_49502_, p_49503_);
         if (!p_49499_.isClientSide) {
-            BlockPos blockpos = p_49500_.relative(p_49501_.get(FACING));
+            BlockPos blockpos = p_49500_.offset(p_49501_.get(FACING));
             p_49499_.setBlock(blockpos, p_49501_.setValue(PART, BedPart.HEAD), 3);
             p_49499_.blockUpdated(p_49500_, Blocks.AIR);
             p_49501_.updateNeighbourShapes(p_49499_, p_49500_, 3);
@@ -374,7 +379,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
     }
 
     public long getSeed(BlockState p_49522_, BlockPos p_49523_) {
-        BlockPos blockpos = p_49523_.relative(p_49522_.get(FACING), p_49522_.get(PART) == BedPart.HEAD ? 0 : 1);
+        BlockPos blockpos = p_49523_.offset(p_49522_.get(FACING), p_49522_.get(PART) == BedPart.HEAD ? 0 : 1);
         return Mth.getSeed(blockpos.getX(), p_49523_.getY(), blockpos.getZ());
     }
 

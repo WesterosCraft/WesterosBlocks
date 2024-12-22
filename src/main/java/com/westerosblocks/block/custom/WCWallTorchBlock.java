@@ -8,6 +8,7 @@ import net.minecraft.block.WallTorchBlock;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.WorldView;
 
 public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLifecycle {
     private WesterosBlockDef def;
@@ -49,9 +50,9 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
     }
 
     @Override
-    public boolean canSurvive(BlockState p_49395_, LevelReader p_49396_, BlockPos p_49397_) {
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
     	if (this.allow_unsupported) return true;
-        return super.canSurvive(p_49395_, p_49396_, p_49397_);
+        return super.canPlaceAt(state, world, pos);
     }
 
     private static String[] TAGS = { "wall_post_override" };

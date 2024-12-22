@@ -1,19 +1,23 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldAccess;
 
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -22,7 +26,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties().noOcclusion();
+            AbstractBlock.Settings settings = def.makeProperties().nonOpaque();
             Block blk = new WCVinesBlock(settings, def);
             return def.registerRenderType(blk, false, false);
         }
@@ -33,7 +37,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
     private boolean no_climb = false;
     public boolean has_down = false;
     public static final BooleanProperty DOWN = PipeBlock.DOWN;
-    private static final VoxelShape UP_AABB = Block.box(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape UP_AABB = VoxelShapes.cuboid(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     private static final VoxelShape DOWN_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
     private static final VoxelShape WEST_AABB = Block.box(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
     private static final VoxelShape EAST_AABB = Block.box(15.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
@@ -43,7 +47,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
 
     public static final Map<Direction, BooleanProperty> PROPERTY_BY_DIRECTION = PipeBlock.PROPERTY_BY_DIRECTION.entrySet().stream().collect(Util.toMap());
     // Support waterlogged on these blocks
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     protected WCVinesBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
@@ -63,56 +67,60 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
                 }
             }
         }
-        this.shapesCache = ImmutableMap.copyOf(this.stateDefinition.getPossibleStates().stream().collect(Collectors.toMap(Function.identity(), WCVinesBlock::calculateShape)));
-        this.registerDefaultState(this.stateDefinition.any().setValue(UP, Boolean.valueOf(false)).setValue(NORTH, Boolean.valueOf(false)).setValue(EAST, Boolean.valueOf(false))
-        		.setValue(SOUTH, Boolean.valueOf(false)).setValue(WEST, Boolean.valueOf(false))
-        		.setValue(DOWN, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)));
+        this.shapesCache = ImmutableMap.copyOf(getDefaultState().getPossibleStates().stream().collect(Collectors.toMap(Function.identity(), WCVinesBlock::calculateShape)));
+        setDefaultState(getDefaultState()
+                .with(UP, Boolean.FALSE)
+                .with(NORTH, Boolean.FALSE)
+                .with(EAST, Boolean.FALSE)
+        		.with(SOUTH, Boolean.FALSE)
+                .with(WEST, Boolean.FALSE)
+        		.with(DOWN, Boolean.FALSE)
+                .with(WATERLOGGED, Boolean.FALSE));
     }
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
 
-    private static VoxelShape calculateShape(BlockState p_242685_0_) {
-        VoxelShape voxelshape = Shapes.empty();
-        if (p_242685_0_.getValue(UP)) {
+    private static VoxelShape calculateShape(BlockState state) {
+        VoxelShape voxelshape = VoxelShapes.empty();
+        if (state.get(UP)) {
            voxelshape = UP_AABB;
         }
-        if (p_242685_0_.getValue(DOWN)) {
-            voxelshape = Shapes.or(voxelshape, DOWN_AABB);
+        if (state.get(DOWN)) {
+            voxelshape = VoxelShapes.union(voxelshape, DOWN_AABB);
          }
 
-        if (p_242685_0_.getValue(NORTH)) {
-           voxelshape = Shapes.or(voxelshape, NORTH_AABB);
+        if (state.get(NORTH)) {
+           voxelshape = VoxelShapes.union(voxelshape, NORTH_AABB);
         }
 
-        if (p_242685_0_.getValue(SOUTH)) {
-           voxelshape = Shapes.or(voxelshape, SOUTH_AABB);
+        if (state.get(SOUTH)) {
+           voxelshape = VoxelShapes.union(voxelshape, SOUTH_AABB);
         }
 
-        if (p_242685_0_.getValue(EAST)) {
-           voxelshape = Shapes.or(voxelshape, EAST_AABB);
+        if (state.get(EAST)) {
+           voxelshape = VoxelShapes.union(voxelshape, EAST_AABB);
         }
 
-        if (p_242685_0_.getValue(WEST)) {
-           voxelshape = Shapes.or(voxelshape, WEST_AABB);
+        if (state.get(WEST)) {
+           voxelshape = VoxelShapes.union(voxelshape, WEST_AABB);
         }
         return voxelshape;
      }
 
-    
     @Override
-    public VoxelShape getShape(BlockState p_220053_1_, BlockGetter p_220053_2_, BlockPos p_220053_3_, CollisionContext p_220053_4_) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return this.shapesCache.get(p_220053_1_);
-    } 
-    @Override
-    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
-        return Shapes.empty();
     }
 
     @Override
-    public boolean canSurvive(BlockState p_196260_1_, LevelReader p_196260_2_, BlockPos p_196260_3_) {
-    	
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        return VoxelShapes.empty();
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
     	return allow_unsupported || this.hasFaces(this.getUpdatedState(p_196260_1_, p_196260_2_, p_196260_3_));
     }
 
@@ -136,7 +144,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
         if ((!has_down) && (p_196541_3_ == Direction.DOWN)) {
            return false;
         } else {
-           BlockPos blockpos = p_196541_2_.relative(p_196541_3_);
+           BlockPos blockpos = p_196541_2_.offset(p_196541_3_);
            if (allow_unsupported ) {
         	   return true;
            }
@@ -146,8 +154,8 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
               return false;
            } else {
               BooleanProperty booleanproperty = PROPERTY_BY_DIRECTION.get(p_196541_3_);
-              BlockState blockstate = p_196541_1_.getBlockState(p_196541_2_.above());
-              return blockstate.is(this) && blockstate.getValue(booleanproperty);
+              BlockState blockstate = p_196541_1_.getBlockState(p_196541_2_.up());
+              return blockstate.isOf(this) && blockstate.get(booleanproperty);
            }
         }
      }
@@ -158,69 +166,72 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
      }
 
      private BlockState getUpdatedState(BlockState p_196545_1_, BlockGetter p_196545_2_, BlockPos p_196545_3_) {
-        BlockPos blockpos = p_196545_3_.above();
-        if (p_196545_1_.getValue(UP)) {
-           p_196545_1_ = p_196545_1_.setValue(UP, Boolean.valueOf(allow_unsupported || isAcceptableNeighbour(p_196545_2_, blockpos, Direction.DOWN)));
+        BlockPos blockpos = p_196545_3_.up();
+        if (p_196545_1_.get(UP)) {
+           p_196545_1_ = p_196545_1_.with(UP, Boolean.valueOf(allow_unsupported || isAcceptableNeighbour(p_196545_2_, blockpos, Direction.DOWN)));
         }
 
         BlockState blockstate = null;
 
         for(Direction direction : Direction.Plane.HORIZONTAL) {
            BooleanProperty booleanproperty = getPropertyForFace(direction);
-           if (p_196545_1_.getValue(booleanproperty)) {
+           if (p_196545_1_.get(booleanproperty)) {
               boolean flag = allow_unsupported || this.canSupportAtFace(p_196545_2_, p_196545_3_, direction);
               if (!flag) {
                  if (blockstate == null) {
                     blockstate = p_196545_2_.getBlockState(blockpos);
                  }
 
-                 flag = blockstate.is(this) && blockstate.getValue(booleanproperty);
+                 flag = blockstate.isOf(this) && get.getValue(booleanproperty);
               }
 
-              p_196545_1_ = p_196545_1_.setValue(booleanproperty, Boolean.valueOf(flag));
+              p_196545_1_ = p_196545_1_.with(booleanproperty, flag);
            }
         }
 
         return p_196545_1_;
      }
 
-     @Override
-     public BlockState updateShape(BlockState p_196271_1_, Direction p_196271_2_, BlockState p_196271_3_, LevelAccessor p_196271_4_, BlockPos p_196271_5_, BlockPos p_196271_6_) {
-        if ((!has_down) && (p_196271_2_ == Direction.DOWN)) {
-           return super.updateShape(p_196271_1_, p_196271_2_, p_196271_3_, p_196271_4_, p_196271_5_, p_196271_6_);
+    @Override
+    public BlockState getStateForNeighborUpdate(
+            BlockState state,
+            Direction direction,
+            BlockState neighborState,
+            WorldAccess world,
+            BlockPos pos,
+            BlockPos neighborPos
+    ) {          if ((!has_down) && (direction == Direction.DOWN)) {
+           return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
         } else {
-           BlockState blockstate = this.getUpdatedState(p_196271_1_, p_196271_4_, p_196271_5_);
-           return !this.hasFaces(blockstate) ? Blocks.AIR.defaultBlockState() : blockstate;
+           BlockState blockstate = this.getUpdatedState(state, world, pos);
+           return !this.hasFaces(blockstate) ? Blocks.AIR.getDefaultState() : blockstate;
         }
-     } 
+     }
 
-     @Nullable 
-     @Override
-     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-        BlockState blockstate = ctx.getLevel().getBlockState(ctx.getClickedPos());
-        boolean flag = blockstate.is(this);
-        BlockState blockstate1 = flag ? blockstate : this.defaultBlockState();
-        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
-        blockstate1 = blockstate1.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        BlockState blockstate = ctx.getWorld().getBlockState(ctx.getBlockPos());
+        boolean flag = blockstate.isOf(this);
+        BlockState blockstate1 = flag ? blockstate : getDefaultState();
+        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        blockstate1 = blockstate1.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
 
-        for(Direction direction : ctx.getNearestLookingDirections()) {
+        for(Direction direction : ctx.getPlacementDirections()) {
            if (has_down || (direction != Direction.DOWN)) {
               BooleanProperty booleanproperty = getPropertyForFace(direction);
-              boolean flag1 = flag && blockstate.getValue(booleanproperty);
-              if (!flag1 && this.canSupportAtFace(ctx.getLevel(), ctx.getClickedPos(), direction)) {
-                 return blockstate1.setValue(booleanproperty, Boolean.valueOf(true));
+              boolean flag1 = flag && blockstate.get(booleanproperty);
+              if (!flag1 && this.canSupportAtFace(ctx.getWorld(), ctx.getBlockPos(), direction)) {
+                 return blockstate1.with(booleanproperty, Boolean.TRUE);
               }
            }
         }
         return flag ? blockstate1 : null;
      }
-     @SuppressWarnings("deprecation")
+
 	@Override 
      public FluidState getFluidState(BlockState state) { 
-         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
      }
-
-
 
      @Override
      public boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {

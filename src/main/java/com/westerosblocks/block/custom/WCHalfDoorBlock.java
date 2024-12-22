@@ -8,7 +8,9 @@ import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.data.client.VariantSettings.Rotation;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -17,6 +19,10 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
 public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
@@ -72,10 +78,10 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter reader, BlockPos pos, CollisionContext selCtx) {
-        Direction direction = state.getValue(FACING);
-        boolean flag = !state.getValue(OPEN);
-        boolean flag1 = state.getValue(HINGE) == DoorHingeSide.RIGHT;
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        Direction direction = state.get(FACING);
+        boolean flag = !state.get(OPEN);
+        boolean flag1 = state.get(HINGE) == DoorHingeSide.RIGHT;
         switch (direction) {
             case EAST:
             default:
@@ -90,8 +96,8 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
-        return Shapes.empty();
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        return VoxelShapes.empty();
     }
 
     @Override
@@ -117,29 +123,32 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
         return this.material == AuxMaterial.METAL ? 1005 : 1006;
     }
 
-    @Nullable
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-        BlockPos blockpos = ctx.getClickedPos();
-        Level level = ctx.getLevel();
-        boolean flag = level.hasNeighborSignal(blockpos);
-        return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite()).setValue(HINGE, this.getHinge(ctx)).setValue(POWERED, Boolean.valueOf(flag)).setValue(OPEN, Boolean.valueOf(flag));
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        BlockPos blockpos = ctx.getBlockPos();
+        World world = ctx.getWorld();
+        boolean flag = world.hasNeighborSignal(blockpos);
+        return getDefaultState()
+                .with(FACING, ctx.getHorizontalDirection().getOpposite())
+                .with(HINGE, this.getHinge(ctx))
+                .with(POWERED, flag)
+                .with(OPEN, flag);
     }
 
     private DoorHingeSide getHinge(BlockPlaceContext ctx) {
         BlockGetter BlockGetter = ctx.getLevel();
-        BlockPos blockpos = ctx.getClickedPos();
+        BlockPos blockpos = ctx.getBlockPos();
         Direction direction = ctx.getHorizontalDirection();
-        BlockPos blockpos1 = blockpos.above();
+        BlockPos blockpos1 = blockpos.up();
         Direction direction1 = direction.getCounterClockWise();
-        BlockPos blockpos2 = blockpos.relative(direction1);
+        BlockPos blockpos2 = blockpos.offset(direction1);
         BlockState blockstate = BlockGetter.getBlockState(blockpos2);
-        BlockPos blockpos3 = blockpos1.relative(direction1);
+        BlockPos blockpos3 = blockpos1.offset(direction1);
         BlockState blockstate1 = BlockGetter.getBlockState(blockpos3);
         Direction direction2 = direction.getClockWise();
-        BlockPos blockpos4 = blockpos.relative(direction2);
+        BlockPos blockpos4 = blockpos.offset(direction2);
         BlockState blockstate2 = BlockGetter.getBlockState(blockpos4);
-        BlockPos blockpos5 = blockpos1.relative(direction2);
+        BlockPos blockpos5 = blockpos1.offset(direction2);
         BlockState blockstate3 = BlockGetter.getBlockState(blockpos5);
         int i = (blockstate.isCollisionShapeFullBlock(BlockGetter, blockpos2) ? -1 : 0) + (blockstate1.isCollisionShapeFullBlock(BlockGetter, blockpos3) ? -1 : 0) + (blockstate2.isCollisionShapeFullBlock(BlockGetter, blockpos4) ? 1 : 0) + (blockstate3.isCollisionShapeFullBlock(BlockGetter, blockpos5) ? 1 : 0);
         boolean flag = blockstate.is(this);
@@ -205,10 +214,10 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         if (allow_unsupported) return true;
         BlockPos blockpos = pos.below();
-        BlockState blockstate = reader.getBlockState(blockpos);
+        BlockState blockstate = world.getBlockState(blockpos);
         return blockstate.isFaceSturdy(reader, blockpos, Direction.UP);
     }
 

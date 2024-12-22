@@ -10,13 +10,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.LadderBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldView;
 
 public class WCLadderBlock extends LadderBlock implements WesterosBlockLifecycle {
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties().noOcclusion();
+            AbstractBlock.Settings settings = def.makeProperties().nonOpaque();
 
             Block blk = new WCLadderBlock(settings, def);
             return def.registerRenderType(blk, false, false);
@@ -47,15 +50,17 @@ public class WCLadderBlock extends LadderBlock implements WesterosBlockLifecycle
     public WesterosBlockDef getWBDefinition() {
         return def;
     }
+
     @Override
-    public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
-        return Shapes.empty();
+    public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+        return VoxelShapes.empty();
     }
 
     @Override
-    public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
-        return allow_unsupported || super.canSurvive(state, world, pos);
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        return allow_unsupported || super.canPlaceAt(state, world, pos);
      }
+
     private static String[] TAGS = { "climbable" };
     private static String[] TAGS_NOCLIMB = {  };
     @Override
