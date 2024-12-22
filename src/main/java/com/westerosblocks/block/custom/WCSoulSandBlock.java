@@ -1,6 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -17,7 +16,7 @@ public class WCSoulSandBlock extends SoulSandBlock implements WesterosBlockLifec
             return def.registerRenderType(blk, true, false);
         }
     }
-    
+
     private WesterosBlockDef def;
 
     protected WCSoulSandBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
@@ -33,6 +32,6 @@ public class WCSoulSandBlock extends SoulSandBlock implements WesterosBlockLifec
     @Override
     public String[] getBlockTags() {
     	return TAGS;
-    }    
+    }
 
 }

@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RailBlock;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle {
 
@@ -21,10 +22,10 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle {
             return def.registerRenderType(blk, false, false);
         }
     }
-    
+
     private WesterosBlockDef def;
     private boolean allow_unsupported = false;
-    
+
     protected WCRailBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
         this.def = def;
@@ -51,20 +52,20 @@ public class WCRailBlock extends RailBlock implements WesterosBlockLifecycle {
         return super.canSurvive(p_49395_, p_49396_, p_49397_);
      }
 
-    @Override
-    public void neighborChanged(BlockState p_49377_, Level p_49378_, BlockPos p_49379_, Block p_49380_, BlockPos p_49381_, boolean p_49382_) {
-    	if (!this.allow_unsupported) { 
-    		super.neighborChanged(p_49377_, p_49378_, p_49379_, p_49380_, p_49381_, p_49382_);
+     @Override
+     protected void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos,
+             boolean notify) {
+        if (!this.allow_unsupported) {
+    		super.neighborUpdate(state, world, pos, sourceBlock, sourcePos, notify);
     	}
-    	else if (!p_49378_.isClientSide && p_49378_.getBlockState(p_49379_).is(this)) {
-        	this.updateState(p_49377_, p_49378_, p_49379_, p_49380_);
+    	else if (!world.isClient && world.getBlockState(pos).isOf(this)) {
+        	this.updateState(state, world, pos, sourceBlock);
         }
-    }
+     }
 
     private static String[] TAGS = { "rails" };
     @Override
     public String[] getBlockTags() {
     	return TAGS;
-    }    
-
+    }
 }

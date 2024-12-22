@@ -8,8 +8,10 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 
 public class WCPaneBlock extends IronBarsBlock implements WesterosBlockLifecycle {
 
@@ -70,18 +72,18 @@ public class WCPaneBlock extends IronBarsBlock implements WesterosBlockLifecycle
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> sd) {
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         if (tempUNCONNECT != null) {
-            sd.add(tempUNCONNECT);
+            builder.add(tempUNCONNECT);
     		tempUNCONNECT = null;
         }
-        super.createBlockStateDefinition(sd);
+        super.appendProperties(builder);
     }
 
     @Override  
     public BlockState updateShape(BlockState state, Direction dir, BlockState nstate, LevelAccessor world, BlockPos pos, BlockPos pos2) {
-    	if (unconnect && state.getValue(UNCONNECT)) {
-            if (state.getValue(WATERLOGGED)) {
+    	if (unconnect && state.get(UNCONNECT)) {
+            if (state.get(WATERLOGGED)) {
                 world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
             }
             return state;

@@ -6,12 +6,16 @@ import com.westerosblocks.block.WesterosBlockFactory;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class WCSoundBlock extends WCSolidBlock {
 	public static class Factory extends WesterosBlockFactory {
@@ -62,22 +66,22 @@ public class WCSoundBlock extends WCSolidBlock {
 			}
 		}
 		if (INDEX != null) {
-			this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, Boolean.valueOf(false)).setValue(INDEX, 1));
+			this.registerDefaultState(this.stateDefinition.any().with(POWERED, Boolean.valueOf(false)).with(INDEX, 1));
 		}
 		else {
-			this.registerDefaultState(this.stateDefinition.any().setValue(POWERED, Boolean.valueOf(false)));
+			this.registerDefaultState(this.stateDefinition.any().with(POWERED, Boolean.valueOf(false)));
 		}
 	}
 
 	@Override
 	public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos pos2, boolean chgflag) {
 		boolean flag = world.hasNeighborSignal(pos);
-		if (flag != state.getValue(POWERED)) {
+		if (flag != state.get(POWERED)) {
 			if (flag) {
 				this.playNote(world, pos);
 				world.scheduleTick(pos, this, getNextTriggerTick(world.random));
 			}
-			world.setBlock(pos, state.setValue(POWERED, Boolean.valueOf(flag)), 3);
+			world.setBlock(pos, state.with(POWERED, Boolean.valueOf(flag)), 3);
 		}
 
 	}
@@ -87,22 +91,23 @@ public class WCSoundBlock extends WCSolidBlock {
 		world.blockEvent(pos, this, 0, 0);
 	}
 
-	@Override
-	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+    @Override
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
+                                 BlockHitResult hit) {
 
-		if (level.isClientSide) {
-			return InteractionResult.SUCCESS;
+		if (world.isClient) {
+			return ActionResult.SUCCESS;
 		} else { // Rotate state on server side, and play new note
 			if (INDEX != null) {
-				int index = state.getValue(INDEX);
+				int index = state.get(INDEX);
 				index = (index + 1) % def.soundList.size();
-				state = state.setValue(INDEX, index); // Rotate sounds selection
-				level.setBlock(pos, state, 3);
+				state = state.with(INDEX, index); // Rotate sounds selection
+				world.setBlockState(pos, state, 3);
 				//WesterosBlocks.log.info("WCSoundBlock.use(" + pos + ") - set to INDEX=" + index);
 			}
-			this.playNote(level, pos);
-			level.scheduleTick(pos, this, getNextTriggerTick(level.random));
-			return InteractionResult.CONSUME;
+			this.playNote(world, pos);
+			world.scheduleTick(pos, this, getNextTriggerTick(world.random));
+			return ActionResult.CONSUME;
 		}
 	}
 
@@ -110,7 +115,7 @@ public class WCSoundBlock extends WCSolidBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos ppos, int eventID, int eventArg) {
 		//WesterosBlocks.log.info("WCSoundBlock.trigger(" + ppos + ")");
 		int i = 0;
-		int sndindex = (INDEX != null) ? state.getValue(INDEX) : 0;
+		int sndindex = (INDEX != null) ? state.get(INDEX) : 0;
 		String soundid = def.soundList.get(sndindex);
 		SoundEvent event = WesterosBlocks.getRegisteredSound(soundid);
 		if (event != null) {
@@ -185,23 +190,24 @@ public class WCSoundBlock extends WCSolidBlock {
 		world.scheduleTick(pos, this, getNextTriggerTick(world.random));
 	}
 
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> container) {
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		if (protoINDEX != null) {
 			INDEX = protoINDEX;
 			protoINDEX = null;
 		}
 		// Only use index for blocks with multiple sounds in list
 		if (INDEX != null) {
-			container.add(POWERED, INDEX);
+			builder.add(POWERED, INDEX);
 		}
 		else {
-			container.add(POWERED);			
+			builder.add(POWERED);
 		}
 	}
     private static String[] TAGS = {  };
     @Override
     public String[] getBlockTags() {
     	return TAGS;
-    }    
+    }
 
 }

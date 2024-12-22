@@ -15,6 +15,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
@@ -74,15 +75,17 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
         		.setValue(FACING, Direction.EAST)
         		.setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
+
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-        super.createBlockStateDefinition(StateDefinition);
-    	StateDefinition.add(FACING, HALF);
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        super.appendProperties(builder);
+    	builder.add(FACING, HALF);
     }
+
     @Override
     protected int getIndexFromState(BlockState state) {
-    	int topoff = (state.getValue(HALF) == DoubleBlockHalf.LOWER) ? 0 : 4;
-    	switch (state.getValue(FACING)) {
+    	int topoff = (state.get(HALF) == DoubleBlockHalf.LOWER) ? 0 : 4;
+    	switch (state.get(FACING)) {
 	    	case EAST:
 	    	default:
 	    		return topoff;
@@ -93,7 +96,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
 	    	case NORTH:
 	    		return topoff+3;
     	}
-    }    
+    }
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
@@ -121,8 +124,8 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     @Override
     public BlockState updateShape(BlockState state, Direction dir, BlockState state2, LevelAccessor world, BlockPos pos, BlockPos pos2) {
     	if (allowHalfBreak) { return super.updateShape(state, dir, state2, world, pos, pos2); }
-        DoubleBlockHalf doubleblockhalf = state.getValue(HALF);
-        if (dir.getAxis() != Direction.Axis.Y || doubleblockhalf == DoubleBlockHalf.LOWER != (dir == Direction.UP) || state2.is(this) && state2.getValue(HALF) != doubleblockhalf) {
+        DoubleBlockHalf doubleblockhalf = state.get(HALF);
+        if (dir.getAxis() != Direction.Axis.Y || doubleblockhalf == DoubleBlockHalf.LOWER != (dir == Direction.UP) || state2.is(this) && state2.get(HALF) != doubleblockhalf) {
            return doubleblockhalf == DoubleBlockHalf.LOWER && dir == Direction.DOWN && !state.canSurvive(world, pos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, dir, state2, world, pos, pos2);
         } else {
            return Blocks.AIR.defaultBlockState();
@@ -134,7 +137,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     	BlockPos above = pos.above();
         FluidState fluidstate =world.getFluidState(above);
         BlockState newstate = this.defaultBlockState()
-			.setValue(FACING, state.getValue(FACING))
+			.setValue(FACING, state.get(FACING))
 			.setValue(HALF, DoubleBlockHalf.UPPER)
 			.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
         world.setBlock(pos.above(), newstate, 3);
@@ -143,7 +146,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     @SuppressWarnings("deprecation")
 	@Override
     public boolean canSurvive(BlockState state, LevelReader reader, BlockPos pos) {
-        if (this.allowHalfBreak || (state.getValue(HALF) != DoubleBlockHalf.UPPER)) {
+        if (this.allowHalfBreak || (state.get(HALF) != DoubleBlockHalf.UPPER)) {
            return super.canSurvive(state, reader, pos);
         }
         else {
@@ -151,7 +154,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
            if (state.getBlock() != this) {
         	   return super.canSurvive(state, reader, pos); 
            }
-           return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
+           return blockstate.is(this) && blockstate.get(HALF) == DoubleBlockHalf.LOWER;
         }
      }
 }

@@ -1,7 +1,5 @@
 package com.westerosblocks.block.custom;
 
-
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -20,9 +18,9 @@ public class WCCakeBlock extends CakeBlock implements WesterosBlockLifecycle {
             return def.registerRenderType(blk, false, false);
         }
     }
-    
+
     private WesterosBlockDef def;
-    
+
     protected WCCakeBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
         this.def = def;
@@ -35,6 +33,6 @@ public class WCCakeBlock extends CakeBlock implements WesterosBlockLifecycle {
     @Override
     public String[] getBlockTags() {
     	return TAGS;
-    }    
+    }
 
 }

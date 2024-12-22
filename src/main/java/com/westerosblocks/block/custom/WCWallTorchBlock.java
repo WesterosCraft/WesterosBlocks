@@ -20,7 +20,7 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
         }
         return ParticleTypes.FLAME;
     }
-    
+
     protected WCWallTorchBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(WCWallTorchBlock.getParticle(def.getType()), settings);
         this.def = def;
@@ -53,11 +53,10 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
     	if (this.allow_unsupported) return true;
         return super.canSurvive(p_49395_, p_49396_, p_49397_);
     }
-    
+
     private static String[] TAGS = { "wall_post_override" };
     @Override
     public String[] getBlockTags() {
     	return TAGS;
     }
-    
 }

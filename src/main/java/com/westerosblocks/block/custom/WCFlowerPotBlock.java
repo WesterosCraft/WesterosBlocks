@@ -17,7 +17,7 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
 			AbstractBlock.Settings settings = def.makeProperties();
         	String emptyPotID = "minecraft:flower_pot";
         	String plantBlockID = null;
-        	
+
         	if (def.type != null) {
         		String[] toks = def.type.split(",");
         		for (String tok : toks) {
@@ -33,7 +33,7 @@ public class WCFlowerPotBlock extends FlowerPotBlock implements WesterosBlockLif
         		}
         	}
         	//WesterosBlocks.log.info(String.format("pot-id=%s, plant-id=%s", emptyPotID, plantBlockID));
-        	
+
         	Supplier<FlowerPotBlock> emptyPot = null;
         	Supplier<Block> plant = () -> null;
             if (emptyPotID != null) {

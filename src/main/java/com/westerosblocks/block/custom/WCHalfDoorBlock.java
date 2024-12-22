@@ -8,8 +8,11 @@ import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.data.client.VariantSettings.Rotation;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -236,8 +239,8 @@ public class WCHalfDoorBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {
-        state.add(FACING, OPEN, HINGE, POWERED);
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(FACING, OPEN, HINGE, POWERED);
     }
 
     private static String[] TAGS = {"doors"};

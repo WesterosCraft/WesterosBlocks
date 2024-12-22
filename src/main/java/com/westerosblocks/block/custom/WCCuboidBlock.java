@@ -7,6 +7,7 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
@@ -14,9 +15,13 @@ import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.World;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -122,7 +127,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     public VoxelShape getBlockSupportShape(BlockState state, BlockGetter reader, BlockPos pos) {
     	int idx = 0;
     	if (STATE != null)
-    		idx = STATE.getIndex(state.getValue(STATE)); 
+    		idx = STATE.getIndex(state.get(STATE)); 
         return SUPPORT_BY_INDEX[idx];
     }
     @Override
@@ -163,16 +168,17 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         };
     }
 
-    @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
+        @Override
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
+                                 BlockHitResult hit) {
+        Hand hand = player.getActiveHand();
+        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(this.STATE);
-            level.setBlock(pos, state, 10);
-            level.levelEvent(player, 1006, pos, 0);
-            return InteractionResult.sidedSuccess(level.isClientSide);
-        }
-        else {
-            return InteractionResult.PASS;
+            world.setBlockState(pos, state, 10);
+            world.syncWorldEvent(player, 1006, pos, 0);
+            return ActionResult.success(world.isClient);
+        } else {
+            return ActionResult.PASS;
         }
     }
 
@@ -185,7 +191,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         }
         return vs;
     }
-    
+
     public List<WesterosBlockDef.Cuboid> getModelCuboids(int stateIdx) {
     	return cuboid_by_facing[modelsPerState * stateIdx];
     }
@@ -194,6 +200,6 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public String[] getBlockTags() {
     	return TAGS;
-    }    
+    }
 
 }

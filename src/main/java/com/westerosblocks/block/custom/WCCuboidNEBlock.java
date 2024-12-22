@@ -8,8 +8,10 @@ import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.data.client.VariantSettings.Rotation;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.math.Direction;
 
@@ -46,22 +48,22 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
                 SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
             }
         }
-        BlockState defbs = this.stateDefinition.any().setValue(FACING, Direction.EAST).setValue(WATERLOGGED, Boolean.valueOf(false));
+        BlockState defbs = this.stateDefinition.any().with(FACING, Direction.EAST).with(WATERLOGGED, Boolean.valueOf(false));
         if (STATE != null) {
-            defbs = defbs.setValue(STATE, STATE.defValue);
+            defbs = defbs.with(STATE, STATE.defValue);
         }
-        this.registerDefaultState(defbs);
+        setDefaultState(defbs);
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-        super.createBlockStateDefinition(StateDefinition);
-        StateDefinition.add(FACING);
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        super.appendProperties(builder);
+        builder.add(FACING);
     }
 
     @Override
     protected int getIndexFromState(BlockState state) {
-        return super.getIndexFromState(state) + ((state.getValue(FACING) == Direction.EAST) ? 0 : 1);
+        return super.getIndexFromState(state) + ((state.get(FACING) == Direction.EAST) ? 0 : 1);
     }
 
     @Override
@@ -72,9 +74,9 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
                 return state;
             case COUNTERCLOCKWISE_90:
             case CLOCKWISE_90:
-                return (state.getValue(FACING) == Direction.EAST) ?
-                        state.setValue(FACING, Direction.NORTH) :
-                        state.setValue(FACING, Direction.EAST);
+                return (state.get(FACING) == Direction.EAST) ?
+                        state.with(FACING, Direction.NORTH) :
+                        state.with(FACING, Direction.EAST);
         }
     }
 
@@ -94,9 +96,9 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
                 break;
             }
         }
-        BlockState bs = this.defaultBlockState().setValue(FACING, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+        BlockState bs = this.defaultBlockState().with(FACING, dir).with(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
         if (STATE != null) {
-            bs = bs.setValue(STATE, STATE.defValue);
+            bs = bs.with(STATE, STATE.defValue);
         }
         return bs;
     }

@@ -22,7 +22,7 @@ public class WCDoorBlock extends DoorBlock implements WesterosBlockLifecycle {
             return def.registerRenderType(blk, false, false);
         }
     }
-    
+
     private WesterosBlockDef def;
     private boolean locked = false;
     private boolean allow_unsupported = false;

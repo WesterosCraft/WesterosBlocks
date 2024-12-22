@@ -9,16 +9,24 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.enums.SlabType;
+import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.World;
 
 public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
 
@@ -51,7 +59,17 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     protected boolean toggleOnUse = false;
     public boolean layerSensitive = false;
 
-    public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[]{Shapes.empty(), Block.box(0.0D, -14.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.box(0.0D, -12.0D, 0.0D, 16.0D, 4.0D, 16.0D), Block.box(0.0D, -10.0D, 0.0D, 16.0D, 6.0D, 16.0D), Block.box(0.0D, -8.0D, 0.0D, 16.0D, 8.0D, 16.0D), Block.box(0.0D, -6.0D, 0.0D, 16.0D, 10.0D, 16.0D), Block.box(0.0D, -4.0D, 0.0D, 16.0D, 12.0D, 16.0D), Block.box(0.0D, -2.0D, 0.0D, 16.0D, 14.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
+    public static final VoxelShape[] SHAPE_BY_LAYER = new VoxelShape[]{
+        VoxelShapes.empty(),
+        VoxelShapes.cuboid(0.0D, -14.0D, 0.0D, 16.0D, 2.0D, 16.0D),
+        VoxelShapes.cuboid(0.0D, -12.0D, 0.0D, 16.0D, 4.0D, 16.0D),
+        VoxelShapes.cuboid(0.0D, -10.0D, 0.0D, 16.0D, 6.0D, 16.0D),
+        VoxelShapes.cuboid(0.0D, -8.0D, 0.0D, 16.0D, 8.0D, 16.0D),
+        VoxelShapes.cuboid(0.0D, -6.0D, 0.0D, 16.0D, 10.0D, 16.0D),
+        VoxelShapes.cuboid(0.0D, -4.0D, 0.0D, 16.0D, 12.0D, 16.0D),
+        VoxelShapes.cuboid(0.0D, -2.0D, 0.0D, 16.0D, 14.0D, 16.0D),
+        VoxelShapes.cuboid(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
+    };
 
     protected WCPlantBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
@@ -65,14 +83,14 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
                 }
             }
         }
-        BlockState defbs = this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false));
+        BlockState defbs = getDefaultState().with(WATERLOGGED, Boolean.FALSE);
         if (STATE != null) {
-            defbs = defbs.setValue(STATE, STATE.defValue);
+            defbs = defbs.with(STATE, STATE.defValue);
         }
         if (LAYERS != null) {
-            defbs = defbs.setValue(LAYERS, 8);
+            defbs = defbs.with(LAYERS, 8);
         }
-        this.registerDefaultState(defbs);
+        setDefaultState(defbs);
     }
 
     @Override
@@ -81,46 +99,44 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     }
 
     @Override
-    @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-        BlockState bs = super.getStateForPlacement(ctx);
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        BlockState bs = super.getPlacementState(ctx);
         if (bs == null) return null;
-        FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
-        bs = bs.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        bs = bs.with(WATERLOGGED, Boolean.valueOf(fluidstate.isIn(FluidTags.WATER)));
         if (STATE != null) {
-            bs = bs.setValue(STATE, STATE.defValue);
+            bs = bs.with(STATE, STATE.defValue);
         }
         if (LAYERS != null) {
-            BlockState below = ctx.getLevel().getBlockState(ctx.getClickedPos().relative(Direction.DOWN));
-            if ((below != null) && (below.hasProperty(BlockStateProperties.LAYERS))) {
+            BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().relative(Direction.DOWN));
+            if ((below != null) && (below.hasProperty(Properties.LAYERS))) {
                 Block blk = below.getBlock();
-                Integer layer = below.getValue(BlockStateProperties.LAYERS);
+                Integer layer = below.get(Properties.LAYERS);
                 // See if soft layer
                 if ((blk instanceof SnowLayerBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock) blk).softLayer)) {
                     layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
                 }
-                bs = bs.setValue(LAYERS, layer);
+                bs = bs.with(LAYERS, layer);
             } else if ((below != null) && (below.getBlock() instanceof SlabBlock)) {
-                SlabType slabtype = below.getValue(BlockStateProperties.SLAB_TYPE);
-                if (slabtype == SlabType.BOTTOM) bs = bs.setValue(LAYERS, 4);
+                SlabType slabtype = below.get(Properties.SLAB_TYPE);
+                if (slabtype == SlabType.BOTTOM) bs = bs.with(LAYERS, 4);
             }
         }
         return bs;
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public FluidState getFluidState(BlockState state) {
-        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     @Override
-    protected boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
-        switch (pathComputationType) {
+    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+        switch (type) {
             case LAND:
                 return false;
             case WATER:
-                return state.getFluidState().is(FluidTags.WATER);
+                return state.getFluidState().isIn(FluidTags.WATER);
             case AIR:
                 return false;
             default:
@@ -130,7 +146,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
 
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateDefinition) {
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         if (tempSTATE != null) {
             STATE = tempSTATE;
             tempSTATE = null;
@@ -140,23 +156,25 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
             tempLAYERS = null;
         }
         if (STATE != null) {
-            stateDefinition.add(STATE);
+            builder.add(STATE);
         }
         if (LAYERS != null) {
-            stateDefinition.add(LAYERS);
+            builder.add(LAYERS);
         }
-        stateDefinition.add(WATERLOGGED);
+        builder.add(WATERLOGGED);
     }
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
+                                 BlockHitResult hit) {
+        Hand hand = player.getActiveHand();
+        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(this.STATE);
-            level.setBlock(pos, state, 10);
-            level.levelEvent(player, 1006, pos, 0);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            world.setBlockState(pos, state, 10);
+            world.syncWorldEvent(player, 1006, pos, 0);
+            return ActionResult.success(world.isClient);
         } else {
-            return InteractionResult.PASS;
+            return ActionResult.PASS;
         }
     }
 
@@ -176,7 +194,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
         if (LAYERS != null) {
-            return SHAPE_BY_LAYER[state.getValue(LAYERS)];
+            return SHAPE_BY_LAYER[state.get(LAYERS)];
         } else {
             return Shapes.block();
         }

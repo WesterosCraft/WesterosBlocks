@@ -43,7 +43,7 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
         	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
-        	}        	
+        	}
             String t = def.getType();
             if ((t != null) && (t.contains(WesterosBlockDef.LAYER_SENSITIVE))) {
             	tempLAYERS = Properties.LAYERS;
@@ -54,7 +54,6 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
         }
     }
 
- 
     protected WCWebBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
         this.def = def;
@@ -71,7 +70,7 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
             }
         }
         BlockState bsdef = getDefaultState().with(WATERLOGGED, Boolean.FALSE);
-    	if (LAYERS != null) {        		
+    	if (LAYERS != null) {
     		bsdef = bsdef.with(LAYERS, 8);
     	}
         if (STATE != null) {
@@ -113,7 +112,6 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
         builder.add(WATERLOGGED);
     }
 
-    @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
     	BlockState bs = super.getPlacementState(ctx);
@@ -138,8 +136,8 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
         		SlabType slabtype = below.get(Properties.SLAB_TYPE);
         		if (slabtype == SlabType.BOTTOM) bs = bs.with(LAYERS, 4);
         	}
-        }        
-    	return bs;    	
+        }
+    	return bs;
     }
 
     @Override
@@ -171,11 +169,11 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
             return ActionResult.PASS;
         }
     }
-    
+
     private static String[] TAGS = { };
     @Override
     public String[] getBlockTags() {
     	return TAGS;
-    }    
+    }
 
 }

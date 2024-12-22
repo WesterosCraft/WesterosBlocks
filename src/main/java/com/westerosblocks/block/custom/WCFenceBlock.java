@@ -5,11 +5,18 @@ import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.*;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.world.World;
 
 public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
 
@@ -51,7 +58,7 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
 	protected WesterosBlockDef.StateProperty STATE;
 
 	protected boolean toggleOnUse = false;
-    
+
     private WesterosBlockDef def;
 
     protected WCFenceBlock(AbstractBlock.Settings settings, WesterosBlockDef def, Boolean doUnconnect) {
@@ -71,29 +78,29 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
         unconnect = (doUnconnect != null);
         unconnectDef = doUnconnect;
         BlockState defbs = this.stateDefinition.any()
-                            .setValue(NORTH, Boolean.valueOf(false))
-                            .setValue(EAST, Boolean.valueOf(false))
-                            .setValue(SOUTH, Boolean.valueOf(false))
-                            .setValue(WEST, Boolean.valueOf(false))
-                            .setValue(WATERLOGGED, Boolean.valueOf(false));
+                            .with(NORTH, Boolean.valueOf(false))
+                            .with(EAST, Boolean.valueOf(false))
+                            .with(SOUTH, Boolean.valueOf(false))
+                            .with(WEST, Boolean.valueOf(false))
+                            .with(WATERLOGGED, Boolean.valueOf(false));
         if (unconnect) {
-            defbs = defbs.setValue(UNCONNECT, unconnectDef);
+            defbs = defbs.with(UNCONNECT, unconnectDef);
         }
 		if (STATE != null) {
-			defbs = defbs.setValue(STATE, STATE.defValue);
+			defbs = defbs.with(STATE, STATE.defValue);
 		}
-        this.registerDefaultState(defbs);
+        setDefaultState(defbs);
     }
 
     @Override
     public WesterosBlockDef getWBDefinition() {
         return def;
-    }    
-    
+    }
+
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateDefinition) {
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
     	if (tempUNCONNECT != null) {
-    		stateDefinition.add(tempUNCONNECT);
+    		builder.add(tempUNCONNECT);
     		tempUNCONNECT = null;
     	}
 		if (tempSTATE != null) {
@@ -101,18 +108,17 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
 			tempSTATE = null;
 		}
 		if (STATE != null) {
-			stateDefinition.add(STATE);
+			builder.add(STATE);
 		}
-    	super.createBlockStateDefinition(stateDefinition);
+    	super.appendProperties(builder);
     }
 
-    @Override  
-    @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
     	if (unconnect && unconnectDef) {
-    		return this.defaultBlockState();
+    		return getDefaultState();
     	}
-    	return super.getStateForPlacement(ctx);
+    	return super.getPlacementState(ctx);
     }
     
 
@@ -135,21 +141,23 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
         return !isExceptionForConnection(p_53330_) && p_53331_ || flag || flag1;
     }
 
-    private boolean isSameFence(BlockState p_153255_) {
-        return p_153255_.is(BlockTags.FENCES) && p_153255_.is(BlockTags.WOODEN_FENCES) == this.defaultBlockState().is(BlockTags.WOODEN_FENCES);
+    private boolean isSameFence(BlockState state) {
+        return state.isIn(BlockTags.FENCES) && state.isIn(BlockTags.WOODEN_FENCES) == this.defaultBlockState().is(BlockTags.WOODEN_FENCES);
     }
 
 
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getMainHandItem().isEmpty()) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
+                                 BlockHitResult hit) {
+        Hand hand = player.getActiveHand();
+        if (this.toggleOnUse && (this.STATE != null) && player.isCreative() && player.getStackInHand(hand).isEmpty()) {
             state = state.cycle(this.STATE);
-            level.setBlock(pos, state, 10);
-            level.levelEvent(player, 1006, pos, 0);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            world.setBlockState(pos, state, 10);
+            world.syncWorldEvent(player, 1006, pos, 0);
+            return ActionResult.success(world.isClient);
         }
         else {
-            return InteractionResult.PASS;
+            return ActionResult.PASS;
         }
     }
 

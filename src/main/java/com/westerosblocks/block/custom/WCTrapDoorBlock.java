@@ -7,9 +7,12 @@ import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class WCTrapDoorBlock extends TrapDoorBlock implements WesterosBlockLifecycle {
 
@@ -46,21 +49,21 @@ public class WCTrapDoorBlock extends TrapDoorBlock implements WesterosBlockLifec
         return def;
     }
 
-
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+    protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player,
+                                 BlockHitResult hit) {
 
         if (this.locked) {
-           return InteractionResult.PASS;
+           return ActionResult.PASS;
         }
         else {
             state = state.cycle(OPEN);
-            level.setBlock(pos, state, 2);
-            if (state.getValue(WATERLOGGED)) {
-                level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+            world.setBlockState(pos, state, 2);
+            if (state.get(WATERLOGGED)) {
+                world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
             }
-            this.playSound(player, level, pos, state.getValue(OPEN));
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            this.playSound(player, world, pos, state.get(OPEN));
+            return ActionResult.success(world.isClient);
         }
     }
 

@@ -18,10 +18,10 @@ import net.minecraft.util.math.Direction;
 public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecycle {
 	public static class Factory extends WesterosBlockFactory {
 		@Override
-		public Block buildBlockClass(WesterosBlockDef def, RegisterEvent.RegisterHelper<Block> helper) {
+		public Block buildBlockClass(WesterosBlockDef def) {
 			final boolean alwaysOnVal = def.getTypeValue("always-on").equals("true");
 			AbstractBlock.Settings settings = def.makeProperties().lightLevel((state) -> {
-				return (alwaysOnVal || state.getValue(BlockStateProperties.LIT)) ? (int) (16 * def.lightValue) : 0;
+				return (alwaysOnVal || state.get(BlockStateProperties.LIT)) ? (int) (16 * def.lightValue) : 0;
 			});
 			Block blk = new WCFurnaceBlock(settings, def);
 			Block rblk = def.registerRenderType(blk, true, def.nonOpaque);
@@ -50,7 +50,7 @@ public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecyc
 
 	@OnlyIn(Dist.CLIENT)
 	public void animateTick(BlockState state, Level world, BlockPos pos, Random random) {
-		boolean lit = state.getValue(LIT);
+		boolean lit = state.get(LIT);
 		boolean active = alwaysOn || lit;
 
 		if (active) {
@@ -62,7 +62,7 @@ public class WCFurnaceBlock extends FurnaceBlock implements WesterosBlockLifecyc
 						false);
 			}
 
-			Direction direction = state.getValue(FACING);
+			Direction direction = state.get(FACING);
 			Direction.Axis direction$axis = direction.getAxis();
 			double d4 = random.nextDouble() * 0.6D - 0.3D;
 			double d5 = direction$axis == Direction.Axis.X ? (double) direction.getStepX() * 0.52D : d4;

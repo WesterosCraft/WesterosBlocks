@@ -11,6 +11,7 @@ import net.minecraft.block.enums.BedPart;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
@@ -352,8 +353,9 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
         return PushReaction.DESTROY;
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_49532_) {
-        p_49532_.add(FACING, PART, OCCUPIED);
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(FACING, PART, OCCUPIED);
     }
 
     public void setPlacedBy(Level p_49499_, BlockPos p_49500_, BlockState p_49501_, @Nullable LivingEntity p_49502_, ItemStack p_49503_) {

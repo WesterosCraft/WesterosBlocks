@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.math.Direction;
 
@@ -31,12 +32,12 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
 			return def.registerRenderType(blk, false, false);
         }
     }
-    
+
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.NORTH, Direction.DOWN, Direction.UP);
 
     protected WCCuboidNSEWUDBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings, def, 6);
-        
+
         int stcnt = def.states.size();
         for (int stidx = 0; stidx < stcnt; stidx++) {
         	int off = stidx * this.modelsPerState;
@@ -53,18 +54,19 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
         		SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
         	}
         }
-        BlockState defbs = this.stateDefinition.any().setValue(FACING, Direction.EAST).setValue(WATERLOGGED, Boolean.valueOf(false));
+        BlockState defbs = this.stateDefinition.any().with(FACING, Direction.EAST).with(WATERLOGGED, Boolean.valueOf(false));
         if (STATE != null) {
-        	defbs = defbs.setValue(STATE, STATE.defValue);
+        	defbs = defbs.with(STATE, STATE.defValue);
         }
-    	this.registerDefaultState(defbs);
+    	setDefaultState(defbs);
     }
+
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-    	super.createBlockStateDefinition(StateDefinition);
-    	StateDefinition.add(FACING);
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    	super.appendProperties(builder);
+    	builder.add(FACING);
     }
-    
+
     @Override
     public List<WesterosBlockDef.Cuboid> getModelCuboids(int stateIdx) {
     	return cuboid_by_facing[modelsPerState * stateIdx + 3];
@@ -73,7 +75,7 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
     @Override
     protected int getIndexFromState(BlockState state) {
     	int off = super.getIndexFromState(state);
-    	switch (state.getValue(FACING)) {
+    	switch (state.get(FACING)) {
 	    	case EAST:
 	    		return off;
 	    	case SOUTH:
@@ -100,9 +102,9 @@ public class WCCuboidNSEWUDBlock extends WCCuboidBlock implements WesterosBlockL
 		   dir = d;
 		   break;
        }
-       BlockState bs = this.defaultBlockState().setValue(FACING, dir).setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+       BlockState bs = this.defaultBlockState().with(FACING, dir).with(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
        if (STATE != null) {
-    	   bs = bs.setValue(STATE, STATE.defValue); 
+    	   bs = bs.with(STATE, STATE.defValue);
        }
        return bs;
     }

@@ -9,8 +9,10 @@ import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.data.client.VariantSettings.Rotation;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.math.Direction;
 
@@ -53,22 +55,22 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 				SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
 			}
 		}
-		BlockState defbs = this.stateDefinition.any().setValue(FACING, Direction.EAST).setValue(WATERLOGGED, Boolean.valueOf(false));
+		BlockState defbs = this.stateDefinition.any().with(FACING, Direction.EAST).with(WATERLOGGED, Boolean.valueOf(false));
 		if (STATE != null) {
-			defbs = defbs.setValue(STATE, STATE.defValue);
+			defbs = defbs.with(STATE, STATE.defValue);
 		}
-		this.registerDefaultState(defbs);
+		setDefaultState(defbs);
 	}
 
-	@Override
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> StateDefinition) {
-		super.createBlockStateDefinition(StateDefinition);
-		StateDefinition.add(FACING);
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+		super.appendProperties(builder);
+		builder.add(FACING);
 	}
 
 	@Override
 	public BlockState rotate(BlockState state, Rotation rot) {
-		return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
+		return state.with(FACING, rot.rotate(state.getValue(FACING)));
 	}
 
 	@SuppressWarnings("deprecation")
@@ -105,10 +107,10 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 				break;
 			}
 		}
-		BlockState bs = this.defaultBlockState().setValue(FACING, dir).setValue(WATERLOGGED,
+		BlockState bs = this.defaultBlockState().with(FACING, dir).with(WATERLOGGED,
 				Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
 		if (STATE != null) {
-			bs = bs.setValue(STATE, STATE.defValue);
+			bs = bs.with(STATE, STATE.defValue);
 		}
 		return bs;
 	}

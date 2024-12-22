@@ -8,6 +8,7 @@ import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
@@ -238,11 +239,12 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
      @Override
      public void randomTick(BlockState p_225542_1_, ServerLevel p_225542_2_, BlockPos p_225542_3_, RandomSource p_225542_4_) {
      }
-     @Override
-     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> container) {
-    	 container.add(UP, NORTH, EAST, SOUTH, WEST, DOWN, WATERLOGGED);
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    	 builder.add(UP, NORTH, EAST, SOUTH, WEST, DOWN, WATERLOGGED);
      }
-     
+
      public static BooleanProperty getPropertyForFace(Direction p_176267_0_) {
          return PROPERTY_BY_DIRECTION.get(p_176267_0_);
       }
@@ -253,5 +255,5 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
      public String[] getBlockTags() {
     	if (no_climb) return TAGS_NOCLIMB;
     	return TAGS;
-     }    
+     }
 }

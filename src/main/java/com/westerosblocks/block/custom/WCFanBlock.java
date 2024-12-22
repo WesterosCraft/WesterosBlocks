@@ -8,13 +8,17 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 
 public class WCFanBlock extends Block implements SimpleWaterloggedBlock, WesterosBlockLifecycle {
 
@@ -39,12 +43,12 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
     }
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    
+
     private WesterosBlockDef def;
     private boolean allow_unsupported = false;
 
-    private static final VoxelShape SHAPE = Block.box(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
-    
+    private static final VoxelShape SHAPE = VoxelShapes.cuboid(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
+
     protected WCFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
         this.def = def;
@@ -57,8 +61,8 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
                 }
             }
         }
-        BlockState defbs = this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false));
-        this.registerDefaultState(defbs);
+        BlockState defbs = this.stateDefinition.any().with(WATERLOGGED, Boolean.valueOf(false));
+        setDefaultState(defbs);
     }
 
     @Override
@@ -67,29 +71,28 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
     }
 
     @Override
-    @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
-    	BlockState bs = super.getStateForPlacement(ctx);
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+    	BlockState bs = super.getPlacementState(ctx);
     	if (bs == null) return null;
-      FluidState fluidstate = ctx.getLevel().getFluidState(ctx.getClickedPos());
-      bs = bs.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+      FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
+      bs = bs.with(WATERLOGGED, Boolean.valueOf(fluidstate.isIn(FluidTags.WATER)));
     	return bs;
     }
 
     @SuppressWarnings("deprecation")
 	  @Override
     public FluidState getFluidState(BlockState state) {
-        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
 
     @Override
-    protected boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
-        switch(pathComputationType) {
+    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+        switch(type) {
             case LAND:
                 return false;
             case WATER:
-                return state.getFluidState().is(FluidTags.WATER);
+                return state.getFluidState().isIn(FluidTags.WATER);
             case AIR:
                 return false;
             default:
@@ -98,8 +101,8 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateDefinition) {
-    	stateDefinition.add(WATERLOGGED);
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    	builder.add(WATERLOGGED);
     }
 
     @Override
@@ -132,5 +135,4 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
     public String[] getBlockTags() {
     	return TAGS;
     }
-    
 }
