@@ -1,6 +1,7 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -19,10 +20,10 @@ public class WCLadderBlock extends LadderBlock implements WesterosBlockLifecycle
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties().nonOpaque();
+            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
 
             Block blk = new WCLadderBlock(settings, def);
-            return def.registerRenderType(blk, false, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 

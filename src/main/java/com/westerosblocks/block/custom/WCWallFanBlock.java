@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.sun.jdi.Mirror;
 import com.westerosblocks.block.WesterosBlockDef;
@@ -36,15 +37,15 @@ public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
     private final WesterosBlockDef def;
     private boolean allow_unsupported = false;
 
-    private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap((Map)
-            ImmutableMap.of((Object) Direction.NORTH,
-                    (Object) VoxelShapes.cuboid(0.0, 4.0, 5.0, 16.0, 12.0, 16.0),
-                    (Object) Direction.SOUTH,
-                    (Object) VoxelShapes.cuboid(0.0, 4.0, 0.0, 16.0, 12.0, 11.0),
-                    (Object) Direction.WEST,
-                    (Object) VoxelShapes.cuboid(5.0, 4.0, 0.0, 16.0, 12.0, 16.0),
-                    (Object) Direction.EAST,
-                    (Object) VoxelShapes.cuboid(0.0, 4.0, 0.0, 11.0, 12.0, 16.0)));
+    private static final Map<Direction, VoxelShape> SHAPES = Maps.newEnumMap(
+            ImmutableMap.of(Direction.NORTH,
+                    VoxelShapes.cuboid(0.0, 4.0, 5.0, 16.0, 12.0, 16.0),
+                    Direction.SOUTH,
+                    VoxelShapes.cuboid(0.0, 4.0, 0.0, 16.0, 12.0, 11.0),
+                    Direction.WEST,
+                    VoxelShapes.cuboid(5.0, 4.0, 0.0, 16.0, 12.0, 16.0),
+                    Direction.EAST,
+                    VoxelShapes.cuboid(0.0, 4.0, 0.0, 11.0, 12.0, 16.0)));
 
     protected WCWallFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
@@ -122,11 +123,11 @@ public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
         Direction direction = state.get(FACING);
         BlockPos blockPos2 = pos.offset(direction.getOpposite());
         BlockState blockState2 = world.getBlockState(blockPos2);
-        return blockState2.isFaceSturdy(world, blockPos2, direction);
+        return blockState2.isSideSolidFullSquare(world, blockPos2, direction);
     }
 
     @Override
-    public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+    protected boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
         return state.getFluidState().isEmpty();
     }
 

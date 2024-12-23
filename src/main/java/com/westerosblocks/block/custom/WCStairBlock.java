@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -36,7 +37,7 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
             WesterosBlockDef.StateProperty state = def.buildStateProperty();
             if (state != null) {
@@ -64,7 +65,8 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
             }
 
             Block blk = new WCStairBlock(settings, def, doUnconnect, doConnectstate);
-            return def.registerRenderType(blk, false, false);
+
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
@@ -179,8 +181,8 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
         Direction direction = ctx.getSide();
         BlockPos blockPos = ctx.getBlockPos();
         FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
-        BlockState blockState = (this.getDefaultState()
-                .with(FACING, ctx.getPlayerLookDirection()))
+        BlockState blockState = (getDefaultState()
+                .with(FACING, ctx.getHorizontalPlayerFacing()))
                 .with(HALF, direction == Direction.DOWN
                         || direction != Direction.UP
                         && ctx.getHitPos().y - (double) blockPos.getY() > 0.5 ? BlockHalf.TOP : BlockHalf.BOTTOM)
@@ -215,10 +217,11 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
         return false;
     }
 
-    @Override
-    public VoxelShape getOutlineShape(BlockState blockState, BlockView world, BlockPos pos, ShapeContext context) {
-        return (blockState.get(HALF) == BlockHalf.TOP ? TOP_SHAPES : BOTTOM_SHAPES)[SHAPE_BY_STATE[this.getShapeIndex(blockState)]];
-    }
+    // TODO, current implementation is a giant box lol
+//    @Override
+//    public VoxelShape getOutlineShape(BlockState blockState, BlockView world, BlockPos pos, ShapeContext context) {
+//        return (blockState.get(HALF) == BlockHalf.TOP ? TOP_SHAPES : BOTTOM_SHAPES)[SHAPE_BY_STATE[this.getShapeIndex(blockState)]];
+//    }
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,

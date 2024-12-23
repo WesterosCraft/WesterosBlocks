@@ -1,6 +1,7 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -11,24 +12,22 @@ import net.minecraft.block.TorchBlock;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings floorBlockSettings = def.makeProperties().noCollision().breakInstantly();
+            AbstractBlock.Settings floorBlockSettings = def.makeBlockSettings().noCollision().breakInstantly();
         	Block floorblock = new WCTorchBlock(floorBlockSettings, def);
-        	@SuppressWarnings("deprecation")
-            AbstractBlock.Settings wallBlockSettings = def.makeProperties().noCollision().breakInstantly().dropsLike(floorblock);
+
+            AbstractBlock.Settings wallBlockSettings = def.makeBlockSettings().noCollision().breakInstantly().dropsLike(floorblock);
         	Block wallblock = new WCWallTorchBlock(wallBlockSettings, def);
-//        	def.registerWallOrFloorBlock(floorblock, wallblock, helper);
-            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), floorblock);
-            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, "wall_" + def.blockName), wallblock);
-            def.registerBlockItem(def.blockName, floorblock);
-            def.registerBlockItem("wall_" + def.blockName, wallblock);
-            def.registerRenderType(floorblock, false, false);
-        	def.registerRenderType(wallblock, false, false);
+
+            def.registerRenderType(ModBlocks.registerBlock(def.blockName, floorblock), false, false);
+        	def.registerRenderType(ModBlocks.registerBlock(def.blockName, wallblock), false, false);
         	return floorblock;
         }
     }
@@ -39,7 +38,9 @@ public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
 
     private static SimpleParticleType getParticle(String typeStr) {
         if (typeStr != null && typeStr.contains("no-particle")) {
-            return new SimpleParticleType(false);
+            //TODO
+            return ParticleTypes.SMOKE;
+//            return new SimpleParticleType(false);
         }
         return ParticleTypes.FLAME;
     }
@@ -67,8 +68,8 @@ public class WCTorchBlock extends TorchBlock implements WesterosBlockLifecycle {
     }
 
     @Override
-    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource rnd) {
-        if (!this.no_particle) super.animateTick(state, level, pos, rnd);
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (!this.no_particle) super.randomDisplayTick(state, world, pos, random);
     }
 
     @Override

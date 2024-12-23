@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -14,13 +15,13 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
             Block blk = new WCBeaconBlock(settings, def);
-            return def.registerRenderType(blk, false, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
     
-    private static WesterosBlockDef.Cuboid[] cuboids = { 
+    private static final WesterosBlockDef.Cuboid[] cuboids = {
             new WesterosBlockDef.Cuboid(0f, 0f, 0f, 0f, 1f, 1f, new int[] { 0, 1, 2, 3, 4, 5 }),
             new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 0f, 1f, new int[] { 0, 1, 2, 3, 4, 5 }),
             new WesterosBlockDef.Cuboid(0f, 0f, 0f, 1f, 1f, 0f, new int[] { 0, 1, 2, 3, 4, 5 }),
@@ -40,7 +41,7 @@ public class WCBeaconBlock extends WCCuboidBlock implements WesterosBlockLifecyc
             new WesterosBlockDef.Cuboid(0.1875f, 0.875f, 0.1875f, 0.8125f, 0.875f, 0.8125f, new int[] { 12, 13, 14, 15, 16, 17 }),
             new WesterosBlockDef.Cuboid(0.1875f, 0.1875f, 0.8125f, 0.8125f, 0.875f, 0.8125f, new int[] { 12, 13, 14, 15, 16, 17 })
     };
-    private static List<WesterosBlockDef.Cuboid> cuboidlist = Arrays.asList(cuboids);
+    private static final List<WesterosBlockDef.Cuboid> cuboidlist = Arrays.asList(cuboids);
     
     protected WCBeaconBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings, def, 1);

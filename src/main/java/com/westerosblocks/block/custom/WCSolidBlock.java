@@ -1,6 +1,6 @@
 package com.westerosblocks.block.custom;
 
-
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -41,7 +41,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
             WesterosBlockDef.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
@@ -70,7 +70,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
             Boolean finalDoSymmetrical = doSymmetrical;
             Block blk = new WCSolidBlock(settings, def, finalDoConnectstate, finalDoSymmetrical);
 
-            return def.registerRenderType(blk, true, def.nonOpaque);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), true, def.nonOpaque);
         }
     }
 

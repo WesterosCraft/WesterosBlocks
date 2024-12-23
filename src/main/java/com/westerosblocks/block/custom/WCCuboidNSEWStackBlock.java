@@ -1,9 +1,6 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.block.WesterosBlockDef;
-import com.westerosblocks.block.WesterosBlockFactory;
-import com.westerosblocks.block.WesterosBlockLifecycle;
-import com.westerosblocks.block.WesterosBlockStateRecord;
+import com.westerosblocks.block.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -21,6 +18,7 @@ import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
@@ -32,9 +30,9 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
             Block blk = new WCCuboidNSEWStackBlock(settings, def);
-            return def.registerRenderType(blk, false, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
     // Support waterlogged on these blocks
@@ -53,7 +51,8 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
             String[] toks = t.split(",");
             for (String tok : toks) {
                 if (tok.equals("allowHalfBreak")) {
-                	brk = true;
+                    brk = true;
+                    break;
                 }
             }
         }
@@ -62,7 +61,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
         for (int i = 0; i < 2; i++) {
         	WesterosBlockStateRecord se = def.getStackElementByIndex(i);
             for (WesterosBlockDef.Cuboid c : se.cuboids) {
-    			cuboid_by_facing[4*i] = new ArrayList<WesterosBlockDef.Cuboid>();	// Use clean, since parent uses cuboid not stack
+    			cuboid_by_facing[4*i] = new ArrayList<>();	// Use clean, since parent uses cuboid not stack
                 cuboid_by_facing[4*i].add(c);
                 cuboid_by_facing[4*i + 1].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY90));
                 cuboid_by_facing[4*i + 2].add(c.rotateCuboid(WesterosBlockDef.CuboidRotation.ROTY180));
@@ -135,14 +134,14 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
      }
 
     @Override
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity entity, ItemStack item) {
+    public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
     	BlockPos above = pos.up();
-        FluidState fluidstate =world.getFluidState(above);
+        FluidState fluidstate = world.getFluidState(above);
         BlockState newstate = getDefaultState()
 			.with(FACING, state.get(FACING))
 			.with(HALF, DoubleBlockHalf.UPPER)
-			.with(WATERLOGGED, Boolean.valueOf(fluidstate.isIn(FluidTags.WATER)));
-        world.setBlock(pos.up(), newstate, 3);
+			.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
+        world.setBlockState(above, newstate, 3);
     }
 
     @Override

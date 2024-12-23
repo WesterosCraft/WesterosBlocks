@@ -1,0 +1,177 @@
+{
+ "blocks": [ {
+   "blockName": "grey_keystone",
+   "blockType": "solid",
+   "hardness": 3,
+   "stepSound": "stone",
+   "material": "rock",
+   "resistance": 10,
+   "creativeTab": "westeros_panelling_carvings_tab",
+   "label": "Grey Keystone",
+   "colorMult": "textures/colormap/smallstonebrick",
+   "textures": [
+     "stone_block/keystone_grey"
+   ]
+ },
+
+   {
+     "blockName": "vivid_sandstone_engraved",
+     "blockType": "solid",
+     "hardness": 5,
+     "stepSound": "stone",
+     "material": "rock",
+     "resistance": 10,
+     "creativeTab": "westeros_panelling_carvings_tab",
+     "label": "Ashlar Engraved Tan",
+     "textures": [
+       "ashlar_engraved/tan/all"
+     ]
+   },
+   {
+     "blockName": "test_block_6",
+     "blockType": "stair",
+     "hardness": 3,
+     "stepSound": "wood",
+     "material": "wood",
+     "resistance": 2,
+     "harvestLevel": [{ "tool": "axe", "level": 1 }],
+     "creativeTab": "westeros_test_tab",
+     "label": "Test Stair (unconnect)",
+     "type": "unconnect:false",
+     "textures": [
+       "test_block/d_texture",
+       "test_block/u_texture",
+       "test_block/w_texture"
+     ]
+   },{
+     "blockName": "ctm_pillar",
+     "blockType": "log",
+     "stepSound": "wood",
+     "material": "cloth",
+     "creativeTab": "westeros_test_tab",
+     "label": "Pillar CTM",
+     "textures": [
+       "ctm/pillar_end",
+       "ctm/pillar_end",
+       "ctm/pillar"
+     ]
+   },{
+     "blockName": "yellow_wildflowers",
+     "blockType": "plant",
+     "type": "layerSensitive",
+     "material": "plants",
+     "creativeTab": "westeros_flowers_tab",
+     "boundingBox": {"xMin": 0.3, "xMax": 0.7, "yMin": 0, "yMax": 0.6, "zMin": 0.3, "zMax": 0.7},
+     "label": "Yellow Wildflowers",
+     "textures": [
+       "flowers/yellow_wildflowers"
+     ]
+   },{
+     "blockName": "candle_altar",
+     "blockType": "crop",
+     "stepSound": "powder",
+     "material": "wood",
+     "creativeTab": "westeros_lighting_tab",
+     "label": "Candle Altar",
+     "type": "toggleOnUse",
+     "boundingBox": {"xMin": 0.125, "xMax": 0.875, "yMin": 0, "yMax": 1, "zMin": 0.125, "zMax": 0.875},
+     "states": [
+       {
+         "stateID": "lit",
+         "lightValue": 0.625,
+         "randomTextures": [
+           {"textures": ["lighting/candle_altar/lit1"]},
+           {"textures": ["lighting/candle_altar/lit2"]},
+           {"textures": ["lighting/candle_altar/lit3"]}
+         ]
+       },
+       {
+         "stateID": "unlit",
+         "lightValue": 0.0,
+         "randomTextures": [
+           {"textures": ["lighting/candle_altar/unlit1"]},
+           {"textures": ["lighting/candle_altar/unlit2"]},
+           {"textures": ["lighting/candle_altar/unlit3"]}
+         ]
+       }
+     ]
+   },{
+     "blockName": "stool",
+     "blockType": "slab",
+     "hardness": 2,
+     "stepSound": "wood",
+     "material": "wood",
+     "resistance": 2,
+     "harvestLevel": [{ "tool": "shovel", "level": 1 }],
+     "creativeTab": "westeros_furniture_tab",
+     "label": "Stool",
+     "lightOpacity": 0,
+     "nonOpaque": true,
+     "textures": [
+       "seat/bottom",
+       "seat/top",
+       "seat/side"
+     ]
+   },{
+     "blockName": "sept_crystal_medium",
+     "blockType": "wall",
+     "hardness": 1.5,
+     "stepSound": "stone",
+     "nonOpaque": true,
+     "alphaRender": true,
+     "material": "rock",
+     "resistance": 10,
+     "harvestLevel": [{ "tool": "pickaxe", "level": 1 }],
+     "creativeTab": "westeros_decor_tab",
+     "type": "unconnect:false",
+     "label": "Sept Crystal Medium",
+     "textures": [
+       "crystal/wall_top",
+       "crystal/wall_top",
+       "crystal/wall"
+     ]
+   },{
+     "blockName": "sept_crystal_small",
+     "blockType": "fence",
+     "hardness": 5,
+     "stepSound": "stone",
+     "nonOpaque": true,
+     "alphaRender": true,
+     "material": "wood",
+     "resistance": 10,
+     "creativeTab": "westeros_decor_tab",
+     "type": "unconnect:false",
+     "label": "Sept Crystal Small",
+     "textures": [
+       "crystal/fence_top",
+       "crystal/fence_top",
+       "crystal/fence"
+     ]
+   },{
+     "blockName": "alyssas_tears_mist_one",
+     "blockType": "web",
+     "stepSound": "cloth",
+     "nonOpaque": true,
+     "alphaRender": true,
+     "material": "web",
+     "creativeTab": "westeros_water_air_tab",
+     "label": "Alyssas Tears Mist One",
+     "textures": [
+       "alyssas_tears_mist/mist1"
+     ],
+     "type": "no-in-web"
+   },{
+     "blockName": "candle",
+     "blockType": "torch",
+     "stepSound": "powder",
+     "material": "wood",
+     "creativeTab": "westeros_lighting_tab",
+     "lightValue": 0.625,
+     "label": "Candle",
+     "type": "allow-unsupported",
+     "textures": [
+       "lighting/candle"
+     ]
+   }
+ ]
+}

@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -44,11 +45,11 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
 	public static class Factory extends WesterosBlockFactory {
 		@Override
 		public Block buildBlockClass(WesterosBlockDef def) {
-			AbstractBlock.Settings settings = def.makeProperties();
+			AbstractBlock.Settings settings = def.makeBlockSettings();
 			settings = settings.blockVision((state, level, pos) -> state.get(LAYERS) >= 8);
 			Block blk = new WCLayerBlock(settings, def);
 
-			return def.registerRenderType(blk, false, false);
+			return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
 		}
 	}
 

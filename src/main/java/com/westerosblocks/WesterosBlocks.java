@@ -33,7 +33,8 @@ public class WesterosBlocks implements ModInitializer {
             "/definitions/block_tags.json",
             "/definitions/menu_overrides.json",
             "/definitions/block_sets.json",
-            "/definitions/blocks.json"
+            "/definitions/test_blocks.json"
+//            "/definitions/blocks.json"
     );
 
     public static WesterosBlocksJsonLoader.WesterosBlocksConfig customConfig;
@@ -47,7 +48,6 @@ public class WesterosBlocks implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
         WesterosBlockDef.initialize();
         customConfig = WesterosBlocksJsonLoader.getBlockConfig(configFiles);
 
@@ -61,6 +61,7 @@ public class WesterosBlocks implements ModInitializer {
         WesterosCreativeModeTabs.registerCreativeModeTabs();
         WesterosBlocksItems.registerModItems();
         ModBlocks.registerModBlocks(customBlockDefs);
+
         ColorHandlers.registerColorProviders();
         ModSounds.registerSounds(customBlockDefs);
 

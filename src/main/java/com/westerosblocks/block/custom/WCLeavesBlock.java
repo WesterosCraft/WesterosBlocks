@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -19,9 +20,9 @@ public class WCLeavesBlock extends LeavesBlock implements WesterosBlockLifecycle
             if (def.lightOpacity == WesterosBlockDef.DEF_INT) {
                 def.lightOpacity = 1;
             }
-            AbstractBlock.Settings settings = def.makeProperties().nonOpaque().suffocates((state, world, pos) -> false).blockVision((state, reader, pos) -> false);
+            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque().suffocates((state, world, pos) -> false).blockVision((state, reader, pos) -> false);
             Block blk = new WCLeavesBlock(settings, def);
-            return def.registerRenderType(blk, true, true);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), true, true);
         }
     }
 

@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -21,14 +22,14 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
         	def.nonOpaque = true;
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
         	// See if we have a state property
         	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
         	}
             Block blk = new WCCuboid16WayBlock(settings, def);
-            return def.registerRenderType(blk, true, true);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), true, true);
         }
     }
 

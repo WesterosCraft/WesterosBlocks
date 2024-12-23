@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -11,10 +12,10 @@ public class WCLogBlock extends PillarBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
 
             Block blk = new WCLogBlock(settings, def);
-            return def.registerRenderType(blk, false, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
@@ -30,7 +31,7 @@ public class WCLogBlock extends PillarBlock implements WesterosBlockLifecycle {
         return def;
     }
 
-    private static String[] TAGS = {"logs"};
+    private static final String[] TAGS = {"logs"};
 
     @Override
     public String[] getBlockTags() {

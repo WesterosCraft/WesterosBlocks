@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -11,9 +12,9 @@ public class WCSoulSandBlock extends SoulSandBlock implements WesterosBlockLifec
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
             Block blk = new WCSoulSandBlock(settings, def);
-            return def.registerRenderType(blk, true, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), true, false);
         }
     }
 

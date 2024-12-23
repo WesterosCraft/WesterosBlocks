@@ -22,7 +22,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static com.westerosblocks.WesterosBlocks.crash;
 
 public class ModBlocks {
-    private static Block registerBlock(String name, Block block) {
+    public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(WesterosBlocks.MOD_ID, name), block);
     }
@@ -43,13 +43,11 @@ public class ModBlocks {
         for (WesterosBlockDef customBlock : customBlockDefs) {
             if (customBlock == null)
                 continue;
+
             Block blk = customBlock.createBlock();
 
             if (blk != null) {
-                // This is where the block is registered
-                registerBlock(customBlock.blockName, blk);
-
-                // Register tab
+                // Register creative tab
                 ItemGroupEvents.modifyEntriesEvent(WesterosCreativeModeTabs.TABS.get(customBlock.creativeTab)).register(entries -> {
                     entries.add(blk);
                 });
@@ -86,6 +84,4 @@ public class ModBlocks {
 //        menuOverrides = customConfig.menuOverrides;
         WesterosBlocks.LOGGER.info("WesterosBlocks custom block registration complete.");
     }
-
-
 }

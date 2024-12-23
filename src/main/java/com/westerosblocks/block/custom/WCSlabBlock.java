@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -21,7 +22,7 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-			AbstractBlock.Settings settings = def.makeProperties();
+			AbstractBlock.Settings settings = def.makeBlockSettings();
 			// See if we have a state property
 			WesterosBlockDef.StateProperty state = def.buildStateProperty();
 			if (state != null) {
@@ -35,14 +36,15 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 				for (String tok : toks) {
 					String[] parts = tok.split(":");
                     // See if we have connectstate
-					if (parts[0].equals("connectstate")) {
-						doConnectstate = true;
-						tempCONNECTSTATE = CONNECTSTATE;
-					}
+                    if (parts[0].equals("connectstate")) {
+                        doConnectstate = true;
+                        tempCONNECTSTATE = CONNECTSTATE;
+                        break;
+                    }
 				}
 			}
 			Block blk = new WCSlabBlock(settings, def, doConnectstate);
-			return def.registerRenderType(blk, false, false);
+			return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
     protected WesterosBlockDef def;
@@ -79,7 +81,7 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
         if (STATE != null) {
 			defbs = defbs.with(STATE, STATE.defValue);
 		}
-		setDefaultState(defbs);
+		this.setDefaultState(defbs);
     }
 
     protected WCSlabBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
@@ -109,8 +111,7 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
-		BlockState bs = super.getPlacementState(ctx);
-		return bs;
+        return super.getPlacementState(ctx);
 	}
 
 	@Override
@@ -128,7 +129,7 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 		}
 	}
 
-    private static String[] TAGS = { "slabs" };
+    private static final String[] TAGS = { "slabs" };
     @Override
     public String[] getBlockTags() {
     	return TAGS;

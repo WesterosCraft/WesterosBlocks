@@ -1,6 +1,6 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -31,25 +31,25 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties().noCollision().breakInstantly();
+            AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly();
             // See if we have a state property
             WesterosBlockDef.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
             String t = def.getType();
-            if ((t != null) && (t.indexOf(WesterosBlockDef.LAYER_SENSITIVE) >= 0)) {
+            if ((t != null) && (t.contains(WesterosBlockDef.LAYER_SENSITIVE))) {
                 tempLAYERS = Properties.LAYERS;
             }
             Block blk = new WCPlantBlock(settings, def);
-            return def.registerRenderType(blk, false, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
     // Support waterlogged on these blocks
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    private WesterosBlockDef def;
+    private final WesterosBlockDef def;
     protected static WesterosBlockDef.StateProperty tempSTATE;
     protected static IntProperty tempLAYERS;
     protected WesterosBlockDef.StateProperty STATE;
@@ -78,6 +78,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
             for (String tok : toks) {
                 if (tok.equals("toggleOnUse")) {
                     toggleOnUse = true;
+                    break;
                 }
             }
         }
@@ -101,17 +102,19 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
         BlockState bs = super.getPlacementState(ctx);
         if (bs == null) return null;
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        bs = bs.with(WATERLOGGED, Boolean.valueOf(fluidstate.isIn(FluidTags.WATER)));
+        bs = bs.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
+
         if (STATE != null) {
             bs = bs.with(STATE, STATE.defValue);
         }
+
         if (LAYERS != null) {
             BlockState below = ctx.getWorld().getBlockState(ctx.getBlockPos().offset(Direction.DOWN));
-            if ((below != null) && (below.hasProperty(Properties.LAYERS))) {
+            if ((below != null) && (below.contains(Properties.LAYERS))) {
                 Block blk = below.getBlock();
                 Integer layer = below.get(Properties.LAYERS);
                 // See if soft layer
-                if ((blk instanceof SnowLayerBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock) blk).softLayer)) {
+                if ((blk instanceof SnowBlock) || ((blk instanceof WCLayerBlock) && ((WCLayerBlock) blk).softLayer)) {
                     layer = (layer > 2) ? Integer.valueOf(layer - 2) : Integer.valueOf(1);
                 }
                 bs = bs.with(LAYERS, layer);
@@ -120,6 +123,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
                 if (slabtype == SlabType.BOTTOM) bs = bs.with(LAYERS, 4);
             }
         }
+
         return bs;
     }
 
@@ -130,16 +134,12 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
 
     @Override
     protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        switch (type) {
-            case LAND:
-                return false;
-            case WATER:
-                return state.getFluidState().isIn(FluidTags.WATER);
-            case AIR:
-                return false;
-            default:
-                return false;
-        }
+        return switch (type) {
+            case LAND -> false;
+            case WATER -> state.getFluidState().isIn(FluidTags.WATER);
+            case AIR -> false;
+            default -> false;
+        };
     }
 
 
@@ -185,20 +185,21 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
 //	}
 
     @Override
-    public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+    protected boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
         return state.getFluidState().isEmpty();
     }
 
-    @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        if (LAYERS != null) {
-            return SHAPE_BY_LAYER[state.get(LAYERS)];
-        } else {
-            return Shapes.block();
-        }
-    }
+    // TODO shape is big
+//    @Override
+//    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+//        if (LAYERS != null) {
+//            return SHAPE_BY_LAYER[state.get(LAYERS)];
+//        } else {
+//            return VoxelShapes.fullCube();
+//        }
+//    }
 
-    private static String[] TAGS = {"flowers"};
+    private static final String[] TAGS = {"flowers"};
 
     @Override
     public String[] getBlockTags() {

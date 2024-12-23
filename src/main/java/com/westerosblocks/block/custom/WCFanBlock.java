@@ -1,6 +1,6 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -12,6 +12,7 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -20,34 +21,26 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class WCFanBlock extends Block implements SimpleWaterloggedBlock, WesterosBlockLifecycle {
+public class WCFanBlock extends Block implements WesterosBlockLifecycle {
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
+    private final WesterosBlockDef def;
+    private boolean allow_unsupported = false;
+    private static final VoxelShape SHAPE = VoxelShapes.cuboid(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
 
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-        	BlockBehaviour.Properties floorprops = def.makeProperties().noCollision().breakInstantly();
-        	Block floorblock = new WCFanBlock(floorprops, def);
-        	@SuppressWarnings("deprecation")
-			    BlockBehaviour.Properties wallprops = def.makeProperties().noCollision().breakInstantly().dropsLike(floorblock);
-        	Block wallblock = new WCWallFanBlock(wallprops, def);
-//        	def.registerWallOrFloorBlock(floorblock, wallblock, helper);
-            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, def.blockName), floorblock);
-            helper.register(ResourceLocation.fromNamespaceAndPath(WesterosBlocks.MOD_ID, "wall_" + def.blockName), wallblock);
-            def.registerBlockItem(def.blockName, floorblock);
-            def.registerBlockItem("wall_" + def.blockName, wallblock);
+            AbstractBlock.Settings floorSettings = def.makeBlockSettings().noCollision().breakInstantly();
+        	Block floorBlock = new WCFanBlock(floorSettings, def);
 
-            def.registerRenderType(floorblock, false, false);
-        	def.registerRenderType(wallblock, false, false);
-        	return floorblock;
+            AbstractBlock.Settings wallSettings = def.makeBlockSettings().noCollision().breakInstantly().dropsLike(floorBlock);
+        	Block wallBlock = new WCWallFanBlock(wallSettings, def);
+
+            def.registerRenderType(ModBlocks.registerBlock(def.blockName, floorBlock), false, false);
+        	def.registerRenderType(ModBlocks.registerBlock("wall_" + def.blockName, wallBlock), false, false);
+        	return floorBlock;
         }
     }
-
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-
-    private WesterosBlockDef def;
-    private boolean allow_unsupported = false;
-
-    private static final VoxelShape SHAPE = VoxelShapes.cuboid(2.0, 0.0, 2.0, 14.0, 4.0, 14.0);
 
     protected WCFanBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
         super(settings);
@@ -58,10 +51,11 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
             for (String tok : toks) {
                 if (tok.equals("allow-unsupported")) {
                     allow_unsupported = true;
+                    break;
                 }
             }
         }
-        BlockState defbs = this.stateDefinition.any().with(WATERLOGGED, Boolean.valueOf(false));
+        BlockState defbs = getDefaultState().with(WATERLOGGED, Boolean.FALSE);
         setDefaultState(defbs);
     }
 
@@ -74,30 +68,24 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
     public BlockState getPlacementState(ItemPlacementContext ctx) {
     	BlockState bs = super.getPlacementState(ctx);
     	if (bs == null) return null;
-      FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
-      bs = bs.with(WATERLOGGED, Boolean.valueOf(fluidstate.isIn(FluidTags.WATER)));
+        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        bs = bs.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
     	return bs;
     }
 
-    @SuppressWarnings("deprecation")
-	  @Override
+    @Override
     public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
-
     @Override
     protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        switch(type) {
-            case LAND:
-                return false;
-            case WATER:
-                return state.getFluidState().isIn(FluidTags.WATER);
-            case AIR:
-                return false;
-            default:
-                return false;
-        }
+        return switch (type) {
+            case LAND -> false;
+            case WATER -> state.getFluidState().isIn(FluidTags.WATER);
+            case AIR -> false;
+            default -> false;
+        };
     }
 
     @Override
@@ -122,12 +110,12 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
     	if (this.allow_unsupported) return true;
-      BlockPos blockPos2 = pos.below();
-      return world.getBlockState(blockPos2).isFaceSturdy(world, blockPos2, Direction.UP);
+      BlockPos blockPos2 = pos.down();
+      return world.getBlockState(blockPos2).isSideSolidFullSquare(world, blockPos2, Direction.UP);
     }
 
     @Override
-    public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
+    protected boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
       return state.getFluidState().isEmpty();
     }
 
@@ -136,7 +124,7 @@ public class WCFanBlock extends Block implements SimpleWaterloggedBlock, Westero
       return SHAPE;
     }
 
-    private static String[] TAGS = { "fans" };
+    private static final String[] TAGS = { "fans" };
     @Override
     public String[] getBlockTags() {
     	return TAGS;

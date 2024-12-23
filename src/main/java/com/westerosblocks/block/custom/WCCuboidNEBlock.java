@@ -1,17 +1,18 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.data.client.VariantSettings.Rotation;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.Direction;
 
 public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
@@ -20,14 +21,14 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
             def.nonOpaque = true;
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
             WesterosBlockDef.StateProperty state = def.buildStateProperty();
             if (state != null) {
                 tempSTATE = state;
             }
             Block blk = new WCCuboidNEBlock(settings, def);
-            return def.registerRenderType(blk, false, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
@@ -66,17 +67,13 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
     }
 
     @Override
-    public BlockState rotate(BlockState state, Rotation rot) {
-        switch (rot) {
-            case CLOCKWISE_180:
-            default:
-                return state;
-            case COUNTERCLOCKWISE_90:
-            case CLOCKWISE_90:
-                return (state.get(FACING) == Direction.EAST) ?
-                        state.with(FACING, Direction.NORTH) :
-                        state.with(FACING, Direction.EAST);
-        }
+    protected BlockState rotate(BlockState blockState, BlockRotation rotation) {
+        return switch (rotation) {
+            default -> blockState;
+            case COUNTERCLOCKWISE_90, CLOCKWISE_90 -> (blockState.get(FACING) == Direction.EAST) ?
+                    blockState.with(FACING, Direction.NORTH) :
+                    blockState.with(FACING, Direction.EAST);
+        };
     }
 
     @Override
@@ -94,7 +91,7 @@ public class WCCuboidNEBlock extends WCCuboidBlock implements WesterosBlockLifec
                 break;
             }
         }
-        BlockState bs = getDefaultState().with(FACING, dir).with(WATERLOGGED, Boolean.valueOf(fluidstate.is(FluidTags.WATER)));
+        BlockState bs = getDefaultState().with(FACING, dir).with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
         if (STATE != null) {
             bs = bs.with(STATE, STATE.defValue);
         }

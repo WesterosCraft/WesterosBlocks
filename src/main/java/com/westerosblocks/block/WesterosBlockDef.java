@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
@@ -447,7 +448,7 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     // TODO
-//    private static final Map<String, AuxMaterial> materialTable = new HashMap<String, AuxMaterial>();
+    private static final Map<String, AbstractBlock.Settings> settingsTable = new HashMap<>();
     private static final Map<String, BlockSoundGroup> stepSoundTable = new HashMap<>();
 //    private static final Map<String, CreativeModeTab> tabTable = new HashMap<>();
     private static final Map<String, WesterosBlockFactory> typeTable = new HashMap<String, WesterosBlockFactory>();
@@ -551,62 +552,70 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         return block;
     }
 
-    public AbstractBlock.Settings makeProperties() {
-        return makeAndCopyProperties(null);
+    public AbstractBlock.Settings makeBlockSettings() {
+        // First get base settings from material
+        AbstractBlock.Settings settings = material != null
+                ? WesterosBlockSettings.get(material)  // Get base settings from our material system
+                : AbstractBlock.Settings.create(); // Fallback if no material
+
+        // Apply custom properties that override material defaults
+        return applyCustomProperties(settings);
+    }
+
+    private AbstractBlock.Settings applyCustomProperties(AbstractBlock.Settings settings) {
+        // Handle hardness and resistance
+        if (hardness >= 0.0F) {
+            settings = resistance >= 0.0
+                    ? settings.strength(hardness, resistance)
+                    : settings.strength(hardness);
+        }
+
+        // Handle custom sounds
+        if (stepSound != null) {
+            settings = settings.sounds(getSoundType());
+        }
+
+        // Handle light levels - state-dependent
+        if (this.stateProp != null) {
+            Map<String, Integer> lightLevels = new HashMap<>();
+            for (WesterosBlockStateRecord sr : this.states) {
+                if (sr.lightValue > 0.0F) {
+                    lightLevels.put(sr.stateID, (int)(16.0 * sr.lightValue));
+                }
+            }
+            if (!lightLevels.isEmpty()) {
+                settings = settings.luminance((state) ->
+                        lightLevels.getOrDefault(state.get(this.stateProp), 0));
+            }
+        }
+        // Handle simple light level
+        else if (lightValue > 0.0F || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
+            float lightLevel = Math.max(lightValue, states.isEmpty() ? 0 : states.getFirst().lightValue);
+            settings = settings.luminance((state) -> (int)(16.0 * lightLevel));
+        }
+
+        // Handle transparency/occlusion
+        if ((!ambientOcclusion) || (nonOpaque)) {
+            settings = settings.nonOpaque()
+                    .blockVision(WesterosBlockDef::never);
+        }
+
+        return settings;
+    }
+
+    public AbstractBlock.Settings makeAndCopyProperties(Block sourceBlock) {
+        AbstractBlock.Settings settings = sourceBlock != null
+                ? AbstractBlock.Settings.copy(sourceBlock)
+                : makeBlockSettings();
+
+        return applyCustomProperties(settings);
     }
 
     private static boolean never(BlockState state, BlockView world, BlockPos pos) {
         return false;
     }
 
-    public AbstractBlock.Settings makeAndCopyProperties(Block blk) {
-        AbstractBlock.Settings settings;
-        if (blk != null) {
-            settings = AbstractBlock.Settings.copy(blk);
-        } else {
-            // TODO
-//            AuxMaterial mat = getMaterial();
-            settings = AbstractBlock.Settings.create(); // TODO - material color?
-        }
-        if (hardness >= 0.0F) {
-            if (resistance >= 0.0)
-                settings = settings.strength(hardness, resistance);
-            else
-                settings = settings.strength(hardness);
-        }
-        if (stepSound != null) {
-            settings = settings.sounds(getSoundType());
-        }
-        // See if any nonzero light levels
-        if (this.stateProp != null) {
-            Map<String, Integer> llmap = null;
-            for (WesterosBlockStateRecord sr : this.states) {
-                if (sr.lightValue > 0.0F) {
-                    if (llmap == null) llmap = new HashMap<String, Integer>();
-                    llmap.put(sr.stateID, (int) (16.0 * sr.lightValue));
-                }
-                if (llmap != null) {
-                    final Map<String, Integer> final_llmap = llmap;
-                    settings = settings.luminance((state) ->
-                            final_llmap.getOrDefault(state.get(this.stateProp), 0));
-                }
-            }
-        } else {
-            float ll = this.states.get(0).lightValue;
-            if (ll > 0.0F) {
-                settings = settings.luminance((state) -> (int) (16.0 * ll));
-            }
-        }
-        if (lightValue > 0.0F) {
-            settings = settings.luminance((state) -> (int) (16.0 * lightValue));
-        }
-        if ((!ambientOcclusion) || (nonOpaque)) { // If no ambient occlusion
-            settings = settings.nonOpaque();
-            settings = settings.blockVision(WesterosBlockDef::never);
-        }
-        return settings;
-    }
-
+    // TODO not sure if needed
 //    public CreativeModeTab getCreativeTab() {
 //        CreativeModeTab ct = tabTable.get(creativeTab);
 //        if (ct == null) {
@@ -711,6 +720,74 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     }
 
     public static void initialize() {
+        settingsTable.put("air", AbstractBlock.Settings.create()
+                .noCollision()
+                .dropsNothing()
+                .air());
+
+        settingsTable.put("grass", AbstractBlock.Settings.create()
+                .strength(0.6F)
+                .sounds(BlockSoundGroup.GRASS)
+                .mapColor(MapColor.GREEN));
+
+        settingsTable.put("ground", AbstractBlock.Settings.create()
+                .strength(0.5F)
+                .sounds(BlockSoundGroup.GRAVEL)
+                .mapColor(MapColor.DIRT_BROWN));
+
+        settingsTable.put("wood", AbstractBlock.Settings.create()
+                .strength(2.0F)
+                .sounds(BlockSoundGroup.WOOD)
+                .burnable()
+                .mapColor(MapColor.OAK_TAN));
+
+        settingsTable.put("rock", AbstractBlock.Settings.create()
+                .strength(1.5F)
+                .requiresTool()
+                .sounds(BlockSoundGroup.STONE));
+
+        settingsTable.put("iron", AbstractBlock.Settings.create()
+                .strength(5.0F)
+                .requiresTool()
+                .sounds(BlockSoundGroup.METAL)
+                .mapColor(MapColor.IRON_GRAY));
+
+        settingsTable.put("water", AbstractBlock.Settings.create()
+                .noCollision()
+                .dropsNothing()
+                .liquid());
+
+        settingsTable.put("lava", AbstractBlock.Settings.create()
+                .noCollision()
+                .dropsNothing()
+                .liquid()
+                .luminance(state -> 15));
+
+        settingsTable.put("leaves", AbstractBlock.Settings.create()
+                .strength(0.2F)
+                .sounds(BlockSoundGroup.GRASS)
+                .nonOpaque()
+                .burnable()
+                .ticksRandomly()
+                .suffocates((state, world, pos) -> false)
+                .blockVision((state, world, pos) -> false));
+
+        settingsTable.put("glass", AbstractBlock.Settings.create()
+                .strength(0.3F)
+                .sounds(BlockSoundGroup.GLASS)
+                .nonOpaque()
+                .allowsSpawning((state, world, pos, type) -> false));
+
+        settingsTable.put("ice", AbstractBlock.Settings.create()
+                .strength(0.5F)
+                .slipperiness(0.98F)
+                .sounds(BlockSoundGroup.GLASS)
+                .nonOpaque());
+
+        settingsTable.put("snow", AbstractBlock.Settings.create()
+                .strength(0.1F)
+                .sounds(BlockSoundGroup.SNOW)
+                .mapColor(MapColor.WHITE));
 //        materialTable.put("air", AuxMaterial.AIR);
 //        materialTable.put("grass", AuxMaterial.GRASS);
 //        materialTable.put("ground", AuxMaterial.DIRT);
@@ -786,24 +863,24 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         typeTable.put("cuboid-ne", new WCCuboidNEBlock.Factory());
         typeTable.put("cuboid-nsewud", new WCCuboidNSEWUDBlock.Factory());
         typeTable.put("cuboid-nsew-stack", new WCCuboidNSEWStackBlock.Factory());
-        typeTable.put("door", new WCDoorBlock.Factory());
+//        typeTable.put("door", new WCDoorBlock.Factory());
         typeTable.put("fire", new WCFireBlock.Factory());
         typeTable.put("leaves", new WCLeavesBlock.Factory());
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
-        typeTable.put("rail", new WCRailBlock.Factory());
+//        typeTable.put("rail", new WCRailBlock.Factory());
         typeTable.put("cake", new WCCakeBlock.Factory());
-        typeTable.put("bed", new WCBedBlock.Factory());
+//        typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
-        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
-        typeTable.put("furnace", new WCFurnaceBlock.Factory());
-        typeTable.put("sound", new WCSoundBlock.Factory());
-        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
+//        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
+//        typeTable.put("furnace", new WCFurnaceBlock.Factory());
+//        typeTable.put("sound", new WCSoundBlock.Factory());
+//        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         typeTable.put("beacon", new WCBeaconBlock.Factory());
         typeTable.put("vines", new WCVinesBlock.Factory());
-        typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
-        typeTable.put("fencegate", new WCFenceGateBlock.Factory());
+//        typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
+//        typeTable.put("fencegate", new WCFenceGateBlock.Factory());
 
         // Standard color multipliers
 //        colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
@@ -854,14 +931,14 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     /**
      * Returns this WesterosBlockDef's default Material
      */
-//    public AuxMaterial getMaterial() {
-//        AuxMaterial m = materialTable.get(material);
-//        if (m == null) {
-//            WesterosBlocks.log.warn(String.format("Invalid material '%s' in block '%s'", material, blockName));
-//            return AuxMaterial.STONE;
-//        }
-//        return m;
-//    }
+    public AbstractBlock.Settings getMaterialSettings() {
+        if (material == null) {
+            WesterosBlocks.LOGGER.warn(String.format("No material specified in block '%s', using stone", blockName));
+            return WesterosBlockSettings.get("rock");
+        }
+
+        return WesterosBlockSettings.get(material);
+    }
 
     /**
      * Returns this WesterosBlockDef's default SoundType

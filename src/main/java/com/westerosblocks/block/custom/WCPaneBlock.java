@@ -1,6 +1,7 @@
 package com.westerosblocks.block.custom;
 
 import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -20,7 +21,7 @@ public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties().nonOpaque();
+            AbstractBlock.Settings settings = def.makeBlockSettings().nonOpaque();
             String t = def.getType();
             boolean doUnconnect = false;
             if (t != null) {
@@ -28,17 +29,18 @@ public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
                 for (String tok : toks) {
                 	String[] parts = tok.split(":");
                     if (parts[0].equals("unconnect")) {
-                    	doUnconnect = true;
-                    	tempUNCONNECT = UNCONNECT;
+                        doUnconnect = true;
+                        tempUNCONNECT = UNCONNECT;
+                        break;
                     }
                 }
             }
             Block blk = new WCPaneBlock(settings, def, doUnconnect);
-            return def.registerRenderType(blk, false, true);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, true);
         }
     }
     
-    public static final BooleanProperty UNCONNECT = BooleanProperty.create("unconnect");
+    public static final BooleanProperty UNCONNECT = BooleanProperty.of("unconnect");
     protected static BooleanProperty tempUNCONNECT;
 
     private WesterosBlockDef def;
@@ -63,13 +65,13 @@ public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
             }
         }
         if (doUnconnect) {
-            this.registerDefaultState(this.stateDefinition.any().
-            		setValue(NORTH, Boolean.valueOf(false)).
-            		setValue(EAST, Boolean.valueOf(false)).
-            		setValue(SOUTH, Boolean.valueOf(false)).
-            		setValue(WEST, Boolean.valueOf(false)).
-            		setValue(WATERLOGGED, Boolean.valueOf(false)).
-            		setValue(UNCONNECT, Boolean.valueOf(false)));
+            setDefaultState(getDefaultState().
+            		with(NORTH, Boolean.FALSE).
+                    with(EAST, Boolean.FALSE).
+                    with(SOUTH, Boolean.FALSE).
+                    with(WEST, Boolean.FALSE).
+                    with(WATERLOGGED, Boolean.FALSE).
+                    with(UNCONNECT, Boolean.FALSE));
         }
     }
 
@@ -113,7 +115,7 @@ public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
         return def;
     }
     
-    private static String[] TAGS = {  };
+    private static final String[] TAGS = {  };
     @Override
     public String[] getBlockTags() {
     	return TAGS;

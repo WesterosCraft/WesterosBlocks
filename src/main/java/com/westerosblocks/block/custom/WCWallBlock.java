@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -76,7 +77,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
     public static class Factory extends WesterosBlockFactory {
         @Override
         public Block buildBlockClass(WesterosBlockDef def) {
-            AbstractBlock.Settings settings = def.makeProperties();
+            AbstractBlock.Settings settings = def.makeBlockSettings();
             // See if we have a state property
             WesterosBlockDef.StateProperty state = def.buildStateProperty();
             if (state != null) {
@@ -105,7 +106,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
 
             Block blk = new WCWallBlock(settings, def, doUnconnect, doConnectstate);
 
-            return def.registerRenderType(blk, false, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 

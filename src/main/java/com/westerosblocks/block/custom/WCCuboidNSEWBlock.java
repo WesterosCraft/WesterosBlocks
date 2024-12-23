@@ -1,20 +1,20 @@
 package com.westerosblocks.block.custom;
 
-
-import com.sun.jdi.Mirror;
-import com.westerosblocks.WesterosBlocks;
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.data.client.VariantSettings.Rotation;
+import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.Direction;
 
 public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLifecycle {
@@ -23,21 +23,18 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 		@Override
 		public Block buildBlockClass(WesterosBlockDef def) {
 			def.nonOpaque = true;
-			AbstractBlock.Settings settings = def.makeProperties();
+			AbstractBlock.Settings settings = def.makeBlockSettings();
         	// See if we have a state property
         	WesterosBlockDef.StateProperty state = def.buildStateProperty();
         	if (state != null) {
         		tempSTATE = state;
         	}
 			Block blk = new WCCuboidNSEWBlock(settings, def);
-			return def.registerRenderType(blk, false, false);
+			return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
 		}
 	}
 
-	// public static final DirectionProperty FACING =
-	// DirectionProperty.create("facing", Direction.EAST, Direction.SOUTH,
-	// Direction.WEST, Direction.NORTH);
-	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+	public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
 
 	protected WCCuboidNSEWBlock(AbstractBlock.Settings settings, WesterosBlockDef def) {
 		super(settings, def, 4);
@@ -70,14 +67,13 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 	}
 
 	@Override
-	public BlockState rotate(BlockState state, Rotation rot) {
-		return state.with(FACING, rot.rotate(state.getValue(FACING)));
+	protected BlockState rotate(BlockState state, BlockRotation rotation) {
+		return state.with(FACING, rotation.rotate(state.get(FACING)));
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
-	public BlockState mirror(BlockState state, Mirror mir) {
-		return state.rotate(mir.getRotation(state.getValue(FACING)));
+	protected BlockState mirror(BlockState state, BlockMirror mirror) {
+		return state.rotate(mirror.getRotation(state.get(FACING)));
 	}
 
 	@Override
@@ -95,7 +91,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
 		FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
 		Direction[] adirection = ctx.getPlacementDirections();
-		Direction dir = Direction.EAST; // Default
+		Direction dir = Direction.EAST;
 		for (Direction d : adirection) {
 			if (d == Direction.EAST || d == Direction.WEST || d == Direction.NORTH || d == Direction.SOUTH) {
 				dir = d.getOpposite();

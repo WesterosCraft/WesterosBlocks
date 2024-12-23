@@ -8,6 +8,8 @@ import net.minecraft.block.WallTorchBlock;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLifecycle {
@@ -17,7 +19,8 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
 
     private static SimpleParticleType getParticle(String typeStr) {
         if (typeStr != null && typeStr.contains("no-particle")) {
-            return new SimpleParticleType(false);
+            // TODO needs to not return anything
+            return ParticleTypes.SMOKE;
         }
         return ParticleTypes.FLAME;
     }
@@ -45,8 +48,8 @@ public class WCWallTorchBlock extends WallTorchBlock implements WesterosBlockLif
     }
 
     @Override
-    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource rnd) {
-        if (!this.no_particle) super.animateTick(state, level, pos, rnd);
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (!this.no_particle) super.randomDisplayTick(state, world, pos, random);
     }
 
     @Override

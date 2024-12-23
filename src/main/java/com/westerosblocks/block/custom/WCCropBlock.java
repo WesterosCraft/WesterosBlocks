@@ -1,5 +1,6 @@
 package com.westerosblocks.block.custom;
 
+import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;
 import com.westerosblocks.block.WesterosBlockLifecycle;
@@ -20,9 +21,9 @@ public class WCCropBlock extends WCPlantBlock implements WesterosBlockLifecycle 
             if ((t != null) && (t.contains(WesterosBlockDef.LAYER_SENSITIVE))) {
             	tempLAYERS = Properties.LAYERS;
             }
-            AbstractBlock.Settings settings = def.makeProperties().noCollision().breakInstantly();
+            AbstractBlock.Settings settings = def.makeBlockSettings().noCollision().breakInstantly();
             Block blk = new WCCropBlock(settings, def);
-            return def.registerRenderType(blk, false, false);
+            return def.registerRenderType(ModBlocks.registerBlock(def.blockName, blk), false, false);
         }
     }
 
