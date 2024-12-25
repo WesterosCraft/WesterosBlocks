@@ -25345,42 +25345,42 @@
       "randomTextures": [
         {
           "textures": [
-            "classic_grass_block/top1",
+            "grass_block/top1",
             "dirt/ground",
             "transparent",
-            "classic_grass_block/grass_block_side_overlay"
+            "grass_block/side_overlay"
           ]
         },
         {
           "textures": [
-            "classic_grass_block/top2",
+            "grass_block/top2",
             "dirt/ground",
             "transparent",
-            "classic_grass_block/grass_block_side_overlay"
+            "grass_block/side_overlay"
           ]
         },
         {
           "textures": [
-            "classic_grass_block/top3",
+            "grass_block/top3",
             "dirt/ground",
             "transparent",
-            "classic_grass_block/grass_block_side_overlay"
+            "grass_block/side_overlay"
           ]
         },
         {
           "textures": [
-            "classic_grass_block/top4",
+            "grass_block/top4",
             "dirt/ground",
             "transparent",
-            "classic_grass_block/grass_block_side_overlay"
+            "grass_block/side_overlay"
           ]
         },
         {
           "textures": [
-            "classic_grass_block/top5",
+            "grass_block/top5",
             "dirt/ground",
             "transparent",
-            "classic_grass_block/grass_block_side_overlay"
+            "grass_block/side_overlay"
           ]
         }
       ],

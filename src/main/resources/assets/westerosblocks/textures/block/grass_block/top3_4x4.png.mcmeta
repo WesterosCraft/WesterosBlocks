@@ -4,7 +4,7 @@
     "type": "westeros_pattern_cond",
     "layer": "SOLID",
     "textures": [
-      "minecraft:block/grass_block/forest_top3_3x3"
+      "westerosblocks:block/grass_block/forest_top3_3x3"
     ],
     "extra": {
       "width": 4,
