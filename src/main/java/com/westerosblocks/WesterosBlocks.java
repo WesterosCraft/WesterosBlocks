@@ -90,8 +90,7 @@ public class WesterosBlocks implements ModInitializer {
         WesterosBlockDef[] blockDefs = config.blocks;
         List<WesterosBlockDef> expandedBlockDefs = new LinkedList<WesterosBlockDef>(Arrays.asList(blockDefs));
 
-        // TODO
-        if (config.blockSets.length < 0) {
+        if (config.blockSets.length > 0) {
             for (WesterosBlockSetDef blockSetDef : blockSetDefs) {
                 if (blockSetDef == null)
                     continue;
@@ -99,7 +98,6 @@ public class WesterosBlocks implements ModInitializer {
                 expandedBlockDefs.addAll(variantBlockDefs);
             }
         }
-
 
         return expandedBlockDefs.toArray(new WesterosBlockDef[expandedBlockDefs.size()]);
     }

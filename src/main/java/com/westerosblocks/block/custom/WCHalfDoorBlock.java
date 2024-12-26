@@ -2,10 +2,7 @@
 //
 //import com.sun.jdi.Mirror;
 //import com.westerosblocks.WesterosBlocks;
-//import com.westerosblocks.block.WesterosBlockDef;
-//import com.westerosblocks.block.WesterosBlockFactory;
-//import com.westerosblocks.block.WesterosBlockLifecycle;
-//import com.westerosblocks.block.WesterosBlockSettings;
+//import com.westerosblocks.block.*;
 //import net.minecraft.block.*;
 //import net.minecraft.block.enums.DoorHinge;
 //import net.minecraft.data.client.VariantSettings.Rotation;
@@ -75,7 +72,7 @@
 //                .with(OPEN, Boolean.FALSE)
 //                .with(HINGE, DoorHinge.LEFT)
 //                .with(POWERED, Boolean.FALSE));
-//        this.material = AuxMaterial.getMaterial(settings, def);
+//        this.material = WesterosBlockSettings.get(def.material);
 //    }
 //
 //    @Override
@@ -116,8 +113,9 @@
 //        return this.material == WesterosBlockSettings.get("metal") ? 1011 : 1012;
 //    }
 //
+//    // todo implmeent metal blocksetting
 //    private int getOpenSound() {
-//        return this.material == AuxMaterial.METAL ? 1005 : 1006;
+//        return this.material == WesterosBlockSettings.get("metal") ? 1005 : 1006;
 //    }
 //
 //    @Override
@@ -185,7 +183,7 @@
 //    }
 //
 //    public boolean isOpen(BlockState state) {
-//        return state.getValue(OPEN);
+//        return state.get(OPEN);
 //    }
 //
 //    public void setOpen(@Nullable Entity entity, Level level, BlockState state, BlockPos pos, boolean open) {

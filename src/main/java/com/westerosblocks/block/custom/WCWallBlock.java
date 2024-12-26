@@ -224,7 +224,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
     }
 
     private static int getStateIndex(BlockState bs) {
-        return getStateIndex(bs.get(UP).booleanValue(), bs.get(EAST_WALL).ordinal(),
+        return getStateIndex(bs.get(UP), bs.get(EAST_WALL).ordinal(),
                 bs.get(WEST_WALL).ordinal(), bs.get(NORTH_WALL).ordinal(), bs.get(SOUTH_WALL).ordinal());
     }
 
@@ -318,7 +318,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
         boolean flag3 = this.connectsTo(blockstate3, blockstate3.isSideSolidFullSquare(world, blockpos4, Direction.EAST),
                 Direction.EAST);
         BlockState blockstate5 = this.getDefaultState().with(WATERLOGGED,
-                Boolean.valueOf(fluidstate.getFluid() == Fluids.WATER));
+                fluidstate.getFluid() == Fluids.WATER);
         return this.updateShape(world, blockstate5, blockpos5, blockstate4, flag, flag1, flag2, flag3);
     }
 
@@ -379,7 +379,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
                                    boolean p_57984_, boolean p_57985_, boolean p_57986_, boolean p_57987_) {
         VoxelShape voxelshape = p_57983_.getCollisionShape(world, p_57982_).getFace(Direction.DOWN);
         BlockState blockstate = this.updateSides(p_57981_, p_57984_, p_57985_, p_57986_, p_57987_, voxelshape);
-        return blockstate.with(UP, Boolean.valueOf(this.shouldRaisePost(blockstate, p_57983_, voxelshape)));
+        return blockstate.with(UP, this.shouldRaisePost(blockstate, p_57983_, voxelshape));
     }
 
     private boolean shouldRaisePost(BlockState blockState, BlockState blockState2, VoxelShape voxelShape) {

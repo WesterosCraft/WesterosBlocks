@@ -1,6 +1,5 @@
 package com.westerosblocks.block.custom;
 
-import com.westerosblocks.WesterosBlocks;
 import com.westerosblocks.block.ModBlocks;
 import com.westerosblocks.block.WesterosBlockDef;
 import com.westerosblocks.block.WesterosBlockFactory;

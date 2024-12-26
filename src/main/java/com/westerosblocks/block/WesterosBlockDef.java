@@ -9,10 +9,7 @@ import com.westerosblocks.sound.ModSounds;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.MapColor;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
@@ -82,6 +79,8 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
     public static final String SHAPE_BOX = "box";
     // Shape for crossed squares (plant-style) (texture is index 0 in list)
     public static final String SHAPE_CROSSED = "crossed";
+    // TODO wood type for wood blocks like fencegate. see WoodTypeUtil class
+    public String woodType = null;
 
     private transient Map<String, String> parsedType;
     private transient boolean hasCollisionBoxes = false;
@@ -309,6 +308,10 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
 
     public String getType() {
         return this.type;
+    }
+
+    public String getWoodType() {
+        return this.woodType;
     }
 
     public WesterosBlockStateRecord getStackElementByIndex(int idx) {
@@ -583,10 +586,11 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
                     lightLevels.put(sr.stateID, (int)(16.0 * sr.lightValue));
                 }
             }
-            if (!lightLevels.isEmpty()) {
-                settings = settings.luminance((state) ->
-                        lightLevels.getOrDefault(state.get(this.stateProp), 0));
-            }
+            // TODO
+//            if (!lightLevels.isEmpty()) {
+//                settings = settings.luminance((state) ->
+//                        lightLevels.getOrDefault(state.get(this.stateProp), 0));
+//            }
         }
         // Handle simple light level
         else if (lightValue > 0.0F || !states.isEmpty() && states.getFirst().lightValue > 0.0F) {
@@ -869,18 +873,18 @@ public class WesterosBlockDef extends WesterosBlockStateRecord {
         typeTable.put("pane", new WCPaneBlock.Factory());
         typeTable.put("layer", new WCLayerBlock.Factory());
         typeTable.put("soulsand", new WCSoulSandBlock.Factory());
-//        typeTable.put("rail", new WCRailBlock.Factory());
+        typeTable.put("rail", new WCRailBlock.Factory());
         typeTable.put("cake", new WCCakeBlock.Factory());
 //        typeTable.put("bed", new WCBedBlock.Factory());
         typeTable.put("sand", new WCSandBlock.Factory());
 //        typeTable.put("halfdoor", new WCHalfDoorBlock.Factory());
 //        typeTable.put("furnace", new WCFurnaceBlock.Factory());
 //        typeTable.put("sound", new WCSoundBlock.Factory());
-//        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
+        typeTable.put("trapdoor", new WCTrapDoorBlock.Factory());
         typeTable.put("beacon", new WCBeaconBlock.Factory());
         typeTable.put("vines", new WCVinesBlock.Factory());
 //        typeTable.put("flowerpot", new WCFlowerPotBlock.Factory());
-//        typeTable.put("fencegate", new WCFenceGateBlock.Factory());
+        typeTable.put("fencegate", new WCFenceGateBlock.Factory());
 
         // Standard color multipliers
 //        colorMultTable.put("#FFFFFF", new FixedColorMultHandler(0xFFFFFF));
