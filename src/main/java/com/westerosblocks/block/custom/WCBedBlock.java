@@ -242,7 +242,7 @@ public class WCBedBlock extends HorizontalFacingBlock implements WesterosBlockLi
         BlockPos blockpos = ctx.getBlockPos();
         BlockPos blockpos1 = blockpos.offset(direction);
         World world = ctx.getWorld();
-        return world.getBlockState(blockpos1).canReplace(ctx) && world.getWorldBorder().contains(blockpos1) ? getDefaultState().with(FACING, direction) : null;
+        return world.getBlockState(blockpos1).canReplace(ctx) && world.getWorldBorder().contains(blockpos1) ? this.getDefaultState().with(FACING, direction) : null;
     }
 
     @Override

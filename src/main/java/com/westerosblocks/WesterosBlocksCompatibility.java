@@ -22,6 +22,7 @@ import com.westerosblocks.block.WesterosBlockSetDef;
 public class WesterosBlocksCompatibility {
 
     public static final String BLOCKSET_PATH = "blocksets.json";
+    // TODO
     public static final String WORLDPAINTER_PATH = "worldpainter.csv";
     public static final String[] WORLDPAINTER_COLS = {
             "name", "discriminator", "properties", "opacity", "receivesLight", "insubstantial",

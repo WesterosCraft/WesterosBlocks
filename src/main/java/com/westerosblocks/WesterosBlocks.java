@@ -41,7 +41,7 @@ public class WesterosBlocks implements ModInitializer {
     private static WesterosBlockDef[] customBlockDefs;
 
     public static HashMap<String, Block> customBlocksByName;
-    public static Block[] customBlocks = new Block[0];
+
     public static Path modConfigPath;
     public static WesterosBlockColorMap[] colorMaps;
     public static WesterosItemMenuOverrides[] menuOverrides;

@@ -65,7 +65,7 @@ public class WCPaneBlock extends PaneBlock implements WesterosBlockLifecycle {
             }
         }
         if (doUnconnect) {
-            setDefaultState(getDefaultState().
+            this.setDefaultState(this.getDefaultState().
             		with(NORTH, Boolean.FALSE).
                     with(EAST, Boolean.FALSE).
                     with(SOUTH, Boolean.FALSE).

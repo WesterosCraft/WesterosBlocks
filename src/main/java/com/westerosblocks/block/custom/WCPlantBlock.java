@@ -82,7 +82,7 @@ public class WCPlantBlock extends Block implements WesterosBlockLifecycle {
                 }
             }
         }
-        BlockState defbs = getDefaultState().with(WATERLOGGED, Boolean.FALSE);
+        BlockState defbs = this.getDefaultState().with(WATERLOGGED, Boolean.FALSE);
         if (STATE != null) {
             defbs = defbs.with(STATE, STATE.defValue);
         }

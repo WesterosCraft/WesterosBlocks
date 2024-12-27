@@ -99,7 +99,7 @@ public class WCSolidBlock extends Block implements WesterosBlockLifecycle {
         connectstate = doConnectstate;
         symmetrical = (doSymmetrical != null);
         symmetricalDef = doSymmetrical;
-        BlockState defbs = getDefaultState();
+        BlockState defbs = this.getDefaultState();
         if (connectstate) {
             defbs = defbs.with(CONNECTSTATE, 0);
         }

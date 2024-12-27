@@ -70,7 +70,7 @@ public class WCWebBlock extends Block implements WesterosBlockLifecycle {
                 }
             }
         }
-        BlockState bsdef = getDefaultState().with(WATERLOGGED, Boolean.FALSE);
+        BlockState bsdef = this.getDefaultState().with(WATERLOGGED, Boolean.FALSE);
     	if (LAYERS != null) {
     		bsdef = bsdef.with(LAYERS, 8);
     	}

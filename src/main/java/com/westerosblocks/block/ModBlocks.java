@@ -22,6 +22,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static com.westerosblocks.WesterosBlocks.crash;
 
 public class ModBlocks {
+    public static Block[] customBlocks = new Block[0];
+
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(WesterosBlocks.MOD_ID, name), block);
@@ -66,8 +68,7 @@ public class ModBlocks {
             }
         }
 
-        // TODO
-//        customBlocks = blklist.toArray(new Block[blklist.size()]);
+        customBlocks = blklist.toArray(new Block[0]);
         WesterosBlockDef.dumpBlockPerf();
         // Dump information for external mods
 //        WesterosBlocksCompatibility.dumpBlockSets(customConfig.blockSets, modConfigPath);
@@ -83,5 +84,9 @@ public class ModBlocks {
         // TODO
 //        menuOverrides = customConfig.menuOverrides;
         WesterosBlocks.LOGGER.info("WesterosBlocks custom block registration complete.");
+    }
+
+    public static Block[] getCustomBlocks() {
+        return customBlocks;
     }
 }

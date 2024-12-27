@@ -92,7 +92,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
         for (int i = 0; i < cnt; i++) {
             SUPPORT_BY_INDEX[i] = def.states.get(i).makeSupportBoxShape(null);
         }
-        BlockState defbs = getDefaultState().with(WATERLOGGED, Boolean.FALSE);
+        BlockState defbs = this.getDefaultState().with(WATERLOGGED, Boolean.FALSE);
         if (STATE != null) {
             defbs = defbs.with(STATE, STATE.defValue);
         }
@@ -158,7 +158,7 @@ public class WCCuboidBlock extends Block implements WesterosBlockLifecycle {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        BlockState bs = getDefaultState().with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
+        BlockState bs = this.getDefaultState().with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
         if (STATE != null) {
             bs = bs.with(STATE, STATE.defValue);
         }

@@ -59,7 +59,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
         		SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
         	}
         }
-        BlockState defbs = getDefaultState()
+        BlockState defbs = this.getDefaultState()
                 .with(ROTATION, 0)
                 .with(WATERLOGGED, Boolean.FALSE);
         if (STATE != null) {
@@ -97,7 +97,7 @@ public class WCCuboid16WayBlock extends WCCuboidBlock implements WesterosBlockLi
     public BlockState getPlacementState(ItemPlacementContext ctx) {
        FluidState fluidstate = ctx.getWorld().getFluidState(ctx.getBlockPos());
        Integer dir = MathHelper.floor((double) (ctx.getPlayerYaw() * 16.0F / 360.0F) + 0.5D) & 15;
-       BlockState bs = getDefaultState()
+       BlockState bs = this.getDefaultState()
                .with(ROTATION, dir)
                .with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
        if (STATE != null) {

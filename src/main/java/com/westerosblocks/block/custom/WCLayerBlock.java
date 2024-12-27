@@ -60,7 +60,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
 		if ((t != null) && (t.contains("softLayer"))) {
 			softLayer = true;
 		}
-		setDefaultState(getDefaultState()
+		this.setDefaultState(this.getDefaultState()
 				.with(LAYERS, 1)
 				.with(WATERLOGGED, Boolean.FALSE));
 	}
@@ -118,7 +118,7 @@ public class WCLayerBlock extends Block implements WesterosBlockLifecycle {
 					with(WATERLOGGED, (newCount < layerCount) && fluidstate.isIn(FluidTags.WATER));
 		}
 		else {
-			return getDefaultState().with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
+			return this.getDefaultState().with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
 		}
 	}
 

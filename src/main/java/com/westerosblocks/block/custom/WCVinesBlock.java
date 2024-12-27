@@ -75,7 +75,7 @@ public class WCVinesBlock extends VineBlock implements WesterosBlockLifecycle {
                 .getStates()
                 .stream()
                 .collect(Collectors.toMap(Function.identity(), WCVinesBlock::calculateShape)));
-        setDefaultState(getDefaultState()
+        setDefaultState(this.getDefaultState()
                 .with(UP, Boolean.FALSE)
                 .with(NORTH, Boolean.FALSE)
                 .with(EAST, Boolean.FALSE)

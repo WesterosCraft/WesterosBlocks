@@ -55,7 +55,7 @@ public class WCFanBlock extends Block implements WesterosBlockLifecycle {
                 }
             }
         }
-        BlockState defbs = getDefaultState().with(WATERLOGGED, Boolean.FALSE);
+        BlockState defbs = this.getDefaultState().with(WATERLOGGED, Boolean.FALSE);
         setDefaultState(defbs);
     }
 

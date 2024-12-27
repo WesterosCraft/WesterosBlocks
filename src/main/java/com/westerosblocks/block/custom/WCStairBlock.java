@@ -127,7 +127,7 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
         this.no_uvlock = no_uvlock;
         this.unconnect = doUnconnect;
         this.connectstate = doConnectstate;
-        BlockState defbs = getDefaultState()
+        BlockState defbs = this.getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(HALF, BlockHalf.BOTTOM)
                 .with(SHAPE, StairShape.STRAIGHT)
@@ -181,7 +181,7 @@ public class WCStairBlock extends Block implements WesterosBlockLifecycle {
         Direction direction = ctx.getSide();
         BlockPos blockPos = ctx.getBlockPos();
         FluidState fluidState = ctx.getWorld().getFluidState(blockPos);
-        BlockState blockState = (getDefaultState()
+        BlockState blockState = (this.getDefaultState()
                 .with(FACING, ctx.getHorizontalPlayerFacing()))
                 .with(HALF, direction == Direction.DOWN
                         || direction != Direction.UP

@@ -318,7 +318,7 @@ public class WCWallBlock extends Block implements Waterloggable, WesterosBlockLi
         boolean flag3 = this.connectsTo(blockstate3, blockstate3.isSideSolidFullSquare(world, blockpos4, Direction.EAST),
                 Direction.EAST);
         BlockState blockstate5 = this.getDefaultState().with(WATERLOGGED,
-                fluidstate.getFluid() == Fluids.WATER);
+                Boolean.valueOf(fluidstate.getFluid() == Fluids.WATER));
         return this.updateShape(world, blockstate5, blockpos5, blockstate4, flag, flag1, flag2, flag3);
     }
 

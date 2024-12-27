@@ -33,7 +33,7 @@ public class WCLeavesBlock extends LeavesBlock implements WesterosBlockLifecycle
         betterfoliage = (typ != null) && typ.contains("better-foliage");
         overlay = (typ != null) && typ.contains("overlay");
         nodecay = (typ != null) && typ.contains("no-decay");
-        setDefaultState(getDefaultState().with(DISTANCE, 7).with(PERSISTENT, !nodecay));
+        setDefaultState(this.getDefaultState().with(DISTANCE, 7).with(PERSISTENT, !nodecay));
     }
 
     @Override

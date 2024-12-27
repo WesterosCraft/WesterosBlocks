@@ -115,7 +115,7 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         if (unconnect && unconnectDef) {
-            return getDefaultState();
+            return this.getDefaultState();
         }
         return super.getPlacementState(ctx);
     }
@@ -156,7 +156,7 @@ public class WCFenceBlock extends FenceBlock implements WesterosBlockLifecycle {
     }
 
     private boolean isSameFence(BlockState state) {
-        return state.isIn(BlockTags.FENCES) && state.isIn(BlockTags.WOODEN_FENCES) == getDefaultState().isIn(BlockTags.WOODEN_FENCES);
+        return state.isIn(BlockTags.FENCES) && state.isIn(BlockTags.WOODEN_FENCES) == this.getDefaultState().isIn(BlockTags.WOODEN_FENCES);
     }
 
     @Override

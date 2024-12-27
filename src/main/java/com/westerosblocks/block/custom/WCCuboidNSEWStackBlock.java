@@ -71,7 +71,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
         for (int j = 0; j < cuboid_by_facing.length; j++) {
             SHAPE_BY_INDEX[j] = getBoundingBoxFromCuboidList(cuboid_by_facing[j]);
         }
-        setDefaultState(getDefaultState()
+        this.setDefaultState(this.getDefaultState()
         		.with(HALF, DoubleBlockHalf.LOWER)
         		.with(FACING, Direction.EAST)
         		.with(WATERLOGGED, Boolean.FALSE));
@@ -107,7 +107,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
        			break;
            	}
            }
-           return getDefaultState()
+           return this.getDefaultState()
        		.with(FACING, dir)
        		.with(HALF, DoubleBlockHalf.LOWER)
        		.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
@@ -137,7 +137,7 @@ public class WCCuboidNSEWStackBlock extends WCCuboidBlock implements WesterosBlo
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
     	BlockPos above = pos.up();
         FluidState fluidstate = world.getFluidState(above);
-        BlockState newstate = getDefaultState()
+        BlockState newstate = this.getDefaultState()
 			.with(FACING, state.get(FACING))
 			.with(HALF, DoubleBlockHalf.UPPER)
 			.with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));

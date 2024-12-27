@@ -60,7 +60,7 @@ public class WCWallFanBlock extends Block implements WesterosBlockLifecycle {
                 }
             }
         }
-        BlockState defbs = getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false));
+        BlockState defbs = this.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, Boolean.valueOf(false));
         setDefaultState(defbs);
     }
 

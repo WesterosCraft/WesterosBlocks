@@ -53,7 +53,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 				SHAPE_BY_INDEX[i] = getBoundingBoxFromCuboidList(cuboid_by_facing[i]);
 			}
 		}
-		BlockState defbs = getDefaultState().with(FACING, Direction.EAST).with(WATERLOGGED, Boolean.FALSE);
+		BlockState defbs = this.getDefaultState().with(FACING, Direction.EAST).with(WATERLOGGED, Boolean.FALSE);
 		if (STATE != null) {
 			defbs = defbs.with(STATE, STATE.defValue);
 		}
@@ -98,7 +98,7 @@ public class WCCuboidNSEWBlock extends WCCuboidBlock implements WesterosBlockLif
 				break;
 			}
 		}
-		BlockState bs = getDefaultState().with(FACING, dir).with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
+		BlockState bs = this.getDefaultState().with(FACING, dir).with(WATERLOGGED, fluidstate.isIn(FluidTags.WATER));
 		if (STATE != null) {
 			bs = bs.with(STATE, STATE.defValue);
 		}

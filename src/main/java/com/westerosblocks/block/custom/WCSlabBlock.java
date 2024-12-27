@@ -74,7 +74,7 @@ public class WCSlabBlock extends SlabBlock implements WesterosBlockLifecycle {
 		}
     
         connectstate = doConnectstate;
-		BlockState defbs = getDefaultState();
+		BlockState defbs = this.getDefaultState();
 		if (connectstate) {
 			defbs = defbs.with(CONNECTSTATE, 0);
 		}
